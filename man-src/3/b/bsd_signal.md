@@ -17,11 +17,11 @@ description: "bsd_signal – signal handling with BSD semantics"
 <p> <code>bsd_signal</code>():</p>
 <dl>
 <dt>
-<dd> Since glibc 2.26:<br />
+</dt><dd> Since glibc 2.26:<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;_XOPEN_SOURCE&nbsp;&gt;=&nbsp;500<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;&amp;&amp;&nbsp;!&nbsp;(_POSIX_C_SOURCE&nbsp;&gt;=&nbsp;200809L)<br />
  Glibc 2.25 and earlier:<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;_XOPEN_SOURCE</dl>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;_XOPEN_SOURCE</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> The <code>bsd_signal</code>() function takes the same arguments, and performs the same task, as <code><a href="/docs/linux/man/2-signal/">signal</a></code>(2). </p>
 <p> The difference between the two is that <code>bsd_signal</code>() is guaranteed to provide reliable signal semantics, that is: a) the disposition of the signal is not reset to the default when the handler is invoked; b) delivery of further instances of the signal is blocked while the signal handler is executing; and c) if the handler interrupts a blocking system call, then the system call is automatically restarted. A portable application cannot rely on <code><a href="/docs/linux/man/2-signal/">signal</a></code>(2) to provide these guarantees.</p>

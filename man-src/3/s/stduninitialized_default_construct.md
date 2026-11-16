@@ -10,15 +10,11 @@ description: "std::uninitialized_default_construct – std::uninitialized_defaul
 <p>std::uninitialized_default_construct &#8211; std::uninitialized_default_construct</p>
 <h2>Synopsis</h2>
 <pre><code>Defined in header&lt;memory&gt;
-
     template &lt;class ForwardIt&gt;
     (1)(since C++ 17)
-
         void uninitialized_default_construct(ForwardIt first, ForwardIt last);
-
 template &lt;class ExecutionPolicy, class ForwardIt&gt;
 (2)(since C++ 17)
-
     void uninitialized_default_construct(ExecutionPolicy &amp;&amp;policy, ForwardIt first, ForwardIt last);</code></pre>
 <p>1) Constructs objects of type typename iterator_traits&lt;ForwardIt&gt;::value_type in the uninitialized storage designated by the range [first, last) by default-initialization, as if by </p>
 <pre><code>for (; first != last; ++first)

@@ -10,7 +10,6 @@ description: "rpmatch – determine if the answer to a question is affirmative o
 <p>rpmatch &#8211; determine if the answer to a question is affirmative or negative</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;stdlib.h&gt;
-
 int rpmatch(const char *response);</code></pre>
 <p> Feature Test Macro Requirements for glibc (see <code><a href="/docs/linux/man/7-feature_test_macros/">feature_test_macros</a></code>(7)): <code>rpmatch</code>():<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;Since glibc 2.19:<br />

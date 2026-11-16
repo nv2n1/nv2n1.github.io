@@ -19,9 +19,6 @@ description: "std::_Function_base –"
 <p> _Manager_type <code>_M_manager</code></p>
 <h3>Static Public Attributes</h3>
 <pre><code>static const std::size_t _M_max_align
-
-
-
 static const std::size_t _M_max_size</code></pre>
 <h2>Detailed Description</h2>
 <p>Base class of all polymorphic function object wrappers. </p>

@@ -19,7 +19,7 @@ description: "dsycon_rook.f –"
 <p> <code>Purpose: </code></p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
  DSYCON_ROOK estimates the reciprocal of the condition number (in the
  1-norm) of a real symmetric matrix A using the factorization
@@ -27,11 +27,11 @@ description: "dsycon_rook.f –"
  An estimate is obtained for norm(inv(A)), and the reciprocal of the
  condition number is computed as RCOND = 1 / (ANORM * norm(inv(A))).
 </pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>UPLO</i> </p>
+</dt><dd> <i>UPLO</i> </dd>
 <pre>
           UPLO is CHARACTER*1
           Specifies whether the details of the factorization are stored
@@ -91,18 +91,16 @@ description: "dsycon_rook.f –"
 <p> <code>Author:</code></p>
 <dl>
 <dt>
-<dd> Univ. of Tennessee </p>
+</dt><dd> Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl>
 <dt>
-<dd> April 2012</dl>
+</dt><dd> April 2012</dd></dl>
 <p> <code>Contributors: </code></p>
 <dl>
-<dt>
-<dd>
 </dl>
 <p> April 2012, Igor Kozachenko, Computer Science Division, University of California, Berkeley </p>
 <p> September 2007, Sven Hammarling, Nicholas J. Higham, Craig Lucas, School of Mathematics, University of Manchester </p>

@@ -12,10 +12,8 @@ std::chrono::year_month_day::operatorsys_days,std::chrono::year_month_day::opera
 
 <pre><code>constexpr operator std::chrono::sys_days() const noexcept;
 (1)(since C++ 20)
-
     explicit constexpr
     operator std::chrono::local_days() const(2)(since C++ 20)
-
         noexcept;</code></pre> 
 Converts&nbsp;<wbr>*this to a std::chrono::time_point representing the same date as this 
 year_month_day. 1) If ok() is true, the return value holds a count of days from the
@@ -54,13 +52,11 @@ ymd = sys_days{ymd};
 // ymd is now 2016y/December/31 
 Normalizing the year and month can be done by adding&nbsp;<wbr>(or subtracting)&nbsp;<wbr>zero 
 std::chrono::months: <pre><code>using namespace std::chrono;
-
 constexpr year_month_day normalize(year_month_day ymd)
 {
     ymd += months{0};     // normalizes year and month
     return sys_days{ymd}; // normalizes day
 }
-
 static_assert(normalize(2017y / 33 / 59) == 2019y / 10 / 29);
 </code></pre>
 

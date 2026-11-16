@@ -31,10 +31,10 @@ description: "ilaenv.f –"
  and problem size information in the arguments.
  This routine will not function correctly if it is converted to all
  lower case. Converting it to all upper case is allowed.</pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>ISPEC</i> </p>
+<dd><i>ISPEC</i> </dd>
 <pre> ISPEC is INTEGER
  Specifies the parameter to be returned as the value of
  ILAENV.
@@ -88,13 +88,13 @@ description: "ilaenv.f –"
 <p>&nbsp;<wbr></dl>
 <p> <code>Author:</code></p>
 <dl COMPACT>
-<dd>Univ. of Tennessee </p>
+<dd>Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl COMPACT>
-<dd>November 2011</dl>
+<dd>November 2011</dd></dl>
 <p> <code>Further Details: </code></p>
 <dl COMPACT>
 <dd>
@@ -113,7 +113,8 @@ description: "ilaenv.f –"
  the optimal blocksize for STRTRI as follows:
  NB = ILAENV( 1, 'STRTRI', UPLO // DIAG, N, -1, -1, -1 )
  IF( NB.LE.1 ) NB = MAX( 1, N )</pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> Definition at line 163 of file ilaenv.f.</p>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for LAPACK from the source code.</p>
+</p>

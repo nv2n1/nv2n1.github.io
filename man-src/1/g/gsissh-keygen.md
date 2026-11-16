@@ -41,125 +41,125 @@ description: "ssh-keygen – authentication key generation, management and conve
 <p> After a key is generated, instructions below detail where the keys should be placed to be activated. </p>
 <p> The options are as follows:</p>
 <dl>
-<dt><code>-A</code></p>
-<dd> For each of the key types (rsa1, rsa, dsa, ecdsa and ed25519) for which host keys do not exist, generate the host keys with the default key file path, an empty passphrase, default bits for the key type, and default comment. This is used by /etc/rc to generate new host keys.</p>
-<dt><code>-a </code><i>rounds</i></p>
-<dd> When saving a new-format private key (i.e. an ed25519 key or any SSH protocol 2 key when the &#8211;<code>o</code> flag is set), this option specifies the number of KDF (key derivation function) rounds used. Higher numbers result in slower passphrase verification and increased resistance to brute-force password cracking (should the keys be stolen). </p>
+<dt><code>-A</code></dt>
+<dd> For each of the key types (rsa1, rsa, dsa, ecdsa and ed25519) for which host keys do not exist, generate the host keys with the default key file path, an empty passphrase, default bits for the key type, and default comment. This is used by /etc/rc to generate new host keys.</dd>
+<dt><code>-a </code><i>rounds</i></dt>
+<dd> When saving a new-format private key (i.e. an ed25519 key or any SSH protocol 2 key when the &#8211;<code>o</code> flag is set), this option specifies the number of KDF (key derivation function) rounds used. Higher numbers result in slower passphrase verification and increased resistance to brute-force password cracking (should the keys be stolen). </dd>
 <p> When screening DH-GEX candidates ( using the &#8211;<code>T</code> command). This option specifies the number of primality tests to perform.</p>
-<dt><code>-B</code></p>
-<dd> Show the bubblebabble digest of specified private or public key file.</p>
-<dt><code>-b </code><i>bits</i></p>
-<dd> Specifies the number of bits in the key to create. For RSA keys, the minimum size is 768 bits and the default is 2048 bits. Generally, 2048 bits is considered sufficient. DSA keys must be exactly 1024 bits as specified by FIPS 186-2. For ECDSA keys, the &#8211;<code>b</code> flag determines the key length by selecting from one of three elliptic curve sizes: 256, 384 or 521 bits. Attempting to use bit lengths other than these three values for ECDSA keys will fail. ED25519 keys have a fixed length and the &#8211;<code>b</code> flag will be ignored.</p>
-<dt><code>-C </code><i>comment</i></p>
-<dd> Provides a new comment.</p>
-<dt><code>-c</code></p>
-<dd> Requests changing the comment in the private and public key files. This operation is only supported for RSA1 keys. The program will prompt for the file containing the private keys, for the passphrase if the key has one, and for the new comment.</p>
-<dt><code>-D </code><i>pkcs11</i></p>
-<dd> Download the RSA public keys provided by the PKCS#11 shared library <i>pkcs11</i> When used in combination with &#8211;<code>s</code> this option indicates that a CA key resides in a PKCS#11 token (see the Sx CERTIFICATES section for details).</p>
-<dt><code>-e</code></p>
-<dd> This option will read a private or public OpenSSH key file and print to stdout the key in one of the formats specified by the &#8211;<code>m</code> option. The default export format is &#8220;RFC4716&#8221; This option allows exporting OpenSSH keys for use by other programs, including several commercial SSH implementations.</p>
-<dt><code>-F </code><i>hostname</i></p>
-<dd> Search for the specified <i>hostname</i> in a known_hosts file, listing any occurrences found. This option is useful to find hashed host names or addresses and may also be used in conjunction with the &#8211;<code>H</code> option to print found keys in a hashed format.</p>
-<dt><code>-f </code><i>filename</i></p>
-<dd> Specifies the filename of the key file.</p>
-<dt><code>-G </code><i>output_file</i></p>
-<dd> Generate candidate primes for DH-GEX. These primes must be screened for safety (using the &#8211;<code>T</code> option) before use.</p>
-<dt><code>-g</code></p>
-<dd> Use generic DNS format when printing fingerprint resource records using the &#8211;<code>r</code> command.</p>
-<dt><code>-H</code></p>
-<dd> Hash a known_hosts file. This replaces all hostnames and addresses with hashed representations within the specified file; the original content is moved to a file with a .old suffix. These hashes may be used normally by <code>ssh</code> and <code>sshd</code> but they do not reveal identifying information should the file&#8217;s contents be disclosed. This option will not modify existing hashed hostnames and is therefore safe to use on files that mix hashed and non-hashed names.</p>
-<dt><code>-h</code></p>
-<dd> When signing a key, create a host certificate instead of a user certificate. Please see the Sx CERTIFICATES section for details.</p>
-<dt><code>-I </code><i>certificate_identity</i></p>
-<dd> Specify the key identity when signing a public key. Please see the Sx CERTIFICATES section for details.</p>
-<dt><code>-i</code></p>
-<dd> This option will read an unencrypted private (or public) key file in the format specified by the &#8211;<code>m</code> option and print an OpenSSH compatible private (or public) key to stdout.</p>
-<dt><code>-J </code><i>num_lines</i></p>
-<dd> Exit after screening the specified number of lines while performing DH candidate screening using the &#8211;<code>T</code> option.</p>
-<dt><code>-j </code><i>start_line</i></p>
-<dd> Start screening at the specified line number while performing DH candidate screening using the &#8211;<code>T</code> option.</p>
-<dt><code>-K </code><i>checkpt</i></p>
-<dd> Write the last line processed to the file <i>checkpt</i> while performing DH candidate screening using the &#8211;<code>T</code> option. This will be used to skip lines in the input file that have already been processed if the job is restarted. This option allows importing keys from other software, including several commercial SSH implementations. The default import format is &#8220;RFC4716&#8221;</p>
-<dt><code>-k</code></p>
-<dd> Generate a KRL file. In this mode, <code>ssh-keygen</code> will generate a KRL file at the location specified via the &#8211;<code>f</code> flag that revokes every key or certificate presented on the command line. Keys/certificates to be revoked may be specified by public key file or using the format described in the Sx KEY REVOCATION LISTS section.</p>
-<dt><code>-L</code></p>
-<dd> Prints the contents of a certificate.</p>
-<dt><code>-l</code></p>
-<dd> Show fingerprint of specified public key file. Private RSA1 keys are also supported. For RSA and DSA keys <code>ssh-keygen</code> tries to find the matching public key file and prints its fingerprint. If combined with &#8211;<code>v</code> an ASCII art representation of the key is supplied with the fingerprint.</p>
-<dt><code>-M </code><i>memory</i></p>
-<dd> Specify the amount of memory to use (in megabytes) when generating candidate moduli for DH-GEX.</p>
-<dt><code>-m </code><i>key_format</i></p>
-<dd> Specify a key format for the &#8211;<code>i</code> (import) or &#8211;<code>e</code> (export) conversion options. The supported key formats are: &#8220;RFC4716&#8221; (RFC 4716/SSH2 public or private key), &#8220;PKCS8&#8221; (PEM PKCS8 public key) or &#8220;PEM&#8221; (PEM public key). The default conversion format is &#8220;RFC4716&#8221;</p>
-<dt><code>-N </code><i>new_passphrase</i></p>
-<dd> Provides the new passphrase.</p>
-<dt><code>-n </code><i>principals</i></p>
-<dd> Specify one or more principals (user or host names) to be included in a certificate when signing a key. Multiple principals may be specified, separated by commas. Please see the Sx CERTIFICATES section for details.</p>
-<dt><code>-O </code><i>option</i></p>
-<dd> Specify a certificate option when signing a key. This option may be specified multiple times. Please see the Sx CERTIFICATES section for details. The options that are valid for user certificates are:</p>
+<dt><code>-B</code></dt>
+<dd> Show the bubblebabble digest of specified private or public key file.</dd>
+<dt><code>-b </code><i>bits</i></dt>
+<dd> Specifies the number of bits in the key to create. For RSA keys, the minimum size is 768 bits and the default is 2048 bits. Generally, 2048 bits is considered sufficient. DSA keys must be exactly 1024 bits as specified by FIPS 186-2. For ECDSA keys, the &#8211;<code>b</code> flag determines the key length by selecting from one of three elliptic curve sizes: 256, 384 or 521 bits. Attempting to use bit lengths other than these three values for ECDSA keys will fail. ED25519 keys have a fixed length and the &#8211;<code>b</code> flag will be ignored.</dd>
+<dt><code>-C </code><i>comment</i></dt>
+<dd> Provides a new comment.</dd>
+<dt><code>-c</code></dt>
+<dd> Requests changing the comment in the private and public key files. This operation is only supported for RSA1 keys. The program will prompt for the file containing the private keys, for the passphrase if the key has one, and for the new comment.</dd>
+<dt><code>-D </code><i>pkcs11</i></dt>
+<dd> Download the RSA public keys provided by the PKCS#11 shared library <i>pkcs11</i> When used in combination with &#8211;<code>s</code> this option indicates that a CA key resides in a PKCS#11 token (see the Sx CERTIFICATES section for details).</dd>
+<dt><code>-e</code></dt>
+<dd> This option will read a private or public OpenSSH key file and print to stdout the key in one of the formats specified by the &#8211;<code>m</code> option. The default export format is &#8220;RFC4716&#8221; This option allows exporting OpenSSH keys for use by other programs, including several commercial SSH implementations.</dd>
+<dt><code>-F </code><i>hostname</i></dt>
+<dd> Search for the specified <i>hostname</i> in a known_hosts file, listing any occurrences found. This option is useful to find hashed host names or addresses and may also be used in conjunction with the &#8211;<code>H</code> option to print found keys in a hashed format.</dd>
+<dt><code>-f </code><i>filename</i></dt>
+<dd> Specifies the filename of the key file.</dd>
+<dt><code>-G </code><i>output_file</i></dt>
+<dd> Generate candidate primes for DH-GEX. These primes must be screened for safety (using the &#8211;<code>T</code> option) before use.</dd>
+<dt><code>-g</code></dt>
+<dd> Use generic DNS format when printing fingerprint resource records using the &#8211;<code>r</code> command.</dd>
+<dt><code>-H</code></dt>
+<dd> Hash a known_hosts file. This replaces all hostnames and addresses with hashed representations within the specified file; the original content is moved to a file with a .old suffix. These hashes may be used normally by <code>ssh</code> and <code>sshd</code> but they do not reveal identifying information should the file&#8217;s contents be disclosed. This option will not modify existing hashed hostnames and is therefore safe to use on files that mix hashed and non-hashed names.</dd>
+<dt><code>-h</code></dt>
+<dd> When signing a key, create a host certificate instead of a user certificate. Please see the Sx CERTIFICATES section for details.</dd>
+<dt><code>-I </code><i>certificate_identity</i></dt>
+<dd> Specify the key identity when signing a public key. Please see the Sx CERTIFICATES section for details.</dd>
+<dt><code>-i</code></dt>
+<dd> This option will read an unencrypted private (or public) key file in the format specified by the &#8211;<code>m</code> option and print an OpenSSH compatible private (or public) key to stdout.</dd>
+<dt><code>-J </code><i>num_lines</i></dt>
+<dd> Exit after screening the specified number of lines while performing DH candidate screening using the &#8211;<code>T</code> option.</dd>
+<dt><code>-j </code><i>start_line</i></dt>
+<dd> Start screening at the specified line number while performing DH candidate screening using the &#8211;<code>T</code> option.</dd>
+<dt><code>-K </code><i>checkpt</i></dt>
+<dd> Write the last line processed to the file <i>checkpt</i> while performing DH candidate screening using the &#8211;<code>T</code> option. This will be used to skip lines in the input file that have already been processed if the job is restarted. This option allows importing keys from other software, including several commercial SSH implementations. The default import format is &#8220;RFC4716&#8221;</dd>
+<dt><code>-k</code></dt>
+<dd> Generate a KRL file. In this mode, <code>ssh-keygen</code> will generate a KRL file at the location specified via the &#8211;<code>f</code> flag that revokes every key or certificate presented on the command line. Keys/certificates to be revoked may be specified by public key file or using the format described in the Sx KEY REVOCATION LISTS section.</dd>
+<dt><code>-L</code></dt>
+<dd> Prints the contents of a certificate.</dd>
+<dt><code>-l</code></dt>
+<dd> Show fingerprint of specified public key file. Private RSA1 keys are also supported. For RSA and DSA keys <code>ssh-keygen</code> tries to find the matching public key file and prints its fingerprint. If combined with &#8211;<code>v</code> an ASCII art representation of the key is supplied with the fingerprint.</dd>
+<dt><code>-M </code><i>memory</i></dt>
+<dd> Specify the amount of memory to use (in megabytes) when generating candidate moduli for DH-GEX.</dd>
+<dt><code>-m </code><i>key_format</i></dt>
+<dd> Specify a key format for the &#8211;<code>i</code> (import) or &#8211;<code>e</code> (export) conversion options. The supported key formats are: &#8220;RFC4716&#8221; (RFC 4716/SSH2 public or private key), &#8220;PKCS8&#8221; (PEM PKCS8 public key) or &#8220;PEM&#8221; (PEM public key). The default conversion format is &#8220;RFC4716&#8221;</dd>
+<dt><code>-N </code><i>new_passphrase</i></dt>
+<dd> Provides the new passphrase.</dd>
+<dt><code>-n </code><i>principals</i></dt>
+<dd> Specify one or more principals (user or host names) to be included in a certificate when signing a key. Multiple principals may be specified, separated by commas. Please see the Sx CERTIFICATES section for details.</dd>
+<dt><code>-O </code><i>option</i></dt>
+<dd> Specify a certificate option when signing a key. This option may be specified multiple times. Please see the Sx CERTIFICATES section for details. The options that are valid for user certificates are:</dd>
 <dl>
-<dt><code>clear</code></p>
-<dd> Clear all enabled permissions. This is useful for clearing the default set of permissions so permissions may be added individually.</p>
-<dt><code>force-command = </code><i>command</i></p>
-<dd> Forces the execution of <i>command</i> instead of any shell or command specified by the user when the certificate is used for authentication.</p>
-<dt><code>no-agent-forwarding</code></p>
-<dd> Disable ssh-agent1 forwarding (permitted by default).</p>
-<dt><code>no-port-forwarding</code></p>
-<dd> Disable port forwarding (permitted by default).</p>
-<dt><code>no-pty</code></p>
-<dd> Disable PTY allocation (permitted by default).</p>
-<dt><code>no-user-rc</code></p>
-<dd> Disable execution of ~/.ssh/rc by <a href="/docs/linux/man/8-sshd/">sshd</a>(8) (permitted by default).</p>
-<dt><code>no-x11-forwarding</code></p>
-<dd> Disable X11 forwarding (permitted by default).</p>
-<dt><code>permit-agent-forwarding</code></p>
-<dd> Allows ssh-agent1 forwarding.</p>
-<dt><code>permit-port-forwarding</code></p>
-<dd> Allows port forwarding.</p>
-<dt><code>permit-pty</code></p>
-<dd> Allows PTY allocation.</p>
-<dt><code>permit-user-rc</code></p>
-<dd> Allows execution of ~/.ssh/rc by <a href="/docs/linux/man/8-sshd/">sshd</a>(8).</p>
-<dt><code>permit-x11-forwarding</code></p>
-<dd> Allows X11 forwarding.</p>
-<dt><code>source-address = </code><i>address_list</i></p>
-<dd> Restrict the source addresses from which the certificate is considered valid. The <i>address_list</i> is a comma-separated list of one or more address/netmask pairs in CIDR format.</dl>
+<dt><code>clear</code></dt>
+<dd> Clear all enabled permissions. This is useful for clearing the default set of permissions so permissions may be added individually.</dd>
+<dt><code>force-command = </code><i>command</i></dt>
+<dd> Forces the execution of <i>command</i> instead of any shell or command specified by the user when the certificate is used for authentication.</dd>
+<dt><code>no-agent-forwarding</code></dt>
+<dd> Disable ssh-agent1 forwarding (permitted by default).</dd>
+<dt><code>no-port-forwarding</code></dt>
+<dd> Disable port forwarding (permitted by default).</dd>
+<dt><code>no-pty</code></dt>
+<dd> Disable PTY allocation (permitted by default).</dd>
+<dt><code>no-user-rc</code></dt>
+<dd> Disable execution of ~/.ssh/rc by <a href="/docs/linux/man/8-sshd/">sshd</a>(8) (permitted by default).</dd>
+<dt><code>no-x11-forwarding</code></dt>
+<dd> Disable X11 forwarding (permitted by default).</dd>
+<dt><code>permit-agent-forwarding</code></dt>
+<dd> Allows ssh-agent1 forwarding.</dd>
+<dt><code>permit-port-forwarding</code></dt>
+<dd> Allows port forwarding.</dd>
+<dt><code>permit-pty</code></dt>
+<dd> Allows PTY allocation.</dd>
+<dt><code>permit-user-rc</code></dt>
+<dd> Allows execution of ~/.ssh/rc by <a href="/docs/linux/man/8-sshd/">sshd</a>(8).</dd>
+<dt><code>permit-x11-forwarding</code></dt>
+<dd> Allows X11 forwarding.</dd>
+<dt><code>source-address = </code><i>address_list</i></dt>
+<dd> Restrict the source addresses from which the certificate is considered valid. The <i>address_list</i> is a comma-separated list of one or more address/netmask pairs in CIDR format.</dd></dl>
 <p> At present, no options are valid for host keys.</p>
-<dt><code>-o</code></p>
-<dd> Causes <code>ssh-keygen</code> to save SSH protocol 2 private keys using the new OpenSSH format rather than the more compatible PEM format. The new format has increased resistance to brute-force password cracking but is not supported by versions of OpenSSH prior to 6.5. Ed25519 keys always use the new private key format.</p>
-<dt><code>-P </code><i>passphrase</i></p>
-<dd> Provides the (old) passphrase.</p>
-<dt><code>-p</code></p>
-<dd> Requests changing the passphrase of a private key file instead of creating a new private key. The program will prompt for the file containing the private key, for the old passphrase, and twice for the new passphrase.</p>
-<dt><code>-Q</code></p>
-<dd> Test whether keys have been revoked in a KRL.</p>
-<dt><code>-q</code></p>
-<dd> Silence <code>ssh-keygen</code></p>
-<dt><code>-R </code><i>hostname</i></p>
-<dd> Removes all keys belonging to <i>hostname</i> from a known_hosts file. This option is useful to delete hashed hosts (see the &#8211;<code>H</code> option above).</p>
-<dt><code>-r </code><i>hostname</i></p>
-<dd> Print the SSHFP fingerprint resource record named <i>hostname</i> for the specified public key file.</p>
-<dt><code>-S </code><i>start</i></p>
-<dd> Specify start point (in hex) when generating candidate moduli for DH-GEX.</p>
-<dt><code>-s </code><i>ca_key</i></p>
-<dd> Certify (sign) a public key using the specified CA key. Please see the Sx CERTIFICATES section for details. </p>
+<dt><code>-o</code></dt>
+<dd> Causes <code>ssh-keygen</code> to save SSH protocol 2 private keys using the new OpenSSH format rather than the more compatible PEM format. The new format has increased resistance to brute-force password cracking but is not supported by versions of OpenSSH prior to 6.5. Ed25519 keys always use the new private key format.</dd>
+<dt><code>-P </code><i>passphrase</i></dt>
+<dd> Provides the (old) passphrase.</dd>
+<dt><code>-p</code></dt>
+<dd> Requests changing the passphrase of a private key file instead of creating a new private key. The program will prompt for the file containing the private key, for the old passphrase, and twice for the new passphrase.</dd>
+<dt><code>-Q</code></dt>
+<dd> Test whether keys have been revoked in a KRL.</dd>
+<dt><code>-q</code></dt>
+<dd> Silence <code>ssh-keygen</code></dd>
+<dt><code>-R </code><i>hostname</i></dt>
+<dd> Removes all keys belonging to <i>hostname</i> from a known_hosts file. This option is useful to delete hashed hosts (see the &#8211;<code>H</code> option above).</dd>
+<dt><code>-r </code><i>hostname</i></dt>
+<dd> Print the SSHFP fingerprint resource record named <i>hostname</i> for the specified public key file.</dd>
+<dt><code>-S </code><i>start</i></dt>
+<dd> Specify start point (in hex) when generating candidate moduli for DH-GEX.</dd>
+<dt><code>-s </code><i>ca_key</i></dt>
+<dd> Certify (sign) a public key using the specified CA key. Please see the Sx CERTIFICATES section for details. </dd>
 <p> When generating a KRL, &#8211;<code>s</code> specifies a path to a CA public key file used to revoke certificates directly by key ID or serial number. See the Sx KEY REVOCATION LISTS section for details.</p>
-<dt><code>-T </code><i>output_file</i></p>
-<dd> Test DH group exchange candidate primes (generated using the &#8211;<code>G</code> option) for safety.</p>
-<dt><code>-t </code><i>type</i></p>
-<dd> Specifies the type of key to create. The possible values are &#8220;rsa1&#8221; for protocol version 1 and &#8220;dsa&#8221; &#8220;ecdsa&#8221; &#8220;ed25519&#8221; or &#8220;rsa&#8221; for protocol version 2.</p>
-<dt><code>-u</code></p>
-<dd> Update a KRL. When specified with &#8211;<code>k</code> keys listed via the command line are added to the existing KRL rather than a new KRL being created.</p>
-<dt><code>-V </code><i>validity_interval</i></p>
-<dd> Specify a validity interval when signing a certificate. A validity interval may consist of a single time, indicating that the certificate is valid beginning now and expiring at that time, or may consist of two times separated by a colon to indicate an explicit time interval. The start time may be specified as a date in YYYYMMDD format, a time in YYYYMMDDHHMMSS format or a relative time (to the current time) consisting of a minus sign followed by a relative time in the format described in the TIME FORMATS section of sshd_config5. The end time may be specified as a YYYYMMDD date, a YYYYMMDDHHMMSS time or a relative time starting with a plus character. </p>
+<dt><code>-T </code><i>output_file</i></dt>
+<dd> Test DH group exchange candidate primes (generated using the &#8211;<code>G</code> option) for safety.</dd>
+<dt><code>-t </code><i>type</i></dt>
+<dd> Specifies the type of key to create. The possible values are &#8220;rsa1&#8221; for protocol version 1 and &#8220;dsa&#8221; &#8220;ecdsa&#8221; &#8220;ed25519&#8221; or &#8220;rsa&#8221; for protocol version 2.</dd>
+<dt><code>-u</code></dt>
+<dd> Update a KRL. When specified with &#8211;<code>k</code> keys listed via the command line are added to the existing KRL rather than a new KRL being created.</dd>
+<dt><code>-V </code><i>validity_interval</i></dt>
+<dd> Specify a validity interval when signing a certificate. A validity interval may consist of a single time, indicating that the certificate is valid beginning now and expiring at that time, or may consist of two times separated by a colon to indicate an explicit time interval. The start time may be specified as a date in YYYYMMDD format, a time in YYYYMMDDHHMMSS format or a relative time (to the current time) consisting of a minus sign followed by a relative time in the format described in the TIME FORMATS section of sshd_config5. The end time may be specified as a YYYYMMDD date, a YYYYMMDDHHMMSS time or a relative time starting with a plus character. </dd>
 <p> For example: &#8220;+52w1d&#8221; (valid from now to 52 weeks and one day from now), &#8220;-4w:+4w&#8221; (valid from four weeks ago to four weeks from now), &#8220;20100101123000:20110101123000&#8221; (valid from 12:30 PM, January 1st, 2010 to 12:30 PM, January 1st, 2011), &#8220;-1d:20110101&#8221; (valid from yesterday to midnight, January 1st, 2011).</p>
-<dt><code>-v</code></p>
-<dd> Verbose mode. Causes <code>ssh-keygen</code> to print debugging messages about its progress. This is helpful for debugging moduli generation. Multiple &#8211;<code>v</code> options increase the verbosity. The maximum is 3.</p>
-<dt><code>-W </code><i>generator</i></p>
-<dd> Specify desired generator when testing candidate moduli for DH-GEX.</p>
-<dt><code>-y</code></p>
-<dd> This option will read a private OpenSSH format file and print an OpenSSH public key to stdout.</p>
-<dt><code>-z </code><i>serial_number</i></p>
-<dd> Specifies a serial number to be embedded in the certificate to distinguish this certificate from others from the same CA. The default serial number is zero. </p>
+<dt><code>-v</code></dt>
+<dd> Verbose mode. Causes <code>ssh-keygen</code> to print debugging messages about its progress. This is helpful for debugging moduli generation. Multiple &#8211;<code>v</code> options increase the verbosity. The maximum is 3.</dd>
+<dt><code>-W </code><i>generator</i></dt>
+<dd> Specify desired generator when testing candidate moduli for DH-GEX.</dd>
+<dt><code>-y</code></dt>
+<dd> This option will read a private OpenSSH format file and print an OpenSSH public key to stdout.</dd>
+<dt><code>-z </code><i>serial_number</i></dt>
+<dd> Specifies a serial number to be embedded in the certificate to distinguish this certificate from others from the same CA. The default serial number is zero. </dd>
 <p> When generating a KRL, the &#8211;<code>z</code> flag is used to specify a KRL version number.</dl>
 <h2>MODULI GENERATION</h2>
 <p> <code>ssh-keygen</code> may be used to generate groups for the Diffie-Hellman Group Exchange (DH-GEX) protocol. Generating these groups is a two-step process: first, candidate primes are generated using a fast, but memory intensive process. These candidate primes are then tested for suitability (a CPU-intensive process). </p>
@@ -191,49 +191,49 @@ description: "ssh-keygen – authentication key generation, management and conve
 <p> KRLs may be generated using the &#8211;<code>k</code> flag. This option reads one or more files from the command line and generates a new KRL. The files may either contain a KRL specification (see below) or public keys, listed one per line. Plain public keys are revoked by listing their hash or contents in the KRL and certificates revoked by serial number or key ID (if the serial is zero or not available). </p>
 <p> Revoking keys using a KRL specification offers explicit control over the types of record used to revoke keys and may be used to directly revoke certificates by serial number or key ID without having the complete original certificate on hand. A KRL specification consists of lines containing one of the following directives followed by a colon and some directive-specific information.</p>
 <dl>
-<dt><code>serial : </code><i>serial_number </i>[- <i>serial_number</i> ]</p>
-<dd> Revokes a certificate with the specified serial number. Serial numbers are 64-bit values, not including zero and may be expressed in decimal, hex or octal. If two serial numbers are specified separated by a hyphen, then the range of serial numbers including and between each is revoked. The CA key must have been specified on the <code>ssh-keygen</code> command line using the &#8211;<code>s</code> option.</p>
-<dt><code>id : </code><i>key_id</i></p>
-<dd> Revokes a certificate with the specified key ID string. The CA key must have been specified on the <code>ssh-keygen</code> command line using the &#8211;<code>s</code> option.</p>
-<dt><code>key : </code><i>public_key</i></p>
-<dd> Revokes the specified key. If a certificate is listed, then it is revoked as a plain public key.</p>
-<dt><code>sha1 : </code><i>public_key</i></p>
-<dd> Revokes the specified key by its SHA1 hash.</dl>
+<dt><code>serial : </code><i>serial_number </i>[- <i>serial_number</i> ]</dt>
+<dd> Revokes a certificate with the specified serial number. Serial numbers are 64-bit values, not including zero and may be expressed in decimal, hex or octal. If two serial numbers are specified separated by a hyphen, then the range of serial numbers including and between each is revoked. The CA key must have been specified on the <code>ssh-keygen</code> command line using the &#8211;<code>s</code> option.</dd>
+<dt><code>id : </code><i>key_id</i></dt>
+<dd> Revokes a certificate with the specified key ID string. The CA key must have been specified on the <code>ssh-keygen</code> command line using the &#8211;<code>s</code> option.</dd>
+<dt><code>key : </code><i>public_key</i></dt>
+<dd> Revokes the specified key. If a certificate is listed, then it is revoked as a plain public key.</dd>
+<dt><code>sha1 : </code><i>public_key</i></dt>
+<dd> Revokes the specified key by its SHA1 hash.</dd></dl>
 <p> KRLs may be updated using the &#8211;<code>u</code> flag in addition to &#8211;<code>k</code> When this option is specified, keys listed via the command line are merged into the KRL, adding to those already there. </p>
 <p> It is also possible, given a KRL, to test whether it revokes a particular key (or keys). The &#8211;<code>Q</code> flag will query an existing KRL, testing each key specified on the commandline. If any key listed on the command line has been revoked (or an error encountered) then <code>ssh-keygen</code> will exit with a non-zero exit status. A zero exit status will only be returned if no key was revoked.</p>
 <h2>FILES</h2>
 <dl>
-<dt><code>~/.ssh/identity </code></p>
-<dd> Contains the protocol version 1 RSA authentication identity of the user. This file should not be readable by anyone but the user. It is possible to specify a passphrase when generating the key; that passphrase will be used to encrypt the private part of this file using 3DES. This file is not automatically accessed by <code>ssh-keygen</code> but it is offered as the default file for the private key. <a href="/docs/linux/man/1-ssh/">ssh</a>(1) will read this file when a login attempt is made. </p>
-<dt><code>~/.ssh/identity.pub </code></p>
-<dd> Contains the protocol version 1 RSA public key for authentication. The contents of this file should be added to ~/.ssh/authorized_keys on all machines where the user wishes to log in using RSA authentication. There is no need to keep the contents of this file secret. </p>
-<dt><code>~/.ssh/id_dsa </code></p>
+<dt><code>~/.ssh/identity </code></dt>
+<dd> Contains the protocol version 1 RSA authentication identity of the user. This file should not be readable by anyone but the user. It is possible to specify a passphrase when generating the key; that passphrase will be used to encrypt the private part of this file using 3DES. This file is not automatically accessed by <code>ssh-keygen</code> but it is offered as the default file for the private key. <a href="/docs/linux/man/1-ssh/">ssh</a>(1) will read this file when a login attempt is made. </dd>
+<dt><code>~/.ssh/identity.pub </code></dt>
+<dd> Contains the protocol version 1 RSA public key for authentication. The contents of this file should be added to ~/.ssh/authorized_keys on all machines where the user wishes to log in using RSA authentication. There is no need to keep the contents of this file secret. </dd>
+<dt><code>~/.ssh/id_dsa </code></dt>
 <dd>
-<dt><code>~/.ssh/id_ecdsa </code></p>
+</dd><dt><code>~/.ssh/id_ecdsa </code></dt>
 <dd>
-<dt><code>~/.ssh/id_ed25519 </code></p>
+</dd><dt><code>~/.ssh/id_ed25519 </code></dt>
 <dd>
-<dt><code>~/.ssh/id_rsa </code></p>
-<dd> Contains the protocol version 2 DSA, ECDSA, ED25519 or RSA authentication identity of the user. This file should not be readable by anyone but the user. It is possible to specify a passphrase when generating the key; that passphrase will be used to encrypt the private part of this file using 128-bit AES. This file is not automatically accessed by <code>ssh-keygen</code> but it is offered as the default file for the private key. <a href="/docs/linux/man/1-ssh/">ssh</a>(1) will read this file when a login attempt is made. </p>
-<dt><code>~/.ssh/id_dsa.pub </code></p>
+</dd><dt><code>~/.ssh/id_rsa </code></dt>
+<dd> Contains the protocol version 2 DSA, ECDSA, ED25519 or RSA authentication identity of the user. This file should not be readable by anyone but the user. It is possible to specify a passphrase when generating the key; that passphrase will be used to encrypt the private part of this file using 128-bit AES. This file is not automatically accessed by <code>ssh-keygen</code> but it is offered as the default file for the private key. <a href="/docs/linux/man/1-ssh/">ssh</a>(1) will read this file when a login attempt is made. </dd>
+<dt><code>~/.ssh/id_dsa.pub </code></dt>
 <dd>
-<dt><code>~/.ssh/id_ecdsa.pub </code></p>
+</dd><dt><code>~/.ssh/id_ecdsa.pub </code></dt>
 <dd>
-<dt><code>~/.ssh/id_ed25519.pub </code></p>
+</dd><dt><code>~/.ssh/id_ed25519.pub </code></dt>
 <dd>
-<dt><code>~/.ssh/id_rsa.pub </code></p>
-<dd> Contains the protocol version 2 DSA, ECDSA, ED25519 or RSA public key for authentication. The contents of this file should be added to ~/.ssh/authorized_keys on all machines where the user wishes to log in using public key authentication. There is no need to keep the contents of this file secret. </p>
-<dt><code>/etc/gsissh/moduli </code></p>
-<dd> Contains Diffie-Hellman groups used for DH-GEX. The file format is described in <a href="/docs/linux/man/5-moduli/">moduli</a>(5).</dl>
+</dd><dt><code>~/.ssh/id_rsa.pub </code></dt>
+<dd> Contains the protocol version 2 DSA, ECDSA, ED25519 or RSA public key for authentication. The contents of this file should be added to ~/.ssh/authorized_keys on all machines where the user wishes to log in using public key authentication. There is no need to keep the contents of this file secret. </dd>
+<dt><code>/etc/gsissh/moduli </code></dt>
+<dd> Contains Diffie-Hellman groups used for DH-GEX. The file format is described in <a href="/docs/linux/man/5-moduli/">moduli</a>(5).</dd></dl>
 <h2>ENVIRONMENT</h2>
 <dl>
-<dt><code>SSH_USE_STRONG_RNG </code></p>
-<dd> The reseeding of the OpenSSL random generator is usually done from <code>/dev/urandom</code> If the <code>SSH_USE_STRONG_RNG</code> environment variable is set to value other than <code>0</code> the OpenSSL random generator is reseeded from <code>/dev/random</code> The number of bytes read is defined by the SSH_USE_STRONG_RNG value. Minimum is 14 bytes. This setting is not recommended on the computers without the hardware random generator because insufficient entropy causes the connection to be blocked until enough entropy is available.</dl>
+<dt><code>SSH_USE_STRONG_RNG </code></dt>
+<dd> The reseeding of the OpenSSL random generator is usually done from <code>/dev/urandom</code> If the <code>SSH_USE_STRONG_RNG</code> environment variable is set to value other than <code>0</code> the OpenSSL random generator is reseeded from <code>/dev/random</code> The number of bytes read is defined by the SSH_USE_STRONG_RNG value. Minimum is 14 bytes. This setting is not recommended on the computers without the hardware random generator because insufficient entropy causes the connection to be blocked until enough entropy is available.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/1-ssh/">ssh</a>(1), ssh-add1, ssh-agent1, <a href="/docs/linux/man/5-moduli/">moduli</a>(5), <a href="/docs/linux/man/8-sshd/">sshd</a>(8)</p>
 <dl>
 <dt>
-<dd> <i>RFC 4716</i> <i>&quot;The Secure Shell (SSH) Public Key File Format&quot;</i> 2006</dl>
+</dt><dd> <i>RFC 4716</i> <i>&quot;The Secure Shell (SSH) Public Key File Format&quot;</i> 2006</dd></dl>
 <h2>AUTHORS</h2>
 <p> OpenSSH is a derivative of the original and free ssh 1.2.12 release by Tatu Ylonen. Aaron Campbell, Bob Beck, Markus Friedl, Niels Provos, Theo de Raadt and Dug Song removed many bugs, re-added newer features and created OpenSSH. Markus Friedl contributed the support for SSH protocol versions 1.5 and 2.0. </p>
 <h2>Index</h2>

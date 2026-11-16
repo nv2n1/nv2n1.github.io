@@ -13,58 +13,58 @@ description: "isdn_audio – audio extension of ttyI ISDN character devices"
 <h2>Audio Related At Command Set</h2>
 <p>This description does <code>not</code> include the standard AT command set. For a description of the standard AT command set, provided by the Linux <font SIZE="-1">ISDN</font> subsystem, see <code><a href="/docs/linux/man/4-ttyi/">ttyI</a></code>(4). All commands starting with <code>AT+</code> except <code>AT+FCLASS</code> are enabled only, if audio mode is active. The following <code>audio related AT commands</code> are supported by <font SIZE="-1">ISDN</font> tty devices:</p>
 <dl>
-<dt><code>AT+FCLASS=0</code></p>
-<dd>Disable audio mode (default). This command sets register <i>18</i> to <i>4</i>.</p>
-<dt><code>AT+FCLASS=8</code></p>
-<dd>Enable audio mode. This command sets register <i>18</i> to <i>5</i>.</p>
-<dt><code>AT+FCLASS=?</code></p>
-<dd>Show possible modes.</p>
-<dt><code>AT+FCLASS?</code></p>
-<dd>Show current mode.</p>
-<dt><code>AT+VNH=</code><i>x</i></p>
-<dd>No function, provided for compatibility only.</p>
-<dt><code>AT+VNH=?</code></p>
-<dd>Always showing &quot;1&quot;.</p>
-<dt><code>AT+VNH?</code></p>
-<dd>Always showing &quot;1&quot;.</p>
-<dt><code>AT+VIP</code></p>
-<dd>Reset all audio parameters.</p>
-<dt><code>AT+VLS=</code><i>x</i></p>
-<dd>Select line <i>x</i>, where <i>x</i> is one of the following:</p>
+<dt><code>AT+FCLASS=0</code></dt>
+<dd>Disable audio mode (default). This command sets register <i>18</i> to <i>4</i>.</dd>
+<dt><code>AT+FCLASS=8</code></dt>
+<dd>Enable audio mode. This command sets register <i>18</i> to <i>5</i>.</dd>
+<dt><code>AT+FCLASS=?</code></dt>
+<dd>Show possible modes.</dd>
+<dt><code>AT+FCLASS?</code></dt>
+<dd>Show current mode.</dd>
+<dt><code>AT+VNH=</code><i>x</i></dt>
+<dd>No function, provided for compatibility only.</dd>
+<dt><code>AT+VNH=?</code></dt>
+<dd>Always showing &quot;1&quot;.</dd>
+<dt><code>AT+VNH?</code></dt>
+<dd>Always showing &quot;1&quot;.</dd>
+<dt><code>AT+VIP</code></dt>
+<dd>Reset all audio parameters.</dd>
+<dt><code>AT+VLS=</code><i>x</i></dt>
+<dd>Select line <i>x</i>, where <i>x</i> is one of the following:</dd>
 <dl>
 <dd>0 = No device.<br />
- 2 = Phone line.</dl>
-<dt><code>AT+VLS=?</code></p>
-<dd>Always showing &quot;0,2&quot;.</p>
-<dt><code>AT+VLS?</code></p>
-<dd>Show current line.</p>
-<dt><code>AT+VRX</code></p>
-<dd>Start audio recording. See below for more information.</p>
-<dt><code>AT+VSD=</code><i>x</i><code>,</code><i>y</i></p>
-<dd>Set silence-detection parameters.</p>
+ 2 = Phone line.</dd></dl>
+<dt><code>AT+VLS=?</code></dt>
+<dd>Always showing &quot;0,2&quot;.</dd>
+<dt><code>AT+VLS?</code></dt>
+<dd>Show current line.</dd>
+<dt><code>AT+VRX</code></dt>
+<dd>Start audio recording. See below for more information.</dd>
+<dt><code>AT+VSD=</code><i>x</i><code>,</code><i>y</i></dt>
+<dd>Set silence-detection parameters.</dd>
 <dl>
 <dd>Possible parameters:<br />
  <i>x</i> = 0 &#8230; 31 sensitivity threshold level.<br />
  (default 0 , deactivated)<br />
- <i>y</i> = 0 &#8230; 255 range of interval in units of 0.1 second. (default 70)</dl>
-<dt><code>AT+VSD=?</code></p>
-<dd>Show possible parameters.</p>
-<dt><code>AT+VSD?</code></p>
-<dd>Show current parameters.</p>
-<dt><code>AT+VSM=</code><i>x</i></p>
-<dd>Select audio data format to <i>x</i>, where <i>x</i> is:</p>
+ <i>y</i> = 0 &#8230; 255 range of interval in units of 0.1 second. (default 70)</dd></dl>
+<dt><code>AT+VSD=?</code></dt>
+<dd>Show possible parameters.</dd>
+<dt><code>AT+VSD?</code></dt>
+<dd>Show current parameters.</dd>
+<dt><code>AT+VSM=</code><i>x</i></dt>
+<dd>Select audio data format to <i>x</i>, where <i>x</i> is:</dd>
 <dl>
 <dd>2 = ADPCM-2<br />
  3 = ADPCM-3<br />
  4 = ADPCM-4<br />
  5 = aLAW<br />
- 6 = uLAW</dl>
-<dt><code>AT+VSM=?</code></p>
-<dd>Show possible audio data formats.</p>
-<dt><code>AT+VSM?</code></p>
-<dd>Show current audio data format.</p>
-<dt><code>AT+VTX</code></p>
-<dd>Start audio playback. See below for more information.</dl>
+ 6 = uLAW</dd></dl>
+<dt><code>AT+VSM=?</code></dt>
+<dd>Show possible audio data formats.</dd>
+<dt><code>AT+VSM?</code></dt>
+<dd>Show current audio data format.</dd>
+<dt><code>AT+VTX</code></dt>
+<dd>Start audio playback. See below for more information.</dd></dl>
 <h2>General Behaviour</h2>
 <p>On incoming calls, if the application responds to a <code>RING</code> by sending <code>ATA</code>, depending on the calling service, the emulator responds with either <code>CONNECT</code> (data call) or <code>VCON</code> (voice call). </p>
 <p> When starting audio playback or recording, the emulator responds with <code>CONNECT</code>. After that, the data transfer protocol described below is used. It is possible to initiate full duplex data transfer by issuing <code>AT+VRX+VTX</code> in a <code>single</code> command. In this case, <code>no</code> CONNECT message is sent to the application and the protocol described below is started immediately. </p>
@@ -73,44 +73,44 @@ description: "isdn_audio – audio extension of ttyI ISDN character devices"
 <h2>Audio Data Format</h2>
 <p>When recording or playing back audio data, a kind of modified bisync protocol is used. When recording audio data, the modem emulator is considered to be the <code>sender</code>, while the application is the <code>receiver</code>. When playing back, this relationship is reversed: The modem emulator acts as <code>receiver</code>, while the application is the <code>sender</code>. With the bisync protocol the character <code>DLE</code> (0x10) has a special meaning and is used like an escape character. It is always followed by a second character which has the following meanings defined:</p>
 <dl>
-<dt><code>ETX</code> (0x03)</p>
-<dd>End of audio data. This code has to be sent by the <code>sender</code>, indicating end of audio data.</p>
-<dt><code>DC4</code> (0x14)</p>
-<dd>Abort sending. This code has to be sent by the <code>receiver</code>, when it wishes to abort receiving data. The <code>sender</code> has to reply by stop sending data and finally indicating end of audio data.</p>
-<dt><code>DLE</code> (0x10)</p>
-<dd>a single byte with value 0x10 in the data stream.</p>
-<dt><code>0</code></p>
-<dd>Touch-tone &quot;0&quot; received. Valid only in direction from emulator to application.</p>
-<dt><code>1</code></p>
-<dd>Touch-tone &quot;1&quot; received. Valid only in direction from emulator to application.</p>
-<dt><code>2</code></p>
-<dd>Touch-tone &quot;2&quot; received. Valid only in direction from emulator to application.</p>
-<dt><code>3</code></p>
-<dd>Touch-tone &quot;3&quot; received. Valid only in direction from emulator to application.</p>
-<dt><code>4</code></p>
-<dd>Touch-tone &quot;4&quot; received. Valid only in direction from emulator to application.</p>
-<dt><code>5</code></p>
-<dd>Touch-tone &quot;5&quot; received. Valid only in direction from emulator to application.</p>
-<dt><code>6</code></p>
-<dd>Touch-tone &quot;6&quot; received. Valid only in direction from emulator to application.</p>
-<dt><code>7</code></p>
-<dd>Touch-tone &quot;7&quot; received. Valid only in direction from emulator to application.</p>
-<dt><code>8</code></p>
-<dd>Touch-tone &quot;8&quot; received. Valid only in direction from emulator to application.</p>
-<dt><code>9</code></p>
-<dd>Touch-tone &quot;9&quot; received. Valid only in direction from emulator to application.</p>
-<dt><code>#</code></p>
-<dd>Touch-tone &quot;#&quot; received. Valid only in direction from emulator to application.</p>
-<dt><code>*</code></p>
-<dd>Touch-tone &quot;*&quot; received. Valid only in direction from emulator to application.</p>
-<dt><code>A</code></p>
-<dd>Touch-tone &quot;A&quot; received. Valid only in direction from emulator to application.</p>
-<dt><code>B</code></p>
-<dd>Touch-tone &quot;B&quot; received. Valid only in direction from emulator to application.</p>
-<dt><code>C</code></p>
-<dd>Touch-tone &quot;C&quot; received. Valid only in direction from emulator to application.</p>
-<dt><code>D</code></p>
-<dd>Touch-tone &quot;D&quot; received. Valid only in direction from emulator to application.</dl>
+<dt><code>ETX</code> (0x03)</dt>
+<dd>End of audio data. This code has to be sent by the <code>sender</code>, indicating end of audio data.</dd>
+<dt><code>DC4</code> (0x14)</dt>
+<dd>Abort sending. This code has to be sent by the <code>receiver</code>, when it wishes to abort receiving data. The <code>sender</code> has to reply by stop sending data and finally indicating end of audio data.</dd>
+<dt><code>DLE</code> (0x10)</dt>
+<dd>a single byte with value 0x10 in the data stream.</dd>
+<dt><code>0</code></dt>
+<dd>Touch-tone &quot;0&quot; received. Valid only in direction from emulator to application.</dd>
+<dt><code>1</code></dt>
+<dd>Touch-tone &quot;1&quot; received. Valid only in direction from emulator to application.</dd>
+<dt><code>2</code></dt>
+<dd>Touch-tone &quot;2&quot; received. Valid only in direction from emulator to application.</dd>
+<dt><code>3</code></dt>
+<dd>Touch-tone &quot;3&quot; received. Valid only in direction from emulator to application.</dd>
+<dt><code>4</code></dt>
+<dd>Touch-tone &quot;4&quot; received. Valid only in direction from emulator to application.</dd>
+<dt><code>5</code></dt>
+<dd>Touch-tone &quot;5&quot; received. Valid only in direction from emulator to application.</dd>
+<dt><code>6</code></dt>
+<dd>Touch-tone &quot;6&quot; received. Valid only in direction from emulator to application.</dd>
+<dt><code>7</code></dt>
+<dd>Touch-tone &quot;7&quot; received. Valid only in direction from emulator to application.</dd>
+<dt><code>8</code></dt>
+<dd>Touch-tone &quot;8&quot; received. Valid only in direction from emulator to application.</dd>
+<dt><code>9</code></dt>
+<dd>Touch-tone &quot;9&quot; received. Valid only in direction from emulator to application.</dd>
+<dt><code>#</code></dt>
+<dd>Touch-tone &quot;#&quot; received. Valid only in direction from emulator to application.</dd>
+<dt><code>*</code></dt>
+<dd>Touch-tone &quot;*&quot; received. Valid only in direction from emulator to application.</dd>
+<dt><code>A</code></dt>
+<dd>Touch-tone &quot;A&quot; received. Valid only in direction from emulator to application.</dd>
+<dt><code>B</code></dt>
+<dd>Touch-tone &quot;B&quot; received. Valid only in direction from emulator to application.</dd>
+<dt><code>C</code></dt>
+<dd>Touch-tone &quot;C&quot; received. Valid only in direction from emulator to application.</dd>
+<dt><code>D</code></dt>
+<dd>Touch-tone &quot;D&quot; received. Valid only in direction from emulator to application.</dd></dl>
 <h2>Author</h2>
 <p>Fritz Elfert &lt;fritz [at] isdn4linux.de&gt;</p>
 <h2>See Also</h2>

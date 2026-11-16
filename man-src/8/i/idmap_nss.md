@@ -20,7 +20,7 @@ This example shows how to use idmap_nss to check the local accounts for its own 
  idmap config * : backend = tdb
  idmap config * : range = 1000000-1999999
  idmap config SAMBA : backend = nss
- idmap config SAMBA : range = 1000-999999</pre></dl>
+ idmap config SAMBA : range = 1000-999999</pre></dd></dl>
 
 <h2>Author</h2>
 

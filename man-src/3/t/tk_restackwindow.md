@@ -14,9 +14,9 @@ int
 <code>Tk_RestackWindow</code>(<i>tkwin, aboveBelow, other</i>)</pre>
 <h2>Arguments</h2>
 <dl COMPACT>
-<dd>Tk_Window <i>tkwin</i> (in) Token for window to restack.</p>
-<dd>int <i>aboveBelow</i> (in) Indicates new position of <i>tkwin</i> relative to <i>other</i>; must be <code>Above</code> or <code>Below</code>.</p>
-<dd>Tk_Window <i>other</i> (in) <i>Tkwin</i> will be repositioned just above or below this window. Must be a sibling of <i>tkwin</i> or a descendant of a sibling. If NULL then <i>tkwin</i> is restacked above or below all siblings. </p>
+<dd>Tk_Window <i>tkwin</i> (in) Token for window to restack.</dd>
+<dd>int <i>aboveBelow</i> (in) Indicates new position of <i>tkwin</i> relative to <i>other</i>; must be <code>Above</code> or <code>Below</code>.</dd>
+<dd>Tk_Window <i>other</i> (in) <i>Tkwin</i> will be repositioned just above or below this window. Must be a sibling of <i>tkwin</i> or a descendant of a sibling. If NULL then <i>tkwin</i> is restacked above or below all siblings. </dd>
 </dl>
 <h2>Description</h2>
 <p><code>Tk_RestackWindow</code> changes the stacking order of <i>window</i> relative to its siblings. If <i>other</i> is specified as NULL then <i>window</i> is repositioned at the top or bottom of its stacking order, depending on whether <i>aboveBelow</i> is <code>Above</code> or <code>Below</code>. If <i>other</i> has a non-NULL value then <i>window</i> is repositioned just above or below <i>other</i>. </p>

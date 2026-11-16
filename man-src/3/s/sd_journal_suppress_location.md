@@ -9,10 +9,10 @@ url: "/docs/linux/man/3-sd_journal_suppress_location/"
 sd_journal_print, sd_journal_printv, sd_journal_send, sd_journal_sendv, sd_journal_perror, SD_JOURNAL_SUPPRESS_LOCATION - Submit log entries to the journal 
 
 <h2>Synopsis</h2><pre>#include &lt;systemd/sd-journal.h&gt;</pre><dl COMPACT><dt> <b>int sd_journal_print(int&nbsp;<wbr></b><i>priority</i><b>, const char&nbsp;<wbr>*</b><i>format</i><b>, ...);</b>
-<dt> <b>int sd_journal_printv(int&nbsp;<wbr></b><i>priority</i><b>, const char&nbsp;<wbr>*</b><i>format</i><b>, va_list&nbsp;<wbr></b><i>ap</i><b>);</b>
-<dt> <b>int sd_journal_send(const char&nbsp;<wbr>*</b><i>format</i><b>, ...);</b>
-<dt> <b>int sd_journal_sendv(const struct iovec&nbsp;<wbr>*</b><i>iov</i><b>, int&nbsp;<wbr></b><i>n</i><b>);</b>
-<dt> <b>int sd_journal_perror(const char&nbsp;<wbr>*</b><i>message</i><b>);</b></dl><h2>Description</h2><b>sd_journal_print()</b>
+</dt><dt> <b>int sd_journal_printv(int&nbsp;<wbr></b><i>priority</i><b>, const char&nbsp;<wbr>*</b><i>format</i><b>, va_list&nbsp;<wbr></b><i>ap</i><b>);</b>
+</dt><dt> <b>int sd_journal_send(const char&nbsp;<wbr>*</b><i>format</i><b>, ...);</b>
+</dt><dt> <b>int sd_journal_sendv(const struct iovec&nbsp;<wbr>*</b><i>iov</i><b>, int&nbsp;<wbr></b><i>n</i><b>);</b>
+</dt><dt> <b>int sd_journal_perror(const char&nbsp;<wbr>*</b><i>message</i><b>);</b></dt></dl><h2>Description</h2><b>sd_journal_print()</b>
 <dd>may be used to submit simple, plain text log entries to the system journal. The first argument is a priority value. This is followed by a format string and its parameters, similar to <b><a HREF="/docs/linux/man/3-printf/">printf</a></b>(3) or <b><a HREF="/docs/linux/man/3-syslog/">syslog</a></b>(3). The priority value is one of <b>LOG_EMERG</b>, <b>LOG_ALERT</b>, <b>LOG_CRIT</b>, <b>LOG_ERR</b>, <b>LOG_WARNING</b>, <b>LOG_NOTICE</b>, <b>LOG_INFO</b>, <b>LOG_DEBUG</b>, as defined in syslog.h, see <b><a HREF="/docs/linux/man/3-syslog/">syslog</a></b>(3) for details. It is recommended to use this call to submit log messages in the application locale or system locale and in UTF-8 format, but no such restrictions are enforced. 
 
  <b>sd_journal_printv()</b> is similar to <b>sd_journal_print()</b> but takes a variable argument list encapsulated in an object of type <i>va_list</i> (see <b><a HREF="/docs/linux/man/3-stdarg/">stdarg</a></b>(3) for more information) instead of the format string. It is otherwise equivalent in behavior. 
@@ -25,10 +25,10 @@ sd_journal_print, sd_journal_printv, sd_journal_send, sd_journal_sendv, sd_journ
 
  Note that <b>sd_journal_send()</b> is a wrapper around <b>sd_journal_sendv()</b> to make it easier to use when only text strings shall be submitted. Also, the following two calls are mostly equivalent: 
 
-<dl COMPACT><dd><pre>sd_journal_print(LOG_INFO, &quot;Hello World, this is PID %lu!&quot;, (unsigned long) getpid());
+</dd><dl COMPACT><dd><pre>sd_journal_print(LOG_INFO, &quot;Hello World, this is PID %lu!&quot;, (unsigned long) getpid());
 sd_journal_send(&quot;MESSAGE=Hello World, this is PID %lu!&quot;, (unsigned long) getpid(),
  &quot;PRIORITY=%i&quot;, LOG_INFO,
- NULL);</pre></dl>
+ NULL);</pre></dd></dl>
  
 
  Note that these calls implicitly add fields for the source file, function name and code line where invoked. This is implemented with macros. If this is not desired, it can be turned off by defining SD_JOURNAL_SUPPRESS_LOCATION before including sd-journal.h. 

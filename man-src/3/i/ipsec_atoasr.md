@@ -41,12 +41,12 @@ description: "ipsec_atoasr, ipsec_rangetoa – convert ASCII to Internet address
 <p> The error-reporting convention lends itself to slightly obscure code, because many readers will not think of NULL as signifying success. A good way to make it clearer is to write something like: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre><code>
 const char *error;
 error = atoasr(/* ... */);
 if (error != NULL) {
 /* something went wrong */
 </code></pre>
-</dl>
+</dd></dl>
 <h2>Index</h2>

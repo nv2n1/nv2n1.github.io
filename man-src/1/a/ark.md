@@ -11,8 +11,8 @@ description: "ark – KDE archiving tool"
 <p> ark &#8211; KDE archiving tool </p>
 <h2>SYNOPSIS</h2>
 <dl>
-<dt> <code>ark</code> [<code>-b</code>] [<code>-a</code>] [<code>-e</code>] [<code>-c</code>] [<code>-f</code><i></p>
-<dd>suffix</i>] [<code>-p</code>] [<code>-t</code><i> file</i>] [<code>-d</code>] [<code>-o</code><i> directory</i>] [KDE Generic Options] [Qt(TM)&nbsp;<wbr>Generic Options]</dl>
+<dt> <code>ark</code> [<code>-b</code>] [<code>-a</code>] [<code>-e</code>] [<code>-c</code>] [<code>-f</code><i></dt>
+<dd>suffix</i>] [<code>-p</code>] [<code>-t</code><i> file</i>] [<code>-d</code>] [<code>-o</code><i> directory</i>] [KDE Generic Options] [Qt(TM)&nbsp;<wbr>Generic Options]</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> Ark is a program for managing various compressed file formats within KDE. Archives can be viewed, extracted, created and modified with Ark. The program can handle various formats such as tar, gzip, bzip2, zip, rar (when the appropriate libraries or command-line programs are installed).</p>
 <h2>OPERATION MODES</h2>
@@ -24,54 +24,54 @@ description: "ark – KDE archiving tool"
 <p> <code>-d, &#8211;dialog</code></p>
 <dl>
 <dt>
-<dd> Show a dialog for specifying the options for a batch or add operation.</dl>
+</dt><dd> Show a dialog for specifying the options for a batch or add operation.</dd></dl>
 <p> <code>-o, &#8211;destination </code><i>directory</i></p>
 <dl>
 <dt>
-<dd> Default the extraction directory to <i>directory</i>. If not passed, the current path is used.</dl>
+</dt><dd> Default the extraction directory to <i>directory</i>. If not passed, the current path is used.</dd></dl>
 <h3>Options for adding files</h3>
 <p> <code>-c, &#8211;add</code></p>
 <dl>
 <dt>
-<dd> Query the user for an archive filename and add specified files to it. Quit when finished.</dl>
+</dt><dd> Query the user for an archive filename and add specified files to it. Quit when finished.</dd></dl>
 <p> <code>-t, &#8211;add-to </code><i>filename</i></p>
 <dl>
 <dt>
-<dd> Add the specified files to <i>filename</i>. Create archive if it does not exist. Quit when finished.</dl>
+</dt><dd> Add the specified files to <i>filename</i>. Create archive if it does not exist. Quit when finished.</dd></dl>
 <p> <code>-p, &#8211;changetofirstpath</code></p>
 <dl>
 <dt>
-<dd> Change the current directory to the first entry and add all other entries relative to this one.</dl>
+</dt><dd> Change the current directory to the first entry and add all other entries relative to this one.</dd></dl>
 <p> <code>-f, &#8211;autofilename </code><i>suffix</i></p>
 <dl>
 <dt>
-<dd> Automatically choose a filename, with the selected <i>suffix</i> (for example rar, tar.gz, zip or any other supported types).</dl>
+</dt><dd> Automatically choose a filename, with the selected <i>suffix</i> (for example rar, tar.gz, zip or any other supported types).</dd></dl>
 <h3>Options for batch extraction</h3>
 <p> <code>b, &#8211;batch</code></p>
 <dl>
 <dt>
-<dd> Use the batch interface instead of the usual dialog. This option is implied if more than one url is specified.</dl>
+</dt><dd> Use the batch interface instead of the usual dialog. This option is implied if more than one url is specified.</dd></dl>
 <p> <code>-e, &#8211;autodestination</code></p>
 <dl>
 <dt>
-<dd> The destination argument will be set to the path of the first file supplied.</dl>
+</dt><dd> The destination argument will be set to the path of the first file supplied.</dd></dl>
 <p> <code>-a, &#8211;autosubfolder</code></p>
 <dl>
 <dt>
-<dd> Archive contents will be read, and if detected to not be a single folder archive, a subfolder by the name of the archive will be created.</dl>
+</dt><dd> Archive contents will be read, and if detected to not be a single folder archive, a subfolder by the name of the archive will be created.</dd></dl>
 <h2>EXAMPLES</h2>
 <p> <code>ark</code><code>&#8211;batch</code><i>archive.tar.bz2</i></p>
 <dl>
 <dt>
-<dd> Will extract <i>archive.tar.bz2</i> into the current directory without showing any GUI.</dl>
+</dt><dd> Will extract <i>archive.tar.bz2</i> into the current directory without showing any GUI.</dd></dl>
 <p> <code>ark</code><code>-b</code><code>-d</code><i>archive.tar.bz2</i><i>archive2.zip</i></p>
 <dl>
 <dt>
-<dd> Will first show an extraction options dialog and then extract both <i>archive.tar.bz2</i> and <i>archive2.zip</i> into the directory chosen in the dialog.</dl>
+</dt><dd> Will first show an extraction options dialog and then extract both <i>archive.tar.bz2</i> and <i>archive2.zip</i> into the directory chosen in the dialog.</dd></dl>
 <p> <code>ark</code><code>&#8211;add-to</code><i>my-archive.zip</i><i>photo1.jpg</i><i>text.txt</i></p>
 <dl>
 <dt>
-<dd> Will create <i>my-archive.zip</i> if does not exist and then add <i>photo1.jpg</i> and <i>text.txt</i> to it.</dl>
+</dt><dd> Will create <i>my-archive.zip</i> if does not exist and then add <i>photo1.jpg</i> and <i>text.txt</i> to it.</dd></dl>
 <h2>AUTHORS</h2>
 <p> Ark is currently maintained by Harald Hvaal&lt;haraldhv [at] stud.ntnu.no&gt; and Raphael Kubo da Costa&lt;kubito [at] gmail.com&gt;. </p>
 <p> This man page was first written by Lauri Watts&lt;lauri [at] kde.org&gt; in 2005 for KDE 3.4, and was later updated in 2009 by Raphael Kubo da Costa&lt;kubito [at] gmail.com&gt;.</p>
@@ -79,9 +79,9 @@ description: "ark – KDE archiving tool"
 <p> <code>Lauri Watts</code> &lt;lauri [at] kde.org&gt;</p>
 <dl>
 <dt>
-<dd> Author.</dl>
+</dt><dd> Author.</dd></dl>
 <p> <code>Raphael Kubo da Costa</code> &lt;kubito [at] gmail.com&gt;</p>
 <dl>
 <dt>
-<dd> Author.</dl>
+</dt><dd> Author.</dd></dl>
 <h2>Index</h2>

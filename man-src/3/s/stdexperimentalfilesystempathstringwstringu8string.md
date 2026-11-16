@@ -11,23 +11,15 @@ std::experimental::filesystem::path::string,wstring,u8string,... - std::experime
 <h2>Synopsis</h2>
 
 <pre><code>template &lt;class CharT, class Traits = std::char_traits&lt;CharT&gt;,
-
           class Alloc = std::allocator&lt;CharT&gt;&gt;
 (1)(filesystem TS)
-
     std::basic_string&lt;CharT, Traits, Alloc&gt;
-
     string(const Alloc &amp;a = Alloc()) const;
-
 std::string string() const;
-
 std::wstring wstring() const;
-
 std::string u8string() const;
 (2)(filesystem TS)
-
     std::u16string u16string() const;
-
 std::u32string u32string() const;</code></pre> 
 Returns the internal pathname in native pathname format, converted to specific string type. Conversion, if any, is specified in todo. 
 1) All memory allocations are performed by a. 
@@ -48,18 +40,12 @@ The internal pathname in native pathname format, converted to specified string t
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;cstdio&gt;
-
 #include &lt;clocale&gt;
-
 #include &lt;fstream&gt;
-
 #include &lt;iostream&gt;
-
 #include &lt;experimental/filesystem&gt;
-
 namespace fs = std::experimental::filesystem;
 int main()
-
 {
     std::setlocale(LC_ALL, &quot;en_US.utf8&quot;);
     std::locale::global(std::locale(&quot;en_US.utf8&quot;));

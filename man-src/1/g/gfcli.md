@@ -14,24 +14,24 @@ description: "gfcli – manual page for gfcli (glusterfs-coreutils) 0.2.0"
 <h2>DESCRIPTION</h2>
 <p> Start a Gluster shell to execute commands on a remote Gluster volume.</p>
 <dl>
-<dt><code>-o</code>, <code>&#8211;xlator-option</code>=<i>OPTION</i></p>
-<dd> specify a translator option for the connection. Multiple options are supported and take the form xlator.key=value.</p>
-<dt><code>-p</code>, <code>&#8211;port</code>=<i>PORT</i></p>
-<dd> specify a port on which to connect</p>
-<dt><code>&#8211;help</code></p>
-<dd> display this help and exit</p>
-<dt><code>&#8211;version</code></p>
-<dd> output version information and exit</dl>
+<dt><code>-o</code>, <code>&#8211;xlator-option</code>=<i>OPTION</i></dt>
+<dd> specify a translator option for the connection. Multiple options are supported and take the form xlator.key=value.</dd>
+<dt><code>-p</code>, <code>&#8211;port</code>=<i>PORT</i></dt>
+<dd> specify a port on which to connect</dd>
+<dt><code>&#8211;help</code></dt>
+<dd> display this help and exit</dd>
+<dt><code>&#8211;version</code></dt>
+<dd> output version information and exit</dd></dl>
 <h2>EXAMPLES</h2>
 <dl>
 <dt>
-<dd> gfcli <a href="glfs://localhost/groot">glfs://localhost/groot</a></p>
+</dt><dd> gfcli <a href="glfs://localhost/groot">glfs://localhost/groot</a></dd>
 <dt>
-<dd> Start a shell with a connection to localhost opened.</p>
+</dt><dd> Start a shell with a connection to localhost opened.</dd>
 <dt>
-<dd> gfcli -o *replicate*.data-self-heal=on <a href="glfs://localhost/groot">glfs://localhost/groot</a></p>
+</dt><dd> gfcli -o *replicate*.data-self-heal=on <a href="glfs://localhost/groot">glfs://localhost/groot</a></dd>
 <dt>
-<dd> Start a shell with a connection localhost open, with the translator option data-self-head set to on.</dl>
+</dt><dd> Start a shell with a connection localhost open, with the translator option data-self-head set to on.</dd></dl>
 <h2>AUTHOR</h2>
 <p> Written by Craig Cabrey.</p>
 <h2>COPYRIGHT</h2>

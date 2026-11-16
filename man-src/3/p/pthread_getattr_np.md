@@ -11,28 +11,26 @@ description: "pthread_getattr_np – get attributes of created thread"
 <h2>Synopsis</h2>
 <pre><code>#define _GNU_SOURCE /* See feature_test_macros(7) */
 #include &lt;pthread.h&gt;
-
 int pthread_getattr_np(pthread_t thread, pthread_attr_t *attr);
-
 Compile and link with - pthread.</code></pre>
 <h2>Description</h2>
 <p>The <code>pthread_getattr_np</code>() function initializes the thread attributes object referred to by <i>attr</i> so that it contains actual attribute values describing the running thread <i>thread</i>. </p>
 <p> The returned attribute values may differ from the corresponding attribute values passed in the <i>attr</i> object that was used to create the thread using <code><a href="/docs/linux/man/3-pthread_create/">pthread_create</a></code>(3). In particular, the following attributes may differ:</p>
 <dl>
-<dt>*</p>
-<dd>the detach state, since a joinable thread may have detached itself after creation;</p>
-<dt>*</p>
-<dd>the stack size, which the implementation may align to a suitable boundary.</p>
-<dt>*</p>
-<dd>and the guard size, which the implementation may round upward to a multiple of the page size, or ignore (i.e., treat as 0), if the application is allocating its own stack.</dl>
+<dt>*</dt>
+<dd>the detach state, since a joinable thread may have detached itself after creation;</dd>
+<dt>*</dt>
+<dd>the stack size, which the implementation may align to a suitable boundary.</dd>
+<dt>*</dt>
+<dd>and the guard size, which the implementation may round upward to a multiple of the page size, or ignore (i.e., treat as 0), if the application is allocating its own stack.</dd></dl>
 <p> Furthermore, if the stack address attribute was not set in the thread attributes object used to create the thread, then the returned thread attributes object will report the actual stack address that the implementation selected for the thread. </p>
 <p> When the thread attributes object returned by <code>pthread_getattr_np</code>() is no longer required, it should be destroyed using <code><a href="/docs/linux/man/3-pthread_attr_destroy/">pthread_attr_destroy</a></code>(3).</p>
 <h2>Return Value</h2>
 <p>On success, this function returns 0; on error, it returns a nonzero error number.</p>
 <h2>Errors</h2>
 <dl>
-<dt><code>ENOMEM</code></p>
-<dd>Insufficient memory.</dl>
+<dt><code>ENOMEM</code></dt>
+<dd>Insufficient memory.</dd></dl>
 <p> In addition, if <i>thread</i> refers to the main thread, then <code>pthread_getattr_np</code>() can fail because of errors from various underlying calls: <code><a href="/docs/linux/man/3-fopen/">fopen</a></code>(3), if <i>/proc/self/maps</i> can&#8217;t be opened; and <code><a href="/docs/linux/man/2-getrlimit/">getrlimit</a></code>(2), if the <code>RLIMIT_STACK</code> resource limit is not supported.</p>
 <h2>Versions</h2>
 <p>This function is available in glibc since version 2.2.3.</p>
@@ -71,9 +69,7 @@ Compile and link with - pthread.</code></pre>
 <pre><code>Attributes of created thread : Guard size = 0 bytes
                                    Stack address = 0x804d000(EOS = 0x8055000)
                                        Stack size = 0x8000(32768)bytes
-
                                            Program source
-
 #define _GNU_SOURCE /* To get pthread_getattr_np() declaration */
 #include &lt;errno.h&gt;
 #include &lt;pthread.h&gt;
@@ -193,7 +189,6 @@ get_thread_attributes_from_cl(int argc, char *argv[],
             if (s != 0)
                 handle_error_en(s, &quot;posix_memalign&quot;);
             printf(&quot;Allocated thread stack at %p
-
 &quot;, stack_addr);
             s = pthread_attr_setstack(attrp, stack_addr, stack_size);
             if (s != 0)

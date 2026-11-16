@@ -15,36 +15,30 @@ usage : ucfq[options](/ path / to / file | package)[/ path / to / file | package
 </code></pre>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>&#8211;help</code> <code>h</code> Print out a usage message.</p>
+<dt><code>&#8211;help</code> <code>h</code> Print out a usage message.</dt>
 <dd>
-<dt><code>&#8211;debug</code> <code>-d</code> Turn on debugging mode.</p>
+</dd><dt><code>&#8211;debug</code> <code>-d</code> Turn on debugging mode.</dt>
 <dd>
-<dt><code>&#8211;verbose</code> <code>-v</code> Make the script more verbose..</p>
+</dd><dt><code>&#8211;verbose</code> <code>-v</code> Make the script more verbose..</dt>
 <dd>
-<dt><code>&#8211;with-colons</code> <code>-w</code></p>
+</dd><dt><code>&#8211;with-colons</code> <code>-w</code></dt>
 <dd>
+</dd><dl>
 <dl>
 <dt>
-<dd>
-<dl>
-<dt>
-<dd> Normally, the script presents the information in a human readable tabular format, but that may be harder for a machine to parse. With this option, the output is a compact, colon separated line, with no dividers, headers, or footer.</dl>
+</dt><dd> Normally, the script presents the information in a human readable tabular format, but that may be harder for a machine to parse. With this option, the output is a compact, colon separated line, with no dividers, headers, or footer.</dd></dl>
 </dl>
 <dl>
-<dt>
-<dd></dl>
-<dt><code>&#8211;state-dr</code> dir</p>
+</dl>
+<dt><code>&#8211;state-dr</code> dir</dt>
 <dd>
+</dd><dl>
 <dl>
 <dt>
-<dd>
-<dl>
-<dt>
-<dd> Set the state directory to <tt>&quot;/path/to/dir&quot;</tt> instead of the default <tt>&quot;/var/lib/ucf&quot;</tt>. Used mostly for testing.</dl>
+</dt><dd> Set the state directory to <tt>&quot;/path/to/dir&quot;</tt> instead of the default <tt>&quot;/var/lib/ucf&quot;</tt>. Used mostly for testing.</dd></dl>
 </dl>
 <dl>
-<dt>
-<dd></dl>
+</dl>
 </dl>
 <h2>DESCRIPTION</h2>
 <p> This script takes a set of arguments, each of which is a package name (and thus does not contain a /) or a full path to a configuration file, and outputs the associated package, if any, if the file exists on disk, and whether it has been modified by the user. The output is either a human readable tabular form, or a compact colon-separated machine friendly format. </p>

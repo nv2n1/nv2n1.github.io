@@ -17,12 +17,12 @@ description: "PNG driver – driver to create PNG and PPM images (drivers)"
 <p> Several environment variables effect the operation of the PNG driver.</p>
 <dl>
 <dt>
-<dd> <code>GRASS_WIDTH=xxx</code><br />
+</dt><dd> <code>GRASS_WIDTH=xxx</code><br />
  the width of the image map (default is 640).<br />
  <code>GRASS_HEIGHT=yyy</code><br />
  the height of the image map (default is 480).<br />
  <code>GRASS_PNGFILE=filename</code><br />
- the filename to put the resulting image in, default is <code>map.png</code>. If you set GRASS_PNGFILE to a filename which ends in &quot;.ppm&quot;, a PPM file will be created. </p>
+ the filename to put the resulting image in, default is <code>map.png</code>. If you set GRASS_PNGFILE to a filename which ends in &quot;.ppm&quot;, a PPM file will be created. </dd>
 <p>&nbsp;<wbr> <code>GRASS_BACKGROUNDCOLOR=RRGGBB</code><br />
  specifies the background color to use in RGB notation (hex values). Default is <code>000000</code> (black).<br />
  <code>GRASS_TRANSPARENT=[TRUE|FALSE]</code><br />
@@ -64,3 +64,4 @@ description: "PNG driver – driver to create PNG and PPM images (drivers)"
 <p> Full index </p>
 <p> � 2003-2008 GRASS Development Team </p>
 <h2>Index</h2>
+</p>

@@ -20,7 +20,7 @@ last the last message in the folder
 cur the most recently accessed message
 prev the message numerically preceding ``cur''
 next the message numerically following ``cur''</pre>
-</dl>
+</dd></dl>
 <p> In commands that take a `msg&#8217; argument, the default is &#8220;cur&#8221;. As a shorthand, &#8220;.&#8221; is equivalent to &#8220;cur&#8221;. </p>
 <p> For example: In a folder containing five messages numbered 5, 10, 94, 177 and 325, &#8220;first&#8221; is 5 and &#8220;last&#8221; is 325. If &#8220;cur&#8221; is 94, then &#8220;prev&#8221; is 10 and &#8220;next&#8221; is 177. </p>
 <p> The word `msgs&#8217; indicates that one or more messages may be specified. Such a specification consists of one message designation or of several message designations, as separate arguments. A message designation consists either of a message name as defined above, or a message range. </p>
@@ -43,19 +43,19 @@ next the message numerically following ``cur''</pre>
 <h3>Sequence Negation</h3>
 <p><code>Nmh</code> provides the ability to select all messages not elements of a user-defined sequence. To do this, the user should define the entry &#8220;Sequence-Negation&#8221; in the <code>nmh</code> profile file; its value may be any string. This string is then used to preface an existing user-defined sequence name. This specification then refers to those messages not elements of the specified sequence name. For example, if the profile entry is: </p>
 <dl>
-<dd>Sequence-Negation: not</dl>
+<dd>Sequence-Negation: not</dd></dl>
 <p> then anytime an <code>nmh</code> command is given &#8220;notfoo&#8221; as a `msg&#8217; or `msgs&#8217; argument, it would substitute all messages that are not elements of the sequence &#8220;foo&#8221;. </p>
 <p> Obviously, the user should beware of defining sequences with names that begin with the value of the &#8220;Sequence-Negation&#8221; profile entry.</p>
 <h3>The Previous Sequence</h3>
 <p><code>Nmh</code> provides the ability to remember the `msgs&#8217; or `msg&#8217; argument last given to an <code>nmh</code> command. The entry &#8220;Previous-Sequence&#8221; should be defined in the <code>nmh</code> profile; its value should be a sequence name or multiple sequence names, as separate arguments. If this entry is defined, when when an <code>nmh</code> command finishes, it will define the sequence(s) named in the value of this entry to be those messages that were specified to the command. Hence, a profile entry of </p>
 <dl>
-<dd>Previous-Sequence: pseq</dl>
+<dd>Previous-Sequence: pseq</dd></dl>
 <p> directs any <code>nmh</code> command that accepts a `msg&#8217; or `msgs&#8217; argument to define the sequence &#8220;pseq&#8221; as those messages when it finishes. </p>
 <p> <code>Note</code>: there can be a performance penalty in using the &#8220;Previous-Sequence&#8221; facility. If it is used, <code>all</code> <code>nmh</code> programs have to write the sequence information to the <i>.mh_sequences</i> file for the folder each time they run. If the &#8220;Previous-Sequence&#8221; profile entry is not included, only <code>pick</code> and <code>mark</code> will write to the <code>.mh_sequences</code> file.</p>
 <h3>The Unseen Sequence</h3>
 <p>Finally, many users like to indicate which messages have not been previously seen by them. The commands <code>inc</code>, <code>rcvstore</code>, <code>show</code>, <code>mhshow</code>, and <code>flist</code> honor the profile entry &#8220;Unseen-Sequence&#8221; to support this activity. This entry in the <i>.mh_profile</i> should be defined as one or more sequence names, as separate arguments. If there is a value for &#8220;Unseen-Sequence&#8221; in the profile, then whenever new messages are placed in a folder (using <code>inc</code> or <code>rcvstore</code>), the new messages will also be added to all the sequences named in this profile entry. For example, a profile entry of </p>
 <dl>
-<dd>Unseen-Sequence: unseen</dl>
+<dd>Unseen-Sequence: unseen</dd></dl>
 <p> directs <code>inc</code> to add new messages to the sequence &#8220;unseen&#8221;. Unlike the behavior of the &#8220;Previous-Sequence&#8221; entry in the profile, however, the sequence(s) will <code>not</code> be zeroed by <code>inc</code>. </p>
 <p> Similarly, whenever <code>show</code>, <code>mhshow</code>, <code>next</code>, or <code>prev</code> displays a message, that message will be removed from any sequences named by the &#8220;Unseen-Sequence&#8221; entry in the profile.</p>
 <h3>Sequence File Format</h3>
@@ -66,7 +66,7 @@ next the message numerically following ``cur''</pre>
 <pre>work: 3 6 8 22-33 46
 unseen: 47 49-51 54
 cur: 46</pre>
-</dl>
+</dd></dl>
 <p> <code>Nmh</code> commands that modify the sequence file will silently remove sequences for nonexistant messages when the sequence file is updated. The exception to this is the &#8220;cur&#8221; sequence, which is allowed to point to a nonexistant message.</p>
 <h3>Sequence File Locking</h3>
 <p>The &#8220;datalocking&#8221; profile entry controls the type of locking used when reading and writing sequence files. The locking mechanisms supported are detailed in <i><a href="/docs/linux/man/5-mh-profile/">mh-profile</a></i>(5). This protects sequence file integrity when multiple <code>nmh</code> commands are run simultaneously. <code>Nmh</code> commands that modify the sequence file use transactional locks; the lock is held from the time the sequence file is read until it it written out. This ensures that modifications to the sequence file will not be lost if multiple commands are run simultaneously. Long-running <code>nmh</code> commands, such as <code>inc</code> and <code>pick</code>, will release the sequence lock during the bulk of their runtime and reread the sequence file after their processing is complete to reduce lock contention time. </p>

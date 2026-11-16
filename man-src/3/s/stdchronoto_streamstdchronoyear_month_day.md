@@ -11,11 +11,8 @@ std::chrono::to_stream(std::chrono::year_month_day) - std::chrono::to_stream(std
 <h2>Synopsis</h2>
 
 <pre><code>template &lt;class CharT, class Traits&gt;
-
 std::basic_ostream&lt;CharT, Traits&gt; &amp;(since C++ 20)
-
     to_stream(std::basic_ostream&lt;CharT, Traits&gt; &amp;os, const CharT *fmt,
-
               const std::chrono::year_month_day &amp;ymd);</code></pre> 
 Outputs ymd to the stream os, formatted according to the null-terminated format string fmt. 
 Format string 

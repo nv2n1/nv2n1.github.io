@@ -50,9 +50,10 @@ original executing thread.
 * </pre>
 <p><code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>PAPI_set_opt</code> </p>
+<dd><code>PAPI_set_opt</code> </dd>
 <p>&nbsp;<wbr><code>PAPI_list_threads</code>&nbsp;<wbr> </p>
 <p>&nbsp;<wbr><code>PAPI_thread_id</code>&nbsp;<wbr> </p>
 <p>&nbsp;<wbr><code>PAPI_thread_init</code>&nbsp;<wbr></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for PAPI from the source code.</p>
+</p>

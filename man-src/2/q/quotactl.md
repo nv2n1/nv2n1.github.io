@@ -22,32 +22,30 @@ int quotactl(int cmd, const char *special, int id, caddr_t addr);
 <p> The <i>addr</i> argument is the address of an optional, command-specific, data structure that is copied in or out of the system. The interpretation of <i>addr</i> is given with each operation below. </p>
 <p> The <i>subcmd</i> value is one of the following operations:</p>
 <dl>
-<dt><code>Q_QUOTAON</code></p>
-<dd> Turn on quotas for a filesystem. The <i>id</i> argument is the identification number of the quota format to be used. Currently, there are three supported quota formats:</p>
+<dt><code>Q_QUOTAON</code></dt>
+<dd> Turn on quotas for a filesystem. The <i>id</i> argument is the identification number of the quota format to be used. Currently, there are three supported quota formats:</dd>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt><code>QFMT_VFS_OLD</code></p>
-<dd> The original quota format.</p>
-<dt><code>QFMT_VFS_V0</code></p>
-<dd> The standard VFS v0 quota format, which can handle 32-bit UIDs and GIDs and quota limits up to 2^42 bytes and 2^32 inodes.</p>
-<dt><code>QFMT_VFS_V1</code></p>
-<dd> A quota format that can handle 32-bit UIDs and GIDs and quota limits of 2^64 bytes and 2^64 inodes.</dl>
+<dt><code>QFMT_VFS_OLD</code></dt>
+<dd> The original quota format.</dd>
+<dt><code>QFMT_VFS_V0</code></dt>
+<dd> The standard VFS v0 quota format, which can handle 32-bit UIDs and GIDs and quota limits up to 2^42 bytes and 2^32 inodes.</dd>
+<dt><code>QFMT_VFS_V1</code></dt>
+<dd> A quota format that can handle 32-bit UIDs and GIDs and quota limits of 2^64 bytes and 2^64 inodes.</dd></dl>
 </dl>
 <dt>
-<dd> The <i>addr</i> argument points to the pathname of a file containing the quotas for the filesystem. The quota file must exist; it is normally created with the <code><a href="/docs/linux/man/8-quotacheck/">quotacheck</a></code>(8) program</p>
+</dt><dd> The <i>addr</i> argument points to the pathname of a file containing the quotas for the filesystem. The quota file must exist; it is normally created with the <code><a href="/docs/linux/man/8-quotacheck/">quotacheck</a></code>(8) program</dd>
 <dt>
-<dd> Quota information can be also stored in hidden system inodes for ext4, XFS, and other filesystems if the filesystem is configured so. In this case, there are no visible quota files and there is no need to use <code><a href="/docs/linux/man/8-quotacheck/">quotacheck</a></code>(8). Quota information is always kept consistent by the filesystem and the <code>Q_QUOTAON</code> operation serves only to enable enforcement of quota limits. The presence of hidden system inodes with quota information is indicated by the <code>DQF_SYS_FILE</code> flag in the <i>dqi_flags</i> field returned by the <code>Q_GETINFO</code> operation.</p>
+</dt><dd> Quota information can be also stored in hidden system inodes for ext4, XFS, and other filesystems if the filesystem is configured so. In this case, there are no visible quota files and there is no need to use <code><a href="/docs/linux/man/8-quotacheck/">quotacheck</a></code>(8). Quota information is always kept consistent by the filesystem and the <code>Q_QUOTAON</code> operation serves only to enable enforcement of quota limits. The presence of hidden system inodes with quota information is indicated by the <code>DQF_SYS_FILE</code> flag in the <i>dqi_flags</i> field returned by the <code>Q_GETINFO</code> operation.</dd>
 <dt>
-<dd> This operation requires privilege (<code>CAP_SYS_ADMIN</code>).</p>
-<dt><code>Q_QUOTAOFF</code></p>
-<dd> Turn off quotas for a filesystem. The <i>addr</i> and <i>id</i> arguments are ignored. This operation requires privilege (<code>CAP_SYS_ADMIN</code>).</p>
-<dt><code>Q_GETQUOTA</code></p>
-<dd> Get disk quota limits and current usage for user or group <i>id</i>. The <i>addr</i> argument is a pointer to a <i>dqblk</i> structure defined in <i>&lt;sys/quota.h&gt;</i> as follows:</p>
+</dt><dd> This operation requires privilege (<code>CAP_SYS_ADMIN</code>).</dd>
+<dt><code>Q_QUOTAOFF</code></dt>
+<dd> Turn off quotas for a filesystem. The <i>addr</i> and <i>id</i> arguments are ignored. This operation requires privilege (<code>CAP_SYS_ADMIN</code>).</dd>
+<dt><code>Q_GETQUOTA</code></dt>
+<dd> Get disk quota limits and current usage for user or group <i>id</i>. The <i>addr</i> argument is a pointer to a <i>dqblk</i> structure defined in <i>&lt;sys/quota.h&gt;</i> as follows:</dd>
 <dt>
-<dd> /* uint64_t is an unsigned 64-bit integer;<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;uint32_t is an unsigned 32-bit integer&nbsp;*/ </p>
+</dt><dd> /* uint64_t is an unsigned 64-bit integer;<br />
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;uint32_t is an unsigned 32-bit integer&nbsp;*/ </dd>
 <p> struct dqblk { /* Definition since Linux 2.4.22 */<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;uint64_t dqb_bhardlimit;&nbsp;<wbr>&nbsp;/*&nbsp;Absolute limit on disk<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;quota blocks alloc&nbsp;*/<br />
@@ -70,13 +68,13 @@ int quotactl(int cmd, const char *special, int id, caddr_t addr);
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;dqblk structure are valid.&nbsp;*/ </p>
 <p> #define QIF_BLIMITS 1 #define QIF_SPACE 2 #define QIF_ILIMITS 4 #define QIF_INODES 8 #define QIF_BTIME 16 #define QIF_ITIME 32 #define QIF_LIMITS (QIF_BLIMITS | QIF_ILIMITS) #define QIF_USAGE (QIF_SPACE | QIF_INODES) #define QIF_TIMES (QIF_BTIME | QIF_ITIME) #define QIF_ALL (QIF_LIMITS | QIF_USAGE | QIF_TIMES)</p>
 <dt>
-<dd> The <i>dqb_valid</i> field is a bit mask that is set to indicate the entries in the <i>dqblk</i> structure that are valid. Currently, the kernel fills in all entries of the <i>dqblk</i> structure and marks them as valid in the <i>dqb_valid</i> field. Unprivileged users may retrieve only their own quotas; a privileged user (<code>CAP_SYS_ADMIN</code>) can retrieve the quotas of any user.</p>
-<dt><code>Q_GETNEXTQUOTA</code> (since Linux 4.6)</p>
-<dd> This operation is the same as <code>Q_GETQUOTA</code>, but it returns quota information for the next ID greater than or equal to <i>id</i> that has a quota set.</p>
+</dt><dd> The <i>dqb_valid</i> field is a bit mask that is set to indicate the entries in the <i>dqblk</i> structure that are valid. Currently, the kernel fills in all entries of the <i>dqblk</i> structure and marks them as valid in the <i>dqb_valid</i> field. Unprivileged users may retrieve only their own quotas; a privileged user (<code>CAP_SYS_ADMIN</code>) can retrieve the quotas of any user.</dd>
+<dt><code>Q_GETNEXTQUOTA</code> (since Linux 4.6)</dt>
+<dd> This operation is the same as <code>Q_GETQUOTA</code>, but it returns quota information for the next ID greater than or equal to <i>id</i> that has a quota set.</dd>
 <dt>
-<dd> The <i>addr</i> argument is a pointer to a <i>nextdqblk</i> structure whose fields are as for the <i>dqblk</i>, except for the addition of a <i>dqb_id</i> field that is used to return the ID for which quota information is being returned:</p>
+</dt><dd> The <i>addr</i> argument is a pointer to a <i>nextdqblk</i> structure whose fields are as for the <i>dqblk</i>, except for the addition of a <i>dqb_id</i> field that is used to return the ID for which quota information is being returned:</dd>
 <dt>
-<dd> struct nextdqblk {<br />
+</dt><dd> struct nextdqblk {<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;uint64_t dqb_bhardlimit;<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;uint64_t dqb_bsoftlimit;<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;uint64_t dqb_curspace;<br />
@@ -86,14 +84,14 @@ int quotactl(int cmd, const char *special, int id, caddr_t addr);
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;uint64_t dqb_btime;<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;uint64_t dqb_itime;<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;uint32_t dqb_valid;<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;uint32_t dqb_id; };</p>
-<dt><code>Q_SETQUOTA</code></p>
-<dd> Set quota information for user or group <i>id</i>, using the information supplied in the <i>dqblk</i> structure pointed to by <i>addr</i>. The <i>dqb_valid</i> field of the <i>dqblk</i> structure indicates which entries in the structure have been set by the caller. This operation supersedes the <code>Q_SETQLIM</code> and <code>Q_SETUSE</code> operations in the previous quota interfaces. This operation requires privilege (<code>CAP_SYS_ADMIN</code>).</p>
-<dt><code>Q_GETINFO</code> (since Linux 2.4.22)</p>
-<dd> Get information (like grace times) about quotafile. The <i>addr</i> argument should be a pointer to a <i>dqinfo</i> structure. This structure is defined in <i>&lt;sys/quota.h&gt;</i> as follows:</p>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;uint32_t dqb_id; };</dd>
+<dt><code>Q_SETQUOTA</code></dt>
+<dd> Set quota information for user or group <i>id</i>, using the information supplied in the <i>dqblk</i> structure pointed to by <i>addr</i>. The <i>dqb_valid</i> field of the <i>dqblk</i> structure indicates which entries in the structure have been set by the caller. This operation supersedes the <code>Q_SETQLIM</code> and <code>Q_SETUSE</code> operations in the previous quota interfaces. This operation requires privilege (<code>CAP_SYS_ADMIN</code>).</dd>
+<dt><code>Q_GETINFO</code> (since Linux 2.4.22)</dt>
+<dd> Get information (like grace times) about quotafile. The <i>addr</i> argument should be a pointer to a <i>dqinfo</i> structure. This structure is defined in <i>&lt;sys/quota.h&gt;</i> as follows:</dd>
 <dt>
-<dd> /* uint64_t is an unsigned 64-bit integer;<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;uint32_t is an unsigned 32-bit integer&nbsp;*/ </p>
+</dt><dd> /* uint64_t is an unsigned 64-bit integer;<br />
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;uint32_t is an unsigned 32-bit integer&nbsp;*/ </dd>
 <p> struct dqinfo { /* Defined since kernel 2.4.22 */<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;uint64_t dqi_bgrace;&nbsp;<wbr>&nbsp;/*&nbsp;Time before block soft limit<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;becomes hard limit&nbsp;*/<br />
@@ -114,32 +112,32 @@ int quotactl(int cmd, const char *special, int id, caddr_t addr);
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;dqinfo structure are valid.&nbsp;*/ </p>
 <p> #define IIF_BGRACE 1 #define IIF_IGRACE 2 #define IIF_FLAGS 4 #define IIF_ALL (IIF_BGRACE | IIF_IGRACE | IIF_FLAGS)</p>
 <dt>
-<dd> The <i>dqi_valid</i> field in the <i>dqinfo</i> structure indicates the entries in the structure that are valid. Currently, the kernel fills in all entries of the <i>dqinfo</i> structure and marks them all as valid in the <i>dqi_valid</i> field. The <i>id</i> argument is ignored.</p>
-<dt><code>Q_SETINFO</code> (since Linux 2.4.22)</p>
-<dd> Set information about quotafile. The <i>addr</i> argument should be a pointer to a <i>dqinfo</i> structure. The <i>dqi_valid</i> field of the <i>dqinfo</i> structure indicates the entries in the structure that have been set by the caller. This operation supersedes the <code>Q_SETGRACE</code> and <code>Q_SETFLAGS</code> operations in the previous quota interfaces. The <i>id</i> argument is ignored. This operation requires privilege (<code>CAP_SYS_ADMIN</code>).</p>
-<dt><code>Q_GETFMT</code> (since Linux 2.4.22)</p>
-<dd> Get quota format used on the specified filesystem. The <i>addr</i> argument should be a pointer to a 4-byte buffer where the format number will be stored.</p>
-<dt><code>Q_SYNC</code></p>
-<dd> Update the on-disk copy of quota usages for a filesystem. If <i>special</i> is NULL, then all filesystems with active quotas are sync&#8217;ed. The <i>addr</i> and <i>id</i> arguments are ignored.</p>
-<dt><code>Q_GETSTATS</code> (supported up to Linux 2.4.21)</p>
-<dd> Get statistics and other generic information about the quota subsystem. The <i>addr</i> argument should be a pointer to a <i>dqstats</i> structure in which data should be stored. This structure is defined in <i>&lt;sys/quota.h&gt;</i>. The <i>special</i> and <i>id</i> arguments are ignored.</p>
+</dt><dd> The <i>dqi_valid</i> field in the <i>dqinfo</i> structure indicates the entries in the structure that are valid. Currently, the kernel fills in all entries of the <i>dqinfo</i> structure and marks them all as valid in the <i>dqi_valid</i> field. The <i>id</i> argument is ignored.</dd>
+<dt><code>Q_SETINFO</code> (since Linux 2.4.22)</dt>
+<dd> Set information about quotafile. The <i>addr</i> argument should be a pointer to a <i>dqinfo</i> structure. The <i>dqi_valid</i> field of the <i>dqinfo</i> structure indicates the entries in the structure that have been set by the caller. This operation supersedes the <code>Q_SETGRACE</code> and <code>Q_SETFLAGS</code> operations in the previous quota interfaces. The <i>id</i> argument is ignored. This operation requires privilege (<code>CAP_SYS_ADMIN</code>).</dd>
+<dt><code>Q_GETFMT</code> (since Linux 2.4.22)</dt>
+<dd> Get quota format used on the specified filesystem. The <i>addr</i> argument should be a pointer to a 4-byte buffer where the format number will be stored.</dd>
+<dt><code>Q_SYNC</code></dt>
+<dd> Update the on-disk copy of quota usages for a filesystem. If <i>special</i> is NULL, then all filesystems with active quotas are sync&#8217;ed. The <i>addr</i> and <i>id</i> arguments are ignored.</dd>
+<dt><code>Q_GETSTATS</code> (supported up to Linux 2.4.21)</dt>
+<dd> Get statistics and other generic information about the quota subsystem. The <i>addr</i> argument should be a pointer to a <i>dqstats</i> structure in which data should be stored. This structure is defined in <i>&lt;sys/quota.h&gt;</i>. The <i>special</i> and <i>id</i> arguments are ignored.</dd>
 <dt>
-<dd> This operation is obsolete and was removed in Linux 2.4.22. Files in <i>/proc/sys/fs/quota/</i> carry the information instead.</dl>
+</dt><dd> This operation is obsolete and was removed in Linux 2.4.22. Files in <i>/proc/sys/fs/quota/</i> carry the information instead.</dd></dl>
 <p> For XFS filesystems making use of the XFS Quota Manager (XQM), the above operations are bypassed and the following operations are used:</p>
 <dl>
-<dt><code>Q_XQUOTAON</code></p>
-<dd> Turn on quotas for an XFS filesystem. XFS provides the ability to turn on/off quota limit enforcement with quota accounting. Therefore, XFS expects <i>addr</i> to be a pointer to an <i>unsigned int</i> that contains a bitwise combination of the following flags (defined in <i>&lt;xfs/xqm.h&gt;</i>):</p>
+<dt><code>Q_XQUOTAON</code></dt>
+<dd> Turn on quotas for an XFS filesystem. XFS provides the ability to turn on/off quota limit enforcement with quota accounting. Therefore, XFS expects <i>addr</i> to be a pointer to an <i>unsigned int</i> that contains a bitwise combination of the following flags (defined in <i>&lt;xfs/xqm.h&gt;</i>):</dd>
 <dt>
-<dd> XFS_QUOTA_UDQ_ACCT /* User quota accounting */ XFS_QUOTA_UDQ_ENFD /* User quota limits enforcement */ XFS_QUOTA_GDQ_ACCT /* Group quota accounting */ XFS_QUOTA_GDQ_ENFD /* Group quota limits enforcement */ XFS_QUOTA_PDQ_ACCT /* Project quota accounting */ XFS_QUOTA_PDQ_ENFD /* Project quota limits enforcement */</p>
+</dt><dd> XFS_QUOTA_UDQ_ACCT /* User quota accounting */ XFS_QUOTA_UDQ_ENFD /* User quota limits enforcement */ XFS_QUOTA_GDQ_ACCT /* Group quota accounting */ XFS_QUOTA_GDQ_ENFD /* Group quota limits enforcement */ XFS_QUOTA_PDQ_ACCT /* Project quota accounting */ XFS_QUOTA_PDQ_ENFD /* Project quota limits enforcement */</dd>
 <dt>
-<dd> This operation requires privilege (<code>CAP_SYS_ADMIN</code>). The <i>id</i> argument is ignored.</p>
-<dt><code>Q_XQUOTAOFF</code></p>
-<dd> Turn off quotas for an XFS filesystem. As with <code>Q_QUOTAON</code>, XFS filesystems expect a pointer to an <i>unsigned int</i> that specifies whether quota accounting and/or limit enforcement need to be turned off (using the same flags as for <code>Q_XQUOTAON</code> operation). This operation requires privilege (<code>CAP_SYS_ADMIN</code>). The <i>id</i> argument is ignored.</p>
-<dt><code>Q_XGETQUOTA</code></p>
-<dd> Get disk quota limits and current usage for user <i>id</i>. The <i>addr</i> argument is a pointer to an <i>fs_disk_quota</i> structure, which is defined in <i>&lt;xfs/xqm.h&gt;</i> as follows:</p>
+</dt><dd> This operation requires privilege (<code>CAP_SYS_ADMIN</code>). The <i>id</i> argument is ignored.</dd>
+<dt><code>Q_XQUOTAOFF</code></dt>
+<dd> Turn off quotas for an XFS filesystem. As with <code>Q_QUOTAON</code>, XFS filesystems expect a pointer to an <i>unsigned int</i> that specifies whether quota accounting and/or limit enforcement need to be turned off (using the same flags as for <code>Q_XQUOTAON</code> operation). This operation requires privilege (<code>CAP_SYS_ADMIN</code>). The <i>id</i> argument is ignored.</dd>
+<dt><code>Q_XGETQUOTA</code></dt>
+<dd> Get disk quota limits and current usage for user <i>id</i>. The <i>addr</i> argument is a pointer to an <i>fs_disk_quota</i> structure, which is defined in <i>&lt;xfs/xqm.h&gt;</i> as follows:</dd>
 <dt>
-<dd> /* All the blk units are in BBs (Basic Blocks) of<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;512 bytes.&nbsp;*/ </p>
+</dt><dd> /* All the blk units are in BBs (Basic Blocks) of<br />
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;512 bytes.&nbsp;*/ </dd>
 <p> #define FS_DQUOT_VERSION 1 /* fs_disk_quota.d_version */ </p>
 <p> #define XFS_USER_QUOTA (1&lt;&lt;0) /* User quota type */ #define XFS_PROJ_QUOTA (1&lt;&lt;1) /* Project quota type */ #define XFS_GROUP_QUOTA (1&lt;&lt;2) /* Group quota type */ </p>
 <p> struct fs_disk_quota {<br />
@@ -178,15 +176,15 @@ int quotactl(int cmd, const char *special, int id, caddr_t addr);
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;int16_t&nbsp;<wbr>&nbsp;d_padding3;&nbsp;<wbr>&nbsp;/*&nbsp;Padding &#8211; for future use&nbsp;*/<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;char&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;d_padding4[8];&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;Yet more padding&nbsp;*/ };</p>
 <dt>
-<dd> Unprivileged users may retrieve only their own quotas; a privileged user (<code>CAP_SYS_ADMIN</code>) may retrieve the quotas of any user.</p>
-<dt><code>Q_XGETNEXTQUOTA</code> (since Linux 4.6)</p>
-<dd> This operation is the same as <code>Q_XGETQUOTA</code>, but it returns (in the <i>fs_disk_quota</i> structure pointed by <i>addr</i>) quota information for the next ID greater than or equal to <i>id</i> that has a quota set. Note that since <i>fs_disk_quota</i> already has <i>q_id</i> field, no separate structure type is needed (in contrast with <code>Q_GETQUOTA</code> and <code>Q_GETNEXTQUOTA</code> operations)</p>
-<dt><code>Q_XSETQLIM</code></p>
-<dd> Set disk quota limits for user <i>id</i>. The <i>addr</i> argument is a pointer to an <i>fs_disk_quota</i> structure. This operation requires privilege (<code>CAP_SYS_ADMIN</code>).</p>
-<dt><code>Q_XGETQSTAT</code></p>
-<dd> Returns XFS filesystem-specific quota information in the <i>fs_quota_stat</i> structure pointed by <i>addr</i>. This is useful for finding out how much space is used to store quota information, and also to get the quota on/off status of a given local XFS filesystem. The <i>fs_quota_stat</i> structure itself is defined as follows:</p>
+</dt><dd> Unprivileged users may retrieve only their own quotas; a privileged user (<code>CAP_SYS_ADMIN</code>) may retrieve the quotas of any user.</dd>
+<dt><code>Q_XGETNEXTQUOTA</code> (since Linux 4.6)</dt>
+<dd> This operation is the same as <code>Q_XGETQUOTA</code>, but it returns (in the <i>fs_disk_quota</i> structure pointed by <i>addr</i>) quota information for the next ID greater than or equal to <i>id</i> that has a quota set. Note that since <i>fs_disk_quota</i> already has <i>q_id</i> field, no separate structure type is needed (in contrast with <code>Q_GETQUOTA</code> and <code>Q_GETNEXTQUOTA</code> operations)</dd>
+<dt><code>Q_XSETQLIM</code></dt>
+<dd> Set disk quota limits for user <i>id</i>. The <i>addr</i> argument is a pointer to an <i>fs_disk_quota</i> structure. This operation requires privilege (<code>CAP_SYS_ADMIN</code>).</dd>
+<dt><code>Q_XGETQSTAT</code></dt>
+<dd> Returns XFS filesystem-specific quota information in the <i>fs_quota_stat</i> structure pointed by <i>addr</i>. This is useful for finding out how much space is used to store quota information, and also to get the quota on/off status of a given local XFS filesystem. The <i>fs_quota_stat</i> structure itself is defined as follows:</dd>
 <dt>
-<dd> #define FS_QSTAT_VERSION 1 /* fs_quota_stat.qs_version */ </p>
+</dt><dd> #define FS_QSTAT_VERSION 1 /* fs_quota_stat.qs_version */ </dd>
 <p> struct fs_qfilestat {<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;uint64_t qfs_ino;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;Inode number&nbsp;*/<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;uint64_t qfs_nblks;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;Number of BBs<br />
@@ -209,11 +207,11 @@ int quotactl(int cmd, const char *special, int id, caddr_t addr);
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;uint16_t qs_bwarnlimit;&nbsp;<wbr>&nbsp;/*&nbsp;Limit for&nbsp;#&nbsp;of warnings&nbsp;*/<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;uint16_t qs_iwarnlimit;&nbsp;<wbr>&nbsp;/*&nbsp;Limit for&nbsp;#&nbsp;of warnings&nbsp;*/ };</p>
 <dt>
-<dd> The <i>id</i> argument is ignored.</p>
-<dt><code>Q_XGETQSTATV</code></p>
-<dd> Returns XFS filesystem-specific quota information in the <i>fs_quota_statv</i> pointed to by <i>addr</i>. This version of the operation uses a structure with proper versioning support, along with appropriate layout (all fields are naturally aligned) and padding to avoiding special compat handling; it also provides the ability to get statistics regarding the project quota file. The <i>fs_quota_statv</i> structure itself is defined as follows:</p>
+</dt><dd> The <i>id</i> argument is ignored.</dd>
+<dt><code>Q_XGETQSTATV</code></dt>
+<dd> Returns XFS filesystem-specific quota information in the <i>fs_quota_statv</i> pointed to by <i>addr</i>. This version of the operation uses a structure with proper versioning support, along with appropriate layout (all fields are naturally aligned) and padding to avoiding special compat handling; it also provides the ability to get statistics regarding the project quota file. The <i>fs_quota_statv</i> structure itself is defined as follows:</dd>
 <dt>
-<dd> #define FS_QSTATV_VERSION1 1 /* fs_quota_statv.qs_version */ </p>
+</dt><dd> #define FS_QSTATV_VERSION1 1 /* fs_quota_statv.qs_version */ </dd>
 <p> struct fs_qfilestatv {<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;uint64_t qfs_ino;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;Inode number&nbsp;*/<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;uint64_t qfs_nblks;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;Number of BBs<br />
@@ -240,54 +238,54 @@ int quotactl(int cmd, const char *special, int id, caddr_t addr);
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;uint16_t qs_iwarnlimit;&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;Limit for&nbsp;#&nbsp;of warnings&nbsp;*/<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;uint64_t qs_pad2[8];&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;For future proofing&nbsp;*/ };</p>
 <dt>
-<dd> The <i>qs_version</i> field of the structure should be filled with the version of the structure supported by the callee (for now, only <i>FS_QSTAT_VERSION1</i> is supported). The kernel will fill the structure in accordance with version provided. The <i>id</i> argument is ignored.</p>
-<dt><code>Q_XQUOTARM (since Linux 3.16)</code></p>
-<dd> Free the disk space taken by disk quotas. The <i>addr</i> argument should be a pointer to an <i>unsigned int</i> value containing flags (the same as in <i>d_flags</i> field of <i>fs_disk_quota</i> structure) which identify what types of quota should be removed. (Note that the quota type passed in the <i>cmd</i> argument is ignored, but should remain valid in order to pass preliminary quotactl syscall handler checks.)</p>
+</dt><dd> The <i>qs_version</i> field of the structure should be filled with the version of the structure supported by the callee (for now, only <i>FS_QSTAT_VERSION1</i> is supported). The kernel will fill the structure in accordance with version provided. The <i>id</i> argument is ignored.</dd>
+<dt><code>Q_XQUOTARM (since Linux 3.16)</code></dt>
+<dd> Free the disk space taken by disk quotas. The <i>addr</i> argument should be a pointer to an <i>unsigned int</i> value containing flags (the same as in <i>d_flags</i> field of <i>fs_disk_quota</i> structure) which identify what types of quota should be removed. (Note that the quota type passed in the <i>cmd</i> argument is ignored, but should remain valid in order to pass preliminary quotactl syscall handler checks.)</dd>
 <dt>
-<dd> Quotas must have already been turned off. The <i>id</i> argument is ignored.</p>
-<dt><code>Q_XQUOTASYNC</code> (since Linux 2.6.15; no-op since Linux 3.4)</p>
-<dd> This operation was an XFS quota equivalent to <code>Q_SYNC</code>, but it is no-op since Linux 3.4, as <code><a href="/docs/linux/man/1-sync/">sync</a></code>(1) writes quota information to disk now (in addition to the other filesystem metadata that it writes out). The <i>special</i>, <i>id</i> and <i>addr</i> arguments are ignored.</dl>
+</dt><dd> Quotas must have already been turned off. The <i>id</i> argument is ignored.</dd>
+<dt><code>Q_XQUOTASYNC</code> (since Linux 2.6.15; no-op since Linux 3.4)</dt>
+<dd> This operation was an XFS quota equivalent to <code>Q_SYNC</code>, but it is no-op since Linux 3.4, as <code><a href="/docs/linux/man/1-sync/">sync</a></code>(1) writes quota information to disk now (in addition to the other filesystem metadata that it writes out). The <i>special</i>, <i>id</i> and <i>addr</i> arguments are ignored.</dd></dl>
 <h2>RETURN VALUE</h2>
 <p> On success, <code>quotactl</code>() returns 0; on error -1 is returned, and <i>errno</i> is set to indicate the error.</p>
 <h2>ERRORS</h2>
 <dl>
-<dt><code>EACCES</code></p>
-<dd> <i>cmd</i> is <code>Q_QUOTAON</code>, and the quota file pointed to by <i>addr</i> exists, but is not a regular file or is not on the filesystem pointed to by <i>special</i>.</p>
-<dt><code>EBUSY</code></p>
-<dd> <i>cmd</i> is <code>Q_QUOTAON</code>, but another <code>Q_QUOTAON</code> had already been performed.</p>
-<dt><code>EFAULT</code></p>
-<dd> <i>addr</i> or <i>special</i> is invalid.</p>
-<dt><code>EINVAL</code></p>
-<dd> <i>cmd</i> or <i>type</i> is invalid.</p>
-<dt><code>EINVAL</code></p>
-<dd> <i>cmd</i> is <code>Q_QUOTAON</code>, but the specified quota file is corrupted.</p>
-<dt><code>EINVAL</code> (since Linux 5.5)</p>
-<dd> <i>cmd</i> is <code>Q_XQUOTARM</code>, but <i>addr</i> does not point to valid quota types.</p>
-<dt><code>ENOENT</code></p>
-<dd> The file specified by <i>special</i> or <i>addr</i> does not exist.</p>
-<dt><code>ENOSYS</code></p>
-<dd> The kernel has not been compiled with the <code>CONFIG_QUOTA</code> option.</p>
-<dt><code>ENOTBLK</code></p>
-<dd> <i>special</i> is not a block device.</p>
-<dt><code>EPERM</code></p>
-<dd> The caller lacked the required privilege (<code>CAP_SYS_ADMIN</code>) for the specified operation.</p>
-<dt><code>ERANGE</code></p>
-<dd> <i>cmd</i> is <code>Q_SETQUOTA</code>, but the specified limits are out of the range allowed by the quota format.</p>
-<dt><code>ESRCH</code></p>
-<dd> No disk quota is found for the indicated user. Quotas have not been turned on for this filesystem.</p>
-<dt><code>ESRCH</code></p>
-<dd> <i>cmd</i> is <code>Q_QUOTAON</code>, but the specified quota format was not found.</p>
-<dt><code>ESRCH</code></p>
-<dd> <i>cmd</i> is <code>Q_GETNEXTQUOTA</code> or <code>Q_XGETNEXTQUOTA</code>, but there is no ID greater than or equal to <i>id</i> that has an active quota.</dl>
+<dt><code>EACCES</code></dt>
+<dd> <i>cmd</i> is <code>Q_QUOTAON</code>, and the quota file pointed to by <i>addr</i> exists, but is not a regular file or is not on the filesystem pointed to by <i>special</i>.</dd>
+<dt><code>EBUSY</code></dt>
+<dd> <i>cmd</i> is <code>Q_QUOTAON</code>, but another <code>Q_QUOTAON</code> had already been performed.</dd>
+<dt><code>EFAULT</code></dt>
+<dd> <i>addr</i> or <i>special</i> is invalid.</dd>
+<dt><code>EINVAL</code></dt>
+<dd> <i>cmd</i> or <i>type</i> is invalid.</dd>
+<dt><code>EINVAL</code></dt>
+<dd> <i>cmd</i> is <code>Q_QUOTAON</code>, but the specified quota file is corrupted.</dd>
+<dt><code>EINVAL</code> (since Linux 5.5)</dt>
+<dd> <i>cmd</i> is <code>Q_XQUOTARM</code>, but <i>addr</i> does not point to valid quota types.</dd>
+<dt><code>ENOENT</code></dt>
+<dd> The file specified by <i>special</i> or <i>addr</i> does not exist.</dd>
+<dt><code>ENOSYS</code></dt>
+<dd> The kernel has not been compiled with the <code>CONFIG_QUOTA</code> option.</dd>
+<dt><code>ENOTBLK</code></dt>
+<dd> <i>special</i> is not a block device.</dd>
+<dt><code>EPERM</code></dt>
+<dd> The caller lacked the required privilege (<code>CAP_SYS_ADMIN</code>) for the specified operation.</dd>
+<dt><code>ERANGE</code></dt>
+<dd> <i>cmd</i> is <code>Q_SETQUOTA</code>, but the specified limits are out of the range allowed by the quota format.</dd>
+<dt><code>ESRCH</code></dt>
+<dd> No disk quota is found for the indicated user. Quotas have not been turned on for this filesystem.</dd>
+<dt><code>ESRCH</code></dt>
+<dd> <i>cmd</i> is <code>Q_QUOTAON</code>, but the specified quota format was not found.</dd>
+<dt><code>ESRCH</code></dt>
+<dd> <i>cmd</i> is <code>Q_GETNEXTQUOTA</code> or <code>Q_XGETNEXTQUOTA</code>, but there is no ID greater than or equal to <i>id</i> that has an active quota.</dd></dl>
 <h2>NOTES</h2>
 <p> Instead of <i>&lt;xfs/xqm.h&gt;</i> one can use <i>&lt;linux/dqblk_xfs.h&gt;</i>, taking into account that there are several naming discrepancies:</p>
 <dl>
-<dt>&bull;</p>
-<dd> Quota enabling flags (of format <code>XFS_QUOTA_[UGP]DQ_{ACCT,ENFD}</code>) are defined without a leading &quot;X&quot;, as <code>FS_QUOTA_[UGP]DQ_{ACCT,ENFD}</code>.</p>
-<dt>&bull;</p>
-<dd> The same is true for <code>XFS_{USER,GROUP,PROJ}_QUOTA</code> quota type flags, which are defined as <code>FS_{USER,GROUP,PROJ}_QUOTA</code>.</p>
-<dt>&bull;</p>
-<dd> The <i>dqblk_xfs.h</i> header file defines its own <code>XQM_USRQUOTA</code>, <code>XQM_GRPQUOTA</code>, and <code>XQM_PRJQUOTA</code> constants for the available quota types, but their values are the same as for constants without the <code>XQM_</code> prefix.</dl>
+<dt>&bull;</dt>
+<dd> Quota enabling flags (of format <code>XFS_QUOTA_[UGP]DQ_{ACCT,ENFD}</code>) are defined without a leading &quot;X&quot;, as <code>FS_QUOTA_[UGP]DQ_{ACCT,ENFD}</code>.</dd>
+<dt>&bull;</dt>
+<dd> The same is true for <code>XFS_{USER,GROUP,PROJ}_QUOTA</code> quota type flags, which are defined as <code>FS_{USER,GROUP,PROJ}_QUOTA</code>.</dd>
+<dt>&bull;</dt>
+<dd> The <i>dqblk_xfs.h</i> header file defines its own <code>XQM_USRQUOTA</code>, <code>XQM_GRPQUOTA</code>, and <code>XQM_PRJQUOTA</code> constants for the available quota types, but their values are the same as for constants without the <code>XQM_</code> prefix.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-quota/">quota</a></code>(1), <code><a href="/docs/linux/man/2-getrlimit/">getrlimit</a></code>(2), <code><a href="/docs/linux/man/8-quotacheck/">quotacheck</a></code>(8), <code><a href="/docs/linux/man/8-quotaon/">quotaon</a></code>(8)</p>
 <h2>COLOPHON</h2>

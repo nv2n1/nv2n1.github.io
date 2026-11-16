@@ -14,12 +14,12 @@ description: "config.sub – validate and canonicalize a configuration triplet"
 <p>Canonicalize a configuration name.</p>
 <h2>Options</h2>
 <dl>
-<dt><code>-h</code>, <code>&#8211;help</code></p>
-<dd>print this help, then exit</p>
-<dt><code>-t</code>, <code>&#8211;time-stamp</code></p>
-<dd>print date of last modification, then exit</p>
-<dt><code>-v</code>, <code>&#8211;version</code></p>
-<dd>print version number, then exit</dl>
+<dt><code>-h</code>, <code>&#8211;help</code></dt>
+<dd>print this help, then exit</dd>
+<dt><code>-t</code>, <code>&#8211;time-stamp</code></dt>
+<dd>print date of last modification, then exit</dd>
+<dt><code>-v</code>, <code>&#8211;version</code></dt>
+<dd>print version number, then exit</dd></dl>
 <h2>Reporting Bugs</h2>
 <p>Report bugs and patches to &lt;config-patches [at] gnu.org&gt;.</p>
 <h2>Copyright</h2>

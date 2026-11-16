@@ -20,10 +20,10 @@ description: "kwalletaskpass – kwallet-based pass-phrase dialog for use with O
 <p> exits 0 on success, 1 if the user cancelled the dialogue, or &gt;1 if an error occurred.</p>
 <h2>ENVIRONMENT</h2>
 <dl>
-<dt><code>DISPLAY</code></p>
-<dd> The X11 display to use for child processes. If this is unset or empty, <code>kwalletcli</code> will not be called.</p>
-<dt><code>PINENTRY</code></p>
-<dd> The <code>pinentry</code> programme to use. The default is inherited from kwalletcli_getpin1.</dl>
+<dt><code>DISPLAY</code></dt>
+<dd> The X11 display to use for child processes. If this is unset or empty, <code>kwalletcli</code> will not be called.</dd>
+<dt><code>PINENTRY</code></dt>
+<dd> The <code>pinentry</code> programme to use. The default is inherited from kwalletcli_getpin1.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/1-kwalletcli/">kwalletcli</a>(1), kwalletcli_getpin1, ssh-add1, ssh-askpass1</p>
 <h2>AUTHORS</h2>

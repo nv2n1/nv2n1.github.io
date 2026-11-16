@@ -14,26 +14,26 @@ description: "lcp_writepol – write LCP policy into a TPM NV index"
 <p><code>lcp_writepol</code> is used to write LCP policy into a (previously-defined) TPM NV index. It also supports writing arbitrary data into a specified index.</p>
 <h2>Options</h2>
 <dl>
-<dt><code>-i&nbsp;<wbr></code><i>index-value</i></p>
-<dd>Designate the index for writing. Index can be UINT32 or string. 3 strings are supported for the reserved LCP indices. Strings and default index values for each string are:</p>
+<dt><code>-i&nbsp;<wbr></code><i>index-value</i></dt>
+<dd>Designate the index for writing. Index can be UINT32 or string. 3 strings are supported for the reserved LCP indices. Strings and default index values for each string are:</dd>
 <dl>
 <dd>
-<dl>
-<dt>default</p>
-<dd>0x50000001(INDEX_LCP_DEF)</p>
-<dt>owner</p>
-<dd>0x40000001(INDEX_LCP_OWN)</p>
-<dt>aux</p>
-<dd>0x50000002(INDEX_LCP_AUX)</dl>
+</dd><dl>
+<dt>default</dt>
+<dd>0x50000001(INDEX_LCP_DEF)</dd>
+<dt>owner</dt>
+<dd>0x40000001(INDEX_LCP_OWN)</dd>
+<dt>aux</dt>
+<dd>0x50000002(INDEX_LCP_AUX)</dd></dl>
 </dl>
-<dt><code>-f&nbsp;<wbr></code><i>policy-file</i></p>
-<dd>File name where the policy data is stored.</p>
-<dt><code>-e</code></p>
-<dd>Write 0 length data to the index. This is useful for special indices, such as those permission is WRITEDFINE.</p>
-<dt><code>-p&nbsp;<wbr></code><i>password</i></p>
-<dd>The TPM owner password</p>
-<dt><code>-h</code></p>
-<dd>Print out the help message</dl>
+<dt><code>-f&nbsp;<wbr></code><i>policy-file</i></dt>
+<dd>File name where the policy data is stored.</dd>
+<dt><code>-e</code></dt>
+<dd>Write 0 length data to the index. This is useful for special indices, such as those permission is WRITEDFINE.</dd>
+<dt><code>-p&nbsp;<wbr></code><i>password</i></dt>
+<dd>The TPM owner password</dd>
+<dt><code>-h</code></dt>
+<dd>Print out the help message</dd></dl>
 <h2>Examples</h2>
 <p><code>lcp_writepol -i </code><i>default </i><code> -f </code><i>policy-file </p>
 <p> </i><code>lcp_writepol -i </code><i>0x00011101 </i><code> -e </p>

@@ -15,15 +15,15 @@ skb_split - Split fragmented skb to two parts at length len.
 <h2>Arguments</h2>
 
 <i>skb</i>
-<dl><dd><dd>the buffer to split</dl>
+<dl><dd></dd><dd>the buffer to split</dd></dl>
  
 
  <i>skb1</i>
-<dl><dd>the buffer to receive the second part</dl>
+<dl><dd>the buffer to receive the second part</dd></dl>
  
 
  <i>len</i>
-<dl><dd>new length for skb</dl>
+<dl><dd>new length for skb</dd></dl>
 
 <h2>Copyright</h2>
 

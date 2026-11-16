@@ -19,7 +19,6 @@ description: "getr, getg, getb, geta – Extract a color component from the curr
 <p> Given a color in the format being used by the current video mode, these functions extract one of the red, green, blue, or alpha components (ranging 0-255), calling the preceding 8, 15, 16, 24, or 32-bit get functions as appropriate. The alpha part is only meaningful for 32-bit pixels. Example: </p>
 <pre><code>
 int r, g, b, color_value;
-
 color_value = getpixel(screen, 100, 100);
 r = getr(color_value);
 g = getg(color_value);

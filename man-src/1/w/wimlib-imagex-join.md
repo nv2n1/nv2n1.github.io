@@ -17,20 +17,21 @@ description: "wimlib-imagex-join – Join split WIMs into a standalone one-part 
 <p> <code>wimlib-imagex join</code> can join both non-pipable and pipable split WIMs.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>&#8211;check</code></p>
-<dd> When reading each <i>SPLIT_WIM_PART</i>, verify its integrity if the integrity table is present; additionally, when writing <i>OUT_WIMFILE</i>, write an integrity table. If this option is not specified, an integrity table will be included in <i>OUT_WIMFILE</i> if and only if one was present in the first part of the split WIM.</dl>
+<dt><code>&#8211;check</code></dt>
+<dd> When reading each <i>SPLIT_WIM_PART</i>, verify its integrity if the integrity table is present; additionally, when writing <i>OUT_WIMFILE</i>, write an integrity table. If this option is not specified, an integrity table will be included in <i>OUT_WIMFILE</i> if and only if one was present in the first part of the split WIM.</dd></dl>
 <h2>EXAMPLES</h2>
 <p> Join a split WIM, with the parts named `windows*.swm&#8217; where the * is anything (usually the number of the part, except for the first part which may have no number), and write the joined WIM to the file `windows.wim&#8217;.</p>
 <dl>
 <dt>
-<dd>
-<p> wimlib-imagex join windows.wim windows*.swm</dl>
+</dt><dd>
+<p> wimlib-imagex join windows.wim windows*.swm</dd></dl>
 <h2>NOTES</h2>
 <p> <code>wimlib-imagex join</code> is roughly equivalent to:</p>
 <dl>
 <dt>
-<dd>
-<p> <code>wimlib-imagex export</code> <i>SWM_PART_1</i> &#8211;ref=&quot;<i>SWM_GLOB</i>&quot; all <i>OUT_WIMFILE</i></dl>
+</dt><dd>
+<p> <code>wimlib-imagex export</code> <i>SWM_PART_1</i> &#8211;ref=&quot;<i>SWM_GLOB</i>&quot; all <i>OUT_WIMFILE</i></dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-wimlib-imagex/">wimlib-imagex</a></code>(1) <code><a href="/docs/linux/man/1-wimlib-imagex-export/">wimlib-imagex-export</a></code>(1) </p>
 <h2>Index</h2>
+</p>

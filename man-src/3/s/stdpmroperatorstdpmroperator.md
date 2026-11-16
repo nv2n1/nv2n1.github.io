@@ -11,11 +11,8 @@ std::pmr::operator==,std::pmr::operator!= - std::pmr::operator==,std::pmr::opera
 <h2>Synopsis</h2>
 
 <pre><code>bool operator==(const std::pmr::memory_resource &amp;a, (1)(since C++ 17)
-
                                                         const std::pmr::memory_resource &amp;b) noexcept;
-
 bool operator!=(const std::pmr::memory_resource &amp;a, (2)(since C++ 17)
-
                                                         const std::pmr::memory_resource &amp;b) noexcept;</code></pre> 
 Compares the memory_resources a and b for equality. Two memory_resources compare equal if and only if memory allocated from one memory_resource can be deallocated from the other and vice versa. 
 

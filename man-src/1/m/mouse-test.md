@@ -17,8 +17,8 @@ description: "mouse-test – a tool for determining mouse type and device it’s
 <p> I know the application is buggy, but I only own one mouse device. If you are interested in this application, just call me and awake me from my laziness. </p>
 <h3>OPTIONS</h3>
 <dl>
-<dt><i>device</i></p>
-<dd> [ <i>device</i> &#8230; ]</dl>
+<dt><i>device</i></dt>
+<dd> [ <i>device</i> &#8230; ]</dd></dl>
 <p> Check this <i>device</i> for a mouse. If no devices are listed, mouse-test will try all possible devices. </p>
 <h2>AUTHOR</h2>
 <p> Alessandro Rubini &lt;rubini [at] linux.it&gt; </p>

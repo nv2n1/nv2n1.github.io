@@ -16,20 +16,20 @@ description: "ucfr – Update Configuration File Registry: associate packages wi
 <p> This script maintains an association between configuration files and packages, and is meant to help provide facilities that <i>dpkg</i> provides conffiles for configuration files and not shipped in a <code>Debian</code> package, but handled by the postinst by <i>ucf</i> instead. This script is idempotent, associating a package to a file multiple times is not an error. It is normally an error to try to associate a file which is already associated with another package, but this can be overridden by using the <i>&#8211;force</i> option.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-h, &#8211;help</code></p>
-<dd> Print a short usage message</p>
-<dt><code>-n, &#8211;no-action</code></p>
-<dd> Dry run. Print the actions that would be taken if the script is invoked, but take no action.</p>
-<dt><code>-d [n], &#8211;debug [n]</code></p>
-<dd> Set the debug level to the (optional) level <i>n</i> (n defaults to 1). This turns on copious debugging information.</p>
-<dt><code>-p, &#8211;purge</code></p>
-<dd> Removes all vestiges of the association between the named package and the configuration file from the registry. The association must already exist; if the configuration file is associated with some other package, an error happens, unless the option <i>&#8211;force</i> is also given. In that case, the any associations for the configuration file are removed from the registry, whether or not the package name matches. This action is idempotent, asking for an association to be purged multiple times does not result in an error, since attempting to remove an non-existent association is silently ignored unless the <i>&#8211;verbose</i> option is used (in which case it just issues a diagnostic).</p>
-<dt><code>-v, &#8211;verbose</code></p>
-<dd> Make the script be very verbose about setting internal variables.</p>
-<dt><code>-f, &#8211;force</code></p>
-<dd> This option forces operations requested even if the configuration file in consideration is owned by another package. This allows a package to <i>hijack</i> a configuration file from another package, or to purge the association between the file and some other package in the registry.</p>
-<dt><code>&#8211;state-dir /path/to/dir</code></p>
-<dd> Set the state directory to /path/to/dir instead of the default <i>/var/lib/ucf.</i> Used mostly for testing.</dl>
+<dt><code>-h, &#8211;help</code></dt>
+<dd> Print a short usage message</dd>
+<dt><code>-n, &#8211;no-action</code></dt>
+<dd> Dry run. Print the actions that would be taken if the script is invoked, but take no action.</dd>
+<dt><code>-d [n], &#8211;debug [n]</code></dt>
+<dd> Set the debug level to the (optional) level <i>n</i> (n defaults to 1). This turns on copious debugging information.</dd>
+<dt><code>-p, &#8211;purge</code></dt>
+<dd> Removes all vestiges of the association between the named package and the configuration file from the registry. The association must already exist; if the configuration file is associated with some other package, an error happens, unless the option <i>&#8211;force</i> is also given. In that case, the any associations for the configuration file are removed from the registry, whether or not the package name matches. This action is idempotent, asking for an association to be purged multiple times does not result in an error, since attempting to remove an non-existent association is silently ignored unless the <i>&#8211;verbose</i> option is used (in which case it just issues a diagnostic).</dd>
+<dt><code>-v, &#8211;verbose</code></dt>
+<dd> Make the script be very verbose about setting internal variables.</dd>
+<dt><code>-f, &#8211;force</code></dt>
+<dd> This option forces operations requested even if the configuration file in consideration is owned by another package. This allows a package to <i>hijack</i> a configuration file from another package, or to purge the association between the file and some other package in the registry.</dd>
+<dt><code>&#8211;state-dir /path/to/dir</code></dt>
+<dd> Set the state directory to /path/to/dir instead of the default <i>/var/lib/ucf.</i> Used mostly for testing.</dd></dl>
 <h2>USAGE</h2>
 <p> The most common case usage is pretty simple: a single line invocation in the postinst on configure, and another single line in the postrm to tell <code>ucfr</code> to forget about the association with the configuration file on purge (using the &#8211;purge option) is all that is needed (assuming ucfr is still on the system).</p>
 <h2>FILES</h2>

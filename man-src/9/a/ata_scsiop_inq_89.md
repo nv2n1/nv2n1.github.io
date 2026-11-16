@@ -14,15 +14,15 @@ description: "ata_scsiop_inq_89 – Simulate INQUIRY VPD page 89, ATA info"
 <p><i>args</i></p>
 <dl>
 <dd>
-<dd>device IDENTIFY data / SCSI command of interest.</dl>
+</dd><dd>device IDENTIFY data / SCSI command of interest.</dd></dl>
 <p> <i>rbuf</i></p>
 <dl>
-<dd>Response buffer, to which simulated SCSI cmd output is sent.</dl>
+<dd>Response buffer, to which simulated SCSI cmd output is sent.</dd></dl>
 <h2>Description</h2>
 <p>Yields SAT-specified ATA VPD page. </p>
 <p> LOCKING: spin_lock_irqsave(host lock)</p>
 <h2>Author</h2>
 <p><code>Jeff Garzik</code></p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

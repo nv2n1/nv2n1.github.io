@@ -24,6 +24,6 @@ description: "pmGetInDom – get instance identifiers for a performance metrics 
 <p><code><a href="/docs/linux/man/3-pmapi/">PMAPI</a></code>(3), <code><a href="/docs/linux/man/3-pmgetconfig/">pmGetConfig</a></code>(3), <code><a href="/docs/linux/man/3-pmgetindomarchive/">pmGetInDomArchive</a></code>(3), <code><a href="/docs/linux/man/3-pmlookupdesc/">pmLookupDesc</a></code>(3), <code><a href="/docs/linux/man/3-pmlookupindom/">pmLookupInDom</a></code>(3), <code><a href="/docs/linux/man/3-pmnameindom/">pmNameInDom</a></code>(3), <code><a href="/docs/linux/man/5-pcp-conf/">pcp.conf</a></code>(5) and <code><a href="/docs/linux/man/5-pcp-env/">pcp.env</a></code>(5).</p>
 <h2>Diagnostics</h2>
 <dl>
-<dt><code>PM_ERR_INDOM</code></p>
-<dd><i>indom</i> is not a valid instance domain identifier </p>
+<dt><code>PM_ERR_INDOM</code></dt>
+<dd><i>indom</i> is not a valid instance domain identifier </dd>
 </dl>

@@ -10,32 +10,32 @@ description: "XListFonts, XFreeFontNames, XListFontsWithInfo, XFreeFontInfo – 
 <p>XListFonts, XFreeFontNames, XListFontsWithInfo, XFreeFontInfo &#8211; obtain or free font names and information </p>
 <h2>Syntax</h2>
 <dl COMPACT>
-<dd>char **XListFonts(Display *<i>display</i>, char *<i>pattern</i>, int <i>maxnames</i>, int *<i>actual_count_return</i>);</p>
-<dd>int XFreeFontNames(char *<i>list</i>[]);</p>
-<dd>char **XListFontsWithInfo(Display *<i>display</i>, char *<i>pattern</i>, int <i>maxnames</i>, int *<i>count_return</i>, XFontStruct **<i>info_return</i>);</p>
-<dd>int XFreeFontInfo(char **<i>names</i>, XFontStruct *<i>free_info</i>, int <i>actual_count</i>);</dl>
+<dd>char **XListFonts(Display *<i>display</i>, char *<i>pattern</i>, int <i>maxnames</i>, int *<i>actual_count_return</i>);</dd>
+<dd>int XFreeFontNames(char *<i>list</i>[]);</dd>
+<dd>char **XListFontsWithInfo(Display *<i>display</i>, char *<i>pattern</i>, int <i>maxnames</i>, int *<i>count_return</i>, XFontStruct **<i>info_return</i>);</dd>
+<dd>int XFreeFontInfo(char **<i>names</i>, XFontStruct *<i>free_info</i>, int <i>actual_count</i>);</dd></dl>
 <h2>Arguments</h2>
 <dl COMPACT>
-<dt><i>actual_count</i></p>
-<dd>Specifies the actual number of font names. </p>
-<dt><i>actual_count_return</i></p>
-<dd>Returns the actual number of font names.</p>
-<dt><i>count_return</i></p>
-<dd>Returns the actual number of matched font names.</p>
-<dt><i>display</i></p>
-<dd>Specifies the connection to the X server.</p>
-<dt><i>info_return</i></p>
-<dd>Returns the font information.</p>
-<dt><i>free_info</i></p>
-<dd>Specifies the font information. </p>
-<dt><i>list</i></p>
-<dd>Specifies the array of strings you want to free.</p>
-<dt><i>maxnames</i></p>
-<dd>Specifies the maximum number of names to be returned.</p>
-<dt><i>names</i></p>
-<dd>Specifies the list of font names. </p>
-<dt><i>pattern</i></p>
-<dd>Specifies the null-terminated pattern string that can contain wildcard characters.</dl>
+<dt><i>actual_count</i></dt>
+<dd>Specifies the actual number of font names. </dd>
+<dt><i>actual_count_return</i></dt>
+<dd>Returns the actual number of font names.</dd>
+<dt><i>count_return</i></dt>
+<dd>Returns the actual number of matched font names.</dd>
+<dt><i>display</i></dt>
+<dd>Specifies the connection to the X server.</dd>
+<dt><i>info_return</i></dt>
+<dd>Returns the font information.</dd>
+<dt><i>free_info</i></dt>
+<dd>Specifies the font information. </dd>
+<dt><i>list</i></dt>
+<dd>Specifies the array of strings you want to free.</dd>
+<dt><i>maxnames</i></dt>
+<dd>Specifies the maximum number of names to be returned.</dd>
+<dt><i>names</i></dt>
+<dd>Specifies the list of font names. </dd>
+<dt><i>pattern</i></dt>
+<dd>Specifies the null-terminated pattern string that can contain wildcard characters.</dd></dl>
 <h2>Description</h2>
 <p>The <code>XListFonts</code> function returns an array of available font names (as controlled by the font search path; see <code>XSetFontPath</code>) that match the string you passed to the pattern argument. The pattern string can contain any characters, but each asterisk (*) is a wildcard for any number of characters, and each question mark (?) is a wildcard for a single character. If the pattern string is not in the Host Portable Character Encoding, the result is implementation-dependent. Use of uppercase or lowercase does not matter. Each returned string is null-terminated. If the data returned by the server is in the Latin Portable Character Encoding, then the returned strings are in the Host Portable Character Encoding. Otherwise, the result is implementation-dependent. If there are no matching font names, <code>XListFonts</code> returns NULL. The client should call <code>XFreeFontNames</code> when finished with the result to free the memory. </p>
 <p> The <code>XFreeFontNames</code> function frees the array and strings returned by <code>XListFonts</code> or <code>XListFontsWithInfo</code>. </p>

@@ -14,18 +14,18 @@ description: "libnetpbm – general introduction to the netpbm library"
 <p> To use <code>libnetpbm</code> services in your C program, #include the <code>pam.h</code> interface header file. For historical reasons, you can also get by in some cases with <code>pbm.h</code>, <code>pgm.h</code>, <code>ppm.h</code>, or <code>pnm.h</code>, but there&#8217;s really no point to that anymore. </p>
 <p> The <code>libnetpbm</code> functions are divided into these categories: </p>
 <dl>
-<dt>&bull;</p>
-<dd> PBM functions. These have names that start with <code>pbm</code> and work only on PBM images.</p>
-<dt>&bull;</p>
-<dd> PGM functions. These have names that start with <code>pgm</code> and work only on PGM images.</p>
-<dt>&bull;</p>
-<dd> PPM functions. These have names that start with <code>ppm</code> and work only on PPM images.</p>
-<dt>&bull;</p>
-<dd> PNM functions. These have names that start with <code>pnm</code> and work on PBM, PGM, and PPM images.</p>
-<dt>&bull;</p>
-<dd> PAM functions. These also have names that start with <code>pnm</code> and work on all the Netpbm image types.</p>
-<dt>&bull;</p>
-<dd> PM functions. These are utility functions that aren&#8217;t specific to any particular image format. </p>
+<dt>&bull;</dt>
+<dd> PBM functions. These have names that start with <code>pbm</code> and work only on PBM images.</dd>
+<dt>&bull;</dt>
+<dd> PGM functions. These have names that start with <code>pgm</code> and work only on PGM images.</dd>
+<dt>&bull;</dt>
+<dd> PPM functions. These have names that start with <code>ppm</code> and work only on PPM images.</dd>
+<dt>&bull;</dt>
+<dd> PNM functions. These have names that start with <code>pnm</code> and work on PBM, PGM, and PPM images.</dd>
+<dt>&bull;</dt>
+<dd> PAM functions. These also have names that start with <code>pnm</code> and work on all the Netpbm image types.</dd>
+<dt>&bull;</dt>
+<dd> PM functions. These are utility functions that aren&#8217;t specific to any particular image format. </dd>
 </dl>
 <p> For new programming, you rarely need to concern yourself with the PBM, PGM, PPM, and PNM functions, because the newer PAM functions do the same thing and are easier to use. For certain processing of bi-level images, the PBM functions are significantly more efficient, though. </p>
 <p> <code>libnetpbm</code> has a backward compatibility feature that means a function designed to read one format can read some others too, converting on the fly. In particular, a function that reads a PGM image will also read a PBM image, but converts it as it reads it so that for programming purposes, it is a PGM image. Similarly, a function that reads PPM can read PBM and PGM as well. And a function that reads PBM, PGM, or PPM can read a PAM that has an equivalent tuple type. </p>

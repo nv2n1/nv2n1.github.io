@@ -102,16 +102,16 @@ description: "kadmind_selinux – Security Enhanced Linux Policy for the kadmind
 <p> <code>kadmind_exec_t</code> </p>
 <p> &#8211; Set files with the kadmind_exec_t type, if you want to transition an executable to the kadmind_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/usr/(kerberos/)?sbin/kadmind, /usr/(kerberos/)?sbin/_kadmind, /usr/kerberos/sbin/kadmin.local </p>
+<dt>Paths:</dt>
+<dd>/usr/(kerberos/)?sbin/kadmind, /usr/(kerberos/)?sbin/_kadmind, /usr/kerberos/sbin/kadmin.local </dd>
 </dl>
 <p> <code>kadmind_log_t</code> </p>
 <p> &#8211; Set files with the kadmind_log_t type, if you want to treat the data as kadmind log data, usually stored under the /var/log directory. </p>
 <p> <code>kadmind_tmp_t</code> </p>
 <p> &#8211; Set files with the kadmind_tmp_t type, if you want to store kadmind temporary files in the /tmp directories. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/var/tmp/kadmin_0, /var/tmp/kiprop_0 </p>
+<dt>Paths:</dt>
+<dd>/var/tmp/kadmin_0, /var/tmp/kiprop_0 </dd>
 </dl>
 <p> <code>kadmind_var_run_t</code> </p>
 <p> &#8211; Set files with the kadmind_var_run_t type, if you want to store the kadmind files under the /run or /var/run directory. </p>

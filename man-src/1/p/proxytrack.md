@@ -15,9 +15,9 @@ description: "proxytrack – proxy to serve content archived by httrack website 
 <p> <code>proxytrack</code> this program allows you to create a proxy to deliver content already archived by <code><a href="/docs/linux/man/1-httrack/">httrack</a></code>(1) , a website copier.</p>
 <h2>EXAMPLES</h2>
 <dl>
-<dt><code>proxytrack proxy:8080 localhost:3130 /home/archives/example.com/hts-cache/new.zip</code></p>
+<dt><code>proxytrack proxy:8080 localhost:3130 /home/archives/example.com/hts-cache/new.zip</code></dt>
 <dd>
-&nbsp;<wbr>will launch the proxytrack proxy, listening to :8080, to deliver content archived in the&nbsp;<wbr>/home/archives/example.com/hts-cache/new.zip cache</dl>
+&nbsp;<wbr>will launch the proxytrack proxy, listening to :8080, to deliver content archived in the&nbsp;<wbr>/home/archives/example.com/hts-cache/new.zip cache</dd></dl>
 <h2>ENVIRONMENT</h2>
 <h2>DIAGNOSTICS</h2>
 <p> Errors/Warnings are reported the console and standard error </p>

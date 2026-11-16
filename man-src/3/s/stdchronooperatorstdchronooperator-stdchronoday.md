@@ -11,19 +11,12 @@ std::chrono::operator+,std::chrono::operator-(std::chrono::day) - std::chrono::o
 <h2>Synopsis</h2>
 
 <pre><code>constexpr std::chrono::day operator+(const std::chrono::day &amp;d, (1)(since C++ 20)
-
                                                                     const std::chrono::days &amp;ds) noexcept;
-
 constexpr std::chrono::day operator+(const std::chrono::days &amp;ds, (2)(since C++ 20)
-
                                                                       const std::chrono::day &amp;d) noexcept;
-
 constexpr std::chrono::day operator-(const std::chrono::day &amp;d, (3)(since C++ 20)
-
                                                                     const std::chrono::days &amp;ds) noexcept;
-
 constexpr std::chrono::days operator-(const std::chrono::day &amp;x, (4)(since C++ 20)
-
                                                                      const std::chrono::day &amp;y) noexcept;</code></pre> 
 1-2) Adds ds.count() days to d. 
 3) Subtracts ds.count() days from d. 
@@ -47,19 +40,10 @@ For (1-3), if the result would be outside the range [0, 255], the actual stored 
 <h2>See also</h2>
 
 <pre><code>operator++      increments or decrements the day
-
 operator++(int) (public member function)
-
 operator--
-
 operator--(int)
 adds or subtracts a number of days
-
 operator+=      (public member function)
-
 operator-=
-
-
-
-
 </code></pre>

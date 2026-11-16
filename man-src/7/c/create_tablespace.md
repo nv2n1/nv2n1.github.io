@@ -16,12 +16,12 @@ description: "CREATE TABLESPACE – define a new tablespace"
 <p> A user with appropriate privileges can pass <i>tablespacename</i> to <code>CREATE DATABASE</code>, <code>CREATE TABLE</code>, <code>CREATE INDEX</code> or <code>ADD CONSTRAINT</code> to have the data files for these objects stored within the specified tablespace.</p>
 <h2>Parameters</h2>
 <dl>
-<dt><i>tablespacename</i></p>
-<dd>The name of a tablespace to be created. The name cannot begin with pg_, as such names are reserved for system tablespaces.</p>
-<dt><i>username</i></p>
-<dd>The name of the user who will own the tablespace. If omitted, defaults to the user executing the command. Only superusers can create tablespaces, but they can assign ownership of tablespaces to non-superusers.</p>
-<dt><i>directory</i></p>
-<dd>The directory that will be used for the tablespace. The directory must be empty and must be owned by the PostgreSQL system user. The directory must be specified by an absolute path name.</dl>
+<dt><i>tablespacename</i></dt>
+<dd>The name of a tablespace to be created. The name cannot begin with pg_, as such names are reserved for system tablespaces.</dd>
+<dt><i>username</i></dt>
+<dd>The name of the user who will own the tablespace. If omitted, defaults to the user executing the command. Only superusers can create tablespaces, but they can assign ownership of tablespaces to non-superusers.</dd>
+<dt><i>directory</i></dt>
+<dd>The directory that will be used for the tablespace. The directory must be empty and must be owned by the PostgreSQL system user. The directory must be specified by an absolute path name.</dd></dl>
 <h2>Notes</h2>
 <p>Tablespaces are only supported on systems that support symbolic links. </p>
 <p> <code>CREATE TABLESPACE</code> cannot be executed inside a transaction block.</p>

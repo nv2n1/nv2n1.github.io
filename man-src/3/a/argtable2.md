@@ -69,7 +69,7 @@ void arg_freetable(void **argtable, size_t n)
 <p> The glossary=&quot;the foo factor&quot; parameter is another descriptive string. It appears only in the glossary table that is generated automatically by the <code>arg_print_glossary</code> function (described later).</p>
 <dl>
 <dt>
-<dd> -f, &#8211;foo=&lt;int&gt; the foo factor</dl>
+</dt><dd> -f, &#8211;foo=&lt;int&gt; the foo factor</dd></dl>
 <p> Specifying a NULL glossary string causes that option to be omitted from the glossary table.</p>
 <h3>LITERAL COMMAND LINE OPTIONS</h3>
 <p> -x, -y, -z, &#8211;help, &#8211;verbose </p>
@@ -191,7 +191,7 @@ Every argument table must have an arg_end structure as its last entry.It marks t
 <h2>AUTHOR</h2>
 <p> Stewart Heitmann &lt;sheitmann [at] users.sourceforge.net&gt; </p>
 <h2>Index</h2>
-<dt><a href="#lbAY">FILES</a></p>
+<dt><a href="#lbAY">FILES</a></dt>
 <dd>
-<dt><a href="#lbAZ">AUTHOR</a></p>
-<dd></dl>
+</dd><dt><a href="#lbAZ">AUTHOR</a></dt>
+<dd></dd></dl>

@@ -17,3 +17,4 @@ description: "QuantLib::NelsonSiegelFitting – Nelson-Siegel fitting method."
 <h2>Detailed Description</h2>
 <p>Nelson-Siegel fitting method. </p>
 <p> Fits a discount function to the form $ d(t) = 
+</p>

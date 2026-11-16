@@ -10,15 +10,11 @@ description: "std::experimental::filesystem::status,std::experimental::filesyste
 <p>std::experimental::filesystem::status,std::experimental::filesystem::symlink_status &#8211; std::experimental::filesystem::status,std::experimental::filesystem::symlink_status</p>
 <h2>Synopsis</h2>
 <pre><code>Defined in header&lt;experimental / filesystem&gt;
-
     file_status status(const path &amp;p);
 (1)(filesystem TS)
-
     file_status status(const path &amp;p, error_code &amp;ec) noexcept;
-
 file_status symlink_status(const path &amp;p);
 (2)(filesystem TS)
-
     file_status symlink_status(const path &amp;p, error_code &amp;ec) noexcept;</code></pre>
 <p>1) Determines the type and attributes of the filesystem object identified by p as if by POSIX stat (symlinks are followed to their targets).<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;* If p is a regular file, returns file_status(file_type::regular).<br />
@@ -47,25 +43,16 @@ noexcept</p>
 <h2>Example</h2>
 <p>// Run this code </p>
 <pre><code>#include &lt;iostream&gt;
-
 #include &lt;fstream&gt;
-
 #include &lt;cstdio&gt;
-
 #include &lt;cstring&gt;
-
 #include &lt;experimental/filesystem&gt;
-
 #include &lt;unistd.h&gt;
-
 #include &lt;sys/socket.h&gt;
-
 #include &lt;sys/un.h&gt;
-
 #include &lt;sys/stat.h&gt;
 namespace fs = std::experimental::filesystem;
 void demo_status(const fs::path &amp;p, fs::file_status s)
-
 {
     std::cout &lt;&lt; p;
     // alternative: switch(s.type()) { case fs::file_type::regular: ...}
@@ -94,9 +81,7 @@ void demo_status(const fs::path &amp;p, fs::file_status s)
         std::cout &lt;&lt; &quot; does not exist
 &quot;;
 }
-
 int main()
-
 {
     // create files of different kinds
     fs::create_directory(&quot;sandbox&quot;);

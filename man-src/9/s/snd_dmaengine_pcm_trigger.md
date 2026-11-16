@@ -15,11 +15,11 @@ snd_dmaengine_pcm_trigger - dmaengine based PCM trigger implementation
 <h2>Arguments</h2>
 
 <i>substream</i>
-<dl><dd><dd>PCM substream</dl>
+<dl><dd></dd><dd>PCM substream</dd></dl>
  
 
  <i>cmd</i>
-<dl><dd>Trigger command</dl>
+<dl><dd>Trigger command</dd></dl>
 
 <h2>Description</h2>
 

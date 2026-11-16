@@ -17,9 +17,9 @@ the Ngmisc internal parameters.</code></pre>
 
  void c_nggetr (char *pnam, float *rval)
 <h2>Description</h2><dl COMPACT><dt>PNAM
-<dd>(an input constant or variable of type CHARACTER) specifies the name of the parameter whose value is to be retrieved. Only the first two characters of the string are examined.
-<dt>RVAL
-<dd>(an output variable of type REAL) is the value of the internal parameter.</dl><h2>C-Binding Description</h2>The C-binding argument descriptions are the same as the FORTRAN argument descriptions.
+</dt><dd>(an input constant or variable of type CHARACTER) specifies the name of the parameter whose value is to be retrieved. Only the first two characters of the string are examined.
+</dd><dt>RVAL
+</dt><dd>(an output variable of type REAL) is the value of the internal parameter.</dd></dl><h2>C-Binding Description</h2>The C-binding argument descriptions are the same as the FORTRAN argument descriptions.
 <h2>Usage</h2>This routine allows you to retrieve the current value of Ngmisc parameters. For a complete list of parameters available in this utility, see the ngmisc_params man page.
 <h2>Access</h2>To use NGGETR or c_nggetr, load the NCAR Graphics libraries ncarg, ncarg_gks, ncarg_c, and ncarg_c, preferably in that order.
 <h2>See Also</h2>Online: ngmisc_params, ngsetr, ngsetc, nggetc, ngseti, nggeti, ncarg_cbind. 

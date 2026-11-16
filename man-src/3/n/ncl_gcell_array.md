@@ -13,20 +13,20 @@ description: "gcell_array (Cell array) – draws a cell array starting with a re
 <p> void gcell_array(const Grect *rect, const Gpat_rep *colr_array);</p>
 <h2>Description</h2>
 <dl COMPACT>
-<dt>rect.p.x</p>
-<dd>(Gfloat Input) &#8211; X world coordinate of point 1.</p>
-<dt>rect.p.y</p>
-<dd>(Gfloat Input) &#8211; Y world coordinate of point 1.</p>
-<dt>rect.q.x</p>
-<dd>(Gfloat Input) &#8211; X world coordinate of point 2.</p>
-<dt>rect.q.y</p>
-<dd>(Gfloat Input) &#8211; Y world coordinate of point 2.</p>
-<dt>colr_array.dims.size_x</p>
-<dd>(Gint, Input) &#8211; X dimension of the color index array colr_array.colr_array.</p>
-<dt>colr_array.dims.size_y</p>
-<dd>(Gint, Input) &#8211; Y dimension of the color index array colr_array.colr_array.</p>
-<dt>colr_array.colr_array</p>
-<dd>(Gint *, Input) &#8211; An array of color indices dimensioned colr_array.dims.size_x by colr_array.dims.size_y which is used to determine the color of each cell drawn.</dl>
+<dt>rect.p.x</dt>
+<dd>(Gfloat Input) &#8211; X world coordinate of point 1.</dd>
+<dt>rect.p.y</dt>
+<dd>(Gfloat Input) &#8211; Y world coordinate of point 1.</dd>
+<dt>rect.q.x</dt>
+<dd>(Gfloat Input) &#8211; X world coordinate of point 2.</dd>
+<dt>rect.q.y</dt>
+<dd>(Gfloat Input) &#8211; Y world coordinate of point 2.</dd>
+<dt>colr_array.dims.size_x</dt>
+<dd>(Gint, Input) &#8211; X dimension of the color index array colr_array.colr_array.</dd>
+<dt>colr_array.dims.size_y</dt>
+<dd>(Gint, Input) &#8211; Y dimension of the color index array colr_array.colr_array.</dd>
+<dt>colr_array.colr_array</dt>
+<dd>(Gint *, Input) &#8211; An array of color indices dimensioned colr_array.dims.size_x by colr_array.dims.size_y which is used to determine the color of each cell drawn.</dd></dl>
 <h2>Usage</h2>
 <p>Points 1 and 2 must be diagonally opposite corner points of a rectangle to be divided into colr_array.dims.size_x cells in the X dimension and colr_array.dims.size_y cells in the Y dimension.</p>
 <h2>Access</h2>

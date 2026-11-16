@@ -15,11 +15,11 @@ pci_platform_rom - provides a pointer to any ROM image provided by the platform
 <h2>Arguments</h2>
 
 <i>pdev</i>
-<dl><dd><dd>pointer to pci device struct</dl>
+<dl><dd></dd><dd>pointer to pci device struct</dd></dl>
  
 
  <i>size</i>
-<dl><dd>pointer to receive size of pci window over ROM</dl>
+<dl><dd>pointer to receive size of pci window over ROM</dd></dl>
 
 <h2>Copyright</h2>
 

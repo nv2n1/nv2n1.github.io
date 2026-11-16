@@ -11,9 +11,9 @@ description: "reposurgeon – surgical operations on repositories"
 <p> reposurgeon &#8211; surgical operations on repositories </p>
 <h2>SYNOPSIS</h2>
 <dl>
-<dt> <code>reposurgeon</code> [<i>command</i>&#8230;]</dl>
+<dt> <code>reposurgeon</code> [<i>command</i>&#8230;]</dt></dl>
 <h2>DESCRIPTION</h2>
-<dd>The purpose of <code>reposurgeon</code> is to enable risky operations that VCSes (version-control systems) don&#8217;t want to let you do, such as (a) editing past comments and metadata, (b) excising commits, (c) coalescing and splitting commits, (d) removing files and subtrees from repo history, (e) merging or grafting two or more repos, and (f) cutting a repo in two by cutting a parent-child link, preserving the branch structure of both child repos. </p>
+<dd>The purpose of <code>reposurgeon</code> is to enable risky operations that VCSes (version-control systems) don&#8217;t want to let you do, such as (a) editing past comments and metadata, (b) excising commits, (c) coalescing and splitting commits, (d) removing files and subtrees from repo history, (e) merging or grafting two or more repos, and (f) cutting a repo in two by cutting a parent-child link, preserving the branch structure of both child repos. </dd>
 <p> A major use of reposurgeon is to assist a human operator to perform higher-quality conversions among version control systems than can be achieved with fully automated converters. </p>
 <p> The original motivation for <code>reposurgeon</code> was to clean up artifacts created by repository conversions. It was foreseen that the tool would also have applications when code needs to be removed from repositories for legal or policy reasons. </p>
 <p> To keep <code>reposurgeon</code> simple and flexible, it normally does not do its own repository reading and writing. Instead, it relies on being able to parse and emit the command streams created by git-fast-export and read by git-fast-import. This means that it can be used on any version-control system that has both fast-export and fast-import utilities. The git-import stream format also implicitly defines a common language of primitive operations for <code>reposurgeon</code> to speak. </p>
@@ -37,7 +37,7 @@ description: "reposurgeon – surgical operations on repositories"
 <p> Here are some motivating examples. The commands will be explained in more detail after the description of selection syntax. </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre><code>
 :15 edit               ;
 ;
@@ -87,47 +87,47 @@ Display all commits with ancestry tracing to : 55
 ;
 Remove the first.gitignore fileop in the repo.
 </code></pre>
-</dl>
+</dd></dl>
 <h3>SELECTION SYNTAX</h3>
 <p> The selection-set specification syntax is an expression-oriented minilanguage. The most basic term in this language is a location. The following sorts of primitive locations are supported: </p>
 <p> event numbers</p>
 <dl>
 <dt>
-<dd> A plain numeric literal is interpreted as a 1-origin event-sequence number.</dl>
+</dt><dd> A plain numeric literal is interpreted as a 1-origin event-sequence number.</dd></dl>
 <p> marks</p>
 <dl>
 <dt>
-<dd> A numeric literal preceded by a colon is interpreted as a mark; see the import stream format documentation for explanation of the semantics of marks.</dl>
+</dt><dd> A numeric literal preceded by a colon is interpreted as a mark; see the import stream format documentation for explanation of the semantics of marks.</dd></dl>
 <p> tag and branch names</p>
 <dl>
 <dt>
-<dd> The basename of a branch (including branches in the refs/tags namespace) refers to its tip commit. The name of a tag is equivalent to its mark (that of the tag itself, not the commit it refers to). Tag and branch locations are bracketed with &lt; &gt; (angle brackets) to distinguish them from command keywords.</dl>
+</dt><dd> The basename of a branch (including branches in the refs/tags namespace) refers to its tip commit. The name of a tag is equivalent to its mark (that of the tag itself, not the commit it refers to). Tag and branch locations are bracketed with &lt; &gt; (angle brackets) to distinguish them from command keywords.</dd></dl>
 <p> legacy IDs</p>
 <dl>
 <dt>
-<dd> If the contents of name brackets (&lt; &gt;) does not match a tag or branch name, the interpreter next searches legacy IDs of commits. This is especially useful when you have imported a Subversion dump; it means that commits made from it can be referred to by their corresponding Subversion revision numbers.</dl>
+</dt><dd> If the contents of name brackets (&lt; &gt;) does not match a tag or branch name, the interpreter next searches legacy IDs of commits. This is especially useful when you have imported a Subversion dump; it means that commits made from it can be referred to by their corresponding Subversion revision numbers.</dd></dl>
 <p> commit numbers</p>
 <dl>
 <dt>
-<dd> A numeric literal within name brackets (&lt; &gt;) preceded by # is interpreted as a 1-origin commit-sequence number.</dl>
+</dt><dd> A numeric literal within name brackets (&lt; &gt;) preceded by # is interpreted as a 1-origin commit-sequence number.</dd></dl>
 <p> $</p>
 <dl>
 <dt>
-<dd> Refers to the last event.</dl>
+</dt><dd> Refers to the last event.</dd></dl>
 <p> These may be grouped into sets in the following ways: </p>
 <p> ranges</p>
 <dl>
 <dt>
-<dd> A range is two locations separated by &quot;..&quot;, and is the set of events beginning at the left-hand location and ending at the right-hand location (inclusive).</dl>
+</dt><dd> A range is two locations separated by &quot;..&quot;, and is the set of events beginning at the left-hand location and ending at the right-hand location (inclusive).</dd></dl>
 <p> lists</p>
 <dl>
 <dt>
-<dd> Comma-separated lists of locations and ranges are accepted, with the obvious meaning.</dl>
+</dt><dd> Comma-separated lists of locations and ranges are accepted, with the obvious meaning.</dd></dl>
 <p> There are some other ways to construct event sets: </p>
 <p> visibility sets</p>
 <dl>
 <dt>
-<dd> A visibility set is an expression specifying a set of event types. It will consist of a leading equal sign, followed by type letters. These are the type letters: <center></p>
+</dt><dd> A visibility set is an expression specifying a set of event types. It will consist of a leading equal sign, followed by type letters. These are the type letters: <center></dd>
 <table BORDER>
 <tr VALIGN=top>
 <td ALIGN=center> B </td>
@@ -225,7 +225,7 @@ Remove the first.gitignore fileop in the repo.
 <p> references</p>
 <dl>
 <dt>
-<dd> A reference name (bracketed by angle brackets) resolves to a single object, either a commit or tag. <center></p>
+</dt><dd> A reference name (bracketed by angle brackets) resolves to a single object, either a commit or tag. <center></dd>
 <table BORDER>
 <tr VALIGN=top>
 <td ALIGN=center><code> type </code></td>
@@ -258,7 +258,7 @@ Remove the first.gitignore fileop in the repo.
 <p> dates and action stamps</p>
 <dl>
 <dt>
-<dd> A date or action stamp in angle brackets resolves to a selection set of all matching commits. <center></p>
+</dt><dd> A date or action stamp in angle brackets resolves to a selection set of all matching commits. <center></dd>
 <table BORDER>
 <tr VALIGN=top>
 <td ALIGN=center><code> type </code></td>
@@ -286,7 +286,7 @@ Remove the first.gitignore fileop in the repo.
 <p> text search</p>
 <dl>
 <dt>
-<dd> A text search expression is a Python regular expression surrounded by forward slashes (to embed a forward slash in it, use a Python string escape such as /). </p>
+</dt><dd> A text search expression is a Python regular expression surrounded by forward slashes (to embed a forward slash in it, use a Python string escape such as /). </dd>
 <p> A text search normally matches against the comment fields of commits and annotated tags, or against their author/committer names, or against the names of tags; also the text of passthrough objects. </p>
 <p> The scope of a text search can be changed with qualifier letters after the trailing slash. These are as follows: <center></p>
 <table BORDER>
@@ -342,7 +342,7 @@ Remove the first.gitignore fileop in the repo.
 <p> paths</p>
 <dl>
 <dt>
-<dd> A &quot;path expression&quot; enclosed in square brackets resolves to the set of all commits and blobs related to a path matching the given expression. The path expression itself is either a path literal or a regular expression surrounded by slashes. Immediately after the trailing / of a path regexp you can put any number of the following characters which act as flags: &#8216;a&#8217;, &#8216;c&#8217;, &#8216;D&#8217;, &quot;M&#8217;, &#8216;R&#8217;, &#8216;C&#8217;, &#8216;N&#8217;. </p>
+</dt><dd> A &quot;path expression&quot; enclosed in square brackets resolves to the set of all commits and blobs related to a path matching the given expression. The path expression itself is either a path literal or a regular expression surrounded by slashes. Immediately after the trailing / of a path regexp you can put any number of the following characters which act as flags: &#8216;a&#8217;, &#8216;c&#8217;, &#8216;D&#8217;, &quot;M&#8217;, &#8216;R&#8217;, &#8216;C&#8217;, &#8216;N&#8217;. </dd>
 <p> By default, a path is related to a commit if the latter has a fileop that touches that file path &#8211; modifies that change it, deletes that remove it, renames and copies that have it as a source or target. When the &#8216;c&#8217; flag is in use the meaning changes: the paths related to a commit become all paths that would be present in a checkout for that commit. </p>
 <p> A path literal matches a commit if and only if the path literal is exactly one of the paths related to the commit (no prefix or suffix operation is done). In particular a path literal won&#8217;t match if it corresponds to a directory in the chosen repository. </p>
 <p> A regular expression matches a commit if it matches any path related to the commit anywhere in the path. You can use &#8216;^&#8217; or &#8216;$&#8217; if you want the expression to only match at the beginning or end of paths. When the &#8216;a&#8217; flag is in use, the path expression selects commits whose every path matches the regular expression. This is not always a subset of commits selected without the &#8216;a&#8217; flag because it also selects commits with no related paths (e.g. empty commits, deletealls and commits with empty trees). If you want to avoid those, you can use e.g. &#8216;[/regex/] &amp; [/regex/a]&#8217;. </p>
@@ -352,7 +352,7 @@ Remove the first.gitignore fileop in the repo.
 <p> function calls</p>
 <dl>
 <dt>
-<dd> The expression language has named special functions. The sequence for a named function is &#8220;@&#8221; followed by a function name, followed by an argument in parentheses. Presently the following functions are defined: <center></p>
+</dt><dd> The expression language has named special functions. The sequence for a named function is &#8220;@&#8221; followed by a function name, followed by an argument in parentheses. Presently the following functions are defined: <center></dd>
 <table BORDER>
 <tr VALIGN=top>
 <td ALIGN=center><code> name </code></td>
@@ -420,7 +420,7 @@ Remove the first.gitignore fileop in the repo.
 <p> <code>read</code> [&#8211;format=fossil] [<i>directory</i>|<i>&#8211;</i>|<i>&lt;infile</i>]</p>
 <dl>
 <dt>
-<dd> With a directory-name argument, this command attempts to read in the contents of a repository in any supported version-control system under that directory; read with no arguments does this in the current directory. If output is redirected to a plain file, it will be read in as a fast-import stream or Subversion dumpfile. With an argument of &#8220;-&#8220;, this command reads a fast-import stream or Subversion dumpfile from standard input (this will be useful in filters constructed with command-line arguments). </p>
+</dt><dd> With a directory-name argument, this command attempts to read in the contents of a repository in any supported version-control system under that directory; read with no arguments does this in the current directory. If output is redirected to a plain file, it will be read in as a fast-import stream or Subversion dumpfile. With an argument of &#8220;-&#8220;, this command reads a fast-import stream or Subversion dumpfile from standard input (this will be useful in filters constructed with command-line arguments). </dd>
 <p> If the contents is a fast-import stream, any &quot;cvs-revision&quot; property on a commit is taken to be a newline-separated list of CVS revision cookies pointing to the commit, and used for reference lifting. </p>
 <p> If the contents is a fast-import stream, any &quot;legacy-id&quot; property on a commit is taken to be a legacy ID token pointing to the commit, and used for reference-lifting. </p>
 <p> If the read location is a git repository and contains a .git/cvsauthors file (such as is left in place by <code>git cvsimport -A</code>) that file will be read in as if it had been given to the <code>authors read</code> command. </p>
@@ -431,7 +431,7 @@ Remove the first.gitignore fileop in the repo.
 <p> <code>write</code> [&#8211;legacy] [&#8211;format=fossil] [&#8211;noincremental] [&#8211;callout] [<i>&gt;outfile</i>|<i>&#8211;</i>]</p>
 <dl>
 <dt>
-<dd> Dump selected events as a fast-import stream representing the edited repository; the default selection set is all events. Where to dump to is standard output if there is no argument or the argument is &#8216;-&#8216;, or the target of an output redirect. </p>
+</dt><dd> Dump selected events as a fast-import stream representing the edited repository; the default selection set is all events. Where to dump to is standard output if there is no argument or the argument is &#8216;-&#8216;, or the target of an output redirect. </dd>
 <p> Alternatively, if there is no redirect and the argument names a directory, the repository is rebuilt into that directory, with any selection set being ignored; if that target directory is nonempty its contents are backed up to a save directory. </p>
 <p> If the write location is a file and the <code>&#8211;format=fossil</code> is used, the file is written in Fossil repository format. </p>
 <p> With the <code>&#8211;legacy</code> option, the Legacy-ID of each commit is appended to its commit comment at write time. This option is mainly useful for debugging conversion edge cases. </p>
@@ -444,108 +444,108 @@ Remove the first.gitignore fileop in the repo.
 <p> <code>choose</code> [<i>reponame</i>]</p>
 <dl>
 <dt>
-<dd> Choose a named repo on which to operate. The name of a repo is normally the basename of the directory or file it was loaded from, but repos loaded from standard input are &quot;unnamed&quot;. <code>reposurgeon</code> will add a disambiguating suffix if there have been multiple reads from the same source. </p>
+</dt><dd> Choose a named repo on which to operate. The name of a repo is normally the basename of the directory or file it was loaded from, but repos loaded from standard input are &quot;unnamed&quot;. <code>reposurgeon</code> will add a disambiguating suffix if there have been multiple reads from the same source. </dd>
 <p> With no argument, lists the names of the currently stored repositories and their load times. The second column is &#8216;*&#8217; for the currently selected repository, &#8216;-&#8216; for others.</dl>
 <p> <code>drop</code> [<i>reponame</i>]</p>
 <dl>
 <dt>
-<dd> Drop a repo named by the argument from reposurgeon&#8217;s list, freeing the memory used for its metadata and deleting on-disk blobs. With no argument, drops the currently chosen repo.</dl>
+</dt><dd> Drop a repo named by the argument from reposurgeon&#8217;s list, freeing the memory used for its metadata and deleting on-disk blobs. With no argument, drops the currently chosen repo.</dd></dl>
 <p> <code>rename</code> <i>reponame</i></p>
 <dl>
 <dt>
-<dd> Rename the currently chosen repo; requires an argument. Won&#8217;t do it if there is already one by the new name.</dl>
+</dt><dd> Rename the currently chosen repo; requires an argument. Won&#8217;t do it if there is already one by the new name.</dd></dl>
 <h3>REBUILDS IN PLACE</h3>
 <p> <code>reposurgeon</code> can rebuild an altered repository in place. Untracked files are normally saved and restored when the contents of the new repository is checked out (but see the documentation of the &#8220;preserve&#8221; command for a caveat). </p>
 <p> <code>rebuild</code> [<i>directory</i>]</p>
 <dl>
 <dt>
-<dd> Rebuild a repository from the state held by <code>reposurgeon</code>. This command does not take a selection set. </p>
+</dt><dd> Rebuild a repository from the state held by <code>reposurgeon</code>. This command does not take a selection set. </dd>
 <p> The single argument, if present, specifies the target directory in which to do the rebuild; if the repository read was from a repo directory (and not a git-import stream), it defaults to that directory. If the target directory is nonempty its contents are backed up to a save directory. Files and directories on the repository&#8217;s preserve list are copied back from the backup directory after repo rebuild. The default preserve list depends on the repository type, and can be displayed with the <code>stats</code> command. </p>
 <p> If <code>reposurgeon</code> has a nonempty legacy map, it will be written to a file named legacy-map in the repository subdirectory as though by a legacy write command. (This will normally be the case for Subversion and CVS conversions.)</dl>
 <p> <code>preserve</code> [<i>file&#8230;</i>]</p>
 <dl>
 <dt>
-<dd> Add (presumably untracked) files or directories to the repo&#8217;s list of paths to be restored from the backup directory after a <code>rebuild</code>. Each argument, if any, is interpreted as a pathname. The current preserve list is displayed afterwards. </p>
+</dt><dd> Add (presumably untracked) files or directories to the repo&#8217;s list of paths to be restored from the backup directory after a <code>rebuild</code>. Each argument, if any, is interpreted as a pathname. The current preserve list is displayed afterwards. </dd>
 <p> It is only necessary to use this feature if your version-control system lacks a command to list files under version control. Under systems with such a command (which include git and hg), all files that are neither beneath the repository dot directory nor under reposurgeon temporary directories are preserved automatically.</dl>
 <p> <code>unpreserve</code> [<i>file&#8230;</i>]</p>
 <dl>
 <dt>
-<dd> Remove (presumably untracked) files or directories to the repo&#8217;s list of paths to be restored from the backup directory after a <code>rebuild</code>. Each argument, if any, is interpreted as a pathname. The current preserve list is displayed afterwards.</dl>
+</dt><dd> Remove (presumably untracked) files or directories to the repo&#8217;s list of paths to be restored from the backup directory after a <code>rebuild</code>. Each argument, if any, is interpreted as a pathname. The current preserve list is displayed afterwards.</dd></dl>
 <h3>INFORMATION AND REPORTS</h3>
 <p> Commands in this group report information about the selected repository. </p>
 <p> The output of these commands can individually be redirected to a named output file. Where indicated in the syntax, you can prefix the output filename with &#8220;&gt;&#8221; and give it as a following argument. If you use &#8220;&gt;&gt;&#8221; the file is opened for append rather than write. </p>
 <p> <code>list</code> [&gt;<i>outfile</i>]</p>
 <dl>
 <dt>
-<dd> This is the main command for identifying the events you want to modify. It lists commits in the selection set by event sequence number with summary information. The first column is raw event numbers, the second a timestamp in local time. If the repository has legacy IDs, they will be displayed in the third column. The leading portion of the comment follows.</dl>
+</dt><dd> This is the main command for identifying the events you want to modify. It lists commits in the selection set by event sequence number with summary information. The first column is raw event numbers, the second a timestamp in local time. If the repository has legacy IDs, they will be displayed in the third column. The leading portion of the comment follows.</dd></dl>
 <p> <code>stamp</code> [&gt;<i>outfile</i>]</p>
 <dl>
 <dt>
-<dd> Alternative form of listing that displays full action stamps, usable as references in selections. Supports &gt; redirection.</dl>
+</dt><dd> Alternative form of listing that displays full action stamps, usable as references in selections. Supports &gt; redirection.</dd></dl>
 <p> <code>tip</code> [&gt;<i>outfile</i>]</p>
 <dl>
 <dt>
-<dd> Display the branch tip names associated with commits in the selection set. These will not necessarily be the same as their branch fields (which will often be tag names if the repo contains either annotated or lightweight tags). </p>
+</dt><dd> Display the branch tip names associated with commits in the selection set. These will not necessarily be the same as their branch fields (which will often be tag names if the repo contains either annotated or lightweight tags). </dd>
 <p> If a commit is at a branch tip, its tip is its branch name. If it has only one child, its tip is the child&#8217;s tip. If it has multiple children, then if there is a child with a matching branch name its tip is the child&#8217;s tip. Otherwise this function throws a recoverable error.</dl>
 <p> <code>tags</code> [&gt;<i>outfile</i>]</p>
 <dl>
 <dt>
-<dd> Display tags and resets: three fields, an event number and a type and a name. Branch tip commits associated with tags are also displayed with the type field &#8216;commit&#8217;. Supports &gt; redirection.</dl>
+</dt><dd> Display tags and resets: three fields, an event number and a type and a name. Branch tip commits associated with tags are also displayed with the type field &#8216;commit&#8217;. Supports &gt; redirection.</dd></dl>
 <p> <code>stats</code> [<i>repo-name</i>&#8230;] [&gt;<i>outfile</i>]</p>
 <dl>
 <dt>
-<dd> Report size statistics and import/export method information about named repositories, or with no argument the currently chosen repository.</dl>
+</dt><dd> Report size statistics and import/export method information about named repositories, or with no argument the currently chosen repository.</dd></dl>
 <p> <code>count</code> [&gt;<i>outfile</i>]</p>
 <dl>
 <dt>
-<dd> Report a count of items in the selection set. Default set is everything in the currently-selected repo. Supports &gt; redirection.</dl>
+</dt><dd> Report a count of items in the selection set. Default set is everything in the currently-selected repo. Supports &gt; redirection.</dd></dl>
 <p> <code>inspect</code> [&gt;<i>outfile</i>]</p>
 <dl>
 <dt>
-<dd> Dump a fast-import stream representing selected events to standard output. Just like a write, except (1) the progress meter is disabled, and (2) there is an identifying header before each event dump.</dl>
+</dt><dd> Dump a fast-import stream representing selected events to standard output. Just like a write, except (1) the progress meter is disabled, and (2) there is an identifying header before each event dump.</dd></dl>
 <p> <code>graph</code> [&gt;<i>outfile</i>]</p>
 <dl>
 <dt>
-<dd> Emit a visualization of the commit graph in the DOT markup language used by the graphviz tool suite. This can be fed as input to the main graphviz rendering program <code><a href="/docs/linux/man/1-dot/">dot</a></code>(1), which will yield a viewable image. Supports &gt; redirection. </p>
+</dt><dd> Emit a visualization of the commit graph in the DOT markup language used by the graphviz tool suite. This can be fed as input to the main graphviz rendering program <code><a href="/docs/linux/man/1-dot/">dot</a></code>(1), which will yield a viewable image. Supports &gt; redirection. </dd>
 <p> You may find a script like this useful: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 graph $1 &gt;/tmp/foo$$
 shell dot &lt;/tmp/foo$$ -Tpng | display -; rm /tmp/foo$$
 </pre>
-</dl>
+</dd></dl>
 <p> You can substitute in your own preferred image viewer, of course.</dl>
 <p> <code>sizes</code> [&gt;<i>outfile</i>]</p>
 <dl>
 <dt>
-<dd> Print a report on data volume per branch; takes a selection set, defaulting to all events. The numbers tally the size of uncompressed blobs, commit and tag comments, and other metadata strings (a blob is counted each time a commit points at it). </p>
+</dt><dd> Print a report on data volume per branch; takes a selection set, defaulting to all events. The numbers tally the size of uncompressed blobs, commit and tag comments, and other metadata strings (a blob is counted each time a commit points at it). </dd>
 <p> The numbers are not an exact measure of storage size: they are intended mainly as a way to get information on how to efficiently partition a repository that has become large enough to be unwieldy. </p>
 <p> Supports &gt; redirection.</dl>
 <p> <code>lint</code> [&gt;<i>outfile</i>]</p>
 <dl>
 <dt>
-<dd> Look for DAG and metadata configurations that may indicate a problem. Presently checks for: (1) Mid-branch deletes, (2) disconnected commits, (3) parentless commits, (4) the existence of multiple roots, (5) committer and author IDs that don&#8217;t look well-formed as DVCS IDs, (6) multiple child links with identical branch labels descending from the same commit, (7) time and action-stamp collisions. </p>
+</dt><dd> Look for DAG and metadata configurations that may indicate a problem. Presently checks for: (1) Mid-branch deletes, (2) disconnected commits, (3) parentless commits, (4) the existence of multiple roots, (5) committer and author IDs that don&#8217;t look well-formed as DVCS IDs, (6) multiple child links with identical branch labels descending from the same commit, (7) time and action-stamp collisions. </dd>
 <p> Options to issue only partial reports are supported; &quot;lint &#8211;options&quot; or &quot;lint -?&quot; lists them. </p>
 <p> The options and output format of this command are unstable; they may change without notice as more sanity checks are added.</dl>
 <p> <code>when</code> &gt;<i>timespec</i></p>
 <dl>
 <dt>
-<dd> Interconvert between git timestamps (integer Unix time plus TZ) and RFC3339 format. Takes one argument, autodetects the format. Useful when eyeballing export streams. Also accepts any other supported date format and converts to RFC3339.</dl>
+</dt><dd> Interconvert between git timestamps (integer Unix time plus TZ) and RFC3339 format. Takes one argument, autodetects the format. Useful when eyeballing export streams. Also accepts any other supported date format and converts to RFC3339.</dd></dl>
 <h3>SURGICAL OPERATIONS</h3>
 <p> These are the operations the rest of reposurgeon is designed to support. </p>
 <p> <code>squash</code> [<i>policy&#8230;</i>]</p>
 <dl>
 <dt>
-<dd> Combine or delete commits in a selection set of events. The default selection set for this command is empty. Has no effect on events other than commits unless the &#8211;delete policy is selected; see the &#8216;delete&#8217; command for discussion. </p>
+</dt><dd> Combine or delete commits in a selection set of events. The default selection set for this command is empty. Has no effect on events other than commits unless the &#8211;delete policy is selected; see the &#8216;delete&#8217; command for discussion. </dd>
 <p> Normally, when a commit is squashed, its file operation list (and any associated blob references) gets either prepended to the beginning of the operation list of each of the commit&#8217;s children or appended to the operation list of each of the commit&#8217;s parents. Then children of a deleted commit get it removed from their parent set and its parents added to their parent set. </p>
 <p> The default is to squash forward, modifying children; but see the list of policy modifiers below for how to change this. </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
  <font SIZE="+1"> <code>Warning</code> </font><br />
- It is easy to get the bounds of a squash command wrong, with confusing and destructive results. Beware thinking you can squash on a selection set to merge all commits except the last one into the last one; what you will actually do is to merge all of them to the first commit <i>after</i> the selected set. </p>
+ It is easy to get the bounds of a squash command wrong, with confusing and destructive results. Beware thinking you can squash on a selection set to merge all commits except the last one into the last one; what you will actually do is to merge all of them to the first commit <i>after</i> the selected set. </dd>
 </dl>
 <p> Normally, any tag pointing to a combined commit will also be pushed forward. But see the list of policy modifiers below for how to change this. </p>
 <p> Following all operation moves, every one of the altered file operation lists is reduced to a shortest normalized form. The normalized form detects various combinations of modification, deletion, and renaming and simplifies the operation sequence as much as it can without losing any information. </p>
@@ -554,56 +554,56 @@ shell dot &lt;/tmp/foo$$ -Tpng | display -; rm /tmp/foo$$
 <p> <code>&#8211;delete</code></p>
 <dl>
 <dt>
-<dd> Simply discards all file ops and tags associated with deleted commit(s).</dl>
+</dt><dd> Simply discards all file ops and tags associated with deleted commit(s).</dd></dl>
 <p> <code>&#8211;coalesce</code></p>
 <dl>
 <dt>
-<dd> Discard all M operations (and associated blobs) except the last.</dl>
+</dt><dd> Discard all M operations (and associated blobs) except the last.</dd></dl>
 <p> <code>&#8211;pushback</code></p>
 <dl>
 <dt>
-<dd> Append fileops to parents, rather than prepending to children.</dl>
+</dt><dd> Append fileops to parents, rather than prepending to children.</dd></dl>
 <p> <code>&#8211;pushforward</code></p>
 <dl>
 <dt>
-<dd> Prepend fileops to children. This is the default; it can be specified in a lift script for explicitness about intentions.</dl>
+</dt><dd> Prepend fileops to children. This is the default; it can be specified in a lift script for explicitness about intentions.</dd></dl>
 <p> <code>&#8211;tagforward</code></p>
 <dl>
 <dt>
-<dd> With the &quot;tagforward&quot; modifier, any tag on the deleted commit is pushed forward to the first child rather than being deleted. This is the default; it can be specified for explicitness.</dl>
+</dt><dd> With the &quot;tagforward&quot; modifier, any tag on the deleted commit is pushed forward to the first child rather than being deleted. This is the default; it can be specified for explicitness.</dd></dl>
 <p> <code>&#8211;tagback</code></p>
 <dl>
 <dt>
-<dd> With the &quot;&#8211;tagback&quot; modifier, any tag on the deleted commit is pushed backward to the first parent rather than being deleted.</dl>
+</dt><dd> With the &quot;&#8211;tagback&quot; modifier, any tag on the deleted commit is pushed backward to the first parent rather than being deleted.</dd></dl>
 <p> <code>&#8211;quiet</code></p>
 <dl>
 <dt>
-<dd> Suppresses warning messages about deletion of commits with non-delete fileops.</dl>
+</dt><dd> Suppresses warning messages about deletion of commits with non-delete fileops.</dd></dl>
 <p> <code>&#8211;complain</code></p>
 <dl>
 <dt>
-<dd> The opposite of quiet. Can be specified for explicitness.</dl>
+</dt><dd> The opposite of quiet. Can be specified for explicitness.</dd></dl>
 <p> Under any of these policies except &#8220;&#8211;delete&#8221;, deleting a commit that has children does not back out the changes made by that commit, as they will still be present in the blobs attached to versions past the end of the deletion set. All a delete does when the commit has children is lose the metadata information about when and by who those changes were actually made; after the delete any such changes will be attributed to the first undeleted children of the deleted commits. It is expected that this command will be useful mainly for removing commits mechanically generated by repository converters such as <code>cvs2svn</code>.</dl>
 <p> <code>delete</code> [<i>policy&#8230;</i>]</p>
 <dl>
 <dt>
-<dd> Delete a selection set of events. The default selection set for this command is empty. On a set of commits, this is equivalent to a squash with the &#8211;delete flag. It unconditionally deletes tags, resets, and passthroughs; blobs can be removed only as a side effect of deleting every commit that points at them.</dl>
+</dt><dd> Delete a selection set of events. The default selection set for this command is empty. On a set of commits, this is equivalent to a squash with the &#8211;delete flag. It unconditionally deletes tags, resets, and passthroughs; blobs can be removed only as a side effect of deleting every commit that points at them.</dd></dl>
 <p> <code>divide</code> <i>parent</i> [<i>child</i>]</p>
 <dl>
 <dt>
-<dd> Attempt to partition a repo by cutting the parent-child link between two specified commits (they must be adjacent). Does not take a general selection set. It is only necessary to specify the parent commit, unless it has multiple children in which case the child commit must follow (separate it with a comma). </p>
+</dt><dd> Attempt to partition a repo by cutting the parent-child link between two specified commits (they must be adjacent). Does not take a general selection set. It is only necessary to specify the parent commit, unless it has multiple children in which case the child commit must follow (separate it with a comma). </dd>
 <p> If the repo was named &#8216;foo&#8217;, you will normally end up with two repos named &#8216;foo-early&#8217; and &#8216;foo-late&#8217; (option and feature events at the beginning of the early segment will be duplicated onto the beginning of the late one.). But if the commit graph would remain connected through another path after the cut, the behavior changes. In this case, if the parent and child were on the same branch &#8216;qux&#8217;, the branch segments are renamed &#8216;qux-early&#8217; and &#8216;qux-late&#8217; but the repo is not divided.</dl>
 <p> <code>expunge</code> <i>[&#8211;notagify] [path | /regexp/]&#8230;</i></p>
 <dl>
 <dt>
-<dd> Expunge files from the selected portion of the repo history; the default is the entire history. The arguments to this command may be paths or Python regular expressions matching paths (regexps must be marked by being surrounded with //). </p>
+</dt><dd> Expunge files from the selected portion of the repo history; the default is the entire history. The arguments to this command may be paths or Python regular expressions matching paths (regexps must be marked by being surrounded with //). </dd>
 <p> All filemodify (M) operations and delete (D) operations involving a matched file in the selected set of events are disconnected from the repo and put in a removal set. Renames are followed as the tool walks forward in the selection set; each triggers a warning message. If a selected file is a copy (C) target, the copy will be deleted and a warning message issued. If a selected file is a copy source, the copy target will be added to the list of paths to be deleted and a warning issued. </p>
 <p> After file expunges have been performed, any commits with no remaining file operations will be removed, and any tags pointing to them. By default each deleted commit is replaced with a tag of the form &#8217;emptycommit-<i>ident</i>&#8216; on the preceding commit unless &#8211;notagify is specified as an argument. Commits with deleted fileops pointing both in and outside the path set are not deleted, but are cloned into the removal set. </p>
 <p> The removal set is not discarded. It is assembled into a new repository named after the old one with the suffix &quot;-expunges&quot; added. Thus, this command can be used to carve a repository into sections by file path matches.</dl>
 <p> <code>tagify</code> [<code>&#8211;canonicalize</code>] [<code>&#8211;tipdeletes</code>] [<code>&#8211;tagify-merges</code>]</p>
 <dl>
 <dt>
-<dd> Search for empty commits and turn them into tags. Takes an optional selection set argument defaulting to all commits. For each commit in the selection set, turn it into a tag with the same message and author information if it has no fileops. By default merge commits are not considered, even if they have no fileops (thus no tree differences with their first parent). To change that, use the <code>&#8211;tagify-merges</code> option. </p>
+</dt><dd> Search for empty commits and turn them into tags. Takes an optional selection set argument defaulting to all commits. For each commit in the selection set, turn it into a tag with the same message and author information if it has no fileops. By default merge commits are not considered, even if they have no fileops (thus no tree differences with their first parent). To change that, use the <code>&#8211;tagify-merges</code> option. </dd>
 <p> The name of the generated tag will be &#8217;emptycommit-<i>ident</i>&#8216;, where <i>ident</i> is generated from the legacy ID of the deleted commit, or from its mark, or from its index in the repository, with a disambiguation suffix if needed. </p>
 <p> With the <code>&#8211;canonicalize</code>, tagify tries harder to detect trivial commits by first ensuring that all fileops of selected commits will have an actual effect when processed by fast-import. </p>
 <p> With the <code>&#8211;tipdeletes</code>, tagify also considers branch tips with only deleteall fileops to be candidates for tagification. The corresponding tags get names of the form &#8216;tipdelete-<i>branchname</i>&#8216; rather than the default &#8217;emptycommit-<i>ident</i>&#8216;. </p>
@@ -611,7 +611,7 @@ shell dot &lt;/tmp/foo$$ -Tpng | display -; rm /tmp/foo$$
 <p> <code>coalesce</code> [<code>&#8211;debug</code>|<code>&#8211;changelog</code>] [<i>timefuzz</i>]</p>
 <dl>
 <dt>
-<dd> Scan the selection set for runs of commits with identical comments close to each other in time (this is a common form of scar tissues in repository up-conversions from older file-oriented version-control systems). Merge these cliques by deleting all but the last commit, in order; fileops from the deleted commits are pushed forward to that last one </p>
+</dt><dd> Scan the selection set for runs of commits with identical comments close to each other in time (this is a common form of scar tissues in repository up-conversions from older file-oriented version-control systems). Merge these cliques by deleting all but the last commit, in order; fileops from the deleted commits are pushed forward to that last one </dd>
 <p> The optional second argument, if present, is a maximum time separation in seconds; the default is 90 seconds. </p>
 <p> The default selection set for this command is =C, all commits. Occasionally you may want to restrict it, for example to avoid coalescing unrelated cliques of &quot;*** empty log message ***&quot; commits from CVS lifts. </p>
 <p> With the &#8211;debug option, show messages about mismatches. </p>
@@ -619,57 +619,57 @@ shell dot &lt;/tmp/foo$$ -Tpng | display -; rm /tmp/foo$$
 <p> <code>split</code> <code>{at|by}</code> <i>item</i></p>
 <dl>
 <dt>
-<dd> The first argument is required to be a commit location; the second is a preposition which indicates which splitting method to use. If the preposition is &#8216;at&#8217;, then the third argument must be an integer 1-origin index of a file operation within the commit. If it is &#8216;by&#8217;, then the third argument must be a pathname to be prefix-matched, pathname match is done first). </p>
+</dt><dd> The first argument is required to be a commit location; the second is a preposition which indicates which splitting method to use. If the preposition is &#8216;at&#8217;, then the third argument must be an integer 1-origin index of a file operation within the commit. If it is &#8216;by&#8217;, then the third argument must be a pathname to be prefix-matched, pathname match is done first). </dd>
 <p> The commit is copied and inserted into a new position in the event sequence, immediately following itself; the duplicate becomes the child of the original, and replaces it as parent of the original&#8217;s children. Commit metadata is duplicated; the new commit then gets a new mark. If the new commit has a legacy ID, the suffix &#8216;.split&#8217; is appended to it. </p>
 <p> Finally, some file operations &#8211; starting at the one matched or indexed by the split argument &#8211; are moved forward from the original commit into the new one. Legal indices are 2-n, where n is the number of file operations in the original commit.</dl>
 <p> <code>add</code> {<i>D</i> <i>path</i> | <i>M</i> <i>perm</i> <i>mark</i> <i>path</i> | <i>R</i> <i>source</i> <i>target</i> | <i>C</i> <i>source</i> <i>target</i>}</p>
 <dl>
 <dt>
-<dd> To a specified commit, add a specified fileop. </p>
+</dt><dd> To a specified commit, add a specified fileop. </dd>
 <p> For a D operation to be valid there must be an M operation for the path in the commit&#8217;s ancestry. For an M operation to be valid, the &#8216;perm&#8217; part must be a token ending with 755 or 644 and the &#8216;mark&#8217; must refer to a blob that precedes the commit location. For an R or C operation to be valid, there must be an M operation for the source in the commit&#8217;s ancestry.</dl>
 <p> <code>remove</code> [<i>index</i> | <i>path</i> | <code>deletes</code>] [<code>to</code> <i>commit</i>]</p>
 <dl>
 <dt>
-<dd> From a specified commit, remove a specified fileop. The op must be one of (a) the keyword &#8220;deletes&#8221;, (b) a file path, (c) a file path preceded by an op type set (some subset of the letters DMRCN), or (d) a 1-origin numeric index. The &#8220;deletes&#8221; keyword selects all D fileops in the commit; the others select one each. </p>
+</dt><dd> From a specified commit, remove a specified fileop. The op must be one of (a) the keyword &#8220;deletes&#8221;, (b) a file path, (c) a file path preceded by an op type set (some subset of the letters DMRCN), or (d) a 1-origin numeric index. The &#8220;deletes&#8221; keyword selects all D fileops in the commit; the others select one each. </dd>
 <p> If the &#8220;to&#8221; clause is present, the removed op is appended to the commit specified by the following singleton selection set. This option cannot be combined with &#8220;deletes&#8221;. </p>
 <p> Note that this command does not attempt to scavenge blobs even if the deleted fileop might be the only reference to them. This behavior may change in a future release.</dl>
 <p> <code>blob</code></p>
 <dl>
 <dt>
-<dd> Create a blob at mark :1 after renumbering other marks starting from :2. Data is taken from stdin, which may be a here-doc. This can be used with the add command to patch synthetic data into a repository.</dl>
+</dt><dd> Create a blob at mark :1 after renumbering other marks starting from :2. Data is taken from stdin, which may be a here-doc. This can be used with the add command to patch synthetic data into a repository.</dd></dl>
 <p> <code>renumber</code></p>
 <dl>
 <dt>
-<dd> Renumber the marks in a repository, from :1 up to :&lt;n&gt; where &lt;n&gt; is the count of the last mark. Just in case an importer ever cares about mark ordering or gaps in the sequence. </p>
+</dt><dd> Renumber the marks in a repository, from :1 up to :&lt;n&gt; where &lt;n&gt; is the count of the last mark. Just in case an importer ever cares about mark ordering or gaps in the sequence. </dd>
 <p> A side effect of this comment is to clean up stray &quot;done&quot; passthroughs that may have entered the repository via graft operations. After a renumber, the repository will have at most one &quot;done&quot; and it will be at the end of the events.</dl>
 <p> <code>mailbox_out</code> [&gt;<i>outfile</i>]</p>
 <dl>
 <dt>
-<dd> Emit a mailbox file of messages in RFC822 format representing the contents of repository metadata. Takes a selection set; members of the set other than commits, annotated tags, and passthroughs are ignored (that is, presently, blobs and resets). </p>
+</dt><dd> Emit a mailbox file of messages in RFC822 format representing the contents of repository metadata. Takes a selection set; members of the set other than commits, annotated tags, and passthroughs are ignored (that is, presently, blobs and resets). </dd>
 <p> The output from this command can optionally be redirected to a named output file. Prefix the filename with &#8220;&gt;&#8221; and give it as a following argument. </p>
 <p> May have an option &#8211;filter, followed by = and a /-enclosed regular expression. If this is given, only headers with names matching it are emitted. In this context the name of the header includes its trailing colon.</dl>
 <p> <code>mailbox_in</code> [&lt;<i>infile</i>] [<i>&#8211;changed</i> &gt;<i>outfile</i>]</p>
 <dl>
 <dt>
-<dd> Accept a mailbox file of messages in RFC822 format representing the contents of the metadata in selected commits and annotated tags. Takes no selection set. If there is an argument it will be taken as the name of a mailbox file to read from; no argument, or one of &#8216;-&#8216;; reads from standard input. </p>
+</dt><dd> Accept a mailbox file of messages in RFC822 format representing the contents of the metadata in selected commits and annotated tags. Takes no selection set. If there is an argument it will be taken as the name of a mailbox file to read from; no argument, or one of &#8216;-&#8216;; reads from standard input. </dd>
 <p> Users should be aware that modifying an Event-Number or Event-Mark field will change which event the update from that message is applied to. This is unlikely to have good results. </p>
 <p> If the Event-Number and Event-Mark fields are absent, the mailbox_in logic will attempt to match the commit or tag first by Legacy-ID, then by a unique committer ID and timestamp pair. </p>
 <p> If output is redirected and the modifier &#8220;&#8211;changed&#8221; appears, a minimal set of modifications actually made is written to the output file in a form that can be fed back in.</dl>
 <p> <code>setfield</code> <i>attribute</i> <i>value</i></p>
 <dl>
 <dt>
-<dd> In the selected objects (defaulting to none) set every instance of a named field to a string value. The string may be quoted to include whitespace, and use backslash escapes interpreted by the Python string-escape codec, such as 
- and 	. </p>
+</dt><dd> In the selected objects (defaulting to none) set every instance of a named field to a string value. The string may be quoted to include whitespace, and use backslash escapes interpreted by the Python string-escape codec, such as 
+ and 	. </dd>
 <p> Attempts to set nonexistent attributes are ignored. Valid values for the attribute are internal Python field names; in particular, for commits, &#8220;comment&#8221; and &#8220;branch&#8221; are legal. Consult the source code for other interesting values.</dl>
 <p> <code>append</code> [<code>&#8211;rstrip</code>] [&gt;<i>text</i>]</p>
 <dl>
 <dt>
-<dd> Append text to the comments of commits and tags in the specified selection set. The text is the first token of the command and may be a quoted string. C-style escape sequences in the string are interpreted using Python&#8217;s string_decode codec. </p>
+</dt><dd> Append text to the comments of commits and tags in the specified selection set. The text is the first token of the command and may be a quoted string. C-style escape sequences in the string are interpreted using Python&#8217;s string_decode codec. </dd>
 <p> If the option &#8211;rstrip is given, the comment is right-stripped before the new text is appended.</dl>
 <p> <code>filter</code> [<i>&#8211;shell</i>|<i>&#8211;regex</i>|<i>&#8211;replace</i>|<i>&#8211;dedos</i>]</p>
 <dl>
 <dt>
-<dd> Run blobs, commit comments, or tag comments in the selection set through the filter specified on the command line. </p>
+</dt><dd> Run blobs, commit comments, or tag comments in the selection set through the filter specified on the command line. </dd>
 <p> In any mode other than &#8211;dedos, attempting to specify a selection set including both blobs and non-blobs (that is, commits or tags) throws an error. Inline content in commits is filtered when the selection set contains (only) blobs and the commit is within the range bounded by the earliest and latest blob in the specification. </p>
 <p> When filtering blobs, if the command line contains the magic cookie &#8216;%PATHS%&#8217; it is replaced with a space-separated list of all paths that reference the blob. </p>
 <p> With &#8211;shell, the remainder of the line specifies a filter as a shell command. Each blob or comment is presented to the filter on standard input; the content is replaced with whatever the filter emits to standard output. </p>
@@ -681,7 +681,7 @@ shell dot &lt;/tmp/foo$$ -Tpng | display -; rm /tmp/foo$$
 <p> <code>transcode</code> <i>codec</i></p>
 <dl>
 <dt>
-<dd> Transcode blobs, commit comments and committer/author names, or tag comments and tag committer names in the selection set to UTF-8 from the character encoding specified on the command line. </p>
+</dt><dd> Transcode blobs, commit comments and committer/author names, or tag comments and tag committer names in the selection set to UTF-8 from the character encoding specified on the command line. </dd>
 <p> Attempting to specify a selection set including both blobs and non-blobs (that is, commits or tags) throws an error. Inline content in commits is filtered when the selection set contains (only) blobs and the commit is within the range bounded by the earliest and latest blob in the specification. </p>
 <p> The encoding argument must name one of the codecs known to the Python standard codecs library. In particular, &#8216;latin-1&#8217; is a valid codec name. </p>
 <p> Errors in this command are fatal, because an error may leave repository objects in a damaged state. </p>
@@ -689,58 +689,58 @@ shell dot &lt;/tmp/foo$$ -Tpng | display -; rm /tmp/foo$$
 <p> <code>edit</code></p>
 <dl>
 <dt>
-<dd> Report the selection set of events to a tempfile as mailbox_out does, call an editor on it, and update from the result as mailbox_in does. If you do not specify an editor name as second argument, it will be taken from the $EDITOR variable in your environment. </p>
+</dt><dd> Report the selection set of events to a tempfile as mailbox_out does, call an editor on it, and update from the result as mailbox_in does. If you do not specify an editor name as second argument, it will be taken from the $EDITOR variable in your environment. </dd>
 <p> Normally this command ignores blobs because <code>mailbox_out</code> does. However, if you specify a selection set consisting of a single blob, your editor will be called directly on the blob file.</dl>
 <p> <code>timeoffset</code> offset [<i>timezone</i>]</p>
 <dl>
 <dt>
-<dd> Apply a time offset to all time/date stamps in the selected set. An offset argument is required; it may be in the form [+-]ss, [+-]mm:ss or [+-]hh:mm:ss. The leading sign is required to distinguish it from a selection expression. </p>
+</dt><dd> Apply a time offset to all time/date stamps in the selected set. An offset argument is required; it may be in the form [+-]ss, [+-]mm:ss or [+-]hh:mm:ss. The leading sign is required to distinguish it from a selection expression. </dd>
 <p> Optionally you may also specify another argument in the form [+-]hhmm, a timezone literal to apply. To apply a timezone without an offset, use an offset literal of +0 or -0.</dl>
 <p> <code>unite</code> [&#8211;prune] <i>reponame</i>&#8230;</p>
 <dl>
 <dt>
-<dd> Unite repositories. Name any number of loaded repositories; they will be united into one union repo and removed from the load list. The union repo will be selected. </p>
+</dt><dd> Unite repositories. Name any number of loaded repositories; they will be united into one union repo and removed from the load list. The union repo will be selected. </dd>
 <p> The root of each repo (other than the oldest repo) will be grafted as a child to the last commit in the dump with a preceding commit date. This will produce a union repository with one branch for each part. Running last to first, duplicate tag and branch names will be disambiguated using the source repository name (thus, recent duplicates will get priority over older ones). After all grafts, marks will be renumbered. </p>
 <p> The name of the new repo will be the names of all parts concatenated, separated by &#8216;+&#8217;. It will have no source directory or preferred system type. </p>
 <p> With the option &#8211;prune, at each join D operations for every ancestral file existing will be prepended to the root commit, then it will be canonicalized using the rules for squashing the effect will be that only files with properly matching M, R, and C operations in the root survive.</dl>
 <p> <code>graft</code> [&#8211;prune] <i>reponame</i></p>
 <dl>
 <dt>
-<dd> For when unite doesn&#8217;t give you enough control. This command may have either of two forms, selected by the size of the selection set. The first argument is always required to be the name of a loaded repo. </p>
+</dt><dd> For when unite doesn&#8217;t give you enough control. This command may have either of two forms, selected by the size of the selection set. The first argument is always required to be the name of a loaded repo. </dd>
 <p> If the selection set is of size 1, it must identify a single commit in the currently chosen repo; in this case the name repo&#8217;s root will become a child of the specified commit. If the selection set is empty, the named repo must contain one or more callouts matching a commits in the currently chosen repo. </p>
 <p> Labels and branches in the named repo are prefixed with its name; then it is grafted to the selected one. Any other callouts in the named repo are also resolved in the context of the currently chosen one. Finally, the named repo is removed from the load list. </p>
 <p> With the option &#8211;prune, prepend a deleteall operation into the root of the grafted repository.</dl>
 <p> <code>path</code> [<i>source</i>] <code>rename</code> [<code>&#8211;force</code>] [<i>target</i>]</p>
 <dl>
 <dt>
-<dd> Rename a path in every fileop of every selected commit. The default selection set is all commits. The first argument is interpreted as a Python regular expression to match against paths; the second may contain back-reference syntax. </p>
+</dt><dd> Rename a path in every fileop of every selected commit. The default selection set is all commits. The first argument is interpreted as a Python regular expression to match against paths; the second may contain back-reference syntax. </dd>
 <p> Ordinarily, if the target path already exists in the fileops, or is visible in the ancestry of the commit, this command throws an error. With the <code>&#8211;force</code> option, these checks are skipped.</dl>
 <p> <code>paths</code> [<code>{sub|sup}</code>] [<code>dirname</code>] [&gt;<i>outfile</i>]</p>
 <dl>
 <dt>
-<dd> Takes a selection set. Without a modifier, list all paths touched by fileops in the selection set (which defaults to the entire repo). This reporting variant does &gt;-redirection. </p>
+</dt><dd> Takes a selection set. Without a modifier, list all paths touched by fileops in the selection set (which defaults to the entire repo). This reporting variant does &gt;-redirection. </dd>
 <p> With the &#8216;sub&#8217; modifier, take a second argument that is a directory name and prepend it to every path. With the &#8216;sup&#8217; modifier, strip any directory argument from the start of the path if it appears there; with no argument, strip the first directory component from every path.</dl>
 <p> <code>merge</code></p>
 <dl>
 <dt>
-<dd> Create a merge link. Takes a selection set argument, ignoring all but the lowest (source) and highest (target) members. Creates a merge link from the highest member (child) to the lowest (parent).</dl>
+</dt><dd> Create a merge link. Takes a selection set argument, ignoring all but the lowest (source) and highest (target) members. Creates a merge link from the highest member (child) to the lowest (parent).</dd></dl>
 <p> <code>unmerge</code></p>
 <dl>
 <dt>
-<dd> Linearize a commit. Takes a selection set argument, which must resolve to a single commit, and removes all its parents except for the first. </p>
+</dt><dd> Linearize a commit. Takes a selection set argument, which must resolve to a single commit, and removes all its parents except for the first. </dd>
 <p> It is equivalent to <code>reparent</code><i>first_parent</i>,<i>commit</i><code>rebase</code>, where <i>commit</i> is the same selection set as used with unmerge and <i>first_parent</i> is a set resolving <i>commit</i>&#8216;s first parent (see the <code>reparent</code> command below </p>
 <p> The main interest of the <code>unmerge</code> is that you don&#8217;t have to find and specify the first parent yourself, saving time and avoiding errors when nearby surgery would make a manual first parent argument stale.</dl>
 <p> <code>reparent</code> [<i>options</i>&#8230;] [<i>policy</i>]</p>
 <dl>
 <dt>
-<dd> Changes the parent list of a commit. Takes a selection set, zero or more option arguments, and an optional policy argument. </p>
+</dt><dd> Changes the parent list of a commit. Takes a selection set, zero or more option arguments, and an optional policy argument. </dd>
 <p> Selection set:</p>
 <dl>
 <dt>
-<dd> The selection set must resolve to one or more commits. The selected commit with the highest event number (not necessarily the last one selected) is the commit to modify. The remainder of the selected commits, if any, become its parents: the selected commit with the lowest event number (which is not necessarily the first one selected) becomes the first parent, the selected commit with second lowest event number becomes the second parent, and so on. All original parent links are removed. Examples: </p>
+</dt><dd> The selection set must resolve to one or more commits. The selected commit with the highest event number (not necessarily the last one selected) is the commit to modify. The remainder of the selected commits, if any, become its parents: the selected commit with the lowest event number (which is not necessarily the first one selected) becomes the first parent, the selected commit with second lowest event number becomes the second parent, and so on. All original parent links are removed. Examples: </dd>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 # this makes 17 the parent of 33
 17,33 reparent
@@ -752,19 +752,19 @@ shell dot &lt;/tmp/foo$$ -Tpng | display -; rm /tmp/foo$$
 # is commit 15, second parent is 17, and third parent is 22
 22,33,15,17 reparent
 </pre>
-</dl>
+</dd></dl>
 </dl>
 <p> Options:</p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <p> <code>&#8211;use-order</code></p>
+</dd><dl>
+<dt>
+</dt><dd> Use the selection order to determine which selected commit is the commit to modify and which are the parents (and if there are multiple parents, their order). The last selected commit (not necessarily the one with the highest event number) is the commit to modify, the first selected commit (not necessarily the one with the lowest event number) becomes the first parent, the second selected commit becomes the second parent, and so on. Examples: </dd>
 <dl>
 <dt>
-<dd> Use the selection order to determine which selected commit is the commit to modify and which are the parents (and if there are multiple parents, their order). The last selected commit (not necessarily the one with the highest event number) is the commit to modify, the first selected commit (not necessarily the one with the lowest event number) becomes the first parent, the second selected commit becomes the second parent, and so on. Examples: </p>
-<dl>
-<dt>
-<dd>
+</dt><dd>
 <pre>
 # this makes 33 the parent of 17
 33|17 reparent --use-order
@@ -772,29 +772,29 @@ shell dot &lt;/tmp/foo$$ -Tpng | display -; rm /tmp/foo$$
 # is commit 22, second parent is 33, and third parent is 15
 22,33,15|17 reparent --use-order
 </pre>
-</dl>
+</dd></dl>
 <p> Because ancestor commit events must appear before their descendants, giving a commit with a low event number a parent with a high event number triggers a re-sort of the events. A re-sort assigns different event numbers to some or all of the events. Re-sorting only works if the reparenting does not introduce any cycles. To swap the order of two commits that have an ancestor-descendant relationship without introducing a cycle during the process, you must reparent the descendant commit first.</dl>
 </dl>
 <p> Policy:</p>
 <dl>
 <dt>
-<dd> By default, the manifest of the reparented commit is computed before modifying it; a deleteall and some fileops are prepended so that the manifest stays unchanged even when the first parent has been changed. This behavior can be changed by specifying a policy: </p>
+</dt><dd> By default, the manifest of the reparented commit is computed before modifying it; a deleteall and some fileops are prepended so that the manifest stays unchanged even when the first parent has been changed. This behavior can be changed by specifying a policy: </dd>
 <p> <code>rebase</code></p>
 <dl>
 <dt>
-<dd> Inhibits the default behavior&#8212;no deleteall is issued and the tree contents of all descendents can be modified as a result.</dl>
+</dt><dd> Inhibits the default behavior&#8212;no deleteall is issued and the tree contents of all descendents can be modified as a result.</dd></dl>
 </dl>
 </dl>
 <p> <code>branch</code> <i>branchname</i>&#8230; {<code>rename</code>|<code>delete</code>} [<i>arg</i>]</p>
 <dl>
 <dt>
-<dd> Rename or delete a branch (and any associated resets). First argument must be an existing branch name; second argument must one of the verbs &#8216;rename&#8217; or &#8216;delete&#8217;. </p>
+</dt><dd> Rename or delete a branch (and any associated resets). First argument must be an existing branch name; second argument must one of the verbs &#8216;rename&#8217; or &#8216;delete&#8217;. </dd>
 <p> For a &#8216;rename&#8217;, the third argument may be any token that is a syntactically valid branch name (but not the name of an existing branch). For a &#8216;delete&#8217;, no third argument is required. </p>
 <p> For either name, if it does not contain a &#8216;/&#8217; the prefix &#8216;refs/heads&#8217; is prepended.</dl>
 <p> <code>tag</code> <i>tagname</i>&#8230; <code>{move|rename|delete}</code> <code>[arg]</code>.</p>
 <dl>
 <dt>
-<dd> Create, move, rename, or delete a tag. </p>
+</dt><dd> Create, move, rename, or delete a tag. </dd>
 <p> Creation is a special case. First argument is a nane, which must not be an existing tag. Takes a singleton event second argument which must point to a commit. A tag object pointing to the commit is created and inserted just after the last tag in the repo (or just after the last commit if there are no tags). The tagger, committish, and comment fields are copied from the commit&#8217;s committer, mark, and comment fields. </p>
 <p> Otherwise, first argument must be an existing tag name; second argument must be one of the verbs &#8220;move&#8221;, &#8220;rename&#8221;, or &#8220;delete&#8221;. </p>
 <p> For a &#8220;move&#8221;, a third argument must be a singleton selection set. For a &#8220;rename&#8221;, the third argument may be any token that is a syntactically valid tag name (but not the name of an existing tag). For a &#8220;delete&#8221;, no third argument is required. </p>
@@ -804,7 +804,7 @@ shell dot &lt;/tmp/foo$$ -Tpng | display -; rm /tmp/foo$$
 <p> <code>reset</code> <i>resetname</i>&#8230; <code>{move|rename|delete}</code> <code>[arg]</code>.</p>
 <dl>
 <dt>
-<dd> Move, rename, or delete a reset. First argument must match an existing reset name; second argument must be one of the verbs &#8220;move&#8221;, &#8220;rename&#8221;, or &#8220;delete&#8221;. </p>
+</dt><dd> Move, rename, or delete a reset. First argument must match an existing reset name; second argument must be one of the verbs &#8220;move&#8221;, &#8220;rename&#8221;, or &#8220;delete&#8221;. </dd>
 <p> For a &#8220;move&#8221;, a third argument must be a singleton selection set. For a &#8220;rename&#8221;, the third argument may be any token token that matches a syntactically valid reset name (but not the name of an existing reset). For a &#8220;delete&#8221;, no third argument is required. </p>
 <p> For either name, if it does not contain a &#8220;/&#8221; the prefix &#8220;heads/&#8221; is prepended. If it does not begin with &#8220;refs/&#8221;, &#8220;refs/&#8221; is prepended. </p>
 <p> An argument matches a reset&#8217;s name if it is either the entire reference (refs/heads/FOO or refs/tags/FOO for some some value of FOO) or the basename (e.g. FOO), or a suffix of the form heads/FOO or tags/FOO. An unqualified basename is assumed to refer to a head. </p>
@@ -812,12 +812,12 @@ shell dot &lt;/tmp/foo$$ -Tpng | display -; rm /tmp/foo$$
 <p> <code>debranch</code> <i>source-branch</i>&#8230; <code>[target-branch]</code>.</p>
 <dl>
 <dt>
-<dd> Takes one or two arguments which must be the names of source and target branches; if the second (target) argument is omitted it defaults to refs/heads/master. Any trailing segment of a branch name is accepted as a synonym for it; thus master is the same as refs/heads/master. Does not take a selection set. </p>
+</dt><dd> Takes one or two arguments which must be the names of source and target branches; if the second (target) argument is omitted it defaults to refs/heads/master. Any trailing segment of a branch name is accepted as a synonym for it; thus master is the same as refs/heads/master. Does not take a selection set. </dd>
 <p> The history of the source branch is merged into the history of the target branch, becoming the history of a subdirectory with the name of the source branch. Any resets of the source branch are removed.</dl>
 <p> <code>strip</code> <code>[blobs|reduce]</code>.</p>
 <dl>
 <dt>
-<dd> Reduce the selected repository to make it a more tractable test case. Use this when reporting bugs. </p>
+</dt><dd> Reduce the selected repository to make it a more tractable test case. Use this when reporting bugs. </dd>
 <p> With the modifier &#8216;blobs&#8217;, replace each blob in the repository with a small, self-identifying stub, leaving all metadata and DAG topology intact. This is useful when you are reporting a bug, for reducing large repositories to test cases of manageable size. </p>
 <p> A selection set is effective only with the &#8216;blobs&#8217; option, defaulting to all blobs. The &#8216;reduce&#8217; mode always acts on the entire repository. </p>
 <p> With the modifier &#8216;reduce&#8217;, perform a topological reduction that throws out uninteresting commits. If a commit has all file modifications (no deletions or copies or renames) and has exactly one ancestor and one descendant, then it may be boring. To be fully boring, it must also not be referred to by any tag or reset. Interesting commits are not boring, or have a non-boring parent or non-boring child. </p>
@@ -825,7 +825,7 @@ shell dot &lt;/tmp/foo$$ -Tpng | display -; rm /tmp/foo$$
 <p> <code>ignores</code> <code>[rename]</code>. <code>[translate]</code>. <code>[defaults]</code>.</p>
 <dl>
 <dt>
-<dd> Intelligent handling of ignore-pattern files. This command fails if no repository has been selected or no preferred write type has been set for the repository. It does not take a selection set. </p>
+</dt><dd> Intelligent handling of ignore-pattern files. This command fails if no repository has been selected or no preferred write type has been set for the repository. It does not take a selection set. </dd>
 <p> If the rename modifier is present, this command attempts to rename all ignore-pattern files to whatever is appropriate for the preferred type &#8211; e.g. .gitignore for git, .hgignore for hg, etc. This option does not cause any translation of the ignore files it renames. </p>
 <p> If the translate modifier is present, syntax translation of each ignore file is attempted. At present, the only transformation the code knows is to prepend a &#8216;syntax: glob&#8217; header if the preferred type is hg. </p>
 <p> If the defaults modifier is present, the command attempts to prepend these default patterns to all ignore files. If no ignore file is created by the first commit, it will be modified to create one containing the defaults. This command will error out on prefer types that have no default ignore patterns (git and hg, in particular). It will also error out when it knows the import tool has already set default patterns.</dl>
@@ -838,7 +838,7 @@ shell dot &lt;/tmp/foo$$ -Tpng | display -; rm /tmp/foo$$
 <p> The following git aliases allow git to work directly with action stamps. Append it to your ~/.gitconfig; if you already have an [alias] section, leave off the first line. </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 [alias]<br />
 #git stamp &lt; commit &#8211; ish&gt; &#8211; print a reposurgeon &#8211; style action stamp<br />
     stamp = show &#8211; s&#8211; format = &#8216;%cI!%ce&#8217;<br />
@@ -855,14 +855,14 @@ shell dot &lt;/tmp/foo$$ -Tpng | display -; rm /tmp/foo$$
     slog = &#8220;!f(){ stamp=$(git smaster $1); shift; git log ${stamp:?not found} $*; }; f&#8221;<br />
 #git sco &lt; stamp&gt; &#8211; check out most recent commit on master that matches &lt; stamp&gt;.<br />
     sco = &#8220;!f(){ stamp=$(git smaster $1); shift; git checkout ${stamp:?not found} $*; }; f&#8221;
-</dl>
+</dd></dl>
 <p> There is a rare case in which an action stamp will not refer uniquely to one commit. It is theoretically possible that the same author might check in revisions on different branches within the one-second resolution of the timestamps in a fast-import stream. There is nothing to be done about this; tools using action stamps need to be aware of the possibility and throw a warning when it occurs. </p>
 <p> In order to support reference lifting, <code>reposurgeon</code> internally builds a legacy-reference map that associates revision identifiers in older version-control systems with commits. The contents of this map comes from three places: (1) cvs2svn:rev properties if the repository was read from a Subversion dump stream, (2) $Id$ and $Revision$ headers in repository files, and (3) the .git/cvs-revisions created by <code>git cvsimport</code>. </p>
 <p> The detailed sequence for lifting possible references is this: first, find possible CVS and Subversion references with the <code>references</code> or =N visibility set; then replace them with equivalent cookies; then run <code>references lift</code> to turn the cookies into action stamps (using the information in the legacy-reference map) without having to do the lookup by hand. </p>
 <p> <code>references</code> [<code>list</code>|<code>edit</code>|<code>lift</code>] [&gt;<i>outfile</i>]</p>
 <dl>
 <dt>
-<dd> With the modifier &#8216;list&#8217;, list commit and tag comments for strings that might be CVS- or Subversion-style revision identifiers. This will be useful when you want to replace them with equivalent cookies that can automatically be translated into VCS-independent action stamps. This reporting command supports &gt;-redirection. It is equivalent to &#8216;=N list&#8217;. </p>
+</dt><dd> With the modifier &#8216;list&#8217;, list commit and tag comments for strings that might be CVS- or Subversion-style revision identifiers. This will be useful when you want to replace them with equivalent cookies that can automatically be translated into VCS-independent action stamps. This reporting command supports &gt;-redirection. It is equivalent to &#8216;=N list&#8217;. </dd>
 <p> With the modifier &#8216;edit&#8217;, edit the set where revision IDs are found. This is equivalent to &#8216;=N edit&#8217;. </p>
 <p> With the modifier &quot;lift&quot;, attempt to resolve Subversion and CVS cookies in comments into action stamps using the legacy map. An action stamp is a timestamp/email/sequence-number combination uniquely identifying the commit associated with that blob, as described in the section called &#8220;TRANSLATION STYLE&#8221;. </p>
 <p> It is not guaranteed that every such reference will be resolved, or even that any at all will be. Normally all references in history from a Subversion repository will resolve, but CVS references are less likely to be resolvable.</dl>
@@ -871,64 +871,64 @@ shell dot &lt;/tmp/foo$$ -Tpng | display -; rm /tmp/foo$$
 <p> <code>assign</code> [<i>name</i>]</p>
 <dl>
 <dt>
-<dd> Compute a leading selection set and assign it to a symbolic name. It is an error to assign to a name that is already assigned, or to any existing branch name. Assignments may be cleared by sequence mutations (though not ordinary deletions); you will see a warning when this occurs. </p>
+</dt><dd> Compute a leading selection set and assign it to a symbolic name. It is an error to assign to a name that is already assigned, or to any existing branch name. Assignments may be cleared by sequence mutations (though not ordinary deletions); you will see a warning when this occurs. </dd>
 <p> With no selection set and no name, list all assignments.&gt; </p>
 <p> Use this to optimize out location and selection computations that would otherwise be performed repeatedly, e.g. in macro calls.</dl>
 <p> <code>unassign</code> [<i>name</i>]</p>
 <dl>
 <dt>
-<dd> Unassign a symbolic name. Throws an error if the name is not assigned.</dl>
+</dt><dd> Unassign a symbolic name. Throws an error if the name is not assigned.</dd></dl>
 <p> <code>names</code> [&gt;<i>outfile</i>]</p>
 <dl>
 <dt>
-<dd> List the names of all known branches and tags. Tells you what things are legal within angle brackets and parentheses.</dl>
+</dt><dd> List the names of all known branches and tags. Tells you what things are legal within angle brackets and parentheses.</dd></dl>
 <p> <code>define</code> <i>name</i> <i>body</i></p>
 <dl>
 <dt>
-<dd> Define a macro. The first whitespace-separated token is the name; the remainder of the line is the body, unless it is &#8220;{&#8220;, which begins a multi-line macro terminated by a line beginning with &#8220;}&#8221;. </p>
+</dt><dd> Define a macro. The first whitespace-separated token is the name; the remainder of the line is the body, unless it is &#8220;{&#8220;, which begins a multi-line macro terminated by a line beginning with &#8220;}&#8221;. </dd>
 <p> A later &#8220;do&#8221; call can invoke this macro. </p>
 <p> The command &#8220;define&#8221; by itself without a name or body produces a macro list.</dl>
 <p> <code>do</code> <i>name</i> <i>arguments</i>&#8230;</p>
 <dl>
 <dt>
-<dd> Expand and perform a macro. The first whitespace-separated token is the name of the macro to be called; remaining tokens replace {0}, {1}&#8230; in the macro definition (the conventions used are those of the Python format method). Tokens may contain whitespace if they are string-quoted; string quotes are stripped. Macros can call macros. </p>
+</dt><dd> Expand and perform a macro. The first whitespace-separated token is the name of the macro to be called; remaining tokens replace {0}, {1}&#8230; in the macro definition (the conventions used are those of the Python format method). Tokens may contain whitespace if they are string-quoted; string quotes are stripped. Macros can call macros. </dd>
 <p> If the macro expansion does not itself begin with a selection set, whatever set was specified before the &quot;do&quot; keyword is available to the command generated by the expansion.</dl>
 <p> <code>undefine</code> <i>name</i>]</p>
 <dl>
 <dt>
-<dd> Undefine the named macro.</dl>
+</dt><dd> Undefine the named macro.</dd></dl>
 <p> Here&#8217;s an example to illustrate how you might use this. In CVS repositories of projects that use the GNU ChangeLog convention, a very common pre-conversion artifact is a commit with the comment &quot;***empty log message***&quot; that modifies only a ChangeLog entry explaining the commit immediately previous to it. The following </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 define changelog&lt;{0}&gt; &amp; / empty log message / squash&#8211; pushback do changelog 2012 &#8211; 08 &#8211; 14T21 : 51 : 35Z do changelog 2012 &#8211; 08 &#8211; 08T22 : 52 : 14Z do changelog 2012 &#8211; 08 &#8211; 07T04 : 48 : 26Z do changelog 2012 &#8211; 08 &#8211; 08T07 : 19 : 09Z do changelog 2012 &#8211; 07 &#8211; 28T18 : 40 : 10Z
-</dl>
+</dd></dl>
 <p> is equivalent to the more verbose </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 &lt;2012-08-14T21:51:35Z&gt; &amp; /empty log message/ squash &#8211;pushback<br />
 &lt;2012-08-08T22:52:14Z&gt; &amp; /empty log message/ squash &#8211;pushback<br />
 &lt;2012-08-07T04:48:26Z&gt; &amp; /empty log message/ squash &#8211;pushback<br />
 &lt;2012-08-08T07:19:09Z&gt; &amp; /empty log message/ squash &#8211;pushback<br />
 &lt;2012-07-28T18:40:10Z&gt; &amp; /empty log message/ squash &#8211;pushback
-</dl>
+</dd></dl>
 <p> but you are less likely to make difficult-to-notice errors typing the first version. </p>
 <p> (Also note how the text regexp acts as a failsafe against the possibility of typing a wrong date that doesn&#8217;t refer to a commit with an empty comment. This was a real-world example from the CVS-to-git conversion of groff.) </p>
 <p> When even a macro is not enough, you can write and call custom Python extensions. </p>
 <p> <code>exec</code> <i>name</i></p>
 <dl>
 <dt>
-<dd> Execute custom code from standard input (normally a file via &lt; redirection). Use this to set up custom extension functions for later eval calls. The code has full access to all internal data structures. Functions defined are accessible to later <code>eval</code> calls. </p>
+</dt><dd> Execute custom code from standard input (normally a file via &lt; redirection). Use this to set up custom extension functions for later eval calls. The code has full access to all internal data structures. Functions defined are accessible to later <code>eval</code> calls. </dd>
 <p> This can be called in a script with the extension code in a here-doc.</dl>
 <p> <code>eval</code> <i>function-name</i></p>
 <dl>
 <dt>
-<dd> Evaluate a line of code in the current interpreter context. Typically this will be a call to a function defined by a previous exec. The variables <i>_repository</i> and <i>_selection</i> will have the obvious values. Note that <i>_selection</i> will be a list of integers, not objects.</dl>
+</dt><dd> Evaluate a line of code in the current interpreter context. Typically this will be a call to a function defined by a previous exec. The variables <i>_repository</i> and <i>_selection</i> will have the obvious values. Note that <i>_selection</i> will be a list of integers, not objects.</dd></dl>
 <p> <code>script</code> <i>filename</i> [<i>arg</i>&#8230;]</p>
 <dl>
 <dt>
-<dd> Takes a filename and optional following arguments. Reads each line from the file and executes it as a command. </p>
+</dt><dd> Takes a filename and optional following arguments. Reads each line from the file and executes it as a command. </dd>
 <p> During execution of the script, the script name replaces the string $0 and the optional following arguments (if any) replace the strings $1, $2 &#8230; $n in the script text. This is done before tokenization, so the $1 in a string like &#8220;foo$1bar&#8221; will be expanded. Additionally, $$ is expanded to the current process ID (which may be useful for scripts that use tempfiles). </p>
 <p> Within scripts (and only within scripts) <code>reposurgeon</code> accepts a slightly extended syntax: First, a backslash ending a line signals that the command continues on the next line. Any number of consecutive lines thus escaped are concatenated, without the ending backslashes, prior to evaluation. Second, a command that takes an input filename argument can instead take literal following data in the syntax of a shell here-document. That is: if the filename is replaced by &quot;&lt;&lt;EOF&quot;, all following lines in the script up to a terminating line consisting only of &quot;EOF&quot; will be read, placed in a temporary file, and that file fed to the command and afterwards deleted. EOF may be replaced by any string. Backslashes have no special meaning while reading a here-document. </p>
 <p> Scripts may have comments. Any line beginning with a &#8216;#&#8217; is ignored. If a line has a trailing position that begins with one or more whitespace characters followed by &#8216;#&#8217;, that trailing portion is ignored.</dl>
@@ -937,15 +937,15 @@ define changelog&lt;{0}&gt; &amp; / empty log message / squash&#8211; pushback d
 <p> <code>authors</code> [<code>read</code>|<code>write</code>] [&lt;<code>filename</code>] [&gt;<code>filename</code>]</p>
 <dl>
 <dt>
-<dd> Apply or dump author-map information for the specified selection set, defaulting to all events. </p>
+</dt><dd> Apply or dump author-map information for the specified selection set, defaulting to all events. </dd>
 <p> Lifts from CVS and Subversion may have only usernames local to the repository host in committer and author IDs. DVCSes want email addresses (net-wide identifiers) and complete names. To supply the map from one to the other, an authors file is expected to consist of lines each beginning with a local user ID, followed by a &#8216;=&#8217; (possibly surrounded by whitespace) followed by a full name and email address, optionally followed by a timezone offset field. Thus: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 ferd = Ferd J. Foonly &lt;foonly [at] foo.com&gt; -0500
 </pre>
-</dl>
+</dd></dl>
 <p> An authors file may have comment lines beginning with &#8216;#&#8217;; these are ignored. </p>
 <p> When an authors file is applied, email addresses in committer and author metadata for which the local ID matches between &lt; and @ are replaced according to the mapping (this handles git-svn lifts). Alternatively, if the local ID is the entire address, this is also considered a match (this handles what git-cvsimport and cvs2git do) </p>
 <p> With the &#8216;read&#8217; modifier, or no modifier, apply author mapping data (from standard input or a &lt;-redirected file). May be useful if you are editing a repo or dump created by <code>cvs2git</code> or by <code>git-svn</code> invoked without -A. </p>
@@ -953,14 +953,14 @@ ferd = Ferd J. Foonly &lt;foonly [at] foo.com&gt; -0500
 <p> <code>branchify</code> [<i>path-set</i>]</p>
 <dl>
 <dt>
-<dd> Specify the list of directories to be treated as potential branches (to become tags if there are no modifications after the creation copies) when analyzing a Subversion repo. This list is ignored when the <code>&#8211;nobranch</code> read option is used. It defaults to the &#8216;standard layout&#8217; set of directories, plus any unrecognized directories in the repository root. </p>
+</dt><dd> Specify the list of directories to be treated as potential branches (to become tags if there are no modifications after the creation copies) when analyzing a Subversion repo. This list is ignored when the <code>&#8211;nobranch</code> read option is used. It defaults to the &#8216;standard layout&#8217; set of directories, plus any unrecognized directories in the repository root. </dd>
 <p> With no arguments, displays the current branchification set. </p>
 <p> An asterisk at the end of a path in the set means &#8216;all immediate subdirectories of this path, unless they are part of another (longer) path in the branchify set&#8217;. </p>
 <p> Note that the branchify set is a property of the reposurgeon interpreter, not of any individual repository, and will persist across Subversion dumpfile reads. This may lead to unexpected results if you forget to re-set it.</dl>
 <p> <code>branchify_map</code> [<i>/regex/branch/</i>&#8230;]</p>
 <dl>
 <dt>
-<dd> Specify the list of regular expressions used for mapping the svn branches that are detected by branchify. If none of the expressions match the default behaviour applies. This maps a branch to the name of the last directory, except for trunk and &#8220;*&#8221; which are mapped to master and root. </p>
+</dt><dd> Specify the list of regular expressions used for mapping the svn branches that are detected by branchify. If none of the expressions match the default behaviour applies. This maps a branch to the name of the last directory, except for trunk and &#8220;*&#8221; which are mapped to master and root. </dd>
 <p> With no arguments the current regex replacement pairs are shown. Passing &#8216;reset&#8217; will clear the mapping. </p>
 <p> The branchify command will match each branch name against regex1 and if it matches rewrite its branch name to branch1. If not it will try regex2 and so forth until it either found a matching regex or there are no regexs left. The regular expressions should be in m[blue]<code>Python&#8217;s</code>m[]<font SIZE="-2">[2]</font>. format. The branch name can use backreferences (see the re.sub function in the Python documentation). </p>
 <p> Note that the regular expressions are appended to &#8216;refs/&#8217; without either the needed &#8216;heads/&#8217; or &#8216;tags/&#8217;. This allows for choosing the right kind of branch type. </p>
@@ -970,29 +970,29 @@ ferd = Ferd J. Foonly &lt;foonly [at] foo.com&gt; -0500
 <p> <code>manifest</code> [<i>regular expression</i>] [&gt;<i>outfile</i>]</p>
 <dl>
 <dt>
-<dd> Takes an optional selection set argument defaulting to all commits, and an optional Python regular expression. For each commit in the selection set, print the mapping of all paths in that commit tree to the corresponding blob marks, mirroring what files would be created in a checkout of the commit. If a regular expression is given, only print &quot;path -&gt; mark&quot; lines for paths matching it. This command supports &gt; redirection.</dl>
+</dt><dd> Takes an optional selection set argument defaulting to all commits, and an optional Python regular expression. For each commit in the selection set, print the mapping of all paths in that commit tree to the corresponding blob marks, mirroring what files would be created in a checkout of the commit. If a regular expression is given, only print &quot;path -&gt; mark&quot; lines for paths matching it. This command supports &gt; redirection.</dd></dl>
 <p> <code>checkout</code> <i>directory</i></p>
 <dl>
 <dt>
-<dd> Takes a selection set which must resolve to a single commit, and a second argument. The second argument is interpreted as a directory name. The state of the code tree at that commit is materialized beneath the directory.</dl>
+</dt><dd> Takes a selection set which must resolve to a single commit, and a second argument. The second argument is interpreted as a directory name. The state of the code tree at that commit is materialized beneath the directory.</dd></dl>
 <p> <code>diff</code> [&gt;<i>outfile</i>]</p>
 <dl>
 <dt>
-<dd> Display the difference between commits. Takes a selection-set argument which must resolve to exactly two commits. Supports output redirection.</dl>
+</dt><dd> Display the difference between commits. Takes a selection-set argument which must resolve to exactly two commits. Supports output redirection.</dd></dl>
 <h3>HOUSEKEEPING</h3>
 <p> These are backed up by the following housekeeping commands, none of which take a selection set: </p>
 <p> <code>help</code></p>
 <dl>
 <dt>
-<dd> Get help on the interpreter commands. Optionally follow with whitespace and a command name; with no argument, lists all commands. &#8216;?&#8217; also invokes this.</dl>
+</dt><dd> Get help on the interpreter commands. Optionally follow with whitespace and a command name; with no argument, lists all commands. &#8216;?&#8217; also invokes this.</dd></dl>
 <p> <code>shell</code></p>
 <dl>
 <dt>
-<dd> Execute the shell command given in the remainder of the line. &#8216;!&#8217; also invokes this.</dl>
+</dt><dd> Execute the shell command given in the remainder of the line. &#8216;!&#8217; also invokes this.</dd></dl>
 <p> <code>prefer</code> [<i>repotype</i>]</p>
 <dl>
 <dt>
-<dd> With no arguments, describe capabilities of all supported systems. With an argument (which must be the name of a supported system) this has two effects: </p>
+</dt><dd> With no arguments, describe capabilities of all supported systems. With an argument (which must be the name of a supported system) this has two effects: </dd>
 <p> First, if there are multiple repositories in a directory you do a read on, reposurgeon will read the preferred one (otherwise it will complain that it can&#8217;t choose among them). </p>
 <p> Secondly, this will change reposurgeon&#8217;s preferred type for output. This means that you do a write to a directory, it will build a repo of the preferred type rather than its original type (if it had one). </p>
 <p> If no preferred type has been explicitly selected, reading in a repository (but not a fast-import stream) will implicitly set the preferred type to the type of that repository. </p>
@@ -1000,7 +1000,7 @@ ferd = Ferd J. Foonly &lt;foonly [at] foo.com&gt; -0500
 <p> <code>sourcetype</code> [<i>repotype</i>]</p>
 <dl>
 <dt>
-<dd> Report (with no arguments) or select (with one argument) the current repository&#8217;s source type. This type is normally set at repository-read time, but may remain unset if the source was a stream file. </p>
+</dt><dd> Report (with no arguments) or select (with one argument) the current repository&#8217;s source type. This type is normally set at repository-read time, but may remain unset if the source was a stream file. </dd>
 <p> The source type affects the interpretation of legacy IDs (for purposes of the =N visibility set and the &#8216;references&#8217; command) by controlling the regular expressions used to recognize them. If no preferred output type has been set, it may also change the output format of stream files made from the repository. </p>
 <p> The source type is reliably set whenever a live repository is read, or when a Subversion stream or Fossil dump is interpreted but not necessarily by other stream files. Streams generated by <code>cvs-fast-export</code>(1) using the <code>&#8211;reposurgeon</code> are detected as CVS. In some other cases, the source system is detected from the presence of magic $-headers in contents blobs.</dl>
 <h3>INSTRUMENTATION</h3>
@@ -1009,87 +1009,87 @@ ferd = Ferd J. Foonly &lt;foonly [at] foo.com&gt; -0500
 <p> <code>index</code> [&gt;<i>outfile</i>]</p>
 <dl>
 <dt>
-<dd> Display four columns of info on objects in the selection set: their number, their type, the associate mark (or &#8216;-&#8216; if no mark) and a summary field varying by type. For a branch or tag it&#8217;s the reference; for a commit it&#8217;s the commit branch; for a blob it&#8217;s the repository path of the file in the blob. </p>
+</dt><dd> Display four columns of info on objects in the selection set: their number, their type, the associate mark (or &#8216;-&#8216; if no mark) and a summary field varying by type. For a branch or tag it&#8217;s the reference; for a commit it&#8217;s the commit branch; for a blob it&#8217;s the repository path of the file in the blob. </dd>
 <p> The default selection set for this command is =CTRU, all objects except blobs.</dl>
 <p> <code>resolve</code> [<i>label-text&#8230;</i>]</p>
 <dl>
 <dt>
-<dd> Does nothing but resolve a selection-set expression and echo the resulting event-number set to standard output. The remainder of the line after the command is used as a label for the output. </p>
+</dt><dd> Does nothing but resolve a selection-set expression and echo the resulting event-number set to standard output. The remainder of the line after the command is used as a label for the output. </dd>
 <p> Implemented mainly for regression testing, but may be useful for exploring the selection-set language.</dl>
 <p> <code>verbose</code> [<i>n</i>]</p>
 <dl>
 <dt>
-<dd> &#8216;verbose 1&#8217; enables the progress meter and messages, &#8216;verbose 0&#8217; disables them. Higher levels of verbosity are available but intended for developers only.</dl>
+</dt><dd> &#8216;verbose 1&#8217; enables the progress meter and messages, &#8216;verbose 0&#8217; disables them. Higher levels of verbosity are available but intended for developers only.</dd></dl>
 <p> <code>quiet</code> [<i>on | off</i>]</p>
 <dl>
 <dt>
-<dd> Without an argument, this command requests a report of the quiet boolean; with the argument &#8216;on&#8217; or &#8216;off&#8217; it is changed. When quiet is on, time-varying report fields which would otherwise cause spurious failures in regression testing are suppressed.</dl>
+</dt><dd> Without an argument, this command requests a report of the quiet boolean; with the argument &#8216;on&#8217; or &#8216;off&#8217; it is changed. When quiet is on, time-varying report fields which would otherwise cause spurious failures in regression testing are suppressed.</dd></dl>
 <p> <code>print</code> <i>output-text&#8230;</i></p>
 <dl>
 <dt>
-<dd> Does nothing but ship its argument line to standard output. Useful in regression tests.</dl>
+</dt><dd> Does nothing but ship its argument line to standard output. Useful in regression tests.</dd></dl>
 <p> <code>echo</code> [<i>number</i>]</p>
 <dl>
 <dt>
-<dd> &#8216;echo 1&#8217; causes each <code>reposurgeon</code> command to be echoed to standard output just before its output. This can be useful in constructing regression tests that are easily checked by eyeball.</dl>
+</dt><dd> &#8216;echo 1&#8217; causes each <code>reposurgeon</code> command to be echoed to standard output just before its output. This can be useful in constructing regression tests that are easily checked by eyeball.</dd></dl>
 <p> <code>version</code> [<i>version</i>&#8230;]</p>
 <dl>
 <dt>
-<dd> With no argument, display the program version and the list of VCSes directly supported. With argument, declare the major version (single digit) or full version (major.minor) under which the enclosing script was developed. The program will error out if the major version has changed (which means the surgical language is not backwards compatible). </p>
+</dt><dd> With no argument, display the program version and the list of VCSes directly supported. With argument, declare the major version (single digit) or full version (major.minor) under which the enclosing script was developed. The program will error out if the major version has changed (which means the surgical language is not backwards compatible). </dd>
 <p> It is good practice to start your lift script with a version requirement, especially if you are going to archive it for later reference.</dl>
 <p> <code>prompt</code> [<i>format</i>&#8230;]</p>
 <dl>
 <dt>
-<dd> Set the command prompt format to the value of the command line; with an empty command line, display it. The prompt format is evaluated in Python after each command with the following dictionary substitutions: </p>
+</dt><dd> Set the command prompt format to the value of the command line; with an empty command line, display it. The prompt format is evaluated in Python after each command with the following dictionary substitutions: </dd>
 <p> chosen</p>
 <dl>
 <dt>
-<dd> The name of the selected repository, or None if none is currently selected.</dl>
+</dt><dd> The name of the selected repository, or None if none is currently selected.</dd></dl>
 <p> Thus, one useful format might be &#8216;rs[%(chosen)s]%% &#8216;. </p>
 <p> More format items may be added in the future. The default prompt corresponds to the format &#8216;reposurgeon%% &#8216;. The format line is evaluated with shell quotng of tokens, so that spaces can be included.</dl>
 <p> <code>history</code></p>
 <dl>
 <dt>
-<dd> List the commands you have entered this session.</dl>
+</dt><dd> List the commands you have entered this session.</dd></dl>
 <p> <code>legacy</code> [<code>read</code>|<code>write</code>] [<code>&lt;filename</code>] [<code>&gt;filename</code>]</p>
 <dl>
 <dt>
-<dd> Apply or list legacy-reference information. Does not take a selection set. The &#8216;read&#8217; variant reads from standard input or a &lt;-redirected filename; the &#8216;write&#8217; variant writes to standard output or a &gt;-redirected filename. </p>
+</dt><dd> Apply or list legacy-reference information. Does not take a selection set. The &#8216;read&#8217; variant reads from standard input or a &lt;-redirected filename; the &#8216;write&#8217; variant writes to standard output or a &gt;-redirected filename. </dd>
 <p> A legacy-reference file maps reference cookies to (committer, commit-date, sequence-number) pairs; these in turn (should) uniquely identify a commit. The format is two whitespace-separated fields: the cookie followed by an action stamp identifying the commit. </p>
 <p> It should not normally be necessary to use this command. The legacy map is automatically preserved through repository reads and rebuilds, being stored in the file legacy-map under the repository subdirectory..</dl>
 <p> <code>set</code> [<code>option</code>]</p>
 <dl>
 <dt>
-<dd> Turn on an option flag. With no arguments, list all options </p>
+</dt><dd> Turn on an option flag. With no arguments, list all options </dd>
 <p> Most options are described in conjunction with the specific operations that the modify. One of general interest is &#8220;compressblobs&#8221;; this enables compression on the blob files in the internal representation reposurgeon uses for editing repositories. With this option, reading and writing of repositories is slower, but editing a repository requires less (sometimes much less) disk space.</dl>
 <p> <code>clear</code> [<code>option</code>]</p>
 <dl>
 <dt>
-<dd> Turn off an option flag. With no arguments, list all options</dl>
+</dt><dd> Turn off an option flag. With no arguments, list all options</dd></dl>
 <p> <code>profile</code></p>
 <dl>
 <dt>
-<dd> Enable profiling. Profile statistics are dumped to the path given as argument. Must be one of the initial command-line arguments, and gathers statistics only on code executed via &#8216;-&#8216;.</dl>
+</dt><dd> Enable profiling. Profile statistics are dumped to the path given as argument. Must be one of the initial command-line arguments, and gathers statistics only on code executed via &#8216;-&#8216;.</dd></dl>
 <p> <code>timing</code></p>
 <dl>
 <dt>
-<dd> Display statistics on phase timing in repository analysis. Mainly of interest to developers trying to speed up the program.</dl>
+</dt><dd> Display statistics on phase timing in repository analysis. Mainly of interest to developers trying to speed up the program.</dd></dl>
 <p> <code>exit</code></p>
 <dl>
 <dt>
-<dd> Exit, reporting the time. Included here because, while EOT will also cleanly exit the interpreter, this command reports elapsed time since start.</dl>
+</dt><dd> Exit, reporting the time. Included here because, while EOT will also cleanly exit the interpreter, this command reports elapsed time since start.</dd></dl>
 <h2>WORKING WITH MERCURIAL</h2>
 <p> reposurgeon uses a built-in extractor class to perform extractions from Mercurial repositories. </p>
 <p> Mercurial branches are exported as branches in the exported repository and tags are exported as tags. By default, bookmarks are ignored. You can specify explicit handling for bookmarks by setting <i>reposurgeon.bookmarks</i> in your .hg/hgrc. Set the value to the prefix that reposurgeon should use for bookmarks. </p>
 <p> For example, if your bookmarks represent branches, put this at the bottom of your .hg/hgrc: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 [reposurgeon]
 bookmarks=heads/
 </pre>
-</dl>
+</dd></dl>
 <p> If you do that, it&#8217;s your responsibility to ensure that branch names do not conflict with bookmark names. You can add a prefix like bookmarks=heads/feature- to disambiguate as necessary.</p>
 <h2>WORKING WITH SUBVERSION</h2>
 <p> reposurgeon can read Subversion dumpfiles or edit a Subversion repository (and you must point it at a repository, not a checkout directory). The reposurgeon distribution includes a script named &#8220;repotool&#8221; that you can use to make and then incrementally update a local mirror of a remote repository for editing or conversion purposes.</p>
@@ -1098,40 +1098,40 @@ bookmarks=heads/
 <p> &#8211;nobranch</p>
 <dl>
 <dt>
-<dd> Suppress branch analysis.</dl>
+</dt><dd> Suppress branch analysis.</dd></dl>
 <p> &#8211;ignore-properties</p>
 <dl>
 <dt>
-<dd> Suppress read-time warnings about discarded property settings.</dl>
+</dt><dd> Suppress read-time warnings about discarded property settings.</dd></dl>
 <p> &#8211;user-ignores</p>
 <dl>
 <dt>
-<dd> Don&#8217;t generate .gitignore files from svn:ignore properties. Instead, just pass through .gitignore files found in the history.</dl>
+</dt><dd> Don&#8217;t generate .gitignore files from svn:ignore properties. Instead, just pass through .gitignore files found in the history.</dd></dl>
 <p> &#8211;use-uuid</p>
 <dl>
 <dt>
-<dd> If the &#8211;use-uuid read option is set, the repository&#8217;s UUID will be used as the hostname when faking up email addresses, a la git-svn. Otherwise, addresses will be generated the way git cvs-import does it, simply ciopying the username into the address field.</dl>
+</dt><dd> If the &#8211;use-uuid read option is set, the repository&#8217;s UUID will be used as the hostname when faking up email addresses, a la git-svn. Otherwise, addresses will be generated the way git cvs-import does it, simply ciopying the username into the address field.</dd></dl>
 <p> These modifiers can go anywhere in any order on the read command line after the read verb. They must be whitespace-separated. </p>
 <p> Here are the rules used for mapping subdirectories in a Subversion repository to branches: </p>
 <dl>
 <dt>
-<dd> 1. At any given time there is a set of eligible paths and path wildcards which declare potential branches. See the documentation of the <code>branchify</code> for how to alter this set, which initially consists of {trunk, tags/*, branches/*, and &#8216;*&#8217;}.</dl>
+</dt><dd> 1. At any given time there is a set of eligible paths and path wildcards which declare potential branches. See the documentation of the <code>branchify</code> for how to alter this set, which initially consists of {trunk, tags/*, branches/*, and &#8216;*&#8217;}.</dd></dl>
 <dl>
 <dt>
-<dd> 2. A repository is considered &quot;flat&quot; if it has no directory that matches a path or path wildcard in the branchify set. All commits in a flat repository are assigned to branch master, and what would have been branch structure becomes directory structure. In this case, we&#8217;re done; all the other rules apply to non-flat repos. </p>
+</dt><dd> 2. A repository is considered &quot;flat&quot; if it has no directory that matches a path or path wildcard in the branchify set. All commits in a flat repository are assigned to branch master, and what would have been branch structure becomes directory structure. In this case, we&#8217;re done; all the other rules apply to non-flat repos. </dd>
 <p> If you give the option <code>&#8211;nobranch</code> when reading a Subversion repository, branch analysis is skipped and the repository is treated as though flat (left as a linear sequence of commits on refs/heads/master). This may be useful if your repository configuration is highly unusual and you need to do your own branch surgery. Note that this option will disable partitioning of mixed commits.</dl>
 <dl>
 <dt>
-<dd> 3. If &quot;trunk&quot; is eligible, it always becomes the master branch.</dl>
+</dt><dd> 3. If &quot;trunk&quot; is eligible, it always becomes the master branch.</dd></dl>
 <dl>
 <dt>
-<dd> 4. If an element of the branchify set ends with *, each immediate subdirectory of it is considered a potential branch. If &#8216;*&#8217; is in the branchify set (which is true by default) all top-level directories other than /trunk, /tags, and /branches are also considered potential branches.</dl>
+</dt><dd> 4. If an element of the branchify set ends with *, each immediate subdirectory of it is considered a potential branch. If &#8216;*&#8217; is in the branchify set (which is true by default) all top-level directories other than /trunk, /tags, and /branches are also considered potential branches.</dd></dl>
 <dl>
 <dt>
-<dd> 5. Each potential branch is checked to see if it has commits on it after the initial creation or copy. If there are such commits, it becomes a branch. If not, it becomes a tag in order to preserve the commit metadata. (In all cases, the name of the tag or branch is the basename of the directory.)</dl>
+</dt><dd> 5. Each potential branch is checked to see if it has commits on it after the initial creation or copy. If there are such commits, it becomes a branch. If not, it becomes a tag in order to preserve the commit metadata. (In all cases, the name of the tag or branch is the basename of the directory.)</dd></dl>
 <dl>
 <dt>
-<dd> 6. Files in the top-level directory are assigned to a synthetic branch named &#8216;root&#8217;.</dl>
+</dt><dd> 6. Files in the top-level directory are assigned to a synthetic branch named &#8216;root&#8217;.</dd></dl>
 <p> Each commit that only creates or deletes directories (in particular, copy commits for tags and branches, and commits that only change properties) will be transformed into a tag named after the branch, containing the date/author/comment metadata from the commit. While this produces a desirable result for tags, non-tag branches (including trunk) will also get root tags this way. This apparent misfeature has been accepted so that reposurgeon will never destroy human-generated metadata that might have value; it is left up to the user to manually remove unwanted tags. </p>
 <p> Subversion branch deletions are turned into deletealls, clearing the fileset of the import-stream branch. When a branch finishes with a deleteall at its tip, the deleteall is transformed into a tag. This rule cleans up after aborted branch renames. </p>
 <p> Occasionally (and usually by mistake) a branchy Subversion repository will contain revisions that touch multiple branches. These are handled by partitioning them into multiple import-stream commits, one on each affected branch. The Legacy-ID of such a split commit will have a pseudo-decimal part &#8211; for example, if Subversion revision 2317 touches three branches, the three generated commits will have IDs 2317.1, 2317.2, and 2317.3. </p>
@@ -1149,39 +1149,39 @@ bookmarks=heads/
 <p> user-generated .gitignore</p>
 <dl>
 <dt>
-<dd> This message means means <code>reposurgeon</code> has found a .gitignore file in the Subversion repository it is analyzing. This probably happened because somebody was using <code>git-svn</code> as a live gateway, and created ignores which may or may not be congruent with those in the generated .gitignore files that the Subversion ignore properties will be translated into. You&#8217;ll need to make a policy decision about which set of ignores to use in the conversion, and possibly set the &#8211;user-ignores option on read to pass through user-created .gitignore files; in that case this warning will not be emitted.</dl>
+</dt><dd> This message means means <code>reposurgeon</code> has found a .gitignore file in the Subversion repository it is analyzing. This probably happened because somebody was using <code>git-svn</code> as a live gateway, and created ignores which may or may not be congruent with those in the generated .gitignore files that the Subversion ignore properties will be translated into. You&#8217;ll need to make a policy decision about which set of ignores to use in the conversion, and possibly set the &#8211;user-ignores option on read to pass through user-created .gitignore files; in that case this warning will not be emitted.</dd></dl>
 <p> can&#8217;t connect nonempty branch XXXX to origin</p>
 <dl>
 <dt>
-<dd> This is a serious error. <code>reposurgeon</code> has been unable to find a link from a specified branch to the trunk (master) branch. The commit graph will not be fully connected and will need manual repair.</dl>
+</dt><dd> This is a serious error. <code>reposurgeon</code> has been unable to find a link from a specified branch to the trunk (master) branch. The commit graph will not be fully connected and will need manual repair.</dd></dl>
 <p> permission information may be lost</p>
 <dl>
 <dt>
-<dd> A Subversion node change on a file sets or clears properties, but no ancestor can be found for this file. Executable or symlink position may be set wrongly on later revisions of this file. Subversion user-defined properties may also be scrambled or lost. Usually this error can be ignored.</dl>
+</dt><dd> A Subversion node change on a file sets or clears properties, but no ancestor can be found for this file. Executable or symlink position may be set wrongly on later revisions of this file. Subversion user-defined properties may also be scrambled or lost. Usually this error can be ignored.</dd></dl>
 <p> properties set</p>
 <dl>
 <dt>
-<dd> <code>reposurgeon</code> has detected a setting of a user-defined property, or the Subversion properties svn:externals. These properties cannot be expressed in an import stream; the user is notified in case this is a showstopper for the conversion or some corrective action is required, but normally this error can be ignored. This warning is suppressed by the &#8211;ignore-properties option.</dl>
+</dt><dd> <code>reposurgeon</code> has detected a setting of a user-defined property, or the Subversion properties svn:externals. These properties cannot be expressed in an import stream; the user is notified in case this is a showstopper for the conversion or some corrective action is required, but normally this error can be ignored. This warning is suppressed by the &#8211;ignore-properties option.</dd></dl>
 <p> branch links detected by file ops only</p>
 <dl>
 <dt>
-<dd> Branch links are normally deduced by examining Subversion directory copy operations. A common user error (making a branch with a non-Subversion directory copy and then doing an svn add on the contends) can defeat this. While <code>reposurgeon</code> should detect and cope with most such copies correctly, you should examine the commit graph to check that the branch is rooted at the correct place.</dl>
+</dt><dd> Branch links are normally deduced by examining Subversion directory copy operations. A common user error (making a branch with a non-Subversion directory copy and then doing an svn add on the contends) can defeat this. While <code>reposurgeon</code> should detect and cope with most such copies correctly, you should examine the commit graph to check that the branch is rooted at the correct place.</dd></dl>
 <p> could not tagify root commit</p>
 <dl>
 <dt>
-<dd> The earliest commit in your Subversion repository has file operations, rather than being a pure directory creation. This probably means your Subversion dump file is malformed, or you may have attempted to lift from an incremental dump. Proceed with caution.</dl>
+</dt><dd> The earliest commit in your Subversion repository has file operations, rather than being a pure directory creation. This probably means your Subversion dump file is malformed, or you may have attempted to lift from an incremental dump. Proceed with caution.</dd></dl>
 <p> deleting parentless tip delete</p>
 <dl>
 <dt>
-<dd> This message may be triggered by a Subversion branch move followed by a re-creation under the source name. Check near the indicated revision to make sure the renamed branch is connected to master.</dl>
+</dt><dd> This message may be triggered by a Subversion branch move followed by a re-creation under the source name. Check near the indicated revision to make sure the renamed branch is connected to master.</dd></dl>
 <p> mid-branch deleteall</p>
 <dl>
 <dt>
-<dd> A deleteall operation has been found in the middle of a branch history. This usually indicates that a Subversion tag or branch was created by mistake, and someone later tried to undo the error by deleting the tag/branch directory before recreating it with a copy operation. Examine the topology near the deleteall closely, it may need hand-hacking. It is fairly likely that both (a) the <code>reposurgeon</code> translation will be different from what other translators (such as <code>git-svn</code>) produce, and (b) it will not be immediately obvious which is right.</dl>
+</dt><dd> A deleteall operation has been found in the middle of a branch history. This usually indicates that a Subversion tag or branch was created by mistake, and someone later tried to undo the error by deleting the tag/branch directory before recreating it with a copy operation. Examine the topology near the deleteall closely, it may need hand-hacking. It is fairly likely that both (a) the <code>reposurgeon</code> translation will be different from what other translators (such as <code>git-svn</code>) produce, and (b) it will not be immediately obvious which is right.</dd></dl>
 <p> lookback for XXX failed, not making branch link</p>
 <dl>
 <dt>
-<dd> Branch analysis failed, probably due to a set of file copies that <code>reposurgeon</code> thought it should interpret as a botched branch creation but couldn&#8217;t deduce a history for. This is a warning; check how the directory XXX is converted, it may need post-editing into a branch.</dl>
+</dt><dd> Branch analysis failed, probably due to a set of file copies that <code>reposurgeon</code> thought it should interpret as a botched branch creation but couldn&#8217;t deduce a history for. This is a warning; check how the directory XXX is converted, it may need post-editing into a branch.</dd></dl>
 <h3>WRITING SUBVERSION REPOSITORIES</h3>
 <p> reposurgeon has support for writing Subversion repositories. Due to mismatches between the ontology of Subversion and that of git import streams, this support has some significant limitations and bugs. </p>
 <p> In summary, Subversion repository histories do not round-trip through reposurgeon editing. File content changes are preserved but some metadata is unavoidably lost. Furthermore, writing out a DVCS history in Subversion also loses significant portions of its metadata. Details follow. </p>
@@ -1370,25 +1370,25 @@ bookmarks=heads/
 <p> It is also good practice to include a generated tag at the point of conversion. E.g </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 mailbox_in --create &lt;&lt;EOF
 Tag-Name: git-conversion
 Marks the spot at which this repository was converted from Subversion to git.
 EOF
 </pre>
-</dl>
+</dd></dl>
 <h2>ADVANCED EXAMPLES</h2>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre><code>
 define lastchange
 {
     @max(= B &amp; [/ ChangeLog / ] &amp; / {0} / B) ? list
 }
 </code></pre>
-</dl>
+</dd></dl>
 <p> List the last commit that refers to a ChangeLog file containing a specified string. (The trick here is that ? extends the singleton set consisting of the last eligible ChangeLog blob to its set of referring commits, and <code>list</code>only notices the commits.)</p>
 <h2>STREAM SYNTAX EXTENSIONS</h2>
 <p> The event-stream parser in &#8220;reposurgeon&#8221; supports some extended syntax. Exporters designed to work with &#8220;reposurgeon&#8221; may have a &#8211;reposurgeon option that enables emission of extended syntax; notably, this is true of <code>cvs-fast-export</code>(1). The remainder of this section describes these syntax extensions. The properties they set are (usually) preserved and re-output when the stream file is written. </p>
@@ -1396,16 +1396,16 @@ define lastchange
 <p> One such extension command is implemented: <code>#sourcetype</code>, which behaves identically to the reposurgeon<code>sourcetype</code> command. An exporter for a version-control system named &#8220;frobozz&#8221; could, for example, say </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 #reposurgeon sourcetype frobozz
 </pre>
-</dl>
+</dd></dl>
 <p> Within a commit, a magic comment of the form &#8220;#legacy-id&#8221; declares a legacy ID from the stream file&#8217;s source version-control system. </p>
 <p> Also accepted is the bzr syntax for setting per-commit properties. While parsing commit syntax, a line beginning with the token &#8220;property&#8221; must contibue with a whitespace-separated property-name token. If it is then followed by a newline it is taken to set that boolean-valued property to true. Otherwise it must be followed by a numeric token specifying a data length, a space, following data (which may contain newlines) and a terminating newline. For example: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 commit refs/heads/master
 mark :1
@@ -1415,7 +1415,7 @@ Example commit.
 property legacy-id 2 r1
 M 644 inline README
 </pre>
-</dl>
+</dd></dl>
 <p> Unlike other extensions, bzr properties are only preserved on stream output if the preferred type is bzr, because any importer other than bzr&#8217;s will choke on them.</p>
 <h2>INCOMPATIBLE LANGUAGE CHANGES</h2>
 <p> In versions before 3.23, &#8220;prefer&#8221; changed the repository type as well as the preferred output format. </p>
@@ -1450,31 +1450,31 @@ M 644 inline README
 <p> git</p>
 <dl>
 <dt>
-<dd> Core git supports both export and import.</dl>
+</dt><dd> Core git supports both export and import.</dd></dl>
 <p> bzr</p>
 <dl>
 <dt>
-<dd> Requires bzr plus the bzr-fast-import plugin.</dl>
+</dt><dd> Requires bzr plus the bzr-fast-import plugin.</dd></dl>
 <p> hg</p>
 <dl>
 <dt>
-<dd> Requires core hg, the hg-fastimport plugin, and the third-party hg-fast-export.py script.</dl>
+</dt><dd> Requires core hg, the hg-fastimport plugin, and the third-party hg-fast-export.py script.</dd></dl>
 <p> svn</p>
 <dl>
 <dt>
-<dd> Stock Subversion commands support export and import.</dl>
+</dt><dd> Stock Subversion commands support export and import.</dd></dl>
 <p> darcs</p>
 <dl>
 <dt>
-<dd> Stock darcs commands support export and import.</dl>
+</dt><dd> Stock darcs commands support export and import.</dd></dl>
 <p> CVS</p>
 <dl>
 <dt>
-<dd> Requires cvs-fast-export. Note that the quality of CVS lifts may be poor, with individual lifts requiring serious hand-hacking. This is due to inherent problems with CVS&#8217;s file-oriented model.</dl>
+</dt><dd> Requires cvs-fast-export. Note that the quality of CVS lifts may be poor, with individual lifts requiring serious hand-hacking. This is due to inherent problems with CVS&#8217;s file-oriented model.</dd></dl>
 <p> RCS</p>
 <dl>
 <dt>
-<dd> Requires cvs-fast-export (yes, that&#8217;s not a typo; cvs-fast-export handles RCS collections as well). The caveat for CVS applies.</dl>
+</dt><dd> Requires cvs-fast-export (yes, that&#8217;s not a typo; cvs-fast-export handles RCS collections as well). The caveat for CVS applies.</dd></dl>
 <h2>CANONICALIZATION RULES</h2>
 <p> It is expected that <code>reposurgeon</code> will be extended with more deletion policies. Policy authors may need to know more about how a commit&#8217;s file operation sequence is reduced to normal form after operations from deleted commits are prepended to it. </p>
 <p> Recall that each commit has a list of file operations, each a M (modify), D (delete), R (rename), C (copy), or &#8216;deleteall&#8217; (delete all files). Only M operations have associated blobs. Normally there is only one M operation per individual file in a commit&#8217;s operation list. </p>
@@ -1591,20 +1591,20 @@ M 644 inline README
 <p> We resolve this dilemma by playing a game of three-directory monte. </p>
 <dl>
 <dt>
-<dd> 1. First, we build the repo in a freshly-created staging directory. If your target directory is named /path/to/foo, the staging directory will be a peer named /path/to/foo-stageNNNN, where NNNN is a cookie derived from <code>reposurgeon</code>&#8216;s process ID.</dl>
+</dt><dd> 1. First, we build the repo in a freshly-created staging directory. If your target directory is named /path/to/foo, the staging directory will be a peer named /path/to/foo-stageNNNN, where NNNN is a cookie derived from <code>reposurgeon</code>&#8216;s process ID.</dd></dl>
 <dl>
 <dt>
-<dd> 2. We then make an empty backup directory. This directory will be named /path/to/foo.~N~, where N is incremented so as not to conflict with any existing backup directories. <code>reposurgeon</code> never, under any circumstances, ever deletes a backup directory. </p>
+</dt><dd> 2. We then make an empty backup directory. This directory will be named /path/to/foo.~N~, where N is incremented so as not to conflict with any existing backup directories. <code>reposurgeon</code> never, under any circumstances, ever deletes a backup directory. </dd>
 <p> So far, all operations are safe; the worst that can happen up to this point if the process gets interrupted is that the staging and backup directories get left behind.</dl>
 <dl>
 <dt>
-<dd> 3. The critical region begins. We first move everything in the target directory to the backup directory.</dl>
+</dt><dd> 3. The critical region begins. We first move everything in the target directory to the backup directory.</dd></dl>
 <dl>
 <dt>
-<dd> 4. Then we move everything in the staging directory to the target.</dl>
+</dt><dd> 4. Then we move everything in the staging directory to the target.</dd></dl>
 <dl>
 <dt>
-<dd> 5. We finish off by restoring untracked files in the target directory from the backup directory. That ends the critical region.</dl>
+</dt><dd> 5. We finish off by restoring untracked files in the target directory from the backup directory. That ends the critical region.</dd></dl>
 <p> During the critical region, all signals that can be ignored are ignored.</p>
 <h2>ERROR RETURNS</h2>
 <p> Returns 1 on fatal error, 0 otherwise. In batch mode all errors are fatal.</p>
@@ -1614,15 +1614,15 @@ M 644 inline README
 <p> Eric S. Raymond &lt;esr [at] thyrsus.com&gt;; project page at m[blue]<code><a rel="nofollow" href="http://www.catb.org/~esr/reposurgeon">http://www.catb.org/~esr/reposurgeon</a></code>m[].</p>
 <h2>NOTES</h2>
 <dl>
-<dt> 1.</p>
-<dd> DVCS Migration HOWTO</p>
+<dt> 1.</dt>
+<dd> DVCS Migration HOWTO</dd>
 <dl>
 <dt>
-<dd> <a rel="nofollow" href="http://www.catb.org/esr/dvcs-migration-guide.html">http://www.catb.org/esr/dvcs-migration-guide.html</a></dl>
-<dt> 2.</p>
-<dd> Python&#8217;s</p>
+</dt><dd> <a rel="nofollow" href="http://www.catb.org/esr/dvcs-migration-guide.html">http://www.catb.org/esr/dvcs-migration-guide.html</a></dd></dl>
+<dt> 2.</dt>
+<dd> Python&#8217;s</dd>
 <dl>
 <dt>
-<dd> <a rel="nofollow" href="http://docs.python.org/2/library/re.html">http://docs.python.org/2/library/re.html</a></dl>
+</dt><dd> <a rel="nofollow" href="http://docs.python.org/2/library/re.html">http://docs.python.org/2/library/re.html</a></dd></dl>
 </dl>
 <h2>Index</h2>

@@ -18,6 +18,6 @@ description: "QuantLib::UpperBoundEngine – Market-model engine for upper-bound
 <p>Market-model engine for upper-bound estimation. </p>
 <p> <code>Precondition:</code></p>
 <dl COMPACT>
-<dd>product and hedge must have the same rate times and exercise times</dl>
+<dd>product and hedge must have the same rate times and exercise times</dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for QuantLib from the source code.</p>

@@ -16,16 +16,16 @@ description: "Tk_GeometryRequest, Tk_SetMinimumRequestSize, Tk_SetInternalBorder
 <code>Tk_SetInternalBorderEx</code>(<i>tkwin, left, right, top, bottom</i>)</pre>
 <h2>Arguments</h2>
 <dl COMPACT>
-<dd>Tk_Window <i>tkwin</i> (in) Window for which geometry is being requested.</p>
-<dd>int <i>reqWidth</i> (in) Desired width for <i>tkwin</i>, in pixel units.</p>
-<dd>int <i>reqHeight</i> (in) Desired height for <i>tkwin</i>, in pixel units.</p>
-<dd>int <i>minWidth</i> (in) Desired minimum requested width for <i>tkwin</i>, in pixel units.</p>
-<dd>int <i>minHeight</i> (in) Desired minimum requested height for <i>tkwin</i>, in pixel units.</p>
-<dd>int <i>width</i> (in) Space to leave for internal border for <i>tkwin</i>, in pixel units.</p>
-<dd>int <i>left</i> (in) Space to leave for left side of internal border for <i>tkwin</i>, in pixel units.</p>
-<dd>int <i>right</i> (in) Space to leave for right side of internal border for <i>tkwin</i>, in pixel units.</p>
-<dd>int <i>top</i> (in) Space to leave for top side of internal border for <i>tkwin</i>, in pixel units.</p>
-<dd>int <i>bottom</i> (in) Space to leave for bottom side of internal border for <i>tkwin</i>, in pixel units. </p>
+<dd>Tk_Window <i>tkwin</i> (in) Window for which geometry is being requested.</dd>
+<dd>int <i>reqWidth</i> (in) Desired width for <i>tkwin</i>, in pixel units.</dd>
+<dd>int <i>reqHeight</i> (in) Desired height for <i>tkwin</i>, in pixel units.</dd>
+<dd>int <i>minWidth</i> (in) Desired minimum requested width for <i>tkwin</i>, in pixel units.</dd>
+<dd>int <i>minHeight</i> (in) Desired minimum requested height for <i>tkwin</i>, in pixel units.</dd>
+<dd>int <i>width</i> (in) Space to leave for internal border for <i>tkwin</i>, in pixel units.</dd>
+<dd>int <i>left</i> (in) Space to leave for left side of internal border for <i>tkwin</i>, in pixel units.</dd>
+<dd>int <i>right</i> (in) Space to leave for right side of internal border for <i>tkwin</i>, in pixel units.</dd>
+<dd>int <i>top</i> (in) Space to leave for top side of internal border for <i>tkwin</i>, in pixel units.</dd>
+<dd>int <i>bottom</i> (in) Space to leave for bottom side of internal border for <i>tkwin</i>, in pixel units. </dd>
 </dl>
 <h2>Description</h2>
 <p><code>Tk_GeometryRequest</code> is called by widget code to indicate its preference for the dimensions of a particular window. The arguments to <code>Tk_GeometryRequest</code> are made available to the geometry manager for the window, which then decides on the actual geometry for the window. Although geometry managers generally try to satisfy requests made to <code>Tk_GeometryRequest</code>, there is no guarantee that this will always be possible. Widget code should not assume that a geometry request will be satisfied until it receives a <code>ConfigureNotify</code> event indicating that the geometry change has occurred. Widget code should never call procedures like <code>Tk_ResizeWindow</code> directly. Instead, it should invoke <code>Tk_GeometryRequest</code> and leave the final geometry decisions to the geometry manager. </p>

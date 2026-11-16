@@ -16,35 +16,36 @@ description: "nutscan – Network UPS Tools (NUT) device discovery library"
 <dl>
 <dd>
 <pre>#include &lt;nut-scan.h&gt;</pre>
-</dl>
+</dd></dl>
 <p> Then, to discover new devices, use the appropriate function: </p>
 <dl>
-<dd>&bull; </p>
+<dd>&bull; </dd>
 <p> <code><a href="/docs/linux/man/3-nutscan_scan_usb/">nutscan_scan_usb</a></code>(3) for supported USB devices,</dl>
 <dl>
-<dd>&bull; </p>
+<dd>&bull; </dd>
 <p> <code><a href="/docs/linux/man/3-nutscan_scan_snmp/">nutscan_scan_snmp</a></code>(3) for supported SNMP agents,</dl>
 <dl>
-<dd>&bull; </p>
+<dd>&bull; </dd>
 <p> <code><a href="/docs/linux/man/3-nutscan_scan_xml_http/">nutscan_scan_xml_http</a></code>(3) for Eaton Network Management Card,</dl>
 <dl>
-<dd>&bull; </p>
+<dd>&bull; </dd>
 <p> <code><a href="/docs/linux/man/3-nutscan_scan_nut/">nutscan_scan_nut</a></code>(3) for NUT servers (upsd), using the classic method,</dl>
 <dl>
-<dd>&bull; </p>
+<dd>&bull; </dd>
 <p> <code><a href="/docs/linux/man/3-nutscan_scan_avahi/">nutscan_scan_avahi</a></code>(3) for NUT servers (upsd), using the mDNS (Avahi) method,</dl>
 <dl>
-<dd>&bull; </p>
+<dd>&bull; </dd>
 <p> <code><a href="/docs/linux/man/3-nutscan_scan_ipmi/">nutscan_scan_ipmi</a></code>(3) for supported IPMI PSU.</dl>
 <p> All of these functions return a list of devices found, using the nutscan_device_t structure. This structure is described in <code><a href="/docs/linux/man/3-nutscan_add_device_to_device/">nutscan_add_device_to_device</a></code>(3). </p>
 <p> Helper functions are also provided to output data using standard formats: </p>
 <dl>
-<dd>&bull; </p>
+<dd>&bull; </dd>
 <p> <code><a href="/docs/linux/man/3-nutscan_display_parsable/">nutscan_display_parsable</a></code>(3) for parsable output,</dl>
 <dl>
-<dd>&bull; </p>
+<dd>&bull; </dd>
 <p> <code><a href="/docs/linux/man/3-nutscan_display_ups_conf/">nutscan_display_ups_conf</a></code>(3) for ups.conf style.</dl>
 <h2>Error Handling</h2>
 <p>There is currently no specific mechanism for error handling.</p>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/8-nut-scanner/">nut-scanner</a></code>(8), <code><a href="/docs/linux/man/3-nutscan_scan_usb/">nutscan_scan_usb</a></code>(3), <code><a href="/docs/linux/man/3-nutscan_scan_snmp/">nutscan_scan_snmp</a></code>(3), <code><a href="/docs/linux/man/3-nutscan_scan_xml_http/">nutscan_scan_xml_http</a></code>(3), <code><a href="/docs/linux/man/3-nutscan_scan_nut/">nutscan_scan_nut</a></code>(3), <code><a href="/docs/linux/man/3-nutscan_scan_avahi/">nutscan_scan_avahi</a></code>(3), <code><a href="/docs/linux/man/3-nutscan_scan_ipmi/">nutscan_scan_ipmi</a></code>(3), <code><a href="/docs/linux/man/3-nutscan_display_parsable/">nutscan_display_parsable</a></code>(3), <code><a href="/docs/linux/man/3-nutscan_display_ups_conf/">nutscan_display_ups_conf</a></code>(3), <code><a href="/docs/linux/man/3-nutscan_new_device/">nutscan_new_device</a></code>(3), <code><a href="/docs/linux/man/3-nutscan_free_device/">nutscan_free_device</a></code>(3), <code><a href="/docs/linux/man/3-nutscan_add_device_to_device/">nutscan_add_device_to_device</a></code>(3), <code><a href="/docs/linux/man/3-nutscan_add_option_to_device/">nutscan_add_option_to_device</a></code>(3), <code><a href="/docs/linux/man/3-nutscan_cidr_to_ip/">nutscan_cidr_to_ip</a></code>(3), <a rel="nofollow" href="http://avahi.org/">http://avahi.org/</a> </p>
+</p>

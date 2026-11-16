@@ -13,13 +13,13 @@ description: "vpBruteForceRender – render using a simple brute-force method"
 </code></pre>
 <p> vpResult</p>
 <dl>
-<dt> <code>vpBruteForceRender(</code><i>vpc</i><code>)</code></p>
+<dt> <code>vpBruteForceRender(</code><i>vpc</i><code>)</code></dt>
 <dd>
-<dd>vpContext *<i>vpc;</i></dl>
+</dd><dd>vpContext *<i>vpc;</i></dd></dl>
 <h2>Arguments</h2>
 <dl>
-<dt><i>vpc</i></p>
-<dd>VolPack context from <code>vpCreateContext.</code></dl>
+<dt><i>vpc</i></dt>
+<dd>VolPack context from <code>vpCreateContext.</code></dd></dl>
 <h2>Description</h2>
 <p>This function is for debugging purposes only. It performs the same function as <code>vpRenderRawVolume</code>, but uses a simpler, very inefficient algorithm. The two functions should produce identical results.</p>
 <h2>See Also</h2>

@@ -23,5 +23,5 @@ description: "mlx5dv_ts_to_ns – Convert device timestamp from HCA core clock u
 <p><code><a href="/docs/linux/man/7-mlx5dv/">mlx5dv</a></code>(7), <code><a href="/docs/linux/man/3-mlx5dv_get_clock_info/">mlx5dv_get_clock_info</a></code>(3), <code><a href="/docs/linux/man/3-mlx5dv_query_device/">mlx5dv_query_device</a></code>(3)</p>
 <h2>Authors</h2>
 <dl COMPACT>
-<dt>Feras Daoud &lt;ferasda [at] mellanox.com&gt;</p>
-<dd></dl>
+<dt>Feras Daoud &lt;ferasda [at] mellanox.com&gt;</dt>
+<dd></dd></dl>

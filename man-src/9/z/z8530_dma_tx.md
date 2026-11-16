@@ -14,11 +14,11 @@ description: "z8530_dma_tx – Handle a DMA TX event"
 <p><i>chan</i></p>
 <dl>
 <dd>
-<dd>The Z8530 channel to handle</dl>
+</dd><dd>The Z8530 channel to handle</dd></dl>
 <h2>Description</h2>
 <p>We have received an interrupt while doing DMA transmissions. It shouldn&#8217;t happen. Scream loudly if it does.</p>
 <h2>Author</h2>
 <p><code>Alan Cox</code> &lt;alan [at] lxorguk.ukuu.org.uk&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

@@ -12,13 +12,12 @@ rdma_disconnect - This function disconnects a connection.
 
 <pre><code>#include &lt;rdma/rdma_cma.h&gt;
 int rdma_disconnect
-
     (struct rdma_cm_id *id);</code></pre>
 
 <h2>Arguments</h2>
 
 <dl><dt>id
-<dd>RDMA identifier.</dl>
+</dt><dd>RDMA identifier.</dd></dl>
 
 <h2>Description</h2>
 

@@ -15,16 +15,16 @@ description: "sheep – Distributed Block Storage System for KVM"
 <p> The server daemon is called <a href="/docs/linux/man/8-sheep/">sheep</a>(8). A command line utility is available via collie(8). KVM/QEMU virtual machines use the sheep daemon via a block driver available in <a href="/docs/linux/man/1-qemu/">qemu</a>(1).</p>
 <h2>Options</h2>
 <dl>
-<dt><code>-p</code><i></i>, <code>&#8211;port</code><i> port</i></p>
-<dd>This option specifies the IP port over which <code>sheep</code> looks for other sheepdog cluster nodes.</p>
-<dt><code>-f</code><i></i>, <code>&#8211;foreground</code></p>
-<dd>This option forces the sheepdog daemon to run in the foreground.</p>
-<dt><code>-l</code><i></i>, <code>&#8211;loglevel</code><i> loglevel</i></p>
-<dd>This option specifies the message level printed.</p>
-<dt><code>-d</code><i></i>, <code>&#8211;debug</code></p>
-<dd>This option displays debug messages.</p>
-<dt><code>-h</code><i></i>, <code>&#8211;help</code></p>
-<dd>Display help and exit.</dl>
+<dt><code>-p</code><i></i>, <code>&#8211;port</code><i> port</i></dt>
+<dd>This option specifies the IP port over which <code>sheep</code> looks for other sheepdog cluster nodes.</dd>
+<dt><code>-f</code><i></i>, <code>&#8211;foreground</code></dt>
+<dd>This option forces the sheepdog daemon to run in the foreground.</dd>
+<dt><code>-l</code><i></i>, <code>&#8211;loglevel</code><i> loglevel</i></dt>
+<dd>This option specifies the message level printed.</dd>
+<dt><code>-d</code><i></i>, <code>&#8211;debug</code></dt>
+<dd>This option displays debug messages.</dd>
+<dt><code>-h</code><i></i>, <code>&#8211;help</code></dt>
+<dd>Display help and exit.</dd></dl>
 <h2>Path</h2>
 <p>Proper LSB systems will store sheepdog files in /var/lib/sheepdog. The init script uses this directory by default. The directory must be on a filesystem with xattr support. In the case of ext3, user_xattr should be added to the mount options. </p>
 <p> mount -o remount,user_xattr /var/lib/shepdog</p>

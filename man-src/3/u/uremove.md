@@ -10,7 +10,6 @@ description: "uremove – Removes a character from a string. Allegro game progra
 <p>uremove &#8211; Removes a character from a string. Allegro game programming library.</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;allegro.h&gt;
-
 int uremove(char *s, int index);</code></pre>
 <h2>Description</h2>
 <p>Removes the character at the specified `index&#8217; within the string, sliding the rest of the data back to fill the gap. If `index&#8217; is negative, it counts backward from the end of the string. Example: </p>

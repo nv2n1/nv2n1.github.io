@@ -11,138 +11,131 @@ description: "ltdbtool – manipulate CTDB’s local TDB files"
 <p> ltdbtool &#8211; manipulate CTDB&#8217;s local TDB files </p>
 <h2>SYNOPSIS</h2>
 <dl>
-<dt> <code>ltdbtool</code> [<i>OPTION</i>&#8230;] {<i>COMMAND</i>} [<i>COMMAND-ARGS</i>]</dl>
+<dt> <code>ltdbtool</code> [<i>OPTION</i>&#8230;] {<i>COMMAND</i>} [<i>COMMAND-ARGS</i>]</dt></dl>
 <h2>DESCRIPTION</h2>
-<dd>ltdbtool is a utility to manipulate CTDB&#8217;s local TDB databases (LTDBs) without connecting to a CTDB daemon. </p>
+<dd>ltdbtool is a utility to manipulate CTDB&#8217;s local TDB databases (LTDBs) without connecting to a CTDB daemon. </dd>
 <p> It can be used to: </p>
 <dl>
 <dt>
-<dd> &bull; dump the contents of a LTDB, optionally printing the CTDB record header information,</dl>
+</dt><dd> &bull; dump the contents of a LTDB, optionally printing the CTDB record header information,</dd></dl>
 <dl>
 <dt>
-<dd> &bull; convert between an LTDB and a non-clustered tdb by adding or removing CTDB headers and</dl>
+</dt><dd> &bull; convert between an LTDB and a non-clustered tdb by adding or removing CTDB headers and</dd></dl>
 <dl>
 <dt>
-<dd> &bull; convert between 64 and 32 bit LTDBs where the CTDB record headers differ by 4 bytes of padding.</dl>
+</dt><dd> &bull; convert between 64 and 32 bit LTDBs where the CTDB record headers differ by 4 bytes of padding.</dd></dl>
 <h2>OPTIONS</h2>
 <p> -e</p>
 <dl>
 <dt>
-<dd> Dump empty records. These are normally excluded.</dl>
+</dt><dd> Dump empty records. These are normally excluded.</dd></dl>
 <p> -p</p>
 <dl>
 <dt>
-<dd> Dump with header information, similar to &quot;ctdb catdb&quot;.</dl>
+</dt><dd> Dump with header information, similar to &quot;ctdb catdb&quot;.</dd></dl>
 <p> -s {0 | 32 | 64}</p>
 <dl>
 <dt>
-<dd> Specify how to determine the CTDB record header size for the input database: </p>
+</dt><dd> Specify how to determine the CTDB record header size for the input database: </dd>
 <p> 0</p>
 <dl>
 <dt>
-<dd> no CTDB header</dl>
+</dt><dd> no CTDB header</dd></dl>
 <p> 32</p>
 <dl>
 <dt>
-<dd> CTDB header size of a 32 bit system (20 bytes)</dl>
+</dt><dd> CTDB header size of a 32 bit system (20 bytes)</dd></dl>
 <p> 64</p>
 <dl>
 <dt>
-<dd> CTDB header size of a 64 bit system (24 bytes)</dl>
+</dt><dd> CTDB header size of a 64 bit system (24 bytes)</dd></dl>
 <p> The default is 32 or 64 depending on the system architecture.</dl>
 <p> -o {0 | 32 | 64}</p>
 <dl>
 <dt>
-<dd> Specify how to determine the CTDB record header size for the output database, see -s.</dl>
+</dt><dd> Specify how to determine the CTDB record header size for the output database, see -s.</dd></dl>
 <p> -S <i>SIZE</i></p>
 <dl>
 <dt>
-<dd> Explicitly specify the CTDB record header SIZE of the input database in bytes.</dl>
+</dt><dd> Explicitly specify the CTDB record header SIZE of the input database in bytes.</dd></dl>
 <p> -O <i>SIZE</i></p>
 <dl>
 <dt>
-<dd> Explicitly specify the CTDB record header SIZE for the output database in bytes.</dl>
+</dt><dd> Explicitly specify the CTDB record header SIZE for the output database in bytes.</dd></dl>
 <p> -h</p>
 <dl>
 <dt>
-<dd> Print help text.</dl>
+</dt><dd> Print help text.</dd></dl>
 <h2>COMMANDS</h2>
 <p> help</p>
 <dl>
 <dt>
-<dd> Print help text.</dl>
+</dt><dd> Print help text.</dd></dl>
 <p> dump <i>IDB</i></p>
 <dl>
 <dt>
-<dd> Dump the contents of an LTDB input file IDB to standard output in a human-readable format.</dl>
+</dt><dd> Dump the contents of an LTDB input file IDB to standard output in a human-readable format.</dd></dl>
 <p> convert <i>IDB</i> <i>ODB</i></p>
 <dl>
 <dt>
-<dd> Copy an LTDB input file IDB to output file ODB, optionally adding or removing CTDB headers.</dl>
+</dt><dd> Copy an LTDB input file IDB to output file ODB, optionally adding or removing CTDB headers.</dd></dl>
 <h2>EXAMPLES</h2>
 <p> Print a local tdb in &quot;tdbdump&quot; style: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
       ltdbtool dump idmap2.tdb.0
-    
 </pre>
-</dl>
+</dd></dl>
 <p> Print a local tdb with header information similar to &quot;ctdb catdb&quot;: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
       ltdbtool dump -p idmap2.tdb.0
-    
 </pre>
-</dl>
+</dd></dl>
 <p> Strip the CTDB headers from records: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
       ltdbtool convert -o0 idmap2.tdb.0 idmap.tdb
-    
 </pre>
-</dl>
+</dd></dl>
 <p> Strip 64 bit CTDB headers from records, running on i386: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
       ltdbtool convert -s64 -o0 idmap2.tdb.0 idmap.tdb
-    
 </pre>
-</dl>
+</dd></dl>
 <p> Strip the CTDB headers from records by piping through tdbrestore: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
       ltdbtool dump idmap2.tdb.0 | tdbrestore idmap.tdb
-    
 </pre>
-</dl>
+</dd></dl>
 <p> Convert a local tdb from a 64 bit system for usage on a 32 bit system: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
       ltdbtool convert -s64 -o32 idmap2.tdb.0 idmap2.tdb.1
-    
 </pre>
-</dl>
+</dd></dl>
 <p> Add a default header: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
       ltdbtool convert -s0 idmap.tdb idmap2.tdb.0
-    
 </pre>
-</dl>
+</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-ctdb/">ctdb</a></code>(1), <code>tdbdump</code>(1), <code>tdbrestore</code>(1), <code><a href="/docs/linux/man/7-ctdb/">ctdb</a></code>(7), m[blue]<code><a rel="nofollow" href="http://ctdb.samba.org/">http://ctdb.samba.org/</a></code>m[]</p>
 <h2>AUTHOR</h2>

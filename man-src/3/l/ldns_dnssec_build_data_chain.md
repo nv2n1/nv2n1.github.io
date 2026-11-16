@@ -20,25 +20,25 @@ description: "ldns_dnssec_data_chain_new, ldns_dnssec_data_chain_free, ldns_dnss
 <p> void ldns_dnssec_data_chain_print(FILE *out, const ldns_dnssec_data_chain *chain); </p>
 <h2>DESCRIPTION</h2>
 <dl>
-<dt> <i>ldns_dnssec_data_chain_new</i>()</p>
-<dd>Creates a new dnssec_chain structure .br Returns ldns_dnssec_data_chain *</dl>
+<dt> <i>ldns_dnssec_data_chain_new</i>()</dt>
+<dd>Creates a new dnssec_chain structure .br Returns ldns_dnssec_data_chain *</dd></dl>
 <dl>
-<dt> <i>ldns_dnssec_data_chain_free</i>()</p>
-<dd>Frees a dnssec_data_chain structure </p>
+<dt> <i>ldns_dnssec_data_chain_free</i>()</dt>
+<dd>Frees a dnssec_data_chain structure </dd>
 <p> .br <code>*chain</code>: The chain to free</dl>
 <dl>
-<dt> <i>ldns_dnssec_data_chain_deep_free</i>()</p>
-<dd>Frees a dnssec_data_chain structure, and all data contained therein </p>
+<dt> <i>ldns_dnssec_data_chain_deep_free</i>()</dt>
+<dd>Frees a dnssec_data_chain structure, and all data contained therein </dd>
 <p> .br <code>*chain</code>: The dnssec_data_chain to free</dl>
 <dl>
-<dt> <i>ldns_dnssec_build_data_chain</i>()</p>
-<dd>Build an ldns_dnssec_data_chain, which contains all DNSSEC data that is needed to derive the trust tree later </p>
+<dt> <i>ldns_dnssec_build_data_chain</i>()</dt>
+<dd>Build an ldns_dnssec_data_chain, which contains all DNSSEC data that is needed to derive the trust tree later </dd>
 <p> The data_set will be cloned </p>
 <p> .br <code>*res</code>: resolver structure for further needed queries .br <code>qflags</code>: resolution flags .br <code>*data_set</code>: The original rrset where the chain ends .br <code>*pkt</code>: optional, can contain the original packet (and hence the sigs and maybe the key) .br <code>*orig_rr</code>: The original Resource Record </p>
 <p> .br Returns the DNSSEC data chain</dl>
 <dl>
-<dt> <i>ldns_dnssec_data_chain_print</i>()</p>
-<dd>Prints the dnssec_data_chain to the given file stream </p>
+<dt> <i>ldns_dnssec_data_chain_print</i>()</dt>
+<dd>Prints the dnssec_data_chain to the given file stream </dd>
 <p> .br <code>*out</code>: The file stream to print to .br <code>*chain</code>: The dnssec_data_chain to print</dl>
 <h2>AUTHOR</h2>
 <p> The ldns team at NLnet Labs. Which consists out of Jelte Jansen and Miek Gieben. </p>
@@ -52,3 +52,4 @@ description: "ldns_dnssec_data_chain_new, ldns_dnssec_data_chain_free, ldns_dnss
 <h2>REMARKS</h2>
 <p> This manpage was automaticly generated from the ldns source code by use of Doxygen and some perl. </p>
 <h2>Index</h2>
+</p>

@@ -11,16 +11,16 @@ description: "XkbNoteControlsChanges – Notes the changes in a changes structur
 <h2>Synopsis</h2>
 <dl COMPACT>
 <dt> <code>void XkbNoteControlsChanges</code> <code>(XkbControlsChangesPtr </code><i>changes</i><code>,</code> <code>XkbControlsNotifyEvent *</code><i>new</i><code>,</code> <code>unsigned int </code><i>wanted</i><code>);</code><br />
- &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</dl>
+ &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</dt></dl>
 <h2>Arguments</h2>
 <dl COMPACT>
-<dt><i>&#8211; changes</i></p>
+<dt><i>&#8211; changes</i></dt>
 <dd>
-<dd>records changes indicated by new</p>
-<dt><i>&#8211; new</i></p>
-<dd>tells which things have changed</p>
-<dt><i>&#8211; wanted</i></p>
-<dd>tells which parts of new to record in changes</dl>
+</dd><dd>records changes indicated by new</dd>
+<dt><i>&#8211; new</i></dt>
+<dd>tells which things have changed</dd>
+<dt><i>&#8211; wanted</i></dt>
+<dd>tells which parts of new to record in changes</dd></dl>
 <h2>Description</h2>
 <p>Whenever a field in the controls structure changes in the server&#8217;s keyboard description, the server sends an XkbControlsNotify event to all interested clients.To receive XkbControlsNotify events under all possible conditions, use <i>XkbSelectEvents </i> and pass XkbControlsNotifyMask in both <i>bits_to_change </i> and <i>values_for_bits.</i> </p>
 <p> To receive XkbControlsNotify events only under certain conditions, use <i>XkbSelectEventDetails </i> using XkbControlsNotify as the <i>event_type </i> and specifying the desired state changes in <i>bits_to_change </i> and <i>values_for_bits </i> using mask bits from Table 1. </p>

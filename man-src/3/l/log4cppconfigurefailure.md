@@ -22,6 +22,6 @@ description: "log4cpp::ConfigureFailure –"
 <p>Constructor. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>reason</i> String containing the description of the exception.</dl>
+<dd><i>reason</i> String containing the description of the exception.</dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for log4cpp from the source code.</p>

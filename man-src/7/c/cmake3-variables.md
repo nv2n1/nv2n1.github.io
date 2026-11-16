@@ -149,22 +149,22 @@ add_custom_target(drive ALL DEPENDS out.txt)</pre>
 <p>Tool that can launch the native build system. The value may be the full path to an executable or just the tool name if it is expected to be in the <code>PATH</code>. </p>
 <p> The tool selected depends on the <code>CMAKE_GENERATOR</code> used to configure the project:</p>
 <dl>
-<dt>&bull;</p>
-<dd>The <i>Makefile Generators</i> set this to <code>make</code>, <code>gmake</code>, or a generator-specific tool (e.g. <code>nmake</code> for <code>NMake Makefiles</code>). </p>
+<dt>&bull;</dt>
+<dd>The <i>Makefile Generators</i> set this to <code>make</code>, <code>gmake</code>, or a generator-specific tool (e.g. <code>nmake</code> for <code>NMake Makefiles</code>). </dd>
 <p> These generators store <code>CMAKE_MAKE_PROGRAM</code> in the CMake cache so that it may be edited by the user.</p>
-<dt>&bull;</p>
-<dd>The <code>Ninja</code> generator sets this to <code>ninja</code>. </p>
+<dt>&bull;</dt>
+<dd>The <code>Ninja</code> generator sets this to <code>ninja</code>. </dd>
 <p> This generator stores <code>CMAKE_MAKE_PROGRAM</code> in the CMake cache so that it may be edited by the user.</p>
-<dt>&bull;</p>
-<dd>The <code>Xcode</code> generator sets this to <code>xcodebuild</code> (or possibly an otherwise undocumented <code>cmakexbuild</code> wrapper implementing some workarounds). </p>
+<dt>&bull;</dt>
+<dd>The <code>Xcode</code> generator sets this to <code>xcodebuild</code> (or possibly an otherwise undocumented <code>cmakexbuild</code> wrapper implementing some workarounds). </dd>
 <p> This generator prefers to lookup the build tool at build time rather than to store <code>CMAKE_MAKE_PROGRAM</code> in the CMake cache ahead of time. This is because <code>xcodebuild</code> is easy to find, the <code>cmakexbuild</code> wrapper is needed only for older Xcode versions, and the path to <code>cmakexbuild</code> may be outdated if CMake itself moves. </p>
 <p> For compatibility with versions of CMake prior to 3.2, if a user or project explicitly adds <code>CMAKE_MAKE_PROGRAM</code> to the CMake cache then CMake will use the specified value.</p>
-<dt>&bull;</p>
-<dd>The <i>Visual Studio Generators</i> set this to the full path to <code>MSBuild.exe</code> (VS &gt;= 10), <code>devenv.com</code> (VS 7,8,9), or <code>VCExpress.exe</code> (VS Express 8,9). (See also variables <code>CMAKE_VS_MSBUILD_COMMAND</code> and <code>CMAKE_VS_DEVENV_COMMAND</code>. </p>
+<dt>&bull;</dt>
+<dd>The <i>Visual Studio Generators</i> set this to the full path to <code>MSBuild.exe</code> (VS &gt;= 10), <code>devenv.com</code> (VS 7,8,9), or <code>VCExpress.exe</code> (VS Express 8,9). (See also variables <code>CMAKE_VS_MSBUILD_COMMAND</code> and <code>CMAKE_VS_DEVENV_COMMAND</code>. </dd>
 <p> These generators prefer to lookup the build tool at build time rather than to store <code>CMAKE_MAKE_PROGRAM</code> in the CMake cache ahead of time. This is because the tools are version-specific and can be located using the Windows Registry. It is also necessary because the proper build tool may depend on the project content (e.g. the Intel Fortran plugin to VS 10 and 11 requires <code>devenv.com</code> to build its <code>.vfproj</code> project files even though <code>MSBuild.exe</code> is normally preferred to support the <code>CMAKE_GENERATOR_TOOLSET</code>). </p>
 <p> For compatibility with versions of CMake prior to 3.0, if a user or project explicitly adds <code>CMAKE_MAKE_PROGRAM</code> to the CMake cache then CMake will use the specified value if possible.</p>
-<dt>&bull;</p>
-<dd>The <code>Green Hills MULTI</code> generator sets this to <code>gbuild</code>. If a user or project explicitly adds <code>CMAKE_MAKE_PROGRAM</code> to the CMake cache then CMake will use the specified value. </p>
+<dt>&bull;</dt>
+<dd>The <code>Green Hills MULTI</code> generator sets this to <code>gbuild</code>. If a user or project explicitly adds <code>CMAKE_MAKE_PROGRAM</code> to the CMake cache then CMake will use the specified value. </dd>
 <p> The <code>CMAKE_MAKE_PROGRAM</code> variable is set for use by project code. The value is also used by the <code><a href="/docs/linux/man/1-cmake3/">cmake3</a>(1)</code> <code>&#8211;build</code> and <code><a href="/docs/linux/man/1-ctest3/">ctest3</a>(1)</code> <code>&#8211;build-and-test</code> tools to launch the native build process.</dl>
 <h3>Cmake_Match_Count</h3>
 <p>The number of matches with the last regular expression. </p>
@@ -246,14 +246,14 @@ add_custom_target(drive ALL DEPENDS out.txt)</pre>
 <p>where the <code>&lt;date&gt;</code> component is of format <code>CCYYMMDD</code> and <code>&lt;id&gt;</code> may contain arbitrary text. This represents development as of a particular date following the <code>&lt;major&gt;.&lt;minor&gt;</code> feature release. </p>
 <p> Individual component values are also available in variables:</p>
 <dl>
-<dt>&bull;</p>
-<dd><code>CMAKE_MAJOR_VERSION</code></p>
-<dt>&bull;</p>
-<dd><code>CMAKE_MINOR_VERSION</code></p>
-<dt>&bull;</p>
-<dd><code>CMAKE_PATCH_VERSION</code></p>
-<dt>&bull;</p>
-<dd><code>CMAKE_TWEAK_VERSION</code> </p>
+<dt>&bull;</dt>
+<dd><code>CMAKE_MAJOR_VERSION</code></dd>
+<dt>&bull;</dt>
+<dd><code>CMAKE_MINOR_VERSION</code></dd>
+<dt>&bull;</dt>
+<dd><code>CMAKE_PATCH_VERSION</code></dd>
+<dt>&bull;</dt>
+<dd><code>CMAKE_TWEAK_VERSION</code> </dd>
 <p> Use the <code>if()</code> command <code>VERSION_LESS</code>, <code>VERSION_EQUAL</code>, or <code>VERSION_GREATER</code> operators to compare version string values against <code>CMAKE_VERSION</code> using a component-wise test. Version component values may be 10 or larger so do not attempt to compare version strings as floating-point numbers. </p>
 <p> <code>NOTE:</code> CMake versions 2.8.2 through 2.8.12 used three components for the feature level. Release versions represented the bug-fix level in a fourth component, i.e. <code>&lt;major&gt;.&lt;minor&gt;.&lt;patch&gt;[.&lt;tweak&gt;][-rc&lt;n&gt;]</code>. Development versions represented the development date in the fourth component, i.e. <code>&lt;major&gt;.&lt;minor&gt;.&lt;patch&gt;.&lt;date&gt;[-&lt;id&gt;]</code>. </p>
 <p> CMake versions prior to 2.8.2 used three components for the feature level and had no bug-fix component. Release versions used an even-valued second component, i.e. <code>&lt;major&gt;.&lt;even-minor&gt;.&lt;patch&gt;[-rc&lt;n&gt;]</code>. Development versions used an odd-valued second component with the development date as the third component, i.e. <code>&lt;major&gt;.&lt;odd-minor&gt;.&lt;date&gt;</code>. </p>
@@ -400,26 +400,26 @@ add_custom_target(drive ALL DEPENDS out.txt)</pre>
 <p>This variable affects how <code>find_*</code> commands choose between OS X Application Bundles and unix-style package components. </p>
 <p> On Darwin or systems supporting OS X Application Bundles, the <code>CMAKE_FIND_APPBUNDLE</code> variable can be set to empty or one of the following:</p>
 <dl>
-<dt><code>FIRST</code></p>
-<dd>Try to find application bundles before standard programs. This is the default on Darwin.</p>
-<dt><code>LAST</code></p>
-<dd>Try to find application bundles after standard programs.</p>
-<dt><code>ONLY</code></p>
-<dd>Only try to find application bundles.</p>
-<dt><code>NEVER</code></p>
-<dd>Never try to find application bundles.</dl>
+<dt><code>FIRST</code></dt>
+<dd>Try to find application bundles before standard programs. This is the default on Darwin.</dd>
+<dt><code>LAST</code></dt>
+<dd>Try to find application bundles after standard programs.</dd>
+<dt><code>ONLY</code></dt>
+<dd>Only try to find application bundles.</dd>
+<dt><code>NEVER</code></dt>
+<dd>Never try to find application bundles.</dd></dl>
 <h3>Cmake_Find_Framework</h3>
 <p>This variable affects how <code>find_*</code> commands choose between OS X Frameworks and unix-style package components. </p>
 <p> On Darwin or systems supporting OS X Frameworks, the <code>CMAKE_FIND_FRAMEWORK</code> variable can be set to empty or one of the following:</p>
 <dl>
-<dt><code>FIRST</code></p>
-<dd>Try to find frameworks before standard libraries or headers. This is the default on Darwin.</p>
-<dt><code>LAST</code></p>
-<dd>Try to find frameworks after standard libraries or headers.</p>
-<dt><code>ONLY</code></p>
-<dd>Only try to find frameworks.</p>
-<dt><code>NEVER</code></p>
-<dd>Never try to find frameworks.</dl>
+<dt><code>FIRST</code></dt>
+<dd>Try to find frameworks before standard libraries or headers. This is the default on Darwin.</dd>
+<dt><code>LAST</code></dt>
+<dd>Try to find frameworks after standard libraries or headers.</dd>
+<dt><code>ONLY</code></dt>
+<dd>Only try to find frameworks.</dd>
+<dt><code>NEVER</code></dt>
+<dd>Never try to find frameworks.</dd></dl>
 <h3>Cmake_Find_Library_Prefixes</h3>
 <p>Prefixes to prepend when looking for libraries. </p>
 <p> This specifies what prefixes to add to library names when the <code>find_library()</code> command looks for libraries. On UNIX systems this is typically <code>lib</code>, meaning that when trying to find the <code>foo</code> library it will look for <code>libfoo</code>.</p>
@@ -481,12 +481,12 @@ add_custom_target(drive ALL DEPENDS out.txt)</pre>
 <pre>-- Up-to-date: /some/destination/path</pre>
 <p>The <code>CMAKE_INSTALL_MESSAGE</code> variable may be set to control which messages are printed:</p>
 <dl>
-<dt><code>ALWAYS</code></p>
-<dd>Print both <code>Installing</code> and <code>Up-to-date</code> messages.</p>
-<dt><code>LAZY</code></p>
-<dd>Print <code>Installing</code> but not <code>Up-to-date</code> messages.</p>
-<dt><code>NEVER</code></p>
-<dd>Print neither <code>Installing</code> nor <code>Up-to-date</code> messages. </p>
+<dt><code>ALWAYS</code></dt>
+<dd>Print both <code>Installing</code> and <code>Up-to-date</code> messages.</dd>
+<dt><code>LAZY</code></dt>
+<dd>Print <code>Installing</code> but not <code>Up-to-date</code> messages.</dd>
+<dt><code>NEVER</code></dt>
+<dd>Print neither <code>Installing</code> nor <code>Up-to-date</code> messages. </dd>
 <p> Other values have undefined behavior and may not be diagnosed. </p>
 <p> If this variable is not set, the default behavior is <code>ALWAYS</code>.</dl>
 <h3>Cmake_Install_Prefix</h3>
@@ -518,16 +518,16 @@ add_executable(CMakeSetup WIN32 ${SRCS})</pre>
 <h3>CMAKE_POLICY_WARNING_CMP&lt;NNNN&gt;</h3>
 <p>Explicitly enable or disable the warning when CMake Policy <code>CMP&lt;NNNN&gt;</code> is not set. This is meaningful only for the few policies that do not warn by default:</p>
 <dl>
-<dt>&bull;</p>
-<dd><code>CMAKE_POLICY_WARNING_CMP0025</code> controls the warning for policy <code>CMP0025</code>.</p>
-<dt>&bull;</p>
-<dd><code>CMAKE_POLICY_WARNING_CMP0047</code> controls the warning for policy <code>CMP0047</code>.</p>
-<dt>&bull;</p>
-<dd><code>CMAKE_POLICY_WARNING_CMP0056</code> controls the warning for policy <code>CMP0056</code>.</p>
-<dt>&bull;</p>
-<dd><code>CMAKE_POLICY_WARNING_CMP0060</code> controls the warning for policy <code>CMP0060</code>.</p>
-<dt>&bull;</p>
-<dd><code>CMAKE_POLICY_WARNING_CMP0065</code> controls the warning for policy <code>CMP0065</code>. </p>
+<dt>&bull;</dt>
+<dd><code>CMAKE_POLICY_WARNING_CMP0025</code> controls the warning for policy <code>CMP0025</code>.</dd>
+<dt>&bull;</dt>
+<dd><code>CMAKE_POLICY_WARNING_CMP0047</code> controls the warning for policy <code>CMP0047</code>.</dd>
+<dt>&bull;</dt>
+<dd><code>CMAKE_POLICY_WARNING_CMP0056</code> controls the warning for policy <code>CMP0056</code>.</dd>
+<dt>&bull;</dt>
+<dd><code>CMAKE_POLICY_WARNING_CMP0060</code> controls the warning for policy <code>CMP0060</code>.</dd>
+<dt>&bull;</dt>
+<dd><code>CMAKE_POLICY_WARNING_CMP0065</code> controls the warning for policy <code>CMP0065</code>. </dd>
 <p> This variable should not be set by a project in CMake code. Project developers running CMake may set this variable in their cache to enable the warning (e.g. <code>-DCMAKE_POLICY_WARNING_CMP&lt;NNNN&gt;=ON</code>). Alternatively, running <code><a href="/docs/linux/man/1-cmake3/">cmake3</a>(1)</code> with the <code>&#8211;debug-output</code>, <code>&#8211;trace</code>, or <code>&#8211;trace-expand</code> option will also enable the warning.</dl>
 <h3>Cmake_Prefix_Path</h3>
 <p><i>;-list</i> of directories specifying installation <i>prefixes</i> to be searched by the <code>find_package()</code>, <code>find_program()</code>, <code>find_library()</code>, <code>find_file()</code>, and <code>find_path()</code> commands. Each command will add appropriate subdirectories (like <code>bin</code>, <code>lib</code>, or <code>include</code>) as specified in its own documentation. </p>
@@ -629,8 +629,8 @@ add_executable(CMakeSetup WIN32 ${SRCS})</pre>
 <p>The name of the CPU CMake is building for. </p>
 <p> This variable is the same as <code>CMAKE_HOST_SYSTEM_PROCESSOR</code> if you build for the host system instead of the target system when cross compiling.</p>
 <dl>
-<dt>&bull;</p>
-<dd>The <code>Green Hills MULTI</code> generator sets this to <code>ARM</code> by default.</dl>
+<dt>&bull;</dt>
+<dd>The <code>Green Hills MULTI</code> generator sets this to <code>ARM</code> by default.</dd></dl>
 <h3>Cmake_System</h3>
 <p>Composite name of operating system CMake is compiling for. </p>
 <p> This variable is the composite of <code>CMAKE_SYSTEM_NAME</code> and <code>CMAKE_SYSTEM_VERSION</code>, e.g. <code>${CMAKE_SYSTEM_NAME}-${CMAKE_SYSTEM_VERSION}</code>. If <code>CMAKE_SYSTEM_VERSION</code> is not set, then this variable is the same as <code>CMAKE_SYSTEM_NAME</code>.</p>
@@ -948,10 +948,10 @@ set(CMAKE_TRY_COMPILE_PLATFORM_VARIABLES MY_CUSTOM_VARIABLE)
 <h3>Cmake_Try_Compile_Target_Type</h3>
 <p>Type of target generated for <code>try_compile()</code> calls using the source file signature. Valid values are:</p>
 <dl>
-<dt><code>EXECUTABLE</code></p>
-<dd>Use <code>add_executable()</code> to name the source file in the generated project. This is the default if no value is given.</p>
-<dt><code>STATIC_LIBRARY</code></p>
-<dd>Use <code>add_library()</code> with the <code>STATIC</code> option to name the source file in the generated project. This avoids running the linker and is intended for use with cross-compiling toolchains that cannot link without custom flags or linker scripts.</dl>
+<dt><code>EXECUTABLE</code></dt>
+<dd>Use <code>add_executable()</code> to name the source file in the generated project. This is the default if no value is given.</dd>
+<dt><code>STATIC_LIBRARY</code></dt>
+<dd>Use <code>add_library()</code> with the <code>STATIC</code> option to name the source file in the generated project. This avoids running the linker and is intended for use with cross-compiling toolchains that cannot link without custom flags or linker scripts.</dd></dl>
 <h3>Cmake_Use_Relative_Paths</h3>
 <p>This variable has no effect. The partially implemented effect it had in previous releases was removed in CMake 3.4.</p>
 <h3>Cmake_Visibility_Inlines_Hidden</h3>
@@ -1214,12 +1214,12 @@ cobertura-report --datafile coberturamerge.ser --destination . \
 <p>The script uses <code>find</code> to capture the paths to all of the <code>cobertura.ser</code> files found below the project&#8217;s source directory. It keeps the list of files and supplies it as an argument to the <code>cobertura-merge</code> program. The <code>&#8211;datafile</code> argument signifies where the result of the merge will be kept. </p>
 <p> The combined <code>coberturamerge.ser</code> file is then used to generate the XML report using the <code>cobertura-report</code> program. The call to the cobertura-report program requires some named arguments.</p>
 <dl>
-<dt><code>&#8211;datafila</code></p>
-<dd>path to the merged <code>.ser</code> file</p>
-<dt><code>&#8211;destination</code></p>
-<dd>path to put the output files(s)</p>
-<dt><code>&#8211;format</code></p>
-<dd>file format to write output in: xml or html </p>
+<dt><code>&#8211;datafila</code></dt>
+<dd>path to the merged <code>.ser</code> file</dd>
+<dt><code>&#8211;destination</code></dt>
+<dd>path to put the output files(s)</dd>
+<dt><code>&#8211;format</code></dt>
+<dd>file format to write output in: xml or html </dd>
 <p> The rest of the supplied arguments consist of the full paths to the <code>/src/main/java</code> directories of each module within the source tree. These directories are needed and should not be forgotten.</dl>
 <h3>Ctest_Coverage_Extra_Flags</h3>
 <p>Specify the CTest <code>CoverageExtraFlags</code> setting in a <code><a href="/docs/linux/man/1-ctest3/">ctest3</a>(1)</code> dashboard client script.</p>
@@ -1389,3 +1389,4 @@ cobertura-report --datafile coberturamerge.ser --destination . \
 <p> This variable triggers the definition of <code>CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION</code> when CPack runs <code>cmake_install.cmake</code> scripts.</p>
 <h2>Copyright</h2>
 <p>2000-2016 Kitware, Inc.</p>
+</p>

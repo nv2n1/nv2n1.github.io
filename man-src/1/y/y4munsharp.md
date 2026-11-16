@@ -16,14 +16,14 @@ description: "y4munsharp – Unsharp filter for YUV4MPEG2 streams"
 <h2>OPTIONS</h2>
 <p> <code>y4munsharp</code> accepts the following options:</p>
 <dl>
-<dt><code>-v</code><i> num</i></p>
-<dd> Set verbosity level (0 = quiet, 1 = normal, 2 = debug) (default: 1)</p>
-<dt><code>-h</code></p>
-<dd> Print a suage summary and exit</p>
-<dt><code>-L</code><i> radius,amount,threshold</i></p>
-<dd> Y&#8217; (luma) unsharp parameters. The <i>radius</i> and <i>amount&quot; arguments are floating point numbers. The threshold</i> argument is an integer. (default: 3.0,0.3,4) <code>-C</code><i> radius,amount,threshold</i> CbCr (chroma) unsharp parameters. The chroma is not processed unless this option is given. Arguments are the same type as for the -L option above. (default: none)</p>
-<dt><code>-N</code></p>
-<dd> Filtering can produce output outside the 16 to 240 range for Y&#8217; and 16 to 235 for CbCr. By default values outside the legal range are clipped/cored (values over 240 for Y&#8217; are set to 240 for example). Using <code>-N</code> the limits 0 and 255 are used instead.</dl>
+<dt><code>-v</code><i> num</i></dt>
+<dd> Set verbosity level (0 = quiet, 1 = normal, 2 = debug) (default: 1)</dd>
+<dt><code>-h</code></dt>
+<dd> Print a suage summary and exit</dd>
+<dt><code>-L</code><i> radius,amount,threshold</i></dt>
+<dd> Y&#8217; (luma) unsharp parameters. The <i>radius</i> and <i>amount&quot; arguments are floating point numbers. The threshold</i> argument is an integer. (default: 3.0,0.3,4) <code>-C</code><i> radius,amount,threshold</i> CbCr (chroma) unsharp parameters. The chroma is not processed unless this option is given. Arguments are the same type as for the -L option above. (default: none)</dd>
+<dt><code>-N</code></dt>
+<dd> Filtering can produce output outside the 16 to 240 range for Y&#8217; and 16 to 235 for CbCr. By default values outside the legal range are clipped/cored (values over 240 for Y&#8217; are set to 240 for example). Using <code>-N</code> the limits 0 and 255 are used instead.</dd></dl>
 <h2>EXAMPLES</h2>
 <p> A mild setting: </p>
 <pre>

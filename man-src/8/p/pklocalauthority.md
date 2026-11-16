@@ -26,7 +26,7 @@ description: "pklocalauthority – PolicyKit Local Authority"
  |-- 30-site.d
  |-- 50-local.d
  `-- 90-mandatory.d</pre>
-</dl>
+</dd></dl>
 <p> and </p>
 <dl>
 <dd>
@@ -37,47 +37,47 @@ description: "pklocalauthority – PolicyKit Local Authority"
  |-- 30-site.d
  |-- 50-local.d
  `-- 90-mandatory.d</pre>
-</dl>
+</dd></dl>
 <p> The /etc/polkit-1/localauthority hierarchy is inteded for local configuration and the /var/lib/polkit-1/localauthority is intended for 3rd party packages. </p>
 <p> Each .pkla file contains one or more authorization entries. If the underlying filesystem supports file monitoring, the Local Authority will reload information whenever .pkla files are added, removed or changed. </p>
 <p> Each directory is intended for a specific audience </p>
 <p> <i>10-vendor.d</i></p>
 <dl>
-<dd>Intended for use by the OS vendor.</dl>
+<dd>Intended for use by the OS vendor.</dd></dl>
 <p> <i>20-org.d</i></p>
 <dl>
-<dd>Intended for the organization deploying the OS.</dl>
+<dd>Intended for the organization deploying the OS.</dd></dl>
 <p> <i>30-site.d</i></p>
 <dl>
-<dd>Intended for the site deploying the system.</dl>
+<dd>Intended for the site deploying the system.</dd></dl>
 <p> <i>50-local.d</i></p>
 <dl>
-<dd>Intended for local usage.</dl>
+<dd>Intended for local usage.</dd></dl>
 <p> <i>90-mandatory.d</i></p>
 <dl>
-<dd>Intended for the organization deploying the OS.</dl>
+<dd>Intended for the organization deploying the OS.</dd></dl>
 <p> and new directories can be added/removed as needed. </p>
 <p> As to regards to the content, each .pkla file is a standard <i>key file</i> and contains key/value pairs in one or more groups with each group representing an authorization entry. A .pkla file MUST be named by using a scheme to ensure that the name is unique, e.g. reverse DNS notation or similar. For example, if the organization is &#8220;Acme Corp&#8221; needs to modify policy for the product &#8220;Frobnicator&#8221;, a name like com.acme.frobnicator.pkla would be suitable.</p>
 <h2>Authorization Entry</h2>
 <p>Each group in a .pkla file must have a name that is unique within the file it belongs to. The following keys are are recognized: </p>
 <p> <i>Identity</i></p>
 <dl>
-<dd>A semi-colon separated list of globs to match identities. Each glob should start with unix-user: or unix-group: to specify whether to match on a UNIX user name or a UNIX group name. Netgroups are supported with the unix-netgroup: prefix, but cannot support glob syntax.</dl>
+<dd>A semi-colon separated list of globs to match identities. Each glob should start with unix-user: or unix-group: to specify whether to match on a UNIX user name or a UNIX group name. Netgroups are supported with the unix-netgroup: prefix, but cannot support glob syntax.</dd></dl>
 <p> <i>Action</i></p>
 <dl>
-<dd>A semi-colon separated list of globs to match action identifiers.</dl>
+<dd>A semi-colon separated list of globs to match action identifiers.</dd></dl>
 <p> <i>ResultActive</i></p>
 <dl>
-<dd>The result to return for subjects in an active local session that matches one or more of the given identities. Allowed values are similar to what can be used in the <i>defaults</i> section of .policy files used to define actions, e.g. yes, no, auth_self, auth_self_keep, auth_admin and auth_admin_keep.</dl>
+<dd>The result to return for subjects in an active local session that matches one or more of the given identities. Allowed values are similar to what can be used in the <i>defaults</i> section of .policy files used to define actions, e.g. yes, no, auth_self, auth_self_keep, auth_admin and auth_admin_keep.</dd></dl>
 <p> <i>ResultInactive</i></p>
 <dl>
-<dd>Like <i>ResultActive</i> but instead applies to subjects in inactive local sessions.</dl>
+<dd>Like <i>ResultActive</i> but instead applies to subjects in inactive local sessions.</dd></dl>
 <p> <i>ResultAny</i></p>
 <dl>
-<dd>Like <i>ResultActive</i> but instead applies to any subject.</dl>
+<dd>Like <i>ResultActive</i> but instead applies to any subject.</dd></dl>
 <p> <i>ReturnValue</i></p>
 <dl>
-<dd>A semi-colon separated list of key/value pairs (of the form key=value) that are added to the details of authorization result on positive matches.</dl>
+<dd>A semi-colon separated list of key/value pairs (of the form key=value) that are added to the details of authorization result on positive matches.</dd></dl>
 <p> All keys specified above are required except that only at least one of <i>ResultAny</i>, <i>ResultInactive</i> and <i>ResultActive</i> must be present. The <i>ReturnValue</i> key is optional.</p>
 <h2>Evaluation Order</h2>
 <p>When a Mechanism requests services from the Authority to check if a given Subject is authorized for a given Action, the authorization entries discussed above are consulted using the following algorithm. </p>
@@ -105,16 +105,16 @@ description: "pklocalauthority – PolicyKit Local Authority"
  ├── 55-org.my.company.d
  │ └── 10-org.my.company.product.pkla
  └── 90-mandatory.d</pre>
-</dl>
+</dd></dl>
 <p> the evaluation order of the .pkla files is: </p>
 <dl>
-<dd>1. 10-desktop-policy.pkla</dl>
+<dd>1. 10-desktop-policy.pkla</dd></dl>
 <dl>
-<dd>2. 01-some-changes-from-a-subvendor.pkla</dl>
+<dd>2. 01-some-changes-from-a-subvendor.pkla</dd></dl>
 <dl>
-<dd>3. 10-org.my.company.product.pkla (the /var one)</dl>
+<dd>3. 10-org.my.company.product.pkla (the /var one)</dd></dl>
 <dl>
-<dd>4. 10-org.my.company.product.pkla (the /etc one)</dl>
+<dd>4. 10-org.my.company.product.pkla (the /etc one)</dd></dl>
 <p> When the list of authorization entries has been calculated, the authorization check can be made. First, the user of the Subject is determined and the groups that the user belongs are looked up. For each group identity, the authorization entries are consulted in order. If the authorization check matches the data from the authorization check, then the authorization result from <i>RequireAny</i>, <i>RequireInactive</i> or <i>RequireActive</i> is used and <i>ReturnValue</i> is added to the authorization result. </p>
 <p> Finally, the authorization entries are consulted using the user identity in the same manner. </p>
 <p> Note that processing continues even after a match. This allows for socalled &#8220;negative authorizations&#8221;, see the section called &#8220;EXAMPLES&#8221; for further discussion.</p>
@@ -124,13 +124,13 @@ description: "pklocalauthority – PolicyKit Local Authority"
 <dd>
 <pre>[Configuration]
 AdminIdentities=unix-group:staff</pre>
-</dl>
+</dd></dl>
 <p> specifies that any user in the staff UNIX group can be used for authentication when administrator authentication is needed. This file would typically be installed in the /etc/polkit-1/localauthority.conf.d directory and given the name 60-desktop-policy.conf to ensure that it is evaluted after the 50-localauthority.conf file shipped with PolicyKit. If the local administrator wants to override this (suppose 60-desktop-policy.conf was shipped as part of the OS) he can simply create a file 99-my-admin-configuration.conf with the following content </p>
 <dl>
 <dd>
 <pre>[Configuration]
 AdminIdentities=unix-user:lisa;unix-user:marge</pre>
-</dl>
+</dd></dl>
 <p> to specify that only the users lisa and marge can authenticate when administrator authentication is needed. </p>
 <p> The following .pkla file grants authorization to all users in the staff group for actions matching the glob com.example.awesomeproduct.* provided they are in an active session on the local console: </p>
 <dl>
@@ -141,7 +141,7 @@ Action=com.example.awesomeproduct.*
 ResultAny=no
 ResultInactive=no
 ResultActive=yes</pre>
-</dl>
+</dd></dl>
 <p> If the users homer and grimes are member of the staff group but policy requires that an administrator needs to authenticate every time authorization for any action matching com.example.awesomeproduct.* is required, one would add </p>
 <dl>
 <dd>
@@ -151,7 +151,7 @@ Action=com.example.awesomeproduct.*
 ResultAny=no
 ResultInactive=no
 ResultActive=auth_admin</pre>
-</dl>
+</dd></dl>
 <p> and make sure this authorization entry is after the first one.</p>
 <h2>Author</h2>
 <p>Written by David Zeuthen &lt;davidz [at] redhat.com&gt; with a lot of help from many others.</p>

@@ -87,7 +87,7 @@ url: "/docs/linux/man/3-frozen_/"
  <b>Note:</b>
 <dl>
 <dt>
-<dd> Explicit invocation of this method is <b>not</b> necessary if the object registered itself as observer with the structures on which such results depend. It is strongly advised to follow this policy when possible.</dl>
+</dt><dd> Explicit invocation of this method is <b>not</b> necessary if the object registered itself as observer with the structures on which such results depend. It is strongly advised to follow this policy when possible.</dd></dl>
  
 
  
@@ -113,13 +113,13 @@ url: "/docs/linux/man/3-frozen_/"
  <b>Warning</b>
 <dl>
 <dt>
-<dd> Objects cache the results of the previous calculation. Such results will be returned upon later invocations of <i></i><b>calculate</b>. When the results depend on arguments which could change between invocations, the lazy object must register itself as observer of such objects for the calculations to be performed again when they change.</dl>
+</dt><dd> Objects cache the results of the previous calculation. Such results will be returned upon later invocations of <i></i><b>calculate</b>. When the results depend on arguments which could change between invocations, the lazy object must register itself as observer of such objects for the calculations to be performed again when they change.</dd></dl>
  
 
  <b>Warning</b>
 <dl>
 <dt>
-<dd> Should this method be redefined in derived classes, <b>LazyObject::calculate()</b> should be called in the overriding method.</dl>
+</dt><dd> Should this method be redefined in derived classes, <b>LazyObject::calculate()</b> should be called in the overriding method.</dd></dl>
  
 
  

@@ -14,7 +14,7 @@ description: "sata_scr_valid – test whether SCRs are accessible"
 <p><i>link</i></p>
 <dl>
 <dd>
-<dd>ATA link to test SCR accessibility for</dl>
+</dd><dd>ATA link to test SCR accessibility for</dd></dl>
 <h2>Description</h2>
 <p>Test whether SCRs are accessible for <i>link</i>. </p>
 <p> LOCKING: None.</p>
@@ -23,5 +23,5 @@ description: "sata_scr_valid – test whether SCRs are accessible"
 <h2>Author</h2>
 <p><code>Jeff Garzik</code></p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

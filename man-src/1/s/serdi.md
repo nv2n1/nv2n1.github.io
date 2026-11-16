@@ -13,28 +13,28 @@ description: "serdi – Read and write RDF syntax"
 <p> serdi [OPTION]&#8230; INPUT BASE_URI </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-b</code></p>
-<dd> Fast bulk output for large serialisations. </p>
-<dt><code>-c PREFIX</code></p>
-<dd> Chop PREFIX from matching blank node IDs. </p>
-<dt><code>-e</code></p>
-<dd> Eat input one character at a time, rather than a page at a time which is the default. This is useful when reading from a pipe since output will be generated immediately as input arrives, rather than waiting until an entire page of input has arrived. With this option serdi uses one page less memory, but will likely be significantly slower. </p>
-<dt><code>-f</code></p>
-<dd> Keep full URIs in input (don&#8217;t qualify). </p>
-<dt><code>-h</code></p>
-<dd> Print the command line options. </p>
-<dt><code>-i SYNTAX</code></p>
-<dd> Read input in SYNTAX (`turtle&#8217; or `ntriples&#8217;). </p>
-<dt><code>-o SYNTAX</code></p>
-<dd> Write output in SYNTAX (`turtle&#8217; or `ntriples&#8217;). </p>
-<dt><code>-p PREFIX</code></p>
-<dd> Add PREFIX to blank node IDs. </p>
-<dt><code>-r ROOT_URI</code></p>
-<dd> Keep relative URIs within ROOT_URI. </p>
-<dt><code>-s INPUT</code></p>
-<dd> Parse INPUT as a string (terminates options). </p>
-<dt><code>-v</code></p>
-<dd> Display version information and exit. </p>
+<dt><code>-b</code></dt>
+<dd> Fast bulk output for large serialisations. </dd>
+<dt><code>-c PREFIX</code></dt>
+<dd> Chop PREFIX from matching blank node IDs. </dd>
+<dt><code>-e</code></dt>
+<dd> Eat input one character at a time, rather than a page at a time which is the default. This is useful when reading from a pipe since output will be generated immediately as input arrives, rather than waiting until an entire page of input has arrived. With this option serdi uses one page less memory, but will likely be significantly slower. </dd>
+<dt><code>-f</code></dt>
+<dd> Keep full URIs in input (don&#8217;t qualify). </dd>
+<dt><code>-h</code></dt>
+<dd> Print the command line options. </dd>
+<dt><code>-i SYNTAX</code></dt>
+<dd> Read input in SYNTAX (`turtle&#8217; or `ntriples&#8217;). </dd>
+<dt><code>-o SYNTAX</code></dt>
+<dd> Write output in SYNTAX (`turtle&#8217; or `ntriples&#8217;). </dd>
+<dt><code>-p PREFIX</code></dt>
+<dd> Add PREFIX to blank node IDs. </dd>
+<dt><code>-r ROOT_URI</code></dt>
+<dd> Keep relative URIs within ROOT_URI. </dd>
+<dt><code>-s INPUT</code></dt>
+<dd> Parse INPUT as a string (terminates options). </dd>
+<dt><code>-v</code></dt>
+<dd> Display version information and exit. </dd>
 </dl>
 <h2>AUTHOR</h2>
 <p> Serdi was written by David Robillard &lt;d@drobilla.net&gt; </p>

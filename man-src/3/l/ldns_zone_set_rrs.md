@@ -17,11 +17,11 @@ description: "ldns_zone_set_rrs, ldns_zone_set_soa"
 <p> void ldns_zone_set_soa(ldns_zone *z, ldns_rr *soa); </p>
 <h2>DESCRIPTION</h2>
 <dl>
-<dt> <i>ldns_zone_set_rrs</i>()</p>
-<dd>Set the zone&#8217;s contents .br <code>z</code>: the zone to put the new soa in .br <code>rrlist</code>: the rrlist to use</dl>
+<dt> <i>ldns_zone_set_rrs</i>()</dt>
+<dd>Set the zone&#8217;s contents .br <code>z</code>: the zone to put the new soa in .br <code>rrlist</code>: the rrlist to use</dd></dl>
 <dl>
-<dt> <i>ldns_zone_set_soa</i>()</p>
-<dd>Set the zone&#8217;s soa record .br <code>z</code>: the zone to put the new soa in .br <code>soa</code>: the soa to set</dl>
+<dt> <i>ldns_zone_set_soa</i>()</dt>
+<dd>Set the zone&#8217;s soa record .br <code>z</code>: the zone to put the new soa in .br <code>soa</code>: the soa to set</dd></dl>
 <h2>AUTHOR</h2>
 <p> The ldns team at NLnet Labs. Which consists out of Jelte Jansen and Miek Gieben. </p>
 <h2>REPORTING BUGS</h2>

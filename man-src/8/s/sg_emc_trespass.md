@@ -15,14 +15,14 @@ description: "sg_emc_trespass – change ownership of SCSI LUN from another Serv
 <h2>Options</h2>
 <p>Arguments to long options are mandatory for short options as well.</p>
 <dl>
-<dt><code>-d</code></p>
-<dd>outputs some extra debug information associated with executing this command</p>
-<dt><code>-hr</code></p>
-<dd>Sets the &#8216;Honor Reservation&#8217; bit in the command. If set, the trespass will only succeed to change the ownership from the Peer SP if the Peer SP does not have an outstanding SCSI reservation for the LUN. By default, the reservation state will be ignored.</p>
-<dt><code>-s</code></p>
-<dd>Send the short version of the trespass command instead of the long version. The short version is supported on the EMC FC5300, FC4500 and FC4700. The long version (default) is supported on the CLARiiON CX and AX family arrays.</p>
-<dt><code>-V</code></p>
-<dd>print out version string then exit.</dl>
+<dt><code>-d</code></dt>
+<dd>outputs some extra debug information associated with executing this command</dd>
+<dt><code>-hr</code></dt>
+<dd>Sets the &#8216;Honor Reservation&#8217; bit in the command. If set, the trespass will only succeed to change the ownership from the Peer SP if the Peer SP does not have an outstanding SCSI reservation for the LUN. By default, the reservation state will be ignored.</dd>
+<dt><code>-s</code></dt>
+<dd>Send the short version of the trespass command instead of the long version. The short version is supported on the EMC FC5300, FC4500 and FC4700. The long version (default) is supported on the CLARiiON CX and AX family arrays.</dd>
+<dt><code>-V</code></dt>
+<dd>print out version string then exit.</dd></dl>
 <p> In the 2.4 series of Linux kernels the <i>DEVICE</i> must be a SCSI generic (sg) device. In the 2.6 series block devices (e.g. SCSI disks and DVD drives) can also be specified. For example &quot;sg_start 0 /dev/sda&quot; will work in the 2.6 series kernels.</p>
 <h2>Exit Status</h2>
 <p>The exit status of sg_emc_trespass is 0 when it is successful. Otherwise see the <a href="/docs/linux/man/8-sg3_utils/">sg3_utils</a>(8) man page.</p>

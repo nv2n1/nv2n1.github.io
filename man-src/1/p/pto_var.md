@@ -21,16 +21,16 @@ description: "pto_var – change image variables inside Hugin .pto project files
 <p> The image numbers start with zero. If the number is missing this applies to the variables of all images (In this case a special treatment applies to the position of the anchor image). An exclamation mark before the variable will remove the variable from the list of variables to optimised.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-o|&#8211;output</code> = file.pto</p>
-<dd> Output Hugin <font SIZE="-1">PTO</font> file. Default: &lt;filename&gt;_var.pto</p>
-<dt><code>-h|&#8211;help</code></p>
-<dd> Shows help</p>
-<dt><code>&#8211;opt</code> varlist</p>
+<dt><code>-o|&#8211;output</code> = file.pto</dt>
+<dd> Output Hugin <font SIZE="-1">PTO</font> file. Default: &lt;filename&gt;_var.pto</dd>
+<dt><code>-h|&#8211;help</code></dt>
+<dd> Shows help</dd>
+<dt><code>&#8211;opt</code> varlist</dt>
 <dd>
 <pre>
  Change optimizer variables
 </pre>
-<dt><code>&#8211;modify-opt</code></p>
+</dd><dt><code>&#8211;modify-opt</code></dt>
 <dd>
 <pre><code>
    Modify the existing optimizer variables
@@ -47,19 +47,19 @@ description: "pto_var – change image variables inside Hugin .pto project files
    --opt !a,!b,!c        Don't optimise distortion (works only with
                          switch --modify-opt together)
 </code></pre>
-<dt><code>&#8211;link varlist</code></p>
+</dd><dt><code>&#8211;link varlist</code></dt>
 <dd>
 <pre>
    Example:
    --link v3          Link hfov of image 3
    --link a1,b1,c1    Link distortions parameter for image 1
 </pre>
-<dt><code>&#8211;unlink varlist</code></p>
+</dd><dt><code>&#8211;unlink varlist</code></dt>
 <dd>
    Examples:<br />
    &#8211;unlink v5        Unlink hfov for image 5<br />
-   &#8211;unlink a2,b2,c2  Unlink distortions parameters for image 2</p>
-<dt><code>&#8211;set varlist</code></p>
+   &#8211;unlink a2,b2,c2  Unlink distortions parameters for image 2</dd>
+<dt><code>&#8211;set varlist</code></dt>
 <dd>
 <pre><code>
    Examples:
@@ -70,13 +70,13 @@ description: "pto_var – change image variables inside Hugin .pto project files
    --set v=val*1.1       Increase fov by 10 % for all images
    --set y=i*20          Set yaw to 0, 20, 40, ...
 </code></pre>
-<dt><code>&#8211;set-from-file filename</code></p>
+</dd><dt><code>&#8211;set-from-file filename</code></dt>
 <dd>
 <pre>
                          Sets variables to new values
                          It reads the varlist from a file
 </pre>
-</dl>
+</dd></dl>
 <h2>AUTHORS</h2>
 <p> Thomas Modes </p>
 <h2>Index</h2>

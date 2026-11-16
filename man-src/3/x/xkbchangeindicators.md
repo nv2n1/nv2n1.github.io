@@ -11,18 +11,18 @@ description: "XkbChangeIndicators – Changes indicator maps or state without pa
 <h2>Synopsis</h2>
 <dl COMPACT>
 <dt> <code>Bool XkbChangeIndicators</code> <code>(Display *</code><i>dpy</i><code>,</code> <code>XkbDescPtr </code><i>xkb</i><code>,</code> <code>XkbIndicatorChangesPtr </code><i>changes</i><code>,</code> <code>unsigned int </code><i>state</i><code>);</code><br />
- &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</dl>
+ &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</dt></dl>
 <h2>Arguments</h2>
 <dl COMPACT>
-<dt><i>&#8211; dpy</i></p>
+<dt><i>&#8211; dpy</i></dt>
 <dd>
-<dd>connection to the X server</p>
-<dt><i>&#8211; xkb</i></p>
-<dd>keyboard description from which names are to be taken.</p>
-<dt><i>&#8211; changes</i></p>
-<dd>indicators to be updated on the server</p>
-<dt><i>&#8211; state</i></p>
-<dd>new state of indicators listed in changes-&gt;state_changes</dl>
+</dd><dd>connection to the X server</dd>
+<dt><i>&#8211; xkb</i></dt>
+<dd>keyboard description from which names are to be taken.</dd>
+<dt><i>&#8211; changes</i></dt>
+<dd>indicators to be updated on the server</dd>
+<dt><i>&#8211; state</i></dt>
+<dd>new state of indicators listed in changes-&gt;state_changes</dd></dl>
 <h2>Description</h2>
 <p>The XkbIndicatorChangesRec identifies small modifications to the indicator map. Use it with the function <i>XkbChangeIndicators </i> to reduce the amount of traffic sent to the server (see STRUCTURES).<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp; The <i>state_changes </i> field is a mask that specifies the indicators that have changed state, and <i>map_changes </i> is a mask that specifies the indicators whose maps have changed. </p>
@@ -52,9 +52,9 @@ description: "XkbChangeIndicators – Changes indicator maps or state without pa
  } XkbIndicatorNotifyEvent;</pre>
 <h2>Diagnostics</h2>
 <dl COMPACT>
-<dt><code>BadAtom</code></p>
-<dd>A name is neither a valid Atom or None</p>
-<dt><code>BadImplementation</code></p>
-<dd>Invalid reply from server</dl>
+<dt><code>BadAtom</code></dt>
+<dd>A name is neither a valid Atom or None</dd>
+<dt><code>BadImplementation</code></dt>
+<dd>Invalid reply from server</dd></dl>
 <h2>See Also</h2>
 <p><code>XkbIndicatorMapNotify</code>(3), <code>XkbIndicatorStateNotify</code>(3)</p>

@@ -16,32 +16,32 @@ description: "textools – generate TeX map files, afm files, fix texmf trees"
 <h2>OPTIONS</h2>
 <p> The modifier options are listed after the options that they modify.</p>
 <dl>
-<dt><code>&#8211;downcasefilenames</code> [<code>&#8211;recurse</code>] [<code>&#8211;force</code>]</p>
+<dt><code>&#8211;downcasefilenames</code> [<code>&#8211;recurse</code>] [<code>&#8211;force</code>]</dt>
 <dd>
-<dt><code>&#8211;encmake</code> <i>afmfile</i> <i>encodingname</i></p>
+</dd><dt><code>&#8211;encmake</code> <i>afmfile</i> <i>encodingname</i></dt>
 <dd>
-<dt><code>&#8211;findfile</code> <i>filename</i> [<code>&#8211;recurse</code>]</p>
+</dd><dt><code>&#8211;findfile</code> <i>filename</i> [<code>&#8211;recurse</code>]</dt>
 <dd>
-<dt><code>&#8211;fixafmfiles</code> [<i>pattern</i>] [<code>&#8211;recurse</code>]</p>
+</dd><dt><code>&#8211;fixafmfiles</code> [<i>pattern</i>] [<code>&#8211;recurse</code>]</dt>
 <dd>
-<dt><code>&#8211;fixtexmftrees</code> [<i>texmfroot</i>] [<code>&#8211;force</code>]</p>
+</dd><dt><code>&#8211;fixtexmftrees</code> [<i>texmfroot</i>] [<code>&#8211;force</code>]</dt>
 <dd>
-<dt><code>&#8211;hidemapnames</code> [<i>pattern</i>] [<code>&#8211;recurse</code>]</p>
+</dd><dt><code>&#8211;hidemapnames</code> [<i>pattern</i>] [<code>&#8211;recurse</code>]</dt>
 <dd>
-<dt><code>&#8211;mactodos</code> [<i>pattern</i>] [<code>&#8211;recurse</code>]</p>
-<dd> Fixes newlines from Macintosh files so that the file is readable in DOS.</p>
-<dt><code>&#8211;removemapnames</code> [<i>pattern</i>] [<code>&#8211;recurse</code>]</p>
+</dd><dt><code>&#8211;mactodos</code> [<i>pattern</i>] [<code>&#8211;recurse</code>]</dt>
+<dd> Fixes newlines from Macintosh files so that the file is readable in DOS.</dd>
+<dt><code>&#8211;removemapnames</code> [<i>pattern</i>] [<code>&#8211;recurse</code>]</dt>
 <dd>
-<dt><code>&#8211;replacefile</code> <i>filename</i> [<code>&#8211;force</code>]</p>
+</dd><dt><code>&#8211;replacefile</code> <i>filename</i> [<code>&#8211;force</code>]</dt>
 <dd>
-<dt><code>&#8211;restoremapnames</code> [<i>pattern</i>] [<code>&#8211;recurse</code>]</p>
+</dd><dt><code>&#8211;restoremapnames</code> [<i>pattern</i>] [<code>&#8211;recurse</code>]</dt>
 <dd>
-<dt><code>&#8211;showfont</code> <i>filename</i></p>
+</dd><dt><code>&#8211;showfont</code> <i>filename</i></dt>
 <dd>
-<dt><code>&#8211;stripformfeeds</code> [<code>&#8211;recurse</code>] [<code>&#8211;force</code>]</p>
+</dd><dt><code>&#8211;stripformfeeds</code> [<code>&#8211;recurse</code>] [<code>&#8211;force</code>]</dt>
 <dd>
-<dt><code>&#8211;tpmmake</code> <i>tpmfile</i></p>
-<dd> Package files into a <i>t-modulename.tpm</i> file. Imagine this file structure: </p>
+</dd><dt><code>&#8211;tpmmake</code> <i>tpmfile</i></dt>
+<dd> Package files into a <i>t-modulename.tpm</i> file. Imagine this file structure: </dd>
 <pre>
 tex/context/third/modulename/t-modulename.vim
 doc/context/third/modulename/modulename-doc.pdf
@@ -53,13 +53,13 @@ tpm/t-modulename.tpm
 textools --tpmmake t-modulename
 </pre>
 <p> the <code>textools</code> command will replace file sizes declared in the tpm file with proper values and create a ZIP archive <i>t-modulename.zip</i> with the files specified by the tpm file. This command needs to be run in the root of the TEXMF tree.</p>
-<dt><code>&#8211;unzipfiles</code> [<i>pattern</i>] [<code>&#8211;recurse</code>]</p>
+<dt><code>&#8211;unzipfiles</code> [<i>pattern</i>] [<code>&#8211;recurse</code>]</dt>
 <dd>
-<dt><code>&#8211;updatetree</code> <i>fromroot</i> <i>toroot</i> [<code>&#8211;force</code> <code>&#8211;nocheck</code> <code>&#8211;merge</code> <code>&#8211;delete</code>]</p>
+</dd><dt><code>&#8211;updatetree</code> <i>fromroot</i> <i>toroot</i> [<code>&#8211;force</code> <code>&#8211;nocheck</code> <code>&#8211;merge</code> <code>&#8211;delete</code>]</dt>
 <dd>
-<dt><code>&#8211;videmapnames</code> [<i>pattern</i>] [<code>&#8211;recurse</code>]</p>
+</dd><dt><code>&#8211;videmapnames</code> [<i>pattern</i>] [<code>&#8211;recurse</code>]</dt>
 <dd>
-</dl>
+</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-texexec/">texexec</a></code>(1), <code><a href="/docs/linux/man/1-texmfstart/">texmfstart</a></code>(1). </p>
 <p> <a rel="nofollow" href="http://www.contextgarden.net">http://www.contextgarden.net</a> laURL: L raConTeXt wiki </p>

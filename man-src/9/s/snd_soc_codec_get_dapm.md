@@ -15,7 +15,7 @@ snd_soc_codec_get_dapm - Returns the DAPM context for the CODEC
 <h2>Arguments</h2>
 
 <i>codec</i>
-<dl><dd><dd>The CODEC for which to get the DAPM context</dl>
+<dl><dd></dd><dd>The CODEC for which to get the DAPM context</dd></dl>
 
 <h2>Note</h2>
 

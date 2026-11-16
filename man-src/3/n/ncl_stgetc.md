@@ -21,16 +21,16 @@ CALL STGETC (CNM,CVL)
 <h2>Description</h2>
 
 <dl><dt>CNM
-<dd>(CHARACTER, input) is the name of a parameter whose character value is to be retrieved. Only the first three characters of CNM are examined. The three characters may either be entirely upper or entirely lower case; mixed case is not recognized. It is recommended that the rest of the character string be used to improve the readability of the code. For example, instead of just 'ZFT', use 'ZFT - Zero Field Text String'.
-<dt>CVL
-<dd>(CHARACTER, output) is a variable in which the value of the parameter specified by CNM is to be returned.</dl>
+</dt><dd>(CHARACTER, input) is the name of a parameter whose character value is to be retrieved. Only the first three characters of CNM are examined. The three characters may either be entirely upper or entirely lower case; mixed case is not recognized. It is recommended that the rest of the character string be used to improve the readability of the code. For example, instead of just 'ZFT', use 'ZFT - Zero Field Text String'.
+</dd><dt>CVL
+</dt><dd>(CHARACTER, output) is a variable in which the value of the parameter specified by CNM is to be returned.</dd></dl>
 
 <h2>C-Binding Description</h2>
 
 The C-binding argument descriptions are the same as the FORTRAN argument descriptions with the following exception: 
 
 <dl><dt>len
-<dd>The size of cvl as dimensioned in the calling program.</dl>
+</dt><dd>The size of cvl as dimensioned in the calling program.</dd></dl>
 
 <h2>Usage</h2>
 

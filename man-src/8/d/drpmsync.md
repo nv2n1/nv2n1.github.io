@@ -61,16 +61,16 @@ description: "drpmsync – sync a file tree with deltarpms"
 <p> Sets the directory where drpmsync searches for the deltarpm programs. The default is to search the <code>$PATH</code> variable.</p>
 <h2>Files</h2>
 <dl>
-<dt><i>dir</i>/drpmsync/deltas</p>
-<dd>directory used to store the deltas</p>
-<dt><i>dir</i>/drpmsync/lock</p>
-<dd>lock used to serialize syncrpm calls</p>
-<dt><i>dir</i>/drpmsync/wip</p>
-<dd>temporary storing space for the transmitted objects</p>
-<dt><i>dir</i>/drpmsync/cache</p>
-<dd>md5sum cache to speed up the calculation of the tree state</p>
-<dt><i>dir</i>/drpmsync/timstamp</p>
-<dd>contains the time of the last finished sync and the last time the remote tree state was requested. </p>
+<dt><i>dir</i>/drpmsync/deltas</dt>
+<dd>directory used to store the deltas</dd>
+<dt><i>dir</i>/drpmsync/lock</dt>
+<dd>lock used to serialize syncrpm calls</dd>
+<dt><i>dir</i>/drpmsync/wip</dt>
+<dd>temporary storing space for the transmitted objects</dd>
+<dt><i>dir</i>/drpmsync/cache</dt>
+<dd>md5sum cache to speed up the calculation of the tree state</dd>
+<dt><i>dir</i>/drpmsync/timstamp</dt>
+<dd>contains the time of the last finished sync and the last time the remote tree state was requested. </dd>
 </dl>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/8-makedeltarpm/">makedeltarpm</a></code>(8), <code><a href="/docs/linux/man/8-combinedeltarpm/">combinedeltarpm</a></code>(8), <code><a href="/docs/linux/man/8-applydeltarpm/">applydeltarpm</a></code>(8), </p>

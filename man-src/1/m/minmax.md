@@ -14,30 +14,30 @@ description: "minmax – Find extreme values in data tables"
 <h2>DESCRIPTION</h2>
 <p> <code>minmax</code> reads its standard input [or from files] and finds the extreme values in each of the columns. It recognizes NaNs and will print warnings if the number of columns vary from record to record. As an option, <code>minmax</code> will find the extent of the first <i>n</i> columns rounded up and down to the nearest multiple of the supplied increments. By default, this output will be in the form <code>-R</code><i>w/e/s/n</i> which can be used directly in the command line for other programs (hence only <i>dx</i> and <i>dy</i> are needed), or the output will be in column form for as many columns as there are increments provided. A similar option (<code>-T</code>) will provide a <code>-T</code><i>zmin/zmax/dz</i> string for makecpt.</p>
 <dl>
-<dt><i>xyzfile</i></p>
-<dd> ASCII [or binary, see <code>-b</code>] file(s) holding a fixed number of data columns.</dl>
+<dt><i>xyzfile</i></dt>
+<dd> ASCII [or binary, see <code>-b</code>] file(s) holding a fixed number of data columns.</dd></dl>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-C</code></p>
-<dd> Report the min/max values per column in separate columns [Default uses &lt;min/max&gt; format].</p>
-<dt><code>-E</code></p>
-<dd> Returns the record whose column <i>col</i> contains the minimum (<code>l</code>) or maximum (<code>h</code>) value. Upper case (<code>L|H</code>) works on absolute value of the data. In case of multiple matches, only the first record is returned.</p>
-<dt><code>-H</code></p>
-<dd> Input file(s) has header record(s). If used, the default number of header records is <code>N_HEADER_RECS</code>. Use <code>-Hi</code> if only input data should have header records [Default will write out header records if the input data have them]. Blank lines and lines starting with # are always skipped.</p>
-<dt><code>-I</code></p>
-<dd> Report the min/max of the first <i>n</i> columns to the nearest multiple of the provided increments (separate the <i>n</i> increments by slashes), and output results in the form <code>-R</code><i>w/e/s/n</i> (unless <code>-C</code> is set). If only one increment is given we also use it for the second column (for backwards compatibility). To override this behaviour, use <code>-Ip</code><i>dx</i>.</p>
-<dt><code>-S</code></p>
-<dd> Add extra space for error bars. Useful together with <code>-I</code> option and when later plotting with <code>psxy</code> <code>-E</code>. <code>-Sx</code> leaves space for horizontal error bars using the values in third (2) column. <code>-Sy</code> leaves space for vertical error bars using the values in third (2) column. <code>-S</code> or <code>-Sxy</code> leaves space for both error bars using the values in third and fourth (2 and 3) columns.</p>
-<dt><code>-T</code></p>
-<dd> Report the min/max of the first (0&#8217;th) column to the nearest multiple of <i>dz</i> and output this in the form <code>-T</code><i>zmin/zmax/dz</i>. To use another column, append /<i>col</i>.</p>
-<dt><code>-:</code></p>
-<dd> Toggles between (longitude,latitude) and (latitude,longitude) input and/or output. [Default is (longitude,latitude)]. Append <code>i</code> to select input only or <code>o</code> to select output only. [Default affects both]. Only works when <code>-I</code> is selected.</p>
-<dt><code>-bi</code></p>
-<dd> Selects binary input. Append <code>s</code> for single precision [Default is <code>d</code> (double)]. Uppercase <code>S</code> or <code>D</code> will force byte-swapping. Optionally, append <i>ncol</i>, the number of columns in your binary input file if it exceeds the columns needed by the program. Or append <code>c</code> if the input file is netCDF. Optionally, append <i>var1</i><code>/</code><i>var2</i><code>/</code><i>&#8230;</i> to specify the variables to be read. [Default is 2 input columns].</p>
-<dt><code>-f</code></p>
-<dd> Special formatting of input and/or output columns (time or geographical data). Specify <code>i</code> or <code>o</code> to make this apply only to input or output [Default applies to both]. Give one or more columns (or column ranges) separated by commas. Append <code>T</code> (absolute calendar time), <code>t</code> (relative time in chosen <code>TIME_UNIT</code> since <code>TIME_EPOCH</code>), <code>x</code> (longitude), <code>y</code> (latitude), or <code>f</code> (floating point) to each column or column range item. Shorthand <code>-f</code>[<code>i</code>|<code>o</code>]<code>g</code> means <code>-f</code>[<code>i</code>|<code>o</code>]0<code>x</code>,1<code>y</code> (geographic coordinates).</p>
-<dt><code>-m</code></p>
-<dd> Multiple segment file(s). Segments are separated by a special record. For ASCII files the first character must be <i>flag</i> [Default is &#8216;&gt;&#8217;]. For binary files all fields must be NaN and <code>-b</code> must set the number of output columns explicitly. By default the <code>-m</code> setting applies to both input and output. Use <code>-mi</code> and <code>-mo</code> to give separate settings to input and output.</dl>
+<dt><code>-C</code></dt>
+<dd> Report the min/max values per column in separate columns [Default uses &lt;min/max&gt; format].</dd>
+<dt><code>-E</code></dt>
+<dd> Returns the record whose column <i>col</i> contains the minimum (<code>l</code>) or maximum (<code>h</code>) value. Upper case (<code>L|H</code>) works on absolute value of the data. In case of multiple matches, only the first record is returned.</dd>
+<dt><code>-H</code></dt>
+<dd> Input file(s) has header record(s). If used, the default number of header records is <code>N_HEADER_RECS</code>. Use <code>-Hi</code> if only input data should have header records [Default will write out header records if the input data have them]. Blank lines and lines starting with # are always skipped.</dd>
+<dt><code>-I</code></dt>
+<dd> Report the min/max of the first <i>n</i> columns to the nearest multiple of the provided increments (separate the <i>n</i> increments by slashes), and output results in the form <code>-R</code><i>w/e/s/n</i> (unless <code>-C</code> is set). If only one increment is given we also use it for the second column (for backwards compatibility). To override this behaviour, use <code>-Ip</code><i>dx</i>.</dd>
+<dt><code>-S</code></dt>
+<dd> Add extra space for error bars. Useful together with <code>-I</code> option and when later plotting with <code>psxy</code> <code>-E</code>. <code>-Sx</code> leaves space for horizontal error bars using the values in third (2) column. <code>-Sy</code> leaves space for vertical error bars using the values in third (2) column. <code>-S</code> or <code>-Sxy</code> leaves space for both error bars using the values in third and fourth (2 and 3) columns.</dd>
+<dt><code>-T</code></dt>
+<dd> Report the min/max of the first (0&#8217;th) column to the nearest multiple of <i>dz</i> and output this in the form <code>-T</code><i>zmin/zmax/dz</i>. To use another column, append /<i>col</i>.</dd>
+<dt><code>-:</code></dt>
+<dd> Toggles between (longitude,latitude) and (latitude,longitude) input and/or output. [Default is (longitude,latitude)]. Append <code>i</code> to select input only or <code>o</code> to select output only. [Default affects both]. Only works when <code>-I</code> is selected.</dd>
+<dt><code>-bi</code></dt>
+<dd> Selects binary input. Append <code>s</code> for single precision [Default is <code>d</code> (double)]. Uppercase <code>S</code> or <code>D</code> will force byte-swapping. Optionally, append <i>ncol</i>, the number of columns in your binary input file if it exceeds the columns needed by the program. Or append <code>c</code> if the input file is netCDF. Optionally, append <i>var1</i><code>/</code><i>var2</i><code>/</code><i>&#8230;</i> to specify the variables to be read. [Default is 2 input columns].</dd>
+<dt><code>-f</code></dt>
+<dd> Special formatting of input and/or output columns (time or geographical data). Specify <code>i</code> or <code>o</code> to make this apply only to input or output [Default applies to both]. Give one or more columns (or column ranges) separated by commas. Append <code>T</code> (absolute calendar time), <code>t</code> (relative time in chosen <code>TIME_UNIT</code> since <code>TIME_EPOCH</code>), <code>x</code> (longitude), <code>y</code> (latitude), or <code>f</code> (floating point) to each column or column range item. Shorthand <code>-f</code>[<code>i</code>|<code>o</code>]<code>g</code> means <code>-f</code>[<code>i</code>|<code>o</code>]0<code>x</code>,1<code>y</code> (geographic coordinates).</dd>
+<dt><code>-m</code></dt>
+<dd> Multiple segment file(s). Segments are separated by a special record. For ASCII files the first character must be <i>flag</i> [Default is &#8216;&gt;&#8217;]. For binary files all fields must be NaN and <code>-b</code> must set the number of output columns explicitly. By default the <code>-m</code> setting applies to both input and output. Use <code>-mi</code> and <code>-mo</code> to give separate settings to input and output.</dd></dl>
 <h2>ASCII FORMAT PRECISION</h2>
 <p> The ASCII output formats of numerical data are controlled by parameters in your .gmtdefaults4 file. Longitude and latitude are formatted according to <code>OUTPUT_DEGREE_FORMAT</code>, whereas other values are formatted according to <code>D_FORMAT</code>. Be aware that the format in effect can lead to loss of precision in the output, which can lead to various problems downstream. If you find the output is not written with enough precision, consider switching to binary output (<code>-bo</code> if available) or specify more decimals using the <code>D_FORMAT</code> setting.</p>
 <h2>EXAMPLES</h2>

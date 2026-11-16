@@ -19,26 +19,26 @@ description: "kawa – Scheme language implemented using on a Java VM"
 <p> This manual page is just a quick synopsis. For more information, read the <code>kawa</code> manual &#8211; see below. </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-e </code><i>expression</i></p>
-<dd> Evaluate the <i>expression</i>.</p>
-<dt><code>-c </code><i>expression</i></p>
-<dd> Evaluate the <i>expression</i>, but does not cause the start-up file <i>~/.kawarc.scm</i> to be read.</p>
-<dt><code>-f </code><i>filename</i></p>
-<dd> Read and evaluate Scheme commands from the <i>filename</i>.</p>
-<dt><code>-s</code></p>
-<dd> Enter an interactive read-evaluate-print command loop.</p>
-<dt><code>-w</code></p>
-<dd> Enter an interactive read-evaluate-print in a new top-level window.</p>
-<dt><code>-C </code><i>filename</i></p>
+<dt><code>-e </code><i>expression</i></dt>
+<dd> Evaluate the <i>expression</i>.</dd>
+<dt><code>-c </code><i>expression</i></dt>
+<dd> Evaluate the <i>expression</i>, but does not cause the start-up file <i>~/.kawarc.scm</i> to be read.</dd>
+<dt><code>-f </code><i>filename</i></dt>
+<dd> Read and evaluate Scheme commands from the <i>filename</i>.</dd>
+<dt><code>-s</code></dt>
+<dd> Enter an interactive read-evaluate-print command loop.</dd>
+<dt><code>-w</code></dt>
+<dd> Enter an interactive read-evaluate-print in a new top-level window.</dd>
+<dt><code>-C </code><i>filename</i></dt>
 <dd> Compile <i>filename</i> to one or more Java class files. See the Kawa manual for details. If no options are specified, it is equivalent to <code>-s</code>.<br />
- GNU <code><a href="/docs/linux/man/3-readline/">readline</a>(3)</code> can normally be used to edit commands. </p>
+ GNU <code><a href="/docs/linux/man/3-readline/">readline</a>(3)</code> can normally be used to edit commands. </dd>
 </dl>
 <h2>FILES</h2>
 <dl>
-<dt><code>/usr/bin/kawa</code></p>
-<dd> The <code>kawa</code> executable, which starts a <code>java</code> interpreter.</p>
-<dt><code>~/.kawarc.scm</code></p>
-<dd> Commands that are executed when <code>kawa</code> is started.</dl>
+<dt><code>/usr/bin/kawa</code></dt>
+<dd> The <code>kawa</code> executable, which starts a <code>java</code> interpreter.</dd>
+<dt><code>~/.kawarc.scm</code></dt>
+<dd> Commands that are executed when <code>kawa</code> is started.</dd></dl>
 <h2>AUTHOR</h2>
 <p> Per Bothner &lt;per [at] bothner.com&gt;.</p>
 <h2>SEE ALSO</h2>

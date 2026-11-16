@@ -39,36 +39,36 @@ description: "hostname – show or set the system’s host name domainname – s
 <p> The recommended method of setting the FQDN is to make the hostname be an alias for the fully qualified name using <i>/etc/hosts</i>, DNS, or NIS. For example, if the hostname was &quot;ursula&quot;, one might have a line in <i>/etc/hosts</i> which reads </p>
 <dl>
 <dt>
-<dd> 127.0.1.1 ursula.example.com ursula</dl>
+</dt><dd> 127.0.1.1 ursula.example.com ursula</dd></dl>
 <p> Technically: The FQDN is the name <code><a href="/docs/linux/man/3-getaddrinfo/">getaddrinfo</a></code>(3) returns for the host name returned by <code><a href="/docs/linux/man/2-gethostname/">gethostname</a></code>(2). The DNS domain name is the part after the first dot. </p>
 <p> Therefore it depends on the configuration of the resolver (usually in <i>/etc/host.conf</i>) how you can change it. Usually the hosts file is parsed before DNS or NIS, so it is most common to change the FQDN in <i>/etc/hosts</i>. </p>
 <p> If a machine has multiple network interfaces/addresses or is used in a mobile environment, then it may either have multiple FQDNs/domain names or none at all. Therefore avoid using <code>hostname &#8211;fqdn</code>, <code>hostname &#8211;domain</code> and <code>dnsdomainname</code>. <code>hostname &#8211;ip-address</code> is subject to the same limitations so it should be avoided as well. </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><i>-a, &#8211;alias</i></p>
-<dd> Display the alias name of the host (if used). This option is deprecated and should not be used anymore.</p>
-<dt><i>-A, &#8211;all-fqdns</i></p>
-<dd> Displays all FQDNs of the machine. This option enumerates all configured network addresses on all configured network interfaces, and translates them to DNS domain names. Addresses that cannot be translated (i.e. because they do not have an appropriate reverse IP entry) are skipped. Note that different addresses may resolve to the same name, therefore the output may contain duplicate entries. Do not make any assumptions about the order of the output.</p>
-<dt><i>-b, &#8211;boot</i></p>
-<dd> Always set a hostname; this allows the file specified by <i>-F</i> to be non-existent or empty, in which case the default hostname <i>localhost</i> will be used if none is yet set.</p>
-<dt><i>-d, &#8211;domain</i></p>
-<dd> Display the name of the DNS domain. Don&#8217;t use the command <code>domainname</code> to get the DNS domain name because it will show the NIS domain name and not the DNS domain name. Use <code>dnsdomainname</code> instead. See the warnings in section <code>THE FQDN</code> above, and avoid using this option.</p>
-<dt><i>-f, &#8211;fqdn, &#8211;long</i></p>
-<dd> Display the FQDN (Fully Qualified Domain Name). A FQDN consists of a short host name and the DNS domain name. Unless you are using bind or NIS for host lookups you can change the FQDN and the DNS domain name (which is part of the FQDN) in the <i>/etc/hosts</i> file. See the warnings in section <code>THE FQDN</code> above und use <code>hostname &#8211;all-fqdns</code> instead wherever possible.</p>
-<dt><i>-F, &#8211;file filename</i></p>
-<dd> Read the host name from the specified file. Comments (lines starting with a `#&#8217;) are ignored.</p>
-<dt><i>-i, &#8211;ip-address</i></p>
-<dd> Display the network address(es) of the host name. Note that this works only if the host name can be resolved. Avoid using this option; use <code>hostname &#8211;all-ip-addresses</code> instead.</p>
-<dt><i>-I, &#8211;all-ip-addresses</i></p>
-<dd> Display all network addresses of the host. This option enumerates all configured addresses on all network interfaces. The loopback interface and IPv6 link-local addresses are omitted. Contrary to option <i>-i</i>, this option does not depend on name resolution. Do not make any assumptions about the order of the output.</p>
-<dt><i>-s, &#8211;short</i></p>
-<dd> Display the short host name. This is the host name cut at the first dot.</p>
-<dt><i>-V, &#8211;version</i></p>
-<dd> Print version information on standard output and exit successfully.</p>
-<dt><i>-y, &#8211;yp, &#8211;nis</i></p>
-<dd> Display the NIS domain name. If a parameter is given (or <code>&#8211;file name</code> ) then root can also set a new NIS domain.</p>
-<dt><i>-h, &#8211;help</i></p>
-<dd> Print a usage message and exit.</dl>
+<dt><i>-a, &#8211;alias</i></dt>
+<dd> Display the alias name of the host (if used). This option is deprecated and should not be used anymore.</dd>
+<dt><i>-A, &#8211;all-fqdns</i></dt>
+<dd> Displays all FQDNs of the machine. This option enumerates all configured network addresses on all configured network interfaces, and translates them to DNS domain names. Addresses that cannot be translated (i.e. because they do not have an appropriate reverse IP entry) are skipped. Note that different addresses may resolve to the same name, therefore the output may contain duplicate entries. Do not make any assumptions about the order of the output.</dd>
+<dt><i>-b, &#8211;boot</i></dt>
+<dd> Always set a hostname; this allows the file specified by <i>-F</i> to be non-existent or empty, in which case the default hostname <i>localhost</i> will be used if none is yet set.</dd>
+<dt><i>-d, &#8211;domain</i></dt>
+<dd> Display the name of the DNS domain. Don&#8217;t use the command <code>domainname</code> to get the DNS domain name because it will show the NIS domain name and not the DNS domain name. Use <code>dnsdomainname</code> instead. See the warnings in section <code>THE FQDN</code> above, and avoid using this option.</dd>
+<dt><i>-f, &#8211;fqdn, &#8211;long</i></dt>
+<dd> Display the FQDN (Fully Qualified Domain Name). A FQDN consists of a short host name and the DNS domain name. Unless you are using bind or NIS for host lookups you can change the FQDN and the DNS domain name (which is part of the FQDN) in the <i>/etc/hosts</i> file. See the warnings in section <code>THE FQDN</code> above und use <code>hostname &#8211;all-fqdns</code> instead wherever possible.</dd>
+<dt><i>-F, &#8211;file filename</i></dt>
+<dd> Read the host name from the specified file. Comments (lines starting with a `#&#8217;) are ignored.</dd>
+<dt><i>-i, &#8211;ip-address</i></dt>
+<dd> Display the network address(es) of the host name. Note that this works only if the host name can be resolved. Avoid using this option; use <code>hostname &#8211;all-ip-addresses</code> instead.</dd>
+<dt><i>-I, &#8211;all-ip-addresses</i></dt>
+<dd> Display all network addresses of the host. This option enumerates all configured addresses on all network interfaces. The loopback interface and IPv6 link-local addresses are omitted. Contrary to option <i>-i</i>, this option does not depend on name resolution. Do not make any assumptions about the order of the output.</dd>
+<dt><i>-s, &#8211;short</i></dt>
+<dd> Display the short host name. This is the host name cut at the first dot.</dd>
+<dt><i>-V, &#8211;version</i></dt>
+<dd> Print version information on standard output and exit successfully.</dd>
+<dt><i>-y, &#8211;yp, &#8211;nis</i></dt>
+<dd> Display the NIS domain name. If a parameter is given (or <code>&#8211;file name</code> ) then root can also set a new NIS domain.</dd>
+<dt><i>-h, &#8211;help</i></dt>
+<dd> Print a usage message and exit.</dd></dl>
 <h2>NOTES</h2>
 <p> The address families <code>hostname</code> tries when looking up the FQDN, aliases and network addresses of the host are determined by the configuration of your resolver. For instance, on GNU Libc systems, the resolver can be instructed to try IPv6 lookups first by using the <code>inet6</code> option in <code>/etc/resolv.conf</code>.</p>
 <h2>FILES</h2>

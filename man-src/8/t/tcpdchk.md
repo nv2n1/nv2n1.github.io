@@ -23,13 +23,13 @@ tcpdchk [-a] [-d] [-i inet_conf] [-v]
 <h2>Options</h2>
 
 <dl><dt>-a
-<dd>Report access control rules that permit access without an explicit ALLOW keyword.
-<dt>-d
-<dd>Examine <i>hosts.allow</i> and <i>hosts.deny</i> files in the current directory instead of the default ones.
-<dt>-i inet_conf
-<dd>Specify this option when <i>tcpdchk</i> is unable to find your <i>inetd.conf</i> network configuration file, or when you suspect that the program uses the wrong one.
-<dt>-v
-<dd>Display the contents of each access control rule. Daemon lists, client lists, shell commands and options are shown in a pretty-printed format; this makes it easier for you to spot any discrepancies between what you want and what the program understands.</dl>
+</dt><dd>Report access control rules that permit access without an explicit ALLOW keyword.
+</dd><dt>-d
+</dt><dd>Examine <i>hosts.allow</i> and <i>hosts.deny</i> files in the current directory instead of the default ones.
+</dd><dt>-i inet_conf
+</dt><dd>Specify this option when <i>tcpdchk</i> is unable to find your <i>inetd.conf</i> network configuration file, or when you suspect that the program uses the wrong one.
+</dd><dt>-v
+</dt><dd>Display the contents of each access control rule. Daemon lists, client lists, shell commands and options are shown in a pretty-printed format; this makes it easier for you to spot any discrepancies between what you want and what the program understands.</dd></dl>
 
 <h2>Files</h2>
 

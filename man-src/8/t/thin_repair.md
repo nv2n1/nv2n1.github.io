@@ -15,23 +15,23 @@ description: "thin_repair – repair thin provisioning binary metadata."
 <p> This tool cannot be run on live metadata.</p>
 <h2>Options</h2>
 <dl>
-<dt><code>-h</code>, <code>&#8211;help</code></p>
-<dd>Print help and exit.</p>
-<dt><code>-V</code>, <code>&#8211;version</code></p>
-<dd>Print version information and exit.</p>
-<dt><code>-i</code>, <code>&#8211;input</code> {device|file}</p>
-<dd>Input file or device with binary data.</p>
-<dt><code>-o</code>, <code>&#8211;output</code> {device|file}</p>
-<dd>Output file or device for binary data.</dl>
+<dt><code>-h</code>, <code>&#8211;help</code></dt>
+<dd>Print help and exit.</dd>
+<dt><code>-V</code>, <code>&#8211;version</code></dt>
+<dd>Print version information and exit.</dd>
+<dt><code>-i</code>, <code>&#8211;input</code> {device|file}</dt>
+<dd>Input file or device with binary data.</dd>
+<dt><code>-o</code>, <code>&#8211;output</code> {device|file}</dt>
+<dd>Output file or device for binary data.</dd></dl>
 <pre> If a file is used for output, then it must be preallocated, and large
  enough to hold the metadata.</pre>
 <dl>
-<dt><code>&#8211;transaction-id</code> {natural}</p>
-<dd>Override the transaction id given in the input xml.</p>
-<dt><code>&#8211;data-block-size</code> {natural}</p>
-<dd>Override the data block size given in the input xml.</p>
-<dt><code>&#8211;nr-data-blocks</code> {natural}</p>
-<dd>Override the nr data blocks given in the input xml.</dl>
+<dt><code>&#8211;transaction-id</code> {natural}</dt>
+<dd>Override the transaction id given in the input xml.</dd>
+<dt><code>&#8211;data-block-size</code> {natural}</dt>
+<dd>Override the data block size given in the input xml.</dd>
+<dt><code>&#8211;nr-data-blocks</code> {natural}</dt>
+<dd>Override the nr data blocks given in the input xml.</dd></dl>
 <h2>Example</h2>
 <p>Reads the binary thin provisioning metadata from file metadata, repairs it and writes it to logical volume /dev/vg/metadata for further processing by the respective device-mapper target: </p>
 <pre> $ thin_repair -i metadata -o /dev/vg/metadata</pre>

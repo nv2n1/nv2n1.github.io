@@ -12,25 +12,23 @@ description: "npm-doctor – Check your environments"
 <h3>Synopsis</h3>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 npm doctor
 </pre>
-</dl>
+</dd></dl>
 <h3>Description</h3>
 <p> <code>npm doctor</code> runs a set of checks to ensure that your npm installation has what it needs to manage your JavaScript packages. npm is mostly a standalone tool, but it does have some basic requirements that must be met:</p>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>&bull;</p>
-<dd> Node.js and git must be executable by npm.</p>
-<dt>&bull;</p>
-<dd> The primary npm registry, <code>registry.npmjs.com</code>, or another service that uses the registry API, is available.</p>
-<dt>&bull;</p>
-<dd> The directories that npm uses, <code>node_modules</code> (both locally and globally), exist and can be written by the current user.</p>
-<dt>&bull;</p>
-<dd> The npm cache exists, and the package tarballs within it aren&#8217;t corrupt. </p>
+<dt>&bull;</dt>
+<dd> Node.js and git must be executable by npm.</dd>
+<dt>&bull;</dt>
+<dd> The primary npm registry, <code>registry.npmjs.com</code>, or another service that uses the registry API, is available.</dd>
+<dt>&bull;</dt>
+<dd> The directories that npm uses, <code>node_modules</code> (both locally and globally), exist and can be written by the current user.</dd>
+<dt>&bull;</dt>
+<dd> The npm cache exists, and the package tarballs within it aren&#8217;t corrupt. </dd>
 </dl>
 </dl>
 <p> Without all of these working properly, npm may not work properly. Many issues are often attributable to things that are outside npm&#8217;s code base, so <code>npm doctor</code> confirms that the npm installation is in a good state. </p>
@@ -49,30 +47,26 @@ npm doctor
 <p> While it&#8217;s documented in the README, it may not be obvious that npm needs Git installed to do many of the things that it does. Also, in some cases – especially on Windows – you may have Git set up in such a way that it&#8217;s not accessible via your <code>PATH</code> so that npm can find it. This check ensures that Git is available.</p>
 <h3>Permissions checks</h3>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>&bull;</p>
-<dd> Your cache must be readable and writable by the user running npm.</p>
-<dt>&bull;</p>
-<dd> Global package binaries must be writable by the user running npm.</p>
-<dt>&bull;</p>
-<dd> Your local <code>node_modules</code> path, if you&#8217;re running <code>npm doctor</code> with a project directory, must be readable and writable by the user running npm. </p>
+<dt>&bull;</dt>
+<dd> Your cache must be readable and writable by the user running npm.</dd>
+<dt>&bull;</dt>
+<dd> Global package binaries must be writable by the user running npm.</dd>
+<dt>&bull;</dt>
+<dd> Your local <code>node_modules</code> path, if you&#8217;re running <code>npm doctor</code> with a project directory, must be readable and writable by the user running npm. </dd>
 </dl>
 </dl>
 <h3>Validate the checksums of cached packages</h3>
 <p> When an npm package is published, the publishing process generates a checksum that npm uses at install time to verify that the package didn&#8217;t get corrupted in transit. <code>npm doctor</code> uses these checksums to validate the package tarballs in your local cache (you can see where that cache is located with <code>npm config get cache</code>, and see what&#8217;s in that cache with <code>npm cache ls</code> – probably more than you were expecting!). In the event that there are corrupt packages in your cache, you should probably run <code>npm cache clean</code> and reset the cache.</p>
 <h3>See Also</h3>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>&bull;</p>
-<dd> npm help bugs</p>
-<dt>&bull;</p>
-<dd> npm help help</p>
-<dt>&bull;</p>
-<dd> npm help ping </p>
+<dt>&bull;</dt>
+<dd> npm help bugs</dd>
+<dt>&bull;</dt>
+<dd> npm help help</dd>
+<dt>&bull;</dt>
+<dd> npm help ping </dd>
 </dl>
 </dl>
 <h2>Index</h2>

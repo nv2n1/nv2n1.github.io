@@ -10,7 +10,6 @@ description: "uinsert – Inserts a character in a string. Allegro game programm
 <p>uinsert &#8211; Inserts a character in a string. Allegro game programming library.</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;allegro.h&gt;
-
 int uinsert(char *s, int index, int c);</code></pre>
 <h2>Description</h2>
 <p>Inserts the character `c&#8217; at the specified `index&#8217; in the string, sliding the rest of the data along to make room. If `index&#8217; is negative, it counts backward from the end of the string. Example: </p>

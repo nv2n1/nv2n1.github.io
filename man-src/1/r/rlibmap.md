@@ -15,20 +15,20 @@ description: "rlibmap – ROOT utility to create class to library maps"
 <p> Creates a map from classes to shared libraries that contain these classes.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>&#8211;help</code></p>
-<dd> Gives a short list of options avaliable, and exit</p>
-<dt><code>-f</code></p>
-<dd> What!?</p>
-<dt><code>-r</code><i>mapfile</i></p>
-<dd> Read map file <i>mapfile</i></p>
-<dt><code>-o</code><i>mapfile</i></p>
-<dd> Output on <i>mapfile</i></p>
-<dt><code>-l</code><i>sofile</i></p>
-<dd> Library to inspect</p>
-<dt><code>-d</code><i>depsofile</i></p>
-<dd> Dependency library.</p>
-<dt><code>-c</code><i>linkdef</i></p>
-<dd> Specify <code>CINT</code> linkdef to use</dl>
+<dt><code>&#8211;help</code></dt>
+<dd> Gives a short list of options avaliable, and exit</dd>
+<dt><code>-f</code></dt>
+<dd> What!?</dd>
+<dt><code>-r</code><i>mapfile</i></dt>
+<dd> Read map file <i>mapfile</i></dd>
+<dt><code>-o</code><i>mapfile</i></dt>
+<dd> Output on <i>mapfile</i></dd>
+<dt><code>-l</code><i>sofile</i></dt>
+<dd> Library to inspect</dd>
+<dt><code>-d</code><i>depsofile</i></dt>
+<dd> Dependency library.</dd>
+<dt><code>-c</code><i>linkdef</i></dt>
+<dd> Specify <code>CINT</code> linkdef to use</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <i><a href="/docs/linux/man/1-root/">root</a></i>(1), <i><a href="/docs/linux/man/1-rootcint/">rootcint</a></i>(1) </p>
 <p> See also the <code>ROOT</code> webpages: <i><a rel="nofollow" href="http://root.cern.ch">http://root.cern.ch</a></i></p>
@@ -36,7 +36,7 @@ description: "rlibmap – ROOT utility to create class to library maps"
 <p> The ROOT team (see web page above):</p>
 <dl>
 <dt>
-<dd> <code>Rene Brun</code> and <code>Fons Rademakers</code></dl>
+</dt><dd> <code>Rene Brun</code> and <code>Fons Rademakers</code></dd></dl>
 <h2>COPYRIGHT</h2>
 <p> This library is free software; you can redistribute it and/or modify it under the terms of the GNU Lesser General Public License as published by the Free Software Foundation; either version 2.1 of the License, or (at your option) any later version. This library is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU Lesser General Public License for more details. You should have received a copy of the GNU Lesser General Public License along with this library; if not, write to the Free Software Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301 USA</p>
 <h2>AUTHOR</h2>

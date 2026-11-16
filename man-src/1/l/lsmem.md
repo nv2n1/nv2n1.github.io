@@ -22,32 +22,33 @@ description: "lsmem – list the ranges of available memory with their online st
 <p> <code>-a</code>, <code>&#8211;all</code></p>
 <dl>
 <dt>
-<dd> List each individual memory block, instead of combining memory blocks with similar attributes.</dl>
+</dt><dd> List each individual memory block, instead of combining memory blocks with similar attributes.</dd></dl>
 <p> <code>-b</code>, <code>&#8211;bytes</code></p>
 <dl>
 <dt>
-<dd> Print the SIZE column in bytes rather than in a human-readable format.</dl>
+</dt><dd> Print the SIZE column in bytes rather than in a human-readable format.</dd></dl>
 <p> <code>-h</code>, <code>&#8211;help</code></p>
 <dl>
 <dt>
-<dd> Display help text and exit.</dl>
+</dt><dd> Display help text and exit.</dd></dl>
 <p> <code>-J</code>, <code>&#8211;json</code></p>
 <dl>
 <dt>
-<dd> Use JSON output format.</dl>
+</dt><dd> Use JSON output format.</dd></dl>
 <p> <code>-n</code>, <code>&#8211;noheadings</code></p>
 <dl>
 <dt>
-<dd> Do not print a header line.</dl>
+</dt><dd> Do not print a header line.</dd></dl>
 <p> <code>-o</code>, <code>&#8211;output</code> <i>list</i></p>
 <dl>
 <dt>
-<dd> Specify which output columns to print. Use <code>&#8211;help</code> to get a list of all supported columns. The default list of columns may be extended if <i>list</i> is specified in the format <code>+</code><i>list</i> (e.g., <code>lsmem -o +NODE</code>).</dl>
+</dt><dd> Specify which output columns to print. Use <code>&#8211;help</code> to get a list of all supported columns. The default list of columns may be extended if <i>list</i> is specified in the format <code>+</code><i>list</i> (e.g., <code>lsmem -o +NODE</code>).</dd></dl>
 <p> <code>&#8211;output-all</code></p>
 <dl>
 <dt>
-<dd> Output all available columns.</dl>
+</dt><dd> Output all available columns.</dd></dl>
 <p> <code>-P</code>, <code>&#8211;pairs</code></p>
 <dl>
 <dt>
-<dd> Produce output in the form of key=&quot;value&quot; pairs. All potentially unsafe value characters are hex-escaped (
+</dt><dd> Produce output in the form of key=&quot;value&quot; pairs. All potentially unsafe value characters are hex-escaped (
+</dd></dl>

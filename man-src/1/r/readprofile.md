@@ -17,24 +17,24 @@ description: "readprofile – read kernel profiling information"
 <p> The <code>readprofile</code> command uses the <code>/proc/profile</code> information to print ascii data on standard output. The output is organized in three columns: the first is the number of clock ticks, the second is the name of the C function in the kernel where those many ticks occurred, and the third is the normalized `load&#8217; of the procedure, calculated as a ratio between the number of ticks and the length of the procedure. The output is filled with blanks to ease readability. </p>
 <p> Available command line options are the following: </p>
 <dl>
-<dt><code>-m</code><i> mapfile</i></p>
-<dd> Specify a mapfile, which by default is <code>/usr/src/linux/System.map.</code> You should specify the map file on cmdline if your current kernel isn&#8217;t the last one you compiled, or if you keep System.map elsewhere. If the name of the map file ends with `.gz&#8217; it is decompressed on the fly. </p>
-<dt><code>-p</code><i> pro-file</i></p>
-<dd> Specify a different profiling buffer, which by default is <code>/proc/profile.</code> Using a different pro-file is useful if you want to `freeze&#8217; the kernel profiling at some time and read it later. The <code>/proc/profile</code> file can be copied using `cat&#8217; or `cp&#8217;. There is no more support for compressed profile buffers, like in <code>readprofile-1.1,</code> because the program needs to know the size of the buffer in advance. </p>
-<dt><code>-i</code></p>
-<dd> Info. This makes <code>readprofile</code> only print the profiling step used by the kernel. The profiling step is the resolution of the profiling buffer, and is chosen during kernel configuration (through `make config&#8217;), or in the kernel&#8217;s command line. If the <code>-t</code> (terse) switch is used together with <code>-i</code> only the decimal number is printed. </p>
-<dt><code>-a</code></p>
-<dd> Print all symbols in the mapfile. By default the procedures with 0 reported ticks are not printed. </p>
-<dt><code>-b</code></p>
-<dd> Print individual histogram-bin counts. </p>
-<dt><code>-r</code></p>
-<dd> Reset the profiling buffer. This can only be invoked by root, because <code>/proc/profile</code> is readable by everybody but writable only by the superuser. However, you can make <code>readprofile</code> setuid 0, in order to reset the buffer without gaining privileges. </p>
-<dt><code>-M</code><i> multiplier</i></p>
-<dd> On some architectures it is possible to alter the frequency at which the kernel delivers profiling interrupts to each CPU. This option allows you to set the frequency, as a multiplier of the system clock frequency, HZ. This is supported on i386-SMP (2.2 and 2.4 kernel) and also on sparc-SMP and sparc64-SMP (2.4 kernel). This option also resets the profiling buffer, and requires superuser privileges. </p>
-<dt><code>-v</code></p>
-<dd> Verbose. The output is organized in four columns and filled with blanks. The first column is the RAM address of a kernel function, the second is the name of the function, the third is the number of clock ticks and the last is the normalized load. </p>
-<dt><code>-V</code></p>
-<dd> Version. This makes <code>readprofile</code> print its version number and exit. </p>
+<dt><code>-m</code><i> mapfile</i></dt>
+<dd> Specify a mapfile, which by default is <code>/usr/src/linux/System.map.</code> You should specify the map file on cmdline if your current kernel isn&#8217;t the last one you compiled, or if you keep System.map elsewhere. If the name of the map file ends with `.gz&#8217; it is decompressed on the fly. </dd>
+<dt><code>-p</code><i> pro-file</i></dt>
+<dd> Specify a different profiling buffer, which by default is <code>/proc/profile.</code> Using a different pro-file is useful if you want to `freeze&#8217; the kernel profiling at some time and read it later. The <code>/proc/profile</code> file can be copied using `cat&#8217; or `cp&#8217;. There is no more support for compressed profile buffers, like in <code>readprofile-1.1,</code> because the program needs to know the size of the buffer in advance. </dd>
+<dt><code>-i</code></dt>
+<dd> Info. This makes <code>readprofile</code> only print the profiling step used by the kernel. The profiling step is the resolution of the profiling buffer, and is chosen during kernel configuration (through `make config&#8217;), or in the kernel&#8217;s command line. If the <code>-t</code> (terse) switch is used together with <code>-i</code> only the decimal number is printed. </dd>
+<dt><code>-a</code></dt>
+<dd> Print all symbols in the mapfile. By default the procedures with 0 reported ticks are not printed. </dd>
+<dt><code>-b</code></dt>
+<dd> Print individual histogram-bin counts. </dd>
+<dt><code>-r</code></dt>
+<dd> Reset the profiling buffer. This can only be invoked by root, because <code>/proc/profile</code> is readable by everybody but writable only by the superuser. However, you can make <code>readprofile</code> setuid 0, in order to reset the buffer without gaining privileges. </dd>
+<dt><code>-M</code><i> multiplier</i></dt>
+<dd> On some architectures it is possible to alter the frequency at which the kernel delivers profiling interrupts to each CPU. This option allows you to set the frequency, as a multiplier of the system clock frequency, HZ. This is supported on i386-SMP (2.2 and 2.4 kernel) and also on sparc-SMP and sparc64-SMP (2.4 kernel). This option also resets the profiling buffer, and requires superuser privileges. </dd>
+<dt><code>-v</code></dt>
+<dd> Verbose. The output is organized in four columns and filled with blanks. The first column is the RAM address of a kernel function, the second is the name of the function, the third is the number of clock ticks and the last is the normalized load. </dd>
+<dt><code>-V</code></dt>
+<dd> Version. This makes <code>readprofile</code> print its version number and exit. </dd>
 </dl>
 <h2>EXAMPLES</h2>
 <p> Browse the profiling buffer ordering by clock ticks: </p>

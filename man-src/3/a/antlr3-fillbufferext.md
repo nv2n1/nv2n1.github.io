@@ -296,16 +296,14 @@ description: "include/antlr3defs.h –"
 <p> Use the contents of an operating system file as the input for an input stream. <code>Parameters:</code></p>
 <dl COMPACT>
 <dt>
-<dd> <i>fileName</i> Name of operating system file to read.</dl>
+</dt><dd> <i>fileName</i> Name of operating system file to read.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dt>
-<dd>
 <dl COMPACT>
-<dt>*</p>
-<dd> Pointer to new input stream context upon success</p>
-<dt>*</p>
-<dd> One of the ANTLR3_ERR_ defines on error.</dl>
+<dt>*</dt>
+<dd> Pointer to new input stream context upon success</dd>
+<dt>*</dt>
+<dd> One of the ANTLR3_ERR_ defines on error.</dd></dl>
 </dl>
 <p> References ANTLR3_CALLOC, ANTLR3_CHARSTREAM, ANTLR3_SUCCESS, antlr3AsciiSetupStream(), antlr3readAscii(), ANTLR3_INPUT_STREAM_struct::close, ANTLR3_INPUT_STREAM_struct::fileName, ANTLR3_INPUT_STREAM_struct::istream, ANTLR3_STRING_FACTORY_struct::newStr, ANTLR3_INT_STREAM_struct::streamName, and ANTLR3_INPUT_STREAM_struct::strFactory.</p>
 <h3>ANTLR3_API void antlr3BaseTreeAdaptorInit (<code>pANTLR3_BASE_TREE_ADAPTOR</code> adaptor, <code>pANTLR3_DEBUG_EVENT_LISTENER</code> debugger)</h3>
@@ -324,21 +322,21 @@ description: "include/antlr3defs.h –"
 <p> Creates a new bitset with at least one 64 bit bset of bits, but as many 64 bit sets as are required. <code>Parameters:</code></p>
 <dl COMPACT>
 <dt>
-<dd> <i>bset</i> A variable number of bits to add to the set, ending in -1 (impossible bit).</dl>
+</dt><dd> <i>bset</i> A variable number of bits to add to the set, ending in -1 (impossible bit).</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
 <dt>
-<dd> A new bit set with all of the specified bitmaps in it and the API initialized.</dl>
+</dt><dd> A new bit set with all of the specified bitmaps in it and the API initialized.</dd></dl>
 <p> Call as:</p>
 <dl COMPACT>
-<dt>*</p>
-<dd> pANTLR3_BITSET = antlrBitsetLoad(bset, bset11, &#8230;, -1);</p>
-<dt>*</p>
-<dd> pANTLR3_BITSET = antlrBitsetOf(-1); Create empty bitset</dl>
+<dt>*</dt>
+<dd> pANTLR3_BITSET = antlrBitsetLoad(bset, bset11, &#8230;, -1);</dd>
+<dt>*</dt>
+<dd> pANTLR3_BITSET = antlrBitsetOf(-1); Create empty bitset</dd></dl>
 <p> <code>Remarks:</code></p>
 <dl COMPACT>
 <dt>
-<dd> Stdargs function &#8211; must supply -1 as last paremeter, which is NOT added to the set.</dl>
+</dt><dd> Stdargs function &#8211; must supply -1 as last paremeter, which is NOT added to the set.</dd></dl>
 <p> References antlr3BitsetNew(), ANTLR3_BITSET_LIST_struct::bits, ANTLR3_BITSET_struct::blist, ANTLR3_BITSET_struct::grow, and ANTLR3_BITSET_LIST_struct::length. </p>
 <p> Referenced by combineFollows(), displayRecognitionError(), mismatchIsMissingToken(), and recoverFromMismatchedElement().</p>
 <h3>ANTLR3_API <code>pANTLR3_BITSET</code> antlr3BitsetNew (<code>ANTLR3_UINT32</code> numBits)</h3>
@@ -348,21 +346,21 @@ description: "include/antlr3defs.h –"
 <p> Creates a new bitset with at least one element, but as many elements are required. <code>Parameters:</code></p>
 <dl COMPACT>
 <dt>
-<dd> <i>bit</i> A variable number of bits to add to the set, ending in -1 (impossible bit).</dl>
+</dt><dd> <i>bit</i> A variable number of bits to add to the set, ending in -1 (impossible bit).</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
 <dt>
-<dd> A new bit set with all of the specified elements added into it.</dl>
+</dt><dd> A new bit set with all of the specified elements added into it.</dd></dl>
 <p> Call as:</p>
 <dl COMPACT>
-<dt>*</p>
-<dd> pANTLR3_BITSET = antlrBitsetOf(n, n1, n2, -1);</p>
-<dt>*</p>
-<dd> pANTLR3_BITSET = antlrBitsetOf(-1); Create empty bitset</dl>
+<dt>*</dt>
+<dd> pANTLR3_BITSET = antlrBitsetOf(n, n1, n2, -1);</dd>
+<dt>*</dt>
+<dd> pANTLR3_BITSET = antlrBitsetOf(-1); Create empty bitset</dd></dl>
 <p> <code>Remarks:</code></p>
 <dl COMPACT>
 <dt>
-<dd> Stdargs function &#8211; must supply -1 as last paremeter, which is NOT added to the set.</dl>
+</dt><dd> Stdargs function &#8211; must supply -1 as last paremeter, which is NOT added to the set.</dd></dl>
 <p> References antlr3BitsetAdd(), and antlr3BitsetNew(). </p>
 <p> Referenced by getTokensType().</p>
 <h3>ANTLR3_API void antlr3BitsetSetAPI (<code>pANTLR3_BITSET</code> bitset)</h3>
@@ -373,11 +371,11 @@ description: "include/antlr3defs.h –"
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dt>
-<dd> <i>inc</i> Input character to transform in 8 bit ASCII form.</dl>
+</dt><dd> <i>inc</i> Input character to transform in 8 bit ASCII form.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
 <dt>
-<dd> ANTLR3_UCHAR encoding of the character.</dl>
+</dt><dd> ANTLR3_UCHAR encoding of the character.</dd></dl>
 <h3>ANTLR3_API <code>pANTLR3_COMMON_TOKEN_STREAM</code> antlr3CommonTokenDebugStreamSourceNew (<code>ANTLR3_UINT32</code> hint, <code>pANTLR3_TOKEN_SOURCE</code> source, <code>pANTLR3_DEBUG_EVENT_LISTENER</code> debugger)</h3>
 <p> References ANTLR3_INT_STREAM_struct::_LA, ANTLR3_TOKEN_STREAM_struct::_LT, ANTLR3_FALSE, antlr3CommonTokenStreamSourceNew(), ANTLR3_INT_STREAM_struct::consume, dbgConsume(), dbgLA(), dbgMark(), dbgRewindLast(), dbgRewindStream(), dbgSeek(), dbgTokLT(), ANTLR3_TOKEN_STREAM_struct::debugger, ANTLR3_TOKEN_STREAM_struct::initialStreamState, ANTLR3_TOKEN_STREAM_struct::istream, ANTLR3_INT_STREAM_struct::mark, ANTLR3_INT_STREAM_struct::rewind, ANTLR3_INT_STREAM_struct::rewindLast, ANTLR3_INT_STREAM_struct::seek, and ANTLR3_COMMON_TOKEN_STREAM_struct::tstream.</p>
 <h3>ANTLR3_API <code>pANTLR3_COMMON_TOKEN</code> antlr3CommonTokenNew (<code>ANTLR3_UINT32</code> ttype)</h3>
@@ -416,33 +414,33 @@ description: "include/antlr3defs.h –"
 <p> Creates an enumeration structure to traverse the hash table. <code>Parameters:</code></p>
 <dl COMPACT>
 <dt>
-<dd> <i>table</i> Table to enumerate</dl>
+</dt><dd> <i>table</i> Table to enumerate</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
 <dt>
-<dd> Pointer to enumeration structure.</dl>
+</dt><dd> Pointer to enumeration structure.</dd></dl>
 <p> References ANTLR3_ERR_NOMEM, ANTLR3_FUNC_PTR, ANTLR3_MALLOC, antlr3EnumFree(), antlr3EnumNext(), antlr3EnumNextEntry(), ANTLR3_HASH_ENUM_struct::bucket, ANTLR3_HASH_TABLE_struct::buckets, ANTLR3_HASH_BUCKET_struct::entries, ANTLR3_HASH_ENUM_struct::entry, ANTLR3_HASH_ENUM_struct::free, ANTLR3_HASH_ENUM_struct::next, and ANTLR3_HASH_ENUM_struct::table. </p>
 <p> Referenced by antlr3BitsetList().</p>
 <h3>ANTLR3_API <code>pANTLR3_EXCEPTION</code> antlr3ExceptionNew (<code>ANTLR3_UINT32</code> exception, void * name, void * message, <code>ANTLR3_BOOLEAN</code> freeMessage)</h3>
 <p> Creates a new ANTLR3 exception structure. <code>Parameters:</code></p>
 <dl COMPACT>
 <dt>
-<dd> <i>exception</i> One of the ANTLR3_xxx_EXCEPTION indicators such as <code>ANTLR3_RECOGNITION_EXCEPTION</code><br />
+</dt><dd> <i>exception</i> One of the ANTLR3_xxx_EXCEPTION indicators such as <code>ANTLR3_RECOGNITION_EXCEPTION</code><br />
  <i>message</i> Pointer to message string<br />
- <i>freeMessage</i> Set to ANTLR3_TRUE if the message parameter should be freed by a call to <code>ANTLR3_FREE()</code> when the exception is destroyed.</dl>
+ <i>freeMessage</i> Set to ANTLR3_TRUE if the message parameter should be freed by a call to <code>ANTLR3_FREE()</code> when the exception is destroyed.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
 <dt>
-<dd> Pointer to newly initialized exception structure, or an ANTLR3_ERR_xx defined value upon failure.</dl>
+</dt><dd> Pointer to newly initialized exception structure, or an ANTLR3_ERR_xx defined value upon failure.</dd></dl>
 <p> An exception is &#8216;thrown&#8217; by a recognizer when input is seen that is not predicted by the grammar productions or when some other error condition occurs. In C we do not have the luxury of try and catch blocks, so exceptions are added in the order they occur to a list in the baserecognizer structure. The last one to be thrown is inserted at the head of the list and the one currently installed is pointed to by the newly installed exception. </p>
 <p> <code>Remarks:</code></p>
 <dl COMPACT>
 <dt>
-<dd> After an exception is created, you may add a pointer to your own structure and a pointer to a function to free this structure when the exception is destroyed.</dl>
+</dt><dd> After an exception is created, you may add a pointer to your own structure and a pointer to a function to free this structure when the exception is destroyed.</dd></dl>
 <p> <code>See also:</code></p>
 <dl COMPACT>
 <dt>
-<dd> <code>ANTLR3_EXCEPTION</code></dl>
+</dt><dd> <code>ANTLR3_EXCEPTION</code></dd></dl>
 <p> References ANTLR3_CALLOC, antlr3ExceptionFree(), antlr3ExceptionPrint(), ANTLR3_EXCEPTION_struct::freeEx, ANTLR3_EXCEPTION_struct::freeMessage, ANTLR3_EXCEPTION_struct::message, ANTLR3_EXCEPTION_struct::name, ANTLR3_EXCEPTION_struct::print, and ANTLR3_EXCEPTION_struct::type. </p>
 <p> Referenced by antlr3RecognitionExceptionNew().</p>
 <h3>ANTLR3_API <code>ANTLR3_UINT32</code> antlr3Hash (void * key, <code>ANTLR3_UINT32</code> keylen)</h3>
@@ -466,7 +464,7 @@ description: "include/antlr3defs.h –"
 <p> Creates a new Mismatched Tree Nde Exception and inserts in the recognizer exception stack. <code>Parameters:</code></p>
 <dl COMPACT>
 <dt>
-<dd> <i>recognizer</i> Context pointer for this recognizer</dl>
+</dt><dd> <i>recognizer</i> Context pointer for this recognizer</dd></dl>
 <p> References ANTLR3_MISMATCHED_TREE_NODE_EXCEPTION, ANTLR3_MISMATCHED_TREE_NODE_NAME, antlr3RecognitionExceptionNew(), ANTLR3_RECOGNIZER_SHARED_STATE_struct::exception, ANTLR3_EXCEPTION_struct::name, ANTLR3_BASE_RECOGNIZER_struct::state, and ANTLR3_EXCEPTION_struct::type. </p>
 <p> Referenced by antlr3TreeParserNewStream().</p>
 <h3>ANTLR3_API <code>pANTLR3_INPUT_STREAM</code> antlr3NewAsciiStringCopyStream (<code>pANTLR3_UINT8</code> inString, <code>ANTLR3_UINT32</code> size, <code>pANTLR3_UINT8</code> name)</h3>
@@ -474,28 +472,24 @@ description: "include/antlr3defs.h –"
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dt>
-<dd> <i>inString</i> Pointer to the string to be copied as the input stream<br />
+</dt><dd> <i>inString</i> Pointer to the string to be copied as the input stream<br />
  <i>size</i> Size (in 8 bit ASCII characters) of the input string<br />
- <i>name</i> NAme to attach the input stream (can be NULL pointer)</dl>
+ <i>name</i> NAme to attach the input stream (can be NULL pointer)</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dt>
-<dd>
 <dl COMPACT>
-<dt>*</p>
-<dd> Pointer to new input stream context upon success</p>
-<dt>*</p>
-<dd> One of the ANTLR3_ERR_ defines on error.</dl>
+<dt>*</dt>
+<dd> Pointer to new input stream context upon success</dd>
+<dt>*</dt>
+<dd> One of the ANTLR3_ERR_ defines on error.</dd></dl>
 </dl>
 <p> <code>Remarks:</code></p>
 <dl COMPACT>
-<dt>
-<dd>
 <dl COMPACT>
-<dt>*</p>
-<dd> ANTLR does not alter the input string in any way.</p>
-<dt>*</p>
-<dd> String is slightly incorrect in that the passed in pointer can be to any memory in C version of ANTLR3 of course.</dl>
+<dt>*</dt>
+<dd> ANTLR does not alter the input string in any way.</dd>
+<dt>*</dt>
+<dd> String is slightly incorrect in that the passed in pointer can be to any memory in C version of ANTLR3 of course.</dd></dl>
 </dl>
 <p> References ANTLR3_CHARSTREAM, ANTLR3_MALLOC, ANTLR3_MEMMOVE, ANTLR3_TRUE, antlr3AsciiSetupStream(), ANTLR3_INPUT_STREAM_struct::data, ANTLR3_INPUT_STREAM_struct::fileName, ANTLR3_INPUT_STREAM_struct::isAllocated, ANTLR3_INPUT_STREAM_struct::istream, ANTLR3_STRING_FACTORY_struct::newStr, ANTLR3_INPUT_STREAM_struct::sizeBuf, ANTLR3_INT_STREAM_struct::streamName, and ANTLR3_INPUT_STREAM_struct::strFactory.</p>
 <h3>ANTLR3_API <code>pANTLR3_INPUT_STREAM</code> antlr3NewAsciiStringInPlaceStream (<code>pANTLR3_UINT8</code> inString, <code>ANTLR3_UINT32</code> size, <code>pANTLR3_UINT8</code> name)</h3>
@@ -503,28 +497,24 @@ description: "include/antlr3defs.h –"
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dt>
-<dd> <i>inString</i> Pointer to the string to be used as the input stream<br />
+</dt><dd> <i>inString</i> Pointer to the string to be used as the input stream<br />
  <i>size</i> Size (in 8 bit ASCII characters) of the input string<br />
- <i>name</i> NAme to attach the input stream (can be NULL pointer)</dl>
+ <i>name</i> NAme to attach the input stream (can be NULL pointer)</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dt>
-<dd>
 <dl COMPACT>
-<dt>*</p>
-<dd> Pointer to new input stream context upon success</p>
-<dt>*</p>
-<dd> One of the ANTLR3_ERR_ defines on error.</dl>
+<dt>*</dt>
+<dd> Pointer to new input stream context upon success</dd>
+<dt>*</dt>
+<dd> One of the ANTLR3_ERR_ defines on error.</dd></dl>
 </dl>
 <p> <code>Remarks:</code></p>
 <dl COMPACT>
-<dt>
-<dd>
 <dl COMPACT>
-<dt>*</p>
-<dd> ANTLR does not alter the input string in any way.</p>
-<dt>*</p>
-<dd> String is slightly incorrect in that the passed in pointer can be to any memory in C version of ANTLR3 of course.</dl>
+<dt>*</dt>
+<dd> ANTLR does not alter the input string in any way.</dd>
+<dt>*</dt>
+<dd> String is slightly incorrect in that the passed in pointer can be to any memory in C version of ANTLR3 of course.</dd></dl>
 </dl>
 <p> References ANTLR3_CHARSTREAM, ANTLR3_FALSE, ANTLR3_MALLOC, antlr3AsciiSetupStream(), ANTLR3_INPUT_STREAM_struct::data, ANTLR3_INPUT_STREAM_struct::fileName, ANTLR3_INPUT_STREAM_struct::isAllocated, ANTLR3_INPUT_STREAM_struct::istream, ANTLR3_STRING_FACTORY_struct::newStr, ANTLR3_INPUT_STREAM_struct::sizeBuf, ANTLR3_INT_STREAM_struct::streamName, and ANTLR3_INPUT_STREAM_struct::strFactory.</p>
 <h3>ANTLR3_API <code>pANTLR3_INPUT_STREAM</code> antlr3NewUCS2StringInPlaceStream (<code>pANTLR3_UINT16</code> inString, <code>ANTLR3_UINT32</code> size, <code>pANTLR3_UINT16</code> name)</h3>
@@ -532,28 +522,24 @@ description: "include/antlr3defs.h –"
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dt>
-<dd> <i>inString</i> Pointer to the string to be used as the input stream<br />
+</dt><dd> <i>inString</i> Pointer to the string to be used as the input stream<br />
  <i>size</i> Size (in 16 bit ASCII characters) of the input string<br />
- <i>name</i> Name to attach the input stream (can be NULL pointer)</dl>
+ <i>name</i> Name to attach the input stream (can be NULL pointer)</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dt>
-<dd>
 <dl COMPACT>
-<dt>*</p>
-<dd> Pointer to new input stream context upon success</p>
-<dt>*</p>
-<dd> One of the ANTLR3_ERR_ defines on error.</dl>
+<dt>*</dt>
+<dd> Pointer to new input stream context upon success</dd>
+<dt>*</dt>
+<dd> One of the ANTLR3_ERR_ defines on error.</dd></dl>
 </dl>
 <p> <code>Remarks:</code></p>
 <dl COMPACT>
-<dt>
-<dd>
 <dl COMPACT>
-<dt>*</p>
-<dd> ANTLR does not alter the input string in any way.</p>
-<dt>*</p>
-<dd> String is slightly incorrect in that the passed in pointer can be to any memory in C version of ANTLR3 of course.</dl>
+<dt>*</dt>
+<dd> ANTLR does not alter the input string in any way.</dd>
+<dt>*</dt>
+<dd> String is slightly incorrect in that the passed in pointer can be to any memory in C version of ANTLR3 of course.</dd></dl>
 </dl>
 <p> References ANTLR3_CHARSTREAM, ANTLR3_FALSE, ANTLR3_MALLOC, antlr3UCS2SetupStream(), ANTLR3_INPUT_STREAM_struct::data, ANTLR3_INPUT_STREAM_struct::fileName, ANTLR3_INPUT_STREAM_struct::isAllocated, ANTLR3_INPUT_STREAM_struct::istream, ANTLR3_STRING_FACTORY_struct::newStr, ANTLR3_INPUT_STREAM_struct::sizeBuf, ANTLR3_INT_STREAM_struct::streamName, and ANTLR3_INPUT_STREAM_struct::strFactory.</p>
 <h3>ANTLR3_API <code>pANTLR3_PARSER</code> antlr3ParserNew (<code>ANTLR3_UINT32</code> sizeHint, <code>pANTLR3_RECOGNIZER_SHARED_STATE</code> state)</h3>

@@ -29,9 +29,9 @@ int ibv_dealloc_mw(struct ibv_mw *mw);
 <p> <code>ibv_alloc_pd</code>(3), <code>ibv_post_send</code>(3), <code>ibv_bind_mw</code>(3), <code>ibv_reg_mr</code>(3),</p>
 <h2>AUTHORS</h2>
 <dl>
-<dt>Majd Dibbiny &lt;majd [at] mellanox.com&gt;</p>
+<dt>Majd Dibbiny &lt;majd [at] mellanox.com&gt;</dt>
 <dd>
-<dt>Yishai Hadas &lt;yishaih [at] mellanox.com&gt;</p>
+</dd><dt>Yishai Hadas &lt;yishaih [at] mellanox.com&gt;</dt>
 <dd>
-</dl>
+</dd></dl>
 <h2>Index</h2>

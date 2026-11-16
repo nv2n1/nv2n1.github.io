@@ -20,22 +20,22 @@ description: "htmlmapdriver"
 <p> The only GRASS display commands that should be used with this driver are:</p>
 <dl>
 <dt>
-<dd> d.text &#8211; pass href information for resulting image maps. d.vect &#8211; draw polygons from a vector map.</dl>
+</dt><dd> d.text &#8211; pass href information for resulting image maps. d.vect &#8211; draw polygons from a vector map.</dd></dl>
 <h2>USAGE</h2>
 <h3>Environment variablesSeveral environment variables effect the operation</h3>
 <p> of HTMLMAP.</p>
 <dl>
 <dt>
-<dd> <code>GRASS_WIDTH=xxx</code><br />
+</dt><dd> <code>GRASS_WIDTH=xxx</code><br />
  the width of the image map (default is 640).<br />
  <code>GRASS_HEIGHT=yyy</code><br />
  the height of the image map (default is 480).<br />
  <code>GRASS_HTMLTYPE=type</code><br />
- the type of image mape to create (default is CLIENT):</p>
+ the type of image mape to create (default is CLIENT):</dd>
 <dl>
 <dt>
-<dd>
- <code>CLIENT</code> Netscape/IE client-side image map. (NAME=&quot;map&quot;) </p>
+</dt><dd>
+ <code>CLIENT</code> Netscape/IE client-side image map. (NAME=&quot;map&quot;) </dd>
 <p> <code>APACHE</code> Apache/NCSA server-side image map. </p>
 <p> <code>RAW</code> Raw url and polygon vertices ( <i>url x1 y1 x2 y2 format with user supplied conversion program.</dl>
 <p> </i><code>GRASS_HTMLFILE=filename</code><br />
@@ -51,7 +51,7 @@ description: "htmlmapdriver"
 <h3>Typical usage</h3>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>d.mon select=HTMLMAP<br />
  Display text strings (href&#8217;s) and polygons </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>echo&nbsp;<wbr>&quot;<a rel="nofollow" href="http://www.no-such-place.net/area51/">http://www.no-such-place.net/area51/</a>&quot;&nbsp;<wbr>| d.text </p>
@@ -82,13 +82,13 @@ description: "htmlmapdriver"
 <p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>g.region region=saved.reg </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>#&nbsp;<wbr>take a look and test it out </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>netscape file:`pwd`/alien.html&nbsp;<wbr>&amp; </p>
-</dl>
+</dd></dl>
 <h2>NOTES</h2>
 <p> HTMLMAP was adapted from the CELL driver in GRASS 4.3. Point-in-polygon test code was lifted from Randolph Franklin&#8217;s web page, see</p>
 <dl>
 <dt>
-<dd> <a rel="nofollow" href="http://www.ecse.rpi.edu/Homepages/wrf/">http://www.ecse.rpi.edu/Homepages/wrf/</a><br />
- <a rel="nofollow" href="http://www.ecse.rpi.edu/Homepages/wrf/research/geom/pnpoly.html">http://www.ecse.rpi.edu/Homepages/wrf/research/geom/pnpoly.html</a></dl>
+</dt><dd> <a rel="nofollow" href="http://www.ecse.rpi.edu/Homepages/wrf/">http://www.ecse.rpi.edu/Homepages/wrf/</a><br />
+ <a rel="nofollow" href="http://www.ecse.rpi.edu/Homepages/wrf/research/geom/pnpoly.html">http://www.ecse.rpi.edu/Homepages/wrf/research/geom/pnpoly.html</a></dd></dl>
 <p> If you create an HTML file with two or more images and image maps, you will need to edit the map names. The HTMLMAP driver creates its map with the name <i>map</i>. A small sed script can easily change the map name: </p>
 <h2>SEE ALSO</h2>
 <p> <i> PNG driver, PostScript driver, XDRIVER<br />

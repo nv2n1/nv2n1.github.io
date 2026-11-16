@@ -23,20 +23,15 @@ In addition, std::cerr.tie() returns &amp;std::cout (same for wcerr and wcout), 
 <p>output to stderr via cerr flushes out the pending output on cout, while output to stderr via clog does not<br />
  // Run this code </p>
 <pre><code>#include &lt;thread&gt;
-
 #include &lt;iostream&gt;
-
 #include &lt;chrono&gt;
-
 void f()
-
 {
     std::cout &lt;&lt; &quot;Output from thread...&quot;;
     std::this_thread::sleep_for(std::chrono::seconds(2));
     std::cout &lt;&lt; &quot;...thread calls flush()&quot; &lt;&lt; std::endl;
 }
 int main()
-
 {
     std::thread t1(f);
     std::this_thread::sleep_for(std::chrono::seconds(1));

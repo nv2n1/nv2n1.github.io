@@ -16,14 +16,14 @@ description: "gmtget – Get individual GMT default parameters"
 <p> <code>gmtget</code> will list the value of one or more GMT default parameters.</p>
 <h2>REQUIRED ARGUMENTS</h2>
 <dl>
-<dt><code>PARAMETER</code></p>
-<dd> Provide one or several parameters of interest. The current value of those parameters will be writen to <i>stdout</i>. For a complete listing of available parameters and their meaning, see the <code>gmt.conf</code> man page.</dl>
+<dt><code>PARAMETER</code></dt>
+<dd> Provide one or several parameters of interest. The current value of those parameters will be writen to <i>stdout</i>. For a complete listing of available parameters and their meaning, see the <code>gmt.conf</code> man page.</dd></dl>
 <h2>OPTIONAL ARGUMENTS</h2>
 <dl>
-<dt><code>-G</code><i>defaultsfile</i></p>
-<dd> Name of specific <code>gmt.conf</code> file to read [Default looks first in current directory, then in your home directory, then in ~/.gmt and finally in the system defaults].</p>
-<dt><code>-L</code></p>
-<dd> Return the values of the parameters on separate lines [Default returns all selected parameter values on one line separated by spaces]</dl>
+<dt><code>-G</code><i>defaultsfile</i></dt>
+<dd> Name of specific <code>gmt.conf</code> file to read [Default looks first in current directory, then in your home directory, then in ~/.gmt and finally in the system defaults].</dd>
+<dt><code>-L</code></dt>
+<dd> Return the values of the parameters on separate lines [Default returns all selected parameter values on one line separated by spaces]</dd></dl>
 <h2>EXAMPLE</h2>
 <p> To list the value of the parameter PS_COMMENTS: </p>
 <pre>

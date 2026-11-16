@@ -10,45 +10,43 @@ description: "xcb_xkb_set_names –"
 <p>xcb_xkb_set_names &#8211;</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;xcb/xkb.h&gt;
-
 Request function
-
     xcb_void_cookie_t
     xcb_xkb_set_names(xcb_connection_t *conn, xcb_xkb_device_spec_t deviceSpec, uint16_t virtualMods, uint32_t which, uint8_t firstType, uint8_t nTypes, uint8_t firstKTLevelt, uint8_t nKTLevels, uint32_t indicators, uint8_t groupNames, uint8_t nRadioGroups, xcb_keycode_t firstKey, uint8_t nKeys, uint8_t nKeyAliases, uint16_t totalKTLevelNames, const void *values);</code></pre>
 <h2>Request Arguments</h2>
 <dl>
-<dt><i>conn</i></p>
-<dd>The XCB connection to X11.</p>
-<dt><i>deviceSpec</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>virtualMods</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>which</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>firstType</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>nTypes</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>firstKTLevelt</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>nKTLevels</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>indicators</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>groupNames</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>nRadioGroups</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>firstKey</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>nKeys</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>nKeyAliases</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>totalKTLevelNames</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>values</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</dl>
+<dt><i>conn</i></dt>
+<dd>The XCB connection to X11.</dd>
+<dt><i>deviceSpec</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>virtualMods</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>which</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>firstType</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>nTypes</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>firstKTLevelt</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>nKTLevels</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>indicators</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>groupNames</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>nRadioGroups</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>firstKey</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>nKeys</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>nKeyAliases</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>totalKTLevelNames</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>values</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd></dl>
 <h2>Description</h2>
 <h2>Return Value</h2>
 <p>Returns an <i>xcb_void_cookie_t</i>. Errors (if any) have to be handled in the event loop. </p>

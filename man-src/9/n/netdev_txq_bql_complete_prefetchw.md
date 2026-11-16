@@ -15,7 +15,7 @@ netdev_txq_bql_complete_prefetchw - prefetch bql data for write
 <h2>Arguments</h2>
 
 <i>dev_queue</i>
-<dl><dd><dd>pointer to transmit queue</dl>
+<dl><dd></dd><dd>pointer to transmit queue</dd></dl>
 
 <h2>Description</h2>
 

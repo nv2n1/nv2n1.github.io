@@ -15,7 +15,7 @@ rpc_max_payload - Get maximum payload size for a transport, in bytes
 <h2>Arguments</h2>
 
 <i>clnt</i>
-<dl><dd><dd>RPC client to query</dl>
+<dl><dd></dd><dd>RPC client to query</dd></dl>
 
 <h2>Description</h2>
 

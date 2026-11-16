@@ -18,18 +18,18 @@ description: "ldns-testns – simple fake nameserver tool"
 <p> ldns-testns is not meant for production use. </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-r</code></p>
-<dd> Listens to a random port. The port number is printed to stdout. </p>
-<dt><code>-p</code> <i>port</i></p>
-<dd> Listens to the specified port. </p>
-<dt><code>-f</code> <i>num</i></p>
-<dd> Forks this number of additional instances that serve the same ports and same datafile. They do not exit; printed is &#8216;forked pid: &lt;num&gt;&#8217; and you have to kill them yourself. </p>
-<dt><code>-v</code></p>
-<dd> Outputs more debug information. It is possible to give this option multiple times to increase verbosity level. </p>
-<dt><code>-6</code></p>
-<dd> Bind to IP6 address instead of IP4. Use together with -p. </p>
-<dt><code>datafile</code></p>
-<dd> The data file is read on start up. It contains queries and the packets that should be sent in answer to those queries. The data file format is explained below. </p>
+<dt><code>-r</code></dt>
+<dd> Listens to a random port. The port number is printed to stdout. </dd>
+<dt><code>-p</code> <i>port</i></dt>
+<dd> Listens to the specified port. </dd>
+<dt><code>-f</code> <i>num</i></dt>
+<dd> Forks this number of additional instances that serve the same ports and same datafile. They do not exit; printed is &#8216;forked pid: &lt;num&gt;&#8217; and you have to kill them yourself. </dd>
+<dt><code>-v</code></dt>
+<dd> Outputs more debug information. It is possible to give this option multiple times to increase verbosity level. </dd>
+<dt><code>-6</code></dt>
+<dd> Bind to IP6 address instead of IP4. Use together with -p. </dd>
+<dt><code>datafile</code></dt>
+<dd> The data file is read on start up. It contains queries and the packets that should be sent in answer to those queries. The data file format is explained below. </dd>
 </dl>
 <h2>DATA FILE FORMAT</h2>
 <p> The data file format has &#8216;;&#8217; to denote comment. A number of entries are processed first to last. The first matching entry is used to answer the query with. This is a line based format. DNS resource records are entered in zone-file format. </p>

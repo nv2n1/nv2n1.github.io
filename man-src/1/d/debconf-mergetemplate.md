@@ -33,9 +33,9 @@ debconf - mergetemplate[options][templates.ll...] templates
 
 <dl>
 <dt>--outdated
-<dd> Merge in even outdated translations. The default is to drop them with a warning message.
-<dt>--drop-old-templates
-<dd> If a translation has an entire template that is not in the master file (and thus is probably an old template), drop that entire template.</dl>
+</dt><dd> Merge in even outdated translations. The default is to drop them with a warning message.
+</dd><dt>--drop-old-templates
+</dt><dd> If a translation has an entire template that is not in the master file (and thus is probably an old template), drop that entire template.</dd></dl>
 
 <h2>SEE ALSO</h2>
 

@@ -18,25 +18,20 @@ std::nullptr_t is the type of the null pointer literal, nullptr. It is a distinc
 
 If two or more overloads accept different pointer types, an overload for std::nullptr_t is necessary to accept a null pointer argument. 
  // Run this code <pre><code>#include &lt;cstddef&gt;
-
 #include &lt;iostream&gt;
 void f(int *pi)
-
 {
     std::cout &lt;&lt; &quot;Pointer to integer overload\n&quot;;
 }
 void f(double *pd)
-
 {
     std::cout &lt;&lt; &quot;Pointer to double overload\n&quot;;
 }
 void f(std::nullptr_t nullp)
-
 {
     std::cout &lt;&lt; &quot;null pointer overload\n&quot;;
 }
 int main()
-
 {
     int *pi;
     double *pd;

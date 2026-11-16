@@ -12,20 +12,14 @@ std::experimental::observer_ptr&lt;W&gt;::observer_ptr - std::experimental::obse
 
 <pre><code>constexpr observer_ptr() noexcept;
 (1)(library fundamentals TS v2)
-
     constexpr observer_ptr(nullptr_t) noexcept;
-
 explicit observer_ptr(element_type *p) noexcept;
 (2)(library fundamentals TS v2)
-
     template &lt;class W2&gt;
     (3)(library fundamentals TS v2)
-
         observer_ptr(observer_ptr&lt;W2&gt; other) noexcept;
-
 observer_ptr(const observer_ptr &amp;other) = default;
 (4)(library fundamentals TS v2)(implicitly declared)
-
     observer_ptr(observer_ptr &amp;&amp;other) = default;
 (5)(library fundamentals TS v2)(implicitly declared)</code></pre> 
 1) Constructs an observer_ptr that has no corresponding watched object. 

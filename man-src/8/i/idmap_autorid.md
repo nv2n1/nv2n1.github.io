@@ -21,40 +21,36 @@ The idmap_autorid backend provides a way to use an algorithmic mapping scheme to
 <h2>Idmap Options</h2>
 
 range = low - high
-<dl><dd>Defines the available matching uid and gid range for which the backend is authoritative. Note that the range acts as a filter. If algorithmically determined UID or GID fall outside the range, they are ignored and the corresponding map is discarded. It is intended as a way to avoid accidental UID/GID overlaps between local and remotely defined IDs.</dl>
+<dl><dd>Defines the available matching uid and gid range for which the backend is authoritative. Note that the range acts as a filter. If algorithmically determined UID or GID fall outside the range, they are ignored and the corresponding map is discarded. It is intended as a way to avoid accidental UID/GID overlaps between local and remotely defined IDs.</dd></dl>
  
 
  rangesize = numberofidsperdomain
 <dl><dd>Defines the number of uids/gids available per domain range. The minimum needed value is 2000. SIDs with RIDs larger than this value will be mapped into extension ranges depending upon number of available ranges. If the autorid backend runs out of available ranges, mapping requests for new domains (or new extension ranges for domains already known) are ignored and the corresponding map is discarded. 
-
  Example: with rangesize set to 10000, users/groups with a RID up to 10000 will be put into the first range for the domain. When attempting to map the an object with a RID of 25000, an extension range will be allocated that will then be used to map all RIDs from 20000-29999. 
-
  One range will be used for local users and groups and for non-domain well-known SIDs like Everyone (S-1-1-0) or Creator Owner (S-1-3-0). A chosen list of well-known SIDs will be preallocated on first start to create deterministic mappings for those. 
-
  Thus the number of local users and groups that can be created is limited by this option as well. If you plan to create a large amount of local users or groups, you will need set this parameter accordingly. 
-
- The default value is 100000.</dl>
+ The default value is 100000.</dd></dl>
  
 
  read only = [ yes | no ]
-<dl><dd>Turn the module into read-only mode. No new ranges will be allocated nor will new mappings be created in the idmap pool. Defaults to no.</dl>
+<dl><dd>Turn the module into read-only mode. No new ranges will be allocated nor will new mappings be created in the idmap pool. Defaults to no.</dd></dl>
  
 
  ignore builtin = [ yes | no ]
-<dl><dd>Ignore any mapping requests for the BUILTIN domain. Defaults to no.</dl>
+<dl><dd>Ignore any mapping requests for the BUILTIN domain. Defaults to no.</dd></dl>
 
 <h2>The Mapping Formulas</h2>
 
 The Unix ID for a RID is calculated this way: 
 
-<dl><dd><pre> ID = REDUCED RID + IDMAP RANGE LOW VALUE + RANGE NUMBER * RANGE SIZE</pre></dl>
+<dl><dd><pre> ID = REDUCED RID + IDMAP RANGE LOW VALUE + RANGE NUMBER * RANGE SIZE</pre></dd></dl>
  
 
  where REDUCED RID = RID % RANGE_SIZE and a DOMAIN RANGE INDEX = RID / RANGE_SIZE is used together with the domain sid to determine the RANGE NUMBER (stored in the database). 
 
  Correspondingly, the formula for calculating the RID for a given Unix ID is this: 
 
-<dl><dd><pre> RID = (ID - LOW ID) % RANGE SIZE + DOMAIN RANGE INDEX * RANGE SIZE</pre></dl>
+<dl><dd><pre> RID = (ID - LOW ID) % RANGE SIZE + DOMAIN RANGE INDEX * RANGE SIZE</pre></dd></dl>
  
 
  Where the DOMAIN RANGE INDEX is retrieved from the database along with the domain sid by the RANGE NUMBER = (ID - LOW ID) / RANGE SIZE .
@@ -68,7 +64,7 @@ This example shows you the minimal configuration that will work for the principa
  workgroup = CUSTOMER
  realm = CUSTOMER.COM
  idmap config * : backend = autorid
- idmap config * : range = 1000000-1999999</pre></dl>
+ idmap config * : range = 1000000-1999999</pre></dd></dl>
  
 
  This example shows how to configure idmap_autorid as default for all domains with a potentially large amount of users plus a specific configuration for a trusted domain that uses the SFU mapping scheme. Please note that idmap ranges and sfu ranges are not allowed to overlap. 
@@ -82,7 +78,7 @@ This example shows you the minimal configuration that will work for the principa
  idmap config * : rangesize = 1000000
  idmap config TRUSTED : backend = ad
  idmap config TRUSTED : range = 50000 - 99999
- idmap config TRUSTED : schema_mode = sfu</pre></dl>
+ idmap config TRUSTED : schema_mode = sfu</pre></dd></dl>
 
 <h2>Author</h2>
 

@@ -25,82 +25,78 @@ description: "ginsh – GiNaC Interactive Shell"
 <p> Symbols can be assigned values by entering</p>
 <dl>
 <dt>
-<dd> <i>symbol</i><code> = </code><i>expression</i><code>;</code></dl>
+</dt><dd> <i>symbol</i><code> = </code><i>expression</i><code>;</code></dd></dl>
 <p> To unassign the value of an assigned symbol, type</p>
 <dl>
 <dt>
-<dd> <code>unassign(&#8216;</code><i>symbol</i><code>&#8216;);</code></dl>
+</dt><dd> <code>unassign(&#8216;</code><i>symbol</i><code>&#8216;);</code></dd></dl>
 <p> Assigned symbols are automatically evaluated (= replaced by their assigned value) when they are used. To refer to the unevaluated symbol, put single quotes (<code>&#8216;</code>) around the name, as demonstrated for the &quot;unassign&quot; command above. </p>
 <p> Symbols are considered to be in the complex domain by default, i.e. they are treated as if they stand in for complex numbers. This behavior can be changed by using the keywords <code>real_symbols</code> and <code>complex_symbols</code> and affects all newly created symbols. </p>
 <p> The following symbols are pre-defined constants that cannot be assigned a value by the user:</p>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt><code>Pi</code></p>
-<dd> Archimedes&#8217; Constant</p>
-<dt><code>Catalan</code></p>
-<dd> Catalan&#8217;s Constant</p>
-<dt><code>Euler</code></p>
-<dd> Euler-Mascheroni Constant</p>
-<dt><code>I</code></p>
-<dd> sqrt(-1)</p>
-<dt><code>FAIL</code></p>
-<dd> an object of the GiNaC &quot;fail&quot; class</dl>
+<dt><code>Pi</code></dt>
+<dd> Archimedes&#8217; Constant</dd>
+<dt><code>Catalan</code></dt>
+<dd> Catalan&#8217;s Constant</dd>
+<dt><code>Euler</code></dt>
+<dd> Euler-Mascheroni Constant</dd>
+<dt><code>I</code></dt>
+<dd> sqrt(-1)</dd>
+<dt><code>FAIL</code></dt>
+<dd> an object of the GiNaC &quot;fail&quot; class</dd></dl>
 </dl>
 <p> There is also the special</p>
 <dl>
 <dt>
-<dd> <code>Digits</code></dl>
+</dt><dd> <code>Digits</code></dd></dl>
 <p> symbol that controls the numeric precision of calculations with inexact numbers. Assigning an integer value to digits will change the precision to the given number of decimal places.</p>
 <h3>WILDCARDS</h3>
 <p> The has(), find(), match() and subs() functions accept wildcards as placeholders for expressions. These have the syntax</p>
 <dl>
 <dt>
-<dd> <code>$</code><i>number</i></dl>
+</dt><dd> <code>$</code><i>number</i></dd></dl>
 <p> for example $0, $1 etc.</p>
 <h3>LAST PRINTED EXPRESSIONS</h3>
 <p> ginsh provides the three special symbols</p>
 <dl>
 <dt>
-<dd> %, %% and %%%</dl>
+</dt><dd> %, %% and %%%</dd></dl>
 <p> that refer to the last, second last, and third last printed expression, respectively. These are handy if you want to use the results of previous computations in a new expression.</p>
 <h3>OPERATORS</h3>
 <p> ginsh provides the following operators, listed in falling order of precedence:</p>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt><code>!</code></p>
-<dd> postfix factorial</p>
-<dt><code>^</code></p>
-<dd> powering</p>
-<dt><code>+</code></p>
-<dd> unary plus</p>
-<dt><code>&#8211;</code></p>
-<dd> unary minus</p>
-<dt><code>*</code></p>
-<dd> multiplication</p>
-<dt><code>/</code></p>
-<dd> division</p>
-<dt><code>+</code></p>
-<dd> addition</p>
-<dt><code>&#8211;</code></p>
-<dd> subtraction</p>
-<dt><code>&lt;</code></p>
-<dd> less than</p>
-<dt><code>&gt;</code></p>
-<dd> greater than</p>
-<dt><code>&lt;=</code></p>
-<dd> less or equal</p>
-<dt><code>&gt;=</code></p>
-<dd> greater or equal</p>
-<dt><code>==</code></p>
-<dd> equal</p>
-<dt><code>!=</code></p>
-<dd> not equal</p>
-<dt><code>=</code></p>
-<dd> symbol assignment</dl>
+<dt><code>!</code></dt>
+<dd> postfix factorial</dd>
+<dt><code>^</code></dt>
+<dd> powering</dd>
+<dt><code>+</code></dt>
+<dd> unary plus</dd>
+<dt><code>&#8211;</code></dt>
+<dd> unary minus</dd>
+<dt><code>*</code></dt>
+<dd> multiplication</dd>
+<dt><code>/</code></dt>
+<dd> division</dd>
+<dt><code>+</code></dt>
+<dd> addition</dd>
+<dt><code>&#8211;</code></dt>
+<dd> subtraction</dd>
+<dt><code>&lt;</code></dt>
+<dd> less than</dd>
+<dt><code>&gt;</code></dt>
+<dd> greater than</dd>
+<dt><code>&lt;=</code></dt>
+<dd> less or equal</dd>
+<dt><code>&gt;=</code></dt>
+<dd> greater or equal</dd>
+<dt><code>==</code></dt>
+<dd> equal</dd>
+<dt><code>!=</code></dt>
+<dd> not equal</dd>
+<dt><code>=</code></dt>
+<dd> symbol assignment</dd></dl>
 </dl>
 <p> All binary operators are left-associative, with the exception of <code>^</code> and <code>=</code> which are right-associative. The result of the assignment operator (<code>=</code>) is its right-hand side, so it&#8217;s possible to assign multiple symbols in one expression (e.g. <code>a = b = c = 2;</code>).</p>
 <h3>LISTS</h3>
@@ -111,13 +107,13 @@ description: "ginsh – GiNaC Interactive Shell"
 <p> A function call in ginsh has the form</p>
 <dl>
 <dt>
-<dd> <i>name</i><code>(</code><i>arguments</i><code>)</code></dl>
+</dt><dd> <i>name</i><code>(</code><i>arguments</i><code>)</code></dd></dl>
 <p> where <i>arguments</i> is a comma-separated sequence of expressions. ginsh provides a couple of built-in functions and also &quot;imports&quot; all symbolic functions defined by GiNaC and additional libraries. There is no way to define your own functions other than linking ginsh against a library that defines symbolic GiNaC functions. </p>
 <p> ginsh provides Tab-completion on function names: if you type the first part of a function name, hitting Tab will complete the name if possible. If the part you typed is not unique, hitting Tab again will display a list of matching functions. Hitting Tab twice at the prompt will display the list of all available functions. </p>
 <p> A list of the built-in functions follows. They nearly all work as the respective GiNaC methods of the same name, so I will not describe them in detail here. Please refer to the GiNaC documentation. </p>
 <dl>
 <dt>
-<dd> <code>charpoly(</code><i>matrix</i><code>, </code><i>symbol</i><code>)</code> &#8211; characteristic polynomial of a matrix<br />
+</dt><dd> <code>charpoly(</code><i>matrix</i><code>, </code><i>symbol</i><code>)</code> &#8211; characteristic polynomial of a matrix<br />
  <code>coeff(</code><i>expression</i><code>, </code><i>object</i><code>, </code><i>number</i><code>)</code> &#8211; extracts coefficient of object^number from a polynomial<br />
  <code>collect(</code><i>expression</i><code>, </code><i>object-or-list</i><code>)</code> &#8211; collects coefficients of like powers (result in recursive form)<br />
  <code>collect_distributed(</code><i>expression</i><code>, </code><i>list</i><code>)</code> &#8211; collects coefficients of like powers (result in distributed form)<br />
@@ -173,49 +169,49 @@ description: "ginsh – GiNaC Interactive Shell"
  <code>transpose(</code><i>matrix</i><code>)</code> &#8211; transpose of a matrix<br />
  <code>unassign(</code><i>&#8216;symbol&#8217;</i><code>)</code> &#8211; unassign an assigned symbol (mind the quotes, please!)<br />
  <code>unit(</code><i>expression</i><code>, </code><i>symbol</i><code>)</code> &#8211; unit part of a polynomial
-</dl>
+</dd></dl>
 <h3>SPECIAL COMMANDS</h3>
 <p> To exit ginsh, enter</p>
 <dl>
 <dt>
-<dd> <code>quit</code></dl>
+</dt><dd> <code>quit</code></dd></dl>
 <p> or</p>
 <dl>
 <dt>
-<dd> <code>exit</code></dl>
+</dt><dd> <code>exit</code></dd></dl>
 <p> ginsh can display a (short) help for a given topic (mostly about functions and operators) by entering</p>
 <dl>
 <dt>
-<dd> <code>?</code><i>topic</i></dl>
+</dt><dd> <code>?</code><i>topic</i></dd></dl>
 <p> Typing</p>
 <dl>
 <dt>
-<dd> <code>??</code></dl>
+</dt><dd> <code>??</code></dd></dl>
 <p> will display a list of available help topics. </p>
 <p> The command</p>
 <dl>
 <dt>
-<dd> <code>print(</code><i>expression</i><code>);</code></dl>
+</dt><dd> <code>print(</code><i>expression</i><code>);</code></dd></dl>
 <p> will print a dump of GiNaC&#8217;s internal representation for the given <i>expression</i>. This is useful for debugging and for learning about GiNaC internals. </p>
 <p> The command</p>
 <dl>
 <dt>
-<dd> <code>print_latex(</code><i>expression</i><code>);</code></dl>
+</dt><dd> <code>print_latex(</code><i>expression</i><code>);</code></dd></dl>
 <p> prints a LaTeX representation of the given <i>expression</i>. </p>
 <p> The command</p>
 <dl>
 <dt>
-<dd> <code>print_csrc(</code><i>expression</i><code>);</code></dl>
+</dt><dd> <code>print_csrc(</code><i>expression</i><code>);</code></dd></dl>
 <p> prints the given <i>expression</i> in a way that can be used in a C or C++ program. </p>
 <p> The command</p>
 <dl>
 <dt>
-<dd> <code>iprint(</code><i>expression</i><code>);</code></dl>
+</dt><dd> <code>iprint(</code><i>expression</i><code>);</code></dd></dl>
 <p> prints the given <i>expression</i> (which must evaluate to an integer) in decimal, octal, and hexadecimal representations. </p>
 <p> Finally, the shell escape</p>
 <dl>
 <dt>
-<dd> <code>!</code> [<i>command </i>[<i>arguments</i>]]</dl>
+</dt><dd> <code>!</code> [<i>command </i>[<i>arguments</i>]]</dd></dl>
 <p> passes the given <i>command</i> and optionally <i>arguments</i> to the shell for execution. With this method, you can execute shell commands from within ginsh without having to quit.</p>
 <h2>EXAMPLES</h2>
 <pre><code>
@@ -242,18 +238,18 @@ parse error at quantum &gt; quit
 </code></pre>
 <h2>DIAGNOSTICS</h2>
 <dl>
-<dt>parse error at <i>foo</i></p>
-<dd> You entered something which ginsh was unable to parse. Please check the syntax of your input and try again.</p>
-<dt>argument <i>num</i> to <i>function</i> must be a <i>type</i></p>
-<dd> The argument number <i>num</i> to the given <i>function</i> must be of a certain type (e.g. a symbol, or a list). The first argument has number 0, the second argument number 1, etc.</dl>
+<dt>parse error at <i>foo</i></dt>
+<dd> You entered something which ginsh was unable to parse. Please check the syntax of your input and try again.</dd>
+<dt>argument <i>num</i> to <i>function</i> must be a <i>type</i></dt>
+<dd> The argument number <i>num</i> to the given <i>function</i> must be of a certain type (e.g. a symbol, or a list). The first argument has number 0, the second argument number 1, etc.</dd></dl>
 <h2>AUTHOR</h2>
 <dl>
-<dt>The GiNaC Group:</p>
+<dt>The GiNaC Group:</dt>
 <dd>
  Christian Bauer &lt;Christian.Bauer [at] uni-mainz.de&gt;<br />
  Alexander Frink &lt;Alexander.Frink [at] uni-mainz.de&gt;<br />
  Richard Kreckel &lt;Richard.Kreckel [at] uni-mainz.de&gt;<br />
- Jens Vollinga &lt;vollinga [at] thep.physik.uni-mainz.de&gt;</dl>
+ Jens Vollinga &lt;vollinga [at] thep.physik.uni-mainz.de&gt;</dd></dl>
 <h2>SEE ALSO</h2>
 <p> GiNaC Tutorial &#8211; An open framework for symbolic computation within the C++ programming language </p>
 <p> CLN &#8211; A Class Library for Numbers, Bruno Haible</p>

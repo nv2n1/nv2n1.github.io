@@ -17,48 +17,48 @@ description: "sssd-krb5 – SSSD Kerberos provider"
 <p>If the auth-module krb5 is used in an SSSD domain, the following options must be used. See the <code><a href="/docs/linux/man/5-sssd-conf/">sssd.conf</a></code>(5) manual page, section &#8220;DOMAIN SECTIONS&#8221;, for details on the configuration of an SSSD domain. </p>
 <p> krb5_server, krb5_backup_server (string)</p>
 <dl>
-<dd>Specifies the comma-separated list of IP addresses or hostnames of the Kerberos servers to which SSSD should connect, in the order of preference. For more information on failover and server redundancy, see the &#8220;FAILOVER&#8221; section. An optional port number (preceded by a colon) may be appended to the addresses or hostnames. If empty, service discovery is enabled; for more information, refer to the &#8220;SERVICE DISCOVERY&#8221; section. </p>
+<dd>Specifies the comma-separated list of IP addresses or hostnames of the Kerberos servers to which SSSD should connect, in the order of preference. For more information on failover and server redundancy, see the &#8220;FAILOVER&#8221; section. An optional port number (preceded by a colon) may be appended to the addresses or hostnames. If empty, service discovery is enabled; for more information, refer to the &#8220;SERVICE DISCOVERY&#8221; section. </dd>
 <p> When using service discovery for KDC or kpasswd servers, SSSD first searches for DNS entries that specify _udp as the protocol and falls back to _tcp if none are found. </p>
 <p> This option was named &#8220;krb5_kdcip&#8221; in earlier releases of SSSD. While the legacy name is recognized for the time being, users are advised to migrate their config files to use &#8220;krb5_server&#8221; instead.</dl>
 <p> krb5_realm (string)</p>
 <dl>
-<dd>The name of the Kerberos realm. This option is required and must be specified.</dl>
+<dd>The name of the Kerberos realm. This option is required and must be specified.</dd></dl>
 <p> krb5_kpasswd, krb5_backup_kpasswd (string)</p>
 <dl>
-<dd>If the change password service is not running on the KDC, alternative servers can be defined here. An optional port number (preceded by a colon) may be appended to the addresses or hostnames. </p>
+<dd>If the change password service is not running on the KDC, alternative servers can be defined here. An optional port number (preceded by a colon) may be appended to the addresses or hostnames. </dd>
 <p> For more information on failover and server redundancy, see the &#8220;FAILOVER&#8221; section. NOTE: Even if there are no more kpasswd servers to try, the backend is not switched to operate offline if authentication against the KDC is still possible. </p>
 <p> Default: Use the KDC</dl>
 <p> krb5_ccachedir (string)</p>
 <dl>
-<dd>Directory to store credential caches. All the substitution sequences of krb5_ccname_template can be used here, too, except %d and %P. The directory is created as private and owned by the user, with permissions set to 0700. </p>
+<dd>Directory to store credential caches. All the substitution sequences of krb5_ccname_template can be used here, too, except %d and %P. The directory is created as private and owned by the user, with permissions set to 0700. </dd>
 <p> Default: /tmp</dl>
 <p> krb5_ccname_template (string)</p>
 <dl>
-<dd>Location of the user&#8217;s credential cache. Three credential cache types are currently supported: &#8220;FILE&#8221;, &#8220;DIR&#8221; and &#8220;KEYRING:persistent&#8221;. The cache can be specified either as <i>TYPE:RESIDUAL</i>, or as an absolute path, which implies the &#8220;FILE&#8221; type. In the template, the following sequences are substituted: </p>
+<dd>Location of the user&#8217;s credential cache. Three credential cache types are currently supported: &#8220;FILE&#8221;, &#8220;DIR&#8221; and &#8220;KEYRING:persistent&#8221;. The cache can be specified either as <i>TYPE:RESIDUAL</i>, or as an absolute path, which implies the &#8220;FILE&#8221; type. In the template, the following sequences are substituted: </dd>
 <p> %u</p>
 <dl>
-<dd>login name</dl>
+<dd>login name</dd></dl>
 <p> %U</p>
 <dl>
-<dd>login UID</dl>
+<dd>login UID</dd></dl>
 <p> %p</p>
 <dl>
-<dd>principal name</dl>
+<dd>principal name</dd></dl>
 <p> %r</p>
 <dl>
-<dd>realm name</dl>
+<dd>realm name</dd></dl>
 <p> %h</p>
 <dl>
-<dd>home directory</dl>
+<dd>home directory</dd></dl>
 <p> %d</p>
 <dl>
-<dd>value of krb5_ccachedir</dl>
+<dd>value of krb5_ccachedir</dd></dl>
 <p> %P</p>
 <dl>
-<dd>the process ID of the SSSD client</dl>
+<dd>the process ID of the SSSD client</dd></dl>
 <p> %%</p>
 <dl>
-<dd>a literal &#8216;%&#8217;</dl>
+<dd>a literal &#8216;%&#8217;</dd></dl>
 <p> If the template ends with &#8216;XXXXXX&#8217; <a href="/docs/linux/man/3-mkstemp/">mkstemp</a>(3) is used to create a unique filename in a safe way. </p>
 <p> When using KEYRING types, the only supported mechanism is &#8220;KEYRING:persistent:%U&#8221;, which uses the Linux kernel keyring to store credentials on a per-UID basis. This is also the recommended choice, as it is the most secure and predictable method. </p>
 <p> The default value for the credential cache name is sourced from the profile stored in the system wide krb5.conf configuration file in the [libdefaults] section. The option name is default_ccache_name. See <a href="/docs/linux/man/5-krb5-conf/">krb5.conf</a>(5)&#8217;s PARAMETER EXPANSION paragraph for additional information on the expansion format defined by krb5.conf. </p>
@@ -66,24 +66,24 @@ description: "sssd-krb5 – SSSD Kerberos provider"
 <p> Default: (from libkrb5)</dl>
 <p> krb5_auth_timeout (integer)</p>
 <dl>
-<dd>Timeout in seconds after an online authentication request or change password request is aborted. If possible, the authentication request is continued offline. </p>
+<dd>Timeout in seconds after an online authentication request or change password request is aborted. If possible, the authentication request is continued offline. </dd>
 <p> Default: 6</dl>
 <p> krb5_validate (boolean)</p>
 <dl>
-<dd>Verify with the help of krb5_keytab that the TGT obtained has not been spoofed. The keytab is checked for entries sequentially, and the first entry with a matching realm is used for validation. If no entry matches the realm, the last entry in the keytab is used. This process can be used to validate environments using cross-realm trust by placing the appropriate keytab entry as the last entry or the only entry in the keytab file. </p>
+<dd>Verify with the help of krb5_keytab that the TGT obtained has not been spoofed. The keytab is checked for entries sequentially, and the first entry with a matching realm is used for validation. If no entry matches the realm, the last entry in the keytab is used. This process can be used to validate environments using cross-realm trust by placing the appropriate keytab entry as the last entry or the only entry in the keytab file. </dd>
 <p> Default: false</dl>
 <p> krb5_keytab (string)</p>
 <dl>
-<dd>The location of the keytab to use when validating credentials obtained from KDCs. </p>
+<dd>The location of the keytab to use when validating credentials obtained from KDCs. </dd>
 <p> Default: /etc/krb5.keytab</dl>
 <p> krb5_store_password_if_offline (boolean)</p>
 <dl>
-<dd>Store the password of the user if the provider is offline and use it to request a TGT when the provider comes online again. </p>
+<dd>Store the password of the user if the provider is offline and use it to request a TGT when the provider comes online again. </dd>
 <p> NOTE: this feature is only available on Linux. Passwords stored in this way are kept in plaintext in the kernel keyring and are potentially accessible by the root user (with difficulty). </p>
 <p> Default: false</dl>
 <p> krb5_renewable_lifetime (string)</p>
 <dl>
-<dd>Request a renewable ticket with a total lifetime, given as an integer immediately followed by a time unit: </p>
+<dd>Request a renewable ticket with a total lifetime, given as an integer immediately followed by a time unit: </dd>
 <p> <i>s</i> for seconds </p>
 <p> <i>m</i> for minutes </p>
 <p> <i>h</i> for hours </p>
@@ -93,7 +93,7 @@ description: "sssd-krb5 – SSSD Kerberos provider"
 <p> Default: not set, i.e. the TGT is not renewable</dl>
 <p> krb5_lifetime (string)</p>
 <dl>
-<dd>Request ticket with a lifetime, given as an integer immediately followed by a time unit: </p>
+<dd>Request ticket with a lifetime, given as an integer immediately followed by a time unit: </dd>
 <p> <i>s</i> for seconds </p>
 <p> <i>m</i> for minutes </p>
 <p> <i>h</i> for hours </p>
@@ -103,7 +103,7 @@ description: "sssd-krb5 – SSSD Kerberos provider"
 <p> Default: not set, i.e. the default ticket lifetime configured on the KDC.</dl>
 <p> krb5_renew_interval (string)</p>
 <dl>
-<dd>The time in seconds between two checks if the TGT should be renewed. TGTs are renewed if about half of their lifetime is exceeded, given as an integer immediately followed by a time unit: </p>
+<dd>The time in seconds between two checks if the TGT should be renewed. TGTs are renewed if about half of their lifetime is exceeded, given as an integer immediately followed by a time unit: </dd>
 <p> <i>s</i> for seconds </p>
 <p> <i>m</i> for minutes </p>
 <p> <i>h</i> for hours </p>
@@ -114,7 +114,7 @@ description: "sssd-krb5 – SSSD Kerberos provider"
 <p> Default: not set</dl>
 <p> krb5_use_fast (string)</p>
 <dl>
-<dd>Enables flexible authentication secure tunneling (FAST) for Kerberos pre-authentication. The following options are supported: </p>
+<dd>Enables flexible authentication secure tunneling (FAST) for Kerberos pre-authentication. The following options are supported: </dd>
 <p> <i>never</i> use FAST. This is equivalent to not setting this option at all. </p>
 <p> <i>try</i> to use FAST. If the server does not support FAST, continue the authentication without it. </p>
 <p> <i>demand</i> to use FAST. The authentication fails if the server does not require fast. </p>
@@ -123,30 +123,30 @@ description: "sssd-krb5 – SSSD Kerberos provider"
 <p> NOTE: SSSD supports FAST only with MIT Kerberos version 1.8 and later. If SSSD is used with an older version of MIT Kerberos, using this option is a configuration error.</dl>
 <p> krb5_fast_principal (string)</p>
 <dl>
-<dd>Specifies the server principal to use for FAST.</dl>
+<dd>Specifies the server principal to use for FAST.</dd></dl>
 <p> krb5_canonicalize (boolean)</p>
 <dl>
-<dd>Specifies if the host and user principal should be canonicalized. This feature is available with MIT Kerberos 1.7 and later versions. </p>
+<dd>Specifies if the host and user principal should be canonicalized. This feature is available with MIT Kerberos 1.7 and later versions. </dd>
 <p> Default: false</dl>
 <p> krb5_use_kdcinfo (boolean)</p>
 <dl>
-<dd>Specifies if the SSSD should instruct the Kerberos libraries what realm and which KDCs to use. This option is on by default, if you disable it, you need to configure the Kerberos library using the <code><a href="/docs/linux/man/5-krb5-conf/">krb5.conf</a></code>(5) configuration file. </p>
+<dd>Specifies if the SSSD should instruct the Kerberos libraries what realm and which KDCs to use. This option is on by default, if you disable it, you need to configure the Kerberos library using the <code><a href="/docs/linux/man/5-krb5-conf/">krb5.conf</a></code>(5) configuration file. </dd>
 <p> See the <code><a href="/docs/linux/man/8-sssd_krb5_locator_plugin/">sssd_krb5_locator_plugin</a></code>(8) manual page for more information on the locator plugin. </p>
 <p> Default: true</dl>
 <p> krb5_use_enterprise_principal (boolean)</p>
 <dl>
-<dd>Specifies if the user principal should be treated as enterprise principal. See section 5 of RFC 6806 for more details about enterprise principals. </p>
+<dd>Specifies if the user principal should be treated as enterprise principal. See section 5 of RFC 6806 for more details about enterprise principals. </dd>
 <p> Default: false (AD provider: true) </p>
 <p> The IPA provider will set to option to &#8216;true&#8217; if it detects that the server is capable of handling enterprise principals and the option is not set explicitly in the config file.</dl>
 <p> krb5_map_user (string)</p>
 <dl>
-<dd>The list of mappings is given as a comma-separated list of pairs &#8220;username:primary&#8221; where &#8220;username&#8221; is a UNIX user name and &#8220;primary&#8221; is a user part of a kerberos principal. This mapping is used when user is authenticating using &#8220;auth_provider = krb5&#8221;. </p>
+<dd>The list of mappings is given as a comma-separated list of pairs &#8220;username:primary&#8221; where &#8220;username&#8221; is a UNIX user name and &#8220;primary&#8221; is a user part of a kerberos principal. This mapping is used when user is authenticating using &#8220;auth_provider = krb5&#8221;. </dd>
 <p> example: </p>
 <dl>
 <dd>
 <pre>krb5_realm = REALM
 krb5_map_user = joe:juser,dick:richard</pre>
-</dl>
+</dd></dl>
 <p> &#8220;joe&#8221; and &#8220;dick&#8221; are UNIX user names and &#8220;juser&#8221; and &#8220;richard&#8221; are primaries of kerberos principals. For user &#8220;joe&#8221; resp. &#8220;dick&#8221; SSSD will try to kinit as &#8220;juser [at] REALM&#8221; resp. &#8220;richard [at] REALM&#8221;. </p>
 <p> Default: not set</dl>
 <h2>Failover</h2>
@@ -176,7 +176,7 @@ krb5_map_user = joe:juser,dick:richard</pre>
 auth_provider = krb5
 krb5_server = 192.168.1.1
 krb5_realm = EXAMPLE.COM</pre>
-</dl>
+</dd></dl>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/8-sssd/">sssd</a></code>(8), <code><a href="/docs/linux/man/5-sssd-conf/">sssd.conf</a></code>(5), <code><a href="/docs/linux/man/5-sssd-ldap/">sssd-ldap</a></code>(5), <code><a href="/docs/linux/man/5-sssd-krb5/">sssd-krb5</a></code>(5), <code><a href="/docs/linux/man/5-sssd-simple/">sssd-simple</a></code>(5), <code><a href="/docs/linux/man/5-sssd-ipa/">sssd-ipa</a></code>(5), <code><a href="/docs/linux/man/5-sssd-ad/">sssd-ad</a></code>(5), <code><a href="/docs/linux/man/5-sssd-sudo/">sssd-sudo</a></code>(5),<code><a href="/docs/linux/man/5-sssd-secrets/">sssd-secrets</a></code>(5),<code><a href="/docs/linux/man/8-sss_cache/">sss_cache</a></code>(8), <code><a href="/docs/linux/man/8-sss_debuglevel/">sss_debuglevel</a></code>(8), <code><a href="/docs/linux/man/8-sss_groupadd/">sss_groupadd</a></code>(8), <code><a href="/docs/linux/man/8-sss_groupdel/">sss_groupdel</a></code>(8), <code><a href="/docs/linux/man/8-sss_groupshow/">sss_groupshow</a></code>(8), <code><a href="/docs/linux/man/8-sss_groupmod/">sss_groupmod</a></code>(8), <code><a href="/docs/linux/man/8-sss_useradd/">sss_useradd</a></code>(8), <code><a href="/docs/linux/man/8-sss_userdel/">sss_userdel</a></code>(8), <code><a href="/docs/linux/man/8-sss_usermod/">sss_usermod</a></code>(8), <code><a href="/docs/linux/man/8-sss_obfuscate/">sss_obfuscate</a></code>(8), <code><a href="/docs/linux/man/8-sss_seed/">sss_seed</a></code>(8), <code><a href="/docs/linux/man/8-sssd_krb5_locator_plugin/">sssd_krb5_locator_plugin</a></code>(8), <code>sss_ssh_authorizedkeys</code>(8), <code>sss_ssh_knownhostsproxy</code>(8),<code><a href="/docs/linux/man/5-sssd-ifp/">sssd-ifp</a></code>(5),<code><a href="/docs/linux/man/8-pam_sss/">pam_sss</a></code>(8). <code><a href="/docs/linux/man/5-sss_rpcidmapd/">sss_rpcidmapd</a></code>(5)</p>
 <h2>Authors</h2>

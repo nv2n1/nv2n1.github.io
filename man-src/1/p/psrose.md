@@ -18,79 +18,79 @@ description: "psrose – Plot a polar histogram (rose, sector, windrose diagrams
 <p> None.</p>
 <h2>OPTIONAL ARGUMENTS</h2>
 <dl>
-<dt><i>table</i></p>
-<dd> One or more ASCII (or binary, see <code>-bi</code>[<i>ncols</i>][<i>type</i>]) data table file(s) holding a number of data columns. If no tables are given then we read from standard input. If a file with only azimuths are given, use <code>-i</code> to indicate the single column with azimuths; then all lengths are set to unity (see <code>-Zu</code> to set actual lengths to unity as well).</p>
-<dt><code>-A</code>[<code>r</code>]<i>sector_width</i></p>
-<dd> Gives the sector width in degrees for sector and rose diagram. [Default 0 means windrose diagram]. Use <code>-Ar</code> to draw rose diagram instead of sector diagram.</p>
-<dt><code>-B</code>[<code>p</code>|<code>s</code>]<i>parameters</i> <i>(more &#8230;)</i></p>
-<dd> Set map boundary intervals. </p>
+<dt><i>table</i></dt>
+<dd> One or more ASCII (or binary, see <code>-bi</code>[<i>ncols</i>][<i>type</i>]) data table file(s) holding a number of data columns. If no tables are given then we read from standard input. If a file with only azimuths are given, use <code>-i</code> to indicate the single column with azimuths; then all lengths are set to unity (see <code>-Zu</code> to set actual lengths to unity as well).</dd>
+<dt><code>-A</code>[<code>r</code>]<i>sector_width</i></dt>
+<dd> Gives the sector width in degrees for sector and rose diagram. [Default 0 means windrose diagram]. Use <code>-Ar</code> to draw rose diagram instead of sector diagram.</dd>
+<dt><code>-B</code>[<code>p</code>|<code>s</code>]<i>parameters</i> <i>(more &#8230;)</i></dt>
+<dd> Set map boundary intervals. </dd>
 <pre>
 Remember that &quot;x&quot; here is
 radial distance and &quot;y&quot; is azimuth. The ylabel may be used to plot a figure caption.
 </pre>
-<dt><code>-C</code>[<i>mode_file</i>]</p>
-<dd> Plot vectors showing the principal directions given in the <i>modes</i> file. If no file is given, compute and plot mean direction. See <code>-M</code> to control vector attributes.</p>
-<dt><code>-D</code></p>
-<dd> Shift sectors so that they are centered on the bin interval (e.g., first sector is centered on 0 degrees).</p>
-<dt><code>-F</code></p>
-<dd> Do not draw the scale length bar [Default plots scale in lower right corner]</p>
-<dt><code>-G</code><i>fill</i></p>
-<dd> Selects shade, color or pattern for filling the sectors [Default is no fill]K.</p>
-<dt><code>-I</code></p>
-<dd> Inquire. Computes statistics needed to specify useful <code>-R</code>. No plot is generated.</p>
-<dt><code>-K</code> <i>(more &#8230;)</i></p>
-<dd> Do not finalize the PostScript plot.</p>
-<dt><code>-L</code>[<i>wlabel</i>/<i>elabel</i>/<i>slabel</i>/<i>nlabel</i>]</p>
-<dd> Specify labels for the 0, 90, 180, and 270 degree marks. For full-circle plot the default is WEST/EAST/SOUTH/NORTH and for half-circle the default is 90W/90E/-/0. A &#8211; in any entry disables that label. Use <code>-L</code> with no argument to disable all four labels</p>
-<dt><code>-M</code><i>parameters</i></p>
-<dd> Used with <code>-C</code> to modify vector parameters. For vector heads, append vector head <i>size</i> [Default is 0, i.e., a line]. See VECTOR ATTRIBUTES for specifying additional attributes.</p>
-<dt><code>-O</code> <i>(more &#8230;)</i></p>
-<dd> Append to existing PostScript plot.</p>
-<dt><code>-P</code> <i>(more &#8230;)</i></p>
-<dd> Select &quot;Portrait&quot; plot orientation.</p>
-<dt><code>-R</code><i>r0</i>/<i>r1</i>/<i>az_0</i>/<i>az_1</i></p>
-<dd> Specifies the &#8216;region&#8217; of interest in (r,azimuth) space. r0 is 0, r1 is max length in units. For azimuth, specify either -90/90 or 0/180 for half circle plot or 0/360 for full circle.</p>
-<dt><code>-S</code>[<code>n</code>]*radial_scale*</p>
-<dd> Specifies radius of circle. Use <code>-Sn</code> to normalize input radii to go from 0 to 1.</p>
-<dt><code>-T</code></p>
-<dd> Specifies that the input data is orientation data (has a 180 degree ambiguity) instead of true 0-360 degree directions [Default].</p>
-<dt><code>-U</code>[<i>just</i>/<i>dx</i>/<i>dy</i>/][<code>c</code>|<i>label</i>] <i>(more &#8230;)</i></p>
-<dd> Draw GMT time stamp logo on plot.</p>
-<dt><code>-V</code>[<i>level</i>] <i>(more &#8230;)</i></p>
-<dd> Select verbosity level [c].</p>
-<dt><code>-W</code><i>pen</i></p>
-<dd> Set pen attributes for sector outline or rose plot. [Default is no outline]. Use <code>-Wv</code><i>pen</i> to change pen used to draw vector (requires <code>-C</code>) [Default is same as sector outline]. </p>
+<dt><code>-C</code>[<i>mode_file</i>]</dt>
+<dd> Plot vectors showing the principal directions given in the <i>modes</i> file. If no file is given, compute and plot mean direction. See <code>-M</code> to control vector attributes.</dd>
+<dt><code>-D</code></dt>
+<dd> Shift sectors so that they are centered on the bin interval (e.g., first sector is centered on 0 degrees).</dd>
+<dt><code>-F</code></dt>
+<dd> Do not draw the scale length bar [Default plots scale in lower right corner]</dd>
+<dt><code>-G</code><i>fill</i></dt>
+<dd> Selects shade, color or pattern for filling the sectors [Default is no fill]K.</dd>
+<dt><code>-I</code></dt>
+<dd> Inquire. Computes statistics needed to specify useful <code>-R</code>. No plot is generated.</dd>
+<dt><code>-K</code> <i>(more &#8230;)</i></dt>
+<dd> Do not finalize the PostScript plot.</dd>
+<dt><code>-L</code>[<i>wlabel</i>/<i>elabel</i>/<i>slabel</i>/<i>nlabel</i>]</dt>
+<dd> Specify labels for the 0, 90, 180, and 270 degree marks. For full-circle plot the default is WEST/EAST/SOUTH/NORTH and for half-circle the default is 90W/90E/-/0. A &#8211; in any entry disables that label. Use <code>-L</code> with no argument to disable all four labels</dd>
+<dt><code>-M</code><i>parameters</i></dt>
+<dd> Used with <code>-C</code> to modify vector parameters. For vector heads, append vector head <i>size</i> [Default is 0, i.e., a line]. See VECTOR ATTRIBUTES for specifying additional attributes.</dd>
+<dt><code>-O</code> <i>(more &#8230;)</i></dt>
+<dd> Append to existing PostScript plot.</dd>
+<dt><code>-P</code> <i>(more &#8230;)</i></dt>
+<dd> Select &quot;Portrait&quot; plot orientation.</dd>
+<dt><code>-R</code><i>r0</i>/<i>r1</i>/<i>az_0</i>/<i>az_1</i></dt>
+<dd> Specifies the &#8216;region&#8217; of interest in (r,azimuth) space. r0 is 0, r1 is max length in units. For azimuth, specify either -90/90 or 0/180 for half circle plot or 0/360 for full circle.</dd>
+<dt><code>-S</code>[<code>n</code>]*radial_scale*</dt>
+<dd> Specifies radius of circle. Use <code>-Sn</code> to normalize input radii to go from 0 to 1.</dd>
+<dt><code>-T</code></dt>
+<dd> Specifies that the input data is orientation data (has a 180 degree ambiguity) instead of true 0-360 degree directions [Default].</dd>
+<dt><code>-U</code>[<i>just</i>/<i>dx</i>/<i>dy</i>/][<code>c</code>|<i>label</i>] <i>(more &#8230;)</i></dt>
+<dd> Draw GMT time stamp logo on plot.</dd>
+<dt><code>-V</code>[<i>level</i>] <i>(more &#8230;)</i></dt>
+<dd> Select verbosity level [c].</dd>
+<dt><code>-W</code><i>pen</i></dt>
+<dd> Set pen attributes for sector outline or rose plot. [Default is no outline]. Use <code>-Wv</code><i>pen</i> to change pen used to draw vector (requires <code>-C</code>) [Default is same as sector outline]. </dd>
 <p> <code>-X</code>[<code>a</code>|<code>c</code>|<code>f</code>|<code>r</code>][<i>x-shift</i>[<code>u</code>]]</p>
-<dt><code>-Y</code>[<code>a</code>|<code>c</code>|<code>f</code>|<code>r</code>][<i>y-shift</i>[<code>u</code>]] <i>(more &#8230;)</i></p>
-<dd> Shift plot origin.</p>
-<dt><code>-Z</code><i>scale</i></p>
-<dd> Multiply the data radii by <i>scale</i>. E.g., use <code>-Z</code>0.001 to convert your data from m to km. To exclude the radii from consideration, set them all to unity with <code>-Zu</code> [Default is no scaling].</p>
-<dt><code>-:</code></p>
-<dd> Input file has (azimuth,radius) pairs rather than the expected (radius,azimuth).</p>
-<dt><code>-bi</code>[<i>ncols</i>][<code>t</code>] <i>(more &#8230;)</i></p>
-<dd> Select native binary input. [Default is 2 input columns].</p>
-<dt><code>-c</code><i>copies</i> <i>(more &#8230;)</i></p>
-<dd> Specify number of plot copies [Default is 1].</p>
-<dt><code>-di</code><i>nodata</i> <i>(more &#8230;)</i></p>
-<dd> Replace input columns that equal <i>nodata</i> with NaN.</p>
-<dt><code>-h</code>[<code>i</code>|<code>o</code>][<i>n</i>][<code>+c</code>][<code>+d</code>][<code>+r</code><i>remark</i>][<code>+r</code><i>title</i>] <i>(more &#8230;)</i></p>
-<dd> Skip or produce header record(s).</p>
-<dt><code>-i</code><i>cols</i>[<code>l</code>][<code>s</code><i>scale</i>][<code>o</code><i>offset</i>][,<i>&#8230;</i>] <i>(more &#8230;)</i></p>
-<dd> Select input columns (0 is first column).</p>
-<dt><code>-p</code>[<code>x</code>|<code>y</code>|<code>z</code>]<i>azim</i>/<i>elev</i>[/<i>zlevel</i>][<code>+w</code><i>lon0</i>/<i>lat0</i>[/<i>z0</i>]][<code>+v</code><i>x0</i>/<i>y0</i>] <i>(more &#8230;)</i></p>
-<dd> Select perspective view.</p>
-<dt><code>-t</code>[<i>transp</i>] <i>(more &#8230;)</i></p>
-<dd> Set PDF transparency level in percent.</p>
-<dt><code>-^</code> or just <code>&#8211;</code></p>
-<dd> Print a short message about the syntax of the command, then exits (NOTE: on Windows use just <code>&#8211;</code>).</p>
-<dt><code>-+</code> or just <code>+</code></p>
-<dd> Print an extensive usage (help) message, including the explanation of any module-specific option (but not the GMT common options), then exits.</p>
-<dt><code>-?</code> or no arguments</p>
-<dd> Print a complete usage (help) message, including the explanation of options, then exits.</p>
-<dt><code>&#8211;</code><code>-version</code></p>
-<dd> Print GMT version and exit.</p>
-<dt><code>&#8211;</code><code>-show-datadir</code></p>
-<dd> Print full path to GMT share directory and exit.</dl>
+<dt><code>-Y</code>[<code>a</code>|<code>c</code>|<code>f</code>|<code>r</code>][<i>y-shift</i>[<code>u</code>]] <i>(more &#8230;)</i></dt>
+<dd> Shift plot origin.</dd>
+<dt><code>-Z</code><i>scale</i></dt>
+<dd> Multiply the data radii by <i>scale</i>. E.g., use <code>-Z</code>0.001 to convert your data from m to km. To exclude the radii from consideration, set them all to unity with <code>-Zu</code> [Default is no scaling].</dd>
+<dt><code>-:</code></dt>
+<dd> Input file has (azimuth,radius) pairs rather than the expected (radius,azimuth).</dd>
+<dt><code>-bi</code>[<i>ncols</i>][<code>t</code>] <i>(more &#8230;)</i></dt>
+<dd> Select native binary input. [Default is 2 input columns].</dd>
+<dt><code>-c</code><i>copies</i> <i>(more &#8230;)</i></dt>
+<dd> Specify number of plot copies [Default is 1].</dd>
+<dt><code>-di</code><i>nodata</i> <i>(more &#8230;)</i></dt>
+<dd> Replace input columns that equal <i>nodata</i> with NaN.</dd>
+<dt><code>-h</code>[<code>i</code>|<code>o</code>][<i>n</i>][<code>+c</code>][<code>+d</code>][<code>+r</code><i>remark</i>][<code>+r</code><i>title</i>] <i>(more &#8230;)</i></dt>
+<dd> Skip or produce header record(s).</dd>
+<dt><code>-i</code><i>cols</i>[<code>l</code>][<code>s</code><i>scale</i>][<code>o</code><i>offset</i>][,<i>&#8230;</i>] <i>(more &#8230;)</i></dt>
+<dd> Select input columns (0 is first column).</dd>
+<dt><code>-p</code>[<code>x</code>|<code>y</code>|<code>z</code>]<i>azim</i>/<i>elev</i>[/<i>zlevel</i>][<code>+w</code><i>lon0</i>/<i>lat0</i>[/<i>z0</i>]][<code>+v</code><i>x0</i>/<i>y0</i>] <i>(more &#8230;)</i></dt>
+<dd> Select perspective view.</dd>
+<dt><code>-t</code>[<i>transp</i>] <i>(more &#8230;)</i></dt>
+<dd> Set PDF transparency level in percent.</dd>
+<dt><code>-^</code> or just <code>&#8211;</code></dt>
+<dd> Print a short message about the syntax of the command, then exits (NOTE: on Windows use just <code>&#8211;</code>).</dd>
+<dt><code>-+</code> or just <code>+</code></dt>
+<dd> Print an extensive usage (help) message, including the explanation of any module-specific option (but not the GMT common options), then exits.</dd>
+<dt><code>-?</code> or no arguments</dt>
+<dd> Print a complete usage (help) message, including the explanation of options, then exits.</dd>
+<dt><code>&#8211;</code><code>-version</code></dt>
+<dd> Print GMT version and exit.</dd>
+<dt><code>&#8211;</code><code>-show-datadir</code></dt>
+<dd> Print full path to GMT share directory and exit.</dd></dl>
 <h2>VECTOR ATTRIBUTES</h2>
 <p> Several modifiers may be appended to the vector-producing options to specify the placement of vector heads, their shapes, and the justification of the vector. Below, left and right refers to the side of the vector line when viewed from the start point to the end point of the segment: <code>+a</code><i>angle</i> sets the angle of the vector head apex [30]. </p>
 <p> <code>+b</code> places a vector head at the beginning of the vector path [none]. Optionally, append <code>t</code> for a terminal line, <code>c</code> for a circle, or <code>a</code> for arrow [Default]. Further append <code>l</code>|<code>r</code> to only draw the left or right side of this head [both sides]. </p>

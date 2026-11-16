@@ -11,11 +11,8 @@ std::ios_base::seekdir - std::ios_base::seekdir
 <h2>Synopsis</h2>
 
 <pre><code>typedef /*implementation defined*/ seekdir;
-
 static constexpr seekdir beg = /*implementation defined*/
-
 static constexpr seekdir end = /*implementation defined*/
-
 static constexpr seekdir cur = /*implementation defined*/</code></pre> 
 Specifies file seeking direction type. The following constants are defined: 
 Constant Explanation 

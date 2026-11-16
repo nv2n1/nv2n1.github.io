@@ -26,14 +26,14 @@ description: "setresuid, setresgid – set real, effective and saved user or gro
 <p> <i>Note</i>: there are cases where <code>setresuid</code>() can fail even when the caller is UID 0; it is a grave security error to omit checking for a failure return from <code>setresuid</code>().</p>
 <h2>ERRORS</h2>
 <dl>
-<dt><code>EAGAIN</code></p>
-<dd> The call would change the caller&#8217;s real UID (i.e., <i>ruid</i> does not match the caller&#8217;s real UID), but there was a temporary failure allocating the necessary kernel data structures.</p>
-<dt><code>EAGAIN</code></p>
-<dd> <i>ruid</i> does not match the caller&#8217;s real UID and this call would bring the number of processes belonging to the real user ID <i>ruid</i> over the caller&#8217;s <code>RLIMIT_NPROC</code> resource limit. Since Linux 3.1, this error case no longer occurs (but robust applications should check for this error); see the description of <code>EAGAIN</code> in <code><a href="/docs/linux/man/2-execve/">execve</a></code>(2).</p>
-<dt><code>EINVAL</code></p>
-<dd> One or more of the target user or group IDs is not valid in this user namespace.</p>
-<dt><code>EPERM</code></p>
-<dd> The calling process is not privileged (did not have the necessary capability in its user namespace) and tried to change the IDs to values that are not permitted. For <code>setresuid</code>(), the necessary capability is <code>CAP_SETUID</code>; for <code>setresgid</code>(), it is <code>CAP_SETGID</code>.</dl>
+<dt><code>EAGAIN</code></dt>
+<dd> The call would change the caller&#8217;s real UID (i.e., <i>ruid</i> does not match the caller&#8217;s real UID), but there was a temporary failure allocating the necessary kernel data structures.</dd>
+<dt><code>EAGAIN</code></dt>
+<dd> <i>ruid</i> does not match the caller&#8217;s real UID and this call would bring the number of processes belonging to the real user ID <i>ruid</i> over the caller&#8217;s <code>RLIMIT_NPROC</code> resource limit. Since Linux 3.1, this error case no longer occurs (but robust applications should check for this error); see the description of <code>EAGAIN</code> in <code><a href="/docs/linux/man/2-execve/">execve</a></code>(2).</dd>
+<dt><code>EINVAL</code></dt>
+<dd> One or more of the target user or group IDs is not valid in this user namespace.</dd>
+<dt><code>EPERM</code></dt>
+<dd> The calling process is not privileged (did not have the necessary capability in its user namespace) and tried to change the IDs to values that are not permitted. For <code>setresuid</code>(), the necessary capability is <code>CAP_SETUID</code>; for <code>setresgid</code>(), it is <code>CAP_SETGID</code>.</dd></dl>
 <h2>VERSIONS</h2>
 <p> These calls are available under Linux since Linux 2.1.44.</p>
 <h2>CONFORMING TO</h2>

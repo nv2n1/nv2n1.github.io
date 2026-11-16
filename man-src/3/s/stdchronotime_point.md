@@ -26,12 +26,9 @@ The amount of time between this time_point and the clock's epoch
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;iostream&gt;
-
 #include &lt;chrono&gt;
-
 #include &lt;ctime&gt;
 int main()
-
 {
     const auto p0 = std::chrono::time_point&lt;std::chrono::system_clock&gt;{};
     const auto p1 = std::chrono::system_clock::now();

@@ -17,9 +17,6 @@ description: "std::chrono::_V2::steady_clock –"
  &lt; <code>steady_clock</code>, <code>duration</code> &gt; <code>time_point</code>&quot;</p>
 <h3>Static Public Member Functions</h3>
 <pre><code>static time_point now () noexcept
-
-
-
 Static Public Attributes
 static constexpr bool is_steady</code></pre>
 <h2>Detailed Description</h2>

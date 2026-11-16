@@ -36,14 +36,10 @@ If the current rounding mode is FE_TONEAREST, this function rounds to even in ha
 <h2>Example</h2>
 <p>// Run this code </p>
 <pre><code>#include &lt;iostream&gt;
-
 #include &lt;cmath&gt;
-
 #include &lt;cfenv&gt;
 int main()
-
 {
-
 #pragma STDC FENV_ACCESS ON
     std::fesetround(FE_TONEAREST);
     std::cout &lt;&lt; &quot;rounding to nearest: 

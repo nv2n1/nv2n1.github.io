@@ -15,44 +15,44 @@ description: "RhumbSolve — perform rhumb line calculations"
 <p> <font SIZE="-1"><code>NOTE:</code></font> the rhumb line is <code>not</code> the shortest path between two points; that is the geodesic and it is calculated by <i><a href="/docs/linux/man/1-geodsolve/">GeodSolve</a></i>(1). </p>
 <p> <code>RhumbSolve</code> operates in one of three modes:</p>
 <dl>
-<dt>1.</p>
-<dd>By default, <code>RhumbSolve</code> accepts lines on the standard input containing <i>lat1</i> <i>lon1</i> <i>azi12</i> <i>s12</i> and prints <i>lat2</i> <i>lon2</i> <i>S12</i> on standard output. This is the direct calculation.</p>
-<dt>2.</p>
-<dd>Command line arguments <code>-l</code> <i>lat1</i> <i>lon1</i> <i>azi12</i> specify a rhumb line. <code>RhumbSolve</code> then accepts a sequence of <i>s12</i> values (one per line) on standard input and prints <i>lat2</i> <i>lon2</i> <i>S12</i> for each. This generates a sequence of points on a rhumb line.</p>
-<dt>3.</p>
-<dd>With the <code>-i</code> command line argument, <code>RhumbSolve</code> performs the inverse calculation. It reads lines containing <i>lat1</i> <i>lon1</i> <i>lat2</i> <i>lon2</i> and prints the values of <i>azi12</i> <i>s12</i> <i>S12</i> for the corresponding shortest rhumb lines. If the end points are on opposite meridians, there are two shortest rhumb lines and the east-going one is chosen.</dl>
+<dt>1.</dt>
+<dd>By default, <code>RhumbSolve</code> accepts lines on the standard input containing <i>lat1</i> <i>lon1</i> <i>azi12</i> <i>s12</i> and prints <i>lat2</i> <i>lon2</i> <i>S12</i> on standard output. This is the direct calculation.</dd>
+<dt>2.</dt>
+<dd>Command line arguments <code>-l</code> <i>lat1</i> <i>lon1</i> <i>azi12</i> specify a rhumb line. <code>RhumbSolve</code> then accepts a sequence of <i>s12</i> values (one per line) on standard input and prints <i>lat2</i> <i>lon2</i> <i>S12</i> for each. This generates a sequence of points on a rhumb line.</dd>
+<dt>3.</dt>
+<dd>With the <code>-i</code> command line argument, <code>RhumbSolve</code> performs the inverse calculation. It reads lines containing <i>lat1</i> <i>lon1</i> <i>lat2</i> <i>lon2</i> and prints the values of <i>azi12</i> <i>s12</i> <i>S12</i> for the corresponding shortest rhumb lines. If the end points are on opposite meridians, there are two shortest rhumb lines and the east-going one is chosen.</dd></dl>
 <h2>Options</h2>
 <dl>
-<dt><code>-i</code></p>
-<dd>perform an inverse calculation (see 3 above).</p>
-<dt><code>-l</code></p>
-<dd>line mode (see 2 above); generate a sequence of points along the rhumb line specified by <i>lat1</i> <i>lon1</i> <i>azi12</i>.</p>
-<dt><code>-e</code></p>
-<dd>specify the ellipsoid via <i>a</i> <i>f</i>; the equatorial radius is <i>a</i> and the flattening is <i>f</i>. Setting <i>f</i> = 0 results in a sphere. Specify <i>f</i> &lt; 0 for a prolate ellipsoid. A simple fraction, e.g., 1/297, is allowed for <i>f</i>. (Also, if <i>f</i> &gt; 1, the flattening is set to 1/<i>f</i>.) By default, the <font SIZE="-1">WGS84</font> ellipsoid is used, <i>a</i> = 6378137 m, <i>f</i> = 1/298.257223563.</p>
-<dt><code>-d</code></p>
-<dd>output angles as degrees, minutes, seconds instead of decimal degrees.</p>
-<dt><code>-:</code></p>
-<dd>like <code>-d</code>, except use : as a separator instead of the d, &#8216;, and &quot; delimiters.</p>
-<dt><code>-p</code></p>
-<dd>set the output precision to <i>prec</i> (default 3); <i>prec</i> is the precision relative to 1 m. See &#8220;<font SIZE="-1">PRECISION&#8221;</font>.</p>
-<dt><code>-s</code></p>
-<dd>By default, the rhumb line calculations are carried out exactly in terms of elliptic integrals. This includes the use of the addition theorem for elliptic integrals to compute the divided difference of the isometric and rectifying latitudes. If <code>-s</code> is supplied this divided difference is computed using Krueger series for the transverse Mercator projection which is only accurate for |<i>f</i>| &lt; 0.01. See &#8220;<font SIZE="-1">ACCURACY&#8221;</font>.</p>
-<dt><code>&#8211;comment-delimiter</code></p>
-<dd>set the comment delimiter to <i>commentdelim</i> (e.g., &#8220;#&#8221; or &#8220;//&#8221;). If set, the input lines will be scanned for this delimiter and, if found, the delimiter and the rest of the line will be removed prior to processing and subsequently appended to the output line (separated by a space).</p>
-<dt><code>&#8211;version</code></p>
-<dd>print version and exit.</p>
-<dt><code>-h</code></p>
-<dd>print usage and exit.</p>
-<dt><code>&#8211;help</code></p>
-<dd>print full documentation and exit.</p>
-<dt><code>&#8211;input-file</code></p>
-<dd>read input from the file <i>infile</i> instead of from standard input; a file name of &#8220;-&#8221; stands for standard input.</p>
-<dt><code>&#8211;input-string</code></p>
-<dd>read input from the string <i>instring</i> instead of from standard input. All occurrences of the line separator character (default is a semicolon) in <i>instring</i> are converted to newlines before the reading begins.</p>
-<dt><code>&#8211;line-separator</code></p>
-<dd>set the line separator character to <i>linesep</i>. By default this is a semicolon.</p>
-<dt><code>&#8211;output-file</code></p>
-<dd>write output to the file <i>outfile</i> instead of to standard output; a file name of &#8220;-&#8221; stands for standard output.</dl>
+<dt><code>-i</code></dt>
+<dd>perform an inverse calculation (see 3 above).</dd>
+<dt><code>-l</code></dt>
+<dd>line mode (see 2 above); generate a sequence of points along the rhumb line specified by <i>lat1</i> <i>lon1</i> <i>azi12</i>.</dd>
+<dt><code>-e</code></dt>
+<dd>specify the ellipsoid via <i>a</i> <i>f</i>; the equatorial radius is <i>a</i> and the flattening is <i>f</i>. Setting <i>f</i> = 0 results in a sphere. Specify <i>f</i> &lt; 0 for a prolate ellipsoid. A simple fraction, e.g., 1/297, is allowed for <i>f</i>. (Also, if <i>f</i> &gt; 1, the flattening is set to 1/<i>f</i>.) By default, the <font SIZE="-1">WGS84</font> ellipsoid is used, <i>a</i> = 6378137 m, <i>f</i> = 1/298.257223563.</dd>
+<dt><code>-d</code></dt>
+<dd>output angles as degrees, minutes, seconds instead of decimal degrees.</dd>
+<dt><code>-:</code></dt>
+<dd>like <code>-d</code>, except use : as a separator instead of the d, &#8216;, and &quot; delimiters.</dd>
+<dt><code>-p</code></dt>
+<dd>set the output precision to <i>prec</i> (default 3); <i>prec</i> is the precision relative to 1 m. See &#8220;<font SIZE="-1">PRECISION&#8221;</font>.</dd>
+<dt><code>-s</code></dt>
+<dd>By default, the rhumb line calculations are carried out exactly in terms of elliptic integrals. This includes the use of the addition theorem for elliptic integrals to compute the divided difference of the isometric and rectifying latitudes. If <code>-s</code> is supplied this divided difference is computed using Krueger series for the transverse Mercator projection which is only accurate for |<i>f</i>| &lt; 0.01. See &#8220;<font SIZE="-1">ACCURACY&#8221;</font>.</dd>
+<dt><code>&#8211;comment-delimiter</code></dt>
+<dd>set the comment delimiter to <i>commentdelim</i> (e.g., &#8220;#&#8221; or &#8220;//&#8221;). If set, the input lines will be scanned for this delimiter and, if found, the delimiter and the rest of the line will be removed prior to processing and subsequently appended to the output line (separated by a space).</dd>
+<dt><code>&#8211;version</code></dt>
+<dd>print version and exit.</dd>
+<dt><code>-h</code></dt>
+<dd>print usage and exit.</dd>
+<dt><code>&#8211;help</code></dt>
+<dd>print full documentation and exit.</dd>
+<dt><code>&#8211;input-file</code></dt>
+<dd>read input from the file <i>infile</i> instead of from standard input; a file name of &#8220;-&#8221; stands for standard input.</dd>
+<dt><code>&#8211;input-string</code></dt>
+<dd>read input from the string <i>instring</i> instead of from standard input. All occurrences of the line separator character (default is a semicolon) in <i>instring</i> are converted to newlines before the reading begins.</dd>
+<dt><code>&#8211;line-separator</code></dt>
+<dd>set the line separator character to <i>linesep</i>. By default this is a semicolon.</dd>
+<dt><code>&#8211;output-file</code></dt>
+<dd>write output to the file <i>outfile</i> instead of to standard output; a file name of &#8220;-&#8221; stands for standard output.</dd></dl>
 <h2>Input</h2>
 <p><code>RhumbSolve</code> measures all angles in degrees, all lengths (<i>s12</i>) in meters, and all areas (<i>S12</i>) in meters^2. On input angles (latitude, longitude, azimuth) can be as decimal degrees or degrees (d), minutes (&#8216;), seconds (&#8220;). A decimal point can only appear in the least significant component and the designator (d, &#8216;, or &#8221;) for this component is optional; thus <tt>&quot;40d30&quot;</tt>, <tt>&quot;40d30'&quot;</tt>, <tt>&quot;40.5d&quot;</tt>, and <tt>40.5</tt> are all equivalent. By default, latitude precedes longitude for each point; however on input either may be given first by appending (or prepending) <i>N</i> or <i>S</i> to the latitude and <i>E</i> or <i>W</i> to the longitude. Azimuths are measured clockwise from north; however this may be overridden with <i>E</i> or <i>W</i>. </p>
 <p> See the <tt>&quot;QUOTING&quot;</tt> section of <i><a href="/docs/linux/man/1-geoconvert/">GeoConvert</a></i>(1) for how to quote the <font SIZE="-1">DMS</font> designators &#8216; and &quot;.</p>

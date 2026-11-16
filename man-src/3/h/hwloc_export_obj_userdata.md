@@ -36,11 +36,11 @@ description: "hwlocality_xmlexport – Exporting Topologies to XML"
 <p> <code>Returns:</code></p>
 <dl>
 <dt>
-<dd> -1 if a failure occured.</dl>
+</dt><dd> -1 if a failure occured.</dd></dl>
 <p> <code>Note:</code></p>
 <dl>
 <dt>
-<dd> See also <code>hwloc_topology_set_userdata_export_callback()</code> for exporting application-specific object userdata. </p>
+</dt><dd> See also <code>hwloc_topology_set_userdata_export_callback()</code> for exporting application-specific object userdata. </dd>
 <p> The topology-specific userdata pointer is ignored when exporting to XML. </p>
 <p> Only printable characters may be exported to XML string attributes. Any other character, especially any non-ASCII character, will be silently dropped. </p>
 <p> If name is &#8216;-&#8216;, the XML output is sent to the standard output.</dl>
@@ -50,11 +50,11 @@ description: "hwlocality_xmlexport – Exporting Topologies to XML"
 <p> <code>Returns:</code></p>
 <dl>
 <dt>
-<dd> -1 if a failure occured.</dl>
+</dt><dd> -1 if a failure occured.</dd></dl>
 <p> <code>Note:</code></p>
 <dl>
 <dt>
-<dd> See also <code>hwloc_topology_set_userdata_export_callback()</code> for exporting application-specific object userdata. </p>
+</dt><dd> See also <code>hwloc_topology_set_userdata_export_callback()</code> for exporting application-specific object userdata. </dd>
 <p> The topology-specific userdata pointer is ignored when exporting to XML. </p>
 <p> Only printable characters may be exported to XML string attributes. Any other character, especially any non-ASCII character, will be silently dropped.</dl>
 <h3>void hwloc_topology_set_userdata_export_callback (<code>hwloc_topology_t</code> topology, void(*)(void *reserved, <code>hwloc_topology_t</code> topology, <code>hwloc_obj_t</code> obj) export_cb)</h3>
@@ -65,7 +65,7 @@ description: "hwlocality_xmlexport – Exporting Topologies to XML"
 <p> <code>Note:</code></p>
 <dl>
 <dt>
-<dd> The topology-specific userdata pointer is ignored when exporting to XML.</dl>
+</dt><dd> The topology-specific userdata pointer is ignored when exporting to XML.</dd></dl>
 <h3>void hwloc_topology_set_userdata_import_callback (<code>hwloc_topology_t</code> topology, void(*)(<code>hwloc_topology_t</code> topology, <code>hwloc_obj_t</code> obj, const char *name, const void *buffer, size_t length) import_cb)</h3>
 <p> Set the application-specific callback for importing userdata. On XML import, userdata is ignored by default because hwloc does not know how to store it in memory. </p>
 <p> This function lets applications set import_cb to a callback function that will get the XML-stored userdata and store it in the object as expected by the application. </p>
@@ -74,4 +74,5 @@ description: "hwlocality_xmlexport – Exporting Topologies to XML"
 <p> <code>Note:</code></p>
 <dl>
 <dt>
-<dd> buffer contains length characters followed by a null byte (&#8216;
+</dt><dd> buffer contains length characters followed by a null byte (&#8216;
+</dd></dl>

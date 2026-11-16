@@ -13,8 +13,8 @@ description: "tipc-peer – modify peer information"
 <h2>Options</h2>
 <p>Options (flags) that can be passed anywhere in the command chain.</p>
 <dl>
-<dt><code>-h</code>,<code> &#8211;help</code></p>
-<dd>Show help about last valid command. For example <code>tipc peer &#8211;help</code> will show peer help and <code>tipc &#8211;help</code> will show general help. The position of the option in the string is irrelevant.</dl>
+<dt><code>-h</code>,<code> &#8211;help</code></dt>
+<dd>Show help about last valid command. For example <code>tipc peer &#8211;help</code> will show peer help and <code>tipc &#8211;help</code> will show general help. The position of the option in the string is irrelevant.</dd></dl>
 <h2>Description</h2>
 <h3>Peer remove</h3>
 <p>Remove an offline peer node from the local data structures. The peer is identified by its <code>address</code> </p>

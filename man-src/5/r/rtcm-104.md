@@ -25,7 +25,7 @@ description: "rtcm-104 – RTCM-104 dump format emitted by GPSD tools"
 <dd>
 <pre>H &lt;message type&gt; &lt;reference station id&gt; &lt;modified z_count&gt; &lt;sequence no&gt;
  &lt;message length&gt; &lt;station health&gt; [T &lt;useful length&gt;]</pre>
-</dl>
+</dd></dl>
 <p> Here is an example: </p>
 <dl>
 <dd>
@@ -34,32 +34,32 @@ S 13 0 3 249.6 -26.120 0.068
 S 2 0 73 249.6 1.220 -0.080
 S 8 0 22 249.6 23.760 0.030
 .</pre>
-</dl>
+</dd></dl>
 <p> &lt;message type&gt; is one of </p>
 <p> 1</p>
 <dl>
-<dd>full corrections &#8211; one message containing corrections for all satellites in view. This is not common.</dl>
+<dd>full corrections &#8211; one message containing corrections for all satellites in view. This is not common.</dd></dl>
 <p> 3</p>
 <dl>
-<dd>reference station parameters &#8211; the position of the reference station GPS antenna.</dl>
+<dd>reference station parameters &#8211; the position of the reference station GPS antenna.</dd></dl>
 <p> 4</p>
 <dl>
-<dd>datum &#8212; the datum to which the DGPS data is referred.</dl>
+<dd>datum &#8212; the datum to which the DGPS data is referred.</dd></dl>
 <p> 5</p>
 <dl>
-<dd>constellation health &#8212; information about the satellites the beacon can see</dl>
+<dd>constellation health &#8212; information about the satellites the beacon can see</dd></dl>
 <p> 6</p>
 <dl>
-<dd>null message &#8212; just a filler.</dl>
+<dd>null message &#8212; just a filler.</dd></dl>
 <p> 7</p>
 <dl>
-<dd>radio beacon almanac &#8212; information about this or other beacons.</dl>
+<dd>radio beacon almanac &#8212; information about this or other beacons.</dd></dl>
 <p> 9</p>
 <dl>
-<dd>subset corrections &#8212; a message containing corrections for only a subset of the satellites in view.</dl>
+<dd>subset corrections &#8212; a message containing corrections for only a subset of the satellites in view.</dd></dl>
 <p> 16</p>
 <dl>
-<dd>special message &#8212; a text message from the beacon operator.</dl>
+<dd>special message &#8212; a text message from the beacon operator.</dd></dl>
 <p> &lt;reference station id&gt; is the id of the GPS reference receiver. The LF transmitters also have (different) id numbers. </p>
 <p> &lt;modified z_count&gt; is the reference time of the corrections in the message in seconds within the current hour. Note that it is in GPS time, which is some seconds ahead of UTC (see the U.S. Naval Observatory&#8217;s <i>table of leap second corrections</i>[2]). </p>
 <p> &lt;sequence no&gt; is a number which increments, modulo 8, for each message transmitted. </p>
@@ -70,7 +70,7 @@ S 8 0 22 249.6 23.760 0.030
 <dl>
 <dd>
 <pre>H 9 687 331.8 1 5 0 T 4</pre>
-</dl>
+</dd></dl>
 <p> &lt;useful length&gt; indicates the number of useful words before the parity error. Depending on the message type, useful information may still be extracted.</p>
 <h3>Correction data (S)</h3>
 <p>One or more of these follow the header for type 1 or type 9 messages. Here is the format: </p>
@@ -78,12 +78,12 @@ S 8 0 22 249.6 23.760 0.030
 <dd>
 <pre>S &lt;satellite&gt; &lt;udre&gt; &lt;iod&gt; &lt;modified z_count&gt; &lt;range error&gt;
  &lt;range error rate&gt;</pre>
-</dl>
+</dd></dl>
 <p> Here is an example: </p>
 <dl>
 <dd>
 <pre>S 7 0 199 331.8 -12.160 0.288</pre>
-</dl>
+</dd></dl>
 <p> &lt;satellite&gt; is the PRN number of the satellite for which this is correction data. </p>
 <p> &lt;udre&gt; is User Differential Range Error with the following values: </p>
 <dl>
@@ -92,7 +92,7 @@ S 8 0 22 249.6 23.760 0.030
 1 1-sigma error &lt;= 4m
 2 1-sigma error &lt;= 8m
 3 1-sigma error &gt; 8m</pre>
-</dl>
+</dd></dl>
 <p> &lt;iod&gt; is Issue Of Data, matching the IOD for the current ephemeris of this satellite, as transmitted by the satellite. The IOD is a unique tag that identifies the ephemeris; the GPS using the DGPS correction and the DGPS generating the data must use the same orbital positions for the satellite. </p>
 <p> &lt;modified z_count&gt; is just a copy of the same field from the header. </p>
 <p> &lt;range error&gt; is the pseudorange error in meters for this satellite as measured by the beacon reference receiver at the epoch indicated by &lt;modified z_count&gt; </p>
@@ -102,24 +102,24 @@ S 8 0 22 249.6 23.760 0.030
 <dl>
 <dd>
 <pre>R &lt;X-coordinate&gt; &lt;Y-coordinate&gt; &lt;Z-coordinate&gt;</pre>
-</dl>
+</dd></dl>
 <p> Here is an example: </p>
 <dl>
 <dd>
 <pre>R 3746729.40 -5086.23 5144450.67</pre>
-</dl>
+</dd></dl>
 <p> The coordinates are the position of the station, in meters to two decimal places, in Earth Centred Earth Fixed coordinates. These are usually referred to the WGS84 reference frame, but may be referred to NAD83 in the US (essentially identical to WGS84 for all except geodesists), or to some other reference frame in other parts of the world.</p>
 <h3>Datum (D)</h3>
 <p>Here is the format: </p>
 <dl>
 <dd>
 <pre>D &lt;dgnss type&gt; &lt;dat&gt; &lt;datum name&gt; [ &lt;dx&gt; &lt;dy&gt; &lt;dz&gt; ]</pre>
-</dl>
+</dd></dl>
 <p> Here is an (artificial) example: </p>
 <dl>
 <dd>
 <pre>D GPS 0 ABC12 25.8 30.5 33.0</pre>
-</dl>
+</dd></dl>
 <p> &lt;dgnss type&gt; is either GPS or GLONASS. </p>
 <p> &lt;dat&gt; is 0 or 1 and indicates the sense of the offset shift given by dx, dy, dz. dat = 0 means that the station coordinates (in the reference message) are referred to a local datum and that adding dx, dy, dz to that position will render it in GNSS coordinates (WGS84 for GPS). If dat = 1 then the ref station position is in GNSS coordinates and adding dx, dy, dz will give it referred to the local datum. </p>
 <p> &lt;datum name&gt; is a standard name for the datum. </p>
@@ -131,12 +131,12 @@ S 8 0 22 249.6 23.760 0.030
 <dd>
 <pre>C &lt;sat&gt; &lt;iodl&gt; &lt;health&gt; &lt;snr&gt; &lt;hlth en&gt; &lt;new data&gt; &lt;los warning&gt;
  &lt;time to unhealthy&gt;</pre>
-</dl>
+</dd></dl>
 <p> Here is an example: </p>
 <dl>
 <dd>
 <pre>C 29 0 0 53 0 0 0 0</pre>
-</dl>
+</dd></dl>
 <p> &lt;sat&gt; is the PRN number of the satellite. </p>
 <p> &lt;iodl&gt; is 1 bit. 0 indicates that this information relates to the satellite information in an accompanying type 1 or type 9 message. </p>
 <p> &lt;health&gt; 0 indicates that the satellite is healthy. Any other value indicates a problem (coding is not known). </p>
@@ -150,12 +150,12 @@ S 8 0 22 249.6 23.760 0.030
 <dd>
 <pre>A &lt;latitude&gt; &lt;longitude&gt; &lt;range&gt; &lt;frequency&gt; &lt;health&gt; &lt;station id&gt;
  &lt;bitrate&gt;</pre>
-</dl>
+</dd></dl>
 <p> Here is an example: </p>
 <dl>
 <dd>
 <pre>A 54.1176 -0.0714 100 302.5 0 447 2</pre>
-</dl>
+</dd></dl>
 <p> &lt;latitude&gt; and &lt;longitude&gt; give the position, in degrees, of the LF transmitter antenna for the station for which this is an almanac. North and East are positive. </p>
 <p> &lt;range&gt; is the published range of the station in km. </p>
 <p> &lt;frequency&gt; is the broadcast frequency in kHz. </p>
@@ -167,12 +167,12 @@ S 8 0 22 249.6 23.760 0.030
 <dl>
 <dd>
 <pre>T &lt;text&gt;</pre>
-</dl>
+</dd></dl>
 <p> Here is an example: </p>
 <dl>
 <dd>
 <pre>T THLS TRIAL SERVICE</pre>
-</dl>
+</dd></dl>
 <p> &lt;text&gt; is just a text message sent by the beacon operator.</p>
 <h3>Null (N)</h3>
 <p>This just indicates a null message. There are no fields.</p>
@@ -182,12 +182,12 @@ S 8 0 22 249.6 23.760 0.030
 <dl>
 <dd>
 <pre>U &lt;hex-literal&gt;</pre>
-</dl>
+</dd></dl>
 <p> Here is an example: </p>
 <dl>
 <dd>
 <pre>U 0x76423055</pre>
-</dl>
+</dd></dl>
 <p> The &lt;hex-literal&gt; will represent 32 bits of information, after parity checks and inversion. The high two bits should be ignored.</p>
 <h3>Null (N)</h3>
 <p>This just indicates a null message. There are no fields.</p>
@@ -201,15 +201,16 @@ S 8 0 22 249.6 23.760 0.030
 <p>Much of the portion of this text describing RTCM2 was originally written by John Sager &lt;john.sager [at] btinternet.com&gt; in association with his RTCM decoder. Other material comes from the GPSD project. There is a project page for gpsd <i>here</i>[3].</p>
 <h2>Notes</h2>
 <dl>
-<dt> 1.</p>
-<dd>Radio Technical Commission for Maritime Services</p>
+<dt> 1.</dt>
+<dd>Radio Technical Commission for Maritime Services</dd>
 <dl>
-<dd><a rel="nofollow" href="http://www.rtcm.org/">http://www.rtcm.org/</a></dl>
-<dt> 2.</p>
-<dd>table of leap second corrections</p>
+<dd><a rel="nofollow" href="http://www.rtcm.org/">http://www.rtcm.org/</a></dd></dl>
+<dt> 2.</dt>
+<dd>table of leap second corrections</dd>
 <dl>
-<dd><a href="ftp://maia.usno.navy.mil/ser7/tai-utc.dat">ftp://maia.usno.navy.mil/ser7/tai-utc.dat</a></dl>
-<dt> 3.</p>
-<dd>here</p>
+<dd><a href="ftp://maia.usno.navy.mil/ser7/tai-utc.dat">ftp://maia.usno.navy.mil/ser7/tai-utc.dat</a></dd></dl>
+<dt> 3.</dt>
+<dd>here</dd>
 <dl>
-<dd><a rel="nofollow" href="http://gpsd.berlios.de/">http://gpsd.berlios.de/</a></dl>
+<dd><a rel="nofollow" href="http://gpsd.berlios.de/">http://gpsd.berlios.de/</a></dd></dl>
+</dl>

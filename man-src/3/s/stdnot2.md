@@ -34,14 +34,10 @@ None.
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;algorithm&gt;
-
 #include &lt;functional&gt;
-
 #include &lt;iostream&gt;
-
 #include &lt;vector&gt;
 struct old_same : std::binary_function&lt;int, int, bool&gt;
-
 {
     bool operator()(int a, int b) const
     {
@@ -49,7 +45,6 @@ struct old_same : std::binary_function&lt;int, int, bool&gt;
     }
 };
 struct new_same
-
 {
     bool operator()(int a, int b) const
     {
@@ -57,13 +52,10 @@ struct new_same
     }
 };
 bool same_fn(int a, int b)
-
 {
     return a == b;
 }
-
 int main()
-
 {
     std::vector&lt;int&gt; v1{0, 1, 2};
     std::vector&lt;int&gt; v2{2, 1, 0};

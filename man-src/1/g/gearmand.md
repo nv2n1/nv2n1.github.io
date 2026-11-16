@@ -25,13 +25,13 @@ url: "/docs/linux/man/1-gearmand/"
 
 <dl>
 <dt>--daemonize / -d
-<dd> Make the daemon run in the background (good for init.d scripts, bad for running under daemontools/supervise).
-<dt>--port=7003 / -p 7003
-<dd> Set the port number, defaults to 7003.
-<dt>--pidfile=/some/dir/gearmand.pid
-<dd> Write a pidfile when starting up
-<dt>--debug=1
-<dd> Enable debugging (currently the only debug output is when a client or worker connects).</dl>
+</dt><dd> Make the daemon run in the background (good for init.d scripts, bad for running under daemontools/supervise).
+</dd><dt>--port=7003 / -p 7003
+</dt><dd> Set the port number, defaults to 7003.
+</dd><dt>--pidfile=/some/dir/gearmand.pid
+</dt><dd> Write a pidfile when starting up
+</dd><dt>--debug=1
+</dt><dd> Enable debugging (currently the only debug output is when a client or worker connects).</dd></dl>
 
 <h2>COPYRIGHT</h2>
 

@@ -11,14 +11,10 @@ std::at_quick_exit - std::at_quick_exit
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;cstdlib&gt;
-
     int at_quick_exit(/*atexit-handler*/ *func) noexcept;
 (1)(since C++ 11)
-
     int at_quick_exit(/*c-atexit-handler*/ *func) noexcept;
-
 extern &quot;C++&quot; using /*atexit-handler*/ = void(); // exposition-only (2)
-
 extern &quot;C&quot; using /*c-atexit-handler*/ = void(); // exposition-only</code></pre> 
 Registers the function pointed to by func to be called on quick program termination (via std::quick_exit). 
 Calling the function from several threads does not induce a data race. The implementation shall support the registration of at least 32 functions. 

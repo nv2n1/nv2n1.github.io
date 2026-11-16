@@ -11,21 +11,9 @@ description: "std::this_thread –"
 <h2>Synopsis</h2>
 <h3>Functions</h3>
 <pre><code>void __sleep_for (chrono::seconds, chrono::nanoseconds)
-
-
-
 thread::id get_id () noexcept
-
-
-
 template&lt;typename _Rep , typename _Period &gt; void sleep_for (const chrono::duration&lt; _Rep, _Period &gt; &amp;__rtime)
-
-
-
 template&lt;typename _Clock , typename _Duration &gt; void sleep_until (const chrono::time_point&lt; _Clock, _Duration &gt; &amp;__atime)
-
-
-
 void yield () noexcept</code></pre>
 <h2>Detailed Description</h2>
 <p>ISO C++ 2011 entities sub-namespace for thread. 30.3.2 Namespace this_thread.</p>

@@ -29,7 +29,7 @@ off --- deregisters all <font SIZE="-1">XPD</font>'s from dahdi.
 <h2>Options</h2>
 
 <dl><dt>-s <i>sort_order</i>
-<dd>The sort order to use.</dl>
+</dt><dd>The sort order to use.</dd></dl>
  
 
  If the option is not used, the sort order is taken from the environment variable <font SIZE="-1">XBUS_SORT</font> and failing that: the hard-coded default of <font SIZE="-1">SORT_CONNECTOR</font>. 
@@ -61,8 +61,6 @@ An example of the output of dahdi_registration for some registered Astribanks:
 <h2>Files</h2>
 
 <dl><dt>/proc/xpp/XBUS-nn/XPD-mm/dahdi_registration
-<dd>Reading from this file shows if if the if the specific <font SIZE="-1">XPD</font> is registered. Writing to it 0 or 1 registers / unregisters the device. 
-
+</dt><dd>Reading from this file shows if if the if the specific <font SIZE="-1">XPD</font> is registered. Writing to it 0 or 1 registers / unregisters the device. 
  This should allow you to register / unregister a specific <font SIZE="-1">XPD</font> rather than all of them. 
-
-</dl>
+</dd></dl>

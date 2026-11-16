@@ -14,16 +14,16 @@ description: "vfs_lock_file – file byte range lock"
 <p><i>filp</i></p>
 <dl>
 <dd>
-<dd>The file to apply the lock to</dl>
+</dd><dd>The file to apply the lock to</dd></dl>
 <p> <i>cmd</i></p>
 <dl>
-<dd>type of locking operation (F_SETLK, F_GETLK, etc.)</dl>
+<dd>type of locking operation (F_SETLK, F_GETLK, etc.)</dd></dl>
 <p> <i>fl</i></p>
 <dl>
-<dd>The lock to be applied</dl>
+<dd>The lock to be applied</dd></dl>
 <p> <i>conf</i></p>
 <dl>
-<dd>Place to return a copy of the conflicting lock, if found.</dl>
+<dd>Place to return a copy of the conflicting lock, if found.</dd></dl>
 <h2>Description</h2>
 <p>A caller that doesn&#8217;t care about the conflicting lock may pass NULL as the final argument. </p>
 <p> If the filesystem defines a private -&gt;<code>lock</code> method, then <i>conf</i> will be left unchanged; so a caller that cares should initialize it to some acceptable default. </p>

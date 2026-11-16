@@ -133,33 +133,33 @@ description: "XmSeparator — The Separator widget class"
 </table>
 </table>
 <dl COMPACT>
-<dt><code>XmNmargin</code></p>
-<dd>For horizontal orientation, specifies the space on the left and right sides between the border of the Separator and the line drawn. For vertical orientation, specifies the space on the top and bottom between the border of the Separator and the line drawn.</p>
-<dt><code>XmNorientation</code></p>
-<dd>Displays Separator vertically or horizontally. This resource can have values of <code>XmVERTICAL</code> and <code>XmHORIZONTAL</code>.</p>
-<dt><code>XmNseparatorType</code></p>
-<dd>Specifies the type of line drawing to be done in the Separator widget.</p>
+<dt><code>XmNmargin</code></dt>
+<dd>For horizontal orientation, specifies the space on the left and right sides between the border of the Separator and the line drawn. For vertical orientation, specifies the space on the top and bottom between the border of the Separator and the line drawn.</dd>
+<dt><code>XmNorientation</code></dt>
+<dd>Displays Separator vertically or horizontally. This resource can have values of <code>XmVERTICAL</code> and <code>XmHORIZONTAL</code>.</dd>
+<dt><code>XmNseparatorType</code></dt>
+<dd>Specifies the type of line drawing to be done in the Separator widget.</dd>
 <dl COMPACT>
 <dd>
-<dl COMPACT>
-<dt><code>XmSINGLE_LINE</code></p>
-<dd>Single line</p>
-<dt><code>XmDOUBLE_LINE</code></p>
-<dd>Double line</p>
-<dt><code>XmSINGLE_DASHED_LINE</code></p>
-<dd>Single-dashed line</p>
-<dt><code>XmDOUBLE_DASHED_LINE</code></p>
-<dd>Double-dashed line</p>
-<dt><code>XmNO_LINE</code></p>
-<dd>No line</p>
-<dt><code>XmSHADOW_ETCHED_IN</code></p>
-<dd>A line whose shadows give the effect of a line etched into the window. The thickness of the line is equal to the value of <code>XmNshadowThickness</code>. For horizontal orientation, the top shadow is drawn in <code>XmNtopShadowColor</code> and the bottom shadow is drawn in <code>XmNbottomShadowColor</code>. For vertical orientation, the left edge is drawn in <code>XmNtopShadowColor</code> and the right edge is drawn in <code>XmNbottomShadowColor</code>.</p>
-<dt><code>XmSHADOW_ETCHED_OUT</code></p>
-<dd>A line whose shadows give the effect of an etched line coming out of the window. The thickness of the line is equal to the value of <code>XmNshadowThickness</code>. For horizontal orientation, the top shadow is drawn in <code>XmNbottomShadowColor</code> and the bottom shadow is drawn in <code>XmNtopShadowColor</code>. For vertical orientation, the left edge is drawn in <code>XmNbottomShadowColor</code> and the right edge is drawn in <code>XmNtopShadowColor</code>.</p>
-<dt><code>XmSHADOW_ETCHED_IN_DASH</code></p>
-<dd>Identical to <code>XmSHADOW_ETCHED_IN</code> except a series of lines creates a dashed line.</p>
-<dt><code>XmSHADOW_ETCHED_OUT_DASH</code></p>
-<dd>Identical to <code>XmSHADOW_ETCHED_OUT</code> except a series of lines creates a dashed line.</dl>
+</dd><dl COMPACT>
+<dt><code>XmSINGLE_LINE</code></dt>
+<dd>Single line</dd>
+<dt><code>XmDOUBLE_LINE</code></dt>
+<dd>Double line</dd>
+<dt><code>XmSINGLE_DASHED_LINE</code></dt>
+<dd>Single-dashed line</dd>
+<dt><code>XmDOUBLE_DASHED_LINE</code></dt>
+<dd>Double-dashed line</dd>
+<dt><code>XmNO_LINE</code></dt>
+<dd>No line</dd>
+<dt><code>XmSHADOW_ETCHED_IN</code></dt>
+<dd>A line whose shadows give the effect of a line etched into the window. The thickness of the line is equal to the value of <code>XmNshadowThickness</code>. For horizontal orientation, the top shadow is drawn in <code>XmNtopShadowColor</code> and the bottom shadow is drawn in <code>XmNbottomShadowColor</code>. For vertical orientation, the left edge is drawn in <code>XmNtopShadowColor</code> and the right edge is drawn in <code>XmNbottomShadowColor</code>.</dd>
+<dt><code>XmSHADOW_ETCHED_OUT</code></dt>
+<dd>A line whose shadows give the effect of an etched line coming out of the window. The thickness of the line is equal to the value of <code>XmNshadowThickness</code>. For horizontal orientation, the top shadow is drawn in <code>XmNbottomShadowColor</code> and the bottom shadow is drawn in <code>XmNtopShadowColor</code>. For vertical orientation, the left edge is drawn in <code>XmNbottomShadowColor</code> and the right edge is drawn in <code>XmNtopShadowColor</code>.</dd>
+<dt><code>XmSHADOW_ETCHED_IN_DASH</code></dt>
+<dd>Identical to <code>XmSHADOW_ETCHED_IN</code> except a series of lines creates a dashed line.</dd>
+<dt><code>XmSHADOW_ETCHED_OUT_DASH</code></dt>
+<dd>Identical to <code>XmSHADOW_ETCHED_OUT</code> except a series of lines creates a dashed line.</dd></dl>
 </dl>
 </dl>
 <h3>Inherited Resources</h3>

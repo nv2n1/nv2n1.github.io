@@ -91,22 +91,22 @@ gdcmconv -i input.dcm -o output.dcm
 <p> Eventhough gdcmconv can overwrite directly on the same file (input.dcm = output.dcm), it is recommended that user should first convert into a different file to make sure the bug is properly handled by GDCM. </p>
 <p> Typical cases where you would want to use gdcmconv in its simple form: </p>
 <dl>
-<dt>*</p>
-<dd> convert non-cp246 conforming file into conforming cp246,</p>
-<dt>*</p>
-<dd> convert implicit little endian transfer syntax file meta header into proper explicit little endian transfer syntax,</p>
-<dt>*</p>
-<dd> convert the GE-13 bytes bug,</p>
-<dt>*</p>
-<dd> convert dual syntax file: implicit/explicit,</p>
-<dt>*</p>
-<dd> convert Philips dual Little Endian/Big Endian file,</p>
-<dt>*</p>
-<dd> convert GDCM 1.2.0 broken UN-2-bytes fields,</p>
-<dt>*</p>
-<dd> &amp;&#8230;</p>
-<dt>*</p>
-<dd> All other broken files listed in the supported section.</dl>
+<dt>*</dt>
+<dd> convert non-cp246 conforming file into conforming cp246,</dd>
+<dt>*</dt>
+<dd> convert implicit little endian transfer syntax file meta header into proper explicit little endian transfer syntax,</dd>
+<dt>*</dt>
+<dd> convert the GE-13 bytes bug,</dd>
+<dt>*</dt>
+<dd> convert dual syntax file: implicit/explicit,</dd>
+<dt>*</dt>
+<dd> convert Philips dual Little Endian/Big Endian file,</dd>
+<dt>*</dt>
+<dd> convert GDCM 1.2.0 broken UN-2-bytes fields,</dd>
+<dt>*</dt>
+<dd> &amp;&#8230;</dd>
+<dt>*</dt>
+<dd> All other broken files listed in the supported section.</dd></dl>
 <p> When no option other is used, only the dataset is inspected. So encapsulated Pixel Data, for instance, is not inspected for well known bugs. </p>
 <p> When doing this kind of work, this is usually a good idea to perform some kind of quality control, see gdcmconv Quality Control section (down below).</p>
 <h2>Typical usage</h2>
@@ -169,10 +169,10 @@ $ gdcmconv --rle uncompressed.dcm compressed.dcm
 <p> Sometime it is necessary to use the &#8211;force option. By default when user specify &#8211;j2k and input file is already in JPEG 2000 encapsulated DICOM format then no operation takes places. By using &#8211;force you make sure that (re)compression operation takes places. </p>
 <p> Real life example of why you would use &#8211;force: </p>
 <dl>
-<dt>*</p>
-<dd> When Pixel Data is missing data / is padded with junk</p>
-<dt>*</p>
-<dd> When you would like to make sure GDCM can handle decompression &amp; recompression cycle</dl>
+<dt>*</dt>
+<dd> When Pixel Data is missing data / is padded with junk</dd>
+<dt>*</dt>
+<dd> When you would like to make sure GDCM can handle decompression &amp; recompression cycle</dd></dl>
 <h3>Decompressing a Compressed DICOM</h3>
 <pre>
 $ gdcmconv --raw compressed.dcm uncompressed.dcm
@@ -196,10 +196,10 @@ $ gdcmconv --raw --planar-configuration 1 uncompressed1.dcm uncompressed2.dcm
 <h3>DCMTK / dicom3tools</h3>
 <p> Using another DICOM implementation such as the one from DCMTK or dicom3tools can be a good process to check the output of gdcmconv. </p>
 <dl>
-<dt>*</p>
-<dd> For DCMTK use: dcmdump</p>
-<dt>*</p>
-<dd> For dicom3tools use: dcdump</dl>
+<dt>*</dt>
+<dd> For DCMTK use: dcmdump</dd>
+<dt>*</dt>
+<dd> For dicom3tools use: dcdump</dd></dl>
 <p> For reference, gdcmconv &#8211;raw will act as dcmdjpeg +cn +px, since it never tries to convert color space.</p>
 <h3>VIM: vimdiff</h3>
 <p> You can setup your favorite editor to compare the output, for instance in vim: </p>

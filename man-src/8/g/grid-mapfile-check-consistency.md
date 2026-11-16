@@ -17,13 +17,13 @@ description: "grid-mapfile-check-consistency – Add an entry to a grid map file
 <p> The full set of command-line options to <code>grid-mapfile-check-consistency</code> are: </p>
 <p> <code>-h, -help, -usage</code></p>
 <dl>
-<dd>Display the command-line options to <code>grid-mapfile-check-consistency</code>.</dl>
+<dd>Display the command-line options to <code>grid-mapfile-check-consistency</code>.</dd></dl>
 <p> <code>-version, -versions</code></p>
 <dl>
-<dd>Display the version number of the <code>grid-mapfile-check-consistency</code> command.</dl>
+<dd>Display the version number of the <code>grid-mapfile-check-consistency</code> command.</dd></dl>
 <p> <code>-mapfile </code><i>MAPFILE</i><code>, -f </code><i>MAPFILE</i></p>
 <dl>
-<dd>Check the gridmap file named by <i>MAPFILE</i> instead of the default.</dl>
+<dd>Check the gridmap file named by <i>MAPFILE</i> instead of the default.</dd></dl>
 <h2>Examples</h2>
 <p>Check that the gridmap file in /etc/grid-security is valid: </p>
 <dl>
@@ -33,7 +33,7 @@ Checking /etc/grid-security/grid-mapfile
 Verifying grid mapfile existence...OK
 Checking for duplicate entries...OK
 Checking for valid user names...OK</pre>
-</dl>
+</dd></dl>
 <p> Check a gridmap file that has an invalid local user name: </p>
 <dl>
 <dd>
@@ -43,20 +43,20 @@ Verifying grid mapfile existence...OK
 Checking for duplicate entries...OK
 ERROR: baduser is not a valid local username
 ERROR: Found 1 invalid username(s)</pre>
-</dl>
+</dd></dl>
 <h2>Environment</h2>
 <p>The following environment variables affect the execution of <code>grid-mapfile-check-consistency</code>: </p>
 <p> <code>GRIDMAP</code></p>
 <dl>
-<dd>Path to the gridmap to check.</dl>
+<dd>Path to the gridmap to check.</dd></dl>
 <h2>Files</h2>
 <p>The following files affect the execution of <code>grid-mapfile-check-consistency</code>: </p>
 <p> <code>$HOME/.gridmap</code></p>
 <dl>
-<dd>Path to the default gridmap to check if the GRIDMAP environment variable is not set for non-root users.</dl>
+<dd>Path to the default gridmap to check if the GRIDMAP environment variable is not set for non-root users.</dd></dl>
 <p> <code>/etc/grid-security/grid-mapfile</code></p>
 <dl>
-<dd>Path to the default gridmap to check if GRIDMAP environment variable is not set and the above file does not exist.</dl>
+<dd>Path to the default gridmap to check if GRIDMAP environment variable is not set and the above file does not exist.</dd></dl>
 <h2>See Also</h2>
 <p><a href="/docs/linux/man/8-grid-mapfile-add-entry/">grid-mapfile-add-entry</a>(8), <a href="/docs/linux/man/8-grid-mapfile-delete-entry/">grid-mapfile-delete-entry</a>(8)</p>
 <h2>Author</h2>

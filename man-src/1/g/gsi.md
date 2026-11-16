@@ -25,16 +25,16 @@ description: "gsi – Gambit-C Scheme Interpreter and Compiler"
 <h2>OPTIONS</h2>
 <p> A summary of options is included below. For a complete description, see the Info files.</p>
 <dl>
-<dt><code>&#8211;</code></p>
-<dd> Initiate a REPL at this point. (Continue by issuing a <code>,c</code> command at the interpreter prompt)</p>
-<dt><code>-:</code></p>
-<dd> Comma separated list of run-time options</p>
-<dt><code>-e</code></p>
-<dd> Evaluate an expression.</p>
-<dt><code>-f</code></p>
-<dd> Skip initialization file.</p>
-<dt><code>-v</code></p>
-<dd> Show version of program.</dl>
+<dt><code>&#8211;</code></dt>
+<dd> Initiate a REPL at this point. (Continue by issuing a <code>,c</code> command at the interpreter prompt)</dd>
+<dt><code>-:</code></dt>
+<dd> Comma separated list of run-time options</dd>
+<dt><code>-e</code></dt>
+<dd> Evaluate an expression.</dd>
+<dt><code>-f</code></dt>
+<dd> Skip initialization file.</dd>
+<dt><code>-v</code></dt>
+<dd> Show version of program.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> The documentation for these programs is arguably too extensive to cover with man pages. Only the common command line options are given here. The programs are documented fully in <code>Gambit-C</code>, available on-line at the Gambit-C Homepage. Once package gambc-doc is installed, this 200+ page document is available via the Info system (info gambit-c), in html via doc-base, or as files in /usr/share/doc/gambc (html, pdf, txt). </p>
 <p> The Debian package r5rs-doc provides the Revised(5) Report on the Algorithmic Language Scheme in several formats. That document is the defining description of the programming language Scheme. </p>

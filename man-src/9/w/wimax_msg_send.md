@@ -14,10 +14,10 @@ description: "wimax_msg_send – Send a pre-allocated message to user space"
 <p><i>wimax_dev</i></p>
 <dl>
 <dd>
-<dd>WiMAX device descriptor</dl>
+</dd><dd>WiMAX device descriptor</dd></dl>
 <p> <i>skb</i></p>
 <dl>
-<dd>struct sk_buff returned by <code>wimax_msg_alloc</code>. Note the ownership of <i>skb</i> is transferred to this function.</dl>
+<dd>struct sk_buff returned by <code>wimax_msg_alloc</code>. Note the ownership of <i>skb</i> is transferred to this function.</dd></dl>
 <h2>Return</h2>
 <p>0 if ok, &lt; 0 errno code on error</p>
 <h2>Description</h2>

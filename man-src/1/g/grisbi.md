@@ -31,10 +31,10 @@ description: "grisbi – Personal finance tracking program based on GTK"
 <h2>OPTIONS</h2>
 <p> These programs follow the usual GNU command line syntax, with long options starting with two dashes (`-&#8216;). A summary of options is included below.</p>
 <dl>
-<dt><code>-?, &#8211;help</code></p>
-<dd> Show summary of options.</p>
-<dt><code>&#8211;version</code></p>
-<dd> Show version of program.</dl>
+<dt><code>-?, &#8211;help</code></dt>
+<dd> Show summary of options.</dd>
+<dt><code>&#8211;version</code></dt>
+<dd> Show version of program.</dd></dl>
 <h2>AUTHOR</h2>
 <p> This manual page was written by Benjamin Drieu &lt;benj [at] debian.org&gt;, for the Debian GNU/Linux system (but may be used by others). </p>
 <h2>Index</h2>

@@ -10,24 +10,24 @@ description: "XSetWMIconName, XGetWMIconName, XSetIconName, XGetIconName – set
 <p>XSetWMIconName, XGetWMIconName, XSetIconName, XGetIconName &#8211; set or read a window&#8217;s WM_ICON_NAME property </p>
 <h2>Syntax</h2>
 <dl COMPACT>
-<dd>void XSetWMIconName(Display *<i>display</i>, Window <i>w</i>, XTextProperty *<i>text_prop</i>);</p>
-<dd>Status XGetWMIconName(Display *<i>display</i>, Window <i>w</i>, XTextProperty *<i>text_prop_return</i>);</p>
-<dd>int XSetIconName(Display *<i>display</i>, Window <i>w</i>, char *<i>icon_name</i>);</p>
-<dd>Status XGetIconName(Display *<i>display</i>, Window <i>w</i>, char **<i>icon_name_return</i>);</dl>
+<dd>void XSetWMIconName(Display *<i>display</i>, Window <i>w</i>, XTextProperty *<i>text_prop</i>);</dd>
+<dd>Status XGetWMIconName(Display *<i>display</i>, Window <i>w</i>, XTextProperty *<i>text_prop_return</i>);</dd>
+<dd>int XSetIconName(Display *<i>display</i>, Window <i>w</i>, char *<i>icon_name</i>);</dd>
+<dd>Status XGetIconName(Display *<i>display</i>, Window <i>w</i>, char **<i>icon_name_return</i>);</dd></dl>
 <h2>Arguments</h2>
 <dl COMPACT>
-<dt><i>display</i></p>
-<dd>Specifies the connection to the X server.</p>
-<dt><i>icon_name</i></p>
-<dd>Specifies the icon name, which should be a null-terminated string.</p>
-<dt><i>icon_name_return</i></p>
-<dd>Returns the window&#8217;s icon name, which is a null-terminated string.</p>
-<dt><i>text_prop</i></p>
-<dd>Specifies the <code>XTextProperty</code> structure to be used.</p>
-<dt><i>text_prop_return</i></p>
-<dd>Returns the <code>XTextProperty</code> structure.</p>
-<dt><i>w</i></p>
-<dd>Specifies the window.</dl>
+<dt><i>display</i></dt>
+<dd>Specifies the connection to the X server.</dd>
+<dt><i>icon_name</i></dt>
+<dd>Specifies the icon name, which should be a null-terminated string.</dd>
+<dt><i>icon_name_return</i></dt>
+<dd>Returns the window&#8217;s icon name, which is a null-terminated string.</dd>
+<dt><i>text_prop</i></dt>
+<dd>Specifies the <code>XTextProperty</code> structure to be used.</dd>
+<dt><i>text_prop_return</i></dt>
+<dd>Returns the <code>XTextProperty</code> structure.</dd>
+<dt><i>w</i></dt>
+<dd>Specifies the window.</dd></dl>
 <h2>Description</h2>
 <p>The <code>XSetWMIconName</code> convenience function calls <code>XSetTextProperty</code> to set the WM_ICON_NAME property. </p>
 <p> The <code>XGetWMIconName</code> convenience function calls <code>XGetTextProperty</code> to obtain the WM_ICON_NAME property. It returns a nonzero status on success; otherwise, it returns a zero status. </p>
@@ -37,14 +37,14 @@ description: "XSetWMIconName, XGetWMIconName, XSetIconName, XGetIconName – set
 <p> <code>XGetIconName</code> can generate a <code>BadWindow</code> error.</p>
 <h2>Properties</h2>
 <dl COMPACT>
-<dt><font SIZE="-1">WM_ICON_NAME</font></p>
-<dd>The name to be used in an icon.</dl>
+<dt><font SIZE="-1">WM_ICON_NAME</font></dt>
+<dd>The name to be used in an icon.</dd></dl>
 <h2>Diagnostics</h2>
 <dl COMPACT>
-<dt><code>BadAlloc</code></p>
-<dd>The server failed to allocate the requested resource or server memory.</p>
-<dt><code>BadWindow</code></p>
-<dd>A value for a Window argument does not name a defined Window.</dl>
+<dt><code>BadAlloc</code></dt>
+<dd>The server failed to allocate the requested resource or server memory.</dd>
+<dt><code>BadWindow</code></dt>
+<dd>A value for a Window argument does not name a defined Window.</dd></dl>
 <h2>See Also</h2>
 <p><a href="/docs/linux/man/3-xallocclasshint/">XAllocClassHint</a>(3), <a href="/docs/linux/man/3-xallociconsize/">XAllocIconSize</a>(3), <a href="/docs/linux/man/3-xallocsizehints/">XAllocSizeHints</a>(3), <a href="/docs/linux/man/3-xallocwmhints/">XAllocWMHints</a>(3), <a href="/docs/linux/man/3-xfree/">XFree</a>(3), <a href="/docs/linux/man/3-xsetcommand/">XSetCommand</a>(3), <a href="/docs/linux/man/3-xsettransientforhint/">XSetTransientForHint</a>(3), <a href="/docs/linux/man/3-xsettextproperty/">XSetTextProperty</a>(3), <a href="/docs/linux/man/3-xsetwmclientmachine/">XSetWMClientMachine</a>(3), <a href="/docs/linux/man/3-xsetwmcolormapwindows/">XSetWMColormapWindows</a>(3), <a href="/docs/linux/man/3-xsetwmname/">XSetWMName</a>(3), <a href="/docs/linux/man/3-xsetwmproperties/">XSetWMProperties</a>(3), <a href="/docs/linux/man/3-xsetwmprotocols/">XSetWMProtocols</a>(3), <a href="/docs/linux/man/3-xstringlisttotextproperty/">XStringListToTextProperty</a>(3)<br />
  <i>Xlib &#8211; C Language X Interface</i></p>

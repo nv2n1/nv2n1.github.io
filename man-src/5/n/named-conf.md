@@ -10,10 +10,10 @@ description: "named.conf – configuration file for named"
 <p>named.conf &#8211; configuration file for named</p>
 <h2>Synopsis</h2>
 <dl>
-<dt> <code>named.conf</code></dl>
+<dt> <code>named.conf</code></dt></dl>
 <h2>Description</h2>
 <p><i>named.conf</i></p>
-<dd>is the configuration file for <code>named</code>. Statements are enclosed in braces and terminated with a semi-colon. Clauses in the statements are also semi-colon terminated. The usual comment styles are supported: </p>
+<dd>is the configuration file for <code>named</code>. Statements are enclosed in braces and terminated with a semi-colon. Clauses in the statements are also semi-colon terminated. The usual comment styles are supported: </dd>
 <p> C style: /* */ </p>
 <p> C++ style: // to end of line </p>
 <p> Unix style: # to end of line</p>
@@ -21,7 +21,7 @@ description: "named.conf – configuration file for named"
 <dl>
 <dd>
 <pre>acl <i>string</i> { <i>address_match_element</i>; ... };</pre>
-</dl>
+</dd></dl>
 <h2>Key</h2>
 <dl>
 <dd>
@@ -29,7 +29,7 @@ description: "named.conf – configuration file for named"
  algorithm <i>string</i>;
  secret <i>string</i>;
 };</pre>
-</dl>
+</dd></dl>
 <h2>Masters</h2>
 <dl>
 <dd>
@@ -37,7 +37,7 @@ description: "named.conf – configuration file for named"
  ( <i>masters</i> | <i>ipv4_address</i> [port <i>integer</i>] |
  <i>ipv6_address</i> [port <i>integer</i>] ) [ key <i>string</i> ]; ...
 };</pre>
-</dl>
+</dd></dl>
 <h2>Server</h2>
 <dl>
 <dd>
@@ -57,21 +57,21 @@ description: "named.conf – configuration file for named"
  [ port ( <i>integer</i> | * ) ];
  support-ixfr <i>boolean</i>; // obsolete
 };</pre>
-</dl>
+</dd></dl>
 <h2>Trusted-Keys</h2>
 <dl>
 <dd>
 <pre>trusted-keys {
  <i>domain_name</i> <i>flags</i> <i>protocol</i> <i>algorithm</i> <i>key</i>; ... 
 };</pre>
-</dl>
+</dd></dl>
 <h2>Managed-Keys</h2>
 <dl>
 <dd>
 <pre>managed-keys {
  <i>domain_name</i> <code>initial-key</code> <i>flags</i> <i>protocol</i> <i>algorithm</i> <i>key</i>; ... 
 };</pre>
-</dl>
+</dd></dl>
 <h2>Controls</h2>
 <dl>
 <dd>
@@ -82,7 +82,7 @@ description: "named.conf – configuration file for named"
  [ keys { <i>string</i>; ... } ];
  unix <i>unsupported</i>; // not implemented
 };</pre>
-</dl>
+</dd></dl>
 <h2>Logging</h2>
 <dl>
 <dd>
@@ -99,7 +99,7 @@ description: "named.conf – configuration file for named"
  };
  category <i>string</i> { <i>string</i>; ... };
 };</pre>
-</dl>
+</dd></dl>
 <h2>Lwres</h2>
 <dl>
 <dd>
@@ -111,7 +111,7 @@ description: "named.conf – configuration file for named"
  search { <i>string</i>; ... };
  ndots <i>integer</i>;
 };</pre>
-</dl>
+</dd></dl>
 <h2>Options</h2>
 <dl>
 <dd>
@@ -302,7 +302,7 @@ description: "named.conf – configuration file for named"
  treat-cr-as-space <i>boolean</i>; // obsolete
  use-id-pool <i>boolean</i>; // obsolete
 };</pre>
-</dl>
+</dd></dl>
 <h2>View</h2>
 <dl>
 <dd>
@@ -449,7 +449,7 @@ description: "named.conf – configuration file for named"
  maintain-ixfr-base <i>boolean</i>; // obsolete
  max-ixfr-log-size <i>size</i>; // obsolete
 };</pre>
-</dl>
+</dd></dl>
 <h2>Zone</h2>
 <dl>
 <dd>
@@ -534,7 +534,7 @@ description: "named.conf – configuration file for named"
  max-ixfr-log-size <i>size</i>; // obsolete
  pubkey <i>integer</i> <i>integer</i> <i>integer</i> <i>quoted_string</i>; // obsolete
 };</pre>
-</dl>
+</dd></dl>
 <h2>Files</h2>
 <p><i>/etc/named.conf</i></p>
 <h2>See Also</h2>

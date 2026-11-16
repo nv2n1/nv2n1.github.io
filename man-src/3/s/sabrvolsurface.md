@@ -11,13 +11,9 @@ description: "ql/experimental/volatility/sabrvolsurface.hpp – SABR volatility 
 <h2>Synopsis</h2>
 <pre><code>
 #include &lt;ql/experimental/volatility/interestratevolsurface.hpp&gt;
-
 #include &lt;ql/experimental/volatility/blackatmvolcurve.hpp&gt;
-
 #include &lt;ql/quote.hpp&gt;
-
 #include &lt;ql/termstructures/volatility/sabrinterpolatedsmilesection.hpp&gt;
-
 #include &lt;boost/array.hpp&gt;</code></pre>
 <h3>Classes</h3>
 <p>class <code>SabrVolSurface</code><br />

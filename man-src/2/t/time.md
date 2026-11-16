@@ -19,10 +19,10 @@ description: "time – get time in seconds"
 <p> On success, the value of time in seconds since the Epoch is returned. On error, <i>((time_t)&nbsp;-1)</i> is returned, and <i>errno</i> is set appropriately.</p>
 <h2>ERRORS</h2>
 <dl>
-<dt><code>EFAULT</code></p>
-<dd> <i>tloc</i> points outside your accessible address space (but see BUGS).</p>
+<dt><code>EFAULT</code></dt>
+<dd> <i>tloc</i> points outside your accessible address space (but see BUGS).</dd>
 <dt>
-<dd> On systems where the C library <code>time</code>() wrapper function invokes an implementation provided by the <code><a href="/docs/linux/man/7-vdso/">vdso</a></code>(7) (so that there is no trap into the kernel), an invalid address may instead trigger a <code>SIGSEGV</code> signal.</dl>
+</dt><dd> On systems where the C library <code>time</code>() wrapper function invokes an implementation provided by the <code><a href="/docs/linux/man/7-vdso/">vdso</a></code>(7) (so that there is no trap into the kernel), an invalid address may instead trigger a <code>SIGSEGV</code> signal.</dd></dl>
 <h2>CONFORMING TO</h2>
 <p> SVr4, 4.3BSD, C89, C99, POSIX.1-2001. POSIX does not specify any error conditions.</p>
 <h2>NOTES</h2>

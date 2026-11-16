@@ -14,22 +14,22 @@ description: "btrace – perform live tracing for block devices"
 <p>The <i>btrace</i> script provides a quick and easy way to do live tracing of block devices. It calls <i>blktrace</i> on the specified devices and pipes the output through <i>blkparse</i> for formatting. See blktrace (8) for more in-depth information about how <i>blktrace</i> works. </p>
 <h2>Options</h2>
 <dl>
-<dt> <code>-s</code></p>
-<dd>Displays data sorted by program (see <i>blkparse</i> (1)). </p>
-<dt> <code>-t </code></p>
-<dd>Displays time deltas per IO (see <i>blkparse</i> (1)). </p>
-<dt> <code>-w </code><i>N</i></p>
-<dd>Sets run time to the number of seconds specified (see <i>blktrace</i> (8)). </p>
-<dt> <code>-n </code><i>N</i></p>
-<dd>Specifies the number of buffers to use (see <i>blktrace</i> (8)). </p>
-<dt> <code>-b </code><i>N</i></p>
-<dd>Specifies buffer size for event extraction (scaled by 1024) (see <i>blktrace</i> (8)). </p>
-<dt> <code>-r </code><i>&lt;dbg mnt&gt;</i></p>
-<dd>Specifies the debugfs mountpoint. </p>
-<dt> <code>-a &lt;</code><i>trace</i>&gt;&#8230;</p>
-<dd>Adds mask to current filter (see <i>blktrace</i> (8)). </p>
-<dt> <code>&lt;</code><i>dev</i>&gt;</p>
-<dd>Specifies the device to trace. </p>
+<dt> <code>-s</code></dt>
+<dd>Displays data sorted by program (see <i>blkparse</i> (1)). </dd>
+<dt> <code>-t </code></dt>
+<dd>Displays time deltas per IO (see <i>blkparse</i> (1)). </dd>
+<dt> <code>-w </code><i>N</i></dt>
+<dd>Sets run time to the number of seconds specified (see <i>blktrace</i> (8)). </dd>
+<dt> <code>-n </code><i>N</i></dt>
+<dd>Specifies the number of buffers to use (see <i>blktrace</i> (8)). </dd>
+<dt> <code>-b </code><i>N</i></dt>
+<dd>Specifies buffer size for event extraction (scaled by 1024) (see <i>blktrace</i> (8)). </dd>
+<dt> <code>-r </code><i>&lt;dbg mnt&gt;</i></dt>
+<dd>Specifies the debugfs mountpoint. </dd>
+<dt> <code>-a &lt;</code><i>trace</i>&gt;&#8230;</dt>
+<dd>Adds mask to current filter (see <i>blktrace</i> (8)). </dd>
+<dt> <code>&lt;</code><i>dev</i>&gt;</dt>
+<dd>Specifies the device to trace. </dd>
 </dl>
 <h2>Example</h2>
 <p>Simply running<br />

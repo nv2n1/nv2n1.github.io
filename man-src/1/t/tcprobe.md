@@ -11,8 +11,8 @@ description: "tcprobe – probe multimedia streams from medium and print informa
 <p> tcprobe &#8211; probe multimedia streams from medium and print information on the standard output</p>
 <h2>SYNOPSIS</h2>
 <dl>
-<dt><code>tcprobe</code></p>
-<dd> <code>-i</code> <i>name</i> [ <code>-B</code> ] [ <code>-M</code> ] [ <code>-T</code> <i>title</i> ] [ <code>-b</code> <i>bitrate</i> ] [ <code>-H</code> <i>n</i> ] [ <code>-f</code> <i>seekfile</i> ] [ <code>-d</code> <i>verbosity</i> ] [ <code>-v</code> ]</dl>
+<dt><code>tcprobe</code></dt>
+<dd> <code>-i</code> <i>name</i> [ <code>-B</code> ] [ <code>-M</code> ] [ <code>-T</code> <i>title</i> ] [ <code>-b</code> <i>bitrate</i> ] [ <code>-H</code> <i>n</i> ] [ <code>-f</code> <i>seekfile</i> ] [ <code>-d</code> <i>verbosity</i> ] [ <code>-v</code> ]</dd></dl>
 <h2>COPYRIGHT</h2>
 <p> <code>tcprobe</code> is Copyright (C) by Thomas Oestreich.</p>
 <h2>DESCRIPTION</h2>
@@ -21,25 +21,25 @@ description: "tcprobe – probe multimedia streams from medium and print informa
  <code>tcprobe</code> reads source (from stdin if not explicitely defined) and prints on the standard output.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-i </code><i>name</i></p>
+<dt><code>-i </code><i>name</i></dt>
 <dd> Specify input source. If ommited, <i>stdin</i> is assumed.<br />
- You can specify a file, directory, device, mountpoint or host address as input source. <code>tcprobe</code> usually handles the different types correctly.</p>
-<dt><code>-B</code></p>
-<dd> Binary output to stdout for use in transcode.</p>
-<dt><code>-M</code></p>
-<dd> Use EXPERIMENTAL mplayer probe, useful for streams that tcprobe doesn&#8217;t recognize elsewhere. With this option enabled, tcprobe merely acts as a frontend for mplayer; of course mplayer binary needs to be installed and avalaible somewhere in PATH.</p>
-<dt><code>-T </code><i>title</i></p>
-<dd> Probe for DVD <i>title</i></p>
-<dt><code>-H</code> <i>n</i></p>
-<dd> This option tells <code>tcprobe</code> to scan <i>n</i> MB of input data. Default is to scan 1 MB. To detect all subtitles and audio tracks (if available) it is highly recommended that this <i>n</i> should be at least increased to 10 or even higher. Very often only some audio tracks start during the first MB of a VOB or DVD file so transcode cannot detect them if not called with a higher value. Please note that <a href="/docs/linux/man/1-transcode/">transcode</a>(1) has a similar -H option as well which has the same meaning.</p>
-<dt><code>-s</code> <i>n</i></p>
-<dd> Skip the first <i>n</i> bytes of the input stream. Default is to skip no bytes.</p>
-<dt><code>-b</code> <i>bitrate</i></p>
-<dd> Set audio encoder bitrate to <i>bitrate</i></p>
-<dt><code>-f </code><i>seekfile</i></p>
-<dd> Read index/seek information from <i>seekfile</i>. This is especially useful for AVI files when it takes a long time to probe when there is no index in the AVI available. Also see <a href="/docs/linux/man/1-aviindex/">aviindex</a>(1).</p>
-<dt><code>-d</code> <i>level</i></p>
-<dd> With this option you can specify a bitmask to enable different levels of verbosity (if supported). You can combine several levels by adding the corresponding values: </p>
+ You can specify a file, directory, device, mountpoint or host address as input source. <code>tcprobe</code> usually handles the different types correctly.</dd>
+<dt><code>-B</code></dt>
+<dd> Binary output to stdout for use in transcode.</dd>
+<dt><code>-M</code></dt>
+<dd> Use EXPERIMENTAL mplayer probe, useful for streams that tcprobe doesn&#8217;t recognize elsewhere. With this option enabled, tcprobe merely acts as a frontend for mplayer; of course mplayer binary needs to be installed and avalaible somewhere in PATH.</dd>
+<dt><code>-T </code><i>title</i></dt>
+<dd> Probe for DVD <i>title</i></dd>
+<dt><code>-H</code> <i>n</i></dt>
+<dd> This option tells <code>tcprobe</code> to scan <i>n</i> MB of input data. Default is to scan 1 MB. To detect all subtitles and audio tracks (if available) it is highly recommended that this <i>n</i> should be at least increased to 10 or even higher. Very often only some audio tracks start during the first MB of a VOB or DVD file so transcode cannot detect them if not called with a higher value. Please note that <a href="/docs/linux/man/1-transcode/">transcode</a>(1) has a similar -H option as well which has the same meaning.</dd>
+<dt><code>-s</code> <i>n</i></dt>
+<dd> Skip the first <i>n</i> bytes of the input stream. Default is to skip no bytes.</dd>
+<dt><code>-b</code> <i>bitrate</i></dt>
+<dd> Set audio encoder bitrate to <i>bitrate</i></dd>
+<dt><code>-f </code><i>seekfile</i></dt>
+<dd> Read index/seek information from <i>seekfile</i>. This is especially useful for AVI files when it takes a long time to probe when there is no index in the AVI available. Also see <a href="/docs/linux/man/1-aviindex/">aviindex</a>(1).</dd>
+<dt><code>-d</code> <i>level</i></dt>
+<dd> With this option you can specify a bitmask to enable different levels of verbosity (if supported). You can combine several levels by adding the corresponding values: </dd>
 <p> QUIET 0 </p>
 <p> INFO 1 </p>
 <p> DEBUG 2 </p>
@@ -50,8 +50,8 @@ description: "tcprobe – probe multimedia streams from medium and print informa
 <p> SYNC 64 </p>
 <p> COUNTER 128 </p>
 <p> PRIVATE 256</p>
-<dt><code>-v</code></p>
-<dd> Print version information and exit.</dl>
+<dt><code>-v</code></dt>
+<dd> Print version information and exit.</dd></dl>
 <h2>NOTES</h2>
 <p> <code>tcprobe</code> is a front end for probing various source types and is used in <code>transcode</code>&#8216;s import modules.</p>
 <h2>EXAMPLES</h2>

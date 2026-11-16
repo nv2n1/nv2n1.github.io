@@ -15,11 +15,11 @@ blk_queue_alignment_offset - set physical block alignment offset
 <h2>Arguments</h2>
 
 <i>q</i>
-<dl><dd><dd>the request queue for the device</dl>
+<dl><dd></dd><dd>the request queue for the device</dd></dl>
  
 
  <i>offset</i>
-<dl><dd>alignment offset in bytes</dl>
+<dl><dd>alignment offset in bytes</dd></dl>
 
 <h2>Description</h2>
 

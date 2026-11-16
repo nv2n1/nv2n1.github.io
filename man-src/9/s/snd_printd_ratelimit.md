@@ -10,7 +10,7 @@ description: "snd_printd_ratelimit –"
 <p>snd_printd_ratelimit &#8211;</p>
 <h2>Synopsis</h2>
 <dl>
-<dt> <code>snd_printd_ratelimit(void);</code></dl>
+<dt> <code>snd_printd_ratelimit(void);</code></dt></dl>
 <h2>Arguments</h2>
-<dd>None</p>
+<dd>None</dd>
 <h2>Copyright</h2>

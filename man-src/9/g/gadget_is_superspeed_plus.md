@@ -14,9 +14,9 @@ description: "gadget_is_superspeed_plus – return true if the hardware handles 
 <p><i>g</i></p>
 <dl>
 <dd>
-<dd>controller that might support superspeed plus</dl>
+</dd><dd>controller that might support superspeed plus</dd></dl>
 <h2>Author</h2>
 <p><code>David Brownell</code> &lt;dbrownell [at] users.sourceforge.net&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

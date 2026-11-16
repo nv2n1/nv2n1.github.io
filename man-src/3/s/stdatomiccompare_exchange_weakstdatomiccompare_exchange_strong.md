@@ -10,51 +10,28 @@ description: "std::atomic<T>::compare_exchange_weak,std::atomic<T>::compare_exch
 <p>std::atomic&lt;T&gt;::compare_exchange_weak,std::atomic&lt;T&gt;::compare_exchange_strong &#8211; std::atomic&lt;T&gt;::compare_exchange_weak,std::atomic&lt;T&gt;::compare_exchange_strong</p>
 <h2>Synopsis</h2>
 <pre><code>bool compare_exchange_weak( T&amp; expected, T desired,
-
 std::memory_order success,
-
 std::memory_order failure ) noexcept;
-
 bool compare_exchange_weak( T&amp; expected, T desired,
-
 std::memory_order success,
-
 std::memory_order failure ) volatile noexcept;
-
 bool compare_exchange_weak( T&amp; expected, T desired,
-
 std::memory_order order =
-
 std::memory_order_seq_cst ) noexcept;
-
 bool compare_exchange_weak( T&amp; expected, T desired,
-
 std::memory_order order =
-
 std::memory_order_seq_cst ) volatile noexcept;        (1) (since C++11)
-
 bool compare_exchange_strong( T&amp; expected, T desired,
-
 std::memory_order success,
-
 std::memory_order failure ) noexcept;                                   (2) (since C++11)
-
 bool compare_exchange_strong( T&amp; expected, T desired,
-
 std::memory_order success,
-
 std::memory_order failure ) volatile noexcept;                                            (3) (since C++11)
-
 bool compare_exchange_strong( T&amp; expected, T desired,
-
 std::memory_order order =
-
 std::memory_order_seq_cst ) noexcept;                                                                       (4) (since C++11)
-
 bool compare_exchange_strong( T&amp; expected, T desired,
-
 std::memory_order order =
-
 std::memory_order_seq_cst ) volatile noexcept;</code></pre>
 <p>Atomically compares the<br />
 object_representation<br />
@@ -134,30 +111,21 @@ template &lt;typename T&gt;</p>
 &nbsp;Reason: more practical use of the strong CAS would be nice, such as where Concurrency in Action uses it<br />
  // Run this code </p>
 <pre><code>#include &lt;atomic&gt;
-
 #include &lt;iostream&gt;
 std::atomic&lt;int&gt; ai;
 int tst_val = 4;
-
 int new_val = 5;
-
 bool exchanged = false;
 void valsout()
-
 {
     std::cout &lt;&lt; &quot;ai= &quot; &lt;&lt; ai
-
               &lt;&lt; &quot;  tst_val= &quot; &lt;&lt; tst_val
-
               &lt;&lt; &quot;  new_val= &quot; &lt;&lt; new_val
-
               &lt;&lt; &quot;  exchanged= &quot; &lt;&lt; std::boolalpha &lt;&lt; exchanged
-
               &lt;&lt; &quot;
 &quot;;
 }
 int main()
-
 {
     ai = 3;
     valsout();

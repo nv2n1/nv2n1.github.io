@@ -15,7 +15,7 @@ description: "XmStringFreeContext — A compound string function that releases t
 <h2>Description</h2>
 <p><code>XmStringFreeContext</code> releases the string scanning context data structure.</p>
 <dl COMPACT>
-<dt><i>context</i></p>
-<dd>Specifies the string context structure that was allocated by the <code>XmStringInitContext</code> function</dl>
+<dt><i>context</i></dt>
+<dd>Specifies the string context structure that was allocated by the <code>XmStringInitContext</code> function</dd></dl>
 <h2>Related</h2>
 <p><code><a href="/docs/linux/man/3-xmstringcreate/">XmStringCreate</a></code>(3) and <code><a href="/docs/linux/man/3-xmstringinitcontext/">XmStringInitContext</a></code>(3).</p>

@@ -11,20 +11,14 @@ std::add_cv,std::add_const,std::add_volatile - std::add_cv,std::add_const,std::a
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;type_traits&gt;
-
     template &lt;class T&gt;
     (1)(since C++ 11)
-
         struct add_cv;
-
 template &lt;class T&gt;
 (2)(since C++ 11)
-
     struct add_const;
-
 template &lt;class T&gt;
 (3)(since C++ 11)
-
     struct add_volatile;</code></pre> 
 Provides the member typedef type which is the same as T, except it has a cv-qualifier added (unless T is a function, a reference, or already has this cv-qualifier) 
 1) adds both const and volatile 
@@ -59,10 +53,8 @@ using add_volatile_t = typename add_volatile&lt;T&gt;::type;
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;iostream&gt;
-
 #include &lt;type_traits&gt;
 struct foo
-
 {
     void m()
     {
@@ -82,7 +74,6 @@ struct foo
     }
 };
 int main()
-
 {
     foo{}.m();
     std::add_const&lt;foo&gt;::type{}.m();

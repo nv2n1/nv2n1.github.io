@@ -31,15 +31,14 @@ url: "/docs/linux/man/3-fribidi_join_arabic/"
 
 <dl>
 <dt><b>const FriBidiCharType *bidi_types</b>
-<dd> Input list of bidi types as returned by fribidi_get_bidi_types(). 
-
+</dt><dd> Input list of bidi types as returned by fribidi_get_bidi_types(). 
  Since there are 23 possible values for a <b>const FriBidiCharType</b>, they are not all listed here.
-<dt><b>const FriBidiStrIndex len</b>
-<dd> Input string length.
-<dt><b>const FriBidiLevel *embedding_levels</b>
-<dd> Input list of embedding levels, as returned by fribidi_get_par_embedding_levels.
-<dt><b>FriBidiArabicProp *ar_props</b>
-<dd> Arabic properties to analyze, initialized by joining types, as returned by fribidi_get_joining_types.</dl>
+</dd><dt><b>const FriBidiStrIndex len</b>
+</dt><dd> Input string length.
+</dd><dt><b>const FriBidiLevel *embedding_levels</b>
+</dt><dd> Input list of embedding levels, as returned by fribidi_get_par_embedding_levels.
+</dd><dt><b>FriBidiArabicProp *ar_props</b>
+</dt><dd> Arabic properties to analyze, initialized by joining types, as returned by fribidi_get_joining_types.</dd></dl>
 
 <h2>DESCRIPTION</h2>
 

@@ -14,16 +14,16 @@ description: "ipcget – Common sys_*get code"
 <p><i>ns</i></p>
 <dl>
 <dd>
-<dd>namespace</dl>
+</dd><dd>namespace</dd></dl>
 <p> <i>ids</i></p>
 <dl>
-<dd>ipc identifier set</dl>
+<dd>ipc identifier set</dd></dl>
 <p> <i>ops</i></p>
 <dl>
-<dd>operations to be called on ipc object creation, permission checks and further checks</dl>
+<dd>operations to be called on ipc object creation, permission checks and further checks</dd></dl>
 <p> <i>params</i></p>
 <dl>
-<dd>the parameters needed by the previous operations.</dl>
+<dd>the parameters needed by the previous operations.</dd></dl>
 <h2>Description</h2>
 <p>Common routine called by <code>sys_msgget</code>, <code>sys_semget</code> and <code>sys_shmget</code>.</p>
 <h2>Copyright</h2>

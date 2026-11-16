@@ -11,11 +11,8 @@ description: "ql/experimental/credit/syntheticcdoengines.hpp – Pricing engines
 <h2>Synopsis</h2>
 <pre><code>
 #include &lt;ql/experimental/credit/syntheticcdo.hpp&gt;
-
 #include &lt;ql/experimental/credit/randomdefaultmodel.hpp&gt;
-
 #include &lt;ql/math/distributions/normaldistribution.hpp&gt;
-
 #include &lt;ql/math/distributions/bivariatenormaldistribution.hpp&gt;</code></pre>
 <h3>Classes</h3>
 <p>class <code>engine</code><br />
@@ -44,6 +41,6 @@ description: "ql/experimental/credit/syntheticcdoengines.hpp – Pricing engines
 <p>Pricing engines for the Synthetic CDO instrument. </p>
 <p> <code>Possible enhancements</code></p>
 <dl>
-<dd>Add further engines for analytical expected tranche loss cases &#8211; large homogeneous pool with Normal Inverse Gaussian, Gamma copula</dl>
+<dd>Add further engines for analytical expected tranche loss cases &#8211; large homogeneous pool with Normal Inverse Gaussian, Gamma copula</dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for QuantLib from the source code.</p>

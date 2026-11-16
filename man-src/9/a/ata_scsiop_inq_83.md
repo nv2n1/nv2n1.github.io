@@ -14,15 +14,15 @@ description: "ata_scsiop_inq_83 – Simulate INQUIRY VPD page 83, device identit
 <p><i>args</i></p>
 <dl>
 <dd>
-<dd>device IDENTIFY data / SCSI command of interest.</dl>
+</dd><dd>device IDENTIFY data / SCSI command of interest.</dd></dl>
 <p> <i>rbuf</i></p>
 <dl>
-<dd>Response buffer, to which simulated SCSI cmd output is sent.</dl>
+<dd>Response buffer, to which simulated SCSI cmd output is sent.</dd></dl>
 <h2>Description</h2>
 <p>Yields two logical unit device identification designators: &#8211; vendor specific ASCII containing the ATA serial number &#8211; SAT defined &#8220;t10 vendor id based&#8221; containing ASCII vendor name (&#8220;ATA &#8220;), model and serial numbers. </p>
 <p> LOCKING: spin_lock_irqsave(host lock)</p>
 <h2>Author</h2>
 <p><code>Jeff Garzik</code></p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

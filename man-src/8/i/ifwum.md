@@ -15,48 +15,48 @@ description: "ipmiutil_fwum – Update IPMC using Kontron OEM Firmware Update Ma
 <h2>Options</h2>
 <p>Command line options are described below.</p>
 <dl>
-<dt>-i 00</p>
-<dd>This option specifies a specific FRU ID to show. The input value should be in hex (0b, 1a, etc.), as shown from the sensor SDR output. The default FRU ID is zero (0).</p>
-<dt>-m 002000</p>
-<dd>Show FRU for a specific MC (e.g. bus 00, sa 20, lun 00). This could be used for PICMG or ATCA blade systems. The trailing character, if present, indicates SMI addressing if &#8216;s&#8217;, or IPMB addressing if &#8216;i&#8217; or not present.</p>
-<dt>-x</p>
-<dd>Causes extra debug messages to be displayed.</p>
-<dt>-N nodename</p>
-<dd>Nodename or IP address of the remote target system. If a nodename is specified, IPMI LAN interface is used. Otherwise the local system management interface is used.</p>
-<dt>-U rmt_user</p>
-<dd>Remote username for the nodename given. The default is a null username.</p>
-<dt>-P/-R rmt_pswd</p>
-<dd>Remote password for the nodename given. The default is a null password.</p>
-<dt>-E</p>
-<dd>Use the remote password from Environment variable IPMI_PASSWORD.</p>
-<dt>-F drv_t</p>
-<dd>Force the driver type to one of the followng: imb, va, open, gnu, landesk, lan, lan2, lan2i, kcs, smb. Note that lan2i means lan2 with intelplus. The default is to detect any available driver type and use it.</p>
-<dt>-J</p>
-<dd>Use the specified LanPlus cipher suite (0 thru 17): 0=none/none/none, 1=sha1/none/none, 2=sha1/sha1/none, 3=sha1/sha1/cbc128, 4=sha1/sha1/xrc4_128, 5=sha1/sha1/xrc4_40, 6=md5/none/none, &#8230; 14=md5/md5/xrc4_40. Default is 3.</p>
-<dt>-T</p>
-<dd>Use a specified IPMI LAN Authentication Type: 0=None, 1=MD2, 2=MD5, 4=Straight Password, 5=OEM.</p>
-<dt>-V</p>
-<dd>Use a specified IPMI LAN privilege level. 1=Callback level, 2=User level, 3=Operator level, 4=Administrator level (default), 5=OEM level.</p>
-<dt>-Y</p>
-<dd>Yes, do prompt the user for the IPMI LAN remote password. Alternatives for the password are -E or -P. </p>
+<dt>-i 00</dt>
+<dd>This option specifies a specific FRU ID to show. The input value should be in hex (0b, 1a, etc.), as shown from the sensor SDR output. The default FRU ID is zero (0).</dd>
+<dt>-m 002000</dt>
+<dd>Show FRU for a specific MC (e.g. bus 00, sa 20, lun 00). This could be used for PICMG or ATCA blade systems. The trailing character, if present, indicates SMI addressing if &#8216;s&#8217;, or IPMB addressing if &#8216;i&#8217; or not present.</dd>
+<dt>-x</dt>
+<dd>Causes extra debug messages to be displayed.</dd>
+<dt>-N nodename</dt>
+<dd>Nodename or IP address of the remote target system. If a nodename is specified, IPMI LAN interface is used. Otherwise the local system management interface is used.</dd>
+<dt>-U rmt_user</dt>
+<dd>Remote username for the nodename given. The default is a null username.</dd>
+<dt>-P/-R rmt_pswd</dt>
+<dd>Remote password for the nodename given. The default is a null password.</dd>
+<dt>-E</dt>
+<dd>Use the remote password from Environment variable IPMI_PASSWORD.</dd>
+<dt>-F drv_t</dt>
+<dd>Force the driver type to one of the followng: imb, va, open, gnu, landesk, lan, lan2, lan2i, kcs, smb. Note that lan2i means lan2 with intelplus. The default is to detect any available driver type and use it.</dd>
+<dt>-J</dt>
+<dd>Use the specified LanPlus cipher suite (0 thru 17): 0=none/none/none, 1=sha1/none/none, 2=sha1/sha1/none, 3=sha1/sha1/cbc128, 4=sha1/sha1/xrc4_128, 5=sha1/sha1/xrc4_40, 6=md5/none/none, &#8230; 14=md5/md5/xrc4_40. Default is 3.</dd>
+<dt>-T</dt>
+<dd>Use a specified IPMI LAN Authentication Type: 0=None, 1=MD2, 2=MD5, 4=Straight Password, 5=OEM.</dd>
+<dt>-V</dt>
+<dd>Use a specified IPMI LAN privilege level. 1=Callback level, 2=User level, 3=Operator level, 4=Administrator level (default), 5=OEM level.</dd>
+<dt>-Y</dt>
+<dd>Yes, do prompt the user for the IPMI LAN remote password. Alternatives for the password are -E or -P. </dd>
 </dl>
 <h2>Parameters</h2>
 <p><i>fwum</i> <code>parameters</code></p>
 <dl>
 <dd>
-<dl>
-<dt><i>info</i></p>
-<dd>Show information about current firmware. </p>
-<dt><i>status</i></p>
-<dd>Show status of each firmware bank present in the hardware. </p>
-<dt><i>download</i> <code>filename</code></p>
-<dd>Download the specified firmware image. </p>
-<dt><i>upgrade</i> [<code>filename</code>]</p>
-<dd>Install firmware upgrade. If the filename is specified, the file is downloaded first, otherwise the last firmware downloaded is used. </p>
-<dt><i>rollback</i></p>
-<dd>Ask IPMC to rollback to previous version. </p>
-<dt><i>tracelog</i></p>
-<dd>Show the firmware upgrade log. </p>
+</dd><dl>
+<dt><i>info</i></dt>
+<dd>Show information about current firmware. </dd>
+<dt><i>status</i></dt>
+<dd>Show status of each firmware bank present in the hardware. </dd>
+<dt><i>download</i> <code>filename</code></dt>
+<dd>Download the specified firmware image. </dd>
+<dt><i>upgrade</i> [<code>filename</code>]</dt>
+<dd>Install firmware upgrade. If the filename is specified, the file is downloaded first, otherwise the last firmware downloaded is used. </dd>
+<dt><i>rollback</i></dt>
+<dd>Ask IPMC to rollback to previous version. </dd>
+<dt><i>tracelog</i></dt>
+<dd>Show the firmware upgrade log. </dd>
 </dl>
 </dl>
 <h2>Examples</h2>

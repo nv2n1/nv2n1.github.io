@@ -15,31 +15,31 @@ description: "hp-check – Dependency/Version Check Utility"
 <p> <code>hp-check [OPTIONS]</code></p>
 <h2>OPTIONS</h2>
 <dl>
-<dt>Compile-time check:</p>
-<dd> -c or &#8211;compile</p>
-<dt>Run-time check:</p>
-<dd> -r or &#8211;run or &#8211;runtime</p>
-<dt>Compile and run-time checks:</p>
-<dd> -b or &#8211;both (default)</p>
-<dt>Set the logging level:</p>
-<dd> -l&lt;level&gt; or &#8211;logging=&lt;level&gt; &lt;level&gt;: none, info*, error, warn, debug (*default)</p>
-<dt>Run in debug mode:</p>
-<dd> -g (same as option: -ldebug)</p>
-<dt>Output plain text only:</p>
-<dd> -t</p>
-<dt>This help information:</p>
-<dd> -h or &#8211;help</dl>
+<dt>Compile-time check:</dt>
+<dd> -c or &#8211;compile</dd>
+<dt>Run-time check:</dt>
+<dd> -r or &#8211;run or &#8211;runtime</dd>
+<dt>Compile and run-time checks:</dt>
+<dd> -b or &#8211;both (default)</dd>
+<dt>Set the logging level:</dt>
+<dd> -l&lt;level&gt; or &#8211;logging=&lt;level&gt; &lt;level&gt;: none, info*, error, warn, debug (*default)</dd>
+<dt>Run in debug mode:</dt>
+<dd> -g (same as option: -ldebug)</dd>
+<dt>Output plain text only:</dt>
+<dd> -t</dd>
+<dt>This help information:</dt>
+<dd> -h or &#8211;help</dd></dl>
 <h2>NOTES</h2>
 <dl>
-<dt>1. For checking for the proper build environment for the HPLIP supplied tarball (.tar.gz or .run),</p>
+<dt>1. For checking for the proper build environment for the HPLIP supplied tarball (.tar.gz or .run),</dt>
 <dd>
-<dt>use the &#8211;compile or &#8211;both switches.</p>
+</dd><dt>use the &#8211;compile or &#8211;both switches.</dt>
 <dd>
-<dt>2. For checking for the proper runtime environment for a distro supplied package (.deb, .rpm, etc),</p>
+</dd><dt>2. For checking for the proper runtime environment for a distro supplied package (.deb, .rpm, etc),</dt>
 <dd>
-<dt>use the &#8211;runtime switch.</p>
+</dd><dt>use the &#8211;runtime switch.</dt>
 <dd>
-</dl>
+</dd></dl>
 <h2>AUTHOR</h2>
 <p> HPLIP (HP Linux Imaging and Printing) is an HP developed solution for printing, scanning, and faxing with HP inkjet and laser based printers in Linux.</p>
 <h2>REPORTING BUGS</h2>

@@ -10,18 +10,13 @@ description: "scandir, scandirat, alphasort, versionsort – scan a directory fo
 <p>scandir, scandirat, alphasort, versionsort &#8211; scan a directory for matching entries</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;dirent.h&gt;
-
 int scandir(const char *dirp, struct dirent ***namelist,
             int (*filter)(const struct dirent *),
             int (*compar)(const struct dirent **, const struct dirent **));
-
 int alphasort(const struct dirent **a, const struct dirent **b);
-
 int versionsort(const struct dirent **a, const struct dirent **b);
-
 #include &lt;dirent.h&gt;
 #include &lt;fcntl.h&gt; /* Definition of AT_* constants */
-
 int scandirat(int dirfd, const char *dirp,
               struct dirent ***namelist,
               int (*filter)(const struct dirent *),
@@ -29,7 +24,7 @@ int scandirat(int dirfd, const char *dirp,
 <p> Feature Test Macro Requirements for glibc (see <code><a href="/docs/linux/man/7-feature_test_macros/">feature_test_macros</a></code>(7)): <code>scandir</code>(), <code>alphasort</code>(): </p>
 <dl>
 <dd>/* Since glibc 2.10: */ _POSIX_C_SOURCE&nbsp;&gt;=&nbsp;200809L<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Glibc versions&nbsp;&lt;=&nbsp;2.19:&nbsp;*/&nbsp;_BSD_SOURCE ||&nbsp;_SVID_SOURCE</dl>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Glibc versions&nbsp;&lt;=&nbsp;2.19:&nbsp;*/&nbsp;_BSD_SOURCE ||&nbsp;_SVID_SOURCE</dd></dl>
 <p> <code>versionsort</code>(): _GNU_SOURCE <code>scandirat</code>(): _GNU_SOURCE</p>
 <h2>Description</h2>
 <p>The <code>scandir</code>() function scans the directory <i>dirp</i>, calling <i>filter</i>() on each directory entry. Entries for which <i>filter</i>() returns nonzero are stored in strings allocated via <code><a href="/docs/linux/man/3-malloc/">malloc</a></code>(3), sorted using <code><a href="/docs/linux/man/3-qsort/">qsort</a></code>(3) with the comparison function <i>compar</i>(), and collected in array <i>namelist</i> which is allocated via <code><a href="/docs/linux/man/3-malloc/">malloc</a></code>(3). If <i>filter</i> is NULL, all entries are selected. </p>
@@ -45,18 +40,18 @@ int scandirat(int dirfd, const char *dirp,
 <p> The <code>alphasort</code>() and <code>versionsort</code>() functions return an integer less than, equal to, or greater than zero if the first argument is considered to be respectively less than, equal to, or greater than the second.</p>
 <h2>Errors</h2>
 <dl>
-<dt><code>ENOENT</code></p>
-<dd>The path in <i>dirp</i> does not exist.</p>
-<dt><code>ENOMEM</code></p>
-<dd>Insufficient memory to complete the operation.</p>
-<dt><code>ENOTDIR</code></p>
-<dd>The path in <i>dirp</i> is not a directory.</dl>
+<dt><code>ENOENT</code></dt>
+<dd>The path in <i>dirp</i> does not exist.</dd>
+<dt><code>ENOMEM</code></dt>
+<dd>Insufficient memory to complete the operation.</dd>
+<dt><code>ENOTDIR</code></dt>
+<dd>The path in <i>dirp</i> is not a directory.</dd></dl>
 <p> The following additional errors can occur for <code>scandirat</code>():</p>
 <dl>
-<dt><code>EBADF</code></p>
-<dd><i>dirfd</i> is not a valid file descriptor.</p>
-<dt><code>ENOTDIR</code></p>
-<dd><i>dirp</i> is a relative path and <i>dirfd</i> is a file descriptor referring to a file other than a directory.</dl>
+<dt><code>EBADF</code></dt>
+<dd><i>dirfd</i> is not a valid file descriptor.</dd>
+<dt><code>ENOTDIR</code></dt>
+<dd><i>dirp</i> is a relative path and <i>dirfd</i> is a file descriptor referring to a file other than a directory.</dd></dl>
 <h2>Versions</h2>
 <p><code>versionsort</code>() was added to glibc in version 2.1. </p>
 <p> <code>scandirat</code>() was added to glibc in version 2.15.</p>

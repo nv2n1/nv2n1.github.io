@@ -17,7 +17,6 @@ description: "do_ellipse – Calculates all the points in an ellipse. Allegro ga
 <pre><code>
 void draw_explosion_ring(BITMAP *bmp, int x, int y, int d){
     ...}
-
 do_ellipse(screen, SCREEN_W / 2, SCREEN_H / 2,
            SCREEN_H / 16, SCREEN_H / 32, flame_color,
            draw_explosion_ring);

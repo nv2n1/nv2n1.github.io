@@ -19,16 +19,16 @@ description: "ldns_update_set_zocount, ldns_update_set_prcount, ldns_update_set_
 <p> void ldns_update_set_adcount(ldns_pkt *p, uint16_t c); </p>
 <h2>DESCRIPTION</h2>
 <dl>
-<dt> <i>ldns_update_set_zocount</i>()</dl>
+<dt> <i>ldns_update_set_zocount</i>()</dt></dl>
 <dl>
-<dt> <i>ldns_update_set_prcount</i>()</p>
-<dd>Set the pr count .br <code>p</code>: the packet .br <code>c</code>: the pr count to set</dl>
+<dt> <i>ldns_update_set_prcount</i>()</dt>
+<dd>Set the pr count .br <code>p</code>: the packet .br <code>c</code>: the pr count to set</dd></dl>
 <dl>
-<dt> <i>ldns_update_set_upcount</i>()</p>
-<dd>Set the up count .br <code>p</code>: the packet .br <code>c</code>: the up count to set</dl>
+<dt> <i>ldns_update_set_upcount</i>()</dt>
+<dd>Set the up count .br <code>p</code>: the packet .br <code>c</code>: the up count to set</dd></dl>
 <dl>
-<dt> <i>ldns_update_set_adcount</i>()</p>
-<dd>Set the ad count .br <code>p</code>: the packet .br <code>c</code>: the ad count to set</dl>
+<dt> <i>ldns_update_set_adcount</i>()</dt>
+<dd>Set the ad count .br <code>p</code>: the packet .br <code>c</code>: the ad count to set</dd></dl>
 <h2>AUTHOR</h2>
 <p> The ldns team at NLnet Labs. Which consists out of Jelte Jansen and Miek Gieben. </p>
 <h2>REPORTING BUGS</h2>

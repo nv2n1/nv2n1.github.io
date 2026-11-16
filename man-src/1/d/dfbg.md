@@ -16,14 +16,14 @@ description: "dfbg – DirectFB background configuration tool"
 <p> <code>dfbg</code> requires DirectFB with the multi-application core enabled. </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-c, &#8211;color</code></p>
-<dd> Set color fill mode using &lt;color&gt; in AARRGGBB format (hexadecimal). The alpha component can be omitted in most configurations. </p>
-<dt><code>-t, &#8211;tile</code></p>
-<dd> Set tiled mode instead of scaling the image to fit the screen size. </p>
-<dt><code>-v, &#8211;version</code></p>
-<dd> Output version information. </p>
-<dt><code>-h, &#8211;help</code></p>
-<dd> Print brief help and exit. </p>
+<dt><code>-c, &#8211;color</code></dt>
+<dd> Set color fill mode using &lt;color&gt; in AARRGGBB format (hexadecimal). The alpha component can be omitted in most configurations. </dd>
+<dt><code>-t, &#8211;tile</code></dt>
+<dd> Set tiled mode instead of scaling the image to fit the screen size. </dd>
+<dt><code>-v, &#8211;version</code></dt>
+<dd> Output version information. </dd>
+<dt><code>-h, &#8211;help</code></dt>
+<dd> Print brief help and exit. </dd>
 </dl>
 <h2>EXAMPLES</h2>
 <p> Set background color to DirectFB&#8217;s default color </p>

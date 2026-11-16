@@ -16,12 +16,12 @@ description: "gnome-activity-journal – browse and search a chronological log o
 <h2>OPTIONS</h2>
 <p> The program follows the usual GNU command line syntax, with options starting with two dashes (`&#8211;&#8216;). A summary of options is included below.</p>
 <dl>
-<dt><code>&#8211;version</code></p>
-<dd> Shows the version number and exits.</p>
-<dt><code>-h, &#8211;help</code></p>
-<dd> Shows a short help message listing all supported options and exits.</p>
-<dt><code>&#8211;debug</code></p>
-<dd> Prints additional debug information. </p>
+<dt><code>&#8211;version</code></dt>
+<dd> Shows the version number and exits.</dd>
+<dt><code>-h, &#8211;help</code></dt>
+<dd> Shows a short help message listing all supported options and exits.</dd>
+<dt><code>&#8211;debug</code></dt>
+<dd> Prints additional debug information. </dd>
 </dl>
 <h2>SEE ALSO</h2>
 <p> <code>zeitgeist-daemon</code>, <code>tracker-store</code> </p>

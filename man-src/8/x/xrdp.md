@@ -15,12 +15,12 @@ description: "xrdp – a Remote Desktop Protocol (RDP) server"
  Unlike Windows NT/2000/2003 server, <code>xrdp</code> will not display a Windows desktop but an X window desktop to the user. It can also be used as a VNC-&gt;RDP bridge. </p>
 <h2>Options</h2>
 <dl>
-<dt><code>-n</code>, <code>&#8211;nodaemon</code></p>
-<dd>Starts <code>xrdp</code> in foreground instead of starting it as a daemon.</p>
-<dt><code>-k</code>, <code>&#8211;kill</code></p>
-<dd>Kills running <code>xrdp</code> daemon.</p>
-<dt><code>-h</code>, <code>&#8211;help</code></p>
-<dd>Output help information and exit. </p>
+<dt><code>-n</code>, <code>&#8211;nodaemon</code></dt>
+<dd>Starts <code>xrdp</code> in foreground instead of starting it as a daemon.</dd>
+<dt><code>-k</code>, <code>&#8211;kill</code></dt>
+<dd>Kills running <code>xrdp</code> daemon.</dd>
+<dt><code>-h</code>, <code>&#8211;help</code></dt>
+<dd>Output help information and exit. </dd>
 </dl>
 <h2>Files</h2>
 <p>${XRDP_BIN_DIR}/xrdp<br />

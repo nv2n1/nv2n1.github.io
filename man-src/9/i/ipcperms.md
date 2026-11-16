@@ -15,15 +15,15 @@ ipcperms - check ipc permissions
 <h2>Arguments</h2>
 
 <i>ns</i>
-<dl><dd><dd>ipc namespace</dl>
+<dl><dd></dd><dd>ipc namespace</dd></dl>
  
 
  <i>ipcp</i>
-<dl><dd>ipc permission set</dl>
+<dl><dd>ipc permission set</dd></dl>
  
 
  <i>flag</i>
-<dl><dd>desired permission set</dl>
+<dl><dd>desired permission set</dd></dl>
 
 <h2>Description</h2>
 

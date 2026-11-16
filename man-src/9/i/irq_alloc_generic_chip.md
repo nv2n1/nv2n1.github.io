@@ -14,26 +14,26 @@ description: "irq_alloc_generic_chip – Allocate a generic chip and initialize 
 <p><i>name</i></p>
 <dl>
 <dd>
-<dd>Name of the irq chip</dl>
+</dd><dd>Name of the irq chip</dd></dl>
 <p> <i>num_ct</i></p>
 <dl>
-<dd>Number of irq_chip_type instances associated with this</dl>
+<dd>Number of irq_chip_type instances associated with this</dd></dl>
 <p> <i>irq_base</i></p>
 <dl>
-<dd>Interrupt base nr for this chip</dl>
+<dd>Interrupt base nr for this chip</dd></dl>
 <p> <i>reg_base</i></p>
 <dl>
-<dd>Register base address (virtual)</dl>
+<dd>Register base address (virtual)</dd></dl>
 <p> <i>handler</i></p>
 <dl>
-<dd>Default flow handler associated with this chip</dl>
+<dd>Default flow handler associated with this chip</dd></dl>
 <h2>Description</h2>
 <p>Returns an initialized irq_chip_generic structure. The chip defaults to the primary (index 0) irq_chip_type and <i>handler</i></p>
 <h2>Authors</h2>
 <p><code>Thomas Gleixner</code> &lt;tglx [at] linutronix.de&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <p> <code>Ingo Molnar</code> &lt;mingo [at] elte.hu&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

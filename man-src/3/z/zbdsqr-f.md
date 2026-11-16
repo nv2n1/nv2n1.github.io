@@ -22,9 +22,7 @@ description: "zbdsqr.f –"
  left singular vectors from the singular value decomposition (SVD) of
  a real N-by-N (upper or lower) bidiagonal matrix B using the implicit
  zero-shift QR algorithm. The SVD of B has the form
- 
  B = Q * S * P**H
- 
  where S is the diagonal matrix of singular values, Q is an orthogonal
  matrix of left singular vectors, and P is an orthogonal matrix of
  right singular vectors. If left singular vectors are requested, this
@@ -33,9 +31,7 @@ description: "zbdsqr.f –"
  P**H, for given complex input matrices U and VT. When U and VT are
  the unitary matrices that reduce a general matrix A to bidiagonal
  form: A = U*B*VT, as computed by ZGEBRD, then
- 
  A = (U*Q) * S * (P**H*VT)
- 
  is the SVD of A. Optionally, the subroutine may also compute Q**H*C
  for a given complex input matrix C.
  See &quot;Computing Small Singular Values of Bidiagonal Matrices With
@@ -46,10 +42,10 @@ description: "zbdsqr.f –"
  B. Parlett and V. Fernando, Technical Report CPAM-554, Mathematics
  Department, University of California at Berkeley, July 1992
  for a detailed description of the algorithm.</pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>UPLO</i> </p>
+<dd><i>UPLO</i> </dd>
 <pre> UPLO is CHARACTER*1
  = 'U': B is upper bidiagonal;
  = 'L': B is lower bidiagonal.</pre>
@@ -138,16 +134,16 @@ description: "zbdsqr.f –"
  algorithm through its inner loop. The algorithms stops
  (and so fails to converge) if the number of passes
  through the inner loop exceeds MAXITR*N**2.</pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Author:</code></p>
 <dl>
-<dd>Univ. of Tennessee </p>
+<dd>Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl>
-<dd>November 2011</dl>
+<dd>November 2011</dd></dl>
 <p> Definition at line 223 of file zbdsqr.f.</p>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for LAPACK from the source code.</p>

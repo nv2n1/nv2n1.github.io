@@ -14,38 +14,38 @@ description: "ilbmtoppm – convert an ILBM file into a portable pixmap"
 <h2>DESCRIPTION</h2>
 <p> Reads an IFF ILBM file as input. Produces a portable pixmap as output. Supported ILBM types are:</p>
 <dl>
-<dt>Normal ILBMs with 1-16 planes.</p>
+<dt>Normal ILBMs with 1-16 planes.</dt>
 <dd>
-<dt>Amiga Extra_Halfbrite (EHB)</p>
+</dd><dt>Amiga Extra_Halfbrite (EHB)</dt>
 <dd>
-<dt>Amiga HAM with 3-16 planes.</p>
+</dd><dt>Amiga HAM with 3-16 planes.</dt>
 <dd>
-<dt>24 bit.</p>
+</dd><dt>24 bit.</dt>
 <dd>
-<dt>Multiplatte (normal or HAM) pictures.</p>
+</dd><dt>Multiplatte (normal or HAM) pictures.</dt>
 <dd>
-<dt>Color map (BMHD + CMAP chunk only, nPlanes = 0).</p>
+</dd><dt>Color map (BMHD + CMAP chunk only, nPlanes = 0).</dt>
 <dd>
-<dt>Unofficial direct color.</p>
-<dd> 1-16 planes for each color component.</p>
-<dt>Chunks used:</p>
-<dd> BMHD, CMAP, CAMG (only HAM &amp; EHB flags used), PCHG, BODY unofficial DCOL chunk to identify direct color ILBM</p>
-<dt>Chunks ignored:</p>
-<dd> GRAB, DEST, SPRT, CRNG, CCRT, CLUT, DPPV, DRNG, EPSF</p>
-<dt>Other chunks (ignored but displayed in verbose mode):</p>
-<dd> NAME, AUTH, (c), ANNO, DPI</p>
-<dt>Unknown chunks are skipped.</p>
-<dd></dl>
+</dd><dt>Unofficial direct color.</dt>
+<dd> 1-16 planes for each color component.</dd>
+<dt>Chunks used:</dt>
+<dd> BMHD, CMAP, CAMG (only HAM &amp; EHB flags used), PCHG, BODY unofficial DCOL chunk to identify direct color ILBM</dd>
+<dt>Chunks ignored:</dt>
+<dd> GRAB, DEST, SPRT, CRNG, CCRT, CLUT, DPPV, DRNG, EPSF</dd>
+<dt>Other chunks (ignored but displayed in verbose mode):</dt>
+<dd> NAME, AUTH, (c), ANNO, DPI</dd>
+<dt>Unknown chunks are skipped.</dt>
+<dd></dd></dl>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-verbose</code></p>
-<dd> Give some information about the ILBM file.</p>
-<dt><code>-ignore &lt;chunkID&gt;</code></p>
-<dd> Skip a chunk. &lt;chunkID&gt; is the 4-letter IFF chunk identifier of the chunk to be skipped.</p>
-<dt><code>-isham | -isehb</code></p>
-<dd> Treat the input file as a HAM or Extra_Halfbrite picture, even if these flags or not set in the CAMG chunk (or if there is no CAMG chunk).</p>
-<dt><code>-adjustcolors</code></p>
-<dd> If all colors in the CMAP have a value of less then 16, ilbmtoppm assumes a 4-bit colormap and gives a warning. With this option the colormap is scaled to 8 bits.</dl>
+<dt><code>-verbose</code></dt>
+<dd> Give some information about the ILBM file.</dd>
+<dt><code>-ignore &lt;chunkID&gt;</code></dt>
+<dd> Skip a chunk. &lt;chunkID&gt; is the 4-letter IFF chunk identifier of the chunk to be skipped.</dd>
+<dt><code>-isham | -isehb</code></dt>
+<dd> Treat the input file as a HAM or Extra_Halfbrite picture, even if these flags or not set in the CAMG chunk (or if there is no CAMG chunk).</dd>
+<dt><code>-adjustcolors</code></dt>
+<dd> If all colors in the CMAP have a value of less then 16, ilbmtoppm assumes a 4-bit colormap and gives a warning. With this option the colormap is scaled to 8 bits.</dd></dl>
 <h2>BUGS</h2>
 <p> The multipalette PCHG BigLineChanges and Huffman decompression code is untested.</p>
 <h2>REFERENCES</h2>

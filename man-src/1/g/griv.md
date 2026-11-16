@@ -17,12 +17,12 @@ description: "griv – Gtk RIVchat"
  <a rel="nofollow" href="http://akolacz.googlepages.com/RivChat-specyfikacja.PDF">http://akolacz.googlepages.com/RivChat-specyfikacja.PDF</a> </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-n</code>, <code>&#8211;nick</code> NICK</p>
-<dd> set nickname for the chat. Your standard nickname is your linux nickname</p>
-<dt><code>-u</code>, <code>&#8211;user</code> USER</p>
-<dd> set your username. Your standard username is your linux nickname and will shown as username [at] hostname</p>
-<dt><code>-p</code>, <code>&#8211;port</code> PORT</p>
-<dd> set a port. The standard port for griv and other chats based on rivchat is 16127 </p>
+<dt><code>-n</code>, <code>&#8211;nick</code> NICK</dt>
+<dd> set nickname for the chat. Your standard nickname is your linux nickname</dd>
+<dt><code>-u</code>, <code>&#8211;user</code> USER</dt>
+<dd> set your username. Your standard username is your linux nickname and will shown as username [at] hostname</dd>
+<dt><code>-p</code>, <code>&#8211;port</code> PORT</dt>
+<dd> set a port. The standard port for griv and other chats based on rivchat is 16127 </dd>
 </dl>
 <h2>EXAMPLES</h2>
 <p> griv -n simon -u cassmodiah -p 16127<br />

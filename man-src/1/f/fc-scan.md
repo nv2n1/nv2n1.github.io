@@ -33,13 +33,13 @@ url: "/docs/linux/man/1-fc-scan/"
  This program follows the usual GNU command line syntax, with long options starting with two dashes (`-'). A summary of options is included below.
 <dl>
 <dt><b>-f</b>
-<dd> Format output according to the format specifier <i>format</i>.
-<dt><b>-V</b>
-<dd> Show version of the program and exit.
-<dt><b>-h</b>
-<dd> Show summary of options.
-<dt><i>file</i>
-<dd> Scan <i>file</i> recursively for font faces.</dl>
+</dt><dd> Format output according to the format specifier <i>format</i>.
+</dd><dt><b>-V</b>
+</dt><dd> Show version of the program and exit.
+</dd><dt><b>-h</b>
+</dt><dd> Show summary of options.
+</dd><dt><i>file</i>
+</dt><dd> Scan <i>file</i> recursively for font faces.</dd></dl>
 
 <h2>RETURN CODES</h2>
 

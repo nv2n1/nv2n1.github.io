@@ -17,7 +17,6 @@ description: "fixsin – Fixed point sine of binary angles. Allegro game program
 <pre><code>
 fixed angle;
 int result;
-
 /* Set the binary angle to 90 degrees. */
 angle = itofix(64);
 /* The sine of 90 degrees is one. */

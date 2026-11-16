@@ -16,21 +16,21 @@ description: "CURLOPT_SSLVERSION – set preferred TLS/SSL version"
 <p> Use one of the available defines for this purpose. The available options are:</p>
 <dl COMPACT>
 <dd>
-<dl COMPACT>
-<dt>CURL_SSLVERSION_DEFAULT</p>
-<dd>The default action. This will attempt to figure out the remote SSL protocol version.</p>
-<dt>CURL_SSLVERSION_TLSv1</p>
-<dd>TLSv1.x</p>
-<dt>CURL_SSLVERSION_SSLv2</p>
-<dd>SSLv2</p>
-<dt>CURL_SSLVERSION_SSLv3</p>
-<dd>SSLv3</p>
-<dt>CURL_SSLVERSION_TLSv1_0</p>
-<dd>TLSv1.0 (Added in 7.34.0)</p>
-<dt>CURL_SSLVERSION_TLSv1_1</p>
-<dd>TLSv1.1 (Added in 7.34.0)</p>
-<dt>CURL_SSLVERSION_TLSv1_2</p>
-<dd>TLSv1.2 (Added in 7.34.0)</dl>
+</dd><dl COMPACT>
+<dt>CURL_SSLVERSION_DEFAULT</dt>
+<dd>The default action. This will attempt to figure out the remote SSL protocol version.</dd>
+<dt>CURL_SSLVERSION_TLSv1</dt>
+<dd>TLSv1.x</dd>
+<dt>CURL_SSLVERSION_SSLv2</dt>
+<dd>SSLv2</dd>
+<dt>CURL_SSLVERSION_SSLv3</dt>
+<dd>SSLv3</dd>
+<dt>CURL_SSLVERSION_TLSv1_0</dt>
+<dd>TLSv1.0 (Added in 7.34.0)</dd>
+<dt>CURL_SSLVERSION_TLSv1_1</dt>
+<dd>TLSv1.1 (Added in 7.34.0)</dd>
+<dt>CURL_SSLVERSION_TLSv1_2</dt>
+<dd>TLSv1.2 (Added in 7.34.0)</dd></dl>
 </dl>
 <h2>Default</h2>
 <p>CURL_SSLVERSION_DEFAULT</p>

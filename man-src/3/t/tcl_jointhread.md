@@ -30,19 +30,19 @@ int
 <code>Tcl_JoinThread</code>(<i>id, result</i>)</pre>
 <h2>Arguments</h2>
 <dl COMPACT>
-<dd>Tcl_Condition <i>*condPtr</i> (in) A condition variable, which must be associated with a mutex lock.</p>
-<dd>Tcl_Mutex <i>*mutexPtr</i> (in) A mutex lock.</p>
-<dd>Tcl_Time <i>*timePtr</i> (in) A time limit on the condition wait. NULL to wait forever. Note that a polling value of 0 seconds does not make much sense.</p>
-<dd>Tcl_ThreadDataKey <i>*keyPtr</i> (in) This identifies a block of thread local storage. The key should be static and process-wide, yet each thread will end up associating a different block of storage with this key.</p>
-<dd>int <i>*size</i> (in) The size of the thread local storage block. This amount of data is allocated and initialized to zero the first time each thread calls <code>Tcl_GetThreadData</code>.</p>
-<dd>Tcl_ThreadId <i>*idPtr</i> (out) The referred storage will contain the id of the newly created thread as returned by the operating system.</p>
-<dd>Tcl_ThreadId <i>id</i> (in) Id of the thread waited upon.</p>
-<dd>Tcl_ThreadCreateProc <i>threadProc</i> (in) This procedure will act as the <code>main()</code> of the newly created thread. The specified <i>clientData</i> will be its sole argument.</p>
-<dd>ClientData <i>clientData</i> (in) Arbitrary information. Passed as sole argument to the <i>threadProc</i>.</p>
-<dd>int <i>stackSize</i> (in) The size of the stack given to the new thread.</p>
-<dd>int <i>flags</i> (in) Bitmask containing flags allowing the caller to modify behaviour of the new thread.</p>
+<dd>Tcl_Condition <i>*condPtr</i> (in) A condition variable, which must be associated with a mutex lock.</dd>
+<dd>Tcl_Mutex <i>*mutexPtr</i> (in) A mutex lock.</dd>
+<dd>Tcl_Time <i>*timePtr</i> (in) A time limit on the condition wait. NULL to wait forever. Note that a polling value of 0 seconds does not make much sense.</dd>
+<dd>Tcl_ThreadDataKey <i>*keyPtr</i> (in) This identifies a block of thread local storage. The key should be static and process-wide, yet each thread will end up associating a different block of storage with this key.</dd>
+<dd>int <i>*size</i> (in) The size of the thread local storage block. This amount of data is allocated and initialized to zero the first time each thread calls <code>Tcl_GetThreadData</code>.</dd>
+<dd>Tcl_ThreadId <i>*idPtr</i> (out) The referred storage will contain the id of the newly created thread as returned by the operating system.</dd>
+<dd>Tcl_ThreadId <i>id</i> (in) Id of the thread waited upon.</dd>
+<dd>Tcl_ThreadCreateProc <i>threadProc</i> (in) This procedure will act as the <code>main()</code> of the newly created thread. The specified <i>clientData</i> will be its sole argument.</dd>
+<dd>ClientData <i>clientData</i> (in) Arbitrary information. Passed as sole argument to the <i>threadProc</i>.</dd>
+<dd>int <i>stackSize</i> (in) The size of the stack given to the new thread.</dd>
+<dd>int <i>flags</i> (in) Bitmask containing flags allowing the caller to modify behaviour of the new thread.</dd>
 <dd>int <i>*result</i> (out) The referred storage is used to place the exit code of the thread waited upon into it.
-</dl>
+</dd></dl>
 <h2>Introduction</h2>
 <p>Beginning with the 8.1 release, the Tcl core is thread safe, which allows you to incorporate Tcl into multithreaded applications without customizing the Tcl core. To enable Tcl multithreading support, you must include the <code>&#8211;enable-threads</code> option to <code>configure</code> when you configure and compile your Tcl core. </p>
 <p> An important constraint of the Tcl threads implementation is that <i>only the thread that created a Tcl interpreter can use that interpreter</i>. In other words, multiple threads can not access the same Tcl interpreter. (However, a single thread can safely create and use multiple interpreters.)</p>

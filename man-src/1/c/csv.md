@@ -29,44 +29,44 @@ description: "csv – process CSV files from the command line"
 <h3>Command line options</h3>
 <p> The following options are passed to Text::CSV. When preceded by the prefix &#8220;output_&#8221;, the destination is affected. Otherwise these options affect both input and output.</p>
 <dl>
-<dt><code>&#8211;quote_char</code></p>
+<dt><code>&#8211;quote_char</code></dt>
 <dd>
-<dt><code>&#8211;escape_char</code></p>
+</dd><dt><code>&#8211;escape_char</code></dt>
 <dd>
-<dt><code>&#8211;sep_char</code></p>
+</dd><dt><code>&#8211;sep_char</code></dt>
 <dd>
-<dt><code>&#8211;eol</code></p>
+</dd><dt><code>&#8211;eol</code></dt>
 <dd>
-<dt><code>&#8211;always_quote</code></p>
+</dd><dt><code>&#8211;always_quote</code></dt>
 <dd>
-<dt><code>&#8211;binary</code></p>
+</dd><dt><code>&#8211;binary</code></dt>
 <dd>
-<dt><code>&#8211;keep_meta_info</code></p>
+</dd><dt><code>&#8211;keep_meta_info</code></dt>
 <dd>
-<dt><code>&#8211;allow_loose_quotes</code></p>
+</dd><dt><code>&#8211;allow_loose_quotes</code></dt>
 <dd>
-<dt><code>&#8211;allow_loose_escapes</code></p>
+</dd><dt><code>&#8211;allow_loose_escapes</code></dt>
 <dd>
-<dt><code>&#8211;allow_whitespace</code></p>
+</dd><dt><code>&#8211;allow_whitespace</code></dt>
 <dd>
-<dt><code>&#8211;verbatim</code></p>
-<dd></dl>
+</dd><dt><code>&#8211;verbatim</code></dt>
+<dd></dd></dl>
 <p> <font SIZE="-1"><code>NOTE</code></font>: <i>binary</i> is set to 1 by default in <code>csv</code>. The other options have their Text::CSV defaults. </p>
 <p> The following additional options are available:</p>
 <dl>
-<dt><code>&#8211;input</code>, <code>-i</code></p>
+<dt><code>&#8211;input</code>, <code>-i</code></dt>
 <dd>
-<dt><code>&#8211;output</code>, <code>-o</code></p>
-<dd> Filenames for input and output. &#8220;-&#8221; means stdio. Useful to trigger <font SIZE="-1">TSV</font> mode (<tt>&quot;--from_tsv&quot;</tt> and <tt>&quot;--to_tsv&quot;</tt>).</p>
-<dt><code>&#8211;columns</code>, <code>-c</code></p>
-<dd> Column numbers may be specified using this option.</p>
-<dt><code>&#8211;fields</code>, <code>-f</code></p>
-<dd> When this option is specified, the first line of the input file is considered as a header line. This option takes a comma-separated list of column-names from the first line. </p>
+</dd><dt><code>&#8211;output</code>, <code>-o</code></dt>
+<dd> Filenames for input and output. &#8220;-&#8221; means stdio. Useful to trigger <font SIZE="-1">TSV</font> mode (<tt>&quot;--from_tsv&quot;</tt> and <tt>&quot;--to_tsv&quot;</tt>).</dd>
+<dt><code>&#8211;columns</code>, <code>-c</code></dt>
+<dd> Column numbers may be specified using this option.</dd>
+<dt><code>&#8211;fields</code>, <code>-f</code></dt>
+<dd> When this option is specified, the first line of the input file is considered as a header line. This option takes a comma-separated list of column-names from the first line. </dd>
 <p> For convenience, this option also accepts a comma-separated list of column numbers as well. Multiple &#8211;fields options are allowed, and both column names and numbers can be mixed together.</p>
-<dt><code>&#8211;from_tsv</code>, <code>&#8211;from-tsv</code></p>
+<dt><code>&#8211;from_tsv</code>, <code>&#8211;from-tsv</code></dt>
 <dd>
-<dt><code>&#8211;to_tsv</code>, <code>&#8211;to-tsv</code></p>
-<dd> Use tabs instead of commas as the delimiter. When <code>csv</code> has the input or output filenames available, this is inferred when they end with <tt>&quot;.tsv&quot;</tt>. To disable this dwimmery, you may say <tt>&quot;--to_tsv=0&quot;</tt> and <tt>&quot;--from_tsv=0&quot;</tt>.</dl>
+</dd><dt><code>&#8211;to_tsv</code>, <code>&#8211;to-tsv</code></dt>
+<dd> Use tabs instead of commas as the delimiter. When <code>csv</code> has the input or output filenames available, this is inferred when they end with <tt>&quot;.tsv&quot;</tt>. To disable this dwimmery, you may say <tt>&quot;--to_tsv=0&quot;</tt> and <tt>&quot;--from_tsv=0&quot;</tt>.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> Text::CSV, Text::CSV_XS</p>
 <h2>AUTHOR</h2>

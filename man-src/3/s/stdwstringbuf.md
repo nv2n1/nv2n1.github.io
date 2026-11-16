@@ -10,15 +10,10 @@ description: "std::basic_stringbuf – std::basic_stringbuf"
 <p>std::basic_stringbuf &#8211; std::basic_stringbuf</p>
 <h2>Synopsis</h2>
 <pre><code>Defined in header &lt;sstream&gt;
-
 template&lt;
-
 class CharT,
-
 class Traits = std::char_traits&lt;CharT&gt;,
-
 class Allocator = std::allocator&lt;CharT&gt;
-
 &gt; class basic_stringbuf : public std::basic_streambuf&lt;CharT, Traits&gt;</code></pre>
 <p>std::basic_stringbuf is a std::basic_streambuf whose associated character sequence is a memory-resident sequence of arbitrary characters, which can be initialized from or made available as an instance of std::basic_string.<br />
 Typical implementations of std::basic_stringbuf hold an object of type std::basic_string or equivalent resizeable sequence container directly as a data member and use it as both the controlled character sequence (the array where the six pointers of std::basic_streambuf are pointing to) and as the associated character sequence (the source of characters for all input operations and the target for the output).<br />

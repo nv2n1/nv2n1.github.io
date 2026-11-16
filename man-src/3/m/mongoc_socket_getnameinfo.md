@@ -13,8 +13,8 @@ description: "mongoc_socket_getnameinfo() – This is a helper around getting th
 mongoc_socket_getnameinfo (mongoc_socket_t *sock);</pre>
 <h2>Parameters</h2>
 <dl COMPACT>
-<dt><code>sock</code></p>
-<dd>A <code>mongoc_socket_t</code> \&amp;.</dl>
+<dt><code>sock</code></dt>
+<dd>A <code>mongoc_socket_t</code> \&amp;.</dd></dl>
 <h2>Description</h2>
 <p>This is a helper around getting the local name of a socket. It is a wrapper around <code>getpeername(3)</code> and <code><a href="/docs/linux/man/3-getnameinfo/">getnameinfo</a>(3)</code> \&amp;. </p>
 <h2>Returns</h2>

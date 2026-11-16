@@ -14,10 +14,10 @@ description: "gshadow – shadowed group file"
 <p> Each line of this file contains the following colon-separated fields: </p>
 <p> <code>group name</code></p>
 <dl>
-<dd>It must be a valid group name, which exist on the system.</dl>
+<dd>It must be a valid group name, which exist on the system.</dd></dl>
 <p> <code>encrypted password</code></p>
 <dl>
-<dd>Refer to <code><a href="/docs/linux/man/3-crypt/">crypt</a></code>(3) for details on how this string is interpreted. </p>
+<dd>Refer to <code><a href="/docs/linux/man/3-crypt/">crypt</a></code>(3) for details on how this string is interpreted. </dd>
 <p> If the password field contains some string that is not a valid result of <code><a href="/docs/linux/man/3-crypt/">crypt</a></code>(3), for instance ! or *, users will not be able to use a unix password to access the group (but group members do not need the password). </p>
 <p> The password is used when a user who is not a member of the group wants to gain the permissions of this group (see <code><a href="/docs/linux/man/1-newgrp/">newgrp</a></code>(1)). </p>
 <p> This field may be empty, in which case only the group members can gain the group permissions. </p>
@@ -25,20 +25,20 @@ description: "gshadow – shadowed group file"
 <p> This password supersedes any password specified in /etc/group.</dl>
 <p> <code>administrators</code></p>
 <dl>
-<dd>It must be a comma-separated list of user names. </p>
+<dd>It must be a comma-separated list of user names. </dd>
 <p> Administrators can change the password or the members of the group. </p>
 <p> Administrators also have the same permissions as the members (see below).</dl>
 <p> <code>members</code></p>
 <dl>
-<dd>It must be a comma-separated list of user names. </p>
+<dd>It must be a comma-separated list of user names. </dd>
 <p> Members can access the group without being prompted for a password. </p>
 <p> You should use the same list of users as in /etc/group.</dl>
 <h2>Files</h2>
 <p>/etc/group</p>
 <dl>
-<dd>Group account information.</dl>
+<dd>Group account information.</dd></dl>
 <p> /etc/gshadow</p>
 <dl>
-<dd>Secure group account information.</dl>
+<dd>Secure group account information.</dd></dl>
 <h2>See Also</h2>
 <p><code>gpasswd</code>(5), <code><a href="/docs/linux/man/5-group/">group</a></code>(5), <code><a href="/docs/linux/man/8-grpck/">grpck</a></code>(8), <code><a href="/docs/linux/man/8-grpconv/">grpconv</a></code>(8), <code><a href="/docs/linux/man/1-newgrp/">newgrp</a></code>(1). </p>

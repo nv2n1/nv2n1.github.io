@@ -17,11 +17,9 @@ description: "load_tga_pf – Packfile version of load_tga. Allegro game program
 <pre><code>
 PACKFILE *packfile;
 BITMAP *bmp;
-
 packfile = pack_fopen("mybitmap.tga", F_READ);
 if (!packfile)
     abort_on_error("Couldn't open mybitmap.tga");
-
 bmp = load_bmp_pf(packfile, pal);
 if (!bmp)
     abort_on_error("Error loading mybitmap.tga");

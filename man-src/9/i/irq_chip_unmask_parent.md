@@ -14,12 +14,12 @@ description: "irq_chip_unmask_parent – Unmask the parent interrupt"
 <p><i>data</i></p>
 <dl>
 <dd>
-<dd>Pointer to interrupt specific data</dl>
+</dd><dd>Pointer to interrupt specific data</dd></dl>
 <h2>Authors</h2>
 <p><code>Thomas Gleixner</code> &lt;tglx [at] linutronix.de&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <p> <code>Ingo Molnar</code> &lt;mingo [at] elte.hu&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

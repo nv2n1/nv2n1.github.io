@@ -84,6 +84,6 @@ description: "QuantLib::GeneralStatistics – Statistics tool."
 <p>adds a datum to the set, possibly with a weight </p>
 <p> <code>Precondition:</code></p>
 <dl COMPACT>
-<dd>weights must be positive or null</dl>
+<dd>weights must be positive or null</dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for QuantLib from the source code.</p>

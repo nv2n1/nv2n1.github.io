@@ -10,11 +10,10 @@ description: "sd_watchdog_enabled – Check whether the service manager expects 
 <p>sd_watchdog_enabled &#8211; Check whether the service manager expects watchdog keep-alive notifications from a service</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;systemd/sd-daemon.h&gt;
-
 int sd_watchdog_enabled(int unset_environment, uint64_t *usec);</code></pre>
 <h2>Description</h2>
 <p><code>sd_watchdog_enabled()</code></p>
-<dd>may be called by a service to detect whether the service manager expects regular keep-alive watchdog notification events from it, and the timeout after which the manager will act on the service if it did not get such a notification. </p>
+<dd>may be called by a service to detect whether the service manager expects regular keep-alive watchdog notification events from it, and the timeout after which the manager will act on the service if it did not get such a notification. </dd>
 <p> If the <i>$WATCHDOG_USEC</i> environment variable is set, and the <i>$WATCHDOG_PID</i> variable is unset or set to the PID of the current process, the service manager expects notifications from this process. The manager will usually terminate a service when it does not get a notification message within the specified time after startup and after each previous message. It is recommended that a daemon sends a keep-alive notification message to the service manager every half of the time returned here. Notification messages may be sent with <code><a href="/docs/linux/man/3-sd_notify/">sd_notify</a></code>(3) with a message string of &quot;WATCHDOG=1&quot;. </p>
 <p> If the <i>unset_environment</i> parameter is non-zero, <code>sd_watchdog_enabled()</code> will unset the <i>$WATCHDOG_USEC</i> and <i>$WATCHDOG_PID</i> environment variables before returning (regardless of whether the function call itself succeeded or not). Those variables are no longer inherited by child processes. Further calls to <code>sd_watchdog_enabled()</code> will also return with zero. </p>
 <p> If the <i>usec</i> parameter is non-NULL, <code>sd_watchdog_enabled()</code> will write the timeout in &micro;s for the watchdog logic to it. </p>
@@ -27,10 +26,10 @@ int sd_watchdog_enabled(int unset_environment, uint64_t *usec);</code></pre>
 <h2>Environment</h2>
 <p><i>$WATCHDOG_PID</i></p>
 <dl>
-<dd>Set by the system manager for supervised process for which watchdog support is enabled, and contains the PID of that process. See above for details.</dl>
+<dd>Set by the system manager for supervised process for which watchdog support is enabled, and contains the PID of that process. See above for details.</dd></dl>
 <p> <i>$WATCHDOG_USEC</i></p>
 <dl>
-<dd>Set by the system manager for supervised process for which watchdog support is enabled, and contains the watchdog timeout in &micro;s See above for details.</dl>
+<dd>Set by the system manager for supervised process for which watchdog support is enabled, and contains the watchdog timeout in &micro;s See above for details.</dd></dl>
 <h2>History</h2>
 <p>The watchdog functionality and the <i>$WATCHDOG_USEC</i> variable were added in systemd-41. </p>
 <p> <code>sd_watchdog_enabled()</code> function was added in systemd-209. Since that version the <i>$WATCHDOG_PID</i> variable is also set.</p>

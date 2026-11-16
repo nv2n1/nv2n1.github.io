@@ -19,16 +19,16 @@ description: "QuantLib::ActualActual – Actual/Actual day count."
 <p>Actual/Actual day count. </p>
 <p> The day count can be calculated according to: </p>
 <dl COMPACT>
-<dt>*</p>
-<dd>the ISDA convention, also known as &#8216;Actual/Actual (Historical)&#8217;, &#8216;Actual/Actual&#8217;, &#8216;Act/Act&#8217;, and according to ISDA also &#8216;Actual/365&#8217;, &#8216;Act/365&#8217;, and &#8216;A/365&#8217;;</p>
-<dt>*</p>
-<dd>the ISMA and US Treasury convention, also known as &#8216;Actual/Actual (Bond)&#8217;;</p>
-<dt>*</p>
-<dd>the AFB convention, also known as &#8216;Actual/Actual (Euro)&#8217;.</dl>
+<dt>*</dt>
+<dd>the ISDA convention, also known as &#8216;Actual/Actual (Historical)&#8217;, &#8216;Actual/Actual&#8217;, &#8216;Act/Act&#8217;, and according to ISDA also &#8216;Actual/365&#8217;, &#8216;Act/365&#8217;, and &#8216;A/365&#8217;;</dd>
+<dt>*</dt>
+<dd>the ISMA and US Treasury convention, also known as &#8216;Actual/Actual (Bond)&#8217;;</dd>
+<dt>*</dt>
+<dd>the AFB convention, also known as &#8216;Actual/Actual (Euro)&#8217;.</dd></dl>
 <p> For more details, refer to <a rel="nofollow" href="http://www.isda.org/publications/pdf/Day-Count-Fracation1999.pdf">http://www.isda.org/publications/pdf/Day-Count-Fracation1999.pdf</a> </p>
 <p> <code>Tests</code></p>
 <dl COMPACT>
-<dd>the correctness of the results is checked against known good values.</dl>
+<dd>the correctness of the results is checked against known good values.</dd></dl>
 <p> <code>Examples: </code> </p>
 <p> <code>Bonds.cpp</code>, <code>CallableBonds.cpp</code>, <code>FRA.cpp</code>, and <code>swapvaluation.cpp</code>. </p>
 <h2>Author</h2>

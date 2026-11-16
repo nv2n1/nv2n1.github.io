@@ -21,11 +21,11 @@ CALL WMLABW (X, Y, LABEL)
 <h2>Description</h2>
 
 <dl><dt>X
-<dd>(Real, Input) - An X coordinate (specified in world coordinates) of a point that specifies the center of the label in LABEL.
-<dt>Y
-<dd>(Real, Input) - A Y coordinate (specified in world coordinates) of a point that specifies the center of the label in LABEL.
-<dt>LABEL
-<dd>(Character, Input) - A character variable that contains the desired label.</dl>
+</dt><dd>(Real, Input) - An X coordinate (specified in world coordinates) of a point that specifies the center of the label in LABEL.
+</dd><dt>Y
+</dt><dd>(Real, Input) - A Y coordinate (specified in world coordinates) of a point that specifies the center of the label in LABEL.
+</dd><dt>LABEL
+</dt><dd>(Character, Input) - A character variable that contains the desired label.</dd></dl>
 
 <h2>Usage</h2>
 

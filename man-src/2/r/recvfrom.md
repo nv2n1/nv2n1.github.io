@@ -30,16 +30,16 @@ ssize_t recvmsg(int sockfd, struct msghdr *msg, int flags);
 <h3>The flags argument</h3>
 <p> The <i>flags</i> argument is formed by ORing one or more of the following values:</p>
 <dl>
-<dt><code>MSG_CMSG_CLOEXEC</code> (<code>recvmsg</code>() only; since Linux 2.6.23)</p>
-<dd> Set the close-on-exec flag for the file descriptor received via a UNIX domain file descriptor using the <code>SCM_RIGHTS</code> operation (described in <code><a href="/docs/linux/man/7-unix/">unix</a></code>(7)). This flag is useful for the same reasons as the <code>O_CLOEXEC</code> flag of <code><a href="/docs/linux/man/2-open/">open</a></code>(2).</p>
-<dt><code>MSG_DONTWAIT</code> (since Linux 2.2)</p>
-<dd> Enables nonblocking operation; if the operation would block, the call fails with the error <code>EAGAIN</code> or <code>EWOULDBLOCK</code>. This provides similar behavior to setting the <code>O_NONBLOCK</code> flag (via the <code><a href="/docs/linux/man/2-fcntl/">fcntl</a></code>(2) <code>F_SETFL</code> operation), but differs in that <code>MSG_DONTWAIT</code> is a per-call option, whereas <code>O_NONBLOCK</code> is a setting on the open file description (see <code><a href="/docs/linux/man/2-open/">open</a></code>(2)), which will affect all threads in the calling process and as well as other processes that hold file descriptors referring to the same open file description.</p>
-<dt><code>MSG_ERRQUEUE</code> (since Linux 2.2)</p>
-<dd> This flag specifies that queued errors should be received from the socket error queue. The error is passed in an ancillary message with a type dependent on the protocol (for IPv4 <code>IP_RECVERR</code>). The user should supply a buffer of sufficient size. See <code><a href="/docs/linux/man/3-cmsg/">cmsg</a></code>(3) and <code><a href="/docs/linux/man/7-ip/">ip</a></code>(7) for more information. The payload of the original packet that caused the error is passed as normal data via <i>msg_iovec</i>. The original destination address of the datagram that caused the error is supplied via <i>msg_name</i>.</p>
+<dt><code>MSG_CMSG_CLOEXEC</code> (<code>recvmsg</code>() only; since Linux 2.6.23)</dt>
+<dd> Set the close-on-exec flag for the file descriptor received via a UNIX domain file descriptor using the <code>SCM_RIGHTS</code> operation (described in <code><a href="/docs/linux/man/7-unix/">unix</a></code>(7)). This flag is useful for the same reasons as the <code>O_CLOEXEC</code> flag of <code><a href="/docs/linux/man/2-open/">open</a></code>(2).</dd>
+<dt><code>MSG_DONTWAIT</code> (since Linux 2.2)</dt>
+<dd> Enables nonblocking operation; if the operation would block, the call fails with the error <code>EAGAIN</code> or <code>EWOULDBLOCK</code>. This provides similar behavior to setting the <code>O_NONBLOCK</code> flag (via the <code><a href="/docs/linux/man/2-fcntl/">fcntl</a></code>(2) <code>F_SETFL</code> operation), but differs in that <code>MSG_DONTWAIT</code> is a per-call option, whereas <code>O_NONBLOCK</code> is a setting on the open file description (see <code><a href="/docs/linux/man/2-open/">open</a></code>(2)), which will affect all threads in the calling process and as well as other processes that hold file descriptors referring to the same open file description.</dd>
+<dt><code>MSG_ERRQUEUE</code> (since Linux 2.2)</dt>
+<dd> This flag specifies that queued errors should be received from the socket error queue. The error is passed in an ancillary message with a type dependent on the protocol (for IPv4 <code>IP_RECVERR</code>). The user should supply a buffer of sufficient size. See <code><a href="/docs/linux/man/3-cmsg/">cmsg</a></code>(3) and <code><a href="/docs/linux/man/7-ip/">ip</a></code>(7) for more information. The payload of the original packet that caused the error is passed as normal data via <i>msg_iovec</i>. The original destination address of the datagram that caused the error is supplied via <i>msg_name</i>.</dd>
 <dt>
-<dd> The error is supplied in a <i>sock_extended_err</i> structure:</p>
+</dt><dd> The error is supplied in a <i>sock_extended_err</i> structure:</dd>
 <dt>
-<dd> #define SO_EE_ORIGIN_NONE 0 #define SO_EE_ORIGIN_LOCAL 1 #define SO_EE_ORIGIN_ICMP 2 #define SO_EE_ORIGIN_ICMP6 3 </p>
+</dt><dd> #define SO_EE_ORIGIN_NONE 0 #define SO_EE_ORIGIN_LOCAL 1 #define SO_EE_ORIGIN_ICMP 2 #define SO_EE_ORIGIN_ICMP6 3 </dd>
 <p> struct sock_extended_err {<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;uint32_t ee_errno;&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;Error number&nbsp;*/<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;uint8_t&nbsp;<wbr>&nbsp;ee_origin;&nbsp;<wbr>&nbsp;/*&nbsp;Where the error originated&nbsp;*/<br />
@@ -51,19 +51,19 @@ ssize_t recvmsg(int sockfd, struct msghdr *msg, int flags);
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;More data may follow&nbsp;*/ }; </p>
 <p> struct sockaddr *SO_EE_OFFENDER(struct sock_extended_err *);</p>
 <dt>
-<dd> <i>ee_errno</i> contains the <i>errno</i> number of the queued error. <i>ee_origin</i> is the origin code of where the error originated. The other fields are protocol-specific. The macro <code>SOCK_EE_OFFENDER</code> returns a pointer to the address of the network object where the error originated from given a pointer to the ancillary message. If this address is not known, the <i>sa_family</i> member of the <i>sockaddr</i> contains <code>AF_UNSPEC</code> and the other fields of the <i>sockaddr</i> are undefined. The payload of the packet that caused the error is passed as normal data.</p>
+</dt><dd> <i>ee_errno</i> contains the <i>errno</i> number of the queued error. <i>ee_origin</i> is the origin code of where the error originated. The other fields are protocol-specific. The macro <code>SOCK_EE_OFFENDER</code> returns a pointer to the address of the network object where the error originated from given a pointer to the ancillary message. If this address is not known, the <i>sa_family</i> member of the <i>sockaddr</i> contains <code>AF_UNSPEC</code> and the other fields of the <i>sockaddr</i> are undefined. The payload of the packet that caused the error is passed as normal data.</dd>
 <dt>
-<dd> For local errors, no address is passed (this can be checked with the <i>cmsg_len</i> member of the <i>cmsghdr</i>). For error receives, the <code>MSG_ERRQUEUE</code> flag is set in the <i>msghdr</i>. After an error has been passed, the pending socket error is regenerated based on the next queued error and will be passed on the next socket operation.</p>
-<dt><code>MSG_OOB</code></p>
-<dd> This flag requests receipt of out-of-band data that would not be received in the normal data stream. Some protocols place expedited data at the head of the normal data queue, and thus this flag cannot be used with such protocols.</p>
-<dt><code>MSG_PEEK</code></p>
-<dd> This flag causes the receive operation to return data from the beginning of the receive queue without removing that data from the queue. Thus, a subsequent receive call will return the same data.</p>
-<dt><code>MSG_TRUNC</code> (since Linux 2.2)</p>
-<dd> For raw (<code>AF_PACKET</code>), Internet datagram (since Linux 2.4.27/2.6.8), netlink (since Linux 2.6.22), and UNIX datagram (since Linux 3.4) sockets: return the real length of the packet or datagram, even when it was longer than the passed buffer.</p>
+</dt><dd> For local errors, no address is passed (this can be checked with the <i>cmsg_len</i> member of the <i>cmsghdr</i>). For error receives, the <code>MSG_ERRQUEUE</code> flag is set in the <i>msghdr</i>. After an error has been passed, the pending socket error is regenerated based on the next queued error and will be passed on the next socket operation.</dd>
+<dt><code>MSG_OOB</code></dt>
+<dd> This flag requests receipt of out-of-band data that would not be received in the normal data stream. Some protocols place expedited data at the head of the normal data queue, and thus this flag cannot be used with such protocols.</dd>
+<dt><code>MSG_PEEK</code></dt>
+<dd> This flag causes the receive operation to return data from the beginning of the receive queue without removing that data from the queue. Thus, a subsequent receive call will return the same data.</dd>
+<dt><code>MSG_TRUNC</code> (since Linux 2.2)</dt>
+<dd> For raw (<code>AF_PACKET</code>), Internet datagram (since Linux 2.4.27/2.6.8), netlink (since Linux 2.6.22), and UNIX datagram (since Linux 3.4) sockets: return the real length of the packet or datagram, even when it was longer than the passed buffer.</dd>
 <dt>
-<dd> For use with Internet stream sockets, see <code><a href="/docs/linux/man/7-tcp/">tcp</a></code>(7).</p>
-<dt><code>MSG_WAITALL</code> (since Linux 2.2)</p>
-<dd> This flag requests that the operation block until the full request is satisfied. However, the call may still return less data than requested if a signal is caught, an error or disconnect occurs, or the next data to be received is of a different type than that returned. This flag has no effect for datagram sockets.</dl>
+</dt><dd> For use with Internet stream sockets, see <code><a href="/docs/linux/man/7-tcp/">tcp</a></code>(7).</dd>
+<dt><code>MSG_WAITALL</code> (since Linux 2.2)</dt>
+<dd> This flag requests that the operation block until the full request is satisfied. However, the call may still return less data than requested if a signal is caught, an error or disconnect occurs, or the next data to be received is of a different type than that returned. This flag has no effect for datagram sockets.</dd></dl>
 <h3>recvfrom()</h3>
 <p> <code>recvfrom</code>() places the received message into the buffer <i>buf</i>. The caller must specify the size of the buffer in <i>len</i>. </p>
 <p> If <i>src_addr</i> is not NULL, and the underlying protocol provides the source address of the message, that source address is placed in the buffer pointed to by <i>src_addr</i>. In this case, <i>addrlen</i> is a value-result argument. Before the call, it should be initialized to the size of the buffer associated with <i>src_addr</i>. Upon return, <i>addrlen</i> is updated to contain the actual size of the source address. The returned address is truncated if the buffer provided is too small; in this case, <i>addrlen</i> will return a value greater than was supplied to the call. </p>
@@ -98,16 +98,16 @@ ssize_t recvmsg(int sockfd, struct msghdr *msg, int flags);
 <p> As an example, Linux uses this ancillary data mechanism to pass extended errors, IP options, or file descriptors over UNIX domain sockets. For further information on the use of ancillary data in various socket domains, see <code><a href="/docs/linux/man/7-unix/">unix</a></code>(7) and <code><a href="/docs/linux/man/7-ip/">ip</a></code>(7). </p>
 <p> The <i>msg_flags</i> field in the <i>msghdr</i> is set on return of <code>recvmsg</code>(). It can contain several flags:</p>
 <dl>
-<dt><code>MSG_EOR</code></p>
-<dd> indicates end-of-record; the data returned completed a record (generally used with sockets of type <code>SOCK_SEQPACKET</code>).</p>
-<dt><code>MSG_TRUNC</code></p>
-<dd> indicates that the trailing portion of a datagram was discarded because the datagram was larger than the buffer supplied.</p>
-<dt><code>MSG_CTRUNC</code></p>
-<dd> indicates that some control data was discarded due to lack of space in the buffer for ancillary data.</p>
-<dt><code>MSG_OOB</code></p>
-<dd> is returned to indicate that expedited or out-of-band data was received.</p>
-<dt><code>MSG_ERRQUEUE</code></p>
-<dd> indicates that no data was received but an extended error from the socket error queue.</dl>
+<dt><code>MSG_EOR</code></dt>
+<dd> indicates end-of-record; the data returned completed a record (generally used with sockets of type <code>SOCK_SEQPACKET</code>).</dd>
+<dt><code>MSG_TRUNC</code></dt>
+<dd> indicates that the trailing portion of a datagram was discarded because the datagram was larger than the buffer supplied.</dd>
+<dt><code>MSG_CTRUNC</code></dt>
+<dd> indicates that some control data was discarded due to lack of space in the buffer for ancillary data.</dd>
+<dt><code>MSG_OOB</code></dt>
+<dd> is returned to indicate that expedited or out-of-band data was received.</dd>
+<dt><code>MSG_ERRQUEUE</code></dt>
+<dd> indicates that no data was received but an extended error from the socket error queue.</dd></dl>
 <h2>RETURN VALUE</h2>
 <p> These calls return the number of bytes received, or -1 if an error occurred. In the event of an error, <i>errno</i> is set to indicate the error. </p>
 <p> When a stream socket peer has performed an orderly shutdown, the return value will be 0 (the traditional &quot;end-of-file&quot; return). </p>
@@ -116,24 +116,24 @@ ssize_t recvmsg(int sockfd, struct msghdr *msg, int flags);
 <h2>ERRORS</h2>
 <p> These are some standard errors generated by the socket layer. Additional errors may be generated and returned from the underlying protocol modules; see their manual pages.</p>
 <dl>
-<dt><code>EAGAIN</code> or <code>EWOULDBLOCK</code></p>
-<dd> The socket is marked nonblocking and the receive operation would block, or a receive timeout had been set and the timeout expired before data was received. POSIX.1 allows either error to be returned for this case, and does not require these constants to have the same value, so a portable application should check for both possibilities.</p>
-<dt><code>EBADF</code></p>
-<dd> The argument <i>sockfd</i> is an invalid file descriptor.</p>
-<dt><code>ECONNREFUSED</code></p>
-<dd> A remote host refused to allow the network connection (typically because it is not running the requested service).</p>
-<dt><code>EFAULT</code></p>
-<dd> The receive buffer pointer(s) point outside the process&#8217;s address space.</p>
-<dt><code>EINTR</code></p>
-<dd> The receive was interrupted by delivery of a signal before any data was available; see <code><a href="/docs/linux/man/7-signal/">signal</a></code>(7).</p>
-<dt><code>EINVAL</code></p>
-<dd> Invalid argument passed.</p>
-<dt><code>ENOMEM</code></p>
-<dd> Could not allocate memory for <code>recvmsg</code>().</p>
-<dt><code>ENOTCONN</code></p>
-<dd> The socket is associated with a connection-oriented protocol and has not been connected (see <code><a href="/docs/linux/man/2-connect/">connect</a></code>(2) and <code><a href="/docs/linux/man/2-accept/">accept</a></code>(2)).</p>
-<dt><code>ENOTSOCK</code></p>
-<dd> The file descriptor <i>sockfd</i> does not refer to a socket.</dl>
+<dt><code>EAGAIN</code> or <code>EWOULDBLOCK</code></dt>
+<dd> The socket is marked nonblocking and the receive operation would block, or a receive timeout had been set and the timeout expired before data was received. POSIX.1 allows either error to be returned for this case, and does not require these constants to have the same value, so a portable application should check for both possibilities.</dd>
+<dt><code>EBADF</code></dt>
+<dd> The argument <i>sockfd</i> is an invalid file descriptor.</dd>
+<dt><code>ECONNREFUSED</code></dt>
+<dd> A remote host refused to allow the network connection (typically because it is not running the requested service).</dd>
+<dt><code>EFAULT</code></dt>
+<dd> The receive buffer pointer(s) point outside the process&#8217;s address space.</dd>
+<dt><code>EINTR</code></dt>
+<dd> The receive was interrupted by delivery of a signal before any data was available; see <code><a href="/docs/linux/man/7-signal/">signal</a></code>(7).</dd>
+<dt><code>EINVAL</code></dt>
+<dd> Invalid argument passed.</dd>
+<dt><code>ENOMEM</code></dt>
+<dd> Could not allocate memory for <code>recvmsg</code>().</dd>
+<dt><code>ENOTCONN</code></dt>
+<dd> The socket is associated with a connection-oriented protocol and has not been connected (see <code><a href="/docs/linux/man/2-connect/">connect</a></code>(2) and <code><a href="/docs/linux/man/2-accept/">accept</a></code>(2)).</dd>
+<dt><code>ENOTSOCK</code></dt>
+<dd> The file descriptor <i>sockfd</i> does not refer to a socket.</dd></dl>
 <h2>CONFORMING TO</h2>
 <p> POSIX.1-2001, POSIX.1-2008, 4.4BSD (these interfaces first appeared in 4.2BSD). </p>
 <p> POSIX.1 describes only the <code>MSG_OOB</code>, <code>MSG_PEEK</code>, and <code>MSG_WAITALL</code> flags.</p>

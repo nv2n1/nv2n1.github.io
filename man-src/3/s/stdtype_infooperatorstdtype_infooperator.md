@@ -11,7 +11,6 @@ std::type_info::operator==,std::type_info::operator!= - std::type_info::operator
 <h2>Synopsis</h2>
 
 <pre><code>bool operator==(const type_info &amp;rhs) const;
-
 bool operator!=(const type_info &amp;rhs) const;</code></pre> 
 Checks if the objects refer to the same types. 
 
@@ -71,7 +70,6 @@ const std::string &amp;profession() const
 }
 ;
 void somefunc(const person &amp;p)
-
 {
     if (typeid(employee) == typeid(p)) {
         std::cout &lt;&lt; p.name() &lt;&lt; &quot; is an employee &quot;;
@@ -80,7 +78,6 @@ void somefunc(const person &amp;p)
     }
 }
 int main()
-
 {
     employee paul(&quot;Paul&quot;, &quot;Economics&quot;);
     somefunc(paul);

@@ -31,15 +31,12 @@ Common use cases include
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;memory&gt;
-
 #include &lt;iostream&gt;
 void fun(std::shared_ptr&lt;int&gt; sp)
-
 {
     std::cout &lt;&lt; &quot;fun: sp.use_count() == &quot; &lt;&lt; sp.use_count() &lt;&lt; '\n';
 }
 int main()
-
 {
     auto sp1 = std::make_shared&lt;int&gt;(5);
     std::cout &lt;&lt; &quot;sp1.use_count() == &quot; &lt;&lt; sp1.use_count() &lt;&lt; '\n';

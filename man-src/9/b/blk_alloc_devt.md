@@ -15,11 +15,11 @@ blk_alloc_devt - allocate a dev_t for a partition
 <h2>Arguments</h2>
 
 <i>part</i>
-<dl><dd><dd>partition to allocate dev_t for</dl>
+<dl><dd></dd><dd>partition to allocate dev_t for</dd></dl>
  
 
  <i>devt</i>
-<dl><dd>out parameter for resulting dev_t</dl>
+<dl><dd>out parameter for resulting dev_t</dd></dl>
 
 <h2>Description</h2>
 

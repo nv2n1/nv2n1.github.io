@@ -10,20 +10,14 @@ description: "std::is_assignable,std::is_trivially_assignable,std::is_nothrow_as
 <p>std::is_assignable,std::is_trivially_assignable,std::is_nothrow_assignable &#8211; std::is_assignable,std::is_trivially_assignable,std::is_nothrow_assignable</p>
 <h2>Synopsis</h2>
 <pre><code>Defined in header&lt;type_traits&gt;
-
     template &lt;class T, class U&gt;
     (1)(since C++ 11)
-
         struct is_assignable;
-
 template &lt;class T, class U&gt;
 (2)(since C++ 11)
-
     struct is_trivially_assignable;
-
 template &lt;class T, class U&gt;
 (3)(since C++ 11)
-
     struct is_nothrow_assignable;</code></pre>
 <p>1) If the expression std::declval&lt;T&gt;() = std::declval&lt;U&gt;() is well-formed in unevaluated context, provides the member constant value equal true. Otherwise, value is false. Access_checks are performed as if from a context unrelated to either type.<br />
 2) same as <code>(1)</code>, but the evaluation of the assignment expression will not call any operation that is not trivial. For the purposes of this check, a call to std::declval is considered trivial and not considered an odr-use of std::declval.<br />
@@ -56,15 +50,11 @@ type std::integral_constant&lt;bool, value&gt;</p>
 <h2>Example</h2>
 <p>// Run this code </p>
 <pre><code>#include &lt;iostream&gt;
-
 #include &lt;string&gt;
-
 #include &lt;type_traits&gt;
-
 struct Ex1 {
     int n;
 };
-
 int main()
 {
     std::cout &lt;&lt; std::boolalpha

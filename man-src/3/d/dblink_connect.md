@@ -21,11 +21,11 @@ dblink_connect(text connname, text connstr) returns text
 <p> <i>connname</i></p>
 <dl>
 <dt>
-<dd> The name to use for this connection; if omitted, an unnamed connection is opened, replacing any existing unnamed connection.</dl>
+</dt><dd> The name to use for this connection; if omitted, an unnamed connection is opened, replacing any existing unnamed connection.</dd></dl>
 <p> <i>connstr</i></p>
 <dl>
 <dt>
-<dd> libpq-style connection info string, for example hostaddr=127.0.0.1 port=5432 dbname=mydb user=postgres password=mypasswd. For details see <code>PQconnectdb</code> in Section 31.1, &#8220;Database Connection Control Functions&#8221;, in the documentation.</dl>
+</dt><dd> libpq-style connection info string, for example hostaddr=127.0.0.1 port=5432 dbname=mydb user=postgres password=mypasswd. For details see <code>PQconnectdb</code> in Section 31.1, &#8220;Database Connection Control Functions&#8221;, in the documentation.</dd></dl>
 <h2>RETURN VALUE</h2>
 <p> Returns status, which is always OK (since any error causes the function to throw an error instead of returning).</p>
 <h2>NOTES</h2>
@@ -34,7 +34,7 @@ dblink_connect(text connname, text connstr) returns text
 <h2>EXAMPLES</h2>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre><code>
 SELECT dblink_connect('dbname=postgres');
 dblink_connect-- -- -- -- -- -- -- --OK(1 row)
@@ -57,3 +57,5 @@ CREATE USER dblink_regression_test WITH PASSWORD 'secret';
  GRANT USAGE ON FOREIGN SERVER fdtest TO dblink_regression_test;
  GRANT SELECT ON TABLE foo TO dblink_regression_test;
  \set ORIGINAL_USER : USER
+</dd></dl>
+</code></pre>

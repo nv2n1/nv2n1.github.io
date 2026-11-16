@@ -33,7 +33,7 @@ log4j.appender.A2.layout=org.apache.log4j.PatternLayout
 log4j.appender.A2.layout.ConversionPattern=The message %m at time %d%n</pre>
 <p><code>Since:</code></p>
 <dl COMPACT>
-<dd>0.3.2</dl>
+<dd>0.3.2</dd></dl>
 <h2>Member Function Documentation</h2>
 <h3>void log4cpp::PropertyConfigurator::configure (const std::string &amp;initFileName)<code>ConfigureFailure</code> [static]</h3>
 <h2>Author</h2>

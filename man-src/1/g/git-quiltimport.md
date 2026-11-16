@@ -22,25 +22,25 @@ git quiltimport[--dry - run | -n][--author&lt;author&gt;][--patches&lt;dir&gt;]
 <p> -n, &#8211;dry-run</p>
 <dl>
 <dt>
-<dd> Walk through the patches in the series and warn if we cannot find all of the necessary information to commit a patch. At the time of this writing only missing author information is warned about.</dl>
+</dt><dd> Walk through the patches in the series and warn if we cannot find all of the necessary information to commit a patch. At the time of this writing only missing author information is warned about.</dd></dl>
 <p> &#8211;author Author Name &lt;Author Email&gt;</p>
 <dl>
 <dt>
-<dd> The author name and email address to use when no author information can be found in the patch description.</dl>
+</dt><dd> The author name and email address to use when no author information can be found in the patch description.</dd></dl>
 <p> &#8211;patches &lt;dir&gt;</p>
 <dl>
 <dt>
-<dd> The directory to find the quilt patches. </p>
+</dt><dd> The directory to find the quilt patches. </dd>
 <p> The default for the patch directory is patches or the value of the <code>$QUILT_PATCHES</code> environment variable.</dl>
 <p> &#8211;series &lt;file&gt;</p>
 <dl>
 <dt>
-<dd> The quilt series file. </p>
+</dt><dd> The quilt series file. </dd>
 <p> The default for the series file is &lt;patches&gt;/series or the value of the <code>$QUILT_SERIES</code> environment variable.</dl>
 <p> &#8211;keep-non-patch</p>
 <dl>
 <dt>
-<dd> Pass <code>-b</code> flag to <i>git mailinfo</i> (see <code><a href="/docs/linux/man/1-git-mailinfo/">git-mailinfo</a></code>(1)).</dl>
+</dt><dd> Pass <code>-b</code> flag to <i>git mailinfo</i> (see <code><a href="/docs/linux/man/1-git-mailinfo/">git-mailinfo</a></code>(1)).</dd></dl>
 <h2>GIT</h2>
 <p> Part of the <code><a href="/docs/linux/man/1-git/">git</a></code>(1) suite </p>
 <h2>Index</h2>

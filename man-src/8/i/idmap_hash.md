@@ -15,7 +15,7 @@ DO NOT USE THIS PLUGIN The idmap_hash plugin implements a hashing algorithm used
 <h2>Idmap Options</h2>
 
 name_map
-<dl><dd>Specifies the absolute path to the name mapping file used by the nss_info API. Entries in the file are of the form &quot;<i>unix name</i> = <i>qualified domain name</i>&quot;. Mapping of both user and group names is supported.</dl>
+<dl><dd>Specifies the absolute path to the name mapping file used by the nss_info API. Entries in the file are of the form &quot;<i>unix name</i> = <i>qualified domain name</i>&quot;. Mapping of both user and group names is supported.</dd></dl>
 
 <h2>Examples</h2>
 
@@ -26,7 +26,7 @@ The following example utilizes the idmap_hash plugin for the idmap and nss_info 
  idmap config * : range = 1000-2147483647
  winbind nss info = hash
  winbind normalize names = yes
- idmap_hash:name_map = /etc/samba/name_map.cfg</pre></dl>
+ idmap_hash:name_map = /etc/samba/name_map.cfg</pre></dd></dl>
 
 <h2>Author</h2>
 

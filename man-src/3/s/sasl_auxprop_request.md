@@ -10,8 +10,6 @@ description: "sasl_auxprop_request – Request Auxiliary Properties from SASL"
 <p>sasl_auxprop_request &#8211; Request Auxiliary Properties from SASL </p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;sasl/sasl.h&gt;
-
-
 int sasl_auxprop_request(sasl_conn_t *conn,
 const char ** propnames)</code></pre>
 <h2>Description</h2>

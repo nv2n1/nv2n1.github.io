@@ -14,13 +14,13 @@ description: "nand_check_erased_buf – check if a buffer contains (almost) only
 <p><i>buf</i></p>
 <dl>
 <dd>
-<dd>buffer to test</dl>
+</dd><dd>buffer to test</dd></dl>
 <p> <i>len</i></p>
 <dl>
-<dd>buffer length</dl>
+<dd>buffer length</dd></dl>
 <p> <i>bitflips_threshold</i></p>
 <dl>
-<dd>maximum number of bitflips</dl>
+<dd>maximum number of bitflips</dd></dl>
 <h2>Description</h2>
 <p>Check if a buffer contains only 0xff, which means the underlying region has been erased and is ready to be programmed. The bitflips_threshold specify the maximum number of bitflips before considering the region is not erased.</p>
 <h2>Note</h2>
@@ -29,5 +29,5 @@ description: "nand_check_erased_buf – check if a buffer contains (almost) only
 <h2>Author</h2>
 <p><code>Thomas Gleixner</code> &lt;tglx [at] linutronix.de&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

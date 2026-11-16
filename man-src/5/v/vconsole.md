@@ -19,10 +19,10 @@ description: "vconsole.conf – Configuration file for the virtual console"
 <p>The following options are understood: </p>
 <p> <i>KEYMAP=</i>, <i>KEYMAP_TOGGLE=</i></p>
 <dl>
-<dd>Configures the key mapping table for the keyboard. <i>KEYMAP=</i> defaults to &quot;us&quot; if not set. The <i>KEYMAP_TOGGLE=</i> can be used to configure a second toggle keymap and is by default unset.</dl>
+<dd>Configures the key mapping table for the keyboard. <i>KEYMAP=</i> defaults to &quot;us&quot; if not set. The <i>KEYMAP_TOGGLE=</i> can be used to configure a second toggle keymap and is by default unset.</dd></dl>
 <p> <i>FONT=</i>, <i>FONT_MAP=</i>, <i>FONT_UNIMAP=</i></p>
 <dl>
-<dd>Configures the console font, the console map and the unicode font map.</dl>
+<dd>Configures the console font, the console map and the unicode font map.</dd></dl>
 <h2>Example</h2>
 <p><code>Example 1. German keyboard and console</code> </p>
 <p> /etc/vconsole.conf: </p>
@@ -30,6 +30,6 @@ description: "vconsole.conf – Configuration file for the virtual console"
 <dd>
 <pre>KEYMAP=de-latin1
 FONT=latarcyrheb-sun16</pre>
-</dl>
+</dd></dl>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/1-systemd/">systemd</a></code>(1), <code><a href="/docs/linux/man/8-systemd-vconsole-setup-service/">systemd-vconsole-setup.service</a></code>(8), <code><a href="/docs/linux/man/1-loadkeys/">loadkeys</a></code>(1), <code><a href="/docs/linux/man/8-setfont/">setfont</a></code>(8), <code><a href="/docs/linux/man/5-locale-conf/">locale.conf</a></code>(5), <code><a href="/docs/linux/man/8-systemd-localed-service/">systemd-localed.service</a></code>(8) </p>

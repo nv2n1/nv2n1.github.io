@@ -19,10 +19,10 @@ description: "mate-system-log – the MATE System Log Viewer"
 <p> This manual page was written by Jochen Voss &lt;voss [at] mathematik.uni-kl.de&gt;.</p>
 <h2>FILES</h2>
 <dl>
-<dt><i>/var/log/messages</i></p>
-<dd> The system&#8217;s main logfile.</p>
-<dt><i>/etc/syslog.conf</i></p>
-<dd> Configuration file for syslogd. See <code>syslog.conf</code>(5) for exact information.</dl>
+<dt><i>/var/log/messages</i></dt>
+<dd> The system&#8217;s main logfile.</dd>
+<dt><i>/etc/syslog.conf</i></dt>
+<dd> Configuration file for syslogd. See <code>syslog.conf</code>(5) for exact information.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code>syslogd</code>(8), <code>sysklogd</code>(8), <code>syslog.conf</code>(5), <code>syslogd-listfiles</code>(8) </p>
 <h2>Index</h2>

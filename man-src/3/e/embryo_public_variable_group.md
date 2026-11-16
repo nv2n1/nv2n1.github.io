@@ -23,29 +23,29 @@ description: "Public Variable Access Functions – In an Embryo program, a globa
 <p>Retrieves the number of public variables in the given program. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>ep</i> The given program.</dl>
+<dd><i>ep</i> The given program.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>The number of public variables.</dl>
+<dd>The number of public variables.</dd></dl>
 <h3>EAPI Embryo_Cell embryo_program_variable_find (Embryo_Program * ep, const char * name)</h3>
 <p>Retrieves the location of the public variable in the given program with the given name. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>ep</i> The given program.<br />
- <i>name</i> The given name.</dl>
+ <i>name</i> The given name.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>The address of the variable if found. EMBRYO_CELL_NONE otherwise.</dl>
+<dd>The address of the variable if found. EMBRYO_CELL_NONE otherwise.</dd></dl>
 <p> References EMBRYO_CELL_NONE.</p>
 <h3>EAPI Embryo_Cell embryo_program_variable_get (Embryo_Program * ep, int num)</h3>
 <p>Retrieves the location of the public variable in the given program with the given identifier. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>ep</i> The given program.<br />
- <i>num</i> The identifier of the public variable.</dl>
+ <i>num</i> The identifier of the public variable.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>The virtual machine address of the variable if found. EMBRYO_CELL_NONE otherwise.</dl>
+<dd>The virtual machine address of the variable if found. EMBRYO_CELL_NONE otherwise.</dd></dl>
 <p> References EMBRYO_CELL_NONE.</p>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for Embryo from the source code.</p>

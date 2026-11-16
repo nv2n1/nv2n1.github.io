@@ -11,10 +11,10 @@ description: "fbsvcmgr – access services API of Firebird"
 <p> fbsvcmgr &#8211; access services API of Firebird </p>
 <h2>SYNOPSYS</h2>
 <dl>
-<dt>fbsvcmgr service_mgr <i>parameter&#8230;</i></p>
+<dt>fbsvcmgr service_mgr <i>parameter&#8230;</i></dt>
 <dd>
-<dt>fbsvcmgr host:service_mgr <i>parameter&#8230;</i></p>
-<dd></dl>
+</dd><dt>fbsvcmgr host:service_mgr <i>parameter&#8230;</i></dt>
+<dd></dd></dl>
 <h2>DESCRIPTION</h2>
 <p> Firebird (like interbase 6 and before) never had a way to access services <font SIZE="-1">API</font> from command line. With the exception of <code>-service</code> switch of <code><a href="/docs/linux/man/1-gbak/">gbak</a></code>(1) and total use of services <font SIZE="-1">API</font> in <code><a href="/docs/linux/man/1-gsec/">gsec</a></code>(1) since version 2.0, to use services one had to use third party <font SIZE="-1">GUI</font> or write himself a program using C or other programming language. Use of <font SIZE="-1">GUI</font> is almost always not a problem, when you work with local machine or machine in your <font SIZE="-1">LAN.</font> But in case, when you connect to remote unix server using any text-only connection, use of services is almost impossible. And this is really a problem sometimes. </p>
 <p> The <code>fbsvcmgr</code> utility solves this problem. With it you may use any service, implemented by firebird. To use this utility you should be familiar with firebird services <font SIZE="-1">API</font> &#8211; <code>fbsvcmgr</code> does <font SIZE="-1">NOT</font> emulate traditional utilities&#8217; switches, it is just frontend to the services <font SIZE="-1">API.</font> </p>
@@ -41,8 +41,8 @@ present in ibase.h becomes-- -- -- -- -- -- -- -- -- -- -- -- - -- -- -- -- -- -
 <p> and so on. As an exception, <i>isc_spb_user_name</i> may be specified as either <i>user_name</i> or simply <i>user</i>. </p>
 <p> The full description of all <font SIZE="-1">SPB</font> parameters can be found int the InterBase 6.0 beta documentation. It is some 40 pages long, so it is not duplicated here. There are a couple of differences, though, which are described below. Another reference is the <i>ibase.h</i> file distributed by the Firebird project.</p>
 <dl>
-<dt>multiple actions in single request</p>
-<dd> Using fbsvcmgr you may perform single action (and get results of it&#8217;s execution when available) or get multiple information items from services manager. For example: </p>
+<dt>multiple actions in single request</dt>
+<dd> Using fbsvcmgr you may perform single action (and get results of it&#8217;s execution when available) or get multiple information items from services manager. For example: </dd>
 <pre>
     fbsvcmgr service_mgr -user sysdba -password masterke -action_display_user
 </pre>
@@ -78,39 +78,33 @@ present in ibase.h becomes-- -- -- -- -- -- -- -- -- -- -- -- - -- -- -- -- -- -
 <pre>
     Unknown switch &quot;-info_server_version&quot;
 </pre>
-<dt>Buggy documentation</p>
-<dd> Some parameters have buggy form in Borland beta documentation. When in trouble, consult <i>ibase.h</i> first for correct form. </p>
+<dt>Buggy documentation</dt>
+<dd> Some parameters have buggy form in Borland beta documentation. When in trouble, consult <i>ibase.h</i> first for correct form. </dd>
 <p> <i>isc_spb_rpr_list_limbo_trans</i> was forgotten in Borland beta documentation, but present in fbsvcmgr.</p>
-<dt>No licensing stuff</p>
-<dd> Everything concerning licensing was removed from interbase 6.0 and therefore not supported here.</p>
-<dt>No access to config file</p>
-<dd> Config file view/modification is not supported in firebird since 1.5 and therefore is not implemented here.</p>
-<dt>Items added in firebird 2.1</p>
+<dt>No licensing stuff</dt>
+<dd> Everything concerning licensing was removed from interbase 6.0 and therefore not supported here.</dd>
+<dt>No access to config file</dt>
+<dd> Config file view/modification is not supported in firebird since 1.5 and therefore is not implemented here.</dd>
+<dt>Items added in firebird 2.1</dt>
 <dd>
+</dd><dl>
 <dl>
-<dt>
-<dd>
-<dl>
-<dt><i>trusted_auth</i></p>
-<dd> (Windows-only) Forces use of windows trusted authentication.</p>
-<dt><i>dbname</i></p>
-<dd> (Only for actions related to security). It is equivalent to the <i>-database</i> switch of the <code><a href="/docs/linux/man/1-gsec/">gsec</a></code>(1) utility. Note that in <code><a href="/docs/linux/man/1-gsec/">gsec</a></code>(1) this switch is mostly used to specify remote server you want to administer. In <code>fbsvcmgr</code> the name of the server is already given in services manager name (first parameter), therefore this parameter in most cases is not needed.</dl>
+<dt><i>trusted_auth</i></dt>
+<dd> (Windows-only) Forces use of windows trusted authentication.</dd>
+<dt><i>dbname</i></dt>
+<dd> (Only for actions related to security). It is equivalent to the <i>-database</i> switch of the <code><a href="/docs/linux/man/1-gsec/">gsec</a></code>(1) utility. Note that in <code><a href="/docs/linux/man/1-gsec/">gsec</a></code>(1) this switch is mostly used to specify remote server you want to administer. In <code>fbsvcmgr</code> the name of the server is already given in services manager name (first parameter), therefore this parameter in most cases is not needed.</dd></dl>
 </dl>
 <dl>
-<dt>
-<dd></dl>
-<dt>Items added in firebird 2.5</p>
+</dl>
+<dt>Items added in firebird 2.5</dt>
 <dd>
+</dd><dl>
 <dl>
-<dt>
-<dd>
-<dl>
-<dt>bkp_no_triggers</p>
-<dd> specify it to avoid executing database-wide triggers</dl>
+<dt>bkp_no_triggers</dt>
+<dd> specify it to avoid executing database-wide triggers</dd></dl>
 </dl>
 <dl>
-<dt>
-<dd></dl>
+</dl>
 </dl>
 <h2>AUTHOR</h2>
 <p> Alex Peshkov, &#8220;peshkoff at mail.ru&#8221; </p>

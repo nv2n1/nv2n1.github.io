@@ -59,10 +59,10 @@ description: "guestfs-lua – How to use libguestfs from Lua"
 <h3><font SIZE="-1">ERRORS</font></h3>
 <p> Most (but not all) errors are converted into objects (ie. tables) containing the following fields:</p>
 <dl>
-<dt>msg</p>
-<dd> The error message (corresponding to &#8220;guestfs_last_error&#8221; in <i>guestfs</i>(3)).</p>
-<dt>code</p>
-<dd> The <tt>&quot;errno&quot;</tt> (corresponding to &#8220;guestfs_last_errno&#8221; in <i>guestfs</i>(3)).</dl>
+<dt>msg</dt>
+<dd> The error message (corresponding to &#8220;guestfs_last_error&#8221; in <i>guestfs</i>(3)).</dd>
+<dt>code</dt>
+<dd> The <tt>&quot;errno&quot;</tt> (corresponding to &#8220;guestfs_last_errno&#8221; in <i>guestfs</i>(3)).</dd></dl>
 <p> These objects also have <tt>&quot;__tostring&quot;</tt> functions attached to them so you can use <tt>&quot;tostring&quot;</tt> (or implicit conversion) to convert them into printable strings. </p>
 <p> Note that the library also throws some errors as plain strings. You may need to check the type.</p>
 <h3><font SIZE="-1">EVENTS</font></h3>
@@ -126,33 +126,25 @@ function cb(g, event, eh, flags, buf, array)-- g is the guestfs handle
 <h2>EXAMPLE 2: INSPECT A VIRTUAL MACHINE DISK IMAGE</h2>
 <pre><code>
  -- Example showing how to inspect a virtual machine disk.
- 
  local G = require "guestfs"
- 
  if table.getn (arg) == 1 then
     disk = arg[1]
  else
     error ("usage: inspect_vm disk.img")
  end
- 
  local g = G.create ()
- 
  -- Attach the disk image read-only to libguestfs.
  g:add_drive (disk, { -- format:"raw"
                       readonly = true })
- 
  -- Run the libguestfs back-end.
  g:launch ()
- 
  -- Ask libguestfs to inspect for operating systems.
  local roots = g:inspect_os ()
  if table.getn (roots) == 0 then
     error ("inspect_vm: no operating systems found")
  end
- 
  for _, root in ipairs (roots) do
     print ("Root device: ", root)
- 
     -- Print basic information about the operating system.
     print ("  Product name: ", g:inspect_get_product_name (root))
     print ("  Version:      ",
@@ -160,7 +152,6 @@ function cb(g, event, eh, flags, buf, array)-- g is the guestfs handle
            g:inspect_get_minor_version (root))
     print ("  Type:         ", g:inspect_get_type (root))
     print ("  Distro:       ", g:inspect_get_distro (root))
- 
     -- Mount up the disks, like guestfish -i.
     --
     -- Sort keys by length, shortest first, so that we end up
@@ -173,7 +164,6 @@ function cb(g, event, eh, flags, buf, array)-- g is the guestfs handle
     for mp,dev in pairs (mps) do
        pcall (function () g:mount_ro (dev, mp) end)
     end
- 
     -- If /etc/issue.net file exists, print up to 3 lines.
     filename = "/etc/issue.net"
     if g:is_file (filename) then
@@ -183,7 +173,6 @@ function cb(g, event, eh, flags, buf, array)-- g is the guestfs handle
           print (line)
        end
     end
- 
     -- Unmount everything.
     g:umount_all ()
  end
@@ -201,27 +190,27 @@ function cb(g, event, eh, flags, buf, array)-- g is the guestfs handle
 <p> To report a new bug against libguestfs, use this link: <a rel="nofollow" href="https://bugzilla.redhat.com/enter_bug.cgi?component=libguestfs">https://bugzilla.redhat.com/enter_bug.cgi?component=libguestfs</a>&amp;product=Virtualization+Tools </p>
 <p> When reporting a bug, please supply:</p>
 <dl>
-<dt>&bull;</p>
-<dd> The version of libguestfs.</p>
-<dt>&bull;</p>
-<dd> Where you got libguestfs (eg. which Linux distro, compiled from source, etc)</p>
-<dt>&bull;</p>
-<dd> Describe the bug accurately and give a way to reproduce it.</p>
-<dt>&bull;</p>
-<dd> Run <i><a href="/docs/linux/man/1-libguestfs-test-tool/">libguestfs-test-tool</a></i>(1) and paste the <code>complete, unedited</code> output into the bug report. </p>
+<dt>&bull;</dt>
+<dd> The version of libguestfs.</dd>
+<dt>&bull;</dt>
+<dd> Where you got libguestfs (eg. which Linux distro, compiled from source, etc)</dd>
+<dt>&bull;</dt>
+<dd> Describe the bug accurately and give a way to reproduce it.</dd>
+<dt>&bull;</dt>
+<dd> Run <i><a href="/docs/linux/man/1-libguestfs-test-tool/">libguestfs-test-tool</a></i>(1) and paste the <code>complete, unedited</code> output into the bug report. </dd>
 </dl>
 <h2>Index</h2>
-<dt><a href="#lbAL">EXAMPLE 1: CREATE A DISK IMAGE</a></p>
+<dt><a href="#lbAL">EXAMPLE 1: CREATE A DISK IMAGE</a></dt>
 <dd>
-<dt><a href="#lbAM">EXAMPLE 2: INSPECT A VIRTUAL MACHINE DISK IMAGE</a></p>
+</dd><dt><a href="#lbAM">EXAMPLE 2: INSPECT A VIRTUAL MACHINE DISK IMAGE</a></dt>
 <dd>
-<dt><a href="#lbAN">SEE ALSO</a></p>
+</dd><dt><a href="#lbAN">SEE ALSO</a></dt>
 <dd>
-<dt><a href="#lbAO">AUTHORS</a></p>
+</dd><dt><a href="#lbAO">AUTHORS</a></dt>
 <dd>
-<dt><a href="#lbAP">COPYRIGHT</a></p>
+</dd><dt><a href="#lbAP">COPYRIGHT</a></dt>
 <dd>
-<dt><a href="#lbAQ">LICENSE</a></p>
+</dd><dt><a href="#lbAQ">LICENSE</a></dt>
 <dd>
-<dt><a href="#lbAR">BUGS</a></p>
-<dd></dl>
+</dd><dt><a href="#lbAR">BUGS</a></dt>
+<dd></dd></dl>

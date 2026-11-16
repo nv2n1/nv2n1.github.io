@@ -17,13 +17,13 @@ description: "secondtst.f –"
 <h3>program __secondtst.f__ ()</h3>
 <p><code>SECONDTST</code> <code>Author:</code></p>
 <dl>
-<dd>Univ. of Tennessee </p>
+<dd>Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl>
-<dd>November 2011</dl>
+<dd>November 2011</dd></dl>
 <p> Definition at line 33 of file secondtst.f.</p>
 <h3>subroutine mysub (integerN, real, dimension(n)X, real, dimension(n)Y)</h3>
 <p>Definition at line 116 of file secondtst.f.</p>

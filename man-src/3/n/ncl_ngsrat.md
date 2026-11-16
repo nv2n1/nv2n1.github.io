@@ -31,33 +31,33 @@ restore the context from the most recently saved state.
 return the current context in the output arrays IAT (integer
 attributes) and RAT (floating-point attributes) as follows:</code></pre> IAT contains integer GKS attribute settings as per:
 <dd>IAT( 1) = Clip indicator
-<dd>IAT( 2) = Line type
-<dd>IAT( 3) = Polyline color index
-<dd>IAT( 4) = Marker type
-<dd>IAT( 5) = Polymarker color index
-<dd>IAT( 6) = Text font
-<dd>IAT( 7) = Text precision
-<dd>IAT( 8) = Text color index
-<dd>IAT( 9) = Text path
-<dd>IAT(10) = Text horizontal alignment
-<dd>IAT(11) = Text vertical alignment
-<dd>IAT(12) = Fill area interior style
-<dd>IAT(13) = Fill are style index
-<dd>IAT(14) = Fill area color index
-<dd>RAT contains REAL GKS attribute settings as per:
-<dd>RAT( 1) = Linewidth scale factor
-<dd>RAT( 2) = Marker scale factor
-<dd>RAT( 3) = Character expansion factor
-<dd>RAT( 4) = Character spacing
-<dd>RAT( 5) = Character height in world coordinates
-<dd>RAT( 6) = Character up vector, X component in world coordinates
-<dd>RAT( 7) = Character up vector, Y component in world coordinates
-<dt> = 3
-<dd>set the context to the values specified in the IAT and RAT arrays (as described above).
-<dt>IAT
-<dd>An integer array, of length 14, that has meaning only if IOPT equals 2 or 3. The elements of the IAT array are described in the above description of IOPT.
-<dt>RAT
-<dd>A real array, of length 7, that has meaning only if IOPT equals 2 or 3. The elements of the IAT array are described in the above description of IOPT.</dl>
+</dd><dd>IAT( 2) = Line type
+</dd><dd>IAT( 3) = Polyline color index
+</dd><dd>IAT( 4) = Marker type
+</dd><dd>IAT( 5) = Polymarker color index
+</dd><dd>IAT( 6) = Text font
+</dd><dd>IAT( 7) = Text precision
+</dd><dd>IAT( 8) = Text color index
+</dd><dd>IAT( 9) = Text path
+</dd><dd>IAT(10) = Text horizontal alignment
+</dd><dd>IAT(11) = Text vertical alignment
+</dd><dd>IAT(12) = Fill area interior style
+</dd><dd>IAT(13) = Fill are style index
+</dd><dd>IAT(14) = Fill area color index
+</dd><dd>RAT contains REAL GKS attribute settings as per:
+</dd><dd>RAT( 1) = Linewidth scale factor
+</dd><dd>RAT( 2) = Marker scale factor
+</dd><dd>RAT( 3) = Character expansion factor
+</dd><dd>RAT( 4) = Character spacing
+</dd><dd>RAT( 5) = Character height in world coordinates
+</dd><dd>RAT( 6) = Character up vector, X component in world coordinates
+</dd><dd>RAT( 7) = Character up vector, Y component in world coordinates
+</dd><dt> = 3
+</dt><dd>set the context to the values specified in the IAT and RAT arrays (as described above).
+</dd><dt>IAT
+</dt><dd>An integer array, of length 14, that has meaning only if IOPT equals 2 or 3. The elements of the IAT array are described in the above description of IOPT.
+</dd><dt>RAT
+</dt><dd>A real array, of length 7, that has meaning only if IOPT equals 2 or 3. The elements of the IAT array are described in the above description of IOPT.</dd></dl>
 
 <h2>Usage</h2>
 

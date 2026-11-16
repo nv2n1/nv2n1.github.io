@@ -10,11 +10,7 @@ description: "selabel_get_digests_all_partial_matches – retrieve the partial m
 <p>selabel_get_digests_all_partial_matches &#8211; retrieve the partial matches digest and the xattr digest that applies to the supplied path &#8211; Only supported on file backend.</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;stdbool.h&gt;
-
-
 #include &lt;selinux/selinux.h&gt;
-
-
 #include &lt;selinux/label.h&gt;</code></pre>
 <p> <code>bool selabel_get_digests_all_partial_matches(</code> <code>struct selabel_handle *</code><i>hnd</i><code>,</code><br />
  <code>const char *</code><i>key</i><code>,</code><br />

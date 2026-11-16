@@ -16,113 +16,107 @@ description: "bltk_report – automated report creation bltk_report_table – su
 <h2>DESCRIPTION</h2>
 <p> The following tools are implemented for results analysis:</p>
 <dl>
-<dt><code>bltk_report</code></p>
-<dd> automated report creation</p>
-<dt><code>bltk_report_table</code></p>
-<dd> summary table creation from several results folders</p>
-<dt><code>bltk_plot</code></p>
-<dd> graph drawing</dl>
+<dt><code>bltk_report</code></dt>
+<dd> automated report creation</dd>
+<dt><code>bltk_report_table</code></dt>
+<dd> summary table creation from several results folders</dd>
+<dt><code>bltk_plot</code></dt>
+<dd> graph drawing</dd></dl>
 <h2>GENERAL OPTIONS</h2>
 <dl>
-<dt><code>-h</code></p>
-<dd> theis help</p>
-<dt><code>-1</code></p>
-<dd> first statistic item of score file is ignored</p>
-<dt><code>-2 </code>item:num</p>
-<dd> statistic from item &#8216;item&#8217;, &#8216;num&#8217; number of score file</p>
-<dt><code>-f</code></p>
-<dd> statistics file name</dl>
+<dt><code>-h</code></dt>
+<dd> theis help</dd>
+<dt><code>-1</code></dt>
+<dd> first statistic item of score file is ignored</dd>
+<dt><code>-2 </code>item:num</dt>
+<dd> statistic from item &#8216;item&#8217;, &#8216;num&#8217; number of score file</dd>
+<dt><code>-f</code></dt>
+<dd> statistics file name</dd></dl>
 <h2>SPECIFIC OPTIONS</h2>
 <p> <code>bltk_report</code></p>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt><code>-o</code></p>
-<dd> print report to output</p>
-<dt><code>-K </code>string</p>
-<dd> comment string</p>
-<dt><code>-R </code>filename</p>
-<dd> argument will be used as report file name</p>
-<dt><code>-3 </code></p>
-<dd> first statistic item of stat.log file is ignored</p>
-<dt><code>-4 </code>item:num</p>
-<dd> statistic from item &#8216;item&#8217;, &#8216;num&#8217; number of stat.log file</p>
-<dt><code>-E</code></p>
-<dd> errors being ignored (allows to create report file anyway)</p>
-<dt><code>-i</code></p>
-<dd> idle mode</dl>
+<dt><code>-o</code></dt>
+<dd> print report to output</dd>
+<dt><code>-K </code>string</dt>
+<dd> comment string</dd>
+<dt><code>-R </code>filename</dt>
+<dd> argument will be used as report file name</dd>
+<dt><code>-3 </code></dt>
+<dd> first statistic item of stat.log file is ignored</dd>
+<dt><code>-4 </code>item:num</dt>
+<dd> statistic from item &#8216;item&#8217;, &#8216;num&#8217; number of stat.log file</dd>
+<dt><code>-E</code></dt>
+<dd> errors being ignored (allows to create report file anyway)</dd>
+<dt><code>-i</code></dt>
+<dd> idle mode</dd></dl>
 </dl>
 <p> <code>bltk_report_table</code></p>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt><code>-d</code></p>
-<dd> debugging mode</p>
-<dt><code>-s</code></p>
-<dd> sort result lines</p>
-<dt><code>-t</code></p>
-<dd> Excel-compatible file format</p>
-<dt><code>-3</code></p>
-<dd> first statistic item of stat.log file is ignored</p>
-<dt><code>-4 </code>item:num</p>
-<dd> statistic from item &#8216;item&#8217;, &#8216;num&#8217; number of stat.log file</p>
-<dt><code>-u</code></p>
-<dd> only columns which contain different values will be included into table</p>
-<dt><code>-E</code></p>
-<dd> errors being ignored (allows to create result table anyway)</p>
-<dt><code>-e</code></p>
-<dd> skip error results</p>
-<dt><code>-F </code>filter</p>
-<dd> only fields from filter file will be included into table (see doc/filter as an example)</p>
-<dt><code>-S</code></p>
-<dd> split mode &#8211; split multiple values to columns</p>
-<dt><code>-R</code></p>
-<dd> analyze all results dirs under passed directories</dl>
+<dt><code>-d</code></dt>
+<dd> debugging mode</dd>
+<dt><code>-s</code></dt>
+<dd> sort result lines</dd>
+<dt><code>-t</code></dt>
+<dd> Excel-compatible file format</dd>
+<dt><code>-3</code></dt>
+<dd> first statistic item of stat.log file is ignored</dd>
+<dt><code>-4 </code>item:num</dt>
+<dd> statistic from item &#8216;item&#8217;, &#8216;num&#8217; number of stat.log file</dd>
+<dt><code>-u</code></dt>
+<dd> only columns which contain different values will be included into table</dd>
+<dt><code>-E</code></dt>
+<dd> errors being ignored (allows to create result table anyway)</dd>
+<dt><code>-e</code></dt>
+<dd> skip error results</dd>
+<dt><code>-F </code>filter</dt>
+<dd> only fields from filter file will be included into table (see doc/filter as an example)</dd>
+<dt><code>-S</code></dt>
+<dd> split mode &#8211; split multiple values to columns</dd>
+<dt><code>-R</code></dt>
+<dd> analyze all results dirs under passed directories</dd></dl>
 </dl>
 <p> <code>bltk_plot</code></p>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt><code>-D</code></p>
-<dd> debugging mode</p>
-<dt><code>-d </code>results_dir</p>
-<dd> results directory name. This option could be passed several times default is current directory.</p>
-<dt><code>-s</code></p>
-<dd> use stat.log file</p>
-<dt><code>-w</code></p>
-<dd> use work.log file</p>
-<dt><code>-x </code>name</p>
-<dd> argument is used to be an X parameter default is &#8216;time&#8217; field</p>
-<dt><code>-y </code>name<code>&#8230;</code></p>
-<dd> argument is used to be an Y parameter this option could be passed several times default is &#8216;cap&#8217; field</p>
-<dt><code>-X </code>x1:x2</p>
-<dd> x range from x1 to x2</p>
-<dt><code>-Y </code>y1:y2</p>
-<dd> y range from y1 to y2</p>
-<dt><code>-t title</code></p>
-<dd> graph title</p>
-<dt><code>-o </code>options</p>
-<dd> options passed to &#8216;plot&#8217; command</p>
-<dt><code>-v</code></p>
-<dd> print current variables</p>
-<dt><code>-p </code>file</p>
-<dd> save graph to specified file</p>
-<dt><code>-n</code></p>
-<dd> print available field&#8217;s names</p>
-<dt><code>-R</code></p>
-<dd> analyze all results dirs under passed directories</dl>
+<dt><code>-D</code></dt>
+<dd> debugging mode</dd>
+<dt><code>-d </code>results_dir</dt>
+<dd> results directory name. This option could be passed several times default is current directory.</dd>
+<dt><code>-s</code></dt>
+<dd> use stat.log file</dd>
+<dt><code>-w</code></dt>
+<dd> use work.log file</dd>
+<dt><code>-x </code>name</dt>
+<dd> argument is used to be an X parameter default is &#8216;time&#8217; field</dd>
+<dt><code>-y </code>name<code>&#8230;</code></dt>
+<dd> argument is used to be an Y parameter this option could be passed several times default is &#8216;cap&#8217; field</dd>
+<dt><code>-X </code>x1:x2</dt>
+<dd> x range from x1 to x2</dd>
+<dt><code>-Y </code>y1:y2</dt>
+<dd> y range from y1 to y2</dd>
+<dt><code>-t title</code></dt>
+<dd> graph title</dd>
+<dt><code>-o </code>options</dt>
+<dd> options passed to &#8216;plot&#8217; command</dd>
+<dt><code>-v</code></dt>
+<dd> print current variables</dd>
+<dt><code>-p </code>file</dt>
+<dd> save graph to specified file</dd>
+<dt><code>-n</code></dt>
+<dd> print available field&#8217;s names</dd>
+<dt><code>-R</code></dt>
+<dd> analyze all results dirs under passed directories</dd></dl>
 </dl>
 <h2>EXAMPLE</h2>
 <dl>
-<dt>bltk_report_table &lt;results1&gt; &#8230; &lt;resultsn&gt; &gt;sum</p>
-<dd> Common results table will be generated in &#8216;sum&#8217; file for &lt;results1&gt; &#8230; &lt;resultsn&gt; directories.</p>
-<dt>bltk_report result</p>
-<dd> &#8216;Report&#8217; file will be generated in results directory</p>
-<dt>bltk_plot -y bat -x N &lt;results_dir1&gt; &#8230; &lt;results_dir&gt;</p>
-<dd> Common graph will be generated for &lt;results_dir1&gt; &#8230; &lt;results_dirn&gt;</dl>
+<dt>bltk_report_table &lt;results1&gt; &#8230; &lt;resultsn&gt; &gt;sum</dt>
+<dd> Common results table will be generated in &#8216;sum&#8217; file for &lt;results1&gt; &#8230; &lt;resultsn&gt; directories.</dd>
+<dt>bltk_report result</dt>
+<dd> &#8216;Report&#8217; file will be generated in results directory</dd>
+<dt>bltk_plot -y bat -x N &lt;results_dir1&gt; &#8230; &lt;results_dir&gt;</dt>
+<dd> Common graph will be generated for &lt;results_dir1&gt; &#8230; &lt;results_dirn&gt;</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-bltk/">bltk</a></code>(1), <code><a href="/docs/linux/man/5-bltk-conf/">bltk.conf</a></code>(5)</p>
 <h2>AUTHOR</h2>

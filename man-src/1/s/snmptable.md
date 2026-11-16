@@ -17,28 +17,28 @@ description: "snmptable – retrieve an SNMP table and display it in tabular for
 <p> AGENT identifies a target SNMP agent, which is instrumented to monitor the gievn objects. At its simplest, the AGENT specification will consist of a hostname or an IPv4 address. In this situation, the command will attempt communication with the agent, using UDP/IPv4 to port 161 of the given target host. See <i><a href="/docs/linux/man/1-snmpcmd/">snmpcmd</a>(1)</i> for a full list of the possible formats for AGENT.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>COMMON OPTIONS</code></p>
-<dd> Please see <i><a href="/docs/linux/man/1-snmpcmd/">snmpcmd</a>(1)</i> for a list of possible values for COMMON OPTIONS as well as their descriptions.</p>
-<dt><code>-Cb</code></p>
-<dd> Display only a brief heading. Any common prefix of the table field names will be deleted.</p>
-<dt><code>-CB</code></p>
-<dd> Do not use GETBULK requests to retrieve data, only GETNEXT.</p>
-<dt><code>-Cc</code><i> CHARS</i></p>
-<dd> Print table in columns of <i>CHARS</i> characters width.</p>
-<dt><code>-Cf</code><i> STRING</i></p>
-<dd> The string <i>STRING</i> is used to separate table columns. With this option, each table entry will be printed in compact form, just with the string given to separate the columns (useful if you want to import it into a database). Otherwise it is printed in nicely aligned columns.</p>
-<dt><code>-Ch</code></p>
-<dd> Display <i>only</i> the column headings.</p>
-<dt><code>-CH</code></p>
-<dd> Do not display the column headings.</p>
-<dt><code>-Ci</code></p>
-<dd> This option prepends the index of the entry to all printed lines.</p>
-<dt><code>-Cl</code></p>
-<dd> Left justify the data in each column.</p>
-<dt><code>-Cr</code><i> REPEATERS</i></p>
-<dd> For GETBULK requests, <i>REPEATERS</i> specifies the max-repeaters value to use. For GETNEXT requests, <i>REPEATERS</i> specifies the number of entries to retrieve at a time.</p>
-<dt><code>-Cw</code><i> WIDTH</i></p>
-<dd> Specifies the width of the lines when the table is printed. If the lines will be longer, the table will be printed in sections of at most <i>WIDTH </i> characters. If <i>WIDTH</i> is less than the length of the contents of a single column, then that single column will still be printed.</dl>
+<dt><code>COMMON OPTIONS</code></dt>
+<dd> Please see <i><a href="/docs/linux/man/1-snmpcmd/">snmpcmd</a>(1)</i> for a list of possible values for COMMON OPTIONS as well as their descriptions.</dd>
+<dt><code>-Cb</code></dt>
+<dd> Display only a brief heading. Any common prefix of the table field names will be deleted.</dd>
+<dt><code>-CB</code></dt>
+<dd> Do not use GETBULK requests to retrieve data, only GETNEXT.</dd>
+<dt><code>-Cc</code><i> CHARS</i></dt>
+<dd> Print table in columns of <i>CHARS</i> characters width.</dd>
+<dt><code>-Cf</code><i> STRING</i></dt>
+<dd> The string <i>STRING</i> is used to separate table columns. With this option, each table entry will be printed in compact form, just with the string given to separate the columns (useful if you want to import it into a database). Otherwise it is printed in nicely aligned columns.</dd>
+<dt><code>-Ch</code></dt>
+<dd> Display <i>only</i> the column headings.</dd>
+<dt><code>-CH</code></dt>
+<dd> Do not display the column headings.</dd>
+<dt><code>-Ci</code></dt>
+<dd> This option prepends the index of the entry to all printed lines.</dd>
+<dt><code>-Cl</code></dt>
+<dd> Left justify the data in each column.</dd>
+<dt><code>-Cr</code><i> REPEATERS</i></dt>
+<dd> For GETBULK requests, <i>REPEATERS</i> specifies the max-repeaters value to use. For GETNEXT requests, <i>REPEATERS</i> specifies the number of entries to retrieve at a time.</dd>
+<dt><code>-Cw</code><i> WIDTH</i></dt>
+<dd> Specifies the width of the lines when the table is printed. If the lines will be longer, the table will be printed in sections of at most <i>WIDTH </i> characters. If <i>WIDTH</i> is less than the length of the contents of a single column, then that single column will still be printed.</dd></dl>
 <p> Note that <code>snmptable</code> REQUIRES an argument specifying the agent to query and exactly one OID argument, as described in the <i><a href="/docs/linux/man/1-snmpcmd/">snmpcmd</a>(1)</i> manual page. This OID <code>must</code> be that of a MIB table object.</p>
 <h2>EXAMPLES</h2>
 <p> $ snmptable -v 2c -c public localhost at.atTable </p>

@@ -33,51 +33,51 @@ description: "QwtWeedingCurveFitter –"
 <p>Constructor </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>tolerance</i> Tolerance</dl>
+<dd><i>tolerance</i> Tolerance</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>setTolerance()</code>, <code>tolerance()</code></dl>
+<dd><code>setTolerance()</code>, <code>tolerance()</code></dd></dl>
 <h2>Member Function Documentation</h2>
 <h3>uint QwtWeedingCurveFitter::chunkSize () const</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>Maximum for the number of points passed to a run of the algorithm &#8211; or 0, when unlimited</dl>
+<dd>Maximum for the number of points passed to a run of the algorithm &#8211; or 0, when unlimited</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>setChunkSize()</code></dl>
+<dd><code>setChunkSize()</code></dd></dl>
 <h3>QPolygonF QwtWeedingCurveFitter::fitCurve (const QPolygonF &amp;points) const [virtual]</h3>
 <p><code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>points</i> Series of data points</dl>
+<dd><i>points</i> Series of data points</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>Curve points</dl>
+<dd>Curve points</dd></dl>
 <p> Implements <code>QwtCurveFitter</code>.</p>
 <h3>void QwtWeedingCurveFitter::setChunkSize (uintnumPoints)</h3>
 <p>Limit the number of points passed to a run of the algorithm </p>
 <p> The runtime of the Douglas Peucker algorithm increases non linear with the number of points. For a chunk size &gt; 0 the polygon is split into pieces passed to the algorithm one by one. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>numPoints</i> Maximum for the number of points passed to the algorithm</dl>
+<dd><i>numPoints</i> Maximum for the number of points passed to the algorithm</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>chunkSize()</code></dl>
+<dd><code>chunkSize()</code></dd></dl>
 <h3>void QwtWeedingCurveFitter::setTolerance (doubletolerance)</h3>
 <p>Assign the tolerance </p>
 <p> The tolerance is the maximum distance, that is acceptable between the original curve and the smoothed curve. </p>
 <p> Increasing the tolerance will reduce the number of the resulting points. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>tolerance</i> Tolerance</dl>
+<dd><i>tolerance</i> Tolerance</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>tolerance()</code></dl>
+<dd><code>tolerance()</code></dd></dl>
 <h3>double QwtWeedingCurveFitter::tolerance () const</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>Tolerance</dl>
+<dd>Tolerance</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>setTolerance()</code></dl>
+<dd><code>setTolerance()</code></dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for Qwt User&#8217;s Guide from the source code.</p>

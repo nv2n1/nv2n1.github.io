@@ -26,11 +26,8 @@ value - the value to initialize the new elements with
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;valarray&gt;
-
 #include &lt;iostream&gt;
-
 int main()
-
 {
     std::valarray&lt;int&gt; v{1, 2, 3};
     v.resize(10);

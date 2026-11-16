@@ -18,24 +18,24 @@ description: "gschem – gEDA/gaf Schematic Capture"
 <h2>OPTIONS</h2>
 <p> <i>gschem</i> accepts the following options:</p>
 <dl>
-<dt><code>-q</code></p>
-<dd> Quiet mode on. This mode turns off all warnings/notes/messages. (optional)</p>
-<dt><code>-v </code></p>
-<dd> Verbose mode on. This mode gives as much feedback to the user as possible. (optional)</p>
-<dt><code>-t </code></p>
-<dd> Print out more information when using mouse strokes. With this command line flag and the middle button configured for mouse strokes, gschem will output the stroke sequence numbers as the user executes strokes. These numbers can be used to define new strokes in the system-gschemrc file.</p>
-<dt><code>-r filename</code></p>
-<dd> Specify a rc filename. Normally <i>gschem</i> searches for the system-gschemrc, then ~/.gEDA/gschemrc, and finally for a gschemrc in the current directory. This options allows the user to specify an additional rc file which is read after all the other rc files are read. (optional)</p>
-<dt><code>-s filename</code></p>
-<dd> Specify a guile script to be executed at startup. (optional)</p>
-<dt><code>-o filename</code></p>
-<dd> Specify a filename for postscript output. This command line argument is useful when running <i>gschem</i> from a shell script and with a guile script. The filename can be changed through the print dialog box.</p>
-<dt><code>-p </code></p>
-<dd> Automatically place the window, especially useful if running gschem from the command line and generating output.</p>
-<dt><code>-h </code></p>
-<dd> Print out short command line help.</p>
-<dt><code>schematic1 [&#8230; schematicN]</code></p>
-<dd> Schematic file to be loaded. Specifing a schematic file is optional. If multiple schematic files are specified they are read in sequentially and put on seperate pages. It is important that the schematic(s) follow all the options (ie last). </p>
+<dt><code>-q</code></dt>
+<dd> Quiet mode on. This mode turns off all warnings/notes/messages. (optional)</dd>
+<dt><code>-v </code></dt>
+<dd> Verbose mode on. This mode gives as much feedback to the user as possible. (optional)</dd>
+<dt><code>-t </code></dt>
+<dd> Print out more information when using mouse strokes. With this command line flag and the middle button configured for mouse strokes, gschem will output the stroke sequence numbers as the user executes strokes. These numbers can be used to define new strokes in the system-gschemrc file.</dd>
+<dt><code>-r filename</code></dt>
+<dd> Specify a rc filename. Normally <i>gschem</i> searches for the system-gschemrc, then ~/.gEDA/gschemrc, and finally for a gschemrc in the current directory. This options allows the user to specify an additional rc file which is read after all the other rc files are read. (optional)</dd>
+<dt><code>-s filename</code></dt>
+<dd> Specify a guile script to be executed at startup. (optional)</dd>
+<dt><code>-o filename</code></dt>
+<dd> Specify a filename for postscript output. This command line argument is useful when running <i>gschem</i> from a shell script and with a guile script. The filename can be changed through the print dialog box.</dd>
+<dt><code>-p </code></dt>
+<dd> Automatically place the window, especially useful if running gschem from the command line and generating output.</dd>
+<dt><code>-h </code></dt>
+<dd> Print out short command line help.</dd>
+<dt><code>schematic1 [&#8230; schematicN]</code></dt>
+<dd> Schematic file to be loaded. Specifing a schematic file is optional. If multiple schematic files are specified they are read in sequentially and put on seperate pages. It is important that the schematic(s) follow all the options (ie last). </dd>
 </dl>
 <h2>EXAMPLES</h2>
 <p> These examples assume that you have a schematic called stack_1.sch in the current directory </p>
@@ -48,8 +48,8 @@ description: "gschem – gEDA/gaf Schematic Capture"
 <h2>ENVIRONMENT</h2>
 <p> <i>gschem</i> respects the following environment variable: </p>
 <dl>
-<dt><code>GEDADATA </code></p>
-<dd> specifies where the various required scheme and rc files are located (the default is ${prefix}/share/gEDA). This environment variables does not need to be set by the end user unless they are moving the executables to a new install ${prefix}. </p>
+<dt><code>GEDADATA </code></dt>
+<dd> specifies where the various required scheme and rc files are located (the default is ${prefix}/share/gEDA). This environment variables does not need to be set by the end user unless they are moving the executables to a new install ${prefix}. </dd>
 </dl>
 <h2>AUTHOR</h2>
 <p> Ales Hvezda and many others </p>

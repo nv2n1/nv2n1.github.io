@@ -230,9 +230,9 @@ url: "/docs/linux/man/3-globus_ftp_client_chgrp/"
  <b>Parameters:</b>
 <dl>
 <dt>
-<dd> <i>user_arg</i> The user_arg parameter passed to the operation. 
+</dt><dd> <i>user_arg</i> The user_arg parameter passed to the operation. 
  <i>handle</i> The handle on which the operation was done. 
- <i>error</i> A Globus error object indicating any problem which occurred, or GLOBUS_SUCCESS, if the operation completed successfully.</dl>
+ <i>error</i> A Globus error object indicating any problem which occurred, or GLOBUS_SUCCESS, if the operation completed successfully.</dd></dl>
  
 
  
@@ -250,7 +250,7 @@ url: "/docs/linux/man/3-globus_ftp_client_chgrp/"
  <b>See Also:</b>
 <dl>
 <dt>
-<dd> <b>globus_ftp_client_feat</b>, <b>globus_ftp_client_features_init</b>, <b>globus_ftp_client_features_destroy</b></dl>
+</dt><dd> <b>globus_ftp_client_feat</b>, <b>globus_ftp_client_features_init</b>, <b>globus_ftp_client_features_destroy</b></dd></dl>
  
 
  
@@ -280,7 +280,7 @@ url: "/docs/linux/man/3-globus_ftp_client_chgrp/"
  <b>Parameters:</b>
 <dl>
 <dt>
-<dd> <i>u_handle</i> Handle which to abort.</dl>
+</dt><dd> <i>u_handle</i> Handle which to abort.</dd></dl>
  
 
  
@@ -296,31 +296,31 @@ url: "/docs/linux/man/3-globus_ftp_client_chgrp/"
  <b>Parameters:</b>
 <dl>
 <dt>
-<dd> <i>u_handle</i> An FTP Client handle to use for the change operation. 
+</dt><dd> <i>u_handle</i> An FTP Client handle to use for the change operation. 
  <i>url</i> The URL of the file to modify group membership. 
  <i>group</i> The group name or numeric identifier for the group that the file should become a member of. 
  <i>attr</i> Attributes for this operation. 
  <i>complete_callback</i> Callback to be invoked once the change is completed. 
- <i>callback_arg</i> Argument to be passed to the complete_callback.</dl>
+ <i>callback_arg</i> Argument to be passed to the complete_callback.</dd></dl>
  
 
  <b>Returns:</b>
 <dl>
 <dt>
-<dd> This function returns an error when any of these conditions are true:
-<dl>
+</dt><dd> This function returns an error when any of these conditions are true:
+</dd><dl>
 <dt>&bull;
-<dd> handle is GLOBUS_NULL
-<dt>&bull;
-<dd> url is GLOBUS_NULL
-<dt>&bull;
-<dd> url cannot be parsed
-<dt>&bull;
-<dd> url is not a ftp or gsiftp url
-<dt>&bull;
-<dd> complete_callback is GLOBUS_NULL
-<dt>&bull;
-<dd> handle already has an operation in progress</dl>
+</dt><dd> handle is GLOBUS_NULL
+</dd><dt>&bull;
+</dt><dd> url is GLOBUS_NULL
+</dd><dt>&bull;
+</dt><dd> url cannot be parsed
+</dd><dt>&bull;
+</dt><dd> url is not a ftp or gsiftp url
+</dd><dt>&bull;
+</dt><dd> complete_callback is GLOBUS_NULL
+</dd><dt>&bull;
+</dt><dd> handle already has an operation in progress</dd></dl>
  
 
 </dl>
@@ -339,31 +339,31 @@ url: "/docs/linux/man/3-globus_ftp_client_chgrp/"
  <b>Parameters:</b>
 <dl>
 <dt>
-<dd> <i>u_handle</i> An FTP Client handle to use for the move operation. 
+</dt><dd> <i>u_handle</i> An FTP Client handle to use for the move operation. 
  <i>url</i> The URL of the file to modify permissions. 
  <i>mode</i> The integer file mode to change to. Be sure that the integer is in the proper base, i.e. 0777 (octal) vs 777 (decimal). 
  <i>attr</i> Attributes for this operation. 
  <i>complete_callback</i> Callback to be invoked once the move is completed. 
- <i>callback_arg</i> Argument to be passed to the complete_callback.</dl>
+ <i>callback_arg</i> Argument to be passed to the complete_callback.</dd></dl>
  
 
  <b>Returns:</b>
 <dl>
 <dt>
-<dd> This function returns an error when any of these conditions are true:
-<dl>
+</dt><dd> This function returns an error when any of these conditions are true:
+</dd><dl>
 <dt>&bull;
-<dd> handle is GLOBUS_NULL
-<dt>&bull;
-<dd> url is GLOBUS_NULL
-<dt>&bull;
-<dd> url cannot be parsed
-<dt>&bull;
-<dd> url is not a ftp or gsiftp url
-<dt>&bull;
-<dd> complete_callback is GLOBUS_NULL
-<dt>&bull;
-<dd> handle already has an operation in progress</dl>
+</dt><dd> handle is GLOBUS_NULL
+</dd><dt>&bull;
+</dt><dd> url is GLOBUS_NULL
+</dd><dt>&bull;
+</dt><dd> url cannot be parsed
+</dd><dt>&bull;
+</dt><dd> url is not a ftp or gsiftp url
+</dd><dt>&bull;
+</dt><dd> complete_callback is GLOBUS_NULL
+</dd><dt>&bull;
+</dt><dd> handle already has an operation in progress</dd></dl>
  
 
 </dl>
@@ -382,7 +382,7 @@ url: "/docs/linux/man/3-globus_ftp_client_chgrp/"
  <b>Parameters:</b>
 <dl>
 <dt>
-<dd> <i>u_handle</i> An FTP Client handle to use for the list operation. 
+</dt><dd> <i>u_handle</i> An FTP Client handle to use for the list operation. 
  <i>url</i> The URL to list. The URL may be an ftp or gsiftp URL. 
  <i>attr</i> Attributes for this file transfer. 
  <i>cksm</i> A pointer to a buffer to be filled with the checksum of the file. On error the buffer contents are undefined. 
@@ -390,28 +390,28 @@ url: "/docs/linux/man/3-globus_ftp_client_chgrp/"
  <i>length</i> Length of data to read from the starting offset. Use -1 to read the entire file. 
  <i>algorithm</i> A pointer to a string to specifying the desired algorithm Currently, GridFTP servers only support the MD5 algorithm. 
  <i>complete_callback</i> Callback to be invoked once the checksum is completed. 
- <i>callback_arg</i> Argument to be passed to the complete_callback.</dl>
+ <i>callback_arg</i> Argument to be passed to the complete_callback.</dd></dl>
  
 
  <b>Returns:</b>
 <dl>
 <dt>
-<dd> This function returns an error when any of these conditions are true:
-<dl>
+</dt><dd> This function returns an error when any of these conditions are true:
+</dd><dl>
 <dt>&bull;
-<dd> handle is GLOBUS_NULL
-<dt>&bull;
-<dd> url is GLOBUS_NULL
-<dt>&bull;
-<dd> url cannot be parsed
-<dt>&bull;
-<dd> url is not a ftp or gsiftp url
-<dt>&bull;
-<dd> size is GLOBUS_NULL
-<dt>&bull;
-<dd> complete_callback is GLOBUS_NULL
-<dt>&bull;
-<dd> handle already has an operation in progress</dl>
+</dt><dd> handle is GLOBUS_NULL
+</dd><dt>&bull;
+</dt><dd> url is GLOBUS_NULL
+</dd><dt>&bull;
+</dt><dd> url cannot be parsed
+</dd><dt>&bull;
+</dt><dd> url is not a ftp or gsiftp url
+</dd><dt>&bull;
+</dt><dd> size is GLOBUS_NULL
+</dd><dt>&bull;
+</dt><dd> complete_callback is GLOBUS_NULL
+</dd><dt>&bull;
+</dt><dd> handle already has an operation in progress</dd></dl>
  
 
 </dl>
@@ -430,36 +430,36 @@ url: "/docs/linux/man/3-globus_ftp_client_chgrp/"
  <b>Parameters:</b>
 <dl>
 <dt>
-<dd> <i>u_handle</i> An FTP Client handle to use for the cwd operation. 
+</dt><dd> <i>u_handle</i> An FTP Client handle to use for the cwd operation. 
  <i>url</i> The URL for the directory to cd into. The URL may be an ftp or gsiftp URL. 
  <i>attr</i> Attributes for this operation. 
  <i>cwd_buffer</i> A pointer to a globus_byte_t * to be allocated and filled with the directory name returned by the CWD, if it succeeds. Otherwise, the value pointed to by it is undefined. It is up the user to free this memory. 
  <i>cwd_buffer_length</i> A pointer to a globus_size_t to be filled with the length of the data in cwd_buffer. 
  <i>complete_callback</i> Callback to be invoked once the cwd is completed. 
- <i>callback_arg</i> Argument to be passed to the complete_callback.</dl>
+ <i>callback_arg</i> Argument to be passed to the complete_callback.</dd></dl>
  
 
  <b>Returns:</b>
 <dl>
 <dt>
-<dd> This function returns an error when any of these conditions are true:
-<dl>
+</dt><dd> This function returns an error when any of these conditions are true:
+</dd><dl>
 <dt>&bull;
-<dd> u_handle is GLOBUS_NULL
-<dt>&bull;
-<dd> url is GLOBUS_NULL
-<dt>&bull;
-<dd> url cannot be parsed
-<dt>&bull;
-<dd> url is not a ftp or gsiftp url
-<dt>&bull;
-<dd> cwd_buffer is GLOBUS_NULL
-<dt>&bull;
-<dd> cwd_buffer_length is GLOBUS_NULL
-<dt>&bull;
-<dd> complete_callback is GLOBUS_NULL
-<dt>&bull;
-<dd> handle already has an operation in progress</dl>
+</dt><dd> u_handle is GLOBUS_NULL
+</dd><dt>&bull;
+</dt><dd> url is GLOBUS_NULL
+</dd><dt>&bull;
+</dt><dd> url cannot be parsed
+</dd><dt>&bull;
+</dt><dd> url is not a ftp or gsiftp url
+</dd><dt>&bull;
+</dt><dd> cwd_buffer is GLOBUS_NULL
+</dd><dt>&bull;
+</dt><dd> cwd_buffer_length is GLOBUS_NULL
+</dd><dt>&bull;
+</dt><dd> complete_callback is GLOBUS_NULL
+</dd><dt>&bull;
+</dt><dd> handle already has an operation in progress</dd></dl>
  
 
 </dl>
@@ -478,30 +478,30 @@ url: "/docs/linux/man/3-globus_ftp_client_chgrp/"
  <b>Parameters:</b>
 <dl>
 <dt>
-<dd> <i>u_handle</i> An FTP Client handle to use for the delete operation. 
+</dt><dd> <i>u_handle</i> An FTP Client handle to use for the delete operation. 
  <i>url</i> The URL for the file to delete. The URL may be an ftp or gsiftp URL. 
  <i>attr</i> Attributes for this file transfer. 
  <i>complete_callback</i> Callback to be invoked once the delete is completed. 
- <i>callback_arg</i> Argument to be passed to the complete_callback.</dl>
+ <i>callback_arg</i> Argument to be passed to the complete_callback.</dd></dl>
  
 
  <b>Returns:</b>
 <dl>
 <dt>
-<dd> This function returns an error when any of these conditions are true:
-<dl>
+</dt><dd> This function returns an error when any of these conditions are true:
+</dd><dl>
 <dt>&bull;
-<dd> u_handle is GLOBUS_NULL
-<dt>&bull;
-<dd> url is GLOBUS_NULL
-<dt>&bull;
-<dd> url cannot be parsed
-<dt>&bull;
-<dd> url is not a ftp or gsiftp url
-<dt>&bull;
-<dd> complete_callback is GLOBUS_NULL
-<dt>&bull;
-<dd> handle already has an operation in progress</dl>
+</dt><dd> u_handle is GLOBUS_NULL
+</dd><dt>&bull;
+</dt><dd> url is GLOBUS_NULL
+</dd><dt>&bull;
+</dt><dd> url cannot be parsed
+</dd><dt>&bull;
+</dt><dd> url is not a ftp or gsiftp url
+</dd><dt>&bull;
+</dt><dd> complete_callback is GLOBUS_NULL
+</dd><dt>&bull;
+</dt><dd> handle already has an operation in progress</dd></dl>
  
 
 </dl>
@@ -518,30 +518,30 @@ url: "/docs/linux/man/3-globus_ftp_client_chgrp/"
  <b>Parameters:</b>
 <dl>
 <dt>
-<dd> <i>u_handle</i> An FTP Client handle to use for the existence check operation. 
+</dt><dd> <i>u_handle</i> An FTP Client handle to use for the existence check operation. 
  <i>url</i> The URL of the directory or file to check. The URL may be an ftp or gsiftp URL. 
  <i>attr</i> Attributes to use for this operation. 
  <i>complete_callback</i> Callback to be invoked once the existence operation is completed. 
- <i>callback_arg</i> Argument to be passed to the complete_callback.</dl>
+ <i>callback_arg</i> Argument to be passed to the complete_callback.</dd></dl>
  
 
  <b>Returns:</b>
 <dl>
 <dt>
-<dd> This function returns an error when any of these conditions are true:
-<dl>
+</dt><dd> This function returns an error when any of these conditions are true:
+</dd><dl>
 <dt>&bull;
-<dd> u_handle is GLOBUS_NULL
-<dt>&bull;
-<dd> url is GLOBUS_NULL
-<dt>&bull;
-<dd> url cannot be parsed
-<dt>&bull;
-<dd> url is not a ftp or gsiftp url
-<dt>&bull;
-<dd> complete_callback is GLOBUS_NULL
-<dt>&bull;
-<dd> handle already has an operation in progress</dl>
+</dt><dd> u_handle is GLOBUS_NULL
+</dd><dt>&bull;
+</dt><dd> url is GLOBUS_NULL
+</dd><dt>&bull;
+</dt><dd> url cannot be parsed
+</dd><dt>&bull;
+</dt><dd> url is not a ftp or gsiftp url
+</dd><dt>&bull;
+</dt><dd> complete_callback is GLOBUS_NULL
+</dd><dt>&bull;
+</dt><dd> handle already has an operation in progress</dd></dl>
  
 
 </dl>
@@ -562,32 +562,32 @@ url: "/docs/linux/man/3-globus_ftp_client_chgrp/"
  <b>Parameters:</b>
 <dl>
 <dt>
-<dd> <i>handle</i> An FTP Client handle to use for the get operation. 
+</dt><dd> <i>handle</i> An FTP Client handle to use for the get operation. 
  <i>url</i> The URL to download. The URL may be an ftp or gsiftp URL. 
  <i>attr</i> Attributes for this file transfer. 
  <i>restart</i> Pointer to a restart marker. 
  <i>eret_alg_str</i> The ERET algorithm string. This string contains information needed to invoke a server-specific data reduction algorithm on the file being retrieved. 
  <i>complete_callback</i> Callback to be invoked once the 'get' is completed. 
- <i>callback_arg</i> Argument to be passed to the complete_callback.</dl>
+ <i>callback_arg</i> Argument to be passed to the complete_callback.</dd></dl>
  
 
  <b>Returns:</b>
 <dl>
 <dt>
-<dd> This function returns an error when any of these conditions are true:
-<dl>
+</dt><dd> This function returns an error when any of these conditions are true:
+</dd><dl>
 <dt>&bull;
-<dd> handle is GLOBUS_NULL
-<dt>&bull;
-<dd> url is GLOBUS_NULL
-<dt>&bull;
-<dd> url cannot be parsed
-<dt>&bull;
-<dd> url is not a ftp or gsiftp url
-<dt>&bull;
-<dd> complete_callback is GLOBUS_NULL
-<dt>&bull;
-<dd> handle already has an operation in progress</dl>
+</dt><dd> handle is GLOBUS_NULL
+</dd><dt>&bull;
+</dt><dd> url is GLOBUS_NULL
+</dd><dt>&bull;
+</dt><dd> url cannot be parsed
+</dd><dt>&bull;
+</dt><dd> url is not a ftp or gsiftp url
+</dd><dt>&bull;
+</dt><dd> complete_callback is GLOBUS_NULL
+</dd><dt>&bull;
+</dt><dd> handle already has an operation in progress</dd></dl>
  
 
 </dl>
@@ -596,7 +596,7 @@ url: "/docs/linux/man/3-globus_ftp_client_chgrp/"
  <b>See Also:</b>
 <dl>
 <dt>
-<dd> <b>globus_ftp_client_register_read()</b></dl>
+</dt><dd> <b>globus_ftp_client_register_read()</b></dd></dl>
  
 
  
@@ -614,19 +614,19 @@ url: "/docs/linux/man/3-globus_ftp_client_chgrp/"
  <b>Parameters:</b>
 <dl>
 <dt>
-<dd> <i>handle</i> An FTP Client handle to use for the put operation. 
+</dt><dd> <i>handle</i> An FTP Client handle to use for the put operation. 
  <i>url</i> The URL to store the data to. The URL may be an ftp or gsiftp URL. 
  <i>attr</i> Attributes for this file transfer. 
  <i>restart</i> Pointer to a restart marker. 
  <i>esto_alg_str</i> 
  <i>complete_callback</i> Callback to be invoked once the 'put' is completed. 
- <i>callback_arg</i> Argument to be passed to the complete_callback.</dl>
+ <i>callback_arg</i> Argument to be passed to the complete_callback.</dd></dl>
  
 
  <b>See Also:</b>
 <dl>
 <dt>
-<dd> <b>globus_ftp_client_register_write()</b></dl>
+</dt><dd> <b>globus_ftp_client_register_write()</b></dd></dl>
  
 
  
@@ -644,7 +644,7 @@ url: "/docs/linux/man/3-globus_ftp_client_chgrp/"
  <b>Parameters:</b>
 <dl>
 <dt>
-<dd> <i>handle</i> An FTP Client handle to use for the get operation. 
+</dt><dd> <i>handle</i> An FTP Client handle to use for the get operation. 
  <i>source_url</i> The URL to transfer. The URL may be an ftp or gsiftp URL. 
  <i>source_attr</i> Attributes for the souce URL. 
  <i>eret_alg_str</i> 
@@ -653,13 +653,13 @@ url: "/docs/linux/man/3-globus_ftp_client_chgrp/"
  <i>esto_alg_str</i> 
  <i>restart</i> Pointer to a restart marker. 
  <i>complete_callback</i> Callback to be invoked once the 'put' is completed. 
- <i>callback_arg</i> Argument to be passed to the complete_callback.</dl>
+ <i>callback_arg</i> Argument to be passed to the complete_callback.</dd></dl>
  
 
  <b>Note:</b>
 <dl>
 <dt>
-<dd> The source_attr and dest_attr MUST be compatible. For example, the MODE and TYPE should match for both the source and destination.</dl>
+</dt><dd> The source_attr and dest_attr MUST be compatible. For example, the MODE and TYPE should match for both the source and destination.</dd></dl>
  
 
  
@@ -671,33 +671,33 @@ url: "/docs/linux/man/3-globus_ftp_client_chgrp/"
  <b>Parameters:</b>
 <dl>
 <dt>
-<dd> <i>u_handle</i> An FTP Client handle to use for the list operation. 
+</dt><dd> <i>u_handle</i> An FTP Client handle to use for the list operation. 
  <i>url</i> The URL to list. The URL may be an ftp or gsiftp URL. 
  <i>attr</i> Attributes for this file transfer. 
  <i>u_features</i> A pointer to a globus_ftp_client_features_t to be filled with the feature set supported by the server. 
  <i>complete_callback</i> Callback to be invoked once the size check is completed. 
- <i>callback_arg</i> Argument to be passed to the complete_callback.</dl>
+ <i>callback_arg</i> Argument to be passed to the complete_callback.</dd></dl>
  
 
  <b>Returns:</b>
 <dl>
 <dt>
-<dd> This function returns an error when any of these conditions are true:
-<dl>
+</dt><dd> This function returns an error when any of these conditions are true:
+</dd><dl>
 <dt>&bull;
-<dd> u_handle is GLOBUS_NULL
-<dt>&bull;
-<dd> source_url is GLOBUS_NULL
-<dt>&bull;
-<dd> source_url cannot be parsed
-<dt>&bull;
-<dd> source_url is not a ftp or gsiftp url
-<dt>&bull;
-<dd> u_features is GLOBUS_NULL or badly initialized
-<dt>&bull;
-<dd> complete_callback is GLOBUS_NULL
-<dt>&bull;
-<dd> handle already has an operation in progress</dl>
+</dt><dd> u_handle is GLOBUS_NULL
+</dd><dt>&bull;
+</dt><dd> source_url is GLOBUS_NULL
+</dd><dt>&bull;
+</dt><dd> source_url cannot be parsed
+</dd><dt>&bull;
+</dt><dd> source_url is not a ftp or gsiftp url
+</dd><dt>&bull;
+</dt><dd> u_features is GLOBUS_NULL or badly initialized
+</dd><dt>&bull;
+</dt><dd> complete_callback is GLOBUS_NULL
+</dd><dt>&bull;
+</dt><dd> handle already has an operation in progress</dd></dl>
  
 
 </dl>
@@ -712,13 +712,13 @@ url: "/docs/linux/man/3-globus_ftp_client_chgrp/"
  <b>Note:</b>
 <dl>
 <dt>
-<dd> Structure passed to this function must have been previously initialized by <b>globus_ftp_client_features_init()</b>.</dl>
+</dt><dd> Structure passed to this function must have been previously initialized by <b>globus_ftp_client_features_init()</b>.</dd></dl>
  
 
  <b>Returns:</b>
 <dl>
 <dt>
-<dd> GLOBUS_SUCCESS on success, otherwise error.</dl>
+</dt><dd> GLOBUS_SUCCESS on success, otherwise error.</dd></dl>
  
 
  
@@ -730,13 +730,13 @@ url: "/docs/linux/man/3-globus_ftp_client_chgrp/"
  <b>Note:</b>
 <dl>
 <dt>
-<dd> Structure initialized by this function must be destroyed using <b>globus_ftp_client_features_destroy()</b></dl>
+</dt><dd> Structure initialized by this function must be destroyed using <b>globus_ftp_client_features_destroy()</b></dd></dl>
  
 
  <b>Returns:</b>
 <dl>
 <dt>
-<dd> GLOBUS_SUCCESS on success, otherwise error.</dl>
+</dt><dd> GLOBUS_SUCCESS on success, otherwise error.</dd></dl>
  
 
  
@@ -752,31 +752,31 @@ url: "/docs/linux/man/3-globus_ftp_client_chgrp/"
  <b>Parameters:</b>
 <dl>
 <dt>
-<dd> <i>handle</i> An FTP Client handle to use for the get operation. 
+</dt><dd> <i>handle</i> An FTP Client handle to use for the get operation. 
  <i>url</i> The URL to download. The URL may be an ftp or gsiftp URL. 
  <i>attr</i> Attributes for this file transfer. 
  <i>restart</i> Pointer to a restart marker. 
  <i>complete_callback</i> Callback to be invoked once the 'get' is completed. 
- <i>callback_arg</i> Argument to be passed to the complete_callback.</dl>
+ <i>callback_arg</i> Argument to be passed to the complete_callback.</dd></dl>
  
 
  <b>Returns:</b>
 <dl>
 <dt>
-<dd> This function returns an error when any of these conditions are true:
-<dl>
+</dt><dd> This function returns an error when any of these conditions are true:
+</dd><dl>
 <dt>&bull;
-<dd> handle is GLOBUS_NULL
-<dt>&bull;
-<dd> url is GLOBUS_NULL
-<dt>&bull;
-<dd> url cannot be parsed
-<dt>&bull;
-<dd> url is not a ftp or gsiftp url
-<dt>&bull;
-<dd> complete_callback is GLOBUS_NULL
-<dt>&bull;
-<dd> handle already has an operation in progress</dl>
+</dt><dd> handle is GLOBUS_NULL
+</dd><dt>&bull;
+</dt><dd> url is GLOBUS_NULL
+</dd><dt>&bull;
+</dt><dd> url cannot be parsed
+</dd><dt>&bull;
+</dt><dd> url is not a ftp or gsiftp url
+</dd><dt>&bull;
+</dt><dd> complete_callback is GLOBUS_NULL
+</dd><dt>&bull;
+</dt><dd> handle already has an operation in progress</dd></dl>
  
 
 </dl>
@@ -785,7 +785,7 @@ url: "/docs/linux/man/3-globus_ftp_client_chgrp/"
  <b>See Also:</b>
 <dl>
 <dt>
-<dd> <b>globus_ftp_client_register_read()</b></dl>
+</dt><dd> <b>globus_ftp_client_register_read()</b></dd></dl>
  
 
  
@@ -801,15 +801,15 @@ url: "/docs/linux/man/3-globus_ftp_client_chgrp/"
  <b>Parameters:</b>
 <dl>
 <dt>
-<dd> <i>u_features</i> list of features, as returned by <b>globus_ftp_client_feat()</b> 
+</dt><dd> <i>u_features</i> list of features, as returned by <b>globus_ftp_client_feat()</b> 
  <i>answer</i> this variable will contain the answer 
- <i>feature</i> feature number, 0 &lt;= feature &lt; GLOBUS_FTP_CLIENT_FEATURE_MAX</dl>
+ <i>feature</i> feature number, 0 &lt;= feature &lt; GLOBUS_FTP_CLIENT_FEATURE_MAX</dd></dl>
  
 
  <b>Returns:</b>
 <dl>
 <dt>
-<dd> error when any of the parameters is null or badly initialized</dl>
+</dt><dd> error when any of the parameters is null or badly initialized</dd></dl>
  
 
  
@@ -825,30 +825,30 @@ url: "/docs/linux/man/3-globus_ftp_client_chgrp/"
  <b>Parameters:</b>
 <dl>
 <dt>
-<dd> <i>u_handle</i> An FTP Client handle to use for the list operation. 
+</dt><dd> <i>u_handle</i> An FTP Client handle to use for the list operation. 
  <i>url</i> The URL to list. The URL may be an ftp or gsiftp URL. 
  <i>attr</i> Attributes for this file transfer. 
  <i>complete_callback</i> Callback to be invoked once the 'list' is completed. 
- <i>callback_arg</i> Argument to be passed to the complete_callback.</dl>
+ <i>callback_arg</i> Argument to be passed to the complete_callback.</dd></dl>
  
 
  <b>Returns:</b>
 <dl>
 <dt>
-<dd> This function returns an error when any of these conditions are true:
-<dl>
+</dt><dd> This function returns an error when any of these conditions are true:
+</dd><dl>
 <dt>&bull;
-<dd> handle is GLOBUS_NULL
-<dt>&bull;
-<dd> url is GLOBUS_NULL
-<dt>&bull;
-<dd> url cannot be parsed
-<dt>&bull;
-<dd> url is not a ftp or gsiftp url
-<dt>&bull;
-<dd> complete_callback is GLOBUS_NULL
-<dt>&bull;
-<dd> handle already has an operation in progress</dl>
+</dt><dd> handle is GLOBUS_NULL
+</dd><dt>&bull;
+</dt><dd> url is GLOBUS_NULL
+</dd><dt>&bull;
+</dt><dd> url cannot be parsed
+</dd><dt>&bull;
+</dt><dd> url is not a ftp or gsiftp url
+</dd><dt>&bull;
+</dt><dd> complete_callback is GLOBUS_NULL
+</dd><dt>&bull;
+</dt><dd> handle already has an operation in progress</dd></dl>
  
 
 </dl>
@@ -857,7 +857,7 @@ url: "/docs/linux/man/3-globus_ftp_client_chgrp/"
  <b>See Also:</b>
 <dl>
 <dt>
-<dd> <b>globus_ftp_client_register_read()</b></dl>
+</dt><dd> <b>globus_ftp_client_register_read()</b></dd></dl>
  
 
  
@@ -873,30 +873,30 @@ url: "/docs/linux/man/3-globus_ftp_client_chgrp/"
  <b>Parameters:</b>
 <dl>
 <dt>
-<dd> <i>u_handle</i> An FTP Client handle to use for the list operation. 
+</dt><dd> <i>u_handle</i> An FTP Client handle to use for the list operation. 
  <i>url</i> The URL to list. The URL may be an ftp or gsiftp URL. 
  <i>attr</i> Attributes for this file transfer. 
  <i>complete_callback</i> Callback to be invoked once the 'list' is completed. 
- <i>callback_arg</i> Argument to be passed to the complete_callback.</dl>
+ <i>callback_arg</i> Argument to be passed to the complete_callback.</dd></dl>
  
 
  <b>Returns:</b>
 <dl>
 <dt>
-<dd> This function returns an error when any of these conditions are true:
-<dl>
+</dt><dd> This function returns an error when any of these conditions are true:
+</dd><dl>
 <dt>&bull;
-<dd> handle is GLOBUS_NULL
-<dt>&bull;
-<dd> url is GLOBUS_NULL
-<dt>&bull;
-<dd> url cannot be parsed
-<dt>&bull;
-<dd> url is not a ftp or gsiftp url
-<dt>&bull;
-<dd> complete_callback is GLOBUS_NULL
-<dt>&bull;
-<dd> handle already has an operation in progress</dl>
+</dt><dd> handle is GLOBUS_NULL
+</dd><dt>&bull;
+</dt><dd> url is GLOBUS_NULL
+</dd><dt>&bull;
+</dt><dd> url cannot be parsed
+</dd><dt>&bull;
+</dt><dd> url is not a ftp or gsiftp url
+</dd><dt>&bull;
+</dt><dd> complete_callback is GLOBUS_NULL
+</dd><dt>&bull;
+</dt><dd> handle already has an operation in progress</dd></dl>
  
 
 </dl>
@@ -905,7 +905,7 @@ url: "/docs/linux/man/3-globus_ftp_client_chgrp/"
  <b>See Also:</b>
 <dl>
 <dt>
-<dd> <b>globus_ftp_client_register_read()</b></dl>
+</dt><dd> <b>globus_ftp_client_register_read()</b></dd></dl>
  
 
  
@@ -921,30 +921,30 @@ url: "/docs/linux/man/3-globus_ftp_client_chgrp/"
  <b>Parameters:</b>
 <dl>
 <dt>
-<dd> <i>u_handle</i> An FTP Client handle to use for the mkdir operation. 
+</dt><dd> <i>u_handle</i> An FTP Client handle to use for the mkdir operation. 
  <i>url</i> The URL for the directory to create. The URL may be an ftp or gsiftp URL. 
  <i>attr</i> Attributes for this operation. 
  <i>complete_callback</i> Callback to be invoked once the mkdir is completed. 
- <i>callback_arg</i> Argument to be passed to the complete_callback.</dl>
+ <i>callback_arg</i> Argument to be passed to the complete_callback.</dd></dl>
  
 
  <b>Returns:</b>
 <dl>
 <dt>
-<dd> This function returns an error when any of these conditions are true:
-<dl>
+</dt><dd> This function returns an error when any of these conditions are true:
+</dd><dl>
 <dt>&bull;
-<dd> u_handle is GLOBUS_NULL
-<dt>&bull;
-<dd> url is GLOBUS_NULL
-<dt>&bull;
-<dd> url cannot be parsed
-<dt>&bull;
-<dd> url is not a ftp or gsiftp url
-<dt>&bull;
-<dd> complete_callback is GLOBUS_NULL
-<dt>&bull;
-<dd> handle already has an operation in progress</dl>
+</dt><dd> u_handle is GLOBUS_NULL
+</dd><dt>&bull;
+</dt><dd> url is GLOBUS_NULL
+</dd><dt>&bull;
+</dt><dd> url cannot be parsed
+</dd><dt>&bull;
+</dt><dd> url is not a ftp or gsiftp url
+</dd><dt>&bull;
+</dt><dd> complete_callback is GLOBUS_NULL
+</dd><dt>&bull;
+</dt><dd> handle already has an operation in progress</dd></dl>
  
 
 </dl>
@@ -963,36 +963,36 @@ url: "/docs/linux/man/3-globus_ftp_client_chgrp/"
  <b>Parameters:</b>
 <dl>
 <dt>
-<dd> <i>u_handle</i> An FTP Client handle to use for the list operation. 
+</dt><dd> <i>u_handle</i> An FTP Client handle to use for the list operation. 
  <i>url</i> The URL of a file or directory to list. The URL may be an ftp or gsiftp URL. 
  <i>attr</i> Attributes for this file transfer. 
  <i>mlst_buffer</i> A pointer to a globus_byte_t * to be allocated and filled with the MLST fact string of the file, if it exists. Otherwise, the value pointed to by it is undefined. It is up to the user to free this memory. 
  <i>mlst_buffer_length</i> A pointer to a globus_size_t to be filled with the length of the data in mlst_buffer. 
  <i>complete_callback</i> Callback to be invoked once the MLST command is completed. 
- <i>callback_arg</i> Argument to be passed to the complete_callback.</dl>
+ <i>callback_arg</i> Argument to be passed to the complete_callback.</dd></dl>
  
 
  <b>Returns:</b>
 <dl>
 <dt>
-<dd> This function returns an error when any of these conditions are true:
-<dl>
+</dt><dd> This function returns an error when any of these conditions are true:
+</dd><dl>
 <dt>&bull;
-<dd> handle is GLOBUS_NULL
-<dt>&bull;
-<dd> url is GLOBUS_NULL
-<dt>&bull;
-<dd> url cannot be parsed
-<dt>&bull;
-<dd> url is not a ftp or gsiftp url
-<dt>&bull;
-<dd> mlst_buffer is GLOBUS_NULL
-<dt>&bull;
-<dd> mlst_buffer_length is GLOBUS_NULL
-<dt>&bull;
-<dd> complete_callback is GLOBUS_NULL
-<dt>&bull;
-<dd> handle already has an operation in progress</dl>
+</dt><dd> handle is GLOBUS_NULL
+</dd><dt>&bull;
+</dt><dd> url is GLOBUS_NULL
+</dd><dt>&bull;
+</dt><dd> url cannot be parsed
+</dd><dt>&bull;
+</dt><dd> url is not a ftp or gsiftp url
+</dd><dt>&bull;
+</dt><dd> mlst_buffer is GLOBUS_NULL
+</dd><dt>&bull;
+</dt><dd> mlst_buffer_length is GLOBUS_NULL
+</dd><dt>&bull;
+</dt><dd> complete_callback is GLOBUS_NULL
+</dd><dt>&bull;
+</dt><dd> handle already has an operation in progress</dd></dl>
  
 
 </dl>
@@ -1011,33 +1011,33 @@ url: "/docs/linux/man/3-globus_ftp_client_chgrp/"
  <b>Parameters:</b>
 <dl>
 <dt>
-<dd> <i>u_handle</i> An FTP Client handle to use for the list operation. 
+</dt><dd> <i>u_handle</i> An FTP Client handle to use for the list operation. 
  <i>url</i> The URL to list. The URL may be an ftp or gsiftp URL. 
  <i>attr</i> Attributes for this file transfer. 
  <i>modification_time</i> A pointer to a globus_abstime_t to be filled with the modification time of the file, if it exists. Otherwise, the value pointed to by it is undefined. 
  <i>complete_callback</i> Callback to be invoked once the modification time check is completed. 
- <i>callback_arg</i> Argument to be passed to the complete_callback.</dl>
+ <i>callback_arg</i> Argument to be passed to the complete_callback.</dd></dl>
  
 
  <b>Returns:</b>
 <dl>
 <dt>
-<dd> This function returns an error when any of these conditions are true:
-<dl>
+</dt><dd> This function returns an error when any of these conditions are true:
+</dd><dl>
 <dt>&bull;
-<dd> handle is GLOBUS_NULL
-<dt>&bull;
-<dd> url is GLOBUS_NULL
-<dt>&bull;
-<dd> url cannot be parsed
-<dt>&bull;
-<dd> url is not a ftp or gsiftp url
-<dt>&bull;
-<dd> modification time is GLOBUS_NULL
-<dt>&bull;
-<dd> complete_callback is GLOBUS_NULL
-<dt>&bull;
-<dd> handle already has an operation in progress</dl>
+</dt><dd> handle is GLOBUS_NULL
+</dd><dt>&bull;
+</dt><dd> url is GLOBUS_NULL
+</dd><dt>&bull;
+</dt><dd> url cannot be parsed
+</dd><dt>&bull;
+</dt><dd> url is not a ftp or gsiftp url
+</dd><dt>&bull;
+</dt><dd> modification time is GLOBUS_NULL
+</dd><dt>&bull;
+</dt><dd> complete_callback is GLOBUS_NULL
+</dd><dt>&bull;
+</dt><dd> handle already has an operation in progress</dd></dl>
  
 
 </dl>
@@ -1056,31 +1056,31 @@ url: "/docs/linux/man/3-globus_ftp_client_chgrp/"
  <b>Parameters:</b>
 <dl>
 <dt>
-<dd> <i>u_handle</i> An FTP Client handle to use for the move operation. 
+</dt><dd> <i>u_handle</i> An FTP Client handle to use for the move operation. 
  <i>source_url</i> The URL for the file to move. 
  <i>dest_url</i> The URL for the target of the move. The host:port part of this URL is ignored. 
  <i>attr</i> Attributes for this operation. 
  <i>complete_callback</i> Callback to be invoked once the move is completed. 
- <i>callback_arg</i> Argument to be passed to the complete_callback.</dl>
+ <i>callback_arg</i> Argument to be passed to the complete_callback.</dd></dl>
  
 
  <b>Returns:</b>
 <dl>
 <dt>
-<dd> This function returns an error when any of these conditions are true:
-<dl>
+</dt><dd> This function returns an error when any of these conditions are true:
+</dd><dl>
 <dt>&bull;
-<dd> handle is GLOBUS_NULL
-<dt>&bull;
-<dd> source_url is GLOBUS_NULL
-<dt>&bull;
-<dd> source_url cannot be parsed
-<dt>&bull;
-<dd> source_url is not a ftp or gsiftp url
-<dt>&bull;
-<dd> complete_callback is GLOBUS_NULL
-<dt>&bull;
-<dd> handle already has an operation in progress</dl>
+</dt><dd> handle is GLOBUS_NULL
+</dd><dt>&bull;
+</dt><dd> source_url is GLOBUS_NULL
+</dd><dt>&bull;
+</dt><dd> source_url cannot be parsed
+</dd><dt>&bull;
+</dt><dd> source_url is not a ftp or gsiftp url
+</dd><dt>&bull;
+</dt><dd> complete_callback is GLOBUS_NULL
+</dd><dt>&bull;
+</dt><dd> handle already has an operation in progress</dd></dl>
  
 
 </dl>
@@ -1099,33 +1099,33 @@ url: "/docs/linux/man/3-globus_ftp_client_chgrp/"
  <b>Parameters:</b>
 <dl>
 <dt>
-<dd> <i>handle</i> An FTP Client handle to use for the get operation. 
+</dt><dd> <i>handle</i> An FTP Client handle to use for the get operation. 
  <i>url</i> The URL to download. The URL may be an ftp or gsiftp URL. 
  <i>attr</i> Attributes for this file transfer. 
  <i>restart</i> Pointer to a restart marker. 
  <i>partial_offset</i> Starting offset for a partial file get. 
  <i>partial_end_offset</i> Ending offset for a partial file get. Use -1 for EOF. 
  <i>complete_callback</i> Callback to be invoked once the 'get' is completed. 
- <i>callback_arg</i> Argument to be passed to the complete_callback.</dl>
+ <i>callback_arg</i> Argument to be passed to the complete_callback.</dd></dl>
  
 
  <b>Returns:</b>
 <dl>
 <dt>
-<dd> This function returns an error when any of these conditions are true:
-<dl>
+</dt><dd> This function returns an error when any of these conditions are true:
+</dd><dl>
 <dt>&bull;
-<dd> handle is GLOBUS_NULL
-<dt>&bull;
-<dd> url is GLOBUS_NULL
-<dt>&bull;
-<dd> url cannot be parsed
-<dt>&bull;
-<dd> url is not a ftp or gsiftp url
-<dt>&bull;
-<dd> complete_callback is GLOBUS_NULL
-<dt>&bull;
-<dd> handle already has an operation in progress</dl>
+</dt><dd> handle is GLOBUS_NULL
+</dd><dt>&bull;
+</dt><dd> url is GLOBUS_NULL
+</dd><dt>&bull;
+</dt><dd> url cannot be parsed
+</dd><dt>&bull;
+</dt><dd> url is not a ftp or gsiftp url
+</dd><dt>&bull;
+</dt><dd> complete_callback is GLOBUS_NULL
+</dd><dt>&bull;
+</dt><dd> handle already has an operation in progress</dd></dl>
  
 
 </dl>
@@ -1144,20 +1144,20 @@ url: "/docs/linux/man/3-globus_ftp_client_chgrp/"
  <b>Parameters:</b>
 <dl>
 <dt>
-<dd> <i>handle</i> An FTP Client handle to use for the put operation. 
+</dt><dd> <i>handle</i> An FTP Client handle to use for the put operation. 
  <i>url</i> The URL to store the data to. The URL may be an ftp or gsiftp URL. 
  <i>attr</i> Attributes for this file transfer. 
  <i>restart</i> Pointer to a restart marker. 
  <i>partial_offset</i> Starting offset for a partial file put. 
  <i>partial_end_offset</i> Ending offset for a partial file put. 
  <i>complete_callback</i> Callback to be invoked once the 'put' is completed. 
- <i>callback_arg</i> Argument to be passed to the complete_callback.</dl>
+ <i>callback_arg</i> Argument to be passed to the complete_callback.</dd></dl>
  
 
  <b>See Also:</b>
 <dl>
 <dt>
-<dd> <b>globus_ftp_client_register_write()</b></dl>
+</dt><dd> <b>globus_ftp_client_register_write()</b></dd></dl>
  
 
  
@@ -1173,7 +1173,7 @@ url: "/docs/linux/man/3-globus_ftp_client_chgrp/"
  <b>Parameters:</b>
 <dl>
 <dt>
-<dd> <i>handle</i> An FTP Client handle to use for the get operation. 
+</dt><dd> <i>handle</i> An FTP Client handle to use for the get operation. 
  <i>source_url</i> The URL to transfer. The URL may be an ftp or gsiftp URL. 
  <i>source_attr</i> Attributes for the souce URL. 
  <i>dest_url</i> The destination URL for the transfer. The URL may be an ftp or gsiftp URL. 
@@ -1182,13 +1182,13 @@ url: "/docs/linux/man/3-globus_ftp_client_chgrp/"
  <i>partial_offset</i> Starting offset for a partial file get. 
  <i>partial_end_offset</i> Ending offset for a partial file get. Use -1 for EOF. 
  <i>complete_callback</i> Callback to be invoked once the 'put' is completed. 
- <i>callback_arg</i> Argument to be passed to the complete_callback.</dl>
+ <i>callback_arg</i> Argument to be passed to the complete_callback.</dd></dl>
  
 
  <b>Note:</b>
 <dl>
 <dt>
-<dd> The source_attr and dest_attr MUST be compatible. For example, the MODE and TYPE should match for both the source and destination.</dl>
+</dt><dd> The source_attr and dest_attr MUST be compatible. For example, the MODE and TYPE should match for both the source and destination.</dd></dl>
  
 
  
@@ -1204,18 +1204,18 @@ url: "/docs/linux/man/3-globus_ftp_client_chgrp/"
  <b>Parameters:</b>
 <dl>
 <dt>
-<dd> <i>handle</i> An FTP Client handle to use for the put operation. 
+</dt><dd> <i>handle</i> An FTP Client handle to use for the put operation. 
  <i>url</i> The URL to store the data to. The URL may be an ftp or gsiftp URL. 
  <i>attr</i> Attributes for this file transfer. 
  <i>restart</i> Pointer to a restart marker. 
  <i>complete_callback</i> Callback to be invoked once the 'put' is completed. 
- <i>callback_arg</i> Argument to be passed to the complete_callback.</dl>
+ <i>callback_arg</i> Argument to be passed to the complete_callback.</dd></dl>
  
 
  <b>See Also:</b>
 <dl>
 <dt>
-<dd> <b>globus_ftp_client_register_write()</b></dl>
+</dt><dd> <b>globus_ftp_client_register_write()</b></dd></dl>
  
 
  
@@ -1231,30 +1231,30 @@ url: "/docs/linux/man/3-globus_ftp_client_chgrp/"
  <b>Parameters:</b>
 <dl>
 <dt>
-<dd> <i>u_handle</i> An FTP Client handle to use for the list operation. 
+</dt><dd> <i>u_handle</i> An FTP Client handle to use for the list operation. 
  <i>url</i> The URL to list. The URL may be an ftp or gsiftp URL. 
  <i>attr</i> Attributes for this file transfer. 
  <i>complete_callback</i> Callback to be invoked once the 'list' is completed. 
- <i>callback_arg</i> Argument to be passed to the complete_callback.</dl>
+ <i>callback_arg</i> Argument to be passed to the complete_callback.</dd></dl>
  
 
  <b>Returns:</b>
 <dl>
 <dt>
-<dd> This function returns an error when any of these conditions are true:
-<dl>
+</dt><dd> This function returns an error when any of these conditions are true:
+</dd><dl>
 <dt>&bull;
-<dd> handle is GLOBUS_NULL
-<dt>&bull;
-<dd> url is GLOBUS_NULL
-<dt>&bull;
-<dd> url cannot be parsed
-<dt>&bull;
-<dd> url is not a ftp or gsiftp url
-<dt>&bull;
-<dd> complete_callback is GLOBUS_NULL
-<dt>&bull;
-<dd> handle already has an operation in progress</dl>
+</dt><dd> handle is GLOBUS_NULL
+</dd><dt>&bull;
+</dt><dd> url is GLOBUS_NULL
+</dd><dt>&bull;
+</dt><dd> url cannot be parsed
+</dd><dt>&bull;
+</dt><dd> url is not a ftp or gsiftp url
+</dd><dt>&bull;
+</dt><dd> complete_callback is GLOBUS_NULL
+</dd><dt>&bull;
+</dt><dd> handle already has an operation in progress</dd></dl>
  
 
 </dl>
@@ -1263,7 +1263,7 @@ url: "/docs/linux/man/3-globus_ftp_client_chgrp/"
  <b>See Also:</b>
 <dl>
 <dt>
-<dd> <b>globus_ftp_client_register_read()</b></dl>
+</dt><dd> <b>globus_ftp_client_register_read()</b></dd></dl>
  
 
  
@@ -1279,30 +1279,30 @@ url: "/docs/linux/man/3-globus_ftp_client_chgrp/"
  <b>Parameters:</b>
 <dl>
 <dt>
-<dd> <i>u_handle</i> An FTP Client handle to use for the rmdir operation. 
+</dt><dd> <i>u_handle</i> An FTP Client handle to use for the rmdir operation. 
  <i>url</i> The URL for the directory to create. The URL may be an ftp or gsiftp URL. 
  <i>attr</i> Attributes for this operation. 
  <i>complete_callback</i> Callback to be invoked once the rmdir is completed. 
- <i>callback_arg</i> Argument to be passed to the complete_callback.</dl>
+ <i>callback_arg</i> Argument to be passed to the complete_callback.</dd></dl>
  
 
  <b>Returns:</b>
 <dl>
 <dt>
-<dd> This function returns an error when any of these conditions are true:
-<dl>
+</dt><dd> This function returns an error when any of these conditions are true:
+</dd><dl>
 <dt>&bull;
-<dd> u_handle is GLOBUS_NULL
-<dt>&bull;
-<dd> url is GLOBUS_NULL
-<dt>&bull;
-<dd> url cannot be parsed
-<dt>&bull;
-<dd> url is not a ftp or gsiftp url
-<dt>&bull;
-<dd> complete_callback is GLOBUS_NULL
-<dt>&bull;
-<dd> handle already has an operation in progress</dl>
+</dt><dd> u_handle is GLOBUS_NULL
+</dd><dt>&bull;
+</dt><dd> url is GLOBUS_NULL
+</dd><dt>&bull;
+</dt><dd> url cannot be parsed
+</dd><dt>&bull;
+</dt><dd> url is not a ftp or gsiftp url
+</dd><dt>&bull;
+</dt><dd> complete_callback is GLOBUS_NULL
+</dd><dt>&bull;
+</dt><dd> handle already has an operation in progress</dd></dl>
  
 
 </dl>
@@ -1321,39 +1321,39 @@ url: "/docs/linux/man/3-globus_ftp_client_chgrp/"
  <b>Note:</b>
 <dl>
 <dt>
-<dd> In ASCII mode, the size will be the size of the file after conversion to ASCII mode. The actual amount of data which is returned in the data callbacks may be less than this amount.</dl>
+</dt><dd> In ASCII mode, the size will be the size of the file after conversion to ASCII mode. The actual amount of data which is returned in the data callbacks may be less than this amount.</dd></dl>
  
 
  <b>Parameters:</b>
 <dl>
 <dt>
-<dd> <i>u_handle</i> An FTP Client handle to use for the list operation. 
+</dt><dd> <i>u_handle</i> An FTP Client handle to use for the list operation. 
  <i>url</i> The URL to list. The URL may be an ftp or gsiftp URL. 
  <i>attr</i> Attributes for this file transfer. 
  <i>size</i> A pointer to a globus_off_t to be filled with the total size of the file, if it exists. Otherwise, the value pointed to by it is undefined. 
  <i>complete_callback</i> Callback to be invoked once the size check is completed. 
- <i>callback_arg</i> Argument to be passed to the complete_callback.</dl>
+ <i>callback_arg</i> Argument to be passed to the complete_callback.</dd></dl>
  
 
  <b>Returns:</b>
 <dl>
 <dt>
-<dd> This function returns an error when any of these conditions are true:
-<dl>
+</dt><dd> This function returns an error when any of these conditions are true:
+</dd><dl>
 <dt>&bull;
-<dd> handle is GLOBUS_NULL
-<dt>&bull;
-<dd> url is GLOBUS_NULL
-<dt>&bull;
-<dd> url cannot be parsed
-<dt>&bull;
-<dd> url is not a ftp or gsiftp url
-<dt>&bull;
-<dd> size is GLOBUS_NULL
-<dt>&bull;
-<dd> complete_callback is GLOBUS_NULL
-<dt>&bull;
-<dd> handle already has an operation in progress</dl>
+</dt><dd> handle is GLOBUS_NULL
+</dd><dt>&bull;
+</dt><dd> url is GLOBUS_NULL
+</dd><dt>&bull;
+</dt><dd> url cannot be parsed
+</dd><dt>&bull;
+</dt><dd> url is not a ftp or gsiftp url
+</dd><dt>&bull;
+</dt><dd> size is GLOBUS_NULL
+</dd><dt>&bull;
+</dt><dd> complete_callback is GLOBUS_NULL
+</dd><dt>&bull;
+</dt><dd> handle already has an operation in progress</dd></dl>
  
 
 </dl>
@@ -1372,36 +1372,36 @@ url: "/docs/linux/man/3-globus_ftp_client_chgrp/"
  <b>Parameters:</b>
 <dl>
 <dt>
-<dd> <i>u_handle</i> An FTP Client handle to use for the list operation. 
+</dt><dd> <i>u_handle</i> An FTP Client handle to use for the list operation. 
  <i>url</i> The URL of a file or directory to list. The URL may be an ftp or gsiftp URL. 
  <i>attr</i> Attributes for this file transfer. 
  <i>stat_buffer</i> A pointer to a globus_byte_t * to be allocated and filled with the STAT listing of the file, if it exists. Otherwise, the value pointed to by it is undefined. It is up to the user to free this memory. 
  <i>stat_buffer_length</i> A pointer to a globus_size_t to be filled with the length of the data in stat_buffer. 
  <i>complete_callback</i> Callback to be invoked once the STAT command is completed. 
- <i>callback_arg</i> Argument to be passed to the complete_callback.</dl>
+ <i>callback_arg</i> Argument to be passed to the complete_callback.</dd></dl>
  
 
  <b>Returns:</b>
 <dl>
 <dt>
-<dd> This function returns an error when any of these conditions are true:
-<dl>
+</dt><dd> This function returns an error when any of these conditions are true:
+</dd><dl>
 <dt>&bull;
-<dd> handle is GLOBUS_NULL
-<dt>&bull;
-<dd> url is GLOBUS_NULL
-<dt>&bull;
-<dd> url cannot be parsed
-<dt>&bull;
-<dd> url is not a ftp or gsiftp url
-<dt>&bull;
-<dd> stat_buffer is GLOBUS_NULL
-<dt>&bull;
-<dd> stat_buffer_length is GLOBUS_NULL
-<dt>&bull;
-<dd> complete_callback is GLOBUS_NULL
-<dt>&bull;
-<dd> handle already has an operation in progress</dl>
+</dt><dd> handle is GLOBUS_NULL
+</dd><dt>&bull;
+</dt><dd> url is GLOBUS_NULL
+</dd><dt>&bull;
+</dt><dd> url cannot be parsed
+</dd><dt>&bull;
+</dt><dd> url is not a ftp or gsiftp url
+</dd><dt>&bull;
+</dt><dd> stat_buffer is GLOBUS_NULL
+</dd><dt>&bull;
+</dt><dd> stat_buffer_length is GLOBUS_NULL
+</dd><dt>&bull;
+</dt><dd> complete_callback is GLOBUS_NULL
+</dd><dt>&bull;
+</dt><dd> handle already has an operation in progress</dd></dl>
  
 
 </dl>
@@ -1420,31 +1420,31 @@ url: "/docs/linux/man/3-globus_ftp_client_chgrp/"
  <b>Parameters:</b>
 <dl>
 <dt>
-<dd> <i>u_handle</i> An FTP Client handle to use for the move operation. 
+</dt><dd> <i>u_handle</i> An FTP Client handle to use for the move operation. 
  <i>source_url</i> The URL for the symbolic link to create. 
  <i>link_url</i> The URL for the target of the link. The host:port part of this URL is ignored. 
  <i>attr</i> Attributes for this operation. 
  <i>complete_callback</i> Callback to be invoked once the symlink is completed. 
- <i>callback_arg</i> Argument to be passed to the complete_callback.</dl>
+ <i>callback_arg</i> Argument to be passed to the complete_callback.</dd></dl>
  
 
  <b>Returns:</b>
 <dl>
 <dt>
-<dd> This function returns an error when any of these conditions are true:
-<dl>
+</dt><dd> This function returns an error when any of these conditions are true:
+</dd><dl>
 <dt>&bull;
-<dd> handle is GLOBUS_NULL
-<dt>&bull;
-<dd> source_url is GLOBUS_NULL
-<dt>&bull;
-<dd> source_url cannot be parsed
-<dt>&bull;
-<dd> source_url is not a ftp or gsiftp url
-<dt>&bull;
-<dd> complete_callback is GLOBUS_NULL
-<dt>&bull;
-<dd> handle already has an operation in progress</dl>
+</dt><dd> handle is GLOBUS_NULL
+</dd><dt>&bull;
+</dt><dd> source_url is GLOBUS_NULL
+</dd><dt>&bull;
+</dt><dd> source_url cannot be parsed
+</dd><dt>&bull;
+</dt><dd> source_url is not a ftp or gsiftp url
+</dd><dt>&bull;
+</dt><dd> complete_callback is GLOBUS_NULL
+</dd><dt>&bull;
+</dt><dd> handle already has an operation in progress</dd></dl>
  
 
 </dl>
@@ -1463,20 +1463,20 @@ url: "/docs/linux/man/3-globus_ftp_client_chgrp/"
  <b>Parameters:</b>
 <dl>
 <dt>
-<dd> <i>handle</i> An FTP Client handle to use for the get operation. 
+</dt><dd> <i>handle</i> An FTP Client handle to use for the get operation. 
  <i>source_url</i> The URL to transfer. The URL may be an ftp or gsiftp URL. 
  <i>source_attr</i> Attributes for the souce URL. 
  <i>dest_url</i> The destination URL for the transfer. The URL may be an ftp or gsiftp URL. 
  <i>dest_attr</i> Attributes for the destination URL. 
  <i>restart</i> Pointer to a restart marker. 
  <i>complete_callback</i> Callback to be invoked once the 'put' is completed. 
- <i>callback_arg</i> Argument to be passed to the complete_callback.</dl>
+ <i>callback_arg</i> Argument to be passed to the complete_callback.</dd></dl>
  
 
  <b>Note:</b>
 <dl>
 <dt>
-<dd> The source_attr and dest_attr MUST be compatible. For example, the MODE and TYPE should match for both the source and destination.</dl>
+</dt><dd> The source_attr and dest_attr MUST be compatible. For example, the MODE and TYPE should match for both the source and destination.</dd></dl>
  
 
  
@@ -1492,31 +1492,31 @@ url: "/docs/linux/man/3-globus_ftp_client_chgrp/"
  <b>Parameters:</b>
 <dl>
 <dt>
-<dd> <i>u_handle</i> An FTP Client handle to use for the change operation. 
+</dt><dd> <i>u_handle</i> An FTP Client handle to use for the change operation. 
  <i>url</i> The URL of the file to modify group membership. 
  <i>utime_time</i> The absolute time to which the file's modification time should be set. 
  <i>attr</i> Attributes for this operation. 
  <i>complete_callback</i> Callback to be invoked once the change is completed. 
- <i>callback_arg</i> Argument to be passed to the complete_callback.</dl>
+ <i>callback_arg</i> Argument to be passed to the complete_callback.</dd></dl>
  
 
  <b>Returns:</b>
 <dl>
 <dt>
-<dd> This function returns an error when any of these conditions are true:
-<dl>
+</dt><dd> This function returns an error when any of these conditions are true:
+</dd><dl>
 <dt>&bull;
-<dd> handle is GLOBUS_NULL
-<dt>&bull;
-<dd> url is GLOBUS_NULL
-<dt>&bull;
-<dd> url cannot be parsed
-<dt>&bull;
-<dd> url is not a ftp or gsiftp url
-<dt>&bull;
-<dd> complete_callback is GLOBUS_NULL
-<dt>&bull;
-<dd> handle already has an operation in progress</dl>
+</dt><dd> handle is GLOBUS_NULL
+</dd><dt>&bull;
+</dt><dd> url is GLOBUS_NULL
+</dd><dt>&bull;
+</dt><dd> url cannot be parsed
+</dd><dt>&bull;
+</dt><dd> url is not a ftp or gsiftp url
+</dd><dt>&bull;
+</dt><dd> complete_callback is GLOBUS_NULL
+</dd><dt>&bull;
+</dt><dd> handle already has an operation in progress</dd></dl>
  
 
 </dl>
@@ -1535,30 +1535,30 @@ url: "/docs/linux/man/3-globus_ftp_client_chgrp/"
  <b>Parameters:</b>
 <dl>
 <dt>
-<dd> <i>u_handle</i> An FTP Client handle to use for the list operation. 
+</dt><dd> <i>u_handle</i> An FTP Client handle to use for the list operation. 
  <i>url</i> The URL to list. The URL may be an ftp or gsiftp URL. 
  <i>attr</i> Attributes for this file transfer. 
  <i>complete_callback</i> Callback to be invoked once the 'list' is completed. 
- <i>callback_arg</i> Argument to be passed to the complete_callback.</dl>
+ <i>callback_arg</i> Argument to be passed to the complete_callback.</dd></dl>
  
 
  <b>Returns:</b>
 <dl>
 <dt>
-<dd> This function returns an error when any of these conditions are true:
-<dl>
+</dt><dd> This function returns an error when any of these conditions are true:
+</dd><dl>
 <dt>&bull;
-<dd> handle is GLOBUS_NULL
-<dt>&bull;
-<dd> url is GLOBUS_NULL
-<dt>&bull;
-<dd> url cannot be parsed
-<dt>&bull;
-<dd> url is not a ftp or gsiftp url
-<dt>&bull;
-<dd> complete_callback is GLOBUS_NULL
-<dt>&bull;
-<dd> handle already has an operation in progress</dl>
+</dt><dd> handle is GLOBUS_NULL
+</dd><dt>&bull;
+</dt><dd> url is GLOBUS_NULL
+</dd><dt>&bull;
+</dt><dd> url cannot be parsed
+</dd><dt>&bull;
+</dt><dd> url is not a ftp or gsiftp url
+</dd><dt>&bull;
+</dt><dd> complete_callback is GLOBUS_NULL
+</dd><dt>&bull;
+</dt><dd> handle already has an operation in progress</dd></dl>
  
 
 </dl>
@@ -1567,7 +1567,7 @@ url: "/docs/linux/man/3-globus_ftp_client_chgrp/"
  <b>See Also:</b>
 <dl>
 <dt>
-<dd> <b>globus_ftp_client_register_read()</b></dl>
+</dt><dd> <b>globus_ftp_client_register_read()</b></dd></dl>
  
 
  
@@ -1583,12 +1583,12 @@ url: "/docs/linux/man/3-globus_ftp_client_chgrp/"
 
 
 <dt><a HREF="#lbBE">Enumeration Type Documentation</a>
-<dd>
+</dt><dd>
 
 
-<dt><a HREF="#lbBH">Function Documentation</a>
-<dd>
+</dd><dt><a HREF="#lbBH">Function Documentation</a>
+</dt><dd>
 
 
-<dt><a HREF="#lbCP">Author</a>
-<dd></dl>
+</dd><dt><a HREF="#lbCP">Author</a>
+</dt><dd></dd></dl>

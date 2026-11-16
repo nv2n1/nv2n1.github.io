@@ -18,62 +18,62 @@ description: "gerbv – Gerber Viewer"
 <h3>gerbv General options:</h3>
 <p> <code>-V|&#8211;version</code> Print the version number of gerbv and exit.</p>
 <dl>
-<dt><code>-h|&#8211;help</code></p>
-<dd> Print a brief usage guide and exit.</p>
-<dt><code>-b&lt;hex&gt;|&#8211;background=&lt;hex&gt;</code></p>
-<dd> Use background color &lt;hex&gt;. &lt;hex&gt; is specified as an html-color code, e.g. #FF0000 for Red.</p>
-<dt><code>-f&lt;hex&gt;|&#8211;foreground=&lt;hex&gt;</code></p>
-<dd> Use foreground color &lt;hex&gt;. &lt;hex&gt; is specified as an html-color code, e.g. #00FF00 for Green. If a user also wants to set the alpha (rendering with Cairo) it can be specified as an #RRGGBBAA code. Use multiple -f flags to set the color for multiple layers.</p>
-<dt><code>-l&nbsp;<wbr>&lt;filename&gt;|&#8211;log=&lt;filename&gt;</code></p>
-<dd> All error messages etc are stored in a file with filename <i>&lt;filename&gt;</i>.</p>
-<dt><code>-t&nbsp;<wbr>&lt;filename&gt;|&#8211;tools=&lt;filename&gt;</code></p>
-<dd> Read Excellon tools from the file <i>&lt;filename&gt;</i>.</p>
-<dt><code>-p&nbsp;<wbr>&lt;project filename&gt;|&#8211;project=&lt;project filename&gt;</code></p>
-<dd> Load a stored project. Please note that the project file must be stored in the same directory as the gerber files. </p>
+<dt><code>-h|&#8211;help</code></dt>
+<dd> Print a brief usage guide and exit.</dd>
+<dt><code>-b&lt;hex&gt;|&#8211;background=&lt;hex&gt;</code></dt>
+<dd> Use background color &lt;hex&gt;. &lt;hex&gt; is specified as an html-color code, e.g. #FF0000 for Red.</dd>
+<dt><code>-f&lt;hex&gt;|&#8211;foreground=&lt;hex&gt;</code></dt>
+<dd> Use foreground color &lt;hex&gt;. &lt;hex&gt; is specified as an html-color code, e.g. #00FF00 for Green. If a user also wants to set the alpha (rendering with Cairo) it can be specified as an #RRGGBBAA code. Use multiple -f flags to set the color for multiple layers.</dd>
+<dt><code>-l&nbsp;<wbr>&lt;filename&gt;|&#8211;log=&lt;filename&gt;</code></dt>
+<dd> All error messages etc are stored in a file with filename <i>&lt;filename&gt;</i>.</dd>
+<dt><code>-t&nbsp;<wbr>&lt;filename&gt;|&#8211;tools=&lt;filename&gt;</code></dt>
+<dd> Read Excellon tools from the file <i>&lt;filename&gt;</i>.</dd>
+<dt><code>-p&nbsp;<wbr>&lt;project filename&gt;|&#8211;project=&lt;project filename&gt;</code></dt>
+<dd> Load a stored project. Please note that the project file must be stored in the same directory as the gerber files. </dd>
 </dl>
 <h3>gerbv Export-specific options:</h3>
 <p> The following commands can be used in combination with the -x flag: <code>-B&lt;b&gt;|&#8211;Border=&lt;b&gt;</code> Set the border around the image &lt;b&gt; percent of the width and height. Default &lt;b&gt; is 5%%.</p>
 <dl>
-<dt><code>-D&lt;XxY&gt;or&lt;R&gt;|&#8211;dpi=&lt;XxY&gt;or&lt;R&gt;</code></p>
-<dd> Resolution (Dots per inch) for the output bitmap. Use &lt;XxY&gt; for different resolutions for the width and height (only when compiled with Cairo as render engine). Use &lt;R&gt; to have the same resolution in both directions. Defaults to 72 DPI in both directions.</p>
-<dt><code>-T&lt;X,Y&gt;|&#8211;translate=&lt;X,Y&gt;</code></p>
-<dd> Translate the image by the distance &lt;X,Y&gt;. Use multiple -T flags to translate multiple files.</p>
-<dt><code>-O&lt;XxY&gt;|&#8211;origin=&lt;XxY&gt;</code></p>
-<dd> Set the lower left corner of the exported image to coordinate &lt;XxY&gt;. Coordinates are in inches.</p>
-<dt><code>-a|&#8211;antialias</code></p>
-<dd> Use antialiasing for the generated output-bitmap.</p>
-<dt><code>-o&nbsp;<wbr>&lt;filename&gt;|&#8211;output=&lt;filename&gt;</code></p>
-<dd> Export to &lt;filename&gt;.</p>
-<dt><code>-W&lt;WxH&gt;|&#8211;window_inch=&lt;WxH&gt;</code></p>
-<dd> Window size in inches &lt;WxH&gt; for the exported image.</p>
-<dt><code>-w&lt;WxH&gt;|&#8211;window=WxH&gt;</code></p>
-<dd> Window size in pixels &lt;WxH&gt; for the exported image. Autoscales to fit if no resolution is specified (note that the default 72 DPI also changes in that case). If a resolution is specified, it will clip the image to this size.</p>
-<dt><code>-x&lt;png/pdf/ps/svg/rs274x/drill&gt;|&#8211;export=&lt;png/pdf/ps/svg/rs274x/drill&gt;</code></p>
-<dd> Export to a file and set the format for the output file. </p>
+<dt><code>-D&lt;XxY&gt;or&lt;R&gt;|&#8211;dpi=&lt;XxY&gt;or&lt;R&gt;</code></dt>
+<dd> Resolution (Dots per inch) for the output bitmap. Use &lt;XxY&gt; for different resolutions for the width and height (only when compiled with Cairo as render engine). Use &lt;R&gt; to have the same resolution in both directions. Defaults to 72 DPI in both directions.</dd>
+<dt><code>-T&lt;X,Y&gt;|&#8211;translate=&lt;X,Y&gt;</code></dt>
+<dd> Translate the image by the distance &lt;X,Y&gt;. Use multiple -T flags to translate multiple files.</dd>
+<dt><code>-O&lt;XxY&gt;|&#8211;origin=&lt;XxY&gt;</code></dt>
+<dd> Set the lower left corner of the exported image to coordinate &lt;XxY&gt;. Coordinates are in inches.</dd>
+<dt><code>-a|&#8211;antialias</code></dt>
+<dd> Use antialiasing for the generated output-bitmap.</dd>
+<dt><code>-o&nbsp;<wbr>&lt;filename&gt;|&#8211;output=&lt;filename&gt;</code></dt>
+<dd> Export to &lt;filename&gt;.</dd>
+<dt><code>-W&lt;WxH&gt;|&#8211;window_inch=&lt;WxH&gt;</code></dt>
+<dd> Window size in inches &lt;WxH&gt; for the exported image.</dd>
+<dt><code>-w&lt;WxH&gt;|&#8211;window=WxH&gt;</code></dt>
+<dd> Window size in pixels &lt;WxH&gt; for the exported image. Autoscales to fit if no resolution is specified (note that the default 72 DPI also changes in that case). If a resolution is specified, it will clip the image to this size.</dd>
+<dt><code>-x&lt;png/pdf/ps/svg/rs274x/drill&gt;|&#8211;export=&lt;png/pdf/ps/svg/rs274x/drill&gt;</code></dt>
+<dd> Export to a file and set the format for the output file. </dd>
 </dl>
 <h3>GTK Options</h3>
 <p> <code>&#8211;gtk-module=</code><i>MODULE</i> Load an additional GTK module</p>
 <dl>
-<dt><code>&#8211;g-fatal-warnings</code></p>
-<dd> Make all warnings fatal</p>
-<dt><code>&#8211;gtk-debug=</code><i>FLAGS</i></p>
-<dd> GTK debugging flags to set</p>
-<dt><code>&#8211;gtk-no-debug=</code><i>FLAGS</i></p>
-<dd> GTK debugging flags to unset</p>
-<dt><code>&#8211;gdk-debug=</code><i>FLAGS</i></p>
-<dd> GDK debugging flags to set</p>
-<dt><code>&#8211;gdk-no-debug=</code><i>FLAGS</i></p>
-<dd> GDK debugging flags to unset</p>
-<dt><code>&#8211;display=</code><i>DISPLAY</i></p>
-<dd> X display to use</p>
-<dt><code>&#8211;sync</code></p>
-<dd> Make X call synchronous</p>
-<dt><code>&#8211;no-xshm</code></p>
-<dd> Don&#8217;t use X shared memory extension</p>
-<dt><code>&#8211;name=</code><i>NAME</i></p>
-<dd> Program name as used by the window manager</p>
-<dt><code>&#8211;class=</code><i>CLASS</i></p>
-<dd> Program class as used by the window manager </p>
+<dt><code>&#8211;g-fatal-warnings</code></dt>
+<dd> Make all warnings fatal</dd>
+<dt><code>&#8211;gtk-debug=</code><i>FLAGS</i></dt>
+<dd> GTK debugging flags to set</dd>
+<dt><code>&#8211;gtk-no-debug=</code><i>FLAGS</i></dt>
+<dd> GTK debugging flags to unset</dd>
+<dt><code>&#8211;gdk-debug=</code><i>FLAGS</i></dt>
+<dd> GDK debugging flags to set</dd>
+<dt><code>&#8211;gdk-no-debug=</code><i>FLAGS</i></dt>
+<dd> GDK debugging flags to unset</dd>
+<dt><code>&#8211;display=</code><i>DISPLAY</i></dt>
+<dd> X display to use</dd>
+<dt><code>&#8211;sync</code></dt>
+<dd> Make X call synchronous</dd>
+<dt><code>&#8211;no-xshm</code></dt>
+<dd> Don&#8217;t use X shared memory extension</dd>
+<dt><code>&#8211;name=</code><i>NAME</i></dt>
+<dd> Program name as used by the window manager</dd>
+<dt><code>&#8211;class=</code><i>CLASS</i></dt>
+<dd> Program class as used by the window manager </dd>
 </dl>
 <h2>GENERAL</h2>
 <p> When you start gerbv you can give the files to be loaded on the command line, either as each file separated with a space or by using wildcards. </p>
@@ -111,8 +111,8 @@ description: "gerbv – Gerber Viewer"
 <p> If your Excellon file does not contain tool definitions then <i>gerbv</i> will preconfigure the tools by deriving the diameter of the drill bit from the tool number. This is probably not what you want, and you will see warnings printed on the console. </p>
 <h2>ENVIRONMENT</h2>
 <dl>
-<dt>GERBV_SCHEMEINIT</p>
-<dd> Defines where the init.scm file is stored. Used by scheme interpreter, which is used by the project reader. </p>
+<dt>GERBV_SCHEMEINIT</dt>
+<dd> Defines where the init.scm file is stored. Used by scheme interpreter, which is used by the project reader. </dd>
 </dl>
 <h2>AUTHOR</h2>
 <pre>

@@ -18,7 +18,7 @@ description: "dggrqf.f –"
 <p> <code>Purpose: </code></p>
 <dl COMPACT>
 <dt>
-<dd>
+</dt><dd>
 <pre>
  DGGRQF computes a generalized RQ factorization of an M-by-N matrix A
  and a P-by-N matrix B:
@@ -39,11 +39,11 @@ description: "dggrqf.f –"
  where inv(B) denotes the inverse of the matrix B, and Z**T denotes the
  transpose of the matrix Z.
 </pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dt>
-<dd> <i>M</i> </p>
+</dt><dd> <i>M</i> </dd>
 <pre>
           M is INTEGER
           The number of rows of the matrix A.  M &gt;= 0.
@@ -131,18 +131,18 @@ description: "dggrqf.f –"
 <p> <code>Author:</code></p>
 <dl COMPACT>
 <dt>
-<dd> Univ. of Tennessee </p>
+</dt><dd> Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl COMPACT>
 <dt>
-<dd> November 2011</dl>
+</dt><dd> November 2011</dd></dl>
 <p> <code>Further Details: </code></p>
 <dl COMPACT>
 <dt>
-<dd>
+</dt><dd>
 <pre>
   The matrix Q is represented as a product of elementary reflectors
      Q = H(1) H(2) . . . H(k), where k = min(m,n).
@@ -163,7 +163,8 @@ description: "dggrqf.f –"
   To form Z explicitly, use LAPACK subroutine DORGQR.
   To use Z to update another matrix, use LAPACK subroutine DORMQR.
 </pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> Definition at line 214 of file dggrqf.f.</p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for LAPACK from the source code.</p>
+</p>

@@ -15,19 +15,19 @@ snd_hwdep_new - create a new hwdep instance
 <h2>Arguments</h2>
 
 <i>card</i>
-<dl><dd><dd>the card instance</dl>
+<dl><dd></dd><dd>the card instance</dd></dl>
  
 
  <i>id</i>
-<dl><dd>the id string</dl>
+<dl><dd>the id string</dd></dl>
  
 
  <i>device</i>
-<dl><dd>the device index (zero-based)</dl>
+<dl><dd>the device index (zero-based)</dd></dl>
  
 
  <i>rhwdep</i>
-<dl><dd>the pointer to store the new hwdep instance</dl>
+<dl><dd>the pointer to store the new hwdep instance</dd></dl>
 
 <h2>Description</h2>
 

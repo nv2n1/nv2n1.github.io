@@ -66,159 +66,159 @@ description: "struct_journal_s – The journal_s type is the concrete type assoc
 <h2>Members</h2>
 <p>j_flags</p>
 <dl>
-<dd>General journaling state flags</dl>
+<dd>General journaling state flags</dd></dl>
 <p> j_errno</p>
 <dl>
-<dd>Is there an outstanding uncleared error on the journal (from a prior abort)?</dl>
+<dd>Is there an outstanding uncleared error on the journal (from a prior abort)?</dd></dl>
 <p> j_sb_buffer</p>
 <dl>
-<dd>First part of superblock buffer</dl>
+<dd>First part of superblock buffer</dd></dl>
 <p> j_superblock</p>
 <dl>
-<dd>Second part of superblock buffer</dl>
+<dd>Second part of superblock buffer</dd></dl>
 <p> j_format_version</p>
 <dl>
-<dd>Version of the superblock format</dl>
+<dd>Version of the superblock format</dd></dl>
 <p> j_state_lock</p>
 <dl>
-<dd>Protect the various scalars in the journal</dl>
+<dd>Protect the various scalars in the journal</dd></dl>
 <p> j_barrier_count</p>
 <dl>
-<dd>Number of processes waiting to create a barrier lock</dl>
+<dd>Number of processes waiting to create a barrier lock</dd></dl>
 <p> j_barrier</p>
 <dl>
-<dd>The barrier lock itself</dl>
+<dd>The barrier lock itself</dd></dl>
 <p> j_running_transaction</p>
 <dl>
-<dd>The current running transaction..</dl>
+<dd>The current running transaction..</dd></dl>
 <p> j_committing_transaction</p>
 <dl>
-<dd>the transaction we are pushing to disk</dl>
+<dd>the transaction we are pushing to disk</dd></dl>
 <p> j_checkpoint_transactions</p>
 <dl>
-<dd>a linked circular list of all transactions waiting for checkpointing</dl>
+<dd>a linked circular list of all transactions waiting for checkpointing</dd></dl>
 <p> j_wait_transaction_locked</p>
 <dl>
-<dd>Wait queue for waiting for a locked transaction to start committing, or for a barrier lock to be released</dl>
+<dd>Wait queue for waiting for a locked transaction to start committing, or for a barrier lock to be released</dd></dl>
 <p> j_wait_done_commit</p>
 <dl>
-<dd>Wait queue for waiting for commit to complete</dl>
+<dd>Wait queue for waiting for commit to complete</dd></dl>
 <p> j_wait_commit</p>
 <dl>
-<dd>Wait queue to trigger commit</dl>
+<dd>Wait queue to trigger commit</dd></dl>
 <p> j_wait_updates</p>
 <dl>
-<dd>Wait queue to wait for updates to complete</dl>
+<dd>Wait queue to wait for updates to complete</dd></dl>
 <p> j_wait_reserved</p>
 <dl>
-<dd>Wait queue to wait for reserved buffer credits to drop</dl>
+<dd>Wait queue to wait for reserved buffer credits to drop</dd></dl>
 <p> j_checkpoint_mutex</p>
 <dl>
-<dd>Mutex for locking against concurrent checkpoints</dl>
+<dd>Mutex for locking against concurrent checkpoints</dd></dl>
 <p> j_head</p>
 <dl>
-<dd>Journal head &#8211; identifies the first unused block in the journal</dl>
+<dd>Journal head &#8211; identifies the first unused block in the journal</dd></dl>
 <p> j_tail</p>
 <dl>
-<dd>Journal tail &#8211; identifies the oldest still-used block in the journal.</dl>
+<dd>Journal tail &#8211; identifies the oldest still-used block in the journal.</dd></dl>
 <p> j_free</p>
 <dl>
-<dd>Journal free &#8211; how many free blocks are there in the journal?</dl>
+<dd>Journal free &#8211; how many free blocks are there in the journal?</dd></dl>
 <p> j_first</p>
 <dl>
-<dd>The block number of the first usable block</dl>
+<dd>The block number of the first usable block</dd></dl>
 <p> j_last</p>
 <dl>
-<dd>The block number one beyond the last usable block</dl>
+<dd>The block number one beyond the last usable block</dd></dl>
 <p> j_dev</p>
 <dl>
-<dd>Device where we store the journal</dl>
+<dd>Device where we store the journal</dd></dl>
 <p> j_blocksize</p>
 <dl>
-<dd>blocksize for the location where we store the journal.</dl>
+<dd>blocksize for the location where we store the journal.</dd></dl>
 <p> j_blk_offset</p>
 <dl>
-<dd>starting block offset for into the device where we store the journal</dl>
+<dd>starting block offset for into the device where we store the journal</dd></dl>
 <p> j_fs_dev</p>
 <dl>
-<dd>Device which holds the client fs. For internal journal this will be equal to j_dev</dl>
+<dd>Device which holds the client fs. For internal journal this will be equal to j_dev</dd></dl>
 <p> j_maxlen</p>
 <dl>
-<dd>Total maximum capacity of the journal region on disk.</dl>
+<dd>Total maximum capacity of the journal region on disk.</dd></dl>
 <p> j_reserved_credits</p>
 <dl>
-<dd>Number of buffers reserved from the running transaction</dl>
+<dd>Number of buffers reserved from the running transaction</dd></dl>
 <p> j_list_lock</p>
 <dl>
-<dd>Protects the buffer lists and internal buffer state.</dl>
+<dd>Protects the buffer lists and internal buffer state.</dd></dl>
 <p> j_inode</p>
 <dl>
-<dd>Optional inode where we store the journal. If present, all journal block numbers are mapped into this inode via <code>bmap</code>.</dl>
+<dd>Optional inode where we store the journal. If present, all journal block numbers are mapped into this inode via <code>bmap</code>.</dd></dl>
 <p> j_tail_sequence</p>
 <dl>
-<dd>Sequence number of the oldest transaction in the log</dl>
+<dd>Sequence number of the oldest transaction in the log</dd></dl>
 <p> j_transaction_sequence</p>
 <dl>
-<dd>Sequence number of the next transaction to grant</dl>
+<dd>Sequence number of the next transaction to grant</dd></dl>
 <p> j_commit_sequence</p>
 <dl>
-<dd>Sequence number of the most recently committed transaction</dl>
+<dd>Sequence number of the most recently committed transaction</dd></dl>
 <p> j_commit_request</p>
 <dl>
-<dd>Sequence number of the most recent transaction wanting commit</dl>
+<dd>Sequence number of the most recent transaction wanting commit</dd></dl>
 <p> j_uuid[16]</p>
 <dl>
-<dd>Uuid of client object.</dl>
+<dd>Uuid of client object.</dd></dl>
 <p> j_task</p>
 <dl>
-<dd>Pointer to the current commit thread for this journal</dl>
+<dd>Pointer to the current commit thread for this journal</dd></dl>
 <p> j_max_transaction_buffers</p>
 <dl>
-<dd>Maximum number of metadata buffers to allow in a single compound commit transaction</dl>
+<dd>Maximum number of metadata buffers to allow in a single compound commit transaction</dd></dl>
 <p> j_commit_interval</p>
 <dl>
-<dd>What is the maximum transaction lifetime before we begin a commit?</dl>
+<dd>What is the maximum transaction lifetime before we begin a commit?</dd></dl>
 <p> j_commit_timer</p>
 <dl>
-<dd>The timer used to wakeup the commit thread</dl>
+<dd>The timer used to wakeup the commit thread</dd></dl>
 <p> j_revoke_lock</p>
 <dl>
-<dd>Protect the revoke table</dl>
+<dd>Protect the revoke table</dd></dl>
 <p> j_revoke</p>
 <dl>
-<dd>The revoke table &#8211; maintains the list of revoked blocks in the current transaction.</dl>
+<dd>The revoke table &#8211; maintains the list of revoked blocks in the current transaction.</dd></dl>
 <p> j_revoke_table[2]</p>
 <dl>
-<dd>alternate revoke tables for j_revoke</dl>
+<dd>alternate revoke tables for j_revoke</dd></dl>
 <p> j_wbuf</p>
 <dl>
-<dd>array of buffer_heads for jbd2_journal_commit_transaction</dl>
+<dd>array of buffer_heads for jbd2_journal_commit_transaction</dd></dl>
 <p> j_wbufsize</p>
 <dl>
-<dd>maximum number of buffer_heads allowed in j_wbuf, the number that will fit in j_blocksize</dl>
+<dd>maximum number of buffer_heads allowed in j_wbuf, the number that will fit in j_blocksize</dd></dl>
 <p> j_last_sync_writer</p>
 <dl>
-<dd>most recent pid which did a synchronous write</dl>
+<dd>most recent pid which did a synchronous write</dd></dl>
 <p> j_history_lock</p>
 <dl>
-<dd>Protect the transactions statistics history</dl>
+<dd>Protect the transactions statistics history</dd></dl>
 <p> j_proc_entry</p>
 <dl>
-<dd>procfs entry for the jbd statistics directory</dl>
+<dd>procfs entry for the jbd statistics directory</dd></dl>
 <p> j_stats</p>
 <dl>
-<dd>Overall statistics</dl>
+<dd>Overall statistics</dd></dl>
 <p> j_private</p>
 <dl>
-<dd>An opaque pointer to fs-private information.</dl>
+<dd>An opaque pointer to fs-private information.</dd></dl>
 <p> j_trans_commit_map</p>
 <dl>
-<dd>Lockdep entity to track transaction commit dependencies</dl>
+<dd>Lockdep entity to track transaction commit dependencies</dd></dl>
 <h2>Authors</h2>
 <p><code>Roger Gammans</code> &lt;rgammans [at] computer-surgery.co.uk&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <p> <code>Stephen Tweedie</code> &lt;sct [at] redhat.com&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

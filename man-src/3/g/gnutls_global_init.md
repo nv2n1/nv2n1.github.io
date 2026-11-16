@@ -14,8 +14,8 @@ description: "gnutls_global_init – API function"
 <p> <code>int gnutls_global_init( </code><i>void</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
-<dt> void</p>
-<dd></dl>
+<dt> void</dt>
+<dd></dd></dl>
 <h2>DESCRIPTION</h2>
 <p> This function performs any required precalculations, detects the supported CPU capabilities and initializes the underlying cryptographic backend. In order to free any resources taken by this call you should <code>gnutls_global_deinit()</code> when gnutls usage is no longer needed. </p>
 <p> This function increments a global counter, so that <code>gnutls_global_deinit()</code> only releases resources when it has been called as many times as <code>gnutls_global_init()</code>. This is useful when GnuTLS is used by more than one library in an application. This function can be called many times, but will only do something the first time. </p>
@@ -32,6 +32,6 @@ description: "gnutls_global_init – API function"
 <h2>SEE ALSO</h2>
 <p> The full documentation for <code>gnutls</code> is maintained as a Texinfo manual. If the /usr/share/doc/gnutls/ directory does not contain the HTML form visit <code></p>
 <dl>
-<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></p>
-<dd> </code></dl>
+<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></dt>
+<dd> </code></dd></dl>
 <h2>Index</h2>

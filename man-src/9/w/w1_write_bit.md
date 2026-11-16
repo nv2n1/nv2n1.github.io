@@ -14,14 +14,14 @@ description: "w1_write_bit – Generates a write-0 or write-1 cycle."
 <p><i>dev</i></p>
 <dl>
 <dd>
-<dd>the master device</dl>
+</dd><dd>the master device</dd></dl>
 <p> <i>bit</i></p>
 <dl>
-<dd>bit to write</dl>
+<dd>bit to write</dd></dl>
 <h2>Description</h2>
 <p>Only call if dev-&gt;bus_master-&gt;touch_bit is NULL</p>
 <h2>Author</h2>
 <p><code>David Fries</code> &lt;David [at] Fries.net&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

@@ -21,23 +21,23 @@ description: "struct_socket – general BSD socket"
 <h2>Members</h2>
 <p>state</p>
 <dl>
-<dd>socket state (<code>SS_CONNECTED</code>, etc)</dl>
+<dd>socket state (<code>SS_CONNECTED</code>, etc)</dd></dl>
 <p> type</p>
 <dl>
-<dd>socket type (<code>SOCK_STREAM</code>, etc)</dl>
+<dd>socket type (<code>SOCK_STREAM</code>, etc)</dd></dl>
 <p> flags</p>
 <dl>
-<dd>socket flags (<code>SOCK_NOSPACE</code>, etc)</dl>
+<dd>socket flags (<code>SOCK_NOSPACE</code>, etc)</dd></dl>
 <p> wq</p>
 <dl>
-<dd>wait queue for several uses</dl>
+<dd>wait queue for several uses</dd></dl>
 <p> file</p>
 <dl>
-<dd>File back pointer for gc</dl>
+<dd>File back pointer for gc</dd></dl>
 <p> sk</p>
 <dl>
-<dd>internal networking protocol agnostic socket representation</dl>
+<dd>internal networking protocol agnostic socket representation</dd></dl>
 <p> ops</p>
 <dl>
-<dd>protocol specific socket operations</dl>
+<dd>protocol specific socket operations</dd></dl>
 <h2>Copyright</h2>

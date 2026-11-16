@@ -30,25 +30,25 @@ url: "/docs/linux/man/1-abrt-server/"
  -u UID
 <dl>
 <dt>
-<dd> Use UID as client uid</dl>
+</dt><dd> Use UID as client uid</dd></dl>
  
 
  -s
 <dl>
 <dt>
-<dd> Log to system log.</dl>
+</dt><dd> Log to system log.</dd></dl>
  
 
  -p
 <dl>
 <dt>
-<dd> Add program names to log.</dl>
+</dt><dd> Add program names to log.</dd></dl>
  
 
  -v
 <dl>
 <dt>
-<dd> Log more detailed debugging information.</dl>
+</dt><dd> Log more detailed debugging information.</dd></dl>
 
 <h2>PROTOCOL</h2>
 
@@ -60,7 +60,7 @@ url: "/docs/linux/man/1-abrt-server/"
 
 <dl>
 <dt>
-<dd> <pre><code>
+</dt><dd> <pre><code>
 -&gt;"POST / HTTP/1.1\r\n"
     -&gt;"\r\n"
     -&gt;"type=string\0" string,
@@ -74,20 +74,20 @@ url: "/docs/linux/man/1-abrt-server/"
         -&gt;"backtrace=string\0" string,
     maximum length 1 MB
             -&gt;(close writing half of the socket) &lt; -"HTTP/1.1 201 \r\n" &lt; -"\r\n"
-</code></pre></dl>
+</code></pre></dd></dl>
  
 
  Deleting problem directory: 
 
 <dl>
 <dt>
-<dd> <pre>
+</dt><dd> <pre>
 -&gt; &quot;DELETE &lt;directory_name&gt; HTTP/1.1\r\n&quot;
 -&gt; &quot;\r\n&quot;
 -&gt; (close writing half of the socket)
 &lt;- &quot;HTTP/1.1 200 \r\n&quot;
 &lt;- &quot;\r\n&quot;
-</pre></dl>
+</pre></dd></dl>
 
 <h2>AUTHORS</h2>
 
@@ -95,7 +95,7 @@ url: "/docs/linux/man/1-abrt-server/"
 
 <dl>
 <dt>
-<dd> &bull; ABRT team</dl>
+</dt><dd> &bull; ABRT team</dd></dl>
  
 
 <h2>Index</h2>

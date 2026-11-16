@@ -15,20 +15,20 @@ description: "xentrace – capture Xen trace buffer data"
 &nbsp;<wbr>CPU(uint)&nbsp;<wbr>TSC(u64)&nbsp;<wbr>EVENT(u32)&nbsp;<wbr>D1 D2 D3 D4 D5&nbsp;<wbr>(all u32) Where CPU is the processor number, TSC is the record&#8217;s timestamp (the value of the CPU cycle counter), EVENT is the event ID and D1&#8230;D5 are the trace data. Data is dumped onto the standard output (which must not be a TTY) or a <i>FILE</i> specified on the command line. The output should be parsed using the tool xentrace_format, which can produce human-readable output in ASCII format.</p>
 <h3>Options</h3>
 <dl>
-<dt><code>-t, &#8211;log-thresh=l</code></p>
-<dd>set the threshold number, l, of new records required to trigger a write of all new records to the output</p>
-<dt><code>-s, &#8211;poll-sleep=p</code></p>
-<dd>set the time, p, (in milliseconds) to sleep between polling the buffers for new data.</p>
-<dt><code>-c, &#8211;cpu-mask=c</code></p>
-<dd>set cpu-mask</p>
-<dt><code>-e, &#8211;evt-mask=e</code></p>
-<dd>set evt-mask</p>
-<dt><code>-?, &#8211;help</code></p>
-<dd>Give this help list</p>
-<dt><code>&#8211;usage</code></p>
-<dd>Give a short usage message</p>
-<dt><code>-V, &#8211;version</code></p>
-<dd>Print program version</dl>
+<dt><code>-t, &#8211;log-thresh=l</code></dt>
+<dd>set the threshold number, l, of new records required to trigger a write of all new records to the output</dd>
+<dt><code>-s, &#8211;poll-sleep=p</code></dt>
+<dd>set the time, p, (in milliseconds) to sleep between polling the buffers for new data.</dd>
+<dt><code>-c, &#8211;cpu-mask=c</code></dt>
+<dd>set cpu-mask</dd>
+<dt><code>-e, &#8211;evt-mask=e</code></dt>
+<dd>set evt-mask</dd>
+<dt><code>-?, &#8211;help</code></dt>
+<dd>Give this help list</dd>
+<dt><code>&#8211;usage</code></dt>
+<dd>Give a short usage message</dd>
+<dt><code>-V, &#8211;version</code></dt>
+<dd>Print program version</dd></dl>
 <h3>Event Classes (Masks)</h3>
 <p>The following event classes (masks) can be used to filter the events being gathered by xentrace:<br />
 &nbsp;<wbr>&nbsp;<wbr><i>ID</i>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr><i>Description</i><br />

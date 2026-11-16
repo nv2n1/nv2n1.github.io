@@ -475,13 +475,11 @@ description: "Markdown – The Markdown text formatting syntax"
 <p> The backtick delimiters surrounding a code span may include spaces &#8212; one after the opening, one before the closing. This allows you to place literal backtick characters at the beginning or end of a code span: </p>
 <blockquote>
 <pre> A single backtick in a code span: `` ` ``
- 
  A backtick-delimited string in a code span: `` `foo` ``</pre>
 </blockquote>
 <p> will produce: </p>
 <blockquote>
 <pre> &lt;p&gt;A single backtick in a code span: &lt;code&gt;`&lt;/code&gt;&lt;/p&gt;
- 
  &lt;p&gt;A backtick-delimited string in a code span: &lt;code&gt;`foo`&lt;/code&gt;&lt;/p&gt;</pre>
 </blockquote>
 <p> With a code span, ampersands and angle brackets are encoded as HTML entities automatically, which makes it easy to include example HTML tags. Markdown will turn this: </p>
@@ -554,28 +552,28 @@ description: "Markdown – The Markdown text formatting syntax"
 </blockquote>
 <p> provides backslash escapes for the following characters:</p>
 <dl>
-<dt><code>backslash</code></p>
+<dt><code>backslash</code></dt>
 <dd>
-<dt><code>`</code></p>
-<dd>backtick</p>
-<dt><code>*</code></p>
-<dd>asterisk</p>
-<dt><code>_</code></p>
-<dd>underscore</p>
-<dd>curly braces</p>
-<dt><code>[]</code></p>
-<dd>square brackets</p>
-<dt><code>()</code></p>
-<dd>parentheses</p>
-<dt><code>#</code></p>
-<dd>hash mark</p>
-<dt><code>+</code></p>
-<dd>plus sign</p>
-<dt><code>&#8211;</code></p>
-<dd>minus sign (hyphen)</p>
-<dt><code>.</code></p>
-<dd>dot</p>
-<dd>exclamation mark</dl>
+</dd><dt><code>`</code></dt>
+<dd>backtick</dd>
+<dt><code>*</code></dt>
+<dd>asterisk</dd>
+<dt><code>_</code></dt>
+<dd>underscore</dd>
+<dd>curly braces</dd>
+<dt><code>[]</code></dt>
+<dd>square brackets</dd>
+<dt><code>()</code></dt>
+<dd>parentheses</dd>
+<dt><code>#</code></dt>
+<dd>hash mark</dd>
+<dt><code>+</code></dt>
+<dd>plus sign</dd>
+<dt><code>&#8211;</code></dt>
+<dd>minus sign (hyphen)</dd>
+<dt><code>.</code></dt>
+<dd>dot</dd>
+<dd>exclamation mark</dd></dl>
 <h2>Bugs</h2>
 <p>assumes that tabs are set to 4 spaces.</p>
 <h2>Author</h2>

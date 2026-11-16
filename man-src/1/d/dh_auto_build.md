@@ -17,8 +17,8 @@ description: "dh_auto_build – automatically builds a package"
 <h2>OPTIONS</h2>
 <p> See &quot;<font SIZE="-1"><code>BUILD SYSTEM OPTIONS</code></font>&quot; in <i><a href="/docs/linux/man/7-debhelper/">debhelper</a></i>(7) for a list of common build system selection and control options.</p>
 <dl>
-<dt><code>&#8212;</code> <i>params</i></p>
-<dd> Pass <i>params</i> to the program that is run, after the parameters that <code>dh_auto_build</code> usually passes.</dl>
+<dt><code>&#8212;</code> <i>params</i></dt>
+<dd> Pass <i>params</i> to the program that is run, after the parameters that <code>dh_auto_build</code> usually passes.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <i><a href="/docs/linux/man/7-debhelper/">debhelper</a></i>(7) </p>
 <p> This program is a part of debhelper.</p>

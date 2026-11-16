@@ -40,14 +40,10 @@ entropy <i>(public member function)</i> </p>
 <h2>Example</h2>
 <p>// Run this code </p>
 <pre><code>#include &lt;iostream&gt;
-
 #include &lt;string&gt;
-
 #include &lt;map&gt;
-
 #include &lt;random&gt;
 int main()
-
 {
     std::random_device rd;
     std::map&lt;int, int&gt; hist;

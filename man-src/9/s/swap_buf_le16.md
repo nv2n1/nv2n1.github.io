@@ -14,15 +14,15 @@ description: "swap_buf_le16 – swap halves of 16-bit words in place"
 <p><i>buf</i></p>
 <dl>
 <dd>
-<dd>Buffer to swap</dl>
+</dd><dd>Buffer to swap</dd></dl>
 <p> <i>buf_words</i></p>
 <dl>
-<dd>Number of 16-bit words in buffer.</dl>
+<dd>Number of 16-bit words in buffer.</dd></dl>
 <h2>Description</h2>
 <p>Swap halves of 16-bit words if needed to convert from little-endian byte order to native cpu byte order, or vice-versa. </p>
 <p> LOCKING: Inherited from caller.</p>
 <h2>Author</h2>
 <p><code>Jeff Garzik</code></p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

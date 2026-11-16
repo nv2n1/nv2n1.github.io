@@ -11,57 +11,31 @@ std::is_permutation - std::is_permutation
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header &lt;algorithm&gt;
-
 template&lt; class ForwardIt1, class ForwardIt2 &gt;                                (since C++11)
-
 bool is_permutation( ForwardIt1 first1, ForwardIt1 last1,                     (until C++20)
-
 ForwardIt2 first2 );
-
 template&lt; class ForwardIt1, class ForwardIt2 &gt;
-
 constexpr bool is_permutation( ForwardIt1 first1, ForwardIt1 last1,           (since C++20)
-
 ForwardIt2 first2 );
-
 template&lt; class ForwardIt1, class ForwardIt2, class BinaryPredicate &gt;                        (since C++11)
-
 bool is_permutation( ForwardIt1 first1, ForwardIt1 last1,                                    (until C++20)
-
 ForwardIt2 first2, BinaryPredicate p );
-
 template&lt; class ForwardIt1, class ForwardIt2, class BinaryPredicate &gt;
-
 constexpr bool is_permutation( ForwardIt1 first1, ForwardIt1 last1,                          (since C++20)
-
 ForwardIt2 first2, BinaryPredicate p );
-
 template&lt; class ForwardIt1, class ForwardIt2 &gt;                        (1)                                   (since C++14)
-
 bool is_permutation( ForwardIt1 first1, ForwardIt1 last1,                                                   (until C++20)
-
 ForwardIt2 first2, ForwardIt2 last2 );
-
 template&lt; class ForwardIt1, class ForwardIt2 &gt;                            (2)
-
 constexpr bool is_permutation( ForwardIt1 first1, ForwardIt1 last1,                                         (since C++20)
-
 ForwardIt2 first2, ForwardIt2 last2 );
-
 template&lt; class ForwardIt1, class ForwardIt2, class BinaryPredicate &gt;         (3)
-
 bool is_permutation( ForwardIt1 first1, ForwardIt1 last1,                                                                  (since C++14)
-
 ForwardIt2 first2, ForwardIt2 last2,                                                                                       (until C++20)
-
 BinaryPredicate p );                                                                         (4)
-
 template&lt; class ForwardIt1, class ForwardIt2, class BinaryPredicate &gt;
-
 constexpr bool is_permutation( ForwardIt1 first1, ForwardIt1 last1,                                                        (since C++20)
-
 ForwardIt2 first2, ForwardIt2 last2,
-
 BinaryPredicate p );</code></pre> 
 Returns true if there exists a permutation of the elements in the range [first1, last1) that makes that range equal to the range [first2,last2), where last2 denotes first2 + (last1 - first1) if it was not given. 
 1,3) Elements are compared using operator==. The behavior is undefined if it is not an equivalence_relation. 
@@ -121,13 +95,9 @@ However if ForwardIt1 and ForwardIt2 meet the requirements of LegacyRandomAccess
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;algorithm&gt;
-
 #include &lt;vector&gt;
-
 #include &lt;iostream&gt;
-
 int main()
-
 {
     std::vector&lt;int&gt; v1{1, 2, 3, 4, 5};
     std::vector&lt;int&gt; v2{3, 5, 4, 1, 2};

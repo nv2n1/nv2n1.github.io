@@ -16,24 +16,24 @@ description: "fmt – simple optimal text formatter"
 <p> With no FILE, or when FILE is -, read standard input. </p>
 <p> Mandatory arguments to long options are mandatory for short options too.</p>
 <dl>
-<dt><code>-c</code>, <code>&#8211;crown-margin</code></p>
-<dd> preserve indentation of first two lines</p>
-<dt><code>-p</code>, <code>&#8211;prefix</code>=<i>,STRING/</i></p>
-<dd> reformat only lines beginning with STRING, reattaching the prefix to reformatted lines</p>
-<dt><code>-s</code>, <code>&#8211;split-only</code></p>
-<dd> split long lines, but do not refill</p>
-<dt><code>-t</code>, <code>&#8211;tagged-paragraph</code></p>
-<dd> indentation of first line different from second</p>
-<dt><code>-u</code>, <code>&#8211;uniform-spacing</code></p>
-<dd> one space between words, two after sentences</p>
-<dt><code>-w</code>, <code>&#8211;width</code>=<i>,WIDTH/</i></p>
-<dd> maximum line width (default of 75 columns)</p>
-<dt><code>-g</code>, <code>&#8211;goal</code>=<i>,WIDTH/</i></p>
-<dd> goal width (default of 93% of width)</p>
-<dt><code>&#8211;help</code></p>
-<dd> display this help and exit</p>
-<dt><code>&#8211;version</code></p>
-<dd> output version information and exit</dl>
+<dt><code>-c</code>, <code>&#8211;crown-margin</code></dt>
+<dd> preserve indentation of first two lines</dd>
+<dt><code>-p</code>, <code>&#8211;prefix</code>=<i>,STRING/</i></dt>
+<dd> reformat only lines beginning with STRING, reattaching the prefix to reformatted lines</dd>
+<dt><code>-s</code>, <code>&#8211;split-only</code></dt>
+<dd> split long lines, but do not refill</dd>
+<dt><code>-t</code>, <code>&#8211;tagged-paragraph</code></dt>
+<dd> indentation of first line different from second</dd>
+<dt><code>-u</code>, <code>&#8211;uniform-spacing</code></dt>
+<dd> one space between words, two after sentences</dd>
+<dt><code>-w</code>, <code>&#8211;width</code>=<i>,WIDTH/</i></dt>
+<dd> maximum line width (default of 75 columns)</dd>
+<dt><code>-g</code>, <code>&#8211;goal</code>=<i>,WIDTH/</i></dt>
+<dd> goal width (default of 93% of width)</dd>
+<dt><code>&#8211;help</code></dt>
+<dd> display this help and exit</dd>
+<dt><code>&#8211;version</code></dt>
+<dd> output version information and exit</dd></dl>
 <h2>AUTHOR</h2>
 <p> Written by Ross Paterson.</p>
 <h2>REPORTING BUGS</h2>

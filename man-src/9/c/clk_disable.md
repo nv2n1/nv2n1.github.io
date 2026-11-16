@@ -14,7 +14,7 @@ description: "clk_disable – inform the system when the clock source is no long
 <p><i>clk</i></p>
 <dl>
 <dd>
-<dd>clock source</dl>
+</dd><dd>clock source</dd></dl>
 <h2>Description</h2>
 <p>Inform the system that a clock source is no longer required by a driver and may be shut down. </p>
 <p> May be called from atomic contexts. </p>

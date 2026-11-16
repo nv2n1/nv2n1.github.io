@@ -15,19 +15,19 @@ blk_add_request_payload - add a payload to a request
 <h2>Arguments</h2>
 
 <i>rq</i>
-<dl><dd><dd>request to update</dl>
+<dl><dd></dd><dd>request to update</dd></dl>
  
 
  <i>page</i>
-<dl><dd>page backing the payload</dl>
+<dl><dd>page backing the payload</dd></dl>
  
 
  <i>offset</i>
-<dl><dd>offset in page</dl>
+<dl><dd>offset in page</dd></dl>
  
 
  <i>len</i>
-<dl><dd>length of the payload.</dl>
+<dl><dd>length of the payload.</dd></dl>
 
 <h2>Description</h2>
 

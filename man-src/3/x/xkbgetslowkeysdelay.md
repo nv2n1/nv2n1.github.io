@@ -11,16 +11,16 @@ description: "XkbGetSlowKeysDelay – Gets the SlowKeys acceptance delay for a k
 <h2>Synopsis</h2>
 <dl COMPACT>
 <dt> <code>Bool XkbGetSlowKeysDelay</code> <code>(Display *</code><i>display</i><code>,</code> <code>unsigned int </code><i>device_spec</i><code>,</code> <code>unsigned int *</code><i>delay_rtrn</i><code>);</code><br />
- &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</dl>
+ &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</dt></dl>
 <h2>Arguments</h2>
 <dl COMPACT>
-<dt><i>&#8211; display</i></p>
+<dt><i>&#8211; display</i></dt>
 <dd>
-<dd>connection to X server</p>
-<dt><i>&#8211; device_spec</i></p>
-<dd>device ID, or XkbUseCoreKbd</p>
-<dt><i>&#8211; delay_rtrn</i></p>
-<dd>backfilled with SlowKeys delay, ms</dl>
+</dd><dd>connection to X server</dd>
+<dt><i>&#8211; device_spec</i></dt>
+<dd>device ID, or XkbUseCoreKbd</dd>
+<dt><i>&#8211; delay_rtrn</i></dt>
+<dd>backfilled with SlowKeys delay, ms</dd></dl>
 <h2>Description</h2>
 <p>Some users may accidentally bump keys while moving a hand or typing stick toward the key they want. Usually, the keys that are accidentally bumped are just hit for a very short period of time. The SlowKeys control helps filter these accidental bumps by telling the server to wait a specified period, called the <i>SlowKeys acceptance delay, </i> before delivering key events. If the key is released before this period elapses, no key events are generated. Users can then bump any number of keys on their way to the one they want without accidentally getting those characters. Once they have reached the key they want, they can then hold the desired key long enough for the computer to accept it. SlowKeys is a boolean control with one configurable attribute. </p>
 <p> When the SlowKeys control is active, the server reports the initial key press, subsequent acceptance or rejection, and release of any key to interested clients by sending an appropriate AccessXNotify event (see section 10.6.4). </p>
@@ -158,10 +158,10 @@ description: "XkbGetSlowKeysDelay – Gets the SlowKeys acceptance delay for a k
 <p> <i>XkbGetSlowKeysDelay </i> requests the attributes of the SlowKeys control from the server, waits for a reply and backfills <i>delay_rtrn </i> with the SlowKeys delay attribute. <i>XkbGetSlowKeysDelay </i> returns True if successful; , <i>XkbGetSlowKeysDelay </i> returns False.</p>
 <h2>Return Values</h2>
 <dl COMPACT>
-<dt>True</p>
-<dd>The <i>XkbGetSlowKeysDelay </i> function returns True if the request of the Slowkeys control from the server was successful. <i></p>
-<dt>False</p>
-<dd></i> The <i>XkbGetSlowKeysDelay </i> function returns False if a compatible version of the Xkb extension is not available in the server.</dl>
+<dt>True</dt>
+<dd>The <i>XkbGetSlowKeysDelay </i> function returns True if the request of the Slowkeys control from the server was successful. <i></dd>
+<dt>False</dt>
+<dd></i> The <i>XkbGetSlowKeysDelay </i> function returns False if a compatible version of the Xkb extension is not available in the server.</dd></dl>
 <h2>Structures</h2>
 <p>The structure for the XkbAccessXNotify event type is as follows: </p>
 <pre>typedef struct {

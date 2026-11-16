@@ -17,24 +17,24 @@ description: "vidir – edit directories and filenames"
 <p> Filenames to be edited may be given any combination of <i>directory</i>s (which will be expanded to the non-recursive list of all files within <i>directory</i>), <i>file</i>s, or <i>&#8211;</i>. If the latter is specified, <code>vidir</code> reads a list of filenames from stdin and displays those for editing.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt>-v, &#8211;verbose</p>
-<dd> Verbosely display the actions taken by the program.</dl>
+<dt>-v, &#8211;verbose</dt>
+<dd> Verbosely display the actions taken by the program.</dd></dl>
 <h2>EXAMPLES</h2>
 <dl>
-<dt>vidir</p>
+<dt>vidir</dt>
 <dd>
-<dt>vidir *.jpeg</p>
-<dd> Typical uses.</p>
-<dt>find | vidir &#8211;</p>
-<dd> Edit subdirectory contents too. To delete subdirectories, delete all their contents and the subdirectory itself in the editor.</p>
-<dt>find -type f | vidir &#8211;</p>
-<dd> Edit all files under the current directory and subdirectories.</dl>
+</dd><dt>vidir *.jpeg</dt>
+<dd> Typical uses.</dd>
+<dt>find | vidir &#8211;</dt>
+<dd> Edit subdirectory contents too. To delete subdirectories, delete all their contents and the subdirectory itself in the editor.</dd>
+<dt>find -type f | vidir &#8211;</dt>
+<dd> Edit all files under the current directory and subdirectories.</dd></dl>
 <h2>ENVIRONMENT VARIABLES</h2>
 <dl>
-<dt><font SIZE="-1">EDITOR</font></p>
-<dd> Editor to use.</p>
-<dt><font SIZE="-1">VISUAL</font></p>
-<dd> Also supported to determine what editor to use.</dl>
+<dt><font SIZE="-1">EDITOR</font></dt>
+<dd> Editor to use.</dd>
+<dt><font SIZE="-1">VISUAL</font></dt>
+<dd> Also supported to determine what editor to use.</dd></dl>
 <h2>AUTHOR</h2>
 <p> Copyright 2006 by Joey Hess &lt;id [at] joeyh.name&gt; </p>
 <p> Licensed under the <font SIZE="-1">GNU GPL.</font> </p>

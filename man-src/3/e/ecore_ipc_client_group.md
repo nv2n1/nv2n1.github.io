@@ -26,24 +26,24 @@ description: "IPC Client Functions – Functions that deal with IPC client objec
 <p>Retrieves the data that has been associated with the given IPC client. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>cl</i> The given client.</dl>
+<dd><i>cl</i> The given client.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>The data associated with the IPC client.</dl>
+<dd>The data associated with the IPC client.</dd></dl>
 <h3>EAPI void ecore_ipc_client_data_set (<code>Ecore_Ipc_Client</code> * cl, const void * data)</h3>
 <p>Sets the IPC data associated with the given IPC client to data. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>cl</i> The given IPC client.<br />
- <i>data</i> The data to associate with the IPC client.</dl>
+ <i>data</i> The data to associate with the IPC client.</dd></dl>
 <h3>EAPI void* ecore_ipc_client_del (<code>Ecore_Ipc_Client</code> * cl)</h3>
 <p>Closes the connection and frees memory allocated to the given IPC client. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>cl</i> The given client.</dl>
+<dd><i>cl</i> The given client.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>Data associated with the client.</dl>
+<dd>Data associated with the client.</dd></dl>
 <p> References ecore_con_client_del(), ecore_con_client_server_get(), and ecore_con_server_data_get(). </p>
 <p> Referenced by ecore_ipc_server_del().</p>
 <h3>EAPI int ecore_ipc_client_send (<code>Ecore_Ipc_Client</code> * cl, int major, int minor, int ref, int ref_to, int response, const void * data, int size)</h3>
@@ -57,23 +57,23 @@ description: "IPC Client Functions – Functions that deal with IPC client objec
  <i>ref_to</i> Reference number of the message this message refers to.<br />
  <i>response</i> Requires response.<br />
  <i>data</i> The data to send as part of the message.<br />
- <i>size</i> Length of the data, in bytes, to send.</dl>
+ <i>size</i> Length of the data, in bytes, to send.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>The number of bytes sent. 0 will be returned if there is an error.</dl>
+<dd>The number of bytes sent. 0 will be returned if there is an error.</dd></dl>
 <p> <code>Todo</code></p>
 <dl COMPACT>
-<dd>This function needs to become an IPC message. </p>
+<dd>This function needs to become an IPC message. </dd>
 <p> Make sure ref_to and response parameters are described correctly.</dl>
 <p> References ecore_con_client_send().</p>
 <h3>EAPI <code>Ecore_Ipc_Server</code>* ecore_ipc_client_server_get (<code>Ecore_Ipc_Client</code> * cl)</h3>
 <p>Retrieves the IPC server that the given IPC client is connected to. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>cl</i> The given IPC client.</dl>
+<dd><i>cl</i> The given IPC client.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>The IPC server the IPC client is connected to.</dl>
+<dd>The IPC server the IPC client is connected to.</dd></dl>
 <p> References ecore_con_client_server_get(), and ecore_con_server_data_get().</p>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for Ecore from the source code.</p>

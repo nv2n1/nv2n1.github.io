@@ -15,11 +15,11 @@ snd_soc_register_dai - Register a DAI dynamically &amp; create its widgets
 <h2>Arguments</h2>
 
 <i>component</i>
-<dl><dd><dd>The component the DAIs are registered for</dl>
+<dl><dd></dd><dd>The component the DAIs are registered for</dd></dl>
  
 
  <i>dai_drv</i>
-<dl><dd>DAI driver to use for the DAI</dl>
+<dl><dd>DAI driver to use for the DAI</dd></dl>
 
 <h2>Description</h2>
 

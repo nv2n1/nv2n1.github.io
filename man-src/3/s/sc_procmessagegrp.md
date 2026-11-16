@@ -11,7 +11,6 @@ description: "sc::ProcMessageGrp –"
 <p> <code>ProcMessageGrp</code> provides a concrete specialization of <code>MessageGrp</code> that supports only one node.</p>
 <h2>Synopsis</h2>
 <pre><code>
-
 #include &lt;message.h&gt;</code></pre>
 <p> Inherits <code>sc::MessageGrp</code>.</p>
 <h3>Public Member Functions</h3>

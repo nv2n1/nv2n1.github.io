@@ -11,25 +11,25 @@ description: "unwrapdiff – demangle word-wrapped patches"
 <p> unwrapdiff &#8211; demangle word-wrapped patches </p>
 <h2>SYNOPSIS</h2>
 <dl>
-<dt> <code>unwrapdiff</code> [-v] [<i>file</i>&#8230;]</p>
-<dt> <code>unwrapdiff</code> {[&#8211;help] | [&#8211;version]}</dl>
+<dt> <code>unwrapdiff</code> [-v] [<i>file</i>&#8230;]</dt>
+<dt> <code>unwrapdiff</code> {[&#8211;help] | [&#8211;version]}</dt></dl>
 <h2>DESCRIPTION</h2>
 <p> <code>unwrapdiff</code></p>
-<dd>demangles patches that have been word-wrapped, in an attempt to make them useful. </p>
+<dd>demangles patches that have been word-wrapped, in an attempt to make them useful. </dd>
 <p> The corrected diff is sent to standard output. Note that you will probably need to use the <code>-l</code> option when applying the patch, in order to ignore any whitespace differences there may be.</p>
 <h2>OPTIONS</h2>
 <p> <code>-v</code></p>
 <dl>
 <dt>
-<dd> Verbose operation. A list of lines that are modified in a way that might be wrong is sent to stderr.</dl>
+</dt><dd> Verbose operation. A list of lines that are modified in a way that might be wrong is sent to stderr.</dd></dl>
 <p> <code>&#8211;help</code></p>
 <dl>
 <dt>
-<dd> Display a short usage message.</dl>
+</dt><dd> Display a short usage message.</dd></dl>
 <p> <code>&#8211;version</code></p>
 <dl>
 <dt>
-<dd> Display the version number of unwrapdiff.</dl>
+</dt><dd> Display the version number of unwrapdiff.</dd></dl>
 <h2>LIMITATIONS</h2>
 <p> Some heuristics are used to decide whether use a space to recombine a wrapped line, or just join them together. Currently this is done by comparing with last three characters of a line with the first two characters of its continuation, and using a space if any of them are different. </p>
 <p> The patch needs to have been valid before being word-wrapped. </p>
@@ -38,5 +38,5 @@ description: "unwrapdiff – demangle word-wrapped patches"
 <p> <code>Tim Waugh</code> &lt;twaugh [at] redhat.com&gt;</p>
 <dl>
 <dt>
-<dd> Package maintainer</dl>
+</dt><dd> Package maintainer</dd></dl>
 <h2>Index</h2>

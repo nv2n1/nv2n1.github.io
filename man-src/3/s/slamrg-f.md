@@ -21,10 +21,10 @@ description: "slamrg.f –"
 <pre> SLAMRG will create a permutation list which will merge the elements
  of A (which is composed of two independently sorted sets) into a
  single set which is sorted in ascending order.</pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>N1</i> </p>
+<dd><i>N1</i> </dd>
 <pre> N1 is INTEGER</pre>
 <p><i>N2</i> </p>
 <pre> N2 is INTEGER
@@ -51,13 +51,13 @@ description: "slamrg.f –"
 <p>&nbsp;<wbr></dl>
 <p> <code>Author:</code></p>
 <dl>
-<dd>Univ. of Tennessee </p>
+<dd>Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl>
-<dd>September 2012</dl>
+<dd>September 2012</dd></dl>
 <p> Definition at line 100 of file slamrg.f.</p>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for LAPACK from the source code.</p>

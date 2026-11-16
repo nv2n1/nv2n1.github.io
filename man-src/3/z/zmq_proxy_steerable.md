@@ -34,17 +34,13 @@ assert(zmq_send(control, &quot;TERMINATE&quot;, 9, 0) == 0);<br />
 <pre><code>void *control = zmq_socket(context, ZMQ_PUB);
 assert(control);
 assert(zmq_bind(control, &quot;tcp://*:5557&quot;) == 0);
-
 // pause the proxy
 assert(zmq_send(control, &quot;PAUSE&quot;, 5, 0) == 0);
-
 // resume the proxy
 assert(zmq_send(control, &quot;RESUME&quot;, 6, 0) == 0);
-
 // terminate the proxy
 assert(zmq_send(control, &quot;TERMINATE&quot;, 9, 0) == 0);
 -- -
-
    SEE ALSO</code></pre>
 <p> <code><a href="/docs/linux/man/3-zmq_proxy/">zmq_proxy</a></code>(3) <code><a href="/docs/linux/man/3-zmq_bind/">zmq_bind</a></code>(3) <code><a href="/docs/linux/man/3-zmq_connect/">zmq_connect</a></code>(3) <code><a href="/docs/linux/man/3-zmq_socket/">zmq_socket</a></code>(3) <code><a href="/docs/linux/man/7-zmq/">zmq</a></code>(7)</p>
 <h2>Authors</h2>

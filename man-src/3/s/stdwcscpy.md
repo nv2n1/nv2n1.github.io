@@ -11,7 +11,6 @@ std::wcscpy - std::wcscpy
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;cwchar&gt;
-
     wchar_t *wcscpy(wchar_t *dest, const wchar_t *src);</code></pre> 
 Copies the wide string pointed to by src (including the terminating null wide character) to wide character array pointed to by dest. 
 If the strings overlap, the behavior is undefined. 
@@ -28,17 +27,12 @@ dest
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;iostream&gt;
-
 #include &lt;cwchar&gt;
-
 #include &lt;memory&gt;
-
 #include &lt;clocale&gt;
 int main()
-
 {
     const wchar_t *src = L&quot;犬 means dog&quot;;
-
     //  src[0] = L'狗'; // can't modify string literal
     auto dst = std::make_unique&lt;wchar_t[]&gt;(std::wcslen(src) + 1); // +1 for the null
     std::wcscpy(dst.get(), src);

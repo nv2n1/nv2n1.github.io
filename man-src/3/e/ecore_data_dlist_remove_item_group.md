@@ -24,36 +24,36 @@ description: "Doubly Linked List Removing Functions – Functions that remove no
 <p>Removes the first item from the given doubly linked list. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>list</i> The given doubly linked list.</dl>
+<dd><i>list</i> The given doubly linked list.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>A pointer to the removed data on success, NULL on failure.</dl>
+<dd>A pointer to the removed data on success, NULL on failure.</dd></dl>
 <h3>EAPI void* ecore_dlist_last_remove (Ecore_DList * list)</h3>
 <p>Removes the last item from the given doubly linked list. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>list</i> The given doubly linked list.</dl>
+<dd><i>list</i> The given doubly linked list.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>A pointer to the removed data on success, NULL otherwise.</dl>
+<dd>A pointer to the removed data on success, NULL otherwise.</dd></dl>
 <p> References ecore_list_empty_is(), and ecore_list_node_destroy().</p>
 <h3>EAPI void* ecore_dlist_remove (Ecore_DList * list)</h3>
 <p>Removes the current item from the given doubly linked list. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>list</i> The given doubly linked list.</dl>
+<dd><i>list</i> The given doubly linked list.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>A pointer to the removed data on success, NULL otherwise.</dl>
+<dd>A pointer to the removed data on success, NULL otherwise.</dd></dl>
 <p> Referenced by ecore_dlist_remove_destroy().</p>
 <h3>EAPI int ecore_dlist_remove_destroy (Ecore_DList * list)</h3>
 <p>Removes and frees the data at the current position in the given doubly linked list. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>list</i> The given doubly linked list.</dl>
+<dd><i>list</i> The given doubly linked list.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>TRUE on success, FALSE otherwise.</dl>
+<dd>TRUE on success, FALSE otherwise.</dd></dl>
 <p> References ecore_dlist_remove().</p>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for Ecore from the source code.</p>

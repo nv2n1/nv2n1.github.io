@@ -19,20 +19,20 @@ description: "squatter – create SQUAT indexes for mailboxes"
 <p> <i>Squatter</i> reads its configuration options out of the <i><a href="/docs/linux/man/5-imapd-conf/">imapd.conf</a></i>(5) file unless specified otherwise by <code>-C</code>.</p>
 <h2>Options</h2>
 <dl>
-<dt><code>-C</code><i> config-file</i></p>
-<dd>Read configuration options from <i>config-file</i>.</p>
-<dt><code>-r</code></p>
-<dd>Recursively create indexes for all sub-mailboxes of the mailboxes or mailbox prefixes given as arguments.</p>
-<dt><code>-s</code></p>
-<dd>Skip mailboxes whose index file is older than their current squat file (within a small time delta).</p>
-<dt><code>-i</code></p>
-<dd>Incremental updates where squat indexes already exist.</p>
-<dt><code>-a</code></p>
-<dd>Only create indexes for mailboxes which have the shared <i>/vendor/cmu/cyrus-imapd/squat</i> annotation set to &quot;true&quot;. </p>
+<dt><code>-C</code><i> config-file</i></dt>
+<dd>Read configuration options from <i>config-file</i>.</dd>
+<dt><code>-r</code></dt>
+<dd>Recursively create indexes for all sub-mailboxes of the mailboxes or mailbox prefixes given as arguments.</dd>
+<dt><code>-s</code></dt>
+<dd>Skip mailboxes whose index file is older than their current squat file (within a small time delta).</dd>
+<dt><code>-i</code></dt>
+<dd>Incremental updates where squat indexes already exist.</dd>
+<dt><code>-a</code></dt>
+<dd>Only create indexes for mailboxes which have the shared <i>/vendor/cmu/cyrus-imapd/squat</i> annotation set to &quot;true&quot;. </dd>
 <p> The value of the <code>/vendor/cmu/cyrus-imapd/squat</code> annotation is inherited by all children of the given mailbox, so an entire mailbox tree can be indexed (or not indexed) by setting a single annotation on the root of that tree with a value of &quot;true&quot; (or &quot;false&quot;). If a mailbox does not have a <code>/vendor/cmu/cyrus-imapd/squat</code> annotation set on it (or does not inherit one), then the mailbox is not indexed. In other words, the implicit value of <code>/vendor/cmu/cyrus-imapd/squat</code> is &quot;false&quot;.</p>
-<dt><code>-v</code></p>
-<dd>Increase the verbosity of progress/status messages.</dl>
+<dt><code>-v</code></dt>
+<dd>Increase the verbosity of progress/status messages.</dd></dl>
 <h2>Files</h2>
 <dl>
-<dt><code>/etc/imapd.conf /etc/cyrus.conf</code></p>
-<dd></dl>
+<dt><code>/etc/imapd.conf /etc/cyrus.conf</code></dt>
+<dd></dd></dl>

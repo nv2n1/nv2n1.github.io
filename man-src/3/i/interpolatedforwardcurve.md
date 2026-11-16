@@ -39,7 +39,7 @@ description: "QuantLib::InterpolatedForwardCurve – Term structure based on int
 <p>Returns the zero yield rate for the given date calculating it from the instantaneous forward rate. </p>
 <p> <code>Warning</code></p>
 <dl COMPACT>
-<dd>This is just a default, highly inefficient and possibly wildly inaccurate implementation. Derived classes should implement their own zeroYield method.</dl>
+<dd>This is just a default, highly inefficient and possibly wildly inaccurate implementation. Derived classes should implement their own zeroYield method.</dd></dl>
 <p> Reimplemented from <code>ForwardRateStructure</code>. </p>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for QuantLib from the source code.</p>

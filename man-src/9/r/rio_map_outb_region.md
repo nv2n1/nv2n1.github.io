@@ -14,27 +14,27 @@ description: "rio_map_outb_region – – Map outbound memory region."
 <p><i>mport</i></p>
 <dl>
 <dd>
-<dd>Master port.</dl>
+</dd><dd>Master port.</dd></dl>
 <p> <i>destid</i></p>
 <dl>
-<dd>destination id window points to</dl>
+<dd>destination id window points to</dd></dl>
 <p> <i>rbase</i></p>
 <dl>
-<dd>RIO base address window translates to</dl>
+<dd>RIO base address window translates to</dd></dl>
 <p> <i>size</i></p>
 <dl>
-<dd>Size of the memory region</dl>
+<dd>Size of the memory region</dd></dl>
 <p> <i>rflags</i></p>
 <dl>
-<dd>Flags for mapping.</dl>
+<dd>Flags for mapping.</dd></dl>
 <p> <i>local</i></p>
 <dl>
-<dd>physical address of memory region mapped</dl>
+<dd>physical address of memory region mapped</dd></dl>
 <h2>Return</h2>
 <p>0 &#8212; Success. </p>
 <p> This function will create the mapping from RIO space to local memory.</p>
 <h2>Author</h2>
 <p><code>Matt Porter</code> &lt;mporter [at] kernel.crashing.org&gt;, &lt;mporter [at] mvista.com&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

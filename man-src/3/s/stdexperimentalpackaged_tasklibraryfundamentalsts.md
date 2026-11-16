@@ -11,11 +11,8 @@ std::experimental::packaged_task(libraryfundamentalsTS) - std::experimental::pac
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header &lt;experimental/future&gt;
-
 template&lt; class &gt; class packaged_task; //not defined (1) (library fundamentals TS)
-
 template&lt; class R, class ...Args &gt;                   (2) (library fundamentals TS)
-
 class packaged_task&lt;R(Args...)&gt;;</code></pre> 
 std::experimental::fundamentals_v1::packaged_task (and std::experimental::fundamentals_v2::packaged_task) is a modified version of std::packaged_task provided by the library fundamentals TS with support for type-erased allocators. 
 

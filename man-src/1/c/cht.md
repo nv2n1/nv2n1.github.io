@@ -19,14 +19,14 @@ description: "cht – chemtool drawings analyzer"
 <h2>OPTIONS</h2>
 <p> <code>cht</code> understands the following options:</p>
 <dl>
-<dt><code>-h, &#8211;help</code></p>
-<dd> Displays brief help and list of options.</p>
-<dt><code>-e, &#8211;exact</code></p>
-<dd> Calculate exact mass for MS.</p>
-<dt><code>-v, &#8211;verbose</code></p>
-<dd> Be verbose.</p>
-<dt><code>-d, &#8211;debug</code></p>
-<dd> Be extremely verbose. </p>
+<dt><code>-h, &#8211;help</code></dt>
+<dd> Displays brief help and list of options.</dd>
+<dt><code>-e, &#8211;exact</code></dt>
+<dd> Calculate exact mass for MS.</dd>
+<dt><code>-v, &#8211;verbose</code></dt>
+<dd> Be verbose.</dd>
+<dt><code>-d, &#8211;debug</code></dt>
+<dd> Be extremely verbose. </dd>
 </dl>
 <h2>BUGS</h2>
 <p> <code>cht</code> can misinterpret molecules that contain the &#8216;aromatic ring&#8217; symbol, as it uses a fixed search radius to identify the aromatic system that it denotes. It also does not handle the &#8216;partial double bond&#8217;, so you should avoid these two in drawings that you intend to use with <code>cht</code>. </p>

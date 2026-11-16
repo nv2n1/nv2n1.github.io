@@ -22,10 +22,10 @@ void *mmap2(void *addr, size_t length, int prot,
 <p> On success, <code>mmap2</code>() returns a pointer to the mapped area. On error, -1 is returned and <i>errno</i> is set appropriately.</p>
 <h2>ERRORS</h2>
 <dl>
-<dt><code>EFAULT</code></p>
-<dd> Problem with getting the data from user space.</p>
-<dt><code>EINVAL</code></p>
-<dd> (Various platforms where the page size is not 4096 bytes.) <i>offset&nbsp;*&nbsp;4096</i> is not a multiple of the system page size.</dl>
+<dt><code>EFAULT</code></dt>
+<dd> Problem with getting the data from user space.</dd>
+<dt><code>EINVAL</code></dt>
+<dd> (Various platforms where the page size is not 4096 bytes.) <i>offset&nbsp;*&nbsp;4096</i> is not a multiple of the system page size.</dd></dl>
 <p> <code>mmap2</code>() can also return any of the errors described in <code><a href="/docs/linux/man/2-mmap/">mmap</a></code>(2).</p>
 <h2>VERSIONS</h2>
 <p> <code>mmap2</code>() is available since Linux 2.3.31.</p>

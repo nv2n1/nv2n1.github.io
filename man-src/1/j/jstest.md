@@ -16,16 +16,16 @@ description: "jstest – joystick test program"
 <p> It is also intended to serve as an example implementation for those who wish to learn how to write their own joystick using applications.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>&#8211;normal</code></p>
-<dd> One-line mode showing immediate status.</p>
-<dt><code>&#8211;old</code></p>
-<dd> Same as &#8211;normal, using 0.x interface.</p>
-<dt><code>&#8211;event</code></p>
-<dd> Prints events as they come in.</p>
-<dt><code>&#8211;nonblock</code></p>
-<dd> Same as &#8211;event, in nonblocking mode.</p>
-<dt><code>&#8211;select</code></p>
-<dd> Same as &#8211;event, using <code><a href="/docs/linux/man/2-select/">select</a></code>(2) call.</dl>
+<dt><code>&#8211;normal</code></dt>
+<dd> One-line mode showing immediate status.</dd>
+<dt><code>&#8211;old</code></dt>
+<dd> Same as &#8211;normal, using 0.x interface.</dd>
+<dt><code>&#8211;event</code></dt>
+<dd> Prints events as they come in.</dd>
+<dt><code>&#8211;nonblock</code></dt>
+<dd> Same as &#8211;event, in nonblocking mode.</dd>
+<dt><code>&#8211;select</code></dt>
+<dd> Same as &#8211;event, using <code><a href="/docs/linux/man/2-select/">select</a></code>(2) call.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-fftest/">fftest</a></code>(1), <code><a href="/docs/linux/man/1-jscal/">jscal</a></code>(1).</p>
 <h2>AUTHOR</h2>

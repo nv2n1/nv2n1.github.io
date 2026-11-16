@@ -15,7 +15,7 @@ snd_pcm_set_sync - set the PCM sync id
 <h2>Arguments</h2>
 
 <i>substream</i>
-<dl><dd><dd>the pcm substream</dl>
+<dl><dd></dd><dd>the pcm substream</dd></dl>
 
 <h2>Description</h2>
 

@@ -19,17 +19,17 @@ description: "ctprfb.f –"
 <p> <code>Purpose: </code></p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
  CTPRFB applies a complex &quot;triangular-pentagonal&quot; block reflector H or its 
  conjugate transpose H**H to a complex matrix C, which is composed of two 
  blocks A and B, either from the left or right.
 </pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>SIDE</i> </p>
+</dt><dd> <i>SIDE</i> </dd>
 <pre>
           SIDE is CHARACTER*1
           = 'L': apply H or H**H from the Left
@@ -155,18 +155,18 @@ if SIDE<br />
 <p> <code>Author:</code></p>
 <dl>
 <dt>
-<dd> Univ. of Tennessee </p>
+</dt><dd> Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl>
 <dt>
-<dd> September 2012</dl>
+</dt><dd> September 2012</dd></dl>
 <p> <code>Further Details: </code></p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre><code>
 The matrix C is a composite matrix formed from blocks A and B.The block B is of size M - by - N;
 if SIDE
@@ -174,12 +174,12 @@ if SIDE
         and if SIDE = 'L', A is of size K - by - N.If SIDE = 'R' and DIRECT = 'F', C = [A B].If SIDE = 'L' and DIRECT = 'F', C = [A][B].If SIDE = 'R' and DIRECT = 'B', C = [B A].If SIDE = 'L' and DIRECT = 'B', C = [B][A].The pentagonal matrix V is composed of a rectangular block V1 and a trapezoidal block V2.The size of the trapezoidal block is determined by the parameter L, where 0 &lt;= L &lt;= K.If L = K, the V2 block of V is triangular;
 if L
 = 0, there is no trapezoidal block, thus V = V1 is rectangular.If DIRECT = 'F' and STOREV = 'C' : V = [V1][V2] - V2 is upper trapezoidal(first L rows of K - by - K upper triangular) If DIRECT = 'F' and STOREV = 'R' : V = [V1 V2] - V2 is lower trapezoidal(first L columns of K - by - K lower triangular) If DIRECT = 'B' and STOREV = 'C' : V = [V2][V1] - V2 is lower trapezoidal(last L rows of K - by - K lower triangular) If DIRECT = 'B' and STOREV = 'R' : V = [V2 V1]
-
                                                                                                                                                                                                                                                                                                                                                                                                                                                                             - V2 is upper trapezoidal(last L columns of K - by - K upper triangular) If STOREV = 'C' and SIDE = 'L',
                                          V is M - by - K with V2 L - by - K.If STOREV = 'C' and SIDE = 'R', V is N - by - K with V2 L - by - K.If STOREV = 'R' and SIDE = 'L', V is K - by - M with V2 K - by - L.If STOREV = 'R' and SIDE = 'R', V is K - by - N with V2 K - by - L.
 </code></pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> Definition at line 251 of file ctprfb.f.</p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for LAPACK from the source code. </p>
 <h2>Index</h2>
+</p>

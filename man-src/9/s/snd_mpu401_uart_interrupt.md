@@ -10,15 +10,15 @@ description: "snd_mpu401_uart_interrupt – generic MPU401-UART interrupt handle
 <p>snd_mpu401_uart_interrupt &#8211; generic MPU401-UART interrupt handler</p>
 <h2>Synopsis</h2>
 <dl>
-<dt> <code>irqreturn_t snd_mpu401_uart_interrupt(int&nbsp;<wbr></code><i>irq</i><code>, void&nbsp;<wbr>*&nbsp;<wbr></code><i>dev_id</i><code>);</code></dl>
+<dt> <code>irqreturn_t snd_mpu401_uart_interrupt(int&nbsp;<wbr></code><i>irq</i><code>, void&nbsp;<wbr>*&nbsp;<wbr></code><i>dev_id</i><code>);</code></dt></dl>
 <h2>Arguments</h2>
 <p><i>irq</i></p>
 <dl>
 <dd>
-<dd>the irq number</dl>
+</dd><dd>the irq number</dd></dl>
 <p> <i>dev_id</i></p>
 <dl>
-<dd>mpu401 instance</dl>
+<dd>mpu401 instance</dd></dl>
 <h2>Description</h2>
 <p>Processes the interrupt for MPU401-UART i/o.</p>
 <h2>Return</h2>

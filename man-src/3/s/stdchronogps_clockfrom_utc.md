@@ -10,9 +10,7 @@ description: "std::chrono::gps_clock::from_utc – std::chrono::gps_clock::from_
 <p>std::chrono::gps_clock::from_utc &#8211; std::chrono::gps_clock::from_utc</p>
 <h2>Synopsis</h2>
 <pre><code>template &lt;class Duration&gt;
-
 static std::chrono::gps_time&lt;std::common_type_t&lt;Duration, std::chrono::seconds&gt;&gt;(since C++ 20)
-
     from_utc(const std::chrono::utc_time&lt;Duration&gt; &amp;) noexcept;</code></pre>
 <p>Converts the utc_time t to a gps_time representing the same point in time. </p>
 <h2>Return value</h2>

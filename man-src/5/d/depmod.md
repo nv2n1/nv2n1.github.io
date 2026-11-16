@@ -18,11 +18,11 @@ description: "depmod.d – Configuration directory for depmod"
 <h2>Commands</h2>
 <p>search <i>subdirectory&#8230;</i></p>
 <dl>
-<dd>This allows you to specify the order in which /lib/modules (or other configured module location) subdirectories will be processed by <code>depmod</code>. Directories are listed in order, with the highest priority given to the first listed directory and the lowest priority given to the last directory listed. The special keyword <code>built-in</code> refers to the standard module directories installed by the kernel. </p>
+<dd>This allows you to specify the order in which /lib/modules (or other configured module location) subdirectories will be processed by <code>depmod</code>. Directories are listed in order, with the highest priority given to the first listed directory and the lowest priority given to the last directory listed. The special keyword <code>built-in</code> refers to the standard module directories installed by the kernel. </dd>
 <p> By default, depmod will give a higher priority to a directory with the name <code>updates</code> using this built-in search string: &quot;updates built-in&quot; but more complex arrangements are possible and are used in several popular distributions.</dl>
 <p> override <i>modulename</i> <i>kernelversion</i> <i>modulesubdirectory</i></p>
 <dl>
-<dd>This command allows you to override which version of a specific module will be used when more than one module sharing the same name is processed by the <code>depmod</code> command. It is possible to specify one kernel or all kernels using the * wildcard. <i>modulesubdirectory</i> is the name of the subdirectory under /lib/modules (or other module location) where the target module is installed. </p>
+<dd>This command allows you to override which version of a specific module will be used when more than one module sharing the same name is processed by the <code>depmod</code> command. It is possible to specify one kernel or all kernels using the * wildcard. <i>modulesubdirectory</i> is the name of the subdirectory under /lib/modules (or other module location) where the target module is installed. </dd>
 <p> For example, it is possible to override the priority of an updated test module called <code>kmod</code> by specifying the following command: &quot;override kmod * extra&quot;. This will ensure that any matching module name installed under the <code>extra</code> subdirectory within /lib/modules (or other module location) will take priority over any likenamed module already provided by the kernel.</dl>
 <h2>Copyright</h2>
 <p>This manual page Copyright 2006-2010, Jon Masters, Red Hat, Inc.</p>
@@ -31,10 +31,10 @@ description: "depmod.d – Configuration directory for depmod"
 <h2>Authors</h2>
 <p><code>Jon Masters</code> &lt;jcm [at] jonmasters.org&gt;</p>
 <dl>
-<dd>Developer</dl>
+<dd>Developer</dd></dl>
 <p> <code>Robby Workman</code> &lt;rworkman [at] slackware.com&gt;</p>
 <dl>
-<dd>Developer</dl>
+<dd>Developer</dd></dl>
 <p> <code>Lucas De Marchi</code> &lt;lucas.de.marchi [at] gmail.com&gt;</p>
 <dl>
-<dd>Developer</dl>
+<dd>Developer</dd></dl>

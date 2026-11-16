@@ -15,11 +15,11 @@ netdev_lower_get_next_private - Get the next -&gt;private from the lower neighbo
 <h2>Arguments</h2>
 
 <i>dev</i>
-<dl><dd><dd>device</dl>
+<dl><dd></dd><dd>device</dd></dl>
  
 
  <i>iter</i>
-<dl><dd>list_head ** of the current position</dl>
+<dl><dd>list_head ** of the current position</dd></dl>
 
 <h2>Description</h2>
 

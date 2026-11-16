@@ -15,11 +15,11 @@ snd_card_set_id - set card identification name
 <h2>Arguments</h2>
 
 <i>card</i>
-<dl><dd><dd>soundcard structure</dl>
+<dl><dd></dd><dd>soundcard structure</dd></dl>
  
 
  <i>nid</i>
-<dl><dd>new identification string</dl>
+<dl><dd>new identification string</dd></dl>
 
 <h2>Description</h2>
 

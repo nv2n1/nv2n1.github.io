@@ -35,29 +35,29 @@ url: "/docs/linux/man/1-po4a-gettextize/"
 
 <dl>
 <dt>-f, --format
-<dd> Format of the documentation you want to handle. Use the --help-format option to see the list of available formats.
-<dt>-m, --master
-<dd> File containing the master document to translate. You can use this option multiple times if you want to gettextize multiple documents.
-<dt>-M, --master-charset
-<dd> Charset of the file containing the document to translate.
-<dt>-l, --localized
-<dd> File containing the localized (translated) document. If you provided multiple master files, you may wish to provide multiple localized file by using this option more than once.
-<dt>-L, --localized-charset
-<dd> Charset of the file containing the localized document.
-<dt>-p, --po
-<dd> File where the message catalog should be written. If not given, the message catalog will be written to the standard output.
-<dt>-o, --option
-<dd> Extra option(s) to pass to the format plugin. Specify each option in the 'name=value' format. See the documentation of each plugin for more information about the valid options and their meanings.
-<dt>-h, --help
-<dd> Show a short help message.
-<dt>--help-format
-<dd> List the documentation format understood by po4a.
-<dt>-V, --version
-<dd> Display the version of the script and exit.
-<dt>-v, --verbose
-<dd> Increase the verbosity of the program.
-<dt>-d, --debug
-<dd> Output some debugging information.</dl>
+</dt><dd> Format of the documentation you want to handle. Use the --help-format option to see the list of available formats.
+</dd><dt>-m, --master
+</dt><dd> File containing the master document to translate. You can use this option multiple times if you want to gettextize multiple documents.
+</dd><dt>-M, --master-charset
+</dt><dd> Charset of the file containing the document to translate.
+</dd><dt>-l, --localized
+</dt><dd> File containing the localized (translated) document. If you provided multiple master files, you may wish to provide multiple localized file by using this option more than once.
+</dd><dt>-L, --localized-charset
+</dt><dd> Charset of the file containing the localized document.
+</dd><dt>-p, --po
+</dt><dd> File where the message catalog should be written. If not given, the message catalog will be written to the standard output.
+</dd><dt>-o, --option
+</dt><dd> Extra option(s) to pass to the format plugin. Specify each option in the 'name=value' format. See the documentation of each plugin for more information about the valid options and their meanings.
+</dd><dt>-h, --help
+</dt><dd> Show a short help message.
+</dd><dt>--help-format
+</dt><dd> List the documentation format understood by po4a.
+</dd><dt>-V, --version
+</dt><dd> Display the version of the script and exit.
+</dd><dt>-v, --verbose
+</dt><dd> Increase the verbosity of the program.
+</dd><dt>-d, --debug
+</dt><dd> Output some debugging information.</dd></dl>
 
 <h2>SEE ALSO</h2>
 

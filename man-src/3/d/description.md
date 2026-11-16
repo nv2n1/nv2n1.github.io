@@ -26,7 +26,7 @@ description: "QuantLib::PathPayoff – Abstract base class for path-dependent op
 <p> <code>Warning</code></p>
 <dl>
 <dt>
-<dd> This method is used for output and comparison between payoffs. It is <code>not</code> meant to be used for writing switch-on-type code.</dl>
+</dt><dd> This method is used for output and comparison between payoffs. It is <code>not</code> meant to be used for writing switch-on-type code.</dd></dl>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for QuantLib from the source code. </p>
 <h2>Index</h2>

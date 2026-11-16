@@ -41,21 +41,14 @@ Locks the associated mutex in shared mode. Effectively calls mutex()-&gt;lock_sh
 &nbsp;This section is incomplete 
 &nbsp;Reason: show a meaningful use of shared_lock::lock 
  // Run this code <pre><code>#include &lt;iostream&gt;
-
 #include &lt;mutex&gt;
-
 #include &lt;string&gt;
-
 #include &lt;shared_mutex&gt;
-
 #include &lt;thread&gt;
 std::string file = &quot;Original content.&quot;; // Simulates a file
-
 std::mutex output_mutex; // mutex that protects output operations.
-
 std::shared_mutex file_mutex; // reader/writer mutex
 void read(int id)
-
 {
     std::string content;
     {
@@ -67,7 +60,6 @@ void read(int id)
     std::cout &lt;&lt; &quot;Contents read by reader #&quot; &lt;&lt; id &lt;&lt; &quot;: &quot; &lt;&lt; content &lt;&lt; '\n';
 }
 void write()
-
 {
     {
         std::lock_guard file_lock(file_mutex);
@@ -77,7 +69,6 @@ void write()
     std::cout &lt;&lt; &quot;New content saved.\n&quot;;
 }
 int main()
-
 {
     std::cout &lt;&lt; &quot;Two readers reading from file.\n&quot;
               &lt;&lt; &quot;A writer competes with them.\n&quot;;

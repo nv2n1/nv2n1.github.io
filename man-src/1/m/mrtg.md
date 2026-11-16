@@ -15,28 +15,28 @@ description: "mrtg – What is MRTG ?"
 &nbsp;<wbr><a rel="nofollow" href="http://oss.oetiker.ch/mrtg">http://oss.oetiker.ch/mrtg</a>&nbsp;<wbr> for all the details about mrtg.</p>
 <h2>HIGHLIGHTS</h2>
 <dl>
-<dt>Portable</p>
-<dd> <font SIZE="-1">MRTG</font> works on most <font SIZE="-1">UNIX</font> platforms and Windows <font SIZE="-1">NT</font>.</p>
-<dt>Perl</p>
-<dd> <font SIZE="-1">MRTG</font> is written in Perl and comes with full source.</p>
-<dt>Portable <font SIZE="-1">SNMP</font></p>
-<dd> <font SIZE="-1">MRTG</font> Uses a highly portable <font SIZE="-1">SNMP</font> implementation written entirely in Perl (thanks to Simon Leinen). There is no need to install any external <font SIZE="-1">SNMP</font> package.</p>
-<dt>SNMPv2c support</p>
-<dd> <font SIZE="-1">MRTG</font> can read the new SNMPv2c 64bit counters. No more counter wrapping.</p>
-<dt>Reliable Interface Identification</p>
-<dd> Router interfaces can be identified by <font SIZE="-1">IP</font> address, description and ethernet address in addition to the normal interface number.</p>
-<dt>Constant size Logfiles</p>
-<dd> <font SIZE="-1">MRTG</font>&#8216;s logfiles do <font SIZE="-1">NOT</font> grow thanks to the use of a unique data consolidation algorithm.</p>
-<dt>Automatic Configuration</p>
-<dd> <font SIZE="-1">MRTG</font> comes with a set of configuration tools which make configuration and setup very simple.</p>
-<dt>Performance</p>
-<dd> Time critical routines are written in C (thanks to the initiative of Dave Rand my Co-Author).</p>
-<dt><font SIZE="-1">GIF</font> free Graphics</p>
-<dd> Graphics are generated directly in <font SIZE="-1">PNG</font> format using the <font SIZE="-1">GD</font> library by Thomas Boutell.</p>
-<dt>Customizability</p>
-<dd> The look of the webpages produced by <font SIZE="-1">MRTG</font> is highly configurable.</p>
-<dt>RRDtool</p>
-<dd> <font SIZE="-1">MRTG</font> has built-in hooks for using RRDtool. If you are strapped for performance this may help.</dl>
+<dt>Portable</dt>
+<dd> <font SIZE="-1">MRTG</font> works on most <font SIZE="-1">UNIX</font> platforms and Windows <font SIZE="-1">NT</font>.</dd>
+<dt>Perl</dt>
+<dd> <font SIZE="-1">MRTG</font> is written in Perl and comes with full source.</dd>
+<dt>Portable <font SIZE="-1">SNMP</font></dt>
+<dd> <font SIZE="-1">MRTG</font> Uses a highly portable <font SIZE="-1">SNMP</font> implementation written entirely in Perl (thanks to Simon Leinen). There is no need to install any external <font SIZE="-1">SNMP</font> package.</dd>
+<dt>SNMPv2c support</dt>
+<dd> <font SIZE="-1">MRTG</font> can read the new SNMPv2c 64bit counters. No more counter wrapping.</dd>
+<dt>Reliable Interface Identification</dt>
+<dd> Router interfaces can be identified by <font SIZE="-1">IP</font> address, description and ethernet address in addition to the normal interface number.</dd>
+<dt>Constant size Logfiles</dt>
+<dd> <font SIZE="-1">MRTG</font>&#8216;s logfiles do <font SIZE="-1">NOT</font> grow thanks to the use of a unique data consolidation algorithm.</dd>
+<dt>Automatic Configuration</dt>
+<dd> <font SIZE="-1">MRTG</font> comes with a set of configuration tools which make configuration and setup very simple.</dd>
+<dt>Performance</dt>
+<dd> Time critical routines are written in C (thanks to the initiative of Dave Rand my Co-Author).</dd>
+<dt><font SIZE="-1">GIF</font> free Graphics</dt>
+<dd> Graphics are generated directly in <font SIZE="-1">PNG</font> format using the <font SIZE="-1">GD</font> library by Thomas Boutell.</dd>
+<dt>Customizability</dt>
+<dd> The look of the webpages produced by <font SIZE="-1">MRTG</font> is highly configurable.</dd>
+<dt>RRDtool</dt>
+<dd> <font SIZE="-1">MRTG</font> has built-in hooks for using RRDtool. If you are strapped for performance this may help.</dd></dl>
 <h2>DETAILS</h2>
 <p> <font SIZE="-1">MRTG</font> consists of a Perl script which uses <font SIZE="-1">SNMP</font> to read the traffic counters of your routers and a fast C program which logs the traffic data and creates beautiful graphs representing the traffic on the monitored network connection. These graphs are embedded into webpages which can be viewed from any modern Web-browser. </p>
 <p> In addition to a detailed daily view, <font SIZE="-1">MRTG</font> also creates visual representations of the traffic seen during the last seven days, the last five weeks and the last twelve months. This is possible because <font SIZE="-1">MRTG</font> keeps a log of all the data it has pulled from the router. This log is automatically consolidated so that it does not grow over time, but still contains all the relevant data for all the traffic seen over the last two years. This is all performed in an efficient manner. Therefore you can monitor 200 or more network links from any halfway decent <font SIZE="-1">UNIX</font> box. </p>
@@ -47,27 +47,27 @@ description: "mrtg – What is MRTG ?"
 <h2>Command-line</h2>
 <p> Mrtg is also the name of the script you have to run to poll data and generate the graphs. Most configuration is set through the configuration file; some command-line options exist all the same.</p>
 <dl>
-<dt><code>&#8211;user</code> <i>username</i> and <code>&#8211;group</code> <i>groupname</i></p>
-<dd> Run as the given user and/or group. (Unix Only)</p>
-<dt><code>&#8211;lock-file</code> <i>filename</i></p>
-<dd> Use an alternate lock-file (the default is to use the configuration-file appended with <tt>&quot;_l&quot;</tt>).</p>
-<dt><code>&#8211;confcache-file</code> <i>filename</i></p>
-<dd> Use an alternate confcache-file (the default is to use the configuration-file appended with <tt>&quot;.ok&quot;</tt>)</p>
-<dt><code>&#8211;logging</code> <i>filename</i>|<code>eventlog</code></p>
-<dd> If this is set to writable filename, all output from mrtg (warnings, debug messages, errors) will go to <i>filename</i>. If you are running on Win32 you can specify <code>eventlog</code> instead of a filename which will send all error to the windows event log. </p>
+<dt><code>&#8211;user</code> <i>username</i> and <code>&#8211;group</code> <i>groupname</i></dt>
+<dd> Run as the given user and/or group. (Unix Only)</dd>
+<dt><code>&#8211;lock-file</code> <i>filename</i></dt>
+<dd> Use an alternate lock-file (the default is to use the configuration-file appended with <tt>&quot;_l&quot;</tt>).</dd>
+<dt><code>&#8211;confcache-file</code> <i>filename</i></dt>
+<dd> Use an alternate confcache-file (the default is to use the configuration-file appended with <tt>&quot;.ok&quot;</tt>)</dd>
+<dt><code>&#8211;logging</code> <i>filename</i>|<code>eventlog</code></dt>
+<dd> If this is set to writable filename, all output from mrtg (warnings, debug messages, errors) will go to <i>filename</i>. If you are running on Win32 you can specify <code>eventlog</code> instead of a filename which will send all error to the windows event log. </dd>
 <p> <font SIZE="-1"><code>NOTE:</code></font>Note, there is no Message <font SIZE="-1">DLL</font> for mrtg. This has the side effect that the windows event logger will display a nice message with every entry in the event log, complaing about the fact that mrtg has no message dll. If any of the Windows folks want to contribute one, they are welcome.</p>
-<dt><code>&#8211;daemon</code></p>
-<dd> Put <font SIZE="-1">MRTG</font> into the background, running as a daemon. This works the same way as the config file option, but the switch is required for proper <font SIZE="-1">FHS</font> operation (because /var/run is writable only by root)</p>
-<dt><code>&#8211;fhs</code></p>
-<dd> Configure all mrtg paths to conform to the <font SIZE="-1">FHS</font> specification; <a rel="nofollow" href="http://www.pathname.com/fhs/">http://www.pathname.com/fhs/</a></p>
-<dt><code>&#8211;check</code></p>
-<dd> Only check the cfg file for errors. Do not do anything.</p>
-<dt><code>&#8211;pid-file=s</code></p>
-<dd> Define the name and path of the pid file for mrtg running as a daemon</p>
-<dt><code>&#8211;log-only</code></p>
-<dd> Only update the logfile, do not produce graphics or html pages</p>
-<dt><code>&#8211;debug=s</code></p>
-<dd> Enable debug options. The argument of the debug option is a comma separated list of debug values: </p>
+<dt><code>&#8211;daemon</code></dt>
+<dd> Put <font SIZE="-1">MRTG</font> into the background, running as a daemon. This works the same way as the config file option, but the switch is required for proper <font SIZE="-1">FHS</font> operation (because /var/run is writable only by root)</dd>
+<dt><code>&#8211;fhs</code></dt>
+<dd> Configure all mrtg paths to conform to the <font SIZE="-1">FHS</font> specification; <a rel="nofollow" href="http://www.pathname.com/fhs/">http://www.pathname.com/fhs/</a></dd>
+<dt><code>&#8211;check</code></dt>
+<dd> Only check the cfg file for errors. Do not do anything.</dd>
+<dt><code>&#8211;pid-file=s</code></dt>
+<dd> Define the name and path of the pid file for mrtg running as a daemon</dd>
+<dt><code>&#8211;log-only</code></dt>
+<dd> Only update the logfile, do not produce graphics or html pages</dd>
+<dt><code>&#8211;debug=s</code></dt>
+<dd> Enable debug options. The argument of the debug option is a comma separated list of debug values: </dd>
 <pre>
  cfg  - watch the config file reading
  dir  - directory mangeling

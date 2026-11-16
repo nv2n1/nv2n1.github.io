@@ -16,16 +16,16 @@ description: "bat – Bacula Administration Tool Console"
 <h2>OPTIONS</h2>
 <p> bat [-s] [-c config_file] [-d debug_level] [-t]</p>
 <dl>
-<dt><code>-c &lt;config&gt;</code></p>
-<dd> Specify configuration file. Default is bat.conf.</p>
-<dt><code>-d &lt;nn&gt;</code></p>
-<dd> Set debug level to <i>nn</i>.</p>
-<dt><code>-s</code></p>
-<dd> No signals. Used in debugging only.</p>
-<dt><code>-t</code></p>
-<dd> Test config mode: read configuration and exit.</p>
-<dt><code>-?</code></p>
-<dd> Show version and usage of program.</dl>
+<dt><code>-c &lt;config&gt;</code></dt>
+<dd> Specify configuration file. Default is bat.conf.</dd>
+<dt><code>-d &lt;nn&gt;</code></dt>
+<dd> Set debug level to <i>nn</i>.</dd>
+<dt><code>-s</code></dt>
+<dd> No signals. Used in debugging only.</dd>
+<dt><code>-t</code></dt>
+<dd> Test config mode: read configuration and exit.</dd>
+<dt><code>-?</code></dt>
+<dd> Show version and usage of program.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/8-bacula-dir/">bacula-dir</a></code>(8), <code>bls</code>(1), <code>bextract</code>(1). </p>
 <h2>AUTHOR</h2>

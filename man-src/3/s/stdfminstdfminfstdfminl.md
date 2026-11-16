@@ -32,10 +32,8 @@ If the implementation supports IEEE floating-point arithmetic (IEC 60559), </p>
 <h2>Example</h2>
 <p>// Run this code </p>
 <pre><code>#include &lt;iostream&gt;
-
 #include &lt;cmath&gt;
 int main()
-
 {
     std::cout &lt;&lt; &quot;fmin(2,1)    = &quot; &lt;&lt; std::fmin(2, 1) &lt;&lt; '
 '

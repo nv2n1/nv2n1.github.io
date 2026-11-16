@@ -14,18 +14,18 @@ description: "gshhs2grass – Extracting GSHHS and WDBII data in GRASS-compatibl
 <h2>DESCRIPTION</h2>
 <p> <code>gshhs2grass</code> reads the binary coastline (GSHHS) and and translates it into an ASCII format suitable for import into GRASS. It automatically handles byte-swabbing between different architectures.</p>
 <dl>
-<dt><i>gshhs_[f|h|i|l|c].b</i></p>
-<dd> One of the GSHHS binary data file as distributed with the GSHHS data supplement. Any of the 5 standard resolutions (full, high, intermediate, low, crude) can be used. The resulting files are called dig_[ascii|att|cats].gshhs_[f|h|i|l|c].</dl>
+<dt><i>gshhs_[f|h|i|l|c].b</i></dt>
+<dd> One of the GSHHS binary data file as distributed with the GSHHS data supplement. Any of the 5 standard resolutions (full, high, intermediate, low, crude) can be used. The resulting files are called dig_[ascii|att|cats].gshhs_[f|h|i|l|c].</dd></dl>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-x</code></p>
-<dd> Specify a minimum (west) longitude.</p>
-<dt><code>-X</code></p>
-<dd> Specify a maximum (east) longitude.</p>
-<dt><code>-y</code></p>
-<dd> Specify a minimum (south) latitude.</p>
-<dt><code>-Y</code></p>
-<dd> Specify a maximum (north) latitude.</dl>
+<dt><code>-x</code></dt>
+<dd> Specify a minimum (west) longitude.</dd>
+<dt><code>-X</code></dt>
+<dd> Specify a maximum (east) longitude.</dd>
+<dt><code>-y</code></dt>
+<dd> Specify a minimum (south) latitude.</dd>
+<dt><code>-Y</code></dt>
+<dd> Specify a maximum (north) latitude.</dd></dl>
 <h2>EXAMPLES</h2>
 <p> To convert the full GSHHS data set , try </p>
 <p> <code>gshhs2grass</code> <i>gshhs_f.b</i></p>

@@ -11,71 +11,71 @@ description: "myisamlog – display MyISAM log file contents"
 <p> myisamlog &#8211; display MyISAM log file contents </p>
 <h2>SYNOPSIS</h2>
 <dl>
-<dt> <code>myisamlog [</code><i>options</i><code>] [</code><i>log_file</i><code> [</code><i>tbl_name</i><code>] &#8230;]</code></dl>
+<dt> <code>myisamlog [</code><i>options</i><code>] [</code><i>log_file</i><code> [</code><i>tbl_name</i><code>] &#8230;]</code></dt></dl>
 <h2>DESCRIPTION</h2>
 <p> <code>myisamlog</code></p>
-<dd>processes the contents of a MyISAM log file. To create such a file, start the server with a <code>&#8211;log-isam=</code><code>log_file</code> option. </p>
+<dd>processes the contents of a MyISAM log file. To create such a file, start the server with a <code>&#8211;log-isam=</code><code>log_file</code> option. </dd>
 <p> Invoke <code>myisamlog</code> like this: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre><code>
 shell &gt; myisamlog[options][file_name[tbl_name]...]
 </code></pre>
-</dl>
+</dd></dl>
 <p> The default operation is update (<code>-u</code>). If a recovery is done (<code>-r</code>), all writes and possibly updates and deletes are done and errors are only counted. The default log file name is myisam.log if no <i>log_file</i> argument is given. If tables are named on the command line, only those tables are updated. </p>
 <p> <code>myisamlog</code> supports the following options: </p>
 <dl>
 <dt>
-<dd> &bull; <code>-?</code>, <code>-I</code> </p>
+</dt><dd> &bull; <code>-?</code>, <code>-I</code> </dd>
 <p> Display a help message and exit.</dl>
 <dl>
 <dt>
-<dd> &bull; <code>-c </code><i>N</i> </p>
+</dt><dd> &bull; <code>-c </code><i>N</i> </dd>
 <p> Execute only <i>N</i> commands.</dl>
 <dl>
 <dt>
-<dd> &bull; <code>-f </code><i>N</i> </p>
+</dt><dd> &bull; <code>-f </code><i>N</i> </dd>
 <p> Specify the maximum number of open files.</dl>
 <dl>
 <dt>
-<dd> &bull; <code>-F </code><i>filepath/</i> </p>
+</dt><dd> &bull; <code>-F </code><i>filepath/</i> </dd>
 <p> Specify the file path with a trailing slash.</dl>
 <dl>
 <dt>
-<dd> &bull; <code>-i</code> </p>
+</dt><dd> &bull; <code>-i</code> </dd>
 <p> Display extra information before exiting.</dl>
 <dl>
 <dt>
-<dd> &bull; <code>-o </code><i>offset</i> </p>
+</dt><dd> &bull; <code>-o </code><i>offset</i> </dd>
 <p> Specify the starting offset.</dl>
 <dl>
 <dt>
-<dd> &bull; <code>-p </code><i>N</i> </p>
+</dt><dd> &bull; <code>-p </code><i>N</i> </dd>
 <p> Remove <i>N</i> components from path.</dl>
 <dl>
 <dt>
-<dd> &bull; <code>-r</code> </p>
+</dt><dd> &bull; <code>-r</code> </dd>
 <p> Perform a recovery operation.</dl>
 <dl>
 <dt>
-<dd> &bull; <code>-R </code><i>record_pos_file record_pos</i> </p>
+</dt><dd> &bull; <code>-R </code><i>record_pos_file record_pos</i> </dd>
 <p> Specify record position file and record position.</dl>
 <dl>
 <dt>
-<dd> &bull; <code>-u</code> </p>
+</dt><dd> &bull; <code>-u</code> </dd>
 <p> Perform an update operation.</dl>
 <dl>
 <dt>
-<dd> &bull; <code>-v</code> </p>
+</dt><dd> &bull; <code>-v</code> </dd>
 <p> Verbose mode. Print more output about what the program does. This option can be given multiple times to produce more and more output.</dl>
 <dl>
 <dt>
-<dd> &bull; <code>-w </code><i>write_file</i> </p>
+</dt><dd> &bull; <code>-w </code><i>write_file</i> </dd>
 <p> Specify the write file.</dl>
 <dl>
 <dt>
-<dd> &bull; <code>-V</code> </p>
+</dt><dd> &bull; <code>-V</code> </dd>
 <p> Display version information.</dl>
 <h2>COPYRIGHT</h2>
 <p> Copyright &#169; 1997, 2020, Oracle and/or its affiliates. All rights reserved. </p>
@@ -87,3 +87,4 @@ shell &gt; myisamlog[options][file_name[tbl_name]...]
 <h2>AUTHOR</h2>
 <p> Oracle Corporation (<a rel="nofollow" href="http://dev.mysql.com/">http://dev.mysql.com/</a>). </p>
 <h2>Index</h2>
+</p>

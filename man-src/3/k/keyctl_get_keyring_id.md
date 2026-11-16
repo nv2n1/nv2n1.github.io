@@ -17,29 +17,29 @@ description: "keyctl_get_keyring_ID – Get the ID of a special keyring"
 <p> If the key or keyring does not yet exist, then if <i>create</i> is non-zero, the key or keyring will be created if it is appropriate to do so. </p>
 <p> The following special key IDs may be specified as <i>key</i>:</p>
 <dl COMPACT>
-<dt><code>KEY_SPEC_THREAD_KEYRING</code></p>
-<dd>This specifies the caller&#8217;s thread-specific keyring.</p>
-<dt><code>KEY_SPEC_PROCESS_KEYRING</code></p>
-<dd>This specifies the caller&#8217;s process-specific keyring.</p>
-<dt><code>KEY_SPEC_SESSION_KEYRING</code></p>
-<dd>This specifies the caller&#8217;s session-specific keyring.</p>
-<dt><code>KEY_SPEC_USER_KEYRING</code></p>
-<dd>This specifies the caller&#8217;s UID-specific keyring.</p>
-<dt><code>KEY_SPEC_USER_SESSION_KEYRING</code></p>
-<dd>This specifies the caller&#8217;s UID-session keyring.</p>
-<dt><code>KEY_SPEC_REQKEY_AUTH_KEY</code></p>
-<dd>This specifies the authorisation key created by <code>request_key</code>() and passed to the process it spawns to generate a key.</dl>
+<dt><code>KEY_SPEC_THREAD_KEYRING</code></dt>
+<dd>This specifies the caller&#8217;s thread-specific keyring.</dd>
+<dt><code>KEY_SPEC_PROCESS_KEYRING</code></dt>
+<dd>This specifies the caller&#8217;s process-specific keyring.</dd>
+<dt><code>KEY_SPEC_SESSION_KEYRING</code></dt>
+<dd>This specifies the caller&#8217;s session-specific keyring.</dd>
+<dt><code>KEY_SPEC_USER_KEYRING</code></dt>
+<dd>This specifies the caller&#8217;s UID-specific keyring.</dd>
+<dt><code>KEY_SPEC_USER_SESSION_KEYRING</code></dt>
+<dd>This specifies the caller&#8217;s UID-session keyring.</dd>
+<dt><code>KEY_SPEC_REQKEY_AUTH_KEY</code></dt>
+<dd>This specifies the authorisation key created by <code>request_key</code>() and passed to the process it spawns to generate a key.</dd></dl>
 <p> If a valid keyring ID is passed in, then this will simply be returned if the key exists; an error will be issued if it doesn&#8217;t exist.</p>
 <h2>Return Value</h2>
 <p>On success <code>keyctl_get_keyring_ID</code>() returns the serial number of the key it found. On error, the value <code>-1</code> will be returned and errno will have been set to an appropriate error.</p>
 <h2>Errors</h2>
 <dl COMPACT>
-<dt><code>ENOKEY</code></p>
-<dd>No matching key was found.</p>
-<dt><code>ENOMEM</code></p>
-<dd>Insufficient memory to create a key.</p>
-<dt><code>EDQUOT</code></p>
-<dd>The key quota for this user would be exceeded by creating this key or linking it to the keyring.</dl>
+<dt><code>ENOKEY</code></dt>
+<dd>No matching key was found.</dd>
+<dt><code>ENOMEM</code></dt>
+<dd>Insufficient memory to create a key.</dd>
+<dt><code>EDQUOT</code></dt>
+<dd>The key quota for this user would be exceeded by creating this key or linking it to the keyring.</dd></dl>
 <h2>Linking</h2>
 <p>This is a library function that can be found in <i>libkeyutils</i>. When linking, <code>-lkeyutils</code> should be specified to the linker.</p>
 <h2>See Also</h2>

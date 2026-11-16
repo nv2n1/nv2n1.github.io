@@ -12,25 +12,21 @@ rdma_create_ep - Allocate a communication identifier and optional QP.
 
 <pre><code>#include &lt;rdma/rdma_cma.h&gt;
 int rdma_create_ep
-
     (struct rdma_cm_id **id,
-
      struct rdma_addrinfo *res,
-
      struct ibv_pd *pd,
-
      struct ibv_qp_init_attr *qp_init_attr);</code></pre>
 
 <h2>Arguments</h2>
 
 <dl><dt>id
-<dd>A reference where the allocated communication identifier will be returned.
-<dt>res
-<dd>Address information associated with the rdma_cm_id returned from rdma_getaddrinfo.
-<dt>pd
-<dd>Optional protection domain if a QP is associated with the rdma_cm_id.
-<dt>qp_init_attr
-<dd>Optional initial QP attributes.</dl>
+</dt><dd>A reference where the allocated communication identifier will be returned.
+</dd><dt>res
+</dt><dd>Address information associated with the rdma_cm_id returned from rdma_getaddrinfo.
+</dd><dt>pd
+</dt><dd>Optional protection domain if a QP is associated with the rdma_cm_id.
+</dd><dt>qp_init_attr
+</dt><dd>Optional initial QP attributes.</dd></dl>
 
 <h2>Description</h2>
 

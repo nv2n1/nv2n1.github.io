@@ -11,21 +11,13 @@ std::experimental::ranges::BidirectionalIterator - std::experimental::ranges::Bi
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header &lt;experimental/ranges/iterator&gt;
-
 template &lt; class I &gt;
-
 concept bool BidirectionalIterator =
-
 ForwardIterator&lt;I&gt; &amp;&amp;
-
 DerivedFrom&lt;ranges::iterator_category_t&lt;I&gt;, ranges::bidirectional_iterator_tag&gt; &amp;&amp;  (ranges TS)
-
 requires(I i) {
-
     { --i } -&gt; Same&lt;I&gt;&amp;;
-
     { i-- } -&gt; Same&lt;I&gt;&amp;&amp;;
-
 };</code></pre> 
 The concept BidirectionalIterator&lt;I&gt; refines ForwardIterator by adding the ability to move an iterator backward. 
 A bidirectional iterator r is said to be decrementable if and only if there exists some s such that ++s == r. All decrementable iterators r shall be in the domain of the expressions --r and r--. 

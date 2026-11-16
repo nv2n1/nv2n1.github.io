@@ -11,25 +11,25 @@ description: "kig – an interactive geometry program for KDE"
 <p> kig &#8211; an interactive geometry program for KDE</p>
 <h2>SYNOPSIS</h2>
 <dl>
-<dt> <code>kig</code> [<code>-c, &#8211;convert-to-native</code> [<code>-o, &#8211;outfile </code><i>filename</i>]] [KDE Generic Options] [Qt Generic Options] </p>
+<dt> <code>kig</code> [<code>-c, &#8211;convert-to-native</code> [<code>-o, &#8211;outfile </code><i>filename</i>]] [KDE Generic Options] [Qt Generic Options] </dt>
 </dl>
 <h2>DESCRIPTION</h2>
-<dd>Kig is an application for interactive geometry. It is intended to serve two purposes: </p>
+<dd>Kig is an application for interactive geometry. It is intended to serve two purposes: </dd>
 <dl>
-<dt>*</p>
-<dd> To allow students to interactively explore mathematical figures and concepts using the computer;</p>
-<dt>*</p>
-<dd> To serve as a WYSIWYG tool for drawing mathematical figures and including them in other documents.</dl>
+<dt>*</dt>
+<dd> To allow students to interactively explore mathematical figures and concepts using the computer;</dd>
+<dt>*</dt>
+<dd> To serve as a WYSIWYG tool for drawing mathematical figures and including them in other documents.</dd></dl>
 <p> With this program you can do geometry on a computer just like you would on a blackboard in a classroom. However the program allows you to move and change parts of a geometrical drawing so that you can see how other parts change as a result. </p>
 <p> Kig supports loci and user-defined macros. It also imports and exports both to and from foreign file formats including Cabri, Dr. Geo, KGeo, KSeg and XFig. </p>
 <p> This application is part of the official KDE edutainment module. </p>
 <h2>OPTIONS</h2>
 <p> App options, in a variablelist </p>
 <dl>
-<dt><code>-c, &#8211;convert-to-native</code></p>
-<dd> Do not show a GUI. Instead convert the specified file to native Kig format. The native Kig file will be written to standard output unless <code>&#8211;outfile</code> is passed. </p>
-<dt><code>-o, &#8211;outfile </code><i>filename</i></p>
-<dd> Used with <code>&#8211;convert-to-native</code> to specify where to save the newly created Kig file. Not specifying this option, or providing a filename of <i>&#8211;</i> will output the file to standard output. </p>
+<dt><code>-c, &#8211;convert-to-native</code></dt>
+<dd> Do not show a GUI. Instead convert the specified file to native Kig format. The native Kig file will be written to standard output unless <code>&#8211;outfile</code> is passed. </dd>
+<dt><code>-o, &#8211;outfile </code><i>filename</i></dt>
+<dd> Used with <code>&#8211;convert-to-native</code> to specify where to save the newly created Kig file. Not specifying this option, or providing a filename of <i>&#8211;</i> will output the file to standard output. </dd>
 </dl>
 <h2>SEE ALSO</h2>
 <p> More detailed user documentation is available from <i>help:/kig</i> (either enter this URL into Konqueror, or run <code>khelpcenter</code> <i>help:/kig</i>). </p>

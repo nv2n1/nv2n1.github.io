@@ -18,15 +18,15 @@ description: "audit.rules – a set of rules loaded in the kernel audit system"
 <p>where the permission are any one of the following:</p>
 <dl>
 <dd>
-<dl>
-<dt><code>r</code></p>
-<dd>&#8211; read of the file</p>
-<dt><code>w</code></p>
-<dd>&#8211; write to the file</p>
-<dt><code>x</code></p>
-<dd>&#8211; execute the file</p>
-<dt><code>a</code></p>
-<dd>&#8211; change in the file&#8217;s attribute</dl>
+</dd><dl>
+<dt><code>r</code></dt>
+<dd>&#8211; read of the file</dd>
+<dt><code>w</code></dt>
+<dd>&#8211; write to the file</dd>
+<dt><code>x</code></dt>
+<dd>&#8211; execute the file</dd>
+<dt><code>a</code></dt>
+<dd>&#8211; change in the file&#8217;s attribute</dd></dl>
 </dl>
 <h3>System Call</h3>
 <p>The system call rules are loaded into a matching engine that intercepts each syscall that all programs on the system makes. Therefore it is very important to only use syscall rules when you have to since these affect performance. The more rules, the bigger the performance hit. You can help the performance, though, by combining syscalls into one rule whenever possible. The Linux kernel has 4 rule matching lists or filters as they are sometimes called. They are: task, exit, user, and exclude. The task list is checked only during the fork or clone syscalls. It is rarely used in practice. The exit filter is the place where all syscall and file system audit requests are evaluated. The user filter is used to filter (remove) some events that originate in user space. By default, any event originating in user space is allowed. So, if there are some events that you do not want to see, then this is a place where some can be removed. See <a href="/docs/linux/man/8-auditctl/">auditctl</a>(8) for fields that are valid. The exclude filter is used to exclude certain events from being emitted. The msgtype field is used to tell the kernel which message types you do not want to record. This filter can remove the event as a whole and is not selective about any other attribute. The user and exit filters are better suited to selectively auditing events. Syscall rules take the general form of: </p>
@@ -34,11 +34,11 @@ description: "audit.rules – a set of rules loaded in the kernel audit system"
 <p>The <code>-a</code> option tells the kernel&#8217;s rule matching engine that we want to append a rule at the end of the rule list. But we need to specify which rule list it goes on and what action to take when it triggers. Valid actions are:</p>
 <dl>
 <dd>
-<dl>
-<dt><code>always</code></p>
-<dd>&#8211; always create an event</p>
-<dt><code>never</code></p>
-<dd>&#8211; never create an event</dl>
+</dd><dl>
+<dt><code>always</code></dt>
+<dd>&#8211; always create an event</dd>
+<dt><code>never</code></dt>
+<dd>&#8211; never create an event</dd></dl>
 </dl>
 <p> The action and list are separated by a comma but no space in between. Valid lists are: <i>task</i>, <i>exit</i>, <i>user</i>, and <i>exclude</i>. Their meaning was explained earlier. Next in the rule would normally be the <code>-S</code> option. This field can either be the syscall name or number. For readability, the name is almost always used. You may give more than one syscall in a rule by specifying another <code>-S</code> option. When sent into the kernel, all syscall fields are put into a mask so that one compare can determine if the syscall is of interest. So, adding multiple syscalls in one rule is very efficient. When you specify a syscall name, auditctl will look up the name and get its syscall number. This leads to some problems on bi-arch machines. The 32 and 64 bit syscall numbers sometimes, but not always, line up. So, to solve this problem, you would generally need to break the rule into 2 with one specifying -F arch=b32 and the other specifying -F arch=b64. This needs to go in front of the <code>-S</code> option so that auditctl looks at the right lookup table when returning the number. After the syscall is specified, you would normally have one or more <code>-F</code> options that fine tune what to match against. Rather than list all the valid field types here, the reader should look at the auditctl man page which has a full listing of each field and what it means. But its worth mentioning a couple things. The audit system considers uids to be unsigned numbers. The audit system uses the number -1 to indicate that a loginuid is not set. This means that when its printed out, it looks like 4294967295. If you write a rule that you wanted try to get the valid users of the system, you need to look in /etc/login.defs to see where user accounts start. For example, if UID_MIN is 500, then you would also need to take into account that the unsigned representation of -1 is higher than 500. So you would address this with the following piece of a rule: </p>
 <pre>-F auid&gt;=500 -F auid!=4294967295</pre>

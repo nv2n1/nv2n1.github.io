@@ -15,47 +15,47 @@ description: "dund – BlueZ Bluetooth dial-up networking daemon"
 <p> dund &lt;options&gt; [pppd options]</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>&#8211;show</code> <code>&#8211;list</code> <code>-l</code></p>
-<dd> Show active DUN connections</p>
-<dt><code>&#8211;listen</code> <code>-s</code></p>
-<dd> Listen for DUN connections</p>
-<dt><code>&#8211;dialup</code> <code>-u</code></p>
-<dd> Listen for dialup/telephone connections</p>
-<dt><code>&#8211;connect</code> <code>-c</code> &lt;bdaddr&gt;</p>
-<dd> Create DUN connection</p>
-<dt><code>&#8211;mrouter</code> <code>-m</code> &lt;bdaddr&gt;</p>
-<dd> Create mRouter connection</p>
-<dt><code>&#8211;search</code> <code>-Q[duration]</code></p>
-<dd> Search and connect</p>
-<dt><code>&#8211;kill</code> <code>-k</code> &lt;bdaddr&gt;</p>
-<dd> Kill DUN connection</p>
-<dt><code>&#8211;killall</code> <code>-K</code></p>
-<dd> Kill all DUN connections</p>
-<dt><code>&#8211;channel</code> <code>-C</code> &lt;channel&gt;</p>
-<dd> RFCOMM channel</p>
-<dt><code>&#8211;device</code> <code>-i</code> &lt;bdaddr&gt;</p>
-<dd> Source bdaddr</p>
-<dt><code>&#8211;nosdp</code> <code>-D</code></p>
-<dd> Disable SDP</p>
-<dt><code>&#8211;auth</code> <code>-A</code></p>
-<dd> Enable authentification</p>
-<dt><code>&#8211;encrypt</code> <code>-E</code></p>
-<dd> Enable encryption</p>
-<dt><code>&#8211;secure</code> <code>-S</code></p>
-<dd> Secure connection</p>
-<dt><code>&#8211;master</code> <code>-M</code></p>
-<dd> Become the master of a piconet</p>
-<dt><code>&#8211;nodetach</code> <code>-n</code></p>
-<dd> Do not become a daemon</p>
-<dt><code>&#8211;persist</code> <code>-p[interval]</code></p>
-<dd> Persist mode</p>
-<dt><code>&#8211;pppd</code> <code>-d</code> &lt;pppd&gt;</p>
-<dd> Location of the PPP daemon (pppd)</p>
-<dt><code>&#8211;msdun</code> <code>-X</code> [timeo]</p>
-<dd> Enable Microsoft dialup networking support</p>
-<dt><code>&#8211;activesync</code> <code>-a</code></p>
-<dd> Enable Microsoft ActiveSync networking</p>
-<dt><code>&#8211;cache</code> <code>-C</code> [valid]</p>
-<dd> Enable address cache </p>
+<dt><code>&#8211;show</code> <code>&#8211;list</code> <code>-l</code></dt>
+<dd> Show active DUN connections</dd>
+<dt><code>&#8211;listen</code> <code>-s</code></dt>
+<dd> Listen for DUN connections</dd>
+<dt><code>&#8211;dialup</code> <code>-u</code></dt>
+<dd> Listen for dialup/telephone connections</dd>
+<dt><code>&#8211;connect</code> <code>-c</code> &lt;bdaddr&gt;</dt>
+<dd> Create DUN connection</dd>
+<dt><code>&#8211;mrouter</code> <code>-m</code> &lt;bdaddr&gt;</dt>
+<dd> Create mRouter connection</dd>
+<dt><code>&#8211;search</code> <code>-Q[duration]</code></dt>
+<dd> Search and connect</dd>
+<dt><code>&#8211;kill</code> <code>-k</code> &lt;bdaddr&gt;</dt>
+<dd> Kill DUN connection</dd>
+<dt><code>&#8211;killall</code> <code>-K</code></dt>
+<dd> Kill all DUN connections</dd>
+<dt><code>&#8211;channel</code> <code>-C</code> &lt;channel&gt;</dt>
+<dd> RFCOMM channel</dd>
+<dt><code>&#8211;device</code> <code>-i</code> &lt;bdaddr&gt;</dt>
+<dd> Source bdaddr</dd>
+<dt><code>&#8211;nosdp</code> <code>-D</code></dt>
+<dd> Disable SDP</dd>
+<dt><code>&#8211;auth</code> <code>-A</code></dt>
+<dd> Enable authentification</dd>
+<dt><code>&#8211;encrypt</code> <code>-E</code></dt>
+<dd> Enable encryption</dd>
+<dt><code>&#8211;secure</code> <code>-S</code></dt>
+<dd> Secure connection</dd>
+<dt><code>&#8211;master</code> <code>-M</code></dt>
+<dd> Become the master of a piconet</dd>
+<dt><code>&#8211;nodetach</code> <code>-n</code></dt>
+<dd> Do not become a daemon</dd>
+<dt><code>&#8211;persist</code> <code>-p[interval]</code></dt>
+<dd> Persist mode</dd>
+<dt><code>&#8211;pppd</code> <code>-d</code> &lt;pppd&gt;</dt>
+<dd> Location of the PPP daemon (pppd)</dd>
+<dt><code>&#8211;msdun</code> <code>-X</code> [timeo]</dt>
+<dd> Enable Microsoft dialup networking support</dd>
+<dt><code>&#8211;activesync</code> <code>-a</code></dt>
+<dd> Enable Microsoft ActiveSync networking</dd>
+<dt><code>&#8211;cache</code> <code>-C</code> [valid]</dt>
+<dd> Enable address cache </dd>
 </dl>
 <h2>Index</h2>

@@ -13,18 +13,18 @@ description: "oath_authenticate_usersfile – API function"
 int oath_authenticate_usersfile(const char *usersfile, const char *username, const char *otp, size_t window, const char *passwd, time_t *last_otp);</code></pre>
 <h2>Arguments</h2>
 <dl>
-<dt>const char * usersfile</p>
-<dd>string with user credential filename, in UsersFile format</p>
-<dt>const char * username</p>
-<dd>string with name of user</p>
-<dt>const char * otp</p>
-<dd>string with one-time password to authenticate</p>
-<dt>size_t window</p>
-<dd>how many past/future OTPs to search</p>
-<dt>const char * passwd</p>
-<dd>string with password, or NULL to disable password checking</p>
-<dt>time_t * last_otp</p>
-<dd>output variable holding last successful authentication</dl>
+<dt>const char * usersfile</dt>
+<dd>string with user credential filename, in UsersFile format</dd>
+<dt>const char * username</dt>
+<dd>string with name of user</dd>
+<dt>const char * otp</dt>
+<dd>string with one-time password to authenticate</dd>
+<dt>size_t window</dt>
+<dd>how many past/future OTPs to search</dd>
+<dt>const char * passwd</dt>
+<dd>string with password, or NULL to disable password checking</dd>
+<dt>time_t * last_otp</dt>
+<dd>output variable holding last successful authentication</dd></dl>
 <h2>Description</h2>
 <p>Authenticate user named <i>username</i> with the one-time password <i>otp</i> and (optional) password <i>passwd</i>. Credentials are read (and updated) from a text file named <i>usersfile</i>. </p>
 <p> Note that for TOTP the usersfile will only record the last OTP and use that to make sure more recent OTPs have not been seen yet when validating a new OTP. That logics relies on using the same search window for the same user.</p>

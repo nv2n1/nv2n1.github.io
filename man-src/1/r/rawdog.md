@@ -19,55 +19,55 @@ description: "rawdog – an RSS Aggregator Without Delusions Of Grandeur"
 <p> This program follows the usual GNU command line syntax, with long options starting with two dashes (`-&#8216;).</p>
 <h3>General Options</h3>
 <dl>
-<dt><code>-d</code> <i>DIR</i>, <code>&#8211;dir</code> <i>DIR</i></p>
-<dd> Use <i>DIR</i> instead of the $HOME/.rawdog directory. This option lets you have two or more <code>rawdog</code> setups with different configurations and sets of feeds.</p>
-<dt><code>-N</code>, <code>&#8211;no-locking</code></p>
-<dd> Do not lock the state file.</p>
+<dt><code>-d</code> <i>DIR</i>, <code>&#8211;dir</code> <i>DIR</i></dt>
+<dd> Use <i>DIR</i> instead of the $HOME/.rawdog directory. This option lets you have two or more <code>rawdog</code> setups with different configurations and sets of feeds.</dd>
+<dt><code>-N</code>, <code>&#8211;no-locking</code></dt>
+<dd> Do not lock the state file.</dd>
 <dt>
-<dd> <code>rawdog</code> usually claims a lock on its state file, to stop more than one instance from running at the same time. Unfortunately, some filesystems don&#8217;t support file locking; you can use this option to disable locking entirely if you&#8217;re in that situation.</p>
-<dt><code>-v</code>, <code>&#8211;verbose</code></p>
-<dd> Print more detailed information about what <code>rawdog</code> is doing to stderr while it runs.</p>
-<dt><code>-V</code> <i>FILE</i>, <code>&#8211;log</code> <i>FILE</i></p>
-<dd> As with <code>-V</code>, but write the information to <i>FILE</i>.</p>
-<dt><code>-W</code>, <code>&#8211;no-lock-wait</code></p>
-<dd> Exit silently if the state file is already locked.</p>
+</dt><dd> <code>rawdog</code> usually claims a lock on its state file, to stop more than one instance from running at the same time. Unfortunately, some filesystems don&#8217;t support file locking; you can use this option to disable locking entirely if you&#8217;re in that situation.</dd>
+<dt><code>-v</code>, <code>&#8211;verbose</code></dt>
+<dd> Print more detailed information about what <code>rawdog</code> is doing to stderr while it runs.</dd>
+<dt><code>-V</code> <i>FILE</i>, <code>&#8211;log</code> <i>FILE</i></dt>
+<dd> As with <code>-V</code>, but write the information to <i>FILE</i>.</dd>
+<dt><code>-W</code>, <code>&#8211;no-lock-wait</code></dt>
+<dd> Exit silently if the state file is already locked.</dd>
 <dt>
-<dd> If the state file is already locked, <code>rawdog</code> will normally wait until it becomes available, then run. However, if you&#8217;re got a lot of feeds and a slow network connection, you might prefer <code>rawdog</code> to just give up immediately if the previous instance is still running.</dl>
+</dt><dd> If the state file is already locked, <code>rawdog</code> will normally wait until it becomes available, then run. However, if you&#8217;re got a lot of feeds and a slow network connection, you might prefer <code>rawdog</code> to just give up immediately if the previous instance is still running.</dd></dl>
 <h3>Actions</h3>
 <p> <code>rawdog</code> will perform these actions in the order given.</p>
 <dl>
-<dt><code>-a</code> <i>URL</i>, <code>&#8211;add</code> <i>URL</i></p>
-<dd> Try to find a feed associated with <i>URL</i> and add it to the config file.</p>
+<dt><code>-a</code> <i>URL</i>, <code>&#8211;add</code> <i>URL</i></dt>
+<dd> Try to find a feed associated with <i>URL</i> and add it to the config file.</dd>
 <dt>
-<dd> <i>URL</i> may be a feed itself, or it can be an HTML page that links to a feed in any of a variety of ways. <code>rawdog</code> uses heuristics to pick the best feed it can find, and will complain if it can&#8217;t find one.</p>
-<dt><code>-c</code> <i>FILE</i>, <code>&#8211;config</code> <i>FILE</i></p>
-<dd> Read <i>FILE</i> as an additional config file; any options provided in <i>FILE</i> will override those set in the main config file (with the exception of &quot;feed&quot;, which is cumulative). <i>FILE</i> may be an absolute path or a path relative to your .rawdog directory.</p>
+</dt><dd> <i>URL</i> may be a feed itself, or it can be an HTML page that links to a feed in any of a variety of ways. <code>rawdog</code> uses heuristics to pick the best feed it can find, and will complain if it can&#8217;t find one.</dd>
+<dt><code>-c</code> <i>FILE</i>, <code>&#8211;config</code> <i>FILE</i></dt>
+<dd> Read <i>FILE</i> as an additional config file; any options provided in <i>FILE</i> will override those set in the main config file (with the exception of &quot;feed&quot;, which is cumulative). <i>FILE</i> may be an absolute path or a path relative to your .rawdog directory.</dd>
 <dt>
-<dd> Note that $HOME/.rawdog/config will still be read first even if you specify this option. <code>-c</code> is mostly useful when you want to write the same set of feeds out using two different sets of output options.</p>
-<dt><code>-f</code> <i>URL</i>, <code>&#8211;update-feed</code> <i>URL</i></p>
-<dd> Update the feed pointed to by <i>URL</i> immediately, even if its period hasn&#8217;t elapsed since it was last updated. This is useful when you&#8217;re publishing a feed yourself, and want to test whether it&#8217;s working properly.</p>
-<dt><code>-l</code>, <code>&#8211;list</code></p>
-<dd> List brief information about each of the feeds that was known about at the time of the last update.</p>
-<dt><code>-r</code> <i>URL</i>, <code>&#8211;remove</code> <i>URL</i></p>
-<dd> Remove feed <i>URL</i> from the config file.</p>
-<dt><code>-s</code> <i>TEMPLATE</i>, <code>&#8211;show</code> <i>TEMPLATE</i></p>
-<dd> Print one of the templates currently in use to stdout. <code>TEMPLATE</code> may be <code>page</code>, <code>item</code>, <code>feedlist</code> or <code>feeditem</code>. This can be used as a starting point if you want to design your own template for use with the corresponding <code>template</code> option in the config file.</p>
-<dt><code>-u</code>, <code>&#8211;update</code></p>
-<dd> Fetch data from the feeds and store it. This could take some time if you&#8217;ve got lots of feeds.</p>
-<dt><code>-w</code>, <code>&#8211;write</code></p>
-<dd> Write out the HTML output file.</dl>
+</dt><dd> Note that $HOME/.rawdog/config will still be read first even if you specify this option. <code>-c</code> is mostly useful when you want to write the same set of feeds out using two different sets of output options.</dd>
+<dt><code>-f</code> <i>URL</i>, <code>&#8211;update-feed</code> <i>URL</i></dt>
+<dd> Update the feed pointed to by <i>URL</i> immediately, even if its period hasn&#8217;t elapsed since it was last updated. This is useful when you&#8217;re publishing a feed yourself, and want to test whether it&#8217;s working properly.</dd>
+<dt><code>-l</code>, <code>&#8211;list</code></dt>
+<dd> List brief information about each of the feeds that was known about at the time of the last update.</dd>
+<dt><code>-r</code> <i>URL</i>, <code>&#8211;remove</code> <i>URL</i></dt>
+<dd> Remove feed <i>URL</i> from the config file.</dd>
+<dt><code>-s</code> <i>TEMPLATE</i>, <code>&#8211;show</code> <i>TEMPLATE</i></dt>
+<dd> Print one of the templates currently in use to stdout. <code>TEMPLATE</code> may be <code>page</code>, <code>item</code>, <code>feedlist</code> or <code>feeditem</code>. This can be used as a starting point if you want to design your own template for use with the corresponding <code>template</code> option in the config file.</dd>
+<dt><code>-u</code>, <code>&#8211;update</code></dt>
+<dd> Fetch data from the feeds and store it. This could take some time if you&#8217;ve got lots of feeds.</dd>
+<dt><code>-w</code>, <code>&#8211;write</code></dt>
+<dd> Write out the HTML output file.</dd></dl>
 <h3>Special Actions</h3>
 <p> If one of these options is specified, <code>rawdog</code> will perform only that action, then exit.</p>
 <dl>
-<dt><code>&#8211;dump</code> <i>URL</i></p>
-<dd> Show what <code>rawdog</code>&#8216;s feed parser returns for <i>URL</i>. This can be useful when trying to understand why <code>rawdog</code> doesn&#8217;t display a feed correctly.</p>
-<dt><code>&#8211;help</code></p>
-<dd> Provide a brief summary of all the options <code>rawdog</code> supports.</dl>
+<dt><code>&#8211;dump</code> <i>URL</i></dt>
+<dd> Show what <code>rawdog</code>&#8216;s feed parser returns for <i>URL</i>. This can be useful when trying to understand why <code>rawdog</code> doesn&#8217;t display a feed correctly.</dd>
+<dt><code>&#8211;help</code></dt>
+<dd> Provide a brief summary of all the options <code>rawdog</code> supports.</dd></dl>
 <h2>EXAMPLES</h2>
 <p> <code>rawdog</code> is typically invoked from <code>cron</code>(1). The following <code><a href="/docs/linux/man/5-crontab/">crontab</a></code>(5) entry would fetch data from feeds and write it to HTML once an hour, exiting if <code>rawdog</code> is already running: </p>
 <pre>
-<dl><dt><dd>0 * * * *  rawdog -Wuw
-</dl>
+<dl><dt></dt><dd>0 * * * *  rawdog -Wuw
+</dd></dl>
 </pre>
 <h2>FILES</h2>
 <p> $HOME/.rawdog/config</p>

@@ -10,7 +10,6 @@ description: "set_config_float – Writes a float in the configuration file. All
 <p>set_config_float &#8211; Writes a float in the configuration file. Allegro game programming library.</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;allegro.h&gt;
-
 void set_config_float(const char *section, const char *name, float val);</code></pre>
 <h2>Description</h2>
 <p>Writes a floating point variable to the current config file. See the comments about set_config_string(). </p>

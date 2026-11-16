@@ -11,99 +11,52 @@ std::regex_replace - std::regex_replace
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;regex&gt;
-
     template &lt;class OutputIt, class BidirIt,
-
               class Traits, class CharT,
-
               class STraits, class SAlloc&gt;
-
     OutputIt regex_replace(OutputIt out, BidirIt first, BidirIt last, (1)(since C++ 11)
-
                                                                           const std::basic_regex&lt;CharT, Traits&gt; &amp;re,
-
                            const std::basic_string&lt;CharT, STraits, SAlloc&gt; &amp;fmt,
-
                            std::regex_constants::match_flag_type flags =
-
                                std::regex_constants::match_default);
-
 template &lt;class OutputIt, class BidirIt,
-
           class Traits, class CharT&gt;
-
 OutputIt regex_replace(OutputIt out, BidirIt first, BidirIt last,
-
                        const std::basic_regex&lt;CharT, Traits&gt; &amp;re, (2)(since C++ 11)
-
                                                                       const CharT *fmt,
-
                        std::regex_constants::match_flag_type flags =
-
                            std::regex_constants::match_default);
-
 template &lt;class Traits, class CharT,
-
           class STraits, class SAlloc,
-
           class FTraits, class FAlloc&gt;
-
 std::basic_string&lt;CharT, STraits, SAlloc&gt;
-
 regex_replace(const std::basic_string&lt;CharT, STraits, SAlloc&gt; &amp;s, (3)(since C++ 11)
-
                                                                       const std::basic_regex&lt;CharT, Traits&gt; &amp;re,
-
               const std::basic_string&lt;CharT, FTraits, FAlloc&gt; &amp;fmt,
-
               std::regex_constants::match_flag_type flags =
-
                   std::regex_constants::match_default);
-
 template &lt;class Traits, class CharT,
-
           class STraits, class SAlloc&gt;
-
 std::basic_string&lt;CharT, STraits, SAlloc&gt;
-
 regex_replace(const std::basic_string&lt;CharT, STraits, SAlloc&gt; &amp;s, (4)(since C++ 11)
-
                                                                       const std::basic_regex&lt;CharT, Traits&gt; &amp;re,
-
               const CharT *fmt,
-
               std::regex_constants::match_flag_type flags =
-
                   std::regex_constants::match_default);
-
 template &lt;class Traits, class CharT,
-
           class STraits, class SAlloc&gt;
-
 std::basic_string&lt;CharT&gt;
-
 regex_replace(const CharT *s, (5)(since C++ 11)
-
                                   const std::basic_regex&lt;CharT, Traits&gt; &amp;re,
-
               const std::basic_string&lt;CharT, STraits, SAlloc&gt; &amp;fmt,
-
               std::regex_constants::match_flag_type flags =
-
                   std::regex_constants::match_default);
-
 template &lt;class Traits, class CharT&gt;
-
 std::basic_string&lt;CharT&gt;
-
 regex_replace(const CharT *s,
-
               const std::basic_regex&lt;CharT, Traits&gt; &amp;re, (6)(since C++ 11)
-
                                                              const CharT *fmt,
-
               std::regex_constants::match_flag_type flags =
-
                   std::regex_constants::match_default);</code></pre> 
 regex_replace uses a regular expression to perform substitution on a sequence of characters: 
 1) Copies characters in the range [first,last) to out, replacing any sequences that match re with characters formatted by fmt. In other words: 
@@ -147,14 +100,10 @@ May throw std::regex_error to indicate an error_condition.
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;iostream&gt;
-
 #include &lt;iterator&gt;
-
 #include &lt;regex&gt;
-
 #include &lt;string&gt;
 int main()
-
 {
     std::string text = &quot;Quick brown fox&quot;;
     std::regex vowel_re(&quot;a|e|i|o|u&quot;);

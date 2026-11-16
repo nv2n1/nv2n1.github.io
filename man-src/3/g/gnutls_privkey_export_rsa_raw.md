@@ -14,24 +14,24 @@ description: "gnutls_privkey_export_rsa_raw – API function"
 <p> <code>int gnutls_privkey_export_rsa_raw(gnutls_privkey_t </code><i>key</i><code>, gnutls_datum_t * </code><i>m</i><code>, gnutls_datum_t * </code><i>e</i><code>, gnutls_datum_t * </code><i>d</i><code>, gnutls_datum_t * </code><i>p</i><code>, gnutls_datum_t * </code><i>q</i><code>, gnutls_datum_t * </code><i>u</i><code>, gnutls_datum_t * </code><i>e1</i><code>, gnutls_datum_t * </code><i>e2</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
-<dt>gnutls_privkey_t key</p>
-<dd> Holds the certificate</p>
-<dt>gnutls_datum_t * m</p>
-<dd> will hold the modulus</p>
-<dt>gnutls_datum_t * e</p>
-<dd> will hold the public exponent</p>
-<dt>gnutls_datum_t * d</p>
-<dd> will hold the private exponent</p>
-<dt>gnutls_datum_t * p</p>
-<dd> will hold the first prime (p)</p>
-<dt>gnutls_datum_t * q</p>
-<dd> will hold the second prime (q)</p>
-<dt>gnutls_datum_t * u</p>
-<dd> will hold the coefficient</p>
-<dt>gnutls_datum_t * e1</p>
-<dd> will hold e1 = d mod (p-1)</p>
-<dt>gnutls_datum_t * e2</p>
-<dd> will hold e2 = d mod (q-1)</dl>
+<dt>gnutls_privkey_t key</dt>
+<dd> Holds the certificate</dd>
+<dt>gnutls_datum_t * m</dt>
+<dd> will hold the modulus</dd>
+<dt>gnutls_datum_t * e</dt>
+<dd> will hold the public exponent</dd>
+<dt>gnutls_datum_t * d</dt>
+<dd> will hold the private exponent</dd>
+<dt>gnutls_datum_t * p</dt>
+<dd> will hold the first prime (p)</dd>
+<dt>gnutls_datum_t * q</dt>
+<dd> will hold the second prime (q)</dd>
+<dt>gnutls_datum_t * u</dt>
+<dd> will hold the coefficient</dd>
+<dt>gnutls_datum_t * e1</dt>
+<dd> will hold e1 = d mod (p-1)</dd>
+<dt>gnutls_datum_t * e2</dt>
+<dd> will hold e2 = d mod (q-1)</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> This function will export the RSA private key&#8217;s parameters found in the given structure. The new parameters will be allocated using <code>gnutls_malloc()</code> and will be stored in the appropriate datum.</p>
 <h2>RETURNS</h2>
@@ -47,6 +47,6 @@ description: "gnutls_privkey_export_rsa_raw – API function"
 <h2>SEE ALSO</h2>
 <p> The full documentation for <code>gnutls</code> is maintained as a Texinfo manual. If the /usr/share/doc/gnutls/ directory does not contain the HTML form visit <code></p>
 <dl>
-<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></p>
-<dd> </code></dl>
+<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></dt>
+<dd> </code></dd></dl>
 <h2>Index</h2>

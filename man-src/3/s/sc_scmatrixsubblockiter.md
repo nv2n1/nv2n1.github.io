@@ -11,49 +11,23 @@ description: "sc::SCMatrixSubblockIter –"
 <p> Objects of class <code>SCMatrixSubblockIter</code> are used to iterate through the blocks of a matrix.</p>
 <h2>Synopsis</h2>
 <pre><code>
-
 #include &lt;block.h&gt;</code></pre>
 <p> Inherits <code>sc::RefCount</code>. Inherited by <code>sc::SCMatrixCompositeSubblockIter</code>, <code>sc::SCMatrixJointSubblockIter</code>, <code>sc::SCMatrixListSubblockIter</code>, <code>sc::SCMatrixNullSubblockIter</code>, and <code>sc::SCMatrixSimpleSubblockIter</code>.</p>
 <h3>Public Types</h3>
 <p>enum <code>Access</code> { <code>Read</code>, <code>Write</code>, <code>Accum</code>, <code>None</code> }</p>
 <h3>Public Member Functions</h3>
 <pre><code>SCMatrixSubblockIter (Access access)
-
-
 The access variable should be one of Read, Write, Accum, and None, with the SCMatrixSubblockIter:: scope operator applied.
-
-
 virtual void begin ()=0
-
-
 Start at the beginning.
-
-
 virtual int ready ()=0
-
-
 Returns nonzero if there is another block.
-
-
 virtual void next ()=0
-
-
 Proceed to the next block.
-
-
 virtual SCMatrixBlock * block ()=0
-
-
 Return the current block.
-
-
 Access access () const
-
-
 Return the type of Access allowed for these blocks.
-
-
-
 Protected Attributes</code></pre>
 <p> Access <code>access_</code></p>
 <h2>Detailed Description</h2>

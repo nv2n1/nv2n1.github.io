@@ -15,12 +15,12 @@ description: "gtf – calculate VESA GTF mode lines"
 <p> <i>Gtf</i> is a utility for calculating VESA GTF modes. Given the desired horizontal and vertical resolutions and refresh rate (in Hz), the parameters for a matching VESA GTF mode are printed out. Two output formats are supported: mode lines suitable for the Xorg <code><a href="/docs/linux/man/5-xorg-conf/">xorg.conf</a>(5)</code> file, and mode parameters suitable for the Linux <code><a href="/docs/linux/man/8-fbset/">fbset</a>(8)</code> utility. </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-v</code>|<code>&#8211;verbose</code></p>
-<dd> Enable verbose printouts This shows a trace for each step of the computation.</p>
-<dt><code>-x</code>|<code>&#8211;xorgmode</code></p>
-<dd> Print the mode parameters as Xorg-style mode lines. This is the default format.</p>
-<dt><code>-f</code>|<code>&#8211;fbset</code></p>
-<dd> Print the mode parameters in a format suitable for <code><a href="/docs/linux/man/8-fbset/">fbset</a>(8)</code>.</dl>
+<dt><code>-v</code>|<code>&#8211;verbose</code></dt>
+<dd> Enable verbose printouts This shows a trace for each step of the computation.</dd>
+<dt><code>-x</code>|<code>&#8211;xorgmode</code></dt>
+<dd> Print the mode parameters as Xorg-style mode lines. This is the default format.</dd>
+<dt><code>-f</code>|<code>&#8211;fbset</code></dt>
+<dd> Print the mode parameters in a format suitable for <code><a href="/docs/linux/man/8-fbset/">fbset</a>(8)</code>.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/5-xorg-conf/">xorg.conf</a>(5), <a href="/docs/linux/man/1-cvt/">cvt</a>(1)</p>
 <h2>AUTHOR</h2>

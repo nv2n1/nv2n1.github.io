@@ -17,88 +17,88 @@ description: "aircrack-ng – a 802.11 WEP / WPA-PSK key cracker"
  Additionally, the program offers a dictionary method for determining the WEP key. For cracking WPA/WPA2 pre-shared keys, a wordlist (file or stdin) or an airolib-ng has to be used.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>Common options:</code></p>
+<dt><code>Common options:</code></dt>
 <dd>
-<dt><i>-a &lt;amode&gt;</i></p>
-<dd> Force the attack mode, 1 or wep for WEP and 2 or wpa for WPA-PSK.</p>
-<dt><i>-e &lt;essid&gt;</i></p>
-<dd> Select the target network based on the ESSID. This option is also required for WPA cracking if the SSID is cloacked. For SSID containing special characters, see <a rel="nofollow" href="http://www.aircrack-ng.org/doku.php?id=faq#how_to_use_spaces_double_quote_and_single_quote_etc._in_ap_names">http://www.aircrack-ng.org/doku.php?id=faq#how_to_use_spaces_double_quote_and_single_quote_etc._in_ap_names</a></p>
-<dt><i>-b &lt;bssid&gt; or &#8211;bssid &lt;bssid&gt;</i></p>
-<dd> Select the target network based on the access point MAC address.</p>
-<dt><i>-p &lt;nbcpu&gt;</i></p>
-<dd> Set this option to the number of CPUs to use (only available on SMP systems). By default, it uses all available CPUs</p>
-<dt><i>-q</i></p>
-<dd> If set, no status information is displayed.</p>
-<dt><i>-C &lt;macs&gt; or &#8211;combine &lt;macs&gt;</i></p>
-<dd> Merges all those APs MAC (separated by a comma) into a virtual one.</p>
-<dt><i>-l &lt;file&gt;</i></p>
-<dd> Write the key into a file.</p>
-<dt><i>-E &lt;file&gt;</i></p>
-<dd> Create Elcomsoft Wireless Security Auditor (EWSA) Project file v3.02.</dl>
+</dd><dt><i>-a &lt;amode&gt;</i></dt>
+<dd> Force the attack mode, 1 or wep for WEP and 2 or wpa for WPA-PSK.</dd>
+<dt><i>-e &lt;essid&gt;</i></dt>
+<dd> Select the target network based on the ESSID. This option is also required for WPA cracking if the SSID is cloacked. For SSID containing special characters, see <a rel="nofollow" href="http://www.aircrack-ng.org/doku.php?id=faq#how_to_use_spaces_double_quote_and_single_quote_etc._in_ap_names">http://www.aircrack-ng.org/doku.php?id=faq#how_to_use_spaces_double_quote_and_single_quote_etc._in_ap_names</a></dd>
+<dt><i>-b &lt;bssid&gt; or &#8211;bssid &lt;bssid&gt;</i></dt>
+<dd> Select the target network based on the access point MAC address.</dd>
+<dt><i>-p &lt;nbcpu&gt;</i></dt>
+<dd> Set this option to the number of CPUs to use (only available on SMP systems). By default, it uses all available CPUs</dd>
+<dt><i>-q</i></dt>
+<dd> If set, no status information is displayed.</dd>
+<dt><i>-C &lt;macs&gt; or &#8211;combine &lt;macs&gt;</i></dt>
+<dd> Merges all those APs MAC (separated by a comma) into a virtual one.</dd>
+<dt><i>-l &lt;file&gt;</i></dt>
+<dd> Write the key into a file.</dd>
+<dt><i>-E &lt;file&gt;</i></dt>
+<dd> Create Elcomsoft Wireless Security Auditor (EWSA) Project file v3.02.</dd></dl>
 <dl>
-<dt><code>Static WEP cracking options:</code></p>
+<dt><code>Static WEP cracking options:</code></dt>
 <dd>
-<dt><i>-c</i></p>
-<dd> Search alpha-numeric characters only.</p>
-<dt><i>-t</i></p>
-<dd> Search binary coded decimal characters only.</p>
-<dt><i>-h </i></p>
-<dd> Search the numeric key for Fritz!BOX</p>
-<dt><i>-d &lt;mask&gt; or &#8211;debug &lt;mask&gt;</i></p>
-<dd> Specify mask of the key. For example: A1:XX:CF</p>
-<dt><i>-m &lt;maddr&gt;</i></p>
-<dd> Only keep the IVs coming from packets that match this MAC address. Alternatively, use -m ff:ff:ff:ff:ff:ff to use all and every IVs, regardless of the network (this disables ESSID and BSSID filtering).</p>
-<dt><i>-n &lt;nbits&gt;</i></p>
-<dd> Specify the length of the key: 64 for 40-bit WEP, 128 for 104-bit WEP, etc., until 512 bits of length. The default value is 128.</p>
-<dt><i>-i &lt;index&gt;</i></p>
-<dd> Only keep the IVs that have this key index (1 to 4). The default behaviour is to ignore the key index in the packet, and use the IV regardless.</p>
-<dt><i>-f &lt;fudge&gt;</i></p>
-<dd> By default, this parameter is set to 2. Use a higher value to increase the bruteforce level: cracking will take more time, but with a higher likelihood of success.</p>
-<dt><i>-k &lt;korek&gt;</i></p>
-<dd> There are 17 KoreK attacks. Sometimes one attack creates a huge false positive that prevents the key from being found, even with lots of IVs. Try -k 1, -k 2, &#8230; -k 17 to disable each attack selectively.</p>
-<dt><i>-x or -x0</i></p>
-<dd> Disable last keybytes bruteforce (not advised).</p>
-<dt><i>-x1</i></p>
-<dd> Enable last keybyte bruteforcing (default)</p>
-<dt><i>-x2</i></p>
-<dd> Enable last two keybytes bruteforcing.</p>
-<dt><i>-X</i></p>
-<dd> Disable bruteforce multithreading (SMP only).</p>
-<dt><i>-s</i></p>
-<dd> Shows ASCII version of the key at the right of the screen.</p>
-<dt><i>-y </i></p>
-<dd> This is an experimental single brute-force attack which should only be used when the standard attack mode fails with more than one million IVs.</p>
-<dt><i>-z </i></p>
-<dd> Uses PTW (Andrei Pyshkin, Erik Tews and Ralf-Philipp Weinmann) attack (default attack).</p>
-<dt><i>-P &lt;num&gt; or &#8211;ptw-debug &lt;num&gt;</i></p>
-<dd> PTW debug: 1 Disable klein, 2 PTW.</p>
-<dt><i>-K</i></p>
-<dd> Use KoreK attacks instead of PTW.</p>
-<dt><i>-D or &#8211;wep-decloak</i></p>
-<dd> WEP decloak mode.</p>
-<dt><i>-1 or &#8211;oneshot</i></p>
-<dd> Run only 1 try to crack key with PTW.</p>
-<dt><i>-M &lt;num&gt;</i></p>
-<dd> Specify maximum number of IVs to use.</dl>
+</dd><dt><i>-c</i></dt>
+<dd> Search alpha-numeric characters only.</dd>
+<dt><i>-t</i></dt>
+<dd> Search binary coded decimal characters only.</dd>
+<dt><i>-h </i></dt>
+<dd> Search the numeric key for Fritz!BOX</dd>
+<dt><i>-d &lt;mask&gt; or &#8211;debug &lt;mask&gt;</i></dt>
+<dd> Specify mask of the key. For example: A1:XX:CF</dd>
+<dt><i>-m &lt;maddr&gt;</i></dt>
+<dd> Only keep the IVs coming from packets that match this MAC address. Alternatively, use -m ff:ff:ff:ff:ff:ff to use all and every IVs, regardless of the network (this disables ESSID and BSSID filtering).</dd>
+<dt><i>-n &lt;nbits&gt;</i></dt>
+<dd> Specify the length of the key: 64 for 40-bit WEP, 128 for 104-bit WEP, etc., until 512 bits of length. The default value is 128.</dd>
+<dt><i>-i &lt;index&gt;</i></dt>
+<dd> Only keep the IVs that have this key index (1 to 4). The default behaviour is to ignore the key index in the packet, and use the IV regardless.</dd>
+<dt><i>-f &lt;fudge&gt;</i></dt>
+<dd> By default, this parameter is set to 2. Use a higher value to increase the bruteforce level: cracking will take more time, but with a higher likelihood of success.</dd>
+<dt><i>-k &lt;korek&gt;</i></dt>
+<dd> There are 17 KoreK attacks. Sometimes one attack creates a huge false positive that prevents the key from being found, even with lots of IVs. Try -k 1, -k 2, &#8230; -k 17 to disable each attack selectively.</dd>
+<dt><i>-x or -x0</i></dt>
+<dd> Disable last keybytes bruteforce (not advised).</dd>
+<dt><i>-x1</i></dt>
+<dd> Enable last keybyte bruteforcing (default)</dd>
+<dt><i>-x2</i></dt>
+<dd> Enable last two keybytes bruteforcing.</dd>
+<dt><i>-X</i></dt>
+<dd> Disable bruteforce multithreading (SMP only).</dd>
+<dt><i>-s</i></dt>
+<dd> Shows ASCII version of the key at the right of the screen.</dd>
+<dt><i>-y </i></dt>
+<dd> This is an experimental single brute-force attack which should only be used when the standard attack mode fails with more than one million IVs.</dd>
+<dt><i>-z </i></dt>
+<dd> Uses PTW (Andrei Pyshkin, Erik Tews and Ralf-Philipp Weinmann) attack (default attack).</dd>
+<dt><i>-P &lt;num&gt; or &#8211;ptw-debug &lt;num&gt;</i></dt>
+<dd> PTW debug: 1 Disable klein, 2 PTW.</dd>
+<dt><i>-K</i></dt>
+<dd> Use KoreK attacks instead of PTW.</dd>
+<dt><i>-D or &#8211;wep-decloak</i></dt>
+<dd> WEP decloak mode.</dd>
+<dt><i>-1 or &#8211;oneshot</i></dt>
+<dd> Run only 1 try to crack key with PTW.</dd>
+<dt><i>-M &lt;num&gt;</i></dt>
+<dd> Specify maximum number of IVs to use.</dd></dl>
 <dl>
-<dt><code>WEP and WPA-PSK cracking options</code></p>
+<dt><code>WEP and WPA-PSK cracking options</code></dt>
 <dd>
-<dt><i>-w &lt;words&gt;</i></p>
-<dd> Path to a dictionary file for wpa cracking. Specify &quot;-&quot; to use stdin. Here is a list of wordlists: <a rel="nofollow" href="http://www.aircrack-ng.org/doku.php?id=faq#where_can_i_find_good_wordlists">http://www.aircrack-ng.org/doku.php?id=faq#where_can_i_find_good_wordlists</a></dl>
+</dd><dt><i>-w &lt;words&gt;</i></dt>
+<dd> Path to a dictionary file for wpa cracking. Specify &quot;-&quot; to use stdin. Here is a list of wordlists: <a rel="nofollow" href="http://www.aircrack-ng.org/doku.php?id=faq#where_can_i_find_good_wordlists">http://www.aircrack-ng.org/doku.php?id=faq#where_can_i_find_good_wordlists</a></dd></dl>
 <dl>
-<dt><code>WPA-PSK cracking options:</code></p>
+<dt><code>WPA-PSK cracking options:</code></dt>
 <dd>
-<dt><i>-S</i></p>
-<dd> WPA cracking speed test.</p>
-<dt><i>-r &lt;database&gt;</i></p>
-<dd> Path to the airolib-ng database. Cannot be used with &#8216;-w&#8217;.</dl>
+</dd><dt><i>-S</i></dt>
+<dd> WPA cracking speed test.</dd>
+<dt><i>-r &lt;database&gt;</i></dt>
+<dd> Path to the airolib-ng database. Cannot be used with &#8216;-w&#8217;.</dd></dl>
 <dl>
-<dt><code>Other options:</code></p>
+<dt><code>Other options:</code></dt>
 <dd>
-<dt><i>-H or &#8211;help</i></p>
-<dd> Show help screen</p>
-<dt><i>-u or &#8211;cpu-detect</i></p>
-<dd> Provide information on the number of CPUs and MMX/SSE support</dl>
+</dd><dt><i>-H or &#8211;help</i></dt>
+<dd> Show help screen</dd>
+<dt><i>-u or &#8211;cpu-detect</i></dt>
+<dd> Provide information on the number of CPUs and MMX/SSE support</dd></dl>
 <h2>AUTHOR</h2>
 <p> This manual page was written by Adam Cecile &lt;gandalf [at] le-vert.net&gt; for the Debian system (but may be used by others). Permission is granted to copy, distribute and/or modify this document under the terms of the GNU General Public License, Version 2 or any later version published by the Free Software Foundation On Debian systems, the complete text of the GNU General Public License can be found in /usr/share/common-licenses/GPL.</p>
 <h2>SEE ALSO</h2>

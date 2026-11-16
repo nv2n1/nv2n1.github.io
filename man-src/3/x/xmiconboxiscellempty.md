@@ -17,14 +17,14 @@ description: "XmIconBoxIsCellEmpty — A function that determines whether a cell
 <h2>Description</h2>
 <p><code>XmIconBoxIsCellEmpty</code> returns <code>True</code> if specified cell contains no child and <code>False</code> otherwise.</p>
 <dl COMPACT>
-<dt><i>widget</i></p>
-<dd>Specifies the IconBox widget ID</p>
-<dt><i>cell_x</i></p>
-<dd>Specifies the X location of the cell to check</p>
-<dt><i>cell_y</i></p>
-<dd>Specifies the Y location of the cell to check</p>
-<dt><i>ignore</i></p>
-<dd>If the widget ID specified by <code>ignore</code> is present in the specified cell, it will be ignored and the function will return <code>True</code></dl>
+<dt><i>widget</i></dt>
+<dd>Specifies the IconBox widget ID</dd>
+<dt><i>cell_x</i></dt>
+<dd>Specifies the X location of the cell to check</dd>
+<dt><i>cell_y</i></dt>
+<dd>Specifies the Y location of the cell to check</dd>
+<dt><i>ignore</i></dt>
+<dd>If the widget ID specified by <code>ignore</code> is present in the specified cell, it will be ignored and the function will return <code>True</code></dd></dl>
 <h2>Return</h2>
 <p>Returns <code>True</code> if the specified cell contains no child, and <code>False</code> otherwide.</p>
 <h2>Related</h2>

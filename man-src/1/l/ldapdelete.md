@@ -16,45 +16,45 @@ description: "ldapdelete – LDAP delete entry tool"
 <p> <code>ldapdelete</code> opens a connection to an LDAP server, binds, and deletes one or more entries. If one or more <i>DN</i> arguments are provided, entries with those Distinguished Names are deleted. Each <i>DN</i> should be provided using the LDAPv3 string representation as defined in RFC 4514. If no <i>DN</i> arguments are provided, a list of DNs is read from standard input (or from <i>file</i> if the <code>-f</code> flag is used).</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-V</code>[<code>V</code>]</p>
-<dd> Print version info. If <code>-VV</code> is given, only the version information is printed.</p>
-<dt><code>-d</code><i>&nbsp;<wbr>debuglevel</i></p>
-<dd> Set the LDAP debugging level to <i>debuglevel</i>. <code>ldapdelete</code> must be compiled with LDAP_DEBUG defined for this option to have any effect.</p>
-<dt><code>-n</code></p>
-<dd> Show what would be done, but don&#8217;t actually delete entries. Useful for debugging in conjunction with <code>-v</code>.</p>
-<dt><code>-v</code></p>
-<dd> Use verbose mode, with many diagnostics written to standard output.</p>
-<dt><code>-c</code></p>
-<dd> Continuous operation mode. Errors are reported, but <code>ldapdelete</code> will continue with deletions. The default is to exit after reporting an error.</p>
-<dt><code>-f</code><i>&nbsp;<wbr>file</i></p>
-<dd> Read a series of DNs from <i>file</i>, one per line, performing an LDAP delete for each.</p>
-<dt><code>-r</code></p>
-<dd> Do a recursive delete. If the DN specified isn&#8217;t a leaf, its children, and all their children are deleted down the tree. No verification is done, so if you add this switch, ldapdelete will happily delete large portions of your tree. Use with care.</p>
-<dt><code>-z</code><i>&nbsp;<wbr>sizelimit</i></p>
-<dd> Use <i>sizelimit</i> when searching for children DN to delete, to circumvent any server-side size limit. Only useful in conjunction with <code>-r</code>.</p>
-<dt><code>-M</code>[<code>M</code>]</p>
-<dd> Enable manage DSA IT control. <code>-MM</code> makes control critical.</p>
-<dt><code>-x </code></p>
-<dd> Use simple authentication instead of SASL.</p>
-<dt><code>-D</code><i>&nbsp;<wbr>binddn</i></p>
-<dd> Use the Distinguished Name <i>binddn</i> to bind to the LDAP directory. For SASL binds, the server is expected to ignore this value.</p>
-<dt><code>-W</code></p>
-<dd> Prompt for simple authentication. This is used instead of specifying the password on the command line.</p>
-<dt><code>-w</code><i>&nbsp;<wbr>passwd</i></p>
-<dd> Use <i>passwd</i> as the password for simple authentication.</p>
-<dt><code>-y</code><i>&nbsp;<wbr>passwdfile</i></p>
-<dd> Use complete contents of <i>passwdfile</i> as the password for simple authentication.</p>
-<dt><code>-H</code><i>&nbsp;<wbr>ldapuri</i></p>
-<dd> Specify URI(s) referring to the ldap server(s); only the protocol/host/port fields are allowed; a list of URI, separated by whitespace or commas is expected.</p>
-<dt><code>-h</code><i>&nbsp;<wbr>ldaphost</i></p>
-<dd> Specify an alternate host on which the ldap server is running. Deprecated in favor of <code>-H</code>.</p>
-<dt><code>-p</code><i>&nbsp;<wbr>ldapport</i></p>
-<dd> Specify an alternate TCP port where the ldap server is listening. Deprecated in favor of <code>-H</code>.</p>
-<dt><code>-P</code>&nbsp;<wbr>{<code>2</code>|<code>3</code>}</p>
-<dd> Specify the LDAP protocol version to use.</p>
-<dt><code>-e</code>&nbsp;<wbr>[<code>!</code>]<i>ext</i>[<code>=</code><i>extparam</i>]</p>
+<dt><code>-V</code>[<code>V</code>]</dt>
+<dd> Print version info. If <code>-VV</code> is given, only the version information is printed.</dd>
+<dt><code>-d</code><i>&nbsp;<wbr>debuglevel</i></dt>
+<dd> Set the LDAP debugging level to <i>debuglevel</i>. <code>ldapdelete</code> must be compiled with LDAP_DEBUG defined for this option to have any effect.</dd>
+<dt><code>-n</code></dt>
+<dd> Show what would be done, but don&#8217;t actually delete entries. Useful for debugging in conjunction with <code>-v</code>.</dd>
+<dt><code>-v</code></dt>
+<dd> Use verbose mode, with many diagnostics written to standard output.</dd>
+<dt><code>-c</code></dt>
+<dd> Continuous operation mode. Errors are reported, but <code>ldapdelete</code> will continue with deletions. The default is to exit after reporting an error.</dd>
+<dt><code>-f</code><i>&nbsp;<wbr>file</i></dt>
+<dd> Read a series of DNs from <i>file</i>, one per line, performing an LDAP delete for each.</dd>
+<dt><code>-r</code></dt>
+<dd> Do a recursive delete. If the DN specified isn&#8217;t a leaf, its children, and all their children are deleted down the tree. No verification is done, so if you add this switch, ldapdelete will happily delete large portions of your tree. Use with care.</dd>
+<dt><code>-z</code><i>&nbsp;<wbr>sizelimit</i></dt>
+<dd> Use <i>sizelimit</i> when searching for children DN to delete, to circumvent any server-side size limit. Only useful in conjunction with <code>-r</code>.</dd>
+<dt><code>-M</code>[<code>M</code>]</dt>
+<dd> Enable manage DSA IT control. <code>-MM</code> makes control critical.</dd>
+<dt><code>-x </code></dt>
+<dd> Use simple authentication instead of SASL.</dd>
+<dt><code>-D</code><i>&nbsp;<wbr>binddn</i></dt>
+<dd> Use the Distinguished Name <i>binddn</i> to bind to the LDAP directory. For SASL binds, the server is expected to ignore this value.</dd>
+<dt><code>-W</code></dt>
+<dd> Prompt for simple authentication. This is used instead of specifying the password on the command line.</dd>
+<dt><code>-w</code><i>&nbsp;<wbr>passwd</i></dt>
+<dd> Use <i>passwd</i> as the password for simple authentication.</dd>
+<dt><code>-y</code><i>&nbsp;<wbr>passwdfile</i></dt>
+<dd> Use complete contents of <i>passwdfile</i> as the password for simple authentication.</dd>
+<dt><code>-H</code><i>&nbsp;<wbr>ldapuri</i></dt>
+<dd> Specify URI(s) referring to the ldap server(s); only the protocol/host/port fields are allowed; a list of URI, separated by whitespace or commas is expected.</dd>
+<dt><code>-h</code><i>&nbsp;<wbr>ldaphost</i></dt>
+<dd> Specify an alternate host on which the ldap server is running. Deprecated in favor of <code>-H</code>.</dd>
+<dt><code>-p</code><i>&nbsp;<wbr>ldapport</i></dt>
+<dd> Specify an alternate TCP port where the ldap server is listening. Deprecated in favor of <code>-H</code>.</dd>
+<dt><code>-P</code>&nbsp;<wbr>{<code>2</code>|<code>3</code>}</dt>
+<dd> Specify the LDAP protocol version to use.</dd>
+<dt><code>-e</code>&nbsp;<wbr>[<code>!</code>]<i>ext</i>[<code>=</code><i>extparam</i>]</dt>
 <dd>
-<dt><code>-E</code>&nbsp;<wbr>[<code>!</code>]<i>ext</i>[<code>=</code><i>extparam</i>]</p>
+</dd><dt><code>-E</code>&nbsp;<wbr>[<code>!</code>]<i>ext</i>[<code>=</code><i>extparam</i>]</dt>
 <dd>
 <p> Specify general extensions with <code>-e</code> and delete extensions with <code>-E</code>. &#8216;<code>!</code>&#8216; indicates criticality. </p>
 <p> General extensions: </p>
@@ -76,7 +76,7 @@ description: "ldapdelete – LDAP delete entry tool"
 <pre>
   (none)
 </pre>
-<dt><code>-o</code><i>&nbsp;<wbr>opt</i>[=<i>optparam</i>]</p>
+</dd><dt><code>-o</code><i>&nbsp;<wbr>opt</i>[=<i>optparam</i>]</dt>
 <dd>
 <p> Specify general options. </p>
 <p> General options: </p>
@@ -84,24 +84,24 @@ description: "ldapdelete – LDAP delete entry tool"
   nettimeout=&lt;timeout&gt;  (in seconds, or &quot;none&quot; or &quot;max&quot;)
   ldif-wrap=&lt;width&gt;     (in columns, or &quot;no&quot; for no wrapping)
 </pre>
-<dt><code>-O</code><i>&nbsp;<wbr>security-properties</i></p>
-<dd> Specify SASL security properties.</p>
-<dt><code>-I</code></p>
-<dd> Enable SASL Interactive mode. Always prompt. Default is to prompt only as needed.</p>
-<dt><code>-Q</code></p>
-<dd> Enable SASL Quiet mode. Never prompt.</p>
-<dt><code>-N</code></p>
-<dd> Do not use reverse DNS to canonicalize SASL host name.</p>
-<dt><code>-U</code><i>&nbsp;<wbr>authcid</i></p>
-<dd> Specify the authentication ID for SASL bind. The form of the identity depends on the actual SASL mechanism used.</p>
-<dt><code>-R</code><i>&nbsp;<wbr>realm</i></p>
-<dd> Specify the realm of authentication ID for SASL bind. The form of the realm depends on the actual SASL mechanism used.</p>
-<dt><code>-X</code><i>&nbsp;<wbr>authzid</i></p>
-<dd> Specify the requested authorization ID for SASL bind. <i>authzid</i> must be one of the following formats: <code>dn:</code><i>&lt;distinguished name&gt;</i> or <code>u:</code><i>&lt;username&gt;</i></p>
-<dt><code>-Y</code><i>&nbsp;<wbr>mech</i></p>
-<dd> Specify the SASL mechanism to be used for authentication. If it&#8217;s not specified, the program will choose the best mechanism the server knows.</p>
-<dt><code>-Z</code>[<code>Z</code>]</p>
-<dd> Issue StartTLS (Transport Layer Security) extended operation. If you use <code>-ZZ</code>, the command will require the operation to be successful.</dl>
+</dd><dt><code>-O</code><i>&nbsp;<wbr>security-properties</i></dt>
+<dd> Specify SASL security properties.</dd>
+<dt><code>-I</code></dt>
+<dd> Enable SASL Interactive mode. Always prompt. Default is to prompt only as needed.</dd>
+<dt><code>-Q</code></dt>
+<dd> Enable SASL Quiet mode. Never prompt.</dd>
+<dt><code>-N</code></dt>
+<dd> Do not use reverse DNS to canonicalize SASL host name.</dd>
+<dt><code>-U</code><i>&nbsp;<wbr>authcid</i></dt>
+<dd> Specify the authentication ID for SASL bind. The form of the identity depends on the actual SASL mechanism used.</dd>
+<dt><code>-R</code><i>&nbsp;<wbr>realm</i></dt>
+<dd> Specify the realm of authentication ID for SASL bind. The form of the realm depends on the actual SASL mechanism used.</dd>
+<dt><code>-X</code><i>&nbsp;<wbr>authzid</i></dt>
+<dd> Specify the requested authorization ID for SASL bind. <i>authzid</i> must be one of the following formats: <code>dn:</code><i>&lt;distinguished name&gt;</i> or <code>u:</code><i>&lt;username&gt;</i></dd>
+<dt><code>-Y</code><i>&nbsp;<wbr>mech</i></dt>
+<dd> Specify the SASL mechanism to be used for authentication. If it&#8217;s not specified, the program will choose the best mechanism the server knows.</dd>
+<dt><code>-Z</code>[<code>Z</code>]</dt>
+<dd> Issue StartTLS (Transport Layer Security) extended operation. If you use <code>-ZZ</code>, the command will require the operation to be successful.</dd></dl>
 <h2>EXAMPLE</h2>
 <p> The following command: </p>
 <pre>

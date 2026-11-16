@@ -20,45 +20,42 @@ description: "uuid – Universally Unique Identifier Command-Line Tool"
 <p> This is the command line interface (<font SIZE="-1">CLI</font>) of <font SIZE="-1"><code>OSSP</code></font><code> uuid</code>. For a detailed description of UUIDs see the documentation of the application programming interface (<font SIZE="-1">API</font>) in <i><a href="/docs/linux/man/3-uuid/">uuid</a></i>(3).</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-v</code> <i>version</i></p>
-<dd> Sets the version of the generated <font SIZE="-1">DCE 1.1</font> variant <font SIZE="-1">UUID.</font> Supported are <i>version</i> &quot;<tt>1</tt>&#8220;, &#8221;<tt>3</tt>&#8220;, &#8221;<tt>4</tt>&#8220; and &#8221;<tt>5</tt>&#8220;. The default is &#8221;<tt>1</tt>&quot;. </p>
+<dt><code>-v</code> <i>version</i></dt>
+<dd> Sets the version of the generated <font SIZE="-1">DCE 1.1</font> variant <font SIZE="-1">UUID.</font> Supported are <i>version</i> &quot;<tt>1</tt>&#8220;, &#8221;<tt>3</tt>&#8220;, &#8221;<tt>4</tt>&#8220; and &#8221;<tt>5</tt>&#8220;. The default is &#8221;<tt>1</tt>&quot;. </dd>
 <p> For version 3 and version 5 UUIDs the additional command line arguments <i>namespace</i> and <i>name</i> have to be given. The <i>namespace</i> is either a <font SIZE="-1">UUID</font> in string representation or an identifier for internally pre-defined namespace UUIDs (currently known are &quot;<tt> ns:DNS<br />
  </tt>&#8220;, &#8221;<tt> ns:URL<br />
  </tt>&#8220;, &#8221;<tt> ns:OID<br />
  </tt>&#8220;, and &#8221;<tt> ns:X500<br />
  </tt>&quot;). The <i>name</i> is a string of arbitrary length.</p>
-<dt><code>-m</code></p>
-<dd> Forces the use of a random multi-cast <font SIZE="-1">MAC</font> address when generating version 1 UUIDs. By default the real physical <font SIZE="-1">MAC</font> address of the system is used.</p>
-<dt><code>-n</code> <i>count</i></p>
-<dd> Generate <i>count</i> UUIDs instead of just a single one (the default).</p>
-<dt><code>-1</code></p>
-<dd> If option <code>-n</code> is used with a <i>count</i> greater than <tt>1</tt>, then this option can enforce the reset the <font SIZE="-1">UUID</font> context for each generated <font SIZE="-1">UUID.</font> This makes no difference for <i>version</i> <tt>3</tt>, <tt>4</tt> and <tt>5</tt> UUIDs. But version <tt>1</tt> UUIDs are based on the previously generated <font SIZE="-1">UUID</font> which is remembered in the <font SIZE="-1">UUID</font> context of the <font SIZE="-1">API.</font> Option <code>-1</code> deletes the remembered <font SIZE="-1">UUID</font> on each iteration.</p>
-<dt><code>-F</code> <i>format</i></p>
-<dd> Representation format for importing or exporting an <font SIZE="-1">UUID.</font> The following (case insensitive) format identifiers are currently recognized:</p>
+<dt><code>-m</code></dt>
+<dd> Forces the use of a random multi-cast <font SIZE="-1">MAC</font> address when generating version 1 UUIDs. By default the real physical <font SIZE="-1">MAC</font> address of the system is used.</dd>
+<dt><code>-n</code> <i>count</i></dt>
+<dd> Generate <i>count</i> UUIDs instead of just a single one (the default).</dd>
+<dt><code>-1</code></dt>
+<dd> If option <code>-n</code> is used with a <i>count</i> greater than <tt>1</tt>, then this option can enforce the reset the <font SIZE="-1">UUID</font> context for each generated <font SIZE="-1">UUID.</font> This makes no difference for <i>version</i> <tt>3</tt>, <tt>4</tt> and <tt>5</tt> UUIDs. But version <tt>1</tt> UUIDs are based on the previously generated <font SIZE="-1">UUID</font> which is remembered in the <font SIZE="-1">UUID</font> context of the <font SIZE="-1">API.</font> Option <code>-1</code> deletes the remembered <font SIZE="-1">UUID</font> on each iteration.</dd>
+<dt><code>-F</code> <i>format</i></dt>
+<dd> Representation format for importing or exporting an <font SIZE="-1">UUID.</font> The following (case insensitive) format identifiers are currently recognized:</dd>
 <dl>
-<dt>
-<dd>
 <dl>
 <dt> BIN<br />
- (binary representation)</p>
+ (binary representation)</dt>
 <dd> This is the raw 128 bit network byte order binary representation of a <font SIZE="-1">UUID.</font> Example is the octet stream <tt> 0xF8 0x1D 0x4F 0xAE 0x7D 0xEC 0x11 0xD0 0xA7 0x65 0x00 0xA0 0xC9 0x1E 0x6B 0xF6<br />
- </tt>.</p>
+ </tt>.</dd>
 <dt> STR<br />
- (string representation)</p>
+ (string representation)</dt>
 <dd> This is the 36 character hexadecimal <font SIZE="-1">ASCII</font> string representation of a <font SIZE="-1">UUID.</font> Example is the string &quot;<tt> f81d4fae-7dec-11d0-a765-00a0c91e6bf6<br />
- </tt>&quot;.</p>
+ </tt>&quot;.</dd>
 <dt> SIV<br />
- (single integer value representation)</p>
-<dd> This is the maximum 39 character long single integer value representation of a <font SIZE="-1">UUID.</font> Example is the string &quot;<tt>329800735698586629295641978511506172918</tt>&quot;.</dl>
+ (single integer value representation)</dt>
+<dd> This is the maximum 39 character long single integer value representation of a <font SIZE="-1">UUID.</font> Example is the string &quot;<tt>329800735698586629295641978511506172918</tt>&quot;.</dd></dl>
 </dl>
 <dl>
-<dt>
-<dd></dl>
-<dt><code>-o</code> <i>filename</i></p>
-<dd> Write output to <i>filename</i> instead of to <i>stdout</i>.</p>
-<dt><code>-d</code></p>
+</dl>
+<dt><code>-o</code> <i>filename</i></dt>
+<dd> Write output to <i>filename</i> instead of to <i>stdout</i>.</dd>
+<dt><code>-d</code></dt>
 <dd> Decode a given <font SIZE="-1">UUID</font> (given as a command line argument or if the command line argument is &quot;<tt> -<br />
- </tt>&quot; the <font SIZE="-1">UUID</font> is read from <i>stdin</i>) and dump textual information about the <font SIZE="-1">UUID.</font></dl>
+ </tt>&quot; the <font SIZE="-1">UUID</font> is read from <i>stdin</i>) and dump textual information about the <font SIZE="-1">UUID.</font></dd></dl>
 <h2>EXAMPLES</h2>
 <pre>
  # generate DCE 1.1 v1 UUID (time and node based)

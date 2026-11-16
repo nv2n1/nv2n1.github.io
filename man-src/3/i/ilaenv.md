@@ -19,7 +19,7 @@ description: "ilaenv.f –"
 <p> <code>Purpose: </code></p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre><code>
  ILAENV is called from the LAPACK routines to choose problem-dependent
  parameters for the local environment.  See ISPEC for a description of
@@ -35,11 +35,11 @@ description: "ilaenv.f –"
  This routine will not function correctly if it is converted to all
  lower case.  Converting it to all upper case is allowed.
 </code></pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>ISPEC</i> </p>
+</dt><dd> <i>ISPEC</i> </dd>
 <pre><code>
 ISPEC is INTEGER
     Specifies the parameter to be returned as the value of
@@ -109,18 +109,18 @@ if the usable block size is less than
 <p> <code>Author:</code></p>
 <dl>
 <dt>
-<dd> Univ. of Tennessee </p>
+</dt><dd> Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl>
 <dt>
-<dd> November 2011</dl>
+</dt><dd> November 2011</dd></dl>
 <p> <code>Further Details: </code></p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
   The following conventions have been used when calling ILAENV from the
   LAPACK routines:
@@ -138,8 +138,9 @@ if the usable block size is less than
       NB = ILAENV( 1, 'STRTRI', UPLO // DIAG, N, -1, -1, -1 )
       IF( NB.LE.1 ) NB = MAX( 1, N )
 </pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> Definition at line 163 of file ilaenv.f.</p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for LAPACK from the source code. </p>
 <h2>Index</h2>
+</p>

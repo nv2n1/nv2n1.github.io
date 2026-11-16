@@ -10,7 +10,6 @@ description: "umad_get_issm_path – get path of issm device"
 <p>umad_get_issm_path &#8211; get path of issm device</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;infiniband/umad.h&gt;
-
 int umad_get_issm_path(char *ca_name, int portnum, char *path, intmax);</code></pre>
 <h2>Description</h2>
 <p><code>umad_get_issm_path()</code> resolves path to issm device (which used for setting/clearing PortInfo:CapMask IsSM bit) for <i>portnum</i> of the IB device <i>ca_name</i> , it stores resolved path in <i>path</i> array which cannot exceed <i>max</i> bytes in length (including NULL terminator). Opening issm device sets PortInfo:CapMask IsSM bit and closing clears it.</p>
@@ -22,5 +21,5 @@ int umad_get_issm_path(char *ca_name, int portnum, char *path, intmax);</code></
 <p><code><a href="/docs/linux/man/3-umad_open_port/">umad_open_port</a></code>(3), <code><a href="/docs/linux/man/3-umad_get_port/">umad_get_port</a></code>(3)</p>
 <h2>Author</h2>
 <dl>
-<dt>Sasha Khapyorsky &lt;sashak [at] voltaire.com&gt;</p>
-<dd></dl>
+<dt>Sasha Khapyorsky &lt;sashak [at] voltaire.com&gt;</dt>
+<dd></dd></dl>

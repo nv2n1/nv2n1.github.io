@@ -14,10 +14,10 @@ description: "clk_round_rate – adjust a rate to the exact rate a clock can pro
 <p><i>clk</i></p>
 <dl>
 <dd>
-<dd>clock source</dl>
+</dd><dd>clock source</dd></dl>
 <p> <i>rate</i></p>
 <dl>
-<dd>desired clock rate in Hz</dl>
+<dd>desired clock rate in Hz</dd></dl>
 <h2>Description</h2>
 <p>This answers the question &#8220;if I were to pass <i>rate</i> to <code>clk_set_rate</code>, what clock rate would I end up with?&#8221; without changing the hardware in any way. In other words: clk_set_rate(clk, r); rate = clk_get_rate(clk); and: </p>
 <pre><code>clk_set_rate(clk, r); rate = clk_get_rate(clk);</code></pre>

@@ -18,32 +18,32 @@ description: "sshpk-sign – sign data using an SSH key"
 <p> Signing with default settings: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 $ printf 'foo' | sshpk-sign -i ~/.ssh/id_ecdsa
 MEUCIAMdLS/vXrrtWFepwe...
 </pre>
-</dl>
+</dd></dl>
 <p> Signing in SSH (RFC 4253) format (rather than the default ASN.1): </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 $ printf 'foo' | sshpk-sign -i ~/.ssh/id_ecdsa -t ssh
 AAAAFGVjZHNhLXNoYTIt...
 </pre>
-</dl>
+</dd></dl>
 <p> Saving the binary signature to a file: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 $ printf 'foo' | sshpk-sign -i ~/.ssh/id_ecdsa \
                             -o signature.bin -b
 $ cat signature.bin | base64
 MEUCIAMdLS/vXrrtWFepwe...
 </pre>
-</dl>
+</dd></dl>
 <h2>OPTIONS</h2>
 <p> <code>-v, &#8211;verbose</code><br />
 &nbsp;<wbr>&nbsp;Print extra information about the key and signature to stderr when signing. </p>

@@ -21,10 +21,10 @@ description: "Tspi_Context_FreeMemory – Free allocated memory for a given cont
 <code>#include &lt;tss/tspi.h&gt;</code>
 <br>
 <dl COMPACT><dt><code>TSS_RESULT Tspi_Context_FreeMemory(TSS_HCONTEXT </code><i>hContext</i><code>, BYTE* </code><i>rgbMemory</i><code>);</code></pre>
-</dl>
+</dt></dl>
 <h2>Description</h2>
 <p><code>Tspi_Context_FreeMemory</code> frees memory allocated by the TSS Service Provider on a per-context basis.</p>
-<dd>This should be used before Tspi_Context_Close is called, to avoid memory leaks. </p>
+<dd>This should be used before Tspi_Context_Close is called, to avoid memory leaks. </dd>
 <h2>Parameters</h2>
 <h3>hContext</h3>
 <p>The <i>hContext</i> parameter is the handle to the local context.</p>
@@ -33,10 +33,10 @@ description: "Tspi_Context_FreeMemory – Free allocated memory for a given cont
 <h2>Return Codes</h2>
 <p><code>Tspi_Context_FreeMemory</code> returns TSS_SUCCESS on success, otherwise one of the following values is returned:</p>
 <dl COMPACT>
-<dt><font SIZE="-1">TSS_E_INVALID_HANDLE</font></p>
-<dd><i>hContext</i> is not a valid handle. </p>
-<dt><font SIZE="-1">TSS_E_INTERNAL_ERROR</font></p>
-<dd>An internal SW error has been detected. </p>
+<dt><font SIZE="-1">TSS_E_INVALID_HANDLE</font></dt>
+<dd><i>hContext</i> is not a valid handle. </dd>
+<dt><font SIZE="-1">TSS_E_INTERNAL_ERROR</font></dt>
+<dd>An internal SW error has been detected. </dd>
 </dl>
 <h2>Conforming To</h2>
 <p><code>Tspi_Context_FreeMemory</code> conforms to the Trusted Computing Group Software Specification version 1.1 Golden </p>

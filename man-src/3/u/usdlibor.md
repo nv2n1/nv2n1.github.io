@@ -11,11 +11,8 @@ description: "ql/indexes/ibor/usdlibor.hpp – USD LIBOR rate"
 <h2>Synopsis</h2>
 <pre><code>
 #include &lt;ql/indexes/ibor/libor.hpp&gt;
-
 #include &lt;ql/time/calendars/unitedstates.hpp&gt;
-
 #include &lt;ql/time/daycounters/actual360.hpp&gt;
-
 #include &lt;ql/currencies/america.hpp&gt;</code></pre>
 <h3>Classes</h3>
 <p>class <code>USDLibor</code><br />

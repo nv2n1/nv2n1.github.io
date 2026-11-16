@@ -14,11 +14,11 @@ description: "rio_release_dev – Frees a RIO device struct"
 <p><i>dev</i></p>
 <dl>
 <dd>
-<dd>LDM device associated with a RIO device struct</dl>
+</dd><dd>LDM device associated with a RIO device struct</dd></dl>
 <h2>Description</h2>
 <p>Gets the RIO device struct associated a RIO device struct. The RIO device struct is freed.</p>
 <h2>Author</h2>
 <p><code>Matt Porter</code> &lt;mporter [at] kernel.crashing.org&gt;, &lt;mporter [at] mvista.com&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

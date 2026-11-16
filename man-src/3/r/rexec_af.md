@@ -10,10 +10,8 @@ description: "rexec, rexec_af – return stream to a remote command"
 <p>rexec, rexec_af &#8211; return stream to a remote command</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;netdb.h&gt;
-
 int rexec(char **ahost, int inport, const char *user,
           const char *passwd, const char *cmd, int *fd2p);
-
 int rexec_af(char **ahost, int inport, const char *user,
              const char *passwd, const char *cmd, int *fd2p,
              sa_family_t af);</code></pre>

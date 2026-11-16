@@ -19,7 +19,7 @@ description: "stgex2.f –"
 <p> <code>Purpose: </code></p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
  STGEX2 swaps adjacent diagonal blocks (A11, B11) and (A22, B22)
  of size 1-by-1 or 2-by-2 in an upper (quasi) triangular matrix pair
@@ -32,11 +32,11 @@ description: "stgex2.f –"
         Q(in) * A(in) * Z(in)**T = Q(out) * A(out) * Z(out)**T
         Q(in) * B(in) * Z(in)**T = Q(out) * B(out) * Z(out)**T
 </pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>WANTQ</i> </p>
+</dt><dd> <i>WANTQ</i> </dd>
 <pre>
           WANTQ is LOGICAL
           .TRUE. : update the left transformation matrix Q;
@@ -141,26 +141,26 @@ description: "stgex2.f –"
 <p> <code>Author:</code></p>
 <dl>
 <dt>
-<dd> Univ. of Tennessee </p>
+</dt><dd> Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl>
 <dt>
-<dd> September 2012</dl>
+</dt><dd> September 2012</dd></dl>
 <p> <code>Further Details: </code></p>
 <dl>
 <dt>
-<dd> In the current code both weak and strong stability tests are performed. The user can omit the strong stability test by changing the internal logical parameter WANDS to .FALSE.. See ref. [2] for details.</dl>
+</dt><dd> In the current code both weak and strong stability tests are performed. The user can omit the strong stability test by changing the internal logical parameter WANDS to .FALSE.. See ref. [2] for details.</dd></dl>
 <p> <code>Contributors: </code></p>
 <dl>
 <dt>
-<dd> Bo Kagstrom and Peter Poromaa, Department of Computing Science, Umea University, S-901 87 Umea, Sweden.</dl>
+</dt><dd> Bo Kagstrom and Peter Poromaa, Department of Computing Science, Umea University, S-901 87 Umea, Sweden.</dd></dl>
 <p> <code>References: </code></p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre><code>
 [1] B.Kagstrom; A Direct Method for Reordering Eigenvalues in the
       Generalized Real Schur Form of a Regular Matrix Pair (A, B), in
@@ -175,8 +175,9 @@ Computing Eigenspaces with Specified
     Algorithms and Software,
     Report UMINF - 94.04, Department of Computing Science, Umea University, S - 901 87 Umea, Sweden, 1994. Also as LAPACK Working Note 87. To appear in Numerical Algorithms, 1996.
 </code></pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> Definition at line 221 of file stgex2.f.</p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for LAPACK from the source code. </p>
 <h2>Index</h2>
+</p>

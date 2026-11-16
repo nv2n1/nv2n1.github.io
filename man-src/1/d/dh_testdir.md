@@ -15,8 +15,8 @@ description: "dh_testdir – test directory before building Debian package"
 <p> <code>dh_testdir</code> tries to make sure that you are in the correct directory when building a Debian package. It makes sure that the file <i>debian/control</i> exists, as well as any other files you specify. If not, it exits with an error.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><i>file</i> &#8230;</p>
-<dd> Test for the existence of these files too.</dl>
+<dt><i>file</i> &#8230;</dt>
+<dd> Test for the existence of these files too.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <i><a href="/docs/linux/man/7-debhelper/">debhelper</a></i>(7) </p>
 <p> This program is a part of debhelper.</p>

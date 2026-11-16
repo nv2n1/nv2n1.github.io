@@ -12,7 +12,6 @@ std::shared_timed_mutex::try_lock_shared_for - std::shared_timed_mutex::try_lock
 
 <pre><code>template &lt;class Rep, class Period&gt;
 (since C++ 14)
-
     bool try_lock_shared_for(const std::chrono::duration&lt;Rep, Period&gt; &amp;timeout_duration);</code></pre> 
 Tries to lock the mutex in shared mode. Blocks until specified timeout_duration has elapsed or the shared lock is acquired, whichever comes first. On successful lock acquisition returns true, otherwise returns false. 
 If timeout_duration is less or equal timeout_duration.zero(), the function behaves like try_lock_shared(). 

@@ -23,7 +23,7 @@ description: "bundle-cache – Package your needed .gem files into your applicat
 <dd>
 <pre>source &quot;<a rel="nofollow" href="https://rubygems.org">https://rubygems.org</a>&quot;
 gem &quot;nokogiri&quot;</pre>
-<dd></dl>
+</dd><dd></dd></dl>
 <p> If you run <code>bundle cache</code> under C Ruby, bundler will retrieve the version of <code>nokogiri</code> for the <code>&quot;ruby&quot;</code> platform. If you deploy to JRuby and run <code>bundle install</code>, bundler is forced to check to see whether a <code>&quot;java&quot;</code> platformed <code>nokogiri</code> exists. </p>
 <p> Even though the <code>nokogiri</code> gem for the Ruby platform is <i>technically</i> acceptable on JRuby, it has a C extension that does not run on JRuby. As a result, bundler will, by default, still connect to <code>rubygems.org</code> to check whether it has a version of one of your gems more specific to your platform. </p>
 <p> This problem is also not limited to the <code>&quot;java&quot;</code> platform. A similar (common) problem can happen when developing on Windows and deploying to Linux, or even when developing on OSX and deploying to Linux. </p>

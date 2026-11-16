@@ -15,14 +15,14 @@ description: "era_dump – dump era metadata from device or file to standard out
 <p> This tool cannot be run on live metadata.</p>
 <h2>Options</h2>
 <dl>
-<dt><code>-h</code>, <code>&#8211;help</code></p>
-<dd>Print help and exit.</p>
-<dt><code>-V</code>, <code>&#8211;version</code></p>
-<dd>Print version information and exit.</p>
-<dt><code>&#8211;repair</code></p>
-<dd>Repair the metadata whilst dumping it.</p>
-<dt><code>&#8211;logical</code></p>
-<dd>Fold any unprocessed write sets into the final era array.</dl>
+<dt><code>-h</code>, <code>&#8211;help</code></dt>
+<dd>Print help and exit.</dd>
+<dt><code>-V</code>, <code>&#8211;version</code></dt>
+<dd>Print version information and exit.</dd>
+<dt><code>&#8211;repair</code></dt>
+<dd>Repair the metadata whilst dumping it.</dd>
+<dt><code>&#8211;logical</code></dt>
+<dd>Fold any unprocessed write sets into the final era array.</dd></dl>
 <pre> You probably want to do this if you're intending to process the results as
  it simplifies the XML.</pre>
 <p><code>-o</code> {xml file} Specify a file for the output rather than writeing to stdout.</p>

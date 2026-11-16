@@ -14,14 +14,14 @@ description: "gnutls_pubkey_verify_hash – API function"
 <p> <code>int gnutls_pubkey_verify_hash(gnutls_pubkey_t </code><i>key</i><code>, unsigned int </code><i>flags</i><code>, const gnutls_datum_t * </code><i>hash</i><code>, const gnutls_datum_t * </code><i>signature</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
-<dt>gnutls_pubkey_t key</p>
-<dd> Holds the public key</p>
-<dt>unsigned int flags</p>
-<dd> Zero or one of <code>gnutls_pubkey_flags_t</code></p>
-<dt>const gnutls_datum_t * hash</p>
-<dd> holds the hash digest to be verified</p>
-<dt>const gnutls_datum_t * signature</p>
-<dd> contains the signature</dl>
+<dt>gnutls_pubkey_t key</dt>
+<dd> Holds the public key</dd>
+<dt>unsigned int flags</dt>
+<dd> Zero or one of <code>gnutls_pubkey_flags_t</code></dd>
+<dt>const gnutls_datum_t * hash</dt>
+<dd> holds the hash digest to be verified</dd>
+<dt>const gnutls_datum_t * signature</dt>
+<dd> contains the signature</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> This function will verify the given signed digest, using the parameters from the public key. </p>
 <p> Deprecated. This function cannot be easily used securely. Use <code>gnutls_pubkey_verify_hash2()</code> instead.</p>
@@ -38,6 +38,6 @@ description: "gnutls_pubkey_verify_hash – API function"
 <h2>SEE ALSO</h2>
 <p> The full documentation for <code>gnutls</code> is maintained as a Texinfo manual. If the /usr/share/doc/gnutls/ directory does not contain the HTML form visit <code></p>
 <dl>
-<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></p>
-<dd> </code></dl>
+<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></dt>
+<dd> </code></dd></dl>
 <h2>Index</h2>

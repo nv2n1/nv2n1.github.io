@@ -15,15 +15,15 @@ blkdev_issue_flush - queue a flush
 <h2>Arguments</h2>
 
 <i>bdev</i>
-<dl><dd><dd>blockdev to issue flush for</dl>
+<dl><dd></dd><dd>blockdev to issue flush for</dd></dl>
  
 
  <i>gfp_mask</i>
-<dl><dd>memory allocation flags (for bio_alloc)</dl>
+<dl><dd>memory allocation flags (for bio_alloc)</dd></dl>
  
 
  <i>error_sector</i>
-<dl><dd>error sector</dl>
+<dl><dd>error sector</dd></dl>
 
 <h2>Description</h2>
 

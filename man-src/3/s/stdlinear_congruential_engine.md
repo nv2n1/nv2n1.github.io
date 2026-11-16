@@ -12,10 +12,8 @@ std::linear_congruential_engine&lt;UIntType,a,c,m&gt;::seed - std::linear_congru
 
 <pre><code>void seed(result_type value = default_seed);
 (1)(since C++ 11)
-
     template &lt;class Sseq&gt;
     (2)(since C++ 11)
-
         void seed(Sseq &amp;seq);</code></pre> 
 Reinitializes the internal state of the random-number engine using new seed value. 
 &nbsp;This section is incomplete 

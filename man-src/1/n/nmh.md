@@ -27,29 +27,27 @@ description: "nmh – new MH message system"
 <p> Commands which take a message number as an argument ( <code>scan</code>, <code>show</code>, <code>repl</code>, &#8230;) also take one of the words: &#8220;first&#8221;, &#8220;prev&#8221;, &#8220;cur&#8221;, &#8220;next&#8221;, or &#8220;last&#8221; to indicate (respectively) the first, previous, current, next, or last message in the current folder (assuming they are defined). </p>
 <p> Commands which take a range of message numbers ( <code>rmm</code>, <code>scan</code>, <code>show</code>, &#8230;) also take any of the abbreviations: </p>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt><i>&lt;num1&gt;</i>&#8211;<i>&lt;num2&gt;</i></p>
-<dd> Indicates all messages in the range &lt;num1&gt; to &lt;num2&gt;, inclusive. The range must be nonempty.</p>
-<dt><i>&lt;num&gt;</i>:+<i>N</i></p>
+<dt><i>&lt;num1&gt;</i>&#8211;<i>&lt;num2&gt;</i></dt>
+<dd> Indicates all messages in the range &lt;num1&gt; to &lt;num2&gt;, inclusive. The range must be nonempty.</dd>
+<dt><i>&lt;num&gt;</i>:+<i>N</i></dt>
 <dd>
-<dt><i>&lt;num&gt;</i>:-<i>N</i></p>
-<dd> Up to <i>N</i> messages beginning with (or ending with) message <i>num</i>. <i>Num</i> may be any of the pre-defined symbols: <i>first</i>, <i>prev</i>, <i>cur</i>, <i>next</i> or <i>last</i>.</p>
-<dt>first:<i>N</i></p>
+</dd><dt><i>&lt;num&gt;</i>:-<i>N</i></dt>
+<dd> Up to <i>N</i> messages beginning with (or ending with) message <i>num</i>. <i>Num</i> may be any of the pre-defined symbols: <i>first</i>, <i>prev</i>, <i>cur</i>, <i>next</i> or <i>last</i>.</dd>
+<dt>first:<i>N</i></dt>
 <dd>
-<dt>prev:<i>N</i></p>
+</dd><dt>prev:<i>N</i></dt>
 <dd>
-<dt>next:<i>N</i></p>
+</dd><dt>next:<i>N</i></dt>
 <dd>
-<dt>last:<i>N</i></p>
-<dd> The first, previous, next or last messages, if they exist.</dl>
+</dd><dt>last:<i>N</i></dt>
+<dd> The first, previous, next or last messages, if they exist.</dd></dl>
 </dl>
 <p> There are many other possibilities such as creating multiple folders for different topics, and automatically refiling messages according to subject, source, destination, or content. These are beyond the scope of this manual entry. </p>
 <p> Following is a list of all the <code>nmh</code> commands: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre><code>
 ^ali(1)~^- list mail aliases
 ^anno(1)~^- annotate messages
@@ -109,7 +107,7 @@ description: "nmh – new MH message system"
 ^install-mh(8)~^- initialize the nmh environment
 ^post(8)~^- deliver a message
 </code></pre>
-</dl>
+</dd></dl>
 <h2>FILES</h2>
 <pre>
 ^/usr/bin~^contains <i>nmh</i> commands

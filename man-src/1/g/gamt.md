@@ -16,23 +16,23 @@ description: "gamt – Intel AMT serial-over-lan (sol) client."
 <p> For more inforamtions on Intel AMT check <a href="/docs/linux/man/7-amt-howto/">amt-howto</a>(7).</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-h</code></p>
-<dd> Display help text.</p>
-<dt><code>-u &lt;user&gt;</code></p>
-<dd> Specify username, defaults to &quot;admin&quot;.</p>
-<dt><code>-p &lt;pass&gt;</code></p>
-<dd> Specify password. <code>gamt</code> will prompt you if unspecified.</p>
-<dt><code>-f &lt;font&gt;</code></p>
-<dd> Specify terminal font, defaults to &quot;monospace 12&quot;.</p>
-<dt><code>-c &lt;color&gt;</code></p>
-<dd> Specify terminal text color, defaults to &quot;gray&quot;.</p>
-<dt><code>-b &lt;color&gt;</code></p>
-<dd> Specify terminal background color, defaults to &quot;black&quot;.</dl>
+<dt><code>-h</code></dt>
+<dd> Display help text.</dd>
+<dt><code>-u &lt;user&gt;</code></dt>
+<dd> Specify username, defaults to &quot;admin&quot;.</dd>
+<dt><code>-p &lt;pass&gt;</code></dt>
+<dd> Specify password. <code>gamt</code> will prompt you if unspecified.</dd>
+<dt><code>-f &lt;font&gt;</code></dt>
+<dd> Specify terminal font, defaults to &quot;monospace 12&quot;.</dd>
+<dt><code>-c &lt;color&gt;</code></dt>
+<dd> Specify terminal text color, defaults to &quot;gray&quot;.</dd>
+<dt><code>-b &lt;color&gt;</code></dt>
+<dd> Specify terminal background color, defaults to &quot;black&quot;.</dd></dl>
 <p> Font, colors can also be changed using menu options. These settings are also written to the <code>~/.gamtrc</code> config file, so they persistent.</p>
 <h2>ENVIRONMENT</h2>
 <dl>
-<dt><code>AMT_PASSWORD</code></p>
-<dd> Default value for the password.</dl>
+<dt><code>AMT_PASSWORD</code></dt>
+<dd> Default value for the password.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/1-amtterm/">amtterm</a>(1), <a href="/docs/linux/man/1-amttool/">amttool</a>(1), <a href="/docs/linux/man/7-amt-howto/">amt-howto</a>(7)</p>
 <h2>AUTHOR</h2>

@@ -15,13 +15,13 @@ CALL NNGETASPECTD (I,J,ASPECT,IER)
 <h2>Description</h2>
 
 <dl><dt>I
-<dd>(Integer, Input) - A subscript indexing the first dimensioned variable in the output grid of the most recent call to NATGRIDD.
-<dt>J
-<dd>(Integer, Input) - A subscript indexing the second dimensioned variable in the output grid of the most recent call to NATGRIDD.
-<dt>ASPECT
-<dd>(Double precision, Output) - The slope at the grid point Z(I,J), where Z is the output grid in the most recent call to NATGRIDD.
-<dt>IER
-<dd>(Integer, Output) - An error return value. If IER is returned as 0, then no errors were detected. If IER is non-zero, then refer to the man page for natgrid_errors for details.</dl>
+</dt><dd>(Integer, Input) - A subscript indexing the first dimensioned variable in the output grid of the most recent call to NATGRIDD.
+</dd><dt>J
+</dt><dd>(Integer, Input) - A subscript indexing the second dimensioned variable in the output grid of the most recent call to NATGRIDD.
+</dd><dt>ASPECT
+</dt><dd>(Double precision, Output) - The slope at the grid point Z(I,J), where Z is the output grid in the most recent call to NATGRIDD.
+</dd><dt>IER
+</dt><dd>(Integer, Output) - An error return value. If IER is returned as 0, then no errors were detected. If IER is non-zero, then refer to the man page for natgrid_errors for details.</dd></dl>
 
 <h2>Access</h2>
 

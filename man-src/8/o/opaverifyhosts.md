@@ -13,25 +13,25 @@ description: "opaverifyhosts Verifies basic node configuration and performance b
  [-h <i>hosts</i>] [-T <i>timelimit</i>] [ <i>test</i>&#8230;]</p>
 <h2>Options</h2>
 <dl>
-<dt>&#8211;help</p>
-<dd>Produces full help text. </p>
-<dt>-k</p>
-<dd>At start and end of verification, kills any existing hostverify or xhpl jobs on the hosts. </p>
-<dt>-c</p>
-<dd>Copies hostverify.sh to hosts first, useful if you have edited it. </p>
-<dt>-f <i>hostfile</i></p>
-<dd>File with hosts in cluster. Default is /etc/sysconfig/opa/hosts. </p>
-<dt>-h <i>hosts</i></p>
-<dd>List of hosts to ping. </p>
-<dt>-u <i>upload_file</i></p>
-<dd>Filename to upload hostverify.res to after verification to allow backup and review of the detailed results for each node. The default upload destination file is hostverify.res. If -u &#8221; is specified, no upload occurs. </p>
-<dt>-d <i>upload_dir</i></p>
-<dd>Directory to upload result from each host to. Default is uploads. </p>
-<dt>-T <i>timelimit</i></p>
-<dd>Time limit in seconds for host to complete tests. Default is 300 seconds (5 minutes). </p>
+<dt>&#8211;help</dt>
+<dd>Produces full help text. </dd>
+<dt>-k</dt>
+<dd>At start and end of verification, kills any existing hostverify or xhpl jobs on the hosts. </dd>
+<dt>-c</dt>
+<dd>Copies hostverify.sh to hosts first, useful if you have edited it. </dd>
+<dt>-f <i>hostfile</i></dt>
+<dd>File with hosts in cluster. Default is /etc/sysconfig/opa/hosts. </dd>
+<dt>-h <i>hosts</i></dt>
+<dd>List of hosts to ping. </dd>
+<dt>-u <i>upload_file</i></dt>
+<dd>Filename to upload hostverify.res to after verification to allow backup and review of the detailed results for each node. The default upload destination file is hostverify.res. If -u &#8221; is specified, no upload occurs. </dd>
+<dt>-d <i>upload_dir</i></dt>
+<dd>Directory to upload result from each host to. Default is uploads. </dd>
+<dt>-T <i>timelimit</i></dt>
+<dd>Time limit in seconds for host to complete tests. Default is 300 seconds (5 minutes). </dd>
 <dt>
-&nbsp;<wbr><i>test</i>&nbsp;<wbr></p>
-<dd>One or more specific tests to run. See /usr/lib/opa-ff/samples/hostverify.sh for a list of available tests. </p>
+&nbsp;<wbr><i>test</i>&nbsp;<wbr></dt>
+<dd>One or more specific tests to run. See /usr/lib/opa-ff/samples/hostverify.sh for a list of available tests. </dd>
 </dl>
 <h2>Examples</h2>
 <p>opaverifyhosts -c<br />
@@ -39,12 +39,12 @@ description: "opaverifyhosts Verifies basic node configuration and performance b
  HOSTS=&#8217;arwen elrond&#8217; opaverifyhosts</p>
 <h2>Environment Variables</h2>
 <dl>
-<dt><code>HOSTS</code></p>
-<dd>List of hosts, used if -h option not supplied. </p>
-<dt><code>HOSTS_FILE</code></p>
-<dd>File containing list of hosts, used in absence of -f and -h. </p>
-<dt><code>UPLOADS_DIR</code></p>
-<dd>Directory to upload to, used in absence of -d. </p>
-<dt><code>FF_MAX_PARALLEL</code></p>
-<dd>Maximum concurrent operations. </p>
+<dt><code>HOSTS</code></dt>
+<dd>List of hosts, used if -h option not supplied. </dd>
+<dt><code>HOSTS_FILE</code></dt>
+<dd>File containing list of hosts, used in absence of -f and -h. </dd>
+<dt><code>UPLOADS_DIR</code></dt>
+<dd>Directory to upload to, used in absence of -d. </dd>
+<dt><code>FF_MAX_PARALLEL</code></dt>
+<dd>Maximum concurrent operations. </dd>
 </dl>

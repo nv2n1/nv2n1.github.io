@@ -22,20 +22,20 @@ description: "cockpit – Cockpit"
 <p> m[blue]<code>Cockpit Guide</code>m[]<font SIZE="-2">[3]</font>, <code><a href="/docs/linux/man/8-cockpit-ws/">cockpit-ws</a></code>(8), <code><a href="/docs/linux/man/1-cockpit-bridge/">cockpit-bridge</a></code>(1), <code><a href="/docs/linux/man/5-cockpit-conf/">cockpit.conf</a></code>(5), <code><a href="/docs/linux/man/1-systemd/">systemd</a></code>(1)</p>
 <h2>NOTES</h2>
 <dl>
-<dt> 1.</p>
-<dd> upstream bug tracker</p>
+<dt> 1.</dt>
+<dd> upstream bug tracker</dd>
 <dl>
 <dt>
-<dd> <a rel="nofollow" href="https://github.com/cockpit-project/cockpit/issues/new">https://github.com/cockpit-project/cockpit/issues/new</a></dl>
-<dt> 2.</p>
-<dd> contributors</p>
+</dt><dd> <a rel="nofollow" href="https://github.com/cockpit-project/cockpit/issues/new">https://github.com/cockpit-project/cockpit/issues/new</a></dd></dl>
+<dt> 2.</dt>
+<dd> contributors</dd>
 <dl>
 <dt>
-<dd> <a rel="nofollow" href="https://github.com/cockpit-project/cockpit/">https://github.com/cockpit-project/cockpit/</a></dl>
-<dt> 3.</p>
-<dd> Cockpit Guide</p>
+</dt><dd> <a rel="nofollow" href="https://github.com/cockpit-project/cockpit/">https://github.com/cockpit-project/cockpit/</a></dd></dl>
+<dt> 3.</dt>
+<dd> Cockpit Guide</dd>
 <dl>
 <dt>
-<dd> <a rel="nofollow" href="http://cockpit-project.org/guide/latest/">http://cockpit-project.org/guide/latest/</a></dl>
+</dt><dd> <a rel="nofollow" href="http://cockpit-project.org/guide/latest/">http://cockpit-project.org/guide/latest/</a></dd></dl>
 </dl>
 <h2>Index</h2>

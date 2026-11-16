@@ -16,12 +16,12 @@ description: "struct_nand_data_interface – NAND interface timing"
 <h2>Members</h2>
 <p>type</p>
 <dl>
-<dd>type of the timing</dl>
+<dd>type of the timing</dd></dl>
 <p> timings</p>
 <dl>
-<dd>The timing, type according to <i>type</i></dl>
+<dd>The timing, type according to <i>type</i></dd></dl>
 <h2>Author</h2>
 <p><code>Thomas Gleixner</code> &lt;tglx [at] linutronix.de&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

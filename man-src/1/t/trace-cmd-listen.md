@@ -17,23 +17,23 @@ description: "trace-cmd-listen – listen for incoming connection to record trac
 <p> <code>-p</code> <i>port</i></p>
 <dl>
 <dt>
-<dd> This option will specify the port to listen to.</dl>
+</dt><dd> This option will specify the port to listen to.</dd></dl>
 <p> <code>-D</code></p>
 <dl>
 <dt>
-<dd> This options causes trace-cmd listen to go into a daemon mode and run in the background.</dl>
+</dt><dd> This options causes trace-cmd listen to go into a daemon mode and run in the background.</dd></dl>
 <p> <code>-d</code> <i>dir</i></p>
 <dl>
 <dt>
-<dd> This option specifies a directory to write the data files into.</dl>
+</dt><dd> This option specifies a directory to write the data files into.</dd></dl>
 <p> <code>-o</code> <i>filename</i></p>
 <dl>
 <dt>
-<dd> This option overrides the default <i>trace</i> in the <i>trace.HOST:PORT.dat</i> that is created when a remote host connects.</dl>
+</dt><dd> This option overrides the default <i>trace</i> in the <i>trace.HOST:PORT.dat</i> that is created when a remote host connects.</dd></dl>
 <p> <code>-l</code> <i>filename</i></p>
 <dl>
 <dt>
-<dd> This option writes the output messages to a log file instead of standard output.</dl>
+</dt><dd> This option writes the output messages to a log file instead of standard output.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/1-trace-cmd/">trace-cmd</a>(1), <a href="/docs/linux/man/1-trace-cmd-record/">trace-cmd-record</a>(1), <a href="/docs/linux/man/1-trace-cmd-report/">trace-cmd-report</a>(1), <a href="/docs/linux/man/1-trace-cmd-start/">trace-cmd-start</a>(1), <a href="/docs/linux/man/1-trace-cmd-stop/">trace-cmd-stop</a>(1), <a href="/docs/linux/man/1-trace-cmd-extract/">trace-cmd-extract</a>(1), <a href="/docs/linux/man/1-trace-cmd-reset/">trace-cmd-reset</a>(1), <a href="/docs/linux/man/1-trace-cmd-split/">trace-cmd-split</a>(1), <a href="/docs/linux/man/1-trace-cmd-list/">trace-cmd-list</a>(1)</p>
 <h2>AUTHOR</h2>
@@ -44,10 +44,10 @@ description: "trace-cmd-listen – listen for incoming connection to record trac
 <p> Copyright (C) 2010 Red Hat, Inc. Free use of this software is granted under the terms of the GNU Public License (GPL).</p>
 <h2>NOTES</h2>
 <dl>
-<dt> 1.</p>
-<dd> rostedt [at] goodmis.org</p>
+<dt> 1.</dt>
+<dd> rostedt [at] goodmis.org</dd>
 <dl>
 <dt>
-<dd> mailto:rostedt [at] goodmis.org</dl>
+</dt><dd> mailto:rostedt [at] goodmis.org</dd></dl>
 </dl>
 <h2>Index</h2>

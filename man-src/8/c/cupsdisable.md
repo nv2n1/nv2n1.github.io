@@ -16,20 +16,20 @@ description: "cupsdisable, cupsenable – stop/start printers and classes"
 <h2>Options</h2>
 <p>The following options may be used:</p>
 <dl>
-<dt><code>-E</code></p>
-<dd>Forces encryption of the connection to the server.</p>
-<dt><code>-U </code><i>username</i></p>
-<dd>Uses the specified username when connecting to the server.</p>
-<dt><code>-c</code></p>
-<dd>Cancels all jobs on the named destination.</p>
-<dt><code>-h </code><i>server</i>[<code>:</code><i>port</i>]</p>
-<dd>Uses the specified server and port.</p>
-<dt><code>&#8211;hold</code></p>
-<dd>Holds remaining jobs on the named printer. Useful for allowing the current job to complete before performing maintenance.</p>
-<dt><code>-r &quot;</code><i>reason</i><code>&quot;</code></p>
-<dd>Sets the message associated with the stopped state. If no reason is specified then the message is set to &quot;Reason Unknown&quot;.</p>
-<dt><code>&#8211;release</code></p>
-<dd>Releases pending jobs for printing. Use after running <code>cupsdisable</code> with the <i>&#8211;hold</i> option to resume printing.</dl>
+<dt><code>-E</code></dt>
+<dd>Forces encryption of the connection to the server.</dd>
+<dt><code>-U </code><i>username</i></dt>
+<dd>Uses the specified username when connecting to the server.</dd>
+<dt><code>-c</code></dt>
+<dd>Cancels all jobs on the named destination.</dd>
+<dt><code>-h </code><i>server</i>[<code>:</code><i>port</i>]</dt>
+<dd>Uses the specified server and port.</dd>
+<dt><code>&#8211;hold</code></dt>
+<dd>Holds remaining jobs on the named printer. Useful for allowing the current job to complete before performing maintenance.</dd>
+<dt><code>-r &quot;</code><i>reason</i><code>&quot;</code></dt>
+<dd>Sets the message associated with the stopped state. If no reason is specified then the message is set to &quot;Reason Unknown&quot;.</dd>
+<dt><code>&#8211;release</code></dt>
+<dd>Releases pending jobs for printing. Use after running <code>cupsdisable</code> with the <i>&#8211;hold</i> option to resume printing.</dd></dl>
 <h2>Conforming To</h2>
 <p>Unlike the System V printing system, CUPS allows printer names to contain any printable character except SPACE, TAB, &quot;/&quot;, or &quot;#&quot;. Also, printer and class names are <i>not</i> case-sensitive. </p>
 <p> The System V versions of these commands are <code>disable</code> and <code>enable</code>, respectively. They have been renamed to avoid conflicts with the <code><a href="/docs/linux/man/1-bash/">bash</a></code>(1) build-in commands of the same names. </p>

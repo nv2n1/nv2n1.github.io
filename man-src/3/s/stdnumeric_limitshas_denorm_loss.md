@@ -11,7 +11,6 @@ description: "std::numeric_limits<T>::has_denorm_loss – std::numeric_limits<T>
 <h2>Synopsis</h2>
 <pre><code>static const bool has_denorm_loss;
 (until C++ 11)
-
     static constexpr bool has_denorm_loss;
 (since C++ 11)</code></pre>
 <p>The value of std::numeric_limits&lt;T&gt;::has_denorm_loss is true for all floating-point types T that detect loss of precision when creating a subnormal number as denormalization loss rather than as inexact result (see below). </p>

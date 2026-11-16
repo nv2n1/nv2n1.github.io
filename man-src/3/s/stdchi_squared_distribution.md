@@ -11,9 +11,7 @@ std::chi_squared_distribution - std::chi_squared_distribution
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header &lt;random&gt;
-
 template&lt; class RealType = double &gt;  (since C++11)
-
 class chi_squared_distribution;</code></pre> 
 The chi_squared_distribution produces random numbers x&gt;0 according to the Chi-squared_distribution: 
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;f(x;n) = 

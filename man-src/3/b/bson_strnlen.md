@@ -17,12 +17,14 @@ bson_strnlen(const char *s,
 </code></pre>
 <h2>PARAMETERS</h2>
 <dl>
-<dt><code>s</code></p>
-<dd> A string.</dl>
+<dt><code>s</code></dt>
+<dd> A string.</dd></dl>
 <dl>
-<dt><code>maxlen</code></p>
-<dd> The maximum size of string to check.</dl>
+<dt><code>maxlen</code></dt>
+<dd> The maximum size of string to check.</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> A portable version of <code><a href="/docs/linux/man/3-strnlen/">strnlen</a>(3)</code> \&amp;. </p>
 <h2>RETURNS</h2>
 <p> The length of <code>s</code> in bytes or <code>maxlen</code> if no <code>
+</p>
+</code>

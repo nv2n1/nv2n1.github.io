@@ -58,7 +58,7 @@ description: "QuantLib::OneFactorCopula – Abstract base class for one-factor c
 <p> [ F(y) = Prob ,(Y &lt; y) = int_{-infty}^infty D_Z(z),dz: int_{-infty}^{h(y,a,z)} D_M(m),dm, qquad h(y,a,z) = ac{y &#8211; qrt{1 &#8211; a^2}dot z}{a}, qquad a &gt; 0. ].PPIn general, $ F_Y(y) $ needs to be computed numerically. </p>
 <p> <code>Possible enhancements</code></p>
 <dl COMPACT>
-<dd>Improve on simple Euler integration</dl>
+<dd>Improve on simple Euler integration</dd></dl>
 <h2>Member Function Documentation</h2>
 <h3>virtual Real density (Real m) const [pure virtual]</h3>
 <p>Density function of M. </p>

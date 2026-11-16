@@ -31,9 +31,9 @@ url: "/docs/linux/man/1-podspell/"
 
 <dl>
 <dt>&bull;
-<dd> Sean M. Burke &lt;sburke [at] cpan.org&gt;
-<dt>&bull;
-<dd> Caleb Cushing &lt;xenoterracide [at] gmail.com&gt;</dl>
+</dt><dd> Sean M. Burke &lt;sburke [at] cpan.org&gt;
+</dd><dt>&bull;
+</dt><dd> Caleb Cushing &lt;xenoterracide [at] gmail.com&gt;</dd></dl>
 
 <h2>COPYRIGHT AND LICENSE</h2>
 

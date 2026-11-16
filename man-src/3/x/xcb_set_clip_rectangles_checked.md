@@ -10,41 +10,39 @@ description: "xcb_set_clip_rectangles –"
 <p>xcb_set_clip_rectangles &#8211;</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;xcb/xproto.h&gt;
-
 Request function
-
     xcb_void_cookie_t
     xcb_set_clip_rectangles(xcb_connection_t *conn, uint8_t ordering, xcb_gcontext_t gc, int16_t clip_x_origin, int16_t clip_y_origin, uint32_t rectangles_len, const xcb_rectangle_t *rectangles);</code></pre>
 <h2>Request Arguments</h2>
 <dl>
-<dt><i>conn</i></p>
-<dd>The XCB connection to X11.</p>
-<dt><i>ordering</i></p>
-<dd>One of the following values:</p>
+<dt><i>conn</i></dt>
+<dd>The XCB connection to X11.</dd>
+<dt><i>ordering</i></dt>
+<dd>One of the following values:</dd>
 <dl>
 <dd>
-<dl>
-<dt><i>XCB_CLIP_ORDERING_UNSORTED</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>XCB_CLIP_ORDERING_Y_SORTED</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>XCB_CLIP_ORDERING_YX_SORTED</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>XCB_CLIP_ORDERING_YX_BANDED</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</dl>
+</dd><dl>
+<dt><i>XCB_CLIP_ORDERING_UNSORTED</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>XCB_CLIP_ORDERING_Y_SORTED</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>XCB_CLIP_ORDERING_YX_SORTED</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>XCB_CLIP_ORDERING_YX_BANDED</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd></dl>
 </dl>
 <dl>
-<dd>TODO: NOT YET DOCUMENTED.</dl>
-<dt><i>gc</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>clip_x_origin</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>clip_y_origin</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>rectangles_len</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>rectangles</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</dl>
+<dd>TODO: NOT YET DOCUMENTED.</dd></dl>
+<dt><i>gc</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>clip_x_origin</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>clip_y_origin</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>rectangles_len</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>rectangles</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd></dl>
 <h2>Description</h2>
 <h2>Return Value</h2>
 <p>Returns an <i>xcb_void_cookie_t</i>. Errors (if any) have to be handled in the event loop. </p>

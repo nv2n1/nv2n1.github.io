@@ -35,18 +35,18 @@ description: "Tspi_GetAttribData – get a non 32bit attribute of the object."
 <h2>Return Codes</h2>
 <p><code>Tspi_GetAttribData</code> returns TSS_SUCCESS on success, otherwise one of the following values are returned:</p>
 <dl COMPACT>
-<dt><font SIZE="-1">TSS_E_INVALID_HANDLE &#8211; Either <i>hObject</i>, <i>attribFlag</i>, or <i>subFlag</i> are invalid.</font></p>
+<dt><font SIZE="-1">TSS_E_INVALID_HANDLE &#8211; Either <i>hObject</i>, <i>attribFlag</i>, or <i>subFlag</i> are invalid.</font></dt>
 <dd>
-<dt><font SIZE="-1">TSS_E_ATTRIB_FLAG</font></p>
+</dd><dt><font SIZE="-1">TSS_E_ATTRIB_FLAG</font></dt>
 <dd>
-<dt><font SIZE="-1">TSS_E_ATTRIB_SUBFLAG</font></p>
+</dd><dt><font SIZE="-1">TSS_E_ATTRIB_SUBFLAG</font></dt>
 <dd>
-<dt><font SIZE="-1">TSS_E_ATTRIB_DATA</font></p>
+</dd><dt><font SIZE="-1">TSS_E_ATTRIB_DATA</font></dt>
 <dd>
-<dt><font SIZE="-1">TSS_E_BAD_PARAMETER</font></p>
+</dd><dt><font SIZE="-1">TSS_E_BAD_PARAMETER</font></dt>
 <dd>
-<dt><font SIZE="-1">TSS_E_INTERNAL_ERROR &#8211; An error occurred internal to the TSS.</font></p>
-<dd></dl>
+</dd><dt><font SIZE="-1">TSS_E_INTERNAL_ERROR &#8211; An error occurred internal to the TSS.</font></dt>
+<dd></dd></dl>
 <h2>Conforming To</h2>
 <p><code>Tspi_GetAttribData</code> conforms to the Trusted Computing Group Software Specification version 1.1 Golden</p>
 <h2>See Also</h2>

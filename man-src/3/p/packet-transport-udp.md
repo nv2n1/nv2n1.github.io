@@ -29,10 +29,10 @@ UDP(
 <code>__init__(self, pktt)</code>
 Constructor
 Initialize object's private data.
-<dl><dt><dd><dl><dt><code>pktt:</code>
-<dd>Packet trace object (packet.pktt.Pktt) so this layer has
+<dl><dl><dt><code>pktt:</code>
+</dt><dd>Packet trace object (packet.pktt.Pktt) so this layer has
 access to the parent layers.
-</dl></dl></pre>
+</dd></dl></dl></pre>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/3-baseobj/">baseobj</a>(3),</code> <code><a href="/docs/linux/man/3-packet-application-rpc/">packet.application.rpc</a>(3)</code> </p>
 <h2>Bugs</h2>

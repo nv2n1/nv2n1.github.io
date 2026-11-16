@@ -28,10 +28,8 @@ FONT *tempfont;
     lower_range = extract_font_range(myfont, -1, 'A' - 1);
 upper_range = extract_font_range(myfont, 'Z' + 1, -1);
 capitals = extract_font_range(myfancy_font, 'A', 'Z');
-
 tempfont = merge_fonts(lower_range, capitals);
 combined_font = merge_fonts(tempfont, upper_range);
-
 /* Clean up temporary fonts */
 destroy_font(lower_range);
 destroy_font(upper_range);

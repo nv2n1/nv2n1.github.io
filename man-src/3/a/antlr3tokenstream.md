@@ -47,9 +47,9 @@ description: "include/antlr3tokenstream.h –"
 <p> Definition of the ANTLR3 common token stream interface. <code>Remarks:</code></p>
 <dl>
 <dt>
-<dd> Much of the documentation for this interface is stolen from Ter&#8217;s Java implementation.</dl>
+</dt><dd> Much of the documentation for this interface is stolen from Ter&#8217;s Java implementation.</dd></dl>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for ANTLR3C from the source code. </p>
 <h2>Index</h2>
-<dt><a href="#lbAK">Author</a></p>
-<dd></dl>
+<dt><a href="#lbAK">Author</a></dt>
+<dd></dd></dl>

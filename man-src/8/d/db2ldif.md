@@ -15,45 +15,45 @@ description: "db2ldif – Directory Server script for exporting the database"
 <h2>Options</h2>
 <p>A summary of options is included below:</p>
 <dl>
-<dt><code>-Z</code> <i>Server Identifier</i></p>
-<dd>The server ID of the Directory Server instance. If there is only one instance on the system, this option can be skipped.</p>
-<dt><code>-n</code> <i>Backend Name</i></p>
-<dd>The name of the LDBM database to reindex. Example: userRoot</p>
-<dt><code>-s</code> <i>includeSuffix</i></p>
-<dd>Specifies suffixes to be included in the LDIF file.</p>
-<dt><code>-x</code> <i>excludeSuffix</i></p>
-<dd>Specifies suffixes to be excluded from the LDIF file.</p>
-<dt><code>-a</code> <i>Output File</i></p>
-<dd>The name for the LDIF file.</p>
-<dt><code>-m</code></p>
-<dd>Minimize the base64 encodings in the exported LDIF file.</p>
-<dt><code>-M</code></p>
+<dt><code>-Z</code> <i>Server Identifier</i></dt>
+<dd>The server ID of the Directory Server instance. If there is only one instance on the system, this option can be skipped.</dd>
+<dt><code>-n</code> <i>Backend Name</i></dt>
+<dd>The name of the LDBM database to reindex. Example: userRoot</dd>
+<dt><code>-s</code> <i>includeSuffix</i></dt>
+<dd>Specifies suffixes to be included in the LDIF file.</dd>
+<dt><code>-x</code> <i>excludeSuffix</i></dt>
+<dd>Specifies suffixes to be excluded from the LDIF file.</dd>
+<dt><code>-a</code> <i>Output File</i></dt>
+<dd>The name for the LDIF file.</dd>
+<dt><code>-m</code></dt>
+<dd>Minimize the base64 encodings in the exported LDIF file.</dd>
+<dt><code>-M</code></dt>
 <dd>Exported ldif is stored in multiple files. These files are named : &lt;instance&gt;_&lt;filename&gt;<br />
- By default, all instances are stored in the filename specified by the -a option.</p>
-<dt><code>-r</code></p>
-<dd>Export replication data(information required to initialize a replica when the LDIF is imported).</p>
-<dt><code>-u</code></p>
-<dd>Do not export the unique-id attribute.</p>
-<dt><code>-U</code></p>
-<dd>Requests that the output LDIF is not folded.</p>
-<dt><code>-C</code></p>
-<dd>Uses only the main database file.</p>
-<dt><code>-N</code></p>
-<dd>Suppress printing sequential number</p>
-<dt><code>-E</code></p>
-<dd>Decrypts any encrypted data during export.</p>
-<dt><code>-1</code></p>
-<dd>Deletes, for reasons of backward compatibility, the first line of the LDIF file that gives the version of the LDIF standard.</p>
-<dt><code>-q</code></p>
-<dd>Quiet mode. Suppresses output of the script.</p>
-<dt><code>-h</code></p>
-<dd>Display the usage.</dl>
+ By default, all instances are stored in the filename specified by the -a option.</dd>
+<dt><code>-r</code></dt>
+<dd>Export replication data(information required to initialize a replica when the LDIF is imported).</dd>
+<dt><code>-u</code></dt>
+<dd>Do not export the unique-id attribute.</dd>
+<dt><code>-U</code></dt>
+<dd>Requests that the output LDIF is not folded.</dd>
+<dt><code>-C</code></dt>
+<dd>Uses only the main database file.</dd>
+<dt><code>-N</code></dt>
+<dd>Suppress printing sequential number</dd>
+<dt><code>-E</code></dt>
+<dd>Decrypts any encrypted data during export.</dd>
+<dt><code>-1</code></dt>
+<dd>Deletes, for reasons of backward compatibility, the first line of the LDIF file that gives the version of the LDIF standard.</dd>
+<dt><code>-q</code></dt>
+<dd>Quiet mode. Suppresses output of the script.</dd>
+<dt><code>-h</code></dt>
+<dd>Display the usage.</dd></dl>
 <h2>Example</h2>
 <dl>
-<dt>db2ldif -Z instance3 -n userRoot -a /LDAP/ldif/export.ldif</p>
+<dt>db2ldif -Z instance3 -n userRoot -a /LDAP/ldif/export.ldif</dt>
 <dd>
-<dt>db2ldif -s &#8216;dc=example,dc=com&#8217; -a /LDAP/ldif/export.ldif -m -E -q</p>
-<dd></dl>
+</dd><dt>db2ldif -s &#8216;dc=example,dc=com&#8217; -a /LDAP/ldif/export.ldif -m -E -q</dt>
+<dd></dd></dl>
 <h2>Diagnostics</h2>
 <p>Exit status is zero if no errors occur. Errors result in a non-zero exit status and a diagnostic message being written to standard error.</p>
 <h2>Author</h2>

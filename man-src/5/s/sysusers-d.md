@@ -38,22 +38,22 @@ g input - -
 m _authd input
 u root 0 &quot;Superuser&quot; /root /bin/zsh
 r - 500-900</pre>
-</dl>
+</dd></dl>
 <p> Empty lines and lines beginning with the &quot;#&quot; character are ignored, and may be used for commenting.</p>
 <h3>Type</h3>
 <p>The type consists of a single letter. The following line types are understood: </p>
 <p> <i>u</i></p>
 <dl>
-<dd>Create a system user and group of the specified name should they not exist yet. The user&#8217;s primary group will be set to the group bearing the same name unless the ID field specifies it. The account will be created disabled, so that logins are not allowed.</dl>
+<dd>Create a system user and group of the specified name should they not exist yet. The user&#8217;s primary group will be set to the group bearing the same name unless the ID field specifies it. The account will be created disabled, so that logins are not allowed.</dd></dl>
 <p> <i>g</i></p>
 <dl>
-<dd>Create a system group of the specified name should it not exist yet. Note that <i>u</i> implicitly creates a matching group. The group will be created with no password set.</dl>
+<dd>Create a system group of the specified name should it not exist yet. Note that <i>u</i> implicitly creates a matching group. The group will be created with no password set.</dd></dl>
 <p> <i>m</i></p>
 <dl>
-<dd>Add a user to a group. If the user or group do not exist yet, they will be implicitly created.</dl>
+<dd>Add a user to a group. If the user or group do not exist yet, they will be implicitly created.</dd></dl>
 <p> <i>r</i></p>
 <dl>
-<dd>Add a range of numeric UIDs/GIDs to the pool to allocate new UIDs and GIDs from. If no line of this type is specified, the range of UIDs/GIDs is set to some compiled-in default. Note that both UIDs and GIDs are allocated from the same pool, in order to ensure that users and groups of the same name are likely to carry the same numeric UID and GID.</dl>
+<dd>Add a range of numeric UIDs/GIDs to the pool to allocate new UIDs and GIDs from. If no line of this type is specified, the range of UIDs/GIDs is set to some compiled-in default. Note that both UIDs and GIDs are allocated from the same pool, in order to ensure that users and groups of the same name are likely to carry the same numeric UID and GID.</dd></dl>
 <h3>Name</h3>
 <p>The name field specifies the user or group name. The specified name must consist only of the characters a-z, A-Z, 0-9, &quot;_&quot; and &quot;-&quot;, except for the first character which must be one of a-z, A-Z or &quot;_&quot; (i.e. numbers and &quot;-&quot; are not permitted as first character). The user/group name must have at least one character, and at most 31. </p>
 <p> For further details about the syntax of user/group names, see m[blue]<code>User/Group Name Syntax</code>m[]<font SIZE="-2">[1]</font>. </p>
@@ -181,7 +181,8 @@ r - 500-900</pre>
 <p><code><a href="/docs/linux/man/1-systemd/">systemd</a></code>(1), <code><a href="/docs/linux/man/8-systemd-sysusers/">systemd-sysusers</a></code>(8)</p>
 <h2>Notes</h2>
 <dl>
-<dt> 1.</p>
-<dd>User/Group Name Syntax</p>
+<dt> 1.</dt>
+<dd>User/Group Name Syntax</dd>
 <dl>
-<dd><a rel="nofollow" href="https://systemd.io/USER_NAMES">https://systemd.io/USER_NAMES</a></dl>
+<dd><a rel="nofollow" href="https://systemd.io/USER_NAMES">https://systemd.io/USER_NAMES</a></dd></dl>
+</dl>

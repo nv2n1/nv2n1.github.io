@@ -27,36 +27,36 @@ description: "oggz-chop — Extract the part of an Ogg file between given start 
 &nbsp;<wbr></p>
 <h3>Output options</h3>
 <dl>
-<dt>-o <code>filename</code>, &#8211;output <code>filename</code></p>
+<dt>-o <code>filename</code>, &#8211;output <code>filename</code></dt>
 <dd> Write output to the specified <code>filename</code> instead of printing it to standard output.<br />
-&nbsp;<wbr></p>
-<dt>-s <code>start_time</code>, &#8211;start <code>start_time</code></p>
+&nbsp;<wbr></dd>
+<dt>-s <code>start_time</code>, &#8211;start <code>start_time</code></dt>
 <dd> Specify the start time of the chopped section to output.<br />
-&nbsp;<wbr></p>
-<dt>-e <code>end_time</code>, &#8211;end <code>end_time</code></p>
+&nbsp;<wbr></dd>
+<dt>-e <code>end_time</code>, &#8211;end <code>end_time</code></dt>
 <dd> Specify the end time of the chopped section to output.<br />
-&nbsp;<wbr></p>
-<dt>-k , &#8211;no-skeleton</p>
+&nbsp;<wbr></dd>
+<dt>-k , &#8211;no-skeleton</dt>
 <dd> Do NOT include a Skeleton bitstream in the output.<br />
-&nbsp;<wbr></p>
-<dt>-h, &#8211;help</p>
-<dd> Display usage information and exit.</p>
-<dt>-v, &#8211;version</p>
-<dd> Output version information and exit. </p>
+&nbsp;<wbr></dd>
+<dt>-h, &#8211;help</dt>
+<dd> Display usage information and exit.</dd>
+<dt>-v, &#8211;version</dt>
+<dd> Output version information and exit. </dd>
 </dl>
 <h2>EXAMPLES</h2>
 <p> Extract the first minute of file.ogx: </p>
 <dl>
 <dt>
-<dd> <tt>oggz chop -e 1:00 file.ogx</tt></dl>
+</dt><dd> <tt>oggz chop -e 1:00 file.ogx</tt></dd></dl>
 <p> Extract from the second to the fifth minute of file.ogx: </p>
 <dl>
 <dt>
-<dd> <tt>oggz chop -s 2:00 -e 5:00 -o output.ogx file.ogx</tt></dl>
+</dt><dd> <tt>oggz chop -s 2:00 -e 5:00 -o output.ogx file.ogx</tt></dd></dl>
 <p> Extract, specifying SMPTE-25 frame offsets: </p>
 <dl>
 <dt>
-<dd> <tt>oggz chop -s smpte-25:00:02:03::12 -e smpte-25:00:05:02::04 -o output.ogv file.ogv</tt></dl>
+</dt><dd> <tt>oggz chop -s smpte-25:00:02:03::12 -e smpte-25:00:05:02::04 -o output.ogv file.ogv</tt></dd></dl>
 <h2>Server configuration</h2>
 <p> The following configuration for Apache httpd will enable oggz-chop. As with most Apache directives, this may of course be restricted to particular Directories or Locations: </p>
 <p> ScriptAlias /oggz-chop /usr/bin/oggz-chop<br />

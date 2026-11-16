@@ -11,9 +11,7 @@ std::toupper(std::locale) - std::toupper(std::locale)
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;locale&gt;
-
     template &lt;class charT&gt;
-
     charT toupper(charT ch, const locale &amp;loc);</code></pre> 
 Converts the character ch to uppercase if possible, using the conversion rules specified by the given locale's std::ctype facet. 
 
@@ -40,12 +38,9 @@ Only 1:1 character mapping can be performed by this function, e.g. the uppercase
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;iostream&gt;
-
 #include &lt;cwctype&gt;
-
 #include &lt;locale&gt;
 int main()
-
 {
     wchar_t c = L'\u017f'; // Latin small letter Long S ('ſ')
     std::cout &lt;&lt; std::hex &lt;&lt; std::showbase;

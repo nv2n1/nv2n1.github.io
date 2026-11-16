@@ -30,7 +30,7 @@ description: "fluxbox-style – A comprehensive look at styles/themes for"
 $ mkdir -p ~/.fluxbox/styles/YourStyle/pixmaps
 $ cd ~/.fluxbox/styles/YourStyle
 $ nano theme.cfg</pre>
-</dl>
+</dd></dl>
 <p> Output of a packaged style should look like the following: </p>
 <dl>
 <dd>
@@ -40,7 +40,7 @@ $ tar -tjvf YourStyle.tar.bz2
  .fluxbox/styles/YourStyle/pixmaps
  .fluxbox/styles/YourStyle/pixmaps/stick.xpm
  ...</pre>
-</dl>
+</dd></dl>
 <p> Of course, all of these are just preferences, <a href="/docs/linux/man/1-fluxbox/">fluxbox</a>(1) allows for the customization of many things, including how you handle your styles. Just remember, however, that if you plan to distribute your style you may find some community bickering if you don&#8217;t follow practices. :)</p>
 <h2>Creating Your Style</h2>
 <p>As discussed above, <a href="/docs/linux/man/1-fluxbox/">fluxbox</a>(1) allows you to configure its four main components: the toolbar, menus, slit and window decorations. Remember that you can customize the slit with its own directives, otherwise the slit will take the appearance of the toolbar. </p>
@@ -48,29 +48,29 @@ $ tar -tjvf YourStyle.tar.bz2
 <dl>
 <dd>
 <pre>toolbar.clock.color: green</pre>
-</dl>
+</dd></dl>
 <p> This sets the color resource of the toolbar clock to <i>green</i>. Another example: </p>
 <dl>
 <dd>
 <pre>menu*color: rgb:3/4/5</pre>
-</dl>
+</dd></dl>
 <p> This sets the color resource of the menu and all of its <i>children</i> to &#8216;rgb:3/4/5&#8217;. (For a description of color names, see X(1).) So this one also applies to <i>menu.title.color</i> and <i>menu.frame.color</i>. And with </p>
 <dl>
 <dd>
 <pre>*font: -b&amp;h-lucida-medium-r-normal-*-*-140-*</pre>
-</dl>
+</dd></dl>
 <p> you set the font resource for all keys to this font name all at once (For information about the fonts installed on your system, you can use a program like <a href="/docs/linux/man/1-xfontsel/">xfontsel</a>(1), gtkfontsel, or <a href="/docs/linux/man/1-xlsfonts/">xlsfonts</a>(1).) </p>
 <p> In the last example you will notice the wildcard (*) before font. In a Fluxbox style you can set a value with a wildcard. The example means that every font in the style will be what is specified. You can do this with any component/value. For example if you wanted all of the text to be one color you would do: </p>
 <dl>
 <dd>
 <pre>*textColor: rgb:3/4/5</pre>
-</dl>
+</dd></dl>
 <p> This means that you can setup a very simple style with very few properties. See the EXAMPLES below for an example of this in practice. <a href="/docs/linux/man/1-fluxbox/">fluxbox</a>(1) also allows you to override wildcards in your style. Lets take our example above and add an override for the toolbar.clock.textColor component: </p>
 <dl>
 <dd>
 <pre>*textColor: rgb:3/4/5
 toolbar.clock.textColor: rgb:255/0/0</pre>
-</dl>
+</dd></dl>
 <p> With that all of the text will be <i>rgb:3/4/5</i> except the toolbar clock text which will be <i>rgb:255/0/0</i>. </p>
 <p> Now what makes <a href="/docs/linux/man/1-fluxbox/">fluxbox</a>(1) so spectacular is its ability to render textures on the fly. A texture is a fillpattern that you see on some styles. Texture descriptions are specified directly to the key that they should apply to, e.g.: </p>
 <dl>
@@ -78,7 +78,7 @@ toolbar.clock.textColor: rgb:255/0/0</pre>
 <pre>toolbar.clock: Raised Gradient Diagonal Bevel1
 toolbar.clock.color: rgb:8/6/4
 toolbar.clock.colorTo: rgb:4/3/2</pre>
-</dl>
+</dd></dl>
 <p> Don&#8217;t worry, we will explain what these mean. A texture description consists of up to five fields, which are as follows: </p>
 <p> <code>Flat | Raised | Sunken</code>. gives the component either a flat, raised or sunken appearance. </p>
 <p> <code>Gradient | Solid</code>. tells <a href="/docs/linux/man/1-fluxbox/">fluxbox</a>(1) to draw either a solid color or a gradient texture. </p>
@@ -91,7 +91,7 @@ toolbar.clock.colorTo: rgb:4/3/2</pre>
 <dd>
 <pre>toolbar.clock: pixmap
 toolbar.clock.pixmap: clock_background.xpm</pre>
-</dl>
+</dd></dl>
 <p> This feature might need some investigation, reports say that sometimes the resources color and colorTo must be set and then they may not be set. </p>
 <p> All gradiented textures are composed of two color values: the <i>color</i> and <i>colorTo</i> resources. When <code>Interlaced</code> is used in <code>Solid</code> mode, the <i>colorTo</i> resource is used to find the interlacing color.</p>
 <h2>Font Effects</h2>
@@ -103,14 +103,14 @@ menu.title.effect: shadow
 menu.title.shadow.color: green
 menu.title.shadow.x: 3
 menu.title.shadow.y: 3</pre>
-</dl>
+</dd></dl>
 <p> To set the halo effect: </p>
 <dl>
 <dd>
 <pre>menu.title.font: sans-8:bold
 menu.title.effect: halo
 menu.title.halo.color: green</pre>
-</dl>
+</dd></dl>
 <h3>Font Problems</h3>
 <p>If you have problems installing fonts or getting them to work, you should read the docs page at xfree.org. Here is a link to one of these: m[blue]<code><a rel="nofollow" href="http://xfree.org/4.3.0/fonts2.html#3">http://xfree.org/4.3.0/fonts2.html#3</a></code>m[]</p>
 <h2>Full Component List</h2>
@@ -202,7 +202,7 @@ window.title.unfocus.color: &lt;color&gt;
 window.title.unfocus.colorTo: &lt;color&gt;
 window.title.unfocus.pixmap: &lt;filename&gt;
 -----------------------------------------</pre>
-</dl>
+</dd></dl>
 <h2>Menu Options</h2>
 <p>Everything you need to make your menu look pretty. </p>
 <dl>
@@ -242,7 +242,7 @@ menu.selected.pixmap: &lt;filename&gt;
 menu.submenu.pixmap: &lt;filename&gt;
 menu.unselected.pixmap: &lt;filename&gt;
 -----------------------------------------</pre>
-</dl>
+</dd></dl>
 <h2>Background</h2>
 <p>Every style must specify the background option. If you don&#8217;t want your style to change the user&#8217;s background, then use &#8216;background: none&#8217;. The options &#8216;centered&#8217;, &#8216;aspect&#8217;, &#8217;tiled&#8217;, and &#8216;fullscreen&#8217; require the &#8216;background.pixmap&#8217; resource to contain a valid file name. The &#8216;random&#8217; option requires &#8216;background.pixmap&#8217; to contain a valid directory name. For these options, <code><a href="/docs/linux/man/1-fluxbox/">fluxbox</a>(1)</code> will call <code><a href="/docs/linux/man/1-fbsetbg/">fbsetbg</a>(1)</code> to set the background. The options &#8216;gradient&#8217;, &#8216;solid&#8217;, and &#8216;mod&#8217; all require &#8216;background.color&#8217; to be set. &#8216;gradient&#8217; and &#8216;mod&#8217; both require &#8216;background.colorTo&#8217;. &#8216;mod&#8217; requires &#8216;background.modX&#8217; and &#8216;background.modY&#8217; to be set as well. These options will be passed to <code><a href="/docs/linux/man/1-fbsetroot/">fbsetroot</a>(1)</code> to set the background. The special option &#8216;unset&#8217; is for use in user overlay files only. It specifies that fbsetbg should never be run (by default, even when &#8216;none&#8217; is set in the overlay, fluxbox will try to run &#8220;fbsetbg -z&#8221; to restore the last wallpaper). </p>
 <dl>
@@ -253,7 +253,7 @@ background.color: &lt;color&gt;
 background.colorTo: &lt;color&gt;
 background.modX: &lt;integer&gt;
 background.modY: &lt;integer&gt;</pre>
-</dl>
+</dd></dl>
 <h2>Slit</h2>
 <p>Here are all of the options for the slit. </p>
 <dl>
@@ -267,7 +267,7 @@ slit.color: &lt;color&gt;
 slit.colorTo: &lt;color&gt;
 slit.pixmap: &lt;filename&gt;
 -----------------------------------------</pre>
-</dl>
+</dd></dl>
 <h2>Toolbar Options</h2>
 <p>Below you will find all of the configuration possibilities for the toolbar. The list is pretty extensive and offers you many options to make your toolbar look just the way you want it. </p>
 <dl>
@@ -326,7 +326,7 @@ toolbar.workspace.color: &lt;color&gt;
 toolbar.workspace.colorTo: &lt;color&gt;
 toolbar.workspace.pixmap: &lt;filename&gt;
 -----------------------------------------</pre>
-</dl>
+</dd></dl>
 <h2>Examples</h2>
 <p>This list may seem intimidating, but remember, when you create your own style you can easily set a majority of these keys with a single component. For an example of this: </p>
 <dl>
@@ -340,7 +340,7 @@ toolbar.workspace.pixmap: &lt;filename&gt;
 *unfocus.textColor: lightgrey
 *font: lucidasans-10
 -----------------------------------------</pre>
-</dl>
+</dd></dl>
 <p> This sets nice defaults for many components.</p>
 <h2>Color Formats</h2>
 <p>These are the color formats for styles: </p>
@@ -348,7 +348,7 @@ toolbar.workspace.pixmap: &lt;filename&gt;
 <dd>
 <pre>#000000 (Hexadecimal)
 rgb:&lt;0-255&gt;/&lt;0-255&gt;/&lt;0-255&gt;</pre>
-</dl>
+</dd></dl>
 <p> See /usr/share/X11/rgb.txt for an explanation.</p>
 <h2>Authors</h2>
 <p>Blackbox was written and maintained by Brad Hughes &lt;blackbox at alug.org&gt; and Jeff Raven &lt;jraven at psu.edu&gt;. </p>
@@ -360,4 +360,4 @@ rgb:&lt;0-255&gt;/&lt;0-255&gt;/&lt;0-255&gt;</pre>
 <h2>Author</h2>
 <p><code>Henrik Kinnunen</code> &lt;fluxgen [at] fluxbox.org&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>

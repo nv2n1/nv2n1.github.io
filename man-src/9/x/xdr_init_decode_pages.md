@@ -15,19 +15,19 @@ xdr_init_decode_pages - Initialize an xdr_stream for decoding data.
 <h2>Arguments</h2>
 
 <i>xdr</i>
-<dl><dd><dd>pointer to xdr_stream struct</dl>
+<dl><dd></dd><dd>pointer to xdr_stream struct</dd></dl>
  
 
  <i>buf</i>
-<dl><dd>pointer to XDR buffer from which to decode data</dl>
+<dl><dd>pointer to XDR buffer from which to decode data</dd></dl>
  
 
  <i>pages</i>
-<dl><dd>list of pages to decode into</dl>
+<dl><dd>list of pages to decode into</dd></dl>
  
 
  <i>len</i>
-<dl><dd>length in bytes of buffer in pages</dl>
+<dl><dd>length in bytes of buffer in pages</dd></dl>
 
 <h2>Copyright</h2>
 

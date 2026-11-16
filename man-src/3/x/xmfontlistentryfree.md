@@ -15,7 +15,7 @@ description: "XmFontListEntryFree — A font list function that recovers memory 
 <h2>Description</h2>
 <p><code>XmFontListEntryFree</code> recovers memory used by a font list entry. This routine does not free the <code>XFontSet</code> or <code>XFontStruct</code> associated with the font list entry.</p>
 <dl COMPACT>
-<dt><i>entry</i></p>
-<dd>Specifies a pointer to the font list entry to be freed. In addition, it may be necessary to take the address of the font list entry (via the <code>&amp;</code> operator) before passing it to this function.</dl>
+<dt><i>entry</i></dt>
+<dd>Specifies a pointer to the font list entry to be freed. In addition, it may be necessary to take the address of the font list entry (via the <code>&amp;</code> operator) before passing it to this function.</dd></dl>
 <h2>Related</h2>
 <p><code><a href="/docs/linux/man/3-xmfontlist/">XmFontList</a></code>(3), <code><a href="/docs/linux/man/3-xmfontlistappendentry/">XmFontListAppendEntry</a></code>(3), <code><a href="/docs/linux/man/3-xmfontlistentrycreate/">XmFontListEntryCreate</a></code>(3), <code><a href="/docs/linux/man/3-xmfontlistentryload/">XmFontListEntryLoad</a></code>(3), <code><a href="/docs/linux/man/3-xmfontlistnextentry/">XmFontListNextEntry</a></code>(3), and <code><a href="/docs/linux/man/3-xmfontlistremoveentry/">XmFontListRemoveEntry</a></code>(3).</p>

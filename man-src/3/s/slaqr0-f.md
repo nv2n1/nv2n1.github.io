@@ -26,10 +26,10 @@ description: "slaqr0.f –"
  matrix Q so that this routine can give the Schur factorization
  of a matrix A which has been reduced to the Hessenberg form H
  by the orthogonal matrix Q: A = Q*H*Q**T = (QZ)*T*(QZ)**T.</pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>WANTT</i> </p>
+<dd><i>WANTT</i> </dd>
 <pre> WANTT is LOGICAL
  = .TRUE. : the full Schur form T is required;
  = .FALSE.: only eigenvalues are required.</pre>
@@ -146,20 +146,21 @@ description: "slaqr0.f –"
 <p>&nbsp;<wbr></dl>
 <p> <code>Author:</code></p>
 <dl>
-<dd>Univ. of Tennessee </p>
+<dd>Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl>
-<dd>September 2012</dl>
+<dd>September 2012</dd></dl>
 <p> <code>Contributors: </code></p>
 <dl>
-<dd>Karen Braman and Ralph Byers, Department of Mathematics, University of Kansas, USA</dl>
+<dd>Karen Braman and Ralph Byers, Department of Mathematics, University of Kansas, USA</dd></dl>
 <p> <code>References: </code></p>
 <dl>
-<dd>K. Braman, R. Byers and R. Mathias, The Multi-Shift QR Algorithm Part I: Maintaining Well Focused Shifts, and Level 3 Performance, SIAM Journal of Matrix Analysis, volume 23, pages 929&#8211;947, 2002. </p>
+<dd>K. Braman, R. Byers and R. Mathias, The Multi-Shift QR Algorithm Part I: Maintaining Well Focused Shifts, and Level 3 Performance, SIAM Journal of Matrix Analysis, volume 23, pages 929&#8211;947, 2002. </dd>
 <p>&nbsp;<wbr>K. Braman, R. Byers and R. Mathias, The Multi-Shift QR Algorithm Part II: Aggressive Early Deflation, SIAM Journal of Matrix Analysis, volume 23, pages 948&#8211;973, 2002.&nbsp;<wbr></dl>
 <p> Definition at line 256 of file slaqr0.f.</p>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for LAPACK from the source code.</p>
+</p>

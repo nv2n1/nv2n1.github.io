@@ -13,17 +13,17 @@ CPEZCT - Draws black and white contours with a single call. Simulates the behavi
 
  void c_cpezct (float *zdat, int mzdt, int nzdt)
 <h2>Description</h2><dl COMPACT><dt>ZDAT
-<dd>(REAL array, dimensioned MZDT x NZDT, input) is the array containing the data to be contoured.
-<dt>MZDT
-<dd>(INTEGER, input) is the first dimension of the FORTRAN array ZDAT and of the array of data stored in it.
-<dt>NZDT
-<dd>(INTEGER, input) is the second dimension of the FORTRAN array ZDAT and of the array of data stored in it.</dl><h2>C-Binding Description</h2>The C-binding argument descriptions are the same as the FORTRAN argument descriptions with the following exceptions:
+</dt><dd>(REAL array, dimensioned MZDT x NZDT, input) is the array containing the data to be contoured.
+</dd><dt>MZDT
+</dt><dd>(INTEGER, input) is the first dimension of the FORTRAN array ZDAT and of the array of data stored in it.
+</dd><dt>NZDT
+</dt><dd>(INTEGER, input) is the second dimension of the FORTRAN array ZDAT and of the array of data stored in it.</dd></dl><h2>C-Binding Description</h2>The C-binding argument descriptions are the same as the FORTRAN argument descriptions with the following exceptions:
 <dl COMPACT><dt>z(nzdt,mzdt)
-<dd>An n by m data array holding values to be contoured.
-<dt>mzdt
-<dd>The second dimension of z.
-<dt>nzdt
-<dd>The first dimension of z.</dl><h2>Usage</h2>The effect of calling CPEZCT will be exactly the same as if you had executed the statements: 
+</dt><dd>An n by m data array holding values to be contoured.
+</dd><dt>mzdt
+</dt><dd>The second dimension of z.
+</dd><dt>nzdt
+</dt><dd>The first dimension of z.</dd></dl><h2>Usage</h2>The effect of calling CPEZCT will be exactly the same as if you had executed the statements: 
 
  CALL CPCNRC (ZDAT,MZDT,MZDT,NZDT,0.,0.,0.,0,0,-682) 
  CALL FRAME 

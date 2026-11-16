@@ -10,7 +10,6 @@ description: "pbs_sigjob – send a signal to a pbs batch job"
 <p>pbs_sigjob &#8211; send a signal to a pbs batch job</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;pbs_error.h&gt;
-
 #include &lt;pbs_ifl.h&gt;</code></pre>
 <pre><code>int pbs_sigjob(int connect, char&nbsp;<wbr>*job_id, char&nbsp;<wbr>*signal, char&nbsp;<wbr>*extend)
 int pbs_sigjobasync(int connect, char&nbsp;<wbr>*job_id, char&nbsp;<wbr>*signal, 

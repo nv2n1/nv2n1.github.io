@@ -23,23 +23,23 @@ description: "sleepenh – an enhanced sleep program."
 <h2>EXIT STATUS</h2>
 <p> An exit status greater or equal to 10 means failure. Known exit status:</p>
 <dl>
-<dt><code>0</code></p>
-<dd> Success.</p>
-<dt><code>1</code></p>
-<dd> Success. There was no need to sleep. (means that initial-time + sleep-time was greater than current-time).</p>
-<dt><code>10</code></p>
-<dd> Failure. Missing command line arguments.</p>
-<dt><code>11</code></p>
-<dd> Failure. Did not receive SIGALRM.</p>
-<dt><code>12</code></p>
-<dd> Failure. Argument is not a number.</p>
-<dt><code>13</code></p>
-<dd> Failure. System error, could not get current time.</dl>
+<dt><code>0</code></dt>
+<dd> Success.</dd>
+<dt><code>1</code></dt>
+<dd> Success. There was no need to sleep. (means that initial-time + sleep-time was greater than current-time).</dd>
+<dt><code>10</code></dt>
+<dd> Failure. Missing command line arguments.</dd>
+<dt><code>11</code></dt>
+<dd> Failure. Did not receive SIGALRM.</dd>
+<dt><code>12</code></dt>
+<dd> Failure. Argument is not a number.</dd>
+<dt><code>13</code></dt>
+<dd> Failure. System error, could not get current time.</dd></dl>
 <h2>USAGE EXAMPLE</h2>
 <p> Suppose you need to send the char &#8216;A&#8217; to the serial port ttyS0 every 4 seconds. This will do that:</p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 &nbsp;<wbr>#!/bin/sh<br />
 &nbsp;<wbr>TIMESTAMP=`sleepenh 0`<br />
 &nbsp;<wbr>while true;&nbsp;<wbr>do<br />
@@ -48,15 +48,15 @@ echo -n&nbsp;<wbr>&quot;A&quot;&nbsp;<wbr>&gt;&nbsp;<wbr>/dev/ttyS0;<br />
 &nbsp;<wbr>&nbsp;<wbr><br />
 #&nbsp;<wbr>just print a nice message on screen<br />
 echo -n&nbsp;<wbr>&quot;I sent&nbsp;<wbr>&#8216;A&#8217;&nbsp;<wbr>to ttyS0, time now is&nbsp;<wbr>&quot;;<br />
-sleepenh 0; </p>
+sleepenh 0; </dd>
 <p>#&nbsp;<wbr>wait the required time&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr><br />
 TIMESTAMP=`sleepenh&nbsp;<wbr>$TIMESTAMP 4.0`;<br />
 &nbsp;<wbr>done</dl>
 <h2>HINT</h2>
 <p> This program can be used to get the current time. Just execute:</p>
 <dl>
-<dt>sleepenh 0</p>
-<dd></dl>
+<dt>sleepenh 0</dt>
+<dd></dd></dl>
 <h2>BUGS</h2>
 <p> It is not accurate for a single sleep. Short sleep-times will also not be accurate.</p>
 <h2>SEE ALSO</h2>

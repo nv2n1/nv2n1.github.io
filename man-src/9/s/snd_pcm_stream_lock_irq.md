@@ -14,7 +14,7 @@ description: "snd_pcm_stream_lock_irq – Lock the PCM stream"
 <p><i>substream</i></p>
 <dl>
 <dd>
-<dd>PCM substream</dl>
+</dd><dd>PCM substream</dd></dl>
 <h2>Description</h2>
 <p>This locks the PCM stream like <code>snd_pcm_stream_lock</code> and disables the local IRQ (only when nonatomic is false). In nonatomic case, this is identical as <code>snd_pcm_stream_lock</code>.</p>
 <h2>Copyright</h2>

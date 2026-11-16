@@ -15,15 +15,15 @@ vfs_unlink - unlink a filesystem object
 <h2>Arguments</h2>
 
 <i>dir</i>
-<dl><dd><dd>parent directory</dl>
+<dl><dd></dd><dd>parent directory</dd></dl>
  
 
  <i>dentry</i>
-<dl><dd>victim</dl>
+<dl><dd>victim</dd></dl>
  
 
  <i>delegated_inode</i>
-<dl><dd>returns victim inode, if the inode is delegated.</dl>
+<dl><dd>returns victim inode, if the inode is delegated.</dd></dl>
 
 <h2>Description</h2>
 

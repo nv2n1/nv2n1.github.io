@@ -15,8 +15,8 @@ description: "Lintian::Index::Scripts – information about scripts."
 <p>Lintian::Index::Scripts information about scripts.</p>
 <h2>Instance Methods</h2>
 <dl COMPACT>
-<dt>add_scripts</p>
-<dd></dl>
+<dt>add_scripts</dt>
+<dd></dd></dl>
 <h2>Author</h2>
 <p>Originally written by Felix Lechner &lt;felix.lechner [at] lease-up.com&gt; for Lintian.</p>
 <h2>See Also</h2>

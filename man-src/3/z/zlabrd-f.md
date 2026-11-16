@@ -25,10 +25,10 @@ description: "zlabrd.f –"
  If m &gt;= n, A is reduced to upper bidiagonal form; if m &lt; n, to lower
  bidiagonal form.
  This is an auxiliary routine called by ZGEBRD</pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>M</i> </p>
+<dd><i>M</i> </dd>
 <pre> M is INTEGER
  The number of rows in the matrix A.</pre>
 <p><i>N</i> </p>
@@ -91,13 +91,13 @@ description: "zlabrd.f –"
 <p>&nbsp;<wbr></dl>
 <p> <code>Author:</code></p>
 <dl>
-<dd>Univ. of Tennessee </p>
+<dd>Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl>
-<dd>September 2012</dl>
+<dd>September 2012</dd></dl>
 <p> <code>Further Details: </code></p>
 <dl>
 <dd>
@@ -130,7 +130,8 @@ description: "zlabrd.f –"
  where a denotes an element of the original matrix which is unchanged,
  vi denotes an element of the vector defining H(i), and ui an element
  of the vector defining G(i).</pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> Definition at line 212 of file zlabrd.f.</p>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for LAPACK from the source code.</p>
+</p>

@@ -10,20 +10,14 @@ description: "std::reverse – std::reverse"
 <p>std::reverse &#8211; std::reverse</p>
 <h2>Synopsis</h2>
 <pre><code>Defined in header&lt;algorithm&gt;
-
     template &lt;class BidirIt&gt;
     (until C++ 20)
-
         void reverse(BidirIt first, BidirIt last);
-
 template &lt;class BidirIt&gt;
 (1)(since C++ 20)
-
     constexpr void reverse(BidirIt first, BidirIt last);
-
 template &lt;class ExecutionPolicy, class BidirIt&gt;
 (2)(since C++ 17)
-
     void reverse(ExecutionPolicy &amp;&amp;policy, BidirIt first, BidirIt last);</code></pre>
 <p>1) Reverses the order of the elements in the range [first, last)<br />
 Behaves as if applying std::iter_swap to every pair of iterators first+i, (last-i) &#8211; 1 for each non-negative i &lt; (last-first)/2<br />
@@ -54,14 +48,10 @@ BidirIt must meet the requirements of ValueSwappable and LegacyBidirectionalIter
 <h2>Example</h2>
 <p>// Run this code </p>
 <pre><code>#include &lt;vector&gt;
-
 #include &lt;iostream&gt;
-
 #include &lt;iterator&gt;
-
 #include &lt;algorithm&gt;
 int main()
-
 {
     std::vector&lt;int&gt; v{1, 2, 3};
     std::reverse(std::begin(v), std::end(v));

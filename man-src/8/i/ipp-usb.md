@@ -17,18 +17,18 @@ description: "ipp-usb – Daemon for IPP over USB printer support"
 <p><code>ipp-usb mode [options]</code></p>
 <h3>Modes are:</h3>
 <dl>
-<dt><code>standalone</code></p>
-<dd>run forever, automatically discover IPP-over-USB devices and serve them all</p>
-<dt><code>udev</code></p>
-<dd>like standalone, but exit when last IPP-over-USB device is disconnected</p>
-<dt><code>debug</code></p>
-<dd>logs duplicated on console, -bg option is ignored</p>
-<dt><code>check</code></p>
-<dd>check configuration and exit</dl>
+<dt><code>standalone</code></dt>
+<dd>run forever, automatically discover IPP-over-USB devices and serve them all</dd>
+<dt><code>udev</code></dt>
+<dd>like standalone, but exit when last IPP-over-USB device is disconnected</dd>
+<dt><code>debug</code></dt>
+<dd>logs duplicated on console, -bg option is ignored</dd>
+<dt><code>check</code></dt>
+<dd>check configuration and exit</dd></dl>
 <h3>Options are</h3>
 <dl>
-<dt><code>-bg</code></p>
-<dd>run in background (ignored in debug mode)</dl>
+<dt><code>-bg</code></dt>
+<dd>run in background (ignored in debug mode)</dd></dl>
 <h2>Configuration</h2>
 <p><code>ipp-usb</code> searched for its configuration file in two places: 1. <code>/etc/ipp-usb/ipp-usb.conf</code> 2. <code>ipp-usb.conf</code> in the directory where executable file is located </p>
 <p> Configuration file syntax is very similar to .INI files syntax. It consist of named sections, and each section contains a set of named variables. Comments are started from # or ; characters and continues until end of line:</p>
@@ -38,7 +38,7 @@ description: "ipp-usb – Daemon for IPP over USB printer support"
 [section 1]
 variable 1 = value 1 ; and another comment
 variable 2 = value 2</pre>
-<dd></dl>
+</dd><dd></dd></dl>
 <h3>Network parameters</h3>
 <p>Network parameters are all in the <code>[network]</code> section:</p>
 <dl>
@@ -56,7 +56,7 @@ variable 2 = value 2</pre>
  interface = loopback # all | loopback
  # Enable or disable IPv6
  ipv6 = enable # enable | disable</pre>
-<dd></dl>
+</dd><dd></dd></dl>
 <h3>Logging configuration</h3>
 <p>Logging parameters are all in the <code>[logging]</code> section:</p>
 <dl>
@@ -88,7 +88,7 @@ variable 2 = value 2</pre>
  max-backup-files = 5
  # Enable or disable ANSI colors on console
  console-color = enable # enable | disable</pre>
-<dd></dl>
+</dd><dd></dd></dl>
 <h3>Quirks</h3>
 <p>Some devices, due to their firmware bugs, require special handling, called device-specific <code>quirks</code>. <code>ipp-usb</code> loads quirks from the <code>/usr/share/ipp-usb/quirks/*.conf</code> files and from the <code>/etc/ipp-usb/quirks/*.conf</code> files. The <code>/etc/ipp-usb/quirks</code> directory is for system quirks overrides or admin changes. These files have .INI-file syntax with the content that looks like this:</p>
 <dl>
@@ -102,42 +102,42 @@ variable 2 = value 2</pre>
 # Default configuration
 [*]
  http-connection = &quot;&quot;</pre>
-<dd></dl>
+</dd><dd></dd></dl>
 <p> For each discovered device, its model name is matched against sections of the quirks files. The section name contains an exact model name, which contains <code>iManufacturer</code>+<code>iProduct</code> entries from <code>lsusb -v</code> command output, or it may contain glob-style wildcards: <code>*</code> that matches any sequence of characters and <code>?</code> , that matches any single character. To match one of these characters (<code>*</code> and <code>?</code>) literally, use backslash as escape. </p>
 <p> All matching sections from all quirks files are taken in consideration, and applied in priority order. Priority is computed using the following algorithm:</p>
 <dl>
-<dt>&#x25cb;</p>
-<dd>When matching model name against section name, amount of non-wildcard matched characters is counted, and the longer match wins</p>
-<dt>&#x25cb;</p>
-<dd>Otherwise, section loaded first wins. Files are loaded in alphabetical order, sections read sequentially</p>
-<dd></dl>
+<dt>&#x25cb;</dt>
+<dd>When matching model name against section name, amount of non-wildcard matched characters is counted, and the longer match wins</dd>
+<dt>&#x25cb;</dt>
+<dd>Otherwise, section loaded first wins. Files are loaded in alphabetical order, sections read sequentially</dd>
+<dd></dd></dl>
 <p> If some parameter exist in multiple sections, used its value from the most priority section </p>
 <p> The following parameters are defined:</p>
 <dl>
-<dt><code>blacklist = true | false</code></p>
-<dd>If <code>true</code>, the matching device is ignored by the <code>ipp-usb</code></p>
-<dt><code>http-XXX = YYY</code></p>
-<dd>Set XXX header of the HTTP requests forwarded to device to YYY. If YYY is empty string, XXX header is removed</p>
-<dt><code>usb-max-interfaces = N</code></p>
-<dd>Don&#8217;t use more that N USB interfaces, even if more is available</dl>
+<dt><code>blacklist = true | false</code></dt>
+<dd>If <code>true</code>, the matching device is ignored by the <code>ipp-usb</code></dd>
+<dt><code>http-XXX = YYY</code></dt>
+<dd>Set XXX header of the HTTP requests forwarded to device to YYY. If YYY is empty string, XXX header is removed</dd>
+<dt><code>usb-max-interfaces = N</code></dt>
+<dd>Don&#8217;t use more that N USB interfaces, even if more is available</dd></dl>
 <p> In case of you found out about your device needs a quirk to work properly or it does not work with <code>ipp-usb</code> at all, although it provides IPP-over-USB interface, please report the isues at <a rel="nofollow" href="https://github.com/OpenPrinting/ipp-usb.">https://github.com/OpenPrinting/ipp-usb.</a> The possible quirk for the device can be added to the project itself and fix the situation for all device&#8217;s owners.</p>
 <h2>Files</h2>
 <dl>
-<dt>&#x25cb;</p>
-<dd><code>/etc/ipp-usb/ipp-usb.conf</code>: the daemon configuration file</p>
-<dt>&#x25cb;</p>
-<dd><code>/var/log/ipp-usb/main.log</code>: the main log file</p>
-<dt>&#x25cb;</p>
-<dd><code>/var/log/ipp-usb/&lt;DEVICE&gt;.log</code>: per-device log files</p>
-<dt>&#x25cb;</p>
-<dd><code>/var/ipp-usb/dev/&lt;DEVICE&gt;.state</code>: device state (HTTP port allocation, DNS-SD name)</p>
-<dt>&#x25cb;</p>
-<dd><code>/var/ipp-usb/lock/ipp-usb.lock</code>: lock file, that helps to prevent multiple copies of daemon to run simultaneously</p>
-<dt>&#x25cb;</p>
-<dd><code>/usr/share/ipp-usb/quirks/*.conf</code>: device-specific quirks (see above)</p>
-<dt>&#x25cb;</p>
-<dd><code>/etc/ipp-usb/quirks/*.conf</code>: device-specific quirks defined by sysadmin (see above)</p>
-<dd></dl>
+<dt>&#x25cb;</dt>
+<dd><code>/etc/ipp-usb/ipp-usb.conf</code>: the daemon configuration file</dd>
+<dt>&#x25cb;</dt>
+<dd><code>/var/log/ipp-usb/main.log</code>: the main log file</dd>
+<dt>&#x25cb;</dt>
+<dd><code>/var/log/ipp-usb/&lt;DEVICE&gt;.log</code>: per-device log files</dd>
+<dt>&#x25cb;</dt>
+<dd><code>/var/ipp-usb/dev/&lt;DEVICE&gt;.state</code>: device state (HTTP port allocation, DNS-SD name)</dd>
+<dt>&#x25cb;</dt>
+<dd><code>/var/ipp-usb/lock/ipp-usb.lock</code>: lock file, that helps to prevent multiple copies of daemon to run simultaneously</dd>
+<dt>&#x25cb;</dt>
+<dd><code>/usr/share/ipp-usb/quirks/*.conf</code>: device-specific quirks (see above)</dd>
+<dt>&#x25cb;</dt>
+<dd><code>/etc/ipp-usb/quirks/*.conf</code>: device-specific quirks defined by sysadmin (see above)</dd>
+<dd></dd></dl>
 <h2>Copyright</h2>
 <p>Copyright (c) by Alexander Pevzner (pzz [at] apevzner.com)<br />
  All rights reserved. </p>

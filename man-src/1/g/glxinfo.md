@@ -16,20 +16,20 @@ description: "glxinfo – show information about the GLX implementation"
 <p> The information includes details about the server- and client-side GLX implementation, the OpenGL and GLU implementations as well as a list of available GLX visuals.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-v</code></p>
-<dd> Print visuals info in verbose form.</p>
-<dt><code>-t</code></p>
-<dd> Print verbose table.</p>
-<dt><code>-display </code><i>display</i></p>
-<dd> Specify the X display to interrogate.</p>
-<dt><code>-h</code></p>
-<dd> Print usage information.</p>
-<dt><code>-i</code></p>
-<dd> Force an indirect rendering context.</p>
-<dt><code>-b</code></p>
-<dd> Find the &quot;best&quot; visual and print its number.</p>
-<dt><code>-l</code></p>
-<dd> Print interesting OpenGL limits.</dl>
+<dt><code>-v</code></dt>
+<dd> Print visuals info in verbose form.</dd>
+<dt><code>-t</code></dt>
+<dd> Print verbose table.</dd>
+<dt><code>-display </code><i>display</i></dt>
+<dd> Specify the X display to interrogate.</dd>
+<dt><code>-h</code></dt>
+<dd> Print usage information.</dd>
+<dt><code>-i</code></dt>
+<dd> Force an indirect rendering context.</dd>
+<dt><code>-b</code></dt>
+<dd> Find the &quot;best&quot; visual and print its number.</dd>
+<dt><code>-l</code></dt>
+<dd> Print interesting OpenGL limits.</dd></dl>
 <h2>AUTHOR</h2>
 <p> glxinfo was written by Brian Paul &lt;brian.paul [at] tungstengraphics.com&gt;. </p>
 <p> This manual page was written by Thierry Reding &lt;thierry [at] gilfi.de&gt;, for the Debian project (but may be used by others). </p>

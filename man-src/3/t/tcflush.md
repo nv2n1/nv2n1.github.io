@@ -11,30 +11,18 @@ description: "termios, tcgetattr, tcsetattr, tcsendbreak, tcdrain, tcflush, tcfl
 <h2>Synopsis</h2>
 <pre><code>#include &lt;termios.h&gt;
 #include &lt;unistd.h&gt;
-
 int tcgetattr(int fd, struct termios *termios_p);
-
 int tcsetattr(int fd, int optional_actions,
               const struct termios *termios_p);
-
 int tcsendbreak(int fd, int duration);
-
 int tcdrain(int fd);
-
 int tcflush(int fd, int queue_selector);
-
 int tcflow(int fd, int action);
-
 void cfmakeraw(struct termios *termios_p);
-
 speed_t cfgetispeed(const struct termios *termios_p);
-
 speed_t cfgetospeed(const struct termios *termios_p);
-
 int cfsetispeed(struct termios *termios_p, speed_t speed);
-
 int cfsetospeed(struct termios *termios_p, speed_t speed);
-
 int cfsetspeed(struct termios *termios_p, speed_t speed);</code></pre>
 <p> Feature Test Macro Requirements for glibc (see <code><a href="/docs/linux/man/7-feature_test_macros/">feature_test_macros</a></code>(7)): <code>cfsetspeed</code>(), <code>cfmakeraw</code>():<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;Since glibc 2.19:<br />
@@ -50,7 +38,8 @@ int cfsetspeed(struct termios *termios_p, speed_t speed);</code></pre>
 <p> In the descriptions below, &quot;not in POSIX&quot; means that the value is not specified in POSIX.1-2001, and &quot;XSI&quot; means that the value is specified in POSIX.1-2001 as part of the XSI extension. </p>
 <p> <i>c_iflag</i> flag constants:</p>
 <dl>
-<dt><code>IGNBRK</code></p>
-<dd>Ignore BREAK condition on input.</p>
-<dt><code>BRKINT</code></p>
+<dt><code>IGNBRK</code></dt>
+<dd>Ignore BREAK condition on input.</dd>
+<dt><code>BRKINT</code></dt>
 <dd>If <code>IGNBRK</code> is set, a BREAK is ignored. If it is not set but <code>BRKINT</code> is set, then a BREAK causes the input and output queues to be flushed, and if the terminal is the controlling terminal of a foreground process group, it will cause a <code>SIGINT</code> to be sent to this foreground process group. When neither <code>IGNBRK</code> nor <code>BRKINT</code> are set, a BREAK reads as a null byte (&#8216;
+</dd></dl>

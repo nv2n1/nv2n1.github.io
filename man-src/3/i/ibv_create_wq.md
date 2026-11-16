@@ -46,7 +46,7 @@ enum ibv_wq_flags {
 <p> <code>ibv_modify_wq</code>(3),</p>
 <h2>AUTHORS</h2>
 <dl>
-<dt>Yishai Hadas &lt;yishaih [at] mellanox.com&gt;</p>
+<dt>Yishai Hadas &lt;yishaih [at] mellanox.com&gt;</dt>
 <dd>
-</dl>
+</dd></dl>
 <h2>Index</h2>

@@ -26,25 +26,25 @@ description: "sudo sudoedit – execute a command as another user"
 <p> Security policies and audit plugins may log successful and failed attempts to run <code>sudo.</code> If an I/O plugin is configured, the running command&#8217;s input and output may be logged as well. </p>
 <p> The options are as follows:</p>
 <dl>
-<dt><code>-A , -askpass</code></p>
-<dd>Normally, if <code>sudo</code> requires a password, it will read it from the user&#8217;s terminal. If the &#8211;<code>A (</code><i>askpass</i> ) option is specified, a (possibly graphical) helper program is executed to read the user&#8217;s password and output the password to the standard output. If the <code>SUDO_ASKPASS</code> environment variable is set, it specifies the path to the helper program. Otherwise, if sudo.conf5 contains a line specifying the askpass program, that value will be used. For example: </p>
+<dt><code>-A , -askpass</code></dt>
+<dd>Normally, if <code>sudo</code> requires a password, it will read it from the user&#8217;s terminal. If the &#8211;<code>A (</code><i>askpass</i> ) option is specified, a (possibly graphical) helper program is executed to read the user&#8217;s password and output the password to the standard output. If the <code>SUDO_ASKPASS</code> environment variable is set, it specifies the path to the helper program. Otherwise, if sudo.conf5 contains a line specifying the askpass program, that value will be used. For example: </dd>
 <pre># Path to askpass helper program
 Path askpass /usr/X11R6/bin/ssh-askpass</pre>
 <p>If no askpass program is available, <code>sudo</code> will exit with an error.</p>
-<dt><code>-B , -bell</code></p>
-<dd>Ring the bell as part of the password prompt when a terminal is present. This option has no effect if an askpass program is used.</p>
-<dt><code>-b , -background</code></p>
-<dd>Run the given command in the background. Note that it is not possible to use shell job control to manipulate background processes started by <code>sudo.</code> Most interactive commands will fail to work properly in background mode.</p>
-<dt><code>-C </code><i>num , &#8211;</i><code>-close-from = </code><i>num</i></p>
-<dd>Close all file descriptors greater than or equal to <i>num</i> before executing a command. Values less than three are not permitted. By default, <code>sudo</code> will close all open file descriptors other than standard input, standard output, and standard error when executing a command. The security policy may restrict the user&#8217;s ability to use this option. The <i>sudoers</i> policy only permits use of the &#8211;<code>C</code> option when the administrator has enabled the <i>closefrom_override</i> option.</p>
-<dt><code>-D </code><i>directory , &#8211;</i><code>-chdir = </code><i>directory</i></p>
-<dd>Run the command in the specified <i>directory</i> instead of the current working directory. The security policy may return an error if the user does not have permission to specify the working directory.</p>
-<dt><code>-E , -preserve-env</code></p>
-<dd>Indicates to the security policy that the user wishes to preserve their existing environment variables. The security policy may return an error if the user does not have permission to preserve the environment.</p>
-<dt><code>&#8211;preserve-env=list</code></p>
-<dd>Indicates to the security policy that the user wishes to add the comma-separated list of environment variables to those preserved from the user&#8217;s environment. The security policy may return an error if the user does not have permission to preserve the environment. This option may be specified multiple times.</p>
-<dt><code>-e , -edit</code></p>
-<dd>Edit one or more files instead of running a command. In lieu of a path name, the string &quot;sudoedit&quot; is used when consulting the security policy. If the user is authorized by the policy, the following steps are taken: </p>
+<dt><code>-B , -bell</code></dt>
+<dd>Ring the bell as part of the password prompt when a terminal is present. This option has no effect if an askpass program is used.</dd>
+<dt><code>-b , -background</code></dt>
+<dd>Run the given command in the background. Note that it is not possible to use shell job control to manipulate background processes started by <code>sudo.</code> Most interactive commands will fail to work properly in background mode.</dd>
+<dt><code>-C </code><i>num , &#8211;</i><code>-close-from = </code><i>num</i></dt>
+<dd>Close all file descriptors greater than or equal to <i>num</i> before executing a command. Values less than three are not permitted. By default, <code>sudo</code> will close all open file descriptors other than standard input, standard output, and standard error when executing a command. The security policy may restrict the user&#8217;s ability to use this option. The <i>sudoers</i> policy only permits use of the &#8211;<code>C</code> option when the administrator has enabled the <i>closefrom_override</i> option.</dd>
+<dt><code>-D </code><i>directory , &#8211;</i><code>-chdir = </code><i>directory</i></dt>
+<dd>Run the command in the specified <i>directory</i> instead of the current working directory. The security policy may return an error if the user does not have permission to specify the working directory.</dd>
+<dt><code>-E , -preserve-env</code></dt>
+<dd>Indicates to the security policy that the user wishes to preserve their existing environment variables. The security policy may return an error if the user does not have permission to preserve the environment.</dd>
+<dt><code>&#8211;preserve-env=list</code></dt>
+<dd>Indicates to the security policy that the user wishes to add the comma-separated list of environment variables to those preserved from the user&#8217;s environment. The security policy may return an error if the user does not have permission to preserve the environment. This option may be specified multiple times.</dd>
+<dt><code>-e , -edit</code></dt>
+<dd>Edit one or more files instead of running a command. In lieu of a path name, the string &quot;sudoedit&quot; is used when consulting the security policy. If the user is authorized by the policy, the following steps are taken: </dd>
 <ol>
 <li> Temporary copies are made of the files to be edited with the owner set to the invoking user.
 <li> The editor specified by the policy is run to edit the temporary files. The <i>sudoers</i> policy uses the <code>SUDO_EDITOR</code> <code>VISUAL</code> and <code>EDITOR</code> environment variables (in that order). If none of <code>SUDO_EDITOR</code> <code>VISUAL</code> or <code>EDITOR</code> are set, the first program listed in the <i>editor</i> <a href="/docs/linux/man/5-sudoers/">sudoers</a>(5) option is used.
@@ -56,67 +56,67 @@ Path askpass /usr/X11R6/bin/ssh-askpass</pre>
 <li> Files located in a directory that is writable by the invoking user may not be edited unless that user is root (version 1.8.16 and higher). </ul>
 <p> Users are never allowed to edit device special files. </p>
 <p> If the specified file does not exist, it will be created. Note that unlike most commands run by <i>sudo</i> the editor is run with the invoking user&#8217;s environment unmodified. If the temporary file becomes empty after editing, the user will be prompted before it is installed. If, for some reason, <code>sudo</code> is unable to update a file with its edited version, the user will receive a warning and the edited copy will remain in a temporary file.</p>
-<dt><code>-g </code><i>group , &#8211;</i><code>-group = </code><i>group</i></p>
-<dd>Run the command with the primary group set to <i>group</i> instead of the primary group specified by the target user&#8217;s password database entry. The <i>group</i> may be either a group name or a numeric group-ID (GID) prefixed with the `#&#8217; character (e.g., <code>#0</code> for GID 0). When running a command as a GID, many shells require that the `#&#8217; be escaped with a backslash (`\&#8217; ) If no &#8211;<code>u</code> option is specified, the command will be run as the invoking user. In either case, the primary group will be set to <i>group</i> The <i>sudoers</i> policy permits any of the target user&#8217;s groups to be specified via the &#8211;<code>g</code> option as long as the &#8211;<code>P</code> option is not in use.</p>
-<dt><code>-H , -set-home</code></p>
-<dd>Request that the security policy set the <code>HOME</code> environment variable to the home directory specified by the target user&#8217;s password database entry. Depending on the policy, this may be the default behavior.</p>
-<dt><code>-h , -help</code></p>
-<dd>Display a short help message to the standard output and exit.</p>
-<dt><code>-h </code><i>host , &#8211;</i><code>-host = </code><i>host</i></p>
-<dd>Run the command on the specified <i>host</i> if the security policy plugin supports remote commands. Note that the <i>sudoers</i> plugin does not currently support running remote commands. This may also be used in conjunction with the &#8211;<code>l</code> option to list a user&#8217;s privileges for the remote host.</p>
-<dt><code>-i , -login</code></p>
-<dd>Run the shell specified by the target user&#8217;s password database entry as a login shell. This means that login-specific resource files such as .profile .bash_profile or .login will be read by the shell. If a command is specified, it is passed to the shell as a simple command using the &#8211;<code>c</code> option. The command and any arguments are concatenated, separated by spaces, after escaping each character (including white space) with a backslash (`\&#8217; ) except for alphanumerics, underscores, hyphens, and dollar signs. If no command is specified, an interactive shell is executed. <code>sudo</code> attempts to change to that user&#8217;s home directory before running the shell. The command is run with an environment similar to the one a user would receive at log in. Note that most shells behave differently when a command is specified as compared to an interactive session; consult the shell&#8217;s manual for details. The <i>Command environment</i> section in the <a href="/docs/linux/man/5-sudoers/">sudoers</a>(5) manual documents how the &#8211;<code>i</code> option affects the environment in which a command is run when the <i>sudoers</i> policy is in use.</p>
-<dt><code>-K , -remove-timestamp</code></p>
-<dd>Similar to the &#8211;<code>k</code> option, except that it removes the user&#8217;s cached credentials entirely and may not be used in conjunction with a command or other option. This option does not require a password. Not all security policies support credential caching.</p>
-<dt><code>-k , -reset-timestamp</code></p>
-<dd>When used without a command, invalidates the user&#8217;s cached credentials. In other words, the next time <code>sudo</code> is run a password will be required. This option does not require a password, and was added to allow a user to revoke <code>sudo</code> permissions from a .logout file. </p>
+<dt><code>-g </code><i>group , &#8211;</i><code>-group = </code><i>group</i></dt>
+<dd>Run the command with the primary group set to <i>group</i> instead of the primary group specified by the target user&#8217;s password database entry. The <i>group</i> may be either a group name or a numeric group-ID (GID) prefixed with the `#&#8217; character (e.g., <code>#0</code> for GID 0). When running a command as a GID, many shells require that the `#&#8217; be escaped with a backslash (`\&#8217; ) If no &#8211;<code>u</code> option is specified, the command will be run as the invoking user. In either case, the primary group will be set to <i>group</i> The <i>sudoers</i> policy permits any of the target user&#8217;s groups to be specified via the &#8211;<code>g</code> option as long as the &#8211;<code>P</code> option is not in use.</dd>
+<dt><code>-H , -set-home</code></dt>
+<dd>Request that the security policy set the <code>HOME</code> environment variable to the home directory specified by the target user&#8217;s password database entry. Depending on the policy, this may be the default behavior.</dd>
+<dt><code>-h , -help</code></dt>
+<dd>Display a short help message to the standard output and exit.</dd>
+<dt><code>-h </code><i>host , &#8211;</i><code>-host = </code><i>host</i></dt>
+<dd>Run the command on the specified <i>host</i> if the security policy plugin supports remote commands. Note that the <i>sudoers</i> plugin does not currently support running remote commands. This may also be used in conjunction with the &#8211;<code>l</code> option to list a user&#8217;s privileges for the remote host.</dd>
+<dt><code>-i , -login</code></dt>
+<dd>Run the shell specified by the target user&#8217;s password database entry as a login shell. This means that login-specific resource files such as .profile .bash_profile or .login will be read by the shell. If a command is specified, it is passed to the shell as a simple command using the &#8211;<code>c</code> option. The command and any arguments are concatenated, separated by spaces, after escaping each character (including white space) with a backslash (`\&#8217; ) except for alphanumerics, underscores, hyphens, and dollar signs. If no command is specified, an interactive shell is executed. <code>sudo</code> attempts to change to that user&#8217;s home directory before running the shell. The command is run with an environment similar to the one a user would receive at log in. Note that most shells behave differently when a command is specified as compared to an interactive session; consult the shell&#8217;s manual for details. The <i>Command environment</i> section in the <a href="/docs/linux/man/5-sudoers/">sudoers</a>(5) manual documents how the &#8211;<code>i</code> option affects the environment in which a command is run when the <i>sudoers</i> policy is in use.</dd>
+<dt><code>-K , -remove-timestamp</code></dt>
+<dd>Similar to the &#8211;<code>k</code> option, except that it removes the user&#8217;s cached credentials entirely and may not be used in conjunction with a command or other option. This option does not require a password. Not all security policies support credential caching.</dd>
+<dt><code>-k , -reset-timestamp</code></dt>
+<dd>When used without a command, invalidates the user&#8217;s cached credentials. In other words, the next time <code>sudo</code> is run a password will be required. This option does not require a password, and was added to allow a user to revoke <code>sudo</code> permissions from a .logout file. </dd>
 <p> When used in conjunction with a command or an option that may require a password, this option will cause <code>sudo</code> to ignore the user&#8217;s cached credentials. As a result, <code>sudo</code> will prompt for a password (if one is required by the security policy) and will not update the user&#8217;s cached credentials. </p>
 <p> Not all security policies support credential caching.</p>
-<dt><code>-l , &#8211;list</code></p>
-<dd>If no <i>command</i> is specified, list the allowed (and forbidden) commands for the invoking user (or the user specified by the &#8211;<code>U</code> option) on the current host. A longer list format is used if this option is specified multiple times and the security policy supports a verbose output format. </p>
+<dt><code>-l , &#8211;list</code></dt>
+<dd>If no <i>command</i> is specified, list the allowed (and forbidden) commands for the invoking user (or the user specified by the &#8211;<code>U</code> option) on the current host. A longer list format is used if this option is specified multiple times and the security policy supports a verbose output format. </dd>
 <p> If a <i>command</i> is specified and is permitted by the security policy, the fully-qualified path to the command is displayed along with any command line arguments. If a <i>command</i> is specified but not allowed by the policy, <code>sudo</code> will exit with a status value of 1.</p>
-<dt><code>-n , -non-interactive</code></p>
-<dd>Avoid prompting the user for input of any kind. If a password is required for the command to run, <code>sudo</code> will display an error message and exit.</p>
-<dt><code>-P , -preserve-groups</code></p>
-<dd>Preserve the invoking user&#8217;s group vector unaltered. By default, the <i>sudoers</i> policy will initialize the group vector to the list of groups the target user is a member of. The real and effective group-IDs, however, are still set to match the target user.</p>
-<dt><code>-p </code><i>prompt , &#8211;</i><code>-prompt = </code><i>prompt</i></p>
-<dd>Use a custom password prompt with optional escape sequences. The following percent (`%&#8217; ) escape sequences are supported by the <i>sudoers</i> policy:</p>
+<dt><code>-n , -non-interactive</code></dt>
+<dd>Avoid prompting the user for input of any kind. If a password is required for the command to run, <code>sudo</code> will display an error message and exit.</dd>
+<dt><code>-P , -preserve-groups</code></dt>
+<dd>Preserve the invoking user&#8217;s group vector unaltered. By default, the <i>sudoers</i> policy will initialize the group vector to the list of groups the target user is a member of. The real and effective group-IDs, however, are still set to match the target user.</dd>
+<dt><code>-p </code><i>prompt , &#8211;</i><code>-prompt = </code><i>prompt</i></dt>
+<dd>Use a custom password prompt with optional escape sequences. The following percent (`%&#8217; ) escape sequences are supported by the <i>sudoers</i> policy:</dd>
 <dl>
-<dt><code>%H</code></p>
-<dd>expanded to the host name including the domain name (only if the machine&#8217;s host name is fully qualified or the <i>fqdn</i> option is set in <a href="/docs/linux/man/5-sudoers/">sudoers</a>(5))</p>
-<dt><code>%h</code></p>
-<dd>expanded to the local host name without the domain name</p>
-<dt><code>%p</code></p>
-<dd>expanded to the name of the user whose password is being requested (respects the <i>rootpw</i> <i>targetpw</i> and <i>runaspw</i> flags in <a href="/docs/linux/man/5-sudoers/">sudoers</a>(5))</p>
-<dt><code>%U</code></p>
-<dd>expanded to the login name of the user the command will be run as (defaults to root unless the &#8211;<code>u</code> option is also specified)</p>
-<dt><code>%u</code></p>
-<dd>expanded to the invoking user&#8217;s login name</p>
-<dt><code>%%</code></p>
-<dd>two consecutive `%&#8217; characters are collapsed into a single `%&#8217; character</dl>
+<dt><code>%H</code></dt>
+<dd>expanded to the host name including the domain name (only if the machine&#8217;s host name is fully qualified or the <i>fqdn</i> option is set in <a href="/docs/linux/man/5-sudoers/">sudoers</a>(5))</dd>
+<dt><code>%h</code></dt>
+<dd>expanded to the local host name without the domain name</dd>
+<dt><code>%p</code></dt>
+<dd>expanded to the name of the user whose password is being requested (respects the <i>rootpw</i> <i>targetpw</i> and <i>runaspw</i> flags in <a href="/docs/linux/man/5-sudoers/">sudoers</a>(5))</dd>
+<dt><code>%U</code></dt>
+<dd>expanded to the login name of the user the command will be run as (defaults to root unless the &#8211;<code>u</code> option is also specified)</dd>
+<dt><code>%u</code></dt>
+<dd>expanded to the invoking user&#8217;s login name</dd>
+<dt><code>%%</code></dt>
+<dd>two consecutive `%&#8217; characters are collapsed into a single `%&#8217; character</dd></dl>
 <p> The custom prompt will override the default prompt specified by either the security policy or the <code>SUDO_PROMPT</code> environment variable. On systems that use PAM, the custom prompt will also override the prompt specified by a PAM module unless the <i>passprompt_override</i> flag is disabled in <i>sudoers</i></p>
-<dt><code>-R </code><i>directory , &#8211;</i><code>-chroot = </code><i>directory</i></p>
-<dd>Change to the specified root <i>directory</i> (see <a href="/docs/linux/man/8-chroot/">chroot</a>(8)) before running the command. The security policy may return an error if the user does not have permission to specify the root directory.</p>
-<dt><code>-r </code><i>role , &#8211;</i><code>-role = </code><i>role</i></p>
-<dd>Run the command with an SELinux security context that includes the specified <i>role</i></p>
-<dt><code>-S , -stdin</code></p>
-<dd>Write the prompt to the standard error and read the password from the standard input instead of using the terminal device.</p>
-<dt><code>-s , -shell</code></p>
-<dd>Run the shell specified by the <code>SHELL</code> environment variable if it is set or the shell specified by the invoking user&#8217;s password database entry. If a command is specified, it is passed to the shell as a simple command using the &#8211;<code>c</code> option. The command and any arguments are concatenated, separated by spaces, after escaping each character (including white space) with a backslash (`\&#8217; ) except for alphanumerics, underscores, hyphens, and dollar signs. If no command is specified, an interactive shell is executed. Note that most shells behave differently when a command is specified as compared to an interactive session; consult the shell&#8217;s manual for details.</p>
-<dt><code>-t </code><i>type , &#8211;</i><code>-type = </code><i>type</i></p>
-<dd>Run the command with an SELinux security context that includes the specified <i>type</i> If no <i>type</i> is specified, the default type is derived from the role.</p>
-<dt><code>-U </code><i>user , &#8211;</i><code>-other-user = </code><i>user</i></p>
-<dd>Used in conjunction with the &#8211;<code>l</code> option to list the privileges for <i>user</i> instead of for the invoking user. The security policy may restrict listing other users&#8217; privileges. The <i>sudoers</i> policy only allows root or a user with the <code>ALL</code> privilege on the current host to use this option.</p>
-<dt><code>-T </code><i>timeout , &#8211;</i><code>-command-timeout = </code><i>timeout</i></p>
-<dd>Used to set a timeout for the command. If the timeout expires before the command has exited, the command will be terminated. The security policy may restrict the ability to set command timeouts. The <i>sudoers</i> policy requires that user-specified timeouts be explicitly enabled.</p>
-<dt><code>-u </code><i>user , &#8211;</i><code>-user = </code><i>user</i></p>
-<dd>Run the command as a user other than the default target user (usually <i>root )</i> The <i>user</i> may be either a user name or a numeric user-ID (UID) prefixed with the `#&#8217; character (e.g., <code>#0</code> for UID 0). When running commands as a UID, many shells require that the `#&#8217; be escaped with a backslash (`\&#8217; ) Some security policies may restrict UIDs to those listed in the password database. The <i>sudoers</i> policy allows UIDs that are not in the password database as long as the <i>targetpw</i> option is not set. Other security policies may not support this.</p>
-<dt><code>-V , -version</code></p>
-<dd>Print the <code>sudo</code> version string as well as the version string of any configured plugins. If the invoking user is already root, the &#8211;<code>V</code> option will display the arguments passed to configure when <code>sudo</code> was built; plugins may display additional information such as default options.</p>
-<dt><code>-v , -validate</code></p>
-<dd>Update the user&#8217;s cached credentials, authenticating the user if necessary. For the <i>sudoers</i> plugin, this extends the <code>sudo</code> timeout for another <code>15</code> minutes by default, but does not run a command. Not all security policies support cached credentials.</p>
-<dt><code>&#8211; </code></p>
-<dd>The &#8211;<code>&#8211;</code> option indicates that <code>sudo</code> should stop processing command line arguments.</dl>
+<dt><code>-R </code><i>directory , &#8211;</i><code>-chroot = </code><i>directory</i></dt>
+<dd>Change to the specified root <i>directory</i> (see <a href="/docs/linux/man/8-chroot/">chroot</a>(8)) before running the command. The security policy may return an error if the user does not have permission to specify the root directory.</dd>
+<dt><code>-r </code><i>role , &#8211;</i><code>-role = </code><i>role</i></dt>
+<dd>Run the command with an SELinux security context that includes the specified <i>role</i></dd>
+<dt><code>-S , -stdin</code></dt>
+<dd>Write the prompt to the standard error and read the password from the standard input instead of using the terminal device.</dd>
+<dt><code>-s , -shell</code></dt>
+<dd>Run the shell specified by the <code>SHELL</code> environment variable if it is set or the shell specified by the invoking user&#8217;s password database entry. If a command is specified, it is passed to the shell as a simple command using the &#8211;<code>c</code> option. The command and any arguments are concatenated, separated by spaces, after escaping each character (including white space) with a backslash (`\&#8217; ) except for alphanumerics, underscores, hyphens, and dollar signs. If no command is specified, an interactive shell is executed. Note that most shells behave differently when a command is specified as compared to an interactive session; consult the shell&#8217;s manual for details.</dd>
+<dt><code>-t </code><i>type , &#8211;</i><code>-type = </code><i>type</i></dt>
+<dd>Run the command with an SELinux security context that includes the specified <i>type</i> If no <i>type</i> is specified, the default type is derived from the role.</dd>
+<dt><code>-U </code><i>user , &#8211;</i><code>-other-user = </code><i>user</i></dt>
+<dd>Used in conjunction with the &#8211;<code>l</code> option to list the privileges for <i>user</i> instead of for the invoking user. The security policy may restrict listing other users&#8217; privileges. The <i>sudoers</i> policy only allows root or a user with the <code>ALL</code> privilege on the current host to use this option.</dd>
+<dt><code>-T </code><i>timeout , &#8211;</i><code>-command-timeout = </code><i>timeout</i></dt>
+<dd>Used to set a timeout for the command. If the timeout expires before the command has exited, the command will be terminated. The security policy may restrict the ability to set command timeouts. The <i>sudoers</i> policy requires that user-specified timeouts be explicitly enabled.</dd>
+<dt><code>-u </code><i>user , &#8211;</i><code>-user = </code><i>user</i></dt>
+<dd>Run the command as a user other than the default target user (usually <i>root )</i> The <i>user</i> may be either a user name or a numeric user-ID (UID) prefixed with the `#&#8217; character (e.g., <code>#0</code> for UID 0). When running commands as a UID, many shells require that the `#&#8217; be escaped with a backslash (`\&#8217; ) Some security policies may restrict UIDs to those listed in the password database. The <i>sudoers</i> policy allows UIDs that are not in the password database as long as the <i>targetpw</i> option is not set. Other security policies may not support this.</dd>
+<dt><code>-V , -version</code></dt>
+<dd>Print the <code>sudo</code> version string as well as the version string of any configured plugins. If the invoking user is already root, the &#8211;<code>V</code> option will display the arguments passed to configure when <code>sudo</code> was built; plugins may display additional information such as default options.</dd>
+<dt><code>-v , -validate</code></dt>
+<dd>Update the user&#8217;s cached credentials, authenticating the user if necessary. For the <i>sudoers</i> plugin, this extends the <code>sudo</code> timeout for another <code>15</code> minutes by default, but does not run a command. Not all security policies support cached credentials.</dd>
+<dt><code>&#8211; </code></dt>
+<dd>The &#8211;<code>&#8211;</code> option indicates that <code>sudo</code> should stop processing command line arguments.</dd></dl>
 <p> Options that take a value may only be specified once unless otherwise indicated in the description. This is to help guard against problems caused by poorly written scripts that invoke <code>sudo</code> with user-controlled input. </p>
 <p> Environment variables to be set for the command may also be passed on the command line in the form of <i>VAR </i><code>= </code><i>value</i> e.g., <code>LD_LIBRARY_PATH = /usr/local/pkg/lib </code> Variables passed on the command line are subject to restrictions imposed by the security policy plugin. The <i>sudoers</i> policy subjects variables passed on the command line to the same restrictions as normal environment variables with one important exception. If the <i>setenv</i> option is set in <i>sudoers</i> the command to be run has the <code>SETENV</code> tag set or the command matched is <code>ALL</code> the user may set variables that would otherwise be forbidden. See <a href="/docs/linux/man/5-sudoers/">sudoers</a>(5) for more information.</p>
 <h2>Command Execution</h2>
@@ -159,42 +159,42 @@ Path askpass /usr/X11R6/bin/ssh-askpass</pre>
 <h2>Environment</h2>
 <p><code>sudo</code> utilizes the following environment variables. The security policy has control over the actual content of the command&#8217;s environment.</p>
 <dl>
-<dt><code>EDITOR</code></p>
-<dd>Default editor to use in &#8211;<code>e</code> (sudoedit) mode if neither <code>SUDO_EDITOR</code> nor <code>VISUAL</code> is set.</p>
-<dt><code>MAIL</code></p>
-<dd>Set to the mail spool of the target user when the &#8211;<code>i</code> option is specified, or when <i>env_reset</i> is enabled in <i>sudoers</i> (unless <code>MAIL</code> is present in the <i>env_keep</i> list).</p>
-<dt><code>HOME</code></p>
-<dd>Set to the home directory of the target user when the &#8211;<code>i</code> or &#8211;<code>H</code> options are specified, when the &#8211;<code>s</code> option is specified and <i>set_home</i> is set in <i>sudoers</i> when <i>always_set_home</i> is enabled in <i>sudoers</i> or when <i>env_reset</i> is enabled in <i>sudoers</i> and <i>HOME</i> is not present in the <i>env_keep</i> list.</p>
-<dt><code>LOGNAME</code></p>
-<dd>Set to the login name of the target user when the &#8211;<code>i</code> option is specified, when the <i>set_logname</i> option is enabled in <i>sudoers</i> or when the <i>env_reset</i> option is enabled in <i>sudoers</i> (unless <code>LOGNAME</code> is present in the <i>env_keep</i> list).</p>
-<dt><code>PATH</code></p>
-<dd>May be overridden by the security policy.</p>
-<dt><code>SHELL</code></p>
-<dd>Used to determine shell to run with &#8211;<code>s</code> option.</p>
-<dt><code>SUDO_ASKPASS</code></p>
-<dd>Specifies the path to a helper program used to read the password if no terminal is available or if the &#8211;<code>A</code> option is specified.</p>
-<dt><code>SUDO_COMMAND</code></p>
-<dd>Set to the command run by sudo, including command line arguments. The command line arguments are truncated at 4096 characters to prevent a potential execution error.</p>
-<dt><code>SUDO_EDITOR</code></p>
-<dd>Default editor to use in &#8211;<code>e</code> (sudoedit) mode.</p>
-<dt><code>SUDO_GID</code></p>
-<dd>Set to the group-ID of the user who invoked sudo.</p>
-<dt><code>SUDO_PROMPT</code></p>
-<dd>Used as the default password prompt unless the &#8211;<code>p</code> option was specified.</p>
-<dt><code>SUDO_PS1</code></p>
-<dd>If set, <code>PS1</code> will be set to its value for the program being run.</p>
-<dt><code>SUDO_UID</code></p>
-<dd>Set to the user-ID of the user who invoked sudo.</p>
-<dt><code>SUDO_USER</code></p>
-<dd>Set to the login name of the user who invoked sudo.</p>
-<dt><code>USER</code></p>
-<dd>Set to the same value as <code>LOGNAME</code> described above.</p>
-<dt><code>VISUAL</code></p>
-<dd>Default editor to use in &#8211;<code>e</code> (sudoedit) mode if <code>SUDO_EDITOR</code> is not set.</dl>
+<dt><code>EDITOR</code></dt>
+<dd>Default editor to use in &#8211;<code>e</code> (sudoedit) mode if neither <code>SUDO_EDITOR</code> nor <code>VISUAL</code> is set.</dd>
+<dt><code>MAIL</code></dt>
+<dd>Set to the mail spool of the target user when the &#8211;<code>i</code> option is specified, or when <i>env_reset</i> is enabled in <i>sudoers</i> (unless <code>MAIL</code> is present in the <i>env_keep</i> list).</dd>
+<dt><code>HOME</code></dt>
+<dd>Set to the home directory of the target user when the &#8211;<code>i</code> or &#8211;<code>H</code> options are specified, when the &#8211;<code>s</code> option is specified and <i>set_home</i> is set in <i>sudoers</i> when <i>always_set_home</i> is enabled in <i>sudoers</i> or when <i>env_reset</i> is enabled in <i>sudoers</i> and <i>HOME</i> is not present in the <i>env_keep</i> list.</dd>
+<dt><code>LOGNAME</code></dt>
+<dd>Set to the login name of the target user when the &#8211;<code>i</code> option is specified, when the <i>set_logname</i> option is enabled in <i>sudoers</i> or when the <i>env_reset</i> option is enabled in <i>sudoers</i> (unless <code>LOGNAME</code> is present in the <i>env_keep</i> list).</dd>
+<dt><code>PATH</code></dt>
+<dd>May be overridden by the security policy.</dd>
+<dt><code>SHELL</code></dt>
+<dd>Used to determine shell to run with &#8211;<code>s</code> option.</dd>
+<dt><code>SUDO_ASKPASS</code></dt>
+<dd>Specifies the path to a helper program used to read the password if no terminal is available or if the &#8211;<code>A</code> option is specified.</dd>
+<dt><code>SUDO_COMMAND</code></dt>
+<dd>Set to the command run by sudo, including command line arguments. The command line arguments are truncated at 4096 characters to prevent a potential execution error.</dd>
+<dt><code>SUDO_EDITOR</code></dt>
+<dd>Default editor to use in &#8211;<code>e</code> (sudoedit) mode.</dd>
+<dt><code>SUDO_GID</code></dt>
+<dd>Set to the group-ID of the user who invoked sudo.</dd>
+<dt><code>SUDO_PROMPT</code></dt>
+<dd>Used as the default password prompt unless the &#8211;<code>p</code> option was specified.</dd>
+<dt><code>SUDO_PS1</code></dt>
+<dd>If set, <code>PS1</code> will be set to its value for the program being run.</dd>
+<dt><code>SUDO_UID</code></dt>
+<dd>Set to the user-ID of the user who invoked sudo.</dd>
+<dt><code>SUDO_USER</code></dt>
+<dd>Set to the login name of the user who invoked sudo.</dd>
+<dt><code>USER</code></dt>
+<dd>Set to the same value as <code>LOGNAME</code> described above.</dd>
+<dt><code>VISUAL</code></dt>
+<dd>Default editor to use in &#8211;<code>e</code> (sudoedit) mode if <code>SUDO_EDITOR</code> is not set.</dd></dl>
 <h2>Files</h2>
 <dl>
-<dt><code>/etc/sudo.conf </code></p>
-<dd><code>sudo</code> front-end configuration</dl>
+<dt><code>/etc/sudo.conf </code></dt>
+<dd><code>sudo</code> front-end configuration</dd></dl>
 <h2>Examples</h2>
 <p>Note: the following examples assume a properly configured security policy. </p>
 <p> To get a file listing of an unreadable directory: </p>
@@ -228,36 +228,36 @@ Path askpass /usr/X11R6/bin/ssh-askpass</pre>
 <h2>Diagnostics</h2>
 <p>Error messages produced by <code>sudo</code> include:</p>
 <dl>
-<dt><code>editing files in a writable directory is not permitted</code></p>
-<dd>By default, <code>sudoedit</code> does not permit editing a file when any of the parent directories are writable by the invoking user. This avoids a race condition that could allow the user to overwrite an arbitrary file. See the <i>sudoedit_checkdir</i> option in <a href="/docs/linux/man/5-sudoers/">sudoers</a>(5) for more information.</p>
-<dt><code>editing symbolic links is not permitted</code></p>
-<dd>By default, <code>sudoedit</code> does not follow symbolic links when opening files. See the <i>sudoedit_follow</i> option in <a href="/docs/linux/man/5-sudoers/">sudoers</a>(5) for more information.</p>
-<dt><code>effective uid is not 0, is sudo installed setuid root?</code></p>
-<dd><code>sudo</code> was not run with root privileges. The <code>sudo</code> binary must be owned by the root user and have the set-user-ID bit set. Also, it must not be located on a file system mounted with the `nosuid&#8217; option or on an NFS file system that maps uid 0 to an unprivileged uid.</p>
-<dt><code>effective uid is not 0, is sudo on a file system with the &#8216;nosuid&#8217; option set or an NFS file system without root privileges?</code></p>
-<dd><code>sudo</code> was not run with root privileges. The <code>sudo</code> binary has the proper owner and permissions but it still did not run with root privileges. The most common reason for this is that the file system the <code>sudo</code> binary is located on is mounted with the `nosuid&#8217; option or it is an NFS file system that maps uid 0 to an unprivileged uid.</p>
-<dt><code>fatal error, unable to load plugins</code></p>
-<dd>An error occurred while loading or initializing the plugins specified in sudo.conf5.</p>
-<dt><code>invalid environment variable name</code></p>
-<dd>One or more environment variable names specified via the &#8211;<code>E</code> option contained an equal sign (`=&#8217; ) The arguments to the &#8211;<code>E</code> option should be environment variable names without an associated value.</p>
-<dt><code>no password was provided</code></p>
-<dd>When <code>sudo</code> tried to read the password, it did not receive any characters. This may happen if no terminal is available (or the &#8211;<code>S</code> option is specified) and the standard input has been redirected from /dev/null</p>
-<dt><code>a terminal is required to read the password</code></p>
-<dd><code>sudo</code> needs to read the password but there is no mechanism available for it to do so. A terminal is not present to read the password from, <code>sudo</code> has not been configured to read from the standard input, the &#8211;<code>S</code> option was not used, and no askpass helper has been specified either via the sudo.conf5 file or the <code>SUDO_ASKPASS</code> environment variable.</p>
-<dt><code>no writable temporary directory found</code></p>
-<dd><code>sudoedit</code> was unable to find a usable temporary directory in which to store its intermediate files.</p>
-<dt><code>The Do </code>no new privileges Dc flag is set, which prevents sudo from running as root.</p>
-<dd><code>sudo</code> was run by a process that has the Linux &#8220;no new privileges&#8221; flag is set. This causes the set-user-ID bit to be ignored when running an executable, which will prevent <code>sudo</code> from functioning. The most likely cause for this is running <code>sudo</code> within a container that sets this flag. Check the documentation to see if it is possible to configure the container such that the flag is not set.</p>
-<dt><code>sudo must be owned by uid 0 and have the setuid bit set</code></p>
-<dd><code>sudo</code> was not run with root privileges. The <code>sudo</code> binary does not have the correct owner or permissions. It must be owned by the root user and have the set-user-ID bit set.</p>
-<dt><code>sudoedit is not supported on this platform</code></p>
-<dd>It is only possible to run <code>sudoedit</code> on systems that support setting the effective user-ID.</p>
-<dt><code>timed out reading password</code></p>
-<dd>The user did not enter a password before the password timeout (5 minutes by default) expired.</p>
-<dt><code>you do not exist in the passwd database</code></p>
-<dd>Your user-ID does not appear in the system passwd database.</p>
-<dt><code>you may not specify environment variables in edit mode</code></p>
-<dd>It is only possible to specify environment variables when running a command. When editing a file, the editor is run with the user&#8217;s environment unmodified.</dl>
+<dt><code>editing files in a writable directory is not permitted</code></dt>
+<dd>By default, <code>sudoedit</code> does not permit editing a file when any of the parent directories are writable by the invoking user. This avoids a race condition that could allow the user to overwrite an arbitrary file. See the <i>sudoedit_checkdir</i> option in <a href="/docs/linux/man/5-sudoers/">sudoers</a>(5) for more information.</dd>
+<dt><code>editing symbolic links is not permitted</code></dt>
+<dd>By default, <code>sudoedit</code> does not follow symbolic links when opening files. See the <i>sudoedit_follow</i> option in <a href="/docs/linux/man/5-sudoers/">sudoers</a>(5) for more information.</dd>
+<dt><code>effective uid is not 0, is sudo installed setuid root?</code></dt>
+<dd><code>sudo</code> was not run with root privileges. The <code>sudo</code> binary must be owned by the root user and have the set-user-ID bit set. Also, it must not be located on a file system mounted with the `nosuid&#8217; option or on an NFS file system that maps uid 0 to an unprivileged uid.</dd>
+<dt><code>effective uid is not 0, is sudo on a file system with the &#8216;nosuid&#8217; option set or an NFS file system without root privileges?</code></dt>
+<dd><code>sudo</code> was not run with root privileges. The <code>sudo</code> binary has the proper owner and permissions but it still did not run with root privileges. The most common reason for this is that the file system the <code>sudo</code> binary is located on is mounted with the `nosuid&#8217; option or it is an NFS file system that maps uid 0 to an unprivileged uid.</dd>
+<dt><code>fatal error, unable to load plugins</code></dt>
+<dd>An error occurred while loading or initializing the plugins specified in sudo.conf5.</dd>
+<dt><code>invalid environment variable name</code></dt>
+<dd>One or more environment variable names specified via the &#8211;<code>E</code> option contained an equal sign (`=&#8217; ) The arguments to the &#8211;<code>E</code> option should be environment variable names without an associated value.</dd>
+<dt><code>no password was provided</code></dt>
+<dd>When <code>sudo</code> tried to read the password, it did not receive any characters. This may happen if no terminal is available (or the &#8211;<code>S</code> option is specified) and the standard input has been redirected from /dev/null</dd>
+<dt><code>a terminal is required to read the password</code></dt>
+<dd><code>sudo</code> needs to read the password but there is no mechanism available for it to do so. A terminal is not present to read the password from, <code>sudo</code> has not been configured to read from the standard input, the &#8211;<code>S</code> option was not used, and no askpass helper has been specified either via the sudo.conf5 file or the <code>SUDO_ASKPASS</code> environment variable.</dd>
+<dt><code>no writable temporary directory found</code></dt>
+<dd><code>sudoedit</code> was unable to find a usable temporary directory in which to store its intermediate files.</dd>
+<dt><code>The Do </code>no new privileges Dc flag is set, which prevents sudo from running as root.</dt>
+<dd><code>sudo</code> was run by a process that has the Linux &#8220;no new privileges&#8221; flag is set. This causes the set-user-ID bit to be ignored when running an executable, which will prevent <code>sudo</code> from functioning. The most likely cause for this is running <code>sudo</code> within a container that sets this flag. Check the documentation to see if it is possible to configure the container such that the flag is not set.</dd>
+<dt><code>sudo must be owned by uid 0 and have the setuid bit set</code></dt>
+<dd><code>sudo</code> was not run with root privileges. The <code>sudo</code> binary does not have the correct owner or permissions. It must be owned by the root user and have the set-user-ID bit set.</dd>
+<dt><code>sudoedit is not supported on this platform</code></dt>
+<dd>It is only possible to run <code>sudoedit</code> on systems that support setting the effective user-ID.</dd>
+<dt><code>timed out reading password</code></dt>
+<dd>The user did not enter a password before the password timeout (5 minutes by default) expired.</dd>
+<dt><code>you do not exist in the passwd database</code></dt>
+<dd>Your user-ID does not appear in the system passwd database.</dd>
+<dt><code>you may not specify environment variables in edit mode</code></dt>
+<dd>It is only possible to specify environment variables when running a command. When editing a file, the editor is run with the user&#8217;s environment unmodified.</dd></dl>
 <h2>See Also</h2>
 <p><a href="/docs/linux/man/1-su/">su</a>(1), <a href="/docs/linux/man/2-stat/">stat</a>(2), login_cap3, <a href="/docs/linux/man/5-passwd/">passwd</a>(5), sudo.conf5, sudo_plugin5, <a href="/docs/linux/man/5-sudoers/">sudoers</a>(5), sudoers_timestamp5, <a href="/docs/linux/man/8-sudoreplay/">sudoreplay</a>(8), <a href="/docs/linux/man/8-visudo/">visudo</a>(8)</p>
 <h2>History</h2>

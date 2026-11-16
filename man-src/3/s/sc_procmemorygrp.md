@@ -11,7 +11,6 @@ description: "sc::ProcMemoryGrp –"
 <p> The <code>ProcMemoryGrp</code> concrete class provides an implementation of <code>MemoryGrp</code> for a single processor.</p>
 <h2>Synopsis</h2>
 <pre><code>
-
 #include &lt;memproc.h&gt;</code></pre>
 <p> Inherits <code>sc::MemoryGrp</code>.</p>
 <h3>Public Member Functions</h3>

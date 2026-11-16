@@ -19,15 +19,15 @@ description: "git-verify-tag – Check the GPG signature of tags"
 <p> &#8211;raw</p>
 <dl>
 <dt>
-<dd> Print the raw gpg status output to standard error instead of the normal human-readable output.</dl>
+</dt><dd> Print the raw gpg status output to standard error instead of the normal human-readable output.</dd></dl>
 <p> -v, &#8211;verbose</p>
 <dl>
 <dt>
-<dd> Print the contents of the tag object before validating it.</dl>
+</dt><dd> Print the contents of the tag object before validating it.</dd></dl>
 <p> &lt;tag&gt;&#8230;</p>
 <dl>
 <dt>
-<dd> SHA-1 identifiers of Git tag objects.</dl>
+</dt><dd> SHA-1 identifiers of Git tag objects.</dd></dl>
 <h2>GIT</h2>
 <p> Part of the <code><a href="/docs/linux/man/1-git/">git</a></code>(1) suite </p>
 <h2>Index</h2>

@@ -22,10 +22,10 @@ description: "ssbgv.f –"
  of a real generalized symmetric-definite banded eigenproblem, of
  the form A*x=(lambda)*B*x. Here A and B are assumed to be symmetric
  and banded, and B is also positive definite.</pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>JOBZ</i> </p>
+<dd><i>JOBZ</i> </dd>
 <pre> JOBZ is CHARACTER*1
  = 'N': Compute eigenvalues only;
  = 'V': Compute eigenvalues and eigenvectors.</pre>
@@ -100,13 +100,13 @@ description: "ssbgv.f –"
 <p>&nbsp;<wbr></dl>
 <p> <code>Author:</code></p>
 <dl>
-<dd>Univ. of Tennessee </p>
+<dd>Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl>
-<dd>November 2011</dl>
+<dd>November 2011</dd></dl>
 <p> Definition at line 177 of file ssbgv.f.</p>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for LAPACK from the source code.</p>

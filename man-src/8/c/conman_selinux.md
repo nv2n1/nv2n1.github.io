@@ -57,9 +57,9 @@ description: "conman_selinux – Security Enhanced Linux Policy for the conman p
 <p> Policy governs the access confined processes have to these ports. SELinux conman policy is very flexible allowing users to setup their conman processes in as secure a method as possible. </p>
 <p> The following port types are defined for conman: </p>
 <dl>
-<dt><code>conman_port_t</code></p>
+<dt><code>conman_port_t</code></dt>
 <dd>
-<dd>Default Defined Ports: tcp 7890 udp 7890</dl>
+</dd><dd>Default Defined Ports: tcp 7890 udp 7890</dd></dl>
 <h2>Managed Files</h2>
 <p>The SELinux process type conman_t can manage files labeled with the following file types. The paths listed are the default paths for these file types. Note the processes UID still need to have DAC permissions. </p>
 <p> <code>cluster_conf_t</code> </p>
@@ -112,8 +112,8 @@ description: "conman_selinux – Security Enhanced Linux Policy for the conman p
 <p> <code>conman_log_t</code> </p>
 <p> &#8211; Set files with the conman_log_t type, if you want to treat the data as conman log data, usually stored under the /var/log directory. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/var/log/conman(/.*)?, /var/log/conman.old(/.*)? </p>
+<dt>Paths:</dt>
+<dd>/var/log/conman(/.*)?, /var/log/conman.old(/.*)? </dd>
 </dl>
 <p> <code>conman_tmp_t</code> </p>
 <p> &#8211; Set files with the conman_tmp_t type, if you want to store conman temporary files in the /tmp directories. </p>

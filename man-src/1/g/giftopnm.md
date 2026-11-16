@@ -18,16 +18,16 @@ description: "giftopnm – convert a GIF file into a portable anymap"
 <p> A GIF image contains rectangular pixels. They all have the same aspect ratio, but may not be square (it&#8217;s actually quite unusual for them not to be square, but it could happen). The pixels of a Netpbm image are always square. Because of the engineering complexity to do otherwise, <code>giftopnm</code> converts a GIF image to a Netpbm image pixel-for-pixel. This means if the GIF pixels are not square, the Netpbm output image has the wrong aspect ratio. In this case, <code>giftopnm</code> issues an informational message telling you to run <code>pnmscale</code> to correct the output. </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>&#8211;alphaout=</code><i>alpha-filename</i></p>
-<dd> <code>giftopnm </code> creates a PGM (portable graymap) file containing the alpha channel values in the input image. If the input image doesn&#8217;t contain an alpha channel, the <i>alpha-filename</i> file contains all zero (transparent) alpha values. If you don&#8217;t specify <code>&#8211;alphaout</code>, <code>giftopnm</code> does not generate an alpha file, and if the input image has an alpha channel, <code>giftopnm</code> simply discards it. </p>
+<dt><code>&#8211;alphaout=</code><i>alpha-filename</i></dt>
+<dd> <code>giftopnm </code> creates a PGM (portable graymap) file containing the alpha channel values in the input image. If the input image doesn&#8217;t contain an alpha channel, the <i>alpha-filename</i> file contains all zero (transparent) alpha values. If you don&#8217;t specify <code>&#8211;alphaout</code>, <code>giftopnm</code> does not generate an alpha file, and if the input image has an alpha channel, <code>giftopnm</code> simply discards it. </dd>
 <p> If you specify <code>&#8211;</code> as the filename, <code>giftopnm</code> writes the alpha output to Standard Output and discards the image. </p>
 <p> See <code><a href="/docs/linux/man/1-pnmcomp/">pnmcomp</a></code>(1) for one way to use the alpha output file.</p>
-<dt><code>-verbose</code></p>
-<dd> Produce verbose output about the GIF file input.</p>
-<dt><code>-comments</code></p>
-<dd> Only output GIF89 comment fields.</p>
-<dt><code>-image </code><i>N</i></p>
-<dd> Output the specified gif image from the input GIF archive (where <i>N</i> is &#8216;1&#8217;, &#8216;2&#8217;, &#8217;20&#8217;&#8230;). Normally there is only one image per file, so this option is not needed.</dl>
+<dt><code>-verbose</code></dt>
+<dd> Produce verbose output about the GIF file input.</dd>
+<dt><code>-comments</code></dt>
+<dd> Only output GIF89 comment fields.</dd>
+<dt><code>-image </code><i>N</i></dt>
+<dd> Output the specified gif image from the input GIF archive (where <i>N</i> is &#8216;1&#8217;, &#8216;2&#8217;, &#8217;20&#8217;&#8230;). Normally there is only one image per file, so this option is not needed.</dd></dl>
 <p> All flags can be abbreviated to their shortest unique prefix. </p>
 <h2>RESTRICTIONS</h2>
 <p> This does not correctly handle the Plain Text Extension of the GIF89 standard, since I did not have any example input files containing them. </p>

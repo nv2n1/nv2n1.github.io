@@ -24,30 +24,30 @@ description: "omshell – OMAPI Command Shell"
 <p> <code>server </code><i>address</i></p>
 <dl>
 <dt>
-<dd> where address is the IP address of the DHCP server to connect to. If this is not specified, the default server is 127.0.0.1 (localhost).</dl>
+</dt><dd> where address is the IP address of the DHCP server to connect to. If this is not specified, the default server is 127.0.0.1 (localhost).</dd></dl>
 <p> <code>port </code><i>number</i></p>
 <dl>
 <dt>
-<dd> where number is the port that OMAPI listens on. By default, this is 7911.</dl>
+</dt><dd> where number is the port that OMAPI listens on. By default, this is 7911.</dd></dl>
 <p> <code>key </code><i>name secret</i></p>
 <dl>
 <dt>
-<dd> This specifies the TSIG key to use to authenticate the OMAPI transactions. <i>name</i> is the name of a key defined in <i>dhcpd.conf</i> with the <code>omapi-key</code> statement. The <i>secret</i> is the secret key generated from <code>dnssec-keygen</code> or another key generation program.</dl>
+</dt><dd> This specifies the TSIG key to use to authenticate the OMAPI transactions. <i>name</i> is the name of a key defined in <i>dhcpd.conf</i> with the <code>omapi-key</code> statement. The <i>secret</i> is the secret key generated from <code>dnssec-keygen</code> or another key generation program.</dd></dl>
 <p> <code>connect</code></p>
 <dl>
 <dt>
-<dd> This starts the OMAPI connection to the server as specified by the <i>server</i> statement.</dl>
+</dt><dd> This starts the OMAPI connection to the server as specified by the <i>server</i> statement.</dd></dl>
 <h2>CREATING LOCAL OBJECTS</h2>
 <p> Any object defined in OMAPI can be created, queried, and/or modified. The object types available to OMAPI are defined in <code><a href="/docs/linux/man/8-dhcpd/">dhcpd</a>(8)</code> and <code><a href="/docs/linux/man/8-dhclient/">dhclient</a>(8)</code>. When using omshell, objects are first defined locally, manipulated as desired, and then associated with an object on the server. Only one object can be manipulated at a time. To create a local object, use </p>
 <p> <code>new </code><i>object-type</i></p>
 <dl>
 <dt>
-<dd> <i>object-type</i> is one of group, host, or lease.</dl>
+</dt><dd> <i>object-type</i> is one of group, host, or lease.</dd></dl>
 <p> At this point, you now have an object that you can set properties on. For example, if a new lease object was created with <i>new lease</i>, any of a lease&#8217;s attributes can be set as follows: </p>
 <p> <code>set </code><i>attribute-name = value</i></p>
 <dl>
 <dt>
-<dd> <code>Attribute</code> names are defined in <code><a href="/docs/linux/man/8-dhcpd/">dhcpd</a>(8)</code> and <code><a href="/docs/linux/man/8-dhclient/">dhclient</a>(8)</code>. Values should be quoted if they are strings. So, to set a lease&#8217;s IP address, you would do the following: <code> set ip-address = 192.168.4.50</code></dl>
+</dt><dd> <code>Attribute</code> names are defined in <code><a href="/docs/linux/man/8-dhcpd/">dhcpd</a>(8)</code> and <code><a href="/docs/linux/man/8-dhclient/">dhclient</a>(8)</code>. Values should be quoted if they are strings. So, to set a lease&#8217;s IP address, you would do the following: <code> set ip-address = 192.168.4.50</code></dd></dl>
 <h2>ASSOCIATING LOCAL AND REMOTE OBJECTS</h2>
 <p> At this point, you can query the server for information about this lease, by </p>
 <p> <code>open</code> </p>

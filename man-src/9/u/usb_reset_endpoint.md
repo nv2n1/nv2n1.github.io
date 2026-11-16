@@ -15,11 +15,11 @@ usb_reset_endpoint - Reset an endpoint's state.
 <h2>Arguments</h2>
 
 <i>dev</i>
-<dl><dd><dd>the device whose endpoint is to be reset</dl>
+<dl><dd></dd><dd>the device whose endpoint is to be reset</dd></dl>
  
 
  <i>epaddr</i>
-<dl><dd>the endpoint's address. Endpoint number for output, endpoint number + USB_DIR_IN for input</dl>
+<dl><dd>the endpoint's address. Endpoint number for output, endpoint number + USB_DIR_IN for input</dd></dl>
 
 <h2>Description</h2>
 

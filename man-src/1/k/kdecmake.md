@@ -19,8 +19,8 @@ description: "kdecmake – Reference of available CMake custom modules."
 </pre>
 <p> This is the documentation for additional modules and scripts for CMake. Using these modules you can check the computer system for installed software packages, features of the compiler and the existance of headers to name just a few. </p>
 <dl>
-<dt><code>CheckCXXSourceCompiles</code></p>
-<dd> macro which checks if the source code compiles </p>
+<dt><code>CheckCXXSourceCompiles</code></dt>
+<dd> macro which checks if the source code compiles </dd>
 <p> CHECK_CXX_SOURCE_COMPILES(SOURCE VAR) </p>
 <pre>
   SOURCE - source code to try to compile
@@ -33,8 +33,8 @@ description: "kdecmake – Reference of available CMake custom modules."
   CMAKE_REQUIRED_INCLUDES = list of include directories
   CMAKE_REQUIRED_LIBRARIES = list of libraries to link
 </pre>
-<dt><code>CheckCXXSourceRuns</code></p>
-<dd> Check if the C++ source code provided in the SOURCE argument compiles and runs. </p>
+<dt><code>CheckCXXSourceRuns</code></dt>
+<dd> Check if the C++ source code provided in the SOURCE argument compiles and runs. </dd>
 <p> CHECK_CXX_SOURCE_RUNS(SOURCE VAR) </p>
 <pre>
   SOURCE - source code to try to compile
@@ -47,8 +47,8 @@ description: "kdecmake – Reference of available CMake custom modules."
   CMAKE_REQUIRED_INCLUDES = list of include directories
   CMAKE_REQUIRED_LIBRARIES = list of libraries to link
 </pre>
-<dt><code>CheckCXXSymbolExists</code></p>
-<dd> Check if the symbol exists in include files, in C++ mode </p>
+<dt><code>CheckCXXSymbolExists</code></dt>
+<dd> Check if the symbol exists in include files, in C++ mode </dd>
 <p> Forked off cmake&#8217;s CheckSymbolExists.cmake CHECK_CXX_SYMBOL_EXISTS(SYMBOL FILES VARIABLE) </p>
 <pre>
   SYMBOL   - symbol
@@ -62,8 +62,8 @@ description: "kdecmake – Reference of available CMake custom modules."
   CMAKE_REQUIRED_INCLUDES = list of include directories
   CMAKE_REQUIRED_LIBRARIES = list of libraries to link
 </pre>
-<dt><code>CheckPointerMember</code></p>
-<dd> Check if the given struct or class has the specified member variable </p>
+<dt><code>CheckPointerMember</code></dt>
+<dd> Check if the given struct or class has the specified member variable </dd>
 <p> CHECK_POINTER_MEMBER (POINTER MEMBER HEADER VARIABLE) </p>
 <pre>
   POINTER - the name of the struct or class you are interested in
@@ -77,8 +77,8 @@ description: "kdecmake – Reference of available CMake custom modules."
   CMAKE_REQUIRED_DEFINITIONS = list of macros to define (-DFOO=bar)
   CMAKE_REQUIRED_INCLUDES = list of include directories
 </pre>
-<dt><code>CheckPrototypeExists</code></p>
-<dd> Check if the prototype for a function exists. </p>
+<dt><code>CheckPrototypeExists</code></dt>
+<dd> Check if the prototype for a function exists. </dd>
 <p> CHECK_PROTOTYPE_EXISTS (FUNCTION HEADER VARIABLE) </p>
 <pre>
   FUNCTION - the name of the function you are looking for
@@ -91,8 +91,8 @@ description: "kdecmake – Reference of available CMake custom modules."
   CMAKE_REQUIRED_DEFINITIONS = list of macros to define (-DFOO=bar)
   CMAKE_REQUIRED_INCLUDES = list of include directories
 </pre>
-<dt><code>CheckStructMember</code></p>
-<dd> Check if the given struct or class has the specified member variable </p>
+<dt><code>CheckStructMember</code></dt>
+<dd> Check if the given struct or class has the specified member variable </dd>
 <p> CHECK_STRUCT_MEMBER (STRUCT MEMBER HEADER VARIABLE) </p>
 <pre>
   STRUCT - the name of the struct or class you are interested in
@@ -106,15 +106,15 @@ description: "kdecmake – Reference of available CMake custom modules."
   CMAKE_REQUIRED_DEFINITIONS = list of macros to define (-DFOO=bar)
   CMAKE_REQUIRED_INCLUDES = list of include directories
 </pre>
-<dt><code>FindACL</code></p>
-<dd> Try to find the ACL library </p>
+<dt><code>FindACL</code></dt>
+<dd> Try to find the ACL library </dd>
 <p> Once done this will define </p>
 <pre>
   ACL_FOUND - system has the ACL library
   ACL_LIBS - The libraries needed to use ACL
 </pre>
-<dt><code>FindAGG</code></p>
-<dd> Try to find the AGG graphics library </p>
+<dt><code>FindAGG</code></dt>
+<dd> Try to find the AGG graphics library </dd>
 <p> Once done this will define </p>
 <pre>
   AGG_FOUND - system has AGG
@@ -122,15 +122,15 @@ description: "kdecmake – Reference of available CMake custom modules."
   AGG_LIBRARIES - Link these to use AGG
   AGG_DEFINITIONS - Compiler switches required for using AGG
 </pre>
-<dt><code>FindAkode</code></p>
-<dd> Try to find the aKode library </p>
+<dt><code>FindAkode</code></dt>
+<dd> Try to find the aKode library </dd>
 <p> Once done this will define </p>
 <pre>
   AKODE_FOUND - system has the aKode library
   AKODE_INCLUDE_DIR - the aKode include directory
   AKODE_LIBRARIES - The libraries needed to use aKode
 </pre>
-<dt><code>FindAlsa</code></p>
+<dt><code>FindAlsa</code></dt>
 <dd>
 <p> Alsa check, based on libkmid/configure.in.in. Only the support for Alsa &gt;= 0.9.x was included; 0.5.x was dropped (but feel free to re-add it if you need it) It defines &#8230; It offers the following macros: </p>
 <pre>
@@ -139,8 +139,8 @@ description: "kdecmake – Reference of available CMake custom modules."
   ALSA_VERSION_STRING(version_string)  looks for alsa/version.h and reads the version string into
                                        the first argument passed to the macro
 </pre>
-<dt><code>FindAutomoc4</code></p>
-<dd> Try to find automoc4 </p>
+</dd><dt><code>FindAutomoc4</code></dt>
+<dd> Try to find automoc4 </dd>
 <p> Once done this will define </p>
 <pre>
   AUTOMOC4_FOUND - automoc4 has been found
@@ -168,11 +168,11 @@ description: "kdecmake – Reference of available CMake custom modules."
     This macro does the same as ADD_LIBRARY, but additionally
     adds automoc4 handling for all source files.
 </pre>
-<dt><code>FindAvahi</code></p>
+<dt><code>FindAvahi</code></dt>
 <dd>
 <p> Find Avahi. Only avahi-common/defs.h is really needed </p>
-<dt><code>FindBerkeleyDB</code></p>
-<dd> Try to find Berkeley DB </p>
+</dd><dt><code>FindBerkeleyDB</code></dt>
+<dd> Try to find Berkeley DB </dd>
 <p> Once done this will define </p>
 <pre>
   BERKELEY_DB_FOUND - system has Berkeley DB
@@ -180,16 +180,16 @@ description: "kdecmake – Reference of available CMake custom modules."
   BERKELEY_DB_LIBRARIES - Link these to use Berkeley DB
   BERKELEY_DB_DEFINITIONS - Compiler switches required for using Berkeley DB
 </pre>
-<dt><code>FindBlitz</code></p>
-<dd> Try to find blitz lib </p>
+<dt><code>FindBlitz</code></dt>
+<dd> Try to find blitz lib </dd>
 <p> ########################################################## ######## DEPRECATED, use FindQImageBlitz instead ######### ########################################################## Once done this will define </p>
 <pre>
   BLITZ_FOUND - system has blitz lib
   BLITZ_INCLUDES - the blitz include directory
   BLITZ_LIBRARIES - The libraries needed to use blitz
 </pre>
-<dt><code>FindBlueZ</code></p>
-<dd> Try to find BlueZ </p>
+<dt><code>FindBlueZ</code></dt>
+<dd> Try to find BlueZ </dd>
 <p> Once done this will define </p>
 <pre>
   BLUEZ_FOUND - system has BlueZ
@@ -198,17 +198,17 @@ description: "kdecmake – Reference of available CMake custom modules."
   BLUEZ_DEFINITIONS - Compiler switches required for using BlueZ
 </pre>
 <p> Redistribution and use is allowed according to the terms of the BSD license. For details see the accompanying COPYING-CMAKE-SCRIPTS file. </p>
-<dt><code>FindBoost</code></p>
-<dd> Try to find Boost include dirs and libraries </p>
+<dt><code>FindBoost</code></dt>
+<dd> Try to find Boost include dirs and libraries </dd>
 <p> Please see the Documentation for Boost in the CMake Manual for details This module only forwards to the one included in cmake for compatibility reasons. </p>
-<dt><code>FindCarbon</code></p>
-<dd> Find Carbon on Mac </p>
+<dt><code>FindCarbon</code></dt>
+<dd> Find Carbon on Mac </dd>
 <pre>
   CARBON_LIBRARY - the library to use Carbon
   CARBON_FOUND - true if Carbon has been found
 </pre>
-<dt><code>FindDNSSD</code></p>
-<dd> Try to find DNSSD </p>
+<dt><code>FindDNSSD</code></dt>
+<dd> Try to find DNSSD </dd>
 <p> Once done this will define </p>
 <pre>
   DNSSD_FOUND - system has DNSSD
@@ -217,8 +217,8 @@ description: "kdecmake – Reference of available CMake custom modules."
   DNSSD_DEFINITIONS - Compiler switches required for using DNSSD
 </pre>
 <p> need more test: look at into dnssd/configure.in.in </p>
-<dt><code>FindENCHANT</code></p>
-<dd> Try to find the Enchant spell checker </p>
+<dt><code>FindENCHANT</code></dt>
+<dd> Try to find the Enchant spell checker </dd>
 <p> Once done this will define </p>
 <pre>
   ENCHANT_FOUND - system has ENCHANT
@@ -226,16 +226,16 @@ description: "kdecmake – Reference of available CMake custom modules."
   ENCHANT_LIBRARIES - Link these to use ENCHANT
   ENCHANT_DEFINITIONS - Compiler switches required for using ENCHANT
 </pre>
-<dt><code>FindEigen</code></p>
-<dd> Try to find Eigen1 library </p>
+<dt><code>FindEigen</code></dt>
+<dd> Try to find Eigen1 library </dd>
 <p> Note that Eigen1 is deprecated in favor of Eigen2. So this file is deprecated in favor of FindEigen2.cmake. It is kept only for compatibility. </p>
 <p> Once done this will define </p>
 <pre>
   EIGEN_FOUND - system has eigen lib
   EIGEN_INCLUDE_DIR - the eigen include directory
 </pre>
-<dt><code>FindEigen2</code></p>
-<dd> Try to find Eigen2 lib </p>
+<dt><code>FindEigen2</code></dt>
+<dd> Try to find Eigen2 lib </dd>
 <p> This module supports requiring a minimum version, e.g. you can do </p>
 <pre>
    find_package(Eigen2 2.0.3)
@@ -247,8 +247,8 @@ description: "kdecmake – Reference of available CMake custom modules."
   EIGEN2_INCLUDE_DIR - the eigen include directory
   EIGEN2_VERSION - eigen version
 </pre>
-<dt><code>FindExiv2</code></p>
-<dd> Try to find the Exiv2 library </p>
+<dt><code>FindExiv2</code></dt>
+<dd> Try to find the Exiv2 library </dd>
 <pre>
   EXIV2_MIN_VERSION - You can set this variable to the minimum version you need 
                       before doing FIND_PACKAGE(Exiv2). The default is 0.12.
@@ -260,16 +260,16 @@ description: "kdecmake – Reference of available CMake custom modules."
   EXIV2_LIBRARIES - Link these to use libexiv2
   EXIV2_DEFINITIONS - Compiler switches required for using libexiv2
 </pre>
-<dt><code>FindFAM</code></p>
-<dd> Try to find the FAM directory notification library </p>
+<dt><code>FindFAM</code></dt>
+<dd> Try to find the FAM directory notification library </dd>
 <p> Once done this will define </p>
 <pre>
   FAM_FOUND - system has FAM
   FAM_INCLUDE_DIR - the FAM include directory
   FAM_LIBRARIES - The libraries needed to use FAM
 </pre>
-<dt><code>FindFFmpeg</code></p>
-<dd> Try to find ffmpeg </p>
+<dt><code>FindFFmpeg</code></dt>
+<dd> Try to find ffmpeg </dd>
 <p> Once done this will define </p>
 <pre>
   FFMPEG_FOUND - system has ffmpeg
@@ -277,8 +277,8 @@ description: "kdecmake – Reference of available CMake custom modules."
   FFMPEG_LIBRARIES - Link these to use ffmpeg
   FFMPEG_DEFINITIONS - Compiler switches required for using ffmpeg
 </pre>
-<dt><code>FindFlac</code></p>
-<dd> Try to find Flac, the Free Lossless Audio Codec </p>
+<dt><code>FindFlac</code></dt>
+<dd> Try to find Flac, the Free Lossless Audio Codec </dd>
 <p> Once done this will define </p>
 <pre>
   FLAC_FOUND - system has Flac
@@ -287,16 +287,16 @@ description: "kdecmake – Reference of available CMake custom modules."
   FLAC_OGGFLAC_LIBRARIES - Link these to use OggFlac
 </pre>
 <p> No version checking is done &#8211; use FLAC_API_VERSION_CURRENT to conditionally compile version-dependent code </p>
-<dt><code>FindFlex</code></p>
-<dd> Try to find Flex </p>
+<dt><code>FindFlex</code></dt>
+<dd> Try to find Flex </dd>
 <p> Once done this will define </p>
 <pre>
   FLEX_FOUND - system has Flex
   FLEX_EXECUTABLE - path of the flex executable
   FLEX_VERSION - the version string, like &quot;2.5.31&quot;
 </pre>
-<dt><code>FindFontconfig</code></p>
-<dd> Try to find the Fontconfig </p>
+<dt><code>FindFontconfig</code></dt>
+<dd> Try to find the Fontconfig </dd>
 <p> Once done this will define </p>
 <pre>
   FONTCONFIG_FOUND - system has Fontconfig
@@ -304,8 +304,8 @@ description: "kdecmake – Reference of available CMake custom modules."
   FONTCONFIG_LIBRARIES - Link these to use FONTCONFIG
   FONTCONFIG_DEFINITIONS - Compiler switches required for using FONTCONFIG
 </pre>
-<dt><code>FindFreetype</code></p>
-<dd> Try to find the freetype library </p>
+<dt><code>FindFreetype</code></dt>
+<dd> Try to find the freetype library </dd>
 <p> Once done this will define </p>
 <pre>
   FREETYPE_FOUND - system has Freetype
@@ -313,8 +313,8 @@ description: "kdecmake – Reference of available CMake custom modules."
   FREETYPE_LIBRARIES - Link these to use FREETYPE
   FREETYPE_INCLUDE_DIR - internal
 </pre>
-<dt><code>FindGIF</code></p>
-<dd> Try to find GIF </p>
+<dt><code>FindGIF</code></dt>
+<dd> Try to find GIF </dd>
 <p> Once done this will define </p>
 <pre>
   GIF_FOUND - system has GIF
@@ -322,15 +322,15 @@ description: "kdecmake – Reference of available CMake custom modules."
   GIF_LIBRARIES - Libraries needed to use GIF
   GIF_DEFINITIONS - Compiler switches required for using GIF
 </pre>
-<dt><code>FindGLIB2</code></p>
-<dd> Try to find the GLIB2 libraries </p>
+<dt><code>FindGLIB2</code></dt>
+<dd> Try to find the GLIB2 libraries </dd>
 <p> Once done this will define </p>
 <pre>
   GLIB2_FOUND - system has glib2
   GLIB2_INCLUDE_DIR - the glib2 include directory
   GLIB2_LIBRARIES - glib2 library
 </pre>
-<dt><code>FindGMP</code></p>
+<dt><code>FindGMP</code></dt>
 <dd>
 <p> Try to find the GMP librairies </p>
 <pre>
@@ -338,8 +338,8 @@ description: "kdecmake – Reference of available CMake custom modules."
   GMP_INCLUDE_DIR - the GMP include directory
   GMP_LIBRARIES - Libraries needed to use GMP
 </pre>
-<dt><code>FindGObject</code></p>
-<dd> Try to find GObject </p>
+</dd><dt><code>FindGObject</code></dt>
+<dd> Try to find GObject </dd>
 <p> Once done this will define </p>
 <pre>
   GOBJECT_FOUND - system has GObject
@@ -347,8 +347,8 @@ description: "kdecmake – Reference of available CMake custom modules."
   GOBJECT_LIBRARIES - the libraries needed to use GObject
   GOBJECT_DEFINITIONS - Compiler switches required for using GObject
 </pre>
-<dt><code>FindGSSAPI</code></p>
-<dd> Try to detect the GSSAPI support </p>
+<dt><code>FindGSSAPI</code></dt>
+<dd> Try to detect the GSSAPI support </dd>
 <p> Once done this will define </p>
 <pre>
   GSSAPI_FOUND - system supports GSSAPI
@@ -356,8 +356,8 @@ description: "kdecmake – Reference of available CMake custom modules."
   GSSAPI_LIBS - the libraries needed to use GSSAPI
   GSSAPI_FLAVOR - the type of API - MIT or HEIMDAL
 </pre>
-<dt><code>FindGStreamer</code></p>
-<dd> Try to find GStreamer </p>
+<dt><code>FindGStreamer</code></dt>
+<dd> Try to find GStreamer </dd>
 <p> Once done this will define </p>
 <pre>
   GSTREAMER_FOUND - system has GStreamer
@@ -365,7 +365,7 @@ description: "kdecmake – Reference of available CMake custom modules."
   GSTREAMER_LIBRARIES - the libraries needed to use GStreamer
   GSTREAMER_DEFINITIONS - Compiler switches required for using GStreamer
 </pre>
-<dt><code>FindGettext</code></p>
+<dt><code>FindGettext</code></dt>
 <dd>
 <p> Try to find Gettext functionality Once done this will define </p>
 <pre>
@@ -373,7 +373,7 @@ description: "kdecmake – Reference of available CMake custom modules."
   GETTEXT_INCLUDE_DIR - Gettext include directory
   GETTEXT_LIBRARIES - Libraries needed to use Gettext
 </pre>
-<dt><code>FindGphoto2</code></p>
+</dd><dt><code>FindGphoto2</code></dt>
 <dd>
 <p> cmake macro to test if we use gphoto2 </p>
 <pre>
@@ -381,8 +381,8 @@ description: "kdecmake – Reference of available CMake custom modules."
   GPHOTO2_INCLUDE_DIR - the GPHOTO2 include directory
   GPHOTO2_LIBRARIES - The libraries needed to use GPHOTO2
 </pre>
-<dt><code>FindHUNSPELL</code></p>
-<dd> Try to find HUNSPELL </p>
+</dd><dt><code>FindHUNSPELL</code></dt>
+<dd> Try to find HUNSPELL </dd>
 <p> Once done this will define </p>
 <pre>
   HUNSPELL_FOUND - system has HUNSPELL
@@ -390,14 +390,14 @@ description: "kdecmake – Reference of available CMake custom modules."
   HUNSPELL_LIBRARIES - The libraries needed to use HUNSPELL
   HUNSPELL_DEFINITIONS - Compiler switches required for using HUNSPELL
 </pre>
-<dt><code>FindIOKit</code></p>
-<dd> Find IOKit on Mac </p>
+<dt><code>FindIOKit</code></dt>
+<dd> Find IOKit on Mac </dd>
 <pre>
   IOKIT_LIBRARY - the library to use IOKit
   IOKIT_FOUND - true if IOKit has been found
 </pre>
-<dt><code>FindKDE4Internal</code></p>
-<dd> Find the KDE4 include and library dirs, KDE preprocessors and define a some macros </p>
+<dt><code>FindKDE4Internal</code></dt>
+<dd> Find the KDE4 include and library dirs, KDE preprocessors and define a some macros </dd>
 <p> This module defines the following variables: </p>
 <pre>
   KDE4_FOUND               - set to TRUE if everything required for building KDE software has been found
@@ -660,7 +660,7 @@ Create the handbook from the docbookfile(using meinproc4)<br />
   have such a dependency. This variable is deprecated with KDE 4.2.0, but
   will still work to make the module backwards-compatible.
 </pre>
-<dt><code>FindKDE4Workspace</code></p>
+<dt><code>FindKDE4Workspace</code></dt>
 <dd>
 <p> Find if we installed kdebase/workspaces. Once done this will define </p>
 <pre>
@@ -714,15 +714,15 @@ Create the handbook from the docbookfile(using meinproc4)<br />
    KDE4WORKSPACE_SERVICES_DIR
    KDE4WORKSPACE_SERVICETYPES_DIR
 </pre>
-<dt><code>FindKDEWIN32</code></p>
-<dd> Try to find the KDEWIN32 library &#8211; deprecated </p>
+</dd><dt><code>FindKDEWIN32</code></dt>
+<dd> Try to find the KDEWIN32 library &#8211; deprecated </dd>
 <p> Once done this will define </p>
 <pre>
   KDEWIN32_FOUND - system has KDEWIN32
   KDEWIN32_INCLUDES - the KDEWIN32 include directories
   KDEWIN32_LIBRARIES - The libraries needed to use KDEWIN32
 </pre>
-<dt><code>FindKDEWIN_Packager</code></p>
+<dt><code>FindKDEWIN_Packager</code></dt>
 <dd>
 <p> KDEWIN packager <a rel="nofollow" href="http://www.winkde.org/pub/kde/ports/win32/installer">http://www.winkde.org/pub/kde/ports/win32/installer</a> </p>
 <p> The kdewin packager is searched in the following pathes and order </p>
@@ -742,20 +742,20 @@ Create the handbook from the docbookfile(using meinproc4)<br />
    )
 </pre>
 <p> endif (KDEWIN_PACKAGER_FOUND) </p>
-<dt><code>FindKDEWin</code></p>
-<dd> Try to find the KDEWIN library </p>
+</dd><dt><code>FindKDEWin</code></dt>
+<dd> Try to find the KDEWIN library </dd>
 <p> Once done this will define </p>
 <pre>
   KDEWIN_FOUND - system has KDEWIN
   KDEWIN_INCLUDES - the KDEWIN include directories
   KDEWIN_LIBRARIES - The libraries needed to use KDEWIN
 </pre>
-<dt><code>FindKDevPlatform</code></p>
+<dt><code>FindKDevPlatform</code></dt>
 <dd>
 <p> Find the KDevelop Platform modules and sets various variables accordingly </p>
 <p> Example usage of this module: find_package(KDevPlatform 1.0.0 REQUIRED) </p>
 <p> The version number and REQUIRED flag are optional. You can set CMAKE_PREFIX_PATH variable to help it find the required files and directories </p>
-<dt><code>FindKNepomuk</code></p>
+</dd><dt><code>FindKNepomuk</code></dt>
 <dd>
 <p> Once done this will define </p>
 <pre>
@@ -763,8 +763,8 @@ Create the handbook from the docbookfile(using meinproc4)<br />
   KNEPOMUK_INCLUDES - the libKNep include directory
   KNEPOMUK_LIBRARIES - Link these to use libKNep
 </pre>
-<dt><code>FindKdcraw</code></p>
-<dd> Try to find the Kdcraw library </p>
+</dd><dt><code>FindKdcraw</code></dt>
+<dd> Try to find the Kdcraw library </dd>
 <p> Once done this will define </p>
 <pre>
   KDCRAW_FOUND - system has libkdcraw
@@ -772,7 +772,7 @@ Create the handbook from the docbookfile(using meinproc4)<br />
   KDCRAW_LIBRARIES - Link these to use libkdcraw
   KDCRAW_DEFINITIONS - Compiler switches required for using libkdcraw
 </pre>
-<dt><code>FindKdeMultimedia</code></p>
+<dt><code>FindKdeMultimedia</code></dt>
 <dd>
 <p> Module to see if we have KDE4 kdemultimedia installed </p>
 <p> This module defines </p>
@@ -783,10 +783,10 @@ Create the handbook from the docbookfile(using meinproc4)<br />
   KDEMULTIMEDIA_LIBRARIES - all of the KDE multimedia libraries together
   KDEMULTIMEDIA_FOUND - true if the above have been found
 </pre>
-<dt><code>FindKdepim</code></p>
+</dd><dt><code>FindKdepim</code></dt>
 <dd>
 <p> Nothing should require kdepim. We&#8217;ll show a fatal error and an explanation. </p>
-<dt><code>FindKdepimLibs</code></p>
+</dd><dt><code>FindKdepimLibs</code></dt>
 <dd>
 <p> Find if we installed kdepimlibs before to compile it Once done this will define </p>
 <pre>
@@ -849,8 +849,8 @@ Create the handbook from the docbookfile(using meinproc4)<br />
    KDEPIMLIBS_SERVICES_DIR
    KDEPIMLIBS_SERVICETYPES_DIR
 </pre>
-<dt><code>FindKexiv2</code></p>
-<dd> Try to find the KExiv2 library </p>
+</dd><dt><code>FindKexiv2</code></dt>
+<dd> Try to find the KExiv2 library </dd>
 <p> Once done this will define </p>
 <pre>
   KEXIV2_FOUND - system has libkexiv2
@@ -858,8 +858,8 @@ Create the handbook from the docbookfile(using meinproc4)<br />
   KEXIV2_LIBRARIES - Link these to use libkexiv2
   KEXIV2_DEFINITIONS - Compiler switches required for using libkexiv2
 </pre>
-<dt><code>FindKipi</code></p>
-<dd> Try to find the Kipi library </p>
+<dt><code>FindKipi</code></dt>
+<dd> Try to find the Kipi library </dd>
 <p> Once done this will define </p>
 <pre>
   KIPI_FOUND - system has libkipi
@@ -867,7 +867,7 @@ Create the handbook from the docbookfile(using meinproc4)<br />
   KIPI_LIBRARIES - Link these to use libkipi
   KIPI_DEFINITIONS - Compiler switches required for using libkipi
 </pre>
-<dt><code>FindKonto</code></p>
+<dt><code>FindKonto</code></dt>
 <dd>
 <p> Once done this will define </p>
 <pre>
@@ -875,23 +875,23 @@ Create the handbook from the docbookfile(using meinproc4)<br />
   KONTO_INCLUDES - the libKonto include directory
   KONTO_LIBRARIES - Link these to use libKonto
 </pre>
-<dt><code>FindKopete</code></p>
-<dd> Try to find the Kopete library </p>
+</dd><dt><code>FindKopete</code></dt>
+<dd> Try to find the Kopete library </dd>
 <p> Once done this will define </p>
 <pre>
   Kopete_FOUND - system has kopete
   KOPETE_INCLUDE_DIR - the kopete include directory
   KOPETE_LIBRARIES - Link these to use kopete
 </pre>
-<dt><code>FindKorundum</code></p>
-<dd> Find Korundum &#8211; the KDE Ruby bindings </p>
+<dt><code>FindKorundum</code></dt>
+<dd> Find Korundum &#8211; the KDE Ruby bindings </dd>
 <p> This module finds if Korundum is installed. It defines the following variables: </p>
 <pre>
   KORUNDUM_PATH - the path to the korundum ruby file
   KORUNDUM_FOUND - true if it has been found
 </pre>
-<dt><code>FindLCMS</code></p>
-<dd> Find LCMS </p>
+<dt><code>FindLCMS</code></dt>
+<dd> Find LCMS </dd>
 <p> Find the LCMS includes and library This module defines </p>
 <pre>
   LCMS_INCLUDE_DIR, where to find lcms.h
@@ -899,15 +899,15 @@ Create the handbook from the docbookfile(using meinproc4)<br />
   LCMS_VERSION, The value of LCMS_VERSION defined in lcms.h
   LCMS_FOUND, If false, do not try to use LCMS.
 </pre>
-<dt><code>FindLibArt</code></p>
-<dd> Try to find the LibArt 2D graphics library </p>
+<dt><code>FindLibArt</code></dt>
+<dd> Try to find the LibArt 2D graphics library </dd>
 <p> Once done this will define </p>
 <pre>
   LIBART_FOUND - system has the LibArt
   LIBART_INCLUDE_DIR - the LibArt include directory
   LIBART_LIBRARIES - The libraries needed to use LibArt
 </pre>
-<dt><code>FindLibAttica</code></p>
+<dt><code>FindLibAttica</code></dt>
 <dd>
 <p> Try to find the Attica library Once done this will define </p>
 <pre>
@@ -918,20 +918,20 @@ Create the handbook from the docbookfile(using meinproc4)<br />
 </pre>
 <p> Copyright (c) 2009 Frederik Gladhorn &lt;gladhorn [at] kde.org&gt; </p>
 <p> Redistribution and use is allowed according to the terms of the BSD license. </p>
-<dt><code>FindLibKonq</code></p>
-<dd> Try to find konqueror library </p>
+</dd><dt><code>FindLibKonq</code></dt>
+<dd> Try to find konqueror library </dd>
 <p> Once done this will define </p>
 <pre>
   LIBKONQ_FOUND - system has libkonq library
   LIBKONQ_INCLUDE_DIR - the LIBKONQ include directory
   LIBKONQ_LIBRARY - the libkonq library
 </pre>
-<dt><code>FindLibLZMA</code></p>
-<dd> Find LibLZMA </p>
+<dt><code>FindLibLZMA</code></dt>
+<dd> Find LibLZMA </dd>
 <p> Find LibLZMA headers and library </p>
 <p>LIBLZMA_FOUND &#8211; True if liblzma is found.LIBLZMA_INCLUDE_DIRS &#8211; Directory where liblzma headers are located.LIBLZMA_LIBRARIES &#8211; Lzma libraries to link against.LIBLZMA_HAS_AUTO_DECODER &#8211; True if lzma_auto_decoder () is found(required).LIBLZMA_HAS_EASY_ENCODER &#8211; True if lzma_easy_encoder () is found(required).LIBLZMA_HAS_LZMA_PRESET &#8211; True if lzma_lzma_preset () is found(required).</p>
-<dt><code>FindLibXml2</code></p>
-<dd> Try to find LibXml2 </p>
+<dt><code>FindLibXml2</code></dt>
+<dd> Try to find LibXml2 </dd>
 <p> Once done this will define </p>
 <pre>
   LIBXML2_FOUND - System has LibXml2
@@ -940,8 +940,8 @@ Create the handbook from the docbookfile(using meinproc4)<br />
   LIBXML2_DEFINITIONS - Compiler switches required for using LibXml2
   LIBXML2_XMLLINT_EXECUTABLE - The XML checking tool xmllint coming with LibXml2
 </pre>
-<dt><code>FindLibXslt</code></p>
-<dd> Try to find LibXslt </p>
+<dt><code>FindLibXslt</code></dt>
+<dd> Try to find LibXslt </dd>
 <p> Once done this will define </p>
 <pre>
   LIBXSLT_FOUND - system has LibXslt
@@ -950,7 +950,7 @@ Create the handbook from the docbookfile(using meinproc4)<br />
   LIBXSLT_DEFINITIONS - Compiler switches required for using LibXslt
   LIBXSLT_XSLTPROC_EXECUTABLE - path to the xsltproc tool
 </pre>
-<dt><code>FindLibintl</code></p>
+<dt><code>FindLibintl</code></dt>
 <dd>
 <p> Try to find Libintl functionality Once done this will define </p>
 <pre>
@@ -959,7 +959,7 @@ Create the handbook from the docbookfile(using meinproc4)<br />
   LIBINTL_LIBRARIES - Libraries needed to use Libintl
 </pre>
 <p> TODO: This will enable translations only if Gettext functionality is present in libc. Must have more robust system for release, where Gettext functionality can also reside in standalone Gettext library, or the one embedded within kdelibs (cf. gettext.m4 from Gettext source). </p>
-<dt><code>FindLibraryWithDebug</code></p>
+</dd><dt><code>FindLibraryWithDebug</code></dt>
 <dd>
 <pre>
   FIND_LIBRARY_WITH_DEBUG
@@ -968,21 +968,21 @@ Create the handbook from the docbookfile(using meinproc4)<br />
      to CMAKE_DEBUG_POSTFIX when creating a shared lib
      it has to be the second and third argument
 </pre>
-<dt><code>FindLinuxWirelesstools</code></p>
-<dd> Try to find wireless extensions support libraries </p>
+</dd><dt><code>FindLinuxWirelesstools</code></dt>
+<dd> Try to find wireless extensions support libraries </dd>
 <p> Once done this will define </p>
 <pre>
   IW_FOUND - system has IW
   IW_INCLUDE_DIR - the IW include directory
   IW_LIBRARIES - Link to these to use IW
 </pre>
-<dt><code>FindMsgfmt</code></p>
-<dd> Try to find msgfmt </p>
+<dt><code>FindMsgfmt</code></dt>
+<dd> Try to find msgfmt </dd>
 <p> Once done this will define </p>
 <pre>
   MSGFMT_FOUND - system has msgfmt
 </pre>
-<dt><code>FindMusicBrainz</code></p>
+<dt><code>FindMusicBrainz</code></dt>
 <dd>
 <p> Module to find the musicbrainz library </p>
 <p> It defines </p>
@@ -991,8 +991,8 @@ Create the handbook from the docbookfile(using meinproc4)<br />
   MUSICBRAINZ_LIBRARIES - the required libraries
   MUSICBRAINZ_FOUND - true if both of the above have been found
 </pre>
-<dt><code>FindMySQL</code></p>
-<dd> Try to find MySQL / MySQL Embedded library </p>
+</dd><dt><code>FindMySQL</code></dt>
+<dd> Try to find MySQL / MySQL Embedded library </dd>
 <p> Find the MySQL includes and client library This module defines </p>
 <pre>
   MYSQL_INCLUDE_DIR, where to find mysql.h
@@ -1003,7 +1003,7 @@ Create the handbook from the docbookfile(using meinproc4)<br />
   MYSQL_FOUND, If false, do not try to use MySQL.
   MYSQL_EMBEDDED_FOUND, If false, do not try to use MySQL Embedded.
 </pre>
-<dt><code>FindNepomuk</code></p>
+<dt><code>FindNepomuk</code></dt>
 <dd>
 <p> Once done this will define </p>
 <pre>
@@ -1014,8 +1014,8 @@ Create the handbook from the docbookfile(using meinproc4)<br />
   NEPOMUK_DEFINITIONS - Compiler switches required for using Nepomuk
 </pre>
 <p> Nepomuk requires Soprano, so this module checks for Soprano too. </p>
-<dt><code>FindNetworkManager</code></p>
-<dd> Try to find NetworkManager </p>
+</dd><dt><code>FindNetworkManager</code></dt>
+<dd> Try to find NetworkManager </dd>
 <p> Once done this will define </p>
 <pre>
   NETWORKMANAGER_FOUND - system has NetworkManager
@@ -1024,8 +1024,8 @@ Create the handbook from the docbookfile(using meinproc4)<br />
   NETWORKMANAGER_CFLAGS - Compiler switches required for using NetworkManager
   NETWORKMANAGER_VERSION - version number of NetworkManager
 </pre>
-<dt><code>FindOggVorbis</code></p>
-<dd> Try to find the OggVorbis libraries </p>
+<dt><code>FindOggVorbis</code></dt>
+<dd> Try to find the OggVorbis libraries </dd>
 <p> Once done this will define </p>
 <pre>
   OGGVORBIS_FOUND - system has OggVorbis
@@ -1037,7 +1037,7 @@ Create the handbook from the docbookfile(using meinproc4)<br />
   VORBISFILE_LIBRARY  - The VorbisFile library
   VORBISENC_LIBRARY   - The VorbisEnc library
 </pre>
-<dt><code>FindOpenEXR</code></p>
+<dt><code>FindOpenEXR</code></dt>
 <dd>
 <p> Try to find the OpenEXR libraries This check defines: </p>
 <pre>
@@ -1046,8 +1046,8 @@ Create the handbook from the docbookfile(using meinproc4)<br />
   OPENEXR_LIBRARIES - Libraries needed to use OpenEXR
   OPENEXR_DEFINITIONS - definitions required to use OpenEXR
 </pre>
-<dt><code>FindOpenSSL</code></p>
-<dd> Try to find the OpenSSL encryption library </p>
+</dd><dt><code>FindOpenSSL</code></dt>
+<dd> Try to find the OpenSSL encryption library </dd>
 <p> Once done this will define </p>
 <pre>
   OPENSSL_FOUND - system has the OpenSSL library
@@ -1055,15 +1055,15 @@ Create the handbook from the docbookfile(using meinproc4)<br />
   OPENSSL_LIBRARIES - The libraries needed to use OpenSSL
   OPENSSL_EAY_LIBRARIES - The additional libraries needed to use OpenSSL on windows
 </pre>
-<dt><code>FindPCRE</code></p>
-<dd> Try to find the PCRE regular expression library </p>
+<dt><code>FindPCRE</code></dt>
+<dd> Try to find the PCRE regular expression library </dd>
 <p> Once done this will define </p>
 <pre>
   PCRE_FOUND - system has the PCRE library
   PCRE_INCLUDE_DIR - the PCRE include directory
   PCRE_LIBRARIES - The libraries needed to use PCRE
 </pre>
-<dt><code>FindPhonon</code></p>
+<dt><code>FindPhonon</code></dt>
 <dd>
 <p> Find libphonon Once done this will define </p>
 <pre>
@@ -1072,8 +1072,8 @@ Create the handbook from the docbookfile(using meinproc4)<br />
   PHONON_LIBS     - link these to use Phonon
   PHONON_VERSION  - the version of the Phonon Library
 </pre>
-<dt><code>FindPkgConfig</code></p>
-<dd> a pkg-config module for CMake </p>
+</dd><dt><code>FindPkgConfig</code></dt>
+<dd> a pkg-config module for CMake </dd>
 <p> Usage: </p>
 <p>   pkg_check_modules(&lt;PREFIX&gt; [REQUIRED] [QUIET] &lt;MODULE&gt; [&lt;MODULE&gt;]*)<br />
      checks for all the given modules</p>
@@ -1138,8 +1138,8 @@ Xdmcp</p>
 <pre>
    pkg_search_module (BAR     libxml-2.0 libxml2 libxml&gt;=2)
 </pre>
-<dt><code>FindPolkitQt-1</code></p>
-<dd> Try to find PolkitQt-1 </p>
+<dt><code>FindPolkitQt-1</code></dt>
+<dd> Try to find PolkitQt-1 </dd>
 <p> Once done this will define </p>
 <pre>
   POLKITQT-1_FOUND - system has Polkit-qt
@@ -1150,8 +1150,8 @@ Xdmcp</p>
   POLKITQT-1_AGENT_LIBRARY - Link this to use the agent wrapper in polkit-qt
   POLKITQT-1_DEFINITIONS - Compiler switches required for using Polkit-qt
 </pre>
-<dt><code>FindPolkitQt</code></p>
-<dd> Try to find Polkit-qt </p>
+<dt><code>FindPolkitQt</code></dt>
+<dd> Try to find Polkit-qt </dd>
 <p> Once done this will define </p>
 <pre>
   POLKITQT_FOUND - system has Polkit-qt
@@ -1163,8 +1163,8 @@ Xdmcp</p>
   POLKITQT_POLICY_FILES_INSTALL_DIR - The directory where policy files should be installed to.
 </pre>
 <p> The minimum required version PolkitQt can be specified by setting the POLKITQT_MIN_VERSION variable. </p>
-<dt><code>FindPopplerQt4</code></p>
-<dd> Try to find the Qt4 binding of the Poppler library </p>
+<dt><code>FindPopplerQt4</code></dt>
+<dd> Try to find the Qt4 binding of the Poppler library </dd>
 <p> Once done this will define </p>
 <pre>
   POPPLER_QT4_FOUND - system has poppler-qt4
@@ -1172,15 +1172,15 @@ Xdmcp</p>
   POPPLER_QT4_LIBRARIES - Link these to use poppler-qt4
   POPPLER_QT4_DEFINITIONS - Compiler switches required for using poppler-qt4
 </pre>
-<dt><code>FindPostgreSQL</code></p>
-<dd> Find PostgreSQL </p>
+<dt><code>FindPostgreSQL</code></dt>
+<dd> Find PostgreSQL </dd>
 <p> Find the PostgreSQL includes and client library This module defines </p>
 <pre>
   POSTGRESQL_INCLUDE_DIR, where to find POSTGRESQL.h
   POSTGRESQL_LIBRARIES, the libraries needed to use POSTGRESQL.
   POSTGRESQL_FOUND, If false, do not try to use PostgreSQL.
 </pre>
-<dt><code>FindPulseAudio</code></p>
+<dt><code>FindPulseAudio</code></dt>
 <dd>
 <p> Try to find the PulseAudio library </p>
 <p> Once done this will define: </p>
@@ -1192,7 +1192,7 @@ Xdmcp</p>
 </pre>
 <p> Copyright (c) 2008, Matthias Kretz, &lt;kretz [at] kde.org&gt; Copyright (c) 2009, Marcus Hufgard, &lt;Marcus.Hufgard [at] hufgard.de&gt; </p>
 <p> Redistribution and use is allowed according to the terms of the BSD license. For details see the accompanying COPYING-CMAKE-SCRIPTS file. </p>
-<dt><code>FindPyKDE4</code></p>
+</dd><dt><code>FindPyKDE4</code></dt>
 <dd>
 <p> FindPyKDE4 </p>
 <p> Checks that Python and PyKDE4 are installed and defines a couple macros: </p>
@@ -1201,7 +1201,7 @@ Xdmcp</p>
      * PYKDE4_ADD_UI_FILES
      * PYKDE4_ADD_EXECUTABLE
 </pre>
-<dt><code>FindPyQt4</code></p>
+</dd><dt><code>FindPyQt4</code></dt>
 <dd>
 <p> Find PyQt4 ~~~~~~~~~~ Copyright (c) 2007-2008, Simon Edwards &lt;simon [at] simonzone.com&gt; Redistribution and use is allowed according to the terms of the BSD license. For details see the accompanying COPYING-CMAKE-SCRIPTS file. </p>
 <p> PyQt4 website: <a rel="nofollow" href="http://www.riverbankcomputing.co.uk/pyqt/index.php">http://www.riverbankcomputing.co.uk/pyqt/index.php</a> </p>
@@ -1215,7 +1215,7 @@ Xdmcp</p>
 <p> PYQT4_VERSION_TAG &#8211; The PyQt version tag using by PyQt&#8217;s sip files. </p>
 <p> PYQT4_SIP_DIR &#8211; The directory holding the PyQt4 .sip files. </p>
 <p> PYQT4_SIP_FLAGS &#8211; The SIP flags used to build PyQt. </p>
-<dt><code>FindPythonLibrary</code></p>
+</dd><dt><code>FindPythonLibrary</code></dt>
 <dd>
 <p> Find Python ~~~~~~~~~~~ Find the Python interpreter and related Python directories. </p>
 <p> This file defines the following variables: </p>
@@ -1231,8 +1231,8 @@ Xdmcp</p>
 <p> PYTHON_SITE_PACKAGES_DIR &#8211; Location of the Python site-packages directory. </p>
 <p> PYTHON_INCLUDE_PATH &#8211; Directory holding the python.h include file. </p>
 <p> PYTHON_LIBRARY, PYTHON_LIBRARIES- Location of the Python library. </p>
-<dt><code>FindQCA2</code></p>
-<dd> Try to find QCA2 (Qt Cryptography Architecture 2) </p>
+</dd><dt><code>FindQCA2</code></dt>
+<dd> Try to find QCA2 (Qt Cryptography Architecture 2) </dd>
 <p> Once done this will define </p>
 <pre>
   QCA2_FOUND - system has QCA2
@@ -1241,16 +1241,16 @@ Xdmcp</p>
   QCA2_DEFINITIONS - Compiler switches required for using QCA2
 </pre>
 <p> use pkg-config to get the directories and then use these values in the FIND_PATH() and FIND_LIBRARY() calls </p>
-<dt><code>FindQImageBlitz</code></p>
-<dd> Try to find the qimageblitz lib </p>
+<dt><code>FindQImageBlitz</code></dt>
+<dd> Try to find the qimageblitz lib </dd>
 <p> Once done this will define </p>
 <pre>
   QIMAGEBLITZ_FOUND - system has qimageblitz lib
   QIMAGEBLITZ_INCLUDES - the qimageblitz include directory
   QIMAGEBLITZ_LIBRARIES - The libraries needed to use qimageblitz
 </pre>
-<dt><code>FindQt4</code></p>
-<dd> Find QT 4 </p>
+<dt><code>FindQt4</code></dt>
+<dd> Find QT 4 </dd>
 <p> This module can be used to find Qt4. The most important issue is that the Qt4 qmake is available via the system path. This qmake is then used to detect basically everything else. This module defines a number of key variables and macros. The variable QT_USE_FILE is set which is the path to a CMake file that can be included to compile Qt 4 applications and libraries. It sets up the compilation environment for include directories, preprocessor defines and populates a QT_LIBRARIES variable. </p>
 <p> Typical usage could be something like: </p>
 <p>find_package(Qt4 4.4.3 COMPONENTS QtCore QtGui QtXml REQUIRED)<br />
@@ -1302,7 +1302,6 @@ Xdmcp</p>
 </pre>
 <p> There are also some files that need processing by some Qt tools such as moc and uic. Listed below are macros that may be used to process those files. </p>
 <pre>
-  
   macro QT4_WRAP_CPP(outfiles inputfile ... OPTIONS ...)
         create moc code from a list of files containing Qt class with
         the Q_OBJECT declaration.  Per-direcotry preprocessor definitions 
@@ -1510,25 +1509,22 @@ Xdmcp</p>
   QT_QCOLLECTIONGENERATOR_EXECUTABLE  Where to find the qcollectiongenerator tool.
   QT_DESIGNER_EXECUTABLE              Where to find the Qt designer tool.
   QT_LINGUIST_EXECUTABLE              Where to find the Qt linguist tool.
-  
 </pre>
 <p> These are around for backwards compatibility they will be set </p>
 <pre>
   QT_WRAP_CPP  Set true if QT_MOC_EXECUTABLE is found
   QT_WRAP_UI   Set true if QT_UIC_EXECUTABLE is found
-  
 </pre>
 <p> These variables do _NOT_ have any effect anymore (compared to FindQt.cmake) </p>
 <pre>
   QT_MT_REQUIRED         Qt4 is now always multithreaded
-  
 </pre>
 <p> These variables are set to &quot;&quot; Because Qt structure changed (They make no sense in Qt4) </p>
 <pre>
   QT_QT_LIBRARY        Qt-Library is now split
 </pre>
-<dt><code>FindRUBY</code></p>
-<dd> Find Ruby </p>
+<dt><code>FindRUBY</code></dt>
+<dd> Find Ruby </dd>
 <p> This module finds if Ruby is installed and determines where the include files and libraries are. It also determines what the name of the library is. This code sets the following variables: </p>
 <pre>
   RUBY_LIBRARY      = full path+file to the ruby library
@@ -1536,7 +1532,7 @@ Xdmcp</p>
   RUBY_EXECUTABLE   = full path+file to the ruby binary
   RUBY_FOUND        = Ruby was found under system.
 </pre>
-<dt><code>FindSIP</code></p>
+<dt><code>FindSIP</code></dt>
 <dd>
 <p> Find SIP ~~~~~~~~ </p>
 <p> SIP website: <a rel="nofollow" href="http://www.riverbankcomputing.co.uk/sip/index.php">http://www.riverbankcomputing.co.uk/sip/index.php</a> </p>
@@ -1553,8 +1549,8 @@ Xdmcp</p>
 <pre>
      into.
 </pre>
-<dt><code>FindSamba</code></p>
-<dd> Try to find the samba directory library </p>
+</dd><dt><code>FindSamba</code></dt>
+<dd> Try to find the samba directory library </dd>
 <p> Once done this will define </p>
 <pre>
   SAMBA_FOUND - system has SAMBA
@@ -1563,7 +1559,7 @@ Xdmcp</p>
   Set SAMBA_REQUIRE_SMBC_SET_CONTEXT to TRUE if you need a version of Samba
   which comes with smbc_set_context()
 </pre>
-<dt><code>FindSane</code></p>
+<dt><code>FindSane</code></dt>
 <dd>
 <p> cmake macro to test if we use sane </p>
 <pre>
@@ -1571,16 +1567,16 @@ Xdmcp</p>
   SANE_INCLUDE_DIR - the SANE include directory
   SANE_LIBRARIES - The libraries needed to use SANE
 </pre>
-<dt><code>FindSasl2</code></p>
-<dd> Try to find the sasl2 directory library </p>
+</dd><dt><code>FindSasl2</code></dt>
+<dd> Try to find the sasl2 directory library </dd>
 <p> Once done this will define </p>
 <pre>
   SASL2_FOUND - system has SASL2
   SASL2_INCLUDE_DIR - the SASL2 include directory
   SASL2_LIBRARIES - The libraries needed to use SASL2
 </pre>
-<dt><code>FindSharedDesktopOntologies</code></p>
-<dd> Try to find shared-desktop-ontologies </p>
+<dt><code>FindSharedDesktopOntologies</code></dt>
+<dd> Try to find shared-desktop-ontologies </dd>
 <p> The shared-desktop-ontologies package is a direct dependancy of the Nepomuk semantic desktop system and provides all necessary ontology files like RDF, RDFS, NRL, or NIE. </p>
 <p> The package is created by the OSCAF project (<a rel="nofollow" href="http://oscaf.sourceforge.net">http://oscaf.sourceforge.net</a>). </p>
 <p> Once done this will define </p>
@@ -1591,8 +1587,8 @@ Xdmcp</p>
   SHAREDDESKTOPONTOLOGIES_VERSION_MINOR - The minor version number, i.e. '2' in '1.2'
   SHAREDDESKTOPONTOLOGIES_VERSION       - The complete version string, i.e. '1.2'
 </pre>
-<dt><code>FindSharedMimeInfo</code></p>
-<dd> Try to find the shared-mime-info package </p>
+<dt><code>FindSharedMimeInfo</code></dt>
+<dd> Try to find the shared-mime-info package </dd>
 <pre>
   SHARED_MIME_INFO_MINIMUM_VERSION - Set this to the minimum version you need, default is 0.18
 </pre>
@@ -1601,7 +1597,7 @@ Xdmcp</p>
   SHARED_MIME_INFO_FOUND - system has the shared-mime-info package
   UPDATE_MIME_DATABASE_EXECUTABLE - the update-mime-database executable
 </pre>
-<dt><code>FindSoprano</code></p>
+<dt><code>FindSoprano</code></dt>
 <dd>
 <p> Find an installation of Soprano </p>
 <p> Sets the following variables: </p>
@@ -1632,8 +1628,8 @@ Xdmcp</p>
    PLUGIN_SESAME2BACKEND
    PLUGIN_VIRTUOSOBACKEND
 </pre>
-<dt><code>FindSqlite</code></p>
-<dd> Try to find Sqlite </p>
+</dd><dt><code>FindSqlite</code></dt>
+<dd> Try to find Sqlite </dd>
 <p> Once done this will define </p>
 <pre>
   SQLITE_FOUND - system has Sqlite
@@ -1642,8 +1638,8 @@ Xdmcp</p>
   SQLITE_DEFINITIONS - Compiler switches required for using Sqlite
 </pre>
 <p> Redistribution and use is allowed according to the terms of the BSD license. For details see the accompanying COPYING-CMAKE-SCRIPTS file. </p>
-<dt><code>FindStrigi</code></p>
-<dd> Try to find Strigi, a fast and small desktop search program (<a rel="nofollow" href="http://strigi.sourceforge.net">http://strigi.sourceforge.net</a> ) </p>
+<dt><code>FindStrigi</code></dt>
+<dd> Try to find Strigi, a fast and small desktop search program (<a rel="nofollow" href="http://strigi.sourceforge.net">http://strigi.sourceforge.net</a> ) </dd>
 <p> Once done this will define </p>
 <pre>
   STRIGI_FOUND - system has Strigi
@@ -1653,24 +1649,24 @@ Xdmcp</p>
   STRIGI_LINE_ANALYZER_PREFIX - strigi plugin prefix
   STRIGI_THROUGH_ANALYZER_PREFIX - strigi plugin prefix
 </pre>
-<dt><code>FindTaglib</code></p>
-<dd> Try to find the Taglib library </p>
+<dt><code>FindTaglib</code></dt>
+<dd> Try to find the Taglib library </dd>
 <p> Once done this will define </p>
 <pre>
   TAGLIB_FOUND - system has the taglib library
   TAGLIB_CFLAGS - the taglib cflags
   TAGLIB_LIBRARIES - The libraries needed to use taglib
 </pre>
-<dt><code>FindUSB</code></p>
-<dd> Try to find the freetype library </p>
+<dt><code>FindUSB</code></dt>
+<dd> Try to find the freetype library </dd>
 <p> Once done this defines </p>
 <pre>
   LIBUSB_FOUND - system has libusb
   LIBUSB_INCLUDE_DIR - the libusb include directory
   LIBUSB_LIBRARIES - Link these to use libusb
 </pre>
-<dt><code>FindX11</code></p>
-<dd> Find X11 installation </p>
+<dt><code>FindX11</code></dt>
+<dd> Find X11 installation </dd>
 <p> Try to find X11 on UNIX systems. The following values are defined </p>
 <pre>
   X11_FOUND        - True if X11 is available
@@ -1712,8 +1708,8 @@ Xdmcp</p>
                 X11_Xv_INCLUDE_PATH,           X11_Xv_LIB,         X11_Xv_FOUND
                 X11_XSync_INCLUDE_PATH,        (in X11_Xext_LIB),  X11_XSync_FOUND
 </pre>
-<dt><code>FindXine</code></p>
-<dd> Try to find the XINE library </p>
+<dt><code>FindXine</code></dt>
+<dd> Try to find the XINE library </dd>
 <p> Once done this will define </p>
 <pre>
   XINE_FOUND - system has the XINE library
@@ -1723,7 +1719,7 @@ Xdmcp</p>
   XINE_LIBRARY - The libraries needed to use XINE
   XINE_XCB_FOUND - libxine can use XCB for video output
 </pre>
-<dt><code>FindXmms</code></p>
+<dt><code>FindXmms</code></dt>
 <dd>
 <p> Search xmms Once done this will define </p>
 <pre>
@@ -1732,17 +1728,17 @@ Xdmcp</p>
   XMMS_LIBRARIES    - Link these to use xmms
   XMMS_LDFLAGS      - for compatibility only, same as XMMS_LIBRARIES
 </pre>
-<dt><code>KDE4Macros</code></p>
+</dd><dt><code>KDE4Macros</code></dt>
 <dd>
 <p> for documentation look at FindKDE4Internal.cmake </p>
-<dt><code>MacroAddCompileFlags</code></p>
-<dd> MACRO_ADD_COMPILE_FLAGS(&lt;_target&gt; &quot;flags&#8230;&quot;) </p>
-<dt><code>MacroAddLinkFlags</code></p>
-<dd> MACRO_ADD_LINK_FLAGS(&lt;_target&gt; &quot;flags&#8230;&quot;) </p>
-<dt><code>MacroAdditionalCleanFiles</code></p>
-<dd> MACRO_ADDITIONAL_CLEAN_FILES(files&#8230;) </p>
+</dd><dt><code>MacroAddCompileFlags</code></dt>
+<dd> MACRO_ADD_COMPILE_FLAGS(&lt;_target&gt; &quot;flags&#8230;&quot;) </dd>
+<dt><code>MacroAddLinkFlags</code></dt>
+<dd> MACRO_ADD_LINK_FLAGS(&lt;_target&gt; &quot;flags&#8230;&quot;) </dd>
+<dt><code>MacroAdditionalCleanFiles</code></dt>
+<dd> MACRO_ADDITIONAL_CLEAN_FILES(files&#8230;) </dd>
 <p> MACRO_OPTIONAL_FIND_PACKAGE( &lt;name&gt; [QUIT] ) </p>
-<dt><code>MacroAppendIf</code></p>
+<dt><code>MacroAppendIf</code></dt>
 <dd>
 <p> MACRO_APPEND_IF(CONDITION VAR VALUE1&#8230;VALUEN ) This convenience macro appends the values VALUE1 up to VALUEN to the list given in VAR, but only if the variable CONDITION is TRUE: </p>
 <p> usage example: IF(SOMELIB_FOUND) </p>
@@ -1751,11 +1747,11 @@ Xdmcp</p>
 </pre>
 <p> ENDIF(SOMELIB_FOUND) </p>
 <p> becomes: MACRO_APPEND_IF(SOMELIB_FOUND my_sources somefile.c someotherfile.c) </p>
-<dt><code>MacroBoolTo01</code></p>
+</dd><dt><code>MacroBoolTo01</code></dt>
 <dd>
 <p> MACRO_BOOL_TO_01( VAR RESULT0 &#8230; RESULTN ) This macro evaluates its first argument and sets all the given vaiables either to 0 or 1 depending on the value of the first one </p>
-<dt><code>MacroEnsureOutOfSourceBuild</code></p>
-<dd> MACRO_ENSURE_OUT_OF_SOURCE_BUILD(&lt;errorMessage&gt;) </p>
+</dd><dt><code>MacroEnsureOutOfSourceBuild</code></dt>
+<dd> MACRO_ENSURE_OUT_OF_SOURCE_BUILD(&lt;errorMessage&gt;) </dd>
 <p> MACRO_ENSURE_OUT_OF_SOURCE_BUILD(&lt;errorMessage&gt;) </p>
 <pre>
     Call this macro in your project if you want to enforce out-of-source builds.
@@ -1763,7 +1759,7 @@ Xdmcp</p>
     This macro works in any of the CMakeLists.txt of your project, but the recommended
     location to call this is close to the beginning of the top level CMakeLists.txt
 </pre>
-<dt><code>MacroEnsureVersion</code></p>
+<dt><code>MacroEnsureVersion</code></dt>
 <dd>
 <p> This file defines the following macros for developers to use in ensuring that installed software is of the right version: </p>
 <p> MACRO_ENSURE_VERSION &#8211; test that a version number is greater than </p>
@@ -1776,9 +1772,9 @@ Xdmcp</p>
                                maximum
 </pre>
 <p> MACRO_ENSURE_VERSION2 &#8211; deprecated, do not use in new code </p>
-<dt><code>MacroLibrary</code></p>
-<dd> include MacroLibrary offers a collection of macros which extend the built-in cmake commands </p>
-<dt><code>MacroLogFeature</code></p>
+</dd><dt><code>MacroLibrary</code></dt>
+<dd> include MacroLibrary offers a collection of macros which extend the built-in cmake commands </dd>
+<dt><code>MacroLogFeature</code></dt>
 <dd>
 <p> This file defines the Feature Logging macros. </p>
 <p> MACRO_LOG_FEATURE(VAR FEATURE DESCRIPTION URL [REQUIRED [MIN_VERSION [COMMENTS]]]) </p>
@@ -1801,8 +1797,8 @@ Xdmcp</p>
 <p> Example: </p>
 <p> INCLUDE(MacroLogFeature) </p>
 <p> FIND_PACKAGE(JPEG) MACRO_LOG_FEATURE(JPEG_FOUND &quot;libjpeg&quot; &quot;Support JPEG images&quot; &quot;<a rel="nofollow" href="http://www.ijg.org">http://www.ijg.org</a>&quot; TRUE &quot;3.2a&quot; &quot;&quot;) &#8230; MACRO_DISPLAY_FEATURE_LOG() </p>
-<dt><code>MacroOptionalAddSubdirectory</code></p>
-<dd> MACRO_OPTIONAL_ADD_SUBDIRECTORY() combines ADD_SUBDIRECTORY() with an OPTION() </p>
+</dd><dt><code>MacroOptionalAddSubdirectory</code></dt>
+<dd> MACRO_OPTIONAL_ADD_SUBDIRECTORY() combines ADD_SUBDIRECTORY() with an OPTION() </dd>
 <p> MACRO_OPTIONAL_ADD_SUBDIRECTORY( &lt;dir&gt; ) If you use MACRO_OPTIONAL_ADD_SUBDIRECTORY() instead of ADD_SUBDIRECTORY(), this will have two effects 1 &#8211; CMake will not complain if the directory doesn&#8217;t exist </p>
 <pre>
      This makes sense if you want to distribute just one of the subdirs
@@ -1818,17 +1814,17 @@ Xdmcp</p>
 <pre>
    $ cmake -DDISABLE_ALL_OPTIONAL_SUBDIRECTORIES=TRUE -DBUILD_kcalc=TRUE &lt;srcdir&gt;
 </pre>
-<dt><code>MacroOptionalDependPackage</code></p>
+<dt><code>MacroOptionalDependPackage</code></dt>
 <dd>
 <p> Search if cmake module is installed in computer cmake will not fail but signal that we must install depend package before. add as previously name of cmake module &quot;_name&quot; and define package needed &quot;_module_needed&quot; if return DEPEND_PACKAGE_${_name} </p>
-<dt><code>MacroOptionalFindPackage</code></p>
-<dd> MACRO_OPTIONAL_FIND_PACKAGE() combines FIND_PACKAGE() with an OPTION() </p>
+</dd><dt><code>MacroOptionalFindPackage</code></dt>
+<dd> MACRO_OPTIONAL_FIND_PACKAGE() combines FIND_PACKAGE() with an OPTION() </dd>
 <p> MACRO_OPTIONAL_FIND_PACKAGE( &lt;name&gt; [QUIT] ) This macro is a combination of OPTION() and FIND_PACKAGE(), it works like FIND_PACKAGE(), but additionally it automatically creates an option name WITH_&lt;name&gt;, which can be disabled via the cmake GUI. or via -DWITH_&lt;name&gt;=OFF The standard &lt;name&gt;_FOUND variables can be used in the same way as when using the normal FIND_PACKAGE() </p>
-<dt><code>MacroPushRequiredVars</code></p>
+<dt><code>MacroPushRequiredVars</code></dt>
 <dd>
 <p> this module defines two macros: MACRO_PUSH_REQUIRED_VARS() and MACRO_POP_REQUIRED_VARS() use these if you call cmake macros which use any of the CMAKE_REQUIRED_XXX variables </p>
 <p> Usage: MACRO_PUSH_REQUIRED_VARS() SET(CMAKE_REQUIRED_DEFINITIONS ${CMAKE_REQUIRED_DEFINITIONS} -DSOME_MORE_DEF) CHECK_FUNCTION_EXISTS(&#8230;) MACRO_POP_REQUIRED_VARS() </p>
-<dt><code>MacroWriteBasicCMakeVersionFile</code></p>
+</dd><dt><code>MacroWriteBasicCMakeVersionFile</code></dt>
 <dd>
 <pre>
   MACRO_WRITE_BASIC_CMAKE_VERSION_FILE( _filename _major _minor _patch)
@@ -1839,7 +1835,7 @@ Xdmcp</p>
     _minor is the minor version number of the project to be installed
     _patch is the patch version number of the project to be installed
 </pre>
-<dt><code>NepomukAddOntologyClasses</code></p>
+</dd><dt><code>NepomukAddOntologyClasses</code></dt>
 <dd>
 <p> Use the Nepomuk resource class generator to generate convinient Resource subclasses from ontologies. </p>
 <p> Usage: </p>
@@ -1854,7 +1850,7 @@ NEPOMUK_ADD_ONTOLOGY_CLASSES(&lt;sources - var&gt;[FAST]
 <p> The optional VISIBILITY parameter can only be used in non-fast mode and allows to set the gcc visibility to make the generated classes usable in a publically exported API. The &lt;visibility-name&gt; is used to create the name of the export macro and the export include file. Thus, when using &quot;VISIBILITY foobar&quot; include file &quot;foobar_export.h&quot; needs to define FOOBAR_EXPORT. </p>
 <p> Copyright (c) 2009 Sebastian Trueg &lt;trueg [at] kde.org&gt; </p>
 <p> Redistribution and use is allowed according to the terms of the BSD license. For details see the accompanying COPYING-CMAKE-SCRIPTS file. </p>
-<dt><code>NepomukMacros</code></p>
+</dd><dt><code>NepomukMacros</code></dt>
 <dd>
 <p> This file contains the following macros: </p>
 <p> NEPOMUK_GENERATE_FROM_ONTOLOGY Parameters: </p>
@@ -1868,7 +1864,7 @@ NEPOMUK_ADD_ONTOLOGY_CLASSES(&lt;sources - var&gt;[FAST]
 </pre>
 <p> In addition to the parameters an arbitrary number of template filenames can be set as arguments </p>
 <p> In case of success NEPOMUK_RESOURCES_GENERATED is true, otherwise false </p>
-<dt><code>PythonMacros</code></p>
+</dd><dt><code>PythonMacros</code></dt>
 <dd>
 <p> Python macros ~~~~~~~~~~~~~ Copyright (c) 2007, Simon Edwards &lt;simon [at] simonzone.com&gt; </p>
 <p> Redistribution and use is allowed according to the terms of the BSD license. For details see the accompanying COPYING-CMAKE-SCRIPTS file. </p>
@@ -1879,13 +1875,13 @@ NEPOMUK_ADD_ONTOLOGY_CLASSES(&lt;sources - var&gt;[FAST]
      destination directory during install. The file will be byte compiled
      and both the .py file and .pyc file will be installed.
 </pre>
-<dt><code>Qt4ConfigDependentSettings</code></p>
+</dd><dt><code>Qt4ConfigDependentSettings</code></dt>
 <dd>
 <p> This file is included by FindQt4.cmake, don&#8217;t include it directly. </p>
-<dt><code>Qt4Macros</code></p>
+</dd><dt><code>Qt4Macros</code></dt>
 <dd>
 <p> This file is included by FindQt4.cmake, don&#8217;t include it directly. </p>
-<dt><code>SIPMacros</code></p>
+</dd><dt><code>SIPMacros</code></dt>
 <dd>
 <p> Macros for SIP ~~~~~~~~~~~~~~ Copyright (c) 2007, Simon Edwards &lt;simon [at] simonzone.com&gt; Redistribution and use is allowed according to the terms of the BSD license. For details see the accompanying COPYING-CMAKE-SCRIPTS file. </p>
 <p> SIP website: <a rel="nofollow" href="http://www.riverbankcomputing.co.uk/sip/index.php">http://www.riverbankcomputing.co.uk/sip/index.php</a> </p>
@@ -1921,32 +1917,32 @@ NEPOMUK_ADD_ONTOLOGY_CLASSES(&lt;sources - var&gt;[FAST]
 <pre>
      SIP.
 </pre>
-<dt><code>Win32Macros</code></p>
+</dd><dt><code>Win32Macros</code></dt>
 <dd>
 <p> win32 macros </p>
 <p> ADDEXPLORERWRAPPER(project) </p>
 <p> Exists only under Win32 ! </p>
 <p> addExplorerWrapper creates batch files for fast access to the build environment from the win32 explorer. </p>
 <p> For mingw and nmake projects it opens a command shell, for Visual Studio IDE&#8217;s (at least tested with VS 8 2005) it opens the related .sln file with paths setting specified at configure time. </p>
-<dt><code>create_exe_symlink</code></p>
+</dd><dt><code>create_exe_symlink</code></dt>
 <dd>
 <p> Create an executable symlink to a Python script. This also sets the target script&#8217;s permission bits. </p>
-</dl>
+</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-ccmake/">ccmake</a>(1), <a href="/docs/linux/man/1-cpack/">cpack</a>(1), <a href="/docs/linux/man/1-ctest/">ctest</a>(1), <a href="/docs/linux/man/1-cmakecommands/">cmakecommands</a>(1), <a href="/docs/linux/man/1-cmakecompat/">cmakecompat</a>(1), <a href="/docs/linux/man/1-cmakemodules/">cmakemodules</a>(1), <a href="/docs/linux/man/1-cmakeprops/">cmakeprops</a>(1), <a href="/docs/linux/man/1-cmakevars/">cmakevars</a>(1)</code> </p>
 <p> The following resources are available to get help using CMake: </p>
 <dl>
-<dt><code>Home Page</code></p>
-<dd> <a rel="nofollow" href="http://www.cmake.org">http://www.cmake.org</a> </p>
+<dt><code>Home Page</code></dt>
+<dd> <a rel="nofollow" href="http://www.cmake.org">http://www.cmake.org</a> </dd>
 <p> The primary starting point for learning about CMake. </p>
-<dt><code>Frequently Asked Questions</code></p>
-<dd> <a rel="nofollow" href="http://www.cmake.org/Wiki/CMake_FAQ">http://www.cmake.org/Wiki/CMake_FAQ</a> </p>
+<dt><code>Frequently Asked Questions</code></dt>
+<dd> <a rel="nofollow" href="http://www.cmake.org/Wiki/CMake_FAQ">http://www.cmake.org/Wiki/CMake_FAQ</a> </dd>
 <p> A Wiki is provided containing answers to frequently asked questions. </p>
-<dt><code>Online Documentation</code></p>
-<dd> <a rel="nofollow" href="http://www.cmake.org/HTML/Documentation.html">http://www.cmake.org/HTML/Documentation.html</a> </p>
+<dt><code>Online Documentation</code></dt>
+<dd> <a rel="nofollow" href="http://www.cmake.org/HTML/Documentation.html">http://www.cmake.org/HTML/Documentation.html</a> </dd>
 <p> Links to available documentation may be found on this web page. </p>
-<dt><code>Mailing List</code></p>
-<dd> <a rel="nofollow" href="http://www.cmake.org/HTML/MailingLists.html">http://www.cmake.org/HTML/MailingLists.html</a> </p>
+<dt><code>Mailing List</code></dt>
+<dd> <a rel="nofollow" href="http://www.cmake.org/HTML/MailingLists.html">http://www.cmake.org/HTML/MailingLists.html</a> </dd>
 <p> For help and discussion about using cmake, a mailing list is provided at cmake [at] cmake.org. The list is member-post-only but one may sign up on the CMake web page. Please first read the full documentation at <a rel="nofollow" href="http://www.cmake.org">http://www.cmake.org</a> before posting questions to the list. </p>
 </dl>
 <p> Summary of helpful links: </p>

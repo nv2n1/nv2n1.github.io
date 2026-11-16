@@ -10,12 +10,7 @@ description: "xcb_randr_get_crtc_transform –"
 <p>xcb_randr_get_crtc_transform &#8211;</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;xcb/randr.h&gt;
-
-
 Request function
-
-
-
 xcb_randr_get_crtc_transform_cookie_t xcb_randr_get_crtc_transform(xcb_connection_t *conn, xcb_randr_crtc_t crtc);</code></pre>
 <h3>Reply datastructure</h3>
 <pre>typedef struct xcb_randr_get_crtc_transform_reply_t {
@@ -35,50 +30,50 @@ xcb_randr_get_crtc_transform_cookie_t xcb_randr_get_crtc_transform(xcb_connectio
 } <code>xcb_randr_get_crtc_transform_reply_t</code>;</pre>
 <h3>Reply function</h3>
 <dl>
-<dd>xcb_randr_get_crtc_transform_reply_t *<code>xcb_randr_get_crtc_transform_reply</code>(xcb_connection_t&nbsp;<wbr>*<i>conn</i>, xcb_randr_get_crtc_transform_cookie_t&nbsp;<wbr><i>cookie</i>, xcb_generic_error_t&nbsp;<wbr>**<i>e</i>);</dl>
+<dd>xcb_randr_get_crtc_transform_reply_t *<code>xcb_randr_get_crtc_transform_reply</code>(xcb_connection_t&nbsp;<wbr>*<i>conn</i>, xcb_randr_get_crtc_transform_cookie_t&nbsp;<wbr><i>cookie</i>, xcb_generic_error_t&nbsp;<wbr>**<i>e</i>);</dd></dl>
 <h3>Reply accessors</h3>
 <dl>
-<dd>char *<code>xcb_randr_get_crtc_transform_pending_filter_name</code>(const xcb_randr_get_crtc_transform_request_t *<i>reply</i>);</p>
-<dd>int <code>xcb_randr_get_crtc_transform_pending_filter_name_length</code>(const xcb_randr_get_crtc_transform_reply_t *<i>reply</i>);</p>
-<dd>xcb_generic_iterator_t <code>xcb_randr_get_crtc_transform_pending_filter_name_end</code>(const xcb_randr_get_crtc_transform_reply_t *<i>reply</i>); uint8_t *xcb_randr_get_crtc_transform_pad_3 (const xcb_randr_get_crtc_transform_request_t *reply)</p>
-<dd>xcb_render_fixed_t *<code>xcb_randr_get_crtc_transform_pending_params</code>(const xcb_randr_get_crtc_transform_request_t *<i>reply</i>);</p>
-<dd>int <code>xcb_randr_get_crtc_transform_pending_params_length</code>(const xcb_randr_get_crtc_transform_reply_t *<i>reply</i>);</p>
-<dd>xcb_generic_iterator_t <code>xcb_randr_get_crtc_transform_pending_params_end</code>(const xcb_randr_get_crtc_transform_reply_t *<i>reply</i>);</p>
-<dd>char *<code>xcb_randr_get_crtc_transform_current_filter_name</code>(const xcb_randr_get_crtc_transform_request_t *<i>reply</i>);</p>
-<dd>int <code>xcb_randr_get_crtc_transform_current_filter_name_length</code>(const xcb_randr_get_crtc_transform_reply_t *<i>reply</i>);</p>
-<dd>xcb_generic_iterator_t <code>xcb_randr_get_crtc_transform_current_filter_name_end</code>(const xcb_randr_get_crtc_transform_reply_t *<i>reply</i>); uint8_t *xcb_randr_get_crtc_transform_pad_4 (const xcb_randr_get_crtc_transform_request_t *reply)</p>
-<dd>xcb_render_fixed_t *<code>xcb_randr_get_crtc_transform_current_params</code>(const xcb_randr_get_crtc_transform_request_t *<i>reply</i>);</p>
-<dd>int <code>xcb_randr_get_crtc_transform_current_params_length</code>(const xcb_randr_get_crtc_transform_reply_t *<i>reply</i>);</p>
+<dd>char *<code>xcb_randr_get_crtc_transform_pending_filter_name</code>(const xcb_randr_get_crtc_transform_request_t *<i>reply</i>);</dd>
+<dd>int <code>xcb_randr_get_crtc_transform_pending_filter_name_length</code>(const xcb_randr_get_crtc_transform_reply_t *<i>reply</i>);</dd>
+<dd>xcb_generic_iterator_t <code>xcb_randr_get_crtc_transform_pending_filter_name_end</code>(const xcb_randr_get_crtc_transform_reply_t *<i>reply</i>); uint8_t *xcb_randr_get_crtc_transform_pad_3 (const xcb_randr_get_crtc_transform_request_t *reply)</dd>
+<dd>xcb_render_fixed_t *<code>xcb_randr_get_crtc_transform_pending_params</code>(const xcb_randr_get_crtc_transform_request_t *<i>reply</i>);</dd>
+<dd>int <code>xcb_randr_get_crtc_transform_pending_params_length</code>(const xcb_randr_get_crtc_transform_reply_t *<i>reply</i>);</dd>
+<dd>xcb_generic_iterator_t <code>xcb_randr_get_crtc_transform_pending_params_end</code>(const xcb_randr_get_crtc_transform_reply_t *<i>reply</i>);</dd>
+<dd>char *<code>xcb_randr_get_crtc_transform_current_filter_name</code>(const xcb_randr_get_crtc_transform_request_t *<i>reply</i>);</dd>
+<dd>int <code>xcb_randr_get_crtc_transform_current_filter_name_length</code>(const xcb_randr_get_crtc_transform_reply_t *<i>reply</i>);</dd>
+<dd>xcb_generic_iterator_t <code>xcb_randr_get_crtc_transform_current_filter_name_end</code>(const xcb_randr_get_crtc_transform_reply_t *<i>reply</i>); uint8_t *xcb_randr_get_crtc_transform_pad_4 (const xcb_randr_get_crtc_transform_request_t *reply)</dd>
+<dd>xcb_render_fixed_t *<code>xcb_randr_get_crtc_transform_current_params</code>(const xcb_randr_get_crtc_transform_request_t *<i>reply</i>);</dd>
+<dd>int <code>xcb_randr_get_crtc_transform_current_params_length</code>(const xcb_randr_get_crtc_transform_reply_t *<i>reply</i>);</dd>
 <dd>xcb_generic_iterator_t <code>xcb_randr_get_crtc_transform_current_params_end</code>(const xcb_randr_get_crtc_transform_reply_t *<i>reply</i>);
-</dl>
+</dd></dl>
 <h2>Request Arguments</h2>
 <dl>
-<dt><i>conn</i></p>
-<dd>The XCB connection to X11.</p>
-<dt><i>crtc</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</dl>
+<dt><i>conn</i></dt>
+<dd>The XCB connection to X11.</dd>
+<dt><i>crtc</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd></dl>
 <h2>Reply Fields</h2>
 <dl>
-<dt><i>response_type</i></p>
-<dd>The type of this reply, in this case <i>XCB_RANDR_GET_CRTC_TRANSFORM</i>. This field is also present in the <i>xcb_generic_reply_t</i> and can be used to tell replies apart from each other.</p>
-<dt><i>sequence</i></p>
-<dd>The sequence number of the last request processed by the X11 server.</p>
-<dt><i>length</i></p>
-<dd>The length of the reply, in words (a word is 4 bytes).</p>
-<dt><i>pending_transform</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>has_transforms</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>current_transform</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>pending_len</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>pending_nparams</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>current_len</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>current_nparams</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</dl>
+<dt><i>response_type</i></dt>
+<dd>The type of this reply, in this case <i>XCB_RANDR_GET_CRTC_TRANSFORM</i>. This field is also present in the <i>xcb_generic_reply_t</i> and can be used to tell replies apart from each other.</dd>
+<dt><i>sequence</i></dt>
+<dd>The sequence number of the last request processed by the X11 server.</dd>
+<dt><i>length</i></dt>
+<dd>The length of the reply, in words (a word is 4 bytes).</dd>
+<dt><i>pending_transform</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>has_transforms</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>current_transform</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>pending_len</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>pending_nparams</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>current_len</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>current_nparams</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd></dl>
 <h2>Description</h2>
 <h2>Return Value</h2>
 <p>Returns an <i>xcb_randr_get_crtc_transform_cookie_t</i>. Errors have to be handled when calling the reply function <i>xcb_randr_get_crtc_transform_reply</i>. </p>

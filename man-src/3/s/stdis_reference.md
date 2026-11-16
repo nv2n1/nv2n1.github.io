@@ -10,10 +10,8 @@ description: "std::is_reference – std::is_reference"
 <p>std::is_reference &#8211; std::is_reference</p>
 <h2>Synopsis</h2>
 <pre><code>Defined in header&lt;type_traits&gt;
-
     template &lt;class T&gt;
     (since C++ 11)
-
         struct is_reference;</code></pre>
 <p>If T is a reference type (lvalue reference or rvalue reference), provides the member constant value equal true. For any other type, value is false. </p>
 <h2>Template parameters</h2>
@@ -43,13 +41,11 @@ type std::integral_constant&lt;bool, value&gt;</p>
 <h2>Example</h2>
 <p>// Run this code </p>
 <pre><code>#include &lt;iostream&gt;
-
 #include &lt;type_traits&gt;
 class A
 {
 };
 int main()
-
 {
     std::cout &lt;&lt; std::boolalpha;
     std::cout &lt;&lt; std::is_reference&lt;A&gt;::value &lt;&lt; '

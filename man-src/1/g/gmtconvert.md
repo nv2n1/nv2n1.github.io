@@ -18,62 +18,62 @@ description: "gmtconvert – Convert, Paste, and/or Extract columns from data ta
 <p> None</p>
 <h2>OPTIONAL ARGUMENTS</h2>
 <dl>
-<dt><i>table</i></p>
-<dd> One or more ASCII (or binary, see <code>-bi</code>[<i>ncols</i>][<i>type</i>]) data table file(s) holding a number of data columns. If no tables are given then we read from standard input.</p>
-<dt><code>-A</code></p>
-<dd> The records from the input files should be pasted horizontally, not appended vertically [Default]. All files must have the same number of segments and number of rows per segment. Note for binary input, all the files you want to paste must have the same number of columns (as set with <code>-bi</code>); ASCII tables can have different number of columns.</p>
-<dt><code>-C</code>[<code>+l</code><i>min</i>][<code>+u</code><i>max</i>][<code>+i</code>]</p>
-<dd> Only output segments whose number of records matches your given criteria: Append <code>+l</code><i>min</i> to ensure all segment must have at least <i>min</i> records to be written to output [0], and append <code>+u</code><i>max</i> to ensure all segments must have at most <i>max</i> records to be written [inf]. You may append <code>+i</code> to invert the selection, i.e., only segments with record counts outside the given range will be output.</p>
-<dt><code>-D</code>[<i>template</i>]</p>
-<dd> For multiple segment data, dump each segment to a separate output file [Default writes a multiple segment file to stdout]. Append a format template for the individual file names; this template <code>must</code> contain a C format specifier that can format an integer argument (the running segment number across all tables); this is usually %d but could be %08d which gives leading zeros, etc. [Default is gmtconvert_segment_%d.{txt|bin}, depending on <code>-bo</code>]. Alternatively, give a template with two C format specifiers and we will supply the table number and the segment number within the table to build the file name.</p>
-<dt><code>-E</code>[<code>f</code>|<code>l</code>|<code>m</code><i>stride</i>]</p>
-<dd> Only extract the first and last record for each segment of interest [Default extracts all records]. Optionally, append <code>f</code> or <code>l</code> to only extract the first or last record of each segment, respectively. Alternatively, append <code>m</code><i>stride</i> to extract only one out of <i>stride</i> records.</p>
-<dt><code>-F</code>[<code>c</code>|<code>n</code>|<code>r</code>|<code>v</code>][<i>refpoint</i>]</p>
-<dd> Alter the way points are connected (by specifying a <i>scheme</i>) and data are grouped (by specifying a <i>method</i>). Append one of four line connection schemes: <code>c</code>: Form continuous line segments for each group [Default]. <code>r</code>: Form line segments from a reference point reset for each group. <code>n</code>: Form networks of line segments between all points in each group. <code>v</code>: Form vector line segments suitable for psxy <code>-Sv+s</code>. Optionally, append the one of four segmentation methods to define the group: <code>a</code>: Ignore all segment headers, i.e., let all points belong to a single group, and set group reference point to the very first point of the first file. <code>f</code>: Consider all data in each file to be a single separate group and reset the group reference point to the first point of each group. <code>s</code>: Segment headers are honored so each segment is a group; the group reference point is reset to the first point of each incoming segment [Default]. <code>r</code>: Same as <code>s</code>, but the group reference point is reset after each record to the previous point (this method is only available with the <code>-Fr</code> scheme). Instead of the codes <code>a</code>|<code>f</code>|<code>s</code>|<code>r</code> you may append the coordinates of a <i>refpoint</i> which will serve as a fixed external reference point for all groups.</p>
-<dt><code>-I</code>[<code>tsr</code>]</p>
-<dd> Invert the order of items, i.e., output the items in reverse order, starting with the last and ending up with the first item [Default keeps original order]. Append up to three items that should be reversed: <code>t</code> will reverse the order of tables, <code>s</code> will reverse the order of segments within each table, and <code>r</code> will reverse the order of records within each segment [Default].</p>
-<dt><code>-L</code></p>
-<dd> Only output a listing of all segment header records and no data records (requires ASCII data).</p>
-<dt><code>-Q</code>[<code>~</code>]<i>selection</i></p>
-<dd> Only write segments whose number is included in <i>selection</i> and skip all others. Cannot be used with <code>-S</code>. The <i>selection</i> syntax is <i>range</i>[,<i>range</i>,&#8230;] where each <i>range</i> of items is either a single segment <i>number</i> or a range with stepped increments given via <i>start</i>[:<i>step</i>:]:<i>stop</i> (<i>step</i> is optional and defaults to 1). A leading <code>~</code> will invert the selection and write all segments but the ones listed. Instead of a list of ranges, use <code>+f</code><i>file</i> to supply a file list with one <i>range</i> per line.</p>
-<dt><code>-S</code>[<code>~</code>]<i>search string</i> or <code>-S</code>[<code>~</code>]/<i>regexp</i>/[<code>i</code>]</p>
-<dd> Only output those segments whose header record contains the specified text string. To reverse the search, i.e., to output segments whose headers do <i>not</i> contain the specified pattern, use <code>-S~</code>. Should your pattern happen to start with ~ you need to escape this character with a backslash [Default output all segments]. Cannot be used with <code>-Q</code>. For matching segments based on aspatial values (via OGR/GMT format), give the search string as <i>varname</i>=<i>value</i> and we will compare <i>value</i> against the value of <i>varname</i> for each segment. Note: If the features are polygons then a match of a particular polygon perimeter also means that any associated polygon holes will also be matched. For matching segment headers against extended regular expressions enclose the expression in slashes. Append <code>i</code> for case-insensitive matching. For a list of such patterns, give <code>+f</code><i>file</i> with one pattern per line. To give a single pattern starting with +f, escape it with a backslash.</p>
-<dt><code>-T</code></p>
-<dd> Suppress the writing of segment headers on output.</p>
-<dt><code>-V</code>[<i>level</i>] <i>(more &#8230;)</i></p>
-<dd> Select verbosity level [c].</p>
-<dt><code>-a</code><i>col</i>=<i>name</i>[<i>&#8230;</i>] <i>(more &#8230;)</i></p>
-<dd> Set aspatial column associations <i>col</i>=<i>name</i>.</p>
-<dt><code>-bi</code>[<i>ncols</i>][<code>t</code>] <i>(more &#8230;)</i></p>
-<dd> Select native binary input.</p>
-<dt><code>-bo</code>[<i>ncols</i>][<i>type</i>] <i>(more &#8230;)</i></p>
-<dd> Select native binary output. [Default is same as input].</p>
-<dt><code>-d</code>[<code>i</code>|<code>o</code>]<i>nodata</i> <i>(more &#8230;)</i></p>
-<dd> Replace input columns that equal <i>nodata</i> with NaN and do the reverse on output.</p>
-<dt><code>-f</code>[<code>i</code>|<code>o</code>]<i>colinfo</i> <i>(more &#8230;)</i></p>
-<dd> Specify data types of input and/or output columns.</p>
-<dt><code>-g</code>[<code>a</code>]<code>x</code>|<code>y</code>|<code>d</code>|<code>X</code>|<code>Y</code>|<code>D</code>|[<i>col</i>]<code>z</code>[+|-]<i>gap</i>[<code>u</code>] <i>(more &#8230;)</i></p>
-<dd> Determine data gaps and line breaks.</p>
-<dt><code>-h</code>[<code>i</code>|<code>o</code>][<i>n</i>][<code>+c</code>][<code>+d</code>][<code>+r</code><i>remark</i>][<code>+r</code><i>title</i>] <i>(more &#8230;)</i></p>
-<dd> Skip or produce header record(s).</p>
-<dt><code>-i</code><i>cols</i>[<code>l</code>][<code>s</code><i>scale</i>][<code>o</code><i>offset</i>][,<i>&#8230;</i>] <i>(more &#8230;)</i></p>
-<dd> Select input columns (0 is first column).</p>
-<dt><code>-o</code><i>cols</i>[,&#8230;] <i>(more &#8230;)</i></p>
-<dd> Select output columns (0 is first column).</p>
-<dt><code>-s</code>[<i>cols</i>][<code>a</code>|<code>r</code>] <i>(more &#8230;)</i></p>
-<dd> Set handling of NaN records.</p>
-<dt><code>-:</code>[<code>i</code>|<code>o</code>] <i>(more &#8230;)</i></p>
-<dd> Swap 1st and 2nd column on input and/or output.</p>
-<dt><code>-^</code> or just <code>&#8211;</code></p>
-<dd> Print a short message about the syntax of the command, then exits (NOTE: on Windows use just <code>&#8211;</code>).</p>
-<dt><code>-+</code> or just <code>+</code></p>
-<dd> Print an extensive usage (help) message, including the explanation of any module-specific option (but not the GMT common options), then exits.</p>
-<dt><code>-?</code> or no arguments</p>
-<dd> Print a complete usage (help) message, including the explanation of options, then exits.</p>
-<dt><code>&#8211;</code><code>-version</code></p>
-<dd> Print GMT version and exit.</p>
-<dt><code>&#8211;</code><code>-show-datadir</code></p>
-<dd> Print full path to GMT share directory and exit.</dl>
+<dt><i>table</i></dt>
+<dd> One or more ASCII (or binary, see <code>-bi</code>[<i>ncols</i>][<i>type</i>]) data table file(s) holding a number of data columns. If no tables are given then we read from standard input.</dd>
+<dt><code>-A</code></dt>
+<dd> The records from the input files should be pasted horizontally, not appended vertically [Default]. All files must have the same number of segments and number of rows per segment. Note for binary input, all the files you want to paste must have the same number of columns (as set with <code>-bi</code>); ASCII tables can have different number of columns.</dd>
+<dt><code>-C</code>[<code>+l</code><i>min</i>][<code>+u</code><i>max</i>][<code>+i</code>]</dt>
+<dd> Only output segments whose number of records matches your given criteria: Append <code>+l</code><i>min</i> to ensure all segment must have at least <i>min</i> records to be written to output [0], and append <code>+u</code><i>max</i> to ensure all segments must have at most <i>max</i> records to be written [inf]. You may append <code>+i</code> to invert the selection, i.e., only segments with record counts outside the given range will be output.</dd>
+<dt><code>-D</code>[<i>template</i>]</dt>
+<dd> For multiple segment data, dump each segment to a separate output file [Default writes a multiple segment file to stdout]. Append a format template for the individual file names; this template <code>must</code> contain a C format specifier that can format an integer argument (the running segment number across all tables); this is usually %d but could be %08d which gives leading zeros, etc. [Default is gmtconvert_segment_%d.{txt|bin}, depending on <code>-bo</code>]. Alternatively, give a template with two C format specifiers and we will supply the table number and the segment number within the table to build the file name.</dd>
+<dt><code>-E</code>[<code>f</code>|<code>l</code>|<code>m</code><i>stride</i>]</dt>
+<dd> Only extract the first and last record for each segment of interest [Default extracts all records]. Optionally, append <code>f</code> or <code>l</code> to only extract the first or last record of each segment, respectively. Alternatively, append <code>m</code><i>stride</i> to extract only one out of <i>stride</i> records.</dd>
+<dt><code>-F</code>[<code>c</code>|<code>n</code>|<code>r</code>|<code>v</code>][<i>refpoint</i>]</dt>
+<dd> Alter the way points are connected (by specifying a <i>scheme</i>) and data are grouped (by specifying a <i>method</i>). Append one of four line connection schemes: <code>c</code>: Form continuous line segments for each group [Default]. <code>r</code>: Form line segments from a reference point reset for each group. <code>n</code>: Form networks of line segments between all points in each group. <code>v</code>: Form vector line segments suitable for psxy <code>-Sv+s</code>. Optionally, append the one of four segmentation methods to define the group: <code>a</code>: Ignore all segment headers, i.e., let all points belong to a single group, and set group reference point to the very first point of the first file. <code>f</code>: Consider all data in each file to be a single separate group and reset the group reference point to the first point of each group. <code>s</code>: Segment headers are honored so each segment is a group; the group reference point is reset to the first point of each incoming segment [Default]. <code>r</code>: Same as <code>s</code>, but the group reference point is reset after each record to the previous point (this method is only available with the <code>-Fr</code> scheme). Instead of the codes <code>a</code>|<code>f</code>|<code>s</code>|<code>r</code> you may append the coordinates of a <i>refpoint</i> which will serve as a fixed external reference point for all groups.</dd>
+<dt><code>-I</code>[<code>tsr</code>]</dt>
+<dd> Invert the order of items, i.e., output the items in reverse order, starting with the last and ending up with the first item [Default keeps original order]. Append up to three items that should be reversed: <code>t</code> will reverse the order of tables, <code>s</code> will reverse the order of segments within each table, and <code>r</code> will reverse the order of records within each segment [Default].</dd>
+<dt><code>-L</code></dt>
+<dd> Only output a listing of all segment header records and no data records (requires ASCII data).</dd>
+<dt><code>-Q</code>[<code>~</code>]<i>selection</i></dt>
+<dd> Only write segments whose number is included in <i>selection</i> and skip all others. Cannot be used with <code>-S</code>. The <i>selection</i> syntax is <i>range</i>[,<i>range</i>,&#8230;] where each <i>range</i> of items is either a single segment <i>number</i> or a range with stepped increments given via <i>start</i>[:<i>step</i>:]:<i>stop</i> (<i>step</i> is optional and defaults to 1). A leading <code>~</code> will invert the selection and write all segments but the ones listed. Instead of a list of ranges, use <code>+f</code><i>file</i> to supply a file list with one <i>range</i> per line.</dd>
+<dt><code>-S</code>[<code>~</code>]<i>search string</i> or <code>-S</code>[<code>~</code>]/<i>regexp</i>/[<code>i</code>]</dt>
+<dd> Only output those segments whose header record contains the specified text string. To reverse the search, i.e., to output segments whose headers do <i>not</i> contain the specified pattern, use <code>-S~</code>. Should your pattern happen to start with ~ you need to escape this character with a backslash [Default output all segments]. Cannot be used with <code>-Q</code>. For matching segments based on aspatial values (via OGR/GMT format), give the search string as <i>varname</i>=<i>value</i> and we will compare <i>value</i> against the value of <i>varname</i> for each segment. Note: If the features are polygons then a match of a particular polygon perimeter also means that any associated polygon holes will also be matched. For matching segment headers against extended regular expressions enclose the expression in slashes. Append <code>i</code> for case-insensitive matching. For a list of such patterns, give <code>+f</code><i>file</i> with one pattern per line. To give a single pattern starting with +f, escape it with a backslash.</dd>
+<dt><code>-T</code></dt>
+<dd> Suppress the writing of segment headers on output.</dd>
+<dt><code>-V</code>[<i>level</i>] <i>(more &#8230;)</i></dt>
+<dd> Select verbosity level [c].</dd>
+<dt><code>-a</code><i>col</i>=<i>name</i>[<i>&#8230;</i>] <i>(more &#8230;)</i></dt>
+<dd> Set aspatial column associations <i>col</i>=<i>name</i>.</dd>
+<dt><code>-bi</code>[<i>ncols</i>][<code>t</code>] <i>(more &#8230;)</i></dt>
+<dd> Select native binary input.</dd>
+<dt><code>-bo</code>[<i>ncols</i>][<i>type</i>] <i>(more &#8230;)</i></dt>
+<dd> Select native binary output. [Default is same as input].</dd>
+<dt><code>-d</code>[<code>i</code>|<code>o</code>]<i>nodata</i> <i>(more &#8230;)</i></dt>
+<dd> Replace input columns that equal <i>nodata</i> with NaN and do the reverse on output.</dd>
+<dt><code>-f</code>[<code>i</code>|<code>o</code>]<i>colinfo</i> <i>(more &#8230;)</i></dt>
+<dd> Specify data types of input and/or output columns.</dd>
+<dt><code>-g</code>[<code>a</code>]<code>x</code>|<code>y</code>|<code>d</code>|<code>X</code>|<code>Y</code>|<code>D</code>|[<i>col</i>]<code>z</code>[+|-]<i>gap</i>[<code>u</code>] <i>(more &#8230;)</i></dt>
+<dd> Determine data gaps and line breaks.</dd>
+<dt><code>-h</code>[<code>i</code>|<code>o</code>][<i>n</i>][<code>+c</code>][<code>+d</code>][<code>+r</code><i>remark</i>][<code>+r</code><i>title</i>] <i>(more &#8230;)</i></dt>
+<dd> Skip or produce header record(s).</dd>
+<dt><code>-i</code><i>cols</i>[<code>l</code>][<code>s</code><i>scale</i>][<code>o</code><i>offset</i>][,<i>&#8230;</i>] <i>(more &#8230;)</i></dt>
+<dd> Select input columns (0 is first column).</dd>
+<dt><code>-o</code><i>cols</i>[,&#8230;] <i>(more &#8230;)</i></dt>
+<dd> Select output columns (0 is first column).</dd>
+<dt><code>-s</code>[<i>cols</i>][<code>a</code>|<code>r</code>] <i>(more &#8230;)</i></dt>
+<dd> Set handling of NaN records.</dd>
+<dt><code>-:</code>[<code>i</code>|<code>o</code>] <i>(more &#8230;)</i></dt>
+<dd> Swap 1st and 2nd column on input and/or output.</dd>
+<dt><code>-^</code> or just <code>&#8211;</code></dt>
+<dd> Print a short message about the syntax of the command, then exits (NOTE: on Windows use just <code>&#8211;</code>).</dd>
+<dt><code>-+</code> or just <code>+</code></dt>
+<dd> Print an extensive usage (help) message, including the explanation of any module-specific option (but not the GMT common options), then exits.</dd>
+<dt><code>-?</code> or no arguments</dt>
+<dd> Print a complete usage (help) message, including the explanation of options, then exits.</dd>
+<dt><code>&#8211;</code><code>-version</code></dt>
+<dd> Print GMT version and exit.</dd>
+<dt><code>&#8211;</code><code>-show-datadir</code></dt>
+<dd> Print full path to GMT share directory and exit.</dd></dl>
 <h2>ASCII FORMAT PRECISION</h2>
 <p> The ASCII output formats of numerical data are controlled by parameters in your <code>gmt.conf</code> file. Longitude and latitude are formatted according to <i>FORMAT_GEO_OUT</i>, whereas other values are formatted according to <i>FORMAT_FLOAT_OUT</i>. Be aware that the format in effect can lead to loss of precision in the output, which can lead to various problems downstream. If you find the output is not written with enough precision, consider switching to binary output (<code>-bo</code> if available) or specify more decimals using the <i>FORMAT_FLOAT_OUT</i> setting.</p>
 <h2>EXAMPLES</h2>

@@ -11,7 +11,6 @@ std::memcpy - std::memcpy
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;cstring&gt;
-
     void *memcpy(void *dest, const void *src, std::size_t count);</code></pre> 
 Copies count bytes from the object pointed to by src to the object pointed to by dest. Both objects are reinterpreted as arrays of unsigned char. 
 If the objects overlap, the behavior is undefined. 
@@ -37,12 +36,9 @@ Where strict_aliasing prohibits examining the same memory as values of two diffe
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;iostream&gt;
-
 #include &lt;cstdint&gt;
-
 #include &lt;cstring&gt;
 int main()
-
 {
     // simple usage
     char source[] = &quot;once upon a midnight dreary...&quot;, dest[4];
@@ -51,7 +47,6 @@ int main()
         std::cout &lt;&lt; c &lt;&lt; '\n';
     // reinterpreting
     double d = 0.1;
-
     //  std::int64_t n = *reinterpret_cast&lt;std::int64_t*&gt;(&amp;d); // aliasing violation
     std::int64_t n;
     std::memcpy(&amp;n, &amp;d, sizeof d); // OK

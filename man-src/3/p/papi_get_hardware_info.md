@@ -29,7 +29,8 @@ description: "PAPI_get_hardware_info –"
 * </pre>
 <p><code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>PAPI_hw_info_t</code> </p>
+<dd><code>PAPI_hw_info_t</code> </dd>
 <p> <code>PAPI_get_executable_info</code>, <code>PAPI_get_opt</code>, <code>PAPI_get_dmem_info</code>, <code>PAPI_library_init</code></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for PAPI from the source code.</p>
+</p>

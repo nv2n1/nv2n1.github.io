@@ -203,12 +203,12 @@ ${$aref}[3] = 17 Assigning an element</p>
 <p> I promised to give you 90% of the benefit with 10% of the details, and that means I left out 90% of the details. Now that you have an overview of the important parts, it should be easier to read the perlref manual page, which discusses 100% of the details. </p>
 <p> Some of the highlights of perlref:</p>
 <dl>
-<dt>&bull;</p>
-<dd> You can make references to anything, including scalars, functions, and other references.</p>
-<dt>&bull;</p>
-<dd> In <code>Use Rule 1</code>, you can omit the curly brackets whenever the thing inside them is an atomic scalar variable like <tt>$aref</tt>. For example, <tt>@$aref</tt> is the same as <tt>&quot;@{$aref}&quot;</tt>, and <tt>$$aref[1]</tt> is the same as <tt>&quot;${$aref}[1]&quot;</tt>. If you&#8217;re just starting out, you may want to adopt the habit of always including the curly brackets.</p>
-<dt>&bull;</p>
-<dd> This doesn&#8217;t copy the underlying array: </p>
+<dt>&bull;</dt>
+<dd> You can make references to anything, including scalars, functions, and other references.</dd>
+<dt>&bull;</dt>
+<dd> In <code>Use Rule 1</code>, you can omit the curly brackets whenever the thing inside them is an atomic scalar variable like <tt>$aref</tt>. For example, <tt>@$aref</tt> is the same as <tt>&quot;@{$aref}&quot;</tt>, and <tt>$$aref[1]</tt> is the same as <tt>&quot;${$aref}[1]&quot;</tt>. If you&#8217;re just starting out, you may want to adopt the habit of always including the curly brackets.</dd>
+<dt>&bull;</dt>
+<dd> This doesn&#8217;t copy the underlying array: </dd>
 <pre>
         $aref2 = $aref1;
 </pre>
@@ -220,17 +220,17 @@ ${$aref}[3] = 17 Assigning an element</p>
 <pre><code>
 $href2 = { % {$href1}};
 </code></pre>
-<dt>&bull;</p>
-<dd> To see if a variable contains a reference, use the <tt>&quot;ref&quot;</tt> function. It returns true if its argument is a reference. Actually it&#8217;s a little better than that: It returns <tt>&quot;HASH&quot;</tt> for hash references and <tt>&quot;ARRAY&quot;</tt> for array references.</p>
-<dt>&bull;</p>
-<dd> If you try to use a reference like a string, you get strings like </p>
+<dt>&bull;</dt>
+<dd> To see if a variable contains a reference, use the <tt>&quot;ref&quot;</tt> function. It returns true if its argument is a reference. Actually it&#8217;s a little better than that: It returns <tt>&quot;HASH&quot;</tt> for hash references and <tt>&quot;ARRAY&quot;</tt> for array references.</dd>
+<dt>&bull;</dt>
+<dd> If you try to use a reference like a string, you get strings like </dd>
 <pre>
         ARRAY(0x80f5dec)   or    HASH(0x826afc0)
 </pre>
 <p> If you ever see a string that looks like this, you&#8217;ll know you printed out a reference by mistake. </p>
 <p> A side effect of this representation is that you can use <tt>&quot;eq&quot;</tt> to see if two references refer to the same thing. (But you should usually use <tt>&quot;==&quot;</tt> instead because it&#8217;s much faster.)</p>
-<dt>&bull;</p>
-<dd> You can use a string as if it were a reference. If you use the string <tt>&quot;foo&quot;</tt> as an array reference, it&#8217;s taken to be a reference to the array <tt>@foo</tt>. This is called a <i>symbolic reference</i>. The declaration <tt>&quot;use strict 'refs'&quot;</tt> disables this feature, which can cause all sorts of trouble if you use it by accident.</dl>
+<dt>&bull;</dt>
+<dd> You can use a string as if it were a reference. If you use the string <tt>&quot;foo&quot;</tt> as an array reference, it&#8217;s taken to be a reference to the array <tt>@foo</tt>. This is called a <i>symbolic reference</i>. The declaration <tt>&quot;use strict 'refs'&quot;</tt> disables this feature, which can cause all sorts of trouble if you use it by accident.</dd></dl>
 <p> You might prefer to go on to perllol instead of perlref; it discusses lists of lists and multidimensional arrays in detail. After that, you should move on to perldsc; it&#8217;s a Data Structure Cookbook that shows recipes for using and printing out arrays of hashes, hashes of arrays, and other kinds of data.</p>
 <h2>Summary</h2>
 <p> Everyone needs compound data structures, and in Perl the way you get them is with references. There are four important rules for managing references: Two for making references and two for using them. Once you know these rules you can do most of the important things you need to do with references.</p>

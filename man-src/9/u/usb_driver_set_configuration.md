@@ -15,11 +15,11 @@ usb_driver_set_configuration - Provide a way for drivers to change device config
 <h2>Arguments</h2>
 
 <i>udev</i>
-<dl><dd><dd>the device whose configuration is being updated</dl>
+<dl><dd></dd><dd>the device whose configuration is being updated</dd></dl>
  
 
  <i>config</i>
-<dl><dd>the configuration being chosen.</dl>
+<dl><dd>the configuration being chosen.</dd></dl>
 
 <h2>Context</h2>
 

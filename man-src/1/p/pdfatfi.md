@@ -40,15 +40,15 @@ ps2pdf test.ps test.pdf
  Various options are supported
 <dl>
 <dt>--help
-<dd> Show help text.
-<dt>--version
-<dd> Print version number
-<dt>--(no)quiet
-<dd> Suppress/don't suppress messages
-<dt>--(no)verbose
-<dd> Verbose (not verbose) printing.
-<dt>--(no)debug
-<dd> Debug infomation printed (not printed)</dl>
+</dt><dd> Show help text.
+</dd><dt>--version
+</dt><dd> Print version number
+</dd><dt>--(no)quiet
+</dt><dd> Suppress/don't suppress messages
+</dd><dt>--(no)verbose
+</dt><dd> Verbose (not verbose) printing.
+</dd><dt>--(no)debug
+</dt><dd> Debug infomation printed (not printed)</dd></dl>
 
 <h2>BUGS</h2>
 

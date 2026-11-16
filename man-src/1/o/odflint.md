@@ -10,15 +10,15 @@ description: "odflint – Check ODF file for problems"
 <p>odflint &#8211; Check ODF file for problems</p>
 <h2>Synopsis</h2>
 <dl>
-<dt> <code>odflint</code> <i>path</i></dl>
+<dt> <code>odflint</code> <i>path</i></dt></dl>
 <h2>Description</h2>
 <p> <code>odflint</code></p>
-<dd>is a program that will check an ODF file and give warning if it finds something suspect. It is not able to make a full validation due to the complexity of the schema. </p>
+<dd>is a program that will check an ODF file and give warning if it finds something suspect. It is not able to make a full validation due to the complexity of the schema. </dd>
 <p> &#8220;Path&#8221; is assumed to be an OpenDocument file of text, spreadsheet or presentation type.</p>
 <h2>Example</h2>
 <dl>
 <dt>
-<dd> <font SIZE="-1"> </font></p>
+</dt><dd> <font SIZE="-1"> </font></dd>
 <pre>
 odflint odf-file
 </pre>
@@ -30,5 +30,5 @@ odflint odf-file
 <p> <code>S&oslash;ren Roug</code></p>
 <dl>
 <dt>
-<dd> Original author</dl>
+</dt><dd> Original author</dd></dl>
 <h2>Index</h2>

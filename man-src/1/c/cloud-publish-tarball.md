@@ -13,39 +13,39 @@ description: "cloud-publish-tarball – publish a cloud archive"
 <p> <code>cloud-publish-tarball [OPTIONS] TARFILE BUCKET [ARCH]</code> </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-k | &#8211;kernel k</code></p>
-<dd> Use previously registered kernel with id &#8216;k&#8217; specify &#8216;none&#8217; for no kernel</p>
-<dt><code>-K | &#8211;kernel-file f</code></p>
-<dd> Bundle, upload, use file &#8216;f&#8217; as kernel</p>
-<dt><code>-q | &#8211;quiet</code></p>
-<dd> Be quiet, only output produced image ids</p>
-<dt><code>-r | &#8211;ramdisk r</code></p>
-<dd> Use previously registered ramdisk with id &#8216;r&#8217; specify &#8216;none&#8217; for no ramdisk</p>
-<dt><code>-R | &#8211;ramdisk-file f</code></p>
-<dd> Bundle, upload, use file &#8216;f&#8217; as ramdisk</p>
-<dt><code>&#8211;rename-image i</code></p>
-<dd> rename the image file before publishing (publish to &lt;bucket&gt;/i)</p>
-<dt><code>&#8211;rename-kernel k</code></p>
-<dd> rename the kernel file before publishing (publish to &lt;bucket&gt;/k)</p>
-<dt><code>&#8211;rename-ramdisk r</code></p>
-<dd> rename the ramdisk file before publishing (publish to &lt;bucket&gt;/r)</p>
-<dt><code>&#8211;save-downloaded d</code></p>
-<dd> save the download image to directory &#8216;d&#8217; (applicable only if TARBALL is an URL) </p>
+<dt><code>-k | &#8211;kernel k</code></dt>
+<dd> Use previously registered kernel with id &#8216;k&#8217; specify &#8216;none&#8217; for no kernel</dd>
+<dt><code>-K | &#8211;kernel-file f</code></dt>
+<dd> Bundle, upload, use file &#8216;f&#8217; as kernel</dd>
+<dt><code>-q | &#8211;quiet</code></dt>
+<dd> Be quiet, only output produced image ids</dd>
+<dt><code>-r | &#8211;ramdisk r</code></dt>
+<dd> Use previously registered ramdisk with id &#8216;r&#8217; specify &#8216;none&#8217; for no ramdisk</dd>
+<dt><code>-R | &#8211;ramdisk-file f</code></dt>
+<dd> Bundle, upload, use file &#8216;f&#8217; as ramdisk</dd>
+<dt><code>&#8211;rename-image i</code></dt>
+<dd> rename the image file before publishing (publish to &lt;bucket&gt;/i)</dd>
+<dt><code>&#8211;rename-kernel k</code></dt>
+<dd> rename the kernel file before publishing (publish to &lt;bucket&gt;/k)</dd>
+<dt><code>&#8211;rename-ramdisk r</code></dt>
+<dd> rename the ramdisk file before publishing (publish to &lt;bucket&gt;/r)</dd>
+<dt><code>&#8211;save-downloaded d</code></dt>
+<dd> save the download image to directory &#8216;d&#8217; (applicable only if TARBALL is an URL) </dd>
 </dl>
 <h2>ARGUMENTS</h2>
 <dl>
-<dt><code>TARFILE</code></p>
-<dd> Target archive. This may be a URL.</p>
-<dt><code>BUCKET</code></p>
-<dd> Target bucket</p>
-<dt><code>ARCH</code></p>
-<dd> Image architecture; if is not provided, a name-based attempt is made to guess </p>
+<dt><code>TARFILE</code></dt>
+<dd> Target archive. This may be a URL.</dd>
+<dt><code>BUCKET</code></dt>
+<dd> Target bucket</dd>
+<dt><code>ARCH</code></dt>
+<dd> Image architecture; if is not provided, a name-based attempt is made to guess </dd>
 </dl>
 <h2>ENVIRONMENT</h2>
 <p> Behavior of this program can be modified by environment variables as described below: </p>
 <dl>
-<dt><code>EC2PRE</code></p>
-<dd> Underlying tools will be invoked using this prefix. The default is &#8216;euca-&#8216;, which results in using tools like &#8216;euca-register&#8217; and &#8216;euca-bundle-image&#8217;. To use the ec2-api-tools or ec2-ami-tools, set EC2PRE=&#8217;ec2-&#8216; </p>
+<dt><code>EC2PRE</code></dt>
+<dd> Underlying tools will be invoked using this prefix. The default is &#8216;euca-&#8216;, which results in using tools like &#8216;euca-register&#8217; and &#8216;euca-bundle-image&#8217;. To use the ec2-api-tools or ec2-ami-tools, set EC2PRE=&#8217;ec2-&#8216; </dd>
 </dl>
 <h2>DESCRIPTION</h2>
 <p> Register a Ubuntu Cloud image tarball per <a rel="nofollow" href="http://cloud-images.ubuntu.com">http://cloud-images.ubuntu.com</a> </p>

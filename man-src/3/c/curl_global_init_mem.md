@@ -24,16 +24,16 @@ description: "curl_global_init_mem – Global libcurl initialisation with memory
 <p> This man page only adds documentation for the callbacks, see the <i><a href="/docs/linux/man/3-curl_global_init/">curl_global_init</a>(3)</i> man page for all the rest. When you use this function, all callback arguments must be set to valid function pointers. </p>
 <p> The prototypes for the given callbacks should match these:</p>
 <dl>
-<dt>void *malloc_callback(size_t size);</p>
-<dd> To replace malloc()</p>
-<dt>void free_callback(void *ptr);</p>
-<dd> To replace free()</p>
-<dt>void *realloc_callback(void *ptr, size_t size);</p>
-<dd> To replace realloc()</p>
-<dt>char *strdup_callback(const char *str);</p>
-<dd> To replace strdup()</p>
-<dt>void *calloc_callback(size_t nmemb, size_t size);</p>
-<dd> To replace calloc()</dl>
+<dt>void *malloc_callback(size_t size);</dt>
+<dd> To replace malloc()</dd>
+<dt>void free_callback(void *ptr);</dt>
+<dd> To replace free()</dd>
+<dt>void *realloc_callback(void *ptr, size_t size);</dt>
+<dd> To replace realloc()</dd>
+<dt>char *strdup_callback(const char *str);</dt>
+<dd> To replace strdup()</dd>
+<dt>void *calloc_callback(size_t nmemb, size_t size);</dt>
+<dd> To replace calloc()</dd></dl>
 <h2>CAUTION</h2>
 <p> Manipulating these gives considerable powers to the application to severely screw things up for libcurl. Take care!</p>
 <h2>SEE ALSO</h2>

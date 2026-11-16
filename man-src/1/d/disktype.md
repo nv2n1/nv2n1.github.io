@@ -19,20 +19,20 @@ description: "disktype – disk format detector"
 <h2>RECOGNIZED FORMATS</h2>
 <p> The following formats are recognized by this version of</p>
 <dl>
-<dt><code>File systems:</code></p>
-<dd> FAT12/FAT16/FAT32, NTFS, HPFS, MFS, HFS, HFS Plus, ISO9660, ext2/ext3, Minix, ReiserFS, Reiser4, Linux romfs, Linux cramfs, Linux squashfs, UFS (some variations), SysV FS (some variations), JFS, XFS, Amiga FS/FFS, BeOS BFS, QNX4 FS, UDF, 3DO CD-ROM file system, Veritas VxFS, Xbox DVD file system.</p>
-<dt><code>Partitioning:</code></p>
-<dd> DOS/PC style, Apple, Amiga &quot;Rigid Disk&quot;, ATARI ST (AHDI3), BSD disklabel, Linux RAID physical disks, Linux LVM1 physical volumes, Linux LVM2 physical volumes, Solaris x86 disklabel (vtoc), Solaris SPARC disklabel.</p>
-<dt><code>Other structures:</code></p>
-<dd> Debian split floppy header, Linux swap.</p>
-<dt><code>Disk images:</code></p>
-<dd> Raw CD image (.bin), Virtual PC hard disk image, Apple UDIF disk image (limited).</p>
-<dt><code>Boot codes:</code></p>
-<dd> LILO, GRUB, SYSLINUX, ISOLINUX, Linux kernel, FreeBSD loader, Sega Dreamcast (?).</p>
-<dt><code>Compression formats:</code></p>
-<dd> gzip, compress, bzip2.</p>
-<dt><code>Archive formats:</code></p>
-<dd> tar, cpio, bar, dump/restore.</dl>
+<dt><code>File systems:</code></dt>
+<dd> FAT12/FAT16/FAT32, NTFS, HPFS, MFS, HFS, HFS Plus, ISO9660, ext2/ext3, Minix, ReiserFS, Reiser4, Linux romfs, Linux cramfs, Linux squashfs, UFS (some variations), SysV FS (some variations), JFS, XFS, Amiga FS/FFS, BeOS BFS, QNX4 FS, UDF, 3DO CD-ROM file system, Veritas VxFS, Xbox DVD file system.</dd>
+<dt><code>Partitioning:</code></dt>
+<dd> DOS/PC style, Apple, Amiga &quot;Rigid Disk&quot;, ATARI ST (AHDI3), BSD disklabel, Linux RAID physical disks, Linux LVM1 physical volumes, Linux LVM2 physical volumes, Solaris x86 disklabel (vtoc), Solaris SPARC disklabel.</dd>
+<dt><code>Other structures:</code></dt>
+<dd> Debian split floppy header, Linux swap.</dd>
+<dt><code>Disk images:</code></dt>
+<dd> Raw CD image (.bin), Virtual PC hard disk image, Apple UDIF disk image (limited).</dd>
+<dt><code>Boot codes:</code></dt>
+<dd> LILO, GRUB, SYSLINUX, ISOLINUX, Linux kernel, FreeBSD loader, Sega Dreamcast (?).</dd>
+<dt><code>Compression formats:</code></dt>
+<dd> gzip, compress, bzip2.</dd>
+<dt><code>Archive formats:</code></dt>
+<dd> tar, cpio, bar, dump/restore.</dd></dl>
 <p> Compressed files (gzip, compress, bzip2 formats) will also have their contents analyzed using transparent decompression. The appropriate compression program must be installed on the system, i.e. <a href="/docs/linux/man/1-gzip/">gzip</a>(1) for the gzip and compress formats, <a href="/docs/linux/man/1-bzip2/">bzip2</a>(1) for the bzip2 format. </p>
 <p> Disk images in general will also have their contents analyzed using the proper mapping, with the exception of the Apple UDIF format. </p>
 <p> See the online documentation at &lt;<a rel="nofollow" href="http://disktype.sourceforge.net/doc/">http://disktype.sourceforge.net/doc/</a>&gt; for more details on the supported formats and their quirks.</p>

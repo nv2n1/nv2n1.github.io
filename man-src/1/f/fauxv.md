@@ -11,35 +11,33 @@ description: "fauxv – print the auxiliary vector"
 <p> fauxv &#8211; print the auxiliary vector </p>
 <h2>SYNOPSIS</h2>
 <dl>
-<dt> <code>fauxv</code> [<i>options</i>] {<i>pid</i>&#8230; | <i>core-file</i>&nbsp;<wbr>[&nbsp;<wbr><i>core-executable</i>&nbsp;<wbr>]&#8230; }</dl>
+<dt> <code>fauxv</code> [<i>options</i>] {<i>pid</i>&#8230; | <i>core-file</i>&nbsp;<wbr>[&nbsp;<wbr><i>core-executable</i>&nbsp;<wbr>]&#8230; }</dt></dl>
 <h2>DESCRIPTION</h2>
 <p> <code>fauxv</code>prints the auxiliary vector of the specified process or core-file.</p>
 <h3>Standard Frysk Options</h3>
 <p> <code>-exe</code></p>
 <dl>
-<dt>
-<dd>
-<dd>The full path of the executable to read.</dl>
+<dd>The full path of the executable to read.</dd></dl>
 <p> <code>-noexe</code></p>
 <dl>
 <dt>
-<dd> Do not attempt to read the corresponding executable when loading a core file.</dl>
+</dt><dd> Do not attempt to read the corresponding executable when loading a core file.</dd></dl>
 <p> <code>-sysroot </code><i>directory</i></p>
 <dl>
 <dt>
-<dd> The system root directory under which all executables, libraries, and source are located.</dl>
+</dt><dd> The system root directory under which all executables, libraries, and source are located.</dd></dl>
 <p> <code>-debug </code><i>class</i><code>=</code><i>level</i><code>&#8230;</code></p>
 <dl>
 <dt>
-<dd> Set internal debug-tracing of the specified Java <i>class</i> to <i>level</i> (level can be NONE, INFO, WARNING, FINE, and FINEST). If the <i>level</i> is absent, FINE is assumed; if the <i>class</i> is absent, the global level is set.</dl>
+</dt><dd> Set internal debug-tracing of the specified Java <i>class</i> to <i>level</i> (level can be NONE, INFO, WARNING, FINE, and FINEST). If the <i>level</i> is absent, FINE is assumed; if the <i>class</i> is absent, the global level is set.</dd></dl>
 <h2>EXAMPLE</h2>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 fauxv 1234
 </pre>
-</dl>
+</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/7-frysk/">frysk</a>(7)</p>
 <h2>BUGS</h2>

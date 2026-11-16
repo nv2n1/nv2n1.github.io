@@ -11,7 +11,6 @@ description: "std::numeric_limits<T>::is_exact – std::numeric_limits<T>::is_ex
 <h2>Synopsis</h2>
 <pre><code>static const bool is_exact;
 (until C++ 11)
-
     static constexpr bool is_exact;
 (since C++ 11)</code></pre>
 <p>The value of std::numeric_limits&lt;T&gt;::is_exact is true for all arithmetic types T that use exact representation. </p>

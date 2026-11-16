@@ -23,6 +23,6 @@ description: "QwtPickerClickRectMachine –"
 <p> Pressing <code>QwtEventPattern::MouseSelect1</code> starts the selection, releasing it selects the first point. Pressing it again selects the second point and terminates the selection. Pressing <code>QwtEventPattern::KeySelect1</code> also starts the selection, a second press selects the first point. A third one selects the second point and terminates the selection. </p>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>QwtEventPattern::MousePatternCode</code>, <code>QwtEventPattern::KeyPatternCode</code></dl>
+<dd><code>QwtEventPattern::MousePatternCode</code>, <code>QwtEventPattern::KeyPatternCode</code></dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for Qwt User&#8217;s Guide from the source code.</p>

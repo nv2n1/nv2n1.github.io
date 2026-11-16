@@ -27,10 +27,5 @@ order - memory order constraints to enforce
 <h2>See also</h2>
 
 <pre><code>stores a value into the object referenced by an atomic_ref object
-
 operator= (public member function)
-
-
-
-
 </code></pre>

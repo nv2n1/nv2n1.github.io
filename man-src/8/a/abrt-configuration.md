@@ -21,7 +21,6 @@ abrt-configuration - dbus server for reading/writing ABRT configuration
 <pre><code>&lt;node name=&quot;/com/redhat/problems/configuration/ccpp&quot;&gt;
 &lt;annotation name=&quot;com.redhat.problems.ConfFile&quot; value=&quot;/etc/abrt/plugins/CCpp.conf&quot; /&gt;
 &lt;annotation name=&quot;com.redhat.problems.DefaultConfFile&quot; value=&quot;/usr/share/abrt/conf.d/plugins/CCpp.conf&quot; /&gt;
-
 &lt;interface name=&quot;com.redhat.problems.configuration.ccpp&quot;&gt;
 &lt;property name=&quot;MakeCompatCore&quot; type=&quot;b&quot; access=&quot;readwrite&quot;/&gt;
 &lt;property name=&quot;SaveBinaryImage&quot; type=&quot;b&quot; access=&quot;readwrite&quot;/&gt;
@@ -33,15 +32,15 @@ abrt-configuration - dbus server for reading/writing ABRT configuration
 <h2>Options</h2>
 
 -v
-<dl><dd>Log more detailed debugging information.</dl>
+<dl><dd>Log more detailed debugging information.</dd></dl>
  
 
  -t NUM
-<dl><dd>Exit after NUM seconds of inactivity.</dl>
+<dl><dd>Exit after NUM seconds of inactivity.</dd></dl>
 
 <h2>Authors</h2>
 
-<dl><dd>&bull; ABRT team</dl>
+<dl><dd>&bull; ABRT team</dd></dl>
 
 <h2>See Also</h2>
 

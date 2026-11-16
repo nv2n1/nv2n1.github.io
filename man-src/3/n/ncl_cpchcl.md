@@ -10,7 +10,7 @@ CPCHCL - Called by the Conpack routines CPCLDM and CPCLDR. The default version d
 
 <h2>Synopsis</h2>CALL CPCHCL (IFLG)
 <h2>Description</h2><dl COMPACT><dt>IFLG
-<dd>(INTEGER, input) is +1 if a line is about to be drawn, -1 if a line has just been drawn.</dl><h2>Usage</h2>The routine CPCHCL is not to be called by the user. It is called by the Conpack routines CPCLDM and CPCLDR just before and just after the contour lines at each level are drawn. The default version of CPCHCL does nothing. A user-supplied replacement may change attributes such as color and line width (by calling the SPPS routine SETUSV or the appropriate GKS routines). 
+</dt><dd>(INTEGER, input) is +1 if a line is about to be drawn, -1 if a line has just been drawn.</dd></dl><h2>Usage</h2>The routine CPCHCL is not to be called by the user. It is called by the Conpack routines CPCLDM and CPCLDR just before and just after the contour lines at each level are drawn. The default version of CPCHCL does nothing. A user-supplied replacement may change attributes such as color and line width (by calling the SPPS routine SETUSV or the appropriate GKS routines). 
 
  If the element of the parameter array 'CLU' corresponding to 'PAI' = -1 has been set non-zero to request the drawing of the edge of the grid, then CPCHCL will be called before and after that is done. Similarly, if the element of 'CLU' corresponding to 'PAI' = -2 has been set non-zero, then CPCHCL will be called before and after the drawing of the edges of the special-value areas, and, if the element of 'CLU' corresponding to 'PAI' = -3 has been set non-zero, then CPCHCL will be called before and after the drawing of the edges of the out-of-range areas. 
 

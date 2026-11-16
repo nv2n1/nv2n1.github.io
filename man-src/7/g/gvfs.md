@@ -11,88 +11,89 @@ description: "gvfs – GIO virtual file system"
 <h2>Description</h2>
 <p>GIO provides a VFS API to GLib applications. It includes a &#8216;local&#8217; implementation using POSIX. gvfs provides implementations that go beyond that and allow to access files and storage using many protocols, such as ftp, http, sftp, dav, nfs, etc. It also provides support for trash folders, for cd burning and for monitoring interesting devices and volumes on the computer. Applications use gvfs indirectly, by means of GIO loading the gvfs module that implements the GIO extension points. The gvfs support for volume monitoring is included in a separate loadable module. The actual gvfs implementation is distributed over a number of processes. None of these are expected to be started from the commandline, except for debugging purposes. Main processes:</p>
 <dl>
-<dd>&bull; gvfsd &#8211; the main gvfs daemon</dl>
+<dd>&bull; gvfsd &#8211; the main gvfs daemon</dd></dl>
 <dl>
-<dd>&bull; gvfsd-fuse &#8211; mounts gvfs as a fuse filesystem</dl>
+<dd>&bull; gvfsd-fuse &#8211; mounts gvfs as a fuse filesystem</dd></dl>
 <dl>
-<dd>&bull; gvfsd-metadata &#8211; writes gvfs metadata</dl>
+<dd>&bull; gvfsd-metadata &#8211; writes gvfs metadata</dd></dl>
 <p> Volume monitors:</p>
 <dl>
-<dd>&bull; gvfs-afc-volume-monitor &#8211; a volume monitor for Apple iPhone/iPod Touch devices</dl>
+<dd>&bull; gvfs-afc-volume-monitor &#8211; a volume monitor for Apple iPhone/iPod Touch devices</dd></dl>
 <dl>
-<dd>&bull; gvfs-goa-volume-monitor &#8211; a volume monitor for GNOME Online Accounts</dl>
+<dd>&bull; gvfs-goa-volume-monitor &#8211; a volume monitor for GNOME Online Accounts</dd></dl>
 <dl>
-<dd>&bull; gvfs-gphoto2-volume-monitor &#8211; a volume monitor for PTP devices</dl>
+<dd>&bull; gvfs-gphoto2-volume-monitor &#8211; a volume monitor for PTP devices</dd></dl>
 <dl>
-<dd>&bull; gvfs-mtp-volume-monitor &#8211; a volume monitor for MTP devices</dl>
+<dd>&bull; gvfs-mtp-volume-monitor &#8211; a volume monitor for MTP devices</dd></dl>
 <dl>
-<dd>&bull; gvfs-udisks2-volume-monitor &#8211; a udisks2-based volume monitor</dl>
+<dd>&bull; gvfs-udisks2-volume-monitor &#8211; a udisks2-based volume monitor</dd></dl>
 <p> Mount backends:</p>
 <dl>
-<dd>&bull; gvfsd-admin &#8211; mounts local filesystem with admin privileges</dl>
+<dd>&bull; gvfsd-admin &#8211; mounts local filesystem with admin privileges</dd></dl>
 <dl>
-<dd>&bull; gvfsd-afc &#8211; mounts iPhone/iPod touch volumes</dl>
+<dd>&bull; gvfsd-afc &#8211; mounts iPhone/iPod touch volumes</dd></dl>
 <dl>
-<dd>&bull; gvfsd-afp &#8211; mounts Apple Filing Protocol volumes</dl>
+<dd>&bull; gvfsd-afp &#8211; mounts Apple Filing Protocol volumes</dd></dl>
 <dl>
-<dd>&bull; gvfsd-afp-browse &#8211; browses Apple Filing Protocol volumes</dl>
+<dd>&bull; gvfsd-afp-browse &#8211; browses Apple Filing Protocol volumes</dd></dl>
 <dl>
-<dd>&bull; gvfsd-archive &#8211; mounts archive files in various formats</dl>
+<dd>&bull; gvfsd-archive &#8211; mounts archive files in various formats</dd></dl>
 <dl>
-<dd>&bull; gvfsd-burn &#8211; provides a location for burning CDs</dl>
+<dd>&bull; gvfsd-burn &#8211; provides a location for burning CDs</dd></dl>
 <dl>
-<dd>&bull; gvfsd-cdda &#8211; mounts audio CDs</dl>
+<dd>&bull; gvfsd-cdda &#8211; mounts audio CDs</dd></dl>
 <dl>
-<dd>&bull; gvfsd-computer &#8211; provides computer://</dl>
+<dd>&bull; gvfsd-computer &#8211; provides computer://</dd></dl>
 <dl>
-<dd>&bull; gvfsd-dav &#8211; mounts DAV filesystems</dl>
+<dd>&bull; gvfsd-dav &#8211; mounts DAV filesystems</dd></dl>
 <dl>
-<dd>&bull; gvfsd-dnssd &#8211; browses dnssd</dl>
+<dd>&bull; gvfsd-dnssd &#8211; browses dnssd</dd></dl>
 <dl>
-<dd>&bull; gvfsd-ftp &#8211; mounts over FTP</dl>
+<dd>&bull; gvfsd-ftp &#8211; mounts over FTP</dd></dl>
 <dl>
-<dd>&bull; gvfsd-google &#8211; mounts Google Drive shares</dl>
+<dd>&bull; gvfsd-google &#8211; mounts Google Drive shares</dd></dl>
 <dl>
-<dd>&bull; gvfsd-gphoto2 &#8211; mounts over PTP</dl>
+<dd>&bull; gvfsd-gphoto2 &#8211; mounts over PTP</dd></dl>
 <dl>
-<dd>&bull; gvfsd-http &#8211; mounts over HTTP</dl>
+<dd>&bull; gvfsd-http &#8211; mounts over HTTP</dd></dl>
 <dl>
-<dd>&bull; gvfsd-localtest &#8211; a test backend</dl>
+<dd>&bull; gvfsd-localtest &#8211; a test backend</dd></dl>
 <dl>
-<dd>&bull; gvfsd-mtp &#8211; mounts over MTP</dl>
+<dd>&bull; gvfsd-mtp &#8211; mounts over MTP</dd></dl>
 <dl>
-<dd>&bull; gvfsd-network &#8211; provides network://</dl>
+<dd>&bull; gvfsd-network &#8211; provides network://</dd></dl>
 <dl>
-<dd>&bull; gvfsd-nfs &#8211; mounts over NFS</dl>
+<dd>&bull; gvfsd-nfs &#8211; mounts over NFS</dd></dl>
 <dl>
-<dd>&bull; gvfsd-recent &#8211; provides recent://</dl>
+<dd>&bull; gvfsd-recent &#8211; provides recent://</dd></dl>
 <dl>
-<dd>&bull; gvfsd-sftp &#8211; mounts over sftp</dl>
+<dd>&bull; gvfsd-sftp &#8211; mounts over sftp</dd></dl>
 <dl>
-<dd>&bull; gvfsd-smb &#8211; mounts Windows Shares Filesystem volumes</dl>
+<dd>&bull; gvfsd-smb &#8211; mounts Windows Shares Filesystem volumes</dd></dl>
 <dl>
-<dd>&bull; gvfsd-smb-browse &#8211; browses Windows Shares Filesystem volumes</dl>
+<dd>&bull; gvfsd-smb-browse &#8211; browses Windows Shares Filesystem volumes</dd></dl>
 <dl>
-<dd>&bull; gvfsd-trash &#8211; provides trash://</dl>
+<dd>&bull; gvfsd-trash &#8211; provides trash://</dd></dl>
 <h2>Environment</h2>
 <p><code>GIO_USE_VFS</code></p>
 <dl>
-<dd>If set, specifies the GIO vfs implementation to use. Possible values include &#8216;local&#8217; and &#8216;gvfs&#8217;.</dl>
+<dd>If set, specifies the GIO vfs implementation to use. Possible values include &#8216;local&#8217; and &#8216;gvfs&#8217;.</dd></dl>
 <p> <code>GIO_USE_VOLUME_MONITOR</code></p>
 <dl>
-<dd>If set, specifies the GIO volume monitor implementation to use. Possible values include &#8216;unix&#8217;, &#8216;GProxyVolumeMonitorUDisks2&#8217;, as well as other native volume monitors that are described in the key files in <code>$XDG_DATA_DIRS</code>/gvfs/remote-volume-monitors.</dl>
+<dd>If set, specifies the GIO volume monitor implementation to use. Possible values include &#8216;unix&#8217;, &#8216;GProxyVolumeMonitorUDisks2&#8217;, as well as other native volume monitors that are described in the key files in <code>$XDG_DATA_DIRS</code>/gvfs/remote-volume-monitors.</dd></dl>
 <h2>Files</h2>
 <p><code>$XDG_DATA_DIRS</code>/gvfs/mounts</p>
 <dl>
-<dd>This directory contains key files describing mount daemons.</dl>
+<dd>This directory contains key files describing mount daemons.</dd></dl>
 <p> <code>$XDG_DATA_DIRS</code>/gvfs/remote-volume-monitors</p>
 <dl>
-<dd>This directory contains key files describing remote volume monitors.</dl>
+<dd>This directory contains key files describing remote volume monitors.</dd></dl>
 <h2>See Also</h2>
 <p>m[blue]<code>GIO documentation</code>m[]<font SIZE="-2">[1]</font>, <code><a href="/docs/linux/man/1-gvfsd/">gvfsd</a></code>(1), <code><a href="/docs/linux/man/1-gvfsd-fuse/">gvfsd-fuse</a></code>(1), <code><a href="/docs/linux/man/1-gvfsd-metadata/">gvfsd-metadata</a></code>(1)</p>
 <h2>Notes</h2>
 <dl>
-<dt> 1.</p>
-<dd>GIO documentation</p>
+<dt> 1.</dt>
+<dd>GIO documentation</dd>
 <dl>
-<dd><a rel="nofollow" href="http://developer.gnome.org/gio">http://developer.gnome.org/gio</a></dl>
+<dd><a rel="nofollow" href="http://developer.gnome.org/gio">http://developer.gnome.org/gio</a></dd></dl>
+</dl>

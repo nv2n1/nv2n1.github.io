@@ -17,7 +17,7 @@ description: "nan, nanf, nanl – return ‘Not a Number’"
 <p> Feature Test Macro Requirements for glibc (see <code><a href="/docs/linux/man/7-feature_test_macros/">feature_test_macros</a></code>(7)): </p>
 <p> <code>nan</code>(), <code>nanf</code>(), <code>nanl</code>():</p>
 <dl COMPACT>
-<dd>_ISOC99_SOURCE || _POSIX_C_SOURCE&nbsp;&gt;=&nbsp;200112L</dl>
+<dd>_ISOC99_SOURCE || _POSIX_C_SOURCE&nbsp;&gt;=&nbsp;200112L</dd></dl>
 <h2>Description</h2>
 <p>These functions return a representation (determined by <i>tagp</i>) of a quiet NaN. If the implementation does not support quiet NaNs, these functions return zero. </p>
 <p> The call <i>nan(char-sequence)</i> is equivalent to: </p>

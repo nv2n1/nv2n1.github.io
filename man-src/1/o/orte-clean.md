@@ -12,7 +12,6 @@ description: "orte-clean – Cleans up any stale processes and files leftover fr
 <h2>SYNOPSIS</h2>
 <pre><code>
 orte - clean[--verbose]
-
     mpirun-- pernode[--host | --hostfile file] orte -
     clean[--verbose]
 </code></pre>

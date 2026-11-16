@@ -15,79 +15,79 @@ description: "GlusterFS – clustered file system"
 <h2>Options</h2>
 <h3>Basic options</h3>
 <dl>
-<dt><code>-f, &#8211;volfile=VOLUME-FILE</code></p>
-<dd>File to use as VOLUME-FILE.</p>
-<dt><code>-l, &#8211;log-file=LOGFILE</code></p>
-<dd>File to use for logging (the default is &lt;INSTALL-DIR&gt;/var/log/glusterfs/&lt;MOUNT-POINT&gt;.log).</p>
-<dt><code>-L, &#8211;log-level=LOGLEVEL</code></p>
-<dd>Logging severity. Valid options are TRACE, DEBUG, INFO, WARNING, ERROR and CRITICAL (the default is INFO).</p>
-<dt><code>-s, &#8211;volfile-server=SERVER</code></p>
-<dd>Server to get the volume from. This option overrides <code>&#8211;volfile </code> option.</p>
-<dt><code>&#8211;volfile-max-fetch-attempts=MAX-ATTEMPTS</code></p>
-<dd>Maximum number of connect attempts to server. This option should be provided with <code>&#8211;volfile-server</code> option (the default is 1). </p>
+<dt><code>-f, &#8211;volfile=VOLUME-FILE</code></dt>
+<dd>File to use as VOLUME-FILE.</dd>
+<dt><code>-l, &#8211;log-file=LOGFILE</code></dt>
+<dd>File to use for logging (the default is &lt;INSTALL-DIR&gt;/var/log/glusterfs/&lt;MOUNT-POINT&gt;.log).</dd>
+<dt><code>-L, &#8211;log-level=LOGLEVEL</code></dt>
+<dd>Logging severity. Valid options are TRACE, DEBUG, INFO, WARNING, ERROR and CRITICAL (the default is INFO).</dd>
+<dt><code>-s, &#8211;volfile-server=SERVER</code></dt>
+<dd>Server to get the volume from. This option overrides <code>&#8211;volfile </code> option.</dd>
+<dt><code>&#8211;volfile-max-fetch-attempts=MAX-ATTEMPTS</code></dt>
+<dd>Maximum number of connect attempts to server. This option should be provided with <code>&#8211;volfile-server</code> option (the default is 1). </dd>
 </dl>
 <h3>Advanced options</h3>
 <dl>
-<dt><code>&#8211;acl</code></p>
-<dd>Mount the filesystem with POSIX ACL support.</p>
-<dt><code>&#8211;debug</code></p>
-<dd>Run in debug mode. This option sets <code>&#8211;no-daemon</code>, <code>&#8211;log-level</code> to DEBUG, and <code>&#8211;log-file</code> to console.</p>
-<dt><code>&#8211;enable-ino32=BOOL</code></p>
-<dd>Use 32-bit inodes when mounting to workaround application that doesn&#8217;t support 64-bit inodes.</p>
-<dt><code>&#8211;fopen-keep-cache</code></p>
-<dd>Do not purge the cache on file open.</p>
-<dt><code>&#8211;mac-compat=BOOL</code></p>
-<dd>Provide stubs for attributes needed for seamless operation on Macs (the default is off).</p>
-<dt><code>-N, &#8211;no-daemon</code></p>
-<dd>Run in the foreground.</p>
-<dt><code>-p, &#8211;pid-file=PIDFILE</code></p>
-<dd>File to use as PID file.</p>
-<dt><code>&#8211;read-only</code></p>
-<dd>Mount the file system in &#8216;read-only&#8217; mode.</p>
-<dt><code>&#8211;selinux</code></p>
-<dd>Enable SELinux label (extended attributes) support on inodes.</p>
-<dt><code>-S, &#8211;socket-file=SOCKFILE</code></p>
-<dd>File to use as unix-socket.</p>
-<dt><code>&#8211;volfile-id=KEY</code></p>
-<dd>Key of the volume file to be fetched from the server.</p>
-<dt><code>&#8211;volfile-server-port=PORT</code></p>
-<dd>Port number of volfile server.</p>
-<dt><code>&#8211;volfile-server-transport=TRANSPORT</code></p>
-<dd>Transport type to get volume file from server (the default is tcp).</p>
-<dt><code>&#8211;volume-name=VOLUME-NAME</code></p>
-<dd>Volume name to be used for MOUNT-POINT (the default is top most volume in VOLUME-FILE).</p>
-<dt><code>&#8211;worm</code></p>
-<dd>Mount the filesystem in &#8216;worm&#8217; mode.</p>
-<dt><code>&#8211;xlator-option=VOLUME-NAME.OPTION=VALUE</code></p>
-<dd>Add/Override a translator option for a volume with the specified value. </p>
+<dt><code>&#8211;acl</code></dt>
+<dd>Mount the filesystem with POSIX ACL support.</dd>
+<dt><code>&#8211;debug</code></dt>
+<dd>Run in debug mode. This option sets <code>&#8211;no-daemon</code>, <code>&#8211;log-level</code> to DEBUG, and <code>&#8211;log-file</code> to console.</dd>
+<dt><code>&#8211;enable-ino32=BOOL</code></dt>
+<dd>Use 32-bit inodes when mounting to workaround application that doesn&#8217;t support 64-bit inodes.</dd>
+<dt><code>&#8211;fopen-keep-cache</code></dt>
+<dd>Do not purge the cache on file open.</dd>
+<dt><code>&#8211;mac-compat=BOOL</code></dt>
+<dd>Provide stubs for attributes needed for seamless operation on Macs (the default is off).</dd>
+<dt><code>-N, &#8211;no-daemon</code></dt>
+<dd>Run in the foreground.</dd>
+<dt><code>-p, &#8211;pid-file=PIDFILE</code></dt>
+<dd>File to use as PID file.</dd>
+<dt><code>&#8211;read-only</code></dt>
+<dd>Mount the file system in &#8216;read-only&#8217; mode.</dd>
+<dt><code>&#8211;selinux</code></dt>
+<dd>Enable SELinux label (extended attributes) support on inodes.</dd>
+<dt><code>-S, &#8211;socket-file=SOCKFILE</code></dt>
+<dd>File to use as unix-socket.</dd>
+<dt><code>&#8211;volfile-id=KEY</code></dt>
+<dd>Key of the volume file to be fetched from the server.</dd>
+<dt><code>&#8211;volfile-server-port=PORT</code></dt>
+<dd>Port number of volfile server.</dd>
+<dt><code>&#8211;volfile-server-transport=TRANSPORT</code></dt>
+<dd>Transport type to get volume file from server (the default is tcp).</dd>
+<dt><code>&#8211;volume-name=VOLUME-NAME</code></dt>
+<dd>Volume name to be used for MOUNT-POINT (the default is top most volume in VOLUME-FILE).</dd>
+<dt><code>&#8211;worm</code></dt>
+<dd>Mount the filesystem in &#8216;worm&#8217; mode.</dd>
+<dt><code>&#8211;xlator-option=VOLUME-NAME.OPTION=VALUE</code></dt>
+<dd>Add/Override a translator option for a volume with the specified value. </dd>
 </dl>
 <h3>Fuse options</h3>
 <dl>
-<dd><code>&#8211;attribute-timeout=SECONDS</code> Set attribute timeout to SECONDS for inodes in fuse kernel module (the default is 1).</p>
-<dt><code>&#8211;background-qlen=N</code></p>
-<dd>Set fuse module&#8217;s background queue length to N (the default is 64).</p>
-<dt><code>&#8211;congestion-threshold=N</code></p>
-<dd>Set fuse module&#8217;s congestion threshold to N (the default is 48).</p>
-<dt><code>&#8211;direct-io-mode=BOOL</code></p>
-<dd>Enable/Disable the direct-I/O mode in fuse module (the default is enable).</p>
-<dt><code>&#8211;dump-fuse=PATHR</code></p>
-<dd>Dump fuse traffic to PATH</p>
-<dt><code>&#8211;entry-timeout=SECONDS</code></p>
-<dd>Set entry timeout to SECONDS in fuse kernel module (the default is 1).</p>
-<dt><code>&#8211;gid-timeout=SECONDS</code></p>
-<dd>Set auxiliary group list timeout to SECONDS for fuse translator (the default is 0).</p>
-<dt><code>&#8211;negative-timeout=SECONDS</code></p>
-<dd>Set negative timeout to SECONDS in fuse kernel module (the default is 0).</p>
-<dt><code>&#8211;volfile-check</code></p>
-<dd>Enable strict volume file checking. </p>
+<dd><code>&#8211;attribute-timeout=SECONDS</code> Set attribute timeout to SECONDS for inodes in fuse kernel module (the default is 1).</dd>
+<dt><code>&#8211;background-qlen=N</code></dt>
+<dd>Set fuse module&#8217;s background queue length to N (the default is 64).</dd>
+<dt><code>&#8211;congestion-threshold=N</code></dt>
+<dd>Set fuse module&#8217;s congestion threshold to N (the default is 48).</dd>
+<dt><code>&#8211;direct-io-mode=BOOL</code></dt>
+<dd>Enable/Disable the direct-I/O mode in fuse module (the default is enable).</dd>
+<dt><code>&#8211;dump-fuse=PATHR</code></dt>
+<dd>Dump fuse traffic to PATH</dd>
+<dt><code>&#8211;entry-timeout=SECONDS</code></dt>
+<dd>Set entry timeout to SECONDS in fuse kernel module (the default is 1).</dd>
+<dt><code>&#8211;gid-timeout=SECONDS</code></dt>
+<dd>Set auxiliary group list timeout to SECONDS for fuse translator (the default is 0).</dd>
+<dt><code>&#8211;negative-timeout=SECONDS</code></dt>
+<dd>Set negative timeout to SECONDS in fuse kernel module (the default is 0).</dd>
+<dt><code>&#8211;volfile-check</code></dt>
+<dd>Enable strict volume file checking. </dd>
 </dl>
 <h3>Miscellaneous Options</h3>
 <dl>
-<dd><code>-?, &#8211;help</code> Display this help.</p>
-<dt><code>&#8211;usage</code></p>
-<dd>Display a short usage message.</p>
-<dt><code>-V, &#8211;version</code></p>
-<dd>Print the program version. </p>
+<dd><code>-?, &#8211;help</code> Display this help.</dd>
+<dt><code>&#8211;usage</code></dt>
+<dd>Display a short usage message.</dd>
+<dt><code>-V, &#8211;version</code></dt>
+<dd>Print the program version. </dd>
 </dl>
 <h2>Files</h2>
 <p>/var/lib/glusterd/vols/*/*.vol</p>

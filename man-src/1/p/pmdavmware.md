@@ -38,14 +38,14 @@ $password = 'YYYY';
 <p> <code>pmdavmware</code> is launched by <i><a href="/docs/linux/man/1-pmcd/">pmcd</a></i>(1) and should never be executed directly. The Install and Remove scripts notify <i><a href="/docs/linux/man/1-pmcd/">pmcd</a></i>(1) when the agent is installed or removed.</p>
 <h2>FILES</h2>
 <dl>
-<dt>$PCP_PMDAS_DIR/vmware/vmware.conf</p>
-<dd> configuration file for the <code>pmdavmware</code> agent</p>
-<dt>$PCP_PMDAS_DIR/vmware/Install</p>
-<dd> installation script for the <code>pmdavmware</code> agent</p>
-<dt>$PCP_PMDAS_DIR/vmware/Remove</p>
-<dd> undo installation script for the <code>pmdavmware</code> agent</p>
-<dt>$PCP_LOG_DIR/pmcd/vmware.log</p>
-<dd> default log file for error messages from <code>pmdavmware</code></dl>
+<dt>$PCP_PMDAS_DIR/vmware/vmware.conf</dt>
+<dd> configuration file for the <code>pmdavmware</code> agent</dd>
+<dt>$PCP_PMDAS_DIR/vmware/Install</dt>
+<dd> installation script for the <code>pmdavmware</code> agent</dd>
+<dt>$PCP_PMDAS_DIR/vmware/Remove</dt>
+<dd> undo installation script for the <code>pmdavmware</code> agent</dd>
+<dt>$PCP_LOG_DIR/pmcd/vmware.log</dt>
+<dd> default log file for error messages from <code>pmdavmware</code></dd></dl>
 <h2>SEE ALSO</h2>
 <p> <i><a href="/docs/linux/man/1-pmcd/">pmcd</a></i>(1). </p>
 <h2>Index</h2>

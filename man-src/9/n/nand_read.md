@@ -14,23 +14,23 @@ description: "nand_read – [MTD Interface] MTD compatibility function for nand_
 <p><i>mtd</i></p>
 <dl>
 <dd>
-<dd>MTD device structure</dl>
+</dd><dd>MTD device structure</dd></dl>
 <p> <i>from</i></p>
 <dl>
-<dd>offset to read from</dl>
+<dd>offset to read from</dd></dl>
 <p> <i>len</i></p>
 <dl>
-<dd>number of bytes to read</dl>
+<dd>number of bytes to read</dd></dl>
 <p> <i>retlen</i></p>
 <dl>
-<dd>pointer to variable to store the number of read bytes</dl>
+<dd>pointer to variable to store the number of read bytes</dd></dl>
 <p> <i>buf</i></p>
 <dl>
-<dd>the databuffer to put data</dl>
+<dd>the databuffer to put data</dd></dl>
 <h2>Description</h2>
 <p>Get hold of the chip and call nand_do_read.</p>
 <h2>Author</h2>
 <p><code>Thomas Gleixner</code> &lt;tglx [at] linutronix.de&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

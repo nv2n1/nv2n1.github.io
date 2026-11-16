@@ -14,15 +14,15 @@ description: "airq_iv_free – free irq bits of an interrupt vector"
 <p><i>iv</i></p>
 <dl>
 <dd>
-<dd>pointer to interrupt vector structure</dl>
+</dd><dd>pointer to interrupt vector structure</dd></dl>
 <p> <i>bit</i></p>
 <dl>
-<dd>number of the first irq bit to free</dl>
+<dd>number of the first irq bit to free</dd></dl>
 <p> <i>num</i></p>
 <dl>
-<dd>number of consecutive irq bits to free</dl>
+<dd>number of consecutive irq bits to free</dd></dl>
 <h2>Author</h2>
 <p><code>Cornelia Huck</code> &lt;cornelia.huck [at] de.ibm.com&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

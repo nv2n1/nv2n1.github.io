@@ -18,12 +18,12 @@ description: "zsoelim – satisfy .so requests in roff input"
 <p> Traditionally, <code>soelim</code> programs were used to allow roff preprocessors to be able to preprocess the files referred to by the requests. This particular version was written to circumvent problems created by support for compressed manual pages.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-C</code>, <code>&#8211;compatible</code></p>
-<dd> This flag is available for compatibility with other <code>soelim</code> programs. Its use is to enable .so requests followed by something other than whitespace. As this is already the default behaviour, it is ignored.</p>
-<dt><code>-h</code>, <code>&#8211;help</code></p>
-<dd> Print a help message and exit.</p>
-<dt><code>-V</code>, <code>&#8211;version</code></p>
-<dd> Display version information.</dl>
+<dt><code>-C</code>, <code>&#8211;compatible</code></dt>
+<dd> This flag is available for compatibility with other <code>soelim</code> programs. Its use is to enable .so requests followed by something other than whitespace. As this is already the default behaviour, it is ignored.</dd>
+<dt><code>-h</code>, <code>&#8211;help</code></dt>
+<dd> Print a help message and exit.</dd>
+<dt><code>-V</code>, <code>&#8211;version</code></dt>
+<dd> Display version information.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-groff/">groff</a></code>(1), <code><a href="/docs/linux/man/1-man/">man</a></code>(1), <code><a href="/docs/linux/man/1-nroff/">nroff</a></code>(1), <code><a href="/docs/linux/man/1-troff/">troff</a></code>(1)</p>
 <h2>AUTHOR</h2>

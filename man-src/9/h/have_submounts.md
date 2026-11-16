@@ -15,7 +15,7 @@ have_submounts - check for mounts over a dentry
 <h2>Arguments</h2>
 
 <i>parent</i>
-<dl><dd><dd>dentry to check.</dl>
+<dl><dd></dd><dd>dentry to check.</dd></dl>
 
 <h2>Description</h2>
 

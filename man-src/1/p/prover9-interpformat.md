@@ -17,27 +17,27 @@ description: "interpformat – tool for transforming mace4(1) models"
 <h2>TRANSFORMATIONS</h2>
 <p> The transformations are listed here.</p>
 <dl>
-<dt><code>standard</code></p>
-<dd> one line per operation</p>
-<dt><code>standard2</code></p>
-<dd> standard, with binary operations in a square (default)</p>
-<dt><code>portable</code></p>
-<dd> list of lists, suitable for parsing by Python, GAP, etc.</p>
-<dt><code>tabular</code></p>
-<dd> as nice tables</p>
-<dt><code>raw</code></p>
-<dd> similar to standard, but without punctuation</p>
-<dt><code>cooked</code></p>
-<dd> as terms, e.g., f(0,1)=2</p>
-<dt><code>tex</code></p>
-<dd> formatted for LaTeX</p>
-<dt><code>xml</code></p>
-<dd> XML</dl>
+<dt><code>standard</code></dt>
+<dd> one line per operation</dd>
+<dt><code>standard2</code></dt>
+<dd> standard, with binary operations in a square (default)</dd>
+<dt><code>portable</code></dt>
+<dd> list of lists, suitable for parsing by Python, GAP, etc.</dd>
+<dt><code>tabular</code></dt>
+<dd> as nice tables</dd>
+<dt><code>raw</code></dt>
+<dd> similar to standard, but without punctuation</dd>
+<dt><code>cooked</code></dt>
+<dd> as terms, e.g., f(0,1)=2</dd>
+<dt><code>tex</code></dt>
+<dd> formatted for LaTeX</dd>
+<dt><code>xml</code></dt>
+<dd> XML</dd></dl>
 <h2>OPTIONS</h2>
 <p> A summary of options is included below.</p>
 <dl>
-<dt><code>output </code><i>&lt;operations&gt;</i></p>
-<dd> Output only the listed <i>operations</i>.</dl>
+<dt><code>output </code><i>&lt;operations&gt;</i></dt>
+<dd> Output only the listed <i>operations</i>.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-mace4/">mace4</a></code>(1).<br />
  Full documentation for <code>interpformat</code> is found in the <code>prover9</code> manual, available on Debian systems in the <i>prover9-doc</i> package at <i>/usr/share/doc/prover9-doc/manual/index.html</i>.</p>

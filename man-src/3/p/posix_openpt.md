@@ -11,17 +11,16 @@ description: "posix_openpt – open a pseudoterminal device"
 <h2>Synopsis</h2>
 <pre><code>#include &lt;fcntl.h&gt;
 #include &lt;stdlib.h&gt;
-
 int posix_openpt(int flags);</code></pre>
 <p> Feature Test Macro Requirements for glibc (see <code><a href="/docs/linux/man/7-feature_test_macros/">feature_test_macros</a></code>(7)): <code>posix_openpt</code>(): _XOPEN_SOURCE&nbsp;&gt;=&nbsp;600</p>
 <h2>Description</h2>
 <p>The <code>posix_openpt</code>() function opens an unused pseudoterminal master device, returning a file descriptor that can be used to refer to that device. </p>
 <p> The <i>flags</i> argument is a bit mask that ORs together zero or more of the following flags:</p>
 <dl>
-<dt><code>O_RDWR</code></p>
-<dd>Open the device for both reading and writing. It is usual to specify this flag.</p>
-<dt><code>O_NOCTTY</code></p>
-<dd>Do not make this device the controlling terminal for the process.</dl>
+<dt><code>O_RDWR</code></dt>
+<dd>Open the device for both reading and writing. It is usual to specify this flag.</dd>
+<dt><code>O_NOCTTY</code></dt>
+<dd>Do not make this device the controlling terminal for the process.</dd></dl>
 <h2>Return Value</h2>
 <p>On success, <code>posix_openpt</code>() returns a file descriptor (a nonnegative integer) which is the lowest numbered unused file descriptor. On failure, -1 is returned, and <i>errno</i> is set to indicate the error.</p>
 <h2>Errors</h2>

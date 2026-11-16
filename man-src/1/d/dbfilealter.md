@@ -16,52 +16,52 @@ description: "dbfilealter – alter the format of an Fsdb file, changing the row
 <p> With <tt>&quot;-Z compression&quot;</tt> it controls compression on the file</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-F</code> or <code>&#8211;fs</code> or <code>&#8211;fieldseparator</code> S</p>
-<dd> Specify the field (column) separator as <tt>&quot;S&quot;</tt>. See below for valid field separators.</p>
-<dt><code>-R</code> or <code>&#8211;rs</code> or <code>&#8211;rowseparator</code> S</p>
-<dd> Specify the row separator as <tt>&quot;S&quot;</tt>. See below for valid row separators.</p>
-<dt><code>-Z</code> or <code>&#8211;compression</code> S</p>
-<dd> Specify file compression as given by file extension <tt>&quot;S&quot;</tt>. Supported compressions are <i>gz</i> for gzip, <i>bz2</i> for bzip2, <i>xz</i> for xz, or &#8220;none&#8221; or undef to disable compression. Default is none.</p>
-<dt><code>-c</code> or <code>&#8211;correct</code></p>
-<dd> Correct any inconsistency caused by the new separators, if possible.</dl>
+<dt><code>-F</code> or <code>&#8211;fs</code> or <code>&#8211;fieldseparator</code> S</dt>
+<dd> Specify the field (column) separator as <tt>&quot;S&quot;</tt>. See below for valid field separators.</dd>
+<dt><code>-R</code> or <code>&#8211;rs</code> or <code>&#8211;rowseparator</code> S</dt>
+<dd> Specify the row separator as <tt>&quot;S&quot;</tt>. See below for valid row separators.</dd>
+<dt><code>-Z</code> or <code>&#8211;compression</code> S</dt>
+<dd> Specify file compression as given by file extension <tt>&quot;S&quot;</tt>. Supported compressions are <i>gz</i> for gzip, <i>bz2</i> for bzip2, <i>xz</i> for xz, or &#8220;none&#8221; or undef to disable compression. Default is none.</dd>
+<dt><code>-c</code> or <code>&#8211;correct</code></dt>
+<dd> Correct any inconsistency caused by the new separators, if possible.</dd></dl>
 <p> This module also supports the standard fsdb options:</p>
 <dl>
-<dt><code>-d</code></p>
-<dd> Enable debugging output.</p>
-<dt><code>-i</code> or <code>&#8211;input</code> InputSource</p>
-<dd> Read from InputSource, typically a file name, or <tt>&quot;-&quot;</tt> for standard input, or (if in Perl) a IO::Handle, Fsdb::IO or Fsdb::BoundedQueue objects.</p>
-<dt><code>-o</code> or <code>&#8211;output</code> OutputDestination</p>
-<dd> Write to OutputDestination, typically a file name, or <tt>&quot;-&quot;</tt> for standard output, or (if in Perl) a IO::Handle, Fsdb::IO or Fsdb::BoundedQueue objects.</p>
-<dt><code>&#8211;autorun</code> or <code>&#8211;noautorun</code></p>
-<dd> By default, programs process automatically, but Fsdb::Filter objects in Perl do not run until you invoke the <i>run()</i> method. The <tt>&quot;--(no)autorun&quot;</tt> option controls that behavior within Perl.</p>
-<dt><code>&#8211;help</code></p>
-<dd> Show help.</p>
-<dt><code>&#8211;man</code></p>
-<dd> Show full manual.</dl>
+<dt><code>-d</code></dt>
+<dd> Enable debugging output.</dd>
+<dt><code>-i</code> or <code>&#8211;input</code> InputSource</dt>
+<dd> Read from InputSource, typically a file name, or <tt>&quot;-&quot;</tt> for standard input, or (if in Perl) a IO::Handle, Fsdb::IO or Fsdb::BoundedQueue objects.</dd>
+<dt><code>-o</code> or <code>&#8211;output</code> OutputDestination</dt>
+<dd> Write to OutputDestination, typically a file name, or <tt>&quot;-&quot;</tt> for standard output, or (if in Perl) a IO::Handle, Fsdb::IO or Fsdb::BoundedQueue objects.</dd>
+<dt><code>&#8211;autorun</code> or <code>&#8211;noautorun</code></dt>
+<dd> By default, programs process automatically, but Fsdb::Filter objects in Perl do not run until you invoke the <i>run()</i> method. The <tt>&quot;--(no)autorun&quot;</tt> option controls that behavior within Perl.</dd>
+<dt><code>&#8211;help</code></dt>
+<dd> Show help.</dd>
+<dt><code>&#8211;man</code></dt>
+<dd> Show full manual.</dd></dl>
 <h3>Valid Field Separators</h3>
 <dl>
-<dt><code>D</code> default: any amount of whitespace on input, tabs on output.</p>
+<dt><code>D</code> default: any amount of whitespace on input, tabs on output.</dt>
 <dd>
-<dt><code>s</code> single space (exactly one space for input and output).</p>
+</dd><dt><code>s</code> single space (exactly one space for input and output).</dt>
 <dd>
-<dt><code>S</code> double space on output; two or more spaces on input.</p>
+</dd><dt><code>S</code> double space on output; two or more spaces on input.</dt>
 <dd>
-<dt><code>t</code> single tab character (exactly one tab for input and output).</p>
+</dd><dt><code>t</code> single tab character (exactly one tab for input and output).</dt>
 <dd>
-<dt><font SIZE="-1"><code>XN</code></font> take <i>N</i> as one or more hex digits that specify a unicode character. Accept one or more of those characters on input, output exactly one of those characters.</p>
+</dd><dt><font SIZE="-1"><code>XN</code></font> take <i>N</i> as one or more hex digits that specify a unicode character. Accept one or more of those characters on input, output exactly one of those characters.</dt>
 <dd>
-<dt><font SIZE="-1"><code>CA</code></font> take <i>A</i> as a one (unicode) literal character. Accept one or more of those characters on input, output exactly one of those characters.</p>
-<dd></dl>
+</dd><dt><font SIZE="-1"><code>CA</code></font> take <i>A</i> as a one (unicode) literal character. Accept one or more of those characters on input, output exactly one of those characters.</dt>
+<dd></dd></dl>
 <p> Potentially in the future <tt>&quot;xN&quot;</tt> and <tt>&quot;cA&quot;</tt> will support single-character-on-input equivalents of <tt>&quot;XN&quot;</tt> and &lt;<font SIZE="-1">CA</font>&gt;.</p>
 <h3>Valid Row Seperators</h3>
 <p> Three row separators are allowed:</p>
 <dl>
-<dt><code>D</code> the default, one line per row</p>
+<dt><code>D</code> the default, one line per row</dt>
 <dd>
-<dt><code>C</code> complete rowized. Each line is a field-labeled and its value, and a blank line separates &quot;rows&quot;. All fields present in the output.</p>
+</dd><dt><code>C</code> complete rowized. Each line is a field-labeled and its value, and a blank line separates &quot;rows&quot;. All fields present in the output.</dt>
 <dd>
-<dt><code>I</code> incompletely rowized. Like &quot;C&quot;, but null fields are omitted from the output.</p>
-<dd></dl>
+</dd><dt><code>I</code> incompletely rowized. Like &quot;C&quot;, but null fields are omitted from the output.</dt>
+<dd></dd></dl>
 <h2>SAMPLE USAGE</h2>
 <h3>Input:</h3>
 <pre>
@@ -92,15 +92,12 @@ description: "dbfilealter – alter the format of an Fsdb file, changing the row
     name: a
     id: 1
     test1: 80
-    
     name: b
     id: 2
     test1: 70
-    
     name: c
     id: 3
     test1: 65
-    
     #   | dbfilealter -R C
 </pre>
 <h3>Correction mode input:</h3>

@@ -29,10 +29,8 @@ throws std::overflow_error if the value can not be represented in unsigned long.
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;iostream&gt;
-
 #include &lt;bitset&gt;
 int main()
-
 {
     for (unsigned long i = 0; i &lt; 10; ++i) {
         std::bitset&lt;5&gt; b(i);

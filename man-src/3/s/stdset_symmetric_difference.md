@@ -11,59 +11,32 @@ std::set_symmetric_difference - std::set_symmetric_difference
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header &lt;algorithm&gt;
-
 template&lt; class InputIt1, class InputIt2, class OutputIt &gt;
-
 OutputIt set_symmetric_difference( InputIt1 first1, InputIt1 last1,                                         (until C++20)
-
 InputIt2 first2, InputIt2 last2,
-
 OutputIt d_first );
-
 template&lt; class InputIt1, class InputIt2, class OutputIt &gt;
-
 constexpr OutputIt set_symmetric_difference( InputIt1 first1, InputIt1 last1,                               (since C++20)
-
 InputIt2 first2, InputIt2 last2,
-
 OutputIt d_first );
-
 template&lt; class ExecutionPolicy, class ForwardIt1, class ForwardIt2, class ForwardIt3 &gt;
-
 ForwardIt3 set_symmetric_difference( ExecutionPolicy&amp;&amp; policy, ForwardIt1 first1, ForwardIt1 last1,     (2) (since C++17)
-
 ForwardIt2 first2, ForwardIt2 last2,
-
 ForwardIt3 d_first );
-
 template&lt; class InputIt1, class InputIt2,
-
 class OutputIt, class Compare &gt;                                                                     (1)
-
 OutputIt set_symmetric_difference( InputIt1 first1, InputIt1 last1,                                                       (until C++20)
-
 InputIt2 first2, InputIt2 last2,
-
 OutputIt d_first, Compare comp );
-
 template&lt; class InputIt1, class InputIt2,
-
 class OutputIt, class Compare &gt;
-
 constexpr OutputIt set_symmetric_difference( InputIt1 first1, InputIt1 last1,                           (3)               (since C++20)
-
 InputIt2 first2, InputIt2 last2,
-
 OutputIt d_first, Compare comp );
-
 template&lt; class ExecutionPolicy, class ForwardIt1, class ForwardIt2,
-
 class ForwardIt3, class Compare &gt;
-
 ForwardIt3 set_symmetric_difference( ExecutionPolicy&amp;&amp; policy, ForwardIt1 first1, ForwardIt1 last1,         (4)           (since C++17)
-
 ForwardIt2 first2, ForwardIt2 last2,
-
 ForwardIt3 d_first, Compare comp );</code></pre> 
 Computes symmetric difference of two sorted ranges: the elements that are found in either of the ranges, but not in both of them are copied to the range beginning at d_first. The resulting range is also sorted. 
 If some element is found m times in [first1, last1) and n times in [first2, last2), it will be copied to d_first exactly std::abs(m-n) times. If m&gt;n, then the last m-n of those elements are copied from [first1,last1), otherwise the last n-m elements are copied from [first2,last2). The resulting range cannot overlap with either of the input ranges. 
@@ -165,15 +138,10 @@ The overloads with a template parameter named ExecutionPolicy report errors as f
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;iostream&gt;
-
 #include &lt;vector&gt;
-
 #include &lt;algorithm&gt;
-
 #include &lt;iterator&gt;
-
 int main()
-
 {
     std::vector&lt;int&gt; v1{1, 2, 3, 4, 5, 6, 7, 8};
     std::vector&lt;int&gt; v2{5, 7, 9, 10};

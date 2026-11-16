@@ -10,13 +10,9 @@ description: "std::basic_ifstream – std::basic_ifstream"
 <p>std::basic_ifstream &#8211; std::basic_ifstream</p>
 <h2>Synopsis</h2>
 <pre><code>Defined in header &lt;fstream&gt;
-
 template&lt;
-
 class CharT,
-
 class Traits = std::char_traits&lt;CharT&gt;
-
 &gt; class basic_ifstream : public std::basic_istream&lt;CharT, Traits&gt;</code></pre>
 <p>The class template basic_ifstream implements high-level input operations on file based streams. It interfaces a file-based streambuffer (std::basic_filebuf) with the high-level interface of (std::basic_istream).<br />
 A typical implementation of std::basic_ifstream holds only one non-derived data member: an instance of std::basic_filebuf&lt;CharT, Traits&gt;.<br />
@@ -237,9 +233,7 @@ event_callback <i>(typedef)</i></p>
 <h2>Example</h2>
 <p>// Run this code </p>
 <pre><code>#include &lt;iostream&gt;
-
 #include &lt;fstream&gt;
-
 #include &lt;string&gt;
 int main()
 {

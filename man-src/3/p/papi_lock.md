@@ -15,16 +15,17 @@ description: "PAPI_lock –"
 <p> <code>C Interface:</code></p>
 <dl COMPACT>
 <dd>#include &lt;<code>papi.h</code>&gt;<br />
- void <code>PAPI_lock(int lock)</code>;</dl>
+ void <code>PAPI_lock(int lock)</code>;</dd></dl>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>lock</i> &#8212; an integer value specifying one of the two user locks: PAPI_USR1_LOCK or PAPI_USR2_LOCK</dl>
+<dd><i>lock</i> &#8212; an integer value specifying one of the two user locks: PAPI_USR1_LOCK or PAPI_USR2_LOCK</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>There is no return value for this call. Upon return from <code>PAPI_lock</code> the current thread has acquired exclusive access to the specified PAPI mutex.</dl>
+<dd>There is no return value for this call. Upon return from <code>PAPI_lock</code> the current thread has acquired exclusive access to the specified PAPI mutex.</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>PAPI_unlock</code> </p>
+<dd><code>PAPI_unlock</code> </dd>
 <p> <code>PAPI_thread_init</code></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for PAPI from the source code.</p>
+</p>

@@ -14,8 +14,8 @@ description: "bundle-clean – Cleans up unused gems in your bundler directory"
 <p>This command will remove all unused gems in your bundler directory. This is useful when you have made many changes to your gem dependencies.</p>
 <h2>Options</h2>
 <dl>
-<dt><code>&#8211;dry-run</code></p>
-<dd>Print the changes, but do not clean the unused gems.</p>
-<dt><code>&#8211;force</code></p>
-<dd>Force a clean even if <code>&#8211;path</code> is not set. </p>
+<dt><code>&#8211;dry-run</code></dt>
+<dd>Print the changes, but do not clean the unused gems.</dd>
+<dt><code>&#8211;force</code></dt>
+<dd>Force a clean even if <code>&#8211;path</code> is not set. </dd>
 </dl>

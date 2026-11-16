@@ -13,40 +13,40 @@ description: "kcpolytest – command line interface to test the polymorphic data
 <p> The command `<code>kcpolytest</code>&#8216; is a utility for facility test and performance test of the polymorphic database. This command is used in the following format. `<i>path</i>&#8216; specifies the path of a database file. `<i>rnum</i>&#8216; specifies the number of iterations. </p>
 <dl>
 <dt>
-<dd>
- <code>kcpolytest order </code>[<code>-th </code><i>num</i>][<code>-rnd</code>][<code>-set</code>|<code>-get</code>|<code>-getw</code>|<code>-rem</code>|<code>-etc</code>][<code>-tran</code>][<code>-oat</code>|<code>-onl</code>|<code>-onl</code>|<code>-otl</code>|<code>-onr</code>][<code>-lv</code>]<i>path</i><i>rnum</i></p>
+</dt><dd>
+ <code>kcpolytest order </code>[<code>-th </code><i>num</i>][<code>-rnd</code>][<code>-set</code>|<code>-get</code>|<code>-getw</code>|<code>-rem</code>|<code>-etc</code>][<code>-tran</code>][<code>-oat</code>|<code>-onl</code>|<code>-onl</code>|<code>-otl</code>|<code>-onr</code>][<code>-lv</code>]<i>path</i><i>rnum</i></dd>
 <dl>
 <dt>
-<dd> Performs in-order tests.</dl>
+</dt><dd> Performs in-order tests.</dd></dl>
 <p> <code>kcpolytest queue </code>[<code>-th </code><i>num</i>][<code>-it </code><i>num</i>][<code>-rnd</code>][<code>-oat</code>|<code>-onl</code>|<code>-onl</code>|<code>-otl</code>|<code>-onr</code>][<code>-lv</code>]<i>path</i><i>rnum</i></p>
 <dl>
 <dt>
-<dd> Performs queuing operations.</dl>
+</dt><dd> Performs queuing operations.</dd></dl>
 <p> <code>kcpolytest wicked </code>[<code>-th </code><i>num</i>][<code>-it </code><i>num</i>][<code>-oat</code>|<code>-onl</code>|<code>-onl</code>|<code>-otl</code>|<code>-onr</code>][<code>-lv</code>]<i>path</i><i>rnum</i></p>
 <dl>
 <dt>
-<dd> Performs mixed operations selected at random.</dl>
+</dt><dd> Performs mixed operations selected at random.</dd></dl>
 <p> <code>kcpolytest tran </code>[<code>-th </code><i>num</i>][<code>-it </code><i>num</i>][<code>-hard</code>][<code>-oat</code>|<code>-onl</code>|<code>-onl</code>|<code>-otl</code>|<code>-onr</code>][<code>-lv</code>]<i>path</i><i>rnum</i></p>
 <dl>
 <dt>
-<dd> Performs test of transaction.</dl>
+</dt><dd> Performs test of transaction.</dd></dl>
 <p> <code>kcpolytest mapred </code>[<code>-rnd</code>][<code>-ru</code>][<code>-oat</code>|<code>-onl</code>|<code>-onl</code>|<code>-otl</code>|<code>-onr</code>][<code>-lv</code>][<code>-tmp </code><i>str</i>][<code>-dbnum </code><i>num</i>][<code>-clim </code><i>num</i>][<code>-cbnum </code><i>num</i>][<code>-xnl</code>][<code>-xpm</code>][<code>-xpr</code>][<code>-xpf</code>][<code>-xnc</code>]<i>path</i><i>rnum</i></p>
 <dl>
 <dt>
-<dd> Performs MapReduce operations.</dl>
+</dt><dd> Performs MapReduce operations.</dd></dl>
 <p> <code>kcpolytest index </code>[<code>-th </code><i>num</i>][<code>-rnd</code>][<code>-set</code>|<code>-get</code>|<code>-rem</code>|<code>-etc</code>][<code>-tran</code>][<code>-oat</code>|<code>-onl</code>|<code>-onl</code>|<code>-otl</code>|<code>-onr</code>][<code>-lv</code>]<i>path</i><i>rnum</i></p>
 <dl>
 <dt>
-<dd> Performs indexing operations.</dl>
+</dt><dd> Performs indexing operations.</dd></dl>
 <p> <code>kcpolytest misc </code><i>path</i></p>
 <dl>
 <dt>
-<dd> Performs miscellaneous tests.</dl>
+</dt><dd> Performs miscellaneous tests.</dd></dl>
 </dl>
 <p> Options feature the following. </p>
 <dl>
 <dt>
-<dd> <code>-th </code><i>num</i> : specifies the number of worker threads.<br />
+</dt><dd> <code>-th </code><i>num</i> : specifies the number of worker threads.<br />
  <code>-rnd</code> : performs random test.<br />
  <code>-set</code> : performs setting operation only.<br />
  <code>-get</code> : performs getting operation only.<br />
@@ -72,7 +72,7 @@ description: "kcpolytest – command line interface to test the polymorphic data
  <code>-xpr</code> : executes with the parallel reducer option.<br />
  <code>-xpf</code> : executes with the parallel flusher option.<br />
  <code>-xnc</code> : executes with the no compression option.
-</dl>
+</dd></dl>
 <p> This command returns 0 on success, another on failure. </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-kcpolymgr/">kcpolymgr</a></code>(1), <code><a href="/docs/linux/man/1-kclangctest/">kclangctest</a></code>(1) </p>

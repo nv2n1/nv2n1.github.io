@@ -13,3 +13,4 @@ description: "native2ascii – Native-to-ASCII Converter"
 <pre><tt>native2ascii</tt><i> [options] [inputfile [outputfile]]</i></pre>
 <h2>Description</h2>
 <p><i>native2ascii</i> converts files that are encoded to any character encoding that is supported by the Java runtime environment to files encoded in ASCII, using Unicode escapes (&quot;
+</p>

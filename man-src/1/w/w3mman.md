@@ -19,23 +19,23 @@ description: "w3mman – an interface to the on-line reference manuals via"
 <h2>OPTIONS</h2>
 <p> A summary of options is included below.</p>
 <dl>
-<dt><code>-M</code><i> path</i></p>
-<dd> Specify <i>path</i> as alternative MANPATH to use.</p>
-<dt><code>-k</code><i> keyword</i></p>
-<dd> Specify <i>keyword</i>.</p>
-<dt><code>-l</code><i> file</i></p>
-<dd> Specify a <i>file</i>.</dl>
+<dt><code>-M</code><i> path</i></dt>
+<dd> Specify <i>path</i> as alternative MANPATH to use.</dd>
+<dt><code>-k</code><i> keyword</i></dt>
+<dd> Specify <i>keyword</i>.</dd>
+<dt><code>-l</code><i> file</i></dt>
+<dd> Specify a <i>file</i>.</dd></dl>
 <h2>ENVIRONMENT</h2>
 <p> Two variables are available for debugging.</p>
 <dl>
-<dt><code>W3MMAN_W3M</code></p>
-<dd> If W3MMAN_W3M is set, its value is used instead of w3m.</p>
-<dt><code>W3MMAN_MAN</code></p>
-<dd> If W3MMAN_MAN is set, its value is used instead of /usr/bin/man.</dl>
+<dt><code>W3MMAN_W3M</code></dt>
+<dd> If W3MMAN_W3M is set, its value is used instead of w3m.</dd>
+<dt><code>W3MMAN_MAN</code></dt>
+<dd> If W3MMAN_MAN is set, its value is used instead of /usr/bin/man.</dd></dl>
 <h2>FILES</h2>
 <dl>
-<dt><i>/usr/lib/w3m/cgi-bin/w3mman2html.cgi</i></p>
-<dd> manual page to HTML converter.</dl>
+<dt><i>/usr/lib/w3m/cgi-bin/w3mman2html.cgi</i></dt>
+<dd> manual page to HTML converter.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-man/">man</a></code>(1), <code><a href="/docs/linux/man/1-w3m/">w3m</a></code>(1).</p>
 <h2>AUTHOR</h2>

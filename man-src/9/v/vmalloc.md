@@ -14,7 +14,7 @@ description: "vmalloc – allocate virtually contiguous memory"
 <p><i>size</i></p>
 <dl>
 <dd>
-<dd>allocation size Allocate enough pages to cover <i>size</i> from the page level allocator and map them into contiguous kernel virtual space.</dl>
+</dd><dd>allocation size Allocate enough pages to cover <i>size</i> from the page level allocator and map them into contiguous kernel virtual space.</dd></dl>
 <h2>Description</h2>
 <p>For tight control over page level allocator and protection flags use <code>__vmalloc</code> instead.</p>
 <h2>Copyright</h2>

@@ -14,10 +14,10 @@ description: "wimax_report_rfkill_sw – Reports changes in the software RF swit
 <p><i>wimax_dev</i></p>
 <dl>
 <dd>
-<dd>WiMAX device descriptor</dl>
+</dd><dd>WiMAX device descriptor</dd></dl>
 <p> <i>state</i></p>
 <dl>
-<dd>New state of the RF kill switch. <code>WIMAX_RF_ON</code> radio on, <code>WIMAX_RF_OFF</code> radio off.</dl>
+<dd>New state of the RF kill switch. <code>WIMAX_RF_ON</code> radio on, <code>WIMAX_RF_OFF</code> radio off.</dd></dl>
 <h2>Description</h2>
 <p>Reports changes in the software RF switch state to the WiMAX stack. </p>
 <p> The main use is during initialization, so the driver can query the device for its current software radio kill switch state and feed it to the system. </p>

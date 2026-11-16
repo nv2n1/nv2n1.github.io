@@ -52,8 +52,8 @@ description: "zarafa_selinux – Security Enhanced Linux Policy for the zarafa p
 <p> <code>zarafa_indexer_var_run_t </code> </p>
 <p> &#8211; Set files with the zarafa_indexer_var_run_t type, if you want to store the zarafa indexer files under the /run directory. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/var/run/zarafa-indexer.pid, /var/run/zarafa-indexer </p>
+<dt>Paths:</dt>
+<dd>/var/run/zarafa-indexer.pid, /var/run/zarafa-indexer </dd>
 </dl>
 <p> <code>zarafa_monitor_exec_t </code> </p>
 <p> &#8211; Set files with the zarafa_monitor_exec_t type, if you want to transition an executable to the zarafa_monitor_t domain. </p>
@@ -70,8 +70,8 @@ description: "zarafa_selinux – Security Enhanced Linux Policy for the zarafa p
 <p> <code>zarafa_server_var_run_t </code> </p>
 <p> &#8211; Set files with the zarafa_server_var_run_t type, if you want to store the zarafa server files under the /run directory. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/var/run/zarafa, /var/run/zarafa-server.pid </p>
+<dt>Paths:</dt>
+<dd>/var/run/zarafa, /var/run/zarafa-server.pid </dd>
 </dl>
 <p> <code>zarafa_share_t </code> </p>
 <p> &#8211; Set files with the zarafa_share_t type, if you want to treat the files as zarafa share data. </p>
@@ -84,8 +84,8 @@ description: "zarafa_selinux – Security Enhanced Linux Policy for the zarafa p
 <p> <code>zarafa_var_lib_t </code> </p>
 <p> &#8211; Set files with the zarafa_var_lib_t type, if you want to store the zarafa files under the /var/lib directory. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/var/lib/zarafa-webaccess(/.*)?, /var/lib/zarafa(/.*)? </p>
+<dt>Paths:</dt>
+<dd>/var/lib/zarafa-webaccess(/.*)?, /var/lib/zarafa(/.*)? </dd>
 </dl>
 <p> Note: File context can be temporarily modified with the chcon command. If you want to permanantly change the file context you need to use the <code>semanage fcontext </code> command. This will modify the SELinux labeling database. You will need to use <code>restorecon</code> to apply the labels.</p>
 <h2>Port Types</h2>
@@ -95,9 +95,9 @@ description: "zarafa_selinux – Security Enhanced Linux Policy for the zarafa p
 <p> Policy governs the access confined processes have to these ports. SELinux zarafa policy is very flexible allowing users to setup their zarafa processes in as secure a method as possible. </p>
 <p> The following port types are defined for zarafa: </p>
 <dl>
-<dt><code>zarafa_port_t </code></p>
+<dt><code>zarafa_port_t </code></dt>
 <dd>
-<dd>Default Defined Ports: tcp 236,237</dl>
+</dd><dd>Default Defined Ports: tcp 236,237</dd></dl>
 <h2>Process Types</h2>
 <p>SELinux defines process types (domains) for each process running on the system </p>
 <p> You can see the context of a process using the <code>-Z</code> option to <code>psP Policy governs the access confined processes have to files. SELinux zarafa policy is very flexible allowing users to setup their zarafa processes in as secure a method as possible. </p>

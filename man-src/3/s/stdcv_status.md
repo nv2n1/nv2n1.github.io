@@ -11,13 +11,9 @@ std::cv_status - std::cv_status
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header &lt;condition_variable&gt;
-
 enum class cv_status {
-
     no_timeout,                             (since C++11)
-
     timeout
-
 };</code></pre> 
 The scoped enumeration std::cv_status describes whether a timed wait returned because of timeout or not. 
 std::cv_status is used by the wait_for and wait_until methods of std::condition_variable and std::condition_variable_any. 

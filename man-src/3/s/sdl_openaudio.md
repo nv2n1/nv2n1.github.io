@@ -20,19 +20,19 @@ description: "SDL_OpenAudio – Opens the audio device with the desired paramete
 desired=(SDL_AudioSpec *)malloc(sizeof(SDL_AudioSpec));</tt></pre>
 <p>&nbsp;<wbr>You must then fill this structure with your desired audio specifications.</p>
 <dl COMPACT>
-<dt><code>desired</code>-&gt;<code>freq</code></p>
+<dt><code>desired</code>-&gt;<code>freq</code></dt>
 <dd>
-<dt><code>desired</code>-&gt;<code>format</code></p>
+</dd><dt><code>desired</code>-&gt;<code>format</code></dt>
 <dd>
-<dt><code>desired</code>-&gt;<code>samples</code></p>
+</dd><dt><code>desired</code>-&gt;<code>samples</code></dt>
 <dd>
-<dt><code>desired</code>-&gt;<code>callback</code></p>
-<dd></dl>
+</dd><dt><code>desired</code>-&gt;<code>callback</code></dt>
+<dd></dd></dl>
 <pre><tt>void callback(void *userdata, Uint8 *stream, int len);</tt></pre>
 <p>&nbsp;<wbr><code>userdata</code>&nbsp;<wbr>is the pointer stored in&nbsp;<wbr><code>userdata</code>&nbsp;<wbr>field of the&nbsp;<wbr><code>SDL_AudioSpec</code>.&nbsp;<wbr><code>stream</code>&nbsp;<wbr>is a pointer to the audio buffer you want to fill with information and&nbsp;<wbr><code>len</code>&nbsp;<wbr>is the length of the audio buffer in bytes.</p>
 <dl COMPACT>
-<dt><code>desired</code>-&gt;<code>userdata</code></p>
-<dd></dl>
+<dt><code>desired</code>-&gt;<code>userdata</code></dt>
+<dd></dd></dl>
 <p> <code>SDL_OpenAudio</code> reads these fields from the <code>desired</code> <code>SDL_AudioSpec</code> structure pass to the function and attempts to find an audio configuration matching your <code>desired</code>. As mentioned above, if the <code>obtained</code> parameter is <code>NULL</code> then SDL with convert from your <code>desired</code> audio settings to the hardware settings as it plays. </p>
 <p> If <code>obtained</code> is <code>NULL</code> then the <code>desired</code> <code>SDL_AudioSpec</code> is your working specification, otherwise the <code>obtained</code> <code>SDL_AudioSpec</code> becomes the working specification and the <code>desirec</code> specification can be deleted. The data in the working specification is used when building <code>SDL_AudioCVT</code>&#8216;s for converting loaded data to the hardware format. </p>
 <p> <code>SDL_OpenAudio</code> calculates the <code>size</code> and <code>silence</code> fields for both the <code>desired</code> and <code>obtained</code> specifications. The <code>size</code> field stores the total size of the audio buffer in bytes, while the <code>silence</code> stores the value used to represent silence in the audio buffer </p>

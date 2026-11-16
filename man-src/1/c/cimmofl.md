@@ -26,13 +26,11 @@ description: "cimmofl – compile MOF files into the CIM Repository"
 <p> The <code>cimmofl</code> command can be used to compile MOF files at any time after installation. If no input file is specified, stdin is used as the input. </p>
 <p> The MOF Compiler requires that the input MOF files be in the current directory or that a fully qualified path be given. To simplify the specification of multiple MOF files in the <code>cimmofl</code> command line, the MOF Compiler allows compiling from files containing a list of MOF files using the include pragma (as shown below).</p>
 <dl>
-<dt>
-<dd>
 <dl>
 <dt>
-<dd> <code>#pragma include (application.mof)</code></p>
-<dt><code>#pragma include (server.mof)</code></p>
-<dd></dl>
+</dt><dd> <code>#pragma include (application.mof)</code></dd>
+<dt><code>#pragma include (server.mof)</code></dt>
+<dd></dd></dl>
 </dl>
 <p> MOF files using the include pragma must be in the current directory or in a directory specified by the <code>-I</code> command line option. </p>
 <p> The <code>-n</code> option can be used to specify a <i>R namespace </i> in which the CIM classes and instances will be compiled. If this option is not specified, the default <i>R namespace </i> is root/cimv2 (with the exception of provider registration schemas). </p>
@@ -40,58 +38,54 @@ description: "cimmofl – compile MOF files into the CIM Repository"
 <h3>Options</h3>
 <p> The <code>cimmofl</code> command recognizes the following options:</p>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt><code>-aE</code></p>
-<dd> Allow Experimental Schema changes.</p>
-<dt><code>-aEV</code></p>
-<dd> Allow both Experimental and Version Schema changes.</p>
-<dt><code>-aV</code></p>
-<dd> Allow both Major and Down Revision Schema changes.</p>
-<dt><code>&#8211;CIMRepository</code></p>
-<dd> Specify the repository path.</p>
-<dt><code>-E</code></p>
-<dd> Syntax check only</p>
-<dt><code>-h, &#8211;help</code></p>
-<dd> Display command usage information.</p>
-<dt><code>-I</code></p>
-<dd> Specify the path to included MOF files. This path may be relative or absolute.</p>
+<dt><code>-aE</code></dt>
+<dd> Allow Experimental Schema changes.</dd>
+<dt><code>-aEV</code></dt>
+<dd> Allow both Experimental and Version Schema changes.</dd>
+<dt><code>-aV</code></dt>
+<dd> Allow both Major and Down Revision Schema changes.</dd>
+<dt><code>&#8211;CIMRepository</code></dt>
+<dd> Specify the repository path.</dd>
+<dt><code>-E</code></dt>
+<dd> Syntax check only</dd>
+<dt><code>-h, &#8211;help</code></dt>
+<dd> Display command usage information.</dd>
+<dt><code>-I</code></dt>
+<dd> Specify the path to included MOF files. This path may be relative or absolute.</dd>
 <dt>
-<dd> If the input MOF file has include pragmas and the included files do not reside in the current directory, the directive must be used to specify a path to them on the <code>cimmofl</code> command line.</p>
-<dt><code>-n</code></p>
-<dd> Override the default CIM Repository namespace. The <i>namespace </i> specified must be a valid CIM namespace name. For the definition of a valid CIM namespace name, refer to the Administrator&#8217;s Guide. For provider registration schemas, the <i>namepace</i> specified must be root/PG_InterOp.</p>
-<dt><code>&#8211;namespace</code></p>
-<dd> Override the default CIM Repository namespace. The <i>namespace </i> specified must be a valid CIM namespace name. For the definition of a valid CIM namespace name, refer to the Administrator&#8217;s Guide. For provider registration schemas, the <i>namepace</i> specified must be root/PG_InterOp.</p>
-<dt><code>-R</code></p>
-<dd> Specify the repository path.</p>
-<dt><code>-N</code></p>
-<dd> Specify the repository name &#8211; defaults to &quot;repository&quot;</p>
-<dt><code>-M</code></p>
-<dd> Repository mode [XML, BIN] &#8211; defaults to &quot;XML&quot;</p>
-<dt><code>&#8211;trace</code></p>
-<dd> Trace to file (default to stdout).</p>
-<dt><code>-uc</code></p>
-<dd> Allow update of an existing class definition.</p>
-<dt><code>&#8211;version</code></p>
-<dd> Display CIM Server version.</p>
-<dt><code>-w</code></p>
-<dd> Suppress warning messages.</p>
+</dt><dd> If the input MOF file has include pragmas and the included files do not reside in the current directory, the directive must be used to specify a path to them on the <code>cimmofl</code> command line.</dd>
+<dt><code>-n</code></dt>
+<dd> Override the default CIM Repository namespace. The <i>namespace </i> specified must be a valid CIM namespace name. For the definition of a valid CIM namespace name, refer to the Administrator&#8217;s Guide. For provider registration schemas, the <i>namepace</i> specified must be root/PG_InterOp.</dd>
+<dt><code>&#8211;namespace</code></dt>
+<dd> Override the default CIM Repository namespace. The <i>namespace </i> specified must be a valid CIM namespace name. For the definition of a valid CIM namespace name, refer to the Administrator&#8217;s Guide. For provider registration schemas, the <i>namepace</i> specified must be root/PG_InterOp.</dd>
+<dt><code>-R</code></dt>
+<dd> Specify the repository path.</dd>
+<dt><code>-N</code></dt>
+<dd> Specify the repository name &#8211; defaults to &quot;repository&quot;</dd>
+<dt><code>-M</code></dt>
+<dd> Repository mode [XML, BIN] &#8211; defaults to &quot;XML&quot;</dd>
+<dt><code>&#8211;trace</code></dt>
+<dd> Trace to file (default to stdout).</dd>
+<dt><code>-uc</code></dt>
+<dd> Allow update of an existing class definition.</dd>
+<dt><code>&#8211;version</code></dt>
+<dd> Display CIM Server version.</dd>
+<dt><code>-w</code></dt>
+<dd> Suppress warning messages.</dd>
 <dt>
-<dd> When compiling the MOF files, if there are CIM elements (such as classes, instances, properties, or methods) defined in the MOF files which already exist in the CIM Repository, the <code>cimmofl</code> command returns warning messages. The <code>-w</code> option can be used to suppress these warning messages.</p>
-<dt><code>&#8211;xml</code></p>
-<dd> Output XML only, to stdout. Do not update repository.</dl>
+</dt><dd> When compiling the MOF files, if there are CIM elements (such as classes, instances, properties, or methods) defined in the MOF files which already exist in the CIM Repository, the <code>cimmofl</code> command returns warning messages. The <code>-w</code> option can be used to suppress these warning messages.</dd>
+<dt><code>&#8211;xml</code></dt>
+<dd> Output XML only, to stdout. Do not update repository.</dd></dl>
 </dl>
 <h2>EXIT STATUS</h2>
 <p> The <code>cimmofl</code> command returns one of the following values:</p>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt><code>0</code></p>
-<dd> Successful completion</p>
-<dt><code>1 </code></p>
-<dd> Error</dl>
+<dt><code>0</code></dt>
+<dd> Successful completion</dd>
+<dt><code>1 </code></dt>
+<dd> Error</dd></dl>
 </dl>
 <p> When an error occurs, an error message is written to stderr and an error value of 1 is returned.</p>
 <h2>USAGE NOTE</h2>
@@ -102,30 +96,30 @@ description: "cimmofl – compile MOF files into the CIM Repository"
 <p> <code>Error trying to create Repository in path localhost:5988: Cannot connect to: localhost:5988 Failed to set DefaultNamespacePath.</code></p>
 <dl>
 <dt>
-<dd> The CIM Server is not running. Start the CIM Server with the command and re-run <code>cimmofl .</code></dl>
+</dt><dd> The CIM Server is not running. Start the CIM Server with the command and re-run <code>cimmofl .</code></dd></dl>
 <p> If the MOF Compiler detects an error in the MOF file while parsing the file, a parsing error is returned with the line number of the MOF file containing the error. </p>
 <p> <code>Operation cannot be carried out since the specified superclass does not exist. </code></p>
 <dl>
 <dt>
-<dd> The MOF Compiler compiled a MOF file with superclasses that were not in the CIM Repository.</dl>
+</dt><dd> The MOF Compiler compiled a MOF file with superclasses that were not in the CIM Repository.</dd></dl>
 <p> For a list of possible error messages that may be returned, refer to the Chapter on WBEM messages in the Administrator&#8217;s Guide.</p>
 <h2>EXAMPLES</h2>
 <p> Compile a MOF file into the default namespace in the CIM Repository, issue the <code>cimmofl</code> command with no options.</p>
 <dl>
 <dt>
-<dd> <code>cimmofl processInfo.mof</code></dl>
+</dt><dd> <code>cimmofl processInfo.mof</code></dd></dl>
 <p> Compile the MOF files into the &quot;root/application&quot; namespace.</p>
 <dl>
 <dt>
-<dd> <code>cimmofl -nroot/application test1.mof test2.mof</code></dl>
+</dt><dd> <code>cimmofl -nroot/application test1.mof test2.mof</code></dd></dl>
 <p> Compile the MOF file defined in the directory ./MOF with the name CIMSchema25.mof, and containing include pragmas for other MOF files also in the ./MOF directory.</p>
 <dl>
 <dt>
-<dd> <code>cimmofl -w -I./MOF MOF/CIMSchema25.mof</code></dl>
+</dt><dd> <code>cimmofl -w -I./MOF MOF/CIMSchema25.mof</code></dd></dl>
 <p> Display Usage Info for the <code>cimmofl</code> command.</p>
 <dl>
 <dt>
-<dd> <code>cimmofl -h</code></dl>
+</dt><dd> <code>cimmofl -h</code></dd></dl>
 <h2>SEE ALSO</h2>
 <p> cimserver(1), <a href="/docs/linux/man/1-cimmof/">cimmof</a>(1). </p>
 <h2>Index</h2>

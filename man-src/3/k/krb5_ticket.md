@@ -19,12 +19,12 @@ description: "Heimdal Kerberos 5 ticket functions –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>context</i> Kerberos context<br />
- <i>ticket</i> Kerberos ticket</dl>
+</dt><dd> <i>context</i> Kerberos context<br />
+ <i>ticket</i> Kerberos ticket</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
 <dt>
-<dd> ticket flags</dl>
+</dt><dd> ticket flags</dd></dl>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for HeimdalKerberos5library from the source code. </p>
 <h2>Index</h2>

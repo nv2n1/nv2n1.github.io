@@ -26,25 +26,25 @@ rping - s[-v][-V][-d][-P][-a address][-p port][-C message_count][-S message_size
 
 <dl>
 <dt>-s
-<dd> Run as the server.
-<dt>-c
-<dd> Run as the client.
-<dt>-a address
-<dd> On the server, specifies the network address to bind the connection to. To bind to any address with IPv6 use -a ::0 . On the client, specifies the server address to connect to.
-<dt>-p
-<dd> Port number for listening server.
-<dt>-v
-<dd> Display ping data.
-<dt>-V
-<dd> Validate ping data.
-<dt>-d
-<dd> Display debug information.
-<dt>-C message_count
-<dd> The number of messages to transfer over each connection. (default infinite)
-<dt>-S message_size
-<dd> The size of each message transferred, in bytes. (default 100)
-<dt>-P
-<dd> Run the server in persistent mode. This allows multiple rping clients to connect to a single server instance. The server will run until killed.</dl>
+</dt><dd> Run as the server.
+</dd><dt>-c
+</dt><dd> Run as the client.
+</dd><dt>-a address
+</dt><dd> On the server, specifies the network address to bind the connection to. To bind to any address with IPv6 use -a ::0 . On the client, specifies the server address to connect to.
+</dd><dt>-p
+</dt><dd> Port number for listening server.
+</dd><dt>-v
+</dt><dd> Display ping data.
+</dd><dt>-V
+</dt><dd> Validate ping data.
+</dd><dt>-d
+</dt><dd> Display debug information.
+</dd><dt>-C message_count
+</dt><dd> The number of messages to transfer over each connection. (default infinite)
+</dd><dt>-S message_size
+</dt><dd> The size of each message transferred, in bytes. (default 100)
+</dd><dt>-P
+</dt><dd> Run the server in persistent mode. This allows multiple rping clients to connect to a single server instance. The server will run until killed.</dd></dl>
 
 <h2>NOTES</h2>
 

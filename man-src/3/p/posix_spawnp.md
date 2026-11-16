@@ -10,12 +10,10 @@ description: "posix_spawn, posix_spawnp – spawn a process"
 <p>posix_spawn, posix_spawnp &#8211; spawn a process</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;spawn.h&gt;
-
 int posix_spawn(pid_t *pid, const char *path,
                 const posix_spawn_file_actions_t *file_actions,
                 const posix_spawnattr_t *attrp,
                 char *const argv[], char *const envp[]);
-
 int posix_spawnp(pid_t *pid, const char *file,
                  const posix_spawn_file_actions_t *file_actions,
                  const posix_spawnattr_t *attrp,
@@ -26,14 +24,14 @@ int posix_spawnp(pid_t *pid, const char *file,
 <p> The only difference between <code>posix_spawn</code>() and <code>posix_spawnp</code>() is the manner in which they specify the file to be executed by the child process. With <code>posix_spawn</code>(), the executable file is specified as a pathname (which can be absolute or relative). With <code>posix_spawnp</code>(), the executable file is specified as a simple filename; the system searches for this file in the list of directories specified by <code>PATH</code> (in the same way as for <code><a href="/docs/linux/man/3-execvp/">execvp</a></code>(3)). For the remainder of this page, the discussion is phrased in terms of <code>posix_spawn</code>(), with the understanding that <code>posix_spawnp</code>() differs only on the point just described. </p>
 <p> The remaining arguments to these two functions are as follows:</p>
 <dl>
-<dt>*</p>
-<dd>The <i>pid</i> argument points to a buffer that is used to return the process ID of the new child process.</p>
-<dt>*</p>
-<dd>The <i>file_actions</i> argument points to a <i>spawn file actions object</i> that specifies file-related actions to be performed in the child between the <code><a href="/docs/linux/man/2-fork/">fork</a></code>(2) and <code><a href="/docs/linux/man/3-exec/">exec</a></code>(3) steps. This object is initialized and populated before the <code>posix_spawn</code>() call using <code>posix_spawn_file_actions_init</code>(3) and the <code>posix_spawn_file_actions_*</code>() functions.</p>
-<dt>*</p>
-<dd>The <i>attrp</i> argument points to an <i>attributes objects</i> that specifies various attributes of the created child process. This object is initialized and populated before the <code>posix_spawn</code>() call using <code>posix_spawnattr_init</code>(3) and the <code>posix_spawnattr_*</code>() functions.</p>
-<dt>*</p>
-<dd>The <i>argv</i> and <i>envp</i> arguments specify the argument list and environment for the program that is executed in the child process, as for <code><a href="/docs/linux/man/2-execve/">execve</a></code>(2).</dl>
+<dt>*</dt>
+<dd>The <i>pid</i> argument points to a buffer that is used to return the process ID of the new child process.</dd>
+<dt>*</dt>
+<dd>The <i>file_actions</i> argument points to a <i>spawn file actions object</i> that specifies file-related actions to be performed in the child between the <code><a href="/docs/linux/man/2-fork/">fork</a></code>(2) and <code><a href="/docs/linux/man/3-exec/">exec</a></code>(3) steps. This object is initialized and populated before the <code>posix_spawn</code>() call using <code>posix_spawn_file_actions_init</code>(3) and the <code>posix_spawn_file_actions_*</code>() functions.</dd>
+<dt>*</dt>
+<dd>The <i>attrp</i> argument points to an <i>attributes objects</i> that specifies various attributes of the created child process. This object is initialized and populated before the <code>posix_spawn</code>() call using <code>posix_spawnattr_init</code>(3) and the <code>posix_spawnattr_*</code>() functions.</dd>
+<dt>*</dt>
+<dd>The <i>argv</i> and <i>envp</i> arguments specify the argument list and environment for the program that is executed in the child process, as for <code><a href="/docs/linux/man/2-execve/">execve</a></code>(2).</dd></dl>
 <p> Below, the functions are described in terms of a three-step process: the <code>fork</code>() step, the pre-<code>exec</code>() step (executed in the child), and the <code>exec</code>() step (executed in the child).</p>
 <h3>fork() step</h3>
 <p>Since glibc 2.24, the <code>posix_spawn</code>() function commences by calling <code><a href="/docs/linux/man/2-clone/">clone</a></code>(2) with <code>CLONE_VM</code> and <code>CLONE_VFORK</code> flags. Older implementations use <code><a href="/docs/linux/man/2-fork/">fork</a></code>(2), or possibly <code><a href="/docs/linux/man/2-vfork/">vfork</a></code>(2) (see below). </p>
@@ -41,48 +39,48 @@ int posix_spawnp(pid_t *pid, const char *file,
 <p> Subsequently, the parent can use one of the system calls described in <code><a href="/docs/linux/man/2-wait/">wait</a></code>(2) to check the status of the child process. If the child fails in any of the housekeeping steps described below, or fails to execute the desired file, it exits with a status of 127. </p>
 <p> Before glibc 2.24, the child process is created using <code><a href="/docs/linux/man/2-vfork/">vfork</a></code>(2) instead of <code><a href="/docs/linux/man/2-fork/">fork</a></code>(2) when either of the following is true:</p>
 <dl>
-<dt>*</p>
-<dd>the <i>spawn-flags</i> element of the attributes object pointed to by <i>attrp</i> contains the GNU-specific flag <code>POSIX_SPAWN_USEVFORK</code>; or</p>
-<dt>*</p>
-<dd><i>file_actions</i> is NULL and the <i>spawn-flags</i> element of the attributes object pointed to by <i>attrp</i> does <i>not</i> contain <code>POSIX_SPAWN_SETSIGMASK</code>, <code>POSIX_SPAWN_SETSIGDEF</code>, <code>POSIX_SPAWN_SETSCHEDPARAM</code>, <code>POSIX_SPAWN_SETSCHEDULER</code>, <code>POSIX_SPAWN_SETPGROUP</code>, or <code>POSIX_SPAWN_RESETIDS</code>.</dl>
+<dt>*</dt>
+<dd>the <i>spawn-flags</i> element of the attributes object pointed to by <i>attrp</i> contains the GNU-specific flag <code>POSIX_SPAWN_USEVFORK</code>; or</dd>
+<dt>*</dt>
+<dd><i>file_actions</i> is NULL and the <i>spawn-flags</i> element of the attributes object pointed to by <i>attrp</i> does <i>not</i> contain <code>POSIX_SPAWN_SETSIGMASK</code>, <code>POSIX_SPAWN_SETSIGDEF</code>, <code>POSIX_SPAWN_SETSCHEDPARAM</code>, <code>POSIX_SPAWN_SETSCHEDULER</code>, <code>POSIX_SPAWN_SETPGROUP</code>, or <code>POSIX_SPAWN_RESETIDS</code>.</dd></dl>
 <p> In other words, <code><a href="/docs/linux/man/2-vfork/">vfork</a></code>(2) is used if the caller requests it, or if there is no cleanup expected in the child before it <code><a href="/docs/linux/man/3-exec/">exec</a></code>(3)s the requested file.</p>
 <h3>pre-exec() step: housekeeping</h3>
 <p>In between the <code>fork()</code> and the <code>exec()</code> steps, a child process may need to perform a set of housekeeping actions. The <code>posix_spawn</code>() and <code>posix_spawnp</code>() functions support a small, well-defined set of system tasks that the child process can accomplish before it executes the executable file. These operations are controlled by the attributes object pointed to by <i>attrp</i> and the file actions object pointed to by <i>file_actions</i>. In the child, processing is done in the following sequence:</p>
 <dl>
-<dt>1.</p>
-<dd>Process attribute actions: signal mask, signal default handlers, scheduling algorithm and parameters, process group, and effective user and group IDs are changed as specified by the attributes object pointed to by <i>attrp</i>.</p>
-<dt>2.</p>
-<dd>File actions, as specified in the <i>file_actions</i> argument, are performed in the order that they were specified using calls to the <code>posix_spawn_file_actions_add*</code>() functions.</p>
-<dt>3.</p>
-<dd>File descriptors with the <code>FD_CLOEXEC</code> flag set are closed.</dl>
+<dt>1.</dt>
+<dd>Process attribute actions: signal mask, signal default handlers, scheduling algorithm and parameters, process group, and effective user and group IDs are changed as specified by the attributes object pointed to by <i>attrp</i>.</dd>
+<dt>2.</dt>
+<dd>File actions, as specified in the <i>file_actions</i> argument, are performed in the order that they were specified using calls to the <code>posix_spawn_file_actions_add*</code>() functions.</dd>
+<dt>3.</dt>
+<dd>File descriptors with the <code>FD_CLOEXEC</code> flag set are closed.</dd></dl>
 <p> All process attributes in the child, other than those affected by attributes specified in the object pointed to by <i>attrp</i> and the file actions in the object pointed to by <i>file_actions</i>, will be affected as though the child was created with <code><a href="/docs/linux/man/2-fork/">fork</a></code>(2) and it executed the program with <code><a href="/docs/linux/man/2-execve/">execve</a></code>(2). </p>
 <p> The process attributes actions are defined by the attributes object pointed to by <i>attrp</i>. The <i>spawn-flags</i> attribute (set using <code>posix_spawnattr_setflags</code>(3)) controls the general actions that occur, and other attributes in the object specify values to be used during those actions. </p>
 <p> The effects of the flags that may be specified in <i>spawn-flags</i> are as follows:</p>
 <dl>
-<dt><code>POSIX_SPAWN_SETSIGMASK</code></p>
-<dd>Set the signal mask to the signal set specified in the <i>spawn-sigmask</i> attribute of the object pointed to by <i>attrp</i>. If the <code>POSIX_SPAWN_SETSIGMASK</code> flag is not set, then the child inherits the parent&#8217;s signal mask.</p>
-<dt><code>POSIX_SPAWN_SETSIGDEF</code></p>
-<dd>Reset the disposition of all signals in the set specified in the <i>spawn-sigdefault</i> attribute of the object pointed to by <i>attrp</i> to the default. For the treatment of the dispositions of signals not specified in the <i>spawn-sigdefault</i> attribute, or the treatment when <code>POSIX_SPAWN_SETSIGDEF</code> is not specified, see <code><a href="/docs/linux/man/2-execve/">execve</a></code>(2).</p>
-<dt><code>POSIX_SPAWN_SETSCHEDPARAM</code></p>
-<dd>If this flag is set, and the <code>POSIX_SPAWN_SETSCHEDULER</code> flag is not set, then set the scheduling parameters to the parameters specified in the <i>spawn-schedparam</i> attribute of the object pointed to by <i>attrp</i>.</p>
-<dt><code>POSIX_SPAWN_SETSCHEDULER</code></p>
-<dd>Set the scheduling policy algorithm and parameters of the child, as follows:</p>
+<dt><code>POSIX_SPAWN_SETSIGMASK</code></dt>
+<dd>Set the signal mask to the signal set specified in the <i>spawn-sigmask</i> attribute of the object pointed to by <i>attrp</i>. If the <code>POSIX_SPAWN_SETSIGMASK</code> flag is not set, then the child inherits the parent&#8217;s signal mask.</dd>
+<dt><code>POSIX_SPAWN_SETSIGDEF</code></dt>
+<dd>Reset the disposition of all signals in the set specified in the <i>spawn-sigdefault</i> attribute of the object pointed to by <i>attrp</i> to the default. For the treatment of the dispositions of signals not specified in the <i>spawn-sigdefault</i> attribute, or the treatment when <code>POSIX_SPAWN_SETSIGDEF</code> is not specified, see <code><a href="/docs/linux/man/2-execve/">execve</a></code>(2).</dd>
+<dt><code>POSIX_SPAWN_SETSCHEDPARAM</code></dt>
+<dd>If this flag is set, and the <code>POSIX_SPAWN_SETSCHEDULER</code> flag is not set, then set the scheduling parameters to the parameters specified in the <i>spawn-schedparam</i> attribute of the object pointed to by <i>attrp</i>.</dd>
+<dt><code>POSIX_SPAWN_SETSCHEDULER</code></dt>
+<dd>Set the scheduling policy algorithm and parameters of the child, as follows:</dd>
 <dl>
 <dd>
-<dl>
-<dt>*</p>
-<dd>The scheduling policy is set to the value specified in the <i>spawn-schedpolicy</i> attribute of the object pointed to by <i>attrp</i>.</p>
-<dt>*</p>
-<dd>The scheduling parameters are set to the value specified in the <i>spawn-schedparam</i> attribute of the object pointed to by <i>attrp</i> (but see BUGS).</dl>
+</dd><dl>
+<dt>*</dt>
+<dd>The scheduling policy is set to the value specified in the <i>spawn-schedpolicy</i> attribute of the object pointed to by <i>attrp</i>.</dd>
+<dt>*</dt>
+<dd>The scheduling parameters are set to the value specified in the <i>spawn-schedparam</i> attribute of the object pointed to by <i>attrp</i> (but see BUGS).</dd></dl>
 <p> If the <code>POSIX_SPAWN_SETSCHEDPARAM</code> and <code>POSIX_SPAWN_SETSCHEDPOLICY</code> flags are not specified, the child inherits the corresponding scheduling attributes from the parent.</dl>
-<dt><code>POSIX_SPAWN_RESETIDS</code></p>
-<dd>If this flag is set, reset the effective UID and GID to the real UID and GID of the parent process. If this flag is not set, then the child retains the effective UID and GID of the parent. In either case, if the set-user-ID and set-group-ID permission bits are enabled on the executable file, their effect will override the setting of the effective UID and GID (se <code><a href="/docs/linux/man/2-execve/">execve</a></code>(2)).</p>
-<dt><code>POSIX_SPAWN_SETPGROUP</code></p>
-<dd>Set the process group to the value specified in the <i>spawn-pgroup</i> attribute of the object pointed to by <i>attrp</i>. If the <i>spawn-pgroup</i> attribute has the value 0, the child&#8217;s process group ID is made the same as its process ID. If the <code>POSIX_SPAWN_SETPGROUP</code> flag is not set, the child inherits the parent&#8217;s process group ID.</p>
-<dt><code>POSIX_SPAWN_USEVFORK</code></p>
-<dd>Since glibc 2.24, this flag has no effect. On older implementations, setting this flag forces the <code>fork()</code> step to use <code><a href="/docs/linux/man/2-vfork/">vfork</a></code>(2) instead of <code><a href="/docs/linux/man/2-fork/">fork</a></code>(2). The <code>_GNU_SOURCE</code> feature test macro must be defined to obtain the definition of this constant.</p>
-<dt><code>POSIX_SPAWN_SETSID</code> (since glibc 2.26)</p>
-<dd>If this flag is set, the child process shall create a new session and become the session leader. The child process shall also become the process group leader of the new process group in the session (see <code><a href="/docs/linux/man/2-setsid/">setsid</a></code>(2)). The <code>_GNU_SOURCE</code> feature test macro must be defined to obtain the definition of this constant.</dl>
+<dt><code>POSIX_SPAWN_RESETIDS</code></dt>
+<dd>If this flag is set, reset the effective UID and GID to the real UID and GID of the parent process. If this flag is not set, then the child retains the effective UID and GID of the parent. In either case, if the set-user-ID and set-group-ID permission bits are enabled on the executable file, their effect will override the setting of the effective UID and GID (se <code><a href="/docs/linux/man/2-execve/">execve</a></code>(2)).</dd>
+<dt><code>POSIX_SPAWN_SETPGROUP</code></dt>
+<dd>Set the process group to the value specified in the <i>spawn-pgroup</i> attribute of the object pointed to by <i>attrp</i>. If the <i>spawn-pgroup</i> attribute has the value 0, the child&#8217;s process group ID is made the same as its process ID. If the <code>POSIX_SPAWN_SETPGROUP</code> flag is not set, the child inherits the parent&#8217;s process group ID.</dd>
+<dt><code>POSIX_SPAWN_USEVFORK</code></dt>
+<dd>Since glibc 2.24, this flag has no effect. On older implementations, setting this flag forces the <code>fork()</code> step to use <code><a href="/docs/linux/man/2-vfork/">vfork</a></code>(2) instead of <code><a href="/docs/linux/man/2-fork/">fork</a></code>(2). The <code>_GNU_SOURCE</code> feature test macro must be defined to obtain the definition of this constant.</dd>
+<dt><code>POSIX_SPAWN_SETSID</code> (since glibc 2.26)</dt>
+<dd>If this flag is set, the child process shall create a new session and become the session leader. The child process shall also become the process group leader of the new process group in the session (see <code><a href="/docs/linux/man/2-setsid/">setsid</a></code>(2)). The <code>_GNU_SOURCE</code> feature test macro must be defined to obtain the definition of this constant.</dd></dl>
 <p> If <i>attrp</i> is NULL, then the default behaviors described above for each flag apply. </p>
 <p> The <i>file_actions</i> argument specifies a sequence of file operations that are performed in the child process after the general processing described above, and before it performs the <code><a href="/docs/linux/man/3-exec/">exec</a></code>(3). If <i>file_actions</i> is NULL, then no special action is taken, and standard <code><a href="/docs/linux/man/3-exec/">exec</a></code>(3) semantics apply&#8212;file descriptors open before the exec remain open in the new process, except those for which the <code>FD_CLOEXEC</code> flag has been set. File locks remain in place. </p>
 <p> If <i>file_actions</i> is not NULL, then it contains an ordered set of requests to <code><a href="/docs/linux/man/2-open/">open</a></code>(2), <code><a href="/docs/linux/man/2-close/">close</a></code>(2), and <code><a href="/docs/linux/man/2-dup2/">dup2</a></code>(2) files. These requests are added to the <i>file_actions</i> by <code>posix_spawn_file_actions_addopen</code>(3), <code>posix_spawn_file_actions_addclose</code>(3), and <code>posix_spawn_file_actions_adddup2</code>(3). The requested operations are performed in the order they were added to <i>file_actions</i>. </p>
@@ -97,8 +95,8 @@ int posix_spawnp(pid_t *pid, const char *file,
 <p>The <code>posix_spawn</code>() and <code>posix_spawnp</code>() functions fail only in the case where the underlying <code><a href="/docs/linux/man/2-fork/">fork</a></code>(2), <code><a href="/docs/linux/man/2-vfork/">vfork</a></code>(2) or <code><a href="/docs/linux/man/2-clone/">clone</a></code>(2) call fails; in these cases, these functions return an error number, which will be one of the errors described for <code><a href="/docs/linux/man/2-fork/">fork</a></code>(2), <code><a href="/docs/linux/man/2-vfork/">vfork</a></code>(2) or <code><a href="/docs/linux/man/2-clone/">clone</a></code>(2). </p>
 <p> In addition, these functions fail if:</p>
 <dl>
-<dt><code>ENOSYS</code></p>
-<dd>Function not supported on this system.</dl>
+<dt><code>ENOSYS</code></dt>
+<dd>Function not supported on this system.</dd></dl>
 <h2>Versions</h2>
 <p>The <code>posix_spawn</code>() and <code>posix_spawnp</code>() functions are available since glibc 2.2.</p>
 <h2>Conforming To</h2>
@@ -114,13 +112,7 @@ int posix_spawnp(pid_t *pid, const char *file,
 <pre><code>$ ./a.out xxxxx
 PID of child: 10190
 Child status: exited, status=127
-
-
-
 Program source
-
-
-
 #include &lt;spawn.h&gt;
 #include &lt;stdint.h&gt;
 #include &lt;stdio.h&gt;

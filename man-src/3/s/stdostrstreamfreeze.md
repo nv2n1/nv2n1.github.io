@@ -28,10 +28,8 @@ flag - desired status
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;strstream&gt;
-
 #include &lt;iostream&gt;
 int main()
-
 {
     std::ostrstream dyn;     // dynamically-allocated output buffer
     dyn &lt;&lt; &quot;Test: &quot; &lt;&lt; 1.23; // note: no std::ends to demonstrate appending

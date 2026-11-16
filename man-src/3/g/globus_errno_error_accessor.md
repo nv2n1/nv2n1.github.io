@@ -22,22 +22,22 @@ description: "Error Data Accessors and Modifiers –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>error</i> The error from which to retrieve the errno</dl>
+</dt><dd> <i>error</i> The error from which to retrieve the errno</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
 <dt>
-<dd> The errno stored in the object</dl>
+</dt><dd> The errno stored in the object</dd></dl>
 <h3>void globus_error_errno_set_errno (globus_object_t *error, const intsystem_errno)</h3>
 <p> Set the errno in a errno error object. </p>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>error</i> The error object for which to set the errno<br />
- <i>system_errno</i> The system errno</dl>
+</dt><dd> <i>error</i> The error object for which to set the errno<br />
+ <i>system_errno</i> The system errno</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
 <dt>
-<dd> void</dl>
+</dt><dd> void</dd></dl>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for globus_common from the source code. </p>
 <h2>Index</h2>

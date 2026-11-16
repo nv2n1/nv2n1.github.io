@@ -13,10 +13,10 @@ description: "stringprep_utf8_nfkc_normalize – API function"
 char *stringprep_utf8_nfkc_normalize(const char *str, ssize_t len);</code></pre>
 <h2>Arguments</h2>
 <dl>
-<dt>const char * str</p>
-<dd>a UTF-8 encoded string.</p>
-<dt>ssize_t len</p>
-<dd>length of <i>str</i>, in bytes, or -1 if <i>str</i> is nul-terminated.</dl>
+<dt>const char * str</dt>
+<dd>a UTF-8 encoded string.</dd>
+<dt>ssize_t len</dt>
+<dd>length of <i>str</i>, in bytes, or -1 if <i>str</i> is nul-terminated.</dd></dl>
 <h2>Description</h2>
 <p>Converts a string into canonical form, standardizing such issues as whether a character with an accent is represented as a base character and combining accent or as a single precomposed character. </p>
 <p> The normalization mode is NFKC (ALL COMPOSE). It standardizes differences that do not affect the text content, such as the above-mentioned accent representation. It standardizes the &quot;compatibility&quot; characters in Unicode, such as SUPERSCRIPT THREE to the standard forms (in this case DIGIT THREE). Formatting information may be lost but for most text operations such characters should be considered the same. It returns a result with composed forms rather than a maximally decomposed form.</p>
@@ -30,5 +30,5 @@ char *stringprep_utf8_nfkc_normalize(const char *str, ssize_t len);</code></pre>
 <h2>See Also</h2>
 <p>The full documentation for <code>libidn</code> is maintained as a Texinfo manual. If the <code>info</code> and <code>libidn</code> programs are properly installed at your site, the command</p>
 <dl>
-<dd><code>info libidn</code></dl>
+<dd><code>info libidn</code></dd></dl>
 <p> should give you access to the complete manual. </p>

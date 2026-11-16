@@ -15,20 +15,20 @@ description: "rhsm-icon – Periodically checks installed products against activ
 &nbsp;<wbr>only runs on graphical&nbsp;<wbr>(X-based)&nbsp;<wbr>systems. Servers which do not have a GUI interface do not run or require the <code>rhsm-icon</code> daemon. </p>
 <h2>Options</h2>
 <dl>
-<dt><code>-c, &#8211;check-period</code></p>
-<dd>Sets the interval to use between checks for the product subscription status. The value is in seconds and the default is one day. </p>
-<dt><code>-f, &#8211;force-icon=TYPE</code></p>
-<dd>Manually displays the given type of icon in the start menu. The TYPE can be <i>warning</i>, <i>expired</i>, or <i>partial</i> and uses a different icon for each type of message. </p>
-<dt><code>&#8211;i, &#8211;check-immediately</code></p>
-<dd>Runs the status check process immediately when the command is invoked. Otherwise, there is a four (4) minute delay before running the initial check. </p>
-<dt><code>-d, &#8211;debug</code></p>
-<dd>Shows debug messages for the daemon. </p>
+<dt><code>-c, &#8211;check-period</code></dt>
+<dd>Sets the interval to use between checks for the product subscription status. The value is in seconds and the default is one day. </dd>
+<dt><code>-f, &#8211;force-icon=TYPE</code></dt>
+<dd>Manually displays the given type of icon in the start menu. The TYPE can be <i>warning</i>, <i>expired</i>, or <i>partial</i> and uses a different icon for each type of message. </dd>
+<dt><code>&#8211;i, &#8211;check-immediately</code></dt>
+<dd>Runs the status check process immediately when the command is invoked. Otherwise, there is a four (4) minute delay before running the initial check. </dd>
+<dt><code>-d, &#8211;debug</code></dt>
+<dd>Shows debug messages for the daemon. </dd>
 </dl>
 <h2>Usage</h2>
 <p>There are two reasons to invoke <code>rhsm-icon</code> manually: </p>
 <dl>
-<dd>* To run the daemon on a new schedule (immediately or with a different frequency) </p>
-<dd>* To view the status icons or messages regardless of the state of the machine </p>
+<dd>* To run the daemon on a new schedule (immediately or with a different frequency) </dd>
+<dd>* To view the status icons or messages regardless of the state of the machine </dd>
 </dl>
 <p> Since X runs the daemon automatically and on schedule, it is not necessary to launch the subscription status daemon manually. The <code>rhsm-icon</code> command can change this schedule. For example: </p>
 <pre>rhsm-icon --check-period 120</pre>

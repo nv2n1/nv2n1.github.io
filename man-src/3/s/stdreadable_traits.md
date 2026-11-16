@@ -10,49 +10,34 @@ description: "std::readable_traits – std::readable_traits"
 <p>std::readable_traits &#8211; std::readable_traits</p>
 <h2>Synopsis</h2>
 <pre><code>Defined in header&lt;iterator&gt;
-
     template &lt;class I&gt;
     (1)(since C++ 20)
-
         struct readable_traits {
 };
-
 template &lt;class T&gt;
 (2)(since C++ 20)
-
     struct readable_traits&lt;T *&gt;;
-
 template &lt;class I&gt;
-
 requires std::is_array_v&lt;I&gt;(3)
 (since C++ 20)
-
     struct readable_traits&lt;I&gt;;
-
 template &lt;class T&gt;
 (4)(since C++ 20)
-
     struct readable_traits&lt;const T&gt; : value_type&lt;T&gt; {
 };
-
 template &lt;class T&gt;
-
 requires requires
 {
     typename T::value_type;
 }
 (5)(since C++ 20)
-
     struct readable_traits&lt;T&gt;;
-
 template &lt;class T&gt;
-
 requires requires
 {
     typename T::element_type;
 }
 (6)(since C++ 20)
-
     struct readable_traits&lt;T&gt;;</code></pre>
 <p>Computes the associated value type of the type I, if any. Users may specialize readable_traits for a program-defined type.<br />
 1) Primary template is an empty struct.<br />

@@ -73,7 +73,7 @@ description: "Handle Management –"
 <p> <code>See Also:</code></p>
 <dl>
 <dt>
-<dd> <code>globus_gsi_proxy_handle_init()</code>, <code>globus_gsi_proxy_handle_destroy()</code>, <code>Handle Attributes</code></dl>
+</dt><dd> <code>globus_gsi_proxy_handle_init()</code>, <code>globus_gsi_proxy_handle_destroy()</code>, <code>Handle Attributes</code></dd></dl>
 <h2>Function Documentation</h2>
 <h3>globus_result_t globus_gsi_proxy_handle_add_extension (<code>globus_gsi_proxy_handle_t</code>handle, X509_EXTENSION *ext)</h3>
 <p> Add X.509 Extensions. Add an X.509 extension to the GSI Proxy handle to be added to certificate </p>
@@ -81,16 +81,16 @@ description: "Handle Management –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>handle</i> The handle for the proxy to which the extension should be added.<br />
- <i>ext</i> The extension to be added.</dl>
+</dt><dd> <i>handle</i> The handle for the proxy to which the extension should be added.<br />
+ <i>ext</i> The extension to be added.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
 <dt>
-<dd> GLOBUS_SUCCESS if the addition was successful, otherwise an error is returned.</dl>
+</dt><dd> GLOBUS_SUCCESS if the addition was successful, otherwise an error is returned.</dd></dl>
 <p> <code>See Also:</code></p>
 <dl>
 <dt>
-<dd> <code>globus_gsi_proxy_handle_get_extensions()</code> </p>
+</dt><dd> <code>globus_gsi_proxy_handle_get_extensions()</code> </dd>
 <p> <code>globus_gsi_proxy_handle_set_extensions()</code></dl>
 <h3>globus_result_t globus_gsi_proxy_handle_clear_cert_info (<code>globus_gsi_proxy_handle_t</code>handle)</h3>
 <p> Clear Cert Info. Clear the proxy cert info extension stored in the GSI Proxy handle. </p>
@@ -98,118 +98,118 @@ description: "Handle Management –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>handle</i> The handle for which to clear the proxy cert info extension.</dl>
+</dt><dd> <i>handle</i> The handle for which to clear the proxy cert info extension.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
 <dt>
-<dd> GLOBUS_SUCCESS if the handle is valid, otherwise an error is returned</dl>
+</dt><dd> GLOBUS_SUCCESS if the handle is valid, otherwise an error is returned</dd></dl>
 <h3>globus_result_t globus_gsi_proxy_handle_get_clock_skew_allowable (<code>globus_gsi_proxy_handle_t</code>handle, int *skew)</h3>
 <p> Get Clock Skew. Get the clock skew of the proxy handle </p>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>handle</i> The handle to get the clock skew of<br />
- <i>skew</i> The resulting clock skew</dl>
+</dt><dd> <i>handle</i> The handle to get the clock skew of<br />
+ <i>skew</i> The resulting clock skew</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
 <dt>
-<dd> GLOBUS_SUCCESS unless an error occurred, in which case an error object identifier (in the form of a globus_result_t) is returned</dl>
+</dt><dd> GLOBUS_SUCCESS unless an error occurred, in which case an error object identifier (in the form of a globus_result_t) is returned</dd></dl>
 <h3>globus_result_t globus_gsi_proxy_handle_get_common_name (<code>globus_gsi_proxy_handle_t</code>handle, char **common_name)</h3>
 <p> Get/Set Proxy Common Name. Get the proxy common name stored in the GSI Proxy handle. </p>
 <p> This function retrieves the proxy common name from the GSI Proxy handle. The common name only impacts draft compliant proxies. </p>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>handle</i> The handle from which to get the proxy common name.<br />
- <i>common_name</i> Contains the proxy common name upon successful return. If the handle does not contain a common name, this parameter will be NULL upon return.</dl>
+</dt><dd> <i>handle</i> The handle from which to get the proxy common name.<br />
+ <i>common_name</i> Contains the proxy common name upon successful return. If the handle does not contain a common name, this parameter will be NULL upon return.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
 <dt>
-<dd> GLOBUS_SUCCESS upon success GLOBUS_GSI_PROXY_ERROR_WITH_HANDLE if handle is invalid</dl>
+</dt><dd> GLOBUS_SUCCESS upon success GLOBUS_GSI_PROXY_ERROR_WITH_HANDLE if handle is invalid</dd></dl>
 <h3>globus_result_t globus_gsi_proxy_handle_get_extensions (<code>globus_gsi_proxy_handle_t</code>handle, STACK_OF(X509_EXTENSION)**exts)</h3>
 <p> Get X.509 Extensions. Get the X.509 extensions from a GSI Proxy handle </p>
 <p> This function returns the X.509 extensions from the proxy certificate. </p>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>handle</i> The handle for the proxy from which the extensions should be retrieved.<br />
- <i>exts</i> The variable to hold the extensions. The caller is responsible for freeing the extensions with sk_X509_EXTENSION_free() when they are done with them.</dl>
+</dt><dd> <i>handle</i> The handle for the proxy from which the extensions should be retrieved.<br />
+ <i>exts</i> The variable to hold the extensions. The caller is responsible for freeing the extensions with sk_X509_EXTENSION_free() when they are done with them.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
 <dt>
-<dd> GLOBUS_SUCCESS if the retrieval was successful, otherwise an error is returned.</dl>
+</dt><dd> GLOBUS_SUCCESS if the retrieval was successful, otherwise an error is returned.</dd></dl>
 <p> <code>See Also:</code></p>
 <dl>
 <dt>
-<dd> <code>globus_gsi_proxy_handle_add_extension()</code> </p>
+</dt><dd> <code>globus_gsi_proxy_handle_add_extension()</code> </dd>
 <p> <code>globus_gsi_proxy_handle_set_extensions()</code></dl>
 <h3>globus_result_t globus_gsi_proxy_handle_get_init_prime (<code>globus_gsi_proxy_handle_t</code>handle, int *init_prime)</h3>
 <p> Get Init Prime. Get the init prime of the proxy handle </p>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>handle</i> The handle to get the init prime used in generating the key pair<br />
- <i>init_prime</i> The resulting init prime</dl>
+</dt><dd> <i>handle</i> The handle to get the init prime used in generating the key pair<br />
+ <i>init_prime</i> The resulting init prime</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
 <dt>
-<dd> GLOBUS_SUCCESS unless an error occurred, in which case an error object identifier (in the form of a globus_result_t) is returned</dl>
+</dt><dd> GLOBUS_SUCCESS unless an error occurred, in which case an error object identifier (in the form of a globus_result_t) is returned</dd></dl>
 <h3>globus_result_t globus_gsi_proxy_handle_get_key_gen_callback (<code>globus_gsi_proxy_handle_t</code>handle, void(**)(int, int, void *)callback)</h3>
 <p> Get Callback for Creating Keys. Get the callback for creating the public/private key pair </p>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>handle</i> The proxy handle to get the callback from<br />
- <i>callback</i> Parameter used for returning the callback</dl>
+</dt><dd> <i>handle</i> The proxy handle to get the callback from<br />
+ <i>callback</i> Parameter used for returning the callback</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
 <dt>
-<dd> GLOBUS_SUCCESS or an error object identifier</dl>
+</dt><dd> GLOBUS_SUCCESS or an error object identifier</dd></dl>
 <h3>globus_result_t globus_gsi_proxy_handle_get_keybits (<code>globus_gsi_proxy_handle_t</code>handle, int *key_bits)</h3>
 <p> Get Key Bits. Get the key bits used for the pub/private key pair of the proxy </p>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>handle</i> The proxy handle to get the key bits of<br />
- <i>key_bits</i> key bits of the proxy handle</dl>
+</dt><dd> <i>handle</i> The proxy handle to get the key bits of<br />
+ <i>key_bits</i> key bits of the proxy handle</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
 <dt>
-<dd> GLOBUS_SUCCESS unless an error occurred, in which case, a globus error object ID is returned GLOBUS_SUCCESS</dl>
+</dt><dd> GLOBUS_SUCCESS unless an error occurred, in which case, a globus error object ID is returned GLOBUS_SUCCESS</dd></dl>
 <h3>globus_result_t globus_gsi_proxy_handle_get_pathlen (<code>globus_gsi_proxy_handle_t</code>handle, int *pathlen)</h3>
 <p> Get Path Length. Get the path length from the GSI Proxy handle. </p>
 <p> This function gets the path length that is being used in the proxy cert info extension. </p>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>handle</i> The handle to be interrogated.<br />
- <i>pathlen</i> The maximum allowable path length</dl>
+</dt><dd> <i>handle</i> The handle to be interrogated.<br />
+ <i>pathlen</i> The maximum allowable path length</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
 <dt>
-<dd> GLOBUS_SUCCESS if the handle is valid, otherwise an error is returned</dl>
+</dt><dd> GLOBUS_SUCCESS if the handle is valid, otherwise an error is returned</dd></dl>
 <p> <code>See Also:</code></p>
 <dl>
 <dt>
-<dd> <code>globus_gsi_proxy_handle_set_pathlen()</code></dl>
+</dt><dd> <code>globus_gsi_proxy_handle_set_pathlen()</code></dd></dl>
 <h3>globus_result_t globus_gsi_proxy_handle_get_policy (<code>globus_gsi_proxy_handle_t</code>handle, unsigned char **policy_data, int *policy_length, int *policy_NID)</h3>
 <p> Get Policy. Get the policy from the GSI Proxy handle. </p>
 <p> This function gets the policy that is being used in the proxy cert info extension. </p>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>handle</i> The handle to be interrogated.<br />
+</dt><dd> <i>handle</i> The handle to be interrogated.<br />
  <i>policy_data</i> The policy data.<br />
  <i>policy_length</i> The length of the returned policy<br />
- <i>policy_NID</i> The NID of the policy language.</dl>
+ <i>policy_NID</i> The NID of the policy language.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
 <dt>
-<dd> GLOBUS_SUCCESS if the handle is valid, otherwise an error is returned</dl>
+</dt><dd> GLOBUS_SUCCESS if the handle is valid, otherwise an error is returned</dd></dl>
 <p> <code>See Also:</code></p>
 <dl>
 <dt>
-<dd> <code>globus_gsi_proxy_handle_set_policy()</code></dl>
+</dt><dd> <code>globus_gsi_proxy_handle_set_policy()</code></dd></dl>
 <h3>globus_result_t globus_gsi_proxy_handle_get_private_key (<code>globus_gsi_proxy_handle_t</code>handle, EVP_PKEY **proxy_key)</h3>
 <p> Get the private key from a GSI Proxy handle. </p>
 <pre>
@@ -220,28 +220,28 @@ value pointed to by the proxy_key parameter.
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>handle</i> The handle from which to get the private key<br />
- <i>proxy_key</i> Parameter used to return the key. It is the users responsibility to free the returned key by calling EVP_PKEY_free().</dl>
+</dt><dd> <i>handle</i> The handle from which to get the private key<br />
+ <i>proxy_key</i> Parameter used to return the key. It is the users responsibility to free the returned key by calling EVP_PKEY_free().</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
 <dt>
-<dd> GLOBUS_SUCCESS unless an error occurred, in which case, a globus error object ID is returned</dl>
+</dt><dd> GLOBUS_SUCCESS unless an error occurred, in which case, a globus error object ID is returned</dd></dl>
 <p> <code>See Also:</code></p>
 <dl>
 <dt>
-<dd> <code>globus_gsi_proxy_handle_set_private_key()</code></dl>
+</dt><dd> <code>globus_gsi_proxy_handle_set_private_key()</code></dd></dl>
 <h3>globus_result_t globus_gsi_proxy_handle_get_proxy_cert_info_openssl (<code>globus_gsi_proxy_handle_t</code>handle, PROXY_CERT_INFO_EXTENSION **pci)</h3>
 <p> Get Cert Info. Get the proxy cert info extension stored in the GSI Proxy handle. </p>
 <p> This function retrieves the proxy cert info extension from the GSI Proxy handle. </p>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>handle</i> The handle from which to get the proxy cert info extension.<br />
- <i>pci</i> Contains the proxy cert info extension upon successful return. If the handle does not contain a pci extension, this parameter will be NULL upon return.</dl>
+</dt><dd> <i>handle</i> The handle from which to get the proxy cert info extension.<br />
+ <i>pci</i> Contains the proxy cert info extension upon successful return. If the handle does not contain a pci extension, this parameter will be NULL upon return.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
 <dt>
-<dd> GLOBUS_SUCCESS upon success GLOBUS_GSI_PROXY_ERROR_WITH_HANDLE if handle is invalid GLOBUS_GSI_PROXY_ERROR_WITH_PROXYCERTINFO if the pci pointer is invalid or if the get failed.</dl>
+</dt><dd> GLOBUS_SUCCESS upon success GLOBUS_GSI_PROXY_ERROR_WITH_HANDLE if handle is invalid GLOBUS_GSI_PROXY_ERROR_WITH_PROXYCERTINFO if the pci pointer is invalid or if the get failed.</dd></dl>
 <h3>globus_result_t globus_gsi_proxy_handle_get_req (<code>globus_gsi_proxy_handle_t</code>handle, X509_REQ **req)</h3>
 <p> Get the certificate request from a GSI Proxy handle. </p>
 <pre>
@@ -251,174 +251,174 @@ the req parameter.
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>handle</i> The handle from which to get the certificate request<br />
- <i>req</i> Parameter used to return the request. It is the users responsibility to free the returned request.</dl>
+</dt><dd> <i>handle</i> The handle from which to get the certificate request<br />
+ <i>req</i> Parameter used to return the request. It is the users responsibility to free the returned request.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
 <dt>
-<dd> GLOBUS_SUCCESS unless an error occurred, in which case, a globus error object ID is returned</dl>
+</dt><dd> GLOBUS_SUCCESS unless an error occurred, in which case, a globus error object ID is returned</dd></dl>
 <p> <code>See Also:</code></p>
 <dl>
 <dt>
-<dd> <code>globus_gsi_proxy_handle_set_req()</code></dl>
+</dt><dd> <code>globus_gsi_proxy_handle_set_req()</code></dd></dl>
 <h3>globus_result_t globus_gsi_proxy_handle_get_signing_algorithm (<code>globus_gsi_proxy_handle_t</code>handle, const EVP_MD **signing_algorithm)</h3>
 <p> Get Signing Algorithm. Get the signing algorithm used to sign the proxy cert request </p>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>handle</i> The proxy handle containing the type of signing algorithm used<br />
- <i>signing_algorithm</i> signing algorithm of the proxy handle</dl>
+</dt><dd> <i>handle</i> The proxy handle containing the type of signing algorithm used<br />
+ <i>signing_algorithm</i> signing algorithm of the proxy handle</dd></dl>
 <p> <code>Return values:</code></p>
 <dl>
 <dt>
-<dd> <i>GLOBUS_SUCCESS</i> unless an error occurred, in which case, a globus error object ID is returned</dl>
+</dt><dd> <i>GLOBUS_SUCCESS</i> unless an error occurred, in which case, a globus error object ID is returned</dd></dl>
 <h3>globus_result_t globus_gsi_proxy_handle_get_time_valid (<code>globus_gsi_proxy_handle_t</code>handle, int *time_valid)</h3>
 <p> Get Time Valid. Get the validity time of the proxy </p>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>handle</i> The proxy handle to get the expiration date of<br />
- <i>time_valid</i> expiration date of the proxy handle</dl>
+</dt><dd> <i>handle</i> The proxy handle to get the expiration date of<br />
+ <i>time_valid</i> expiration date of the proxy handle</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
 <dt>
-<dd> GLOBUS_SUCCESS unless an error occurred, in which case, a globus error object ID is returned</dl>
+</dt><dd> GLOBUS_SUCCESS unless an error occurred, in which case, a globus error object ID is returned</dd></dl>
 <h3>globus_result_t globus_gsi_proxy_handle_get_type (<code>globus_gsi_proxy_handle_t</code>handle, globus_gsi_cert_utils_cert_type_t *type)</h3>
 <p> Get Proxy Type. Determine the type of proxy that will be generated when using this handle. </p>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>handle</i> The handle from which to get the type<br />
- <i>type</i> Parameter used to return the type.</dl>
+</dt><dd> <i>handle</i> The handle from which to get the type<br />
+ <i>type</i> Parameter used to return the type.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
 <dt>
-<dd> GLOBUS_SUCCESS unless an error occurred, in which case, a globus error object ID is returned</dl>
+</dt><dd> GLOBUS_SUCCESS unless an error occurred, in which case, a globus error object ID is returned</dd></dl>
 <p> <code>See Also:</code></p>
 <dl>
 <dt>
-<dd> <code>globus_gsi_proxy_handle_set_type()</code></dl>
+</dt><dd> <code>globus_gsi_proxy_handle_set_type()</code></dd></dl>
 <h3>globus_result_t globus_gsi_proxy_handle_init (<code>globus_gsi_proxy_handle_t</code> *handle, <code>globus_gsi_proxy_handle_attrs_t</code>handle_attrs)</h3>
 <p> Initialize a GSI Proxy handle. Initialize a proxy handle which can be used in subsequent operations. The handle may only be used in one sequence of operations at a time. </p>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>handle</i> A pointer to the handle to be initialized. If the handle is originally NULL, space is allocated for it. Otherwise, the current values of the handle are overwritten.<br />
- <i>handle_attrs</i> Initial attributes to be used to create this handle.</dl>
+</dt><dd> <i>handle</i> A pointer to the handle to be initialized. If the handle is originally NULL, space is allocated for it. Otherwise, the current values of the handle are overwritten.<br />
+ <i>handle_attrs</i> Initial attributes to be used to create this handle.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
 <dt>
-<dd> GLOBUS_SUCCESS unless an error occurred, in which case, a globus error object ID is returned</dl>
+</dt><dd> GLOBUS_SUCCESS unless an error occurred, in which case, a globus error object ID is returned</dd></dl>
 <p> <code>See Also:</code></p>
 <dl>
 <dt>
-<dd> <code>globus_gsi_proxy_handle_destroy()</code></dl>
+</dt><dd> <code>globus_gsi_proxy_handle_destroy()</code></dd></dl>
 <h3>globus_result_t globus_gsi_proxy_handle_set_extensions (<code>globus_gsi_proxy_handle_t</code>handle, STACK_OF(X509_EXTENSION)*exts)</h3>
 <p> Set X.509 Extensions. Set the X.509 extensions from a GSI Proxy handle </p>
 <p> This function sets the X.509 extensions for a proxy certificate. </p>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>handle</i> The handle for the proxy from which the extension should be set.<br />
- <i>exts</i> The extensions to be set. Can be NULL to clear extensions.</dl>
+</dt><dd> <i>handle</i> The handle for the proxy from which the extension should be set.<br />
+ <i>exts</i> The extensions to be set. Can be NULL to clear extensions.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
 <dt>
-<dd> GLOBUS_SUCCESS if the addition was successful, otherwise an error is returned.</dl>
+</dt><dd> GLOBUS_SUCCESS if the addition was successful, otherwise an error is returned.</dd></dl>
 <p> <code>See Also:</code></p>
 <dl>
 <dt>
-<dd> <code>globus_gsi_proxy_handle_add_extension()</code> </p>
+</dt><dd> <code>globus_gsi_proxy_handle_add_extension()</code> </dd>
 <p> <code>globus_gsi_proxy_handle_get_extensions()</code></dl>
 <h3>globus_result_t globus_gsi_proxy_handle_set_is_limited (<code>globus_gsi_proxy_handle_t</code>handle, globus_bool_tis_limited)</h3>
 <p> Set/Check Proxy Is Limited. Set the limited proxy flag on the proxy handle </p>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>handle</i> the proxy handle<br />
- <i>is_limited</i> boolean value to set on the proxy handle</dl>
+</dt><dd> <i>handle</i> the proxy handle<br />
+ <i>is_limited</i> boolean value to set on the proxy handle</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
 <dt>
-<dd> GLOBUS_SUCCESS unless an error occurred, in which case, a globus error object ID is returned</dl>
+</dt><dd> GLOBUS_SUCCESS unless an error occurred, in which case, a globus error object ID is returned</dd></dl>
 <h3>globus_result_t globus_gsi_proxy_handle_set_pathlen (<code>globus_gsi_proxy_handle_t</code>handle, longpathlen)</h3>
 <p> Set Path Length. Set the path length to be used in the GSI Proxy handle. </p>
 <p> This function sets the path length to be used in the proxy cert info extension. </p>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>handle</i> The handle to be modified.<br />
- <i>pathlen</i> The maximum allowable path length</dl>
+</dt><dd> <i>handle</i> The handle to be modified.<br />
+ <i>pathlen</i> The maximum allowable path length</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
 <dt>
-<dd> GLOBUS_SUCCESS if the handle is valid, otherwise an error is returned</dl>
+</dt><dd> GLOBUS_SUCCESS if the handle is valid, otherwise an error is returned</dd></dl>
 <p> <code>See Also:</code></p>
 <dl>
 <dt>
-<dd> <code>globus_gsi_proxy_handle_get_pathlen()</code></dl>
+</dt><dd> <code>globus_gsi_proxy_handle_get_pathlen()</code></dd></dl>
 <h3>globus_result_t globus_gsi_proxy_handle_set_policy (<code>globus_gsi_proxy_handle_t</code>handle, const unsigned char *policy_data, intpolicy_length, intpolicy_language_NID)</h3>
 <p> Set Policy. Set the policy to be used in the GSI Proxy handle. </p>
 <p> This function sets the policy to be used in the proxy cert info extension. </p>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>handle</i> The handle to be modified.<br />
+</dt><dd> <i>handle</i> The handle to be modified.<br />
  <i>policy_data</i> The policy data.<br />
  <i>policy_length</i> The length of the policy data<br />
- <i>policy_language_NID</i> The NID of the policy language.</dl>
+ <i>policy_language_NID</i> The NID of the policy language.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
 <dt>
-<dd> GLOBUS_SUCCESS if the handle and its associated fields are valid otherwise an error is returned</dl>
+</dt><dd> GLOBUS_SUCCESS if the handle and its associated fields are valid otherwise an error is returned</dd></dl>
 <p> <code>See Also:</code></p>
 <dl>
 <dt>
-<dd> <code>globus_gsi_proxy_handle_get_policy()</code></dl>
+</dt><dd> <code>globus_gsi_proxy_handle_get_policy()</code></dd></dl>
 <h3>globus_result_t globus_gsi_proxy_handle_set_proxy_cert_info_openssl (<code>globus_gsi_proxy_handle_t</code>handle, PROXY_CERT_INFO_EXTENSION *pci)</h3>
 <p> Set Cert Info. Set the proxy cert info extension stored in the GSI Proxy handle. </p>
 <p> This function sets the proxy cert info extension in the GSI Proxy handle. </p>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>handle</i> The handle for which to set the proxy cert info extension.<br />
- <i>pci</i> The proxy cert info extension to set.</dl>
+</dt><dd> <i>handle</i> The handle for which to set the proxy cert info extension.<br />
+ <i>pci</i> The proxy cert info extension to set.</dd></dl>
 <p> <code>Return values:</code></p>
 <dl>
 <dt>
-<dd> <i>GLOBUS_SUCCESS</i> Success<br />
+</dt><dd> <i>GLOBUS_SUCCESS</i> Success<br />
  <i>GLOBUS_GSI_PROXY_ERROR_WITH_HANDLE</i> Handle is invalid<br />
- <i>GLOBUS_GSI_PROXY_ERROR_WITH_PROXYCERTINFO</i> pci pointer is invalid or if the set failed.</dl>
+ <i>GLOBUS_GSI_PROXY_ERROR_WITH_PROXYCERTINFO</i> pci pointer is invalid or if the set failed.</dd></dl>
 <h3>globus_result_t globus_gsi_proxy_handle_set_time_valid (<code>globus_gsi_proxy_handle_t</code>handle, inttime_valid)</h3>
 <p> Set Time Valid. Set the validity time of the proxy </p>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>handle</i> The proxy handle to set the expiration date for<br />
- <i>time_valid</i> desired expiration date of the proxy</dl>
+</dt><dd> <i>handle</i> The proxy handle to set the expiration date for<br />
+ <i>time_valid</i> desired expiration date of the proxy</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
 <dt>
-<dd> GLOBUS_SUCCESS unless an error occurred, in which case, a globus error object ID is returned GLOBUS_SUCCESS</dl>
+</dt><dd> GLOBUS_SUCCESS unless an error occurred, in which case, a globus error object ID is returned GLOBUS_SUCCESS</dd></dl>
 <h3>globus_result_t globus_gsi_proxy_handle_set_type (<code>globus_gsi_proxy_handle_t</code>handle, globus_gsi_cert_utils_cert_type_ttype)</h3>
 <p> Get Proxy Type. Set the type of proxy that will be generated when using this handle. Note that this will have no effect when generating a proxy from a proxy. In that case the generated proxy will inherit the type of the parent. </p>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>handle</i> The handle for which to set the type<br />
- <i>type</i> Parameter used to pass the type.</dl>
+</dt><dd> <i>handle</i> The handle for which to set the type<br />
+ <i>type</i> Parameter used to pass the type.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
 <dt>
-<dd> GLOBUS_SUCCESS unless an error occurred, in which case, a globus error object ID is returned</dl>
+</dt><dd> GLOBUS_SUCCESS unless an error occurred, in which case, a globus error object ID is returned</dd></dl>
 <p> <code>See Also:</code></p>
 <dl>
 <dt>
-<dd> <code>globus_gsi_proxy_handle_set_type()</code></dl>
+</dt><dd> <code>globus_gsi_proxy_handle_set_type()</code></dd></dl>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for globus_gsi_proxy_core from the source code. </p>
 <h2>Index</h2>
-<dt><a href="#lbAH">Function Documentation</a></p>
+<dt><a href="#lbAH">Function Documentation</a></dt>
 <dd>
-<dt><a href="#lbBG">Author</a></p>
-<dd></dl>
+</dd><dt><a href="#lbBG">Author</a></dt>
+<dd></dd></dl>

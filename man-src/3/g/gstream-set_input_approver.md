@@ -23,18 +23,14 @@ bool ia_abc_is_what_we_want(int chr)
     else
         return false;
 }
-
 //...
-
 gs.set_input_approver(ia_abc_is_what_we_want);
 gs &gt;&gt; my_string; // the user is only able to input a, b or c
 </code></pre>
 <p> If you want to declare any variables of the type of the function, the typedef &#8216;input_approver&#8217; in &#8216;gbuf&#8217; makes it easy, e.g. </p>
 <pre><code>
 gbuf::input_approver tmp_ap;
-
 //...
-
 tmp_ap = gs1.get_input_approver();
 gs1.set_input_approver(gs2.get_input_approver());
 gs2.set_input_approver(tmp_ap);

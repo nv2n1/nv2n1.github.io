@@ -14,12 +14,12 @@ description: "gnutls_x509_rdn_get – API function"
 <p> <code>int gnutls_x509_rdn_get(const gnutls_datum_t * </code><i>idn</i><code>, char * </code><i>buf</i><code>, size_t * </code><i>buf_size</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
-<dt>const gnutls_datum_t * idn</p>
-<dd> should contain a DER encoded RDN sequence</p>
-<dt>char * buf</p>
-<dd> a pointer to a structure to hold the peer&#8217;s name</p>
-<dt>size_t * buf_size</p>
-<dd> holds the size of <i>buf</i></dl>
+<dt>const gnutls_datum_t * idn</dt>
+<dd> should contain a DER encoded RDN sequence</dd>
+<dt>char * buf</dt>
+<dd> a pointer to a structure to hold the peer&#8217;s name</dd>
+<dt>size_t * buf_size</dt>
+<dd> holds the size of <i>buf</i></dd></dl>
 <h2>DESCRIPTION</h2>
 <p> This function will return the name of the given RDN sequence. The name will be in the form &quot;C=xxxx,O=yyyy,CN=zzzz&quot; as described in RFC4514.</p>
 <h2>RETURNS</h2>
@@ -33,6 +33,6 @@ description: "gnutls_x509_rdn_get – API function"
 <h2>SEE ALSO</h2>
 <p> The full documentation for <code>gnutls</code> is maintained as a Texinfo manual. If the /usr/share/doc/gnutls/ directory does not contain the HTML form visit <code></p>
 <dl>
-<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></p>
-<dd> </code></dl>
+<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></dt>
+<dd> </code></dd></dl>
 <h2>Index</h2>

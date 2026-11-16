@@ -14,29 +14,29 @@ CPRECT - Initializes the contouring of a rectangular array of data.
  void c_cprect (float *zdat, int kzdt, int mzdt, int nzdt, 
  float *rwrk, int lrwk, int *iwrk, int liwk)
 <h2>Description</h2><dl COMPACT><dt>ZDAT
-<dd>(REAL array, dimensioned KZDT x n, where &quot;n&quot; is greater than or equal to NZDT, input) is the array of data to be contoured.
-<dt>KZDT
-<dd>(INTEGER, input) is the first dimension of the array ZDAT.
-<dt>MZDT
-<dd>(INTEGER, input) is the first dimension of the array of data in ZDAT. MZDT must be less than or equal to KZDT.
-<dt>NZDT
-<dd>(INTEGER, input) is the second dimension of the array of data in ZDAT. NZDT must be less than or equal to the declared second dimension of the array ZDAT.
-<dt>RWRK
-<dd>(REAL array, dimensioned LRWK, input/output) is the real work array.
-<dt>LRWK
-<dd>(INTEGER, input) is the length of RWRK.
-<dt>IWRK
-<dd>(INTEGER array, dimensioned LIWK, input/output) is the integer work array.
-<dt>LIWK
-<dd>(INTEGER, input) is the length of IWRK.</dl><h2>C-Binding Description</h2>The C-binding argument descriptions are the same as the FORTRAN argument descriptions with the following exceptions:
+</dt><dd>(REAL array, dimensioned KZDT x n, where &quot;n&quot; is greater than or equal to NZDT, input) is the array of data to be contoured.
+</dd><dt>KZDT
+</dt><dd>(INTEGER, input) is the first dimension of the array ZDAT.
+</dd><dt>MZDT
+</dt><dd>(INTEGER, input) is the first dimension of the array of data in ZDAT. MZDT must be less than or equal to KZDT.
+</dd><dt>NZDT
+</dt><dd>(INTEGER, input) is the second dimension of the array of data in ZDAT. NZDT must be less than or equal to the declared second dimension of the array ZDAT.
+</dd><dt>RWRK
+</dt><dd>(REAL array, dimensioned LRWK, input/output) is the real work array.
+</dd><dt>LRWK
+</dt><dd>(INTEGER, input) is the length of RWRK.
+</dd><dt>IWRK
+</dt><dd>(INTEGER array, dimensioned LIWK, input/output) is the integer work array.
+</dd><dt>LIWK
+</dt><dd>(INTEGER, input) is the length of IWRK.</dd></dl><h2>C-Binding Description</h2>The C-binding argument descriptions are the same as the FORTRAN argument descriptions with the following exceptions:
 <dl COMPACT><dt>zdat(l,kzdt)
-<dd>zdat is dimensioned l by kzdt, where l &ge; nzdt.
-<dt>kzdt
-<dd>The second dimension of the array zdat.
-<dt>mzdt
-<dd>The second dimension of the array of data in zdat. mzdt &le; kzdt.
-<dt>nzdt
-<dd>The first dimension of the array of data in zdat. nzdt &le; l, where l is the declared first dimension of the array zdat.</dl><h2>Usage</h2>The routine CPRECT is called to initialize the process of drawing a contour plot from a rectangular array of data. The arguments define the data array, a real workspace array, and an integer workspace array. The dimensions of all the arrays are transferred to variables in COMMON, so that, in calls to other Conpack routines, those dimensions may be omitted. 
+</dt><dd>zdat is dimensioned l by kzdt, where l &ge; nzdt.
+</dd><dt>kzdt
+</dt><dd>The second dimension of the array zdat.
+</dd><dt>mzdt
+</dt><dd>The second dimension of the array of data in zdat. mzdt &le; kzdt.
+</dd><dt>nzdt
+</dt><dd>The first dimension of the array of data in zdat. nzdt &le; l, where l is the declared first dimension of the array zdat.</dd></dl><h2>Usage</h2>The routine CPRECT is called to initialize the process of drawing a contour plot from a rectangular array of data. The arguments define the data array, a real workspace array, and an integer workspace array. The dimensions of all the arrays are transferred to variables in COMMON, so that, in calls to other Conpack routines, those dimensions may be omitted. 
 
  CPRECT initializes the internal pointers that manage workspace use; also, it decides the appropriate ranges of X and Y coordinates for drawing contour lines and positioning labels. 
 

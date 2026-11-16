@@ -18,13 +18,13 @@ description: "storaged.conf – The storaged configuration file"
 <pre> [storaged]
  modules=*
  modules_load_preference=ondemand</pre>
-</dl>
+</dd></dl>
 <p> <code>modules = &lt;string list&gt;</code></p>
 <dl>
-<dd>This variable controlls what modules should be loaded. It may contain either a comma-separated list of modules to load or a single asterisk which stands for all the modules.</dl>
+<dd>This variable controlls what modules should be loaded. It may contain either a comma-separated list of modules to load or a single asterisk which stands for all the modules.</dd></dl>
 <p> <code>modules_load_preference = ondemand|onstartup</code></p>
 <dl>
-<dd>This key tells storaged when to load the plugins: either at startup or on demand by D-Bus <code>org.storaged.Storaged.Manager.EnableModules()</code>.</dl>
+<dd>This key tells storaged when to load the plugins: either at startup or on demand by D-Bus <code>org.storaged.Storaged.Manager.EnableModules()</code>.</dd></dl>
 <h2>Author</h2>
 <p>&lt;phatina [at] redhat.com&gt;</p>
 <h2>Bugs</h2>

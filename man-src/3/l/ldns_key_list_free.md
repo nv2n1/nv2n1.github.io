@@ -18,16 +18,16 @@ description: "ldns_key_free, ldns_key_deep_free, ldns_key_list_free"
 <p> void ldns_key_list_free(ldns_key_list *key_list); </p>
 <h2>DESCRIPTION</h2>
 <dl>
-<dt> <i>ldns_key_free</i>()</p>
-<dd>frees a key structure, but not its internal data structures </p>
+<dt> <i>ldns_key_free</i>()</dt>
+<dd>frees a key structure, but not its internal data structures </dd>
 <p> .br <code>key</code>: the key object to free</dl>
 <dl>
-<dt> <i>ldns_key_deep_free</i>()</p>
-<dd>frees a key structure and all its internal data structures, except the data set by ldns_key_set_external_key() </p>
+<dt> <i>ldns_key_deep_free</i>()</dt>
+<dd>frees a key structure and all its internal data structures, except the data set by ldns_key_set_external_key() </dd>
 <p> .br <code>key</code>: the key object to free</dl>
 <dl>
-<dt> <i>ldns_key_list_free</i>()</p>
-<dd>Frees a key list structure .br <code>key_list</code>: the key list object to free</dl>
+<dt> <i>ldns_key_list_free</i>()</dt>
+<dd>Frees a key list structure .br <code>key_list</code>: the key list object to free</dd></dl>
 <h2>AUTHOR</h2>
 <p> The ldns team at NLnet Labs. Which consists out of Jelte Jansen and Miek Gieben. </p>
 <h2>REPORTING BUGS</h2>

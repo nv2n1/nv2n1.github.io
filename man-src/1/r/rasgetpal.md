@@ -16,10 +16,10 @@ description: "rasgetpal – extract the color palette of a rasterfile and write 
 <p> Once you have a &quot;.pal&quot; color palette you can use it with NCSA&#8217;s XImage or any other application that uses this format of color palette. A textual color palette can be edited using a standard text editor and then fed back to <i>ctrans</i>, <i>rasview</i>, or <i>rascat</i> in order to get a modified color palette. It&#8217;s also useful when you simply want to know what&#8217;s in your color palette. See &quot;man ras_palette&quot; for more information on these different formats.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-help</code></p>
-<dd> Print help information.</p>
-<dt><code>-Version</code></p>
-<dd> Print the version number. </p>
+<dt><code>-help</code></dt>
+<dd> Print help information.</dd>
+<dt><code>-Version</code></dt>
+<dd> Print the version number. </dd>
 </dl>
 <h2>EXAMPLE</h2>
 <p> Let&#8217;s suppose you have an X Window Dump rasterfile called <i>window.xwd</i> and you&#8217;d like to get a textual copy of the color palette. </p>

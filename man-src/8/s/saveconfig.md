@@ -15,16 +15,16 @@ description: "saveconfig – Directory Server script for saving the Admin Server
 <h2>Options</h2>
 <p>A summary of options is included below:</p>
 <dl>
-<dt><code>-Z</code> <i>Server Identifier</i></p>
-<dd>The server ID of the Directory Server instance. If there is only one instance on the system, this option can be skipped.</p>
-<dt><code>-h</code></p>
-<dd>Display the usage.</dl>
+<dt><code>-Z</code> <i>Server Identifier</i></dt>
+<dd>The server ID of the Directory Server instance. If there is only one instance on the system, this option can be skipped.</dd>
+<dt><code>-h</code></dt>
+<dd>Display the usage.</dd></dl>
 <h2>Example</h2>
 <dl>
-<dt>saveconfig</p>
+<dt>saveconfig</dt>
 <dd>
-<dt>saveconfig -Z instance3</p>
-<dd></dl>
+</dd><dt>saveconfig -Z instance3</dt>
+<dd></dd></dl>
 <h2>Diagnostics</h2>
 <p>Exit status is zero if no errors occur. Errors result in a non-zero exit status and a diagnostic message being written to standard error.</p>
 <h2>Author</h2>

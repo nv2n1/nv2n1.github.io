@@ -14,31 +14,25 @@ HSTOPI - Specifies various INTEGER parameters to be used by the Histogram utilit
  void c_hstopi (char *string, int param1, int param2, 
  int *icol, int lcol)
 <h2>Description</h2><dl COMPACT><dt>STRING
-<dd>Character, input -- Selects an internal parameter. The possibilities are: 
-
- 
+</dt><dd>Character, input -- Selects an internal parameter. The possibilities are: 
 'COL=ON'&nbsp;<wbr>or&nbsp;<wbr>'COL=OFF' 
- 
 'CLA=ON'&nbsp;<wbr>or&nbsp;<wbr>'CLA=OFF' 
-
  If an option is turned 'ON', then the remaining HSTOPI arguments can be used to override the default settings of that option. 
-
  If the option is 'OFF', then the remaining arguments of the HSTOPI call can be any dummy values. Option settings will be returned to their default values. 
-
  The following options are defined by this subroutine:
-<dl COMPACT><dd><dl COMPACT><dt>COL
-<dd>This option turns the use of color OFF, or ON. If it is ON, then eight color indices are assigned to the various parts of the histogram as described by the INTEGER array ICOL. Arguments ICOL and LCOL must be set, PARAM1 and PARAM2 can have dummy values.
-<dt>CLA
-<dd>This option allows the size and orientation of class labels to be altered. If 'CLA=ON', the size of the label characters is set using argument PARAM1, and the orientation is set by argument PARAM2. Arguments ICOL and LCOL can have dummy values. If 'CLA=OFF', defaults are used which cause medium sized characters to be written in the horizontal direction.</dl></dl><dt>PARAM1
-<dd>Integer, input -- Specifies the character height of class labels. 
+</dd><dl COMPACT><dd></dd><dl COMPACT><dt>COL
+</dt><dd>This option turns the use of color OFF, or ON. If it is ON, then eight color indices are assigned to the various parts of the histogram as described by the INTEGER array ICOL. Arguments ICOL and LCOL must be set, PARAM1 and PARAM2 can have dummy values.
+</dd><dt>CLA
+</dt><dd>This option allows the size and orientation of class labels to be altered. If 'CLA=ON', the size of the label characters is set using argument PARAM1, and the orientation is set by argument PARAM2. Arguments ICOL and LCOL can have dummy values. If 'CLA=OFF', defaults are used which cause medium sized characters to be written in the horizontal direction.</dd></dl></dl><dt>PARAM1
+</dt><dd>Integer, input -- Specifies the character height of class labels. 
 
  When 'CLA=ON'; 1 = small, 2 = medium, 3 = large; default is 2 when 'CLA=OFF'.
-<dt>PARAM2
-<dd>Integer, input -- Specifies the character orientation of class labels. 
+</dd><dt>PARAM2
+</dt><dd>Integer, input -- Specifies the character orientation of class labels. 
 
  If 'CLA=ON', labels can vary from 0 (horizontal) to 90 (vertical) degrees. Vertical is the default when 'CLA=OFF'.
-<dt>ICOL
-<dd>Integer, input -- Assigns a set of RGB color indices to the eight components of a histogram graphic when 'COL=ON'. 
+</dd><dt>ICOL
+</dt><dd>Integer, input -- Assigns a set of RGB color indices to the eight components of a histogram graphic when 'COL=ON'. 
 
  ICOL(1) = color index used for area fill of 
  
@@ -87,8 +81,8 @@ HSTOPI - Specifies various INTEGER parameters to be used by the Histogram utilit
 &nbsp;<wbr>&nbsp;<wbr>7&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>YELLOW 
  
 &nbsp;<wbr>&nbsp;<wbr>8&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>ORANGE
-<dt>LCOL
-<dd>Integer, input -- Specifies the length of array ICOL. LCOL must be set to 8.</dl><h2>C-Binding Description</h2>The C-binding argument descriptions are the same as the FORTRAN argument descriptions.
+</dd><dt>LCOL
+</dt><dd>Integer, input -- Specifies the length of array ICOL. LCOL must be set to 8.</dd></dl><h2>C-Binding Description</h2>The C-binding argument descriptions are the same as the FORTRAN argument descriptions.
 <h2>Usage</h2>HSTOPI is called to set parameters of type INTEGER before entry HISTGR is called to generate the histogram. Options are size and orientation of class labels, and setting the colors for various components of the graphic. 
 
  For a complete list of parameters available in this utility, see the histogram_params man page.

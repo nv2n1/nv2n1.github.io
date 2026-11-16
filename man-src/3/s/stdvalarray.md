@@ -11,9 +11,7 @@ std::valarray - std::valarray
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header &lt;valarray&gt;
-
 template&lt; class T &gt;
-
 class valarray;</code></pre> 
 std::valarray is the class for representing and manipulating arrays of values. It supports element-wise mathematical operations and various forms of generalized subscript operators, slicing and indirect access. 
 

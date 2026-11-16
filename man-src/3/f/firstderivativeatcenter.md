@@ -50,14 +50,14 @@ description: "QuantLib::SampledCurve – This class contains a sampled curve."
 <h3><code>Real</code> valueAtCenter () const</h3>
 <p><code>Possible enhancements</code></p>
 <dl COMPACT>
-<dd>replace or complement with a more general function valueAt(spot)</dl>
+<dd>replace or complement with a more general function valueAt(spot)</dd></dl>
 <h3><code>Real</code> firstDerivativeAtCenter () const</h3>
 <p><code>Possible enhancements</code></p>
 <dl COMPACT>
-<dd>replace or complement with a more general function firstDerivativeAt(spot)</dl>
+<dd>replace or complement with a more general function firstDerivativeAt(spot)</dd></dl>
 <h3><code>Real</code> secondDerivativeAtCenter () const</h3>
 <p><code>Possible enhancements</code></p>
 <dl COMPACT>
-<dd>replace or complement with a more general function secondDerivativeAt(spot)</dl>
+<dd>replace or complement with a more general function secondDerivativeAt(spot)</dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for QuantLib from the source code.</p>

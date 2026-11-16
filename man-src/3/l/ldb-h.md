@@ -487,12 +487,12 @@ description: "include/ldb.h – Samba’s ldb database."
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dt>
-<dd> <i>a</i> the first attribute name to compare<br />
- <i>b</i> the second attribute name to compare</dl>
+</dt><dd> <i>a</i> the first attribute name to compare<br />
+ <i>b</i> the second attribute name to compare</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
 <dt>
-<dd> 0 if the attribute names are the same, or only differ in case; non-zero if there are any differences</dl>
+</dt><dd> 0 if the attribute names are the same, or only differ in case; non-zero if there are any differences</dd></dl>
 <p> attribute names are restricted by rfc2251 so using strcasecmp and toupper here is ok. return 0 for match</p>
 <h3>#define LDB_ATTR_FLAG_FIXED (1&lt;&lt;2)</h3>
 <p> The attribute is supplied by the application and should not be removed.</p>
@@ -511,31 +511,31 @@ description: "include/ldb.h – Samba’s ldb database."
 <p> <code>See Also:</code></p>
 <dl COMPACT>
 <dt>
-<dd> Microsoft documentation of this OID</dl>
+</dt><dd> Microsoft documentation of this OID</dd></dl>
 <h3>#define LDB_CONTROL_EXTENDED_DN_OID &#8216;1.2.840.113556.1.4.529&#8217;</h3>
 <p> OID for extended DN. </p>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
 <dt>
-<dd> Microsoft documentation of this OID</dl>
+</dt><dd> Microsoft documentation of this OID</dd></dl>
 <h3>#define LDB_CONTROL_NOTIFICATION_OID &#8216;1.2.840.113556.1.4.528&#8217;</h3>
 <p> OID for notification. </p>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
 <dt>
-<dd> Microsoft documentation of this OID</dl>
+</dt><dd> Microsoft documentation of this OID</dd></dl>
 <h3>#define LDB_CONTROL_PAGED_RESULTS_OID &#8216;1.2.840.113556.1.4.319&#8217;</h3>
 <p> OID for the paged results control. This control is included in the searchRequest and searchResultDone messages as part of the controls field of the LDAPMessage, as defined in Section 4.1.12 of LDAP v3. </p>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
 <dt>
-<dd> RFC 2696.</dl>
+</dt><dd> RFC 2696.</dd></dl>
 <h3>#define LDB_CONTROL_PERMISSIVE_MODIFY_OID &#8216;1.2.840.113556.1.4.1413&#8217;</h3>
 <p> OID to let modifies don&#8217;t give an error when adding an existing attribute with the same value or deleting an nonexisting one attribute. </p>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
 <dt>
-<dd> Microsoft documentation of this OID</dl>
+</dt><dd> Microsoft documentation of this OID</dd></dl>
 <h3>#define LDB_CONTROL_PROVISION_OID &#8216;1.3.6.1.4.1.7165.4.3.16&#8217;</h3>
 <p> LDB_CONTROL_PROVISION_OID is used to skip some constraint checks. It&#8217;s is mainly thought to be used for the provisioning.</p>
 <h3>#define LDB_CONTROL_RECALCULATE_SD_OID &#8216;1.3.6.1.4.1.7165.4.3.5&#8217;</h3>
@@ -545,7 +545,7 @@ description: "include/ldb.h – Samba’s ldb database."
 <p> <code>See Also:</code></p>
 <dl COMPACT>
 <dt>
-<dd> draft managedit.</dl>
+</dt><dd> draft managedit.</dd></dl>
 <h3>#define LDB_CONTROL_REVEAL_INTERNALS &#8216;1.3.6.1.4.1.7165.4.3.6&#8217;</h3>
 <p> REVEAL_INTERNALS is used to reveal internal attributes and DN components which are not normally shown to the user.</p>
 <h3>#define LDB_CONTROL_RODC_DCPROMO_OID &#8216;1.2.840.113556.1.4.1341&#8217;</h3>
@@ -553,67 +553,67 @@ description: "include/ldb.h – Samba’s ldb database."
 <p> <code>See Also:</code></p>
 <dl COMPACT>
 <dt>
-<dd> Microsoft documentation of this OID</dl>
+</dt><dd> Microsoft documentation of this OID</dd></dl>
 <h3>#define LDB_CONTROL_SD_FLAGS_OID &#8216;1.2.840.113556.1.4.801&#8217;</h3>
 <p> OID for specifying the returned elements of the ntSecurityDescriptor. </p>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
 <dt>
-<dd> Microsoft documentation of this OID</dl>
+</dt><dd> Microsoft documentation of this OID</dd></dl>
 <h3>#define LDB_CONTROL_SEARCH_OPTIONS_OID &#8216;1.2.840.113556.1.4.1340&#8217;</h3>
 <p> OID for specifying an advanced scope for a search. </p>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
 <dt>
-<dd> Microsoft documentation of this OID</dl>
+</dt><dd> Microsoft documentation of this OID</dd></dl>
 <h3>#define LDB_CONTROL_SERVER_LAZY_COMMIT &#8216;1.2.840.113556.1.4.619&#8217;</h3>
 <p> OID to allow the server to be more &#8216;fast and loose&#8217; with the data being added. </p>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
 <dt>
-<dd> Microsoft documentation of this OID</dl>
+</dt><dd> Microsoft documentation of this OID</dd></dl>
 <h3>#define LDB_CONTROL_SERVER_SORT_OID &#8216;1.2.840.113556.1.4.473&#8217;</h3>
 <p> OID for LDAP server sort result extension. This control is included in the searchRequest message as part of the controls field of the LDAPMessage, as defined in Section 4.1.12 of LDAP v3. The controlType is set to &#8216;1.2.840.113556.1.4.473&#8217;. The criticality MAY be either TRUE or FALSE (where absent is also equivalent to FALSE) at the client&#8217;s option. </p>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
 <dt>
-<dd> RFC 2891.</dl>
+</dt><dd> RFC 2891.</dd></dl>
 <h3>#define LDB_CONTROL_SHOW_DEACTIVATED_LINK_OID &#8216;1.2.840.113556.1.4.2065&#8217;</h3>
 <p> OID for getting deactivated linked attributes. </p>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
 <dt>
-<dd> Microsoft documentation of this OID</dl>
+</dt><dd> Microsoft documentation of this OID</dd></dl>
 <h3>#define LDB_CONTROL_SHOW_DELETED_OID &#8216;1.2.840.113556.1.4.417&#8217;</h3>
 <p> OID for getting deleted objects. </p>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
 <dt>
-<dd> Microsoft documentation of this OID</dl>
+</dt><dd> Microsoft documentation of this OID</dd></dl>
 <h3>#define LDB_CONTROL_SHOW_RECYCLED_OID &#8216;1.2.840.113556.1.4.2064&#8217;</h3>
 <p> OID for getting recycled objects. </p>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
 <dt>
-<dd> Microsoft documentation of this OID</dl>
+</dt><dd> Microsoft documentation of this OID</dd></dl>
 <h3>#define LDB_CONTROL_SORT_RESP_OID &#8216;1.2.840.113556.1.4.474&#8217;</h3>
 <p> OID for LDAP server sort result response extension. This control is included in the searchResultDone message as part of the controls field of the LDAPMessage, as defined in Section 4.1.12 of LDAP v3. </p>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
 <dt>
-<dd> RFC 2891.</dl>
+</dt><dd> RFC 2891.</dd></dl>
 <h3>#define LDB_CONTROL_TREE_DELETE_OID &#8216;1.2.840.113556.1.4.805&#8217;</h3>
 <p> OID for performing subtree deletes. </p>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
 <dt>
-<dd> Microsoft documentation of this OID</dl>
+</dt><dd> Microsoft documentation of this OID</dd></dl>
 <h3>#define LDB_CONTROL_VERIFY_NAME_OID &#8216;1.2.840.113556.1.4.1338&#8217;</h3>
 <p> OID for the allowing some kind of relax check for attributes with DNs. </p>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
 <dt>
-<dd> 3.1.1.3.4.1.16 in [MS-ADTS].pdf</dl>
+</dt><dd> 3.1.1.3.4.1.16 in [MS-ADTS].pdf</dd></dl>
 <h3>#define LDB_CONTROL_VLV_REQ_OID &#8216;2.16.840.1.113730.3.4.9&#8217;</h3>
 <p> OID for LDAP Virtual List View Request extension. This control is included in SearchRequest messages as part of the controls field of the LDAPMessage.</p>
 <h3>#define LDB_CONTROL_VLV_RESP_OID &#8216;2.16.840.1.113730.3.4.10&#8217;</h3>
@@ -635,13 +635,13 @@ description: "include/ldb.h – Samba’s ldb database."
 <p> <code>See Also:</code></p>
 <dl COMPACT>
 <dt>
-<dd> <code>LDB_FLAG_MOD_MASK</code></dl>
+</dt><dd> <code>LDB_FLAG_MOD_MASK</code></dd></dl>
 <h3>#define LDB_FLAG_MOD_DELETE 3</h3>
 <p> Flag value used in ldap_modify() to indicate that attributes are being deleted. </p>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
 <dt>
-<dd> <code>LDB_FLAG_MOD_MASK</code></dl>
+</dt><dd> <code>LDB_FLAG_MOD_MASK</code></dd></dl>
 <h3>#define LDB_FLAG_MOD_MASK 0x3</h3>
 <p> There are a number of flags that are used with ldap_modify() in ldb_message_element.flags fields. The LDB_FLAG_MOD_ADD, LDB_FLAG_MOD_DELETE and LDB_FLAG_MOD_REPLACE flags are used in ldap_modify() calls to specify whether attributes are being added, deleted or modified respectively.</p>
 <h3>#define LDB_FLAG_MOD_REPLACE 2</h3>
@@ -649,7 +649,7 @@ description: "include/ldb.h – Samba’s ldb database."
 <p> <code>See Also:</code></p>
 <dl COMPACT>
 <dt>
-<dd> <code>LDB_FLAG_MOD_MASK</code></dl>
+</dt><dd> <code>LDB_FLAG_MOD_MASK</code></dd></dl>
 <h3>#define LDB_FLAG_MOD_TYPE(flags) ((flags) &amp; <code>LDB_FLAG_MOD_MASK</code>)</h3>
 <p> use this to extract the mod type from the operation</p>
 <h3>#define LDB_FLG_ENABLE_TRACING 32</h3>
@@ -677,7 +677,7 @@ description: "include/ldb.h – Samba’s ldb database."
 <p> <code>See Also:</code></p>
 <dl COMPACT>
 <dt>
-<dd> RFC 2252, Section 4.3.2</dl>
+</dt><dd> RFC 2252, Section 4.3.2</dd></dl>
 <h3>#define LDB_SYNTAX_DN &#8216;1.3.6.1.4.1.1466.115.121.1.12&#8217;</h3>
 <p> LDAP attribute syntax for a DN. This is the well-known LDAP attribute syntax for a DN. </p>
 <p> See RFC 2252, Section 4.3.2</p>
@@ -706,112 +706,112 @@ do {     if (numel &gt; 1) {         qsort(base, numel, sizeof((base)[0]), (int 
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dt>
-<dd> <i>ldb</i> the context associated with the database (from <code>ldb_init()</code>)<br />
- <i>message</i> the message containing the record to add.</dl>
+</dt><dd> <i>ldb</i> the context associated with the database (from <code>ldb_init()</code>)<br />
+ <i>message</i> the message containing the record to add.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
 <dt>
-<dd> result code (LDB_SUCCESS if the record was added, otherwise a failure code)</dl>
+</dt><dd> result code (LDB_SUCCESS if the record was added, otherwise a failure code)</dd></dl>
 <h3>int ldb_base64_decode (char *s)</h3>
 <p> Base64 decode a buffer. This function decodes a base64 encoded string in place. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dt>
-<dd> <i>s</i> the string to decode.</dl>
+</dt><dd> <i>s</i> the string to decode.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
 <dt>
-<dd> the length of the returned (decoded) string.</dl>
+</dt><dd> the length of the returned (decoded) string.</dd></dl>
 <p> <code>Note:</code></p>
 <dl COMPACT>
 <dt>
-<dd> the string is null terminated, but the null terminator is not included in the length.</dl>
+</dt><dd> the string is null terminated, but the null terminator is not included in the length.</dd></dl>
 <h3>char* ldb_base64_encode (TALLOC_CTX *mem_ctx, const char *buf, intlen)</h3>
 <p> Base64 encode a buffer. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dt>
-<dd> <i>mem_ctx</i> the memory context that the result is allocated from.<br />
+</dt><dd> <i>mem_ctx</i> the memory context that the result is allocated from.<br />
  <i>buf</i> pointer to the array that is to be encoded<br />
- <i>len</i> the number of elements in the array to be encoded</dl>
+ <i>len</i> the number of elements in the array to be encoded</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
 <dt>
-<dd> pointer to an array containing the encoded data</dl>
+</dt><dd> pointer to an array containing the encoded data</dd></dl>
 <p> <code>Note:</code></p>
 <dl COMPACT>
 <dt>
-<dd> The caller is responsible for freeing the result</dl>
+</dt><dd> The caller is responsible for freeing the result</dd></dl>
 <h3>char* ldb_binary_encode (TALLOC_CTX *mem_ctx, struct <code>ldb_val</code>val)</h3>
 <p> Encode a binary blob. This function encodes a binary blob using the encoding rules in RFC 2254 (Section 4). This function also escapes any non-printable characters. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dt>
-<dd> <i>mem_ctx</i> the memory context to allocate the return string in.<br />
- <i>val</i> the (potentially) binary data to be encoded</dl>
+</dt><dd> <i>mem_ctx</i> the memory context to allocate the return string in.<br />
+ <i>val</i> the (potentially) binary data to be encoded</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
 <dt>
-<dd> the encoded data as a null terminated string</dl>
+</dt><dd> the encoded data as a null terminated string</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
 <dt>
-<dd> RFC 2252.</dl>
+</dt><dd> RFC 2252.</dd></dl>
 <h3>char* ldb_binary_encode_string (TALLOC_CTX *mem_ctx, const char *string)</h3>
 <p> Encode a string. This function encodes a string using the encoding rules in RFC 2254 (Section 4). This function also escapes any non-printable characters. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dt>
-<dd> <i>mem_ctx</i> the memory context to allocate the return string in.<br />
- <i>string</i> the string to be encoded</dl>
+</dt><dd> <i>mem_ctx</i> the memory context to allocate the return string in.<br />
+ <i>string</i> the string to be encoded</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
 <dt>
-<dd> the encoded data as a null terminated string</dl>
+</dt><dd> the encoded data as a null terminated string</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
 <dt>
-<dd> RFC 2252.</dl>
+</dt><dd> RFC 2252.</dd></dl>
 <h3>int ldb_build_add_req (struct <code>ldb_request</code> **ret_req, struct <code>ldb_context</code> *ldb, TALLOC_CTX *mem_ctx, const struct <code>ldb_message</code> *message, struct <code>ldb_control</code> **controls, void *context, ldb_request_callback_tcallback, struct <code>ldb_request</code> *parent)</h3>
 <p> Helper function to build an add request. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dt>
-<dd> <i>ret_req</i> the request structure is returned here (talloced on mem_ctx)<br />
+</dt><dd> <i>ret_req</i> the request structure is returned here (talloced on mem_ctx)<br />
  <i>ldb</i> the context associated with the database (from <code>ldb_init()</code>)<br />
  <i>mem_ctx</i> a talloc memory context (used as parent of ret_req)<br />
  <i>message</i> contains the entry to be added<br />
  <i>controls</i> an array of controls<br />
  <i>context</i> the callback function context<br />
  <i>the</i> callback function to handle the async replies<br />
- <i>the</i> parent request if any</dl>
+ <i>the</i> parent request if any</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
 <dt>
-<dd> result code (LDB_SUCCESS on success, or a failure code)</dl>
+</dt><dd> result code (LDB_SUCCESS on success, or a failure code)</dd></dl>
 <h3>int ldb_build_del_req (struct <code>ldb_request</code> **ret_req, struct <code>ldb_context</code> *ldb, TALLOC_CTX *mem_ctx, struct ldb_dn *dn, struct <code>ldb_control</code> **controls, void *context, ldb_request_callback_tcallback, struct <code>ldb_request</code> *parent)</h3>
 <p> Helper function to build a delete request. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dt>
-<dd> <i>ret_req</i> the request structure is returned here (talloced on mem_ctx)<br />
+</dt><dd> <i>ret_req</i> the request structure is returned here (talloced on mem_ctx)<br />
  <i>ldb</i> the context associated with the database (from <code>ldb_init()</code>)<br />
  <i>mem_ctx</i> a talloc memory context (used as parent of ret_req)<br />
  <i>dn</i> the DN to be deleted<br />
  <i>controls</i> an array of controls<br />
  <i>context</i> the callback function context<br />
  <i>the</i> callback function to handle the async replies<br />
- <i>the</i> parent request if any</dl>
+ <i>the</i> parent request if any</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
 <dt>
-<dd> result code (LDB_SUCCESS on success, or a failure code)</dl>
+</dt><dd> result code (LDB_SUCCESS on success, or a failure code)</dd></dl>
 <h3>int ldb_build_extended_req (struct <code>ldb_request</code> **ret_req, struct <code>ldb_context</code> *ldb, TALLOC_CTX *mem_ctx, const char *oid, void *data, struct <code>ldb_control</code> **controls, void *context, ldb_request_callback_tcallback, struct <code>ldb_request</code> *parent)</h3>
 <p> Helper function to build a extended request. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dt>
-<dd> <i>ret_req</i> the request structure is returned here (talloced on mem_ctx)<br />
+</dt><dd> <i>ret_req</i> the request structure is returned here (talloced on mem_ctx)<br />
  <i>ldb</i> the context associated with the database (from <code>ldb_init()</code>)<br />
  <i>mem_ctx</i> a talloc memory context (used as parent of ret_req)<br />
  <i>oid</i> the OID of the extended operation.<br />
@@ -819,34 +819,34 @@ do {     if (numel &gt; 1) {         qsort(base, numel, sizeof((base)[0]), (int 
  <i>controls</i> an array of controls<br />
  <i>context</i> the callback function context<br />
  <i>the</i> callback function to handle the async replies<br />
- <i>the</i> parent request if any</dl>
+ <i>the</i> parent request if any</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
 <dt>
-<dd> result code (LDB_SUCCESS on success, or a failure code)</dl>
+</dt><dd> result code (LDB_SUCCESS on success, or a failure code)</dd></dl>
 <h3>int ldb_build_mod_req (struct <code>ldb_request</code> **ret_req, struct <code>ldb_context</code> *ldb, TALLOC_CTX *mem_ctx, const struct <code>ldb_message</code> *message, struct <code>ldb_control</code> **controls, void *context, ldb_request_callback_tcallback, struct <code>ldb_request</code> *parent)</h3>
 <p> Helper function to build a modify request. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dt>
-<dd> <i>ret_req</i> the request structure is returned here (talloced on mem_ctx)<br />
+</dt><dd> <i>ret_req</i> the request structure is returned here (talloced on mem_ctx)<br />
  <i>ldb</i> the context associated with the database (from <code>ldb_init()</code>)<br />
  <i>mem_ctx</i> a talloc memory context (used as parent of ret_req)<br />
  <i>message</i> contains the entry to be modified<br />
  <i>controls</i> an array of controls<br />
  <i>context</i> the callback function context<br />
  <i>the</i> callback function to handle the async replies<br />
- <i>the</i> parent request if any</dl>
+ <i>the</i> parent request if any</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
 <dt>
-<dd> result code (LDB_SUCCESS on success, or a failure code)</dl>
+</dt><dd> result code (LDB_SUCCESS on success, or a failure code)</dd></dl>
 <h3>int ldb_build_rename_req (struct <code>ldb_request</code> **ret_req, struct <code>ldb_context</code> *ldb, TALLOC_CTX *mem_ctx, struct ldb_dn *olddn, struct ldb_dn *newdn, struct <code>ldb_control</code> **controls, void *context, ldb_request_callback_tcallback, struct <code>ldb_request</code> *parent)</h3>
 <p> Helper function to build a rename request. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dt>
-<dd> <i>ret_req</i> the request structure is returned here (talloced on mem_ctx)<br />
+</dt><dd> <i>ret_req</i> the request structure is returned here (talloced on mem_ctx)<br />
  <i>ldb</i> the context associated with the database (from <code>ldb_init()</code>)<br />
  <i>mem_ctx</i> a talloc memory context (used as parent of ret_req)<br />
  <i>olddn</i> the old DN<br />
@@ -854,17 +854,17 @@ do {     if (numel &gt; 1) {         qsort(base, numel, sizeof((base)[0]), (int 
  <i>controls</i> an array of controls<br />
  <i>context</i> the callback function context<br />
  <i>the</i> callback function to handle the async replies<br />
- <i>the</i> parent request if any</dl>
+ <i>the</i> parent request if any</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
 <dt>
-<dd> result code (LDB_SUCCESS on success, or a failure code)</dl>
+</dt><dd> result code (LDB_SUCCESS on success, or a failure code)</dd></dl>
 <h3>int ldb_build_search_req (struct <code>ldb_request</code> **ret_req, struct <code>ldb_context</code> *ldb, TALLOC_CTX *mem_ctx, struct ldb_dn *base, enum ldb_scopescope, const char *expression, const char *const *attrs, struct <code>ldb_control</code> **controls, void *context, ldb_request_callback_tcallback, struct <code>ldb_request</code> *parent)</h3>
 <p> Helper function to build a search request. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dt>
-<dd> <i>ret_req</i> the request structure is returned here (talloced on mem_ctx)<br />
+</dt><dd> <i>ret_req</i> the request structure is returned here (talloced on mem_ctx)<br />
  <i>ldb</i> the context associated with the database (from <code>ldb_init()</code>)<br />
  <i>mem_ctx</i> a talloc memory context (used as parent of ret_req)<br />
  <i>base</i> the Base Distinguished Name for the query (use <code>ldb_dn_new()</code> for an empty one)<br />
@@ -874,137 +874,137 @@ do {     if (numel &gt; 1) {         qsort(base, numel, sizeof((base)[0]), (int 
  <i>controls</i> an array of controls<br />
  <i>context</i> the callback function context<br />
  <i>the</i> callback function to handle the async replies<br />
- <i>the</i> parent request if any</dl>
+ <i>the</i> parent request if any</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
 <dt>
-<dd> result code (LDB_SUCCESS on success, or a failure code)</dl>
+</dt><dd> result code (LDB_SUCCESS on success, or a failure code)</dd></dl>
 <h3>char* ldb_casefold (struct <code>ldb_context</code> *ldb, TALLOC_CTX *mem_ctx, const char *s, size_tn)</h3>
 <p> Casefold a string. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dt>
-<dd> <i>ldb</i> the ldb context<br />
+</dt><dd> <i>ldb</i> the ldb context<br />
  <i>mem_ctx</i> the memory context to allocate the result string memory from.<br />
- <i>s</i> the string that is to be folded</dl>
+ <i>s</i> the string that is to be folded</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
 <dt>
-<dd> a copy of the string, converted to upper case</dl>
+</dt><dd> a copy of the string, converted to upper case</dd></dl>
 <p> <code>Note:</code></p>
 <dl COMPACT>
 <dt>
-<dd> The default function is not yet UTF8 aware. Provide your own set of functions through <code>ldb_set_utf8_fns()</code></dl>
+</dt><dd> The default function is not yet UTF8 aware. Provide your own set of functions through <code>ldb_set_utf8_fns()</code></dd></dl>
 <h3>int ldb_connect (struct <code>ldb_context</code> *ldb, const char *url, unsigned intflags, const char *options[])</h3>
 <p> Connect to a database. This is typically called soon after <code>ldb_init()</code>, and is required prior to any search or database modification operations. </p>
 <p> The URL can be one of the following forms:</p>
 <dl COMPACT>
-<dt>&bull;</p>
-<dd> <a href="tdb://path">tdb://path</a></p>
-<dt>&bull;</p>
-<dd> <a href="ldapi://path">ldapi://path</a></p>
-<dt>&bull;</p>
-<dd> <a href="ldap://host">ldap://host</a></p>
-<dt>&bull;</p>
-<dd> <a href="sqlite://path">sqlite://path</a></dl>
+<dt>&bull;</dt>
+<dd> <a href="tdb://path">tdb://path</a></dd>
+<dt>&bull;</dt>
+<dd> <a href="ldapi://path">ldapi://path</a></dd>
+<dt>&bull;</dt>
+<dd> <a href="ldap://host">ldap://host</a></dd>
+<dt>&bull;</dt>
+<dd> <a href="sqlite://path">sqlite://path</a></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dt>
-<dd> <i>ldb</i> the context associated with the database (from <code>ldb_init()</code>)<br />
+</dt><dd> <i>ldb</i> the context associated with the database (from <code>ldb_init()</code>)<br />
  <i>url</i> the URL of the database to connect to, as noted above<br />
  <i>flags</i> a combination of LDB_FLG_* to modify the connection behaviour<br />
- <i>options</i> backend specific options &#8211; passed uninterpreted to the backend</dl>
+ <i>options</i> backend specific options &#8211; passed uninterpreted to the backend</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
 <dt>
-<dd> result code (LDB_SUCCESS on success, or a failure code)</dl>
+</dt><dd> result code (LDB_SUCCESS on success, or a failure code)</dd></dl>
 <p> <code>Note:</code></p>
 <dl COMPACT>
 <dt>
-<dd> It is an error to connect to a database that does not exist in readonly mode (that is, with LDB_FLG_RDONLY). However in read-write mode, the database will be created if it does not exist.</dl>
+</dt><dd> It is an error to connect to a database that does not exist in readonly mode (that is, with LDB_FLG_RDONLY). However in read-write mode, the database will be created if it does not exist.</dd></dl>
 <p> <code>Examples: </code> <code>ldbreader.c</code>.</p>
 <h3>char* ldb_control_to_string (TALLOC_CTX *mem_ctx, const struct <code>ldb_control</code> *control)</h3>
 <p> Convert a control into its string representation. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dt>
-<dd> <i>mem_ctx</i> TALLOC context to return result on, and to allocate error_string on<br />
- <i>control</i> A struct <code>ldb_control</code> to convert</dl>
+</dt><dd> <i>mem_ctx</i> TALLOC context to return result on, and to allocate error_string on<br />
+ <i>control</i> A struct <code>ldb_control</code> to convert</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
 <dt>
-<dd> string representation of the control</dl>
+</dt><dd> string representation of the control</dd></dl>
 <h3>int <code>ldb_delete</code> (struct <code>ldb_context</code> *ldb, struct ldb_dn *dn)</h3>
 <p> Delete a record from the database. This function deletes a record from the database. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dt>
-<dd> <i>ldb</i> the context associated with the database (from <code>ldb_init()</code>)<br />
- <i>dn</i> the DN for the record to be deleted.</dl>
+</dt><dd> <i>ldb</i> the context associated with the database (from <code>ldb_init()</code>)<br />
+ <i>dn</i> the DN for the record to be deleted.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
 <dt>
-<dd> result code (LDB_SUCCESS if the record was deleted, otherwise a failure code)</dl>
+</dt><dd> result code (LDB_SUCCESS if the record was deleted, otherwise a failure code)</dd></dl>
 <h3>char* ldb_dn_alloc_linearized (TALLOC_CTX *mem_ctx, struct ldb_dn *dn)</h3>
 <p> Allocate a copy of the linear form of a DN (without any extended components) onto the supplied memory context. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dt>
-<dd> <i>dn</i> The DN to linearize<br />
- <i>mem_ctx</i> TALLOC context to return result on</dl>
+</dt><dd> <i>dn</i> The DN to linearize<br />
+ <i>mem_ctx</i> TALLOC context to return result on</dd></dl>
 <h3>struct ldb_dn struct ldb_dn* ldb_dn_from_ldb_val (TALLOC_CTX *mem_ctx, struct <code>ldb_context</code> *ldb, const struct <code>ldb_val</code> *strdn)</h3>
 <p> Allocate a new DN from a struct <code>ldb_val</code> (useful to avoid buffer overrun) </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dt>
-<dd> <i>mem_ctx</i> TALLOC context to return resulting ldb_dn structure on<br />
- <i>dn</i> The new DN</dl>
+</dt><dd> <i>mem_ctx</i> TALLOC context to return resulting ldb_dn structure on<br />
+ <i>dn</i> The new DN</dd></dl>
 <p> <code>Note:</code></p>
 <dl COMPACT>
 <dt>
-<dd> The DN will not be parsed at this time. Use ldb_dn_validate to tell if the DN is syntacticly correct</dl>
+</dt><dd> The DN will not be parsed at this time. Use ldb_dn_validate to tell if the DN is syntacticly correct</dd></dl>
 <h3>char* ldb_dn_get_extended_linearized (TALLOC_CTX *mem_ctx, struct ldb_dn *dn, intmode)</h3>
 <p> Get the linear form of a DN (with any extended components) </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dt>
-<dd> <i>mem_ctx</i> TALLOC context to return result on<br />
+</dt><dd> <i>mem_ctx</i> TALLOC context to return result on<br />
  <i>dn</i> The DN to linearize<br />
- <i>mode</i> Style of extended DN to return (0 is HEX representation of binary form, 1 is a string form)</dl>
+ <i>mode</i> Style of extended DN to return (0 is HEX representation of binary form, 1 is a string form)</dd></dl>
 <h3>const char* ldb_dn_get_linearized (struct ldb_dn *dn)</h3>
 <p> Get the linear form of a DN (without any extended components) </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dt>
-<dd> <i>dn</i> The DN to linearize</dl>
+</dt><dd> <i>dn</i> The DN to linearize</dd></dl>
 <h3>struct ldb_dn* ldb_dn_new (TALLOC_CTX *mem_ctx, struct <code>ldb_context</code> *ldb, const char *dn)</h3>
 <p> Allocate a new DN from a string. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dt>
-<dd> <i>mem_ctx</i> TALLOC context to return resulting ldb_dn structure on<br />
- <i>dn</i> The new DN</dl>
+</dt><dd> <i>mem_ctx</i> TALLOC context to return resulting ldb_dn structure on<br />
+ <i>dn</i> The new DN</dd></dl>
 <p> <code>Note:</code></p>
 <dl COMPACT>
 <dt>
-<dd> The DN will not be parsed at this time. Use ldb_dn_validate to tell if the DN is syntacticly correct</dl>
+</dt><dd> The DN will not be parsed at this time. Use ldb_dn_validate to tell if the DN is syntacticly correct</dd></dl>
 <h3>struct ldb_dn* ldb_dn_new_fmt (TALLOC_CTX *mem_ctx, struct <code>ldb_context</code> *ldb, const char *new_fmt, &#8230;)</h3>
 <p> Allocate a new DN from a printf style format string and arguments. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dt>
-<dd> <i>mem_ctx</i> TALLOC context to return resulting ldb_dn structure on<br />
- <i>new_fms</i> The new DN as a format string (plus arguments)</dl>
+</dt><dd> <i>mem_ctx</i> TALLOC context to return resulting ldb_dn structure on<br />
+ <i>new_fms</i> The new DN as a format string (plus arguments)</dd></dl>
 <p> <code>Note:</code></p>
 <dl COMPACT>
 <dt>
-<dd> The DN will not be parsed at this time. Use ldb_dn_validate to tell if the DN is syntacticly correct</dl>
+</dt><dd> The DN will not be parsed at this time. Use ldb_dn_validate to tell if the DN is syntacticly correct</dd></dl>
 <h3>bool ldb_dn_validate (struct ldb_dn *dn)</h3>
 <p> Determine if this DN is syntactically valid. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dt>
-<dd> <i>dn</i> The DN to validate</dl>
+</dt><dd> <i>dn</i> The DN to validate</dd></dl>
 <h3>const char* ldb_errstring (struct <code>ldb_context</code> *ldb)</h3>
 <p> return extended error information from the last call</p>
 <h3>int <code>ldb_extended</code> (struct <code>ldb_context</code> *ldb, const char *oid, void *data, struct <code>ldb_result</code> **res)</h3>
@@ -1012,29 +1012,29 @@ do {     if (numel &gt; 1) {         qsort(base, numel, sizeof((base)[0]), (int 
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dt>
-<dd> <i>ldb</i> the context associated with the database (from <code>ldb_init()</code>)<br />
+</dt><dd> <i>ldb</i> the context associated with the database (from <code>ldb_init()</code>)<br />
  <i>oid</i> the OID of the extended operation.<br />
  <i>data</i> a void pointer a the extended operation specific parameters, it needs to be NULL or a valid talloc pointer! talloc_get_type() will be used on it<br />
- <i>res</i> the result of the extended operation</dl>
+ <i>res</i> the result of the extended operation</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
 <dt>
-<dd> result code (LDB_SUCCESS if the extended operation returned fine, otherwise a failure code)</dl>
+</dt><dd> result code (LDB_SUCCESS if the extended operation returned fine, otherwise a failure code)</dd></dl>
 <h3>int ldb_extended_default_callback (struct <code>ldb_request</code> *req, struct <code>ldb_reply</code> *ares)</h3>
 <p> The default async extended operation callback function. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dt>
-<dd> <i>req</i> the request we are callback of<br />
- <i>ares</i> a single reply from the async core</dl>
+</dt><dd> <i>req</i> the request we are callback of<br />
+ <i>ares</i> a single reply from the async core</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
 <dt>
-<dd> result code (LDB_SUCCESS on success, or a failure code)</dl>
+</dt><dd> result code (LDB_SUCCESS on success, or a failure code)</dd></dl>
 <p> <code>Note:</code></p>
 <dl COMPACT>
 <dt>
-<dd> this function expects req-&gt;context to always be an struct <code>ldb_result</code> pointer AND a talloc context, this function will steal on the context each message from the ares reply passed on by the async core so that in the end all the messages will be in the context (<code>ldb_result</code>) memory tree. Freeing the passed context (<code>ldb_result</code> tree) will free all the resources (the request need to be freed separately and the result doe not depend on the request that can be freed as sson as the search request is finished)</dl>
+</dt><dd> this function expects req-&gt;context to always be an struct <code>ldb_result</code> pointer AND a talloc context, this function will steal on the context each message from the ares reply passed on by the async core so that in the end all the messages will be in the context (<code>ldb_result</code>) memory tree. Freeing the passed context (<code>ldb_result</code> tree) will free all the resources (the request need to be freed separately and the result doe not depend on the request that can be freed as sson as the search request is finished)</dd></dl>
 <h3>unsigned int ldb_get_flags (struct <code>ldb_context</code> *ldb)</h3>
 <p> return the ldb flags</p>
 <h3>int ldb_global_init (void)</h3>
@@ -1042,51 +1042,51 @@ do {     if (numel &gt; 1) {         qsort(base, numel, sizeof((base)[0]), (int 
 <p> <code>Returns:</code></p>
 <dl COMPACT>
 <dt>
-<dd> 0 if initialisation succeeded, -1 otherwise</dl>
+</dt><dd> 0 if initialisation succeeded, -1 otherwise</dd></dl>
 <h3>struct <code>ldb_context</code>* ldb_init (TALLOC_CTX *mem_ctx, struct tevent_context *ev_ctx)</h3>
 <p> Initialise an ldb context. This is required before any other LDB call. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dt>
-<dd> <i>mem_ctx</i> pointer to a talloc memory context. Pass NULL if there is no suitable context available.</dl>
+</dt><dd> <i>mem_ctx</i> pointer to a talloc memory context. Pass NULL if there is no suitable context available.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
 <dt>
-<dd> pointer to <code>ldb_context</code> that should be free&#8217;d (using talloc_free()) at the end of the program.</dl>
+</dt><dd> pointer to <code>ldb_context</code> that should be free&#8217;d (using talloc_free()) at the end of the program.</dd></dl>
 <p> <code>Examples: </code> <code>ldbreader.c</code>, and <code>ldifreader.c</code>.</p>
 <h3>int ldb_ldif_parse_modrdn (struct <code>ldb_context</code> *ldb, const struct <code>ldb_ldif</code> *ldif, TALLOC_CTX *mem_ctx, struct ldb_dn **olddn, struct ldb_dn **newrdn, bool *deleteoldrdn, struct ldb_dn **newsuperior, struct ldb_dn **newdn)</h3>
 <p> Parse a modrdn LDIF message from a struct <code>ldb_message</code>. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dt>
-<dd> <i>ldb</i> the ldb context (from <code>ldb_init()</code>)<br />
+</dt><dd> <i>ldb</i> the ldb context (from <code>ldb_init()</code>)<br />
  <i>ldif</i> the preparsed LDIF chunk (from <code>ldb_ldif_read()</code>)<br />
  <i>mem_ctx</i> the memory context that&#8217;s used for return values<br />
  <i>olddn</i> the old dn as struct ldb_dn, if not needed pass NULL<br />
  <i>newrdn</i> the new rdn as struct ldb_dn, if not needed pass NULL<br />
  <i>deleteoldrdn</i> the deleteoldrdn value as bool, if not needed pass NULL<br />
  <i>newsuperior</i> the newsuperior dn as struct ldb_dn, if not needed pass NULL newsuperior can be NULL as it is optional in the LDIF<br />
- <i>newdn</i> the full constructed new dn as struct ldb_dn, if not needed pass NULL</dl>
+ <i>newdn</i> the full constructed new dn as struct ldb_dn, if not needed pass NULL</dd></dl>
 <h3>struct <code>ldb_ldif</code>* ldb_ldif_read (struct <code>ldb_context</code> *ldb, int(*)(void *)fgetc_fn, void *private_data)</h3>
 <p> Read an LDIF message. This function creates an LDIF message using a caller supplied read function. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dt>
-<dd> <i>ldb</i> the ldb context (from <code>ldb_init()</code>)<br />
+</dt><dd> <i>ldb</i> the ldb context (from <code>ldb_init()</code>)<br />
  <i>fgetc_fn</i> a function pointer for the read function. This must take a private data pointer, and must return a pointer to an integer corresponding to the next byte read (or EOF if there is no more data to be read).<br />
- <i>private_data</i> pointer that will be provided back to the read function. This is udeful for maintaining state or context.</dl>
+ <i>private_data</i> pointer that will be provided back to the read function. This is udeful for maintaining state or context.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
 <dt>
-<dd> the LDIF message that has been read in</dl>
+</dt><dd> the LDIF message that has been read in</dd></dl>
 <p> <code>Note:</code></p>
 <dl COMPACT>
 <dt>
-<dd> You must free the LDIF message when no longer required, using <code>ldb_ldif_read_free()</code>.</dl>
+</dt><dd> You must free the LDIF message when no longer required, using <code>ldb_ldif_read_free()</code>.</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
 <dt>
-<dd> <code>ldb_ldif_read_file</code> for a more convenient way to read from a file stream. </p>
+</dt><dd> <code>ldb_ldif_read_file</code> for a more convenient way to read from a file stream. </dd>
 <p> <code>ldb_ldif_read_string</code> for a more convenient way to read from a string (char array). </p>
 <p> <code>ldb_ldif_write</code> for the writer equivalent to this function.</dl>
 <h3>struct <code>ldb_ldif</code>* ldb_ldif_read_file (struct <code>ldb_context</code> *ldb, FILE *f)</h3>
@@ -1094,12 +1094,12 @@ do {     if (numel &gt; 1) {         qsort(base, numel, sizeof((base)[0]), (int 
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dt>
-<dd> <i>ldb</i> the ldb context (from <code>ldb_init()</code>)<br />
- <i>f</i> the file stream to read from (typically from fdopen())</dl>
+</dt><dd> <i>ldb</i> the ldb context (from <code>ldb_init()</code>)<br />
+ <i>f</i> the file stream to read from (typically from fdopen())</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
 <dt>
-<dd> <code>ldb_ldif_read_string</code> for an equivalent function that will read from a string (char array). </p>
+</dt><dd> <code>ldb_ldif_read_string</code> for an equivalent function that will read from a string (char array). </dd>
 <p> <code>ldb_ldif_write_file</code> for the writer equivalent to this function.</dl>
 <p> <code>Examples: </code> <code>ldifreader.c</code>.</p>
 <h3>void ldb_ldif_read_free (struct <code>ldb_context</code> *ldb, struct <code>ldb_ldif</code> *msg)</h3>
@@ -1107,38 +1107,38 @@ do {     if (numel &gt; 1) {         qsort(base, numel, sizeof((base)[0]), (int 
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dt>
-<dd> <i>ldb</i> the ldb context (from <code>ldb_init()</code>)<br />
- <i>msg</i> the message to clean up and free</dl>
+</dt><dd> <i>ldb</i> the ldb context (from <code>ldb_init()</code>)<br />
+ <i>msg</i> the message to clean up and free</dd></dl>
 <p> <code>Examples: </code> <code>ldifreader.c</code>.</p>
 <h3>struct <code>ldb_ldif</code>* ldb_ldif_read_string (struct <code>ldb_context</code> *ldb, const char **s)</h3>
 <p> Read an LDIF message from a string. This function reads the next LDIF message from the contents of a char array. If you want to get all of the LDIF messages, you will need to repeatedly call this function, until it returns NULL. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dt>
-<dd> <i>ldb</i> the ldb context (from <code>ldb_init()</code>)<br />
- <i>s</i> pointer to the char array to read from</dl>
+</dt><dd> <i>ldb</i> the ldb context (from <code>ldb_init()</code>)<br />
+ <i>s</i> pointer to the char array to read from</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
 <dt>
-<dd> <code>ldb_ldif_read_file</code> for an equivalent function that will read from a file stream. </p>
+</dt><dd> <code>ldb_ldif_read_file</code> for an equivalent function that will read from a file stream. </dd>
 <p> <code>ldb_ldif_write</code> for a more general (arbitrary read function) version of this function.</dl>
 <h3>int ldb_ldif_write (struct <code>ldb_context</code> *ldb, int(*)(void *, const char *,&#8230;) PRINTF_ATTRIBUTE fprintf_fn(2, 3), void *private_data, const struct <code>ldb_ldif</code> *ldif)</h3>
 <p> Write an LDIF message. This function writes an LDIF message using a caller supplied write function. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dt>
-<dd> <i>ldb</i> the ldb context (from <code>ldb_init()</code>)<br />
+</dt><dd> <i>ldb</i> the ldb context (from <code>ldb_init()</code>)<br />
  <i>fprintf_fn</i> a function pointer for the write function. This must take a private data pointer, followed by a format string, and then a variable argument list.<br />
  <i>private_data</i> pointer that will be provided back to the write function. This is useful for maintaining state or context.<br />
- <i>ldif</i> the message to write out</dl>
+ <i>ldif</i> the message to write out</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
 <dt>
-<dd> the total number of bytes written, or an error code as returned from the write function.</dl>
+</dt><dd> the total number of bytes written, or an error code as returned from the write function.</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
 <dt>
-<dd> <code>ldb_ldif_write_file</code> for a more convenient way to write to a file stream. </p>
+</dt><dd> <code>ldb_ldif_write_file</code> for a more convenient way to write to a file stream. </dd>
 <p> <code>ldb_ldif_read</code> for the reader equivalent to this function.</dl>
 <p> <code>Examples: </code> <code>ldbreader.c</code>, and <code>ldifreader.c</code>.</p>
 <h3>int ldb_ldif_write_file (struct <code>ldb_context</code> *ldb, FILE *f, const struct <code>ldb_ldif</code> *msg)</h3>
@@ -1146,44 +1146,44 @@ do {     if (numel &gt; 1) {         qsort(base, numel, sizeof((base)[0]), (int 
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dt>
-<dd> <i>ldb</i> the ldb context (from <code>ldb_init()</code>)<br />
+</dt><dd> <i>ldb</i> the ldb context (from <code>ldb_init()</code>)<br />
  <i>f</i> the file stream to write to (typically from fdopen())<br />
- <i>msg</i> the message to write out</dl>
+ <i>msg</i> the message to write out</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
 <dt>
-<dd> the total number of bytes written, or a negative error code</dl>
+</dt><dd> the total number of bytes written, or a negative error code</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
 <dt>
-<dd> <code>ldb_ldif_read_file</code> for the reader equivalent to this function.</dl>
+</dt><dd> <code>ldb_ldif_read_file</code> for the reader equivalent to this function.</dd></dl>
 <h3>char* ldb_ldif_write_string (struct <code>ldb_context</code> *ldb, TALLOC_CTX *mem_ctx, const struct <code>ldb_ldif</code> *msg)</h3>
 <p> Write an LDIF message to a string. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dt>
-<dd> <i>ldb</i> the ldb context (from <code>ldb_init()</code>)<br />
+</dt><dd> <i>ldb</i> the ldb context (from <code>ldb_init()</code>)<br />
  <i>mem_ctx</i> the talloc context on which to attach the string)<br />
- <i>msg</i> the message to write out</dl>
+ <i>msg</i> the message to write out</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
 <dt>
-<dd> the string containing the LDIF, or NULL on error</dl>
+</dt><dd> the string containing the LDIF, or NULL on error</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
 <dt>
-<dd> <code>ldb_ldif_read_string</code> for the reader equivalent to this function.</dl>
+</dt><dd> <code>ldb_ldif_read_string</code> for the reader equivalent to this function.</dd></dl>
 <h3>int <code>ldb_modify</code> (struct <code>ldb_context</code> *ldb, const struct <code>ldb_message</code> *message)</h3>
 <p> Modify the specified attributes of a record. This function modifies a record that is in the database. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dt>
-<dd> <i>ldb</i> the context associated with the database (from <code>ldb_init()</code>)<br />
- <i>message</i> the message containing the changes required.</dl>
+</dt><dd> <i>ldb</i> the context associated with the database (from <code>ldb_init()</code>)<br />
+ <i>message</i> the message containing the changes required.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
 <dt>
-<dd> result code (LDB_SUCCESS if the record was modified as requested, otherwise a failure code)</dl>
+</dt><dd> result code (LDB_SUCCESS if the record was modified as requested, otherwise a failure code)</dd></dl>
 <h3>int ldb_msg_add (struct <code>ldb_message</code> *msg, const struct <code>ldb_message_element</code> *el, intflags)</h3>
 <p> add a element to a <code>ldb_message</code></p>
 <h3>int ldb_msg_add_empty (struct <code>ldb_message</code> *msg, const char *attr_name, intflags, struct <code>ldb_message_element</code> **return_el)</h3>
@@ -1193,27 +1193,27 @@ do {     if (numel &gt; 1) {         qsort(base, numel, sizeof((base)[0]), (int 
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dt>
-<dd> <i>msg</i> the message to check<br />
+</dt><dd> <i>msg</i> the message to check<br />
  <i>name</i> attribute name<br />
- <i>value</i> attribute value</dl>
+ <i>value</i> attribute value</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
 <dt>
-<dd> 1 on match and 0 otherwise.</dl>
+</dt><dd> 1 on match and 0 otherwise.</dd></dl>
 <h3>int ldb_msg_difference (struct <code>ldb_context</code> *ldb, TALLOC_CTX *mem_ctx, struct <code>ldb_message</code> *msg1, struct <code>ldb_message</code> *msg2, struct <code>ldb_message</code> **_msg_out)</h3>
 <p> return a <code>ldb_message</code> representing the differences between msg1 and msg2. If you then use this in a <code>ldb_modify()</code> call, it can be used to save edits to a message </p>
 <p> Result message is constructed as follows:</p>
 <dl COMPACT>
-<dt>&bull;</p>
-<dd> LDB_FLAG_MOD_ADD &#8211; elements found only in msg2</p>
-<dt>&bull;</p>
-<dd> LDB_FLAG_MOD_REPLACE &#8211; elements in msg2 that have different value in msg1 Value for msg2 element is used</p>
-<dt>&bull;</p>
-<dd> LDB_FLAG_MOD_DELETE &#8211; elements found only in msg2</dl>
+<dt>&bull;</dt>
+<dd> LDB_FLAG_MOD_ADD &#8211; elements found only in msg2</dd>
+<dt>&bull;</dt>
+<dd> LDB_FLAG_MOD_REPLACE &#8211; elements in msg2 that have different value in msg1 Value for msg2 element is used</dd>
+<dt>&bull;</dt>
+<dd> LDB_FLAG_MOD_DELETE &#8211; elements found only in msg2</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
 <dt>
-<dd> LDB_SUCCESS or LDB_ERR_OPERATIONS_ERROR</dl>
+</dt><dd> LDB_SUCCESS or LDB_ERR_OPERATIONS_ERROR</dd></dl>
 <h3>int int ldb_msg_element_compare (struct <code>ldb_message_element</code> *el1, struct <code>ldb_message_element</code> *el2)</h3>
 <p> compare two message elements &#8211; return 0 on match</p>
 <h3>struct <code>ldb_message_element</code>* ldb_msg_find_element (const struct <code>ldb_message</code> *msg, const char *attr_name)</h3>
@@ -1225,160 +1225,160 @@ do {     if (numel &gt; 1) {         qsort(base, numel, sizeof((base)[0]), (int 
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dt>
-<dd> <i>el</i> the element to search<br />
- <i>val</i> the value to search for</dl>
+</dt><dd> <i>el</i> the element to search<br />
+ <i>val</i> the value to search for</dd></dl>
 <p> <code>Note:</code></p>
 <dl COMPACT>
 <dt>
-<dd> This search is case sensitive</dl>
+</dt><dd> This search is case sensitive</dd></dl>
 <h3>struct <code>ldb_message</code>* ldb_msg_new (TALLOC_CTX *mem_ctx)</h3>
 <p> Create an empty message. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dt>
-<dd> <i>mem_ctx</i> the memory context to create in. You can pass NULL to get the top level context, however the ldb context (from <code>ldb_init()</code>) may be a better choice</dl>
+</dt><dd> <i>mem_ctx</i> the memory context to create in. You can pass NULL to get the top level context, however the ldb context (from <code>ldb_init()</code>) may be a better choice</dd></dl>
 <h3>int ldb_msg_sanity_check (struct <code>ldb_context</code> *ldb, const struct <code>ldb_message</code> *msg)</h3>
 <p> Integrity check an <code>ldb_message</code>. This function performs basic sanity / integrity checks on an <code>ldb_message</code>. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dt>
-<dd> <i>ldb</i> context in which to perform the checks<br />
- <i>msg</i> the message to check</dl>
+</dt><dd> <i>ldb</i> context in which to perform the checks<br />
+ <i>msg</i> the message to check</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
 <dt>
-<dd> LDB_SUCCESS if the message is OK, or a non-zero error code (one of LDB_ERR_INVALID_DN_SYNTAX, LDB_ERR_ENTRY_ALREADY_EXISTS or LDB_ERR_INVALID_ATTRIBUTE_SYNTAX) if there is a problem with a message.</dl>
+</dt><dd> LDB_SUCCESS if the message is OK, or a non-zero error code (one of LDB_ERR_INVALID_DN_SYNTAX, LDB_ERR_ENTRY_ALREADY_EXISTS or LDB_ERR_INVALID_ATTRIBUTE_SYNTAX) if there is a problem with a message.</dd></dl>
 <h3>int ldb_op_default_callback (struct <code>ldb_request</code> *req, struct <code>ldb_reply</code> *ares)</h3>
 <p> The default async extended operation callback function. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dt>
-<dd> <i>req</i> the request we are callback of<br />
- <i>ares</i> a single reply from the async core</dl>
+</dt><dd> <i>req</i> the request we are callback of<br />
+ <i>ares</i> a single reply from the async core</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
 <dt>
-<dd> result code (LDB_SUCCESS on success, or a failure code)</dl>
+</dt><dd> result code (LDB_SUCCESS on success, or a failure code)</dd></dl>
 <h3>struct <code>ldb_control</code>* ldb_parse_control_from_string (struct <code>ldb_context</code> *ldb, TALLOC_CTX *mem_ctx, const char *control_strings)</h3>
 <p> Convert a string representing a control into a <code>ldb_control</code> structure. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dt>
-<dd> <i>ldb</i> LDB context<br />
+</dt><dd> <i>ldb</i> LDB context<br />
  <i>mem_ctx</i> TALLOC context to return result on, and to allocate error_string on<br />
- <i>control_strings</i> A string-formatted control</dl>
+ <i>control_strings</i> A string-formatted control</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
 <dt>
-<dd> a <code>ldb_control</code> element</dl>
+</dt><dd> a <code>ldb_control</code> element</dd></dl>
 <h3>struct <code>ldb_control</code>** ldb_parse_control_strings (struct <code>ldb_context</code> *ldb, TALLOC_CTX *mem_ctx, const char **control_strings)</h3>
 <p> Convert an array of string represention of a control into an array of <code>ldb_control</code> structures. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dt>
-<dd> <i>ldb</i> LDB context<br />
+</dt><dd> <i>ldb</i> LDB context<br />
  <i>mem_ctx</i> TALLOC context to return result on, and to allocate error_string on<br />
- <i>control_strings</i> Array of string-formatted controls</dl>
+ <i>control_strings</i> Array of string-formatted controls</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
 <dt>
-<dd> array of <code>ldb_control</code> elements</dl>
+</dt><dd> array of <code>ldb_control</code> elements</dd></dl>
 <h3>int <code>ldb_rename</code> (struct <code>ldb_context</code> *ldb, struct ldb_dn *olddn, struct ldb_dn *newdn)</h3>
 <p> Rename a record in the database. This function renames a record in the database. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dt>
-<dd> <i>ldb</i> the context associated with the database (from <code>ldb_init()</code>)<br />
+</dt><dd> <i>ldb</i> the context associated with the database (from <code>ldb_init()</code>)<br />
  <i>olddn</i> the DN for the record to be renamed.<br />
- <i>newdn</i> the new DN</dl>
+ <i>newdn</i> the new DN</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
 <dt>
-<dd> result code (LDB_SUCCESS if the record was renamed as requested, otherwise a failure code)</dl>
+</dt><dd> result code (LDB_SUCCESS if the record was renamed as requested, otherwise a failure code)</dd></dl>
 <h3>struct <code>ldb_control</code>* ldb_reply_get_control (struct <code>ldb_reply</code> *rep, const char *oid)</h3>
 <p> check if a control with the specified &#8216;oid&#8217; exist and return it </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dt>
-<dd> <i>rep</i> the reply struct where to add the control<br />
- <i>oid</i> the object identifier of the control as string</dl>
+</dt><dd> <i>rep</i> the reply struct where to add the control<br />
+ <i>oid</i> the object identifier of the control as string</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
 <dt>
-<dd> the control, NULL if not found</dl>
+</dt><dd> the control, NULL if not found</dd></dl>
 <h3>int ldb_request_add_control (struct <code>ldb_request</code> *req, const char *oid, boolcritical, void *data)</h3>
 <p> Add a <code>ldb_control</code> to a <code>ldb_request</code>. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dt>
-<dd> <i>req</i> the request struct where to add the control<br />
+</dt><dd> <i>req</i> the request struct where to add the control<br />
  <i>oid</i> the object identifier of the control as string<br />
  <i>critical</i> whether the control should be critical or not<br />
- <i>data</i> a talloc pointer to the control specific data</dl>
+ <i>data</i> a talloc pointer to the control specific data</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
 <dt>
-<dd> result code (LDB_SUCCESS on success, or a failure code)</dl>
+</dt><dd> result code (LDB_SUCCESS on success, or a failure code)</dd></dl>
 <h3>struct <code>ldb_control</code>* ldb_request_get_control (struct <code>ldb_request</code> *req, const char *oid)</h3>
 <p> check if a control with the specified &#8216;oid&#8217; exist and return it </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dt>
-<dd> <i>req</i> the request struct where to add the control<br />
- <i>oid</i> the object identifier of the control as string</dl>
+</dt><dd> <i>req</i> the request struct where to add the control<br />
+ <i>oid</i> the object identifier of the control as string</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
 <dt>
-<dd> the control, NULL if not found</dl>
+</dt><dd> the control, NULL if not found</dd></dl>
 <h3>int ldb_request_replace_control (struct <code>ldb_request</code> *req, const char *oid, boolcritical, void *data)</h3>
 <p> replace a <code>ldb_control</code> in a <code>ldb_request</code> </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dt>
-<dd> <i>req</i> the request struct where to add the control<br />
+</dt><dd> <i>req</i> the request struct where to add the control<br />
  <i>oid</i> the object identifier of the control as string<br />
  <i>critical</i> whether the control should be critical or not<br />
- <i>data</i> a talloc pointer to the control specific data</dl>
+ <i>data</i> a talloc pointer to the control specific data</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
 <dt>
-<dd> result code (LDB_SUCCESS on success, or a failure code)</dl>
+</dt><dd> result code (LDB_SUCCESS on success, or a failure code)</dd></dl>
 <h3>int <code>ldb_search</code> (struct <code>ldb_context</code> *ldb, TALLOC_CTX *mem_ctx, struct <code>ldb_result</code> **result, struct ldb_dn *base, enum ldb_scopescope, const char *const *attrs, const char *exp_fmt, &#8230;)</h3>
 <p> Search the database. This function searches the database, and returns records that match an LDAP-like search expression </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dt>
-<dd> <i>ldb</i> the context associated with the database (from <code>ldb_init()</code>)<br />
+</dt><dd> <i>ldb</i> the context associated with the database (from <code>ldb_init()</code>)<br />
  <i>mem_ctx</i> the memory context to use for the request and the results<br />
  <i>result</i> the return result<br />
  <i>base</i> the Base Distinguished Name for the query (use <code>ldb_dn_new()</code> for an empty one)<br />
  <i>scope</i> the search scope for the query<br />
  <i>attrs</i> the search attributes for the query (pass NULL if none required)<br />
- <i>exp_fmt</i> the search expression to use for this query (printf like)</dl>
+ <i>exp_fmt</i> the search expression to use for this query (printf like)</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
 <dt>
-<dd> result code (LDB_SUCCESS on success, or a failure code)</dl>
+</dt><dd> result code (LDB_SUCCESS on success, or a failure code)</dd></dl>
 <p> <code>Note:</code></p>
 <dl COMPACT>
 <dt>
-<dd> use talloc_free() to free the <code>ldb_result</code> returned</dl>
+</dt><dd> use talloc_free() to free the <code>ldb_result</code> returned</dd></dl>
 <p> <code>Examples: </code> <code>ldbreader.c</code>.</p>
 <h3>int ldb_search_default_callback (struct <code>ldb_request</code> *req, struct <code>ldb_reply</code> *ares)</h3>
 <p> The default async search callback function. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dt>
-<dd> <i>req</i> the request we are callback of<br />
- <i>ares</i> a single reply from the async core</dl>
+</dt><dd> <i>req</i> the request we are callback of<br />
+ <i>ares</i> a single reply from the async core</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
 <dt>
-<dd> result code (LDB_SUCCESS on success, or a failure code)</dl>
+</dt><dd> result code (LDB_SUCCESS on success, or a failure code)</dd></dl>
 <p> <code>Note:</code></p>
 <dl COMPACT>
 <dt>
-<dd> this function expects req-&gt;context to always be an struct <code>ldb_result</code> pointer AND a talloc context, this function will steal on the context each message from the ares reply passed on by the async core so that in the end all the messages will be in the context (<code>ldb_result</code>) memory tree. Freeing the passed context (<code>ldb_result</code> tree) will free all the resources (the request need to be freed separately and the result doe not depend on the request that can be freed as sson as the search request is finished)</dl>
+</dt><dd> this function expects req-&gt;context to always be an struct <code>ldb_result</code> pointer AND a talloc context, this function will steal on the context each message from the ares reply passed on by the async core so that in the end all the messages will be in the context (<code>ldb_result</code>) memory tree. Freeing the passed context (<code>ldb_result</code> tree) will free all the resources (the request need to be freed separately and the result doe not depend on the request that can be freed as sson as the search request is finished)</dd></dl>
 <h3>int ldb_sequence_number (struct <code>ldb_context</code> *ldb, enum ldb_sequence_typetype, uint64_t *seq_num)</h3>
 <p> Obtain current/next database sequence number.</p>
 <h3>int ldb_set_debug (struct <code>ldb_context</code> *ldb, void(*)(void *context, enum ldb_debug_level level, const char *fmt, va_list ap) PRINTF_ATTRIBUTE debug(3, 0), void *context)</h3>
@@ -1396,43 +1396,43 @@ do {     if (numel &gt; 1) {         qsort(base, numel, sizeof((base)[0]), (int 
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dt>
-<dd> <i>s</i> the string to convert</dl>
+</dt><dd> <i>s</i> the string to convert</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
 <dt>
-<dd> the time structure, or 0 if the string cannot be converted</dl>
+</dt><dd> the time structure, or 0 if the string cannot be converted</dd></dl>
 <h3>time_t ldb_string_utc_to_time (const char *s)</h3>
 <p> Convert a string to a time structure. This function converts an LDAP formatted UTCTime string to a time_t structure. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dt>
-<dd> <i>s</i> the string to convert</dl>
+</dt><dd> <i>s</i> the string to convert</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
 <dt>
-<dd> the time structure, or 0 if the string cannot be converted</dl>
+</dt><dd> the time structure, or 0 if the string cannot be converted</dd></dl>
 <h3>char* ldb_timestring (TALLOC_CTX *mem_ctx, time_tt)</h3>
 <p> Convert a time structure to a string. This function converts a time_t structure to an LDAP formatted GeneralizedTime string. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dt>
-<dd> <i>mem_ctx</i> the memory context to allocate the return string in<br />
- <i>t</i> the time structure to convert</dl>
+</dt><dd> <i>mem_ctx</i> the memory context to allocate the return string in<br />
+ <i>t</i> the time structure to convert</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
 <dt>
-<dd> the formatted string, or NULL if the time structure could not be converted</dl>
+</dt><dd> the formatted string, or NULL if the time structure could not be converted</dd></dl>
 <h3>char* ldb_timestring_utc (TALLOC_CTX *mem_ctx, time_tt)</h3>
 <p> Convert a time structure to a string. This function converts a time_t structure to an LDAP formatted UTCTime string. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dt>
-<dd> <i>mem_ctx</i> the memory context to allocate the return string in<br />
- <i>t</i> the time structure to convert</dl>
+</dt><dd> <i>mem_ctx</i> the memory context to allocate the return string in<br />
+ <i>t</i> the time structure to convert</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
 <dt>
-<dd> the formatted string, or NULL if the time structure could not be converted</dl>
+</dt><dd> the formatted string, or NULL if the time structure could not be converted</dd></dl>
 <h3>int ldb_transaction_cancel (struct <code>ldb_context</code> *ldb)</h3>
 <p> cancel a transaction</p>
 <h3>int ldb_transaction_commit (struct <code>ldb_context</code> *ldb)</h3>
@@ -1446,23 +1446,23 @@ do {     if (numel &gt; 1) {         qsort(base, numel, sizeof((base)[0]), (int 
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dt>
-<dd> <i>mem_ctx</i> the memory context that the duplicated value will be allocated from<br />
- <i>v</i> the <code>ldb_val</code> to be duplicated.</dl>
+</dt><dd> <i>mem_ctx</i> the memory context that the duplicated value will be allocated from<br />
+ <i>v</i> the <code>ldb_val</code> to be duplicated.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
 <dt>
-<dd> the duplicated <code>ldb_val</code> structure.</dl>
+</dt><dd> the duplicated <code>ldb_val</code> structure.</dd></dl>
 <h3>int ldb_val_equal_exact (const struct <code>ldb_val</code> *v1, const struct <code>ldb_val</code> *v2)</h3>
 <p> Compare two <code>ldb_val</code> values. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dt>
-<dd> <i>v1</i> first <code>ldb_val</code> structure to be tested<br />
- <i>v2</i> second <code>ldb_val</code> structure to be tested</dl>
+</dt><dd> <i>v1</i> first <code>ldb_val</code> structure to be tested<br />
+ <i>v2</i> second <code>ldb_val</code> structure to be tested</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
 <dt>
-<dd> 1 for a match, 0 if there is any difference</dl>
+</dt><dd> 1 for a match, 0 if there is any difference</dd></dl>
 <h3>int ldb_val_to_time (const struct <code>ldb_val</code> *v, time_t *t)</h3>
 <p> convert a LDAP GeneralizedTime string in <code>ldb_val</code> format to a time_t.</p>
 <h3>int ldb_valid_attr_name (const char *s)</h3>
@@ -1470,10 +1470,10 @@ do {     if (numel &gt; 1) {         qsort(base, numel, sizeof((base)[0]), (int 
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dt>
-<dd> <i>s</i> the string to check</dl>
+</dt><dd> <i>s</i> the string to check</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
 <dt>
-<dd> 1 if the name is ok</dl>
+</dt><dd> 1 if the name is ok</dd></dl>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for LDB from the source code.</p>

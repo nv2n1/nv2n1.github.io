@@ -17,13 +17,11 @@ description: "javap – The Java Class File Disassembler"
 <h2>DESCRIPTION</h2>
 <p> The <code>javap</code> command disassembles one or more class files. Its output depends on the options used. If no options are used, <code>javap</code> prints out the package, protected, and public fields and methods of the classes passed to it. <code>javap</code> prints its output to stdout. </p>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>options</p>
-<dd> Command-line options.</p>
-<dt>classes</p>
-<dd> List of one or more classes (separated by spaces) to be processed for annotations (such as <i>DocFooter.class</i>). You may specify a class that can be found in the class path, by its file name (for example, <i>/home/user/myproject/src/DocFooter.class</i>), or with a URL (for example, <i>file:///home/user/myproject/src/DocFooter.class</i>).</dl>
+<dt>options</dt>
+<dd> Command-line options.</dd>
+<dt>classes</dt>
+<dd> List of one or more classes (separated by spaces) to be processed for annotations (such as <i>DocFooter.class</i>). You may specify a class that can be found in the class path, by its file name (for example, <i>/home/user/myproject/src/DocFooter.class</i>), or with a URL (for example, <i>file:///home/user/myproject/src/DocFooter.class</i>).</dd></dl>
 </dl>
 <p> For example, compile the following class declaration: </p>
 <pre><code>
@@ -98,45 +96,43 @@ Code:
 </code></pre>
 <h2>OPTIONS</h2>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>-help &#8211;help -?</p>
-<dd> Prints out help message for <code>javap</code>.</p>
-<dt>-version</p>
-<dd> Prints out version information.</p>
-<dt>-l</p>
-<dd> Prints out line and local variable tables.</p>
-<dt>-public</p>
-<dd> Shows only public classes and members.</p>
-<dt>-protected</p>
-<dd> Shows only protected and public classes and members.</p>
-<dt>-package</p>
-<dd> Shows only package, protected, and public classes and members. This is the default.</p>
-<dt>-private -p</p>
-<dd> Shows all classes and members.</p>
-<dt>-Jflag</p>
-<dd> Pass <i>flag</i> directly to the runtime system. Some examples: </p>
+<dt>-help &#8211;help -?</dt>
+<dd> Prints out help message for <code>javap</code>.</dd>
+<dt>-version</dt>
+<dd> Prints out version information.</dd>
+<dt>-l</dt>
+<dd> Prints out line and local variable tables.</dd>
+<dt>-public</dt>
+<dd> Shows only public classes and members.</dd>
+<dt>-protected</dt>
+<dd> Shows only protected and public classes and members.</dd>
+<dt>-package</dt>
+<dd> Shows only package, protected, and public classes and members. This is the default.</dd>
+<dt>-private -p</dt>
+<dd> Shows all classes and members.</dd>
+<dt>-Jflag</dt>
+<dd> Pass <i>flag</i> directly to the runtime system. Some examples: </dd>
 <pre>
 <code>javap -J-version
 javap -J-Djava.security.manager -J-Djava.security.policy=MyPolicy MyClassName</code>
 </pre>
-<dt>-s</p>
-<dd> Prints internal type signatures.</p>
-<dt>-sysinfo</p>
-<dd> Shows system information (path, size, date, MD5 hash) of the class being processed.</p>
-<dt>-constants</p>
-<dd> Shows static final constants.</p>
-<dt>-c</p>
-<dd> Prints out disassembled code, i.e., the instructions that comprise the Java bytecodes, for each of the methods in the class. These are documented in the <i>Java Virtual Machine Specification</i> @ <a rel="nofollow" href="http://java.sun.com/docs/books/vmspec/.">http://java.sun.com/docs/books/vmspec/.</a></p>
-<dt>-verbose</p>
-<dd> Prints stack size, number of <i>locals</i> and <i>args</i> for methods.</p>
-<dt>-classpath path</p>
-<dd> Specifies the path <code>javap</code> uses to look up classes. Overrides the default or the CLASSPATH environment variable if it is set.</p>
-<dt>-bootclasspath path</p>
-<dd> Specifies path from which to load bootstrap classes. By default, the bootstrap classes are the classes implementing the core Java platform located in <i>jre/lib/rt.jar</i> and several other jar files.</p>
-<dt>-extdirs dirs</p>
-<dd> Overrides location at which installed extensions are searched for. The default location for extensions is the value of <i>java.ext.dirs</i>.</dl>
+<dt>-s</dt>
+<dd> Prints internal type signatures.</dd>
+<dt>-sysinfo</dt>
+<dd> Shows system information (path, size, date, MD5 hash) of the class being processed.</dd>
+<dt>-constants</dt>
+<dd> Shows static final constants.</dd>
+<dt>-c</dt>
+<dd> Prints out disassembled code, i.e., the instructions that comprise the Java bytecodes, for each of the methods in the class. These are documented in the <i>Java Virtual Machine Specification</i> @ <a rel="nofollow" href="http://java.sun.com/docs/books/vmspec/.">http://java.sun.com/docs/books/vmspec/.</a></dd>
+<dt>-verbose</dt>
+<dd> Prints stack size, number of <i>locals</i> and <i>args</i> for methods.</dd>
+<dt>-classpath path</dt>
+<dd> Specifies the path <code>javap</code> uses to look up classes. Overrides the default or the CLASSPATH environment variable if it is set.</dd>
+<dt>-bootclasspath path</dt>
+<dd> Specifies path from which to load bootstrap classes. By default, the bootstrap classes are the classes implementing the core Java platform located in <i>jre/lib/rt.jar</i> and several other jar files.</dd>
+<dt>-extdirs dirs</dt>
+<dd> Overrides location at which installed extensions are searched for. The default location for extensions is the value of <i>java.ext.dirs</i>.</dd></dl>
 </dl>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/1-javac/">javac</a>(1), <a href="/docs/linux/man/1-java/">java</a>(1), <a href="/docs/linux/man/1-jdb/">jdb</a>(1), javah(1), <a href="/docs/linux/man/1-javadoc/">javadoc</a>(1) </p>

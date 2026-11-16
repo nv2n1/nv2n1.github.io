@@ -36,7 +36,7 @@ description: "X Window Parent Functions – Functions that retrieve or changes t
 <dl COMPACT>
 <dd><i>window</i> Unused.<br />
  <i>x</i> The X coordinate of the pointer.<br />
- <i>y</i> The Y coordinate of the pointer.</dl>
+ <i>y</i> The Y coordinate of the pointer.</dd></dl>
 <p> Retrieves the coordinates of the pointer. If the window used in ecore_x_query_pointer_prefetch() is not on the same screen than the root window or if an error occured, x and y are set to 0. Otherwise, they are respectively set to the X and Y coordinates of the pointer. </p>
 <p> To use this function, you must call before, and in order, ecore_x_query_pointer_prefetch(), which sends the QueryPointer request, then ecore_x_query_pointer_fetch(), which gets the reply.</p>
 <h3>EAPI Ecore_X_Window* ecore_x_window_children_get (Ecore_X_Window window __UNUSED__, int * num)</h3>
@@ -44,28 +44,28 @@ description: "X Window Parent Functions – Functions that retrieve or changes t
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>window</i> Unused.<br />
- <i>num</i> children windows count.</dl>
+ <i>num</i> children windows count.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>The children windows.</dl>
+<dd>The children windows.</dd></dl>
 <p> Retrieves the children windows of the given window. If an error occured, 0 is returned. </p>
 <p> To use this function, you must call before, and in order, <code>ecore_x_query_tree_prefetch()</code>, which sends the QueryTree request, then <code>ecore_x_query_tree_fetch()</code>, which gets the reply.</p>
 <h3>EAPI Ecore_X_Window ecore_x_window_parent_get (Ecore_X_Window win)</h3>
 <p>Retrieves the parent window of the given window. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>win</i> The given window.</dl>
+<dd><i>win</i> The given window.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>The parent window of win.</dl>
+<dd>The parent window of win.</dd></dl>
 <h3>EAPI Ecore_X_Window ecore_x_window_parent_get (Ecore_X_Window window __UNUSED__)</h3>
 <p>Retrieves the parent window of the given window. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>window</i> Unused.</dl>
+<dd><i>window</i> Unused.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>The parent window of window.</dl>
+<dd>The parent window of window.</dd></dl>
 <p> Retrieves the parent window of the given window. If an error occured, 0 is returned. </p>
 <p> To use this function, you must call before, and in order, <code>ecore_x_query_tree_prefetch()</code>, which sends the QueryTree request, then <code>ecore_x_query_tree_fetch()</code>, which gets the reply.</p>
 <h3>EAPI void ecore_x_window_reparent (Ecore_X_Window win, Ecore_X_Window new_parent, int x, int y)</h3>
@@ -75,6 +75,6 @@ description: "X Window Parent Functions – Functions that retrieve or changes t
 <dd><i>win</i> The window to reparent.<br />
  <i>new_parent</i> The new parent window.<br />
  <i>x</i> X position within new parent window.<br />
- <i>y</i> Y position within new parent window.</dl>
+ <i>y</i> Y position within new parent window.</dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for Ecore from the source code.</p>

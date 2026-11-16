@@ -23,19 +23,17 @@ url: "/docs/linux/man/1-python-nitrate/"
  Among the most essential python-nitrate features are:
 <dl>
 <dt>&bull;
-<dd> Natural and concise Python interface
-<dt>&bull;
-<dd> Custom level of caching &amp; logging
-<dt>&bull;
-<dd> Automated status coloring
-<dt>&bull;
-<dd> Integrated test suite
-<dt>&bull;
-<dd> Utility functions 
-
+</dt><dd> Natural and concise Python interface
+</dd><dt>&bull;
+</dt><dd> Custom level of caching &amp; logging
+</dd><dt>&bull;
+</dt><dd> Automated status coloring
+</dd><dt>&bull;
+</dt><dd> Integrated test suite
+</dd><dt>&bull;
+</dt><dd> Utility functions 
  The main motivation was to hide unnecessary implementation details wherever possible so that using the API is as concise as possible. 
-
- Scripts importing python-nitrate can make use of several useful helper functions including info() for logging to stderr, listed() which converts list into nice human readable form, color() for coloring and of course log.{debug,info,warn,error} for logging.</dl>
+ Scripts importing python-nitrate can make use of several useful helper functions including info() for logging to stderr, listed() which converts list into nice human readable form, color() for coloring and of course log.{debug,info,warn,error} for logging.</dd></dl>
 
 <h2>EXAMPLES</h2>
 

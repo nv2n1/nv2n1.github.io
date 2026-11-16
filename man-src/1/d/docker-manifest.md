@@ -16,11 +16,11 @@ description: "docker-manifest – Manage Docker image manifests and manifest lis
 <p> To see help for a subcommand, use: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 docker manifest CMD --help
 </pre>
-</dl>
+</dd></dl>
 <p> For full details on using docker manifest lists, see the registry v2 specification. </p>
 <h2>OPTIONS</h2>
 <p> <code>-h</code>, <code>&#8211;help</code>[=false] <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>help for manifest</p>

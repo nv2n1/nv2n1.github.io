@@ -14,11 +14,11 @@ mongoc_gridfs_file_set_content_type (mongoc_gridfs_file_t *file,
  const char *content_type);</pre>
 <h2>Parameters</h2>
 <dl COMPACT>
-<dt><code>file</code></p>
-<dd>A <code>mongoc_gridfs_file_t</code> \&amp;.</dl>
+<dt><code>file</code></dt>
+<dd>A <code>mongoc_gridfs_file_t</code> \&amp;.</dd></dl>
 <dl COMPACT>
-<dt><code>str</code></p>
-<dd>A string containing the content type.</dl>
+<dt><code>str</code></dt>
+<dd>A string containing the content type.</dd></dl>
 <h2>Description</h2>
 <p>Sets the content type for the gridfs file. This should be something like <code>text/plain</code> \&amp;. </p>
 <p> You need to call <code><a href="/docs/linux/man/3-mongoc_gridfs_file_save/">mongoc_gridfs_file_save</a>(3)</code> to persist this change. </p>

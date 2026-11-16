@@ -19,10 +19,10 @@ description: "ipa-nis-manage – Enables or disables the NIS listener plugin"
 <p> Directory Server will need to be restarted after the NIS listener plugin has been enabled. </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-d</code>, <code>&#8211;debug</code></p>
-<dd> Enable debug logging when more verbose output is needed</p>
-<dt><code>-y</code> <i>file</i></p>
-<dd> File containing the Directory Manager password</dl>
+<dt><code>-d</code>, <code>&#8211;debug</code></dt>
+<dd> Enable debug logging when more verbose output is needed</dd>
+<dt><code>-y</code> <i>file</i></dt>
+<dd> File containing the Directory Manager password</dd></dl>
 <h2>EXIT STATUS</h2>
 <p> 0 if the command was successful </p>
 <p> 1 if an error occurred </p>

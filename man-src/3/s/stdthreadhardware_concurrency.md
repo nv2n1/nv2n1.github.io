@@ -25,7 +25,6 @@ Number of concurrent threads supported. If the value is not well defined or not 
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;iostream&gt;
-
 #include &lt;thread&gt;
 int main()
 {

@@ -22,53 +22,53 @@ dbrvstatdiff[-f format][-c ConfRating] m1c n1c m2c n2c
 <p> Produce statistics on the difference of sets of random variables. If a hypothesized difference is given (with <tt>&quot;-h&quot;</tt>), to does a Student&#8217;s t-test. </p>
 <p> Random variables are specified by:</p>
 <dl>
-<dt>&quot;m1c&quot;, &quot;m2c&quot;</p>
-<dd> The column names of means of random variables.</p>
-<dt>&quot;sd1c&quot;, &quot;sd2c&quot;</p>
-<dd> The column names of standard deviations of random variables.</p>
-<dt>&quot;n1c&quot;, &quot;n2c&quot;</p>
-<dd> Counts of number of samples for each random variable</dl>
+<dt>&quot;m1c&quot;, &quot;m2c&quot;</dt>
+<dd> The column names of means of random variables.</dd>
+<dt>&quot;sd1c&quot;, &quot;sd2c&quot;</dt>
+<dd> The column names of standard deviations of random variables.</dd>
+<dt>&quot;n1c&quot;, &quot;n2c&quot;</dt>
+<dd> Counts of number of samples for each random variable</dd></dl>
 <p> These values can be computed with dbcolstats. </p>
 <p> Creates up to ten new columns:</p>
 <dl>
-<dt>&quot;diff&quot;</p>
-<dd> The difference of <font SIZE="-1">RV 2 &#8211; RV 1.</font></p>
-<dt>&quot;diff_pct&quot;</p>
-<dd> The percentage difference (<font SIZE="-1">RV2-RV1</font>)/1</p>
-<dt>&quot;diff_conf_{half,low,high}&quot; and &quot;diff_conf_pct_{half,low,high}&quot;</p>
-<dd> The half half confidence intervals and low and high values for absolute and relative confidence.</p>
-<dt>&quot;t_test&quot;</p>
-<dd> The T-test value for the given hypothesized difference.</p>
-<dt>&quot;t_test_result&quot;</p>
-<dd> Given the confidence rating, does the test pass? Will be either &#8220;rejected&#8221; or &#8220;not-rejected&#8221;.</p>
-<dt>&quot;t_test_break&quot;</p>
-<dd> The hypothesized value that is break-even point for the T-test.</p>
-<dt>&quot;t_test_break_pct&quot;</p>
-<dd> Break-even point as a percent of m1c.</dl>
+<dt>&quot;diff&quot;</dt>
+<dd> The difference of <font SIZE="-1">RV 2 &#8211; RV 1.</font></dd>
+<dt>&quot;diff_pct&quot;</dt>
+<dd> The percentage difference (<font SIZE="-1">RV2-RV1</font>)/1</dd>
+<dt>&quot;diff_conf_{half,low,high}&quot; and &quot;diff_conf_pct_{half,low,high}&quot;</dt>
+<dd> The half half confidence intervals and low and high values for absolute and relative confidence.</dd>
+<dt>&quot;t_test&quot;</dt>
+<dd> The T-test value for the given hypothesized difference.</dd>
+<dt>&quot;t_test_result&quot;</dt>
+<dd> Given the confidence rating, does the test pass? Will be either &#8220;rejected&#8221; or &#8220;not-rejected&#8221;.</dd>
+<dt>&quot;t_test_break&quot;</dt>
+<dd> The hypothesized value that is break-even point for the T-test.</dd>
+<dt>&quot;t_test_break_pct&quot;</dt>
+<dd> Break-even point as a percent of m1c.</dd></dl>
 <p> Confidence intervals are not printed if standard deviations are not provided. Confidence intervals assume normal distributions with common variances. </p>
 <p> T-tests are only computed if a hypothesized difference is provided. Hypothesized differences should be proceeded by &lt;=, &gt;=, =. T-tests assume normal distributions with common variances.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-c </code><font SIZE="-1"><code>FRACTION</code></font> or <code>&#8211;confidence </code><font SIZE="-1"><code>FRACTION</code></font></p>
-<dd> Specify <font SIZE="-1">FRACTION</font> for the confidence interval. Defaults to 0.95 for a 95% confidence factor (alpha = 0.05).</p>
-<dt><code>-f </code><font SIZE="-1"><code>FORMAT</code></font> or <code>&#8211;format </code><font SIZE="-1"><code>FORMAT</code></font></p>
-<dd> Specify a <i><a href="/docs/linux/man/3-printf/">printf</a></i>(3)-style format for output statistics. Defaults to <tt>&quot;%.5g&quot;</tt>.</p>
-<dt><code>-h </code><font SIZE="-1"><code>DIFF</code></font> or <code>&#8211;hypothesis </code><font SIZE="-1"><code>DIFF</code></font></p>
-<dd> Specify the hypothesized difference as <tt>&quot;DIFF&quot;</tt>, where <tt>&quot;DIFF&quot;</tt> is something like <tt>&quot;&lt;=0&quot;</tt> or <tt>&quot;&gt;=0&quot;</tt>, etc.</dl>
+<dt><code>-c </code><font SIZE="-1"><code>FRACTION</code></font> or <code>&#8211;confidence </code><font SIZE="-1"><code>FRACTION</code></font></dt>
+<dd> Specify <font SIZE="-1">FRACTION</font> for the confidence interval. Defaults to 0.95 for a 95% confidence factor (alpha = 0.05).</dd>
+<dt><code>-f </code><font SIZE="-1"><code>FORMAT</code></font> or <code>&#8211;format </code><font SIZE="-1"><code>FORMAT</code></font></dt>
+<dd> Specify a <i><a href="/docs/linux/man/3-printf/">printf</a></i>(3)-style format for output statistics. Defaults to <tt>&quot;%.5g&quot;</tt>.</dd>
+<dt><code>-h </code><font SIZE="-1"><code>DIFF</code></font> or <code>&#8211;hypothesis </code><font SIZE="-1"><code>DIFF</code></font></dt>
+<dd> Specify the hypothesized difference as <tt>&quot;DIFF&quot;</tt>, where <tt>&quot;DIFF&quot;</tt> is something like <tt>&quot;&lt;=0&quot;</tt> or <tt>&quot;&gt;=0&quot;</tt>, etc.</dd></dl>
 <p> This module also supports the standard fsdb options:</p>
 <dl>
-<dt><code>-d</code></p>
-<dd> Enable debugging output.</p>
-<dt><code>-i</code> or <code>&#8211;input</code> InputSource</p>
-<dd> Read from InputSource, typically a file name, or <tt>&quot;-&quot;</tt> for standard input, or (if in Perl) a IO::Handle, Fsdb::IO or Fsdb::BoundedQueue objects.</p>
-<dt><code>-o</code> or <code>&#8211;output</code> OutputDestination</p>
-<dd> Write to OutputDestination, typically a file name, or <tt>&quot;-&quot;</tt> for standard output, or (if in Perl) a IO::Handle, Fsdb::IO or Fsdb::BoundedQueue objects.</p>
-<dt><code>&#8211;autorun</code> or <code>&#8211;noautorun</code></p>
-<dd> By default, programs process automatically, but Fsdb::Filter objects in Perl do not run until you invoke the <i>run()</i> method. The <tt>&quot;--(no)autorun&quot;</tt> option controls that behavior within Perl.</p>
-<dt><code>&#8211;help</code></p>
-<dd> Show help.</p>
-<dt><code>&#8211;man</code></p>
-<dd> Show full manual.</dl>
+<dt><code>-d</code></dt>
+<dd> Enable debugging output.</dd>
+<dt><code>-i</code> or <code>&#8211;input</code> InputSource</dt>
+<dd> Read from InputSource, typically a file name, or <tt>&quot;-&quot;</tt> for standard input, or (if in Perl) a IO::Handle, Fsdb::IO or Fsdb::BoundedQueue objects.</dd>
+<dt><code>-o</code> or <code>&#8211;output</code> OutputDestination</dt>
+<dd> Write to OutputDestination, typically a file name, or <tt>&quot;-&quot;</tt> for standard output, or (if in Perl) a IO::Handle, Fsdb::IO or Fsdb::BoundedQueue objects.</dd>
+<dt><code>&#8211;autorun</code> or <code>&#8211;noautorun</code></dt>
+<dd> By default, programs process automatically, but Fsdb::Filter objects in Perl do not run until you invoke the <i>run()</i> method. The <tt>&quot;--(no)autorun&quot;</tt> option controls that behavior within Perl.</dd>
+<dt><code>&#8211;help</code></dt>
+<dd> Show help.</dd>
+<dt><code>&#8211;man</code></dt>
+<dd> Show full manual.</dd></dl>
 <h2>SAMPLE USAGE</h2>
 <h3>Input:</h3>
 <pre>
@@ -157,7 +157,6 @@ dbrvstatdiff[-f format][-c ConfRating] m1c n1c m2c n2c
         t_test_result: rejected
         t_test_break: -1.082
         t_test_break_pct: -54.648
-        
         #  | dbmultistats -k case value
         #   | dbcolcopylast mean stddev n
         #   | dbrow _case eq &quot;b&quot;

@@ -15,23 +15,23 @@ description: "ideviceprovision – Manage provisioning profiles on a device."
 <p> Manage provisioning profiles on a device. </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-u, &#8211;udid UDID</code></p>
-<dd> target specific device by its 40-digit device UDID.</p>
-<dt><code>-d, &#8211;debug</code></p>
-<dd> enable communication debugging.</p>
-<dt><code>-h, &#8211;help</code></p>
-<dd> prints usage information. </p>
+<dt><code>-u, &#8211;udid UDID</code></dt>
+<dd> target specific device by its 40-digit device UDID.</dd>
+<dt><code>-d, &#8211;debug</code></dt>
+<dd> enable communication debugging.</dd>
+<dt><code>-h, &#8211;help</code></dt>
+<dd> prints usage information. </dd>
 </dl>
 <h2>COMMANDS</h2>
 <dl>
-<dt><code>install FILE</code></p>
-<dd> Install the provisioning profile specified by FILE. A valid &quot;.mobileprovision&quot; file is expected.</p>
-<dt><code>list</code></p>
-<dd> Get a list of all provisioning profiles on the device.</p>
-<dt><code>copy PATH</code></p>
-<dd> Retrieves all provisioning profiles from the device and stores them into the existing directory specified by PATH. The files will be stored as &quot;UUID.mobileprovision&quot;.</p>
-<dt><code>remove UUID</code></p>
-<dd> Removes the provisioning profile identified by UUID. </p>
+<dt><code>install FILE</code></dt>
+<dd> Install the provisioning profile specified by FILE. A valid &quot;.mobileprovision&quot; file is expected.</dd>
+<dt><code>list</code></dt>
+<dd> Get a list of all provisioning profiles on the device.</dd>
+<dt><code>copy PATH</code></dt>
+<dd> Retrieves all provisioning profiles from the device and stores them into the existing directory specified by PATH. The files will be stored as &quot;UUID.mobileprovision&quot;.</dd>
+<dt><code>remove UUID</code></dt>
+<dd> Removes the provisioning profile identified by UUID. </dd>
 </dl>
 <h2>AUTHORS</h2>
 <p> Nikias Bassen </p>

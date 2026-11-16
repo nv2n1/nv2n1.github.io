@@ -42,10 +42,10 @@ description: "zlags2.f –"
  then the transformed (2,2) element of B is not zero, except when the
  first rows of input A and B are parallel and the second rows are
  zero.</pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>UPPER</i> </p>
+<dd><i>UPPER</i> </dd>
 <pre> UPPER is LOGICAL
  = .TRUE.: the input matrices A and B are upper triangular.
  = .FALSE.: the input matrices A and B are lower triangular.</pre>
@@ -83,13 +83,13 @@ description: "zlags2.f –"
 <p>&nbsp;<wbr></dl>
 <p> <code>Author:</code></p>
 <dl>
-<dd>Univ. of Tennessee </p>
+<dd>Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl>
-<dd>November 2011</dl>
+<dd>November 2011</dd></dl>
 <p> Definition at line 158 of file zlags2.f.</p>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for LAPACK from the source code.</p>

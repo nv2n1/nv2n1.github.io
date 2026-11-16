@@ -14,12 +14,10 @@ int pcre_jit_exec(const pcre *code, const pcre_extra *extra,
                   const char *subject, int length, int startoffset,
                   int options, int *ovector, int ovecsize,
                   pcre_jit_stack *jstack);
-
 int pcre16_jit_exec(const pcre16 *code, const pcre16_extra *extra,
                     PCRE_SPTR16 subject, int length, int startoffset,
                     int options, int *ovector, int ovecsize,
                     pcre_jit_stack *jstack);
-
 int pcre32_jit_exec(const pcre32 *code, const pcre32_extra *extra,
                     PCRE_SPTR32 subject, int length, int startoffset,
                     int options, int *ovector, int ovecsize,

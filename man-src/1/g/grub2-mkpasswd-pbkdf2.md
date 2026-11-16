@@ -13,18 +13,18 @@ description: "grub-mkpasswd-pbkdf2 — Generate a PBKDF2 password hash."
 <p> <code>grub-mkpasswd-pbkdf2</code> [-c | &#8211;iteration-count=<i>NUM</i>] [-l | &#8211;buflen=<i>NUM</i>]</p>
 <dl>
 <dt>
-<dd> [-s | &#8211;salt=<i>NUM</i>] </p>
+</dt><dd> [-s | &#8211;salt=<i>NUM</i>] </dd>
 </dl>
 <h2>DESCRIPTION</h2>
 <p> <code>grub-mkpasswd-pbkdf2</code> generates a PBKDF2 password string suitable for use in a GRUB configuration file. </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt>&#8211;iteration-count=<i>NUM</i></p>
-<dd> Number of PBKDF2 iterations. </p>
-<dt>&#8211;buflen=<i>NUM</i></p>
-<dd> Length of generated hash. </p>
-<dt>&#8211;salt=<i>NUM</i></p>
-<dd> Length of salt to use. </p>
+<dt>&#8211;iteration-count=<i>NUM</i></dt>
+<dd> Number of PBKDF2 iterations. </dd>
+<dt>&#8211;buflen=<i>NUM</i></dt>
+<dd> Length of generated hash. </dd>
+<dt>&#8211;salt=<i>NUM</i></dt>
+<dd> Length of salt to use. </dd>
 </dl>
 <h2>SEE ALSO</h2>
 <p> <code>info grub</code> </p>

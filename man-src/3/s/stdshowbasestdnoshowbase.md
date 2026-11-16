@@ -25,15 +25,10 @@ The showbase flag affects the behavior of integer output (see std::num_put::put)
 <h2>Example</h2>
 <p>// Run this code </p>
 <pre><code>#include &lt;sstream&gt;
-
 #include &lt;locale&gt;
-
 #include &lt;iostream&gt;
-
 #include &lt;iomanip&gt;
-
 int main()
-
 {
     // showbase affects the output of octals and hexadecimals
     std::cout &lt;&lt; std::hex

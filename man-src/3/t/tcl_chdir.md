@@ -16,9 +16,9 @@ int
 <code>Tcl_Chdir</code>(<i>path</i>)</pre>
 <h2>Arguments</h2>
 <dl COMPACT>
-<dd>Tcl_Interp <i>*interp</i> (in) Interpreter in which to report an error, if any.</p>
-<dd>Tcl_DString <i>*bufferPtr</i> (in/out) This dynamic string is used to store the current working directory. At the time of the call it should be uninitialized or free. The caller must eventually call <code>Tcl_DStringFree</code> to free up anything stored here.</p>
-<dd>char <i>*path</i> (in) File path in UTF-8 format. </p>
+<dd>Tcl_Interp <i>*interp</i> (in) Interpreter in which to report an error, if any.</dd>
+<dd>Tcl_DString <i>*bufferPtr</i> (in/out) This dynamic string is used to store the current working directory. At the time of the call it should be uninitialized or free. The caller must eventually call <code>Tcl_DStringFree</code> to free up anything stored here.</dd>
+<dd>char <i>*path</i> (in) File path in UTF-8 format. </dd>
 </dl>
 <h2>Description</h2>
 <p>These procedures may be used to manipulate the current working directory for the application. They provide C-level access to the same functionality as the Tcl <code>pwd</code> command. </p>

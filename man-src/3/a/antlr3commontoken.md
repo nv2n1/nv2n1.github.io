@@ -83,12 +83,12 @@ description: "include/antlr3commontoken.h –"
 <p> The definition of an ANTLR3 common token structure, which all implementations of a token stream should provide, installing any further structures in the custom pointer element of this structure. <code>Remarks:</code></p>
 <dl>
 <dt>
-<dd> Token streams are in essence provided by lexers or other programs that serve as lexers.</dl>
+</dt><dd> Token streams are in essence provided by lexers or other programs that serve as lexers.</dd></dl>
 <h3>typedef struct <code>ANTLR3_TOKEN_FACTORY_struct</code></h3>
 <p>&nbsp;<wbr>&nbsp;<wbr><code>ANTLR3_TOKEN_FACTORY</code>&quot; </p>
 <p> ANTLR3 Token factory interface to create lots of tokens efficiently rather than creating and freeing lots of little bits of memory.</p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for ANTLR3C from the source code. </p>
 <h2>Index</h2>
-<dt><a href="#lbAX">Author</a></p>
-<dd></dl>
+<dt><a href="#lbAX">Author</a></dt>
+<dd></dd></dl>

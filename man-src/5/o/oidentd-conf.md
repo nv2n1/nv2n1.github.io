@@ -13,8 +13,8 @@ description: "oidentd.conf – The oidentd configuration file."
 <p> The <code>$HOME/.oidentd.conf</code> file allows a user to specify what ident response will be returned for specific connections.</p>
 <h2>/etc/oidentd.conf SYNTAX</h2>
 <dl>
-<dt><code>USER DIRECTIVE</code></p>
-<dd>The <code>oidentd.conf</code> file consists of 0 or more <i>user</i> directives. The <i>user</i> directive is used to grant capabilities on a per-user basis. </p>
+<dt><code>USER DIRECTIVE</code></dt>
+<dd>The <code>oidentd.conf</code> file consists of 0 or more <i>user</i> directives. The <i>user</i> directive is used to grant capabilities on a per-user basis. </dd>
 <p> The <i>user</i> directive has the following syntax: </p>
 <pre><i>default</i> {
  &lt;<i>range directive</i>&gt;
@@ -24,8 +24,8 @@ OR
  &lt;<i>range directive</i>&gt;
 }</pre>
 <p>The <i>default</i> directive matches all users for whom rules are not defined. There should only be one <i>default</i> directive, and it should be the first statement in the file. All entries for users defined after the default definition will inherit the capabilities of the default user. Capabilities can then be allowed, denied, or forced on a per-user basis by way of the <i>user</i> statement followed by the username of the user to whom the properties that follow will apply.</p>
-<dt><code>RANGE DIRECTIVE</code></p>
-<dd>The body of a <i>user</i> directive consists of 1 or more <i>range</i> directives. </p>
+<dt><code>RANGE DIRECTIVE</code></dt>
+<dd>The body of a <i>user</i> directive consists of 1 or more <i>range</i> directives. </dd>
 <p> The <i>range</i> directive is used to specify a host/port range for which a set of capabilities is binding. A range directive consists of 1 or more statements of the following form: </p>
 <pre>default {
  &lt;capability directive&gt;
@@ -43,8 +43,8 @@ OR
 <p> The <i>fport</i> parameter is used to specify the destination port of a connection. </p>
 <p> The <i>lport</i> and <i>fport</i> parameters take either a port or a port range. Ports can be specified numerically (e.g. 113) or by giving a service name (e.g. &quot;auth&quot;). Ranges of ports take the form &lt;starting port&gt;:&lt;ending port&gt;. The ending port is optional. If the ending port is omitted, the range is taken to be any port greater than or equal to the starting port. </p>
 <p> The omission of any of the <i>to</i>, <i>lport</i>, <i>from</i> and <i>fport</i> parameters acts like a wildcard for that parameter. For example, the statement &quot;from localhost&quot; matches all connections from localhost on any port to any host on any port.</p>
-<dt><code>CAPABILITY DIRECTIVE</code></p>
-<dd>The body of a <i>range</i> directive consists of one or more capability directives. </p>
+<dt><code>CAPABILITY DIRECTIVE</code></dt>
+<dd>The body of a <i>range</i> directive consists of one or more capability directives. </dd>
 <p> Capabilities are used to assign or deny privileges to specific users. Valid capabilities inside user directives are <i>allow</i>, <i>deny</i>, and<i>force</i>. </p>
 <p> The capability directive consists of one or more statements of the form: </p>
 <p> <i>allow</i> OR <i>deny</i> OR <i>force</i> &lt;capability&gt;. </p>
@@ -64,42 +64,45 @@ OR
 <p> Valid capabilities are <i>reply</i>, <i>random</i>, <i>numeric</i>, <i>random_numeric</i>, and <i>hide</i>. Descriptions can be found below.</p>
 <h2>Capabilities</h2>
 <dl>
-<dt><code>spoof</code></p>
+<dt><code>spoof</code></dt>
 <dd>Allow spoofed ident responses; allow the user to specify a string of her choosing as the ident reply. The only restriction on the spoofed response is that it must not be the username of another user. When a user spoofs her ident reply, the login name of the user is recorded along with the forged reply.<br />
- This capability does not apply to the <i>force</i> action.</p>
-<dt><code>spoof_all</code></p>
+ This capability does not apply to the <i>force</i> action.</dd>
+<dt><code>spoof_all</code></dt>
 <dd>Allow the usernames of other users to be used as ident responses.<br />
- This capability does not apply to the <i>force</i> action.</p>
-<dt><code>spoof_privport</code></p>
+ This capability does not apply to the <i>force</i> action.</dd>
+<dt><code>spoof_privport</code></dt>
 <dd>Allow ident replies to be spoofed on privileged ports (ports lower than 1024).<br />
- This capability does not apply to the <i>force</i> action.</p>
-<dt><code>reply</code> &lt;string&gt; [&lt;string1&gt; &#8230; &lt;stringN&gt;]</p>
-<dd>Reply to successful ident lookups with the ident response specified in &lt;string&gt;. If more than one string parameter is given, one of the strings will be selected randomly. </p>
+ This capability does not apply to the <i>force</i> action.</dd>
+<dt><code>reply</code> &lt;string&gt; [&lt;string1&gt; &#8230; &lt;stringN&gt;]</dt>
+<dd>Reply to successful ident lookups with the ident response specified in &lt;string&gt;. If more than one string parameter is given, one of the strings will be selected randomly. </dd>
 <p> In a user&#8217;s <code>$HOME/.oidentd.conf</code> file, up to 20 strings may be specified for a <code>reply</code> statement. </p>
 <p> In the <code>/etc/oidentd.conf</code> file, there is no limitation on the number of strings that may be specified. </p>
 <p> The strings must be quoted strings (e.g. &quot;string&quot;). Strings may contain the following escape characters: </p>
 <dl>
 <dd>
-<dl>
+</dd><dl>
 <dt><code>
-</code></p>
-<dd>new line</p>
-<dt><code>	</code></p>
-<dd>tab</p>
-<dt><code></code></p>
-<dd>carriage return</p>
-<dt><code></code></p>
-<dd>backspace</p>
-<dt><code></code></p>
-<dd>vertical tab</p>
-<dt><code></code></p>
-<dd>form feed</p>
-<dt><code></code></p>
-<dd>alert (bell)</p>
-<dt><code></code></p>
-<dd>escape</p>
-<dt><code>\</code></p>
-<dd>backslash</p>
-<dt><code>\</code><i>NNN</i></p>
-<dd>The character with the ASCII code <i>NNN</i> in the octal base system.</p>
+</code></dt>
+<dd>new line</dd>
+<dt><code>	</code></dt>
+<dd>tab</dd>
 <dt><code>
+</code></dt>
+<dd>carriage return</dd>
+<dt><code></code></dt>
+<dd>backspace</dd>
+<dt><code></code></dt>
+<dd>vertical tab</dd>
+<dt><code></code></dt>
+<dd>form feed</dd>
+<dt><code></code></dt>
+<dd>alert (bell)</dd>
+<dt><code></code></dt>
+<dd>escape</dd>
+<dt><code>\</code></dt>
+<dd>backslash</dd>
+<dt><code>\</code><i>NNN</i></dt>
+<dd>The character with the ASCII code <i>NNN</i> in the octal base system.</dd>
+<dt><code>
+</dt></dl></dl></dl>
+</code>

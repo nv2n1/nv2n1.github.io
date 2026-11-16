@@ -10,9 +10,9 @@ description: "traceroute6 – traces path to a network host"
 <p>traceroute6 &#8211; traces path to a network host</p>
 <h2>Synopsis</h2>
 <dl>
-<dt> <code>traceroute6</code> [<code>-dnrvV</code>] [<code>-i&nbsp;</code><i>interface</i>] [<code>-m&nbsp;</code><i>max_ttl</i>] [<code>-p&nbsp;</code><i>port</i>] [<code>-q&nbsp;</code><i>max_probes</i>] [<code>-s&nbsp;</code><i>source</i>] [<code>-w&nbsp;</code><i>wait time</i>] {destination} [size]</dl>
+<dt> <code>traceroute6</code> [<code>-dnrvV</code>] [<code>-i&nbsp;</code><i>interface</i>] [<code>-m&nbsp;</code><i>max_ttl</i>] [<code>-p&nbsp;</code><i>port</i>] [<code>-q&nbsp;</code><i>max_probes</i>] [<code>-s&nbsp;</code><i>source</i>] [<code>-w&nbsp;</code><i>wait time</i>] {destination} [size]</dt></dl>
 <h2>Description</h2>
-<dd>Description can be found in <code><a href="/docs/linux/man/8-traceroute/">traceroute</a></code>(8), all the references to IP replaced to IPv6. It is needless to copy the description from there.</p>
+<dd>Description can be found in <code><a href="/docs/linux/man/8-traceroute/">traceroute</a></code>(8), all the references to IP replaced to IPv6. It is needless to copy the description from there.</dd>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/8-traceroute/">traceroute</a></code>(8), <code><a href="/docs/linux/man/8-tracepath/">tracepath</a></code>(8), <code><a href="/docs/linux/man/8-ping/">ping</a></code>(8).</p>
 <h2>History</h2>

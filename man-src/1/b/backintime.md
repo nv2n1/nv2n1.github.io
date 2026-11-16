@@ -24,54 +24,52 @@ description: "backintime – a simple backup tool for Linux."
 <h3>user.callback</h3>
 <p> During backup process the application can call a user callback at different steps. This callback is &quot;$XDG_CONFIG_HOME/backintime/user.callback&quot; (by default $XDG_CONFIG_HOME is ~/.config). The first argument is the reason:</p>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>1</p>
-<dd> Backup process begins.</p>
-<dt>2</p>
-<dd> Backup process ends.</p>
-<dt>3</p>
-<dd> A new snapshot was taken. The extra arguments are snapshot ID and snapshot path.</p>
-<dt>4</p>
-<dd> There was an error. The second argument is the error code.</p>
+<dt>1</dt>
+<dd> Backup process begins.</dd>
+<dt>2</dt>
+<dd> Backup process ends.</dd>
+<dt>3</dt>
+<dd> A new snapshot was taken. The extra arguments are snapshot ID and snapshot path.</dd>
+<dt>4</dt>
+<dd> There was an error. The second argument is the error code.</dd>
 <dl>
 <dt>
-<dd> Error codes:</p>
+</dt><dd> Error codes:</dd>
 <dl>
-<dt>1</p>
-<dd> The application is not configured.</p>
-<dt>2</p>
-<dd> A &quot;take snapshot&quot; process is already running.</p>
-<dt>3</p>
-<dd> Can&#8217;t find snapshots folder (is it on a removable drive ?).</p>
-<dt>4</p>
-<dd> A snapshot for &quot;now&quot; already exist.</dl>
+<dt>1</dt>
+<dd> The application is not configured.</dd>
+<dt>2</dt>
+<dd> A &quot;take snapshot&quot; process is already running.</dd>
+<dt>3</dt>
+<dd> Can&#8217;t find snapshots folder (is it on a removable drive ?).</dd>
+<dt>4</dt>
+<dd> A snapshot for &quot;now&quot; already exist.</dd></dl>
 </dl>
 </dl>
 </dl>
 <h2>OPTIONS</h2>
 <dl>
-<dt>-b, &#8211;backup</p>
-<dd> take a snapshot now (if needed)</p>
-<dt>&#8211;backup-job</p>
-<dd> take a snapshot (if needed) depending on schedule rules (used for cron jobs)</p>
-<dt>&#8211;snapshots-path</p>
-<dd> display path where is saves the snapshots (if configured)</p>
-<dt>&#8211;snapshots-list</p>
-<dd> display the list of snapshot IDs (if any)</p>
-<dt>&#8211;snapshots-list-path</p>
-<dd> display the paths to snapshots (if any)</p>
-<dt>&#8211;last-snapshot</p>
-<dd> display last snapshot ID (if any)</p>
-<dt>&#8211;last-snapshot-path</p>
-<dd> display the path to the last snapshot (if any)</p>
-<dt>-h, &#8211;help</p>
-<dd> display a short help</p>
-<dt>-v, &#8211;version</p>
-<dd> show version</p>
-<dt>&#8211;license</p>
-<dd> show license</dl>
+<dt>-b, &#8211;backup</dt>
+<dd> take a snapshot now (if needed)</dd>
+<dt>&#8211;backup-job</dt>
+<dd> take a snapshot (if needed) depending on schedule rules (used for cron jobs)</dd>
+<dt>&#8211;snapshots-path</dt>
+<dd> display path where is saves the snapshots (if configured)</dd>
+<dt>&#8211;snapshots-list</dt>
+<dd> display the list of snapshot IDs (if any)</dd>
+<dt>&#8211;snapshots-list-path</dt>
+<dd> display the paths to snapshots (if any)</dd>
+<dt>&#8211;last-snapshot</dt>
+<dd> display last snapshot ID (if any)</dd>
+<dt>&#8211;last-snapshot-path</dt>
+<dd> display the path to the last snapshot (if any)</dd>
+<dt>-h, &#8211;help</dt>
+<dd> display a short help</dd>
+<dt>-v, &#8211;version</dt>
+<dd> show version</dd>
+<dt>&#8211;license</dt>
+<dd> show license</dd></dl>
 <h2>SEE ALSO</h2>
 <p> backintime-gnome, backintime-kde4. </p>
 <p> Back In Time also has a website: <a rel="nofollow" href="http://backintime.le-web.org">http://backintime.le-web.org</a></p>

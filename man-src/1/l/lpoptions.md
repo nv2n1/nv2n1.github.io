@@ -22,22 +22,22 @@ description: "lpoptions – display or set printer options and defaults"
 <h2>OPTIONS</h2>
 <p> <code>lpoptions</code> supports the following options:</p>
 <dl>
-<dt><code>-E</code></p>
-<dd> Enables encryption when communicating with the CUPS server.</p>
-<dt><code>-d </code><i>destination</i>[<code>/</code><i>instance</i>]</p>
-<dd> Sets the user default printer to <i>destination</i>. If <i>instance</i> is supplied then that particular instance is used. This option overrides the system default printer for the current user.</p>
-<dt><code>-h </code><i>server</i>[<code>:</code><i>port</i>]</p>
-<dd> Uses an alternate server.</p>
-<dt><code>-l</code></p>
-<dd> Lists the printer specific options and their current settings.</p>
-<dt><code>-o </code><i>option</i>[<code>=</code><i>value</i>]</p>
-<dd> Specifies a new option for the named destination.</p>
-<dt><code>-p </code><i>destination</i>[<code>/</code><i>instance</i>]</p>
-<dd> Sets the destination and instance, if specified, for any options that follow. If the named instance does not exist then it is created. Destinations can only be created using the <code><a href="/docs/linux/man/8-lpadmin/">lpadmin</a></code>(8) program.</p>
-<dt><code>-r </code><i>option</i></p>
-<dd> Removes the specified option from the named destination.</p>
-<dt><code>-x </code><i>destination</i>[<code>/</code><i>instance</i>]</p>
-<dd> Removes the options for the named destination and instance, if specified. If the named instance does not exist then this does nothing. Destinations can only be removed using the <code><a href="/docs/linux/man/8-lpadmin/">lpadmin</a></code>(8) command.</dl>
+<dt><code>-E</code></dt>
+<dd> Enables encryption when communicating with the CUPS server.</dd>
+<dt><code>-d </code><i>destination</i>[<code>/</code><i>instance</i>]</dt>
+<dd> Sets the user default printer to <i>destination</i>. If <i>instance</i> is supplied then that particular instance is used. This option overrides the system default printer for the current user.</dd>
+<dt><code>-h </code><i>server</i>[<code>:</code><i>port</i>]</dt>
+<dd> Uses an alternate server.</dd>
+<dt><code>-l</code></dt>
+<dd> Lists the printer specific options and their current settings.</dd>
+<dt><code>-o </code><i>option</i>[<code>=</code><i>value</i>]</dt>
+<dd> Specifies a new option for the named destination.</dd>
+<dt><code>-p </code><i>destination</i>[<code>/</code><i>instance</i>]</dt>
+<dd> Sets the destination and instance, if specified, for any options that follow. If the named instance does not exist then it is created. Destinations can only be created using the <code><a href="/docs/linux/man/8-lpadmin/">lpadmin</a></code>(8) program.</dd>
+<dt><code>-r </code><i>option</i></dt>
+<dd> Removes the specified option from the named destination.</dd>
+<dt><code>-x </code><i>destination</i>[<code>/</code><i>instance</i>]</dt>
+<dd> Removes the options for the named destination and instance, if specified. If the named instance does not exist then this does nothing. Destinations can only be removed using the <code><a href="/docs/linux/man/8-lpadmin/">lpadmin</a></code>(8) command.</dd></dl>
 <h2>FILES</h2>
 <p> <i>~/.cups/lpoptions</i> &#8211; user defaults and instances created by non-root users.<br />
  <i>/etc/cups/lpoptions</i> &#8211; system-wide defaults and instances created by the root user.</p>

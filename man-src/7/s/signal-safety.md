@@ -14,10 +14,10 @@ description: "signal-safety – async-signal-safe functions"
 <p> When performing buffered I/O on a file, the <i>stdio</i> functions must maintain a statically allocated data buffer along with associated counters and indexes (or pointers) that record the amount of data and the current position in the buffer. Suppose that the main program is in the middle of a call to a <i>stdio</i> function such as <code><a href="/docs/linux/man/3-printf/">printf</a></code>(3) where the buffer and associated variables have been partially updated. If, at that moment, the program is interrupted by a signal handler that also calls <code><a href="/docs/linux/man/3-printf/">printf</a></code>(3), then the second call to <code><a href="/docs/linux/man/3-printf/">printf</a></code>(3) will operate on inconsistent data, with unpredictable results. </p>
 <p> To avoid problems with unsafe functions, there are two possible choices:</p>
 <dl>
-<dt>1.</p>
-<dd>Ensure that (a) the signal handler calls only async-signal-safe functions, and (b) the signal handler itself is reentrant with respect to global variables in the main program.</p>
-<dt>2.</p>
-<dd>Block signal delivery in the main program when calling functions that are unsafe or operating on global data that is also accessed by the signal handler.</dl>
+<dt>1.</dt>
+<dd>Ensure that (a) the signal handler calls only async-signal-safe functions, and (b) the signal handler itself is reentrant with respect to global variables in the main program.</dd>
+<dt>2.</dt>
+<dd>Block signal delivery in the main program when calling functions that are unsafe or operating on global data that is also accessed by the signal handler.</dd></dl>
 <p> Generally, the second choice is difficult in programs of any complexity, so the first choice is taken. </p>
 <p> POSIX.1 specifies a set of functions that an implementation must make async-signal-safe. (An implementation may provide safe implementations of additional functions, but this is not required by the standard and other implementations may not provide the same guarantees.) </p>
 <p> In general, a function is async-signal-safe either because it is reentrant or because it is atomic with respect to signals (i.e., its execution can&#8217;t be interrupted by a signal handler). </p>
@@ -986,23 +986,23 @@ description: "signal-safety – async-signal-safe functions"
 </table>
 <p> Notes:</p>
 <dl>
-<dt>*</p>
-<dd>POSIX.1-2001 and POSIX.1-2001 TC2 required the functions <code><a href="/docs/linux/man/3-fpathconf/">fpathconf</a></code>(3), <code><a href="/docs/linux/man/3-pathconf/">pathconf</a></code>(3), and <code><a href="/docs/linux/man/3-sysconf/">sysconf</a></code>(3) to be async-signal-safe, but this requirement was removed in POSIX.1-2008.</p>
-<dt>*</p>
-<dd>If a signal handler interrupts the execution of an unsafe function, and the handler terminates via a call to <code><a href="/docs/linux/man/3-longjmp/">longjmp</a></code>(3) or <code><a href="/docs/linux/man/3-siglongjmp/">siglongjmp</a></code>(3) and the program subsequently calls an unsafe function, then the behavior of the program is undefined.</p>
-<dt>*</p>
-<dd>POSIX.1-2001 TC1 clarified that if an application calls <code><a href="/docs/linux/man/2-fork/">fork</a></code>(2) from a signal handler and any of the fork handlers registered by <code>pthread_atfork</code>(3) calls a function that is not async-signal-safe, the behavior is undefined. A future revision of the standard is likely to remove <code><a href="/docs/linux/man/2-fork/">fork</a></code>(2) from the list of async-signal-safe functions.</p>
-<dt>*</p>
-<dd>Asynchronous signal handlers that call functions which are cancellation points and nest over regions of deferred cancellation may trigger cancellation whose behavior is as if asynchronous cancellation had occurred and may cause application state to become inconsistent.</dl>
+<dt>*</dt>
+<dd>POSIX.1-2001 and POSIX.1-2001 TC2 required the functions <code><a href="/docs/linux/man/3-fpathconf/">fpathconf</a></code>(3), <code><a href="/docs/linux/man/3-pathconf/">pathconf</a></code>(3), and <code><a href="/docs/linux/man/3-sysconf/">sysconf</a></code>(3) to be async-signal-safe, but this requirement was removed in POSIX.1-2008.</dd>
+<dt>*</dt>
+<dd>If a signal handler interrupts the execution of an unsafe function, and the handler terminates via a call to <code><a href="/docs/linux/man/3-longjmp/">longjmp</a></code>(3) or <code><a href="/docs/linux/man/3-siglongjmp/">siglongjmp</a></code>(3) and the program subsequently calls an unsafe function, then the behavior of the program is undefined.</dd>
+<dt>*</dt>
+<dd>POSIX.1-2001 TC1 clarified that if an application calls <code><a href="/docs/linux/man/2-fork/">fork</a></code>(2) from a signal handler and any of the fork handlers registered by <code>pthread_atfork</code>(3) calls a function that is not async-signal-safe, the behavior is undefined. A future revision of the standard is likely to remove <code><a href="/docs/linux/man/2-fork/">fork</a></code>(2) from the list of async-signal-safe functions.</dd>
+<dt>*</dt>
+<dd>Asynchronous signal handlers that call functions which are cancellation points and nest over regions of deferred cancellation may trigger cancellation whose behavior is as if asynchronous cancellation had occurred and may cause application state to become inconsistent.</dd></dl>
 <h3>errno</h3>
 <p>Fetching and setting the value of <i>errno</i> is async-signal-safe provided that the signal handler saves <i>errno</i> on entry and restores its value before returning.</p>
 <h3>Deviations in the GNU C library</h3>
 <p>The following known deviations from the standard occur in the GNU C library:</p>
 <dl>
-<dt>*</p>
-<dd>Before glibc 2.24, <code><a href="/docs/linux/man/3-execl/">execl</a></code>(3) and <code><a href="/docs/linux/man/3-execle/">execle</a></code>(3) employed <code><a href="/docs/linux/man/3-realloc/">realloc</a></code>(3) internally and were consequently not async-signal-safe. This was fixed in glibc 2.24.</p>
-<dt>*</p>
-<dd>The glibc implementation of <code><a href="/docs/linux/man/3-aio_suspend/">aio_suspend</a></code>(3) is not async-signal-safe because it uses <code>pthread_mutex_lock</code>(3) internally.</dl>
+<dt>*</dt>
+<dd>Before glibc 2.24, <code><a href="/docs/linux/man/3-execl/">execl</a></code>(3) and <code><a href="/docs/linux/man/3-execle/">execle</a></code>(3) employed <code><a href="/docs/linux/man/3-realloc/">realloc</a></code>(3) internally and were consequently not async-signal-safe. This was fixed in glibc 2.24.</dd>
+<dt>*</dt>
+<dd>The glibc implementation of <code><a href="/docs/linux/man/3-aio_suspend/">aio_suspend</a></code>(3) is not async-signal-safe because it uses <code>pthread_mutex_lock</code>(3) internally.</dd></dl>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/2-sigaction/">sigaction</a></code>(2), <code><a href="/docs/linux/man/7-signal/">signal</a></code>(7), <code><a href="/docs/linux/man/7-standards/">standards</a></code>(7)</p>
 <h2>Colophon</h2>

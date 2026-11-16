@@ -21,10 +21,10 @@ description: "aio_return – get return status of asynchronous I/O operation"
 <p> If the asynchronous I/O operation has not yet completed, the return value and effect of <code>aio_return</code>() are undefined.</p>
 <h2>ERRORS</h2>
 <dl>
-<dt><code>EINVAL</code></p>
-<dd> <i>aiocbp</i> does not point at a control block for an asynchronous I/O request of which the return status has not been retrieved yet.</p>
-<dt><code>ENOSYS</code></p>
-<dd> <code>aio_return</code>() is not implemented.</dl>
+<dt><code>EINVAL</code></dt>
+<dd> <i>aiocbp</i> does not point at a control block for an asynchronous I/O request of which the return status has not been retrieved yet.</dd>
+<dt><code>ENOSYS</code></dt>
+<dd> <code>aio_return</code>() is not implemented.</dd></dl>
 <h2>VERSIONS</h2>
 <p> The <code>aio_return</code>() function is available since glibc 2.1.</p>
 <h2>ATTRIBUTES</h2>

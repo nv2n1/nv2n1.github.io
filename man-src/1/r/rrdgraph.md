@@ -187,8 +187,8 @@ print[0] = "0.020833" print[1] = "0.0440833" graph_left = 51 graph_top = 22 grap
 <h2>ENVIRONMENT VARIABLES</h2>
 <p> The following environment variables may be used to change the behavior of <tt>&quot;rrdtool graph&quot;</tt>:</p>
 <dl>
-<dt><font SIZE="-1"><code>RRDCACHED_ADDRESS</code></font></p>
-<dd> If this environment variable is set it will have the same effect as specifying the <tt>&quot;--daemon&quot;</tt> option on the command line. If both are present, the command line argument takes precedence.</dl>
+<dt><font SIZE="-1"><code>RRDCACHED_ADDRESS</code></font></dt>
+<dd> If this environment variable is set it will have the same effect as specifying the <tt>&quot;--daemon&quot;</tt> option on the command line. If both are present, the command line argument takes precedence.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> rrdgraph gives an overview of how <code>rrdtool graph</code> works. rrdgraph_data describes <font SIZE="-1"><code>DEF</code></font>,<font SIZE="-1"><code>CDEF</code></font> and <font SIZE="-1"><code>VDEF</code></font> in detail. rrdgraph_rpn describes the <font SIZE="-1"><code>RPN</code></font> language used in the <code>?DEF</code> statements. rrdgraph_graph page describes all of the graph and print functions. </p>
 <p> Make sure to read rrdgraph_examples for tips&amp;tricks.</p>
@@ -196,9 +196,9 @@ print[0] = "0.020833" print[1] = "0.0440833" graph_left = 51 graph_top = 22 grap
 <p> Program by Tobias Oetiker &lt;tobi [at] oetiker.ch&gt; </p>
 <p> This manual page by Alex van den Bogaerdt &lt;alex [at] vandenbogaerdt.nl&gt; with corrections and/or additions by several people </p>
 <h2>Index</h2>
-<dt><a href="#lbAS">ENVIRONMENT VARIABLES</a></p>
+<dt><a href="#lbAS">ENVIRONMENT VARIABLES</a></dt>
 <dd>
-<dt><a href="#lbAT">SEE ALSO</a></p>
+</dd><dt><a href="#lbAT">SEE ALSO</a></dt>
 <dd>
-<dt><a href="#lbAU">AUTHOR</a></p>
-<dd></dl>
+</dd><dt><a href="#lbAU">AUTHOR</a></dt>
+<dd></dd></dl>

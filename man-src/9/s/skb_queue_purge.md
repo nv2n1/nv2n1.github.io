@@ -15,7 +15,7 @@ skb_queue_purge - empty a list
 <h2>Arguments</h2>
 
 <i>list</i>
-<dl><dd><dd>list to empty</dl>
+<dl><dd></dd><dd>list to empty</dd></dl>
 
 <h2>Description</h2>
 

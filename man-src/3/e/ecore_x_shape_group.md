@@ -27,7 +27,7 @@ description: "X Shape extension – Functions that use the shape extension of th
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>dest_win</i> The given window.<br />
- <i>source_mask</i> A 2-bit depth pixmap that provides the new shape of the window.</dl>
+ <i>source_mask</i> A 2-bit depth pixmap that provides the new shape of the window.</dd></dl>
 <p> Sets the shape of the window dest_win to the pixmap source_mask.</p>
 <h3>EAPI void ecore_x_window_shape_rectangle_set (Ecore_X_Window dest_win, int x, int y, int width, int height)</h3>
 <p>Sets the shape of the given window to a rectangle. </p>
@@ -37,22 +37,22 @@ description: "X Shape extension – Functions that use the shape extension of th
  <i>x</i> The X coordinate of the top left corner of the rectangle.<br />
  <i>y</i> The Y coordinate of the top left corner of the rectangle.<br />
  <i>width</i> The width of the rectangle.<br />
- <i>height</i> The height of the rectangle.</dl>
+ <i>height</i> The height of the rectangle.</dd></dl>
 <p> Sets the shape of the window dest_win to a rectangle defined by x, y, width and height.</p>
 <h3>EAPI Ecore_X_Rectangle* ecore_x_window_shape_rectangles_get (Ecore_X_Window window __UNUSED__, int * num_ret)</h3>
 <p>To document. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>window</i> Unused.<br />
- <i>num_ret</i> To document.</dl>
+ <i>num_ret</i> To document.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>To document.</dl>
+<dd>To document.</dd></dl>
 <p> To use this function, you must call before, and in order, <code>ecore_x_window_shape_rectangles_get_prefetch()</code>, which sends the ShapeGetRectangles request, then <code>ecore_x_window_shape_rectangles_get_fetch()</code>, which gets the reply.</p>
 <h3>EAPI void ecore_x_window_shape_rectangles_get_prefetch (Ecore_X_Window window)</h3>
 <p>Sends the ShapeGetRectangles request. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>window</i> Requested window.</dl>
+<dd><i>window</i> Requested window.</dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for Ecore from the source code.</p>

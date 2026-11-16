@@ -27,10 +27,10 @@ if(ev_ctx == NULL) {
 <h2>Tevent loops</h2>
 <p>Tevent loops are the dispatcher for events. They catch them and trigger the handlers. In the case of longer processes, the program spends most of its time at this point waiting for events, invoking handlers and waiting for another event again. There are 2 types of loop available for use in tevent library: </p>
 <dl>
-<dt>&bull;</p>
-<dd>int <code>tevent_loop_wait()</code></p>
-<dt>&bull;</p>
-<dd>int <code>tevent_loop_once()</code></dl>
+<dt>&bull;</dt>
+<dd>int <code>tevent_loop_wait()</code></dd>
+<dt>&bull;</dt>
+<dd>int <code>tevent_loop_once()</code></dd></dl>
 <p> Both of functions accept just one parametr (tevent context) and the only difference lies in the fact that the first loop can theoretically last for ever but the second one will wait just for a single one event to catch and then the loop breaks and the program continue.</p>
 <h2>Tevent with threads</h2>
 <p>In order to use tevent with threads, you must first understand how to use the talloc library in threaded programs. For more information about working with talloc, please visit talloc website where tutorial and documentation are located. </p>

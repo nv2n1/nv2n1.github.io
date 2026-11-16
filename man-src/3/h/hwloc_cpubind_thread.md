@@ -30,10 +30,10 @@ description: "hwlocality_cpubinding – CPU binding"
 <pre>hwloc_set_cpubind(topology, set, HWLOC_CPUBIND_THREAD),</pre>
 <p><code>See also:</code></p>
 <dl COMPACT>
-<dd>Some example codes are available under doc/examples/ in the source tree.</dl>
+<dd>Some example codes are available under doc/examples/ in the source tree.</dd></dl>
 <p> <code>Note:</code></p>
 <dl COMPACT>
-<dd>To unbind, just call the binding function with either a full cpuset or a cpuset equal to the system cpuset. </p>
+<dd>To unbind, just call the binding function with either a full cpuset or a cpuset equal to the system cpuset. </dd>
 <p> On some operating systems, CPU binding may have effects on memory binding, see <code>HWLOC_CPUBIND_NOMEMBIND</code> </p>
 <p> Running lstopo &#8211;top or hwloc-ps can be a very convenient tool to check how binding actually happened.</dl>
 <h2>Enumeration Type Documentation</h2>
@@ -42,25 +42,25 @@ description: "hwlocality_cpubinding – CPU binding"
 <p> The default (0) is to bind the current process, assumed to be single-threaded, in a non-strict way. This is the most portable way to bind as all operating systems usually provide it. </p>
 <p> <code>Note:</code></p>
 <dl COMPACT>
-<dd>Not all systems support all kinds of binding. See the &#8216;Detailed Description&#8217; section of <code>CPU binding</code> for a description of errors that can occur.</dl>
+<dd>Not all systems support all kinds of binding. See the &#8216;Detailed Description&#8217; section of <code>CPU binding</code> for a description of errors that can occur.</dd></dl>
 <p> <code>Enumerator</code></p>
 <dl COMPACT>
-<dt><i>HWLOC_CPUBIND_PROCESS </i></p>
-<dd>Bind all threads of the current (possibly) multithreaded process.</p>
-<dt><i>HWLOC_CPUBIND_THREAD </i></p>
-<dd>Bind current thread of current process.</p>
-<dt><i>HWLOC_CPUBIND_STRICT </i></p>
-<dd>Request for strict binding from the OS. By default, when the designated CPUs are all busy while other CPUs are idle, operating systems may execute the thread/process on those other CPUs instead of the designated CPUs, to let them progress anyway. Strict binding means that the thread/process will _never_ execute on other cpus than the designated CPUs, even when those are busy with other tasks and other CPUs are idle.</dl>
+<dt><i>HWLOC_CPUBIND_PROCESS </i></dt>
+<dd>Bind all threads of the current (possibly) multithreaded process.</dd>
+<dt><i>HWLOC_CPUBIND_THREAD </i></dt>
+<dd>Bind current thread of current process.</dd>
+<dt><i>HWLOC_CPUBIND_STRICT </i></dt>
+<dd>Request for strict binding from the OS. By default, when the designated CPUs are all busy while other CPUs are idle, operating systems may execute the thread/process on those other CPUs instead of the designated CPUs, to let them progress anyway. Strict binding means that the thread/process will _never_ execute on other cpus than the designated CPUs, even when those are busy with other tasks and other CPUs are idle.</dd></dl>
 <p> <code>Note:</code></p>
 <dl COMPACT>
-<dd>Depending on the operating system, strict binding may not be possible (e.g., the OS does not implement it) or not allowed (e.g., for an administrative reasons), and the function will fail in that case.</dl>
+<dd>Depending on the operating system, strict binding may not be possible (e.g., the OS does not implement it) or not allowed (e.g., for an administrative reasons), and the function will fail in that case.</dd></dl>
 <p> When retrieving the binding of a process, this flag checks whether all its threads actually have the same binding. If the flag is not given, the binding of each thread will be accumulated. </p>
 <p> <code>Note:</code></p>
 <dl COMPACT>
-<dd>This flag is meaningless when retrieving the binding of a thread.</dl>
+<dd>This flag is meaningless when retrieving the binding of a thread.</dd></dl>
 <dl COMPACT>
-<dt><i>HWLOC_CPUBIND_NOMEMBIND </i></p>
-<dd>Avoid any effect on memory binding. On some operating systems, some CPU binding function would also bind the memory on the corresponding NUMA node. It is often not a problem for the application, but if it is, setting this flag will make hwloc avoid using OS functions that would also bind memory. This will however reduce the support of CPU bindings, i.e. potentially return -1 with errno set to ENOSYS in some cases.</dl>
+<dt><i>HWLOC_CPUBIND_NOMEMBIND </i></dt>
+<dd>Avoid any effect on memory binding. On some operating systems, some CPU binding function would also bind the memory on the corresponding NUMA node. It is often not a problem for the application, but if it is, setting this flag will make hwloc avoid using OS functions that would also bind memory. This will however reduce the support of CPU bindings, i.e. potentially return -1 with errno set to ENOSYS in some cases.</dd></dl>
 <p> This flag is only meaningful when used with functions that set the CPU binding. It is ignored when used with functions that get CPU binding information.</p>
 <h2>Function Documentation</h2>
 <h3>int hwloc_get_cpubind (<code>hwloc_topology_t</code> topology, <code>hwloc_cpuset_t</code> set, int flags)</h3>
@@ -72,40 +72,41 @@ description: "hwlocality_cpubinding – CPU binding"
 <p>Get the current physical binding of process pid. </p>
 <p> <code>Note:</code></p>
 <dl COMPACT>
-<dd>hwloc_pid_t is pid_t on Unix platforms, and HANDLE on native Windows platforms. </p>
+<dd>hwloc_pid_t is pid_t on Unix platforms, and HANDLE on native Windows platforms. </dd>
 <p> As a special case on Linux, if a tid (thread ID) is supplied instead of a pid (process ID) and <code>HWLOC_CPUBIND_THREAD</code> is passed in flags, the binding for that specific thread is returned. </p>
 <p> On non-Linux systems, <code>HWLOC_CPUBIND_THREAD</code> can not be used in flags.</dl>
 <h3>int hwloc_get_proc_last_cpu_location (<code>hwloc_topology_t</code> topology, hwloc_pid_t pid, <code>hwloc_cpuset_t</code> set, int flags)</h3>
 <p>Get the last physical CPU where a process ran. The operating system may move some tasks from one processor to another at any time according to their binding, so this function may return something that is already outdated. </p>
 <p> <code>Note:</code></p>
 <dl COMPACT>
-<dd>hwloc_pid_t is pid_t on Unix platforms, and HANDLE on native Windows platforms. </p>
+<dd>hwloc_pid_t is pid_t on Unix platforms, and HANDLE on native Windows platforms. </dd>
 <p> As a special case on Linux, if a tid (thread ID) is supplied instead of a pid (process ID) and <code>HWLOC_CPUBIND_THREAD</code> is passed in flags, the last CPU location of that specific thread is returned. </p>
 <p> On non-Linux systems, <code>HWLOC_CPUBIND_THREAD</code> can not be used in flags.</dl>
 <h3>int hwloc_get_thread_cpubind (<code>hwloc_topology_t</code> topology, hwloc_thread_t thread, <code>hwloc_cpuset_t</code> set, int flags)</h3>
 <p>Get the current physical binding of thread tid. </p>
 <p> <code>Note:</code></p>
 <dl COMPACT>
-<dd>hwloc_thread_t is pthread_t on Unix platforms, and HANDLE on native Windows platforms. </p>
+<dd>hwloc_thread_t is pthread_t on Unix platforms, and HANDLE on native Windows platforms. </dd>
 <p> <code>HWLOC_CPUBIND_PROCESS</code> can not be used in flags.</dl>
 <h3>int hwloc_set_cpubind (<code>hwloc_topology_t</code> topology, <code>hwloc_const_cpuset_t</code> set, int flags)</h3>
 <p>Bind current process or thread on cpus given in physical bitmap set. </p>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>-1 with errno set to ENOSYS if the action is not supported </p>
+<dd>-1 with errno set to ENOSYS if the action is not supported </dd>
 <p> -1 with errno set to EXDEV if the binding cannot be enforced</dl>
 <h3>int hwloc_set_proc_cpubind (<code>hwloc_topology_t</code> topology, hwloc_pid_t pid, <code>hwloc_const_cpuset_t</code> set, int flags)</h3>
 <p>Bind a process pid on cpus given in physical bitmap set. </p>
 <p> <code>Note:</code></p>
 <dl COMPACT>
-<dd>hwloc_pid_t is pid_t on Unix platforms, and HANDLE on native Windows platforms. </p>
+<dd>hwloc_pid_t is pid_t on Unix platforms, and HANDLE on native Windows platforms. </dd>
 <p> As a special case on Linux, if a tid (thread ID) is supplied instead of a pid (process ID) and <code>HWLOC_CPUBIND_THREAD</code> is passed in flags, the binding is applied to that specific thread. </p>
 <p> On non-Linux systems, <code>HWLOC_CPUBIND_THREAD</code> can not be used in flags.</dl>
 <h3>int hwloc_set_thread_cpubind (<code>hwloc_topology_t</code> topology, hwloc_thread_t thread, <code>hwloc_const_cpuset_t</code> set, int flags)</h3>
 <p>Bind a thread thread on cpus given in physical bitmap set. </p>
 <p> <code>Note:</code></p>
 <dl COMPACT>
-<dd>hwloc_thread_t is pthread_t on Unix platforms, and HANDLE on native Windows platforms. </p>
+<dd>hwloc_thread_t is pthread_t on Unix platforms, and HANDLE on native Windows platforms. </dd>
 <p> <code>HWLOC_CPUBIND_PROCESS</code> can not be used in flags.</dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for Hardware Locality (hwloc) from the source code.</p>
+</p>

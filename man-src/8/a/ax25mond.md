@@ -14,7 +14,7 @@ description: "ax25mond – dump the AX.25 network traffic and and provide socket
 <p><code>Ax25mond</code> will first read it&#8217;s configuration file /etc/ax25/ax25mond.conf. It will then wait for connects on the sockets specified in this file. When connected, it will transmit all data which it has received on the AX.25 monitor socket.</p>
 <h2>Options</h2>
 <dl>
-<dt><code>-v, &#8211;version</code></p>
-<dd>Displays the version number and some copyright information.</dl>
+<dt><code>-v, &#8211;version</code></dt>
+<dd>Displays the version number and some copyright information.</dd></dl>
 <h2>Author</h2>
 <p>Johann Hanne, DH3MB &lt;jonny [at] baycom.org&gt;</p>

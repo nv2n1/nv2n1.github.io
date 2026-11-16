@@ -15,7 +15,7 @@ ffz - find first zero bit in word
 <h2>Arguments</h2>
 
 <i>word</i>
-<dl><dd><dd>The word to search</dl>
+<dl><dd></dd><dd>The word to search</dd></dl>
 
 <h2>Description</h2>
 

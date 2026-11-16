@@ -146,7 +146,7 @@ description: "org.freedesktop.machine1 – The D-Bus interface of systemd-machin
  interface org.freedesktop.DBus.Introspectable { ... };
  interface org.freedesktop.DBus.Properties { ... };
 };</pre>
-</dl>
+</dd></dl>
 <h3>Methods</h3>
 <p><code>GetMachine()</code> may be used to get the machine object path for the machine with the specified name. Similarly, <code>GetMachineByPID()</code> gets the machine object the specified PID belongs to if there is any. </p>
 <p> <code>GetImage()</code> may be used to get the image object path of the image with the specified name. </p>
@@ -236,7 +236,7 @@ description: "org.freedesktop.machine1 – The D-Bus interface of systemd-machin
  interface org.freedesktop.DBus.Introspectable { ... };
  interface org.freedesktop.DBus.Properties { ... };
 };</pre>
-</dl>
+</dd></dl>
 <h3>Methods</h3>
 <p><code>Terminate()</code> and <code>Kill()</code> terminate/kill the machine. These methods take the same arguments as <code>TerminateMachine()</code> and <code>KillMachine()</code> on the Manager interface, respectively. </p>
 <p> <code>GetAddresses()</code> and <code>GetOSRelease()</code> get the IP address and OS release information from the machine. These methods take the same arguments as <code>GetMachineAddresses()</code> and <code>GetMachineOSRelease()</code> of the Manager interface, respectively.</p>
@@ -258,23 +258,24 @@ description: "org.freedesktop.machine1 – The D-Bus interface of systemd-machin
 <pre>$ gdbus introspect --system \
  --dest org.freedesktop.machine1 \
  --object-path /org/freedesktop/machine1</pre>
-</dl>
+</dd></dl>
 <p> <code>Example 2. Introspect org.freedesktop.machine1.Machine on the bus</code> </p>
 <dl>
 <dd>
 <pre>$ gdbus introspect --system \
  --dest org.freedesktop.machine1 \
  --object-path /org/freedesktop/machine1/machine/rawhide</pre>
-</dl>
+</dd></dl>
 <h2>Versioning</h2>
 <p>These D-Bus interfaces follow m[blue]<code>the usual interface versioning guidelines</code>m[]<font SIZE="-2">[2]</font>.</p>
 <h2>Notes</h2>
 <dl>
-<dt> 1.</p>
-<dd>New Control Group Interfaces</p>
+<dt> 1.</dt>
+<dd>New Control Group Interfaces</dd>
 <dl>
-<dd><a rel="nofollow" href="https://www.freedesktop.org/wiki/Software/systemd/ControlGroupInterface/">https://www.freedesktop.org/wiki/Software/systemd/ControlGroupInterface/</a></dl>
-<dt> 2.</p>
-<dd>the usual interface versioning guidelines</p>
+<dd><a rel="nofollow" href="https://www.freedesktop.org/wiki/Software/systemd/ControlGroupInterface/">https://www.freedesktop.org/wiki/Software/systemd/ControlGroupInterface/</a></dd></dl>
+<dt> 2.</dt>
+<dd>the usual interface versioning guidelines</dd>
 <dl>
-<dd><a rel="nofollow" href="http://0pointer.de/blog/projects/versioning-dbus.html">http://0pointer.de/blog/projects/versioning-dbus.html</a></dl>
+<dd><a rel="nofollow" href="http://0pointer.de/blog/projects/versioning-dbus.html">http://0pointer.de/blog/projects/versioning-dbus.html</a></dd></dl>
+</dl>

@@ -11,7 +11,6 @@ description: "sc::KeyVal –"
 <p> The <code>KeyVal</code> class is designed to simplify the process of allowing a user to specify keyword/value associations to a C++ program.</p>
 <h2>Synopsis</h2>
 <pre><code>
-
 #include &lt;keyval.h&gt;</code></pre>
 <p> Inherits <code>sc::RefCount</code>. Inherited by <code>sc::AggregateKeyVal</code>, <code>sc::AssignedKeyVal</code>, <code>sc::PrefixKeyVal</code>, and <code>sc::StringKeyVal</code>.</p>
 <h3>Public Types</h3>
@@ -106,140 +105,47 @@ description: "sc::KeyVal –"
 <p>Ref&lt; DescribedClass &gt; describedclassvalue (int i, int j, const KeyValValue &amp;def=KeyValValueRefDescribedClass()) <code>Reading 3D Arrays.</code><br />
  These members correspond to the above members, but can be used to read in arrays with more than two dimensions. The nindex argument is the number of indices in the array. It is followed by an int giving the value of each index. </p>
 <pre><code>int Va_exists (const char *key, int nindex,...)
-
-
-
 int Va_count (const char *key, int nindex,...)
-
-
-
 int Va_booleanvalue (const char *key, int nindex,...)
-
-
-
 double Va_doublevalue (const char *key, int nindex,...)
-
-
-
 float Va_floatvalue (const char *key, int nindex,...)
-
-
-
 char Va_charvalue (const char *key, int nindex,...)
-
-
-
 int Va_intvalue (const char *key, int nindex,...)
-
-
-
 size_t Va_sizevalue (const char *key, int nindex,...)
-
-
-
 char * Va_pcharvalue (const char *key, int nindex,...)
-
-
-
 std::string Va_stringvalue (const char *key, int nindex,...)
-
-
-
 Ref&lt; DescribedClass &gt; Va_describedclassvalue (const char *key, int nindex,...)
-
-
-
 Protected Member Functions
 void seterror (KeyValError err)
-
-
 Set the current error condition.
-
-
 void seterror (KeyValValue::KeyValValueError err)
-
-
 Set the current error condition.
-
-
 virtual int key_exists (const char *)=0
-
-
 Ultimately called by exists.
-
-
 virtual int key_count (const char *=0)
-
-
 Ultimately called by count.
-
-
 virtual Ref&lt; KeyValValue &gt; key_value (const char *, const KeyValValue &amp;def)=0
-
-
 Ultimately called by value.
-
-
 virtual int key_booleanvalue (const char *, const KeyValValue &amp;def)
-
-
 Ultimately called by booleanvalue.
-
-
 virtual double key_doublevalue (const char *key, const KeyValValue &amp;def)
-
-
 Ultimately called by doublevalue.
-
-
 virtual float key_floatvalue (const char *key, const KeyValValue &amp;def)
-
-
 Ultimately called by floatvalue.
-
-
 virtual char key_charvalue (const char *key, const KeyValValue &amp;def)
-
-
 Ultimately called by charvalue.
-
-
 virtual int key_intvalue (const char *key, const KeyValValue &amp;def)
-
-
 Ultimately called by intvalue.
-
-
 virtual size_t key_sizevalue (const char *key, const KeyValValue &amp;def)
-
-
 Ultimately called by sizevalue.
-
-
 virtual char * key_pcharvalue (const char *key, const KeyValValue &amp;def)
-
-
 Ultimately called by pcharvalue.
-
-
 virtual std::string key_stringvalue (const char *key, const KeyValValue &amp;def)
-
-
 Ultimately called by stringvalue.
-
-
 virtual Ref&lt; DescribedClass &gt; key_describedclassvalue (const char *key, const KeyValValue &amp;def)
-
-
 Ultimately called by describedclassvalue.
-
-
-
 Protected Attributes
 int verbose_
-
-
-
 Friends</code></pre>
 <p> class <code>AggregateKeyVal</code> </p>
 <p> class <code>PrefixKeyVal</code></p>

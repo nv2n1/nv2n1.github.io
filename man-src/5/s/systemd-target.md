@@ -20,9 +20,9 @@ description: "systemd.target – Target unit configuration"
 <h3>Default Dependencies</h3>
 <p>The following dependencies are added unless <i>DefaultDependencies=no</i> is set: </p>
 <dl>
-<dd>&bull; Target units will automatically complement all configured dependencies of type <i>Wants=</i> or <i>Requires=</i> with dependencies of type <i>After=</i> unless <i>DefaultDependencies=no</i> is set in the specified units. Note that <i>Wants=</i> or <i>Requires=</i> must be defined in the target unit itself &#8212; if you for example define <i>Wants=</i>some.target in some.service, the automatic ordering will not be added.</dl>
+<dd>&bull; Target units will automatically complement all configured dependencies of type <i>Wants=</i> or <i>Requires=</i> with dependencies of type <i>After=</i> unless <i>DefaultDependencies=no</i> is set in the specified units. Note that <i>Wants=</i> or <i>Requires=</i> must be defined in the target unit itself &#8212; if you for example define <i>Wants=</i>some.target in some.service, the automatic ordering will not be added.</dd></dl>
 <dl>
-<dd>&bull; Target units automatically gain <i>Conflicts=</i> and <i>Before=</i> dependencies against shutdown.target.</dl>
+<dd>&bull; Target units automatically gain <i>Conflicts=</i> and <i>Before=</i> dependencies against shutdown.target.</dd></dl>
 <h2>Example</h2>
 <p><code>Example 1. Simple standalone target</code> </p>
 <dl>
@@ -33,7 +33,7 @@ Description=Emergency Mode with Networking
 Requires=emergency.target systemd-networkd.service
 After=emergency.target systemd-networkd.service
 AllowIsolate=yes</pre>
-</dl>
+</dd></dl>
 <p> When adding dependencies to other units, it&#8217;s important to check if they set <i>DefaultDependencies=</i>. Service units, unless they set <i>DefaultDependencies=no</i>, automatically get a dependency on sysinit.target. In this case, both emergency.target and systemd-networkd.service have <i>DefaultDependencies=no</i>, so they are suitable for use in this target, and do not pull in sysinit.target. </p>
 <p> You can now switch into this emergency mode by running <i>systemctl isolate emergency-net.target</i> or by passing the option <i>systemd.unit=emergency-net.target</i> on the kernel command line. </p>
 <p> Other units can have <i>WantedBy=emergency-net.target</i> in the <i>[Install]</i> section. After they are enabled using <code>systemctl enable</code>, they will be started before <i>emergency-net.target</i> is started. It is also possible to add arbitrary units as dependencies of emergency.target without modifying them by using <code>systemctl add-wants</code>.</p>

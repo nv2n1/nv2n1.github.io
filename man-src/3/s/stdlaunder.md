@@ -11,13 +11,9 @@ std::launder - std::launder
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header &lt;new&gt;
-
 template &lt;class T&gt;                                  (since C++17)
-
 constexpr T* launder(T* p) noexcept;                (until C++20)
-
 template &lt;class T&gt;                                  (since C++20)
-
 [[nodiscard]] constexpr T* launder(T* p) noexcept;</code></pre> 
 Obtains a pointer to the object located at the address represented by p. 
 Formally, given 
@@ -73,9 +69,7 @@ auto p5 = std::launder(reinterpret_cast&lt;int (*)[10]&gt;(&amp;x5.a[0]));
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;new&gt;
-
 #include &lt;cstddef&gt;
-
 #include &lt;cassert&gt;
 struct X {
     const int n; // note: X has a const member
@@ -101,7 +95,6 @@ int A::transmogrify()
 }
 static_assert(sizeof(B) == sizeof(A));
 int main()
-
 {
     X *p = new X{3, 4};
     const int a = p-&gt;n;

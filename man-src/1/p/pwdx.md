@@ -13,10 +13,10 @@ description: "pwdx – report current working directory of a process"
 <p> <code>pwdx</code> [<i>options</i>] <i>pid</i> [&#8230;]</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-V</code>, <code>&#8211;version</code></p>
-<dd> Output version information and exit.</p>
-<dt><code>-h</code>, <code>&#8211;help</code></p>
-<dd> Output help screen and exit.</dl>
+<dt><code>-V</code>, <code>&#8211;version</code></dt>
+<dd> Output version information and exit.</dd>
+<dt><code>-h</code>, <code>&#8211;help</code></dt>
+<dd> Output help screen and exit.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-ps/">ps</a></code>(1), <code><a href="/docs/linux/man/1-pgrep/">pgrep</a></code>(1)</p>
 <h2>STANDARDS</h2>

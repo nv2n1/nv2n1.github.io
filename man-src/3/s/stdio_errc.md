@@ -11,11 +11,8 @@ std::io_errc - std::io_errc
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header &lt;ios&gt;
-
 enum class io_errc {
-
     stream = 1,              (since C++11)
-
 };</code></pre> 
 The scoped enumeration std::io_errc defines the error codes reported by I/O streams in std::ios_base::failure exception objects. Only one error code (std::io_errc::stream) is required, although the implementation may define additional error codes. Because the appropriate specialization of std::is_error_code_enum is provided, values of type std::io_errc are implicitly convertible to std::error_code. 
 
@@ -44,11 +41,8 @@ is_error_code_enum&lt;std::io_errc&gt; extends the type trait std::is_error_code
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;iostream&gt;
-
 #include &lt;fstream&gt;
-
 int main()
-
 {
     std::ifstream f(&quot;doesn't exist&quot;);
     try {

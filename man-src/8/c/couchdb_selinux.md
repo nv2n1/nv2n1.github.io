@@ -55,9 +55,9 @@ description: "couchdb_selinux – Security Enhanced Linux Policy for the couchdb
 <p> Policy governs the access confined processes have to these ports. SELinux couchdb policy is very flexible allowing users to setup their couchdb processes in as secure a method as possible. </p>
 <p> The following port types are defined for couchdb: </p>
 <dl>
-<dt><code>couchdb_port_t</code></p>
+<dt><code>couchdb_port_t</code></dt>
 <dd>
-<dd>Default Defined Ports: tcp 5984,6984 udp 5984,6984</dl>
+</dd><dd>Default Defined Ports: tcp 5984,6984 udp 5984,6984</dd></dl>
 <h2>Managed Files</h2>
 <p>The SELinux process type couchdb_t can manage files labeled with the following file types. The paths listed are the default paths for these file types. Note the processes UID still need to have DAC permissions. </p>
 <p> <code>cluster_conf_t</code> </p>

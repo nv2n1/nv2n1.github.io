@@ -17,14 +17,14 @@ description: "pt_chown – helper function for grantpt(3), changes ownship and p
 <h2>Return Codes</h2>
 <p><code>pt_chown</code> has the following return codes:</p>
 <dl>
-<dt>EBADF</p>
-<dd>The file descriptor is not a valid master pseudo terminal. </p>
-<dt>EINVAL</p>
-<dd>The device is not a character device. </p>
-<dt>EACCES</p>
-<dd>Can&#8217;t change device owner and group or device permissions. </p>
-<dt>0</p>
-<dd>The owner, group, and permissions were successfully changed. </p>
+<dt>EBADF</dt>
+<dd>The file descriptor is not a valid master pseudo terminal. </dd>
+<dt>EINVAL</dt>
+<dd>The device is not a character device. </dd>
+<dt>EACCES</dt>
+<dd>Can&#8217;t change device owner and group or device permissions. </dd>
+<dt>0</dt>
+<dd>The owner, group, and permissions were successfully changed. </dd>
 </dl>
 <h2>Bugs</h2>
 <p>Report bugs using the glibcbug script to bugs [at] gnu.org </p>

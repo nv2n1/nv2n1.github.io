@@ -11,17 +11,11 @@ std::atomic_flag_test_and_set,std::atomic_flag_test_and_set_explicit - std::atom
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header &lt;atomic&gt;
-
 bool atomic_flag_test_and_set( volatile std::atomic_flag* p ) noexcept;
-
 bool atomic_flag_test_and_set( std::atomic_flag* p ) noexcept;
-
 bool atomic_flag_test_and_set_explicit( volatile std::atomic_flag* p,   (1) (since C++11)
-
 std::memory_order order ) noexcept;                                                       (2) (since C++11)
-
 bool atomic_flag_test_and_set_explicit( std::atomic_flag* p,
-
 std::memory_order order ) noexcept;</code></pre> 
 Atomically changes the state of a std::atomic_flag pointed to by p to set (true) and returns the value it held before. 
 
@@ -74,15 +68,11 @@ Fourth version
 
 A spinlock mutex can be implemented in userspace using an atomic_flag 
  // Run this code <pre><code>#include &lt;thread&gt;
-
 #include &lt;vector&gt;
-
 #include &lt;iostream&gt;
-
 #include &lt;atomic&gt;
 std::atomic_flag lock = ATOMIC_FLAG_INIT;
 void f(int n)
-
 {
     for (int cnt = 0; cnt &lt; 100; ++cnt) {
         while (std::atomic_flag_test_and_set_explicit(&amp;lock, std::memory_order_acquire))
@@ -92,7 +82,6 @@ void f(int n)
     }
 }
 int main()
-
 {
     std::vector&lt;std::thread&gt; v;
     for (int n = 0; n &lt; 10; ++n) {

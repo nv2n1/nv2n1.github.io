@@ -17,19 +17,19 @@ description: "networkd-dispatcher – Dispatcher service for systemd-networkd co
 <h2>Options</h2>
 <p><code>-h, &#8211;help</code></p>
 <dl>
-<dd>Print command-line syntax and program options to stdout.</dl>
+<dd>Print command-line syntax and program options to stdout.</dd></dl>
 <p> <code>-S, &#8211;script-dir=</code><i>SCRIPT_DIR</i></p>
 <dl>
-<dd>Location under which to look for scripts. Like the <i>PATH</i> environment variable, this may contain multiple directories separated by : and in case multiple directories have scripts with the same name, the earliest directory wins. Defaults to /etc/networkd-dispatcher:/usr/lib/networkd-dispatcher.</dl>
+<dd>Location under which to look for scripts. Like the <i>PATH</i> environment variable, this may contain multiple directories separated by : and in case multiple directories have scripts with the same name, the earliest directory wins. Defaults to /etc/networkd-dispatcher:/usr/lib/networkd-dispatcher.</dd></dl>
 <p> <code>-T, &#8211;run-startup-triggers</code></p>
 <dl>
-<dd>Generate events reflecting preexisting state and behavior on startup. This can be used to ensure that triggers are belatedly run even if networkd-dispatcher is invoked after systemd-networkd has already started an interface.</dl>
+<dd>Generate events reflecting preexisting state and behavior on startup. This can be used to ensure that triggers are belatedly run even if networkd-dispatcher is invoked after systemd-networkd has already started an interface.</dd></dl>
 <p> <code>-v, &#8211;verbose</code></p>
 <dl>
-<dd>Increase verbosity by one level. The default level is <i>WARNING</i>. Each use of <i>-v</i> will increment the log level (towards <i>INFO</i> or <i>DEBUG</i>), and each use of <i>-q</i> will decrement it (towards <i>ERROR</i> or <i>CRITICAL</i>).</dl>
+<dd>Increase verbosity by one level. The default level is <i>WARNING</i>. Each use of <i>-v</i> will increment the log level (towards <i>INFO</i> or <i>DEBUG</i>), and each use of <i>-q</i> will decrement it (towards <i>ERROR</i> or <i>CRITICAL</i>).</dd></dl>
 <p> <code>-q, &#8211;quiet</code></p>
 <dl>
-<dd>Decrease verbosity by one level.</dl>
+<dd>Decrease verbosity by one level.</dd></dl>
 <h2>Configuration Files</h2>
 <p>The systemd service reads <i>/etc/default/networkd-dispatcher</i> as an environment file for additional daemon arguments. </p>
 <p> The scripts to be run on network changes are in subdirectories <i>routable.d/</i>, <i>dormant.d/</i>, <i>no-carrier.d/</i>, <i>off.d/</i>, <i>carrier.d/</i>, <i>degraded.d/</i>, <i>configured.d</i>, <i>configuring.d/</i> inside <i>SCRIPT_DIR</i>. The default value for <i>SCRIPT_DIR</i> is <i>/etc/networkd-dispatcher:/usr/lib/networkd-dispatcher</i>. </p>

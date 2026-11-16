@@ -178,15 +178,15 @@ VolPack - introduction to VolPack, a library for volume rendering
 
 <h2>Data Types</h2>The following data types are declared in the VolPack header file (volpack.h):
 <dl COMPACT><dt>vpContext
-<dd>An opaque handle for a rendering context. A context contains all of the information required to render a volume, including classification and shading parameters, the view transformation, a description of the format of the volume data, and private data structures used by the rendering routines.
-<dt>vpResult
-<dd>A result code. Most of the library routines return the code VP_OK upon successful completion, or an error code if the library call fails.
-<dt>vpVector3
-<dd>A three-element linear array of double-precision elements (double[3]).
-<dt>vpVector4
-<dd>A four-element linear array of double-precisions elements (double[4]).
-<dt>vpMatrix3
-<dd>A three-by-three array of double-precision elements (double[3][3]).
-<dt>vpMatrix4
-<dd>A four-by-four array of double-precision elements (double[4][4]).</dl><h2>Availability</h2>Source code and documentation for VolPack are available free via the World Wide Web (<a rel="nofollow" HREF="http://www-graphics.stanford.edu/software/volpack)">http://www-graphics.stanford.edu/software/volpack)</a> or by anonymous ftp (<a HREF="ftp://graphics.stanford.edu/pub/volpack">ftp://graphics.stanford.edu/pub/volpack</a>).
+</dt><dd>An opaque handle for a rendering context. A context contains all of the information required to render a volume, including classification and shading parameters, the view transformation, a description of the format of the volume data, and private data structures used by the rendering routines.
+</dd><dt>vpResult
+</dt><dd>A result code. Most of the library routines return the code VP_OK upon successful completion, or an error code if the library call fails.
+</dd><dt>vpVector3
+</dt><dd>A three-element linear array of double-precision elements (double[3]).
+</dd><dt>vpVector4
+</dt><dd>A four-element linear array of double-precisions elements (double[4]).
+</dd><dt>vpMatrix3
+</dt><dd>A three-by-three array of double-precision elements (double[3][3]).
+</dd><dt>vpMatrix4
+</dt><dd>A four-by-four array of double-precision elements (double[4][4]).</dd></dl><h2>Availability</h2>Source code and documentation for VolPack are available free via the World Wide Web (<a rel="nofollow" HREF="http://www-graphics.stanford.edu/software/volpack)">http://www-graphics.stanford.edu/software/volpack)</a> or by anonymous ftp (<a HREF="ftp://graphics.stanford.edu/pub/volpack">ftp://graphics.stanford.edu/pub/volpack</a>).
 <h2>See Also</h2><i>VolPack User's Guide</i>

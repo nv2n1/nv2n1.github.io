@@ -14,7 +14,7 @@ description: "blk_start_queue – restart a previously stopped queue"
 <p><i>q</i></p>
 <dl>
 <dd>
-<dd>The struct request_queue in question</dl>
+</dd><dd>The struct request_queue in question</dd></dl>
 <h2>Description</h2>
 <p><code>blk_start_queue</code> will clear the stop flag on the queue, and call the request_fn for the queue if it was in a stopped state when entered. Also see <code>blk_stop_queue</code>. Queue lock must be held.</p>
 <h2>Copyright</h2>

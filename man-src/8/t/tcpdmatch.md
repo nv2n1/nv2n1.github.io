@@ -26,28 +26,26 @@ tcpdmatch [-d] daemon client
 
 The following two arguments are always required:
 <dl><dt>daemon
-<dd>A daemon process name. Typically, the last component of a daemon executable pathname.
-<dt>client
-<dd>A host name or network address, or one of the `unknown' or `paranoid' wildcard patterns. 
-
+</dt><dd>A daemon process name. Typically, the last component of a daemon executable pathname.
+</dd><dt>client
+</dt><dd>A host name or network address, or one of the `unknown' or `paranoid' wildcard patterns. 
  When a client host name is specified, <i>tcpdmatch</i> gives a prediction for each address listed for that client. 
-
- When a client address is specified, <i>tcpdmatch</i> predicts what <i>tcpd</i> would do when client name lookup fails.</dl>
+ When a client address is specified, <i>tcpdmatch</i> predicts what <i>tcpd</i> would do when client name lookup fails.</dd></dl>
  
 
  Optional information specified with the <i>daemon [at] server</i> form:
 <dl><dt>server
-<dd>A host name or network address, or one of the `unknown' or `paranoid' wildcard patterns. The default server name is `unknown'.</dl>
+</dt><dd>A host name or network address, or one of the `unknown' or `paranoid' wildcard patterns. The default server name is `unknown'.</dd></dl>
  
 
  Optional information specified with the <i>user [at] client</i> form:
 <dl><dt>user
-<dd>A client user identifier. Typically, a login name or a numeric userid. The default user name is `unknown'.</dl>
+</dt><dd>A client user identifier. Typically, a login name or a numeric userid. The default user name is `unknown'.</dd></dl>
 
 <h2>Options</h2>
 
 <dl><dt>-d
-<dd>Examine <i>hosts.allow</i> and <i>hosts.deny</i> files in the current directory instead of the default ones.</dl>
+</dt><dd>Examine <i>hosts.allow</i> and <i>hosts.deny</i> files in the current directory instead of the default ones.</dd></dl>
 
 <h2>Examples</h2>
 

@@ -16,10 +16,10 @@ description: "XmListDeselectPos — A List function that deselects an item at a 
 <h2>Description</h2>
 <p><code>XmListDeselectPos</code> unhighlights the item at the specified position and deletes it from the list of selected items.</p>
 <dl COMPACT>
-<dt><i>widget</i></p>
-<dd>Specifies the ID of the List widget</p>
-<dt><i>position</i></p>
-<dd>Specifies the position of the item to be deselected. A value of 1 indicates that the first item in the list is deselected; a value of 2 indicates that the second item is deselected; and so on. A value of 0 (zero) indicates that the last item in the list is deselected.</dl>
+<dt><i>widget</i></dt>
+<dd>Specifies the ID of the List widget</dd>
+<dt><i>position</i></dt>
+<dd>Specifies the position of the item to be deselected. A value of 1 indicates that the first item in the list is deselected; a value of 2 indicates that the second item is deselected; and so on. A value of 0 (zero) indicates that the last item in the list is deselected.</dd></dl>
 <p> For a complete definition of List and its associated resources, see <code><a href="/docs/linux/man/3-xmlist/">XmList</a></code>(3).</p>
 <h2>Related</h2>
 <p><code><a href="/docs/linux/man/3-xmlist/">XmList</a></code>(3).</p>

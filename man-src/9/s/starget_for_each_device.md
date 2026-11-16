@@ -14,20 +14,20 @@ description: "starget_for_each_device – helper to walk all devices of a target
 <p><i>starget</i></p>
 <dl>
 <dd>
-<dd>target whose devices we want to iterate over.</dl>
+</dd><dd>target whose devices we want to iterate over.</dd></dl>
 <p> <i>data</i></p>
 <dl>
-<dd>Opaque passed to each function call.</dl>
+<dd>Opaque passed to each function call.</dd></dl>
 <p> <i>fn</i></p>
 <dl>
-<dd>Function to call on each device</dl>
+<dd>Function to call on each device</dd></dl>
 <h2>Description</h2>
 <p>This traverses over each device of <i>starget</i>. The devices have a reference that must be released by scsi_host_put when breaking out of the loop.</p>
 <h2>Authors</h2>
 <p><code>James Bottomley</code> &lt;James.Bottomley [at] hansenpartnership.com&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <p> <code>Rob Landley</code> &lt;rob [at] landley.net&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

@@ -14,10 +14,10 @@ description: "gnutls_certificate_get_openpgp_keyring – export keyring from a #
 <p> <code>void gnutls_certificate_get_openpgp_keyring(gnutls_certificate_credentials_t </code><i>sc</i><code>, gnutls_openpgp_keyring_t * </code><i>keyring</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
-<dt>gnutls_certificate_credentials_t sc</p>
-<dd> is a <code>gnutls_certificate_credentials_t</code> structure.</p>
-<dt>gnutls_openpgp_keyring_t * keyring</p>
-<dd> the exported keyring. Should be treated as constant</dl>
+<dt>gnutls_certificate_credentials_t sc</dt>
+<dd> is a <code>gnutls_certificate_credentials_t</code> structure.</dd>
+<dt>gnutls_openpgp_keyring_t * keyring</dt>
+<dd> the exported keyring. Should be treated as constant</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> This function will export the OpenPGP keyring associated with the given credentials.</p>
 <h2>SINCE</h2>
@@ -31,6 +31,6 @@ description: "gnutls_certificate_get_openpgp_keyring – export keyring from a #
 <p> The full documentation for <code>gnutls</code> is maintained as a Texinfo manual. If the <code>info</code> and <code>gnutls</code> programs are properly installed at your site, the command</p>
 <dl>
 <dt>
-<dd> <code>info gnutls</code></dl>
+</dt><dd> <code>info gnutls</code></dd></dl>
 <p> should give you access to the complete manual. </p>
 <h2>Index</h2>

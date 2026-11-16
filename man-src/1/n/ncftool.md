@@ -17,21 +17,21 @@ description: "ncftool – Network configuration tool"
 <h3><code>list [&#8211;macs] [&#8211;all] [&#8211;inactive]</code></h3>
 <p> List the currently configured toplevel network interfaces</p>
 <dl>
-<dt><code>[&#8211;macs]</code> &#8211; show <font SIZE="-1">MAC</font> addresses</p>
+<dt><code>[&#8211;macs]</code> &#8211; show <font SIZE="-1">MAC</font> addresses</dt>
 <dd>
-<dt><code>[&#8211;all]</code> &#8211; show all (up &amp; down) interfaces</p>
+</dd><dt><code>[&#8211;all]</code> &#8211; show all (up &amp; down) interfaces</dt>
 <dd>
-<dt><code>[&#8211;inactive]</code> &#8211; show only inactive (down) interfaces</p>
-<dd></dl>
+</dd><dt><code>[&#8211;inactive]</code> &#8211; show only inactive (down) interfaces</dt>
+<dd></dd></dl>
 <h3><code>dumpxml [&#8211;mac] [&#8211;live] name</code></h3>
 <p> Dump the <font SIZE="-1">XML</font> description of an interface</p>
 <dl>
-<dt><code>[&#8211;mac]</code> &#8211; interpret the name as <font SIZE="-1">MAC</font> address</p>
+<dt><code>[&#8211;mac]</code> &#8211; interpret the name as <font SIZE="-1">MAC</font> address</dt>
 <dd>
-<dt><code>[&#8211;live]</code> &#8211; include information about the live interface</p>
+</dd><dt><code>[&#8211;live]</code> &#8211; include information about the live interface</dt>
 <dd>
-<dt><code>name</code> &#8211; the name of the interface</p>
-<dd></dl>
+</dd><dt><code>name</code> &#8211; the name of the interface</dt>
+<dd></dd></dl>
 <h3><code>define xmlfile</code></h3>
 <p> Define an interface from the specified <font SIZE="-1">XML</font> file.</p>
 <h3><code>undefine iface</code></h3>
@@ -55,7 +55,7 @@ description: "ncftool – Network configuration tool"
 <h2>AUTHORS</h2>
 <p> Please refer to the <font SIZE="-1">AUTHORS</font> file distributed with netcf. </p>
 <h2>Index</h2>
-<dt><a href="#lbAQ">SEE ALSO</a></p>
+<dt><a href="#lbAQ">SEE ALSO</a></dt>
 <dd>
-<dt><a href="#lbAR">AUTHORS</a></p>
-<dd></dl>
+</dd><dt><a href="#lbAR">AUTHORS</a></dt>
+<dd></dd></dl>

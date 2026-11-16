@@ -22,7 +22,7 @@ description: "Linked List General Functions – Miscellaneous functions that wor
 <p>Return the memory allocation failure flag after any operation needin allocation. </p>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>The state of the allocation flag</dl>
+<dd>The state of the allocation flag</dd></dl>
 <p> This function returns the state of the memory allocation flag. This flag is set if memory allocations during <code>evas_list_append()</code>, <code>evas_list_prepend()</code>, <code>evas_list_append_relative()</code>, or <code>evas_list_prepend_relative()</code> fail. If they do fail, 1 will be returned, otherwise 0 will be returned. The flag will remain in its current state until the next call that requires allocation is called, and is then reset. </p>
 <p> Example: </p>
 <pre> Evas_List *list = NULL;
@@ -38,10 +38,10 @@ description: "Linked List General Functions – Miscellaneous functions that wor
 <p>Get the count of the number of items in a list. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>list</i> The list whose count to return</dl>
+<dd><i>list</i> The list whose count to return</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>The number of members in the list list</dl>
+<dd>The number of members in the list list</dd></dl>
 <p> This function returns how many members in the specified list: list. If the list is empty (NULL), 0 is returned. </p>
 <p> NB: This is an order-1 operation and takes the same tiem regardless of the length of the list. </p>
 <p> Example: </p>
@@ -53,10 +53,10 @@ description: "Linked List General Functions – Miscellaneous functions that wor
 <p>Get the list node data member. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>list</i> The list node to get the data member of</dl>
+<dd><i>list</i> The list node to get the data member of</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>The data member from the list node list</dl>
+<dd>The data member from the list node list</dd></dl>
 <p> This function returns the data member of the specified list node list. It is equivalent to list-&gt;data. </p>
 <p> Example: </p>
 <pre> extern Evas_List *list;

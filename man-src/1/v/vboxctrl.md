@@ -16,32 +16,32 @@ description: "vboxctrl – control vbox functions"
 <p> <code>vboxctrl</code> controls a number of vbox functions. The user&#8217;s password is asked before performing the requested action.</p>
 <h3>OPTIONS</h3>
 <dl>
-<dt><i>-c, &#8211;create</i></p>
-<dd> Creates a control file.</p>
-<dt><i>-r, &#8211;remove</i></p>
-<dd> Removes a control file (default).</p>
-<dt><i>-n, &#8211;answernow</i></p>
-<dd> Control file &quot;vboxctrl-answernow&quot;.</p>
-<dt><i>-a, &#8211;answerall</i></p>
-<dd> Control file &quot;vboxctrl-answerall&quot;.</p>
-<dt><i>-p, &#8211;stop</i></p>
-<dd> Control file &quot;vboxctrl-stop&quot;.</p>
-<dt><i>-j, &#8211;reject</i></p>
-<dd> Control file &quot;vboxctrl-reject&quot;.</p>
-<dt><i>-s, &#8211;spooldir</i></p>
-<dd> Spooldirectory in which to create/remove control files.</p>
-<dt><i>-v, &#8211;version</i></p>
-<dd> Displays package version.</p>
-<dt><i>-h, &#8211;help</i></p>
-<dd> Displays a usage message.</dl>
+<dt><i>-c, &#8211;create</i></dt>
+<dd> Creates a control file.</dd>
+<dt><i>-r, &#8211;remove</i></dt>
+<dd> Removes a control file (default).</dd>
+<dt><i>-n, &#8211;answernow</i></dt>
+<dd> Control file &quot;vboxctrl-answernow&quot;.</dd>
+<dt><i>-a, &#8211;answerall</i></dt>
+<dd> Control file &quot;vboxctrl-answerall&quot;.</dd>
+<dt><i>-p, &#8211;stop</i></dt>
+<dd> Control file &quot;vboxctrl-stop&quot;.</dd>
+<dt><i>-j, &#8211;reject</i></dt>
+<dd> Control file &quot;vboxctrl-reject&quot;.</dd>
+<dt><i>-s, &#8211;spooldir</i></dt>
+<dd> Spooldirectory in which to create/remove control files.</dd>
+<dt><i>-v, &#8211;version</i></dt>
+<dd> Displays package version.</dd>
+<dt><i>-h, &#8211;help</i></dt>
+<dd> Displays a usage message.</dd></dl>
 <p> The spool directory is taken from one of the following:</p>
 <dl>
-<dt><i>1</i></p>
-<dd> the default builtin value</p>
-<dt><i>2</i></p>
-<dd> The value of the environment variable VBOXSPOOL, if set.</p>
-<dt><i>3</i></p>
-<dd> The directory of the command line option &quot;&#8211;spooldir&quot;. </p>
+<dt><i>1</i></dt>
+<dd> the default builtin value</dd>
+<dt><i>2</i></dt>
+<dd> The value of the environment variable VBOXSPOOL, if set.</dd>
+<dt><i>3</i></dt>
+<dd> The directory of the command line option &quot;&#8211;spooldir&quot;. </dd>
 </dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-vbox/">vbox</a>(1), <a href="/docs/linux/man/8-vboxd/">vboxd</a>(8)</code> </p>

@@ -16,38 +16,38 @@ description: "LilyPond – manual page for LilyPond 2.12.2"
 <p> LilyPond produces beautiful music notation. For more information, see <a rel="nofollow" href="http://lilypond.org">http://lilypond.org</a></p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-d</code>, <code>&#8211;define-default=SYM</code>[=<i>VAL</i>]</p>
-<dd> set Scheme option SYM to VAL (default: #t). Use <code>-dhelp</code> for help.</p>
-<dt><code>-e</code>, <code>&#8211;evaluate</code>=<i>EXPR</i></p>
-<dd> evaluate scheme code</p>
-<dt><code>-f</code>, <code>&#8211;formats</code>=<i>FORMATs</i></p>
-<dd> dump FORMAT,&#8230; Also as separate options:</p>
-<dt><code>&#8211;pdf</code></p>
-<dd> generate PDF (default)</p>
-<dt><code>&#8211;png</code></p>
-<dd> generate PNG</p>
-<dt><code>&#8211;ps</code></p>
-<dd> generate PostScript</p>
-<dt><code>-h</code>, <code>&#8211;help</code></p>
-<dd> show this help and exit</p>
-<dt><code>-H</code>, <code>&#8211;header</code>=<i>FIELD</i></p>
-<dd> dump header field FIELD to file named BASENAME.FIELD</p>
-<dt><code>-I</code>, <code>&#8211;include</code>=<i>DIR</i></p>
-<dd> add DIR to search path</p>
-<dt><code>-i</code>, <code>&#8211;init</code>=<i>FILE</i></p>
-<dd> use FILE as init file</p>
-<dt><code>-j</code>, <code>&#8211;jail</code>=<i>USER</i>, GROUP, JAIL, DIR</p>
-<dd> chroot to JAIL, become USER:GROUP and cd into DIR</p>
-<dt><code>-o</code>, <code>&#8211;output</code>=<i>FILE</i></p>
-<dd> write output to FILE (suffix will be added)</p>
-<dt><code>&#8211;relocate</code></p>
-<dd> relocate using directory of lilypond program</p>
-<dt><code>-v</code>, <code>&#8211;version</code></p>
-<dd> show version number and exit</p>
-<dt><code>-V</code>, <code>&#8211;verbose</code></p>
-<dd> be verbose</p>
-<dt><code>-w</code>, <code>&#8211;warranty</code></p>
-<dd> show warranty and copyright</dl>
+<dt><code>-d</code>, <code>&#8211;define-default=SYM</code>[=<i>VAL</i>]</dt>
+<dd> set Scheme option SYM to VAL (default: #t). Use <code>-dhelp</code> for help.</dd>
+<dt><code>-e</code>, <code>&#8211;evaluate</code>=<i>EXPR</i></dt>
+<dd> evaluate scheme code</dd>
+<dt><code>-f</code>, <code>&#8211;formats</code>=<i>FORMATs</i></dt>
+<dd> dump FORMAT,&#8230; Also as separate options:</dd>
+<dt><code>&#8211;pdf</code></dt>
+<dd> generate PDF (default)</dd>
+<dt><code>&#8211;png</code></dt>
+<dd> generate PNG</dd>
+<dt><code>&#8211;ps</code></dt>
+<dd> generate PostScript</dd>
+<dt><code>-h</code>, <code>&#8211;help</code></dt>
+<dd> show this help and exit</dd>
+<dt><code>-H</code>, <code>&#8211;header</code>=<i>FIELD</i></dt>
+<dd> dump header field FIELD to file named BASENAME.FIELD</dd>
+<dt><code>-I</code>, <code>&#8211;include</code>=<i>DIR</i></dt>
+<dd> add DIR to search path</dd>
+<dt><code>-i</code>, <code>&#8211;init</code>=<i>FILE</i></dt>
+<dd> use FILE as init file</dd>
+<dt><code>-j</code>, <code>&#8211;jail</code>=<i>USER</i>, GROUP, JAIL, DIR</dt>
+<dd> chroot to JAIL, become USER:GROUP and cd into DIR</dd>
+<dt><code>-o</code>, <code>&#8211;output</code>=<i>FILE</i></dt>
+<dd> write output to FILE (suffix will be added)</dd>
+<dt><code>&#8211;relocate</code></dt>
+<dd> relocate using directory of lilypond program</dd>
+<dt><code>-v</code>, <code>&#8211;version</code></dt>
+<dd> show version number and exit</dd>
+<dt><code>-V</code>, <code>&#8211;verbose</code></dt>
+<dd> be verbose</dd>
+<dt><code>-w</code>, <code>&#8211;warranty</code></dt>
+<dd> show warranty and copyright</dd></dl>
 <h2>REPORTING BUGS</h2>
 <p> Report bugs via <a rel="nofollow" href="http://post.gmane.org/post.php?group=gmane.comp.gnu.lilypond.bugs">http://post.gmane.org/post.php?group=gmane.comp.gnu.lilypond.bugs</a></p>
 <h2>COPYRIGHT</h2>
@@ -60,6 +60,6 @@ description: "LilyPond – manual page for LilyPond 2.12.2"
 <p> The full documentation for <code>LilyPond</code> is maintained as a Texinfo manual. If the <code>info</code> and <code>LilyPond</code> programs are properly installed at your site, the command</p>
 <dl>
 <dt>
-<dd> <code>info LilyPond</code></dl>
+</dt><dd> <code>info LilyPond</code></dd></dl>
 <p> should give you access to the complete manual. </p>
 <h2>Index</h2>

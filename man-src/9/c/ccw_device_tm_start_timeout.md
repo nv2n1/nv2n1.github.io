@@ -14,23 +14,23 @@ description: "ccw_device_tm_start_timeout – perform start function"
 <p><i>cdev</i></p>
 <dl>
 <dd>
-<dd>ccw device on which to perform the start function</dl>
+</dd><dd>ccw device on which to perform the start function</dd></dl>
 <p> <i>tcw</i></p>
 <dl>
-<dd>transport-command word to be started</dl>
+<dd>transport-command word to be started</dd></dl>
 <p> <i>intparm</i></p>
 <dl>
-<dd>user defined parameter to be passed to the interrupt handler</dl>
+<dd>user defined parameter to be passed to the interrupt handler</dd></dl>
 <p> <i>lpm</i></p>
 <dl>
-<dd>mask of paths to use</dl>
+<dd>mask of paths to use</dd></dl>
 <p> <i>expires</i></p>
 <dl>
-<dd>time span in jiffies after which to abort request</dl>
+<dd>time span in jiffies after which to abort request</dd></dl>
 <h2>Description</h2>
 <p>Start the tcw on the given ccw device. Return zero on success, non-zero otherwise.</p>
 <h2>Author</h2>
 <p><code>Cornelia Huck</code> &lt;cornelia.huck [at] de.ibm.com&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

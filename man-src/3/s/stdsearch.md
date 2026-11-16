@@ -11,71 +11,43 @@ std::search - std::search
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;algorithm&gt;
-
     template &lt;class ForwardIt1, class ForwardIt2&gt;
-
     ForwardIt1 search(ForwardIt1 first, ForwardIt1 last, (until C++ 20)
-
                                                              ForwardIt2 s_first,
                       ForwardIt2 s_last);
-
 template &lt;class ForwardIt1, class ForwardIt2&gt;
-
 constexpr ForwardIt1 search(ForwardIt1 first, ForwardIt1 last, (since C++ 20)
-
                                                                    ForwardIt2 s_first,
                             ForwardIt2 s_last);
-
 template &lt;class ExecutionPolicy, class ForwardIt1, class ForwardIt2&gt;
-
 ForwardIt1 search(ExecutionPolicy &amp;&amp;policy, ForwardIt1 first, ForwardIt1 last, (2)(since C++ 17)
-
                                                                                    ForwardIt2 s_first,
                   ForwardIt2 s_last);
-
 template &lt;class ForwardIt1, class ForwardIt2, class BinaryPredicate&gt;
-
 ForwardIt1 search(ForwardIt1 first, ForwardIt1 last, (until C++ 20)
-
                                                          ForwardIt2 s_first,
                   ForwardIt2 s_last, BinaryPredicate p);
 (1)
-
     template &lt;class ForwardIt1, class ForwardIt2, class BinaryPredicate&gt;
-
     constexpr ForwardIt1 search(ForwardIt1 first, ForwardIt1 last, (since C++ 20)
-
                                                                        ForwardIt2 s_first,
                                 ForwardIt2 s_last, BinaryPredicate p);
-
 template &lt;class ExecutionPolicy, class ForwardIt1, class ForwardIt2, class BinaryPredicate&gt;
-
 ForwardIt1 search(ExecutionPolicy &amp;&amp;policy, ForwardIt1 first, ForwardIt1 last, (3)(4)(since C++ 17)
-
                                                                                    ForwardIt2 s_first,
                   ForwardIt2 s_last, BinaryPredicate p);
-
 template &lt;class ForwardIt, class Searcher&gt;
 (since C++ 17)
-
     ForwardIt search(ForwardIt first, ForwardIt last, (until C++ 20)
-
                                                           const Searcher &amp;searcher);
 (5)
-
     template &lt;class ForwardIt, class Searcher&gt;
-
     constexpr ForwardIt search(ForwardIt first, ForwardIt last, (since C++ 20)
-
                                                                     const Searcher &amp;searcher);
 1-4) Searches for the first occurrence of the sequence of elements [s_first, s_last) in the range [first, last).
-
 1) Elements are compared using operator==.
-
 3) Elements are compared using the given binary predicate p.
-
 2,4) Same as (1,3), but executed according to policy. These overloads do not participate in overload resolution unless std::is_execution_policy_v&lt;std::decay_t&lt;ExecutionPolicy&gt;&gt; is true
-
 5) Searches the sequence [first, last) for the pattern specified in the constructor of searcher. Effectively executes return searcher(first, last).first;. Searcher need not be CopyConstructible.</code></pre> 
 The standard library provides the following searchers: 
 default_searcher standard C++ library search algorithm implementation 
@@ -178,23 +150,16 @@ The overloads with a template parameter named ExecutionPolicy report errors as f
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;string&gt;
-
 #include &lt;algorithm&gt;
-
 #include &lt;iostream&gt;
-
 #include &lt;vector&gt;
-
 #include &lt;functional&gt;
 template &lt;typename Container&gt;
-
 bool in_quote(const Container &amp;cont, const std::string &amp;s)
-
 {
     return std::search(cont.begin(), cont.end(), s.begin(), s.end()) != cont.end();
 }
 int main()
-
 {
     std::string str = &quot;why waste time learning, when ignorance is instantaneous?&quot;;
     // str.find() can be used as well

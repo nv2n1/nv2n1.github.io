@@ -11,9 +11,7 @@ std::bitset - std::bitset
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header &lt;bitset&gt;
-
 template&lt; std::size_t N &gt;
-
 class bitset;</code></pre> 
 The class template bitset represents a fixed-size sequence of N bits. Bitsets can be manipulated by standard logic operators and converted to and from strings and integers. 
 bitset meets the requirements of CopyConstructible and CopyAssignable. 

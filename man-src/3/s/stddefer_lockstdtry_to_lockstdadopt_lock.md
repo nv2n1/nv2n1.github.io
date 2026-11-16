@@ -30,7 +30,6 @@ adopt_lock_t assume the calling thread already has ownership of the mutex
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;mutex&gt;
-
 #include &lt;thread&gt;
 struct bank_account {
     explicit bank_account(int balance)
@@ -41,7 +40,6 @@ struct bank_account {
     std::mutex m;
 };
 void transfer(bank_account &amp;from, bank_account &amp;to, int amount)
-
 {
     // lock both mutexes without deadlock
     std::lock(from.m, to.m);
@@ -49,17 +47,13 @@ void transfer(bank_account &amp;from, bank_account &amp;to, int amount)
     std::lock_guard&lt;std::mutex&gt; lock1(from.m, std::adopt_lock);
     std::lock_guard&lt;std::mutex&gt; lock2(to.m, std::adopt_lock);
     // equivalent approach:
-
     //    std::unique_lock&lt;std::mutex&gt; lock1(from.m, std::defer_lock);
-
     //    std::unique_lock&lt;std::mutex&gt; lock2(to.m, std::defer_lock);
-
     //    std::lock(lock1, lock2);
     from.balance -= amount;
     to.balance += amount;
 }
 int main()
-
 {
     bank_account my_account(100);
     bank_account your_account(50);

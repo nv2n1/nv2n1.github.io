@@ -15,71 +15,59 @@ description: "fts-rest-snapshot"
 <p> This command can be used to retrieve the internal status FTS3 has on all pairs with ACTIVE transfers. It allows to filter by VO, source SE and destination SE</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-h/&#8211;help</code></p>
-<dd> Show this help message and exit</p>
+<dt><code>-h/&#8211;help</code></dt>
+<dd> Show this help message and exit</dd>
 <dl>
-<dt>
-<dd></dl>
-<dt><code>-v/&#8211;verbose</code></p>
-<dd> Verbose output.</p>
+</dl>
+<dt><code>-v/&#8211;verbose</code></dt>
+<dd> Verbose output.</dd>
 <dl>
-<dt>
-<dd></dl>
-<dt><code>-s/&#8211;endpoint</code></p>
-<dd> Fts3 rest endpoint.</p>
+</dl>
+<dt><code>-s/&#8211;endpoint</code></dt>
+<dd> Fts3 rest endpoint.</dd>
 <dl>
-<dt>
-<dd></dl>
-<dt><code>-j/&#8211;json</code></p>
-<dd> Print the output in json format.</p>
+</dl>
+<dt><code>-j/&#8211;json</code></dt>
+<dd> Print the output in json format.</dd>
 <dl>
-<dt>
-<dd></dl>
-<dt><code>&#8211;key</code></p>
-<dd> The user certificate private key.</p>
+</dl>
+<dt><code>&#8211;key</code></dt>
+<dd> The user certificate private key.</dd>
 <dl>
-<dt>
-<dd></dl>
-<dt><code>&#8211;cert</code></p>
-<dd> The user certificate.</p>
+</dl>
+<dt><code>&#8211;cert</code></dt>
+<dd> The user certificate.</dd>
 <dl>
-<dt>
-<dd></dl>
-<dt><code>&#8211;capath</code></p>
-<dd> Use the specified directory to verify the peer</p>
+</dl>
+<dt><code>&#8211;capath</code></dt>
+<dd> Use the specified directory to verify the peer</dd>
 <dl>
-<dt>
-<dd></dl>
-<dt><code>&#8211;insecure</code></p>
-<dd> Do not validate the server certificate</p>
+</dl>
+<dt><code>&#8211;insecure</code></dt>
+<dd> Do not validate the server certificate</dd>
 <dl>
-<dt>
-<dd></dl>
-<dt><code>&#8211;access-token</code></p>
-<dd> Oauth2 access token (supported only by some endpoints, takes precedence)</p>
+</dl>
+<dt><code>&#8211;access-token</code></dt>
+<dd> Oauth2 access token (supported only by some endpoints, takes precedence)</dd>
 <dl>
-<dt>
-<dd></dl>
-<dt><code>&#8211;vo</code></p>
-<dd> Filter by vo</p>
+</dl>
+<dt><code>&#8211;vo</code></dt>
+<dd> Filter by vo</dd>
 <dl>
-<dt>
-<dd></dl>
-<dt><code>&#8211;source</code></p>
-<dd> Filter by source se</p>
+</dl>
+<dt><code>&#8211;source</code></dt>
+<dd> Filter by source se</dd>
 <dl>
-<dt>
-<dd></dl>
-<dt><code>&#8211;destination</code></p>
-<dd> Filter by destination se</p>
+</dl>
+<dt><code>&#8211;destination</code></dt>
+<dd> Filter by destination se</dd>
 <dl>
-<dt>
-<dd></dl>
+</dl>
 </dl>
 <h2>EXAMPLE</h2>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre><code>
 $ &amp;nbsp;
 fts - rest - snapshot - s &amp;nbsp;
@@ -222,7 +210,7 @@ dteam
 0 seconds
     Most frequent error : -
 </code></pre>
-</dl>
+</dd></dl>
 <h2>AUTHORS</h2>
 <p> fts-devel [at] cern.ch. </p>
 <h2>Index</h2>

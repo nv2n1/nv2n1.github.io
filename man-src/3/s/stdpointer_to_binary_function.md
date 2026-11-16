@@ -11,13 +11,9 @@ std::pointer_to_binary_function - std::pointer_to_binary_function
 <h2>Synopsis</h2>
 
 <pre><code>template&lt;
-
 class Arg1,                                                                            (deprecated in C++11)
-
 class Arg2,                                                                            (removed in C++17)
-
 class Result
-
 &gt; class pointer_to_binary_function : public std::binary_function&lt;Arg1, Arg2, Result&gt;;</code></pre> 
 std::pointer_to_binary_function is a function object that acts as a wrapper around a binary function. 
 

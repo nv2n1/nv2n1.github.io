@@ -11,22 +11,14 @@ std::pow(std::valarray) - std::pow(std::valarray)
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;valarray&gt;
-
     template &lt;class T&gt;
     (1)
-
         std::valarray&lt;T&gt; pow(const std::valarray&lt;T&gt; &amp;base, const std::valarray&lt;T&gt; &amp;exp);
-
 template &lt;class T&gt;
-
 std::valarray&lt;T&gt; pow(const std::valarray&lt;T&gt; &amp;base, (2)
-
                                                        const typename std::valarray&lt;T&gt;::value_type &amp;vexp);
-
 template &lt;class T&gt;
-
 std::valarray&lt;T&gt; pow(const typename std::valarray&lt;T&gt;::value_type &amp;vbase, (3)
-
                                                                              const std::valarray&lt;T&gt; &amp;exp);</code></pre> 
 Raises a value to a power. 
 1) Computes the values of each element in the numeric array base raised to the power specified by the corresponding element from the numeric array exp. 
@@ -60,9 +52,7 @@ The function can be implemented with the return type different from std::valarra
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;* The return type does not add more than two levels of template nesting over the most deeply-nested argument type. 
 Defect reports 
 The following behavior-changing defect reports were applied retroactively to previously published C++ standards. <pre><code>DR       Applied to Behavior as published                                                                      Correct behavior
-
 LWG_3074 C++98      T is deduced from both the scalar and the valarray for (2-3), disallowing mixed-type calls only deduce T from the valarray
-
 </code></pre>
 
 <h2>Example</h2>

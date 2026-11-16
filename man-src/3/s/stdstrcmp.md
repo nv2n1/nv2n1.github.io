@@ -11,7 +11,6 @@ std::strcmp - std::strcmp
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;cstring&gt;
-
     int strcmp(const char *lhs, const char *rhs);</code></pre> 
 Compares two null-terminated byte strings lexicographically. 
 The sign of the result is the sign of the difference between the values of the first pair of characters (both interpreted as unsigned char) that differ in the strings being compared. 
@@ -30,14 +29,10 @@ Positive value if lhs appears after rhs in lexicographical order.
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;vector&gt;
-
 #include &lt;cstring&gt;
-
 #include &lt;algorithm&gt;
-
 #include &lt;iostream&gt;
 int main()
-
 {
     std::vector&lt;const char *&gt; cats{&quot;Heathcliff&quot;, &quot;Snagglepuss&quot;, &quot;Hobbes&quot;, &quot;Garfield&quot;};
     std::sort(cats.begin(), cats.end(), [](const char *strA, const char *strB) {

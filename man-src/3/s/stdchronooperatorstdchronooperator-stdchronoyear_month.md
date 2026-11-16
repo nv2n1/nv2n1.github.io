@@ -10,31 +10,18 @@ description: "std::chrono::operator+,std::chrono::operator-(std::chrono::year_mo
 <p>std::chrono::operator+,std::chrono::operator-(std::chrono::year_month) &#8211; std::chrono::operator+,std::chrono::operator-(std::chrono::year_month)</p>
 <h2>Synopsis</h2>
 <pre><code>constexpr std::chrono::year_month operator+(const std::chrono::year_month &amp;ym, (1)(since C++ 20)
-
                                                                                    const std::chrono::years &amp;dy) noexcept;
-
 constexpr std::chrono::year_month operator+(const std::chrono::years &amp;dy, (2)(since C++ 20)
-
                                                                               const std::chrono::year_month &amp;ym) noexcept;
-
 constexpr std::chrono::year_month operator+(const std::chrono::year_month &amp;ym, (3)(since C++ 20)
-
                                                                                    const std::chrono::months &amp;dm) noexcept;
-
 constexpr std::chrono::year_month operator+(const std::chrono::months &amp;dm, (4)(since C++ 20)
-
                                                                                const std::chrono::year_month &amp;ym) noexcept;
-
 constexpr std::chrono::year_month operator-(const std::chrono::year_month &amp;ym, (5)(since C++ 20)
-
                                                                                    const std::chrono::years &amp;dy) noexcept;
-
 constexpr std::chrono::year_month operator-(const std::chrono::year_month &amp;ym, (6)(since C++ 20)
-
                                                                                    const std::chrono::months &amp;dm) noexcept;
-
 constexpr std::chrono::months operator-(const std::chrono::year_month &amp;ym1, (7)(since C++ 20)
-
                                                                                 const std::chrono::year_month &amp;ym2) noexcept;</code></pre>
 <p>1-2) Adds dy.count() years to ym.<br />
 3-4) Adds dm.count() months to ym.<br />
@@ -60,12 +47,6 @@ auto ym = 2001y / April;</p>
 &nbsp;Reason: no example </p>
 <h2>See also</h2>
 <pre><code>modifies the year_month by some number of months or years
-
 operator+= (public member function)
-
 operator-=
-
-
-
-
 </code></pre>

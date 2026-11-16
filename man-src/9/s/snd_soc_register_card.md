@@ -15,7 +15,7 @@ snd_soc_register_card - Register a card with the ASoC core
 <h2>Arguments</h2>
 
 <i>card</i>
-<dl><dd><dd>Card to register</dl>
+<dl><dd></dd><dd>Card to register</dd></dl>
 
 <h2>Copyright</h2>
 

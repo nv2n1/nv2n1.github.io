@@ -24,67 +24,67 @@ description: "rpmbuild – Build RPM Package(s)"
 <h3>General Options</h3>
 <p>These options can be used in all the different modes.</p>
 <dl>
-<dt><code>-?, &#8211;help</code></p>
-<dd>Print a longer usage message then normal.</p>
-<dt><code>&#8211;version</code></p>
-<dd>Print a single line containing the version number of <code>rpm</code> being used.</p>
-<dt><code>&#8211;quiet</code></p>
-<dd>Print as little as possible &#8211; normally only error messages will be displayed.</p>
-<dt><code>-v</code></p>
-<dd>Print verbose information &#8211; normally routine progress messages will be displayed.</p>
-<dt><code>-vv</code></p>
-<dd>Print lots of ugly debugging information.</p>
-<dt><code>&#8211;rcfile </code><i>FILELIST</i></p>
-<dd>Each of the files in the colon separated <i>FILELIST</i> is read sequentially by <code>rpm</code> for configuration information. Only the first file in the list must exist, and tildes will be expanded to the value of <code>$HOME</code>. The default <i>FILELIST</i> is <i>/usr/lib/rpm/rpmrc</i>:<i>/usr/lib/rpm/redhat/rpmrc</i>:<i>/etc/rpmrc</i>:<i>~/.rpmrc</i>.</p>
-<dt><code>&#8211;pipe </code><i>CMD</i></p>
-<dd>Pipes the output of <code>rpm</code> to the command <i>CMD</i>.</p>
-<dt><code>&#8211;dbpath </code><i>DIRECTORY</i></p>
-<dd>Use the database in <i>DIRECTORY</i> rather than the default path <i>/var/lib/rpm</i></p>
-<dt><code>&#8211;root </code><i>DIRECTORY</i></p>
-<dd>Use the file system tree rooted at <i>DIRECTORY</i> for all operations. Note that this means the database within <i>DIRECTORY</i> will be used for dependency checks and any scriptlet(s) (e.g. <code>%post</code> if installing, or <code>%prep</code> if building, a package) will be run after a <a href="/docs/linux/man/2-chroot/">chroot</a>(2) to <i>DIRECTORY</i>.</p>
-<dt><code>-D, &#8211;define=&#8217;</code><i>MACRO EXPR</i><code>&#8216;</code></p>
-<dd>Defines <i>MACRO</i> with value <i>EXPR</i>.</dl>
+<dt><code>-?, &#8211;help</code></dt>
+<dd>Print a longer usage message then normal.</dd>
+<dt><code>&#8211;version</code></dt>
+<dd>Print a single line containing the version number of <code>rpm</code> being used.</dd>
+<dt><code>&#8211;quiet</code></dt>
+<dd>Print as little as possible &#8211; normally only error messages will be displayed.</dd>
+<dt><code>-v</code></dt>
+<dd>Print verbose information &#8211; normally routine progress messages will be displayed.</dd>
+<dt><code>-vv</code></dt>
+<dd>Print lots of ugly debugging information.</dd>
+<dt><code>&#8211;rcfile </code><i>FILELIST</i></dt>
+<dd>Each of the files in the colon separated <i>FILELIST</i> is read sequentially by <code>rpm</code> for configuration information. Only the first file in the list must exist, and tildes will be expanded to the value of <code>$HOME</code>. The default <i>FILELIST</i> is <i>/usr/lib/rpm/rpmrc</i>:<i>/usr/lib/rpm/redhat/rpmrc</i>:<i>/etc/rpmrc</i>:<i>~/.rpmrc</i>.</dd>
+<dt><code>&#8211;pipe </code><i>CMD</i></dt>
+<dd>Pipes the output of <code>rpm</code> to the command <i>CMD</i>.</dd>
+<dt><code>&#8211;dbpath </code><i>DIRECTORY</i></dt>
+<dd>Use the database in <i>DIRECTORY</i> rather than the default path <i>/var/lib/rpm</i></dd>
+<dt><code>&#8211;root </code><i>DIRECTORY</i></dt>
+<dd>Use the file system tree rooted at <i>DIRECTORY</i> for all operations. Note that this means the database within <i>DIRECTORY</i> will be used for dependency checks and any scriptlet(s) (e.g. <code>%post</code> if installing, or <code>%prep</code> if building, a package) will be run after a <a href="/docs/linux/man/2-chroot/">chroot</a>(2) to <i>DIRECTORY</i>.</dd>
+<dt><code>-D, &#8211;define=&#8217;</code><i>MACRO EXPR</i><code>&#8216;</code></dt>
+<dd>Defines <i>MACRO</i> with value <i>EXPR</i>.</dd></dl>
 <h3>Build Options</h3>
 <p>The general form of an rpm build command is </p>
 <p> <code>rpmbuild</code> <code>-b</code><i>STAGE</i><code>|-t</code><i>STAGE</i> [ <code> rpmbuild-options </code> ] <i>FILE</i><i> &#8230;</i> </p>
 <p> The argument used is <code>-b</code> if a spec file is being used to build the package and <code>-t</code> if <code>rpmbuild</code> should look inside of a (possibly compressed) tar file for the spec file to use. After the first argument, the next character (<i>STAGE</i>) specifies the stages of building and packaging to be done and is one of:</p>
 <dl>
-<dt><code>-ba</code></p>
-<dd>Build binary and source packages (after doing the %prep, %build, and %install stages).</p>
-<dt><code>-bb</code></p>
-<dd>Build a binary package (after doing the %prep, %build, and %install stages).</p>
-<dt><code>-bp</code></p>
-<dd>Executes the &quot;%prep&quot; stage from the spec file. Normally this involves unpacking the sources and applying any patches.</p>
-<dt><code>-bc</code></p>
-<dd>Do the &quot;%build&quot; stage from the spec file (after doing the %prep stage). This generally involves the equivalent of a &quot;make&quot;.</p>
-<dt><code>-bi</code></p>
-<dd>Do the &quot;%install&quot; stage from the spec file (after doing the %prep and %build stages). This generally involves the equivalent of a &quot;make install&quot;.</p>
-<dt><code>-bl</code></p>
-<dd>Do a &quot;list check&quot;. The &quot;%files&quot; section from the spec file is macro expanded, and checks are made to verify that each file exists.</p>
-<dt><code>-bs</code></p>
-<dd>Build just the source package.</dl>
+<dt><code>-ba</code></dt>
+<dd>Build binary and source packages (after doing the %prep, %build, and %install stages).</dd>
+<dt><code>-bb</code></dt>
+<dd>Build a binary package (after doing the %prep, %build, and %install stages).</dd>
+<dt><code>-bp</code></dt>
+<dd>Executes the &quot;%prep&quot; stage from the spec file. Normally this involves unpacking the sources and applying any patches.</dd>
+<dt><code>-bc</code></dt>
+<dd>Do the &quot;%build&quot; stage from the spec file (after doing the %prep stage). This generally involves the equivalent of a &quot;make&quot;.</dd>
+<dt><code>-bi</code></dt>
+<dd>Do the &quot;%install&quot; stage from the spec file (after doing the %prep and %build stages). This generally involves the equivalent of a &quot;make install&quot;.</dd>
+<dt><code>-bl</code></dt>
+<dd>Do a &quot;list check&quot;. The &quot;%files&quot; section from the spec file is macro expanded, and checks are made to verify that each file exists.</dd>
+<dt><code>-bs</code></dt>
+<dd>Build just the source package.</dd></dl>
 <p> The following options may also be used:</p>
 <dl>
-<dt><code>&#8211;buildroot </code><i>DIRECTORY</i></p>
-<dd>When building a package, override the BuildRoot tag with directory <i>DIRECTORY</i>.</p>
-<dt><code>&#8211;clean</code></p>
-<dd>Remove the build tree after the packages are made.</p>
-<dt><code>&#8211;nobuild</code></p>
-<dd>Do not execute any build stages. Useful for testing out spec files.</p>
-<dt><code>&#8211;noclean</code></p>
-<dd>Do not execute %clean build stage even if present in spec.</p>
-<dt><code>&#8211;nocheck</code></p>
-<dd>Do not execute %check build stage even if present in spec.</p>
-<dt><code>&#8211;nodeps</code></p>
-<dd>Do not verify build dependencies.</p>
-<dt><code>&#8211;rmsource</code></p>
-<dd>Remove the sources after the build (may also be used standalone, e.g. &quot;<code>rpmbuild</code> <code>&#8211;rmsource foo.spec</code>&quot;).</p>
-<dt><code>&#8211;rmspec</code></p>
-<dd>Remove the spec file after the build (may also be used standalone, eg. &quot;<code>rpmbuild</code> <code>&#8211;rmspec foo.spec</code>&quot;).</p>
-<dt><code>&#8211;short-circuit</code></p>
-<dd>Skip straight to specified stage (i.e., skip all stages leading up to the specified stage). Only valid with <code>-bc</code>, <code>-bi</code>, and <code>-bb</code>. Useful for local testing only. Packages built this way will be marked with an unsatisfiable dependency to prevent their accidental use.</p>
-<dt><code>&#8211;target </code><i>PLATFORM</i></p>
-<dd>When building the package, interpret <i>PLATFORM</i> as <code>arch-vendor-os</code> and set the macros <code>%_target</code>, <code>%_target_cpu</code>, and <code>%_target_os</code> accordingly.</dl>
+<dt><code>&#8211;buildroot </code><i>DIRECTORY</i></dt>
+<dd>When building a package, override the BuildRoot tag with directory <i>DIRECTORY</i>.</dd>
+<dt><code>&#8211;clean</code></dt>
+<dd>Remove the build tree after the packages are made.</dd>
+<dt><code>&#8211;nobuild</code></dt>
+<dd>Do not execute any build stages. Useful for testing out spec files.</dd>
+<dt><code>&#8211;noclean</code></dt>
+<dd>Do not execute %clean build stage even if present in spec.</dd>
+<dt><code>&#8211;nocheck</code></dt>
+<dd>Do not execute %check build stage even if present in spec.</dd>
+<dt><code>&#8211;nodeps</code></dt>
+<dd>Do not verify build dependencies.</dd>
+<dt><code>&#8211;rmsource</code></dt>
+<dd>Remove the sources after the build (may also be used standalone, e.g. &quot;<code>rpmbuild</code> <code>&#8211;rmsource foo.spec</code>&quot;).</dd>
+<dt><code>&#8211;rmspec</code></dt>
+<dd>Remove the spec file after the build (may also be used standalone, eg. &quot;<code>rpmbuild</code> <code>&#8211;rmspec foo.spec</code>&quot;).</dd>
+<dt><code>&#8211;short-circuit</code></dt>
+<dd>Skip straight to specified stage (i.e., skip all stages leading up to the specified stage). Only valid with <code>-bc</code>, <code>-bi</code>, and <code>-bb</code>. Useful for local testing only. Packages built this way will be marked with an unsatisfiable dependency to prevent their accidental use.</dd>
+<dt><code>&#8211;target </code><i>PLATFORM</i></dt>
+<dd>When building the package, interpret <i>PLATFORM</i> as <code>arch-vendor-os</code> and set the macros <code>%_target</code>, <code>%_target_cpu</code>, and <code>%_target_os</code> accordingly.</dd></dl>
 <h3>Rebuild And Recompile Options</h3>
 <p>There are two other ways to invoke building with rpm: </p>
 <p> <code>rpmbuild</code> <code>&#8211;rebuild|&#8211;recompile</code> <i>SOURCEPKG</i><i> &#8230;</i> </p>

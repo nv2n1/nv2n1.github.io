@@ -12,55 +12,39 @@ std::mem_fun_ref_t,std::mem_fun1_ref_t,std::const_mem_fun_ref_t, - std::mem_fun_
 
 template&lt;&nbsp;<wbr>class S, class T&nbsp;<wbr>&gt; <pre><code>class mem_fun_ref_t : public unary_function&lt;T, S&gt;
 {
-
   public:
     (1)(deprecated in C++ 11)
-
         explicit mem_fun_ref_t(S (T::*p)());
     (removed in C++ 17)
-
         S
         operator()(T &amp;p) const;
 };
-
 template &lt;class S, class T&gt;
 class const_mem_fun_ref_t : public unary_function&lt;T, S&gt;
 {
-
   public:
     (2)(deprecated in C++ 11)
-
         explicit const_mem_fun_ref_t(S (T::*p)() const);
     (removed in C++ 17)
-
         S
         operator()(const T &amp;p) const;
 };
-
 template &lt;class S, class T, class A&gt;
 class mem_fun1_ref_t : public binary_function&lt;T, A, S&gt;
 {
-
   public:
     (3)(deprecated in C++ 11)
-
         explicit mem_fun1_ref_t(S (T::*p)(A));
     (removed in C++ 17)
-
         S
         operator()(T &amp;p, A x) const;
 };
-
 template &lt;class S, class T, class A&gt;
 class const_mem_fun1_ref_t : public binary_function&lt;T, A, S&gt;
-
 {
     (deprecated in C++ 11)
-
         public : (4)(removed in C++ 17)
-
                      explicit const_mem_fun1_ref_t(S (T::*p)(A) const);
-
     S operator()(const T &amp;p, A x) const;
 };</code></pre> 
 Wrapper around a member function pointer. The class instance whose member function 

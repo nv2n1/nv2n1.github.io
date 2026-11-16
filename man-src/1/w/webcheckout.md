@@ -17,12 +17,12 @@ description: "webcheckout – check out repositories referenced on a web page"
 <p> If the optional destdir parameter is specified, <font SIZE="-1">VCS</font> programs will be asked to check out repositories into that directory. If there are multiple repositories to check out, each will be checked out into a separate subdirectory of the destdir.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt>-a, &#8211;auth</p>
-<dd> Prefer authenticated repositories. By default, webcheckout will use anonymous repositories when possible. If you have an account that allows you to use authenticated repositories, you might want to use this option.</p>
-<dt>&#8211;no-act, -n</p>
-<dd> Do not actually check anything out, just print out the commands that would be run to check out the repositories.</p>
-<dt>&#8211;quiet, -q</p>
-<dd> Quiet mode. Do not print out the commands being run. (The <font SIZE="-1">VCS</font> commands may still be noisy however.)</dl>
+<dt>-a, &#8211;auth</dt>
+<dd> Prefer authenticated repositories. By default, webcheckout will use anonymous repositories when possible. If you have an account that allows you to use authenticated repositories, you might want to use this option.</dd>
+<dt>&#8211;no-act, -n</dt>
+<dd> Do not actually check anything out, just print out the commands that would be run to check out the repositories.</dd>
+<dt>&#8211;quiet, -q</dt>
+<dd> Quiet mode. Do not print out the commands being run. (The <font SIZE="-1">VCS</font> commands may still be noisy however.)</dd></dl>
 <h2>PREREQUISITES</h2>
 <p> To use this program you will need lots of <font SIZE="-1">VCS</font> programs installed, obviously. It also depends on the perl <font SIZE="-1">LWP</font> and HTML::Parser modules. </p>
 <p> If the perl <font SIZE="-1">URI</font> module is installed, webcheckout can heuristically guess what you mean by partial URLs, such as &#8220;kitenet.net/~joey&#8221;&#8217;</p>

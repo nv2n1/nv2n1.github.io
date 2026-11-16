@@ -32,19 +32,19 @@ description: "atomic-sign- Create a signature for an image"
 <p> Sign the foobar image from privateregistry.example.com </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 atomic sign privateregistry.example.com/foobar
 </pre>
-</dl>
+</dd></dl>
 <p> Sign the foobar image and save the signature in /tmp/signatures/. </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 atomic sign -d /tmp/signatures privateregistry.example.com
 </pre>
-</dl>
+</dd></dl>
 <p> Sign the busybox image with the identify of foo [at] bar.com with a user&#8217;s keyring </p>
 <p> sudo atomic sign &#8211;sign-by foo [at] bar.com &#8211;gnupghome=~/.gnupg privateregistry.example.com </p>
 <h2>RELATED CONFIGURATION</h2>

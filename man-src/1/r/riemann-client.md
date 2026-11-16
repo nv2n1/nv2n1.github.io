@@ -23,69 +23,65 @@ description: "riemann-client – Riemann communication tool"
 <p> See the Riemann documentation <i><a rel="nofollow" href="http://riemann.io/concepts.html">http://riemann.io/concepts.html</a></i> for more information about the query syntax. </p>
 <p> Apart from the mandatory argument, the <code>riemann-client</code> accepts the following options in query mode: </p>
 <dl>
-<dt><code>-j</code>, <code>&#8211;json</code></p>
-<dd> Print the result in JSON format, instead of the default, human-readable one. </p>
-<dt><code>-T</code>, <code>&#8211;tcp</code></p>
-<dd> Send the event via TCP (the default). </p>
-<dt><code>-G</code>, <code>&#8211;tls</code></p>
-<dd> Send the event via TLS. </p>
-<dt><code>-o</code>, <code>&#8211;option</code> <i>option</i>=<i>value</i></p>
-<dd> Set one client option to the given value. </p>
+<dt><code>-j</code>, <code>&#8211;json</code></dt>
+<dd> Print the result in JSON format, instead of the default, human-readable one. </dd>
+<dt><code>-T</code>, <code>&#8211;tcp</code></dt>
+<dd> Send the event via TCP (the default). </dd>
+<dt><code>-G</code>, <code>&#8211;tls</code></dt>
+<dd> Send the event via TLS. </dd>
+<dt><code>-o</code>, <code>&#8211;option</code> <i>option</i>=<i>value</i></dt>
+<dd> Set one client option to the given value. </dd>
 <p> Available client options are: </p>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt><code>cafile</code></p>
-<dd> Path to the file containing trusted certificate authority certificates. Only used for TLS connections. </p>
-<dt><code>certfile</code></p>
-<dd> Path to the file containing the public client certificate. Only used for TLS connections. </p>
-<dt><code>keyfile</code></p>
-<dd> Path to the file containing the private client key. Only used for TLS connections.</dl>
+<dt><code>cafile</code></dt>
+<dd> Path to the file containing trusted certificate authority certificates. Only used for TLS connections. </dd>
+<dt><code>certfile</code></dt>
+<dd> Path to the file containing the public client certificate. Only used for TLS connections. </dd>
+<dt><code>keyfile</code></dt>
+<dd> Path to the file containing the private client key. Only used for TLS connections.</dd></dl>
 </dl>
 </dl>
 <h3>Submit mode</h3>
 <p> In submit mode, <code>riemann-client</code> accepts the following options: </p>
 <dl>
-<dt><code>-s</code>, <code>&#8211;state</code> <i>STATE</i></p>
-<dd> The state the event should describe, free-form text, optional. </p>
-<dt><code>-S</code>, <code>&#8211;service</code> <i>SERVICE</i></p>
-<dd> The service the event is coming from. </p>
-<dt><code>-h</code>, <code>&#8211;host</code> <i>HOST</i></p>
-<dd> The host the event originates from. Not to be confused with the optional <i>HOST</i> parameter of <code>riemann-client</code> itself, which sets where to send the events to. </p>
-<dt><code>-D</code>, <code>&#8211;description</code> <i>DESCRIPTION</i></p>
-<dd> The description of the event, optional. </p>
-<dt><code>-t</code>, <code>&#8211;tag</code> <i>TAG</i></p>
-<dd> This option can be used multiple times to add tags to the event. </p>
-<dt><code>-a</code>, <code>&#8211;attribute</code> <i>NAME</i>=<i>VALUE</i></p>
-<dd> This option can be used multiple times to add custom attributes to the event. </p>
-<dt><code>-i</code>, <code>&#8211;metric-sint64</code> <i>METRIC</i></p>
-<dd> Sets the metric for the event, using integer precision. </p>
-<dt><code>-d</code>, <code>&#8211;metric-d</code> <i>METRIC</i></p>
-<dd> Sets the metric of the event, using double precision. </p>
-<dt><code>-f</code>, <code>&#8211;metric-f</code> <i>METRIC</i></p>
-<dd> Sets the metric of the event, using floating point precision. </p>
-<dt><code>-L</code>, <code>&#8211;ttl</code> <i>TTL</i></p>
-<dd> An optional time-to-live of the event, in seconds (floating point number). </p>
-<dt><code>-T</code>, <code>&#8211;tcp</code></p>
-<dd> Send the event via TCP (the default). </p>
-<dt><code>-U</code>, <code>&#8211;udp</code></p>
-<dd> Send the event via UDP. </p>
-<dt><code>-G</code>, <code>&#8211;tls</code></p>
-<dd> Send the event via TLS. </p>
-<dt><code>-o</code>, <code>&#8211;option</code> <i>option</i>=<i>value</i></p>
-<dd> Set one client option to the given value. </p>
+<dt><code>-s</code>, <code>&#8211;state</code> <i>STATE</i></dt>
+<dd> The state the event should describe, free-form text, optional. </dd>
+<dt><code>-S</code>, <code>&#8211;service</code> <i>SERVICE</i></dt>
+<dd> The service the event is coming from. </dd>
+<dt><code>-h</code>, <code>&#8211;host</code> <i>HOST</i></dt>
+<dd> The host the event originates from. Not to be confused with the optional <i>HOST</i> parameter of <code>riemann-client</code> itself, which sets where to send the events to. </dd>
+<dt><code>-D</code>, <code>&#8211;description</code> <i>DESCRIPTION</i></dt>
+<dd> The description of the event, optional. </dd>
+<dt><code>-t</code>, <code>&#8211;tag</code> <i>TAG</i></dt>
+<dd> This option can be used multiple times to add tags to the event. </dd>
+<dt><code>-a</code>, <code>&#8211;attribute</code> <i>NAME</i>=<i>VALUE</i></dt>
+<dd> This option can be used multiple times to add custom attributes to the event. </dd>
+<dt><code>-i</code>, <code>&#8211;metric-sint64</code> <i>METRIC</i></dt>
+<dd> Sets the metric for the event, using integer precision. </dd>
+<dt><code>-d</code>, <code>&#8211;metric-d</code> <i>METRIC</i></dt>
+<dd> Sets the metric of the event, using double precision. </dd>
+<dt><code>-f</code>, <code>&#8211;metric-f</code> <i>METRIC</i></dt>
+<dd> Sets the metric of the event, using floating point precision. </dd>
+<dt><code>-L</code>, <code>&#8211;ttl</code> <i>TTL</i></dt>
+<dd> An optional time-to-live of the event, in seconds (floating point number). </dd>
+<dt><code>-T</code>, <code>&#8211;tcp</code></dt>
+<dd> Send the event via TCP (the default). </dd>
+<dt><code>-U</code>, <code>&#8211;udp</code></dt>
+<dd> Send the event via UDP. </dd>
+<dt><code>-G</code>, <code>&#8211;tls</code></dt>
+<dd> Send the event via TLS. </dd>
+<dt><code>-o</code>, <code>&#8211;option</code> <i>option</i>=<i>value</i></dt>
+<dd> Set one client option to the given value. </dd>
 <p> Available client options are: </p>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt><code>cafile</code></p>
-<dd> Path to the file containing trusted certificate authority certificates. Only used for TLS connections. </p>
-<dt><code>certfile</code></p>
-<dd> Path to the file containing the public client certificate. Only used for TLS connections. </p>
-<dt><code>keyfile</code></p>
-<dd> Path to the file containing the private client key. Only used for TLS connections.</dl>
+<dt><code>cafile</code></dt>
+<dd> Path to the file containing trusted certificate authority certificates. Only used for TLS connections. </dd>
+<dt><code>certfile</code></dt>
+<dd> Path to the file containing the public client certificate. Only used for TLS connections. </dd>
+<dt><code>keyfile</code></dt>
+<dd> Path to the file containing the private client key. Only used for TLS connections.</dd></dl>
 </dl>
 </dl>
 <h2>EXAMPLES</h2>

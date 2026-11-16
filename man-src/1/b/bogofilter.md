@@ -11,36 +11,36 @@ description: "bogofilter – fast Bayesian spam filter"
 <p> bogofilter &#8211; fast Bayesian spam filter </p>
 <h2>SYNOPSIS</h2>
 <dl>
-<dt> <code>bogofilter</code> [help options | classification options | registration options | parameter options | info options] [general options] [config file options]</dl>
-<dd>where </p>
+<dt> <code>bogofilter</code> [help options | classification options | registration options | parameter options | info options] [general options] [config file options]</dt></dl>
+<dd>where </dd>
 <p> <code>help options</code> are:</p>
 <dl>
-<dt> [-h] [&#8211;help] [-V] [-Q]</dl>
+<dt> [-h] [&#8211;help] [-V] [-Q]</dt></dl>
 <p> <code>classification options</code></p>
-<dd>are:</p>
+<dd>are:</dd>
 <dl>
-<dt> [-p] [-e] [-t] [-T] [-u] [-H] [-M] [-b] [-B&nbsp;<wbr><i>object &#8230;</i>] [-R] [general options] [parameter options] [config file options]</dl>
+<dt> [-p] [-e] [-t] [-T] [-u] [-H] [-M] [-b] [-B&nbsp;<wbr><i>object &#8230;</i>] [-R] [general options] [parameter options] [config file options]</dt></dl>
 <p> <code>registration options</code></p>
-<dd>are:</p>
+<dd>are:</dd>
 <dl>
-<dt> [-s | -n] [-S | -N] [general options]</dl>
+<dt> [-s | -n] [-S | -N] [general options]</dt></dl>
 <p> <code>general options</code></p>
-<dd>are:</p>
+<dd>are:</dd>
 <dl>
-<dt> [-c&nbsp;<wbr><i>filename</i>] [-C] [-d&nbsp;<wbr><i>dir</i>] [-k&nbsp;<wbr><i>cachesize</i>] [-l] [-L&nbsp;<wbr><i>tag</i>] [-I&nbsp;<wbr><i>filename</i>] [-O&nbsp;<wbr><i>filename</i>]</dl>
+<dt> [-c&nbsp;<wbr><i>filename</i>] [-C] [-d&nbsp;<wbr><i>dir</i>] [-k&nbsp;<wbr><i>cachesize</i>] [-l] [-L&nbsp;<wbr><i>tag</i>] [-I&nbsp;<wbr><i>filename</i>] [-O&nbsp;<wbr><i>filename</i>]</dt></dl>
 <p> <code>parameter options</code></p>
-<dd>are:</p>
+<dd>are:</dd>
 <dl>
-<dt> [-E&nbsp;<wbr><i>value</i><i>[,value]</i>] [-m&nbsp;<wbr><i>value</i><i>[,value]</i><i>[,value]</i>] [-o&nbsp;<wbr><i>value</i><i>[,value]</i>]</dl>
+<dt> [-E&nbsp;<wbr><i>value</i><i>[,value]</i>] [-m&nbsp;<wbr><i>value</i><i>[,value]</i><i>[,value]</i>] [-o&nbsp;<wbr><i>value</i><i>[,value]</i>]</dt></dl>
 <p> <code>info options</code></p>
-<dd>are:</p>
+<dd>are:</dd>
 <dl>
-<dt> [-v] [-y&nbsp;<wbr><i>date</i>] [-D] [-x&nbsp;<wbr><i>flags</i>]</dl>
+<dt> [-v] [-y&nbsp;<wbr><i>date</i>] [-D] [-x&nbsp;<wbr><i>flags</i>]</dt></dl>
 <p> <code>config file options</code></p>
-<dd>are:</p>
+<dd>are:</dd>
 <dl>
-<dt> [&#8211;<i>option=value</i>]</dl>
-<dd>Note: Use <code>bogofilter &#8211;help</code> to display the complete list of options.</p>
+<dt> [&#8211;<i>option=value</i>]</dt></dl>
+<dd>Note: Use <code>bogofilter &#8211;help</code> to display the complete list of options.</dd>
 <h2>DESCRIPTION</h2>
 <p> Bogofilter is a Bayesian spam filter. In its normal mode of operation, it takes an email message or other text on standard input, does a statistical check against lists of &quot;good&quot; and &quot;bad&quot; words, and returns a status code indicating whether or not the message is spam. Bogofilter is designed with a fast algorithm, uses the Berkeley DB for fast startup and lookups, coded directly in C, and tuned for speed, so it can be used for production by sites that process a lot of mail.</p>
 <h2>THEORY OF OPERATION</h2>
@@ -118,7 +118,7 @@ description: "bogofilter – fast Bayesian spam filter"
 <p> The following recipe (a) spam-bins anything that bogofilter rates as spam, (b) registers the words in messages rated as spam as such, and (c) registers the words in messages rated as non-spam as such. With this in place, it will normally only be necessary for the user to intervene (with <code>-Ns</code> or <code>-Sn</code>) when bogofilter miscategorizes something. </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre><code>
 #filter mail through bogofilter, tagging it as Ham, Spam, or Unsure,
 #and updating the wordlist
@@ -143,32 +143,32 @@ unsure-bogofilter
 #messages out of it, classify them as ham(or spam), and use them to
 #train bogofilter.
 </code></pre>
-</dl>
+</dd></dl>
 <p> The following procmail rule will take mail on stdin and save it to file spam if bogofilter thinks it&#8217;s spam: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 :0HB:
 * ? bogofilter
 spam
 </pre>
-</dl>
+</dd></dl>
 <p> and this similar rule will also register the tokens in the mail according to the bogofilter classification: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 :0HB:
 * ? bogofilter -u
 spam
 </pre>
-</dl>
+</dd></dl>
 <p> If bogofilter fails (returning 3) the message will be treated as non-spam. </p>
 <p> This one is for maildrop, it automatically defers the mail and retries later when the xfilter command fails, use this in your ~/.mailfilter: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 xfilter &quot;bogofilter -u -e -p&quot;
 if (/^X-Bogosity: Spam, tests=bogofilter/)
@@ -176,11 +176,11 @@ if (/^X-Bogosity: Spam, tests=bogofilter/)
   to &quot;spam-bogofilter&quot;
 }
 </pre>
-</dl>
+</dd></dl>
 <p> The following .muttrc lines will create mutt macros for dispatching mail to bogofilter. </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 macro index d &quot;&lt;enter-command&gt;unset wait_key
 \
@@ -197,26 +197,26 @@ macro index d &quot;&lt;enter-command&gt;unset wait_key
 \
 &lt;delete-message&gt;&quot; &quot;delete message as spam&quot;
 </pre>
-</dl>
+</dd></dl>
 <p> Integration with Mail Transport Agent (MTA) </p>
 <dl>
 <dt>
-<dd> 1. bogofilter can also be integrated into an MTA to filter all incoming mail. While the specific implementation is MTA dependent, the general steps are as follows:</dl>
+</dt><dd> 1. bogofilter can also be integrated into an MTA to filter all incoming mail. While the specific implementation is MTA dependent, the general steps are as follows:</dd></dl>
 <dl>
 <dt>
-<dd> 2. Install bogofilter on the mail server</dl>
+</dt><dd> 2. Install bogofilter on the mail server</dd></dl>
 <dl>
 <dt>
-<dd> 3. Prime the bogofilter databases with a spam and non-spam corpus. Since bogofilter will be serving a larger community, it is important to prime it with a representative set of messages.</dl>
+</dt><dd> 3. Prime the bogofilter databases with a spam and non-spam corpus. Since bogofilter will be serving a larger community, it is important to prime it with a representative set of messages.</dd></dl>
 <dl>
 <dt>
-<dd> 4. Set up the MTA to invoke bogofilter on each message. While this is an MTA specific step, you&#8217;ll probably need to use the <code>-p</code>, <code>-u</code>, and <code>-e</code> options.</dl>
+</dt><dd> 4. Set up the MTA to invoke bogofilter on each message. While this is an MTA specific step, you&#8217;ll probably need to use the <code>-p</code>, <code>-u</code>, and <code>-e</code> options.</dd></dl>
 <dl>
 <dt>
-<dd> 5. Set up a mechanism for users to register spam/non-spam messages, as well as to correct mis-classifications. The most generic solution is to set up alias email addresses to which users bounce messages.</dl>
+</dt><dd> 5. Set up a mechanism for users to register spam/non-spam messages, as well as to correct mis-classifications. The most generic solution is to set up alias email addresses to which users bounce messages.</dd></dl>
 <dl>
 <dt>
-<dd> 6. See the doc and contrib directories for more information.</dl>
+</dt><dd> 6. See the doc and contrib directories for more information.</dd></dl>
 <p> Use of R to verify bogofilter&#8217;s calculations </p>
 <p> The -R option tells bogofilter to generate an R data frame. The data frame contains one row per token analyzed. Each such row contains the token, the sum of its database &quot;good&quot; and &quot;spam&quot; counts, the &quot;good&quot; count divided by the number of non-spam messages used to create the training database, the &quot;spam&quot; count divided by the spam message count, Robinson&#8217;s f(w) for the token, the natural logs of (1 &#8211; f(w)) and f(w), and an indicator character (+ if the token&#8217;s f(w) value exceeded the minimum deviation from 0.5, &#8211; if it didn&#8217;t). There is one additional row at the end of the table that contains a label in the token field, followed by the number of words actually used (the ones with + indicators), Robinson&#8217;s P, Q, S, s and x values and the minimum deviation. </p>
 <p> The R data frame can be saved to a file and later read into an R session (see m[blue]<code>the R project website</code>m[]<font SIZE="-2">[5]</font> for information about the mathematics package R). Provided with the bogofilter distribution is a simple R script (file bogo.R) that can be used to verify bogofilter&#8217;s calculations. Instructions for its use are included in the script in the form of comments.</p>
@@ -225,88 +225,87 @@ macro index d &quot;&lt;enter-command&gt;unset wait_key
 <p> A classification run will generate (we are not showing the date and host part here): </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 bogofilter[1412] : X &#8211; Bogosity : Ham, spamicity = 0.000227 bogofilter[1415] : X &#8211; Bogosity : Spam, spamicity = 0.998918
-</dl>
+</dd></dl>
 <p> Using <code>-u</code> to classify a message and update a wordlist will produce (one a single line): </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 bogofilter[1426]: X-Bogosity: Spam, spamicity=0.998918,
   register -s, 329 words, 1 messages
-    
 </pre>
-</dl>
+</dd></dl>
 <p> Registering words (<code>-l</code> and <code>-s</code>, <code>-n</code>, <code>-S</code>, or <code>-N</code>) will produce: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 bogofilter[1440]: register-n, 255 words, 1 messages
 </pre>
-</dl>
+</dd></dl>
 <p> A registration run (using <code>-s</code>, <code>-n</code>, <code>-N</code>, or <code>-S</code>) will generate messages like: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 bogofilter[17330] : register &#8211; n, 574 words, 3 messages bogofilter[6244] : register &#8211; s, 1273 words, 4 messages
-</dl>
+</dd></dl>
 <h2>FILES</h2>
 <p> /etc/bogofilter.cf</p>
 <dl>
 <dt>
-<dd> System configuration file.</dl>
+</dt><dd> System configuration file.</dd></dl>
 <p> ~/.bogofilter.cf</p>
 <dl>
 <dt>
-<dd> User configuration file.</dl>
+</dt><dd> User configuration file.</dd></dl>
 <p> ~/.bogofilter/wordlist.db</p>
 <dl>
 <dt>
-<dd> Combined list of good and spam tokens.</dl>
+</dt><dd> Combined list of good and spam tokens.</dd></dl>
 <h2>AUTHOR</h2>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre><code>
 Eric S.Raymond esr[at] thyrsus.com.David Relson relson[at] osagesoftware.com.Matthias Andree matthias.andree[at] gmx.de.Greg Louis glouis[at] dynamicro.on.ca.
 </code></pre>
-</dl>
+</dd></dl>
 <p> For updates, see the m[blue]<code>bogofilter project page</code>m[]<font SIZE="-2">[6]</font>.</p>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/1-bogolexer/">bogolexer</a>(1), <a href="/docs/linux/man/1-bogotune/">bogotune</a>(1), <a href="/docs/linux/man/1-bogoupgrade/">bogoupgrade</a>(1), <a href="/docs/linux/man/1-bogoutil/">bogoutil</a>(1)</p>
 <h2>NOTES</h2>
 <dl>
-<dt> 1.</p>
-<dd> A Plan For Spam</p>
+<dt> 1.</dt>
+<dd> A Plan For Spam</dd>
 <dl>
 <dt>
-<dd> <a rel="nofollow" href="http://www.paulgraham.com/spam.html">http://www.paulgraham.com/spam.html</a></dl>
-<dt> 2.</p>
-<dd> Spam Detection</p>
+</dt><dd> <a rel="nofollow" href="http://www.paulgraham.com/spam.html">http://www.paulgraham.com/spam.html</a></dd></dl>
+<dt> 2.</dt>
+<dd> Spam Detection</dd>
 <dl>
 <dt>
-<dd> <a rel="nofollow" href="http://radio-weblogs.com/0101454/stories/2002/09/16/spamDetection.html">http://radio-weblogs.com/0101454/stories/2002/09/16/spamDetection.html</a></dl>
-<dt> 3.</p>
-<dd> A Statistical Approach to the Spam Problem</p>
+</dt><dd> <a rel="nofollow" href="http://radio-weblogs.com/0101454/stories/2002/09/16/spamDetection.html">http://radio-weblogs.com/0101454/stories/2002/09/16/spamDetection.html</a></dd></dl>
+<dt> 3.</dt>
+<dd> A Statistical Approach to the Spam Problem</dd>
 <dl>
 <dt>
-<dd> <a rel="nofollow" href="http://www.linuxjournal.com/article/6467">http://www.linuxjournal.com/article/6467</a></dl>
-<dt> 4.</p>
-<dd> Another improvement</p>
+</dt><dd> <a rel="nofollow" href="http://www.linuxjournal.com/article/6467">http://www.linuxjournal.com/article/6467</a></dd></dl>
+<dt> 4.</dt>
+<dd> Another improvement</dd>
 <dl>
 <dt>
-<dd> <a rel="nofollow" href="http://www.garyrobinson.net/2004/04/improved%5fchi.html">http://www.garyrobinson.net/2004/04/improved%5fchi.html</a></dl>
-<dt> 5.</p>
-<dd> the R project website</p>
+</dt><dd> <a rel="nofollow" href="http://www.garyrobinson.net/2004/04/improved%5fchi.html">http://www.garyrobinson.net/2004/04/improved%5fchi.html</a></dd></dl>
+<dt> 5.</dt>
+<dd> the R project website</dd>
 <dl>
 <dt>
-<dd> <a rel="nofollow" href="http://cran.r-project.org/">http://cran.r-project.org/</a></dl>
-<dt> 6.</p>
-<dd> bogofilter project page</p>
+</dt><dd> <a rel="nofollow" href="http://cran.r-project.org/">http://cran.r-project.org/</a></dd></dl>
+<dt> 6.</dt>
+<dd> bogofilter project page</dd>
 <dl>
 <dt>
-<dd> <a rel="nofollow" href="http://bogofilter.sourceforge.net/">http://bogofilter.sourceforge.net/</a></dl>
+</dt><dd> <a rel="nofollow" href="http://bogofilter.sourceforge.net/">http://bogofilter.sourceforge.net/</a></dd></dl>
 </dl>
 <h2>Index</h2>

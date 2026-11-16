@@ -23,12 +23,12 @@ description: "fedfs-map-nfs4 – generate automounter program map entries for Fe
 <h2>Examples</h2>
 <p>Typically, a <code><a href="/docs/linux/man/8-fedfs-map-nfs4/">fedfs-map-nfs4</a></code>(8) entry in <i>/etc/auto.master</i> looks like this:</p>
 <dl>
-<dd>/nfs4 /usr/sbin/fedfs-map-nfs4 </p>
+<dd>/nfs4 /usr/sbin/fedfs-map-nfs4 </dd>
 </dl>
 <p> Under the /nfs4 directory on the local system, the automounter uses <code><a href="/docs/linux/man/8-fedfs-map-nfs4/">fedfs-map-nfs4</a></code>(8) to convert a FedFS domain name to a set of servers and an export path, which are then passed to <code><a href="/docs/linux/man/8-mount-nfs/">mount.nfs</a></code>(8). The automounter mounts this FedFS domain on the directory <i>/nfs4/domainname</i>. </p>
 <p> After configuring and restarting <code>autofs</code>, to access files in the <i>example.net</i> FedFS domain, for instance, you can start with:</p>
 <dl>
-<dd>$ cd /nfs4/example.net </p>
+<dd>$ cd /nfs4/example.net </dd>
 </dl>
 <p> The automounter uses the <code><a href="/docs/linux/man/8-fedfs-map-nfs4/">fedfs-map-nfs4</a></code>(8) command to look up the file servers that provide the domain root for the <i>example.net</i> domain. It then mounts one of these servers on <i>/nfs4/example.net</i>. </p>
 <p> If the <code><a href="/docs/linux/man/8-fedfs-map-nfs4/">fedfs-map-nfs4</a></code>(8) command cannot find the requested domain, no local directory is created and no mount operation is performed. Applications receive an ENOENT error in this case. </p>
@@ -41,8 +41,8 @@ description: "fedfs-map-nfs4 – generate automounter program map entries for Fe
 <p> Network file system clients follow file system referrals as applications encounter them, which is similar to how an automounter works. Consider the initial mount of the domain root as if you are mounting a single whole file system, even though underneath, additional NFS mounts come and go as needed.</p>
 <h2>Files</h2>
 <dl>
-<dt><i>/etc/auto.master</i></p>
-<dd>master automounter map</dl>
+<dt><i>/etc/auto.master</i></dt>
+<dd>master automounter map</dd></dl>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/7-fedfs/">fedfs</a></code>(7), <code><a href="/docs/linux/man/5-nfs/">nfs</a></code>(5), <code><a href="/docs/linux/man/5-autofs/">autofs</a></code>(5), </p>
 <p> RFC 2782 for a discussion of DNS SRV records </p>

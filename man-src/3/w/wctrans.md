@@ -10,7 +10,6 @@ description: "wctrans – wide-character translation mapping"
 <p>wctrans &#8211; wide-character translation mapping</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;wctype.h&gt;
-
 wctrans_t wctrans(const char *name);</code></pre>
 <h2>Description</h2>
 <p>The <i>wctrans_t</i> type represents a mapping which can map a wide character to another wide character. Its nature is implementation-dependent, but the special value <i>(wctrans_t)&nbsp;0</i> denotes an invalid mapping. Nonzero <i>wctrans_t</i> values can be passed to the <code><a href="/docs/linux/man/3-towctrans/">towctrans</a></code>(3) function to actually perform the wide-character mapping. </p>

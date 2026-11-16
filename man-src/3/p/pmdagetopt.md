@@ -19,26 +19,26 @@ description: "pmdaGetOpt, pmdaGetOptions – get options from arguments, parsing
 <p>These functions are wrappers for <code>pmgetopt_r</code>(3). The behavior of each function is that certain options are assumed to have a predefined behavior which initializes several fields in the <code>pmdaInterface</code> structure. The <code>pmdaGetOptions</code> interface allows both short and long options to be given, whereas <code>pmdaGetOpt</code> allows for short form options only. </p>
 <p> The options that both <code>pmdaGetOptions</code> and <code>pmdaGetOpt</code> will trap are:</p>
 <dl>
-<dt><code>-D</code><i>trace</i></p>
-<dd>Set the <code><a href="/docs/linux/man/3-pmapi/">PMAPI</a></code>(3) debug control variable (<code>pmDebug</code>) to <i>trace</i>. Used for controlling levels of trace output while debugging.</p>
-<dt><code>-d</code><i>domain</i></p>
-<dd>Set the <i>domain</i> number of this agent.</p>
-<dt><code>-h</code><i>helpfile</i></p>
-<dd>Obtain the help text (see <code><a href="/docs/linux/man/3-pmdatext/">pmdaText</a></code>(3)) for the metrics from this file rather than from the path specified with <code><a href="/docs/linux/man/3-pmdadso/">pmdaDSO</a></code>(3) or <code><a href="/docs/linux/man/3-pmdadaemon/">pmdaDaemon</a></code>(3).</p>
-<dt><code>-i</code><i>port</i></p>
-<dd>Expect PMCD to connect on inet <i>port</i> (number or name).</p>
-<dt><code>-6</code><i>port</i></p>
-<dd>Expect PMCD to connect on ipv6 <i>port</i> (number or name).</p>
-<dt><code>-l</code><i>logfile</i></p>
-<dd>Redirect diagnostics and trace output to <i>logfile</i>.</p>
-<dt><code>-p</code></p>
-<dd>Expect PMCD to supply stdin/stdout pipe.</p>
-<dt><code>-u</code><i>socket</i></p>
-<dd>Expect PMCD to connect on unix domain <i>socket</i>.</dl>
+<dt><code>-D</code><i>trace</i></dt>
+<dd>Set the <code><a href="/docs/linux/man/3-pmapi/">PMAPI</a></code>(3) debug control variable (<code>pmDebug</code>) to <i>trace</i>. Used for controlling levels of trace output while debugging.</dd>
+<dt><code>-d</code><i>domain</i></dt>
+<dd>Set the <i>domain</i> number of this agent.</dd>
+<dt><code>-h</code><i>helpfile</i></dt>
+<dd>Obtain the help text (see <code><a href="/docs/linux/man/3-pmdatext/">pmdaText</a></code>(3)) for the metrics from this file rather than from the path specified with <code><a href="/docs/linux/man/3-pmdadso/">pmdaDSO</a></code>(3) or <code><a href="/docs/linux/man/3-pmdadaemon/">pmdaDaemon</a></code>(3).</dd>
+<dt><code>-i</code><i>port</i></dt>
+<dd>Expect PMCD to connect on inet <i>port</i> (number or name).</dd>
+<dt><code>-6</code><i>port</i></dt>
+<dd>Expect PMCD to connect on ipv6 <i>port</i> (number or name).</dd>
+<dt><code>-l</code><i>logfile</i></dt>
+<dd>Redirect diagnostics and trace output to <i>logfile</i>.</dd>
+<dt><code>-p</code></dt>
+<dd>Expect PMCD to supply stdin/stdout pipe.</dd>
+<dt><code>-u</code><i>socket</i></dt>
+<dd>Expect PMCD to connect on unix domain <i>socket</i>.</dd></dl>
 <p> The <code>pmdaGetOptions</code> interface will also capture the following options, and store them within the <i>opts</i> parameter:</p>
 <dl>
-<dt><code>-U</code><i>username</i></p>
-<dd>Set the user account name under which the PMDA should execute.</dl>
+<dt><code>-U</code><i>username</i></dt>
+<dd>Set the user account name under which the PMDA should execute.</dd></dl>
 <p> Only one of <code>-i</code>, <code>-6</code>, <code>-p</code> and <code>-u</code> may be specified. If none of these three options is given, a pipe (<code>-p</code>) is assumed. When these options are encountered by <code>pmdaGetOpt</code>, the option is processed and the next option is examined. Therefore, <code>pmdaGetOpt</code> will only return when an option other than those listed above is found, or the end of the list is reached. The returned value will be the argument or EOF, respectively. </p>
 <p> A PMDA can control which of these options the program will accept with either the <i>opts</i> or <i>optstring</i> argument. To accept all the options, the PMDA should call <code>pmdaGetOptions</code> with the short_options field of the <i>opts</i> structure set to the PMDA_OPTIONS macro, or <code>pmdaGetOpt</code> with the option string &quot;D:d:h:i:l:pu:&quot;. Any PMDA specific options should be added to these strings in the style of <code><a href="/docs/linux/man/3-getopt/">getopt</a></code>(3), and will be returned by both <code>pmdaGetOptions</code> and <code>pmdaGetOpt</code> if encountered. </p>
 <p> When a command line option usage error is detected in the <code>pmdaGetOptions</code> interface, the error field of the <i>opts</i> structure will contain a non-zero error count. </p>

@@ -16,55 +16,55 @@ description: "chkweb – runs the LaTeX parts of a CWEB file through chktex"
 <h2>OPTIONS</h2>
 <p> Miscellaneous options:</p>
 <dl>
-<dt><code>-h &#8211;help</code></p>
-<dd> Print a help screen.</p>
-<dt><code>-i &#8211;license</code></p>
-<dd> Show distribution information.</p>
-<dt><code>-l &#8211;localrc</code></p>
-<dd> Read local .chktexrc formatted file.</p>
-<dt><code>-d &#8211;debug</code></p>
-<dd> Debug information. Give it a number.</p>
-<dt><code>-r &#8211;reset</code></p>
-<dd> Reset settings to default.</dl>
+<dt><code>-h &#8211;help</code></dt>
+<dd> Print a help screen.</dd>
+<dt><code>-i &#8211;license</code></dt>
+<dd> Show distribution information.</dd>
+<dt><code>-l &#8211;localrc</code></dt>
+<dd> Read local .chktexrc formatted file.</dd>
+<dt><code>-d &#8211;debug</code></dt>
+<dd> Debug information. Give it a number.</dd>
+<dt><code>-r &#8211;reset</code></dt>
+<dd> Reset settings to default.</dd></dl>
 <p> Muting warning messages:</p>
 <dl>
-<dt><code>-w &#8211;warnon</code></p>
-<dd> Makes msg # given a warning and turns it on.</p>
-<dt><code>-e &#8211;erroron</code></p>
-<dd> Makes msg # given an error and turns it on.</p>
-<dt><code>-m &#8211;msgon</code></p>
-<dd> Makes msg # given a message and turns it on.</p>
-<dt><code>-n &#8211;nowarn</code></p>
-<dd> Mutes msg # given. </p>
+<dt><code>-w &#8211;warnon</code></dt>
+<dd> Makes msg # given a warning and turns it on.</dd>
+<dt><code>-e &#8211;erroron</code></dt>
+<dd> Makes msg # given an error and turns it on.</dd>
+<dt><code>-m &#8211;msgon</code></dt>
+<dd> Makes msg # given a message and turns it on.</dd>
+<dt><code>-n &#8211;nowarn</code></dt>
+<dd> Mutes msg # given. </dd>
 </dl>
 <p> Output control flags:</p>
 <dl>
-<dt><code>-V &#8211;pipeverb</code></p>
-<dd> How errors are displayed when stdout != tty. Defaults to the same as -v.</p>
-<dt><code>-s &#8211;splitchar</code></p>
-<dd> String used to split fields when doing -v0</p>
-<dt><code>-o &#8211;output</code></p>
-<dd> Redirect error report to a file.</p>
-<dt><code>-q &#8211;quiet</code></p>
-<dd> Shuts up about version information.</p>
-<dt><code>-f &#8211;format</code></p>
-<dd> Format to use for output </p>
+<dt><code>-V &#8211;pipeverb</code></dt>
+<dd> How errors are displayed when stdout != tty. Defaults to the same as -v.</dd>
+<dt><code>-s &#8211;splitchar</code></dt>
+<dd> String used to split fields when doing -v0</dd>
+<dt><code>-o &#8211;output</code></dt>
+<dd> Redirect error report to a file.</dd>
+<dt><code>-q &#8211;quiet</code></dt>
+<dd> Shuts up about version information.</dd>
+<dt><code>-f &#8211;format</code></dt>
+<dd> Format to use for output </dd>
 </dl>
 <p> Boolean switches (1 -&gt; enables / 0 -&gt; disables):</p>
 <dl>
-<dt><code>-b &#8211;backup</code></p>
-<dd> Backup output file.</p>
-<dt><code>-x &#8211;wipeverb</code></p>
-<dd> Ignore contents of `erb&#8217; commands.</p>
-<dt><code>-g &#8211;globalrc</code></p>
-<dd> Read global .chktexrc file.</p>
-<dt><code>-I &#8211;inputfiles</code></p>
-<dd> Execute \input statements.</p>
-<dt><code>-H &#8211;headererr</code></p>
-<dd> Show errors found in front of egin{document}</dl>
+<dt><code>-b &#8211;backup</code></dt>
+<dd> Backup output file.</dd>
+<dt><code>-x &#8211;wipeverb</code></dt>
+<dd> Ignore contents of `erb&#8217; commands.</dd>
+<dt><code>-g &#8211;globalrc</code></dt>
+<dd> Read global .chktexrc file.</dd>
+<dt><code>-I &#8211;inputfiles</code></dt>
+<dd> Execute \input statements.</dd>
+<dt><code>-H &#8211;headererr</code></dt>
+<dd> Show errors found in front of egin{document}</dd></dl>
 <dl>
-<dt><code>-W &#8211;version</code></p>
-<dd> Version information </p>
+<dt><code>-W &#8211;version</code></dt>
+<dd> Version information </dd>
 </dl>
 <p> If no LaTeX files are specified on the command line, we will read from stdin. For explanation of warning/error messages, please consult the main document /usr/share/doc/chktex/ChkTeX.dvi.gz. </p>
 <h2>DISTRIBUTION</h2>

@@ -14,17 +14,17 @@ description: "scsi_device_set_state – Take the given device through the device
 <p><i>sdev</i></p>
 <dl>
 <dd>
-<dd>scsi device to change the state of.</dl>
+</dd><dd>scsi device to change the state of.</dd></dl>
 <p> <i>state</i></p>
 <dl>
-<dd>state to change to.</dl>
+<dd>state to change to.</dd></dl>
 <h2>Description</h2>
 <p>Returns zero if unsuccessful or an error if the requested transition is illegal.</p>
 <h2>Authors</h2>
 <p><code>James Bottomley</code> &lt;James.Bottomley [at] hansenpartnership.com&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <p> <code>Rob Landley</code> &lt;rob [at] landley.net&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

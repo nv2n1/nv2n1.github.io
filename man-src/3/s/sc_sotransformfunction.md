@@ -11,9 +11,7 @@ description: "sc::SOTransformFunction –"
 <p> <code>SOTransformShell</code> describes how an AO function contributes to an <code>SO</code> function in a particular <code>SO</code> shell.</p>
 <h2>Synopsis</h2>
 <pre><code>
-
 #include &lt;sobasis.h&gt;
-
 Public Attributes</code></pre>
 <p> double <code>coef</code><br />
  <i>The coefficient of the AO. </i><br />

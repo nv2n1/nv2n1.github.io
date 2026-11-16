@@ -11,7 +11,6 @@ std::iswprint - std::iswprint
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;cwctype&gt;
-
     int iswprint(std::wint_t ch);</code></pre> 
 Checks if the given wide character can be printed, i.e. it is either a number (0123456789), an uppercase letter (ABCDEFGHIJKLMNOPQRSTUVWXYZ), a lowercase letter (abcdefghijklmnopqrstuvwxyz), a punctuation character(!&quot;#$%&amp;'()*+,-./:;&lt;=&gt;?@[\]^_`{|}~), space or any printable character specific to the current C locale. 
 If the value of ch is neither representable as a wchar_t nor equal to the value of the macro WEOF, the behavior is undefined. 
@@ -31,12 +30,9 @@ ISO_30112 specifies which Unicode characters are include in POSIX print category
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;iostream&gt;
-
 #include &lt;cwctype&gt;
-
 #include &lt;clocale&gt;
 int main()
-
 {
     wchar_t c = L'\u2002'; // en-space
     std::setlocale(LC_ALL, &quot;en_US.utf8&quot;);

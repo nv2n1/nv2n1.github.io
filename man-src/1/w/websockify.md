@@ -87,24 +87,18 @@ url: "/docs/linux/man/1-websockify/"
 
 <dl>
 <dt>*
-<dd> Daemonizing: When the -D option is specified, websockify runs in the background as a daemon process. 
-
-<dt>*
-<dd> SSL (the wss:// WebSockets URI): This is detected automatically by websockify by sniffing the first byte sent from the client and then wrapping the socket if the data starts with '\x16' or '\x80' (indicating SSL). 
-
-<dt>*
-<dd> Flash security policy: websockify detects flash security policy requests (again by sniffing the first packet) and answers with an appropriate flash security policy response (and then closes the port). This means no separate flash security policy server is needed for supporting the flash WebSockets fallback emulator. 
-
-<dt>*
-<dd> Session recording: This feature that allows recording of the traffic sent and received from the client to a file using the --record option. 
-
-<dt>*
-<dd> Mini-webserver: websockify can detect and respond to normal web requests on the same port as the WebSockets proxy and Flash security policy. This functionality is activate with the --web DIR option where DIR is the root of the web directory to serve. 
-
-<dt>*
-<dd> Wrap a program: see the &quot;Wrap a Program&quot; section below. 
-
-</dl>
+</dt><dd> Daemonizing: When the -D option is specified, websockify runs in the background as a daemon process. 
+</dd><dt>*
+</dt><dd> SSL (the wss:// WebSockets URI): This is detected automatically by websockify by sniffing the first byte sent from the client and then wrapping the socket if the data starts with '\x16' or '\x80' (indicating SSL). 
+</dd><dt>*
+</dt><dd> Flash security policy: websockify detects flash security policy requests (again by sniffing the first packet) and answers with an appropriate flash security policy response (and then closes the port). This means no separate flash security policy server is needed for supporting the flash WebSockets fallback emulator. 
+</dd><dt>*
+</dt><dd> Session recording: This feature that allows recording of the traffic sent and received from the client to a file using the --record option. 
+</dd><dt>*
+</dt><dd> Mini-webserver: websockify can detect and respond to normal web requests on the same port as the WebSockets proxy and Flash security policy. This functionality is activate with the --web DIR option where DIR is the root of the web directory to serve. 
+</dd><dt>*
+</dt><dd> Wrap a program: see the &quot;Wrap a Program&quot; section below. 
+</dd></dl>
 
 <h3>Wrap a Program</h3>
 

@@ -15,10 +15,10 @@ description: "IBFINDNODESUSING –"
 <p>ibfindnodesusing.pl uses ibroute and detects the current nodes which are routed through both directions of the link specified. The link is specified by one switch port end; the script finds the remote end automatically.</p>
 <h3>Options</h3>
 <dl>
-<dt><code>-h</code></p>
-<dd>show help</p>
-<dt><code>-R</code></p>
-<dd>Recalculate the ibnetdiscover information, ie do not use the cached information. This option is slower but should be used if the diag tools have not been used for some time or if there are other reasons to believe that the fabric has changed. </p>
+<dt><code>-h</code></dt>
+<dd>show help</dd>
+<dt><code>-R</code></dt>
+<dd>Recalculate the ibnetdiscover information, ie do not use the cached information. This option is slower but should be used if the diag tools have not been used for some time or if there are other reasons to believe that the fabric has changed. </dd>
 <p> <code>-C &lt;ca_name&gt;</code> use the specified ca_name. </p>
 <p> <code>-P &lt;ca_port&gt;</code> use the specified ca_port.</dl>
 <h3>Files</h3>
@@ -52,6 +52,6 @@ description: "IBFINDNODESUSING –"
 0x0008f104004119d0 &quot;SW4 (Rack 3) ISR9024 Voltaire 9024D&quot;</pre>
 <h3>Author</h3>
 <dl>
-<dt><code>Ira Weiny</code></p>
-<dd>&lt; <i>ira.weiny [at] intel.com</i> &gt; </p>
+<dt><code>Ira Weiny</code></dt>
+<dd>&lt; <i>ira.weiny [at] intel.com</i> &gt; </dd>
 </dl>

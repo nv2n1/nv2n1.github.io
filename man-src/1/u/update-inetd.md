@@ -17,37 +17,37 @@ description: "update-inetd – create, remove, enable or disable entry /etc/inet
 <p> Also note that <code>&#8211;enable</code> and <code>&#8211;remove</code> will not be acted upon for service entries that are commented out using anything but the value specified with <code>&#8211;comment-chars</code> (or the default value if none is specified).</p>
 <h2>COMMANDS</h2>
 <dl>
-<dt><code>&#8211;add</code> <i>entry-line</i></p>
-<dd> Add an entry to <i>/etc/inetd.conf</i>. A description of the <i>entry-line</i> format can be found in the <code>inetd</code>(8) or <code>inetd.conf</code>(5) manual pages (or just look at <i>/etc/inetd.conf</i>). In order to prevent the shell from changing your <i>entry-line</i> definition you have to quote the <i>entry-line</i> using single or double quotes. You can use tabs (tab character or 	) and spaces to separate the fields of the <i>entry-line</i>. To add the <i>entry-line</i> to a specific section in the <i>/etc/inetd.conf</i> file please use the <code>&#8211;group</code> option. </p>
+<dt><code>&#8211;add</code> <i>entry-line</i></dt>
+<dd> Add an entry to <i>/etc/inetd.conf</i>. A description of the <i>entry-line</i> format can be found in the <code>inetd</code>(8) or <code>inetd.conf</code>(5) manual pages (or just look at <i>/etc/inetd.conf</i>). In order to prevent the shell from changing your <i>entry-line</i> definition you have to quote the <i>entry-line</i> using single or double quotes. You can use tabs (tab character or 	) and spaces to separate the fields of the <i>entry-line</i>. To add the <i>entry-line</i> to a specific section in the <i>/etc/inetd.conf</i> file please use the <code>&#8211;group</code> option. </dd>
 <p> If you are trying to add an entry which already exists, <code>update-inetd</code> will not add the entry. For uncommented entries it will do nothing and for entries that are commented out by the comment-chars (see option <code>&#8211;comment-chars</code>) it will enable the existing entry. If you want to completely replace an entry just remove the entry with the <code>&#8211;remove</code> command first.</p>
-<dt><code>&#8211;remove</code> <i>entry-regex</i></p>
-<dd> Remove an entry-line matching <i>entry-regex</i> (e.g. &quot;<i>telnet</i>&quot;) from <i>/etc/inetd.conf</i>. The <i>entry-regex</i> will be anchored at the beginning of the entry line.</p>
-<dt><code>&#8211;enable</code> <i>service</i>[,&#8230;]</p>
-<dd> Enable <i>service</i> (e.g. &quot;<i>ftp</i>&quot;) in <i>/etc/inetd.conf</i>. If you want to enable more than one <i>service</i> you can use a comma-separated list of services (no whitespace characters allowed).</p>
-<dt><code>&#8211;disable</code> <i>service</i>[,&#8230;]</p>
-<dd> Disable <i>service</i> (e.g. &quot;<i>ftp</i>&quot;) in <i>/etc/inetd.conf</i>. If you want to disable more than one <i>service</i> you can use a comma-separated list of services (no whitespace characters allowed).</dl>
+<dt><code>&#8211;remove</code> <i>entry-regex</i></dt>
+<dd> Remove an entry-line matching <i>entry-regex</i> (e.g. &quot;<i>telnet</i>&quot;) from <i>/etc/inetd.conf</i>. The <i>entry-regex</i> will be anchored at the beginning of the entry line.</dd>
+<dt><code>&#8211;enable</code> <i>service</i>[,&#8230;]</dt>
+<dd> Enable <i>service</i> (e.g. &quot;<i>ftp</i>&quot;) in <i>/etc/inetd.conf</i>. If you want to enable more than one <i>service</i> you can use a comma-separated list of services (no whitespace characters allowed).</dd>
+<dt><code>&#8211;disable</code> <i>service</i>[,&#8230;]</dt>
+<dd> Disable <i>service</i> (e.g. &quot;<i>ftp</i>&quot;) in <i>/etc/inetd.conf</i>. If you want to disable more than one <i>service</i> you can use a comma-separated list of services (no whitespace characters allowed).</dd></dl>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>&#8211;group</code> <i>groupname</i></p>
-<dd> Specify that the new entry should be placed in group <i>groupname</i> (e.g. &quot;<i></i><font SIZE="-1"><i>MAIL</i></font><i></i>&#8220;). If the group does not exist the entry will be placed at the end of the file. The default group is &#8221;<font SIZE="-1"><code>OTHER</code></font>&quot;. </p>
+<dt><code>&#8211;group</code> <i>groupname</i></dt>
+<dd> Specify that the new entry should be placed in group <i>groupname</i> (e.g. &quot;<i></i><font SIZE="-1"><i>MAIL</i></font><i></i>&#8220;). If the group does not exist the entry will be placed at the end of the file. The default group is &#8221;<font SIZE="-1"><code>OTHER</code></font>&quot;. </dd>
 <p> This option is only relevant with the <code>&#8211;add</code> command.</p>
-<dt><code>&#8211;pattern</code> <i>pattern</i></p>
-<dd> This option can be used to select a service. You only need this option if you have two (or more) services of the same name. </p>
+<dt><code>&#8211;pattern</code> <i>pattern</i></dt>
+<dd> This option can be used to select a service. You only need this option if you have two (or more) services of the same name. </dd>
 <p> This option is not relevant with the <code>&#8211;add</code> command.</p>
-<dt><code>&#8211;comment-chars</code> <i>characters</i></p>
-<dd> <code>update-inetd</code> uses &quot;<code>#&lt;off&gt;# </code>&quot; as the default comment characters. You can use this option to specify different comment characters. This is only necessary if you have to deal with two (or more) services of the same name. If you do use this option, it is your responsibility to eventually remove the commented out entry.</p>
-<dt><code>&#8211;multi</code></p>
-<dd> If you want to disable/remove more than one entry at a time you should use this option. If you try to remove more than one entry at a time without using this option the program will show a warning and prompt the user for an explicit confirmation.</p>
-<dt><code>&#8211;file</code> <i>filename</i></p>
-<dd> Use <i>filename</i> instead of <i>/etc/inetd.conf</i>.</p>
-<dt><code>&#8211;verbose</code></p>
-<dd> Explain what is being done.</p>
-<dt><code>&#8211;debug</code></p>
-<dd> Enables debugging mode.</p>
-<dt><code>&#8211;help</code></p>
-<dd> Print a usage message on standard output and exit successfully.</p>
-<dt><code>&#8211;version</code></p>
-<dd> Print version information on standard output and exit successfully.</dl>
+<dt><code>&#8211;comment-chars</code> <i>characters</i></dt>
+<dd> <code>update-inetd</code> uses &quot;<code>#&lt;off&gt;# </code>&quot; as the default comment characters. You can use this option to specify different comment characters. This is only necessary if you have to deal with two (or more) services of the same name. If you do use this option, it is your responsibility to eventually remove the commented out entry.</dd>
+<dt><code>&#8211;multi</code></dt>
+<dd> If you want to disable/remove more than one entry at a time you should use this option. If you try to remove more than one entry at a time without using this option the program will show a warning and prompt the user for an explicit confirmation.</dd>
+<dt><code>&#8211;file</code> <i>filename</i></dt>
+<dd> Use <i>filename</i> instead of <i>/etc/inetd.conf</i>.</dd>
+<dt><code>&#8211;verbose</code></dt>
+<dd> Explain what is being done.</dd>
+<dt><code>&#8211;debug</code></dt>
+<dd> Enables debugging mode.</dd>
+<dt><code>&#8211;help</code></dt>
+<dd> Print a usage message on standard output and exit successfully.</dd>
+<dt><code>&#8211;version</code></dt>
+<dd> Print version information on standard output and exit successfully.</dd></dl>
 <h2>EXAMPLES</h2>
 <p> You have installed ssh (secure encrypting remote shell) and wish to disable its unencrypted cousins: </p>
 <pre>

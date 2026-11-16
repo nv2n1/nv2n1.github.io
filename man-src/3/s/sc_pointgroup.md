@@ -11,7 +11,6 @@ description: "sc::PointGroup –"
 <p> The <code>PointGroup</code> class is really a place holder for a <code>CharacterTable</code>.</p>
 <h2>Synopsis</h2>
 <pre><code>
-
 #include &lt;pointgrp.h&gt;</code></pre>
 <p> Inherits <code>sc::SavableState</code>.</p>
 <h3>Public Member Functions</h3>

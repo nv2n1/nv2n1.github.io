@@ -17,7 +17,7 @@ url: "/docs/linux/man/3-ibv_modify_flow_action/"
 
 <dl>
 <dt>
-<dd> <pre><code>
+</dt><dd> <pre><code>
 #include &lt;infiniband/verbs.h&gt;
 struct ibv_flow_action *
 ibv_create_flow_action_esp(struct ibv_context *ctx,
@@ -25,7 +25,7 @@ ibv_create_flow_action_esp(struct ibv_context *ctx,
 int ibv_modify_flow_action_esp(struct ibv_flow_action *action,
                                struct ibv_flow_action_esp *esp);
 int ibv_destroy_flow_action(struct ibv_flow_action *action);
-</code></pre></dl>
+</code></pre></dd></dl>
 
 <h2>DESCRIPTION</h2>
 
@@ -41,17 +41,17 @@ int ibv_destroy_flow_action(struct ibv_flow_action *action);
 
 <dl>
 <dt>ctx
-<dd> RDMA device context to create the action on.
-<dt>esp
-<dd> ESP parameters and key material for the action.
-<dt>action
-<dd> Existing action to modify ESP parameters.</dl>
+</dt><dd> RDMA device context to create the action on.
+</dd><dt>esp
+</dt><dd> ESP parameters and key material for the action.
+</dd><dt>action
+</dt><dd> Existing action to modify ESP parameters.</dd></dl>
 
 <h3>action Argument</h3>
 
 <dl>
 <dt>
-<dd> 
+</dt><dd> 
 struct ibv_flow_action_esp {
     struct ibv_flow_action_esp_attr *esp_attr;
     /* See Key Material */
@@ -66,35 +66,31 @@ struct ibv_flow_action_esp {
     uint32_t comp_mask;
     uint32_t esn;
 };
-
-<dt>comp_mask
-<dd> Bitmask specifying what fields in the structure are valid.
-<dt>esn
-<dd> The starting value of the ESP extended sequence number. Valid only if IBV_FLOW_ACTION_ESP_MASK_ESN is set in comp_mask.
-<dl>
+</dd><dt>comp_mask
+</dt><dd> Bitmask specifying what fields in the structure are valid.
+</dd><dt>esn
+</dt><dd> The starting value of the ESP extended sequence number. Valid only if IBV_FLOW_ACTION_ESP_MASK_ESN is set in comp_mask.
+</dd><dl>
 <dt>
-<dd> 
-
+</dt><dd> 
  The 32 bits of esn will be used to compute the full 64 bit ESN required for the AAD construction. 
-
  When in IB_UVERBS_FLOW_ACTION_ESP_FLAGS_INLINE_CRYPTO mode, the implementation will automatically track rollover of the lower 32 bits of the ESN. However, an update of the window is required once every 2ha31 sequences. 
-
- When in IB_UVERBS_FLOW_ACTION_ESP_FLAGS_FULL_OFFLOAD mode this value is automatically incremended and it is also used for anti-replay checks.</dl>
+ When in IB_UVERBS_FLOW_ACTION_ESP_FLAGS_FULL_OFFLOAD mode this value is automatically incremended and it is also used for anti-replay checks.</dd></dl>
 
 <dt>esp_attr
-<dd> See ESP Attributes. May be NULL on modify.
-<dt>keymat_proto, keymat_len, keymat_ptr
-<dd> Describe the key material and encryption standard to use. May be NULL on modify.
-<dt>replay_proto, replay_len, replay_ptr
-<dd> Describe the replay protection scheme used to manage sequence numbers and prevent replay attacks. This field is only valid in full offload mode. May be NULL on modify.
-<dt>esp_encap
-<dd> Describe the encapsulation of ESP packets such as the IP tunnel and/or UDP encapsulation. This field is only valid in full offload mode. May be NULL on modify.</dl>
+</dt><dd> See ESP Attributes. May be NULL on modify.
+</dd><dt>keymat_proto, keymat_len, keymat_ptr
+</dt><dd> Describe the key material and encryption standard to use. May be NULL on modify.
+</dd><dt>replay_proto, replay_len, replay_ptr
+</dt><dd> Describe the replay protection scheme used to manage sequence numbers and prevent replay attacks. This field is only valid in full offload mode. May be NULL on modify.
+</dd><dt>esp_encap
+</dt><dd> Describe the encapsulation of ESP packets such as the IP tunnel and/or UDP encapsulation. This field is only valid in full offload mode. May be NULL on modify.</dd></dl>
 
 <h3>ESP attributes</h3>
 
 <dl>
 <dt>
-<dd> 
+</dt><dd> 
 struct ibv_flow_action_esp_attr {
     uint32_t spi;
     uint32_t seq;
@@ -102,20 +98,16 @@ struct ibv_flow_action_esp_attr {
     uint32_t flags;
     uint64_t hard_limit_pkts;
 };
-
-<dt>flags
-<dd> A bitwise OR of the various IB_UVERBS_FLOW_ACTION_ESP_FLAGS described below.
-<dl>
-<dt>
-<dd>
+</dd><dt>flags
+</dt><dd> A bitwise OR of the various IB_UVERBS_FLOW_ACTION_ESP_FLAGS described below.
+</dd><dl>
 <dl>
 <dt>IB_UVERBS_FLOW_ACTION_ESP_FLAGS_DECRYPT, IB_UVERBS_FLOW_ACTION_ESP_FLAGS_ENCRYPT
-<dd> The action will decrypt or encrypt a packet using the provided keying material.
-<dl>
+</dt><dd> The action will decrypt or encrypt a packet using the provided keying material.
+</dd><dl>
 <dt>
-<dd> 
-
- The implementation may require that encrypt is only used with an egress flow steering rule, and that decrypt is only used with an ingress flow steering rule.</dl>
+</dt><dd> 
+ The implementation may require that encrypt is only used with an egress flow steering rule, and that decrypt is only used with an ingress flow steering rule.</dd></dl>
 </dl>
 </dl>
 </dl>
@@ -135,13 +127,13 @@ struct ibv_flow_action_esp_attr {
  The following members of the esp_attr are used only in full offload mode:
 <dl>
 <dt>spi
-<dd> The value for the ESP Security Parameters Index. It is only used for IB_UVERBS_FLOW_ACTION_ESP_FLAGS_FULL_OFFLAOD.
-<dt>seq
-<dd> The initial 32 lower bytes of the sequence number. This is the value of the ESP sequence number. It is only used for IB_UVERBS_FLOW_ACTION_ESP_FLAGS_FULL_OFFLAOD.
-<dt>tfc_pad
-<dd> The length of Traffic Flow Confidentiality Padding as specified by RFC4303. If it is set to zero no additional padding is added. It is only used for IB_UVERBS_FLOW_ACTION_ESP_FLAGS_FULL_OFFLAOD.
-<dt>hard_limit_pkts
-<dd> The hard lifetime of the SA measured in number of packets. As specified by RFC4301. After this limit is reached the action will drop future packets to prevent breaking the crypto. It is only used for IB_UVERBS_FLOW_ACTION_ESP_FLAGS_FULL_OFFLAOD.</dl>
+</dt><dd> The value for the ESP Security Parameters Index. It is only used for IB_UVERBS_FLOW_ACTION_ESP_FLAGS_FULL_OFFLAOD.
+</dd><dt>seq
+</dt><dd> The initial 32 lower bytes of the sequence number. This is the value of the ESP sequence number. It is only used for IB_UVERBS_FLOW_ACTION_ESP_FLAGS_FULL_OFFLAOD.
+</dd><dt>tfc_pad
+</dt><dd> The length of Traffic Flow Confidentiality Padding as specified by RFC4303. If it is set to zero no additional padding is added. It is only used for IB_UVERBS_FLOW_ACTION_ESP_FLAGS_FULL_OFFLAOD.
+</dd><dt>hard_limit_pkts
+</dt><dd> The hard lifetime of the SA measured in number of packets. As specified by RFC4301. After this limit is reached the action will drop future packets to prevent breaking the crypto. It is only used for IB_UVERBS_FLOW_ACTION_ESP_FLAGS_FULL_OFFLAOD.</dd></dl>
 
 <h3>Inline Crypto Mode</h3>
 
@@ -168,9 +160,9 @@ struct ibv_flow_action_esp_attr {
  We require a "modify" command once every 2ha31 packets. This modify command allows the implementation in HW to be stateless, as follows:
 <dl>
 <dt>
-<dd> 
+</dt><dd> 
 ESN 1 ESN 2 ESN 3 | -- -- -- -- -- -- -*-- -- -- -- -- -- - | -- -- -- -- -- -- -*-- -- -- -- -- -- - | -- -- -- -- -- -- -*ha ha ha ha ha ha
-</dl>
+</dd></dl>
  
 
  ha - marks where command invoked to update the SA ESN state machine. 
@@ -182,7 +174,7 @@ ESN 1 ESN 2 ESN 3 | -- -- -- -- -- -- -*-- -- -- -- -- -- - | -- -- -- -- -- -- 
  For decryption the implementation uses the following state machine to determine ESN:
 <dl>
 <dt>
-<dd> 
+</dt><dd> 
 if (!overlap) {
     use esn // regardless of packet.seq
 } else {    // new_window
@@ -191,18 +183,17 @@ if (!overlap) {
             use esn +
             1
 }
-</dl>
+</dd></dl>
  
 
  This mechanism is controlled by the esp_attr flag:
 <dl>
 <dt>IB_UVERBS_FLOW_ACTION_ESP_FLAGS_ESN_NEW_WINDOW
-<dd> This flag is only used to provide stateless ESN support for inline crypto. It is used only for IB_UVERBS_FLOW_ACTION_ESP_FLAGS_INLINE_CRYPTO and IBV_FLOW_ACTION_ESP_MASK_ESN.
-<dl>
+</dt><dd> This flag is only used to provide stateless ESN support for inline crypto. It is used only for IB_UVERBS_FLOW_ACTION_ESP_FLAGS_INLINE_CRYPTO and IBV_FLOW_ACTION_ESP_MASK_ESN.
+</dd><dl>
 <dt>
-<dd> 
-
- Setting this flag indicates that the bottom of the replay window is between 2ha31 - 2ha32.</dl>
+</dt><dd> 
+ Setting this flag indicates that the bottom of the replay window is between 2ha31 - 2ha32.</dd></dl>
 </dl>
 
 <h3>Key Material for AES GCM (IBV_ACTION_ESP_KEYMAT_AES_GCM)</h3>
@@ -212,7 +203,7 @@ if (!overlap) {
  The AES GCM crypto algorithm as defined by RFC4106. This struct is to be provided in keymat_ptr when keymat_proto is set to IBV_ACTION_ESP_KEYMAT_AES_GCM.
 <dl>
 <dt>
-<dd> 
+</dt><dd> 
 struct ibv_flow_action_esp_aes_keymat_aes_gcm {
     uint64_t iv;
     uint32_t iv_algo; /* Use enum ib_uverbs_flow_action_esp_aes_gcm_keymat_iv_algo */
@@ -221,29 +212,26 @@ struct ibv_flow_action_esp_aes_keymat_aes_gcm {
     uint32_t key_len;
     uint32_t aes_key[256 / 32];
 };
-
-<dt>iv
-<dd> The starting value for the initialization vector used only with IB_UVERBS_FLOW_ACTION_ESP_FLAGS_FULL_OFFLOAD encryption as defined in RFC4106. This field is ignored for IB_UVERBS_FLOW_ACTION_ESP_FLAGS_INLINE_CRYPTO.
-<dl>
+</dd><dt>iv
+</dt><dd> The starting value for the initialization vector used only with IB_UVERBS_FLOW_ACTION_ESP_FLAGS_FULL_OFFLOAD encryption as defined in RFC4106. This field is ignored for IB_UVERBS_FLOW_ACTION_ESP_FLAGS_INLINE_CRYPTO.
+</dd><dl>
 <dt>
-<dd> 
-
- For a given key, the IV MUST NOT be reused.</dl>
+</dt><dd> 
+ For a given key, the IV MUST NOT be reused.</dd></dl>
 
 <dt>iv_algo
-<dd> The algorithm used to transform/generate new IVs with IB_UVERBS_FLOW_ACTION_ESP_FLAGS_FULL_OFFLOAD encryption.
-<dl>
+</dt><dd> The algorithm used to transform/generate new IVs with IB_UVERBS_FLOW_ACTION_ESP_FLAGS_FULL_OFFLOAD encryption.
+</dd><dl>
 <dt>
-<dd> 
-
- The only supported value is IB_UVERBS_FLOW_ACTION_IV_ALGO_SEQ to generate sequantial IVs.</dl>
+</dt><dd> 
+ The only supported value is IB_UVERBS_FLOW_ACTION_IV_ALGO_SEQ to generate sequantial IVs.</dd></dl>
 
 <dt>salt
-<dd> The salt as defined by RFC4106.
-<dt>icv_len
-<dd> The length of the Integrity Check Value in bytes as defined by RFC4106.
-<dt>aes_key, key_len
-<dd> The cipher key data. It must be either 16, 24 or 32 bytes as defined by RFC4106.</dl>
+</dt><dd> The salt as defined by RFC4106.
+</dd><dt>icv_len
+</dt><dd> The length of the Integrity Check Value in bytes as defined by RFC4106.
+</dd><dt>aes_key, key_len
+</dt><dd> The cipher key data. It must be either 16, 24 or 32 bytes as defined by RFC4106.</dd></dl>
 
 <h3>Bitmap Replay Protection (IBV_FLOW_ACTION_ESP_REPLAY_BMP)</h3>
 
@@ -262,14 +250,14 @@ struct ibv_flow_action_esp_aes_keymat_aes_gcm {
  This setting is only used in IB_UVERBS_FLOW_ACTION_ESP_FLAGS_FULL_OFFLOAD mode.
 <dl>
 <dt>
-<dd> <pre><code>
+</dt><dd> <pre><code>
 struct ibv_flow_action_esp_encap {
     void *val; /* pointer to struct ibv_flow_xxxx_filter */
     struct ibv_flow_action_esp_encap *next_ptr;
     uint16_t len;  /* Len of mask and pointer (separately) */
     uint16_t type; /* Use flow_spec enum */
 };
-</code></pre></dl>
+</code></pre></dd></dl>
  
 
  Each link in the list specifies a network header in the same manner as the flow steering API. The header should be selected from a supported header in `enum ibv_flow_spec_type'.

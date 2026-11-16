@@ -21,13 +21,13 @@ CALL WMLABT (X, Y, LABEL, IPOS)
 <h2>Description</h2>
 
 <dl><dt>X
-<dd>(Real, Input) - An X coordinate (specified in world coordinates) of a point that specifies a position for the label in LABEL.
-<dt>Y
-<dd>(Real, Input) - A Y coordinate (specified in world coordinates) of a point that specifies a position for the label in LABEL.
-<dt>LABEL
-<dd>(Character, Input) - A character variable that contains the desired label.
-<dt>IPOS
-<dd>(Integer, Input) - A flag for controlling whether an optional arrow is drawn. If IPOS is 0, then no arrow is drawn and the label is centered at (X,Y). If IPOS is between 1 and 12 (inclusive), then an arrow is drawn in one of twelve positions and (X,Y) specifies the location of the tip of the arrow.</dl>
+</dt><dd>(Real, Input) - An X coordinate (specified in world coordinates) of a point that specifies a position for the label in LABEL.
+</dd><dt>Y
+</dt><dd>(Real, Input) - A Y coordinate (specified in world coordinates) of a point that specifies a position for the label in LABEL.
+</dd><dt>LABEL
+</dt><dd>(Character, Input) - A character variable that contains the desired label.
+</dd><dt>IPOS
+</dt><dd>(Integer, Input) - A flag for controlling whether an optional arrow is drawn. If IPOS is 0, then no arrow is drawn and the label is centered at (X,Y). If IPOS is between 1 and 12 (inclusive), then an arrow is drawn in one of twelve positions and (X,Y) specifies the location of the tip of the arrow.</dd></dl>
 
 <h2>Usage</h2>
 

@@ -15,83 +15,83 @@ description: "mc – Visual shell for Unix-like systems."
 <p> GNU Midnight Commander is a directory browser/file manager for Unix-like operating systems.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><i>-a, &#8211;stickchars</i></p>
-<dd> Disable usage of graphic characters for line drawing.</p>
-<dt><i>-b, &#8211;nocolor</i></p>
-<dd> Force black and white display.</p>
-<dt><i>-c, &#8211;color</i></p>
-<dd> Force color mode, please check the section Colors for more information.</p>
-<dt><i>-C arg, &#8211;colors=arg</i></p>
-<dd> Specify a different color set in the command line. The format of arg is documented in the Colors section.</p>
-<dt><i>-S arg, &#8211;skin=arg</i></p>
-<dd> Specify a name of skin in the command line. Technology of skins is documented in the Skins section.</p>
-<dt><i>-d, &#8211;nomouse</i></p>
-<dd> Disable mouse support.</p>
-<dt><i>-e [file], &#8211;edit[=file]</i></p>
-<dd> Start the internal editor. If the file is specified, open it on startup. See also <code>mcedit (1)</code>.</p>
-<dt><i>-f, &#8211;datadir</i></p>
-<dd> Display the compiled-in search paths for Midnight Commander files.</p>
-<dt><i>-F, &#8211;datadir-info</i></p>
-<dd> Display extended info about compiled-in paths for Midnight Commander.</p>
-<dt><i>&#8211;configure-options</i></p>
-<dd> Display configure options.</p>
-<dt><i>-k, &#8211;resetsoft</i></p>
-<dd> Reset softkeys to their default from the termcap/terminfo database. Only useful on HP terminals when the function keys don&#8217;t work.</p>
-<dt><i>-K file, &#8211;keymap=file</i></p>
-<dd> Specify a name of keymap file in the command line.</p>
-<dt><i>&#8211;nokeymap</i></p>
-<dd> Don&#8217;t load key bindings from any file, use default hardcoded keys.</p>
-<dt><i>-l file, &#8211;ftplog=file</i></p>
-<dd> Save the ftpfs dialog with the server in file.</p>
-<dt><i>-D N, &#8211;debuglevel=N</i></p>
-<dd> Save the debug level for SMB VFS. N is in 0-10 range.</p>
-<dt><i>-P file, &#8211;printwd=file</i></p>
-<dd> Print the last working directory to the specified file. This option is not meant to be used directly. Instead, it&#8217;s used from a special shell script that automatically changes the current directory of the shell to the last directory the Midnight Commander was in. Source the file <code>/usr/share/mc/bin/mc.sh</code> (bash and zsh users) or <code>/usr/share/mc/bin/mc.csh</code> (tcsh users) respectively to define <code>mc</code> as an alias to the appropriate shell script.</p>
-<dt><i>-s, &#8211;slow</i></p>
-<dd> Set alternative mode drawing of frameworks. If the section [Lines] is not filled, the symbol for the pseudographics frame is a space, otherwise the frame characters are taken from following parameters. </p>
+<dt><i>-a, &#8211;stickchars</i></dt>
+<dd> Disable usage of graphic characters for line drawing.</dd>
+<dt><i>-b, &#8211;nocolor</i></dt>
+<dd> Force black and white display.</dd>
+<dt><i>-c, &#8211;color</i></dt>
+<dd> Force color mode, please check the section Colors for more information.</dd>
+<dt><i>-C arg, &#8211;colors=arg</i></dt>
+<dd> Specify a different color set in the command line. The format of arg is documented in the Colors section.</dd>
+<dt><i>-S arg, &#8211;skin=arg</i></dt>
+<dd> Specify a name of skin in the command line. Technology of skins is documented in the Skins section.</dd>
+<dt><i>-d, &#8211;nomouse</i></dt>
+<dd> Disable mouse support.</dd>
+<dt><i>-e [file], &#8211;edit[=file]</i></dt>
+<dd> Start the internal editor. If the file is specified, open it on startup. See also <code>mcedit (1)</code>.</dd>
+<dt><i>-f, &#8211;datadir</i></dt>
+<dd> Display the compiled-in search paths for Midnight Commander files.</dd>
+<dt><i>-F, &#8211;datadir-info</i></dt>
+<dd> Display extended info about compiled-in paths for Midnight Commander.</dd>
+<dt><i>&#8211;configure-options</i></dt>
+<dd> Display configure options.</dd>
+<dt><i>-k, &#8211;resetsoft</i></dt>
+<dd> Reset softkeys to their default from the termcap/terminfo database. Only useful on HP terminals when the function keys don&#8217;t work.</dd>
+<dt><i>-K file, &#8211;keymap=file</i></dt>
+<dd> Specify a name of keymap file in the command line.</dd>
+<dt><i>&#8211;nokeymap</i></dt>
+<dd> Don&#8217;t load key bindings from any file, use default hardcoded keys.</dd>
+<dt><i>-l file, &#8211;ftplog=file</i></dt>
+<dd> Save the ftpfs dialog with the server in file.</dd>
+<dt><i>-D N, &#8211;debuglevel=N</i></dt>
+<dd> Save the debug level for SMB VFS. N is in 0-10 range.</dd>
+<dt><i>-P file, &#8211;printwd=file</i></dt>
+<dd> Print the last working directory to the specified file. This option is not meant to be used directly. Instead, it&#8217;s used from a special shell script that automatically changes the current directory of the shell to the last directory the Midnight Commander was in. Source the file <code>/usr/share/mc/bin/mc.sh</code> (bash and zsh users) or <code>/usr/share/mc/bin/mc.csh</code> (tcsh users) respectively to define <code>mc</code> as an alias to the appropriate shell script.</dd>
+<dt><i>-s, &#8211;slow</i></dt>
+<dd> Set alternative mode drawing of frameworks. If the section [Lines] is not filled, the symbol for the pseudographics frame is a space, otherwise the frame characters are taken from following parameters. </dd>
 <p> <code>You can redefine the following variables:</code></p>
-<dt><code>lefttop</code></p>
-<dd> left-top corner</p>
-<dt><code>righttop</code></p>
-<dd> right-top corner</p>
-<dt><code>centertop</code></p>
-<dd> center-top cross</p>
-<dt><code>centerbottom</code></p>
-<dd> center-bottom cross</p>
-<dt><code>leftbottom</code></p>
-<dd> left-bottom corner</p>
-<dt><code>rightbottom</code></p>
-<dd> right-bottom corner</p>
-<dt><code>leftmiddle</code></p>
-<dd> left-middle cross</p>
-<dt><code>rightmiddle</code></p>
-<dd> right-middle cross</p>
-<dt><code>centermiddle</code></p>
-<dd> center cross</p>
-<dt><code>horiz</code></p>
-<dd> default horizontal line</p>
-<dt><code>vert</code></p>
-<dd> default vertical line</p>
-<dt><code>thinhoriz</code></p>
-<dd> thin horizontal line</p>
-<dt><code>thinvert</code></p>
-<dd> thin vertical line</p>
-<dt><i>-t, &#8211;termcap</i></p>
-<dd> Used only if the code was compiled with Slang and terminfo: it makes the Midnight Commander use the value of the <code>TERMCAP</code> variable for the terminal information instead of the information on the system wide terminal database</p>
-<dt><i>-u, &#8211;nosubshell</i></p>
-<dd> Disable use of the concurrent shell (only makes sense if the Midnight Commander has been built with concurrent shell support).</p>
-<dt><i>-U, &#8211;subshell</i></p>
-<dd> Enable use of the concurrent shell support (only makes sense if the Midnight Commander was built with the subshell support set as an optional feature).</p>
-<dt><i>-v file, &#8211;view=file</i></p>
-<dd> Start the internal viewer to view the specified file. See also <code>mcview (1)</code>.</p>
-<dt><i>-V, &#8211;version</i></p>
-<dd> Display the version of the program.</p>
-<dt><i>-x, &#8211;xterm</i></p>
-<dd> Force xterm mode. Used when running on xterm-capable terminals (two screen modes, and able to send mouse escape sequences).</p>
-<dt><i>-X, &#8211;no-x11</i></p>
-<dd> Do not use X11 to get the state of modifiers Alt, Ctrl, Shift</p>
-<dt><i>-g, &#8211;oldmouse</i></p>
-<dd> Force a &quot;normal tracking&quot; mouse mode. Used when running on xterm-capable terminals (tmux/screen).</dl>
+<dt><code>lefttop</code></dt>
+<dd> left-top corner</dd>
+<dt><code>righttop</code></dt>
+<dd> right-top corner</dd>
+<dt><code>centertop</code></dt>
+<dd> center-top cross</dd>
+<dt><code>centerbottom</code></dt>
+<dd> center-bottom cross</dd>
+<dt><code>leftbottom</code></dt>
+<dd> left-bottom corner</dd>
+<dt><code>rightbottom</code></dt>
+<dd> right-bottom corner</dd>
+<dt><code>leftmiddle</code></dt>
+<dd> left-middle cross</dd>
+<dt><code>rightmiddle</code></dt>
+<dd> right-middle cross</dd>
+<dt><code>centermiddle</code></dt>
+<dd> center cross</dd>
+<dt><code>horiz</code></dt>
+<dd> default horizontal line</dd>
+<dt><code>vert</code></dt>
+<dd> default vertical line</dd>
+<dt><code>thinhoriz</code></dt>
+<dd> thin horizontal line</dd>
+<dt><code>thinvert</code></dt>
+<dd> thin vertical line</dd>
+<dt><i>-t, &#8211;termcap</i></dt>
+<dd> Used only if the code was compiled with Slang and terminfo: it makes the Midnight Commander use the value of the <code>TERMCAP</code> variable for the terminal information instead of the information on the system wide terminal database</dd>
+<dt><i>-u, &#8211;nosubshell</i></dt>
+<dd> Disable use of the concurrent shell (only makes sense if the Midnight Commander has been built with concurrent shell support).</dd>
+<dt><i>-U, &#8211;subshell</i></dt>
+<dd> Enable use of the concurrent shell support (only makes sense if the Midnight Commander was built with the subshell support set as an optional feature).</dd>
+<dt><i>-v file, &#8211;view=file</i></dt>
+<dd> Start the internal viewer to view the specified file. See also <code>mcview (1)</code>.</dd>
+<dt><i>-V, &#8211;version</i></dt>
+<dd> Display the version of the program.</dd>
+<dt><i>-x, &#8211;xterm</i></dt>
+<dd> Force xterm mode. Used when running on xterm-capable terminals (two screen modes, and able to send mouse escape sequences).</dd>
+<dt><i>-X, &#8211;no-x11</i></dt>
+<dd> Do not use X11 to get the state of modifiers Alt, Ctrl, Shift</dd>
+<dt><i>-g, &#8211;oldmouse</i></dt>
+<dd> Force a &quot;normal tracking&quot; mouse mode. Used when running on xterm-capable terminals (tmux/screen).</dd></dl>
 <p> If specified, the first path name is the directory to show in the selected panel; the second path name is the directory to be shown in the other panel.</p>
 <h2>Overview</h2>
 <p> The screen of the Midnight Commander is divided into four parts. Almost all of the screen space is taken up by two directory panels. By default, the second line from the bottom of the screen is the shell command line, and the bottom line shows the function key labels. The topmost line is the menu bar line. The menu bar line may not be visible, but appears if you click the topmost line with the mouse or press the F9 key. </p>
@@ -108,12 +108,12 @@ description: "mc – Visual shell for Unix-like systems."
 <h2>Keys</h2>
 <p> Some commands in the Midnight Commander involve the use of the <i>Control</i> (sometimes labeled CTRL or CTL) and the <i>Meta</i> (sometimes labeled ALT or even Compose) keys. In this manual we will use the following abbreviations:</p>
 <dl>
-<dt><code>C-&lt;chr&gt;</code></p>
-<dd> means hold the Control key while typing the character &lt;chr&gt;. Thus C-f would be: hold the Control key and type f.</p>
-<dt><code>Alt-&lt;chr&gt;</code></p>
-<dd> means hold the Meta or Alt key down while typing &lt;chr&gt;. If there is no Meta or Alt key, type <i>ESC</i>, release it, then type the character &lt;chr&gt;.</p>
-<dt><code>S-&lt;chr&gt;</code></p>
-<dd> means hold the Shift key down while typing &lt;chr&gt;.</dl>
+<dt><code>C-&lt;chr&gt;</code></dt>
+<dd> means hold the Control key while typing the character &lt;chr&gt;. Thus C-f would be: hold the Control key and type f.</dd>
+<dt><code>Alt-&lt;chr&gt;</code></dt>
+<dd> means hold the Meta or Alt key down while typing &lt;chr&gt;. If there is no Meta or Alt key, type <i>ESC</i>, release it, then type the character &lt;chr&gt;.</dd>
+<dt><code>S-&lt;chr&gt;</code></dt>
+<dd> means hold the Shift key down while typing &lt;chr&gt;.</dd></dl>
 <p> All input lines in the Midnight Commander use an approximation to the GNU Emacs editor&#8217;s key bindings (default). </p>
 <p> You may redefine key bindings. See <i>redefine hotkey bindings</i> </p>
 <p> for more info. All other key bindings (described in this manual) relative to default behavior. </p>
@@ -126,97 +126,97 @@ description: "mc – Visual shell for Unix-like systems."
 <p> Hotkey bindings may be read from external file (keymap-file). Initially, Mignight Commander creates key bindings using keymap defined in the source code. Then, two files <code>/usr/share/mc/mc.keymap</code> and <code>/etc/mc/mc.keymap</code> are loaded always, sequentially reassigned key bindings defined earlier. User-defined keymap-file is searched on the following algorithm (to the first one found):</p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
  1) command line option <code>-K &lt;keymap&gt;</code> or <code>&#8211;keymap=&lt;keymap&gt;</code><br />
  2) Environment variable <code>MC_KEYMAP</code><br />
  3) Parameter <code>keymap</code> in section <code>[Midnight-Commander]</code> of config file.<br />
  4) File <code>~/.config/mc/mc.keymap</code>
-</dl>
+</dd></dl>
 <p> Command line option, environment variable and parameter in config file may contain the absolute path to the keymap-file (with the extension .keymap or without it). Search of keymap-file will occur in (to the first one found):</p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
  1) <code>~/.config/mc</code><br />
  2) <code>/etc/mc/</code><br />
- 3) <code>/usr/share/mc/</code> </p>
+ 3) <code>/usr/share/mc/</code> </dd>
 </dl>
 <h2> Miscellaneous Keys</h2>
 <p> Here are some keys which don&#8217;t fall into any of the other categories:</p>
 <dl>
-<dt><code>Enter</code></p>
-<dd> if there is some text in the command line (the one at the bottom of the panels), then that command is executed. If there is no text in the command line then if the selection bar is over a directory the Midnight Commander does a <code><a href="/docs/linux/man/2-chdir/">chdir</a>(2)</code> to the selected directory and reloads the information on the panel; if the selection is an executable file then it is executed. Finally, if the extension of the selected file name matches one of the extensions in the extensions file then the corresponding command is executed.</p>
-<dt><code>C-l</code></p>
-<dd> repaint all the information in the Midnight Commander.</p>
-<dt><code>C-x c</code></p>
-<dd> run the Chmod command on a file or on the tagged files.</p>
-<dt><code>C-x o</code></p>
-<dd> run the Chown command on the current file or on the tagged files.</p>
-<dt><code>C-x l</code></p>
-<dd> run the hard link command.</p>
-<dt><code>C-x s</code></p>
-<dd> run the absolute symbolic link command.</p>
-<dt><code>C-x v</code></p>
-<dd> run the relative symbolic link command. See the File Menu section for more information about symbolic links.</p>
-<dt><code>C-x i</code></p>
-<dd> set the other panel display mode to information.</p>
-<dt><code>C-x q</code></p>
-<dd> set the other panel display mode to quick view.</p>
-<dt><code>C-x !</code></p>
-<dd> execute the External panelize command.</p>
-<dt><code>C-x h</code></p>
-<dd> run the add directory to hotlist command.</p>
-<dt><code>Alt-!</code></p>
-<dd> executes the Filtered view command, described in the view command.</p>
-<dt><code>Alt-?</code></p>
-<dd> executes the Find file command.</p>
-<dt><code>Alt-c</code></p>
-<dd> pops up the quick cd dialog.</p>
-<dt><code>C-o</code></p>
-<dd> when the program is being run in the Linux or FreeBSD console or under an xterm, it will show you the output of the previous command. When ran on the Linux console, the Midnight Commander uses an external program (cons.saver) to handle saving and restoring of information on the screen.</dl>
+<dt><code>Enter</code></dt>
+<dd> if there is some text in the command line (the one at the bottom of the panels), then that command is executed. If there is no text in the command line then if the selection bar is over a directory the Midnight Commander does a <code><a href="/docs/linux/man/2-chdir/">chdir</a>(2)</code> to the selected directory and reloads the information on the panel; if the selection is an executable file then it is executed. Finally, if the extension of the selected file name matches one of the extensions in the extensions file then the corresponding command is executed.</dd>
+<dt><code>C-l</code></dt>
+<dd> repaint all the information in the Midnight Commander.</dd>
+<dt><code>C-x c</code></dt>
+<dd> run the Chmod command on a file or on the tagged files.</dd>
+<dt><code>C-x o</code></dt>
+<dd> run the Chown command on the current file or on the tagged files.</dd>
+<dt><code>C-x l</code></dt>
+<dd> run the hard link command.</dd>
+<dt><code>C-x s</code></dt>
+<dd> run the absolute symbolic link command.</dd>
+<dt><code>C-x v</code></dt>
+<dd> run the relative symbolic link command. See the File Menu section for more information about symbolic links.</dd>
+<dt><code>C-x i</code></dt>
+<dd> set the other panel display mode to information.</dd>
+<dt><code>C-x q</code></dt>
+<dd> set the other panel display mode to quick view.</dd>
+<dt><code>C-x !</code></dt>
+<dd> execute the External panelize command.</dd>
+<dt><code>C-x h</code></dt>
+<dd> run the add directory to hotlist command.</dd>
+<dt><code>Alt-!</code></dt>
+<dd> executes the Filtered view command, described in the view command.</dd>
+<dt><code>Alt-?</code></dt>
+<dd> executes the Find file command.</dd>
+<dt><code>Alt-c</code></dt>
+<dd> pops up the quick cd dialog.</dd>
+<dt><code>C-o</code></dt>
+<dd> when the program is being run in the Linux or FreeBSD console or under an xterm, it will show you the output of the previous command. When ran on the Linux console, the Midnight Commander uses an external program (cons.saver) to handle saving and restoring of information on the screen.</dd></dl>
 <p> When the subshell support is compiled in, you can type C-o at any time and you will be taken back to the Midnight Commander main screen, to return to your application just type C-o. If you have an application suspended by using this trick, you won&#8217;t be able to execute other programs from the Midnight Commander until you terminate the suspended application.</p>
 <h2> Directory Panels</h2>
 <p> This section lists the keys which operate on the directory panels. If you want to know how to change the appearance of the panels take a look at the section on Left and Right Menus.</p>
 <dl>
-<dt><code>Tab, C-i</code></p>
-<dd> change the current panel. The old other panel becomes the new current panel and the old current panel becomes the new other panel. The selection bar moves from the old current panel to the new current panel.</p>
-<dt><code>Insert, C-t</code></p>
-<dd> to tag files you may use the Insert key (the kich1 terminfo sequence). To untag files, just retag a tagged file.</p>
-<dt><code>M-e</code></p>
-<dd> to change charset of panel you may use M-e (Alt-e). Recoding is made from selected codepage into system codepage. To cancel the recoding you may select &quot;directory up&quot; (..) in active panel. To cancel the charsets in all directories, select &quot;No translation &quot; in the dialog of encodings.</p>
-<dt><code>Alt-g, Alt-r, Alt-j</code></p>
-<dd> used to select the top file in a panel, the middle file and the bottom one, respectively.</p>
-<dt><code>Alt-t</code></p>
-<dd> toggle the current display listing to show the next display listing mode. With this it is possible to quickly switch to brief listing, long listing, user defined listing mode, and back to the default.</p>
-<dt><code>C-\ (control-backslash)</code></p>
-<dd> show the directory hotlist and change to the selected directory.</p>
-<dt><code>+ &nbsp;<wbr>(plus)</code></p>
-<dd> this is used to select (tag) a group of files. The Midnight Commander will prompt for a selection options. When <i>Files only</i> checkbox is on, only files will be selected. If <i>Files only</i> is off, as files as directories will be selected. When <i>Shell Patterns</i> checkbox is on, the regular expression is much like the filename globbing in the shell (* standing for zero or more characters and ? standing for one character). If <i>Shell Patterns</i> is off, then the tagging of files is done with normal regular expressions (see ed (1)). When <i>Case sensitive</i> checkbox is on, the selection will be case sensitive characters. If <i>Case sensitive</i> is off, the case will be ignored.</p>
-<dt><code>\ (backslash)</code></p>
-<dd> use the &quot;\&quot; key to unselect a group of files. This is the opposite of the Plus key.</p>
-<dt><code>up-key, C-p</code></p>
-<dd> move the selection bar to the previous entry in the panel.</p>
-<dt><code>down-key, C-n</code></p>
-<dd> move the selection bar to the next entry in the panel.</p>
-<dt><code>home, a1, Alt-&lt;</code></p>
-<dd> move the selection bar to the first entry in the panel.</p>
-<dt><code>end, c1, Alt-&gt;</code></p>
-<dd> move the selection bar to the last entry in the panel.</p>
-<dt><code>next-page, C-v</code></p>
-<dd> move the selection bar one page down.</p>
-<dt><code>prev-page, Alt-v</code></p>
-<dd> move the selection bar one page up.</p>
-<dt><code>Alt-o</code></p>
-<dd> If the currently selected file is a directory, load that directory on the other panel and moves the selection to the next file. If the currently selected file is not a directory, load the parent directory on the other panel and moves the selection to the next file.</p>
-<dt><code>Alt-i</code></p>
-<dd> make the current directory of the current panel also the current directory of the other panel. Put the other panel to the listing mode if needed. If the current panel is panelized, the other panel doesn&#8217;t become panelized.</p>
-<dt><code>C-PageUp, C-PageDown</code></p>
-<dd> only when supported by the terminal: change to &quot;..&quot; and to the currently selected directory respectively.</p>
-<dt><code>Alt-y</code></p>
-<dd> moves to the previous directory in the history, equivalent to clicking the <i>&lt;</i> with the mouse.</p>
-<dt><code>Alt-u</code></p>
-<dd> moves to the next directory in the history, equivalent to clicking the <i>&gt;</i> with the mouse.</p>
-<dt><code>Alt-Shift-h, Alt-H</code></p>
-<dd> displays the directory history, equivalent to depressing the &#8216;v&#8217; with the mouse.</dl>
+<dt><code>Tab, C-i</code></dt>
+<dd> change the current panel. The old other panel becomes the new current panel and the old current panel becomes the new other panel. The selection bar moves from the old current panel to the new current panel.</dd>
+<dt><code>Insert, C-t</code></dt>
+<dd> to tag files you may use the Insert key (the kich1 terminfo sequence). To untag files, just retag a tagged file.</dd>
+<dt><code>M-e</code></dt>
+<dd> to change charset of panel you may use M-e (Alt-e). Recoding is made from selected codepage into system codepage. To cancel the recoding you may select &quot;directory up&quot; (..) in active panel. To cancel the charsets in all directories, select &quot;No translation &quot; in the dialog of encodings.</dd>
+<dt><code>Alt-g, Alt-r, Alt-j</code></dt>
+<dd> used to select the top file in a panel, the middle file and the bottom one, respectively.</dd>
+<dt><code>Alt-t</code></dt>
+<dd> toggle the current display listing to show the next display listing mode. With this it is possible to quickly switch to brief listing, long listing, user defined listing mode, and back to the default.</dd>
+<dt><code>C-\ (control-backslash)</code></dt>
+<dd> show the directory hotlist and change to the selected directory.</dd>
+<dt><code>+ &nbsp;<wbr>(plus)</code></dt>
+<dd> this is used to select (tag) a group of files. The Midnight Commander will prompt for a selection options. When <i>Files only</i> checkbox is on, only files will be selected. If <i>Files only</i> is off, as files as directories will be selected. When <i>Shell Patterns</i> checkbox is on, the regular expression is much like the filename globbing in the shell (* standing for zero or more characters and ? standing for one character). If <i>Shell Patterns</i> is off, then the tagging of files is done with normal regular expressions (see ed (1)). When <i>Case sensitive</i> checkbox is on, the selection will be case sensitive characters. If <i>Case sensitive</i> is off, the case will be ignored.</dd>
+<dt><code>\ (backslash)</code></dt>
+<dd> use the &quot;\&quot; key to unselect a group of files. This is the opposite of the Plus key.</dd>
+<dt><code>up-key, C-p</code></dt>
+<dd> move the selection bar to the previous entry in the panel.</dd>
+<dt><code>down-key, C-n</code></dt>
+<dd> move the selection bar to the next entry in the panel.</dd>
+<dt><code>home, a1, Alt-&lt;</code></dt>
+<dd> move the selection bar to the first entry in the panel.</dd>
+<dt><code>end, c1, Alt-&gt;</code></dt>
+<dd> move the selection bar to the last entry in the panel.</dd>
+<dt><code>next-page, C-v</code></dt>
+<dd> move the selection bar one page down.</dd>
+<dt><code>prev-page, Alt-v</code></dt>
+<dd> move the selection bar one page up.</dd>
+<dt><code>Alt-o</code></dt>
+<dd> If the currently selected file is a directory, load that directory on the other panel and moves the selection to the next file. If the currently selected file is not a directory, load the parent directory on the other panel and moves the selection to the next file.</dd>
+<dt><code>Alt-i</code></dt>
+<dd> make the current directory of the current panel also the current directory of the other panel. Put the other panel to the listing mode if needed. If the current panel is panelized, the other panel doesn&#8217;t become panelized.</dd>
+<dt><code>C-PageUp, C-PageDown</code></dt>
+<dd> only when supported by the terminal: change to &quot;..&quot; and to the currently selected directory respectively.</dd>
+<dt><code>Alt-y</code></dt>
+<dd> moves to the previous directory in the history, equivalent to clicking the <i>&lt;</i> with the mouse.</dd>
+<dt><code>Alt-u</code></dt>
+<dd> moves to the next directory in the history, equivalent to clicking the <i>&gt;</i> with the mouse.</dd>
+<dt><code>Alt-Shift-h, Alt-H</code></dt>
+<dd> displays the directory history, equivalent to depressing the &#8216;v&#8217; with the mouse.</dd></dl>
 <h2> Quick search</h2>
 <p> The Quick search mode allows you to perform fast file search in file panel. Press <i>C-s</i> or <i>Alt-s</i> to start a filename search in the directory listing. </p>
 <p> When the search is active, the user input will be added to the search string instead of the command line. If the <i>Show mini-status</i> option is enabled the search string is shown on the mini-status line. When typing, the selection bar will move to the next file starting with the typed letters. The <i>Backspace</i> or <i>DEL</i> keys can be used to correct typing mistakes. If C-s is pressed again, the next match is searched for. </p>
@@ -225,85 +225,85 @@ description: "mc – Visual shell for Unix-like systems."
 <h2> Shell Command Line</h2>
 <p> This section lists keys which are useful to avoid excessive typing when entering shell commands.</p>
 <dl>
-<dt><code>Alt-Enter</code></p>
-<dd> copy the currently selected file name to the command line.</p>
-<dt><code>C-Enter</code></p>
-<dd> same a Alt-Enter. May not work on remote systems and some terminals.</p>
-<dt><code>C-Shift-Enter</code></p>
-<dd> copy the full path name of the currently selected file to the command line. May not work on remote systems and some terminals.</p>
-<dt><code>Alt-Tab</code></p>
-<dd> does the filename, command, variable, username and hostname completion for you.</p>
-<dt><code>C-x t, C-x C-t</code></p>
-<dd> copy the tagged files (or if there are no tagged files, the selected file) of the current panel (C-x t) or of the other panel (C-x C-t) to the command line.</p>
-<dt><code>C-x p, C-x C-p</code></p>
-<dd> the first key sequence copies the current path name to the command line, and the second one copies the unselected panel&#8217;s path name to the command line.</p>
-<dt><code>C-q</code></p>
-<dd> the quote command can be used to insert characters that are otherwise interpreted by the Midnight Commander (like the &#8216;+&#8217; symbol)</p>
-<dt><code>Alt-p, Alt-n</code></p>
-<dd> use these keys to browse through the command history. Alt-p takes you to the last entry, Alt-n takes you to the next one.</p>
-<dt><code>Alt-h</code></p>
-<dd> displays the history for the current input line.</dl>
+<dt><code>Alt-Enter</code></dt>
+<dd> copy the currently selected file name to the command line.</dd>
+<dt><code>C-Enter</code></dt>
+<dd> same a Alt-Enter. May not work on remote systems and some terminals.</dd>
+<dt><code>C-Shift-Enter</code></dt>
+<dd> copy the full path name of the currently selected file to the command line. May not work on remote systems and some terminals.</dd>
+<dt><code>Alt-Tab</code></dt>
+<dd> does the filename, command, variable, username and hostname completion for you.</dd>
+<dt><code>C-x t, C-x C-t</code></dt>
+<dd> copy the tagged files (or if there are no tagged files, the selected file) of the current panel (C-x t) or of the other panel (C-x C-t) to the command line.</dd>
+<dt><code>C-x p, C-x C-p</code></dt>
+<dd> the first key sequence copies the current path name to the command line, and the second one copies the unselected panel&#8217;s path name to the command line.</dd>
+<dt><code>C-q</code></dt>
+<dd> the quote command can be used to insert characters that are otherwise interpreted by the Midnight Commander (like the &#8216;+&#8217; symbol)</dd>
+<dt><code>Alt-p, Alt-n</code></dt>
+<dd> use these keys to browse through the command history. Alt-p takes you to the last entry, Alt-n takes you to the next one.</dd>
+<dt><code>Alt-h</code></dt>
+<dd> displays the history for the current input line.</dd></dl>
 <h2> General Movement Keys</h2>
 <p> The help viewer, the file viewer and the directory tree use common code to handle moving. Therefore they accept exactly the same keys. Each of them also accepts some keys of its own. </p>
 <p> Other parts of the Midnight Commander use some of the same movement keys, so this section may be of use for those parts too.</p>
 <dl>
-<dt><code>Up, C-p</code></p>
-<dd> moves one line backward.</p>
-<dt><code>Down, C-n</code></p>
-<dd> moves one line forward.</p>
-<dt><code>Prev Page, Page Up, Alt-v</code></p>
-<dd> moves one page up.</p>
-<dt><code>Next Page, Page Down, C-v</code></p>
-<dd> moves one page down.</p>
-<dt><code>Home, A1</code></p>
-<dd> moves to the beginning.</p>
-<dt><code>End, C1</code></p>
-<dd> move to the end.</dl>
+<dt><code>Up, C-p</code></dt>
+<dd> moves one line backward.</dd>
+<dt><code>Down, C-n</code></dt>
+<dd> moves one line forward.</dd>
+<dt><code>Prev Page, Page Up, Alt-v</code></dt>
+<dd> moves one page up.</dd>
+<dt><code>Next Page, Page Down, C-v</code></dt>
+<dd> moves one page down.</dd>
+<dt><code>Home, A1</code></dt>
+<dd> moves to the beginning.</dd>
+<dt><code>End, C1</code></dt>
+<dd> move to the end.</dd></dl>
 <p> The help viewer and the file viewer accept the following keys in addition the to ones mentioned above:</p>
 <dl>
-<dt><code>b, C-b, C-h, Backspace, Delete</code></p>
-<dd> moves one page up.</p>
-<dt><code>Space bar</code></p>
-<dd> moves one page down.</p>
-<dt><code>u, d</code></p>
-<dd> moves one half of a page up or down.</p>
-<dt><code>g, G</code></p>
-<dd> moves to the beginning or to the end.</dl>
+<dt><code>b, C-b, C-h, Backspace, Delete</code></dt>
+<dd> moves one page up.</dd>
+<dt><code>Space bar</code></dt>
+<dd> moves one page down.</dd>
+<dt><code>u, d</code></dt>
+<dd> moves one half of a page up or down.</dd>
+<dt><code>g, G</code></dt>
+<dd> moves to the beginning or to the end.</dd></dl>
 <h2> Input Line Keys</h2>
 <p> The input lines (they are used for the command line and for the query dialogs in the program) accept these keys:</p>
 <dl>
-<dt><code>C-a</code></p>
-<dd> puts the cursor at the beginning of line.</p>
-<dt><code>C-e</code></p>
-<dd> puts the cursor at the end of the line.</p>
-<dt><code>C-b, move-left</code></p>
-<dd> move the cursor one position left.</p>
-<dt><code>C-f, move-right</code></p>
-<dd> move the cursor one position right.</p>
-<dt><code>Alt-f</code></p>
-<dd> moves one word forward.</p>
-<dt><code>Alt-b</code></p>
-<dd> moves one word backward.</p>
-<dt><code>C-h, Backspace</code></p>
-<dd> delete the previous character.</p>
-<dt><code>C-d, Delete</code></p>
-<dd> delete the character in the point (over the cursor).</p>
-<dt><code>C-@</code></p>
-<dd> sets the mark for cutting.</p>
-<dt><code>C-w</code></p>
-<dd> copies the text between the cursor and the mark to a kill buffer and removes the text from the input line.</p>
-<dt><code>Alt-w</code></p>
-<dd> copies the text between the cursor and the mark to a kill buffer.</p>
-<dt><code>C-y</code></p>
-<dd> yanks back the contents of the kill buffer.</p>
-<dt><code>C-k</code></p>
-<dd> kills the text from the cursor to the end of the line.</p>
-<dt><code>Alt-p, Alt-n</code></p>
-<dd> Use these keys to browse through the command history. Alt-p takes you to the last entry, Alt-n takes you to the next one.</p>
-<dt><code>Alt-C-h, Alt-Backspace</code></p>
-<dd> delete one word backward.</p>
-<dt><code>Alt-Tab</code></p>
-<dd> does the filename, command, variable, username and hostname completion for you.</dl>
+<dt><code>C-a</code></dt>
+<dd> puts the cursor at the beginning of line.</dd>
+<dt><code>C-e</code></dt>
+<dd> puts the cursor at the end of the line.</dd>
+<dt><code>C-b, move-left</code></dt>
+<dd> move the cursor one position left.</dd>
+<dt><code>C-f, move-right</code></dt>
+<dd> move the cursor one position right.</dd>
+<dt><code>Alt-f</code></dt>
+<dd> moves one word forward.</dd>
+<dt><code>Alt-b</code></dt>
+<dd> moves one word backward.</dd>
+<dt><code>C-h, Backspace</code></dt>
+<dd> delete the previous character.</dd>
+<dt><code>C-d, Delete</code></dt>
+<dd> delete the character in the point (over the cursor).</dd>
+<dt><code>C-@</code></dt>
+<dd> sets the mark for cutting.</dd>
+<dt><code>C-w</code></dt>
+<dd> copies the text between the cursor and the mark to a kill buffer and removes the text from the input line.</dd>
+<dt><code>Alt-w</code></dt>
+<dd> copies the text between the cursor and the mark to a kill buffer.</dd>
+<dt><code>C-y</code></dt>
+<dd> yanks back the contents of the kill buffer.</dd>
+<dt><code>C-k</code></dt>
+<dd> kills the text from the cursor to the end of the line.</dd>
+<dt><code>Alt-p, Alt-n</code></dt>
+<dd> Use these keys to browse through the command history. Alt-p takes you to the last entry, Alt-n takes you to the next one.</dd>
+<dt><code>Alt-C-h, Alt-Backspace</code></dt>
+<dd> delete one word backward.</dd>
+<dt><code>Alt-Tab</code></dt>
+<dd> does the filename, command, variable, username and hostname completion for you.</dd></dl>
 <h2></h2>
 <h2>Menu Bar</h2>
 <p> The menu bar pops up when you press F9 or click the mouse on the top row of the screen. The menu bar has five menus: &quot;Left&quot;, &quot;File&quot;, &quot;Command&quot;, &quot;Options&quot; and &quot;Right&quot;. </p>
@@ -321,44 +321,44 @@ description: "mc – Visual shell for Unix-like systems."
 <p> After the panel size, you may specify the two columns mode on the panel, this is done by adding the number &quot;2&quot; to the user format string. </p>
 <p> After this you add the name of the fields with an optional size specifier. This are the available fields you may display:</p>
 <dl>
-<dt><code>name</code></p>
-<dd> displays the file name.</p>
-<dt><code>size</code></p>
-<dd> displays the file size.</p>
-<dt><code>bsize</code></p>
-<dd> is an alternative form of the <code>size</code> format. It displays the size of the files and for directories it just shows SUB-DIR or UP&#8211;DIR.</p>
-<dt><code>type</code></p>
-<dd> displays a one character wide type field. This character is similar to what is displayed by ls with the -F flag &#8211; <code>*</code> for executable files, <code>/</code> for directories, <code>@</code> for links, <code>=</code> for sockets, <code>&#8211;</code> for character devices, <code>+</code> for block devices, <code>|</code> for pipes, <code>~</code> for symbolic links to directories and <code>!</code> for stale symlinks (links that point nowhere).</p>
-<dt><code>mark</code></p>
-<dd> an asterisk if the file is tagged, a space if it&#8217;s not.</p>
-<dt><code>mtime</code></p>
-<dd> file&#8217;s last modification time.</p>
-<dt><code>atime</code></p>
-<dd> file&#8217;s last access time.</p>
-<dt><code>ctime</code></p>
-<dd> file&#8217;s status change time.</p>
-<dt><code>perm</code></p>
-<dd> a string representing the current permission bits of the file.</p>
-<dt><code>mode</code></p>
-<dd> an octal value with the current permission bits of the file.</p>
-<dt><code>nlink</code></p>
-<dd> the number of links to the file.</p>
-<dt><code>ngid</code></p>
-<dd> the GID (numeric).</p>
-<dt><code>nuid</code></p>
-<dd> the UID (numeric).</p>
-<dt><code>owner</code></p>
-<dd> the owner of the file.</p>
-<dt><code>group</code></p>
-<dd> the group of the file.</p>
-<dt><code>inode</code></p>
-<dd> the inode of the file.</dl>
+<dt><code>name</code></dt>
+<dd> displays the file name.</dd>
+<dt><code>size</code></dt>
+<dd> displays the file size.</dd>
+<dt><code>bsize</code></dt>
+<dd> is an alternative form of the <code>size</code> format. It displays the size of the files and for directories it just shows SUB-DIR or UP&#8211;DIR.</dd>
+<dt><code>type</code></dt>
+<dd> displays a one character wide type field. This character is similar to what is displayed by ls with the -F flag &#8211; <code>*</code> for executable files, <code>/</code> for directories, <code>@</code> for links, <code>=</code> for sockets, <code>&#8211;</code> for character devices, <code>+</code> for block devices, <code>|</code> for pipes, <code>~</code> for symbolic links to directories and <code>!</code> for stale symlinks (links that point nowhere).</dd>
+<dt><code>mark</code></dt>
+<dd> an asterisk if the file is tagged, a space if it&#8217;s not.</dd>
+<dt><code>mtime</code></dt>
+<dd> file&#8217;s last modification time.</dd>
+<dt><code>atime</code></dt>
+<dd> file&#8217;s last access time.</dd>
+<dt><code>ctime</code></dt>
+<dd> file&#8217;s status change time.</dd>
+<dt><code>perm</code></dt>
+<dd> a string representing the current permission bits of the file.</dd>
+<dt><code>mode</code></dt>
+<dd> an octal value with the current permission bits of the file.</dd>
+<dt><code>nlink</code></dt>
+<dd> the number of links to the file.</dd>
+<dt><code>ngid</code></dt>
+<dd> the GID (numeric).</dd>
+<dt><code>nuid</code></dt>
+<dd> the UID (numeric).</dd>
+<dt><code>owner</code></dt>
+<dd> the owner of the file.</dd>
+<dt><code>group</code></dt>
+<dd> the group of the file.</dd>
+<dt><code>inode</code></dt>
+<dd> the inode of the file.</dd></dl>
 <p> Also you can use following keywords to define the panel layout:</p>
 <dl>
-<dt><code>space</code></p>
-<dd> a space in the display format.</p>
-<dt><code>|</code></p>
-<dd> add a vertical line to the display format.</dl>
+<dt><code>space</code></dt>
+<dd> a space in the display format.</dd>
+<dt><code>|</code></dt>
+<dd> add a vertical line to the display format.</dd></dl>
 <p> To force one field to a fixed size (a size specifier), you just add <code>:</code> followed by the number of characters you want the field to have. If the number is followed by the symbol <code>+</code>, then the size specifies the minimal field size &#8211; if the program finds out that there is more space on the screen, it will then expand that field. </p>
 <p> For example, the <code>Full</code> display corresponds to this format: </p>
 <p> half type name | size | mtime </p>
@@ -368,12 +368,12 @@ description: "mc – Visual shell for Unix-like systems."
 <p> half name | size:7 | type mode:3 </p>
 <p> Panels may also be set to the following modes:</p>
 <dl>
-<dt><code>Info</code></p>
-<dd> The info view display information related to the currently selected file and if possible information about the current file system.</p>
-<dt><code>Tree</code></p>
-<dd> The tree view is quite similar to the directory tree feature. See the section about it for more information.</p>
-<dt><code>Quick View</code></p>
-<dd> In this mode, the panel will switch to a reduced viewer that displays the contents of the currently selected file, if you select the panel (with the tab key or the mouse), you will have access to the usual viewer commands.</dl>
+<dt><code>Info</code></dt>
+<dd> The info view display information related to the currently selected file and if possible information about the current file system.</dd>
+<dt><code>Tree</code></dt>
+<dd> The tree view is quite similar to the directory tree feature. See the section about it for more information.</dd>
+<dt><code>Quick View</code></dt>
+<dd> In this mode, the panel will switch to a reduced viewer that displays the contents of the currently selected file, if you select the panel (with the tab key or the mouse), you will have access to the usual viewer commands.</dd></dl>
 <h2> Sort Order&#8230;</h2>
 <p> The eight sort orders are by name, by extension, by modification time, by access time, and by inode information modification time, by size, by inode and unsorted. In the Sort order dialog box you can choose the sort order and you may also specify if you want to sort in reverse order by checking the reverse box. </p>
 <p> By default directories are sorted before files but this can be changed from the Panel options menu (option <code>Mix all files</code>).</p>
@@ -502,18 +502,18 @@ awk '$9 ~! /incoming/ { print $9 }' &lt; /var/log/xferlog
 <p> <i>keyword/expr</i>, i.e. everything after the slash until new line is <i>expr</i>. </p>
 <p> <i>keyword</i> can be:</p>
 <dl>
-<dt><i>shell</i></p>
-<dd> &#8211; <i>expr</i> is an extension (no wildcards). File matches it its name ends with <i>expr</i>. Example: <i>shell/.tar</i> matches <i>*.tar</i>.</p>
-<dt><i>regex</i></p>
-<dd> &#8211; <i>expr</i> is a regular expression. File matches if its name matches the regular expression.</p>
-<dt><i>directory</i></p>
-<dd> &#8211; <i>expr</i> is a regular expression. File matches if it is a directory and its name matches the regular expression.</p>
-<dt><i>type</i></p>
-<dd> &#8211; <i>expr</i> is a regular expression. File matches if the output of <i>file %f</i> without the initial &quot;filename:&quot; part matches regular expression <i>expr</i>.</p>
-<dt><i>default</i></p>
-<dd> &#8211; matches any file. <i>expr</i> is ignored.</p>
-<dt><i>include</i></p>
-<dd> &#8211; denotes a common section. <i>expr</i> is the name of the section.</dl>
+<dt><i>shell</i></dt>
+<dd> &#8211; <i>expr</i> is an extension (no wildcards). File matches it its name ends with <i>expr</i>. Example: <i>shell/.tar</i> matches <i>*.tar</i>.</dd>
+<dt><i>regex</i></dt>
+<dd> &#8211; <i>expr</i> is a regular expression. File matches if its name matches the regular expression.</dd>
+<dt><i>directory</i></dt>
+<dd> &#8211; <i>expr</i> is a regular expression. File matches if it is a directory and its name matches the regular expression.</dd>
+<dt><i>type</i></dt>
+<dd> &#8211; <i>expr</i> is a regular expression. File matches if the output of <i>file %f</i> without the initial &quot;filename:&quot; part matches regular expression <i>expr</i>.</dd>
+<dt><i>default</i></dt>
+<dd> &#8211; matches any file. <i>expr</i> is ignored.</dd>
+<dt><i>include</i></dt>
+<dd> &#8211; denotes a common section. <i>expr</i> is the name of the section.</dd></dl>
 <p> Other lines should start with a space or tab and should be of the format: <i>keyword=command</i> (with no spaces around =), where <i>keyword</i> should be: <i>Open</i> (invoked on Enter or double click), <i>View</i> (F3), <i>Edit</i> (F4) or <i>Include</i> (to add rules from the common section). <i>command</i> is any one-line shell command, with the simple macro substitution. </p>
 <p> Rules are matched from top to bottom, thus the order is important. If the appropriate action is missing, search continues as if this rule didn&#8217;t match (i.e. if a file matches the first and second entry and View action is missing in the first one, then on pressing F3 the View action from the second entry will be used). <i>default</i> should match all the actions.</p>
 <h2> Background Jobs</h2>
@@ -726,48 +726,48 @@ L       List the contents of a compressed tar-archive
 <p> When accessing a user menu, or executing an extension dependent command, or running a command from the command line input, a simple macro substitution takes place. </p>
 <p> The macros are:</p>
 <dl>
-<dt><i>%i</i></p>
-<dd> The indent of blank space, equal the cursor column position. For edit menu only.</p>
-<dt><i>%y</i></p>
-<dd> The syntax type of current file. For edit menu only.</p>
-<dt><i>%k</i></p>
-<dd> The block file name.</p>
-<dt><i>%e</i></p>
-<dd> The error file name.</p>
-<dt><i>%m</i></p>
-<dd> The current menu name.</p>
-<dt><i>%f</i> and <i>%p</i></p>
-<dd> The current file name.</p>
-<dt><i>%x</i></p>
-<dd> The extension of current file name.</p>
-<dt><i>%b</i></p>
-<dd> The current file name without extension.</p>
-<dt><i>%d</i></p>
-<dd> The current directory name.</p>
-<dt><i>%F</i></p>
-<dd> The current file in the unselected panel.</p>
-<dt><i>%D</i></p>
-<dd> The directory name of the unselected panel.</p>
-<dt><i>%t</i></p>
-<dd> The currently tagged files.</p>
-<dt><i>%T</i></p>
-<dd> The tagged files in the unselected panel.</p>
-<dt><i>%u</i> and <i>%U</i></p>
-<dd> Similar to the %t and %T macros, but in addition the files are untagged. You can use this macro only once per menu file entry or extension file entry, because next time there will be no tagged files.</p>
-<dt><i>%s</i> and <i>%S</i></p>
-<dd> The selected files: The tagged files if there are any. Otherwise the current file.</p>
-<dt><i>%cd</i></p>
-<dd> This is a special macro that is used to change the current directory to the directory specified in front of it. This is used primarily as an interface to the Virtual File System.</p>
-<dt><i>%view</i></p>
-<dd> This macro is used to invoke the internal viewer. This macro can be used alone, or with arguments. If you pass any arguments to this macro, they should be enclosed in brackets.</p>
+<dt><i>%i</i></dt>
+<dd> The indent of blank space, equal the cursor column position. For edit menu only.</dd>
+<dt><i>%y</i></dt>
+<dd> The syntax type of current file. For edit menu only.</dd>
+<dt><i>%k</i></dt>
+<dd> The block file name.</dd>
+<dt><i>%e</i></dt>
+<dd> The error file name.</dd>
+<dt><i>%m</i></dt>
+<dd> The current menu name.</dd>
+<dt><i>%f</i> and <i>%p</i></dt>
+<dd> The current file name.</dd>
+<dt><i>%x</i></dt>
+<dd> The extension of current file name.</dd>
+<dt><i>%b</i></dt>
+<dd> The current file name without extension.</dd>
+<dt><i>%d</i></dt>
+<dd> The current directory name.</dd>
+<dt><i>%F</i></dt>
+<dd> The current file in the unselected panel.</dd>
+<dt><i>%D</i></dt>
+<dd> The directory name of the unselected panel.</dd>
+<dt><i>%t</i></dt>
+<dd> The currently tagged files.</dd>
+<dt><i>%T</i></dt>
+<dd> The tagged files in the unselected panel.</dd>
+<dt><i>%u</i> and <i>%U</i></dt>
+<dd> Similar to the %t and %T macros, but in addition the files are untagged. You can use this macro only once per menu file entry or extension file entry, because next time there will be no tagged files.</dd>
+<dt><i>%s</i> and <i>%S</i></dt>
+<dd> The selected files: The tagged files if there are any. Otherwise the current file.</dd>
+<dt><i>%cd</i></dt>
+<dd> This is a special macro that is used to change the current directory to the directory specified in front of it. This is used primarily as an interface to the Virtual File System.</dd>
+<dt><i>%view</i></dt>
+<dd> This macro is used to invoke the internal viewer. This macro can be used alone, or with arguments. If you pass any arguments to this macro, they should be enclosed in brackets.</dd>
 <dt>
-<dd> The arguments are: <i>ascii</i> to force the viewer into ascii mode; <i>hex</i> to force the viewer into hex mode; <i>nroff</i> to tell the viewer that it should interpret the bold and underline sequences of nroff; <i>unformatted</i> to tell the viewer to not interpret nroff commands for making the text bold or underlined.</p>
-<dt><i>%%</i></p>
-<dd> The % character</p>
-<dt><i>%{some text}</i></p>
-<dd> Prompt for the substitution. An input box is shown and the text inside the braces is used as a prompt. The macro is substituted by the text typed by the user. The user can press ESC or F10 to cancel. This macro doesn&#8217;t work on the command line yet.</p>
-<dt><i>%var{ENV:default}</i></p>
-<dd> If environment variable <i>ENV</i> is unset, the <i>default</i> is substituted. Otherwise, the value of <i>ENV</i> is substituted.</dl>
+</dt><dd> The arguments are: <i>ascii</i> to force the viewer into ascii mode; <i>hex</i> to force the viewer into hex mode; <i>nroff</i> to tell the viewer that it should interpret the bold and underline sequences of nroff; <i>unformatted</i> to tell the viewer to not interpret nroff commands for making the text bold or underlined.</dd>
+<dt><i>%%</i></dt>
+<dd> The % character</dd>
+<dt><i>%{some text}</i></dt>
+<dd> Prompt for the substitution. An input box is shown and the text inside the braces is used as a prompt. The macro is substituted by the text typed by the user. The user can press ESC or F10 to cancel. This macro doesn&#8217;t work on the command line yet.</dd>
+<dt><i>%var{ENV:default}</i></dt>
+<dd> If environment variable <i>ENV</i> is unset, the <i>default</i> is substituted. Otherwise, the value of <i>ENV</i> is substituted.</dd></dl>
 <h2> The subshell support</h2>
 <p> The subshell support is a compile time option, that works with the shells: bash, tcsh and zsh. </p>
 <p> When the subshell code is activated the Midnight Commander will spawn a concurrent copy of your shell (the one defined in the <code>SHELL</code> variable and if it is not defined, then the one in the /etc/passwd file) and run it in a pseudo terminal, instead of invoking a new shell each time you execute a command, the command will be passed to the subshell as if you had typed it. This also allows you to change the environment variables, use shell functions and define aliases that are valid until you quit the Midnight Commander. </p>
@@ -813,3 +813,4 @@ L       List the contents of a compressed tar-archive
 <p> determines whether to preserve the permissions, timestamps and (if you are root) the ownership of the original files. If this option is not set, the current value of the umask will be respected. </p>
 <p> <code>Use shell patterns</code> </p>
 <p> When this option is on you can use the &#8216;*&#8217; and &#8216;?&#8217; wildcards in the source mask. They work like they do in the shell. In the target mask only the &#8216;*&#8217; and &#8216;\&lt;digit&gt;&#8217; wildcards are allowed. The first &#8216;*&#8217; wildcard in the target mask corresponds to the first wildcard group in the source mask, the second &#8216;*&#8217; corresponds to the second group and so on. The &#8216;\1&#8217; wildcard corresponds to the first wildcard group in the source mask, the &#8216;\2&#8217; wildcard corresponds to the second group and so on all the way up to &#8216;\9&#8217;. The &#8216;
+</p>

@@ -11,11 +11,8 @@ std::experimental::ranges::MoveConstructible - std::experimental::ranges::MoveCo
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header &lt;experimental/ranges/concepts&gt;
-
 template &lt; class T &gt;
-
 concept bool MoveConstructible =                  (ranges TS)
-
 Constructible&lt;T, T&gt; &amp;&amp; ConvertibleTo&lt;T, T&gt;;</code></pre> 
 The concept MoveConstructible is satisfied if T is a reference type, or if it is an object type where an object of that type can constructed from an rvalue of that type in both direct- and copy-initialization contexts, with the usual semantics. 
 More precisely, if T is an object type, then MoveConstructible&lt;T&gt; is satisfied only if given 
@@ -23,10 +20,8 @@ More precisely, if T is an object type, then MoveConstructible&lt;T&gt; is satis
 * u2, a distinct object of type T equal to rv, 
 the following are true: <pre><code>*After the definition T u = rv;
 , u is equal to u2;
-
 *T{rv} is equal to u2;
 and
-
     *If T is not const -
     qualified,
     then rv's resulting state (after the definition/expression is evaluated in either bullets above) is valid but unspecified; otherwise, it is unchanged.

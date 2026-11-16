@@ -12,7 +12,6 @@ remctl, remctl_result_free - Simple remctl call to a remote server
 
 <pre><code>#include &lt;remctl.h&gt;
 struct remctl_result *
-
 remctl(const char *host, unsigned short port,
        const char *principal, const char **command);
 void remctl_result_free(struct remctl_result *result);</code></pre>

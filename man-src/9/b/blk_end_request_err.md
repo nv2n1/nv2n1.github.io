@@ -10,15 +10,15 @@ description: "blk_end_request_err – Finish a request till the next failure bou
 <p>blk_end_request_err &#8211; Finish a request till the next failure boundary.</p>
 <h2>Synopsis</h2>
 <dl>
-<dt> <code>bool blk_end_request_err(struct request&nbsp;<wbr>*&nbsp;<wbr></code><i>rq</i><code>, int&nbsp;<wbr></code><i>error</i><code>);</code></dl>
+<dt> <code>bool blk_end_request_err(struct request&nbsp;<wbr>*&nbsp;<wbr></code><i>rq</i><code>, int&nbsp;<wbr></code><i>error</i><code>);</code></dt></dl>
 <h2>Arguments</h2>
 <p><i>rq</i></p>
 <dl>
 <dd>
-<dd>the request to finish till the next failure boundary for</dl>
+</dd><dd>the request to finish till the next failure boundary for</dd></dl>
 <p> <i>error</i></p>
 <dl>
-<dd>must be negative errno</dl>
+<dd>must be negative errno</dd></dl>
 <h2>Description</h2>
 <p>Complete <i>rq</i> till the next failure boundary.</p>
 <h2>Return</h2>

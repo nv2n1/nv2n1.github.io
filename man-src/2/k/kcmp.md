@@ -21,22 +21,22 @@ int kcmp(pid_t pid1, pid_t pid2, int type,
 <p> Permission to employ <code>kcmp</code>() is governed by ptrace access mode <code>PTRACE_MODE_READ_REALCREDS</code> checks against both <i>pid1</i> and <i>pid2</i>; see <code><a href="/docs/linux/man/2-ptrace/">ptrace</a></code>(2). </p>
 <p> The <i>type</i> argument specifies which resource is to be compared in the two processes. It has one of the following values:</p>
 <dl>
-<dt><code>KCMP_FILE</code></p>
-<dd> Check whether a file descriptor <i>idx1</i> in the process <i>pid1</i> refers to the same open file description (see <code><a href="/docs/linux/man/2-open/">open</a></code>(2)) as file descriptor <i>idx2</i> in the process <i>pid2</i>. The existence of two file descriptors that refer to the same open file description can occur as a result of <code><a href="/docs/linux/man/2-dup/">dup</a></code>(2) (and similar) <code><a href="/docs/linux/man/2-fork/">fork</a></code>(2), or passing file descriptors via a domain socket (see <code><a href="/docs/linux/man/7-unix/">unix</a></code>(7)).</p>
-<dt><code>KCMP_FILES</code></p>
-<dd> Check whether the processes share the same set of open file descriptors. The arguments <i>idx1</i> and <i>idx2</i> are ignored. See the discussion of the <code>CLONE_FILES</code> flag in <code><a href="/docs/linux/man/2-clone/">clone</a></code>(2).</p>
-<dt><code>KCMP_FS</code></p>
-<dd> Check whether the processes share the same filesystem information (i.e., file mode creation mask, working directory, and filesystem root). The arguments <i>idx1</i> and <i>idx2</i> are ignored. See the discussion of the <code>CLONE_FS</code> flag in <code><a href="/docs/linux/man/2-clone/">clone</a></code>(2).</p>
-<dt><code>KCMP_IO</code></p>
-<dd> Check whether the processes share I/O context. The arguments <i>idx1</i> and <i>idx2</i> are ignored. See the discussion of the <code>CLONE_IO</code> flag in <code><a href="/docs/linux/man/2-clone/">clone</a></code>(2).</p>
-<dt><code>KCMP_SIGHAND</code></p>
-<dd> Check whether the processes share the same table of signal dispositions. The arguments <i>idx1</i> and <i>idx2</i> are ignored. See the discussion of the <code>CLONE_SIGHAND</code> flag in <code><a href="/docs/linux/man/2-clone/">clone</a></code>(2).</p>
-<dt><code>KCMP_SYSVSEM</code></p>
-<dd> Check whether the processes share the same list of System V semaphore undo operations. The arguments <i>idx1</i> and <i>idx2</i> are ignored. See the discussion of the <code>CLONE_SYSVSEM</code> flag in <code><a href="/docs/linux/man/2-clone/">clone</a></code>(2).</p>
-<dt><code>KCMP_VM</code></p>
-<dd> Check whether the processes share the same address space. The arguments <i>idx1</i> and <i>idx2</i> are ignored. See the discussion of the <code>CLONE_VM</code> flag in <code><a href="/docs/linux/man/2-clone/">clone</a></code>(2).</p>
-<dt><code>KCMP_EPOLL_TFD</code> (since Linux 4.13)</p>
-<dd> Check whether the file descriptor <i>idx1</i> of the process <i>pid1</i> is present in the <code><a href="/docs/linux/man/7-epoll/">epoll</a></code>(7) instance described by <i>idx2</i> of the process <i>pid2</i>. The argument <i>idx2</i> is a pointer to a structure where the target file is described. This structure has the form:</dl>
+<dt><code>KCMP_FILE</code></dt>
+<dd> Check whether a file descriptor <i>idx1</i> in the process <i>pid1</i> refers to the same open file description (see <code><a href="/docs/linux/man/2-open/">open</a></code>(2)) as file descriptor <i>idx2</i> in the process <i>pid2</i>. The existence of two file descriptors that refer to the same open file description can occur as a result of <code><a href="/docs/linux/man/2-dup/">dup</a></code>(2) (and similar) <code><a href="/docs/linux/man/2-fork/">fork</a></code>(2), or passing file descriptors via a domain socket (see <code><a href="/docs/linux/man/7-unix/">unix</a></code>(7)).</dd>
+<dt><code>KCMP_FILES</code></dt>
+<dd> Check whether the processes share the same set of open file descriptors. The arguments <i>idx1</i> and <i>idx2</i> are ignored. See the discussion of the <code>CLONE_FILES</code> flag in <code><a href="/docs/linux/man/2-clone/">clone</a></code>(2).</dd>
+<dt><code>KCMP_FS</code></dt>
+<dd> Check whether the processes share the same filesystem information (i.e., file mode creation mask, working directory, and filesystem root). The arguments <i>idx1</i> and <i>idx2</i> are ignored. See the discussion of the <code>CLONE_FS</code> flag in <code><a href="/docs/linux/man/2-clone/">clone</a></code>(2).</dd>
+<dt><code>KCMP_IO</code></dt>
+<dd> Check whether the processes share I/O context. The arguments <i>idx1</i> and <i>idx2</i> are ignored. See the discussion of the <code>CLONE_IO</code> flag in <code><a href="/docs/linux/man/2-clone/">clone</a></code>(2).</dd>
+<dt><code>KCMP_SIGHAND</code></dt>
+<dd> Check whether the processes share the same table of signal dispositions. The arguments <i>idx1</i> and <i>idx2</i> are ignored. See the discussion of the <code>CLONE_SIGHAND</code> flag in <code><a href="/docs/linux/man/2-clone/">clone</a></code>(2).</dd>
+<dt><code>KCMP_SYSVSEM</code></dt>
+<dd> Check whether the processes share the same list of System V semaphore undo operations. The arguments <i>idx1</i> and <i>idx2</i> are ignored. See the discussion of the <code>CLONE_SYSVSEM</code> flag in <code><a href="/docs/linux/man/2-clone/">clone</a></code>(2).</dd>
+<dt><code>KCMP_VM</code></dt>
+<dd> Check whether the processes share the same address space. The arguments <i>idx1</i> and <i>idx2</i> are ignored. See the discussion of the <code>CLONE_VM</code> flag in <code><a href="/docs/linux/man/2-clone/">clone</a></code>(2).</dd>
+<dt><code>KCMP_EPOLL_TFD</code> (since Linux 4.13)</dt>
+<dd> Check whether the file descriptor <i>idx1</i> of the process <i>pid1</i> is present in the <code><a href="/docs/linux/man/7-epoll/">epoll</a></code>(7) instance described by <i>idx2</i> of the process <i>pid2</i>. The argument <i>idx2</i> is a pointer to a structure where the target file is described. This structure has the form:</dd></dl>
 <p> struct kcmp_epoll_slot {<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;__u32 efd;<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;__u32 tfd;<br />
@@ -47,34 +47,32 @@ int kcmp(pid_t pid1, pid_t pid2, int type,
 <p> The return value of a successful call to <code>kcmp</code>() is simply the result of arithmetic comparison of kernel pointers (when the kernel compares resources, it uses their memory addresses). </p>
 <p> The easiest way to explain is to consider an example. Suppose that <i>v1</i> and <i>v2</i> are the addresses of appropriate resources, then the return value is one of the following:</p>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>0</p>
-<dd> <i>v1</i> is equal to <i>v2</i>; in other words, the two processes share the resource.</p>
-<dt>1</p>
-<dd> <i>v1</i> is less than <i>v2</i>.</p>
-<dt>2</p>
-<dd> <i>v1</i> is greater than <i>v2</i>.</p>
-<dt>3</p>
-<dd> <i>v1</i> is not equal to <i>v2</i>, but ordering information is unavailable.</dl>
+<dt>0</dt>
+<dd> <i>v1</i> is equal to <i>v2</i>; in other words, the two processes share the resource.</dd>
+<dt>1</dt>
+<dd> <i>v1</i> is less than <i>v2</i>.</dd>
+<dt>2</dt>
+<dd> <i>v1</i> is greater than <i>v2</i>.</dd>
+<dt>3</dt>
+<dd> <i>v1</i> is not equal to <i>v2</i>, but ordering information is unavailable.</dd></dl>
 </dl>
 <p> On error, -1 is returned, and <i>errno</i> is set appropriately. </p>
 <p> <code>kcmp</code>() was designed to return values suitable for sorting. This is particularly handy if one needs to compare a large number of file descriptors.</p>
 <h2>ERRORS</h2>
 <dl>
-<dt><code>EBADF</code></p>
-<dd> <i>type</i> is <code>KCMP_FILE</code> and <i>fd1</i> or <i>fd2</i> is not an open file descriptor.</p>
-<dt><code>EFAULT</code></p>
-<dd> The epoll slot addressed by <i>idx2</i> is outside of the user&#8217;s address space.</p>
-<dt><code>EINVAL</code></p>
-<dd> <i>type</i> is invalid.</p>
-<dt><code>ENOENT</code></p>
-<dd> The target file is not present in <code><a href="/docs/linux/man/7-epoll/">epoll</a></code>(7) instance.</p>
-<dt><code>EPERM</code></p>
-<dd> Insufficient permission to inspect process resources. The <code>CAP_SYS_PTRACE</code> capability is required to inspect processes that you do not own. Other ptrace limitations may also apply, such as <code>CONFIG_SECURITY_YAMA</code>, which, when <i>/proc/sys/kernel/yama/ptrace_scope</i> is 2, limits <code>kcmp</code>() to child processes; see <code><a href="/docs/linux/man/2-ptrace/">ptrace</a></code>(2).</p>
-<dt><code>ESRCH</code></p>
-<dd> Process <i>pid1</i> or <i>pid2</i> does not exist.</dl>
+<dt><code>EBADF</code></dt>
+<dd> <i>type</i> is <code>KCMP_FILE</code> and <i>fd1</i> or <i>fd2</i> is not an open file descriptor.</dd>
+<dt><code>EFAULT</code></dt>
+<dd> The epoll slot addressed by <i>idx2</i> is outside of the user&#8217;s address space.</dd>
+<dt><code>EINVAL</code></dt>
+<dd> <i>type</i> is invalid.</dd>
+<dt><code>ENOENT</code></dt>
+<dd> The target file is not present in <code><a href="/docs/linux/man/7-epoll/">epoll</a></code>(7) instance.</dd>
+<dt><code>EPERM</code></dt>
+<dd> Insufficient permission to inspect process resources. The <code>CAP_SYS_PTRACE</code> capability is required to inspect processes that you do not own. Other ptrace limitations may also apply, such as <code>CONFIG_SECURITY_YAMA</code>, which, when <i>/proc/sys/kernel/yama/ptrace_scope</i> is 2, limits <code>kcmp</code>() to child processes; see <code><a href="/docs/linux/man/2-ptrace/">ptrace</a></code>(2).</dd>
+<dt><code>ESRCH</code></dt>
+<dd> Process <i>pid1</i> or <i>pid2</i> does not exist.</dd></dl>
 <h2>VERSIONS</h2>
 <p> The <code>kcmp</code>() system call first appeared in Linux 3.5.</p>
 <h2>CONFORMING TO</h2>

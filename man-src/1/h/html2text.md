@@ -21,40 +21,40 @@ description: "html2text – an advanced HTML-to-text converter"
 <p> Debian version of <code>html2text</code> also can do input and output recoding (see /usr/share/doc/html2text/README.Debian for more info). <code>html2text</code> tries to fetch encoding from HTML document. If encoding is not specified, you can use <code>-ascii</code> and <code>-utf8</code> options. Output is converted to user&#8217;s locale charset (LC_CTYPE).</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-nometa</code></p>
-<dd> By default, Debian version of <code>html2text</code> use &#8216;meta http-equiv&#8217; tag for input recoding. This option cancels this behavior.</p>
-<dt><code>-ascii</code></p>
-<dd> By default, when <code>-nometa</code> is supplied, <code>html2text</code> uses <code>UTF-8</code> for the output. Specifying this option, plain <code>ASCII</code> is used instead. To find out how non-ASCII characters are rendered, refer to the file &quot;ascii.substitutes&quot;.</p>
-<dt><code>-utf8</code></p>
-<dd> By default, when <code>-nometa</code> is supplied, <code>html2text</code> uses <code>ISO 8859-1</code> for the input. Specifying this option, <code>UTF-8</code> is used instead (both for input and output). This option implies <code>-nobs</code>.</p>
-<dt><code>-check</code></p>
-<dd> This option is for diagnostic purposes: The HTML document is only parsed and not processed otherwise. In this mode of operation, <code>html2text</code> will report on parse errors and scan errors, which it does not in other modes of operation. Note that parse and scan errors are not fatal for <code>html2text</code>, but may cause mis-interpretation of the HTML code and/or portions of the document being swallowed.</p>
-<dt><code>-debug-parser</code></p>
-<dd> Let <code>html2text</code> report on the tokens being shifted, rules being applied, etc., while scanning the HTML document. This option is for diagnostic purposes.</p>
-<dt><code>-debug-scanner</code></p>
-<dd> Let <code>html2text</code> report on each lexical token scanned, while scanning the HTML document. This option is for diagnostic purposes.</p>
-<dt><code>-help</code></p>
-<dd> Print command line summary and exit.</p>
-<dt><code>-nobs</code></p>
-<dd> By default, original <code>html2text</code> renders underlined letters with sequences like &quot;underscore-backspace-character&quot; and boldface letters like &quot;character-backspace-character&quot;. Because of issues with UTF-8, Debian version of <code>html2text</code> doesn&#8217;t produce backspaces, so this option really does nothing.</p>
-<dt><code>-o</code><i> output-file</i></p>
-<dd> Write the output to <i>output-file</i> instead of standard output. A dash as the <i>output-file</i> is an alternate way to specify the standard output.</p>
-<dt><code>-rcfile</code><i> path</i></p>
-<dd> Attempt to read the file specified in <i>path</i> as RC file.</p>
-<dt><code>-style</code> ( <code>compact</code> | <code>pretty</code> )</p>
-<dd> Style <code>pretty</code> changes some of the default values of the formatting parameters documented in <code><a href="/docs/linux/man/5-html2textrc/">html2textrc</a></code>(5). To find out which and how the formatting parameter defaults are changed, check the file &quot;pretty.style&quot;. If this option is omitted, style <code>compact</code> is assumed as default.</p>
-<dt><code>-unparse</code></p>
-<dd> This option is for diagnostic purposes: Instead of formatting the parsed document, generate HTML code, that is guaranteed to be syntactically correct. If <code>html2text</code> has problems parsing a syntactically incorrect HTML document, this option may help you to understand what <code>html2text</code> thinks that the original HTML code means.</p>
-<dt><code>-version</code></p>
-<dd> Print program version and exit.</p>
-<dt><code>-width</code><i> width</i></p>
-<dd> By default, <code>html2text</code> formats the HTML documents for a screen width of 79 characters. If redirecting the output into a file, or if your terminal has a width other than 80 characters, or if you just want to get an idea how <code>html2text</code> deals with large tables and different terminal widths, you may want to specify a different <i>width</i>.</dl>
+<dt><code>-nometa</code></dt>
+<dd> By default, Debian version of <code>html2text</code> use &#8216;meta http-equiv&#8217; tag for input recoding. This option cancels this behavior.</dd>
+<dt><code>-ascii</code></dt>
+<dd> By default, when <code>-nometa</code> is supplied, <code>html2text</code> uses <code>UTF-8</code> for the output. Specifying this option, plain <code>ASCII</code> is used instead. To find out how non-ASCII characters are rendered, refer to the file &quot;ascii.substitutes&quot;.</dd>
+<dt><code>-utf8</code></dt>
+<dd> By default, when <code>-nometa</code> is supplied, <code>html2text</code> uses <code>ISO 8859-1</code> for the input. Specifying this option, <code>UTF-8</code> is used instead (both for input and output). This option implies <code>-nobs</code>.</dd>
+<dt><code>-check</code></dt>
+<dd> This option is for diagnostic purposes: The HTML document is only parsed and not processed otherwise. In this mode of operation, <code>html2text</code> will report on parse errors and scan errors, which it does not in other modes of operation. Note that parse and scan errors are not fatal for <code>html2text</code>, but may cause mis-interpretation of the HTML code and/or portions of the document being swallowed.</dd>
+<dt><code>-debug-parser</code></dt>
+<dd> Let <code>html2text</code> report on the tokens being shifted, rules being applied, etc., while scanning the HTML document. This option is for diagnostic purposes.</dd>
+<dt><code>-debug-scanner</code></dt>
+<dd> Let <code>html2text</code> report on each lexical token scanned, while scanning the HTML document. This option is for diagnostic purposes.</dd>
+<dt><code>-help</code></dt>
+<dd> Print command line summary and exit.</dd>
+<dt><code>-nobs</code></dt>
+<dd> By default, original <code>html2text</code> renders underlined letters with sequences like &quot;underscore-backspace-character&quot; and boldface letters like &quot;character-backspace-character&quot;. Because of issues with UTF-8, Debian version of <code>html2text</code> doesn&#8217;t produce backspaces, so this option really does nothing.</dd>
+<dt><code>-o</code><i> output-file</i></dt>
+<dd> Write the output to <i>output-file</i> instead of standard output. A dash as the <i>output-file</i> is an alternate way to specify the standard output.</dd>
+<dt><code>-rcfile</code><i> path</i></dt>
+<dd> Attempt to read the file specified in <i>path</i> as RC file.</dd>
+<dt><code>-style</code> ( <code>compact</code> | <code>pretty</code> )</dt>
+<dd> Style <code>pretty</code> changes some of the default values of the formatting parameters documented in <code><a href="/docs/linux/man/5-html2textrc/">html2textrc</a></code>(5). To find out which and how the formatting parameter defaults are changed, check the file &quot;pretty.style&quot;. If this option is omitted, style <code>compact</code> is assumed as default.</dd>
+<dt><code>-unparse</code></dt>
+<dd> This option is for diagnostic purposes: Instead of formatting the parsed document, generate HTML code, that is guaranteed to be syntactically correct. If <code>html2text</code> has problems parsing a syntactically incorrect HTML document, this option may help you to understand what <code>html2text</code> thinks that the original HTML code means.</dd>
+<dt><code>-version</code></dt>
+<dd> Print program version and exit.</dd>
+<dt><code>-width</code><i> width</i></dt>
+<dd> By default, <code>html2text</code> formats the HTML documents for a screen width of 79 characters. If redirecting the output into a file, or if your terminal has a width other than 80 characters, or if you just want to get an idea how <code>html2text</code> deals with large tables and different terminal widths, you may want to specify a different <i>width</i>.</dd></dl>
 <h2>FILES</h2>
 <dl>
-<dt><i>/etc/html2textrc</i></p>
-<dd> System wide parser configuration file.</p>
-<dt><i>$HOME/.html2textrc</i></p>
-<dd> Personal parser configuration file, overrides the system wide values.</dl>
+<dt><i>/etc/html2textrc</i></dt>
+<dd> System wide parser configuration file.</dd>
+<dt><i>$HOME/.html2textrc</i></dt>
+<dd> Personal parser configuration file, overrides the system wide values.</dd></dl>
 <h2>CONFORMING TO</h2>
 <p> <code>HTML 3.2</code> (HTML 3.2 Reference Specification &#8211; <a rel="nofollow" href="http://www.w3.org/TR/REC-html32">http://www.w3.org/TR/REC-html32</a>),</p>
 <h2>RESTRICTIONS</h2>

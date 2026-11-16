@@ -14,7 +14,7 @@ description: "dev_open – prepare an interface for use."
 <p><i>dev</i></p>
 <dl>
 <dd>
-<dd>device to open</dl>
+</dd><dd>device to open</dd></dl>
 <h2>Description</h2>
 <p>Takes a device from down to up state. The device&#8217;s private open function is invoked and then the multicast lists are loaded. Finally the device is moved into the up state and a <code>NETDEV_UP</code> message is sent to the netdev notifier chain. </p>
 <p> Calling this function on an active interface is a nop. On a failure a negative errno code is returned.</p>

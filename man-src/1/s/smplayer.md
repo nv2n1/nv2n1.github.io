@@ -13,52 +13,52 @@ description: "SMPlayer – The best GUI frontend for MPlayer"
 <p> <code>smplayer</code> <i>[-minigui</i>] [<i>-mpcgui</i>] [<i>-defaultgui</i>] [<i>-config-path &lt;directory&gt;</i>] [<i>-send-action &lt;action_name&gt;</i>] [<i>-actions &lt;action_list&gt;</i>] [<i>[-no]-close-at-end</i>] [<i>[-no]-fullscreen</i>] [<i>-sub &lt;subtitle_file&gt;</i>] [<i>-pos &lt;x&gt; &lt;y&gt;</i>] [<i>-size &lt;width&gt; &lt;height&gt;</i>] [<i>-add-to-playlist</i>] [<i>-disable-server] [-help|&#8211;help|-h|-?</i>] [<i>&lt;media1&gt;</i>] [<i>&lt;media2&gt;</i>]&#8230;</p>
 <h2>DESCRIPTION</h2>
 <dl>
-<dt>SMPlayer is a GUI media player based on Qt, using <code><a href="/docs/linux/man/1-mplayer/">mplayer</a></code>(1) as its backend.</p>
-<dd></dl>
+<dt>SMPlayer is a GUI media player based on Qt, using <code><a href="/docs/linux/man/1-mplayer/">mplayer</a></code>(1) as its backend.</dt>
+<dd></dd></dl>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-minigui</code></p>
-<dd> Open the mini GUI instead of the default one.</p>
-<dt><code>-mpcgui</code></p>
-<dd> Open the mpc GUI instead of the default one.</p>
-<dt><code>-defaultgui</code></p>
-<dd> Open the default gui.</p>
-<dt><code>-config-path &lt;directory&gt;</code></p>
-<dd> Specify the directory for the configuration files (smplayer.ini, smplayer_files.ini&#8230;).</p>
-<dt><code>-send-action &lt;action_name&gt;</code></p>
-<dd> Try to make a connection to another running instance and send to it the specified action.</p>
+<dt><code>-minigui</code></dt>
+<dd> Open the mini GUI instead of the default one.</dd>
+<dt><code>-mpcgui</code></dt>
+<dd> Open the mpc GUI instead of the default one.</dd>
+<dt><code>-defaultgui</code></dt>
+<dd> Open the default gui.</dd>
+<dt><code>-config-path &lt;directory&gt;</code></dt>
+<dd> Specify the directory for the configuration files (smplayer.ini, smplayer_files.ini&#8230;).</dd>
+<dt><code>-send-action &lt;action_name&gt;</code></dt>
+<dd> Try to make a connection to another running instance and send to it the specified action.</dd>
 <dt>
-<dd> <i>Example</i>: smplayer -send-action pause</p>
+</dt><dd> <i>Example</i>: smplayer -send-action pause</dd>
 <dt>
-<dd> The rest of options (if any) will be ignored and the application will exit. It will return 0 on success or -1 on failure.</p>
-<dt><code>-actions &lt;action_list&gt;</code></p>
-<dd> &lt;action_list&gt; is a list of actions separated by spaces. The actions will be executed just after loading the file (if any) in the same order as input. For switchable actions you can pass true or false as parameter.</p>
+</dt><dd> The rest of options (if any) will be ignored and the application will exit. It will return 0 on success or -1 on failure.</dd>
+<dt><code>-actions &lt;action_list&gt;</code></dt>
+<dd> &lt;action_list&gt; is a list of actions separated by spaces. The actions will be executed just after loading the file (if any) in the same order as input. For switchable actions you can pass true or false as parameter.</dd>
 <dt>
-<dd> <i>Example</i>: smplayer -actions.br &quot;fullscreen compact true&quot;</p>
+</dt><dd> <i>Example</i>: smplayer -actions.br &quot;fullscreen compact true&quot;</dd>
 <dt>
-<dd> Quotes are necessary in case you pass more than one action.</p>
-<dt><code>-close-at-end</code></p>
-<dd> Close the main window when the file/playlist finishes.</p>
-<dt><code>-no-close-at-end</code></p>
-<dd> Do not close the main window when the file/playlist finishes.</p>
-<dt><code>-fullscreen</code></p>
-<dd> Play the video in fullscreen mode.</p>
-<dt><code>-no-fullscreen</code></p>
-<dd> Play the video in windowed mode.</p>
-<dt><code>-sub</code></p>
-<dd> Specify the subtitle file to be loaded (for the first video only).</p>
-<dt><code>-pos &lt;x&gt; &lt;y&gt;</code></p>
-<dd> Specify the coordinates where the main window will be displayed.</p>
-<dt><code>-size &lt;width&gt; &lt;height&gt;</code></p>
-<dd> Specify the size of the main window.</p>
-<dt><code>-h, -help, &#8211;help, -?</code></p>
-<dd> Show the help message and then exit.</p>
-<dt><code>-add-to-playlist</code></p>
-<dd> If there is another instance running, the media will be added to that instance&#8217;s playlist. If there is no other instance, this option will be ignored and the files will be opened in a new instance.</p>
-<dt><code>-disable-server</code></p>
-<dd> Disables the server used to communicate with other instances. This also disables the possibility to use a single instance.</p>
-<dt><code>&lt;media1&gt; &lt;media2&gt; &#8230;</code></p>
-<dd> Any kind of file that SMPlayer can open. It can be a local file, a DVD (e.g. <a href="dvd://1">dvd://1</a>), an Internet stream (e.g. <a href="mms://....)">mms://&#8230;.)</a> or a local playlist in format m3u or pls.</dl>
+</dt><dd> Quotes are necessary in case you pass more than one action.</dd>
+<dt><code>-close-at-end</code></dt>
+<dd> Close the main window when the file/playlist finishes.</dd>
+<dt><code>-no-close-at-end</code></dt>
+<dd> Do not close the main window when the file/playlist finishes.</dd>
+<dt><code>-fullscreen</code></dt>
+<dd> Play the video in fullscreen mode.</dd>
+<dt><code>-no-fullscreen</code></dt>
+<dd> Play the video in windowed mode.</dd>
+<dt><code>-sub</code></dt>
+<dd> Specify the subtitle file to be loaded (for the first video only).</dd>
+<dt><code>-pos &lt;x&gt; &lt;y&gt;</code></dt>
+<dd> Specify the coordinates where the main window will be displayed.</dd>
+<dt><code>-size &lt;width&gt; &lt;height&gt;</code></dt>
+<dd> Specify the size of the main window.</dd>
+<dt><code>-h, -help, &#8211;help, -?</code></dt>
+<dd> Show the help message and then exit.</dd>
+<dt><code>-add-to-playlist</code></dt>
+<dd> If there is another instance running, the media will be added to that instance&#8217;s playlist. If there is no other instance, this option will be ignored and the files will be opened in a new instance.</dd>
+<dt><code>-disable-server</code></dt>
+<dd> Disables the server used to communicate with other instances. This also disables the possibility to use a single instance.</dd>
+<dt><code>&lt;media1&gt; &lt;media2&gt; &#8230;</code></dt>
+<dd> Any kind of file that SMPlayer can open. It can be a local file, a DVD (e.g. <a href="dvd://1">dvd://1</a>), an Internet stream (e.g. <a href="mms://....)">mms://&#8230;.)</a> or a local playlist in format m3u or pls.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-mplayer/">mplayer</a></code>(1)</p>
 <h2>AUTHOR</h2>

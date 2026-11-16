@@ -10,10 +10,8 @@ description: "std::is_base_of – std::is_base_of"
 <p>std::is_base_of &#8211; std::is_base_of</p>
 <h2>Synopsis</h2>
 <pre><code>Defined in header&lt;type_traits&gt;
-
     template &lt;class Base, class Derived&gt;
     (since C++ 11)
-
         struct is_base_of;</code></pre>
 <p>If Derived is derived from Base or if both are the same non-union class (in both cases ignoring cv-qualification), provides the member constant value equal to true. Otherwise value is false.<br />
 If both Base and Derived are non-union class types, and they are not the same type (ignoring cv-qualification), Derived shall be a complete_type; otherwise the behavior is undefined.<br />
@@ -65,7 +63,6 @@ template &lt;typename Base, typename Derived&gt;</p>
 <h2>Example</h2>
 <p>// Run this code </p>
 <pre><code>#include &lt;iostream&gt;
-
 #include &lt;type_traits&gt;
 class A
 {
@@ -77,7 +74,6 @@ class C
 {
 };
 int main()
-
 {
     std::cout &lt;&lt; std::boolalpha;
     std::cout &lt;&lt; &quot;a2b: &quot; &lt;&lt; std::is_base_of&lt;A, B&gt;::value &lt;&lt; '

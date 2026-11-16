@@ -15,11 +15,11 @@ snd_soc_dai_set_bclk_ratio - configure BCLK to sample rate ratio.
 <h2>Arguments</h2>
 
 <i>dai</i>
-<dl><dd><dd>DAI</dl>
+<dl><dd></dd><dd>DAI</dd></dl>
  
 
  <i>ratio</i>
-<dl><dd>Ratio of BCLK to Sample rate.</dl>
+<dl><dd>Ratio of BCLK to Sample rate.</dd></dl>
 
 <h2>Description</h2>
 

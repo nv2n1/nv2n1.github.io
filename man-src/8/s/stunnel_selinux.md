@@ -55,9 +55,9 @@ description: "stunnel_selinux – Security Enhanced Linux Policy for the stunnel
 <p> Policy governs the access confined processes have to these ports. SELinux stunnel policy is very flexible allowing users to setup their stunnel processes in as secure a method as possible. </p>
 <p> The following port types are defined for stunnel: </p>
 <dl>
-<dt><code>stunnel_port_t</code></p>
+<dt><code>stunnel_port_t</code></dt>
 <dd>
-<dd></dl>
+</dd><dd></dd></dl>
 <h2>Managed Files</h2>
 <p>The SELinux process type stunnel_t can manage files labeled with the following file types. The paths listed are the default paths for these file types. Note the processes UID still need to have DAC permissions. </p>
 <p> <code>cluster_conf_t</code> </p>
@@ -105,8 +105,8 @@ description: "stunnel_selinux – Security Enhanced Linux Policy for the stunnel
 <p> <code>stunnel_exec_t</code> </p>
 <p> &#8211; Set files with the stunnel_exec_t type, if you want to transition an executable to the stunnel_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/usr/bin/stunnel, /usr/sbin/stunnel </p>
+<dt>Paths:</dt>
+<dd>/usr/bin/stunnel, /usr/sbin/stunnel </dd>
 </dl>
 <p> <code>stunnel_log_t</code> </p>
 <p> &#8211; Set files with the stunnel_log_t type, if you want to treat the data as stunnel log data, usually stored under the /var/log directory. </p>

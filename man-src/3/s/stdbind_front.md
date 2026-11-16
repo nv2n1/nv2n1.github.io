@@ -11,9 +11,7 @@ std::bind_front - std::bind_front
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header &lt;functional&gt;
-
 template &lt;class F, class... Args&gt;                     (since C++20)
-
 /*unspecified*/ bind_front( F&amp;&amp; f, Args&amp;&amp;... args );</code></pre> 
 The function template bind_front generates a forwarding call wrapper for f. Calling this wrapper is equivalent to invoking f with its first sizeof...(Args) parameters bound to args. 
 In other words, std::bind_front(f, bound_args...)(call_args...) is equivalent to std::invoke(f, bound_args..., call_args....). 
@@ -37,7 +35,6 @@ std::decay_t&lt;F&gt; and each type in std::decay_t&lt;Args&gt;... must meet the
 
 A function object of type T that is unspecified, except that the types of objects returned by two calls to std::bind_front with the same arguments are the same. 
 The returned object (call wrapper) has the following properties: <pre><code>std::bind_front return type
-
 </code></pre>
 
 <h2>Member objects</h2>

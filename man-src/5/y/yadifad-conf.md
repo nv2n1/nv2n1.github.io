@@ -13,41 +13,41 @@ description: "yadifad.conf – configuration file for yadifad(8)."
 <h2>Description</h2>
 <p>The configuration of yadifad has several containers:</p>
 <dl>
-<dt><code>&lt;main&gt;</code></p>
-<dd>&nbsp;<wbr>General container&nbsp;<wbr></p>
-<dt>&lt;key&gt;</p>
-<dd>TSIG keys</p>
-<dt>&lt;acl&gt;</p>
-<dd>Access lists</p>
-<dt>&lt;nsid&gt;</p>
-<dd>NameServer IDentifier</p>
-<dt>&lt;rrl&gt;</p>
-<dd>Response Rate Limiting directives</p>
-<dt>&lt;zone&gt;</p>
-<dd>Description of the domain name in specific attributes.</p>
-<dt>&lt;channels&gt;</p>
-<dd>Description of the logger outputs.</p>
-<dt>&lt;dnssec-policy&gt;</p>
-<dd>Description of dnssec policies.</p>
-<dt>&lt;key-suite&gt;</p>
-<dd>Description of the key-suites needed if &#8216;dnssec policies&#8217; are used.</p>
-<dt>&lt;key-roll&gt;</p>
-<dd>Description of the key-rolls needed if &#8216;dnssec policies&#8217; are used.</p>
-<dt>&lt;key-template&gt;</p>
-<dd>Description of the key-templates needed if &#8216;dnssec policies&#8217; are used.</p>
-<dt>&lt;denial&gt;</p>
-<dd>Description of &#8216;denial&#8217;, this can be used in certain &#8216;dnssec policies&#8217;.</dl>
+<dt><code>&lt;main&gt;</code></dt>
+<dd>&nbsp;<wbr>General container&nbsp;<wbr></dd>
+<dt>&lt;key&gt;</dt>
+<dd>TSIG keys</dd>
+<dt>&lt;acl&gt;</dt>
+<dd>Access lists</dd>
+<dt>&lt;nsid&gt;</dt>
+<dd>NameServer IDentifier</dd>
+<dt>&lt;rrl&gt;</dt>
+<dd>Response Rate Limiting directives</dd>
+<dt>&lt;zone&gt;</dt>
+<dd>Description of the domain name in specific attributes.</dd>
+<dt>&lt;channels&gt;</dt>
+<dd>Description of the logger outputs.</dd>
+<dt>&lt;dnssec-policy&gt;</dt>
+<dd>Description of dnssec policies.</dd>
+<dt>&lt;key-suite&gt;</dt>
+<dd>Description of the key-suites needed if &#8216;dnssec policies&#8217; are used.</dd>
+<dt>&lt;key-roll&gt;</dt>
+<dd>Description of the key-rolls needed if &#8216;dnssec policies&#8217; are used.</dd>
+<dt>&lt;key-template&gt;</dt>
+<dd>Description of the key-templates needed if &#8216;dnssec policies&#8217; are used.</dd>
+<dt>&lt;denial&gt;</dt>
+<dd>Description of &#8216;denial&#8217;, this can be used in certain &#8216;dnssec policies&#8217;.</dd></dl>
 <p> The configuration supports included files.<br />
  example: include /etc/yadifa/conf.d/local.conf The configuration files can be nested. The configuration consists of:</p>
 <dl>
-<dt><code>*</code></p>
-<dd>Container, which starts with &lt;container name&gt; and ends with &lt;/container name&gt;</p>
-<dt><code>*</code></p>
-<dd>Variable name</p>
-<dt><code>*</code></p>
-<dd>1 or 2 arguments</p>
-<dt><code>*</code></p>
-<dd>Arguments can contain 1 or more comma separated values.</dl>
+<dt><code>*</code></dt>
+<dd>Container, which starts with &lt;container name&gt; and ends with &lt;/container name&gt;</dd>
+<dt><code>*</code></dt>
+<dd>Variable name</dd>
+<dt><code>*</code></dt>
+<dd>1 or 2 arguments</dd>
+<dt><code>*</code></dt>
+<dd>Arguments can contain 1 or more comma separated values.</dd></dl>
 <p> eg. </p>
 <pre>&lt;container&gt;
  # variable argument
@@ -60,21 +60,21 @@ description: "yadifad.conf – configuration file for yadifad(8)."
 <h2>Examples</h2>
 <p>Examples of containers defined for a configuration file.</p>
 <dl>
-<dt><code>*</code></p>
-<dd>Main</p>
+<dt><code>*</code></dt>
+<dd>Main</dd>
 <dl>
 <dd>
-<dl>
-<dt>1.</p>
-<dd>Config with includes</p>
+</dd><dl>
+<dt>1.</dt>
+<dd>Config with includes</dd>
 <dl>
 <dd>
 <pre># start yadifad.conf &lt;main&gt; container
 include /etc/yadifa/conf.d/local.conf
 # end yadifad.conf &lt;main&gt; container</pre>
-</dl>
-<dt>2.</p>
-<dd>Main without includes</p>
+</dd></dl>
+<dt>2.</dt>
+<dd>Main without includes</dd>
 <dl>
 <dd>
 <pre>&lt;main&gt;
@@ -166,20 +166,20 @@ include /etc/yadifa/conf.d/local.conf
  # set the number of threads to serve queries
  thread-count-by-address 2
 &lt;/main&gt;</pre>
-</dl>
+</dd></dl>
 </dl>
 </dl>
 </dl>
 <dl>
-<dt><code>*</code></p>
+<dt><code>*</code></dt>
 <dd>Key<br />
  TSIG-key configuration
-</dl>
+</dd></dl>
 <dl>
 <dd>
-<dl>
-<dt>1.</p>
-<dd>Admin-key key definition (the name is arbitrary)</p>
+</dd><dl>
+<dt>1.</dt>
+<dd>Admin-key key definition (the name is arbitrary)</dd>
 <dl>
 <dd>
 <pre>&lt;key&gt;
@@ -187,9 +187,9 @@ include /etc/yadifa/conf.d/local.conf
  algorithm hmac-md5
  secret WorthlessKeyForExample==
 &lt;/key&gt;</pre>
-</dl>
-<dt>2.</p>
-<dd>Master-slave key definition</p>
+</dd></dl>
+<dt>2.</dt>
+<dd>Master-slave key definition</dd>
 <dl>
 <dd>
 <pre>&lt;key&gt;
@@ -197,19 +197,19 @@ include /etc/yadifa/conf.d/local.conf
  algorithm hmac-md5
  secret MasterAndSlavesTSIGKey==
 &lt;/key&gt;</pre>
-</dl>
+</dd></dl>
 </dl>
 </dl>
 <dl>
-<dt><code>*</code></p>
+<dt><code>*</code></dt>
 <dd>ACL<br />
  Access Control List definitions
-</dl>
+</dd></dl>
 <dl>
 <dd>
-<dl>
-<dt>1.</p>
-<dd>Master-slave key use</p>
+</dd><dl>
+<dt>1.</dt>
+<dd>Master-slave key use</dd>
 <dl>
 <dd>
 <pre>&lt;acl&gt;
@@ -218,36 +218,36 @@ include /etc/yadifa/conf.d/local.conf
  master 192.0.2.53
  localhost 127.0.0.0/8, ::1
 &lt;/acl&gt;</pre>
-<dl>
-<dt><code>*</code></p>
+</dd><dl>
+<dt><code>*</code></dt>
 <dd>NSID<br />
  DNS NameServer IDentifier
-</dl>
+</dd></dl>
 <dl>
 <dd>
-<dl>
-<dt>1.</p>
-<dd>Example with ascii</p>
+</dd><dl>
+<dt>1.</dt>
+<dd>Example with ascii</dd>
 <dl>
 <dd>
 <pre>&lt;nsid&gt;
  ascii belgium-brussels-01
 &lt;/nsid&gt;</pre>
-</dl>
-<dt>2.</p>
-<dd>Example with hex</p>
+</dd></dl>
+<dt>2.</dt>
+<dd>Example with hex</dd>
 <dl>
 <dd>
 <pre>&lt;nsid&gt;
  hex 00320201
 &lt;/nsid&gt;</pre>
-</dl>
+</dd></dl>
 </dl>
 </dl>
 <dl>
-<dt><code>*</code></p>
+<dt><code>*</code></dt>
 <dd>RRL<br />
- Response Rate Limiting</dl>
+ Response Rate Limiting</dd></dl>
 <pre>&lt;rrl&gt;
  # Number of identical responses per second before responses are being limited
  responses-per-second 5
@@ -267,13 +267,13 @@ include /etc/yadifa/conf.d/local.conf
  enabled yes
 &lt;/rrl&gt;</pre>
 <dl>
-<dt><code>*</code></p>
-<dd>Zone</dl>
+<dt><code>*</code></dt>
+<dd>Zone</dd></dl>
 <dl>
 <dd>
-<dl>
-<dt>1.</p>
-<dd>Master domain zone config</p>
+</dd><dl>
+<dt>1.</dt>
+<dd>Master domain zone config</dd>
 <dl>
 <dd>
 <pre>&lt;zone&gt;
@@ -294,9 +294,9 @@ include /etc/yadifa/conf.d/local.conf
  # Use DNSSEC policies otherwise remove or put in remark line below
  dnssec-policy 1
 &lt;/zone&gt;</pre>
-</dl>
-<dt>2.</p>
-<dd>Slave domain zone config</p>
+</dd></dl>
+<dt>2.</dt>
+<dd>Slave domain zone config</dd>
 <dl>
 <dd>
 <pre>&lt;zone&gt;
@@ -311,17 +311,17 @@ include /etc/yadifa/conf.d/local.conf
  # Accept notifes from these ACL entries
  allow-notify master
 &lt;/zone&gt;</pre>
-<dl>
-<dt><code>*</code></p>
-<dd>DNSSEC-Policy</dl>
+</dd><dl>
+<dt><code>*</code></dt>
+<dd>DNSSEC-Policy</dd></dl>
 <p> DNSSEC-Policy needs some extra sections: key-suite, key-roll, key-template (and denial if NSEC3 is configured)</p>
 <dl>
 <dd>
+</dd><dl>
+<dt>1.</dt>
+<dd>dnssec-policy example with all the needed sections</dd>
 <dl>
-<dt>1.</p>
-<dd>dnssec-policy example with all the needed sections</p>
-<dl>
-<dd>example with NSEC3 </p>
+<dd>example with NSEC3 </dd>
 <pre>&lt;dnssec-policy&gt;
  id &quot;1&quot;
  description &quot;Example of ZSK and KSK&quot;
@@ -338,8 +338,8 @@ include /etc/yadifa/conf.d/local.conf
  key-suite &quot;ksk-2048&quot;
 &lt;/dnssec-policy&gt;</pre>
 </dl>
-<dt>2.</p>
-<dd>key-suite </p>
+<dt>2.</dt>
+<dd>key-suite </dd>
 <pre>&lt;key-suite&gt; 
  id &quot;ksk-2048&quot;
  key-template &quot;ksk-2048&quot;
@@ -350,8 +350,8 @@ include /etc/yadifa/conf.d/local.conf
  key-template &quot;zsk-1024&quot;
  key-roll &quot;key-roll-zsk-1024-short-times&quot;
 &lt;/key-suite&gt; </pre>
-<dt>3.</p>
-<dd>key-roll </p>
+<dt>3.</dt>
+<dd>key-roll </dd>
 <pre>&lt;key-roll&gt; 
  id &quot;key-roll-ksk-2048-short-times&quot;
 # command minutes hours day month day-week week
@@ -370,8 +370,8 @@ include /etc/yadifa/conf.d/local.conf
  inactive 8,38 * * * * * 
  remove 12,42 * * * * *
 &lt;/key-roll&gt; </pre>
-<dt>4.</p>
-<dd>key-template </p>
+<dt>4.</dt>
+<dd>key-template </dd>
 <pre>&lt;key-template&gt;
  id &quot;ksk-2048&quot;
  ksk true
@@ -384,8 +384,8 @@ include /etc/yadifa/conf.d/local.conf
  algorithm 8
  size 1024
 &lt;/key-template&gt;</pre>
-<dt>5.</p>
-<dd>denial </p>
+<dt>5.</dt>
+<dd>denial </dd>
 <pre>&lt;denial&gt; 
  id &quot;nsec3-with-salt-on&quot;
  salt &quot;ABCD&quot;
@@ -402,16 +402,16 @@ include /etc/yadifa/conf.d/local.conf
  iterations 5
  optout off 
 &lt;/denial&gt; </pre>
-<dl>
-<dt><code>*</code></p>
-<dd>Channels</dl>
+</dd><dl>
+<dt><code>*</code></dt>
+<dd>Channels</dd></dl>
 <p> Logging output-channel configurations: The &quot;name&quot; is arbitrary and is used in the &lt;loggers&gt;.<br />
  The &quot;stream-name&quot; defines the output type (ie: a file name or syslog).<br />
  The &quot;arguments&quot; are specific to the output type (ie: unix file access rights or syslog options and facilities).
  </dl>
 <dl>
-<dt>1.</p>
-<dd>Example: YADIFA running as daemon channel definition. </p>
+<dt>1.</dt>
+<dd>Example: YADIFA running as daemon channel definition. </dd>
 <dl>
 <dd>
 <pre>&lt;channels&gt;
@@ -426,10 +426,10 @@ include /etc/yadifa/conf.d/local.conf
  all all.log 0644
  syslog syslog user
 &lt;/channels&gt;</pre>
-</dl>
-<dt>2.</p>
+</dd></dl>
+<dt>2.</dt>
 <dd>Example: YADIFA running in debug mode.<br />
- This example shows the &quot;stderr&quot; and &quot;stdout&quot; which can also be used in the first example, but will output to the console.</p>
+ This example shows the &quot;stderr&quot; and &quot;stdout&quot; which can also be used in the first example, but will output to the console.</dd>
 <dl>
 <dd>
 <pre>&lt;channels&gt;
@@ -438,17 +438,17 @@ include /etc/yadifa/conf.d/local.conf
  stderr STDERR
  stdout STDOUT
 &lt;/channels&gt;</pre>
-<dl>
-<dt><code>*</code></p>
-<dd>Loggers</dl>
+</dd><dl>
+<dt><code>*</code></dt>
+<dd>Loggers</dd></dl>
 <p> Logging input configurations: The &quot;bundle&quot; name is predefined: database, dnssec, server, statistics, system, zone.<br />
  The &quot;debuglevel&quot; uses the same names as syslog or &quot;*&quot; or &quot;all&quot; to filter the input.<br />
  The &quot;channels&quot; are a comma-separated list of channels.</p>
 <dl>
 <dd>
-<dl>
-<dt>1.</p>
-<dd>Example without syslog</p>
+</dd><dl>
+<dt>1.</dt>
+<dd>Example without syslog</dd>
 <dl>
 <dd>
 <pre>&lt;loggers&gt;
@@ -461,9 +461,9 @@ include /etc/yadifa/conf.d/local.conf
  queries * queries
  zone * zone,all
 &lt;/loggers&gt;</pre>
-</dl>
-<dt>2.</p>
-<dd>Example with syslog</p>
+</dd></dl>
+<dt>2.</dt>
+<dd>Example with syslog</dd>
 <dl>
 <dd>
 <pre>&lt;loggers&gt;
@@ -476,27 +476,27 @@ include /etc/yadifa/conf.d/local.conf
  queries * queries,syslog
  zone * zone,syslog
 &lt;/loggers&gt;</pre>
-</dl>
+</dd></dl>
 </dl>
 </dl>
 <p> The defined loggers are:</p>
 <dl>
-<dd></dl>
+<dd></dd></dl>
 <dl>
-<dt>system</p>
-<dd>contains low level messages about the system such as memory allocation, threading, IOs, timers and cryptography, &#8230;</p>
-<dt>database</p>
-<dd>It contains messages about most lower-level operations in the DNS database. ie: journal, updates, zone loading and sanitization, DNS message query resolution, &#8230;)</p>
-<dt>dnssec</p>
-<dd>contains messages about lower-level dnssec operations in the DNS database. ie: status, maintenance, verification, &#8230;</p>
-<dt>server</p>
-<dd>contains messages about operations in the DNS server. ie: start up, shutdown, configuration, transfers, various services status (database management, network management, DNS notification management, dynamic update management, resource rate limiting, &#8230;)</p>
-<dt>zone</p>
-<dd>contains messages about the loading of a zone from a source (file parsing, transferred binary zone reading, &#8230;)</p>
-<dt>stats</p>
-<dd>contains the statistics of the server.</p>
-<dt>queries</p>
-<dd>contains the queries on the server. Queries can be logged with the BIND and/or with the YADIFA format. </p>
+<dt>system</dt>
+<dd>contains low level messages about the system such as memory allocation, threading, IOs, timers and cryptography, &#8230;</dd>
+<dt>database</dt>
+<dd>It contains messages about most lower-level operations in the DNS database. ie: journal, updates, zone loading and sanitization, DNS message query resolution, &#8230;)</dd>
+<dt>dnssec</dt>
+<dd>contains messages about lower-level dnssec operations in the DNS database. ie: status, maintenance, verification, &#8230;</dd>
+<dt>server</dt>
+<dd>contains messages about operations in the DNS server. ie: start up, shutdown, configuration, transfers, various services status (database management, network management, DNS notification management, dynamic update management, resource rate limiting, &#8230;)</dd>
+<dt>zone</dt>
+<dd>contains messages about the loading of a zone from a source (file parsing, transferred binary zone reading, &#8230;)</dd>
+<dt>stats</dt>
+<dd>contains the statistics of the server.</dd>
+<dt>queries</dt>
+<dd>contains the queries on the server. Queries can be logged with the BIND and/or with the YADIFA format. </dd>
 <p> <code>BIND format:</code> </p>
 <p> client sender-ip#port: query: fqdn class type +SETDC (listen-ip) </p>
 <p> <code>YADIFA format:</code> </p>
@@ -504,36 +504,36 @@ include /etc/yadifa/conf.d/local.conf
 <p> where:</p>
 <dl>
 <dd>
-<dl>
-<dt>id</p>
-<dd>is the query message id</p>
-<dt>+</p>
-<dd>means the message has the Recursion Desired flag set</p>
-<dt>S</p>
-<dd>means the message is signed with a TSIG</p>
-<dt>E</p>
-<dd>means the message is EDNS</p>
-<dt>T</p>
-<dd>means the message was sent using TCP instead of UDP</p>
-<dt>D</p>
-<dd>means the message has the DNSSEC OK flag set</p>
-<dt>C</p>
-<dd>means the message has the Checking Disabled flag set</p>
-<dt>fqdn</p>
-<dd>is the queried FQDN</p>
-<dt>class</p>
-<dd>is the queried class</p>
-<dt>type</p>
-<dd>is the queried type</p>
-<dt>sender-ip</p>
-<dd>is the IP of the client that sent the query</p>
-<dt>port</p>
-<dd>is the port of the client that sent the query</p>
-<dt>listen-ip</p>
-<dd>is the listen network interface that received the message</dl>
+</dd><dl>
+<dt>id</dt>
+<dd>is the query message id</dd>
+<dt>+</dt>
+<dd>means the message has the Recursion Desired flag set</dd>
+<dt>S</dt>
+<dd>means the message is signed with a TSIG</dd>
+<dt>E</dt>
+<dd>means the message is EDNS</dd>
+<dt>T</dt>
+<dd>means the message was sent using TCP instead of UDP</dd>
+<dt>D</dt>
+<dd>means the message has the DNSSEC OK flag set</dd>
+<dt>C</dt>
+<dd>means the message has the Checking Disabled flag set</dd>
+<dt>fqdn</dt>
+<dd>is the queried FQDN</dd>
+<dt>class</dt>
+<dd>is the queried class</dd>
+<dt>type</dt>
+<dd>is the queried type</dd>
+<dt>sender-ip</dt>
+<dd>is the IP of the client that sent the query</dd>
+<dt>port</dt>
+<dd>is the port of the client that sent the query</dd>
+<dt>listen-ip</dt>
+<dd>is the listen network interface that received the message</dd></dl>
 </dl>
 <dl>
-<dd>Note that on YADIFA any unset flag is replaced by a &#8216;-&#8216;, on BIND only the &#8216;+&#8217; follows that rule.</dl>
+<dd>Note that on YADIFA any unset flag is replaced by a &#8216;-&#8216;, on BIND only the &#8216;+&#8217; follows that rule.</dd></dl>
 </dl>
 <p> System operators will mostly be interested in the info and above messages of queries and stats, as well as the error and above messages of the other loggers. </p>
 <h2>See Also</h2>
@@ -547,27 +547,28 @@ include /etc/yadifa/conf.d/local.conf
 <h2>Mailing Lists</h2>
 <p>There exists a mailinglist for questions relating to any program in the yadifa package: </p>
 <dl>
-<dt><code>*</code></p>
+<dt><code>*</code></dt>
 <dd><code>yadifa-users [at] mailinglists.yadifa.eu</code><br />
- for submitting questions/answers.</dl>
+ for submitting questions/answers.</dd></dl>
 <dl>
-<dt><code>*</code></p>
+<dt><code>*</code></dt>
 <dd><code><a rel="nofollow" href="http://www.yadifa.eu/mailing-list-users">http://www.yadifa.eu/mailing-list-users</a></code><br />
- for subscription requests.</dl>
+ for subscription requests.</dd></dl>
 <p> If you would like to stay informed about new versions and official patches send a subscription request to via:</p>
 <dl>
-<dt><code>*</code></p>
-<dd><code><a rel="nofollow" href="http://www.yadifa.eu/mailing-list-announcements">http://www.yadifa.eu/mailing-list-announcements</a></code></dl>
+<dt><code>*</code></dt>
+<dd><code><a rel="nofollow" href="http://www.yadifa.eu/mailing-list-announcements">http://www.yadifa.eu/mailing-list-announcements</a></code></dd></dl>
 <p> (this is a readonly list).</p>
 <h2>License And Copyright</h2>
 <dl>
-<dt>Copyright</p>
+<dt>Copyright</dt>
 <dd>(C)2012-2016, EURid<br />
  B-1831 Diegem, Belgium<br />
- <code>info [at] yadifa.eu</code></dl>
+ <code>info [at] yadifa.eu</code></dd></dl>
 <h2>Authors</h2>
 <p>Gery Van Emelen<br />
  Email: <code>Gery.VanEmelen [at] EURid.eu</code><br />
  Eric Diaz Fernandez<br />
  Email: <code>Eric.DiazFernandez [at] EURid.eu</code> </p>
 <p> WWW: <code><a rel="nofollow" href="http://www.EURid.eu">http://www.EURid.eu</a></code></p>
+</dl></dl></dl></dl></dl></dl></dl></dl></dl></dl>

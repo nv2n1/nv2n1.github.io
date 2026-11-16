@@ -21,29 +21,29 @@ description: "yppasswd, ypchfn, ypchsh – change your password in the NIS datab
 <p> All tools will first prompt the user for the current NIS password needed for authentication with the <code><a href="/docs/linux/man/8-yppasswdd/">yppasswdd</a></code>(8) daemon. Subsequently, the program prompts for the updated information: </p>
 <p> If we use shadowing passwords using passwd.adjunct, SHA-512 will be used for hashing a new password by default. If we want to use MD5, SHA_256 or older DES, we need to set the environment variable YP_PASSWD_HASH. Possible values are &quot;DES&quot;, &quot;MD5&quot;, &quot;SHA-256&quot; and &quot;SHA-512&quot; (value is case-insensitive).</p>
 <dl>
-<dt><code>yppasswd</code> or <code>-p</code></p>
+<dt><code>yppasswd</code> or <code>-p</code></dt>
 <dd> Change the user&#8217;s NIS password.<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>The user is prompted for the new password.<br />
- While typing the password, echoing is turned off, so the password does not appear on the screen. An empty password is rejected, as are passwords shorter than six characters. The user will then be requested to retype the password to make sure it wasn&#8217;t<tt>&nbsp;<wbr></tt>misspelled the first time.</p>
-<dt><code>ypchsh</code> or <code>-l</code></p>
-<dd> Change the user&#8217;s login shell. The user is prompted for a new shell, offering the old one as default:</p>
+ While typing the password, echoing is turned off, so the password does not appear on the screen. An empty password is rejected, as are passwords shorter than six characters. The user will then be requested to retype the password to make sure it wasn&#8217;t<tt>&nbsp;<wbr></tt>misspelled the first time.</dd>
+<dt><code>ypchsh</code> or <code>-l</code></dt>
+<dd> Change the user&#8217;s login shell. The user is prompted for a new shell, offering the old one as default:</dd>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 Login shell [/bin/sh]: _
 </pre>
+</dd><dt>
+</dt><dd> To accept the default, simply press return. To clear the shell field in your <code><a href="/docs/linux/man/5-passwd/">passwd</a></code>(5) file entry (so that the system&#8217;s default shell is selected), enter the string <i>none</i>.</dd>
+<dt><code>ypchfn</code> or <code>-f</code></dt>
+<dd> Change the user&#8217;s full name and related information. Traditionally, some applications expect the GECOS field (field 4) of the <code><a href="/docs/linux/man/5-passwd/">passwd</a></code>(5) file to contain the user&#8217;s real name (as opposed to the login name) plus some additional information like the office phone number. This information is displayed by <code><a href="/docs/linux/man/1-finger/">finger</a></code>(1) and probably some other tools, too.</dd>
 <dt>
-<dd> To accept the default, simply press return. To clear the shell field in your <code><a href="/docs/linux/man/5-passwd/">passwd</a></code>(5) file entry (so that the system&#8217;s default shell is selected), enter the string <i>none</i>.</p>
-<dt><code>ypchfn</code> or <code>-f</code></p>
-<dd> Change the user&#8217;s full name and related information. Traditionally, some applications expect the GECOS field (field 4) of the <code><a href="/docs/linux/man/5-passwd/">passwd</a></code>(5) file to contain the user&#8217;s real name (as opposed to the login name) plus some additional information like the office phone number. This information is displayed by <code><a href="/docs/linux/man/1-finger/">finger</a></code>(1) and probably some other tools, too.</p>
+</dt><dd> When setting the full name, <code>ypchfn</code> displays the following prompts, with the defaults in brackets:</dd>
 <dt>
-<dd> When setting the full name, <code>ypchfn</code> displays the following prompts, with the defaults in brackets:</p>
-<dt>
-<dd>
+</dt><dd>
 <pre><code>
 Name[Joe Doe] : Location[2nd floor, bldg 34] : Office Phone[12345] : Home Phone[]:
 </code></pre>
-<dt>
-<dd> To accept a default, simply press return. To clear a field, enter the string <i>none</i>.</dl>
+</dd><dt>
+</dt><dd> To accept a default, simply press return. To clear a field, enter the string <i>none</i>.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-chfn/">chfn</a></code>(1), <code><a href="/docs/linux/man/1-chsh/">chsh</a></code>(1), <code><a href="/docs/linux/man/1-finger/">finger</a></code>(1), <code><a href="/docs/linux/man/5-passwd/">passwd</a></code>(5), <code><a href="/docs/linux/man/1-passwd/">passwd</a></code>(1), <code><a href="/docs/linux/man/1-ypcat/">ypcat</a></code>(1), <code><a href="/docs/linux/man/8-yppasswdd/">yppasswdd</a></code>(8), <code><a href="/docs/linux/man/8-ypserv/">ypserv</a></code>(8), <code><a href="/docs/linux/man/1-ypwhich/">ypwhich</a></code>(1) </p>
 <h2>AUTHOR</h2>

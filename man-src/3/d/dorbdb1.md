@@ -27,7 +27,6 @@ DORBDB1 simultaneously bidiagonalizes the blocks of a tall and skinny
                                                   and X21 is(M - P) - by - Q.Q must be no larger than P,
                                                   M - P, or M - Q.Routines DORBDB2, DORBDB3, and DORBDB4 handle cases in which Q is not the minimum dimension.The orthogonal matrices P1, P2, and Q1 are P - by - P, (M - P) - by - (M - P),
                                                   and(M - Q) - by - (M - Q), respectively.They are represented implicitly by Householder vectors.B11 and B12 are Q - by - Q bidiagonal matrices represented implicitly by angles THETA, PHI..fi
-
                                                                                                                                                                                                                                         Parameters : M M is INTEGER The number of rows X11 plus the number of rows in X21.
 </code></pre>
 <p> <i>P</i> </p>
@@ -102,7 +101,6 @@ DORBDB1 simultaneously bidiagonalizes the blocks of a tall and skinny
 <pre>
           LWORK is INTEGER
            The dimension of the array WORK. LWORK &gt;= M-Q.
- 
            If LWORK = -1, then a workspace query is assumed; the routine
            only calculates the optimal size of the WORK array, returns
            this value as the first entry of the WORK array, and no error
@@ -118,18 +116,18 @@ DORBDB1 simultaneously bidiagonalizes the blocks of a tall and skinny
 <p> <code>Author:</code></p>
 <dl>
 <dt>
-<dd> Univ. of Tennessee </p>
+</dt><dd> Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl>
 <dt>
-<dd> July 2012</dl>
+</dt><dd> July 2012</dd></dl>
 <p> <code>Further Details: </code></p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre><code>
   The upper-bidiagonal blocks B11, B21 are represented implicitly by
   angles THETA(1), ..., THETA(Q) and PHI(1), ..., PHI(Q-1). Every entry
@@ -139,11 +137,11 @@ DORBDB1 simultaneously bidiagonalizes the blocks of a tall and skinny
   See DORCSD2BY1 for details on generating P1, P2, and Q1 using DORGQR
   and DORGLQ.
 </code></pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>References: </code></p>
 <dl>
 <dt>
-<dd> [1] Brian D. Sutton. Computing the complete CS decomposition. Numer. Algorithms, 50(1):33-65, 2009.</dl>
+</dt><dd> [1] Brian D. Sutton. Computing the complete CS decomposition. Numer. Algorithms, 50(1):33-65, 2009.</dd></dl>
 <p> Definition at line 203 of file dorbdb1.f.</p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for LAPACK from the source code. </p>

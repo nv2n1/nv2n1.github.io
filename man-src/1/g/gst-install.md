@@ -17,8 +17,8 @@ description: "gst-install – installs missing GStreamer plugins"
 <p> See the documentation of <code>gstpbutilsinstallplugins</code> for the argument construction and exit states.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt>&#8211;transient-for</p>
-<dd> The X Window ID of the window which should be used as parents for the dialogs</dl>
+<dt>&#8211;transient-for</dt>
+<dd> The X Window ID of the window which should be used as parents for the dialogs</dd></dl>
 <h2>DIAGNOSTICS</h2>
 <p> None yet.</p>
 <h2>HOMEPAGE</h2>

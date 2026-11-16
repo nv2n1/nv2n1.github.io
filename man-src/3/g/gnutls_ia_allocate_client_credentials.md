@@ -14,8 +14,8 @@ description: "gnutls_ia_allocate_client_credentials – Used to allocate an gnut
 <p> <code>int gnutls_ia_allocate_client_credentials(gnutls_ia_client_credentials_t * </code><i>sc</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
-<dt>gnutls_ia_client_credentials_t * sc</p>
-<dd> is a pointer to a <code>gnutls_ia_server_credentials_t</code> structure.</dl>
+<dt>gnutls_ia_client_credentials_t * sc</dt>
+<dd> is a pointer to a <code>gnutls_ia_server_credentials_t</code> structure.</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> This structure is complex enough to manipulate directly thus this helper function is provided in order to allocate it. </p>
 <p> Adding this credential to a session will enable TLS/IA, and will require an Application Phase after the TLS handshake (if the server support TLS/IA). Use <code>gnutls_ia_require_inner_phase()</code> to toggle the TLS/IA mode.</p>
@@ -30,6 +30,6 @@ description: "gnutls_ia_allocate_client_credentials – Used to allocate an gnut
 <p> The full documentation for <code>gnutls</code> is maintained as a Texinfo manual. If the <code>info</code> and <code>gnutls</code> programs are properly installed at your site, the command</p>
 <dl>
 <dt>
-<dd> <code>info gnutls</code></dl>
+</dt><dd> <code>info gnutls</code></dd></dl>
 <p> should give you access to the complete manual. </p>
 <h2>Index</h2>

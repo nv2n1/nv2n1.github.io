@@ -27,18 +27,18 @@ description: "QwtAbstractSeriesStore –"
 <h3>virtual QRectF QwtAbstractSeriesStore::dataRect () const [protected], [pure virtual]</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>Bounding rectangle of the stored series</dl>
+<dd>Bounding rectangle of the stored series</dd></dl>
 <p> Implemented in <code>QwtSeriesStore&lt; T &gt;</code>, <code>QwtSeriesStore&lt; QwtIntervalSample &gt;</code>, <code>QwtSeriesStore&lt; QwtOHLCSample &gt;</code>, <code>QwtSeriesStore&lt; QPointF &gt;</code>, <code>QwtSeriesStore&lt; QwtSetSample &gt;</code>, and <code>QwtSeriesStore&lt; QwtPoint3D &gt;</code>.</p>
 <h3>virtual size_t QwtAbstractSeriesStore::dataSize () const [protected], [pure virtual]</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>Number of samples</dl>
+<dd>Number of samples</dd></dl>
 <p> Implemented in <code>QwtSeriesStore&lt; T &gt;</code>, <code>QwtSeriesStore&lt; QwtIntervalSample &gt;</code>, <code>QwtSeriesStore&lt; QwtOHLCSample &gt;</code>, <code>QwtSeriesStore&lt; QPointF &gt;</code>, <code>QwtSeriesStore&lt; QwtSetSample &gt;</code>, and <code>QwtSeriesStore&lt; QwtPoint3D &gt;</code>.</p>
 <h3>virtual void QwtAbstractSeriesStore::setRectOfInterest (const QRectF &amp;) [protected], [pure virtual]</h3>
 <p>Set a the &#8216;rectangle of interest&#8217; for the stored series </p>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>QwtSeriesData&lt;T&gt;::setRectOfInterest()</code></dl>
+<dd><code>QwtSeriesData&lt;T&gt;::setRectOfInterest()</code></dd></dl>
 <p> Implemented in <code>QwtSeriesStore&lt; T &gt;</code>, <code>QwtSeriesStore&lt; QwtIntervalSample &gt;</code>, <code>QwtSeriesStore&lt; QwtOHLCSample &gt;</code>, <code>QwtSeriesStore&lt; QPointF &gt;</code>, <code>QwtSeriesStore&lt; QwtSetSample &gt;</code>, and <code>QwtSeriesStore&lt; QwtPoint3D &gt;</code>. </p>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for Qwt User&#8217;s Guide from the source code.</p>

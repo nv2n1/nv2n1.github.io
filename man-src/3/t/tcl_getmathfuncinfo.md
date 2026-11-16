@@ -19,17 +19,17 @@ Tcl_Obj *
 <code>Tcl_ListMathFuncs</code>(<i>interp, pattern</i>)</pre>
 <h2>Arguments</h2>
 <dl COMPACT>
-<dd>Tcl_Interp <i>*interp</i> (in) Interpreter in which new function will be defined.</p>
-<dd>const char <i>*name</i> (in) Name for new function.</p>
-<dd>int <i>numArgs</i> (in) Number of arguments to new function; also gives size of <i>argTypes</i> array.</p>
-<dd>Tcl_ValueType <i>*argTypes</i> (in) Points to an array giving the permissible types for each argument to function.</p>
-<dd>Tcl_MathProc <i>*proc</i> (in) Procedure that implements the function.</p>
-<dd>ClientData <i>clientData</i> (in) Arbitrary one-word value to pass to <i>proc</i> when it is invoked.</p>
-<dd>int <i>*numArgsPtr</i> (out) Points to a variable that will be set to contain the number of arguments to the function.</p>
-<dd>Tcl_ValueType <i>**argTypesPtr</i> (out) Points to a variable that will be set to contain a pointer to an array giving the permissible types for each argument to the function which will need to be freed up using <i>Tcl_Free</i>.</p>
-<dd>Tcl_MathProc <i>**procPtr</i> (out) Points to a variable that will be set to contain a pointer to the implementation code for the function (or NULL if the function is implemented directly in bytecode).</p>
-<dd>ClientData <i>*clientDataPtr</i> (out) Points to a variable that will be set to contain the clientData argument passed to <i>Tcl_CreateMathFunc</i> when the function was created if the function is not implemented directly in bytecode.</p>
-<dd>const char <i>*pattern</i> (in) Pattern to match against function names so as to filter them (by passing to <i>Tcl_StringMatch</i>), or NULL to not apply any filter. </p>
+<dd>Tcl_Interp <i>*interp</i> (in) Interpreter in which new function will be defined.</dd>
+<dd>const char <i>*name</i> (in) Name for new function.</dd>
+<dd>int <i>numArgs</i> (in) Number of arguments to new function; also gives size of <i>argTypes</i> array.</dd>
+<dd>Tcl_ValueType <i>*argTypes</i> (in) Points to an array giving the permissible types for each argument to function.</dd>
+<dd>Tcl_MathProc <i>*proc</i> (in) Procedure that implements the function.</dd>
+<dd>ClientData <i>clientData</i> (in) Arbitrary one-word value to pass to <i>proc</i> when it is invoked.</dd>
+<dd>int <i>*numArgsPtr</i> (out) Points to a variable that will be set to contain the number of arguments to the function.</dd>
+<dd>Tcl_ValueType <i>**argTypesPtr</i> (out) Points to a variable that will be set to contain a pointer to an array giving the permissible types for each argument to the function which will need to be freed up using <i>Tcl_Free</i>.</dd>
+<dd>Tcl_MathProc <i>**procPtr</i> (out) Points to a variable that will be set to contain a pointer to the implementation code for the function (or NULL if the function is implemented directly in bytecode).</dd>
+<dd>ClientData <i>*clientDataPtr</i> (out) Points to a variable that will be set to contain the clientData argument passed to <i>Tcl_CreateMathFunc</i> when the function was created if the function is not implemented directly in bytecode.</dd>
+<dd>const char <i>*pattern</i> (in) Pattern to match against function names so as to filter them (by passing to <i>Tcl_StringMatch</i>), or NULL to not apply any filter. </dd>
 </dl>
 <h2>Description</h2>
 <p>Tcl allows a number of mathematical functions to be used in expressions, such as <code>sin</code>, <code>cos</code>, and <code>hypot</code>. These functions are represented by commands in the namespace, <code>tcl::mathfunc</code>. The <code>Tcl_CreateMathFunc</code> function is an obsolete way for applications to add additional functions to those already provided by Tcl or to replace existing functions. It should not be used by new applications, which should create math functions using <code>Tcl_CreateObjCommand</code> to create a command in the <code>tcl::mathfunc</code> namespace. </p>
@@ -42,7 +42,7 @@ Tcl_Obj *
  Tcl_Interp *<i>interp</i>,
  Tcl_Value *<i>args</i>,
  Tcl_Value *<i>resultPtr</i>);</pre>
-</dl>
+</dd></dl>
 <p> When <i>proc</i> is invoked the <i>clientData</i> and <i>interp</i> arguments will be the same as those passed to <code>Tcl_CreateMathFunc</code>. <i>Args</i> will point to an array of <i>numArgs</i> Tcl_Value structures, which describe the actual arguments to the function:</p>
 <dl COMPACT>
 <dd>
@@ -52,7 +52,7 @@ Tcl_Obj *
  double <i>doubleValue</i>;
  Tcl_WideInt <i>wideValue</i>;
 } Tcl_Value;</pre>
-</dl>
+</dd></dl>
 <p> The <i>type</i> field indicates the type of the argument and is one of <code>TCL_INT</code>, <code>TCL_DOUBLE</code> or <code>TCL_WIDE_INT</code>. It will match the <i>argTypes</i> value specified for the function unless the <i>argTypes</i> value was <code>TCL_EITHER</code>. Tcl converts the argument supplied in the expression to the type requested in <i>argTypes</i>, if that is necessary. Depending on the value of the <i>type</i> field, the <i>intValue</i>, <i>doubleValue</i> or <i>wideValue</i> field will contain the actual value of the argument. </p>
 <p> <i>Proc</i> should compute its result and store it either as an integer in <i>resultPtr-&gt;intValue</i> or as a floating value in <i>resultPtr-&gt;doubleValue</i>. It should set also <i>resultPtr-&gt;type</i> to one of <code>TCL_INT</code>, <code>TCL_DOUBLE</code> or <code>TCL_WIDE_INT</code> to indicate which value was set. Under normal circumstances <i>proc</i> should return <code>TCL_OK</code>. If an error occurs while executing the function, <i>proc</i> should return <code>TCL_ERROR</code> and leave an error message in the interpreter&#8217;s result. </p>
 <p> <code>Tcl_GetMathFuncInfo</code> retrieves the values associated with function <i>name</i> that were passed to a preceding <code>Tcl_CreateMathFunc</code> call. Normally, the return code is <code>TCL_OK</code> but if the named function does not exist, <code>TCL_ERROR</code> is returned and an error message is placed in the interpreter&#8217;s result. </p>

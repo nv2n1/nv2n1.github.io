@@ -17,34 +17,34 @@ description: "grdredpol – Compute the Continuous Reduction To the Pole, AKA di
 <p> In the method used here computations are carried out in both the frequency and the space domains. The idea is that a large area may be decomposed in small size windows where both the ambient field and the magnetization vector change by a very small amount. Inside each of those windows, or bins, a set of filter coefficients are calculate and reconstruct for each individual point the component filter using a first order Taylor series expansion.</p>
 <h2>REQUIRED ARGUMENTS</h2>
 <dl>
-<dt><i>anom_grd</i></p>
-<dd> The anomaly grid to be converted.</p>
-<dt><code>-G</code><i>rtp_grd</i></p>
-<dd> is the filename for output grdfile with the RTP solution</dl>
+<dt><i>anom_grd</i></dt>
+<dd> The anomaly grid to be converted.</dd>
+<dt><code>-G</code><i>rtp_grd</i></dt>
+<dd> is the filename for output grdfile with the RTP solution</dd></dl>
 <h2>OPTIONAL ARGUMENTS</h2>
 <dl>
-<dt><code>-C</code><i>dec/dip</i></p>
-<dd> Use this (constant) declination and inclination angles for both field and magnetization. This option consists in the classical RTP procedure.</p>
-<dt><code>-E</code><i>dip_grd/dec_grd</i></p>
-<dd> Get magnetization DIP &amp; DEC from these grids [default: use IGRF]. Note that these two grids do not need to have the same resolution as the anomaly grid. They can be coarser.</p>
-<dt><code>-F</code><i>m/n</i></p>
-<dd> The filter window size in terms of row/columns. The default value is 25&#215;25.</p>
-<dt><code>-M</code><i>m|r</i></p>
-<dd> Set boundary conditions. m|r stands for mirror or replicate edges (Default is zero padding).</p>
-<dt><code>-N</code></p>
-<dd> Do NOT use Taylor expansion.</p>
-<dt><code>-R</code><i>west</i>/<i>east</i>/<i>south</i>/<i>north</i></p>
-<dd> defines the Region of the output points. [Default: Same as input.]</p>
-<dt><code>-T</code><i>year</i></p>
-<dd> Decimal year used by the IGRF routine to compute the declination and inclination at each point [default: 2000]</p>
-<dt><code>-W</code><i>width</i></p>
-<dd> The size of the moving window in degrees [5].</p>
-<dt><code>-Z</code><i>filter_grd</i></p>
-<dd> Write the filter file to disk.</p>
-<dt><code>-V</code>[<i>level</i>] <i>(more &#8230;)</i></p>
-<dd> Select verbosity level [c].</p>
-<dt><code>-n</code>[<code>b</code>|<code>c</code>|<code>l</code>|<code>n</code>][<code>+a</code>][<code>+b</code><i>BC</i>][<code>+c</code>][<code>+t</code><i>threshold</i>] <i>(more &#8230;)</i></p>
-<dd> Select interpolation mode for grids.</dl>
+<dt><code>-C</code><i>dec/dip</i></dt>
+<dd> Use this (constant) declination and inclination angles for both field and magnetization. This option consists in the classical RTP procedure.</dd>
+<dt><code>-E</code><i>dip_grd/dec_grd</i></dt>
+<dd> Get magnetization DIP &amp; DEC from these grids [default: use IGRF]. Note that these two grids do not need to have the same resolution as the anomaly grid. They can be coarser.</dd>
+<dt><code>-F</code><i>m/n</i></dt>
+<dd> The filter window size in terms of row/columns. The default value is 25&#215;25.</dd>
+<dt><code>-M</code><i>m|r</i></dt>
+<dd> Set boundary conditions. m|r stands for mirror or replicate edges (Default is zero padding).</dd>
+<dt><code>-N</code></dt>
+<dd> Do NOT use Taylor expansion.</dd>
+<dt><code>-R</code><i>west</i>/<i>east</i>/<i>south</i>/<i>north</i></dt>
+<dd> defines the Region of the output points. [Default: Same as input.]</dd>
+<dt><code>-T</code><i>year</i></dt>
+<dd> Decimal year used by the IGRF routine to compute the declination and inclination at each point [default: 2000]</dd>
+<dt><code>-W</code><i>width</i></dt>
+<dd> The size of the moving window in degrees [5].</dd>
+<dt><code>-Z</code><i>filter_grd</i></dt>
+<dd> Write the filter file to disk.</dd>
+<dt><code>-V</code>[<i>level</i>] <i>(more &#8230;)</i></dt>
+<dd> Select verbosity level [c].</dd>
+<dt><code>-n</code>[<code>b</code>|<code>c</code>|<code>l</code>|<code>n</code>][<code>+a</code>][<code>+b</code><i>BC</i>][<code>+c</code>][<code>+t</code><i>threshold</i>] <i>(more &#8230;)</i></dt>
+<dd> Select interpolation mode for grids.</dd></dl>
 <h2>CONSEQUENCES OF GRID RESAMPLING</h2>
 <p> Resample or sampling of grids will use various algorithms (see <code>-n</code>) that may lead to possible distortions or unexpected results in the resampled values. One expected effect of resampling with splines is the tendency for the new resampled values to slightly exceed the global min/max limits of the original grid. If this is unacceptable, you can impose clipping of the resampled values values so they do not exceed the input min/max values by adding <code>+c</code> to your <code>-n</code> option.</p>
 <h2>EXAMPLES</h2>

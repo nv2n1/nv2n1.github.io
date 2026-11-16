@@ -10,29 +10,17 @@ description: "std::filesystem::copy_file – std::filesystem::copy_file"
 <p>std::filesystem::copy_file &#8211; std::filesystem::copy_file</p>
 <h2>Synopsis</h2>
 <pre><code>Defined in header&lt;filesystem&gt;
-
     bool copy_file(const std::filesystem::path &amp;from,
-
                    const std::filesystem::path &amp;to);
-
 bool copy_file(const std::filesystem::path &amp;from, (1)(since C++ 17)
-
                                                       const std::filesystem::path &amp;to,
-
                std::error_code &amp;ec);
-
 bool copy_file(const std::filesystem::path &amp;from,
-
                const std::filesystem::path &amp;to,
-
                std::filesystem::copy_options options);
-
 bool copy_file(const std::filesystem::path &amp;from, (2)(since C++ 17)
-
                                                       const std::filesystem::path &amp;to,
-
                std::filesystem::copy_options options,
-
                std::error_code &amp;ec);</code></pre>
 <p>1) The default, equivalent to <code>(2)</code> with copy_options::none used as options<br />
 2) Copies a single file from from to to, using the copy options indicated by options. The behavior is undefined if there is more than one option in any of the copy_options option group present in options (even in the groups not relevant to copy_file)<br />
@@ -67,14 +55,10 @@ LWG_3014 C++17 error_code overload marked noexcept but can allocate memory noexc
 <h2>Examples</h2>
 <p>// Run this code </p>
 <pre><code>#include &lt;fstream&gt;
-
 #include &lt;iostream&gt;
-
 #include &lt;filesystem&gt;
-
 namespace fs = std::filesystem;
 int main()
-
 {
     fs::create_directory(&quot;sandbox&quot;);
     std::ofstream(&quot;sandbox/file1.txt&quot;).put('a');

@@ -15,50 +15,50 @@ description: "rustdoc – generate documentation from Rust source code"
 <p> This tool generates API reference documentation by extracting comments from source code written in the Rust language, available at &lt;<code><a rel="nofollow" href="https://www.rust-lang.org">https://www.rust-lang.org</a></code>&gt;. It accepts several input formats and provides several output formats for the generated documentation. </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-r</code>, <code>&#8211;input-format</code> <i>FORMAT</i></p>
-<dd> html or json (default: inferred)</p>
-<dt><code>-w</code>, <code>&#8211;output-format</code> <i>FORMAT</i></p>
-<dd> html or json (default: html)</p>
-<dt><code>-o</code>, <code>&#8211;output</code> <i>OUTPUT</i></p>
-<dd> where to place the output (default: <i>doc/</i> for html, <i>doc.json</i> for json)</p>
-<dt><code>&#8211;passes</code> <i>LIST</i></p>
-<dd> space-separated list of passes to run (default: &#8221;)</p>
-<dt><code>&#8211;no-defaults</code></p>
-<dd> don&#8217;t run the default passes</p>
-<dt><code>&#8211;plugins</code> <i>LIST</i></p>
-<dd> space-separated list of plugins to run (default: &#8221;)</p>
-<dt><code>&#8211;plugin-path</code> <i>DIR</i></p>
-<dd> directory to load plugins from (default: <i>/tmp/rustdoc_ng/plugins</i>)</p>
-<dt><code>&#8211;target</code> <i>TRIPLE</i></p>
-<dd> target triple to document</p>
-<dt><code>&#8211;crate-name</code> <i>NAME</i></p>
-<dd> specify the name of this crate</p>
-<dt><code>-L</code>, <code>&#8211;library-path</code> <i>DIR</i></p>
-<dd> directory to add to crate search path</p>
-<dt><code>&#8211;cfg</code> <i>SPEC</i></p>
-<dd> pass a <i>&#8211;cfg</i> to rustc</p>
-<dt><code>&#8211;extern</code> <i>VAL</i></p>
-<dd> pass an <i>&#8211;extern</i> to rustc</p>
-<dt><code>&#8211;test</code></p>
-<dd> run code examples as tests</p>
-<dt><code>&#8211;test-args</code> <i>ARGS</i></p>
-<dd> pass arguments to the test runner</p>
-<dt><code>&#8211;html-in-header</code> <i>FILE</i></p>
-<dd> file to add to &lt;head&gt;</p>
-<dt><code>&#8211;html-before-content</code> <i>FILE</i></p>
-<dd> file to add in &lt;body&gt;, before content</p>
-<dt><code>&#8211;html-after-content</code> <i>FILE</i></p>
-<dd> file to add in &lt;body&gt;, after content</p>
-<dt><code>&#8211;markdown-css</code> <i>FILE</i></p>
-<dd> CSS files to include via &lt;link&gt; in a rendered Markdown file</p>
-<dt><code>&#8211;markdown-playground-url</code> <i>URL</i></p>
-<dd> URL to send code snippets to</p>
-<dt><code>&#8211;markdown-no-toc</code></p>
-<dd> don&#8217;t include table of contents</p>
-<dt><code>-h</code>, <code>&#8211;help</code></p>
-<dd> Print help</p>
-<dt><code>-V</code>, <code>&#8211;version</code></p>
-<dd> Print rustdoc&#8217;s version </p>
+<dt><code>-r</code>, <code>&#8211;input-format</code> <i>FORMAT</i></dt>
+<dd> html or json (default: inferred)</dd>
+<dt><code>-w</code>, <code>&#8211;output-format</code> <i>FORMAT</i></dt>
+<dd> html or json (default: html)</dd>
+<dt><code>-o</code>, <code>&#8211;output</code> <i>OUTPUT</i></dt>
+<dd> where to place the output (default: <i>doc/</i> for html, <i>doc.json</i> for json)</dd>
+<dt><code>&#8211;passes</code> <i>LIST</i></dt>
+<dd> space-separated list of passes to run (default: &#8221;)</dd>
+<dt><code>&#8211;no-defaults</code></dt>
+<dd> don&#8217;t run the default passes</dd>
+<dt><code>&#8211;plugins</code> <i>LIST</i></dt>
+<dd> space-separated list of plugins to run (default: &#8221;)</dd>
+<dt><code>&#8211;plugin-path</code> <i>DIR</i></dt>
+<dd> directory to load plugins from (default: <i>/tmp/rustdoc_ng/plugins</i>)</dd>
+<dt><code>&#8211;target</code> <i>TRIPLE</i></dt>
+<dd> target triple to document</dd>
+<dt><code>&#8211;crate-name</code> <i>NAME</i></dt>
+<dd> specify the name of this crate</dd>
+<dt><code>-L</code>, <code>&#8211;library-path</code> <i>DIR</i></dt>
+<dd> directory to add to crate search path</dd>
+<dt><code>&#8211;cfg</code> <i>SPEC</i></dt>
+<dd> pass a <i>&#8211;cfg</i> to rustc</dd>
+<dt><code>&#8211;extern</code> <i>VAL</i></dt>
+<dd> pass an <i>&#8211;extern</i> to rustc</dd>
+<dt><code>&#8211;test</code></dt>
+<dd> run code examples as tests</dd>
+<dt><code>&#8211;test-args</code> <i>ARGS</i></dt>
+<dd> pass arguments to the test runner</dd>
+<dt><code>&#8211;html-in-header</code> <i>FILE</i></dt>
+<dd> file to add to &lt;head&gt;</dd>
+<dt><code>&#8211;html-before-content</code> <i>FILE</i></dt>
+<dd> file to add in &lt;body&gt;, before content</dd>
+<dt><code>&#8211;html-after-content</code> <i>FILE</i></dt>
+<dd> file to add in &lt;body&gt;, after content</dd>
+<dt><code>&#8211;markdown-css</code> <i>FILE</i></dt>
+<dd> CSS files to include via &lt;link&gt; in a rendered Markdown file</dd>
+<dt><code>&#8211;markdown-playground-url</code> <i>URL</i></dt>
+<dd> URL to send code snippets to</dd>
+<dt><code>&#8211;markdown-no-toc</code></dt>
+<dd> don&#8217;t include table of contents</dd>
+<dt><code>-h</code>, <code>&#8211;help</code></dt>
+<dd> Print help</dd>
+<dt><code>-V</code>, <code>&#8211;version</code></dt>
+<dd> Print rustdoc&#8217;s version </dd>
 </dl>
 <h2>OUTPUT FORMATS</h2>
 <p> The rustdoc tool can generate output in either an HTML or JSON format. </p>

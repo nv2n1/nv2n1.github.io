@@ -19,12 +19,12 @@ description: "tsa2d32, tsd2a32, tsd2a – gcin’s Tsin tools"
 <p> <code>tsd2a</code> is an old tool only for back-compatibility.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-nousecount</code></p>
-<dd> Do not record usecount when exporting phrase database of Tsin input method.</dl>
+<dt><code>-nousecount</code></dt>
+<dd> Do not record usecount when exporting phrase database of Tsin input method.</dd></dl>
 <h2>ENVIRONMENT VARIABLES</h2>
 <dl>
-<dt>GCIN_NO_RELOAD</p>
-<dd> Tell gcin server do not reload data after execution of tsa2d32.</dl>
+<dt>GCIN_NO_RELOAD</dt>
+<dd> Tell gcin server do not reload data after execution of tsa2d32.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-gcin/">gcin</a></code>(1), <code>tslearn.</code></p>
 <h2>AUTHOR</h2>

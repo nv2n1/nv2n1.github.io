@@ -24,38 +24,38 @@ description: "perl583delta – what is new for perl v5.8.3"
 <p> The old behaviour was that <tt>%tied_hash</tt> would return whatever would have been returned for that hash before the hash was tied (so usually 0). The new behaviour in the absence of a <font SIZE="-1">SCALAR</font> method is to return <font SIZE="-1">TRUE</font> if in the middle of an <tt>&quot;each&quot;</tt> iteration, and otherwise call <font SIZE="-1">FIRSTKEY</font> to check if the hash is empty (making sure that a subsequent <tt>&quot;each&quot;</tt> will also begin by calling <font SIZE="-1">FIRSTKEY</font>). Please see &#8220;<font SIZE="-1">SCALAR&#8221;</font> in perltie for the full details and caveats.</p>
 <h2>Modules and Pragmata</h2>
 <dl>
-<dt><font SIZE="-1">CGI</font></p>
+<dt><font SIZE="-1">CGI</font></dt>
 <dd>
-<dt>Cwd</p>
+</dd><dt>Cwd</dt>
 <dd>
-<dt>Digest</p>
+</dd><dt>Digest</dt>
 <dd>
-<dt>Digest::MD5</p>
+</dd><dt>Digest::MD5</dt>
 <dd>
-<dt>Encode</p>
+</dd><dt>Encode</dt>
 <dd>
-<dt>File::Spec</p>
+</dd><dt>File::Spec</dt>
 <dd>
-<dt>FindBin</p>
-<dd> A function <tt>&quot;again&quot;</tt> is provided to resolve problems where modules in different directories wish to use FindBin.</p>
-<dt>List::Util</p>
-<dd> You can now weaken references to read only values.</p>
-<dt>Math::BigInt</p>
+</dd><dt>FindBin</dt>
+<dd> A function <tt>&quot;again&quot;</tt> is provided to resolve problems where modules in different directories wish to use FindBin.</dd>
+<dt>List::Util</dt>
+<dd> You can now weaken references to read only values.</dd>
+<dt>Math::BigInt</dt>
 <dd>
-<dt>PodParser</p>
+</dd><dt>PodParser</dt>
 <dd>
-<dt>Pod::Perldoc</p>
+</dd><dt>Pod::Perldoc</dt>
 <dd>
-<dt><font SIZE="-1">POSIX</font></p>
+</dd><dt><font SIZE="-1">POSIX</font></dt>
 <dd>
-<dt>Unicode::Collate</p>
+</dd><dt>Unicode::Collate</dt>
 <dd>
-<dt>Unicode::Normalize</p>
+</dd><dt>Unicode::Normalize</dt>
 <dd>
-<dt>Test::Harness</p>
+</dd><dt>Test::Harness</dt>
 <dd>
-<dt>threads::shared</p>
-<dd> <tt>&quot;cond_wait&quot;</tt> has a new two argument form. <tt>&quot;cond_timedwait&quot;</tt> has been added.</dl>
+</dd><dt>threads::shared</dt>
+<dd> <tt>&quot;cond_wait&quot;</tt> has a new two argument form. <tt>&quot;cond_timedwait&quot;</tt> has been added.</dd></dl>
 <h2>Utility Changes</h2>
 <p> <tt>&quot;find2perl&quot;</tt> now assumes <tt>&quot;-print&quot;</tt> as a default action. Previously, it needed to be specified explicitly. </p>
 <p> A new utility, <tt>&quot;prove&quot;</tt>, makes it easy to run an individual regression test at the command line. <tt>&quot;prove&quot;</tt> is part of Test::Harness, which users of earlier Perl versions can install from <font SIZE="-1">CPAN.</font></p>

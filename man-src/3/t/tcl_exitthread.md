@@ -22,9 +22,9 @@ Tcl_ExitProc *
 <code>Tcl_SetExitProc</code>(<i>proc</i>)</pre>
 <h2>Arguments</h2>
 <dl COMPACT>
-<dd>int <i>status</i> (in) Provides information about why the application or thread exited. Exact meaning may be platform-specific. 0 usually means a normal exit, any nonzero value usually means that an error occurred.</p>
-<dd>Tcl_ExitProc <i>*proc</i> (in) Procedure to invoke before exiting application, or (for <code>Tcl_SetExitProc</code>) NULL to uninstall the current application exit procedure.</p>
-<dd>ClientData <i>clientData</i> (in) Arbitrary one-word value to pass to <i>proc</i>. </p>
+<dd>int <i>status</i> (in) Provides information about why the application or thread exited. Exact meaning may be platform-specific. 0 usually means a normal exit, any nonzero value usually means that an error occurred.</dd>
+<dd>Tcl_ExitProc <i>*proc</i> (in) Procedure to invoke before exiting application, or (for <code>Tcl_SetExitProc</code>) NULL to uninstall the current application exit procedure.</dd>
+<dd>ClientData <i>clientData</i> (in) Arbitrary one-word value to pass to <i>proc</i>. </dd>
 </dl>
 <h2>Description</h2>
 <p>The procedures described here provide a graceful mechanism to end the execution of a <code>Tcl</code> application. Exit handlers are invoked to cleanup the application&#8217;s state before ending the execution of <code>Tcl</code> code. </p>
@@ -35,7 +35,7 @@ Tcl_ExitProc *
 <dl COMPACT>
 <dd>
 <pre>typedef void Tcl_ExitProc(ClientData <i>clientData</i>);</pre>
-</dl>
+</dd></dl>
 <p> The <i>clientData</i> parameter to <i>proc</i> is a copy of the <i>clientData</i> argument given to <code>Tcl_CreateExitHandler</code> or <code>Tcl_CreateThreadExitHandler</code> when the callback was created. Typically, <i>clientData</i> points to a data structure containing application-specific information about what to do in <i>proc</i>. </p>
 <p> <code>Tcl_DeleteExitHandler</code> and <code>Tcl_DeleteThreadExitHandler</code> may be called to delete a previously-created exit handler. It removes the handler indicated by <i>proc</i> and <i>clientData</i> so that no call to <i>proc</i> will be made. If no such handler exists then <code>Tcl_DeleteExitHandler</code> or <code>Tcl_DeleteThreadExitHandler</code> does nothing. </p>
 <p> <code>Tcl_Finalize</code> and <code>Tcl_Exit</code> execute all registered exit handlers, in reverse order from the order in which they were registered. This matches the natural order in which extensions are loaded and unloaded; if extension <code>A</code> loads extension <code>B</code>, it usually unloads <code>B</code> before it itself is unloaded. If extension <code>A</code> registers its exit handlers before loading extension <code>B</code>, this ensures that any exit handlers for <code>B</code> will be executed before the exit handlers for <code>A</code>. </p>

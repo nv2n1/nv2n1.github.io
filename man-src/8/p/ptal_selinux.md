@@ -47,9 +47,9 @@ description: "ptal_selinux – Security Enhanced Linux Policy for the ptal proce
 <p> Policy governs the access confined processes have to these ports. SELinux ptal policy is very flexible allowing users to setup their ptal processes in as secure a method as possible. </p>
 <p> The following port types are defined for ptal: </p>
 <dl>
-<dt><code>ptal_port_t</code></p>
+<dt><code>ptal_port_t</code></dt>
 <dd>
-<dd>Default Defined Ports: tcp 5703</dl>
+</dd><dd>Default Defined Ports: tcp 5703</dd></dl>
 <h2>Managed Files</h2>
 <p>The SELinux process type ptal_t can manage files labeled with the following file types. The paths listed are the default paths for these file types. Note the processes UID still need to have DAC permissions. </p>
 <p> <code>cluster_conf_t</code> </p>
@@ -95,14 +95,14 @@ description: "ptal_selinux – Security Enhanced Linux Policy for the ptal proce
 <p> <code>ptal_exec_t</code> </p>
 <p> &#8211; Set files with the ptal_exec_t type, if you want to transition an executable to the ptal_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/usr/sbin/ptal-mlcd, /usr/sbin/ptal-printd, /usr/sbin/ptal-photod </p>
+<dt>Paths:</dt>
+<dd>/usr/sbin/ptal-mlcd, /usr/sbin/ptal-printd, /usr/sbin/ptal-photod </dd>
 </dl>
 <p> <code>ptal_var_run_t</code> </p>
 <p> &#8211; Set files with the ptal_var_run_t type, if you want to store the ptal files under the /run or /var/run directory. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/var/run/ptal-mlcd(/.*)?, /var/run/ptal-printd(/.*)? </p>
+<dt>Paths:</dt>
+<dd>/var/run/ptal-mlcd(/.*)?, /var/run/ptal-printd(/.*)? </dd>
 </dl>
 <p> Note: File context can be temporarily modified with the chcon command. If you want to permanently change the file context you need to use the <code>semanage fcontext</code> command. This will modify the SELinux labeling database. You will need to use <code>restorecon</code> to apply the labels.</p>
 <h2>Commands</h2>

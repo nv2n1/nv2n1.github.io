@@ -19,18 +19,18 @@ description: "SDL_Overlay – YUV video overlay"
 } SDL_Overlay;</tt></pre>
 <h2>Structure Data</h2>
 <dl COMPACT>
-<dt><code>format</code></p>
-<dd>Overlay format (see below)</p>
-<dt><code>w, h</code></p>
-<dd>Width and height of overlay</p>
-<dt><code>planes</code></p>
-<dd>Number of planes in the overlay. Usually either 1 or 3</p>
-<dt><code>pitches</code></p>
-<dd>An array of pitches, one for each plane. Pitch is the length of a row in bytes.</p>
-<dt><code>pixels</code></p>
-<dd>An array of pointers to teh data of each plane. The overlay should be locked before these pointers are used.</p>
-<dt><code>hw_overlay</code></p>
-<dd>This will be set to 1 if the overlay is hardware accelerated.</dl>
+<dt><code>format</code></dt>
+<dd>Overlay format (see below)</dd>
+<dt><code>w, h</code></dt>
+<dd>Width and height of overlay</dd>
+<dt><code>planes</code></dt>
+<dd>Number of planes in the overlay. Usually either 1 or 3</dd>
+<dt><code>pitches</code></dt>
+<dd>An array of pitches, one for each plane. Pitch is the length of a row in bytes.</dd>
+<dt><code>pixels</code></dt>
+<dd>An array of pointers to teh data of each plane. The overlay should be locked before these pointers are used.</dd>
+<dt><code>hw_overlay</code></dt>
+<dd>This will be set to 1 if the overlay is hardware accelerated.</dd></dl>
 <h2>Description</h2>
 <p>A <code>SDL_Overlay</code> is similar to a <i></i><code>SDL_Surface</code> except it stores a YUV overlay. All the fields are read only, except for <code>pixels</code> which should be <i>locked</i> before use. The <code>format</code> field stores the format of the overlay which is one of the following: </p>
 <pre><tt>#define SDL_YV12_OVERLAY 0x32315659 /* Planar mode: Y + V + U */

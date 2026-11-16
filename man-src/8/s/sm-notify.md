@@ -15,10 +15,10 @@ description: "sm-notify – send reboot notifications to NFS peers"
 <p> Network file systems must also detect when lock state is lost because a remote host has rebooted. After an NFS client reboots, an NFS server must release all file locks held by applications that were running on that client. After a server reboots, a client must remind the server of file locks held by applications running on that client. </p>
 <p> For NFS version 2 and version 3, the <i>Network Status Monitor</i> protocol (or NSM for short) is used to notify NFS peers of reboots. On Linux, two separate user-space components constitute the NSM service:</p>
 <dl>
-<dt><code>sm-notify</code></p>
-<dd>A helper program that notifies NFS peers after the local system reboots</p>
-<dt><code>rpc.statd</code></p>
-<dd>A daemon that listens for reboot notifications from other hosts, and manages the list of hosts to be notified when the local system reboots</dl>
+<dt><code>sm-notify</code></dt>
+<dd>A helper program that notifies NFS peers after the local system reboots</dd>
+<dt><code>rpc.statd</code></dt>
+<dd>A daemon that listens for reboot notifications from other hosts, and manages the list of hosts to be notified when the local system reboots</dd></dl>
 <p> The local NFS lock manager alerts its local <code>rpc.statd</code> of each remote peer that should be monitored. When the local system reboots, the <code>sm-notify</code> command notifies the NSM service on monitored peers of the reboot. When a remote reboots, that peer notifies the local <code>rpc.statd</code>, which in turn passes the reboot notification back to the local NFS lock manager.</p>
 <h2>Nsm Operation In Detail</h2>
 <p>The first file locking interaction between an NFS client and server causes the NFS lock managers on both peers to contact their local NSM service to store information about the opposite peer. On Linux, the local lock manager contacts <code>rpc.statd</code>. </p>
@@ -32,26 +32,26 @@ description: "sm-notify – send reboot notifications to NFS peers"
 <p> Part of NFS lock recovery is rediscovering which peers need to be monitored again. The <code>sm-notify</code> command clears the monitor list on persistent storage after each reboot.</p>
 <h2>Options</h2>
 <dl>
-<dt><code>-d</code></p>
-<dd>Keeps <code>sm-notify</code> attached to its controlling terminal and running in the foreground so that notification progress may be monitored directly.</p>
-<dt><code>-f</code></p>
-<dd>Send notifications even if <code>sm-notify</code> has already run since the last system reboot.</p>
-<dt><code>-m</code><i> retry-time</i></p>
-<dd>Specifies the length of time, in minutes, to continue retrying notifications to unresponsive hosts. If this option is not specified, <code>sm-notify</code> attempts to send notifications for 15 minutes. Specifying a value of 0 causes <code>sm-notify</code> to continue sending notifications to unresponsive peers until it is manually killed.</p>
-<dd>Notifications are retried if sending fails, the remote does not respond, the remote&#8217;s NSM service is not registered, or if there is a DNS failure which prevents the remote&#8217;s <i>mon_name</i> from being resolved to an address.</p>
-<dd>Hosts are not removed from the notification list until a valid reply has been received. However, the SM_NOTIFY procedure has a void result. There is no way for <code>sm-notify</code> to tell if the remote recognized the sender and has started appropriate lock recovery.</p>
-<dt><code>-n</code></p>
-<dd>Prevents <code>sm-notify</code> from updating the local system&#8217;s NSM state number.</p>
-<dt><code>-p</code><i> port</i></p>
-<dd>Specifies the source port number <code>sm-notify</code> should use when sending reboot notifications. If this option is not specified, a randomly chosen ephemeral port is used.</p>
-<dd>This option can be used to traverse a firewall between client and server.</p>
-<dt><code>-P, </code><i></i><code>&#8211;state-directory-path</code><i> pathname</i></p>
-<dd>Specifies the pathname of the parent directory where NSM state information resides. If this option is not specified, <code>sm-notify</code> uses <i>/var/lib/nfs/statd</i> by default.</p>
-<dd>After starting, <code>sm-notify</code> attempts to set its effective UID and GID to the owner and group of this directory.</p>
-<dt><code>-v</code><i> ipaddr </i><code>|</code><i> hostname</i></p>
-<dd>Specifies the network address from which to send reboot notifications, and the <i>mon_name</i> argument to use when sending SM_NOTIFY requests. If this option is not specified, <code>sm-notify</code> uses a wildcard address as the transport bind address, and uses the <i>my_name</i> recorded when the remote was monitored as the <i>mon_name</i> argument when sending SM_NOTIFY requests.</p>
-<dd>The <i>ipaddr</i> form can be expressed as either an IPv4 or an IPv6 presentation address. If the <i>ipaddr</i> form is used, the <code>sm-notify</code> command converts this address to a hostname for use as the <i>mon_name</i> argument when sending SM_NOTIFY requests.</p>
-<dd>This option can be useful in multi-homed configurations where the remote requires notification from a specific network address.</dl>
+<dt><code>-d</code></dt>
+<dd>Keeps <code>sm-notify</code> attached to its controlling terminal and running in the foreground so that notification progress may be monitored directly.</dd>
+<dt><code>-f</code></dt>
+<dd>Send notifications even if <code>sm-notify</code> has already run since the last system reboot.</dd>
+<dt><code>-m</code><i> retry-time</i></dt>
+<dd>Specifies the length of time, in minutes, to continue retrying notifications to unresponsive hosts. If this option is not specified, <code>sm-notify</code> attempts to send notifications for 15 minutes. Specifying a value of 0 causes <code>sm-notify</code> to continue sending notifications to unresponsive peers until it is manually killed.</dd>
+<dd>Notifications are retried if sending fails, the remote does not respond, the remote&#8217;s NSM service is not registered, or if there is a DNS failure which prevents the remote&#8217;s <i>mon_name</i> from being resolved to an address.</dd>
+<dd>Hosts are not removed from the notification list until a valid reply has been received. However, the SM_NOTIFY procedure has a void result. There is no way for <code>sm-notify</code> to tell if the remote recognized the sender and has started appropriate lock recovery.</dd>
+<dt><code>-n</code></dt>
+<dd>Prevents <code>sm-notify</code> from updating the local system&#8217;s NSM state number.</dd>
+<dt><code>-p</code><i> port</i></dt>
+<dd>Specifies the source port number <code>sm-notify</code> should use when sending reboot notifications. If this option is not specified, a randomly chosen ephemeral port is used.</dd>
+<dd>This option can be used to traverse a firewall between client and server.</dd>
+<dt><code>-P, </code><i></i><code>&#8211;state-directory-path</code><i> pathname</i></dt>
+<dd>Specifies the pathname of the parent directory where NSM state information resides. If this option is not specified, <code>sm-notify</code> uses <i>/var/lib/nfs/statd</i> by default.</dd>
+<dd>After starting, <code>sm-notify</code> attempts to set its effective UID and GID to the owner and group of this directory.</dd>
+<dt><code>-v</code><i> ipaddr </i><code>|</code><i> hostname</i></dt>
+<dd>Specifies the network address from which to send reboot notifications, and the <i>mon_name</i> argument to use when sending SM_NOTIFY requests. If this option is not specified, <code>sm-notify</code> uses a wildcard address as the transport bind address, and uses the <i>my_name</i> recorded when the remote was monitored as the <i>mon_name</i> argument when sending SM_NOTIFY requests.</dd>
+<dd>The <i>ipaddr</i> form can be expressed as either an IPv4 or an IPv6 presentation address. If the <i>ipaddr</i> form is used, the <code>sm-notify</code> command converts this address to a hostname for use as the <i>mon_name</i> argument when sending SM_NOTIFY requests.</dd>
+<dd>This option can be useful in multi-homed configurations where the remote requires notification from a specific network address.</dd></dl>
 <h2>Configuration File</h2>
 <p>Many of the options that can be set on the command line can also be controlled through values set in the <code>[sm-notify]</code> or, in one case, the <code>[statd]</code> section of the <i>/etc/nfs.conf</i> configuration file. </p>
 <p> Values recognized in the <code>[sm-notify]</code> section include: <code>retry-time</code>, <code>outgoing-port</code>, and <code>outgoing-addr</code>. These have the same effect as the command line options <code>m</code>, <code>p</code>, and <code>v</code> respectively. </p>
@@ -64,10 +64,10 @@ description: "sm-notify – send reboot notifications to NFS peers"
 <p>Lock recovery after a reboot is critical to maintaining data integrity and preventing unnecessary application hangs. </p>
 <p> To help <code>rpc.statd</code> match SM_NOTIFY requests to NLM requests, a number of best practices should be observed, including:</p>
 <dl>
-<dd>The UTS nodename of your systems should match the DNS names that NFS peers use to contact them</p>
-<dd>The UTS nodenames of your systems should always be fully qualified domain names</p>
-<dd>The forward and reverse DNS mapping of the UTS nodenames should be consistent</p>
-<dd>The hostname the client uses to mount the server should match the server&#8217;s <i>mon_name</i> in SM_NOTIFY requests it sends</dl>
+<dd>The UTS nodename of your systems should match the DNS names that NFS peers use to contact them</dd>
+<dd>The UTS nodenames of your systems should always be fully qualified domain names</dd>
+<dd>The forward and reverse DNS mapping of the UTS nodenames should be consistent</dd>
+<dd>The hostname the client uses to mount the server should match the server&#8217;s <i>mon_name</i> in SM_NOTIFY requests it sends</dd></dl>
 <p> Unmounting an NFS file system does not necessarily stop either the NFS client or server from monitoring each other. Both may continue monitoring each other for a time in case subsequent NFS traffic between the two results in fresh mounts and additional file locking. </p>
 <p> On Linux, if the <code>lockd</code> kernel module is unloaded during normal operation, all remote NFS peers are unmonitored. This can happen on an NFS client, for example, if an automounter removes all NFS mount points due to inactivity.</p>
 <h3>IPv6 and TI-RPC support</h3>
@@ -75,14 +75,14 @@ description: "sm-notify – send reboot notifications to NFS peers"
 <p> Currently, the <code>sm-notify</code> command supports sending notification only via datagram transport protocols.</p>
 <h2>Files</h2>
 <dl>
-<dt><i>/var/lib/nfs/statd/sm</i></p>
-<dd>directory containing monitor list</p>
-<dt><i>/var/lib/nfs/statd/sm.bak</i></p>
-<dd>directory containing notify list</p>
-<dt><i>/var/lib/nfs/statd/state</i></p>
-<dd>NSM state number for this host</p>
-<dt><i>/proc/sys/fs/nfs/nsm_local_state</i></p>
-<dd>kernel&#8217;s copy of the NSM state number</dl>
+<dt><i>/var/lib/nfs/statd/sm</i></dt>
+<dd>directory containing monitor list</dd>
+<dt><i>/var/lib/nfs/statd/sm.bak</i></dt>
+<dd>directory containing notify list</dd>
+<dt><i>/var/lib/nfs/statd/state</i></dt>
+<dd>NSM state number for this host</dd>
+<dt><i>/proc/sys/fs/nfs/nsm_local_state</i></dt>
+<dd>kernel&#8217;s copy of the NSM state number</dd></dl>
 <h2>See Also</h2>
 <p><code>rpc.statd</code>(8), <code><a href="/docs/linux/man/5-nfs/">nfs</a></code>(5), <code><a href="/docs/linux/man/2-uname/">uname</a></code>(2), <code><a href="/docs/linux/man/7-hostname/">hostname</a></code>(7) </p>
 <p> RFC 1094 &#8211; &quot;NFS: Network File System Protocol Specification&quot;<br />

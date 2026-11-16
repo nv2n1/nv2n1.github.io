@@ -12,12 +12,9 @@ std::experimental::optional&lt;T&gt;::emplace - std::experimental::optional&lt;T
 
 <pre><code>template &lt;class... Args&gt;
 (library fundamentals TS)
-
     void emplace(Args &amp;&amp;...args);
-
 template &lt;class U, class... Args&gt;
 (library fundamentals TS)
-
     void emplace(std::initializer_list&lt;U&gt; ilist, Args &amp;&amp;...args);</code></pre> 
 Constructs the contained value in-place. If *this already contains a value before the call, the contained value is destroyed by calling its destructor. 
 1) Initializes the contained value by direct-initializing (but not direct-list-initializing) with std::forward&lt;Args&gt;(args)... as parameters. 
@@ -46,10 +43,5 @@ Any exception thrown by the selected constructor of T. If an exception is thrown
 <h2>See also</h2>
 
 <pre><code>assigns contents
-
 operator= (public member function)
-
-
-
-
 </code></pre>

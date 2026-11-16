@@ -26,7 +26,7 @@ url: "/docs/linux/man/1-fasd/"
 
 <dl>
 <dt>
-<dd> <pre><code>
+</dt><dd> <pre><code>
 - s &amp;nbsp;
 &amp;nbsp;
 &amp;nbsp;
@@ -136,7 +136,7 @@ show a brief help message - [0 - 9] &amp; nbsp;
 &amp;nbsp;
 &amp;nbsp;
 select the nth entry
-</code></pre></dl>
+</code></pre></dd></dl>
 
 <h2>DESCRIPTION</h2>
 
@@ -152,14 +152,14 @@ select the nth entry
 
 <dl>
 <dt>
-<dd> <pre>
+</dt><dd> <pre>
 z bundle
 f -e vim nginx conf
 f -i rc$
 vi&nbsp;<wbr>`f nginx conf`
 cp update.html&nbsp;<wbr>`d www`
 open&nbsp;<wbr>`sf pdf`
-</pre></dl>
+</pre></dd></dl>
 
 <h2>SHELL INITIALIZATION</h2>
 
@@ -168,9 +168,9 @@ open&nbsp;<wbr>`sf pdf`
  To get fasd working in a shell, some initialization code must be run. Put lines below in your POSIX compatible shell rc.
 <dl>
 <dt>
-<dd> <pre>
+</dt><dd> <pre>
 eval&nbsp;<wbr>&quot;$(fasd --init auto)&quot;
-</pre></dl>
+</pre></dd></dl>
  
 
  This will setup a command hook that executes on every command and advanced tab completion for zsh and bash. 
@@ -178,7 +178,7 @@ eval&nbsp;<wbr>&quot;$(fasd --init auto)&quot;
  If you want more control over what gets into your shell environment, you can pass customized set of arguments to fasd --init.
 <dl>
 <dt>
-<dd> 
+</dt><dd> 
 zsh - hook &amp;nbsp;
 &amp;nbsp;
 &amp;nbsp;
@@ -321,21 +321,21 @@ tcsh-hook&amp;nbsp;
 &amp;nbsp;
 #&amp; nbsp;
 setup tcsh precmd alias
-</dl>
+</dd></dl>
  
 
  Example for a minimal zsh setup (no tab completion):
 <dl>
 <dt>
-<dd> <pre>
+</dt><dd> <pre>
 eval&nbsp;<wbr>&quot;$(fasd --init posix-alias zsh-hook)&quot;
-</pre></dl>
+</pre></dd></dl>
  
 
  Note that this method will slightly increase your shell start-up time, since calling binaries has overhead. You can cache fasd init code if you want minimal overhead. Example code for bash (to be put into .bashrc):
 <dl>
 <dt>
-<dd> 
+</dt><dd> 
 fasd_cache = "$HOME/.fasd-init-bash" if &amp; nbsp;
 [&amp;nbsp; "$(command -v fasd)" &amp; nbsp; - nt &amp; nbsp; "$fasd_cache" &amp; nbsp; - o &amp; nbsp; !&amp;nbsp; - s &amp; nbsp; "$fasd_cache" &amp; nbsp;];
 &amp;nbsp;
@@ -347,7 +347,7 @@ fasd-- init posix - alias bash - hook bash - ccomp bash - ccomp - install &amp;n
 "$fasd_cache" fi
     source &amp;nbsp;
 "$fasd_cache" unset fasd_cache
-</dl>
+</dd></dl>
  
 
  Optionally, if you can also source fasd if you want fasd to be a shell function instead of an executable. 
@@ -355,11 +355,11 @@ fasd-- init posix - alias bash - hook bash - ccomp bash - ccomp - install &amp;n
  You can tweak initialization code. For instance, if you want to use &quot;c&quot; instead of &quot;z&quot; to do directory jumping, you can use the alias below:
 <dl>
 <dt>
-<dd> 
+</dt><dd> 
 alias c = 'fasd_cd -d'
 #&amp; nbsp;`- d'&amp;nbsp;option present for bash completion
 #&amp; nbsp; function fasd_cd is defined in posix - alias
-</dl>
+</dd></dl>
 
 <h2>MATCHING</h2>
 
@@ -370,9 +370,9 @@ alias c = 'fasd_cd -d'
  For a given set of queries (the set of command-line arguments passed to fasd), a path is a match if and only if:
 <dl>
 <dt>1.
-<dd> Queries match the path in order.
-<dt>2.
-<dd> The last query matches the last segment of the path.</dl>
+</dt><dd> Queries match the path in order.
+</dd><dt>2.
+</dt><dd> The last query matches the last segment of the path.</dd></dl>
  
 
  If no match is found, fasd will try the same process ignoring case. If still no match is found, fasd will allow extra characters to be placed between query characters for fuzzy matching. 
@@ -380,9 +380,9 @@ alias c = 'fasd_cd -d'
  Tips:
 <dl>
 <dt>&bull;
-<dd> If you want your last query not to match the last segment of the path, append `/' as the last query.
-<dt>&bull;
-<dd> If you want your last query to match the end of the filename, append `$' to the last query.</dl>
+</dt><dd> If you want your last query not to match the last segment of the path, append `/' as the last query.
+</dd><dt>&bull;
+</dt><dd> If you want your last query to match the end of the filename, append `$' to the last query.</dd></dl>
 
 <h2>COMPATIBILITY</h2>
 
@@ -401,7 +401,7 @@ alias c = 'fasd_cd -d'
  Word mode completion can be triggered on any command. Word completion is triggered by any command line argument that starts with &quot;,&quot; (all), &quot;f,&quot; (files), or &quot;d,&quot; (directories), or that ends with &quot;,,&quot; (all), &quot;,,f&quot; (files), or &quot;,,d&quot; (directories). Examples:
 <dl>
 <dt>
-<dd> 
+</dt><dd> 
 $ &amp;nbsp;
 vim, rc, lo&lt;Tab&gt; $ &amp;nbsp;
 vim &amp;nbsp;
@@ -410,13 +410,13 @@ mv index.html d, www&lt;Tab&gt;
                      $ &amp;nbsp;
 mv index.html &amp;nbsp;
 / var / www /
-</dl>
+</dd></dl>
  
 
  There are also three zle widgets: &quot;fasd-complete&quot;, &quot;fasd-complete-f&quot;, &quot;fasd-complete-d&quot;. You can bind them to keybindings you like:
 <dl>
 <dt>
-<dd> 
+</dt><dd> 
 bindkey &amp;nbsp;
 '^X^A' &amp; nbsp;
 fasd - complete &amp;nbsp;
@@ -440,7 +440,7 @@ fasd - complete - d &amp;nbsp;
 #&amp; nbsp;
 C - x C - d to do fasd - complete - d &amp;nbsp;
 (only directories)
-</dl>
+</dd></dl>
 
 <h2>BACKENDS</h2>
 
@@ -455,7 +455,7 @@ C - x C - d to do fasd - complete - d &amp;nbsp;
  Upon every execution, fasd will source &quot;/etc/fasdrc&quot; and &quot;$HOME/.fasdrc&quot; if they are present. Below are some variables you can set:
 <dl>
 <dt>
-<dd> <pre><code>
+</dt><dd> <pre><code>
 $_FASD_DATA
 Path to the fasd data file, default &amp;nbsp;
 "$HOME/.fasd".$_FASD_BLACKLIST
@@ -485,7 +485,7 @@ Path to .viminfo file for viminfo backend, defaults to&amp;nbsp;"$HOME/.viminfo"
 $_FASD_RECENTLY_USED_XBEL
 Path to XDG recently-used.xbel file for recently-used backend, defaults to
 "$HOME/.local/share/recently-used.xbel"
-</code></pre></dl>
+</code></pre></dd></dl>
 
 <h2>DEBUGGING</h2>
 
@@ -498,9 +498,9 @@ Path to XDG recently-used.xbel file for recently-used backend, defaults to
  You can set _FASD_SINK in your .fasdrc to obtain a log.
 <dl>
 <dt>
-<dd> <pre>
+</dt><dd> <pre>
 _FASD_SINK=&quot;$HOME/.fasd.log&quot;
-</pre></dl>
+</pre></dd></dl>
 
 <h2>COPYING</h2>
 

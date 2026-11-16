@@ -11,33 +11,19 @@ std::adjacent_find - std::adjacent_find
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header &lt;algorithm&gt;
-
 template&lt; class ForwardIt &gt;                                                                      (until C++20)
-
 ForwardIt adjacent_find( ForwardIt first, ForwardIt last );
-
 template&lt; class ForwardIt &gt;                                                                      (since C++20)
-
 constexpr ForwardIt adjacent_find( ForwardIt first, ForwardIt last );
-
 template&lt; class ExecutionPolicy, class ForwardIt &gt;
-
 ForwardIt adjacent_find( ExecutionPolicy&amp;&amp; policy,                                           (2) (since C++17)
-
 ForwardIt first, ForwardIt last );                                                       (1)
-
 template&lt; class ForwardIt, class BinaryPredicate&gt;                                                              (until C++20)
-
 ForwardIt adjacent_find( ForwardIt first, ForwardIt last, BinaryPredicate p );
-
 template&lt; class ForwardIt, class BinaryPredicate&gt;                                                              (since C++20)
-
 constexpr ForwardIt adjacent_find( ForwardIt first, ForwardIt last, BinaryPredicate p );     (3)
-
 template&lt; class ExecutionPolicy, class ForwardIt, class BinaryPredicate&gt;
-
 ForwardIt adjacent_find( ExecutionPolicy&amp;&amp; policy,                                               (4)           (since C++17)
-
 ForwardIt first, ForwardIt last, BinaryPredicate p );</code></pre> 
 Searches the range [first, last) for two consecutive identical elements. 
 1) Elements are compared using operator==. 
@@ -121,14 +107,10 @@ The overloads with a template parameter named ExecutionPolicy report errors as f
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;algorithm&gt;
-
 #include &lt;iostream&gt;
-
 #include &lt;vector&gt;
-
 #include &lt;functional&gt;
 int main()
-
 {
     std::vector&lt;int&gt; v1{0, 1, 2, 3, 40, 40, 41, 41, 5};
     auto i1 = std::adjacent_find(v1.begin(), v1.end());

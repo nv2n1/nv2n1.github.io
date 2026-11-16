@@ -34,41 +34,41 @@ define dumptype &quot;dt&quot; { # optional insensitive sensitive
 <p>Integer arguments may have one of the following (case insensitive) suffixes, some of which have a multiplier effect: </p>
 <p> <code>b byte bytes</code></p>
 <dl>
-<dd>Some number of bytes.</dl>
+<dd>Some number of bytes.</dd></dl>
 <p> <code>bps</code></p>
 <dl>
-<dd>Some number of bytes per second.</dl>
+<dd>Some number of bytes per second.</dd></dl>
 <p> <code>k kb kbyte kbytes kilobyte kilobytes</code></p>
 <dl>
-<dd>Some number of kilobytes (bytes*1024).</dl>
+<dd>Some number of kilobytes (bytes*1024).</dd></dl>
 <p> <code>kps kbps</code></p>
 <dl>
-<dd>Some number of kilobytes per second (bytes*1024). </p>
+<dd>Some number of kilobytes per second (bytes*1024). </dd>
 <p> It is the default multiplier for all size options.</dl>
 <p> <code>m mb meg mbyte mbytes megabyte megabytes</code></p>
 <dl>
-<dd>Some number of megabytes (bytes*1024*1024).</dl>
+<dd>Some number of megabytes (bytes*1024*1024).</dd></dl>
 <p> <code>mps mbps</code></p>
 <dl>
-<dd>Some number of megabytes per second (bytes*1024*1024).</dl>
+<dd>Some number of megabytes per second (bytes*1024*1024).</dd></dl>
 <p> <code>g gb gbyte gbytes gigabyte gigabytes</code></p>
 <dl>
-<dd>Some number of gigabytes (bytes*1024*1024*1024).</dl>
+<dd>Some number of gigabytes (bytes*1024*1024*1024).</dd></dl>
 <p> <code>t tb tbyte tbytes terabyte terabytes</code></p>
 <dl>
-<dd>Some number of terabytes (bytes*1024*1024*1024*1024).</dl>
+<dd>Some number of terabytes (bytes*1024*1024*1024*1024).</dd></dl>
 <p> <code>tape tapes</code></p>
 <dl>
-<dd>Some number of tapes.</dl>
+<dd>Some number of tapes.</dd></dl>
 <p> <code>day days</code></p>
 <dl>
-<dd>Some number of days.</dl>
+<dd>Some number of days.</dd></dl>
 <p> <code>week weeks</code></p>
 <dl>
-<dd>Some number of weeks (days*7). </p>
+<dd>Some number of weeks (days*7). </dd>
 <dl>
 <dd><font SIZE="+1"> <code>Note</code> </font><br />
- The value <code>inf</code> may be used in most places where an integer is expected to mean an infinite amount. </p>
+ The value <code>inf</code> may be used in most places where an integer is expected to mean an infinite amount. </dd>
 <p> Boolean arguments may have any of the values <code>1</code>, <code>y</code>, <code>yes</code>, <code>t</code>, <code>true</code> or <code>on</code> to indicate a true state, or <code>0</code>, <code>n</code>, <code>no</code>, <code>f</code>, <code>false</code> or <code>off</code> to indicate a false state. If no argument is given, <code>true</code> is assumed. </p>
 </dl>
 </dl>
@@ -79,10 +79,9 @@ define dumptype &quot;dt&quot; { # optional insensitive sensitive
 <pre> ESCAPE SEQUENCE BECOMES
  \ \
  \&quot; &quot;
- 
  (newline)
  	 (tab)
-  (carriage return)
+ (carriage return)
   (form-feed)
  \1 - \7
   - \77
@@ -122,65 +121,65 @@ define tapetype child {
 <h2>Global Parameters</h2>
 <p><code>org</code> <i>string</i></p>
 <dl>
-<dd>Default: <i>&quot;daily&quot;</i>. A descriptive name for the configuration. This string appears in the Subject line of mail reports. Each Amanda configuration should have a different string to keep mail reports distinct.</dl>
+<dd>Default: <i>&quot;daily&quot;</i>. A descriptive name for the configuration. This string appears in the Subject line of mail reports. Each Amanda configuration should have a different string to keep mail reports distinct.</dd></dl>
 <p> <code>mailer</code> <i>string</i></p>
 <dl>
-<dd>Default found by configure. A mail program that can send mail with &#8216;<i>MAILER -s &quot;subject&quot; user &lt; message_file</i>&#8216;.</dl>
+<dd>Default found by configure. A mail program that can send mail with &#8216;<i>MAILER -s &quot;subject&quot; user &lt; message_file</i>&#8216;.</dd></dl>
 <p> <code>mailto</code> <i>string</i></p>
 <dl>
-<dd>Default: none. A space separated list of recipients for mail reports. If not specified, amdump will not send any mail.</dl>
+<dd>Default: none. A space separated list of recipients for mail reports. If not specified, amdump will not send any mail.</dd></dl>
 <p> <code>send-amreport-on</code> [ <code>all</code> | <code>strange</code> | <code>error</code> | <code>never</code> ]</p>
 <dl>
-<dd>Default: <code>all</code>. Specify which types of messages will trigger an email from amreport. amreport is used by amdump and amflush. </p>
+<dd>Default: <code>all</code>. Specify which types of messages will trigger an email from amreport. amreport is used by amdump and amflush. </dd>
 <p> <code>all</code></p>
 <dl>
-<dd>Send an email on any message.</dl>
+<dd>Send an email on any message.</dd></dl>
 <p> <code>strange</code></p>
 <dl>
-<dd>Send an email on strange or error message. A strange message occurs when the dump succeeded, but returned one or more errors unknown to Amanda.</dl>
+<dd>Send an email on strange or error message. A strange message occurs when the dump succeeded, but returned one or more errors unknown to Amanda.</dd></dl>
 <p> <code>error</code></p>
 <dl>
-<dd>Send an email only on error messages.</dl>
+<dd>Send an email only on error messages.</dd></dl>
 <p> <code>never</code></p>
 <dl>
-<dd>Never send an email.</dl>
+<dd>Never send an email.</dd></dl>
 </dl>
 <p> <code>report-use-media</code> <i>boolean</i></p>
 <dl>
-<dd>Default: <i>True</i> if <code>max-dle-by-volume</code> is not set, <i>False</i> if it is set. If the reporter must print the list of media used in the run.</dl>
+<dd>Default: <i>True</i> if <code>max-dle-by-volume</code> is not set, <i>False</i> if it is set. If the reporter must print the list of media used in the run.</dd></dl>
 <p> <code>report-next-media</code> <i>boolean</i></p>
 <dl>
-<dd>Default: <i>True</i> if <code>max-dle-by-volume</code> is not set, <i>False</i> if it is set. If the reporter must print the list of media expected for the next run.</dl>
+<dd>Default: <i>True</i> if <code>max-dle-by-volume</code> is not set, <i>False</i> if it is set. If the reporter must print the list of media expected for the next run.</dd></dl>
 <p> <code>max-dle-by-volume</code> <i>int</i></p>
 <dl>
-<dd>Default: <i>1000000000</i>. The maximum number of dle written to a single volume.</dl>
+<dd>Default: <i>1000000000</i>. The maximum number of dle written to a single volume.</dd></dl>
 <p> <code>dumpcycle</code> <i>int</i></p>
 <dl>
-<dd>Default: <i>10 days</i>. The number of days in the backup cycle. Each disk will get a full backup at least this often. Setting this to zero tries to do a full backup each run. </p>
+<dd>Default: <i>10 days</i>. The number of days in the backup cycle. Each disk will get a full backup at least this often. Setting this to zero tries to do a full backup each run. </dd>
 <dl>
 <dd><font SIZE="+1"> <code>Note</code> </font><br />
- This parameter may also be set in a specific <code>dumptype</code> (see below). This value sets the default for all <code>dumptype</code>s so must appear in <code>amanda.conf</code> before any <code>dumptype</code>s are defined. </p>
+ This parameter may also be set in a specific <code>dumptype</code> (see below). This value sets the default for all <code>dumptype</code>s so must appear in <code>amanda.conf</code> before any <code>dumptype</code>s are defined. </dd>
 </dl>
 </dl>
 <p> <code>runspercycle</code> <i>int</i></p>
 <dl>
-<dd>Default: <i>same as dumpcycle</i>. The number of amdump runs in <code>dumpcycle</code> days. A value of 0 means the same value as <code>dumpcycle</code>. A value of -1 means guess the number of runs from the <code><a href="/docs/linux/man/5-tapelist/">tapelist</a></code>(5) file, which is the number of tapes used in the last <code>dumpcycle</code> days / <code>runtapes</code>.</dl>
+<dd>Default: <i>same as dumpcycle</i>. The number of amdump runs in <code>dumpcycle</code> days. A value of 0 means the same value as <code>dumpcycle</code>. A value of -1 means guess the number of runs from the <code><a href="/docs/linux/man/5-tapelist/">tapelist</a></code>(5) file, which is the number of tapes used in the last <code>dumpcycle</code> days / <code>runtapes</code>.</dd></dl>
 <p> <code>tapecycle</code> <i>int</i></p>
 <dl>
-<dd>Default: <i>15 tapes</i>. Specifies the number of &quot;active&quot; volumes &#8211; volumes that Amanda will not overwrite. While Amanda is always willing to write to a new volume, it refuses to overwrite a volume unless at least &#8216;<code>tapecycle</code> -1&#8242; volumes have been written since. </p>
+<dd>Default: <i>15 tapes</i>. Specifies the number of &quot;active&quot; volumes &#8211; volumes that Amanda will not overwrite. While Amanda is always willing to write to a new volume, it refuses to overwrite a volume unless at least &#8216;<code>tapecycle</code> -1&#8242; volumes have been written since. </dd>
 <p> It is considered good administrative practice to set the <code>tapecycle</code> parameter slightly lower than the actual number of tapes in use. This allows the administrator to more easily cope with damaged or misplaced tapes or schedule adjustments that call for slight adjustments in the rotation order. </p>
 <p> Note: Amanda is commonly misconfigured with <code>tapecycle</code> equal to the number of tapes per <code>dumpcycle</code>. In this misconfiguration, amanda may erase a full dump before a new one is completed. Recovery is then impossible. The <code>tapecycle</code> must be at least one tape larger than the number of tapes per dumpcycle. </p>
 <p> The number of tapes per dumpcycle is calculated by multiplying the number of <code>amdump</code> runs per dump cycle <code>runspercycle</code> (the number of <code>amdump</code> runs per dump cycle) and <code>runtapes</code> (the number of tapes used per run). Typically <code>tapecycle</code> is set to two or four times the tapes per dumpcycle.</dl>
 <p> <code>usetimestamps</code> <i>bool</i></p>
 <dl>
-<dd>Default: <code>Yes</code>. This option allows Amanda to track multiple runs per calendar day. The only reason one might disable it is that Amanda versions before 2.5.1 can&#8217;t read logfiles written when this option was enabled.</dl>
+<dd>Default: <code>Yes</code>. This option allows Amanda to track multiple runs per calendar day. The only reason one might disable it is that Amanda versions before 2.5.1 can&#8217;t read logfiles written when this option was enabled.</dd></dl>
 <p> <code>label-new-tapes</code> <i>string</i></p>
 <dl>
-<dd>Deprecated, use <code>autolabel</code> option with options <code>volume-error empty</code> to get equivalent behavior. </p>
+<dd>Deprecated, use <code>autolabel</code> option with options <code>volume-error empty</code> to get equivalent behavior. </dd>
 <p> Default: not set. When set, this directive will cause Amanda to automatically write an Amanda tape label to any blank tape she encounters.</dl>
 <p> <code>autolabel</code> <i>string</i> [<code>any</code>] [<code>other-config</code>] [<code>non-amanda</code>] [<code>volume-error</code>] [<code>empty</code>]</p>
 <dl>
-<dd>Default: not set. When set, this directive will cause Amanda to automatically write an Amanda tape label to most volume she encounters. This option is DANGEROUS because when set, Amanda may erase near-failing tapes or tapes accidentally loaded in the wrong slot. </p>
+<dd>Default: not set. When set, this directive will cause Amanda to automatically write an Amanda tape label to most volume she encounters. This option is DANGEROUS because when set, Amanda may erase near-failing tapes or tapes accidentally loaded in the wrong slot. </dd>
 <p> When using this directive, specify the template for new tape labels. The template can contains many variables that are substituted by their values: </p>
 <pre> $c : config name
  $o : org configuration
@@ -193,23 +192,23 @@ define tapetype child {
 <p> Note that many devices cannot distinguish an empty tape from an error condition, so it may is often necessary to include <code>volume-error</code> as an autolabel condition. </p>
 <p> <code>any</code></p>
 <dl>
-<dd>equivalent to &#8216;<code>other-config non-amanda volume-error empty</code>&#8216;</dl>
+<dd>equivalent to &#8216;<code>other-config non-amanda volume-error empty</code>&#8216;</dd></dl>
 <p> <code>other-config</code></p>
 <dl>
-<dd>Label volumes with a valid Amanda label that do not match our <code>labelstr</code>. Danger: this may erase volumes from other Amanda configurations without warning!</dl>
+<dd>Label volumes with a valid Amanda label that do not match our <code>labelstr</code>. Danger: this may erase volumes from other Amanda configurations without warning!</dd></dl>
 <p> <code>non-amanda</code></p>
 <dl>
-<dd>Label volumes which do not start with data that resembles an Amanda header. Danger: this may erase volumes from other backup applications without warning!</dl>
+<dd>Label volumes which do not start with data that resembles an Amanda header. Danger: this may erase volumes from other backup applications without warning!</dd></dl>
 <p> <code>volume-error</code></p>
 <dl>
-<dd>Label volumes where an error occurs while trying to read the label. Danger: this may erase arbitrary volumes due to transient errors.</dl>
+<dd>Label volumes where an error occurs while trying to read the label. Danger: this may erase arbitrary volumes due to transient errors.</dd></dl>
 <p> <code>empty</code></p>
 <dl>
-<dd>Label volumes where a read returns 0 bytes.</dl>
+<dd>Label volumes where a read returns 0 bytes.</dd></dl>
 </dl>
 <p> <code>meta-autolabel</code> <i>string</i></p>
 <dl>
-<dd>Default: not set. When set and if the changer support meta-label, this directive will cause Amanda to automatically add a meta-label to a meta-volume. </p>
+<dd>Default: not set. When set and if the changer support meta-label, this directive will cause Amanda to automatically add a meta-label to a meta-volume. </dd>
 <p> A meta-volume is a containers that contains many volumes, eg. a removable hard-disk for use with chg-disk, each hard disk have many slots (volume). The meta-label is the label to put on the meta-volume. </p>
 <p> When using this directive, specify the template for new meta labels. The template can contains many variables that are substituted by their values: </p>
 <pre> $c : config name
@@ -217,106 +216,106 @@ define tapetype child {
 <p>The template should contain some number of contiguous &#8216;%&#8217; characters, which will be replaced with a generated number. Be sure to specify enough &#8216;%&#8217; characters that you do not run out of meta labels. Example: <code>&quot;DailySet1-%%%&quot;</code>, <code>&quot;$o-%%%&quot;</code>,</dl>
 <p> <code>dumpuser</code> <i>string</i></p>
 <dl>
-<dd>Default: <i>&quot;amanda&quot;</i>. The login name Amanda uses to run the backups. The backup client hosts must allow access from the tape server host as this user via <code>.rhosts</code> or <code>.amandahosts</code>, depending on how the Amanda software was built.</dl>
+<dd>Default: <i>&quot;amanda&quot;</i>. The login name Amanda uses to run the backups. The backup client hosts must allow access from the tape server host as this user via <code>.rhosts</code> or <code>.amandahosts</code>, depending on how the Amanda software was built.</dd></dl>
 <p> <code>printer</code> <i>string</i></p>
 <dl>
-<dd>Printer to use when doing tape labels. See the <code>lbl-templ</code> <code>tapetype</code> option.</dl>
+<dd>Printer to use when doing tape labels. See the <code>lbl-templ</code> <code>tapetype</code> option.</dd></dl>
 <p> <code>tapedev</code> <i>string</i></p>
 <dl>
-<dd>Default: <i>&quot;null:&quot;</i>. This parameter can either specify a device (explicitly or by referencing a device definition &#8211; see <code><a href="/docs/linux/man/7-amanda-devices/">amanda-devices</a></code>(7)) or a tape changer (explicitly or by referencing a device definition &#8211; see <code><a href="/docs/linux/man/7-amanda-changers/">amanda-changers</a></code>(7)).</dl>
+<dd>Default: <i>&quot;null:&quot;</i>. This parameter can either specify a device (explicitly or by referencing a device definition &#8211; see <code><a href="/docs/linux/man/7-amanda-devices/">amanda-devices</a></code>(7)) or a tape changer (explicitly or by referencing a device definition &#8211; see <code><a href="/docs/linux/man/7-amanda-changers/">amanda-changers</a></code>(7)).</dd></dl>
 <p> <code>device-property</code> <i>string</i> <i>string</i></p>
 <dl>
-<dd>These options can set various device properties. See <code><a href="/docs/linux/man/7-amanda-devices/">amanda-devices</a></code>(7) for more information on device properties and their syntax. Both strings are always quoted; the first string contains the name of the property to set, and the second contains its value. For example, to set a fixed block size of 128k, write: </p>
+<dd>These options can set various device properties. See <code><a href="/docs/linux/man/7-amanda-devices/">amanda-devices</a></code>(7) for more information on device properties and their syntax. Both strings are always quoted; the first string contains the name of the property to set, and the second contains its value. For example, to set a fixed block size of 128k, write: </dd>
 <pre>device-property &quot;BLOCK_SIZE&quot; &quot;128k&quot;</pre>
 </dl>
 <p> <code>property</code> [<code>append</code>] <i>string</i> <i>string</i>+</p>
 <dl>
-<dd>These options can set various properties, they can be used by third party software to store information in the configuration file. Both strings are quoted; the first string contains the name of the property to set, and the others contains its values. <code>append</code> keyword append the values to the list of values for that property.</dl>
+<dd>These options can set various properties, they can be used by third party software to store information in the configuration file. Both strings are quoted; the first string contains the name of the property to set, and the others contains its values. <code>append</code> keyword append the values to the list of values for that property.</dd></dl>
 <p> <code>tpchanger</code> <i>string</i></p>
 <dl>
-<dd>Default: not set. The tape changer to use. In most cases, only one of <code>tpchanger</code> or <code>tapedev</code> is specified, although for backward compatibility both may be specified if <code>tpchanger</code> gives the name of an old changer script. See <code><a href="/docs/linux/man/7-amanda-changers/">amanda-changers</a></code>(7) for more information on configuring changers.</dl>
+<dd>Default: not set. The tape changer to use. In most cases, only one of <code>tpchanger</code> or <code>tapedev</code> is specified, although for backward compatibility both may be specified if <code>tpchanger</code> gives the name of an old changer script. See <code><a href="/docs/linux/man/7-amanda-changers/">amanda-changers</a></code>(7) for more information on configuring changers.</dd></dl>
 <p> <code>interactivity</code> <i>string</i></p>
 <dl>
-<dd>Default: not set. The interactivity module Amanda should use to interact with the user. See <code><a href="/docs/linux/man/7-amanda-interactivity/">amanda-interactivity</a></code>(7) for a list of modules.</dl>
+<dd>Default: not set. The interactivity module Amanda should use to interact with the user. See <code><a href="/docs/linux/man/7-amanda-interactivity/">amanda-interactivity</a></code>(7) for a list of modules.</dd></dl>
 <p> <code>taperscan</code> <i>string</i></p>
 <dl>
-<dd>Default: traditional. The taperscan module amanda should use to find a tape to write to. See <code><a href="/docs/linux/man/7-amanda-taperscan/">amanda-taperscan</a></code>(7) for a list of modules.</dl>
+<dd>Default: traditional. The taperscan module amanda should use to find a tape to write to. See <code><a href="/docs/linux/man/7-amanda-taperscan/">amanda-taperscan</a></code>(7) for a list of modules.</dd></dl>
 <p> <code>changerdev</code> <i>string</i></p>
 <dl>
-<dd>Default: <i>&quot;dev/null&quot;</i>. A tape changer configuration parameter. Usage depends on the particular changer defined with the <code>tpchanger</code> option.</dl>
+<dd>Default: <i>&quot;dev/null&quot;</i>. A tape changer configuration parameter. Usage depends on the particular changer defined with the <code>tpchanger</code> option.</dd></dl>
 <p> <code>changerfile</code> <i>string</i></p>
 <dl>
-<dd>Default: <i>&quot;/usr/adm/amanda/log/changer-status&quot;</i>. A tape changer configuration parameter. Usage depends on the particular changer defined with the <code>tpchanger</code> option.</dl>
+<dd>Default: <i>&quot;/usr/adm/amanda/log/changer-status&quot;</i>. A tape changer configuration parameter. Usage depends on the particular changer defined with the <code>tpchanger</code> option.</dd></dl>
 <p> <code>runtapes</code> <i>int</i></p>
 <dl>
-<dd>Default: <i>1</i>. The maximum number of tapes used in a single run. If a tape changer is not configured, this option is not used and should be commented out of the configuration file. </p>
+<dd>Default: <i>1</i>. The maximum number of tapes used in a single run. If a tape changer is not configured, this option is not used and should be commented out of the configuration file. </dd>
 <p> If a tape changer is configured, this may be set larger than one to let Amanda write to more than one tape. </p>
 <p> Note that this is an upper bound on the number of tapes, and Amanda may use less.</dl>
 <p> <code>maxdumpsize</code> <i>int</i></p>
 <dl>
-<dd>Default: <i></i><code>runtapes</code><i>*</i><i></i><code>tape-length</code>. Maximum number of bytes the planner will schedule for a run. </p>
+<dd>Default: <i></i><code>runtapes</code><i>*</i><i></i><code>tape-length</code>. Maximum number of bytes the planner will schedule for a run. </dd>
 <p> The default unit is Kbytes if it is not specified.</dl>
 <p> <code>taperalgo</code> [ <code>first</code> | <code>firstfit</code> | <code>largest</code> | <code>largestfit</code> | <code>smallest</code> | <code>last</code> ]</p>
 <dl>
-<dd>Default: <code>first</code>. The algorithm used to choose which dump image to send to the taper. </p>
+<dd>Default: <code>first</code>. The algorithm used to choose which dump image to send to the taper. </dd>
 <p> <code>first</code></p>
 <dl>
-<dd>First in, first out.</dl>
+<dd>First in, first out.</dd></dl>
 <p> <code>firstfit</code></p>
 <dl>
-<dd>The first dump image that will fit on the current tape.</dl>
+<dd>The first dump image that will fit on the current tape.</dd></dl>
 <p> <code>largest</code></p>
 <dl>
-<dd>The largest dump image.</dl>
+<dd>The largest dump image.</dd></dl>
 <p> <code>largestfit</code></p>
 <dl>
-<dd>The largest dump image that will fit on the current tape.</dl>
+<dd>The largest dump image that will fit on the current tape.</dd></dl>
 <p> <code>smallest</code></p>
 <dl>
-<dd>The smallest dump image.</dl>
+<dd>The smallest dump image.</dd></dl>
 <p> <code>last</code></p>
 <dl>
-<dd>Last in, first out.</dl>
+<dd>Last in, first out.</dd></dl>
 </dl>
 <p> <code>taper-parallel-write</code> <i>int</i></p>
 <dl>
-<dd>Default: <i>1</i>. Amanda can write simultaneously up to that number of volume at any given time. The changer must have as many drives.</dl>
+<dd>Default: <i>1</i>. Amanda can write simultaneously up to that number of volume at any given time. The changer must have as many drives.</dd></dl>
 <p> <code>eject-volume</code> <i>int</i></p>
 <dl>
-<dd>Default: <i>no</i>. Set to <code>yes</code> if you want the volume to be ejected after Amanda wrote data to it. It works only with some changer and device.</dl>
+<dd>Default: <i>no</i>. Set to <code>yes</code> if you want the volume to be ejected after Amanda wrote data to it. It works only with some changer and device.</dd></dl>
 <p> <code>labelstr</code> <i>string</i></p>
 <dl>
-<dd>Default: <i>&quot;.*&quot;</i>. The tape label constraint regular expression. All tape labels generated (see <code><a href="/docs/linux/man/8-amlabel/">amlabel</a></code>(8)) and used by this configuration must match the regular expression. If multiple configurations are run from the same tape server host, it is helpful to set their labels to different strings (for example, &quot;DAILY[0-9][0-9]*&quot; vs. &quot;ARCHIVE[0-9][0-9]*&quot;) to avoid overwriting each other&#8217;s tapes.</dl>
+<dd>Default: <i>&quot;.*&quot;</i>. The tape label constraint regular expression. All tape labels generated (see <code><a href="/docs/linux/man/8-amlabel/">amlabel</a></code>(8)) and used by this configuration must match the regular expression. If multiple configurations are run from the same tape server host, it is helpful to set their labels to different strings (for example, &quot;DAILY[0-9][0-9]*&quot; vs. &quot;ARCHIVE[0-9][0-9]*&quot;) to avoid overwriting each other&#8217;s tapes.</dd></dl>
 <p> <code>tapetype</code> <i>string</i></p>
 <dl>
-<dd>Default: <i>no default</i>. The type of tape drive associated with <code>tapedev</code> or <code>tpchanger</code>. This refers to one of the defined <code>tapetype</code>s in the config file (see below), which specify various tape parameters, like the <code>length</code>, <code>filemark</code> size, and <code>speed</code> of the tape media and device.</dl>
+<dd>Default: <i>no default</i>. The type of tape drive associated with <code>tapedev</code> or <code>tpchanger</code>. This refers to one of the defined <code>tapetype</code>s in the config file (see below), which specify various tape parameters, like the <code>length</code>, <code>filemark</code> size, and <code>speed</code> of the tape media and device.</dd></dl>
 <p> <code>ctimeout</code> <i>int</i></p>
 <dl>
-<dd>Default: <i>30 seconds</i>. Maximum amount of time that <code>amcheck</code> will wait for each client host.</dl>
+<dd>Default: <i>30 seconds</i>. Maximum amount of time that <code>amcheck</code> will wait for each client host.</dd></dl>
 <p> <code>dtimeout</code> <i>int</i></p>
 <dl>
-<dd>Default: <i>1800 seconds</i>. Amount of idle time per disk on a given client that a <code>dumper</code> running from within <code>amdump</code> will wait before it fails with a data timeout error.</dl>
+<dd>Default: <i>1800 seconds</i>. Amount of idle time per disk on a given client that a <code>dumper</code> running from within <code>amdump</code> will wait before it fails with a data timeout error.</dd></dl>
 <p> <code>etimeout</code> <i>int</i></p>
 <dl>
-<dd>Default: <i>300 seconds</i>. Amount of time per estimate on a given client that the <code>planner</code> step of <code>amdump</code> will wait to get the dump size estimates (note: Amanda runs up to 3 estimates for each DLE). For instance, with the default of 300 seconds and four DLE&#8217;s, each estimating level 0 and level 1 on client A, <code>planner</code> will wait up to 40 minutes for that machine. A negative value will be interpreted as a total amount of time to wait per client instead of per disk.</dl>
+<dd>Default: <i>300 seconds</i>. Amount of time per estimate on a given client that the <code>planner</code> step of <code>amdump</code> will wait to get the dump size estimates (note: Amanda runs up to 3 estimates for each DLE). For instance, with the default of 300 seconds and four DLE&#8217;s, each estimating level 0 and level 1 on client A, <code>planner</code> will wait up to 40 minutes for that machine. A negative value will be interpreted as a total amount of time to wait per client instead of per disk.</dd></dl>
 <p> <code>connect-tries</code> <i>int</i></p>
 <dl>
-<dd>Default: <i>3</i>. How many times the server will try a connection.</dl>
+<dd>Default: <i>3</i>. How many times the server will try a connection.</dd></dl>
 <p> <code>req-tries</code> <i>int</i></p>
 <dl>
-<dd>Default: <i>3</i>. How many times the server will resend a REQ packet if it doesn&#8217;t get the ACK packet.</dl>
+<dd>Default: <i>3</i>. How many times the server will resend a REQ packet if it doesn&#8217;t get the ACK packet.</dd></dl>
 <p> <code>netusage</code> <i>int</i></p>
 <dl>
-<dd>Default: <i>80000 Kbps</i>. The maximum network bandwidth allocated to Amanda, in Kbytes per second. See also the <code>interface</code> section.</dl>
+<dd>Default: <i>80000 Kbps</i>. The maximum network bandwidth allocated to Amanda, in Kbytes per second. See also the <code>interface</code> section.</dd></dl>
 <p> <code>inparallel</code> <i>int</i></p>
 <dl>
-<dd>Default: <i>10</i>. The maximum number of backups that Amanda will attempt to run in parallel. Amanda will stay within the constraints of network bandwidth and holding disk space available, so it doesn&#8217;t hurt to set this number a bit high. Some contention can occur with larger numbers of backups, but this effect is relatively small on most systems.</dl>
+<dd>Default: <i>10</i>. The maximum number of backups that Amanda will attempt to run in parallel. Amanda will stay within the constraints of network bandwidth and holding disk space available, so it doesn&#8217;t hurt to set this number a bit high. Some contention can occur with larger numbers of backups, but this effect is relatively small on most systems.</dd></dl>
 <p> <code>displayunit</code> &quot;k|m|g|t&quot;</p>
 <dl>
-<dd>Default: <i>&quot;k&quot;</i>. The unit used to print many numbers, k=kilo, m=mega, g=giga, t=tera.</dl>
+<dd>Default: <i>&quot;k&quot;</i>. The unit used to print many numbers, k=kilo, m=mega, g=giga, t=tera.</dd></dl>
 <p> <code>dumporder</code> <i>string</i></p>
 <dl>
-<dd>Default: <i>&quot;tttTTTTTTT&quot;</i>. The priority order of each dumper: </p>
+<dd>Default: <i>&quot;tttTTTTTTT&quot;</i>. The priority order of each dumper: </dd>
 <pre>s: smallest size
 S: largest size
 t: smallest time
@@ -326,73 +325,73 @@ B: largest bandwidth</pre>
 </dl>
 <p> <code>maxdumps</code> <i>int</i></p>
 <dl>
-<dd>Default: <i>1</i>. The maximum number of backups from a single host that Amanda will attempt to run in parallel. See also the <code>inparallel</code> option. </p>
+<dd>Default: <i>1</i>. The maximum number of backups from a single host that Amanda will attempt to run in parallel. See also the <code>inparallel</code> option. </dd>
 <p> Note that this parameter may also be set in a specific <code>dumptype</code> (see below). This value sets the default for all <code>dumptype</code>s so must appear in <code>amanda.conf</code> before any <code>dumptype</code>s are defined.</dl>
 <p> <code>bumpsize</code> <i>int</i></p>
 <dl>
-<dd>Default: <i>10 Mbytes</i>. The minimum savings required to trigger an automatic bump from one incremental level to the next, expressed as size. If Amanda determines that the next higher backup level will be this much smaller than the current level, it will do the next level. The value of this parameter is used only if the parameter <i>bumppercent</i> is set to 0. </p>
+<dd>Default: <i>10 Mbytes</i>. The minimum savings required to trigger an automatic bump from one incremental level to the next, expressed as size. If Amanda determines that the next higher backup level will be this much smaller than the current level, it will do the next level. The value of this parameter is used only if the parameter <i>bumppercent</i> is set to 0. </dd>
 <p> The default unit is Kbytes if it is not specified. </p>
 <p> The global setting of this parameter can be overwritten inside of a dumptype-definition. </p>
 <p> See also the options <code>bumppercent</code>, <code>bumpmult</code> and <code>bumpdays</code>.</dl>
 <p> <code>bumppercent</code> <i>int</i></p>
 <dl>
-<dd>Default: <i>0</i>. The minimum savings required to trigger an automatic bump from one incremental level to the next, expressed as percentage of the current size of the DLE (size of current level 0). If Amanda determines that the next higher backup level will be this much smaller than the current level, it will do the next level. </p>
+<dd>Default: <i>0</i>. The minimum savings required to trigger an automatic bump from one incremental level to the next, expressed as percentage of the current size of the DLE (size of current level 0). If Amanda determines that the next higher backup level will be this much smaller than the current level, it will do the next level. </dd>
 <p> If this parameter is set to 0, the value of the parameter <i>bumpsize</i> is used to trigger bumping. </p>
 <p> The global setting of this parameter can be overwritten inside of a dumptype-definition. </p>
 <p> See also the options <code>bumpsize</code>, <code>bumpmult</code> and <code>bumpdays</code>.</dl>
 <p> <code>bumpmult</code> <i>float</i></p>
 <dl>
-<dd>Default: <i>1.5</i>. The bump size multiplier. Amanda multiplies <code>bumpsize</code> by this factor for each level. This prevents active filesystems from bumping too much by making it harder to bump to the next level. For example, with the default <code>bumpsize</code> and <code>bumpmult</code> set to 2.0, the bump threshold will be 10 Mbytes for level one, 20 Mbytes for level two, 40 Mbytes for level three, and so on. </p>
+<dd>Default: <i>1.5</i>. The bump size multiplier. Amanda multiplies <code>bumpsize</code> by this factor for each level. This prevents active filesystems from bumping too much by making it harder to bump to the next level. For example, with the default <code>bumpsize</code> and <code>bumpmult</code> set to 2.0, the bump threshold will be 10 Mbytes for level one, 20 Mbytes for level two, 40 Mbytes for level three, and so on. </dd>
 <p> The global setting of this parameter can be overwritten inside of a dumptype-definition.</dl>
 <p> <code>bumpdays</code> <i>int</i></p>
 <dl>
-<dd>Default: <i>2 days</i>. To insure redundancy in the dumps, Amanda keeps filesystems at the same incremental level for at least <code>bumpdays</code> days, even if the other bump threshold criteria are met. </p>
+<dd>Default: <i>2 days</i>. To insure redundancy in the dumps, Amanda keeps filesystems at the same incremental level for at least <code>bumpdays</code> days, even if the other bump threshold criteria are met. </dd>
 <p> The global setting of this parameter can be overwritten inside of a dumptype-definition.</dl>
 <p> <code>diskfile</code> <i>string</i></p>
 <dl>
-<dd>Default: <i>&quot;disklist&quot;</i>. The file name for the <i>disklist</i> file holding client hosts, disks and other client dumping information.</dl>
+<dd>Default: <i>&quot;disklist&quot;</i>. The file name for the <i>disklist</i> file holding client hosts, disks and other client dumping information.</dd></dl>
 <p> <code>infofile</code> <i>string</i></p>
 <dl>
-<dd>Default: <i>&quot;/usr/adm/amanda/curinfo&quot;</i>. The file or directory name for the historical information database. If Amanda was configured to use DBM databases, this is the base file name for them. If it was configured to use text formated databases (the default), this is the base directory and within here will be a directory per client, then a directory per disk, then a text file of data.</dl>
+<dd>Default: <i>&quot;/usr/adm/amanda/curinfo&quot;</i>. The file or directory name for the historical information database. If Amanda was configured to use DBM databases, this is the base file name for them. If it was configured to use text formated databases (the default), this is the base directory and within here will be a directory per client, then a directory per disk, then a text file of data.</dd></dl>
 <p> <code>logdir</code> <i>string</i></p>
 <dl>
-<dd>Default: <i>&quot;/usr/adm/amanda&quot;</i>. The directory for the <code>amdump</code> and <code>log</code> files.</dl>
+<dd>Default: <i>&quot;/usr/adm/amanda&quot;</i>. The directory for the <code>amdump</code> and <code>log</code> files.</dd></dl>
 <p> <code>indexdir</code> <i>string</i></p>
 <dl>
-<dd>Default <i>&quot;/usr/adm/amanda/index&quot;</i>. The directory where index files (backup image catalogues) are stored. Index files are only generated for filesystems whose <code>dumptype</code> has the <code>index</code> option enabled.</dl>
+<dd>Default <i>&quot;/usr/adm/amanda/index&quot;</i>. The directory where index files (backup image catalogues) are stored. Index files are only generated for filesystems whose <code>dumptype</code> has the <code>index</code> option enabled.</dd></dl>
 <p> <code>tapelist</code> <i>string</i></p>
 <dl>
-<dd>Default: <i>&quot;tapelist&quot;</i>. The file name for the active <code><a href="/docs/linux/man/5-tapelist/">tapelist</a></code>(5). Amanda maintains this file with information about the active set of tapes.</dl>
+<dd>Default: <i>&quot;tapelist&quot;</i>. The file name for the active <code><a href="/docs/linux/man/5-tapelist/">tapelist</a></code>(5). Amanda maintains this file with information about the active set of tapes.</dd></dl>
 <p> <code>device-output-buffer-size</code> <i>int</i></p>
 <dl>
-<dd>Default: <i>1280k</i>. Controls the amount of memory used by Amanda to hold data as it is read from the network or disk before it is written to the output device. Higher values may be useful on fast tape drives and optical media. </p>
+<dd>Default: <i>1280k</i>. Controls the amount of memory used by Amanda to hold data as it is read from the network or disk before it is written to the output device. Higher values may be useful on fast tape drives and optical media. </dd>
 <p> The default unit is bytes if it is not specified.</dl>
 <p> <code>tapebufs</code> <i>int</i></p>
 <dl>
-<dd>Default: <i>20</i>. This option is deprecated; use the <code>device-output-buffer-size</code> directive instead. <code>tapebufs</code> works the same way, but the number specified is multiplied by the device blocksize prior to use.</dl>
+<dd>Default: <i>20</i>. This option is deprecated; use the <code>device-output-buffer-size</code> directive instead. <code>tapebufs</code> works the same way, but the number specified is multiplied by the device blocksize prior to use.</dd></dl>
 <p> <code>reserve</code> <i>int</i></p>
 <dl>
-<dd>Default: <i>100</i>. The part of holding-disk space that should be reserved for incremental backups if no tape is available, expressed as a percentage of the available holding-disk space (0-100). By default, when there is no tape to write to, degraded mode (incremental) backups will be performed to the holding disk. If full backups should also be allowed in this case, the amount of holding disk space reserved for incrementals should be lowered.</dl>
+<dd>Default: <i>100</i>. The part of holding-disk space that should be reserved for incremental backups if no tape is available, expressed as a percentage of the available holding-disk space (0-100). By default, when there is no tape to write to, degraded mode (incremental) backups will be performed to the holding disk. If full backups should also be allowed in this case, the amount of holding disk space reserved for incrementals should be lowered.</dd></dl>
 <p> <code>autoflush</code> <code>no</code>|<code>yes</code>|<code>all</code></p>
 <dl>
-<dd>Default: <code>no</code>. Whether an amdump run will flush the dumps from holding disk to tape. With <code>yes</code>, only dump matching the command line argument are flushed. With <code>all</code>, all dump are flushed.</dl>
+<dd>Default: <code>no</code>. Whether an amdump run will flush the dumps from holding disk to tape. With <code>yes</code>, only dump matching the command line argument are flushed. With <code>all</code>, all dump are flushed.</dd></dl>
 <p> <code>amrecover-do-fsf</code> <i>bool</i></p>
 <dl>
-<dd>Deprecated; amrecover always uses fsf, and does not invoke amrestore. </p>
+<dd>Deprecated; amrecover always uses fsf, and does not invoke amrestore. </dd>
 <p> Default: <code>on</code>. Amrecover will call amrestore with the -f flag for faster positioning of the tape.</dl>
 <p> <code>amrecover-check-label</code> <i>bool</i></p>
 <dl>
-<dd>Deprecated; amrecover always checks the label, and does not invoke amrestore. </p>
+<dd>Deprecated; amrecover always checks the label, and does not invoke amrestore. </dd>
 <p> Default: <code>on</code>. Amrecover will call amrestore with the -l flag to check the label.</dl>
 <p> <code>amrecover-changer</code> <i>string</i></p>
 <dl>
-<dd>Default: not set. Amrecover will use the changer if you use &#8216;settape &lt;string&gt;&#8217; and that string is the same as the <code>amrecover-changer</code> setting.</dl>
+<dd>Default: not set. Amrecover will use the changer if you use &#8216;settape &lt;string&gt;&#8217; and that string is the same as the <code>amrecover-changer</code> setting.</dd></dl>
 <p> <code>columnspec</code> <i>string</i></p>
 <dl>
-<dd>default: &quot;HostName=0:-12:12,Disk=1:-11:11,Level=1:-1:1,OrigKB=1:-7:0,OutKB=1:-7:0,Compress=1:-6:1,DumpTime=1:-7:7,Dumprate=1:-6:1,TapeTime=1:-6:6,TapeRate=1:-6:1&quot; </p>
+<dd>default: &quot;HostName=0:-12:12,Disk=1:-11:11,Level=1:-1:1,OrigKB=1:-7:0,OutKB=1:-7:0,Compress=1:-6:1,DumpTime=1:-7:7,Dumprate=1:-6:1,TapeTime=1:-6:6,TapeRate=1:-6:1&quot; </dd>
 <p> Defines the width of columns <code>amreport</code> should use. <i>String</i> is a comma (&#8216;,&#8217;) separated list of triples. Each triple consists of three parts which are separated by a equal sign (&#8216;=&#8217;) and a colon (&#8216;:&#8217;) (see the example). These four parts specify: </p>
 <dl>
-<dd>1. the name of the column, which may be: </p>
+<dd>1. the name of the column, which may be: </dd>
 <pre> Compress (compression ratio)
  Disk (client disk name)
  DumpRate (dump rate in KBytes/sec)
@@ -405,82 +404,82 @@ B: largest bandwidth</pre>
  TapeTime (total tape time in hours:minutes)</pre>
 </dl>
 <dl>
-<dd>2. the amount of space to display before the column (used to get whitespace between columns).</dl>
+<dd>2. the amount of space to display before the column (used to get whitespace between columns).</dd></dl>
 <dl>
-<dd>3. the width of the column itself. If set to a negative value, the width will be calculated on demand to fit the largest entry in this column.</dl>
+<dd>3. the width of the column itself. If set to a negative value, the width will be calculated on demand to fit the largest entry in this column.</dd></dl>
 <dl>
-<dd>4. the precision of the column, number of digit after the decimal point for number.</dl>
+<dd>4. the precision of the column, number of digit after the decimal point for number.</dd></dl>
 <p> Here is an example: </p>
 <pre>columnspec &quot;Disk=1:18,HostName=0:10,OrigKB=::2,OutKB=1:7&quot;</pre>
 <p>The above will display the disk information in 18 characters and put one space before it. The hostname column will be 10 characters wide with no space to the left. The Original KBytes print 2 decimal digit. The output KBytes column is seven characters wide with one space before it.</dl>
 <p> <code>includefile</code> <i>string</i></p>
 <dl>
-<dd>Default: <i>no default</i>. The name of an Amanda configuration file to include within the current file. Useful for sharing dumptypes, tapetypes and interface definitions among several configurations. Relative pathnames are relative to the configuration directory.</dl>
+<dd>Default: <i>no default</i>. The name of an Amanda configuration file to include within the current file. Useful for sharing dumptypes, tapetypes and interface definitions among several configurations. Relative pathnames are relative to the configuration directory.</dd></dl>
 <p> <code>debug-days</code> <i>int</i></p>
 <dl>
-<dd>Default: <i>3</i>. The number of days the debug files are kept.</dl>
+<dd>Default: <i>3</i>. The number of days the debug files are kept.</dd></dl>
 <p> <code>debug-auth</code> <i>int</i></p>
 <dl>
-<dd>Default: <i>0</i>. Debug level of the auth module</dl>
+<dd>Default: <i>0</i>. Debug level of the auth module</dd></dl>
 <p> <code>debug-event</code> <i>int</i></p>
 <dl>
-<dd>Default: <i>0</i>. Debug level of the event module</dl>
+<dd>Default: <i>0</i>. Debug level of the event module</dd></dl>
 <p> <code>debug-holding</code> <i>int</i></p>
 <dl>
-<dd>Default: <i>0</i>. Debug level of the holdingdisk module</dl>
+<dd>Default: <i>0</i>. Debug level of the holdingdisk module</dd></dl>
 <p> <code>debug-protocol</code> <i>int</i></p>
 <dl>
-<dd>Default: <i>0</i>. Debug level of the protocol module</dl>
+<dd>Default: <i>0</i>. Debug level of the protocol module</dd></dl>
 <p> <code>debug-planner</code> <i>int</i></p>
 <dl>
-<dd>Default: <i>0</i>. Debug level of the planner process</dl>
+<dd>Default: <i>0</i>. Debug level of the planner process</dd></dl>
 <p> <code>debug-driver</code> <i>int</i></p>
 <dl>
-<dd>Default: <i>0</i>. Debug level of the driver process</dl>
+<dd>Default: <i>0</i>. Debug level of the driver process</dd></dl>
 <p> <code>debug-dumper</code> <i>int</i></p>
 <dl>
-<dd>Default: <i>0</i>. Debug level of the dumper process</dl>
+<dd>Default: <i>0</i>. Debug level of the dumper process</dd></dl>
 <p> <code>debug-chunker</code> <i>int</i></p>
 <dl>
-<dd>Default: <i>0</i>. Debug level of the chunker process</dl>
+<dd>Default: <i>0</i>. Debug level of the chunker process</dd></dl>
 <p> <code>debug-taper</code> <i>int</i></p>
 <dl>
-<dd>Default: <i>0</i>. Debug level of the taper process</dl>
+<dd>Default: <i>0</i>. Debug level of the taper process</dd></dl>
 <p> <code>debug-recovery</code> <i>int</i></p>
 <dl>
-<dd>Default: <i>1</i>. Debug level of all recovery process</dl>
+<dd>Default: <i>1</i>. Debug level of all recovery process</dd></dl>
 <p> <code>flush-threshold-dumped</code> <i>int</i></p>
 <dl>
-<dd>Default: <i>0</i>. Amanda will not begin writing data to a new volume until the amount of data on the holding disk is at least this percentage of the volume size. In other words, Amanda will not begin until the amount of data on the holding disk is greater than the tape length times this parameter. This parameter may be larger than 100%, for example to keep more recent dumps on the holding disk for faster recovery. </p>
+<dd>Default: <i>0</i>. Amanda will not begin writing data to a new volume until the amount of data on the holding disk is at least this percentage of the volume size. In other words, Amanda will not begin until the amount of data on the holding disk is greater than the tape length times this parameter. This parameter may be larger than 100%, for example to keep more recent dumps on the holding disk for faster recovery. </dd>
 <p> Needless to say, your holding disk must be big enough that this criterion could be satisfied. If the holding disk cannot be used for a particular dump (because, for example, there is no remaining holding space) then Amanda will disregard the constraint specified by this setting and start a new volume anyway. Once writing to a volume has begun, this constraint is not applied unless and until a new volume is needed. </p>
 <p> The value of this parameter may not exceed than that of the <code>flush-threshold-scheduled</code> parameter.</dl>
 <p> <code>flush-threshold-scheduled</code> <i>int</i></p>
 <dl>
-<dd>Default: <i>0</i>. Amanda will not begin writing data to a new volume until the sum of the amount of data on the holding disk and the estimated amount of data remaining to be dumped during this run is at least this percentage of the volume size. In other words, Amanda will not begin until the inequality h + s &gt; t &#215; d is satisfied, where h is the amount of data on the holding disk, s is the total amount of data scheduled for this run but not dumped yet, t is the capacity of a volume, and d is this parameter, expressed as a percentage. This parameter may be larger than 100%. </p>
+<dd>Default: <i>0</i>. Amanda will not begin writing data to a new volume until the sum of the amount of data on the holding disk and the estimated amount of data remaining to be dumped during this run is at least this percentage of the volume size. In other words, Amanda will not begin until the inequality h + s &gt; t &#215; d is satisfied, where h is the amount of data on the holding disk, s is the total amount of data scheduled for this run but not dumped yet, t is the capacity of a volume, and d is this parameter, expressed as a percentage. This parameter may be larger than 100%. </dd>
 <p> Needless to say, your holding disk must be big enough that this criterion could be satisfied. If the holding disk cannot be used for a particular dump (because, for example, there is no remaining holding space) then Amanda will disregard the constraint specified by this setting and start a new volume anyway. Once writing to a volume has begun, this constraint is not applied unless and until a new volume is needed. </p>
 <p> The value of this parameter may not be less than that of the <code>flush-threshold-dumped</code> or <code>taperflush</code> parameters.</dl>
 <p> <code>taperflush</code> <i>int</i></p>
 <dl>
-<dd>Default: <i>0</i>. At the end of a run, Amanda will start a new tape to flush remaining data if there is more data on the holding disk at the end of a run than this setting allows; the amount is specified as a percentage of the capacity of a single volume. In other words, at the end of a run, Amanda will begin a new tape if the inequality h &gt; t &#215; f is satisfied, where h is the amount of data remaining on the holding disk from this or previous runs, t is the capacity of a volume, and f is this parameter, expressed as a percentage. This parameter may be greater than 100%. </p>
+<dd>Default: <i>0</i>. At the end of a run, Amanda will start a new tape to flush remaining data if there is more data on the holding disk at the end of a run than this setting allows; the amount is specified as a percentage of the capacity of a single volume. In other words, at the end of a run, Amanda will begin a new tape if the inequality h &gt; t &#215; f is satisfied, where h is the amount of data remaining on the holding disk from this or previous runs, t is the capacity of a volume, and f is this parameter, expressed as a percentage. This parameter may be greater than 100%. </dd>
 <p> The value of this parameter may not exceed that of the <code>flush-threshold-scheduled</code> parameter.; <code>autoflush</code> must be set to &#8216;yes&#8217; if <code>taperflush</code> is greater than 0.</dl>
 <p> <code>reserved-udp-port</code> <i>int</i>,<i>int</i></p>
 <dl>
-<dd>Default: &#8211;with-udpportrange or <i>512,1023</i>. Reserved udp port that will be used (bsd, bsdudp). Range is inclusive.</dl>
+<dd>Default: &#8211;with-udpportrange or <i>512,1023</i>. Reserved udp port that will be used (bsd, bsdudp). Range is inclusive.</dd></dl>
 <p> <code>reserved-tcp-port</code> <i>int</i>,<i>int</i></p>
 <dl>
-<dd>Default: &#8211;with-low-tcpportrange or <i>512,1023</i>. Reserved tcp port that will be used (bsdtcp). Range is inclusive.</dl>
+<dd>Default: &#8211;with-low-tcpportrange or <i>512,1023</i>. Reserved tcp port that will be used (bsdtcp). Range is inclusive.</dd></dl>
 <p> <code>unreserved-tcp-port</code> <i>int</i>,<i>int</i></p>
 <dl>
-<dd>Default: &#8211;with-tcpportrange or <i>1024,65535</i>. Unreserved tcp port that will be used (bsd, bsdudp). Range is inclusive.</dl>
+<dd>Default: &#8211;with-tcpportrange or <i>1024,65535</i>. Unreserved tcp port that will be used (bsd, bsdudp). Range is inclusive.</dd></dl>
 <p> <code>recovery-limit</code> [ <i>string</i> | <code>same-host</code> | <code>server</code>]</p>
 <dl>
-<dd>Default: none (no limitations). This parameter limits the hosts that may do recoveries. Hosts are identified by their authenticated peer name, as described in <code><a href="/docs/linux/man/7-amanda-auth/">amanda-auth</a></code>(7); if this is not available and the recovery-limit parameter is present, recovery will be denied. The arguments to the parameter are strings giving host match expressions (see <code><a href="/docs/linux/man/7-amanda-match/">amanda-match</a></code>(7)) or the special keywords <code>same-host</code> or <code>server</code>. The <code>same-host</code> keyword requires an exact match to the hostname of the DLE being recovered. The <code>server</code> keyword require the connection come from the fqdn of the server. Specifying no arguments at all will disable all recoveries from any host. </p>
+<dd>Default: none (no limitations). This parameter limits the hosts that may do recoveries. Hosts are identified by their authenticated peer name, as described in <code><a href="/docs/linux/man/7-amanda-auth/">amanda-auth</a></code>(7); if this is not available and the recovery-limit parameter is present, recovery will be denied. The arguments to the parameter are strings giving host match expressions (see <code><a href="/docs/linux/man/7-amanda-match/">amanda-match</a></code>(7)) or the special keywords <code>same-host</code> or <code>server</code>. The <code>same-host</code> keyword requires an exact match to the hostname of the DLE being recovered. The <code>server</code> keyword require the connection come from the fqdn of the server. Specifying no arguments at all will disable all recoveries from any host. </dd>
 <p> Note that match expressions can be constructed to be forgiving of e.g., fully-qualified vs. unqualified hostnames, but <code>same-host</code> requires an exact match. </p>
 <p> The error messages that appear in amrecover are intentionally vague to avoid information leakage. Consult the amindexd debug log for more details on the reasons a recovery was rejected. </p>
 <p> Recovery limits can be refined on a per-DLE basis using the dumptype parameter of the same name. Note that the default value will apply to any dumpfiles for disks which no longer appear in the disklist; thus leaving the global parameter at its default value but setting it for all DLEs is not sufficient to maintain secure backups.</dl>
 <p> <code>tmpdir</code> <i>string</i></p>
 <dl>
-<dd>Default: none (system default). Set it to a directory with lots of free space if sort in amindexd fail with &#8216;No space left on device&#8217;.</dl>
+<dd>Default: none (system default). Set it to a directory with lots of free space if sort in amindexd fail with &#8216;No space left on device&#8217;.</dd></dl>
 <h2>Holdingdisk Section</h2>
 <p>The <code>amanda.conf</code> file may define one or more holding disks used as buffers to hold backup images before they are written to tape. The syntax is: </p>
 <pre>define holdingdisk <i>name</i> {
@@ -492,16 +491,16 @@ B: largest bandwidth</pre>
 <p> The options and values are: </p>
 <p> <code>comment</code> <i>string</i></p>
 <dl>
-<dd>Default: not set. A comment string describing this holding disk.</dl>
+<dd>Default: not set. A comment string describing this holding disk.</dd></dl>
 <p> <code>directory</code> <i>string</i></p>
 <dl>
-<dd>Default: <i>&quot;/dumps/amanda&quot;</i>. The path to this holding area.</dl>
+<dd>Default: <i>&quot;/dumps/amanda&quot;</i>. The path to this holding area.</dd></dl>
 <p> <code>use</code> <i>int</i></p>
 <dl>
-<dd>Default: <i>0 Gb</i>. Amount of space that can be used in this holding disk area. If the value is zero, all available space on the file system is used. If the value is negative, Amanda will use all available space minus that value.</dl>
+<dd>Default: <i>0 Gb</i>. Amount of space that can be used in this holding disk area. If the value is zero, all available space on the file system is used. If the value is negative, Amanda will use all available space minus that value.</dd></dl>
 <p> <code>chunksize</code> <i>int</i></p>
 <dl>
-<dd>Default: <i>1 Gb</i>. Holding disk chunk size. Dumps larger than the specified size will be stored in multiple holding disk files. The size of each chunk will not exceed the specified value. However, even though dump images are split in the holding disk, they are concatenated as they are written to tape, so each dump image still corresponds to a single continuous tape section. </p>
+<dd>Default: <i>1 Gb</i>. Holding disk chunk size. Dumps larger than the specified size will be stored in multiple holding disk files. The size of each chunk will not exceed the specified value. However, even though dump images are split in the holding disk, they are concatenated as they are written to tape, so each dump image still corresponds to a single continuous tape section. </dd>
 <p> The default unit is Kbytes if it is not specified. </p>
 <p> If 0 is specified, Amanda will create holding disk chunks as large as ((INT_MAX/1024)-64) Kbytes. </p>
 <p> Each holding disk chunk includes a 32 Kbyte header, so the minimum chunk size is 64 Kbytes (but that would be really silly). </p>
@@ -519,93 +518,93 @@ B: largest bandwidth</pre>
 <p> The dumptype options and values are: </p>
 <p> <code>auth</code> <i>string</i></p>
 <dl>
-<dd>Default: <i>&quot;bsdtcp&quot;</i>. Type of authorization to perform between tape server and backup client hosts. See <code><a href="/docs/linux/man/7-amanda-auth/">amanda-auth</a></code>(7) for more detail.</dl>
+<dd>Default: <i>&quot;bsdtcp&quot;</i>. Type of authorization to perform between tape server and backup client hosts. See <code><a href="/docs/linux/man/7-amanda-auth/">amanda-auth</a></code>(7) for more detail.</dd></dl>
 <p> <code>amandad-path</code> <i>string</i></p>
 <dl>
-<dd>Default: <i>&quot;$libexec/amandad&quot;</i>. Specify the amandad path of the client, only use with rsh/ssh authentification.</dl>
+<dd>Default: <i>&quot;$libexec/amandad&quot;</i>. Specify the amandad path of the client, only use with rsh/ssh authentification.</dd></dl>
 <p> <code>client-username</code> <i>string</i></p>
 <dl>
-<dd>Default: <i>CLIENT_LOGIN</i>. Specify the username to connect on the client, only use with rsh/ssh authentification.</dl>
+<dd>Default: <i>CLIENT_LOGIN</i>. Specify the username to connect on the client, only use with rsh/ssh authentification.</dd></dl>
 <p> <code>client-port</code> [ <i>int</i> | <i>string</i> ]</p>
 <dl>
-<dd>Default: <i>&quot;amanda&quot;</i>. Specifies the port to connect to on the client. It can be a service name or a numeric port number.</dl>
+<dd>Default: <i>&quot;amanda&quot;</i>. Specifies the port to connect to on the client. It can be a service name or a numeric port number.</dd></dl>
 <p> <code>bumpsize</code> <i>int</i></p>
 <dl>
-<dd>Default: <i>10 Mbytes</i>. The minimum savings required to trigger an automatic bump from one incremental level to the next, expressed as size. If Amanda determines that the next higher backup level will be this much smaller than the current level, it will do the next level. The value of this parameter is used only if the parameter <i>bumppercent</i> is set to 0. </p>
+<dd>Default: <i>10 Mbytes</i>. The minimum savings required to trigger an automatic bump from one incremental level to the next, expressed as size. If Amanda determines that the next higher backup level will be this much smaller than the current level, it will do the next level. The value of this parameter is used only if the parameter <i>bumppercent</i> is set to 0. </dd>
 <p> The default unit is Kbytes if it is not specified. </p>
 <p> See also the options <code>bumppercent</code>, <code>bumpmult</code> and <code>bumpdays</code>.</dl>
 <p> <code>bumppercent</code> <i>int</i></p>
 <dl>
-<dd>Default: <i>0</i>. The minimum savings required to trigger an automatic bump from one incremental level to the next, expressed as percentage of the current size of the DLE (size of current level 0). If Amanda determines that the next higher backup level will be this much smaller than the current level, it will do the next level. </p>
+<dd>Default: <i>0</i>. The minimum savings required to trigger an automatic bump from one incremental level to the next, expressed as percentage of the current size of the DLE (size of current level 0). If Amanda determines that the next higher backup level will be this much smaller than the current level, it will do the next level. </dd>
 <p> If this parameter is set to 0, the value of the parameter <i>bumpsize</i> is used to trigger bumping. </p>
 <p> See also the options <code>bumpsize</code>, <code>bumpmult</code> and <code>bumpdays</code>.</dl>
 <p> <code>bumpmult</code> <i>float</i></p>
 <dl>
-<dd>Default: <i>1.5</i>. The bump size multiplier. Amanda multiplies <code>bumpsize</code> by this factor for each level. This prevents active filesystems from bumping too much by making it harder to bump to the next level. For example, with the default <code>bumpsize</code> and <code>bumpmult</code> set to 2.0, the bump threshold will be 10 Mbytes for level one, 20 Mbytes for level two, 40 Mbytes for level three, and so on.</dl>
+<dd>Default: <i>1.5</i>. The bump size multiplier. Amanda multiplies <code>bumpsize</code> by this factor for each level. This prevents active filesystems from bumping too much by making it harder to bump to the next level. For example, with the default <code>bumpsize</code> and <code>bumpmult</code> set to 2.0, the bump threshold will be 10 Mbytes for level one, 20 Mbytes for level two, 40 Mbytes for level three, and so on.</dd></dl>
 <p> <code>bumpdays</code> <i>int</i></p>
 <dl>
-<dd>Default: <i>2 days</i>. To insure redundancy in the dumps, Amanda keeps filesystems at the same incremental level for at least <code>bumpdays</code> days, even if the other bump threshold criteria are met.</dl>
+<dd>Default: <i>2 days</i>. To insure redundancy in the dumps, Amanda keeps filesystems at the same incremental level for at least <code>bumpdays</code> days, even if the other bump threshold criteria are met.</dd></dl>
 <p> <code>comment</code> <i>string</i></p>
 <dl>
-<dd>Default: not set. A comment string describing this set of backup options.</dl>
+<dd>Default: not set. A comment string describing this set of backup options.</dd></dl>
 <p> <code>comprate</code> <i>float</i> [, <i>float</i> ]</p>
 <dl>
-<dd>Default: <i>0.50, 0.50</i>. The expected full and incremental compression factor for dumps. It is only used if Amanda does not have any history information on compression rates for a filesystem, so should not usually need to be set. However, it may be useful for the first time a very large filesystem that compresses very little is backed up.</dl>
+<dd>Default: <i>0.50, 0.50</i>. The expected full and incremental compression factor for dumps. It is only used if Amanda does not have any history information on compression rates for a filesystem, so should not usually need to be set. However, it may be useful for the first time a very large filesystem that compresses very little is backed up.</dd></dl>
 <p> <code>compress</code> [ <code>none</code> | <code>client</code> | <code>server</code> ] [ <code>best</code> | <code>fast</code> | <code>custom</code> ]</p>
 <dl>
-<dd>Default: <code>client fast</code>. If Amanda does compression of the backup images, it can do so either on the backup client host before it crosses the network or on the tape server host as it goes from the network into the holding disk or to tape. Which place to do compression (if at all) depends on how well the dump image usually compresses, the speed and load on the client or server, network capacity, holding disk capacity, availability of tape hardware compression, etc. </p>
+<dd>Default: <code>client fast</code>. If Amanda does compression of the backup images, it can do so either on the backup client host before it crosses the network or on the tape server host as it goes from the network into the holding disk or to tape. Which place to do compression (if at all) depends on how well the dump image usually compresses, the speed and load on the client or server, network capacity, holding disk capacity, availability of tape hardware compression, etc. </dd>
 <p> For either type of compression, Amanda also allows the selection of three styles of compression. <code>best</code> is the best compression available, often at the expense of CPU overhead. <code>fast</code> is often not as good a compression as <code>best</code>, but usually less CPU overhead. Or to specify <code>custom</code> to use your own compression method. (See dumptype custom-compress in example/amanda.conf for reference) </p>
 <p> So the <code>compress</code> options line may be one of: </p>
 <p> compress none</p>
 <dl>
-<dd></dl>
+<dd></dd></dl>
 <p> compress client fast</p>
 <dl>
-<dd></dl>
+<dd></dd></dl>
 <p> compress client best</p>
 <dl>
-<dd></dl>
+<dd></dd></dl>
 <p> compress client custom</p>
 <dl>
-<dd>Specify <code>client-custom-compress</code> &quot;PROG&quot; </p>
+<dd>Specify <code>client-custom-compress</code> &quot;PROG&quot; </dd>
 <p> PROG must not contain white space and it must accept -d for uncompress.</dl>
 <p> compress server fast</p>
 <dl>
-<dd></dl>
+<dd></dd></dl>
 <p> compress server best</p>
 <dl>
-<dd></dl>
+<dd></dd></dl>
 <p> compress server custom</p>
 <dl>
-<dd>Specify <code>server-custom-compress</code> &quot;PROG&quot; </p>
+<dd>Specify <code>server-custom-compress</code> &quot;PROG&quot; </dd>
 <p> PROG must not contain white space and it must accept -d for uncompress.</dl>
 <p> Note that some tape devices do compression and this option has nothing to do with whether that is used. If hardware compression is used (usually via a particular tape device name or <code>mt</code> option), Amanda (software) compression should be disabled.</dl>
 <p> <code>client-custom-compress</code> <i>string</i></p>
 <dl>
-<dd>Default: none. The program to use to perform compression/decompression on the client; used with &quot;compress client custom&quot;. Must not contain whitespace. Must accept -d to uncompress.</dl>
+<dd>Default: none. The program to use to perform compression/decompression on the client; used with &quot;compress client custom&quot;. Must not contain whitespace. Must accept -d to uncompress.</dd></dl>
 <p> <code>server-custom-compress</code> <i>string</i></p>
 <dl>
-<dd>Default: none. The program to use to perform compression/decompression on the server; used with &quot;compress server custom&quot;. Must not contain whitespace. Must accept -d to uncompress.</dl>
+<dd>Default: none. The program to use to perform compression/decompression on the server; used with &quot;compress server custom&quot;. Must not contain whitespace. Must accept -d to uncompress.</dd></dl>
 <p> <code>dumpcycle</code> <i>int</i></p>
 <dl>
-<dd>Default: <i>10 days</i>. The number of days in the backup cycle. Each disk using this set of options will get a full backup at least this of ten. Setting this to zero tries to do a full backup each run.</dl>
+<dd>Default: <i>10 days</i>. The number of days in the backup cycle. Each disk using this set of options will get a full backup at least this of ten. Setting this to zero tries to do a full backup each run.</dd></dl>
 <p> <code>encrypt</code> [ <code>none</code> | <code>client</code> | <code>server</code> ]</p>
 <dl>
-<dd>Default: not set. To encrypt backup images, it can do so either on the backup client host before it crosses the network or on the tape server host as it goes from the network into the holding disk or to tape. </p>
+<dd>Default: not set. To encrypt backup images, it can do so either on the backup client host before it crosses the network or on the tape server host as it goes from the network into the holding disk or to tape. </dd>
 <p> So the <code>encrypt</code> options line may be one of: </p>
 <p> encrypt none</p>
 <dl>
-<dd></dl>
+<dd></dd></dl>
 <p> encrypt client</p>
 <dl>
-<dd>Specify client-encrypt &quot;PROG&quot; </p>
+<dd>Specify client-encrypt &quot;PROG&quot; </dd>
 <p> PROG must not contain white space. </p>
 <p> Specify client-decrypt-option &quot;decryption-parameter&quot; Default: &quot;-d&quot; </p>
 <p> decryption-parameter must not contain white space. </p>
 <p> (See dumptype client-encrypt-nocomp in example/amanda.conf for reference)</dl>
 <p> encrypt server</p>
 <dl>
-<dd>Specify server-encrypt &quot;PROG&quot; </p>
+<dd>Specify server-encrypt &quot;PROG&quot; </dd>
 <p> PROG must not contain white space. </p>
 <p> Specify server-decrypt-option &quot;decryption-parameter&quot; Default: &quot;-d&quot; </p>
 <p> decryption-parameter must not contain white space. </p>
@@ -613,32 +612,32 @@ B: largest bandwidth</pre>
 <p> Note that current logic assumes compression then encryption during backup(thus decrypt then uncompress during restore). So specifying client-encryption AND server-compression is not supported. <i>amcrypt</i> which is a wrapper of <i>aespipe</i> is provided as a reference symmetric encryption program.</dl>
 <p> <code>client-encrypt</code> <i>string</i></p>
 <dl>
-<dd>Default: none. The program to use to perform encryption/decryption on the client; used with &quot;encrypt client&quot;. Must not contain whitespace.</dl>
+<dd>Default: none. The program to use to perform encryption/decryption on the client; used with &quot;encrypt client&quot;. Must not contain whitespace.</dd></dl>
 <p> <code>client-decrypt-option</code> <i>string</i></p>
 <dl>
-<dd>Default: -d. The option that can be passed to client-encrypt to make it decrypt instead. Must not contain whitespace.</dl>
+<dd>Default: -d. The option that can be passed to client-encrypt to make it decrypt instead. Must not contain whitespace.</dd></dl>
 <p> <code>server-encrypt</code> <i>string</i></p>
 <dl>
-<dd>Default: none. The program to use to perform encryption/decryption on the server; used with &quot;encrypt server&quot;. Must not contain whitespace.</dl>
+<dd>Default: none. The program to use to perform encryption/decryption on the server; used with &quot;encrypt server&quot;. Must not contain whitespace.</dd></dl>
 <p> <code>server-decrypt-option</code> <i>string</i></p>
 <dl>
-<dd>Default: -d. The option that can be passed to server-encrypt to make it decrypt instead. Must not contain whitespace.</dl>
+<dd>Default: -d. The option that can be passed to server-encrypt to make it decrypt instead. Must not contain whitespace.</dd></dl>
 <p> <code>estimate</code> [ <code>client</code> | <code>calcsize</code> | <code>server</code> ]+</p>
 <dl>
-<dd>Default: <code>client</code>. Determine the way Amanda estimates the size of each DLE before beginning a backup. This is a list of acceptable estimate methods, and Amanda applies the first method supported by the application. The methods are: </p>
+<dd>Default: <code>client</code>. Determine the way Amanda estimates the size of each DLE before beginning a backup. This is a list of acceptable estimate methods, and Amanda applies the first method supported by the application. The methods are: </dd>
 <p> client</p>
 <dl>
-<dd>Use the same program as the dumping program. This is the most accurate method to do estimates, but it can take a long time.</dl>
+<dd>Use the same program as the dumping program. This is the most accurate method to do estimates, but it can take a long time.</dd></dl>
 <p> calcsize</p>
 <dl>
-<dd>Use a faster program to do estimates, but the result is less accurate.</dl>
+<dd>Use a faster program to do estimates, but the result is less accurate.</dd></dl>
 <p> server</p>
 <dl>
-<dd>Use only statistics from the previous few runs to give an estimate. This very quick, but the result is not accurate if your disk usage changes from day to day. If this method is specified, but the server does not have enough data to make an estimate, then the option is internally moved to the end of the list, thereby preferring &#8216;client&#8217; or &#8216;calcsize&#8217; in this case.</dl>
+<dd>Use only statistics from the previous few runs to give an estimate. This very quick, but the result is not accurate if your disk usage changes from day to day. If this method is specified, but the server does not have enough data to make an estimate, then the option is internally moved to the end of the list, thereby preferring &#8216;client&#8217; or &#8216;calcsize&#8217; in this case.</dd></dl>
 </dl>
 <p> <code>exclude</code> [ <code>list</code> | <code>file</code> ][[<code>optional</code>][<code>append</code>][ <i>string</i> ]+]</p>
 <dl>
-<dd>Default: <code>file</code>. Exclude is the opposite of <code>include</code> and specifies files that will be excluded from the backup. The format of the exclude expressions depends on the application, and some applications do not support excluding files at all. </p>
+<dd>Default: <code>file</code>. Exclude is the opposite of <code>include</code> and specifies files that will be excluded from the backup. The format of the exclude expressions depends on the application, and some applications do not support excluding files at all. </dd>
 <p> There are two exclude parameters, <code>exclude</code> <code>file</code> and <code>exclude</code> <code>list.</code> With <code>exclude</code> <code>file</code>, the <i>string</i> is an exclude expression. With <code>exclude</code> <code>list</code> , the <i>string</i> is a file name on the client containing <code>GNU-tar</code> exclude expressions. The path to the specified exclude list file, if present (see description of &#8216;optional&#8217; below), must be readable by the Amanda user. </p>
 <p> All exclude expressions are concatenated in one file and passed to the application as an <code>&#8211;exclude-from</code> argument. </p>
 <p> For <code>GNU-tar</code>, exclude expressions must always be specified as relative to the top-level directory of the DLE, and must start with &quot;./&quot;. See the manpages for individual applications for more information on supported exclude expressions. </p>
@@ -649,126 +648,126 @@ B: largest bandwidth</pre>
 <p>the actual file used would be /var/.amanda.excludes for a backup of /var, /usr/local/.amanda.excludes for a backup of /usr/local, and so on.</dl>
 <p> <code>holdingdisk</code> [ <code>never</code> | <code>auto</code> | <code>required</code> ]</p>
 <dl>
-<dd>Default: <code>auto</code>. Whether a holding disk should be used for these backups or whether they should go directly to tape. If the holding disk is a portion of another file system that Amanda is backing up, that file system should refer to a dumptype with <code>holdingdisk</code> set to <i>never</i> to avoid backing up the holding disk into itself. </p>
+<dd>Default: <code>auto</code>. Whether a holding disk should be used for these backups or whether they should go directly to tape. If the holding disk is a portion of another file system that Amanda is backing up, that file system should refer to a dumptype with <code>holdingdisk</code> set to <i>never</i> to avoid backing up the holding disk into itself. </dd>
 <p> <code>never</code>|no|false|off</p>
 <dl>
-<dd>Never use a holdingdisk, the dump will always go directly to tape. There will be no dump if you have a tape error.</dl>
+<dd>Never use a holdingdisk, the dump will always go directly to tape. There will be no dump if you have a tape error.</dd></dl>
 <p> <code>auto</code>|yes|true|on</p>
 <dl>
-<dd>Use the holding disk, unless there is a problem with the holding disk, the dump won&#8217;t fit there or the medium doesn&#8217;t require spooling (e.g., VFS device)</dl>
+<dd>Use the holding disk, unless there is a problem with the holding disk, the dump won&#8217;t fit there or the medium doesn&#8217;t require spooling (e.g., VFS device)</dd></dl>
 <p> <code>required</code></p>
 <dl>
-<dd>Always dump to holdingdisk, never directly to tape. There will be no dump if it doesn&#8217;t fit on holdingdisk</dl>
+<dd>Always dump to holdingdisk, never directly to tape. There will be no dump if it doesn&#8217;t fit on holdingdisk</dd></dl>
 </dl>
 <p> <code>ignore</code> <i>boolean</i></p>
 <dl>
-<dd>Default: <code>no</code>. Whether disks associated with this backup type should be backed up or not. This option is useful when the <i>disklist</i> file is shared among several configurations, some of which should not back up all the listed file systems.</dl>
+<dd>Default: <code>no</code>. Whether disks associated with this backup type should be backed up or not. This option is useful when the <i>disklist</i> file is shared among several configurations, some of which should not back up all the listed file systems.</dd></dl>
 <p> <code>include</code> [ <code>list</code> | <code>file</code> ][[<code>optional</code>][<code>append</code>][ <i>string</i> ]+]</p>
 <dl>
-<dd>Default: <code>file</code> &quot;.&quot;. There are two include lists, <code>include file</code> and <code>include list.</code> With <code>include file</code> , the <i>string</i> is a glob expression. With <code>include list</code> , the <i>string</i> is a file name on the client containing glob expressions. </p>
+<dd>Default: <code>file</code> &quot;.&quot;. There are two include lists, <code>include file</code> and <code>include list.</code> With <code>include file</code> , the <i>string</i> is a glob expression. With <code>include list</code> , the <i>string</i> is a file name on the client containing glob expressions. </dd>
 <p> All include expressions are expanded by Amanda, concatenated in one file and passed to <code>GNU-tar</code> as a <code>&#8211;files-from</code> argument. They must start with &quot;./&quot; and contain no other &quot;/&quot;. </p>
 <p> Include expressions must always be specified as relative to the head directory of the DLE. </p>
 <dl>
 <dd><font SIZE="+1"> <code>Note</code> </font><br />
- For globbing to work at all, even the limited single level, the top level directory of the DLE must be readable by the Amanda user. </p>
+ For globbing to work at all, even the limited single level, the top level directory of the DLE must be readable by the Amanda user. </dd>
 </dl>
 <p> With the <code>append</code> keyword, the <i>string</i> is appended to the current list, without it, the <i>string</i> overwrites the list. </p>
 <p> If <code>optional</code> is specified for <code>include list</code>, then amcheck will not complain if the file doesn&#8217;t exist or is not readable. </p>
 <p> For <code>include list</code>, If the file name is relative, the disk name being backed up is prepended.</dl>
 <p> <code>index</code> <i>boolean</i></p>
 <dl>
-<dd>Default: <code>no</code>. Whether an index (catalogue) of the backup should be generated and saved in <code>indexdir</code>. These catalogues are used by the <code>amrecover</code> utility.</dl>
+<dd>Default: <code>no</code>. Whether an index (catalogue) of the backup should be generated and saved in <code>indexdir</code>. These catalogues are used by the <code>amrecover</code> utility.</dd></dl>
 <p> <code>kencrypt</code> <i>boolean</i></p>
 <dl>
-<dd>Default: <code>no</code>. Whether the backup image should be encrypted by Kerberos as it is sent across the network from the backup client host to the tape server host.</dl>
+<dd>Default: <code>no</code>. Whether the backup image should be encrypted by Kerberos as it is sent across the network from the backup client host to the tape server host.</dd></dl>
 <p> <code>maxdumps</code> <i>int</i></p>
 <dl>
-<dd>Default: <i>1</i>. The maximum number of backups from a single host that Amanda will attempt to run in parallel. See also the main section parameter <code>inparallel</code>.</dl>
+<dd>Default: <i>1</i>. The maximum number of backups from a single host that Amanda will attempt to run in parallel. See also the main section parameter <code>inparallel</code>.</dd></dl>
 <p> <code>maxpromoteday</code> <i>int</i></p>
 <dl>
-<dd>Default: <i>10000</i>. The maximum number of day for a promotion, set it 0 if you don&#8217;t want promotion, set it to 1 or 2 if your disks get overpromoted.</dl>
+<dd>Default: <i>10000</i>. The maximum number of day for a promotion, set it 0 if you don&#8217;t want promotion, set it to 1 or 2 if your disks get overpromoted.</dd></dl>
 <p> <code>max-warnings</code> <i>int</i></p>
 <dl>
-<dd>Default: <i>20</i>. The maximum number of error lines in the report for a dle. A value of &#8216;0&#8217; means unlimited. This is useful to reduce the size of the log file and the size of the report. All errors are put in separate files if a dle have more errors.</dl>
+<dd>Default: <i>20</i>. The maximum number of error lines in the report for a dle. A value of &#8216;0&#8217; means unlimited. This is useful to reduce the size of the log file and the size of the report. All errors are put in separate files if a dle have more errors.</dd></dl>
 <p> <code>priority</code> [ <code>low</code> | <code>medium</code> | <code>high</code> ]</p>
 <dl>
-<dd>Default: <code>medium</code>. When there is no tape to write to, Amanda will do incremental backups in priority order to the holding disk. The priority may be high (2), medium (1), low (0) or a number of your choice.</dl>
+<dd>Default: <code>medium</code>. When there is no tape to write to, Amanda will do incremental backups in priority order to the holding disk. The priority may be high (2), medium (1), low (0) or a number of your choice.</dd></dl>
 <p> <code>program</code> [ <code>&quot;DUMP&quot;</code> | <code>&quot;GNUTAR&quot;</code> | <code>&quot;APPLICATION&quot;</code> ]</p>
 <dl>
-<dd>Default: <i>&quot;DUMP&quot;</i>. The type of backup to perform. Valid values are: </p>
+<dd>Default: <i>&quot;DUMP&quot;</i>. The type of backup to perform. Valid values are: </dd>
 <p> <code>&quot;DUMP&quot;</code></p>
 <dl>
-<dd>The native operating system backup program.</dl>
+<dd>The native operating system backup program.</dd></dl>
 <p> <code>&quot;GNUTAR&quot;</code></p>
 <dl>
-<dd>To use GNU-tar or to do PC backups using Samba.</dl>
+<dd>To use GNU-tar or to do PC backups using Samba.</dd></dl>
 <p> <code>&quot;APPLICATION&quot;</code></p>
 <dl>
-<dd>To use an application, see the <i>application</i> option.</dl>
+<dd>To use an application, see the <i>application</i> option.</dd></dl>
 </dl>
 <p> <code>application</code> <i>string</i></p>
 <dl>
-<dd>No default. Must be the name of an application if <i>program</i> is set to <i>APPLICATION</i>. See APPLICATION SECTION below.</dl>
+<dd>No default. Must be the name of an application if <i>program</i> is set to <i>APPLICATION</i>. See APPLICATION SECTION below.</dd></dl>
 <p> <code>script</code> <i>string</i></p>
 <dl>
-<dd>No default. Must be the name of a script. You can have many script. See SCRIPT SECTION below.</dl>
+<dd>No default. Must be the name of a script. You can have many script. See SCRIPT SECTION below.</dd></dl>
 <p> <code>property</code> [<code>append</code>] <i>string</i> <i>string</i>+</p>
 <dl>
-<dd>These options can set various properties, they can be used by third party software to store information in the configuration file. Both strings are quoted; the first string contains the name of the property to set, and the others contains its values. <code>append</code> keyword append the values to the list of values for that property.</dl>
+<dd>These options can set various properties, they can be used by third party software to store information in the configuration file. Both strings are quoted; the first string contains the name of the property to set, and the others contains its values. <code>append</code> keyword append the values to the list of values for that property.</dd></dl>
 <p> <code>record</code> <i>boolean</i></p>
 <dl>
-<dd>Default: <code>yes</code>. Whether to ask the backup program to update its database (e.g. /etc/dumpdates for DUMP or /usr/local/var/amanda/gnutar-lists for GNUTAR) of time stamps. This is normally enabled for daily backups and turned off for periodic archival runs.</dl>
+<dd>Default: <code>yes</code>. Whether to ask the backup program to update its database (e.g. /etc/dumpdates for DUMP or /usr/local/var/amanda/gnutar-lists for GNUTAR) of time stamps. This is normally enabled for daily backups and turned off for periodic archival runs.</dd></dl>
 <p> <code>skip-full</code> <i>boolean</i></p>
 <dl>
-<dd>Default: <code>no</code>. If <code>true</code> and <code>planner</code> has scheduled a full backup, these disks will be skipped, and full backups should be run off-line on these days. It was reported that Amanda only schedules level 1 incrementals in this configuration; this is probably a bug.</dl>
+<dd>Default: <code>no</code>. If <code>true</code> and <code>planner</code> has scheduled a full backup, these disks will be skipped, and full backups should be run off-line on these days. It was reported that Amanda only schedules level 1 incrementals in this configuration; this is probably a bug.</dd></dl>
 <p> <code>skip-incr</code> <i>boolean</i></p>
 <dl>
-<dd>Default: <code>no</code>. If <code>true</code> and <code>planner</code> has scheduled an incremental backup, these disks will be skipped.</dl>
+<dd>Default: <code>no</code>. If <code>true</code> and <code>planner</code> has scheduled an incremental backup, these disks will be skipped.</dd></dl>
 <p> <code>ssh-keys</code> <i>string</i></p>
 <dl>
-<dd>Default: not set. The key file the ssh auth will use, it must be the private key. If this parameter is not specified, then the default ssh key will be used.</dl>
+<dd>Default: not set. The key file the ssh auth will use, it must be the private key. If this parameter is not specified, then the default ssh key will be used.</dd></dl>
 <p> <code>starttime</code> <i>int</i></p>
 <dl>
-<dd>Default: not set. Backup of these disks will not start until after this time of day. The value should be hh*100+mm, e.g. 6:30PM (18:30) would be entered as 1830.</dl>
+<dd>Default: not set. Backup of these disks will not start until after this time of day. The value should be hh*100+mm, e.g. 6:30PM (18:30) would be entered as 1830.</dd></dl>
 <p> <code>strategy</code> [ <code>standard</code> | <code>nofull</code> | <code>noinc</code> | <code>skip</code> | <code>incronly</code> ]</p>
 <dl>
-<dd>Default: <code>standard</code>. Strategy to use when planning what level of backup to run next. Values are: </p>
+<dd>Default: <code>standard</code>. Strategy to use when planning what level of backup to run next. Values are: </dd>
 <p> <code>standard</code></p>
 <dl>
-<dd>The standard Amanda schedule.</dl>
+<dd>The standard Amanda schedule.</dd></dl>
 <p> <code>nofull</code></p>
 <dl>
-<dd>Never do full backups, only level 1 incrementals.</dl>
+<dd>Never do full backups, only level 1 incrementals.</dd></dl>
 <p> <code>noinc</code></p>
 <dl>
-<dd>Never do incremental backups, only full dumps.</dl>
+<dd>Never do incremental backups, only full dumps.</dd></dl>
 <p> <code>skip</code></p>
 <dl>
-<dd>Treat this DLE as if it doesn&#8217;t exist (useful to disable DLEs when sharing the <i>disklist</i> file between multiple configurations). Skipped DLEs will not be checked or dumped, and will not be matched by disklist expressions.</dl>
+<dd>Treat this DLE as if it doesn&#8217;t exist (useful to disable DLEs when sharing the <i>disklist</i> file between multiple configurations). Skipped DLEs will not be checked or dumped, and will not be matched by disklist expressions.</dd></dl>
 <p> <code>incronly</code></p>
 <dl>
-<dd>Only do incremental dumps. <code>amadmin force</code> should be used to tell Amanda that a full dump has been performed off-line, so that it resets to level 1.</dl>
+<dd>Only do incremental dumps. <code>amadmin force</code> should be used to tell Amanda that a full dump has been performed off-line, so that it resets to level 1.</dd></dl>
 </dl>
 <p> <code>allow-split</code> <i>bool</i></p>
 <dl>
-<dd>Default: true. If true, then dumps with this dumptype can be split on the storage media. If false, then the dump will be written in a single file on the media. See &quot;Dump Splitting Configuration&quot; below.</dl>
+<dd>Default: true. If true, then dumps with this dumptype can be split on the storage media. If false, then the dump will be written in a single file on the media. See &quot;Dump Splitting Configuration&quot; below.</dd></dl>
 <p> <code>tape-splitsize</code> <i>int</i></p>
 <dl>
-<dd>Deprecated. See &quot;Dump Splitting Configuration&quot; below. </p>
+<dd>Deprecated. See &quot;Dump Splitting Configuration&quot; below. </dd>
 <p> Default: not set. Split dump file on tape into pieces of a specified size. The default unit is Kbytes if it is not specified.</dl>
 <p> <code>split-diskbuffer</code> <i>string</i></p>
 <dl>
-<dd>Deprecated. See &quot;Dump Splitting Configuration&quot; below. Default: not set. When dumping a split dump in PORT-WRITE mode (usually meaning &quot;no holding disk&quot;), buffer the split chunks to a file in the directory specified by this option.</dl>
+<dd>Deprecated. See &quot;Dump Splitting Configuration&quot; below. Default: not set. When dumping a split dump in PORT-WRITE mode (usually meaning &quot;no holding disk&quot;), buffer the split chunks to a file in the directory specified by this option.</dd></dl>
 <p> <code>fallback-splitsize</code> <i>int</i></p>
 <dl>
-<dd>Deprecated. See &quot;Dump Splitting Configuration&quot; below. </p>
+<dd>Deprecated. See &quot;Dump Splitting Configuration&quot; below. </dd>
 <p> Default: <i>10M</i>. This specifies the part size used when no <code>split-diskbuffer</code> is specified, or when it is too small or does not exist, and thus the maximum amount of memory consumed for in-memory splitting. The default unit is Kbytes if it is not specified.</dl>
 <p> <code>recovery-limit</code> [ <code>server</code> | <code>same-host</code> | <i>string</i> ]*</p>
 <dl>
-<dd>Default: global value. This parameter overrides the global <code>recovery-limit</code> parameter for DLEs of this dumptype.</dl>
+<dd>Default: global value. This parameter overrides the global <code>recovery-limit</code> parameter for DLEs of this dumptype.</dd></dl>
 <p> <code>dump-limit</code> [ <code>server</code> | <code>same-host</code> ]*</p>
 <dl>
-<dd>Default: <code>server</code>. Specify which host can initiate a backup of the dle. With <code>server</code>, the server can initiate a backup with the <code>amdump</code> command. With <code>same-host</code>, the client can initiate a backup with the <code>amdump_client</code> command.</dl>
+<dd>Default: <code>server</code>. Specify which host can initiate a backup of the dle. With <code>server</code>, the server can initiate a backup with the <code>amdump</code> command. With <code>same-host</code>, the client can initiate a backup with the <code>amdump_client</code> command.</dd></dl>
 <p> The following <code>dumptype</code> entries are predefined by Amanda: </p>
 <pre>define dumptype &quot;no-compress&quot; {
  compress none
@@ -821,39 +820,39 @@ define dumptype &quot;testing&quot; {
 <p> The tapetype options and values are: </p>
 <p> <code>comment</code> <i>string</i></p>
 <dl>
-<dd>Default: not set. A comment string describing this set of tape information.</dl>
+<dd>Default: not set. A comment string describing this set of tape information.</dd></dl>
 <p> <code>filemark</code> <i>int</i></p>
 <dl>
-<dd>Default: <i>1 kbytes</i>. How large a file mark (tape mark) is, measured in kbytes. If the size is only known in some linear measurement (e.g. inches), convert it to kbytes using the device density.</dl>
+<dd>Default: <i>1 kbytes</i>. How large a file mark (tape mark) is, measured in kbytes. If the size is only known in some linear measurement (e.g. inches), convert it to kbytes using the device density.</dd></dl>
 <p> <code>length</code> <i>int</i></p>
 <dl>
-<dd>Default: <i>2000 kbytes</i>. How much data will fit on a tape, expressed in kbytes. </p>
+<dd>Default: <i>2000 kbytes</i>. How much data will fit on a tape, expressed in kbytes. </dd>
 <p> Note that this value is only used by Amanda to schedule which backups will be run. Once the backups start, Amanda will continue to write to a tape until it gets an error, regardless of what value is entered for <code>length</code> (but see <code><a href="/docs/linux/man/7-amanda-devices/">amanda-devices</a></code>(7) for exceptions).</dl>
 <p> <code>blocksize</code> <i>int</i></p>
 <dl>
-<dd>Default: <i>32 kbytes</i>. How much data will be written in each tape record, expressed in kbytes. This is similar to the <i>BLOCK_SIZE</i> device property, but if the blocksize is not a multiple of 1024 bytes, then this parameter cannot be used to specify it, and the property must be used instead.</dl>
+<dd>Default: <i>32 kbytes</i>. How much data will be written in each tape record, expressed in kbytes. This is similar to the <i>BLOCK_SIZE</i> device property, but if the blocksize is not a multiple of 1024 bytes, then this parameter cannot be used to specify it, and the property must be used instead.</dd></dl>
 <p> <code>readblocksize</code> <i>int</i></p>
 <dl>
-<dd>Default: <i>32 kytes</i> How much data will be read in each tape record. This can be used to override a device&#8217;s block size for reads only. This may be useful, for example, in reading a tape written with a 256k block size when Amanda is configured to use 128k blocks. This unusual feature is not supported by all operating systems and tape devices. </p>
+<dd>Default: <i>32 kytes</i> How much data will be read in each tape record. This can be used to override a device&#8217;s block size for reads only. This may be useful, for example, in reading a tape written with a 256k block size when Amanda is configured to use 128k blocks. This unusual feature is not supported by all operating systems and tape devices. </dd>
 <p> The default unit is Kbytes if it is not specified.</dl>
 <p> <code>part-size</code> <i>int</i></p>
 <dl>
-<dd>If this is set to zero (default), then no splitting will take place, and the entire dump will fail, if end-of-medium is encountered before the dump is complete, unless the device property LEOM is true, and the device can detect EOM. See &quot;Dump Splitting Configuration&quot; below.</dl>
+<dd>If this is set to zero (default), then no splitting will take place, and the entire dump will fail, if end-of-medium is encountered before the dump is complete, unless the device property LEOM is true, and the device can detect EOM. See &quot;Dump Splitting Configuration&quot; below.</dd></dl>
 <p> <code>part-cache-type</code> [ <code>none</code> | <code>disk</code> | <code>memory</code> ]</p>
 <dl>
-<dd>Default: none. When part caching is required, this parameter specifies the type of caching that will be used. The options include no caching (<code>none</code>), in which case a failed part will cause the entire dump to fail; on-disk caching (<code>disk</code>), for which <code>part-cache-dir</code> must be set properly; and in-memory caching (<code>memory</code>), which on most systems severely restrains the size of the part that can be written. See &quot;Dump Splitting Configuration&quot; below.</dl>
+<dd>Default: none. When part caching is required, this parameter specifies the type of caching that will be used. The options include no caching (<code>none</code>), in which case a failed part will cause the entire dump to fail; on-disk caching (<code>disk</code>), for which <code>part-cache-dir</code> must be set properly; and in-memory caching (<code>memory</code>), which on most systems severely restrains the size of the part that can be written. See &quot;Dump Splitting Configuration&quot; below.</dd></dl>
 <p> <code>part-cache-dir</code> <i>string</i></p>
 <dl>
-<dd>Default: none. The directory in which part-cache files can be written when caching on disk. See &quot;Dump Splitting Configuration&quot; below.</dl>
+<dd>Default: none. The directory in which part-cache files can be written when caching on disk. See &quot;Dump Splitting Configuration&quot; below.</dd></dl>
 <p> <code>part-cache-max-size</code> <i>int</i></p>
 <dl>
-<dd>Default: none. The maximum part size to use when caching is in effect. This is used to limit the part size when disk or memory space for caching is constrained. This value must be greater than zero.</dl>
+<dd>Default: none. The maximum part size to use when caching is in effect. This is used to limit the part size when disk or memory space for caching is constrained. This value must be greater than zero.</dd></dl>
 <p> <code>speed</code> <i>int</i></p>
 <dl>
-<dd>Default: <i>200 bps</i>. How fast the drive will accept data, in bytes per second. This parameter is NOT currently used by Amanda.</dl>
+<dd>Default: <i>200 bps</i>. How fast the drive will accept data, in bytes per second. This parameter is NOT currently used by Amanda.</dd></dl>
 <p> <code>lbl-templ</code> <i>string</i></p>
 <dl>
-<dd>Default: not set. A PostScript template file used by <code>amreport</code> to generate labels. Several sample files are provided with the Amanda sources in the <i>example</i> directory. See the <code><a href="/docs/linux/man/8-amreport/">amreport</a></code>(8) man page for more information.</dl>
+<dd>Default: not set. A PostScript template file used by <code>amreport</code> to generate labels. Several sample files are provided with the Amanda sources in the <i>example</i> directory. See the <code><a href="/docs/linux/man/8-amreport/">amreport</a></code>(8) man page for more information.</dd></dl>
 <p> In addition to options, another <code>tapetype</code> name may be supplied as an identifier, which makes this <code>tapetype</code> inherit options from another <code>tapetype</code>. For instance, the only difference between a DLT4000 tape drive using Compact-III tapes and one using Compact-IV tapes is the length of the tape. So they could be entered as: </p>
 <pre>define tapetype &quot;DLT4000-III&quot; {
  comment &quot;DLT4000 tape drives with Compact-III tapes&quot;
@@ -878,10 +877,10 @@ define tapetype &quot;DLT4000-IV&quot; {
 <p> The interface options and values are: </p>
 <p> <code>comment</code> <i>string</i></p>
 <dl>
-<dd>Default: not set. A comment string describing this set of network information.</dl>
+<dd>Default: not set. A comment string describing this set of network information.</dd></dl>
 <p> <code>use</code> <i>int</i></p>
 <dl>
-<dd>Default: <i>80000 Kbps</i>. The speed of the interface in Kbytes per second.</dl>
+<dd>Default: <i>80000 Kbps</i>. The speed of the interface in Kbytes per second.</dd></dl>
 <p> In addition to options, another <code>interface</code> name may be supplied as an identifier, which makes this <code>interface</code> inherit options from another <code>interface</code>. At the moment, this is of little use.</p>
 <h2>Application Section</h2>
 <p>The <code>amanda.conf</code> file may define multiple types of application. The information is entered in a <code>application</code> section, which looks like this: </p>
@@ -894,17 +893,17 @@ define tapetype &quot;DLT4000-IV&quot; {
 <p> The application options and values are: </p>
 <p> <code>client-name</code> <i>string</i></p>
 <dl>
-<dd>No default, specifies an application name that is in the amanda-client.conf on the client. The setting from that application will be merged with the current application. If <code>client-name</code> is set then it is an error if that application is not defined on the client. </p>
+<dd>No default, specifies an application name that is in the amanda-client.conf on the client. The setting from that application will be merged with the current application. If <code>client-name</code> is set then it is an error if that application is not defined on the client. </dd>
 <p> If <code>client-name</code> is not set then the merge is done with the application that have the name equal to the plugin. eg. if the plugin is &#8216;amgtar&#8217;, then the setting from the application &#8216;amgtar&#8217; is used if it is defined.</dl>
 <p> <code>comment</code> <i>string</i></p>
 <dl>
-<dd>Default: not set. A comment string describing this application.</dl>
+<dd>Default: not set. A comment string describing this application.</dd></dl>
 <p> <code>plugin</code> <i>string</i></p>
 <dl>
-<dd>No default. Must be set to the name of the program. This program must be in the <i>$libexecdir/amanda/application</i> directory on the client.</dl>
+<dd>No default. Must be set to the name of the program. This program must be in the <i>$libexecdir/amanda/application</i> directory on the client.</dd></dl>
 <p> <code>property</code> [<code>append</code>] [<code>priority</code>] <i>string</i> <i>string</i>+</p>
 <dl>
-<dd>No default. You can set property for the application, each application have a different set of property. Both strings are quoted; the first string contains the name of the property to set, and the others contains its values. <code>append</code> keyword append the values to the list of values for that property. <code>priority</code> keyword disallow the setting of that property on the client.</dl>
+<dd>No default. You can set property for the application, each application have a different set of property. Both strings are quoted; the first string contains the name of the property to set, and the others contains its values. <code>append</code> keyword append the values to the list of values for that property. <code>priority</code> keyword disallow the setting of that property on the client.</dd></dl>
 <h2>Script Section</h2>
 <p>The <code>amanda.conf</code> file may define multiple types of script. The information is entered in a <code>script</code> section, which looks like this: </p>
 <pre>define script &quot;<i>name</i>&quot; {
@@ -916,95 +915,95 @@ define tapetype &quot;DLT4000-IV&quot; {
 <p> The script options and values are: </p>
 <p> <code>client-name</code> <i>string</i></p>
 <dl>
-<dd>No default, specifies a script name that is in the amanda-client.conf on the client. The setting from that script will be merged with the currect script. If <code>client-name</code> is set then it is an error if that script is not defined on the client. </p>
+<dd>No default, specifies a script name that is in the amanda-client.conf on the client. The setting from that script will be merged with the currect script. If <code>client-name</code> is set then it is an error if that script is not defined on the client. </dd>
 <p> If <code>client-name</code> is not set then the merge is done with the script that have the name equal to the plugin. eg. if the plugin is &#8216;amlog-script&#8217;, then the setting from the script &#8216;amlog-script&#8217; is used.</dl>
 <p> <code>comment</code> <i>string</i></p>
 <dl>
-<dd>Default: not set. A comment string describing this script.</dl>
+<dd>Default: not set. A comment string describing this script.</dd></dl>
 <p> <code>plugin</code> <i>string</i></p>
 <dl>
-<dd>No default. Must be set to the name of the program. This program must be in the <i>$libexecdir/amanda/application</i> directory on the client and/or server.</dl>
+<dd>No default. Must be set to the name of the program. This program must be in the <i>$libexecdir/amanda/application</i> directory on the client and/or server.</dd></dl>
 <p> <code>order</code> <i>int</i></p>
 <dl>
-<dd>Default: <i>5000</i>. Scripts are executed in that order, it is useful if you have many scripts and they must be executed in a spefific order.</dl>
+<dd>Default: <i>5000</i>. Scripts are executed in that order, it is useful if you have many scripts and they must be executed in a spefific order.</dd></dl>
 <p> <code>single-execution</code> <i>boolean</i></p>
 <dl>
-<dd>Default: <i>no</i>. The script is executed for each dle. If <i>yes</i>, the script is executed one time only.</dl>
+<dd>Default: <i>no</i>. The script is executed for each dle. If <i>yes</i>, the script is executed one time only.</dd></dl>
 <p> <code>execute-where</code> [ <code>client</code> | <code>server</code> ]</p>
 <dl>
-<dd>Default: <code>client</code>. Where the script must be executed, on the client or server.</dl>
+<dd>Default: <code>client</code>. Where the script must be executed, on the client or server.</dd></dl>
 <p> <code>execute-on</code> <i>execute_on</i> [,<i>execute_on</i>]*</p>
 <dl>
-<dd>No default. When the script must be executed, you can specify many of them: </p>
+<dd>No default. When the script must be executed, you can specify many of them: </dd>
 <p> <code>pre-amcheck</code></p>
 <dl>
-<dd>Execute before the amcheck command for all dle. Can only be run on server.</dl>
+<dd>Execute before the amcheck command for all dle. Can only be run on server.</dd></dl>
 <p> <code>pre-dle-amcheck</code></p>
 <dl>
-<dd>Execute before the amcheck command for the dle.</dl>
+<dd>Execute before the amcheck command for the dle.</dd></dl>
 <p> <code>pre-host-amcheck</code></p>
 <dl>
-<dd>Execute before the amcheck command for all dle for the client.</dl>
+<dd>Execute before the amcheck command for all dle for the client.</dd></dl>
 <p> <code>post-amcheck</code></p>
 <dl>
-<dd>Execute after the amcheck command for all dle. Can only be run on server.</dl>
+<dd>Execute after the amcheck command for all dle. Can only be run on server.</dd></dl>
 <p> <code>post-dle-amcheck</code></p>
 <dl>
-<dd>Execute after the amcheck command for the dle.</dl>
+<dd>Execute after the amcheck command for the dle.</dd></dl>
 <p> <code>post-host-amcheck</code></p>
 <dl>
-<dd>Execute after the amcheck command for all dle for the client.</dl>
+<dd>Execute after the amcheck command for all dle for the client.</dd></dl>
 <p> <code>pre-estimate</code></p>
 <dl>
-<dd>Execute before the estimate command for all dle. Can only be run on server.</dl>
+<dd>Execute before the estimate command for all dle. Can only be run on server.</dd></dl>
 <p> <code>pre-dle-estimate</code></p>
 <dl>
-<dd>Execute before the estimate command for the dle.</dl>
+<dd>Execute before the estimate command for the dle.</dd></dl>
 <p> <code>pre-host-estimate</code></p>
 <dl>
-<dd>Execute before the estimate command for all dle for the client.</dl>
+<dd>Execute before the estimate command for all dle for the client.</dd></dl>
 <p> <code>post-estimate</code></p>
 <dl>
-<dd>Execute after the estimate command for all dle. Can only be run on server.</dl>
+<dd>Execute after the estimate command for all dle. Can only be run on server.</dd></dl>
 <p> <code>post-dle-estimate</code></p>
 <dl>
-<dd>Execute after the estimate command for the dle.</dl>
+<dd>Execute after the estimate command for the dle.</dd></dl>
 <p> <code>post-host-estimate</code></p>
 <dl>
-<dd>Execute after the estimate command for all dle for the client.</dl>
+<dd>Execute after the estimate command for all dle for the client.</dd></dl>
 <p> <code>pre-backup</code></p>
 <dl>
-<dd>Execute before the backup command for all dle. Can only be run on server.</dl>
+<dd>Execute before the backup command for all dle. Can only be run on server.</dd></dl>
 <p> <code>pre-dle-backup</code></p>
 <dl>
-<dd>Execute before the backup command for the dle.</dl>
+<dd>Execute before the backup command for the dle.</dd></dl>
 <p> <code>pre-host-backup</code></p>
 <dl>
-<dd>Execute before the backup command for all dle for the client. It can&#8217;t be run on client, it must be run on server</dl>
+<dd>Execute before the backup command for all dle for the client. It can&#8217;t be run on client, it must be run on server</dd></dl>
 <p> <code>post-backup</code></p>
 <dl>
-<dd>Execute after the backup command for all dle. Can only be run on server.</dl>
+<dd>Execute after the backup command for all dle. Can only be run on server.</dd></dl>
 <p> <code>post-dle-backup</code></p>
 <dl>
-<dd>Execute after the backup command for the dle.</dl>
+<dd>Execute after the backup command for the dle.</dd></dl>
 <p> <code>post-host-backup</code></p>
 <dl>
-<dd>Execute after the backup command for all dle for the client. It can&#8217;t be run on client, it must be run on server</dl>
+<dd>Execute after the backup command for all dle for the client. It can&#8217;t be run on client, it must be run on server</dd></dl>
 <p> <code>pre-recover</code></p>
 <dl>
-<dd>Execute before any level is recovered.</dl>
+<dd>Execute before any level is recovered.</dd></dl>
 <p> <code>post-recover</code></p>
 <dl>
-<dd>Execute after all levels are recovered.</dl>
+<dd>Execute after all levels are recovered.</dd></dl>
 <p> <code>pre-level-recover</code></p>
 <dl>
-<dd>Execute before each level recovery.</dl>
+<dd>Execute before each level recovery.</dd></dl>
 <p> <code>post-level-recover</code></p>
 <dl>
-<dd>Execute after each level recovery.</dl>
+<dd>Execute after each level recovery.</dd></dl>
 <p> <code>inter-level-recover</code></p>
 <dl>
-<dd>Execute between two levels of recovery.</dl>
+<dd>Execute between two levels of recovery.</dd></dl>
 <p> If you recover level 0 and 2 of the disk /usr with amrecover, it will execute: </p>
 <pre>script --pre-recover
 script --pre-level-recover --level 0
@@ -1018,7 +1017,7 @@ script --post-recover</pre>
 </dl>
 <p> <code>property</code> [<code>append</code>] [<code>priority</code>] <i>string</i> <i>string</i>+</p>
 <dl>
-<dd>No default. You can set property for the script, each script have a different set of property. Both strings are quoted; the first string contains the name of the property to set, and the others contains its values. <code>append</code> keyword append the values to the list of values for that property. <code>priority</code> keyword disallow the setting of that property on the client.</dl>
+<dd>No default. You can set property for the script, each script have a different set of property. Both strings are quoted; the first string contains the name of the property to set, and the others contains its values. <code>append</code> keyword append the values to the list of values for that property. <code>priority</code> keyword disallow the setting of that property on the client.</dd></dl>
 <h2>Device Section</h2>
 <p>Backend storage devices are specified in <code>amanda.conf</code> in the form of &quot;device&quot; sections, which look like this: </p>
 <pre>define device <i>name</i> {
@@ -1053,13 +1052,13 @@ script --post-recover</pre>
 <p> The interactivity options and values are: </p>
 <p> <code>comment</code> <i>string</i></p>
 <dl>
-<dd>Default: not set. A comment string describing this interactivity.</dl>
+<dd>Default: not set. A comment string describing this interactivity.</dd></dl>
 <p> <code>plugin</code> <i>string</i></p>
 <dl>
-<dd>No default. Must be set to the name of the interactivity module, as described in <code><a href="/docs/linux/man/7-amanda-interactivity/">amanda-interactivity</a></code>(7).</dl>
+<dd>No default. Must be set to the name of the interactivity module, as described in <code><a href="/docs/linux/man/7-amanda-interactivity/">amanda-interactivity</a></code>(7).</dd></dl>
 <p> <code>property</code> [<code>append</code>] <i>string</i> <i>string</i>+</p>
 <dl>
-<dd>No default. You can set arbitrary properties for the interactivity. Each interactivity module has a different set of properties. The first string contains the name of the property to set, and the others contains its values. All strings should be quoted. The <code>append</code> keyword appends the given values to an existing list of values for that property.</dl>
+<dd>No default. You can set arbitrary properties for the interactivity. Each interactivity module has a different set of properties. The first string contains the name of the property to set, and the others contains its values. All strings should be quoted. The <code>append</code> keyword appends the given values to an existing list of values for that property.</dd></dl>
 <p> See <code><a href="/docs/linux/man/7-amanda-interactivity/">amanda-interactivity</a></code>(7) for more information on configuring interactivity methods.</p>
 <h2>Taperscan Section</h2>
 <p>The <code>amanda.conf</code> file may define multiple taperscan methods, although only one will be used &#8211; that specified by the <code>taperscan</code> parameter. The information is entered in a <code>taperscan</code> section, which looks like this: </p>
@@ -1072,13 +1071,13 @@ script --post-recover</pre>
 <p> The taperscan options and values are: </p>
 <p> <code>comment</code> <i>string</i></p>
 <dl>
-<dd>Default: not set. A comment string describing this taperscan.</dl>
+<dd>Default: not set. A comment string describing this taperscan.</dd></dl>
 <p> <code>plugin</code> <i>string</i></p>
 <dl>
-<dd>No default. Must be set to the name of the taperscan module. See <code><a href="/docs/linux/man/7-amanda-taperscan/">amanda-taperscan</a></code>(7) for a list of defined taperscan modules.</dl>
+<dd>No default. Must be set to the name of the taperscan module. See <code><a href="/docs/linux/man/7-amanda-taperscan/">amanda-taperscan</a></code>(7) for a list of defined taperscan modules.</dd></dl>
 <p> <code>property</code> [<code>append</code>] <i>string</i> <i>string</i>+</p>
 <dl>
-<dd>No default. Operates just like properties for interactivity methods, above.</dl>
+<dd>No default. Operates just like properties for interactivity methods, above.</dd></dl>
 <p> See <code><a href="/docs/linux/man/7-amanda-taperscan/">amanda-taperscan</a></code>(7) for more information on configuring taperscan.</p>
 <h2>Dump Splitting Configuration</h2>
 <p>Amanda can &quot;split&quot; dumps into parts while writing them to storage media. This allows Amanda to recover gracefully from a failure while writing a part to a volume, by simply selecting a new volume and re-writing the dump from the beginning of the failed part. Parts also allow Amanda to seek directly to the required data, although this functionality is not yet used. </p>

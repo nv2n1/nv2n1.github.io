@@ -21,27 +21,27 @@ description: "struct_usb_os_desc – describes OS descriptors associated with on
 <h2>Members</h2>
 <p>ext_compat_id</p>
 <dl>
-<dd>16 bytes of &#8220;Compatible ID&#8221; and &#8220;Subcompatible ID&#8221;</dl>
+<dd>16 bytes of &#8220;Compatible ID&#8221; and &#8220;Subcompatible ID&#8221;</dd></dl>
 <p> ext_prop</p>
 <dl>
-<dd>Extended Properties list</dl>
+<dd>Extended Properties list</dd></dl>
 <p> ext_prop_len</p>
 <dl>
-<dd>Total length of Extended Properties blobs</dl>
+<dd>Total length of Extended Properties blobs</dd></dl>
 <p> ext_prop_count</p>
 <dl>
-<dd>Number of Extended Properties</dl>
+<dd>Number of Extended Properties</dd></dl>
 <p> opts_mutex</p>
 <dl>
-<dd>Optional mutex protecting config data of a usb_function_instance</dl>
+<dd>Optional mutex protecting config data of a usb_function_instance</dd></dl>
 <p> group</p>
 <dl>
-<dd>Represents OS descriptors associated with an interface in configfs</dl>
+<dd>Represents OS descriptors associated with an interface in configfs</dd></dl>
 <p> owner</p>
 <dl>
-<dd>Module associated with this OS descriptor</dl>
+<dd>Module associated with this OS descriptor</dd></dl>
 <h2>Author</h2>
 <p><code>David Brownell</code> &lt;dbrownell [at] users.sourceforge.net&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

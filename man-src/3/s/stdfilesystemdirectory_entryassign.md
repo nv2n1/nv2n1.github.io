@@ -12,7 +12,6 @@ std::filesystem::directory_entry::assign - std::filesystem::directory_entry::ass
 
 <pre><code>void assign(const std::filesystem::path &amp;p);
 (since C++ 17)
-
     void assign(const std::filesystem::path &amp;p, std::error_code &amp;ec);</code></pre> 
 Assigns new content to the directory entry object. Sets the path to p and calls refresh to update the cached attributes. If an error occurs, the values of the cached attributes are unspecified. 
 
@@ -37,10 +36,5 @@ The overload that does not take a std::error_code&amp; parameter throws filesyst
 <h2>See also</h2>
 
 <pre><code>assigns contents
-
 operator= (public member function)
-
-
-
-
 </code></pre>

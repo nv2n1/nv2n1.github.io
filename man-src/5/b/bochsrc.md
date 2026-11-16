@@ -14,17 +14,17 @@ description: "bochsrc – Configuration file for Bochs."
 <p> Starting with version 2.0, two environment variables have a built-in default value which is set at compile time. $BXSHARE points to the &quot;share&quot; directory which is typically /usr/share/bochs on UNIX machines. See the $(sharedir) variable in the Makefile for the exact value. $BXSHARE is used by disk images to locate the directory where the BIOS images and keymaps can be found. If $BXSHARE is not defined, Bochs will supply the default value. Also, $LTDL_LIBRARY_PATH points to a list of directories (separated by colons if more than one) to search in for Bochs plugins. A compile-time default is provided if this variable is not defined by the user.</p>
 <h2>Options</h2>
 <dl>
-<dt><i>#include</i></p>
-<dd>This option includes another configuration file. It is possible to put installation defaults in a global config file (e.g. location of rom images). </p>
+<dt><i>#include</i></dt>
+<dd>This option includes another configuration file. It is possible to put installation defaults in a global config file (e.g. location of rom images). </dd>
 <p> Example:<br />
 &nbsp;<wbr>&nbsp;<wbr>#include&nbsp;<wbr>/etc/bochsrc </p>
-<dt><i>config_interface:</i></p>
-<dd>The configuration interface is a series of menus or dialog boxes that allows you to change all the settings that control Bochs&#8217;s behavior. There are two choices of configuration interface: a text mode version called &quot;textconfig&quot; and a graphical version called &quot;wx&quot;. The text mode version uses stdin/stdout and is always compiled in. The graphical version is only available when you use &quot;&#8211;with-wx&quot; on the configure command. If you do not write a config_interface line, Bochs will choose a default for you. </p>
+<dt><i>config_interface:</i></dt>
+<dd>The configuration interface is a series of menus or dialog boxes that allows you to change all the settings that control Bochs&#8217;s behavior. There are two choices of configuration interface: a text mode version called &quot;textconfig&quot; and a graphical version called &quot;wx&quot;. The text mode version uses stdin/stdout and is always compiled in. The graphical version is only available when you use &quot;&#8211;with-wx&quot; on the configure command. If you do not write a config_interface line, Bochs will choose a default for you. </dd>
 <p> <code>NOTE:</code> if you use the &quot;wx&quot; configuration interface, you must also use the &quot;wx&quot; display library. </p>
 <p> Example:<br />
 &nbsp;<wbr>&nbsp;<wbr>config_interface: textconfig </p>
-<dt><i>display_library:</i></p>
-<dd>The display library is the code that displays the Bochs VGA screen. Bochs has a selection of about 10 different display library implementations for different platforms. If you run configure with multiple &#8211;with-* options, the display_library command lets you choose which one you want to run with. If you do not write a display_library line, Bochs will choose a default for you. </p>
+<dt><i>display_library:</i></dt>
+<dd>The display library is the code that displays the Bochs VGA screen. Bochs has a selection of about 10 different display library implementations for different platforms. If you run configure with multiple &#8211;with-* options, the display_library command lets you choose which one you want to run with. If you do not write a display_library line, Bochs will choose a default for you. </dd>
 <p> The choices are:<br />
 &nbsp;<wbr>&nbsp;<wbr>x&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>X windows interface, cross platform<br />
 &nbsp;<wbr>&nbsp;<wbr>win32&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>native win32 libraries<br />
@@ -44,15 +44,15 @@ description: "bochsrc – Configuration file for Bochs."
 &nbsp;<wbr>&nbsp;<wbr>display_library: rfb, options=&quot;timeout=60&quot;&nbsp;<wbr>&nbsp;<wbr>#&nbsp;<wbr>time to wait for client<br />
 &nbsp;<wbr>&nbsp;<wbr>display_library: sdl, options=&quot;fullscreen&quot;&nbsp;<wbr>&nbsp;<wbr>#&nbsp;<wbr>startup in fullscreen mode<br />
 &nbsp;<wbr>&nbsp;<wbr>display_library: x, options=&quot;hideIPS&quot;&nbsp;<wbr>#&nbsp;<wbr>disable IPS output in status bar </p>
-<dt><i>romimage:</i></p>
-<dd>The ROM BIOS controls what the PC does when it first powers on. Normally, you can use a precompiled BIOS in the source or binary distribution called <code>BIOS-bochs-latest.</code> The default ROM BIOS is usually loaded starting at address 0xe0000, and it is exactly 128k long. The legacy version of the Bochs BIOS is usually loaded starting at address 0xf0000, and it is exactly 64k long. You can also use the environment variable $BXSHARE to specify the location of the BIOS. The usage of external large BIOS images (up to 512k) at memory top is now supported, but we still recommend to use the BIOS distributed with Bochs. The start address is optional, since it can be calculated from image size. </p>
+<dt><i>romimage:</i></dt>
+<dd>The ROM BIOS controls what the PC does when it first powers on. Normally, you can use a precompiled BIOS in the source or binary distribution called <code>BIOS-bochs-latest.</code> The default ROM BIOS is usually loaded starting at address 0xe0000, and it is exactly 128k long. The legacy version of the Bochs BIOS is usually loaded starting at address 0xf0000, and it is exactly 64k long. You can also use the environment variable $BXSHARE to specify the location of the BIOS. The usage of external large BIOS images (up to 512k) at memory top is now supported, but we still recommend to use the BIOS distributed with Bochs. The start address is optional, since it can be calculated from image size. </dd>
 <p> Examples:<br />
 &nbsp;<wbr>&nbsp;<wbr>romimage: file=bios/BIOS-bochs-latest<br />
 &nbsp;<wbr>&nbsp;<wbr>romimage: file=$BXSHARE/BIOS-bochs-legacy<br />
 &nbsp;<wbr>&nbsp;<wbr>romimage: file=mybios.bin, address=0xfff80000<br />
 &nbsp;<wbr>&nbsp;<wbr>romimage: file=mybios.bin </p>
-<dt><i>cpu:</i></p>
-<dd>This defines cpu-related parameters inside Bochs: </p>
+<dt><i>cpu:</i></dt>
+<dd>This defines cpu-related parameters inside Bochs: </dd>
 <p> count: </p>
 <p> Set the number of processors:cores per processor:threads per core when Bochs is compiled for SMP emulation. Bochs currently supports up to 8 processors. If Bochs is compiled without SMP support, it won&#8217;t accept values different from 1. </p>
 <p> quantum: </p>
@@ -81,27 +81,27 @@ description: "bochsrc – Configuration file for Bochs."
 <p>&nbsp;<wbr>[1]&nbsp;<wbr>&nbsp;<wbr>IPS measurements depend on OS and compiler configuration in addition to processor clock speed. </p>
 <p> Example:<br />
 &nbsp;<wbr>&nbsp;<wbr>cpu: count=2, ips=10000000 </p>
-<dt><i>megs:</i></p>
-<dd>Set the number of Megabytes of physical memory you want to emulate. The default is 32MB, most OS&#8217;s won&#8217;t need more than that. The maximum amount of memory supported is 2048Mb. </p>
+<dt><i>megs:</i></dt>
+<dd>Set the number of Megabytes of physical memory you want to emulate. The default is 32MB, most OS&#8217;s won&#8217;t need more than that. The maximum amount of memory supported is 2048Mb. </dd>
 <p> Example:<br />
 &nbsp;<wbr>&nbsp;<wbr>megs: 32 </p>
-<dt><i>optromimage1: </i>, <i>optromimage2: </i>, <i>optromimage3: </i>or <i>optromimage4:</i></p>
-<dd>You may now load up to 4 optional ROM images. Be sure to use a read-only area, typically between C8000 and EFFFF. These optional ROM images should not overwrite the rombios (located at F0000-FFFFF) and the videobios (located at C0000-C7FFF). Those ROM images will be initialized by the bios if they contain the right signature (0x55AA). It can also be a convenient way to upload some arbitrary code/data in the simulation, that can be retrieved by the boot loader </p>
+<dt><i>optromimage1: </i>, <i>optromimage2: </i>, <i>optromimage3: </i>or <i>optromimage4:</i></dt>
+<dd>You may now load up to 4 optional ROM images. Be sure to use a read-only area, typically between C8000 and EFFFF. These optional ROM images should not overwrite the rombios (located at F0000-FFFFF) and the videobios (located at C0000-C7FFF). Those ROM images will be initialized by the bios if they contain the right signature (0x55AA). It can also be a convenient way to upload some arbitrary code/data in the simulation, that can be retrieved by the boot loader </dd>
 <p> Example:<br />
 &nbsp;<wbr>&nbsp;<wbr>optromimage1: file=optionalrom.bin, address=0xd0000 </p>
-<dt><i>vgaromimage:</i></p>
-<dd>You also need to load a VGA ROM BIOS into 0xC0000. </p>
+<dt><i>vgaromimage:</i></dt>
+<dd>You also need to load a VGA ROM BIOS into 0xC0000. </dd>
 <p> Examples:<br />
 &nbsp;<wbr>&nbsp;<wbr>vgaromimage: file=bios/VGABIOS-elpin-2.40<br />
 &nbsp;<wbr>&nbsp;<wbr>vgaromimage: file=bios/VGABIOS-lgpl-latest<br />
 &nbsp;<wbr>&nbsp;<wbr>vgaromimage: file=$BXSHARE/VGABIOS-lgpl-latest </p>
-<dt><i>vga:</i></p>
-<dd>Here you can specify the display extension to be used. With the value &#8216;none&#8217; you can use standard VGA with no extension. Other supported values are &#8216;vbe&#8217; for Bochs VBE and &#8216;cirrus&#8217; for Cirrus SVGA support. </p>
+<dt><i>vga:</i></dt>
+<dd>Here you can specify the display extension to be used. With the value &#8216;none&#8217; you can use standard VGA with no extension. Other supported values are &#8216;vbe&#8217; for Bochs VBE and &#8216;cirrus&#8217; for Cirrus SVGA support. </dd>
 <p> Examples:<br />
 &nbsp;<wbr>&nbsp;<wbr>vga: extension=cirrus<br />
 &nbsp;<wbr>&nbsp;<wbr>vga: extension=vbe </p>
-<dt><i>floppya: </i>or <i>floppyb:</i></p>
-<dd>Point this to the pathname of a floppy image file or device. Floppya is the first drive, and floppyb is the second drive. If you&#8217;re booting from a floppy, floppya should point to a bootable disk. </p>
+<dt><i>floppya: </i>or <i>floppyb:</i></dt>
+<dd>Point this to the pathname of a floppy image file or device. Floppya is the first drive, and floppyb is the second drive. If you&#8217;re booting from a floppy, floppya should point to a bootable disk. </dd>
 <p> You can set the initial status of the media to &#8216;ejected&#8217; or &#8216;inserted&#8217;. Usually you will want to use &#8216;inserted&#8217;. </p>
 <p> Example: </p>
 <p> 2.88M 3.5&quot; Floppy:<br />
@@ -116,14 +116,14 @@ description: "bochsrc – Configuration file for Bochs."
 &nbsp;<wbr>&nbsp;<wbr>floppya: 360k=path, status=inserted </p>
 <p> Autodetect Floppy type:<br />
 &nbsp;<wbr>&nbsp;<wbr>floppya: image=path, status=inserted </p>
-<dt><i>ata0: </i>, <i>ata1: </i>, <i>ata2: </i>or <i>ata3:</i></p>
-<dd>These options enables up to 4 ata channels. For each channel the two base io addresses and the irq must be specified. ata0 and ata1 are enabled by default, with the values shown below. </p>
+<dt><i>ata0: </i>, <i>ata1: </i>, <i>ata2: </i>or <i>ata3:</i></dt>
+<dd>These options enables up to 4 ata channels. For each channel the two base io addresses and the irq must be specified. ata0 and ata1 are enabled by default, with the values shown below. </dd>
 <p> Examples:<br />
 ata0: enabled=1, ioaddr1=0x1f0, ioaddr2=0x3f0, irq=14<br />
 ata1: enabled=1, ioaddr1=0x170, ioaddr2=0x370, irq=15<br />
 ata2: enabled=1, ioaddr1=0x1e8, ioaddr2=0x3e0, irq=11<br />
 ata3: enabled=1, ioaddr1=0x168, ioaddr2=0x360, irq=9 </p>
-<dt><i>ata</i>[<code>0-3</code>]<i>-master: </i>or <i>ata</i>[<code>0-3</code>]<i>-slave:</i></p>
+<dt><i>ata</i>[<code>0-3</code>]<i>-master: </i>or <i>ata</i>[<code>0-3</code>]<i>-slave:</i></dt>
 <dd>This defines the type and characteristics of all attached ata devices:<br />
 type=&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>type of attached device&nbsp;<wbr>[disk|cdrom]<br />
 path=&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>path of the image<br />
@@ -135,7 +135,7 @@ status=&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>only valid for cdr
 biosdetect=&nbsp;<wbr>type of biosdetection&nbsp;<wbr>[none|auto], only for disks on ata0&nbsp;<wbr>[cmos]<br />
 translation=type of translation of the bios, only for disks&nbsp;<wbr>[none|lba|large|rechs|auto]<br />
 model=&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>string returned by identify device command<br />
-journal=&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>optional filename of the redolog for undoable and volatile disks </p>
+journal=&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>optional filename of the redolog for undoable and volatile disks </dd>
 <p> Point this at a hard disk image file, cdrom iso file, or a physical cdrom device. To create a hard disk image, try running bximage. It will help you choose the size and then suggest a line that works with it. </p>
 <p> In UNIX it is possible to use a raw device as a Bochs hard disk, but WE DON&#8217;T RECOMMEND IT. </p>
 <p> The path is always mandatory. Disk geometry autodetection works with images created by bximage if CHS is set to 0/0/0 (cylinders are calculated using heads=16 and spt=63). For other hard disk images and modes the cylinders, heads, and spt are mandatory. </p>
@@ -167,71 +167,71 @@ ata2-master: type=disk, path=62M.sample, cylinders=940, heads=8, spt=17<br />
 ata2-slave:&nbsp;<wbr>&nbsp;<wbr>type=disk, path=112M.sample, cylinders=900, heads=15, spt=17<br />
 ata3-master: type=disk, path=483M.sample, cylinders=1024, heads=15, spt=63<br />
 ata3-slave:&nbsp;<wbr>&nbsp;<wbr>type=cdrom, path=iso.sample, status=inserted </p>
-<dt><i>com1: </i>, <i>com2: </i>, <i>com3: </i>or <i>com4:</i></p>
-<dd>This defines a serial port (UART type 16550A). In the &#8216;term&#8217; you can specify a device to use as com1. This can be a real serial line, or a pty. To use a pty (under X/Unix), create two windows (xterms, usually). One of them will run bochs, and the other will act as com1. Find out the tty the com1 window using the `tty&#8217; command, and use that as the `dev&#8217; parameter. Then do `sleep 1000000&#8242; in the com1 window to keep the shell from messing with things, and run bochs in the other window. Serial I/O to com1 (port 0x3f8) will all go to the other window. </p>
+<dt><i>com1: </i>, <i>com2: </i>, <i>com3: </i>or <i>com4:</i></dt>
+<dd>This defines a serial port (UART type 16550A). In the &#8216;term&#8217; you can specify a device to use as com1. This can be a real serial line, or a pty. To use a pty (under X/Unix), create two windows (xterms, usually). One of them will run bochs, and the other will act as com1. Find out the tty the com1 window using the `tty&#8217; command, and use that as the `dev&#8217; parameter. Then do `sleep 1000000&#8242; in the com1 window to keep the shell from messing with things, and run bochs in the other window. Serial I/O to com1 (port 0x3f8) will all go to the other window. </dd>
 <p> Other serial modes are &#8216;null&#8217; (no input/output), &#8216;file&#8217; (output to a file specified as the &#8216;dev&#8217; parameter), &#8216;raw&#8217; (use the real serial port &#8211; under construction for win32) and &#8216;mouse&#8217; (standard serial mouse &#8211; requires mouse option setting &#8216;type=serial&#8217; or &#8216;type=serial_wheel&#8217;) </p>
 <p> Examples:<br />
 &nbsp;<wbr>&nbsp;<wbr>com1: enabled=term, dev=/dev/ttyp7<br />
 &nbsp;<wbr>&nbsp;<wbr>com2: enabled=1, mode=file, dev=serial.out<br />
 &nbsp;<wbr>&nbsp;<wbr>com1: enabled=1, mode=mouse </p>
-<dt><i>parport1: </i>or <i>parport2:</i></p>
-<dd>This defines a parallel (printer) port. When turned on and an output file is defined the emulated printer port sends characters printed by the guest OS into the output file. On some platforms a device filename can be used to send the data to the real parallel port (e.g. &quot;/dev/lp0&quot; on Linux). </p>
+<dt><i>parport1: </i>or <i>parport2:</i></dt>
+<dd>This defines a parallel (printer) port. When turned on and an output file is defined the emulated printer port sends characters printed by the guest OS into the output file. On some platforms a device filename can be used to send the data to the real parallel port (e.g. &quot;/dev/lp0&quot; on Linux). </dd>
 <p> Examples:<br />
 &nbsp;<wbr>&nbsp;<wbr>parport1: enabled=1, file=parport.out<br />
 &nbsp;<wbr>&nbsp;<wbr>parport2: enabled=1, file=&quot;/dev/lp0&quot;<br />
 &nbsp;<wbr>&nbsp;<wbr>parport1: enabled=0 </p>
-<dt><i>boot:</i></p>
-<dd>This defines the boot sequence. Now you can specify up to 3 boot drives, which can be &#8216;floppy&#8217;, &#8216;disk&#8217;, &#8216;cdrom&#8217; or &#8216;network&#8217; (boot ROM). Legacy &#8216;a&#8217; and &#8216;c&#8217; are also supported. </p>
+<dt><i>boot:</i></dt>
+<dd>This defines the boot sequence. Now you can specify up to 3 boot drives, which can be &#8216;floppy&#8217;, &#8216;disk&#8217;, &#8216;cdrom&#8217; or &#8216;network&#8217; (boot ROM). Legacy &#8216;a&#8217; and &#8216;c&#8217; are also supported. </dd>
 <p> Example:<br />
 &nbsp;<wbr>&nbsp;<wbr>boot: cdrom, floppy, disk </p>
-<dt><i>floppy_bootsig_check:</i></p>
-<dd>This disables the 0xaa55 signature check on boot floppies The check is enabled by default. </p>
+<dt><i>floppy_bootsig_check:</i></dt>
+<dd>This disables the 0xaa55 signature check on boot floppies The check is enabled by default. </dd>
 <p> Example:<br />
 &nbsp;<wbr>&nbsp;<wbr>floppy_bootsig_check: disabled=1 </p>
-<dt><i>log:</i></p>
-<dd>Give the path of the log file you&#8217;d like Bochs debug and misc. verbiage to be written to. If you really don&#8217;t want it, make it /dev/null. </p>
+<dt><i>log:</i></dt>
+<dd>Give the path of the log file you&#8217;d like Bochs debug and misc. verbiage to be written to. If you really don&#8217;t want it, make it /dev/null. </dd>
 <p> Example:<br />
 &nbsp;<wbr>&nbsp;<wbr>log: bochs.out<br />
 &nbsp;<wbr>&nbsp;<wbr>log:&nbsp;<wbr>/dev/tty&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>(unix only)<br />
 &nbsp;<wbr>&nbsp;<wbr>log:&nbsp;<wbr>/dev/null&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>(unix only) </p>
-<dt><i>logprefix:</i></p>
+<dt><i>logprefix:</i></dt>
 <dd>This handles the format of the string prepended to each log line : You may use those special tokens :<br />
 &nbsp;<wbr>&nbsp;<wbr>%t : 11 decimal digits timer tick<br />
 &nbsp;<wbr>&nbsp;<wbr>%i : 8 hexadecimal digits of cpu0 current eip<br />
 &nbsp;<wbr>&nbsp;<wbr>%e : 1 character event type&nbsp;<wbr>(&#8216;i&#8217;nfo,&nbsp;<wbr>&#8216;d&#8217;ebug,&nbsp;<wbr>&#8216;p&#8217;anic,&nbsp;<wbr>&#8216;e&#8217;rror)<br />
-&nbsp;<wbr>&nbsp;<wbr>%d : 5 characters string of the device, between brackets </p>
+&nbsp;<wbr>&nbsp;<wbr>%d : 5 characters string of the device, between brackets </dd>
 <p> Default : %t%e%d </p>
 <p> Examples:<br />
 &nbsp;<wbr>&nbsp;<wbr>logprefix:&nbsp;<wbr>%t-%e-@%i-%d<br />
 &nbsp;<wbr>&nbsp;<wbr>logprefix:&nbsp;<wbr>%i%e%d </p>
-<dt><i>panic:</i></p>
-<dd>If Bochs reaches a condition where it cannot emulate correctly, it does a panic. This can be a configuration problem (like a misspelled bochsrc line) or an emulation problem (like an unsupported video mode). The &quot;panic&quot; setting in bochsrc tells Bochs how to respond to a panic. You can set this to fatal (terminate the session), report (print information to the console), or ignore (do nothing). </p>
+<dt><i>panic:</i></dt>
+<dd>If Bochs reaches a condition where it cannot emulate correctly, it does a panic. This can be a configuration problem (like a misspelled bochsrc line) or an emulation problem (like an unsupported video mode). The &quot;panic&quot; setting in bochsrc tells Bochs how to respond to a panic. You can set this to fatal (terminate the session), report (print information to the console), or ignore (do nothing). </dd>
 <p> The safest setting is action=fatal. If you are getting panics, you can try action=report instead. If you allow Bochs to continue after a panic, don&#8217;t be surprised if you get strange behavior or crashes if a panic occurs. Please report panic messages unless it is just a configuration problem like &quot;could not find hard drive image.&quot; </p>
 <p> Example:<br />
 &nbsp;<wbr>&nbsp;<wbr>panic: action=fatal </p>
-<dt><i>error:</i></p>
-<dd>Bochs produces an error message when it finds a condition that really shouldn&#8217;t happen, but doesn&#8217;t endanger the simulation. An example of an error might be if the emulated software produces an illegal disk command. </p>
+<dt><i>error:</i></dt>
+<dd>Bochs produces an error message when it finds a condition that really shouldn&#8217;t happen, but doesn&#8217;t endanger the simulation. An example of an error might be if the emulated software produces an illegal disk command. </dd>
 <p> The &quot;error&quot; setting tells Bochs how to respond to an error condition. You can set this to fatal (terminate the session), report (print information to the console), or ignore (do nothing). </p>
 <p> Example:<br />
 &nbsp;<wbr>&nbsp;<wbr>error: action=report </p>
-<dt><i>info:</i></p>
-<dd>This setting tells Bochs what to do when an event occurs that generates informational messages. You can set this to fatal (that would not be very smart though), report (print information to the console), or ignore (do nothing). For general usage, the &quot;report&quot; option is probably a good choice. </p>
+<dt><i>info:</i></dt>
+<dd>This setting tells Bochs what to do when an event occurs that generates informational messages. You can set this to fatal (that would not be very smart though), report (print information to the console), or ignore (do nothing). For general usage, the &quot;report&quot; option is probably a good choice. </dd>
 <p> Example:<br />
 &nbsp;<wbr>&nbsp;<wbr>info: action=report </p>
-<dt><i>debug:</i></p>
-<dd>This setting tells Bochs what to do with messages intended to assist in debugging. You can set this to fatal (but you shouldn&#8217;t), report (print information to the console), or ignore (do nothing). You should generally set this to ignore, unless you are trying to diagnose a particular problem. </p>
+<dt><i>debug:</i></dt>
+<dd>This setting tells Bochs what to do with messages intended to assist in debugging. You can set this to fatal (but you shouldn&#8217;t), report (print information to the console), or ignore (do nothing). You should generally set this to ignore, unless you are trying to diagnose a particular problem. </dd>
 <p> <code>NOTE:</code> When action=report, Bochs may spit out thousands of debug messages per second, which can impact performance and fill up your disk. </p>
 <p> Example:<br />
 &nbsp;<wbr>&nbsp;<wbr>debug: action=ignore </p>
-<dt><i>debugger_log:</i></p>
-<dd>Give the path of the log file you&#8217;d like Bochs to log debugger output. If you really don&#8217;t want it, make it &#8216;/dev/null&#8217;, or &#8216;-&#8216;. </p>
+<dt><i>debugger_log:</i></dt>
+<dd>Give the path of the log file you&#8217;d like Bochs to log debugger output. If you really don&#8217;t want it, make it &#8216;/dev/null&#8217;, or &#8216;-&#8216;. </dd>
 <p> Example:<br />
 &nbsp;<wbr>&nbsp;<wbr>log: debugger.out<br />
 &nbsp;<wbr>&nbsp;<wbr>log:&nbsp;<wbr>/dev/null&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>(unix only)<br />
 &nbsp;<wbr>&nbsp;<wbr>log: &#8211; </p>
-<dt><i>sb16:</i></p>
+<dt><i>sb16:</i></dt>
 <dd>This defines the SB16 sound emulation. It can have several of the following properties. All properties are in this format:<br />
-&nbsp;<wbr>&nbsp;<wbr>sb16: property=value </p>
+&nbsp;<wbr>&nbsp;<wbr>sb16: property=value </dd>
 <p> <code>PROPERTIES FOR sb16:</code> </p>
 <p> midi: </p>
 <p> The filename is where the midi data is sent. This can be a device or just a file if you want to record the midi data. </p>
@@ -273,21 +273,21 @@ ata3-slave:&nbsp;<wbr>&nbsp;<wbr>type=cdrom, path=iso.sample, status=inserted </
 &nbsp;<wbr>&nbsp;<wbr>wavemode=1, wave=alsa,<br />
 &nbsp;<wbr>&nbsp;<wbr>log=sb16.log, dmatimer=600000 </p>
 <p> <code>NOTE:</code> The examples are wrapped onto three lines for formatting reasons, but it should all be on one line in the actual bochsrc file. </p>
-<dt><i>vga_update_interval:</i></p>
-<dd>Video memory is scanned for updates and screen updated every so many virtual seconds. The default value is 40000, about 25Hz. Keep in mind that you must tweak the &#8216;cpu: ips=N&#8217; directive to be as close to the number of emulated instructions-per-second your workstation can do, for this to be accurate. </p>
+<dt><i>vga_update_interval:</i></dt>
+<dd>Video memory is scanned for updates and screen updated every so many virtual seconds. The default value is 40000, about 25Hz. Keep in mind that you must tweak the &#8216;cpu: ips=N&#8217; directive to be as close to the number of emulated instructions-per-second your workstation can do, for this to be accurate. </dd>
 <p> Example:<br />
 &nbsp;<wbr>&nbsp;<wbr>vga_update_interval: 250000 </p>
-<dt><i>keyboard_serial_delay:</i></p>
-<dd>Approximate time in microseconds that it takes one character to be transfered from the keyboard to controller over the serial path. </p>
+<dt><i>keyboard_serial_delay:</i></dt>
+<dd>Approximate time in microseconds that it takes one character to be transfered from the keyboard to controller over the serial path. </dd>
 <p> Example:<br />
 &nbsp;<wbr>&nbsp;<wbr>keyboard_serial_delay: 200 </p>
-<dt><i>keyboard_paste_delay:</i></p>
-<dd>Approximate time in microseconds between attempts to paste characters to the keyboard controller. This leaves time for the guest os to deal with the flow of characters. The ideal setting depends on how your operating system processes characters. The default of 100000 usec (.1 seconds) was chosen because it works consistently in Windows. </p>
+<dt><i>keyboard_paste_delay:</i></dt>
+<dd>Approximate time in microseconds between attempts to paste characters to the keyboard controller. This leaves time for the guest os to deal with the flow of characters. The ideal setting depends on how your operating system processes characters. The default of 100000 usec (.1 seconds) was chosen because it works consistently in Windows. </dd>
 <p> If your OS is losing characters during a paste, increase the paste delay until it stops losing characters. </p>
 <p> Example:<br />
 &nbsp;<wbr>&nbsp;<wbr>keyboard_paste_delay: 100000 </p>
-<dt><i>clock:</i></p>
-<dd>This defines the parameters of the clock inside Bochs. </p>
+<dt><i>clock:</i></dt>
+<dd>This defines the parameters of the clock inside Bochs. </dd>
 <p> sync </p>
 <p> TO BE COMPLETED (see Greg explanation in feature request #536329) </p>
 <p> time0 </p>
@@ -297,32 +297,32 @@ ata3-slave:&nbsp;<wbr>&nbsp;<wbr>type=cdrom, path=iso.sample, status=inserted </
 <p> Default value are sync=none, time0=local </p>
 <p> Example:<br />
 &nbsp;<wbr>&nbsp;<wbr>clock: sync=realtime, time0=938581955&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>#&nbsp;<wbr>Wed Sep 29 07:12:35 1999 </p>
-<dt><i>mouse:</i></p>
-<dd>This option prevents Bochs from creating mouse &quot;events&quot; unless a mouse is enabled. The hardware emulation itself is not disabled by this. You can turn the mouse on by setting enabled to 1, or turn it off by setting enabled to 0. Unless you have a particular reason for enabling the mouse by default, it is recommended that you leave it off. You can also toggle the mouse usage at runtime (control key + middle mouse button). With the mouse type option you can select the type of mouse to emulate. The default value is &#8216;ps2&#8217;. The other choices are &#8216;imps2&#8217; (wheel mouse on PS/2), &#8216;serial&#8217;, &#8216;serial_wheel&#8217; (one com port requires setting &#8216;mode=mouse&#8217;) and &#8216;usb&#8217; (3-button mouse &#8211; one of the USB ports must be connected with the &#8216;mouse&#8217; device &#8211; requires PCI and USB support). </p>
+<dt><i>mouse:</i></dt>
+<dd>This option prevents Bochs from creating mouse &quot;events&quot; unless a mouse is enabled. The hardware emulation itself is not disabled by this. You can turn the mouse on by setting enabled to 1, or turn it off by setting enabled to 0. Unless you have a particular reason for enabling the mouse by default, it is recommended that you leave it off. You can also toggle the mouse usage at runtime (control key + middle mouse button). With the mouse type option you can select the type of mouse to emulate. The default value is &#8216;ps2&#8217;. The other choices are &#8216;imps2&#8217; (wheel mouse on PS/2), &#8216;serial&#8217;, &#8216;serial_wheel&#8217; (one com port requires setting &#8216;mode=mouse&#8217;) and &#8216;usb&#8217; (3-button mouse &#8211; one of the USB ports must be connected with the &#8216;mouse&#8217; device &#8211; requires PCI and USB support). </dd>
 <p> Examples:<br />
 &nbsp;<wbr>&nbsp;<wbr>mouse: enabled=0<br />
 &nbsp;<wbr>&nbsp;<wbr>mouse: enabled=1, type=imps2 </p>
-<dt><i>private_colormap:</i></p>
-<dd>Requests that the GUI create and use it&#8217;s own non-shared colormap. This colormap will be used when in the bochs window. If not enabled, a shared colormap scheme may be used. Once again, enabled=1 turns on this feature and 0 turns it off. </p>
+<dt><i>private_colormap:</i></dt>
+<dd>Requests that the GUI create and use it&#8217;s own non-shared colormap. This colormap will be used when in the bochs window. If not enabled, a shared colormap scheme may be used. Once again, enabled=1 turns on this feature and 0 turns it off. </dd>
 <p> Example:<br />
 &nbsp;<wbr>&nbsp;<wbr>private_colormap: enabled=1 </p>
-<dt><i>i440fxsupport:</i></p>
-<dd>This option controls the presence of the i440FX PCI chipset. You can also specify the devices connected to PCI slots. Up to 5 slots are available now. These devices are currently supported: ne2k, pcivga, pcidev and pcipnic. If Bochs is compiled with Cirrus SVGA support you&#8217;ll have the additional choice &#8216;cirrus&#8217;. </p>
+<dt><i>i440fxsupport:</i></dt>
+<dd>This option controls the presence of the i440FX PCI chipset. You can also specify the devices connected to PCI slots. Up to 5 slots are available now. These devices are currently supported: ne2k, pcivga, pcidev and pcipnic. If Bochs is compiled with Cirrus SVGA support you&#8217;ll have the additional choice &#8216;cirrus&#8217;. </dd>
 <p> Example:<br />
 &nbsp;<wbr>&nbsp;<wbr>i440fxsupport: enabled=1, slot1=pcivga, slot2=ne2k </p>
-<dt><i>pcidev:</i></p>
-<dd>Enables the mapping of a host PCI hardware device within the PCI subsystem of the Bochs x86 emulator. This feature requires Linux as a host OS. </p>
+<dt><i>pcidev:</i></dt>
+<dd>Enables the mapping of a host PCI hardware device within the PCI subsystem of the Bochs x86 emulator. This feature requires Linux as a host OS. </dd>
 <p> Example:<br />
 &nbsp;<wbr>&nbsp;<wbr>pcidev: vendor=0x1234, device=0x5678 </p>
 <p> The vendor and device arguments should contain the vendor ID respectively the device ID of the PCI device you want to map within Bochs. <code>The PCI mapping is still very experimental.</code> </p>
-<dt><i>ne2k:</i></p>
+<dt><i>ne2k:</i></dt>
 <dd>Defines the characteristics of an attached ne2000 isa card :<br />
 ioaddr=IOADDR,<br />
 irq=IRQ,<br />
 mac=MACADDR,<br />
 ethmod=MODULE,<br />
 ethdev=DEVICE,<br />
-script=SCRIPT </p>
+script=SCRIPT </dd>
 <p> <code>PROPERTIES FOR ne2k:</code> </p>
 <p> ioaddr, irq: You probably won&#8217;t need to change ioaddr and irq, unless there are IRQ conflicts. These parameters are ignored if the NE2000 is assigned to a PCI slot. </p>
 <p> mac: The MAC address MUST NOT match the address of any machine on the net. Also, the first byte must be an even number (bit 0 set means a multicast address), and you cannot use ff:ff:ff:ff:ff:ff because that&#8217;s the broadcast address. For the ethertap module, you must use fe:fd:00:00:00:01. There may be other restrictions too. To be safe, just use the b0:c4&#8230; address. </p>
@@ -351,26 +351,26 @@ script=SCRIPT </p>
 &nbsp;<wbr>&nbsp;<wbr>ne2k: ioaddr=0x300, irq=9, mac=fe:fd:00:00:00:01, ethmod=tuntap, ethdev=/dev/net/tun0, script=./tunconfig<br />
 &nbsp;<wbr>&nbsp;<wbr>ne2k: ioaddr=0x300, irq=9, mac=b0:c4:20:00:00:01, ethmod=vde, ethdev=&quot;/tmp/vde.ctl&quot;<br />
 &nbsp;<wbr>&nbsp;<wbr>ne2k: ioaddr=0x300, irq=9, mac=b0:c4:20:00:00:01, ethmod=vnet, ethdev=&quot;c:/temp&quot; </p>
-<dt><i>keyboard_mapping:</i></p>
-<dd>This enables a remap of a physical localized keyboard to a virtualized us keyboard, as the PC architecture expects. If enabled, the keymap file must be specified. </p>
+<dt><i>keyboard_mapping:</i></dt>
+<dd>This enables a remap of a physical localized keyboard to a virtualized us keyboard, as the PC architecture expects. If enabled, the keymap file must be specified. </dd>
 <p>&nbsp;<wbr>Examples:<br />
 keyboard_mapping: enabled=1, map=gui/keymaps/x11-pc-de.map </p>
-<dt><i>keyboard_type:</i></p>
-<dd>Type of emulated keyboard sent back to the OS to a &quot;keyboard identify&quot; command. It must be one of &quot;xt&quot;, &quot;at&quot; or &quot;mf&quot;. </p>
+<dt><i>keyboard_type:</i></dt>
+<dd>Type of emulated keyboard sent back to the OS to a &quot;keyboard identify&quot; command. It must be one of &quot;xt&quot;, &quot;at&quot; or &quot;mf&quot;. </dd>
 <p> Example:<br />
 &nbsp;<wbr>&nbsp;<wbr>keyboard_type: mf </p>
-<dt><i>user_shortcut:</i></p>
-<dd>This defines the keyboard shortcut to be sent when you press the &quot;user&quot; button in the header bar. The shortcut string is a combination of maximum 3 key names (listed below) separated with a &#8216;-&#8216; character. </p>
+<dt><i>user_shortcut:</i></dt>
+<dd>This defines the keyboard shortcut to be sent when you press the &quot;user&quot; button in the header bar. The shortcut string is a combination of maximum 3 key names (listed below) separated with a &#8216;-&#8216; character. </dd>
 <p> Valid key names: </p>
 <p> &quot;alt&quot;, &quot;bksl&quot;, &quot;bksp&quot;, &quot;ctrl&quot;, &quot;del&quot;, &quot;down&quot;, &quot;end&quot;, &quot;enter&quot;, &quot;esc&quot;, &quot;f1&quot;, &#8230; &quot;f12&quot;, &quot;home&quot;, &quot;ins&quot;, &quot;left&quot;, &quot;menu&quot;, &quot;minus&quot;, &quot;pgdwn&quot;, &quot;pgup&quot;, &quot;plus&quot;, &quot;right&quot;, &quot;shift&quot;, &quot;space&quot;, &quot;tab&quot;, &quot;up&quot;, &quot;win&quot;, &quot;print&quot; and &quot;power&quot;. </p>
 <p> Example:<br />
 &nbsp;<wbr>&nbsp;<wbr>user_shortcut: keys=ctrl-alt-del </p>
-<dt><i>cmosimage:</i></p>
-<dd>This defines image file that can be loaded into the CMOS RAM at startup. The rtc_init parameter controls whether initialize the RTC with values stored in the image. By default the time0 argument given to the clock option is used. With &#8216;rtc_init=image&#8217; the image is the source for the initial time. </p>
+<dt><i>cmosimage:</i></dt>
+<dd>This defines image file that can be loaded into the CMOS RAM at startup. The rtc_init parameter controls whether initialize the RTC with values stored in the image. By default the time0 argument given to the clock option is used. With &#8216;rtc_init=image&#8217; the image is the source for the initial time. </dd>
 <p> Example:<br />
 &nbsp;<wbr>&nbsp;<wbr>cmosimage: file=cmos.img, rtc_init=time0 </p>
-<dt><i>usb1:</i></p>
-<dd>This option controls the presence of the USB root hub which is a part of the i440FX PCI chipset. With the portX option you can connect devices to the hub (currently supported: &#8216;mouse&#8217; and &#8216;keypad&#8217;). If you connect the mouse to one of the ports and use the mouse option &#8216;type=usb&#8217; you&#8217;ll have a 3-button USB mouse. </p>
+<dt><i>usb1:</i></dt>
+<dd>This option controls the presence of the USB root hub which is a part of the i440FX PCI chipset. With the portX option you can connect devices to the hub (currently supported: &#8216;mouse&#8217; and &#8216;keypad&#8217;). If you connect the mouse to one of the ports and use the mouse option &#8216;type=usb&#8217; you&#8217;ll have a 3-button USB mouse. </dd>
 <p> Example:<br />
 &nbsp;<wbr>&nbsp;<wbr>usb1: enabled=1, port1=mouse, port2=keypad </p>
 </dl>

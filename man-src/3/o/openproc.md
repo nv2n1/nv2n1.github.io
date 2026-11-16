@@ -19,44 +19,44 @@ description: "openproc, closeproc – initialize process information from /proc/
 <h2>Flags</h2>
 <p>The behaviour of <code>openproc</code> is controlled by the following set of flags, which may be ORed together. There are three different kinds of flags. The first group of flags determines which information gets read from /proc/#pid for each process. The second group of flags (of which only one can be enacted for a opendir call) restricts which processes information is read for by providing a list of criteria. The third group of flags restricts this as well, but doesn&#8217;t need arguments. These may be used together again. </p>
 <dl>
-<dt><code>PROC_FILLMEM</code></p>
-<dd>read information from <i>/proc/#pid/statm</i></p>
-<dt><code>PROC_FILLCOM</code></p>
-<dd>allocate <i>cmdline</i> part of <i>proc_t</i> and read information from <i>/proc/#pid/cmdline</i></p>
-<dt><code>PROC_FILLENV</code></p>
-<dd>allocate <i>environ</i> part of <i>proc_t</i> and read information from <i>/proc/#pid/environ</i></p>
-<dt><code>PROC_FILLUSR</code></p>
-<dd>resolve user ids to names via <i>/etc/passwd</i></p>
-<dt><code>PROC_FILLGRP</code></p>
-<dd>resolve group ids to names via <i>/etc/group</i></p>
-<dt><code>PROC_FILLSTATUS</code></p>
-<dd>read information from <i>/proc/#pid/status</i></p>
-<dt><code>PROC_FILLSTAT</code></p>
-<dd>read information from <i>/proc/#pid/stat</i></p>
-<dt><code>PROC_FILLARG</code></p>
-<dd>equivalent to PROC_FILLCOM</p>
-<dt><code>PROC_FILLCGROUP</code></p>
-<dd>alloc and fill in cgroup</p>
-<dt><code>PROC_FILLSUPGRP</code></p>
-<dd>resolve supplementary group id -&gt; group name</p>
-<dt><code>PROC_FILLOOM</code></p>
-<dd>fill in proc_t oom_score and oom_adj</p>
-<dt><code>PROC_FILLNS</code></p>
-<dd>fill in proc_t namespace information</p>
-<dt><code>PROC_FILLSYSTEMD</code></p>
-<dd>fill in proc_t systemd information</p>
-<dt><code>PROC_LOOSE_TASKS</code></p>
-<dd>threat threads as if they were processes</p>
-<dt><code>PROC_PID</code> (2nd argument pid_t*<i>pidlist</i>)</p>
-<dd>lookup only processes whose pid is contained in <i>pidlist</i> (the list is terminated with 0)</p>
-<dt><code>PROC_UID</code> (arguments uid_t*<i>uidlist</i><code>, int </code><i>n</i>)</p>
-<dd>lookup only processes whose user id is contained in <i>uidlist</i> (where <i>n</i> is the number of uids contained in the list)</p>
-<dt><code>PROC_EDITCGRPCVT</code></p>
-<dd>edit cgroup as single vector</p>
-<dt><code>PROC_EDITCMDLCVT</code></p>
-<dd>edit cmdline as single vector</p>
-<dt><code>PROC_EDITENVRCVT</code></p>
-<dd>edit environ as single vector </p>
+<dt><code>PROC_FILLMEM</code></dt>
+<dd>read information from <i>/proc/#pid/statm</i></dd>
+<dt><code>PROC_FILLCOM</code></dt>
+<dd>allocate <i>cmdline</i> part of <i>proc_t</i> and read information from <i>/proc/#pid/cmdline</i></dd>
+<dt><code>PROC_FILLENV</code></dt>
+<dd>allocate <i>environ</i> part of <i>proc_t</i> and read information from <i>/proc/#pid/environ</i></dd>
+<dt><code>PROC_FILLUSR</code></dt>
+<dd>resolve user ids to names via <i>/etc/passwd</i></dd>
+<dt><code>PROC_FILLGRP</code></dt>
+<dd>resolve group ids to names via <i>/etc/group</i></dd>
+<dt><code>PROC_FILLSTATUS</code></dt>
+<dd>read information from <i>/proc/#pid/status</i></dd>
+<dt><code>PROC_FILLSTAT</code></dt>
+<dd>read information from <i>/proc/#pid/stat</i></dd>
+<dt><code>PROC_FILLARG</code></dt>
+<dd>equivalent to PROC_FILLCOM</dd>
+<dt><code>PROC_FILLCGROUP</code></dt>
+<dd>alloc and fill in cgroup</dd>
+<dt><code>PROC_FILLSUPGRP</code></dt>
+<dd>resolve supplementary group id -&gt; group name</dd>
+<dt><code>PROC_FILLOOM</code></dt>
+<dd>fill in proc_t oom_score and oom_adj</dd>
+<dt><code>PROC_FILLNS</code></dt>
+<dd>fill in proc_t namespace information</dd>
+<dt><code>PROC_FILLSYSTEMD</code></dt>
+<dd>fill in proc_t systemd information</dd>
+<dt><code>PROC_LOOSE_TASKS</code></dt>
+<dd>threat threads as if they were processes</dd>
+<dt><code>PROC_PID</code> (2nd argument pid_t*<i>pidlist</i>)</dt>
+<dd>lookup only processes whose pid is contained in <i>pidlist</i> (the list is terminated with 0)</dd>
+<dt><code>PROC_UID</code> (arguments uid_t*<i>uidlist</i><code>, int </code><i>n</i>)</dt>
+<dd>lookup only processes whose user id is contained in <i>uidlist</i> (where <i>n</i> is the number of uids contained in the list)</dd>
+<dt><code>PROC_EDITCGRPCVT</code></dt>
+<dd>edit cgroup as single vector</dd>
+<dt><code>PROC_EDITCMDLCVT</code></dt>
+<dd>edit cmdline as single vector</dd>
+<dt><code>PROC_EDITENVRCVT</code></dt>
+<dd>edit environ as single vector </dd>
 </dl>
 <h2>Note</h2>
 <p>Only one of the flags needing additional arguments (<code>PROC_{PID,UID}</code>) may be used at a time.</p>

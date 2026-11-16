@@ -50,7 +50,7 @@ Link with - lnftables.
 <p> The flags setting controls the output format. </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 enum {<br />
     NFT_CTX_OUTPUT_REVERSEDNS = (1 &lt;&lt; 0),<br />
     NFT_CTX_OUTPUT_SERVICE = (1 &lt;&lt; 1),<br />
@@ -69,66 +69,66 @@ enum {<br />
                                   NFT_CTX_OUTPUT_NUMERIC_TIME),<br />
     NFT_CTX_OUTPUT_TERSE = (1 &lt;&lt; 11),<br />
 };
-</dl>
+</dd></dl>
 <p> NFT_CTX_OUTPUT_REVERSEDNS</p>
 <dl>
 <dt>
-<dd> Reverse DNS lookups are performed for IP addresses when printing. Note that this may add significant delay to <code>list</code> commands depending on DNS resolver speed.</dl>
+</dt><dd> Reverse DNS lookups are performed for IP addresses when printing. Note that this may add significant delay to <code>list</code> commands depending on DNS resolver speed.</dd></dl>
 <p> NFT_CTX_OUTPUT_SERVICE</p>
 <dl>
 <dt>
-<dd> Print port numbers as services as described in the /etc/services file.</dl>
+</dt><dd> Print port numbers as services as described in the /etc/services file.</dd></dl>
 <p> NFT_CTX_OUTPUT_STATELESS</p>
 <dl>
 <dt>
-<dd> If stateless output has been requested, then stateful data is not printed. Stateful data refers to those objects that carry run-time data, e.g. the <code>counter</code> statement holds packet and byte counter values, making it stateful.</dl>
+</dt><dd> If stateless output has been requested, then stateful data is not printed. Stateful data refers to those objects that carry run-time data, e.g. the <code>counter</code> statement holds packet and byte counter values, making it stateful.</dd></dl>
 <p> NFT_CTX_OUTPUT_HANDLE</p>
 <dl>
 <dt>
-<dd> Upon insertion into the ruleset, some elements are assigned a unique handle for identification purposes. For example, when deleting a table or chain, it may be identified either by name or handle. Rules on the other hand must be deleted by handle, because there is no other way to uniquely identify them. This flag makes ruleset listings include handle values.</dl>
+</dt><dd> Upon insertion into the ruleset, some elements are assigned a unique handle for identification purposes. For example, when deleting a table or chain, it may be identified either by name or handle. Rules on the other hand must be deleted by handle, because there is no other way to uniquely identify them. This flag makes ruleset listings include handle values.</dd></dl>
 <p> NFT_CTX_OUTPUT_JSON</p>
 <dl>
 <dt>
-<dd> If enabled at compile-time, libnftables accepts input in JSON format and is able to print output in JSON format as well. See <code><a href="/docs/linux/man/5-libnftables-json/">libnftables-json</a></code>(5) for a description of the supported schema. This flag controls JSON output format, input is auto-detected.</dl>
+</dt><dd> If enabled at compile-time, libnftables accepts input in JSON format and is able to print output in JSON format as well. See <code><a href="/docs/linux/man/5-libnftables-json/">libnftables-json</a></code>(5) for a description of the supported schema. This flag controls JSON output format, input is auto-detected.</dd></dl>
 <p> NFT_CTX_OUTPUT_ECHO</p>
 <dl>
 <dt>
-<dd> The echo setting makes libnftables print the changes once they are committed to the kernel, just like a running instance of <code>nft monitor</code> would. Amongst other things, this allows to retrieve an added rule&#8217;s handle atomically.</dl>
+</dt><dd> The echo setting makes libnftables print the changes once they are committed to the kernel, just like a running instance of <code>nft monitor</code> would. Amongst other things, this allows to retrieve an added rule&#8217;s handle atomically.</dd></dl>
 <p> NFT_CTX_OUTPUT_GUID</p>
 <dl>
 <dt>
-<dd> Display UID and GID as described in the /etc/passwd and /etc/group files.</dl>
+</dt><dd> Display UID and GID as described in the /etc/passwd and /etc/group files.</dd></dl>
 <p> NFT_CTX_OUTPUT_NUMERIC_PROTO</p>
 <dl>
 <dt>
-<dd> Display layer 4 protocol numerically.</dl>
+</dt><dd> Display layer 4 protocol numerically.</dd></dl>
 <p> NFT_CTX_OUTPUT_NUMERIC_PRIO</p>
 <dl>
 <dt>
-<dd> Display base chain priority numerically.</dl>
+</dt><dd> Display base chain priority numerically.</dd></dl>
 <p> NFT_CTX_OUTPUT_NUMERIC_SYMBOL</p>
 <dl>
 <dt>
-<dd> Display expression datatype as numeric value.</dl>
+</dt><dd> Display expression datatype as numeric value.</dd></dl>
 <p> NFT_CTX_OUTPUT_NUMERIC_TIME</p>
 <dl>
 <dt>
-<dd> Display time, day and hour values in numeric format.</dl>
+</dt><dd> Display time, day and hour values in numeric format.</dd></dl>
 <p> NFT_CTX_OUTPUT_NUMERIC_ALL</p>
 <dl>
 <dt>
-<dd> Display all numerically.</dl>
+</dt><dd> Display all numerically.</dd></dl>
 <p> NFT_CTX_OUTPUT_TERSE</p>
 <dl>
 <dt>
-<dd> If terse output has been requested, then the contents of sets are not printed.</dl>
+</dt><dd> If terse output has been requested, then the contents of sets are not printed.</dd></dl>
 <p> The <code>nft_ctx_output_get_flags</code>() function returns the output flags setting&#8217;s value in <i>ctx</i>. </p>
 <p> The <code>nft_ctx_output_set_flags</code>() function sets the output flags setting in <i>ctx</i> to the value of <i>val</i>.</p>
 <h3>nft_ctx_output_get_debug() and nft_ctx_output_set_debug()</h3>
 <p> Libnftables supports separate debugging of different parts of its internals. To facilitate this, debugging output is controlled via a bit mask. The bits are defined as such: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 enum nft_debug_level {<br />
     NFT_DEBUG_SCANNER = 0x1,<br />
     NFT_DEBUG_PARSER = 0x2,<br />
@@ -138,35 +138,35 @@ enum nft_debug_level {<br />
     NFT_DEBUG_PROTO_CTX = 0x20,<br />
     NFT_DEBUG_SEGTREE = 0x40,<br />
 };
-</dl>
+</dd></dl>
 <p> NFT_DEBUG_SCANNER</p>
 <dl>
 <dt>
-<dd> Print LEX debug output.</dl>
+</dt><dd> Print LEX debug output.</dd></dl>
 <p> NFT_DEBUG_PARSER</p>
 <dl>
 <dt>
-<dd> Print YACC debug output.</dl>
+</dt><dd> Print YACC debug output.</dd></dl>
 <p> NFT_DEBUG_EVALUATION</p>
 <dl>
 <dt>
-<dd> Print debug information about evaluation phase.</dl>
+</dt><dd> Print debug information about evaluation phase.</dd></dl>
 <p> NFT_DEBUG_NETLINK</p>
 <dl>
 <dt>
-<dd> Print netlink debug output.</dl>
+</dt><dd> Print netlink debug output.</dd></dl>
 <p> NFT_DEBUG_MNL</p>
 <dl>
 <dt>
-<dd> Print libmnl debug output.</dl>
+</dt><dd> Print libmnl debug output.</dd></dl>
 <p> NFT_DEBUG_PROTO_CTX</p>
 <dl>
 <dt>
-<dd> Print protocol context debug output.</dl>
+</dt><dd> Print protocol context debug output.</dd></dl>
 <p> NFT_DEBUG_SEGTREE</p>
 <dl>
 <dt>
-<dd> Print segtree (i.e. interval sets) debug output.</dl>
+</dt><dd> Print segtree (i.e. interval sets) debug output.</dd></dl>
 <p> The <code>nft_ctx_output_get_debug</code>() function returns the debug output setting&#8217;s value in <i>ctx</i>. </p>
 <p> The <code>nft_ctx_output_set_debug</code>() function sets the debug output setting in <i>ctx</i> to the value of <i>mask</i>.</p>
 <h3>Controlling library standard and error output</h3>
@@ -187,7 +187,7 @@ enum nft_debug_level {<br />
 <h2>EXAMPLE</h2>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre><code>
 #include &lt;nftables/libnftables.h&gt;
 #include &lt;stdio.h&gt;
@@ -235,3 +235,5 @@ Enter command ('q' to quit): ");
         fgets(buf, 256, stdin);
         if (strlen(buf))
             buf[strlen(buf) - 1] = '
+</dd></dl>
+</code></pre>

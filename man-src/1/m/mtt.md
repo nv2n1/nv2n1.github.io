@@ -16,14 +16,14 @@ description: "mtt – teletext browser for X11 and console."
 <h2>OPTIONS</h2>
 <p> <code>mtt</code> understands the usual toolkit options (-geometry + friends). Additional options are:</p>
 <dl>
-<dt><code>-help</code></p>
-<dd> print help text.</p>
-<dt><code>-debug</code></p>
-<dd> enable debug messages.</p>
-<dt><code>-device &lt;dev&gt;</code></p>
-<dd> vbi device (default is /dev/vbi0).</p>
-<dt><code>-tty</code></p>
-<dd> force using the console mode.</dl>
+<dt><code>-help</code></dt>
+<dd> print help text.</dd>
+<dt><code>-debug</code></dt>
+<dd> enable debug messages.</dd>
+<dt><code>-device &lt;dev&gt;</code></dt>
+<dd> vbi device (default is /dev/vbi0).</dd>
+<dt><code>-tty</code></dt>
+<dd> force using the console mode.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/1-motv/">motv</a>(1)</p>
 <h2>AUTHOR</h2>

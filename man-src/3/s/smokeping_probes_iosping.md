@@ -34,58 +34,43 @@ Smokeping::probes::IOSPing - Cisco IOS Probe for SmokePing
  pings = 5</pre><h2>Description</h2>Integrates Cisco <font SIZE="-1">IOS</font> as a probe into smokeping. Uses the rsh / remsh protocol to run a ping from an <font SIZE="-1">IOS</font> device.
 <h2>Variables</h2>Supported probe-specific variables:
 <dl COMPACT><dt>binary
-<dd>The binary option specifies the path of the binary to be used to connect to the <font SIZE="-1">IOS</font> device. Commonly used binaries are /usr/bin/rsh and /usr/bin/remsh, although any script or binary should work if can be called as 
-
+</dt><dd>The binary option specifies the path of the binary to be used to connect to the <font SIZE="-1">IOS</font> device. Commonly used binaries are /usr/bin/rsh and /usr/bin/remsh, although any script or binary should work if can be called as 
  <pre> /path/to/binary [ -l user ] router ping</pre>to produce the <font SIZE="-1">IOS</font> ping dialog on stdin &amp; stdout. 
-
  Example value: /usr/bin/rsh 
-
  This setting is mandatory.
-<dt>forks
-<dd>Run this many concurrent processes at maximum 
-
+</dd><dt>forks
+</dt><dd>Run this many concurrent processes at maximum 
  Example value: 5 
-
  Default value: 5
-<dt>offset
-<dd>If you run many probes concurrently you may want to prevent them from hitting your network all at the same time. Using the probe-specific offset parameter you can change the point in time when each probe will be run. Offset is specified in % of total interval, or alternatively as 'random', and the offset from the 'General' section is used if nothing is specified here. Note that this does <font SIZE="-1">NOT</font> influence the rrds itself, it is just a matter of when data acqusition is initiated. (This variable is only applicable if the variable 'concurrentprobes' is set in the 'General' section.) 
-
+</dd><dt>offset
+</dt><dd>If you run many probes concurrently you may want to prevent them from hitting your network all at the same time. Using the probe-specific offset parameter you can change the point in time when each probe will be run. Offset is specified in % of total interval, or alternatively as 'random', and the offset from the 'General' section is used if nothing is specified here. Note that this does <font SIZE="-1">NOT</font> influence the rrds itself, it is just a matter of when data acqusition is initiated. (This variable is only applicable if the variable 'concurrentprobes' is set in the 'General' section.) 
  Example value: 50%
-<dt>packetsize
-<dd>The (optional) packetsize option lets you configure the packetsize for the pings sent. 
-
+</dd><dt>packetsize
+</dt><dd>The (optional) packetsize option lets you configure the packetsize for the pings sent. 
  Default value: 56
-<dt>step
-<dd>Duration of the base interval that this probe should use, if different from the one specified in the 'Database' section. Note that the step in the <font SIZE="-1">RRD</font> files is fixed when they are originally generated, and if you change the step parameter afterwards, you'll have to delete the old <font SIZE="-1">RRD</font> files or somehow convert them. (This variable is only applicable if the variable 'concurrentprobes' is set in the 'General' section.) 
-
+</dd><dt>step
+</dt><dd>Duration of the base interval that this probe should use, if different from the one specified in the 'Database' section. Note that the step in the <font SIZE="-1">RRD</font> files is fixed when they are originally generated, and if you change the step parameter afterwards, you'll have to delete the old <font SIZE="-1">RRD</font> files or somehow convert them. (This variable is only applicable if the variable 'concurrentprobes' is set in the 'General' section.) 
  Example value: 300
-<dt>timeout
-<dd>How long a single 'ping' takes at maximum 
-
+</dd><dt>timeout
+</dt><dd>How long a single 'ping' takes at maximum 
  Example value: 15 
-
- Default value: 5</dl>
+ Default value: 5</dd></dl>
  
 
  Supported target-specific variables:
 <dl COMPACT><dt>ioshost
-<dd>The ioshost option specifies the <font SIZE="-1">IOS</font> device which should be used for the ping. 
-
+</dt><dd>The ioshost option specifies the <font SIZE="-1">IOS</font> device which should be used for the ping. 
  Example value: my.cisco.router 
-
  This setting is mandatory.
-<dt>iosint
-<dd>The (optional) iosint option allows you to specify the source address or interface in the <font SIZE="-1">IOS</font> device. The value should be an <font SIZE="-1">IP</font> address or an interface name such as ``Ethernet 1/0''. If this option is omitted, the <font SIZE="-1">IOS</font> device will pick the <font SIZE="-1">IP</font> address of the outbound interface to use. 
-
+</dd><dt>iosint
+</dt><dd>The (optional) iosint option allows you to specify the source address or interface in the <font SIZE="-1">IOS</font> device. The value should be an <font SIZE="-1">IP</font> address or an interface name such as ``Ethernet 1/0''. If this option is omitted, the <font SIZE="-1">IOS</font> device will pick the <font SIZE="-1">IP</font> address of the outbound interface to use. 
  Example value: Ethernet 1/0
-<dt>iosuser
-<dd>The (optional) iosuser option allows you to specify the remote username the <font SIZE="-1">IOS</font> device. If this option is omitted, the username defaults to the default user used by the remsh command (usually the user running the remsh command, ie the user running SmokePing). 
-
+</dd><dt>iosuser
+</dt><dd>The (optional) iosuser option allows you to specify the remote username the <font SIZE="-1">IOS</font> device. If this option is omitted, the username defaults to the default user used by the remsh command (usually the user running the remsh command, ie the user running SmokePing). 
  Example value: admin
-<dt>pings
-<dd>How many pings should be sent to each target, if different from the global value specified in the Database section. Note that the number of pings in the <font SIZE="-1">RRD</font> files is fixed when they are originally generated, and if you change this parameter afterwards, you'll have to delete the old <font SIZE="-1">RRD</font> files or somehow convert them. 
-
- Example value: 5</dl><h2>Authors</h2>Paul J Murphy &lt;paul [at] murph.org&gt; 
+</dd><dt>pings
+</dt><dd>How many pings should be sent to each target, if different from the global value specified in the Database section. Note that the number of pings in the <font SIZE="-1">RRD</font> files is fixed when they are originally generated, and if you change this parameter afterwards, you'll have to delete the old <font SIZE="-1">RRD</font> files or somehow convert them. 
+ Example value: 5</dd></dl><h2>Authors</h2>Paul J Murphy &lt;paul [at] murph.org&gt; 
 
  based on Smokeping::probes::FPing by 
 

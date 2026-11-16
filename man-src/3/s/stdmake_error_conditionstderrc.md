@@ -25,12 +25,9 @@ Error condition for e.
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;system_error&gt;
-
 #include &lt;string&gt;
-
 #include &lt;iostream&gt;
 int main()
-
 {
     auto err = std::make_error_condition(std::errc::invalid_argument);
     std::cout &lt;&lt; err.message() &lt;&lt; '\n';

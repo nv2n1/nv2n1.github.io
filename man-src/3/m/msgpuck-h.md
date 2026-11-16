@@ -180,7 +180,7 @@ description: "msgpuck.h – MsgPuck is a simple and efficient MsgPack encoder/de
 * </pre>
 <p><code>Note:</code></p>
 <dl COMPACT>
-<dd>Supported compilers. The implementation requires a C99+ or C++03+ compatible compiler. </p>
+<dd>Supported compilers. The implementation requires a C99+ or C++03+ compatible compiler. </dd>
 <p> Inline functions. The implementation is compatible with both C99 and GNU inline functions. Please define MP_SOURCE 1 before #include &lt;<code>msgpuck.h</code>&gt; in a single compilation unit. This module will be used to store non-inlined versions of functions and global tables.</dl>
 <h2>Function Documentation</h2>
 <h3>MP_PROTO int mp_check (const char **data, const char *end)</h3>
@@ -188,347 +188,347 @@ description: "msgpuck.h – MsgPuck is a simple and efficient MsgPack encoder/de
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>data</i> &#8211; the pointer to a buffer<br />
- <i>end</i> &#8211; the end of a buffer</dl>
+ <i>end</i> &#8211; the end of a buffer</dd></dl>
 <p> <code>Return values:</code></p>
 <dl COMPACT>
 <dd><i>0</i> when MsgPack in <i>data</i> is valid.<br />
- <i>!=</i> 0 when MsgPack in <i>data</i> is not valid.</dl>
+ <i>!=</i> 0 when MsgPack in <i>data</i> is not valid.</dd></dl>
 <p> <code>Postcondition:</code></p>
 <dl COMPACT>
-<dd>*data = *data + mp_sizeof_TYPE() where TYPE is mp_typeof(**data) </p>
+<dd>*data = *data + mp_sizeof_TYPE() where TYPE is mp_typeof(**data) </dd>
 <p> *data is not defined if MsgPack is not valid</dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>mp_next()</code></dl>
+<dd><code>mp_next()</code></dd></dl>
 <h3>MP_PROTO ptrdiff_t mp_check_array (const char *cur, const char *end)</h3>
 <p>Check that <i>cur</i> buffer has enough bytes to decode an array header. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>cur</i> buffer<br />
- <i>end</i> end of the buffer</dl>
+ <i>end</i> end of the buffer</dd></dl>
 <p> <code>Return values:</code></p>
 <dl COMPACT>
 <dd><i>0</i> &#8211; buffer has enough bytes<br />
- <i>&gt;</i> 0 &#8211; the number of remaining bytes to read</dl>
+ <i>&gt;</i> 0 &#8211; the number of remaining bytes to read</dd></dl>
 <p> <code>Precondition:</code></p>
 <dl COMPACT>
-<dd>cur &lt; end </p>
+<dd>cur &lt; end </dd>
 <p> mp_typeof(*cur) == MP_ARRAY</dl>
 <h3>MP_PROTO ptrdiff_t mp_check_binl (const char *cur, const char *end)</h3>
 <p>Check that <i>cur</i> buffer has enough bytes to decode a binstring header. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>cur</i> buffer<br />
- <i>end</i> end of the buffer</dl>
+ <i>end</i> end of the buffer</dd></dl>
 <p> <code>Return values:</code></p>
 <dl COMPACT>
 <dd><i>0</i> &#8211; buffer has enough bytes<br />
- <i>&gt;</i> 0 &#8211; the number of remaining bytes to read</dl>
+ <i>&gt;</i> 0 &#8211; the number of remaining bytes to read</dd></dl>
 <p> <code>Precondition:</code></p>
 <dl COMPACT>
-<dd>cur &lt; end </p>
+<dd>cur &lt; end </dd>
 <p> mp_typeof(*cur) == MP_BIN</dl>
 <h3>MP_PROTO ptrdiff_t mp_check_bool (const char *cur, const char *end)</h3>
 <p>Check that <i>cur</i> buffer has enough bytes to decode a bool value. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>cur</i> buffer<br />
- <i>end</i> end of the buffer</dl>
+ <i>end</i> end of the buffer</dd></dl>
 <p> <code>Return values:</code></p>
 <dl COMPACT>
 <dd><i>0</i> &#8211; buffer has enough bytes<br />
- <i>&gt;</i> 0 &#8211; the number of remaining bytes to read</dl>
+ <i>&gt;</i> 0 &#8211; the number of remaining bytes to read</dd></dl>
 <p> <code>Precondition:</code></p>
 <dl COMPACT>
-<dd>cur &lt; end </p>
+<dd>cur &lt; end </dd>
 <p> mp_typeof(*cur) == MP_BOOL</dl>
 <h3>MP_PROTO ptrdiff_t mp_check_double (const char *cur, const char *end)</h3>
 <p>Check that <i>cur</i> buffer has enough bytes to decode a double. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>cur</i> buffer<br />
- <i>end</i> end of the buffer</dl>
+ <i>end</i> end of the buffer</dd></dl>
 <p> <code>Return values:</code></p>
 <dl COMPACT>
 <dd><i>0</i> &#8211; buffer has enough bytes<br />
- <i>&gt;</i> 0 &#8211; the number of remaining bytes to read</dl>
+ <i>&gt;</i> 0 &#8211; the number of remaining bytes to read</dd></dl>
 <p> <code>Precondition:</code></p>
 <dl COMPACT>
-<dd>cur &lt; end </p>
+<dd>cur &lt; end </dd>
 <p> mp_typeof(*cur) == MP_DOUBLE</dl>
 <h3>MP_PROTO ptrdiff_t mp_check_float (const char *cur, const char *end)</h3>
 <p>Check that <i>cur</i> buffer has enough bytes to decode a float. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>cur</i> buffer<br />
- <i>end</i> end of the buffer</dl>
+ <i>end</i> end of the buffer</dd></dl>
 <p> <code>Return values:</code></p>
 <dl COMPACT>
 <dd><i>0</i> &#8211; buffer has enough bytes<br />
- <i>&gt;</i> 0 &#8211; the number of remaining bytes to read</dl>
+ <i>&gt;</i> 0 &#8211; the number of remaining bytes to read</dd></dl>
 <p> <code>Precondition:</code></p>
 <dl COMPACT>
-<dd>cur &lt; end </p>
+<dd>cur &lt; end </dd>
 <p> mp_typeof(*cur) == MP_FLOAT</dl>
 <h3>MP_PROTO ptrdiff_t mp_check_int (const char *cur, const char *end)</h3>
 <p>Check that <i>cur</i> buffer has enough bytes to decode an int. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>cur</i> buffer<br />
- <i>end</i> end of the buffer</dl>
+ <i>end</i> end of the buffer</dd></dl>
 <p> <code>Return values:</code></p>
 <dl COMPACT>
 <dd><i>0</i> &#8211; buffer has enough bytes<br />
- <i>&gt;</i> 0 &#8211; the number of remaining bytes to read</dl>
+ <i>&gt;</i> 0 &#8211; the number of remaining bytes to read</dd></dl>
 <p> <code>Precondition:</code></p>
 <dl COMPACT>
-<dd>cur &lt; end </p>
+<dd>cur &lt; end </dd>
 <p> mp_typeof(*cur) == MP_INT</dl>
 <h3>MP_PROTO ptrdiff_t mp_check_map (const char *cur, const char *end)</h3>
 <p>Check that <i>cur</i> buffer has enough bytes to decode a map header. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>cur</i> buffer<br />
- <i>end</i> end of the buffer</dl>
+ <i>end</i> end of the buffer</dd></dl>
 <p> <code>Return values:</code></p>
 <dl COMPACT>
 <dd><i>0</i> &#8211; buffer has enough bytes<br />
- <i>&gt;</i> 0 &#8211; the number of remaining bytes to read</dl>
+ <i>&gt;</i> 0 &#8211; the number of remaining bytes to read</dd></dl>
 <p> <code>Precondition:</code></p>
 <dl COMPACT>
-<dd>cur &lt; end </p>
+<dd>cur &lt; end </dd>
 <p> mp_typeof(*cur) == MP_MAP</dl>
 <h3>MP_PROTO ptrdiff_t mp_check_nil (const char *cur, const char *end)</h3>
 <p>Check that <i>cur</i> buffer has enough bytes to decode nil. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>cur</i> buffer<br />
- <i>end</i> end of the buffer</dl>
+ <i>end</i> end of the buffer</dd></dl>
 <p> <code>Return values:</code></p>
 <dl COMPACT>
 <dd><i>0</i> &#8211; buffer has enough bytes<br />
- <i>&gt;</i> 0 &#8211; the number of remaining bytes to read</dl>
+ <i>&gt;</i> 0 &#8211; the number of remaining bytes to read</dd></dl>
 <p> <code>Precondition:</code></p>
 <dl COMPACT>
-<dd>cur &lt; end </p>
+<dd>cur &lt; end </dd>
 <p> mp_typeof(*cur) == MP_NIL</dl>
 <h3>MP_PROTO ptrdiff_t mp_check_strl (const char *cur, const char *end)</h3>
 <p>Check that <i>cur</i> buffer has enough bytes to decode a string header. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>cur</i> buffer<br />
- <i>end</i> end of the buffer</dl>
+ <i>end</i> end of the buffer</dd></dl>
 <p> <code>Return values:</code></p>
 <dl COMPACT>
 <dd><i>0</i> &#8211; buffer has enough bytes<br />
- <i>&gt;</i> 0 &#8211; the number of remaining bytes to read</dl>
+ <i>&gt;</i> 0 &#8211; the number of remaining bytes to read</dd></dl>
 <p> <code>Precondition:</code></p>
 <dl COMPACT>
-<dd>cur &lt; end </p>
+<dd>cur &lt; end </dd>
 <p> mp_typeof(*cur) == MP_STR</dl>
 <h3>MP_PROTO ptrdiff_t mp_check_uint (const char *cur, const char *end)</h3>
 <p>Check that <i>cur</i> buffer has enough bytes to decode an uint. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>cur</i> buffer<br />
- <i>end</i> end of the buffer</dl>
+ <i>end</i> end of the buffer</dd></dl>
 <p> <code>Return values:</code></p>
 <dl COMPACT>
 <dd><i>0</i> &#8211; buffer has enough bytes<br />
- <i>&gt;</i> 0 &#8211; the number of remaining bytes to read</dl>
+ <i>&gt;</i> 0 &#8211; the number of remaining bytes to read</dd></dl>
 <p> <code>Precondition:</code></p>
 <dl COMPACT>
-<dd>cur &lt; end </p>
+<dd>cur &lt; end </dd>
 <p> mp_typeof(*cur) == MP_UINT</dl>
 <h3>MP_PROTO int mp_compare_uint (const char *data_a, const char *data_b)</h3>
 <p>Compare two packed unsigned integers. The function is faster than two <code>mp_decode_uint()</code> calls. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>data_a</i> unsigned int a<br />
- <i>data_b</i> unsigned int b</dl>
+ <i>data_b</i> unsigned int b</dd></dl>
 <p> <code>Return values:</code></p>
 <dl COMPACT>
 <dd><i>&lt;</i> 0 when <i>a</i> &lt; <i>b</i><br />
  <i>0</i> when <i>a</i> == <i>b</i><br />
- <i>&gt;</i> 0 when <i>a</i> &gt; <i>b</i></dl>
+ <i>&gt;</i> 0 when <i>a</i> &gt; <i>b</i></dd></dl>
 <h3>MP_PROTO uint32_t mp_decode_array (const char **data)</h3>
 <p>Decode an array header from MsgPack <i>data</i>. All array members must be decoded after the header. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>data</i> &#8211; the pointer to a buffer</dl>
+<dd><i>data</i> &#8211; the pointer to a buffer</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>the number of elements in an array</dl>
+<dd>the number of elements in an array</dd></dl>
 <p> <code>Postcondition:</code></p>
 <dl COMPACT>
-<dd>*data = *data + mp_sizeof_array(retval)</dl>
+<dd>*data = *data + mp_sizeof_array(retval)</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>An usage example </code></dl>
+<dd><code>An usage example </code></dd></dl>
 <h3>MP_PROTO const char* mp_decode_bin (const char **data, uint32_t *len)</h3>
 <p>Decode a binstring from MsgPack <i>data</i>. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>data</i> &#8211; the pointer to a buffer<br />
- <i>len</i> &#8211; the pointer to save a binstring length</dl>
+ <i>len</i> &#8211; the pointer to save a binstring length</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>a pointer to a decoded binstring</dl>
+<dd>a pointer to a decoded binstring</dd></dl>
 <p> <code>Postcondition:</code></p>
 <dl COMPACT>
-<dd>*data = *data + mp_sizeof_str(*len)</dl>
+<dd>*data = *data + mp_sizeof_str(*len)</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>mp_encode_binl</code></dl>
+<dd><code>mp_encode_binl</code></dd></dl>
 <h3>MP_PROTO uint32_t mp_decode_binl (const char **data)</h3>
 <p>Decode a length of a binstring from MsgPack <i>data</i>. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>data</i> &#8211; the pointer to a buffer</dl>
+<dd><i>data</i> &#8211; the pointer to a buffer</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>a length of a binstring</dl>
+<dd>a length of a binstring</dd></dl>
 <p> <code>Postcondition:</code></p>
 <dl COMPACT>
-<dd>*data = *data + mp_sizeof_binl(retval)</dl>
+<dd>*data = *data + mp_sizeof_binl(retval)</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>mp_encode_binl</code></dl>
+<dd><code>mp_encode_binl</code></dd></dl>
 <h3>MP_PROTO bool mp_decode_bool (const char **data)</h3>
 <p>Decode a bool value from MsgPack <i>data</i>. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>data</i> &#8211; the pointer to a buffer</dl>
+<dd><i>data</i> &#8211; the pointer to a buffer</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>a decoded bool value</dl>
+<dd>a decoded bool value</dd></dl>
 <p> <code>Postcondition:</code></p>
 <dl COMPACT>
-<dd>*data = *data + mp_sizeof_bool(retval)</dl>
+<dd>*data = *data + mp_sizeof_bool(retval)</dd></dl>
 <h3>MP_PROTO double mp_decode_double (const char **data)</h3>
 <p>Decode a double from MsgPack <i>data</i>. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>data</i> &#8211; the pointer to a buffer</dl>
+<dd><i>data</i> &#8211; the pointer to a buffer</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>a double</dl>
+<dd>a double</dd></dl>
 <p> <code>Postcondition:</code></p>
 <dl COMPACT>
-<dd>*data = *data + mp_sizeof_double(retval)</dl>
+<dd>*data = *data + mp_sizeof_double(retval)</dd></dl>
 <h3>MP_PROTO float mp_decode_float (const char **data)</h3>
 <p>Decode a float from MsgPack <i>data</i>. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>data</i> &#8211; the pointer to a buffer</dl>
+<dd><i>data</i> &#8211; the pointer to a buffer</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>a float</dl>
+<dd>a float</dd></dl>
 <p> <code>Postcondition:</code></p>
 <dl COMPACT>
-<dd>*data = *data + mp_sizeof_float(retval)</dl>
+<dd>*data = *data + mp_sizeof_float(retval)</dd></dl>
 <h3>MP_PROTO int64_t mp_decode_int (const char **data)</h3>
 <p>Decode a signed integer from MsgPack <i>data</i>. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>data</i> &#8211; the pointer to a buffer</dl>
+<dd><i>data</i> &#8211; the pointer to a buffer</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>an unsigned number</dl>
+<dd>an unsigned number</dd></dl>
 <p> <code>Postcondition:</code></p>
 <dl COMPACT>
-<dd>*data = *data + mp_sizeof_int(retval)</dl>
+<dd>*data = *data + mp_sizeof_int(retval)</dd></dl>
 <h3>MP_PROTO uint32_t mp_decode_map (const char **data)</h3>
 <p>Decode a map header from MsgPack <i>data</i>. All map key-value pairs must be decoded after the header. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>data</i> &#8211; the pointer to a buffer</dl>
+<dd><i>data</i> &#8211; the pointer to a buffer</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>the number of key/value pairs in a map</dl>
+<dd>the number of key/value pairs in a map</dd></dl>
 <p> <code>Postcondition:</code></p>
 <dl COMPACT>
-<dd>*data = *data + mp_sizeof_array(retval)</dl>
+<dd>*data = *data + mp_sizeof_array(retval)</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>An usage example </code></dl>
+<dd><code>An usage example </code></dd></dl>
 <h3>MP_PROTO void mp_decode_nil (const char **data)</h3>
 <p>Decode the nil value from MsgPack <i>data</i>. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>data</i> &#8211; the pointer to a buffer</dl>
+<dd><i>data</i> &#8211; the pointer to a buffer</dd></dl>
 <p> <code>Postcondition:</code></p>
 <dl COMPACT>
-<dd>*data = *data + <code>mp_sizeof_nil()</code></dl>
+<dd>*data = *data + <code>mp_sizeof_nil()</code></dd></dl>
 <h3>MP_PROTO const char* mp_decode_str (const char **data, uint32_t *len)</h3>
 <p>Decode a string from MsgPack <i>data</i>. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>data</i> &#8211; the pointer to a buffer<br />
- <i>len</i> &#8211; the pointer to save a string length</dl>
+ <i>len</i> &#8211; the pointer to save a string length</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>a pointer to a decoded string</dl>
+<dd>a pointer to a decoded string</dd></dl>
 <p> <code>Postcondition:</code></p>
 <dl COMPACT>
-<dd>*data = *data + mp_sizeof_str(*len)</dl>
+<dd>*data = *data + mp_sizeof_str(*len)</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>mp_encode_binl</code></dl>
+<dd><code>mp_encode_binl</code></dd></dl>
 <h3>MP_PROTO const char* mp_decode_strbin (const char **data, uint32_t *len)</h3>
 <p>Decode a string or binstring from MsgPack <i>data</i>. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>data</i> &#8211; the pointer to a buffer<br />
- <i>len</i> &#8211; the pointer to save a binstring length</dl>
+ <i>len</i> &#8211; the pointer to save a binstring length</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>a pointer to a decoded binstring</dl>
+<dd>a pointer to a decoded binstring</dd></dl>
 <p> <code>Postcondition:</code></p>
 <dl COMPACT>
-<dd>*data = *data + mp_sizeof_strbinl(*len)</dl>
+<dd>*data = *data + mp_sizeof_strbinl(*len)</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>mp_encode_binl</code></dl>
+<dd><code>mp_encode_binl</code></dd></dl>
 <h3>MP_PROTO uint32_t mp_decode_strbinl (const char **data)</h3>
 <p>Decode a length of a string or binstring from MsgPack <i>data</i>. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>data</i> &#8211; the pointer to a buffer</dl>
+<dd><i>data</i> &#8211; the pointer to a buffer</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>a length of a string</dl>
+<dd>a length of a string</dd></dl>
 <p> <code>Postcondition:</code></p>
 <dl COMPACT>
-<dd>*data = *data + mp_sizeof_strbinl(retval)</dl>
+<dd>*data = *data + mp_sizeof_strbinl(retval)</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>mp_encode_binl</code></dl>
+<dd><code>mp_encode_binl</code></dd></dl>
 <h3>MP_PROTO uint32_t mp_decode_strl (const char **data)</h3>
 <p>Decode a length of a string from MsgPack <i>data</i>. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>data</i> &#8211; the pointer to a buffer</dl>
+<dd><i>data</i> &#8211; the pointer to a buffer</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>a length of astring</dl>
+<dd>a length of astring</dd></dl>
 <p> <code>Postcondition:</code></p>
 <dl COMPACT>
-<dd>*data = *data + mp_sizeof_strl(retval)</dl>
+<dd>*data = *data + mp_sizeof_strl(retval)</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>mp_encode_strl</code></dl>
+<dd><code>mp_encode_strl</code></dd></dl>
 <h3>MP_PROTO uint64_t mp_decode_uint (const char **data)</h3>
 <p>Decode an unsigned integer from MsgPack <i>data</i>. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>data</i> &#8211; the pointer to a buffer</dl>
+<dd><i>data</i> &#8211; the pointer to a buffer</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>an unsigned number</dl>
+<dd>an unsigned number</dd></dl>
 <p> <code>Postcondition:</code></p>
 <dl COMPACT>
-<dd>*data = *data + mp_sizeof_uint(retval)</dl>
+<dd>*data = *data + mp_sizeof_uint(retval)</dd></dl>
 <h3>MP_PROTO char* mp_encode_array (char *data, uint32_tsize)</h3>
 <p>Encode an array header of <i>size</i> elements. All array members must be encoded after the header. </p>
 <p> Example usage: </p>
@@ -551,93 +551,93 @@ description: "msgpuck.h – MsgPuck is a simple and efficient MsgPack encoder/de
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>data</i> &#8211; a buffer<br />
- <i>size</i> &#8211; a number of elements</dl>
+ <i>size</i> &#8211; a number of elements</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd><i>data</i> + <code>mp_sizeof_array(size) </code></dl>
+<dd><i>data</i> + <code>mp_sizeof_array(size) </code></dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>mp_sizeof_array</code></dl>
+<dd><code>mp_sizeof_array</code></dd></dl>
 <h3>MP_PROTO char* mp_encode_bin (char *data, const char *str, uint32_tlen)</h3>
 <p>Encode a binstring of length <i>len</i>. The function is equivalent to <code>mp_encode_binl()</code> + memcpy. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>data</i> &#8211; a buffer<br />
  <i>str</i> &#8211; a pointer to binstring data<br />
- <i>len</i> &#8211; a binstring length</dl>
+ <i>len</i> &#8211; a binstring length</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd><i>data</i> + mp_sizeof_bin(<i>len</i>) == data + mp_sizeof_binl(<i>len</i>) + <i>len</i></dl>
+<dd><i>data</i> + mp_sizeof_bin(<i>len</i>) == data + mp_sizeof_binl(<i>len</i>) + <i>len</i></dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>mp_encode_strl</code></dl>
+<dd><code>mp_encode_strl</code></dd></dl>
 <h3>MP_PROTO char* mp_encode_binl (char *data, uint32_tlen)</h3>
 <p>Encode a binstring header of length <i>len</i>. See <code>mp_encode_strl()</code> for more details. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>data</i> &#8211; a bufer<br />
- <i>len</i> &#8211; a string length</dl>
+ <i>len</i> &#8211; a string length</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>data + mp_sizeof_binl(<i>len</i>)</dl>
+<dd>data + mp_sizeof_binl(<i>len</i>)</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>mp_encode_strl</code></dl>
+<dd><code>mp_encode_strl</code></dd></dl>
 <h3>MP_PROTO char* mp_encode_bool (char *data, boolval)</h3>
 <p>Encode a bool value <i>val</i>. It is your responsibility to ensure that <i>data</i> has enough space. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>data</i> &#8211; a buffer<br />
- <i>val</i> &#8211; a bool</dl>
+ <i>val</i> &#8211; a bool</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd><i>data</i> + mp_sizeof_bool(val)</dl>
+<dd><i>data</i> + mp_sizeof_bool(val)</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>An usage example </code> </p>
+<dd><code>An usage example </code> </dd>
 <p> <code>mp_sizeof_bool()</code></dl>
 <h3>MP_PROTO char* mp_encode_double (char *data, doublenum)</h3>
 <p>Encode a double <i>num</i>. It is your responsibility to ensure that <i>data</i> has enough space. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>data</i> &#8211; a buffer<br />
- <i>num</i> &#8211; a float</dl>
+ <i>num</i> &#8211; a float</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd><i>data</i> + mp_sizeof_double(<i>num</i>)</dl>
+<dd><i>data</i> + mp_sizeof_double(<i>num</i>)</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>An usage example </code> </p>
+<dd><code>An usage example </code> </dd>
 <p> <code>mp_sizeof_double()</code></dl>
 <h3>MP_PROTO char* mp_encode_float (char *data, floatnum)</h3>
 <p>Encode a float <i>num</i>. It is your responsibility to ensure that <i>data</i> has enough space. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>data</i> &#8211; a buffer<br />
- <i>num</i> &#8211; a float</dl>
+ <i>num</i> &#8211; a float</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd><i>data</i> + mp_sizeof_float(<i>num</i>)</dl>
+<dd><i>data</i> + mp_sizeof_float(<i>num</i>)</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>mp_sizeof_float()</code> </p>
+<dd><code>mp_sizeof_float()</code> </dd>
 <p> <code>An usage example </code></dl>
 <h3>MP_PROTO char* mp_encode_int (char *data, int64_tnum)</h3>
 <p>Encode a signed integer <i>num</i>. It is your responsibility to ensure that <i>data</i> has enough space. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>data</i> &#8211; a buffer<br />
- <i>num</i> &#8211; a number</dl>
+ <i>num</i> &#8211; a number</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd><i>data</i> + mp_sizeof_int(<i>num</i>)</dl>
+<dd><i>data</i> + mp_sizeof_int(<i>num</i>)</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>An usage example </code> </p>
+<dd><code>An usage example </code> </dd>
 <p> <code>mp_sizeof_int()</code></dl>
 <p> <code>Precondition:</code></p>
 <dl COMPACT>
-<dd><i>num</i> &lt; 0</dl>
+<dd><i>num</i> &lt; 0</dd></dl>
 <h3>MP_PROTO char* mp_encode_map (char *data, uint32_tsize)</h3>
 <p>Encode a map header of <i>size</i> elements. All map key-value pairs must be encoded after the header. </p>
 <p> Example usage: </p>
@@ -666,24 +666,24 @@ description: "msgpuck.h – MsgPuck is a simple and efficient MsgPack encoder/de
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>data</i> &#8211; a buffer<br />
- <i>size</i> &#8211; a number of key/value pairs</dl>
+ <i>size</i> &#8211; a number of key/value pairs</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd><i>data</i> + <code>mp_sizeof_map(size)</code></dl>
+<dd><i>data</i> + <code>mp_sizeof_map(size)</code></dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>mp_sizeof_map</code></dl>
+<dd><code>mp_sizeof_map</code></dd></dl>
 <h3>MP_PROTO char* mp_encode_nil (char *data)</h3>
 <p>Encode the nil value. It is your responsibility to ensure that <i>data</i> has enough space. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>data</i> &#8211; a buffer</dl>
+<dd><i>data</i> &#8211; a buffer</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd><i>data</i> + <code>mp_sizeof_nil()</code></dl>
+<dd><i>data</i> + <code>mp_sizeof_nil()</code></dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>An usage example </code> </p>
+<dd><code>An usage example </code> </dd>
 <p> <code>mp_sizeof_nil()</code></dl>
 <h3>MP_PROTO char* mp_encode_str (char *data, const char *str, uint32_tlen)</h3>
 <p>Encode a string of length <i>len</i>. The function is equivalent to <code>mp_encode_strl()</code> + memcpy. </p>
@@ -691,12 +691,13 @@ description: "msgpuck.h – MsgPuck is a simple and efficient MsgPack encoder/de
 <dl COMPACT>
 <dd><i>data</i> &#8211; a buffer<br />
  <i>str</i> &#8211; a pointer to string data<br />
- <i>len</i> &#8211; a string length</dl>
+ <i>len</i> &#8211; a string length</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd><i>data</i> + mp_sizeof_str(len) == data + mp_sizeof_strl(len) + len</dl>
+<dd><i>data</i> + mp_sizeof_str(len) == data + mp_sizeof_strl(len) + len</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>mp_encode_strl</code></dl>
+<dd><code>mp_encode_strl</code></dd></dl>
 <h3>MP_PROTO char* mp_encode_strl (char *data, uint32_tlen)</h3>
 <p>Encode a string header of length <i>len</i>. The function encodes MsgPack header (<i>only</i> header) for a string of length <i>len</i>. You should append actual string data to the buffer manually after encoding the header (exactly <i>len</i> bytes without trailing &#8216;
+</p>

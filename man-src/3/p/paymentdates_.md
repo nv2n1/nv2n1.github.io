@@ -10,13 +10,7 @@ description: "QuantLib::YearOnYearInflationSwap – Year-on-year inflation-index
 <p>QuantLib::YearOnYearInflationSwap &#8211; Year-on-year inflation-indexed swap. </p>
 <h2>Synopsis</h2>
 <pre><code>void setupExpired () const
-
-
-
 void performCalculations () const
-
-
-
 Protected Attributes</code></pre>
 <p> Inherits <code>QuantLib::InflationSwap</code>.</p>
 <h3>Public Member Functions</h3>
@@ -34,13 +28,7 @@ Protected Attributes</code></pre>
 <h3>Protected Member Functions</h3>
 <p><code>Instrument interface</code> </p>
 <pre><code>void setupExpired () const
-
-
-
 void performCalculations () const
-
-
-
 Protected Attributes</code></pre>
 <p> <code>Rate</code> <code>fixedRate_</code> </p>
 <p> <code>Handle</code>&lt; <code>YoYInflationTermStructure</code> &gt; <code>inflationTS_</code> </p>
@@ -55,7 +43,7 @@ Protected Attributes</code></pre>
 <p>re $ t_M $ is the maturity time, $ P_n(0,t) $ is the nominal discount factor at time $ t $, $ N $ is the notional, and $ I(t) $ is the inflation index value at time $ t $. </p>
 <p> <code>Note:</code></p>
 <dl>
-<dd>The allowAmbiguousPayments parameter is to allow for payment arithmetic being ambiguous. If the maturity is in, say, 30.01 years according to the day-counter and roll rules, does this mean that there is a payment in 0.01 years? If allowAmbiguousPayments is false, the ambiguousPaymentPeriod parameter sets the period within which the answer is no.</dl>
+<dd>The allowAmbiguousPayments parameter is to allow for payment arithmetic being ambiguous. If the maturity is in, say, 30.01 years according to the day-counter and roll rules, does this mean that there is a payment in 0.01 years? If allowAmbiguousPayments is false, the ambiguousPaymentPeriod parameter sets the period within which the answer is no.</dd></dl>
 <h2>Member Function Documentation</h2>
 <h3>void setupExpired () const [protected, virtual]</h3>
 <p>This method must leave the instrument in a consistent state when the expiration condition is met. </p>

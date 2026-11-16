@@ -18,8 +18,8 @@ description: "mdvalidator – Validate XML Documents against the ECMA Documentat
 <h2>PROVIDER</h2>
 <p> The following providers are supported:</p>
 <dl>
-<dt><i>ecma</i></p>
-<dd> Validate the input files against the ECMA Documentation Schema.</dl>
+<dt><i>ecma</i></dt>
+<dd> Validate the input files against the ECMA Documentation Schema.</dd></dl>
 <h2>EXAMPLES</h2>
 <p> To validate the <i>monodocer</i> output stored within a directory (and all ECMA documentation within all sub-directories, recursively), use: </p>
 <pre>
@@ -27,8 +27,8 @@ description: "mdvalidator – Validate XML Documents against the ECMA Documentat
 </pre>
 <h2>MAILING LISTS</h2>
 <dl>
-<dt>Visit <a rel="nofollow" href="http://lists.ximian.com/mailman/listinfo/mono-docs-list">http://lists.ximian.com/mailman/listinfo/mono-docs-list</a> for details.</p>
-<dd></dl>
+<dt>Visit <a rel="nofollow" href="http://lists.ximian.com/mailman/listinfo/mono-docs-list">http://lists.ximian.com/mailman/listinfo/mono-docs-list</a> for details.</dt>
+<dd></dd></dl>
 <h2>WEB SITE</h2>
 <p> Visit <a rel="nofollow" href="http://www.mono-project.com">http://www.mono-project.com</a> for details </p>
 <h2>Index</h2>

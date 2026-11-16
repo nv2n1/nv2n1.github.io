@@ -34,31 +34,29 @@ int io_submit(aio_context_t ctx_id, long nr, struct iocb **iocbpp);
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;__u32&nbsp;<wbr>&nbsp;<wbr>&nbsp;aio_resfd; }; </p>
 <p> The fields of this structure are as follows:</p>
 <dl>
-<dt><i>aio_data</i></p>
-<dd> This data is copied into the <i>data</i> field of the <i>io_event</i> structure upon I/O completion (see <code><a href="/docs/linux/man/2-io_getevents/">io_getevents</a></code>(2)).</p>
-<dt><i>aio_key</i></p>
-<dd> This is an internal field used by the kernel. Do not modify this field after an <code>io_submit</code>() call.</p>
-<dt><i>aio_rw_flags</i></p>
-<dd> This defines the R/W flags passed with structure. The valid values are:</p>
+<dt><i>aio_data</i></dt>
+<dd> This data is copied into the <i>data</i> field of the <i>io_event</i> structure upon I/O completion (see <code><a href="/docs/linux/man/2-io_getevents/">io_getevents</a></code>(2)).</dd>
+<dt><i>aio_key</i></dt>
+<dd> This is an internal field used by the kernel. Do not modify this field after an <code>io_submit</code>() call.</dd>
+<dt><i>aio_rw_flags</i></dt>
+<dd> This defines the R/W flags passed with structure. The valid values are:</dd>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt><code>RWF_APPEND</code> (since Linux 4.16)</p>
-<dd> Append data to the end of the file. See the description of the flag of the same name in <code><a href="/docs/linux/man/2-pwritev2/">pwritev2</a></code>(2) as well as the description of <code>O_APPEND</code> in <code><a href="/docs/linux/man/2-open/">open</a></code>(2). The <i>aio_offset</i> field is ignored. The file offset is not changed.</p>
-<dt><code>RWF_DSYNC</code> (since Linux 4.13)</p>
-<dd> Write operation complete according to requirement of synchronized I/O data integrity. See the description of the flag of the same name in <code><a href="/docs/linux/man/2-pwritev2/">pwritev2</a></code>(2) as well the description of <code>O_DSYNC</code> in <code><a href="/docs/linux/man/2-open/">open</a></code>(2).</p>
-<dt><code>RWF_HIPRI</code> (since Linux 4.13)</p>
-<dd> High priority request, poll if possible</p>
-<dt><code>RWF_NOWAIT</code> (since Linux 4.14)</p>
-<dd> Don&#8217;t wait if the I/O will block for operations such as file block allocations, dirty page flush, mutex locks, or a congested block device inside the kernel. If any of these conditions are met, the control block is returned immediately with a return value of <code>-EAGAIN</code> in the <i>res</i> field of the <i>io_event</i> structure (see <code><a href="/docs/linux/man/2-io_getevents/">io_getevents</a></code>(2)).</p>
-<dt><code>RWF_SYNC</code> (since Linux 4.13)</p>
-<dd> Write operation complete according to requirement of synchronized I/O file integrity. See the description of the flag of the same name in <code><a href="/docs/linux/man/2-pwritev2/">pwritev2</a></code>(2) as well the description of <code>O_SYNC</code> in <code><a href="/docs/linux/man/2-open/">open</a></code>(2).</dl>
+<dt><code>RWF_APPEND</code> (since Linux 4.16)</dt>
+<dd> Append data to the end of the file. See the description of the flag of the same name in <code><a href="/docs/linux/man/2-pwritev2/">pwritev2</a></code>(2) as well as the description of <code>O_APPEND</code> in <code><a href="/docs/linux/man/2-open/">open</a></code>(2). The <i>aio_offset</i> field is ignored. The file offset is not changed.</dd>
+<dt><code>RWF_DSYNC</code> (since Linux 4.13)</dt>
+<dd> Write operation complete according to requirement of synchronized I/O data integrity. See the description of the flag of the same name in <code><a href="/docs/linux/man/2-pwritev2/">pwritev2</a></code>(2) as well the description of <code>O_DSYNC</code> in <code><a href="/docs/linux/man/2-open/">open</a></code>(2).</dd>
+<dt><code>RWF_HIPRI</code> (since Linux 4.13)</dt>
+<dd> High priority request, poll if possible</dd>
+<dt><code>RWF_NOWAIT</code> (since Linux 4.14)</dt>
+<dd> Don&#8217;t wait if the I/O will block for operations such as file block allocations, dirty page flush, mutex locks, or a congested block device inside the kernel. If any of these conditions are met, the control block is returned immediately with a return value of <code>-EAGAIN</code> in the <i>res</i> field of the <i>io_event</i> structure (see <code><a href="/docs/linux/man/2-io_getevents/">io_getevents</a></code>(2)).</dd>
+<dt><code>RWF_SYNC</code> (since Linux 4.13)</dt>
+<dd> Write operation complete according to requirement of synchronized I/O file integrity. See the description of the flag of the same name in <code><a href="/docs/linux/man/2-pwritev2/">pwritev2</a></code>(2) as well the description of <code>O_SYNC</code> in <code><a href="/docs/linux/man/2-open/">open</a></code>(2).</dd></dl>
 </dl>
-<dt><i>aio_lio_opcode</i></p>
-<dd> This defines the type of I/O to be performed by the <i>iocb</i> structure. The valid values are defined by the enum defined in <i>linux/aio_abi.h</i>:</p>
+<dt><i>aio_lio_opcode</i></dt>
+<dd> This defines the type of I/O to be performed by the <i>iocb</i> structure. The valid values are defined by the enum defined in <i>linux/aio_abi.h</i>:</dd>
 <dt>
-<dd> enum {<br />
+</dt><dd> enum {<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;IOCB_CMD_PREAD&nbsp;=&nbsp;0,<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;IOCB_CMD_PWRITE&nbsp;=&nbsp;1,<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;IOCB_CMD_FSYNC&nbsp;=&nbsp;2,<br />
@@ -66,46 +64,44 @@ int io_submit(aio_context_t ctx_id, long nr, struct iocb **iocbpp);
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;IOCB_CMD_POLL&nbsp;=&nbsp;5,<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;IOCB_CMD_NOOP&nbsp;=&nbsp;6,<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;IOCB_CMD_PREADV&nbsp;=&nbsp;7,<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;IOCB_CMD_PWRITEV&nbsp;=&nbsp;8, };</p>
-<dt><i>aio_reqprio</i></p>
-<dd> This defines the requests priority.</p>
-<dt><i>aio_fildes</i></p>
-<dd> The file descriptor on which the I/O operation is to be performed.</p>
-<dt><i>aio_buf</i></p>
-<dd> This is the buffer used to transfer data for a read or write operation.</p>
-<dt><i>aio_nbytes</i></p>
-<dd> This is the size of the buffer pointed to by <i>aio_buf</i>.</p>
-<dt><i>aio_offset</i></p>
-<dd> This is the file offset at which the I/O operation is to be performed.</p>
-<dt><i>aio_flags</i></p>
-<dd> This is the set of flags associated with the <i>iocb</i> structure. The valid values are:</p>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;IOCB_CMD_PWRITEV&nbsp;=&nbsp;8, };</dd>
+<dt><i>aio_reqprio</i></dt>
+<dd> This defines the requests priority.</dd>
+<dt><i>aio_fildes</i></dt>
+<dd> The file descriptor on which the I/O operation is to be performed.</dd>
+<dt><i>aio_buf</i></dt>
+<dd> This is the buffer used to transfer data for a read or write operation.</dd>
+<dt><i>aio_nbytes</i></dt>
+<dd> This is the size of the buffer pointed to by <i>aio_buf</i>.</dd>
+<dt><i>aio_offset</i></dt>
+<dd> This is the file offset at which the I/O operation is to be performed.</dd>
+<dt><i>aio_flags</i></dt>
+<dd> This is the set of flags associated with the <i>iocb</i> structure. The valid values are:</dd>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt><code>IOCB_FLAG_RESFD</code></p>
-<dd> Asynchronous I/O control must signal the file descriptor mentioned in <i>aio_resfd</i> upon completion.</p>
-<dt><code>IOCB_FLAG_IOPRIO</code> (since Linux 4.18)</p>
-<dd> Interpret the <i>aio_reqprio</i> field as an <code>IOPRIO_VALUE</code> as defined by <i>linux/ioprio.h</i>.</dl>
+<dt><code>IOCB_FLAG_RESFD</code></dt>
+<dd> Asynchronous I/O control must signal the file descriptor mentioned in <i>aio_resfd</i> upon completion.</dd>
+<dt><code>IOCB_FLAG_IOPRIO</code> (since Linux 4.18)</dt>
+<dd> Interpret the <i>aio_reqprio</i> field as an <code>IOPRIO_VALUE</code> as defined by <i>linux/ioprio.h</i>.</dd></dl>
 </dl>
-<dt><i>aio_resfd</i></p>
-<dd> The file descriptor to signal in the event of asynchronous I/O completion.</dl>
+<dt><i>aio_resfd</i></dt>
+<dd> The file descriptor to signal in the event of asynchronous I/O completion.</dd></dl>
 <h2>RETURN VALUE</h2>
 <p> On success, <code>io_submit</code>() returns the number of <i>iocb</i>s submitted (which may be less than <i>nr</i>, or 0 if <i>nr</i> is zero). For the failure return, see NOTES.</p>
 <h2>ERRORS</h2>
 <dl>
-<dt><code>EAGAIN</code></p>
-<dd> Insufficient resources are available to queue any <i>iocb</i>s.</p>
-<dt><code>EBADF</code></p>
-<dd> The file descriptor specified in the first <i>iocb</i> is invalid.</p>
-<dt><code>EFAULT</code></p>
-<dd> One of the data structures points to invalid data.</p>
-<dt><code>EINVAL</code></p>
-<dd> The AIO context specified by <i>ctx_id</i> is invalid. <i>nr</i> is less than 0. The <i>iocb</i> at <i>*iocbpp[0]</i> is not properly initialized, the operation specified is invalid for the file descriptor in the <i>iocb</i>, or the value in the <i>aio_reqprio</i> field is invalid.</p>
-<dt><code>ENOSYS</code></p>
-<dd> <code>io_submit</code>() is not implemented on this architecture.</p>
-<dt><code>EPERM</code></p>
-<dd> The <i>aio_reqprio</i> field is set with the class <code>IOPRIO_CLASS_RT</code>, but the submitting context does not have the <code>CAP_SYS_ADMIN</code> capability.</dl>
+<dt><code>EAGAIN</code></dt>
+<dd> Insufficient resources are available to queue any <i>iocb</i>s.</dd>
+<dt><code>EBADF</code></dt>
+<dd> The file descriptor specified in the first <i>iocb</i> is invalid.</dd>
+<dt><code>EFAULT</code></dt>
+<dd> One of the data structures points to invalid data.</dd>
+<dt><code>EINVAL</code></dt>
+<dd> The AIO context specified by <i>ctx_id</i> is invalid. <i>nr</i> is less than 0. The <i>iocb</i> at <i>*iocbpp[0]</i> is not properly initialized, the operation specified is invalid for the file descriptor in the <i>iocb</i>, or the value in the <i>aio_reqprio</i> field is invalid.</dd>
+<dt><code>ENOSYS</code></dt>
+<dd> <code>io_submit</code>() is not implemented on this architecture.</dd>
+<dt><code>EPERM</code></dt>
+<dd> The <i>aio_reqprio</i> field is set with the class <code>IOPRIO_CLASS_RT</code>, but the submitting context does not have the <code>CAP_SYS_ADMIN</code> capability.</dd></dl>
 <h2>VERSIONS</h2>
 <p> The asynchronous I/O system calls first appeared in Linux 2.5.</p>
 <h2>CONFORMING TO</h2>

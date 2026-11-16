@@ -15,15 +15,15 @@ svc_xprt_names - format a buffer with a list of transport names
 <h2>Arguments</h2>
 
 <i>serv</i>
-<dl><dd><dd>pointer to an RPC service</dl>
+<dl><dd></dd><dd>pointer to an RPC service</dd></dl>
  
 
  <i>buf</i>
-<dl><dd>pointer to a buffer to be filled in</dl>
+<dl><dd>pointer to a buffer to be filled in</dd></dl>
  
 
  <i>buflen</i>
-<dl><dd>length of buffer to be filled in</dl>
+<dl><dd>length of buffer to be filled in</dd></dl>
 
 <h2>Description</h2>
 

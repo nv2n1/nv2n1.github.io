@@ -14,7 +14,7 @@ description: "ccw_device_set_online – enable a ccw device for I/O"
 <p><i>cdev</i></p>
 <dl>
 <dd>
-<dd>target ccw device</dl>
+</dd><dd>target ccw device</dd></dl>
 <h2>Description</h2>
 <p>This function first enables <i>cdev</i> and then calls the driver&#8217;s <code>set_online</code> function for <i>cdev</i>, if given. If <code>set_online</code> returns an error, <i>cdev</i> is disabled again.</p>
 <h2>Return</h2>
@@ -24,5 +24,5 @@ description: "ccw_device_set_online – enable a ccw device for I/O"
 <h2>Author</h2>
 <p><code>Cornelia Huck</code> &lt;cornelia.huck [at] de.ibm.com&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

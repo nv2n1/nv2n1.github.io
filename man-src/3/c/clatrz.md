@@ -19,7 +19,7 @@ description: "clatrz.f –"
 <p> <code>Purpose: </code></p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre><code>
 CLATRZ factors the M - by - (M + L) complex upper trapezoidal matrix[A1 A2] = [A(1
                                                                                  : M, 1
@@ -30,11 +30,11 @@ CLATRZ factors the M - by - (M + L) complex upper trapezoidal matrix[A1 A2] = [A
                                                                               of unitary transformations,
                                                                         where Z is an(M + L) - by - (M + L) unitary matrix and, R and A1 are M - by - M upper triangular matrices.
 </code></pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>M</i> </p>
+</dt><dd> <i>M</i> </dd>
 <pre>
           M is INTEGER
           The number of rows of the matrix A.  M &gt;= 0.
@@ -78,22 +78,22 @@ CLATRZ factors the M - by - (M + L) complex upper trapezoidal matrix[A1 A2] = [A
 <p> <code>Author:</code></p>
 <dl>
 <dt>
-<dd> Univ. of Tennessee </p>
+</dt><dd> Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl>
 <dt>
-<dd> September 2012</dl>
+</dt><dd> September 2012</dd></dl>
 <p> <code>Contributors: </code></p>
 <dl>
 <dt>
-<dd> A. Petitet, Computer Science Dept., Univ. of Tenn., Knoxville, USA</dl>
+</dt><dd> A. Petitet, Computer Science Dept., Univ. of Tenn., Knoxville, USA</dd></dl>
 <p> <code>Further Details: </code></p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
   The factorization is obtained by Householder's method.  The kth
   transformation matrix, Z( k ), which is used to introduce zeros into
@@ -113,8 +113,9 @@ CLATRZ factors the M - by - (M + L) complex upper trapezoidal matrix[A1 A2] = [A
   Z is given by
      Z =  Z( 1 ) * Z( 2 ) * ... * Z( m ).
 </pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> Definition at line 141 of file clatrz.f.</p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for LAPACK from the source code. </p>
 <h2>Index</h2>
+</p>

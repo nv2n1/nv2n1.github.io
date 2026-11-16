@@ -19,59 +19,59 @@ description: "fbrun – display run dialog window"
 <p> <code>-title</code> <i>title</i></p>
 <dl>
 <dt>
-<dd> Set title</dl>
+</dt><dd> Set title</dd></dl>
 <p> <code>-text</code> <i>text</i></p>
 <dl>
 <dt>
-<dd> Text input</dl>
+</dt><dd> Text input</dd></dl>
 <p> <code>-w</code> <i>width</i></p>
 <dl>
 <dt>
-<dd> Window width in pixels</dl>
+</dt><dd> Window width in pixels</dd></dl>
 <p> <code>-h</code> <i>height</i></p>
 <dl>
 <dt>
-<dd> Window height in pixels</dl>
+</dt><dd> Window height in pixels</dd></dl>
 <p> <code>-display</code> <i>display</i></p>
 <dl>
 <dt>
-<dd> Display name, defaults to <code>$DISPLAY</code></dl>
+</dt><dd> Display name, defaults to <code>$DISPLAY</code></dd></dl>
 <p> <code>-pos</code> <i>x</i> <i>y</i></p>
 <dl>
 <dt>
-<dd> Window position in pixels</dl>
+</dt><dd> Window position in pixels</dd></dl>
 <p> <code>-nearmouse</code></p>
 <dl>
 <dt>
-<dd> Position the window under the mouse cursor</dl>
+</dt><dd> Position the window under the mouse cursor</dd></dl>
 <p> <code>-fg</code> <i>color</i></p>
 <dl>
 <dt>
-<dd> Foreground text color. The default is <code>black</code></dl>
+</dt><dd> Foreground text color. The default is <code>black</code></dd></dl>
 <p> <code>-bg</code> <i>color</i></p>
 <dl>
 <dt>
-<dd> Background color. The default is <code>white</code></dl>
+</dt><dd> Background color. The default is <code>white</code></dd></dl>
 <p> <code>-font</code> <i>name</i></p>
 <dl>
 <dt>
-<dd> Text font name</dl>
+</dt><dd> Text font name</dd></dl>
 <p> <code>-hf</code> <i>filename</i></p>
 <dl>
 <dt>
-<dd> History file to load. The default is <code>~/.fluxbox/fbrun_history</code>.</dl>
+</dt><dd> History file to load. The default is <code>~/.fluxbox/fbrun_history</code>.</dd></dl>
 <p> <code>-help</code></p>
 <dl>
 <dt>
-<dd> Show this help</dl>
+</dt><dd> Show this help</dd></dl>
 <h2>EXAMPLE</h2>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 fbrun -fg black -bg white -text xterm -title &quot;run xterm&quot;
 </pre>
-</dl>
+</dd></dl>
 <h2>AUTHORS</h2>
 <p> This manpage was originally written by Bastian Kleineidam &lt;calvin at debian.org&gt; for the Debian distribution of fluxbox (but may be used by others). </p>
 <p> It was then converted to asciidoc format by Jim Ramsay &lt;i.am at jimramsay.com&gt; for fluxbox-1.1.2</p>
@@ -81,5 +81,5 @@ fbrun -fg black -bg white -text xterm -title &quot;run xterm&quot;
 <p> <code>Jim Ramsay</code> &lt;i.am [at] jimramsay.com&gt;</p>
 <dl>
 <dt>
-<dd> Author.</dl>
+</dt><dd> Author.</dd></dl>
 <h2>Index</h2>

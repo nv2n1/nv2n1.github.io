@@ -26,24 +26,23 @@ CALL TDEZ2D(NX,NY,X,Y,Z,RMULT,THETA,PHI,IST)
 
 The arguments of TDEZ2D are as follows:
 <dl><dt>NX
-<dd>(an input constant or variable of type INTEGER) - The size of the input array X below.
-<dt>NY
-<dd>(an input constant or variable of type INTEGER) - The size of the input array Y below.
-<dt>X
-<dd>(an input array variable of type REAL) - A 1-dimensional array specifying X-coordinate values.
-<dt>Y
-<dd>(an input array variable of type REAL) - A 1-dimensional array specifying Y-coordinate values.
-<dt>Z
-<dd>(an input array variable of type REAL) - An array NX by NY containing the surface to be drawn. Z(I,J) is a functional value at coordiante (X(I),Y(J)) for I=1,NX and J=1,NY.
-<dt>RMULT
-<dd>(an input constant or variable of type REAL) - A multiplier of the diagonal length (DL) of the smallest box containing the surface to be drawn. Together with THETA and PHI (defined below), RMULT is used to determine the eye position (see USAGE).
-<dt>THETA
-<dd>(an input constant or variable of type REAL) - An angle (in degrees) in the XY plane measured positive counter-clockwise from the X axis. Together with RMULT (defined above) and PHI (defined below), THETA is used to determine the eye position (see USAGE).
-<dt>PHI
-<dd>(an input constant or variable of type REAL) - An angle (in degrees) measured from the positive Z axis toward the XY plane. Together with RMULT and THETA (defined above), PHI is used to determine the eye position (see USAGE).
-<dt>IST
-<dd>(an input constant or variable of type INTEGER) - A style index defining the colors used to shade the surface as per: 
-
+</dt><dd>(an input constant or variable of type INTEGER) - The size of the input array X below.
+</dd><dt>NY
+</dt><dd>(an input constant or variable of type INTEGER) - The size of the input array Y below.
+</dd><dt>X
+</dt><dd>(an input array variable of type REAL) - A 1-dimensional array specifying X-coordinate values.
+</dd><dt>Y
+</dt><dd>(an input array variable of type REAL) - A 1-dimensional array specifying Y-coordinate values.
+</dd><dt>Z
+</dt><dd>(an input array variable of type REAL) - An array NX by NY containing the surface to be drawn. Z(I,J) is a functional value at coordiante (X(I),Y(J)) for I=1,NX and J=1,NY.
+</dd><dt>RMULT
+</dt><dd>(an input constant or variable of type REAL) - A multiplier of the diagonal length (DL) of the smallest box containing the surface to be drawn. Together with THETA and PHI (defined below), RMULT is used to determine the eye position (see USAGE).
+</dd><dt>THETA
+</dt><dd>(an input constant or variable of type REAL) - An angle (in degrees) in the XY plane measured positive counter-clockwise from the X axis. Together with RMULT (defined above) and PHI (defined below), THETA is used to determine the eye position (see USAGE).
+</dd><dt>PHI
+</dt><dd>(an input constant or variable of type REAL) - An angle (in degrees) measured from the positive Z axis toward the XY plane. Together with RMULT and THETA (defined above), PHI is used to determine the eye position (see USAGE).
+</dd><dt>IST
+</dt><dd>(an input constant or variable of type INTEGER) - A style index defining the colors used to shade the surface as per: 
  1 - wire frame 
  2 - gray shades underneath; gray shades on top. 
  3 - gray shades underneath; red shades on top. 
@@ -52,13 +51,8 @@ The arguments of TDEZ2D are as follows:
  6 - gray shades underneath; cyan shades on top. 
  7 - gray shades underneath; magenta shades on top. 
  8 - gray shades underneath; yellow shades on top. 
- 
-
- 
-
  IST is positive, then black is used for the background or and white for the foreground color; if IST is negative of any of the above values, then white used for the background color and black for the eground color. 
-
- If the value for IST falls outside the legal range, it is defaulted to 6.</dl>
+ If the value for IST falls outside the legal range, it is defaulted to 6.</dd></dl>
 
 <h2>C-Binding Description</h2>
 

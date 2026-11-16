@@ -16,11 +16,11 @@ bool bson_iter_find_case(bson_iter_t *iter,
 </code></pre>
 <h2>PARAMETERS</h2>
 <dl>
-<dt><code>iter</code></p>
-<dd> A <code>bson_iter_t</code> \&amp;.</dl>
+<dt><code>iter</code></dt>
+<dd> A <code>bson_iter_t</code> \&amp;.</dd></dl>
 <dl>
-<dt><code>key</code></p>
-<dd> An ASCII string containing the field to locate.</dl>
+<dt><code>key</code></dt>
+<dd> An ASCII string containing the field to locate.</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> Advances <code>iter</code> until it is observing an element matching the name of <code>key</code> or exhausting all elements. </p>
 <p> <code>key</code> is not case-sensitive. The keys will be case-folded to determine a match using the current locale. </p>

@@ -34,11 +34,11 @@ description: "QwtSetSample –"
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>v</i> Value<br />
- <i>s</i> Set of values</dl>
+ <i>s</i> Set of values</dd></dl>
 <h2>Member Function Documentation</h2>
 <h3>double QwtSetSample::added () const [inline]</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>All values of the set added</dl>
+<dd>All values of the set added</dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for Qwt User&#8217;s Guide from the source code.</p>

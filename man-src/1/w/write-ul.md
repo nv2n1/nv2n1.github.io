@@ -15,7 +15,7 @@ description: "write – send a message to another user"
 <dl COMPACT>
 <dd>
 <pre>Message from yourname [at] yourhost on yourtty at hh:mm ...</pre>
-</dl>
+</dd></dl>
 <p> Any further lines you enter will be copied to the specified user&#8217;s terminal. If the other user wants to reply, they must run <code>write</code> as well. </p>
 <p> When you are done, type an end-of-file or interrupt character. The other user will see the message <code>EOF</code> indicating that the conversation is over. </p>
 <p> You can prevent people (other than the superuser) from writing to you with the <code><a href="/docs/linux/man/1-mesg/">mesg</a></code>(1) command. Some commands, for example <code><a href="/docs/linux/man/1-nroff/">nroff</a></code>(1) and <code><a href="/docs/linux/man/1-pr/">pr</a></code>(1), may automatically disallow writing, so that the output they produce isn&#8217;t overwritten. </p>
@@ -24,10 +24,10 @@ description: "write – send a message to another user"
 <h2>Options</h2>
 <p><code>-V</code>, <code>&#8211;version</code></p>
 <dl COMPACT>
-<dd>Display version information and exit.</dl>
+<dd>Display version information and exit.</dd></dl>
 <p> <code>-h</code>, <code>&#8211;help</code></p>
 <dl COMPACT>
-<dd>Display help text and exit.</dl>
+<dd>Display help text and exit.</dd></dl>
 <h2>History</h2>
 <p>A <code>write</code> command appeared in Version 6 AT&amp;T UNIX.</p>
 <h2>See Also</h2>

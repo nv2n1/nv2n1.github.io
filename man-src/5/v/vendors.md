@@ -20,11 +20,11 @@ description: "vendors.list – Security key configuration for APT"
 } </pre>
 <h2>The Simple-Key Type</h2>
 <p>This type of verification is used when the vendor has a single secured key that must be used to sign the Release file. The following items should be present </p>
-<dl>
-<dt><code>Fingerprint</code></p>
-<dd>The PGP fingerprint for the key. The fingerprint should be expressed in the standard notion with or without spaces. The <code>&#8211;fingerprint</code> option for <code><a href="/docs/linux/man/1-gpg/">gpg</a></code>(1) will show the fingerprint for the selected keys(s). </p>
-<dt><code>Name</code></p>
-<dd>A string containing a description of the owner of the key or vendor. You may put the vendor name and email. The string must be entirely within double-quotes (<code>&quot;</code>). </p>
+</dd><dl>
+<dt><code>Fingerprint</code></dt>
+<dd>The PGP fingerprint for the key. The fingerprint should be expressed in the standard notion with or without spaces. The <code>&#8211;fingerprint</code> option for <code><a href="/docs/linux/man/1-gpg/">gpg</a></code>(1) will show the fingerprint for the selected keys(s). </dd>
+<dt><code>Name</code></dt>
+<dd>A string containing a description of the owner of the key or vendor. You may put the vendor name and email. The string must be entirely within double-quotes (<code>&quot;</code>). </dd>
 </dl>
 <h2>Files</h2>
 <p><i>/etc/apt/vendors.list</i></p>
@@ -34,3 +34,4 @@ description: "vendors.list – Security key configuration for APT"
 <p>Reporting bugs in APT-RPM is best done in the APT-RPM mailinglist at <a rel="nofollow" href="http://apt-rpm.org/mailinglist.shtml.">http://apt-rpm.org/mailinglist.shtml.</a> </p>
 <h2>Author</h2>
 <p>Maintainer and contributor information can be found in the credits page <a rel="nofollow" href="http://apt-rpm.org/about.shtml">http://apt-rpm.org/about.shtml</a> of APT-RPM.</p>
+</dl>

@@ -14,10 +14,10 @@ description: "gnutls_x509_crq_verify – API function"
 <p> <code>int gnutls_x509_crq_verify(gnutls_x509_crq_t </code><i>crq</i><code>, unsigned int </code><i>flags</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
-<dt>gnutls_x509_crq_t crq</p>
-<dd> is the crq to be verified</p>
-<dt>unsigned int flags</p>
-<dd> Flags that may be used to change the verification algorithm. Use OR of the gnutls_certificate_verify_flags enumerations.</dl>
+<dt>gnutls_x509_crq_t crq</dt>
+<dd> is the crq to be verified</dd>
+<dt>unsigned int flags</dt>
+<dd> Flags that may be used to change the verification algorithm. Use OR of the gnutls_certificate_verify_flags enumerations.</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> This function will verify self signature in the certificate request and return its status.</p>
 <h2>RETURNS</h2>
@@ -32,6 +32,6 @@ description: "gnutls_x509_crq_verify – API function"
 <h2>SEE ALSO</h2>
 <p> The full documentation for <code>gnutls</code> is maintained as a Texinfo manual. If the /usr/share/doc/gnutls/ directory does not contain the HTML form visit <code></p>
 <dl>
-<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></p>
-<dd> </code></dl>
+<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></dt>
+<dd> </code></dd></dl>
 <h2>Index</h2>

@@ -22,14 +22,14 @@ key_serial_t find_key_by_type_and_name(const char *type,
 <p> The function returns the ID of the key if a key was found or -1 otherwise.</p>
 <h2>ERRORS</h2>
 <dl>
-<dt><code>ENOKEY</code></p>
-<dd> No key was found or the keyring specified is invalid.</p>
-<dt><code>EKEYEXPIRED</code></p>
-<dd> The key or keyring have expired.</p>
-<dt><code>EKEYREVOKED</code></p>
-<dd> The key or keyring have been revoked.</p>
-<dt><code>EACCES</code></p>
-<dd> The key is not accessible or keyring exists, but is not <code>writable</code> by the calling process.</dl>
+<dt><code>ENOKEY</code></dt>
+<dd> No key was found or the keyring specified is invalid.</dd>
+<dt><code>EKEYEXPIRED</code></dt>
+<dd> The key or keyring have expired.</dd>
+<dt><code>EKEYREVOKED</code></dt>
+<dd> The key or keyring have been revoked.</dd>
+<dt><code>EACCES</code></dt>
+<dd> The key is not accessible or keyring exists, but is not <code>writable</code> by the calling process.</dd></dl>
 <h2>LINKING</h2>
 <p> When linking, <code>-lkeyutils</code> should be specified to the linker.</p>
 <h2>SEE ALSO</h2>

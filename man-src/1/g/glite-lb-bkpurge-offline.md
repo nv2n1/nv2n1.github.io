@@ -16,31 +16,31 @@ description: "glite-lb-bkpurge-offline – emergency utility for removing inacti
 <p> This utility is provided for <code>emergency and expert use only</code>. Exact semantics of job age are slightly different from regular <code>glite-lb-bkpurge</code>, there is no synchronization with running L&amp;B server and/or proxy when jobs receive new events while being purged, and error handling is minimal. </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-a</code> <i>NNN</i>[smhd]</p>
-<dd> Purge ABORTED jobs older than NNN seconds/minutes/hours/days (only one number and one letter allowed). If the time is not specified, the default timeout is determined by the server. </p>
-<dt><code>-c</code> <i>NNN</i>[smhd]</p>
-<dd> Purge CLEARED jobs older than the given age. </p>
-<dt><code>-d</code> <i>NNN</i>[smhd]</p>
-<dd> Purge DONE jobs older than the given age. </p>
-<dt><code>-h</code></p>
-<dd> Display help. </p>
-<dt><code>-m</code> <i>BKSERVER</i></p>
-<dd> L&amp;B server machine name. If not specified, the environment variable EDG_WL_QUERY_SERVER is checked for hostname and port. </p>
-<dt><code>-M</code> {singleshot|staged}</p>
-<dd> Cleaning method (default=staged). </p>
-<dt><code>-n</code> <i>NNN</i>[smhd]</p>
-<dd> Purge CANCELED jobs older than the given age. </p>
-<dt><code>-o</code> <i>NNN</i>[smhd]</p>
-<dd> Purge OTHER jobs (i.e., jobs in states other than ABORTED, CLEARED or CANCELED) older than the given age. </p>
-<dt><code>-p</code></p>
-<dd> Purge L&amp;B proxy database (default: L&amp;B server DB). </p>
-<dt><code>-t</code></p>
-<dd> Free unused space if using MyISAM DB engine. Note that MyISAM is not used by default in L&amp;B deployments. </p>
+<dt><code>-a</code> <i>NNN</i>[smhd]</dt>
+<dd> Purge ABORTED jobs older than NNN seconds/minutes/hours/days (only one number and one letter allowed). If the time is not specified, the default timeout is determined by the server. </dd>
+<dt><code>-c</code> <i>NNN</i>[smhd]</dt>
+<dd> Purge CLEARED jobs older than the given age. </dd>
+<dt><code>-d</code> <i>NNN</i>[smhd]</dt>
+<dd> Purge DONE jobs older than the given age. </dd>
+<dt><code>-h</code></dt>
+<dd> Display help. </dd>
+<dt><code>-m</code> <i>BKSERVER</i></dt>
+<dd> L&amp;B server machine name. If not specified, the environment variable EDG_WL_QUERY_SERVER is checked for hostname and port. </dd>
+<dt><code>-M</code> {singleshot|staged}</dt>
+<dd> Cleaning method (default=staged). </dd>
+<dt><code>-n</code> <i>NNN</i>[smhd]</dt>
+<dd> Purge CANCELED jobs older than the given age. </dd>
+<dt><code>-o</code> <i>NNN</i>[smhd]</dt>
+<dd> Purge OTHER jobs (i.e., jobs in states other than ABORTED, CLEARED or CANCELED) older than the given age. </dd>
+<dt><code>-p</code></dt>
+<dd> Purge L&amp;B proxy database (default: L&amp;B server DB). </dd>
+<dt><code>-t</code></dt>
+<dd> Free unused space if using MyISAM DB engine. Note that MyISAM is not used by default in L&amp;B deployments. </dd>
 </dl>
 <h2>ENVIRONMENT</h2>
 <dl>
-<dt><code>EDG_WL_QUERY_SERVER</code></p>
-<dd> If <code>$EDG_WL_QUERY_SERVER</code> is set, its value is used as the bkserver address. </p>
+<dt><code>EDG_WL_QUERY_SERVER</code></dt>
+<dd> If <code>$EDG_WL_QUERY_SERVER</code> is set, its value is used as the bkserver address. </dd>
 </dl>
 <h2>BUGS</h2>
 <p> Please report all bugs to CESNET gLite L&amp;B issue tracker available at <i><a rel="nofollow" href="https://github.com/CESNET/glite-lb/issues">https://github.com/CESNET/glite-lb/issues</a></i> </p>

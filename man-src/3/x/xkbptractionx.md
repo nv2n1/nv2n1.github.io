@@ -11,12 +11,12 @@ description: "XkbPtrActionX – Returns the high_XXX and low_XXX fields of act c
 <h2>Synopsis</h2>
 <dl COMPACT>
 <dt> <code>int XkbPtrActionX</code> <code>(XkbPtrAction </code><i>act</i><code>);</code><br />
- &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</dl>
+ &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</dt></dl>
 <h2>Arguments</h2>
 <dl COMPACT>
-<dt><i>&#8211; act</i></p>
+<dt><i>&#8211; act</i></dt>
 <dd>
-<dd>action from which to extract X</dl>
+</dd><dd>action from which to extract X</dd></dl>
 <h2>Description</h2>
 <p>Actions associated with the XkbPtrAction structure move the pointer when keys are pressed and released. </p>
 <p> If the MouseKeys control is not enabled, KeyPress and KeyRelease events are treated as though the action is XkbSA_NoAction. </p>

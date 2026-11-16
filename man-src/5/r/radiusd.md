@@ -18,13 +18,13 @@ description: "radiusd.conf – configuration file for the FreeRADIUS server"
 <p>The file format is line-based, like many other Unix configuration files. Each entry in the file must be placed on a line by itself, although continuations are supported. </p>
 <p> The file consists of configuration items (variable = value pairs), sections, and comments.</p>
 <dl>
-<dt>Variables</p>
-<dd>Variables can be set via: </p>
+<dt>Variables</dt>
+<dd>Variables can be set via: </dd>
 <dl>
 <dd>
 <pre><br>
  name = value</pre>
-</dl>
+</dd></dl>
 <p> Single and double-quoted strings are permitted: </p>
 <dl>
 <dd>
@@ -32,9 +32,9 @@ description: "radiusd.conf – configuration file for the FreeRADIUS server"
  string1 = &quot;hello world&quot;
 <br>
  string2 = 'hello mom'</pre>
-</dl>
-<dt>Sections</p>
-<dd>A section begins with a section name, followed on the same line by an open bracket &#8216;<code>{</code>&#8216;. Section may contain other sections, comments, or variables. Sections may be nested to any depth, limited only by available memory. A section ends with a close bracket &#8216;<code>}</code>&#8216;, on a line by itself. </p>
+</dd></dl>
+<dt>Sections</dt>
+<dd>A section begins with a section name, followed on the same line by an open bracket &#8216;<code>{</code>&#8216;. Section may contain other sections, comments, or variables. Sections may be nested to any depth, limited only by available memory. A section ends with a close bracket &#8216;<code>}</code>&#8216;, on a line by itself. </dd>
 <dl>
 <dd>
 <pre><br>
@@ -43,7 +43,7 @@ description: "radiusd.conf – configuration file for the FreeRADIUS server"
  ...
 <br>
  }</pre>
-</dl>
+</dd></dl>
 <p> Sections can sometimes have a second name following the first one. The situations where this is legal depend on the context. See the examples and comments in the <code>radiusd.conf</code> file for more information. </p>
 <dl>
 <dd>
@@ -53,9 +53,9 @@ description: "radiusd.conf – configuration file for the FreeRADIUS server"
  ...
 <br>
  }</pre>
-</dl>
-<dt>Comments</p>
-<dd>Any line beginning with a (<code>#</code>) is deemed to be a comment, and is ignored. Comments can appear after a variable or section definitions. </p>
+</dd></dl>
+<dt>Comments</dt>
+<dd>Any line beginning with a (<code>#</code>) is deemed to be a comment, and is ignored. Comments can appear after a variable or section definitions. </dd>
 <dl>
 <dd>
 <pre><br>
@@ -68,9 +68,9 @@ description: "radiusd.conf – configuration file for the FreeRADIUS server"
  ...
 <br>
  } # end of section</pre>
-</dl>
-<dt>Continuations</p>
-<dd>Long lines can be broken up via continuations, using &#8216;\&#8217; as the last character of the line. For example, the following entry: </p>
+</dd></dl>
+<dt>Continuations</dt>
+<dd>Long lines can be broken up via continuations, using &#8216;\&#8217; as the last character of the line. For example, the following entry: </dd>
 <dl>
 <dd>
 <pre><br>
@@ -79,7 +79,7 @@ description: "radiusd.conf – configuration file for the FreeRADIUS server"
  blah \
 <br>
  blah&quot;</pre>
-</dl>
+</dd></dl>
 <p> will set the value of the variable &quot;foo&quot; to &quot;blah blah blah&quot;. Any CR or LF is not turned into a space, but all other whitespace is preserved in the final value.</dl>
 <h2>References</h2>
 <p>The value of a variable can reference another variable. These references are evaluated when the configuration file is loaded, which means that there is no run-time cost associated with them. This feature is most useful for turning long, repeated pieces of text into short ones. </p>
@@ -91,22 +91,22 @@ description: "radiusd.conf – configuration file for the FreeRADIUS server"
  who = ${foo} # sets variable 'who' to value of variable 'foo'
 <br>
  my = &quot;${foo} a&quot; # sets variable 'my' to &quot;bar a&quot;</pre>
-</dl>
+</dd></dl>
 <p> If the variable exists in a section or subsection, it can be referenced as ${section.subsection.variable}. Forward references are not allowed. Relative references are allowed, by pre-pending the name with one or more period. </p>
 <dl>
 <dd>
 <pre> blogs = ${.foo}</pre>
-</dl>
+</dd></dl>
 <p> Will set variable <code>blogs</code> to the value of variable <code>foo</code>, from the current section. </p>
 <dl>
 <dd>
 <pre> blogs = ${..foo}</pre>
-</dl>
+</dd></dl>
 <p> Will set variable <code>blogs</code> to the value of variable <code>foo</code>, from the section which contains the current section. </p>
 <dl>
 <dd>
 <pre> blogs = ${modules.detail.detailfile}</pre>
-</dl>
+</dd></dl>
 <p> Will set variable <code>blogs</code> to the value of variable <code>detailfile</code>, of the <code>detail</code> module, which is in the <code>modules</code> section of the configuration file.</p>
 <h2>Files</h2>
 <p>/etc/raddb/radiusd.conf</p>

@@ -47,12 +47,12 @@ description: "Tspi_TPM_CollateIdentityRequest – Gets all the informatin necess
 <h2>Return Codes</h2>
 <p><code>Tspi_TPM_CollateIdentityRequest</code> returns TSS_SUCCESS on success, otherwise one of the following values are returned:</p>
 <dl COMPACT>
-<dt><font SIZE="-1">TSS_E_INVALID_HANDLE</font></p>
-<dd>Either <code>hTPM</code> or <code>hKeySRK</code> or <code>hCAPubKey</code> is not a valid handle.</p>
-<dt><font SIZE="-1">TSS_E_BAD_PARAMETER</font></p>
+<dt><font SIZE="-1">TSS_E_INVALID_HANDLE</font></dt>
+<dd>Either <code>hTPM</code> or <code>hKeySRK</code> or <code>hCAPubKey</code> is not a valid handle.</dd>
+<dt><font SIZE="-1">TSS_E_BAD_PARAMETER</font></dt>
 <dd>
-<dt><font SIZE="-1">TSS_E_INTERNAL_ERROR</font></p>
-<dd>An error occurred internal to the TSS.</dl>
+</dd><dt><font SIZE="-1">TSS_E_INTERNAL_ERROR</font></dt>
+<dd>An error occurred internal to the TSS.</dd></dl>
 <h2>Conforming To</h2>
 <p><code>Tspi_TPM_CollateIdentityRequest</code> conforms to the Trusted Computing Group Software Specification version 1.1 Golden</p>
 <h2>See Also</h2>

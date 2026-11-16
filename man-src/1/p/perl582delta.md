@@ -25,30 +25,30 @@ description: "perl582delta – what is new for perl v5.8.2"
 <h3>Updated Modules And Pragmata</h3>
 <p> The following modules and pragmata have been updated since Perl 5.8.1:</p>
 <dl>
-<dt>Devel::PPPort</p>
+<dt>Devel::PPPort</dt>
 <dd>
-<dt>Digest::MD5</p>
+</dd><dt>Digest::MD5</dt>
 <dd>
-<dt>I18N::LangTags</p>
+</dd><dt>I18N::LangTags</dt>
 <dd>
-<dt>libnet</p>
+</dd><dt>libnet</dt>
 <dd>
-<dt>MIME::Base64</p>
+</dd><dt>MIME::Base64</dt>
 <dd>
-<dt>Pod::Perldoc</p>
+</dd><dt>Pod::Perldoc</dt>
 <dd>
-<dt>strict</p>
-<dd> Documentation improved</p>
-<dt>Tie::Hash</p>
-<dd> Documentation improved</p>
-<dt>Time::HiRes</p>
+</dd><dt>strict</dt>
+<dd> Documentation improved</dd>
+<dt>Tie::Hash</dt>
+<dd> Documentation improved</dd>
+<dt>Time::HiRes</dt>
 <dd>
-<dt>Unicode::Collate</p>
+</dd><dt>Unicode::Collate</dt>
 <dd>
-<dt>Unicode::Normalize</p>
+</dd><dt>Unicode::Normalize</dt>
 <dd>
-<dt><font SIZE="-1">UNIVERSAL</font></p>
-<dd> Documentation improved</dl>
+</dd><dt><font SIZE="-1">UNIVERSAL</font></dt>
+<dd> Documentation improved</dd></dl>
 <h2>Selected Bug Fixes</h2>
 <p> Some syntax errors involving unrecognized filetest operators are now handled correctly by the parser.</p>
 <h2>Changed Internals</h2>
@@ -60,12 +60,12 @@ description: "perl582delta – what is new for perl v5.8.2"
 <h2>Future Directions</h2>
 <p> Starting with 5.8.3 we intend to make more frequent maintenance releases, with a smaller number of changes in each. The intent is to propagate bug fixes out to stable releases more rapidly and make upgrading stable releases less of an upheaval. This should give end users more flexibility in their choice of upgrade timing, and allow them easier assessment of the impact of upgrades. The current plan is for code freezes as follows</p>
 <dl>
-<dt>&bull;</p>
-<dd> 5.8.3 23:59:59 <font SIZE="-1">GMT,</font> Wednesday December 31st 2003</p>
-<dt>&bull;</p>
-<dd> 5.8.4 23:59:59 <font SIZE="-1">GMT,</font> Wednesday March 31st 2004</p>
-<dt>&bull;</p>
-<dd> 5.8.5 23:59:59 <font SIZE="-1">GMT,</font> Wednesday June 30th 2004</dl>
+<dt>&bull;</dt>
+<dd> 5.8.3 23:59:59 <font SIZE="-1">GMT,</font> Wednesday December 31st 2003</dd>
+<dt>&bull;</dt>
+<dd> 5.8.4 23:59:59 <font SIZE="-1">GMT,</font> Wednesday March 31st 2004</dd>
+<dt>&bull;</dt>
+<dd> 5.8.5 23:59:59 <font SIZE="-1">GMT,</font> Wednesday June 30th 2004</dd></dl>
 <p> with the release following soon after, when testing is complete. </p>
 <p> See &#8220;Future Directions&#8221; in perl581delta for more soothsaying.</p>
 <h2>Reporting Bugs</h2>

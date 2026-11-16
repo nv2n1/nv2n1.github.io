@@ -82,363 +82,363 @@ description: "QwtThermo –"
 <p>The Thermometer Widget. </p>
 <p> <code>QwtThermo</code> is a widget which displays a value in an interval. It supports:</p>
 <dl COMPACT>
-<dt>&bull;</p>
-<dd>a horizontal or vertical layout;</p>
-<dt>&bull;</p>
-<dd>a range;</p>
-<dt>&bull;</p>
-<dd>a scale;</p>
-<dt>&bull;</p>
-<dd>an alarm level.</dl>
+<dt>&bull;</dt>
+<dd>a horizontal or vertical layout;</dd>
+<dt>&bull;</dt>
+<dd>a range;</dd>
+<dt>&bull;</dt>
+<dd>a scale;</dd>
+<dt>&bull;</dt>
+<dd>an alarm level.</dd></dl>
 <p> The fill colors might be calculated from an optional color map If no color map has been assigned <code>QwtThermo</code> uses the following colors/brushes from the widget palette: </p>
 <dl COMPACT>
-<dt>&bull;</p>
-<dd>QPalette::Base Background of the pipe</p>
-<dt>&bull;</p>
-<dd>QPalette::ButtonText Fill brush below the alarm level</p>
-<dt>&bull;</p>
-<dd>QPalette::Highlight Fill brush for the values above the alarm level</p>
-<dt>&bull;</p>
-<dd>QPalette::WindowText For the axis of the scale</p>
-<dt>&bull;</p>
-<dd>QPalette::Text For the labels of the scale</dl>
+<dt>&bull;</dt>
+<dd>QPalette::Base Background of the pipe</dd>
+<dt>&bull;</dt>
+<dd>QPalette::ButtonText Fill brush below the alarm level</dd>
+<dt>&bull;</dt>
+<dd>QPalette::Highlight Fill brush for the values above the alarm level</dd>
+<dt>&bull;</dt>
+<dd>QPalette::WindowText For the axis of the scale</dd>
+<dt>&bull;</dt>
+<dd>QPalette::Text For the labels of the scale</dd></dl>
 <h2>Member Enumeration Documentation</h2>
 <h3>enum <code>QwtThermo::OriginMode</code></h3>
 <p>Origin mode. This property specifies where the beginning of the liquid is placed. </p>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>setOriginMode()</code>, <code>setOrigin()</code></dl>
+<dd><code>setOriginMode()</code>, <code>setOrigin()</code></dd></dl>
 <p> <code>Enumerator</code></p>
 <dl COMPACT>
-<dt><i>OriginMinimum </i></p>
-<dd>The origin is the minimum of the scale.</p>
-<dt><i>OriginMaximum </i></p>
-<dd>The origin is the maximum of the scale.</p>
-<dt><i>OriginCustom </i></p>
-<dd>The origin is specified using the <code>origin()</code> property.</dl>
+<dt><i>OriginMinimum </i></dt>
+<dd>The origin is the minimum of the scale.</dd>
+<dt><i>OriginMaximum </i></dt>
+<dd>The origin is the maximum of the scale.</dd>
+<dt><i>OriginCustom </i></dt>
+<dd>The origin is specified using the <code>origin()</code> property.</dd></dl>
 <h3>enum <code>QwtThermo::ScalePosition</code></h3>
 <p>Position of the scale </p>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>setScalePosition()</code>, <code>setOrientation()</code></dl>
+<dd><code>setScalePosition()</code>, <code>setOrientation()</code></dd></dl>
 <p> <code>Enumerator</code></p>
 <dl COMPACT>
-<dt><i>NoScale </i></p>
-<dd>The slider has no scale.</p>
-<dt><i>LeadingScale </i></p>
-<dd>The scale is right of a vertical or below of a horizontal slider.</p>
-<dt><i>TrailingScale </i></p>
-<dd>The scale is left of a vertical or above of a horizontal slider.</dl>
+<dt><i>NoScale </i></dt>
+<dd>The slider has no scale.</dd>
+<dt><i>LeadingScale </i></dt>
+<dd>The scale is right of a vertical or below of a horizontal slider.</dd>
+<dt><i>TrailingScale </i></dt>
+<dd>The scale is left of a vertical or above of a horizontal slider.</dd></dl>
 <h2>Constructor &amp; Destructor Documentation</h2>
 <h3>QwtThermo::QwtThermo (QWidget *parent = NULL) [explicit]</h3>
 <p>Constructor </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>parent</i> Parent widget</dl>
+<dd><i>parent</i> Parent widget</dd></dl>
 <h2>Member Function Documentation</h2>
 <h3>QBrush QwtThermo::alarmBrush () const</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>Liquid brush ( QPalette::Highlight ) above the alarm threshold.</dl>
+<dd>Liquid brush ( QPalette::Highlight ) above the alarm threshold.</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>setAlarmBrush()</code>, QWidget::palette()</dl>
+<dd><code>setAlarmBrush()</code>, QWidget::palette()</dd></dl>
 <p> <code>Warning:</code></p>
 <dl COMPACT>
-<dd>The alarm threshold has no effect, when a color map has been assigned</dl>
+<dd>The alarm threshold has no effect, when a color map has been assigned</dd></dl>
 <h3>bool QwtThermo::alarmEnabled () const</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>True, when the alarm threshold is enabled.</dl>
+<dd>True, when the alarm threshold is enabled.</dd></dl>
 <p> <code>Warning:</code></p>
 <dl COMPACT>
-<dd>The alarm threshold has no effect, when a color map has been assigned</dl>
+<dd>The alarm threshold has no effect, when a color map has been assigned</dd></dl>
 <h3>double QwtThermo::alarmLevel () const</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>Alarm threshold.</dl>
+<dd>Alarm threshold.</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>setAlarmLevel()</code></dl>
+<dd><code>setAlarmLevel()</code></dd></dl>
 <p> <code>Warning:</code></p>
 <dl COMPACT>
-<dd>The alarm threshold has no effect, when a color map has been assigned</dl>
+<dd>The alarm threshold has no effect, when a color map has been assigned</dd></dl>
 <h3>QRect QwtThermo::alarmRect (const QRect &amp;fillRect) const [protected]</h3>
 <p>Calculate the alarm rectangle of the pipe. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>fillRect</i> Filled rectangle in the pipe</dl>
+<dd><i>fillRect</i> Filled rectangle in the pipe</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>Rectangle to be filled with the alarm brush</dl>
+<dd>Rectangle to be filled with the alarm brush</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>pipeRect()</code>, <code>fillRect()</code>, <code>alarmLevel()</code>, <code>alarmBrush()</code></dl>
+<dd><code>pipeRect()</code>, <code>fillRect()</code>, <code>alarmLevel()</code>, <code>alarmBrush()</code></dd></dl>
 <h3>int QwtThermo::borderWidth () const</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>Border width of the thermometer pipe.</dl>
+<dd>Border width of the thermometer pipe.</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>setBorderWidth()</code></dl>
+<dd><code>setBorderWidth()</code></dd></dl>
 <h3>void QwtThermo::changeEvent (QEvent *event) [protected], [virtual]</h3>
 <p>Qt change event handler </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>event</i> Event</dl>
+<dd><i>event</i> Event</dd></dl>
 <h3><code>QwtColorMap</code> * QwtThermo::colorMap ()</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>Color map for the fill color</dl>
+<dd>Color map for the fill color</dd></dl>
 <p> <code>Warning:</code></p>
 <dl COMPACT>
-<dd>The alarm threshold has no effect, when a color map has been assigned</dl>
+<dd>The alarm threshold has no effect, when a color map has been assigned</dd></dl>
 <h3>const <code>QwtColorMap</code> * QwtThermo::colorMap () const</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>Color map for the fill color</dl>
+<dd>Color map for the fill color</dd></dl>
 <p> <code>Warning:</code></p>
 <dl COMPACT>
-<dd>The alarm threshold has no effect, when a color map has been assigned</dl>
+<dd>The alarm threshold has no effect, when a color map has been assigned</dd></dl>
 <h3>void QwtThermo::drawLiquid (QPainter *painter, const QRect &amp;pipeRect) const [protected], [virtual]</h3>
 <p>Redraw the liquid in thermometer pipe. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>painter</i> Painter<br />
- <i>pipeRect</i> Bounding rectangle of the pipe without borders</dl>
+ <i>pipeRect</i> Bounding rectangle of the pipe without borders</dd></dl>
 <h3>QBrush QwtThermo::fillBrush () const</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>Liquid ( QPalette::ButtonText ) brush.</dl>
+<dd>Liquid ( QPalette::ButtonText ) brush.</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>setFillBrush()</code>, QWidget::palette()</dl>
+<dd><code>setFillBrush()</code>, QWidget::palette()</dd></dl>
 <h3>QRect QwtThermo::fillRect (const QRect &amp;pipeRect) const [protected]</h3>
 <p>Calculate the filled rectangle of the pipe. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>pipeRect</i> Rectangle of the pipe</dl>
+<dd><i>pipeRect</i> Rectangle of the pipe</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>Rectangle to be filled ( fill and alarm brush )</dl>
+<dd>Rectangle to be filled ( fill and alarm brush )</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>pipeRect()</code>, <code>alarmRect()</code></dl>
+<dd><code>pipeRect()</code>, <code>alarmRect()</code></dd></dl>
 <h3>QSize QwtThermo::minimumSizeHint () const [virtual]</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>Minimum size hint</dl>
+<dd>Minimum size hint</dd></dl>
 <p> <code>Warning:</code></p>
 <dl COMPACT>
-<dd>The return value depends on the font and the scale.</dl>
+<dd>The return value depends on the font and the scale.</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>sizeHint()</code></dl>
+<dd><code>sizeHint()</code></dd></dl>
 <h3>Qt::Orientation QwtThermo::orientation () const</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>Orientation</dl>
+<dd>Orientation</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>setOrientation()</code></dl>
+<dd><code>setOrientation()</code></dd></dl>
 <h3>double QwtThermo::origin () const</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>Origin of the thermo, when OriginCustom is enabled</dl>
+<dd>Origin of the thermo, when OriginCustom is enabled</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>setOrigin()</code>, <code>setOriginMode()</code>, <code>originMode()</code></dl>
+<dd><code>setOrigin()</code>, <code>setOriginMode()</code>, <code>originMode()</code></dd></dl>
 <h3><code>QwtThermo::OriginMode</code> QwtThermo::originMode () const</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>Mode, how the origin is determined.</dl>
+<dd>Mode, how the origin is determined.</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>setOriginMode()</code>, serOrigin(), <code>origin()</code></dl>
+<dd><code>setOriginMode()</code>, serOrigin(), <code>origin()</code></dd></dl>
 <h3>void QwtThermo::paintEvent (QPaintEvent *event) [protected], [virtual]</h3>
 <p>Paint event handler </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>event</i> Paint event</dl>
+<dd><i>event</i> Paint event</dd></dl>
 <h3>QRect QwtThermo::pipeRect () const [protected]</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>Bounding rectangle of the pipe ( without borders ) in widget coordinates</dl>
+<dd>Bounding rectangle of the pipe ( without borders ) in widget coordinates</dd></dl>
 <h3>int QwtThermo::pipeWidth () const</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>Width of the pipe.</dl>
+<dd>Width of the pipe.</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>setPipeWidth()</code></dl>
+<dd><code>setPipeWidth()</code></dd></dl>
 <h3><code>QwtInterval::BorderFlags</code> QwtThermo::rangeFlags () const</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>Range flags</dl>
+<dd>Range flags</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>setRangeFlags()</code></dl>
+<dd><code>setRangeFlags()</code></dd></dl>
 <h3>void QwtThermo::resizeEvent (QResizeEvent *event) [protected], [virtual]</h3>
 <p>Resize event handler </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>event</i> Resize event</dl>
+<dd><i>event</i> Resize event</dd></dl>
 <h3>const <code>QwtScaleDraw</code> * QwtThermo::scaleDraw () const</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>the scale draw of the thermo</dl>
+<dd>the scale draw of the thermo</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>setScaleDraw()</code></dl>
+<dd><code>setScaleDraw()</code></dd></dl>
 <h3><code>QwtScaleDraw</code> * QwtThermo::scaleDraw () [protected]</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>the scale draw of the thermo</dl>
+<dd>the scale draw of the thermo</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>setScaleDraw()</code></dl>
+<dd><code>setScaleDraw()</code></dd></dl>
 <h3><code>QwtThermo::ScalePosition</code> QwtThermo::scalePosition () const</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>Scale position.</dl>
+<dd>Scale position.</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>setScalePosition()</code></dl>
+<dd><code>setScalePosition()</code></dd></dl>
 <h3>void QwtThermo::setAlarmBrush (const QBrush &amp;brush)</h3>
 <p>Specify the liquid brush above the alarm threshold. Changes the QPalette::Highlight brush of the palette. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>brush</i> New brush.</dl>
+<dd><i>brush</i> New brush.</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>alarmBrush()</code>, QWidget::setPalette()</dl>
+<dd><code>alarmBrush()</code>, QWidget::setPalette()</dd></dl>
 <p> <code>Warning:</code></p>
 <dl COMPACT>
-<dd>The alarm threshold has no effect, when a color map has been assigned</dl>
+<dd>The alarm threshold has no effect, when a color map has been assigned</dd></dl>
 <h3>void QwtThermo::setAlarmEnabled (boolon)</h3>
 <p>Enable or disable the alarm threshold. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>on</i> true (disabled) or false (enabled)</dl>
+<dd><i>on</i> true (disabled) or false (enabled)</dd></dl>
 <p> <code>Warning:</code></p>
 <dl COMPACT>
-<dd>The alarm threshold has no effect, when a color map has been assigned</dl>
+<dd>The alarm threshold has no effect, when a color map has been assigned</dd></dl>
 <h3>void QwtThermo::setAlarmLevel (doublelevel)</h3>
 <p>Specify the alarm threshold. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>level</i> Alarm threshold</dl>
+<dd><i>level</i> Alarm threshold</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>alarmLevel()</code></dl>
+<dd><code>alarmLevel()</code></dd></dl>
 <p> <code>Warning:</code></p>
 <dl COMPACT>
-<dd>The alarm threshold has no effect, when a color map has been assigned</dl>
+<dd>The alarm threshold has no effect, when a color map has been assigned</dd></dl>
 <h3>void QwtThermo::setBorderWidth (intwidth)</h3>
 <p>Set the border width of the pipe. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>width</i> Border width</dl>
+<dd><i>width</i> Border width</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>borderWidth()</code></dl>
+<dd><code>borderWidth()</code></dd></dl>
 <h3>void QwtThermo::setColorMap (<code>QwtColorMap</code> *colorMap)</h3>
 <p>Assign a color map for the fill color. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>colorMap</i> Color map</dl>
+<dd><i>colorMap</i> Color map</dd></dl>
 <p> <code>Warning:</code></p>
 <dl COMPACT>
-<dd>The alarm threshold has no effect, when a color map has been assigned</dl>
+<dd>The alarm threshold has no effect, when a color map has been assigned</dd></dl>
 <h3>void QwtThermo::setFillBrush (const QBrush &amp;brush)</h3>
 <p>Change the brush of the liquid. Changes the QPalette::ButtonText brush of the palette. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>brush</i> New brush.</dl>
+<dd><i>brush</i> New brush.</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>fillBrush()</code>, QWidget::setPalette()</dl>
+<dd><code>fillBrush()</code>, QWidget::setPalette()</dd></dl>
 <h3>void QwtThermo::setOrientation (Qt::Orientationorientation)</h3>
 <p>Set the orientation. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>orientation</i> Allowed values are Qt::Horizontal and Qt::Vertical.</dl>
+<dd><i>orientation</i> Allowed values are Qt::Horizontal and Qt::Vertical.</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>orientation()</code>, <code>scalePosition()</code></dl>
+<dd><code>orientation()</code>, <code>scalePosition()</code></dd></dl>
 <h3>void QwtThermo::setOrigin (doubleorigin)</h3>
 <p>Specifies the custom origin. If originMode is set to OriginCustom this property controls where the liquid starts. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>origin</i> New origin level</dl>
+<dd><i>origin</i> New origin level</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>setOriginMode()</code>, <code>originMode()</code>, <code>origin()</code></dl>
+<dd><code>setOriginMode()</code>, <code>originMode()</code>, <code>origin()</code></dd></dl>
 <h3>void QwtThermo::setOriginMode (<code>OriginMode</code>m)</h3>
 <p>Change how the origin is determined. </p>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>originMode()</code>, serOrigin(), <code>origin()</code></dl>
+<dd><code>originMode()</code>, serOrigin(), <code>origin()</code></dd></dl>
 <h3>void QwtThermo::setPipeWidth (intwidth)</h3>
 <p>Change the width of the pipe. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>width</i> Width of the pipe</dl>
+<dd><i>width</i> Width of the pipe</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>pipeWidth()</code></dl>
+<dd><code>pipeWidth()</code></dd></dl>
 <h3>void QwtThermo::setRangeFlags (<code>QwtInterval::BorderFlags</code>flags)</h3>
 <p>Exclude/Include min/max values. According to the flags minValue() and maxValue() are included/excluded from the pipe. In case of an excluded value the corresponding tick is painted 1 pixel off of the <code>pipeRect()</code>. </p>
 <p> F.e. when a minimum of 0.0 has to be displayed as an empty pipe the minValue() needs to be excluded. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>flags</i> Range flags</dl>
+<dd><i>flags</i> Range flags</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>rangeFlags()</code></dl>
+<dd><code>rangeFlags()</code></dd></dl>
 <h3>void QwtThermo::setScaleDraw (<code>QwtScaleDraw</code> *scaleDraw)</h3>
 <p>Set a scale draw. For changing the labels of the scales, it is necessary to derive from <code>QwtScaleDraw</code> and overload <code>QwtScaleDraw::label()</code>. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>scaleDraw</i> ScaleDraw object, that has to be created with new and will be deleted in <code>~QwtThermo()</code> or the next call of <code>setScaleDraw()</code>.</dl>
+<dd><i>scaleDraw</i> ScaleDraw object, that has to be created with new and will be deleted in <code>~QwtThermo()</code> or the next call of <code>setScaleDraw()</code>.</dd></dl>
 <h3>void QwtThermo::setScalePosition (<code>ScalePosition</code>scalePosition)</h3>
 <p>Change the position of the scale. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>scalePosition</i> Position of the scale.</dl>
+<dd><i>scalePosition</i> Position of the scale.</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>ScalePosition</code>, <code>scalePosition()</code></dl>
+<dd><code>ScalePosition</code>, <code>scalePosition()</code></dd></dl>
 <h3>void QwtThermo::setSpacing (intspacing)</h3>
 <p>Change the spacing between pipe and scale. A spacing of 0 means, that the backbone of the scale is below the pipe. </p>
 <p> The default setting is 3 pixels. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>spacing</i> Number of pixels</dl>
+<dd><i>spacing</i> Number of pixels</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>spacing()</code>;</dl>
+<dd><code>spacing()</code>;</dd></dl>
 <h3>void QwtThermo::setValue (doublevalue) [virtual], [slot]</h3>
 <p>Set the current value. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>value</i> New Value</dl>
+<dd><i>value</i> New Value</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>value()</code></dl>
+<dd><code>value()</code></dd></dl>
 <h3>QSize QwtThermo::sizeHint () const [virtual]</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>the minimum size hint</dl>
+<dd>the minimum size hint</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>minimumSizeHint()</code></dl>
+<dd><code>minimumSizeHint()</code></dd></dl>
 <h3>int QwtThermo::spacing () const</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>Number of pixels between pipe and scale</dl>
+<dd>Number of pixels between pipe and scale</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>setSpacing()</code></dl>
+<dd><code>setSpacing()</code></dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for Qwt User&#8217;s Guide from the source code.</p>

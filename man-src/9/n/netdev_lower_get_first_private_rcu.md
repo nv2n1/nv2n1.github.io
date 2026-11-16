@@ -15,7 +15,7 @@ netdev_lower_get_first_private_rcu - Get the first -&gt;private from the lower n
 <h2>Arguments</h2>
 
 <i>dev</i>
-<dl><dd><dd>device</dl>
+<dl><dd></dd><dd>device</dd></dl>
 
 <h2>Description</h2>
 

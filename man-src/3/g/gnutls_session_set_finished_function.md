@@ -14,10 +14,10 @@ description: "gnutls_session_set_finished_function – API function"
 <p> <code>void gnutls_session_set_finished_function(gnutls_session_t </code><i>session</i><code>, gnutls_finished_callback_func </code><i>func</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
-<dt>gnutls_session_t session</p>
-<dd> is a <code>gnutls_session_t</code> structure.</p>
-<dt>gnutls_finished_callback_func func</p>
-<dd> a <code>gnutls_finished_callback_func</code> callback.</dl>
+<dt>gnutls_session_t session</dt>
+<dd> is a <code>gnutls_session_t</code> structure.</dd>
+<dt>gnutls_finished_callback_func func</dt>
+<dd> a <code>gnutls_finished_callback_func</code> callback.</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> Register a callback function for the session that will be called when a TLS Finished message has been generated. The function is typically used to copy away the TLS finished message for later use as a channel binding or similar purpose.</p>
 <h2>THE CALLBACK SHOULD FOLLOW THIS PROTOTYPE</h2>
@@ -35,6 +35,6 @@ description: "gnutls_session_set_finished_function – API function"
 <p> The full documentation for <code>gnutls</code> is maintained as a Texinfo manual. If the <code>info</code> and <code>gnutls</code> programs are properly installed at your site, the command</p>
 <dl>
 <dt>
-<dd> <code>info gnutls</code></dl>
+</dt><dd> <code>info gnutls</code></dd></dl>
 <p> should give you access to the complete manual. </p>
 <h2>Index</h2>

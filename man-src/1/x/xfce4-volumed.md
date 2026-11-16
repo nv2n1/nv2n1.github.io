@@ -13,22 +13,22 @@ description: "xfce4-volumed – Pulseaudio volume keys daemon for the Xfce deskt
 <h3>Usage:</h3>
 <dl>
 <dt>
-<dd> xfce4-volumed [OPTION&#8230;]</dl>
+</dt><dd> xfce4-volumed [OPTION&#8230;]</dd></dl>
 <h3>Help Options:</h3>
 <dl>
-<dt><code>-h</code>, <code>&#8211;help</code></p>
-<dd> Show help options</p>
-<dt><code>&#8211;help-all</code></p>
-<dd> Show all help options</p>
-<dt><code>&#8211;help-gtk</code></p>
-<dd> Show GTK+ Options</dl>
+<dt><code>-h</code>, <code>&#8211;help</code></dt>
+<dd> Show help options</dd>
+<dt><code>&#8211;help-all</code></dt>
+<dd> Show all help options</dd>
+<dt><code>&#8211;help-gtk</code></dt>
+<dd> Show GTK+ Options</dd></dl>
 <h3>Application Options:</h3>
 <dl>
-<dt><code>-v</code>, <code>&#8211;version</code></p>
-<dd> Version information</p>
-<dt><code>&#8211;no-daemon</code></p>
-<dd> Do not fork to the background</p>
-<dt><code>&#8211;display</code>=<i>DISPLAY</i></p>
-<dd> X display to use</dl>
+<dt><code>-v</code>, <code>&#8211;version</code></dt>
+<dd> Version information</dd>
+<dt><code>&#8211;no-daemon</code></dt>
+<dd> Do not fork to the background</dd>
+<dt><code>&#8211;display</code>=<i>DISPLAY</i></dt>
+<dd> X display to use</dd></dl>
 <p> Please report bugs to &lt;<a rel="nofollow" href="http://bugs.launchpad.net/xfce4-volumed-pulse">http://bugs.launchpad.net/xfce4-volumed-pulse</a>&gt;. </p>
 <h2>Index</h2>

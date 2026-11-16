@@ -13,7 +13,7 @@ MAPACI - Normally used to pick colors for the areas created by the boundary line
 
  int c_mapaci (int iaid)
 <h2>Description</h2><dl COMPACT><dt>IAID
-<dd>(an input expression of type INTEGER) is an area identifier for one of the areas defined by the set of boundary lines added to an area map by a call to MAPBLA.</dl><h2>C-Binding Description</h2>The C-binding argument description is the same as the FORTRAN argument description.
+</dt><dd>(an input expression of type INTEGER) is an area identifier for one of the areas defined by the set of boundary lines added to an area map by a call to MAPBLA.</dd></dl><h2>C-Binding Description</h2>The C-binding argument description is the same as the FORTRAN argument description.
 <h2>Usage</h2>Executing the statement &quot;ICIR=MAPACI(IAID)&quot; gives ICIR a value between 1 and 7, inclusive, that may be used to select a color index for the area whose area identifier is IAID. It is guaranteed that MAPACI will not return the same value for adjacent areas; this fact can be used to ensure that adjacent areas will have different colors. 
 
  Note that it is the responsibility of the user to define the colors associated with color indices used; this is done by calling the GKS routine GSCR.

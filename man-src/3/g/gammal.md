@@ -19,15 +19,15 @@ description: "gamma, gammaf, gammal – (logarithm of the) gamma function"
 <p> <code>gamma</code>():</p>
 <dl>
 <dt>
-<dd> _XOPEN_SOURCE<br />
+</dt><dd> _XOPEN_SOURCE<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Since glibc 2.19:&nbsp;*/&nbsp;_DEFAULT_SOURCE<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Glibc versions&nbsp;&lt;=&nbsp;2.19:&nbsp;*/&nbsp;_BSD_SOURCE ||&nbsp;_SVID_SOURCE</dl>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Glibc versions&nbsp;&lt;=&nbsp;2.19:&nbsp;*/&nbsp;_BSD_SOURCE ||&nbsp;_SVID_SOURCE</dd></dl>
 <p> <code>gammaf</code>(), <code>gammal</code>():</p>
 <dl>
 <dt>
-<dd> _XOPEN_SOURCE &gt;= 600 || (_XOPEN_SOURCE &amp;&amp; _ISOC99_SOURCE)<br />
+</dt><dd> _XOPEN_SOURCE &gt;= 600 || (_XOPEN_SOURCE &amp;&amp; _ISOC99_SOURCE)<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Since glibc 2.19:&nbsp;*/&nbsp;_DEFAULT_SOURCE<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Glibc versions&nbsp;&lt;=&nbsp;2.19:&nbsp;*/&nbsp;_BSD_SOURCE ||&nbsp;_SVID_SOURCE</dl>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Glibc versions&nbsp;&lt;=&nbsp;2.19:&nbsp;*/&nbsp;_BSD_SOURCE ||&nbsp;_SVID_SOURCE</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> These functions are deprecated: instead, use either the <code><a href="/docs/linux/man/3-tgamma/">tgamma</a></code>(3) or the <code><a href="/docs/linux/man/3-lgamma/">lgamma</a></code>(3) functions, as appropriate. </p>
 <p> For the definition of the Gamma function, see <code><a href="/docs/linux/man/3-tgamma/">tgamma</a></code>(3).</p>

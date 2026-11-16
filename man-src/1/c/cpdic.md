@@ -17,14 +17,14 @@ description: "cpdic – User Dictionary Copy Tool"
 <p> If the -i option is specified, the system dictionary will be copied. If the -u option is specified, another user dictionary will be copied.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt>-cs <i>canna-server</i> (or -cannaserver <i>canna-server</i>)</p>
-<dd></dl>
+<dt>-cs <i>canna-server</i> (or -cannaserver <i>canna-server</i>)</dt>
+<dd></dd></dl>
 <p> Specifies the name of the server machine that contains a dictionary to be copied.</p>
 <dl>
-<dt>-i</p>
-<dd> Copies the system dictionary.</p>
-<dt>-u <i>user-name</i></p>
-<dd> Copies the dictionary of the specified user.</dl>
+<dt>-i</dt>
+<dd> Copies the system dictionary.</dd>
+<dt>-u <i>user-name</i></dt>
+<dd> Copies the dictionary of the specified user.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/1-lsdic/">lsdic</a>(1), <a href="/docs/linux/man/1-mkdic/">mkdic</a>(1), <a href="/docs/linux/man/1-mvdic/">mvdic</a>(1), <a href="/docs/linux/man/1-rmdic/">rmdic</a>(1) </p>
 <h2>Index</h2>

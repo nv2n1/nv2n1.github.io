@@ -12,22 +12,15 @@ std::get(std::array) - std::get(std::array)
 
 <pre><code>template &lt;size_t I, class T, size_t N&gt;
 (1)(since C++ 11)
-
     constexpr T &amp;get(array&lt;T, N&gt; &amp;a) noexcept;
-
 template &lt;size_t I, class T, size_t N&gt;
 (2)(since C++ 11)
-
     constexpr T &amp;&amp;get(array&lt;T, N&gt; &amp;&amp;a) noexcept;
-
 template &lt;size_t I, class T, size_t N&gt;
 (3)(since C++ 11)
-
     constexpr const T &amp;get(const array&lt;T, N&gt; &amp;a) noexcept;
-
 template &lt;size_t I, class T, size_t N&gt;
 (4)(since C++ 17)
-
     constexpr const T &amp;&amp;get(const array&lt;T, N&gt; &amp;&amp;a) noexcept;</code></pre> 
 Extracts the Ith element element from the array. 
 I must be an integer value in range [0, N). This is enforced at compile time as opposed to at() or operator[]. 
@@ -51,10 +44,8 @@ The overloads are marked as constexpr since C++14.
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;iostream&gt;
-
 #include &lt;array&gt;
 int main()
-
 {
     std::array&lt;int, 3&gt; arr;
     // set values:

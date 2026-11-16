@@ -38,12 +38,9 @@ wait_until <i>(public member function)</i></p>
 <p>A shared_future may be used to signal multiple threads simultaneously, similar to std::condition_variable::notify_all()<br />
  // Run this code </p>
 <pre><code>#include &lt;iostream&gt;
-
 #include &lt;future&gt;
-
 #include &lt;chrono&gt;
 int main()
-
 {
     std::promise&lt;void&gt; ready_promise, t1_ready_promise, t2_ready_promise;
     std::shared_future&lt;void&gt; ready_future(ready_promise.get_future());
@@ -53,7 +50,6 @@ int main()
         ready_future.wait(); // waits for the signal from main()
         return std::chrono::high_resolution_clock::now() - start;
     };
-
     auto fun2 = [&amp;, ready_future]() -&gt; std::chrono::duration&lt;double, std::milli&gt; {
         t2_ready_promise.set_value();
         ready_future.wait(); // waits for the signal from main()

@@ -11,7 +11,6 @@ description: "ql/instruments/quantovanillaoption.hpp – Quanto version of a van
 <h2>Synopsis</h2>
 <pre><code>
 #include &lt;ql/instruments/oneassetoption.hpp&gt;
-
 #include &lt;ql/instruments/payoffs.hpp&gt;</code></pre>
 <h3>Classes</h3>
 <p>class <code>QuantoOptionResults&lt; ResultsType &gt;</code><br />

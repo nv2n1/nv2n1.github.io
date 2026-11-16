@@ -12,7 +12,7 @@ description: "findsmb – list info about machines that respond to SMB name quer
 <h2>SYNOPSIS</h2>
 <dl>
 <dt>
-<dd>findsmb [subnet broadcast address]</dl>
+</dt><dd>findsmb [subnet broadcast address]</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> This perl script is part of the <code><a href="/docs/linux/man/7-samba/">samba</a></code>(7) suite. </p>
 <p> findsmb is a perl script that prints out several pieces of information about machines on a subnet that respond to SMB name query requests. It uses <code><a href="/docs/linux/man/1-nmblookup/">nmblookup</a></code>(1) and <code><a href="/docs/linux/man/1-smbclient/">smbclient</a></code>(1) to obtain this information.</p>
@@ -20,11 +20,11 @@ description: "findsmb – list info about machines that respond to SMB name quer
 <p> -r</p>
 <dl>
 <dt>
-<dd> Controls whether findsmb takes bugs in Windows95 into account when trying to find a Netbios name registered of the remote machine. This option is disabled by default because it is specific to Windows 95 and Windows 95 machines only. If set, <code><a href="/docs/linux/man/1-nmblookup/">nmblookup</a></code>(1) will be called with <code>-B</code> option.</dl>
+</dt><dd> Controls whether findsmb takes bugs in Windows95 into account when trying to find a Netbios name registered of the remote machine. This option is disabled by default because it is specific to Windows 95 and Windows 95 machines only. If set, <code><a href="/docs/linux/man/1-nmblookup/">nmblookup</a></code>(1) will be called with <code>-B</code> option.</dd></dl>
 <p> subnet broadcast address</p>
 <dl>
 <dt>
-<dd> Without this option, findsmb will probe the subnet of the machine where <code><a href="/docs/linux/man/1-findsmb/">findsmb</a></code>(1) is run. This value is passed to <code><a href="/docs/linux/man/1-nmblookup/">nmblookup</a></code>(1) as part of the <code>-B</code> option.</dl>
+</dt><dd> Without this option, findsmb will probe the subnet of the machine where <code><a href="/docs/linux/man/1-findsmb/">findsmb</a></code>(1) is run. This value is passed to <code><a href="/docs/linux/man/1-nmblookup/">nmblookup</a></code>(1) as part of the <code>-B</code> option.</dd></dl>
 <h2>EXAMPLES</h2>
 <p> The output of findsmb lists the following information for all machines that respond to the initial nmblookup for any name: IP address, NetBIOS name, Workgroup name, operating system, and SMB server version. </p>
 <p> There will be a &#8216;+&#8217; in front of the workgroup name for machines that are local master browsers for that workgroup. There will be an &#8216;*&#8217; in front of the workgroup name for machines that are the domain master browser for that workgroup. Machines that are running Windows for Workgroups, Windows 95 or Windows 98 will not show any information about the operating system or server version. </p>
@@ -32,7 +32,7 @@ description: "findsmb – list info about machines that respond to SMB name quer
 <p> For example, running findsmb without <code>-r</code> option set would yield output similar to the following </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre><code>
 IP ADDR         NETBIOS NAME   WORKGROUP/OS/VERSION 
 --------------------------------------------------------------------- 
@@ -47,7 +47,7 @@ IP ADDR         NETBIOS NAME   WORKGROUP/OS/VERSION
 192.168.35.93   FROGSTAR-PC    [MVENGR] [Windows 5.0] [Windows 2000 LAN Manager]
 192.168.35.97   HERBNT1       *[HERB-NT] [Windows NT 4.0] [NT LAN Manager 4.0]
 </code></pre>
-</dl>
+</dd></dl>
 <h2>VERSION</h2>
 <p> This man page is part of version 4.11.6-Ubuntu of the Samba suite.</p>
 <h2>SEE ALSO</h2>

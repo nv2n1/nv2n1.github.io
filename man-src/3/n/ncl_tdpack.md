@@ -14,64 +14,64 @@ TDPACK (which stands for &quot;Three Dimensional PACKage&quot;) is a collection 
 
  Tdpack consists of the following routines:
 <dl><dt>Initialization Routines:
-<dd><dt> TDINIT -
-<dd>Define eye position, line of sight, up direction, and stereo flag.
-<dt> TDPARA -
-<dd>Define the reference parallelogram.
-<dt> TDCLRS -
-<dd>Define colors for TDPACK.
-<dt>Parameter-Access Routines:
-<dd><dt> TDGETI -
-<dd>Get the integer value of an internal parameter.
-<dt> TDGETR -
-<dd>Get the real value of an internal parameter.
-<dt> TDGTRS -
-<dd>Get the definition of a specified rendering style.
-<dt> TDSETI -
-<dd>Set the integer value of an internal parameter.
-<dt> TDSETR -
-<dd>Set the real value of an internal parameter.
-<dt> TDSTRS -
-<dd>Define a specified rendering style.
-<dt>Point-Transforming Routines:
-<dd><dt> TDPRPT -
-<dd>Project from 3-space to the projection plane.
-<dt> TDPRPA -
-<dd>Project from 3-space to the plane of the reference parallelogram.
-<dt> TDPRPI -
-<dd>Project from the plane of the reference parallelogram to 3-space.
-<dt>Line-Drawing Routines:
-<dd><dt> TDLINE -
-<dd>Draw the projection of a line in 3-space.
-<dt> TDLNPA -
-<dd>Draw the projection of a line in the plane of the reference parallelogram.
-<dt>Grid-Drawing Routines:
-<dd><dt> TDGRDS -
-<dd>Draw the grids on all the faces of a box in 3-space.
-<dt> TDGRID -
-<dd>Draw the grid on a particular face of a box in 3-space.
-<dt>Label-Drawing Routines:
-<dd><dt> TDLBLS -
-<dd>Draw labels for all faces of a box in 3-space.
-<dt> TDLBLA -
-<dd>Draw labels for a particular face of a box in 3-space.
-<dt> TDPLCH -
-<dd>Draw characters in the plane of the reference parallelogram.
-<dt>Surface-Drawing Routines:
-<dd><dt> TDDTRI -
-<dd>Draw triangles defined by a triangle list.
-<dt> TDSTRI -
-<dd>Add triangles defining a simple surface to a triangle list.
-<dt> TDITRI -
-<dd>Add triangles defining an isosurface to a triangle list.
-<dt> TDMTRI -
-<dd>Add triangles defining a 3D marker to a triangle list.
-<dt> TDCTRI -
-<dd>Order the triangles in a triangle list for proper rendering.
-<dt> TDSORT -
-<dd>Cut triangles with a plane perpendicular to one of the axes.
-<dt> TDOTRI -
-<dd>Generic sorting routine</dl>
+</dt><dd></dd><dt> TDINIT -
+</dt><dd>Define eye position, line of sight, up direction, and stereo flag.
+</dd><dt> TDPARA -
+</dt><dd>Define the reference parallelogram.
+</dd><dt> TDCLRS -
+</dt><dd>Define colors for TDPACK.
+</dd><dt>Parameter-Access Routines:
+</dt><dd></dd><dt> TDGETI -
+</dt><dd>Get the integer value of an internal parameter.
+</dd><dt> TDGETR -
+</dt><dd>Get the real value of an internal parameter.
+</dd><dt> TDGTRS -
+</dt><dd>Get the definition of a specified rendering style.
+</dd><dt> TDSETI -
+</dt><dd>Set the integer value of an internal parameter.
+</dd><dt> TDSETR -
+</dt><dd>Set the real value of an internal parameter.
+</dd><dt> TDSTRS -
+</dt><dd>Define a specified rendering style.
+</dd><dt>Point-Transforming Routines:
+</dt><dd></dd><dt> TDPRPT -
+</dt><dd>Project from 3-space to the projection plane.
+</dd><dt> TDPRPA -
+</dt><dd>Project from 3-space to the plane of the reference parallelogram.
+</dd><dt> TDPRPI -
+</dt><dd>Project from the plane of the reference parallelogram to 3-space.
+</dd><dt>Line-Drawing Routines:
+</dt><dd></dd><dt> TDLINE -
+</dt><dd>Draw the projection of a line in 3-space.
+</dd><dt> TDLNPA -
+</dt><dd>Draw the projection of a line in the plane of the reference parallelogram.
+</dd><dt>Grid-Drawing Routines:
+</dt><dd></dd><dt> TDGRDS -
+</dt><dd>Draw the grids on all the faces of a box in 3-space.
+</dd><dt> TDGRID -
+</dt><dd>Draw the grid on a particular face of a box in 3-space.
+</dd><dt>Label-Drawing Routines:
+</dt><dd></dd><dt> TDLBLS -
+</dt><dd>Draw labels for all faces of a box in 3-space.
+</dd><dt> TDLBLA -
+</dt><dd>Draw labels for a particular face of a box in 3-space.
+</dd><dt> TDPLCH -
+</dt><dd>Draw characters in the plane of the reference parallelogram.
+</dd><dt>Surface-Drawing Routines:
+</dt><dd></dd><dt> TDDTRI -
+</dt><dd>Draw triangles defined by a triangle list.
+</dd><dt> TDSTRI -
+</dt><dd>Add triangles defining a simple surface to a triangle list.
+</dd><dt> TDITRI -
+</dt><dd>Add triangles defining an isosurface to a triangle list.
+</dd><dt> TDMTRI -
+</dt><dd>Add triangles defining a 3D marker to a triangle list.
+</dd><dt> TDCTRI -
+</dt><dd>Order the triangles in a triangle list for proper rendering.
+</dd><dt> TDSORT -
+</dt><dd>Cut triangles with a plane perpendicular to one of the axes.
+</dd><dt> TDOTRI -
+</dt><dd>Generic sorting routine</dd></dl>
 
 <h2>C-Binding Synopsis</h2>
 

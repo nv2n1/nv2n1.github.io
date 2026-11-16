@@ -13,8 +13,8 @@ description: "mongoc_read_prefs_destroy() – Frees a read preference and all as
 mongoc_read_prefs_destroy (mongoc_read_prefs_t *read_prefs);</pre>
 <h2>Parameters</h2>
 <dl COMPACT>
-<dt><code>read_prefs</code></p>
-<dd>A <code>mongoc_read_prefs_t</code> \&amp;.</dl>
+<dt><code>read_prefs</code></dt>
+<dd>A <code>mongoc_read_prefs_t</code> \&amp;.</dd></dl>
 <h2>Description</h2>
 <p>Frees a read preference and all associated resources. </p>
 <h2>Colophon</h2>

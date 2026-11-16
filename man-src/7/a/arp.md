@@ -63,47 +63,47 @@ description: "arp – Linux ARP kernel module."
 </td>
 </tr>
 </table>
-</dl>
+</dd></dl>
 <p> If the <code>ATF_NETMASK</code> flag is set, then <i>arp_netmask</i> should be valid. Linux 2.2 does not support proxy network ARP entries, so this should be set to 0xffffffff, or 0 to remove an existing proxy arp entry. <code>ATF_USETRAILERS</code> is obsolete and should not be used.</p>
 <h3>/proc interfaces</h3>
 <p>ARP supports a range of <i>/proc</i> interfaces to configure parameters on a global or per-interface basis. The interfaces can be accessed by reading or writing the <i>/proc/sys/net/ipv4/neigh/*/*</i> files. Each interface in the system has its own directory in <i>/proc/sys/net/ipv4/neigh/</i>. The setting in the &quot;default&quot; directory is used for all newly created devices. Unless otherwise specified, time-related interfaces are specified in seconds.</p>
 <dl>
-<dt><i>anycast_delay</i> (since Linux 2.2)</p>
-<dd>The maximum number of jiffies to delay before replying to a IPv6 neighbor solicitation message. Anycast support is not yet implemented. Defaults to 1 second.</p>
-<dt><i>app_solicit</i> (since Linux 2.2)</p>
-<dd>The maximum number of probes to send to the user space ARP daemon via netlink before dropping back to multicast probes (see <i>mcast_solicit</i>). Defaults to 0.</p>
-<dt><i>base_reachable_time</i> (since Linux 2.2)</p>
-<dd>Once a neighbor has been found, the entry is considered to be valid for at least a random value between <i>base_reachable_time</i>/2 and 3*<i>base_reachable_time</i>/2. An entry&#8217;s validity will be extended if it receives positive feedback from higher level protocols. Defaults to 30 seconds. This file is now obsolete in favor of <i>base_reachable_time_ms</i>.</p>
-<dt><i>base_reachable_time_ms</i> (since Linux 2.6.12)</p>
-<dd>As for <i>base_reachable_time</i>, but measures time in milliseconds. Defaults to 30000 milliseconds.</p>
-<dt><i>delay_first_probe_time</i> (since Linux 2.2)</p>
-<dd>Delay before first probe after it has been decided that a neighbor is stale. Defaults to 5 seconds.</p>
-<dt><i>gc_interval</i> (since Linux 2.2)</p>
-<dd>How frequently the garbage collector for neighbor entries should attempt to run. Defaults to 30 seconds.</p>
-<dt><i>gc_stale_time</i> (since Linux 2.2)</p>
-<dd>Determines how often to check for stale neighbor entries. When a neighbor entry is considered stale, it is resolved again before sending data to it. Defaults to 60 seconds.</p>
-<dt><i>gc_thresh1</i> (since Linux 2.2)</p>
-<dd>The minimum number of entries to keep in the ARP cache. The garbage collector will not run if there are fewer than this number of entries in the cache. Defaults to 128.</p>
-<dt><i>gc_thresh2</i> (since Linux 2.2)</p>
-<dd>The soft maximum number of entries to keep in the ARP cache. The garbage collector will allow the number of entries to exceed this for 5 seconds before collection will be performed. Defaults to 512.</p>
-<dt><i>gc_thresh3</i> (since Linux 2.2)</p>
-<dd>The hard maximum number of entries to keep in the ARP cache. The garbage collector will always run if there are more than this number of entries in the cache. Defaults to 1024.</p>
-<dt><i>locktime</i> (since Linux 2.2)</p>
-<dd>The minimum number of jiffies to keep an ARP entry in the cache. This prevents ARP cache thrashing if there is more than one potential mapping (generally due to network misconfiguration). Defaults to 1 second.</p>
-<dt><i>mcast_solicit</i> (since Linux 2.2)</p>
-<dd>The maximum number of attempts to resolve an address by multicast/broadcast before marking the entry as unreachable. Defaults to 3.</p>
-<dt><i>proxy_delay</i> (since Linux 2.2)</p>
-<dd>When an ARP request for a known proxy-ARP address is received, delay up to <i>proxy_delay</i> jiffies before replying. This is used to prevent network flooding in some cases. Defaults to 0.8 seconds.</p>
-<dt><i>proxy_qlen</i> (since Linux 2.2)</p>
-<dd>The maximum number of packets which may be queued to proxy-ARP addresses. Defaults to 64.</p>
-<dt><i>retrans_time</i> (since Linux 2.2)</p>
-<dd>The number of jiffies to delay before retransmitting a request. Defaults to 1 second. This file is now obsolete in favor of <i>retrans_time_ms</i>.</p>
-<dt><i>retrans_time_ms</i> (since Linux 2.6.12)</p>
-<dd>The number of milliseconds to delay before retransmitting a request. Defaults to 1000 milliseconds.</p>
-<dt><i>ucast_solicit</i> (since Linux 2.2)</p>
-<dd>The maximum number of attempts to send unicast probes before asking the ARP daemon (see <i>app_solicit</i>). Defaults to 3.</p>
-<dt><i>unres_qlen</i> (since Linux 2.2)</p>
-<dd>The maximum number of packets which may be queued for each unresolved address by other network layers. Defaults to 3.</dl>
+<dt><i>anycast_delay</i> (since Linux 2.2)</dt>
+<dd>The maximum number of jiffies to delay before replying to a IPv6 neighbor solicitation message. Anycast support is not yet implemented. Defaults to 1 second.</dd>
+<dt><i>app_solicit</i> (since Linux 2.2)</dt>
+<dd>The maximum number of probes to send to the user space ARP daemon via netlink before dropping back to multicast probes (see <i>mcast_solicit</i>). Defaults to 0.</dd>
+<dt><i>base_reachable_time</i> (since Linux 2.2)</dt>
+<dd>Once a neighbor has been found, the entry is considered to be valid for at least a random value between <i>base_reachable_time</i>/2 and 3*<i>base_reachable_time</i>/2. An entry&#8217;s validity will be extended if it receives positive feedback from higher level protocols. Defaults to 30 seconds. This file is now obsolete in favor of <i>base_reachable_time_ms</i>.</dd>
+<dt><i>base_reachable_time_ms</i> (since Linux 2.6.12)</dt>
+<dd>As for <i>base_reachable_time</i>, but measures time in milliseconds. Defaults to 30000 milliseconds.</dd>
+<dt><i>delay_first_probe_time</i> (since Linux 2.2)</dt>
+<dd>Delay before first probe after it has been decided that a neighbor is stale. Defaults to 5 seconds.</dd>
+<dt><i>gc_interval</i> (since Linux 2.2)</dt>
+<dd>How frequently the garbage collector for neighbor entries should attempt to run. Defaults to 30 seconds.</dd>
+<dt><i>gc_stale_time</i> (since Linux 2.2)</dt>
+<dd>Determines how often to check for stale neighbor entries. When a neighbor entry is considered stale, it is resolved again before sending data to it. Defaults to 60 seconds.</dd>
+<dt><i>gc_thresh1</i> (since Linux 2.2)</dt>
+<dd>The minimum number of entries to keep in the ARP cache. The garbage collector will not run if there are fewer than this number of entries in the cache. Defaults to 128.</dd>
+<dt><i>gc_thresh2</i> (since Linux 2.2)</dt>
+<dd>The soft maximum number of entries to keep in the ARP cache. The garbage collector will allow the number of entries to exceed this for 5 seconds before collection will be performed. Defaults to 512.</dd>
+<dt><i>gc_thresh3</i> (since Linux 2.2)</dt>
+<dd>The hard maximum number of entries to keep in the ARP cache. The garbage collector will always run if there are more than this number of entries in the cache. Defaults to 1024.</dd>
+<dt><i>locktime</i> (since Linux 2.2)</dt>
+<dd>The minimum number of jiffies to keep an ARP entry in the cache. This prevents ARP cache thrashing if there is more than one potential mapping (generally due to network misconfiguration). Defaults to 1 second.</dd>
+<dt><i>mcast_solicit</i> (since Linux 2.2)</dt>
+<dd>The maximum number of attempts to resolve an address by multicast/broadcast before marking the entry as unreachable. Defaults to 3.</dd>
+<dt><i>proxy_delay</i> (since Linux 2.2)</dt>
+<dd>When an ARP request for a known proxy-ARP address is received, delay up to <i>proxy_delay</i> jiffies before replying. This is used to prevent network flooding in some cases. Defaults to 0.8 seconds.</dd>
+<dt><i>proxy_qlen</i> (since Linux 2.2)</dt>
+<dd>The maximum number of packets which may be queued to proxy-ARP addresses. Defaults to 64.</dd>
+<dt><i>retrans_time</i> (since Linux 2.2)</dt>
+<dd>The number of jiffies to delay before retransmitting a request. Defaults to 1 second. This file is now obsolete in favor of <i>retrans_time_ms</i>.</dd>
+<dt><i>retrans_time_ms</i> (since Linux 2.6.12)</dt>
+<dd>The number of milliseconds to delay before retransmitting a request. Defaults to 1000 milliseconds.</dd>
+<dt><i>ucast_solicit</i> (since Linux 2.2)</dt>
+<dd>The maximum number of attempts to send unicast probes before asking the ARP daemon (see <i>app_solicit</i>). Defaults to 3.</dd>
+<dt><i>unres_qlen</i> (since Linux 2.2)</dt>
+<dd>The maximum number of packets which may be queued for each unresolved address by other network layers. Defaults to 3.</dd></dl>
 <h2>Versions</h2>
 <p>The <i>struct arpreq</i> changed in Linux 2.0 to include the <i>arp_dev</i> member and the ioctl numbers changed at the same time. Support for the old ioctls was dropped in Linux 2.2. </p>
 <p> Support for proxy arp entries for networks (netmask not equal 0xffffffff) was dropped in Linux 2.2. It is replaced by automatic proxy arp setup by the kernel for all reachable hosts on other interfaces (when forwarding and proxy arp is enabled for the interface). </p>

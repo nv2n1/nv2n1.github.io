@@ -15,7 +15,7 @@ relay_close - close the channel
 <h2>Arguments</h2>
 
 <i>chan</i>
-<dl><dd><dd>the channel</dl>
+<dl><dd></dd><dd>the channel</dd></dl>
 
 <h2>Description</h2>
 

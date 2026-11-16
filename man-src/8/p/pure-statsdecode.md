@@ -15,10 +15,10 @@ description: "pure-statsdecode – Show human-readable dates from a \"stats\" lo
 <p>This program decodes Pure-FTPd&#8217;s &quot;stats&quot; log files and converts timestamps into human-readable dates. </p>
 <h2>Options</h2>
 <dl>
-<dt><code>&#8211;</code></p>
-<dd>means to read the standard input.</p>
-<dt><code>filename</code></p>
-<dd>is a log file produced with pure-ftpd -O ftpstats:/path/to/logfile</dl>
+<dt><code>&#8211;</code></dt>
+<dd>means to read the standard input.</dd>
+<dt><code>filename</code></dt>
+<dd>is a log file produced with pure-ftpd -O ftpstats:/path/to/logfile</dd></dl>
 <h2>Examples</h2>
 <p>To run this program the standard way type: pure-statsdecode /var/log/pureftpd.log &gt; /tmp/pureftpd.humanlog Alternativly you can run it as: cat /var/log/pureftpd.log | pure-statsdecode &#8211; | gzip &#8211;best &gt; /tmp/pureftpd.humanlog.gz </p>
 <h2>Authors</h2>

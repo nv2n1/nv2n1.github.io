@@ -25,10 +25,8 @@ A reference to the static object of unspecified runtime type, derived from std::
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;iostream&gt;
-
 #include &lt;fstream&gt;
 int main()
-
 {
     std::ifstream f(&quot;doesn't exist&quot;);
     try {

@@ -15,104 +15,104 @@ description: "fwsnort – Firewall Snort"
 <p> <code>fwsnort</code> (optionally) uses the IPTables::Parse module to parse the iptables ruleset on the machine to determine which Snort rules are applicable to the specific iptables policy. After all, if iptables is blocking all inbound http traffic from external addresses, it is probably not of much use to try detecting inbound attacks against against tcp/80. By default fwsnort generates iptables rules that log Snort sid&#8217;s within a &#8211;log-prefix to syslog where the messages can be analyzed with a log analyzer such as <code>psad</code> (see <a rel="nofollow" href="http://www.cipherdyne.org/psad/">http://www.cipherdyne.org/psad/</a>). <code>fwsnort</code> relies on the iptables string match module to match Snort content fields in the application portion of ip traffic. Since Snort rules can contain hex data in content fields (specified between pipe &quot;|&quot; characters), fwsnort implements a patch against iptables (which has been accepted by the Netfilter project as of iptables-1.2.7a) which adds a &quot;&#8211;hex-string&quot; option. This allow iptables to accept content fields from Snort rules such as &quot;|0d0a5b52504c5d3030320d0a|&quot; without any modification. <code>fwsnort</code> is able to translate approximately 60% of all rules from the Snort-2.3.3 IDS into equivalent iptables rules. For more information about the translation strategy as well as advantages/disadvantages of the method used by fwsnort to obtain intrusion detection data, see the README included with the fwsnort sources or browse to: <a rel="nofollow" href="http://www.cipherdyne.org/fwsnort/">http://www.cipherdyne.org/fwsnort/</a></p>
 <h2>Options</h2>
 <dl>
-<dt><code>-c</code>, <code>&#8211;config&nbsp;<wbr>&lt;configuration file&gt;</code></p>
-<dd>By default fwsnort makes use of the configuration file <code>/etc/fwsnort/fwsnort.conf</code> for almost all configuration parameters. fwsnort can be made to override this path by specifying a different file on the command line with the &#8211;config option.</p>
-<dt><code>&#8211;update-rules</code></p>
-<dd>Download the latest Emerging Threats rules from <a rel="nofollow" href="http://www.emergingthreats.net">http://www.emergingthreats.net</a> This will overwrite the emerging-all.rules file in the /etc/fwsnort/snort_rules/ directory. Note that the automatic downloading of Snort rules from <a rel="nofollow" href="http://www.snort.org/">http://www.snort.org/</a> as of March, 2005 is only offered as a pay service.</p>
-<dt><code>&#8211;include-type&nbsp;<wbr>&nbsp;<wbr>&lt;rules type&gt;</code></p>
-<dd>Restrict to processing snort rules of &lt;rules type&gt;. Example rule types would include &quot;ddos&quot;, &quot;backdoor&quot;, and &quot;web-attacks&quot;. This option also supports a comma-separated list of types, e.g. &quot;ddos,backdoor&quot;.</p>
-<dt><code>&#8211;exclude-type&nbsp;<wbr>&nbsp;<wbr>&lt;rules type&gt;</code></p>
-<dd>Exclude all Snort rules from of type &lt;rules type&gt; from the translation process. For example, if you don&#8217;t want any rules from the file emerging-all.rules to be translated, then use &quot;emerging-all&quot; as the argument to this option. A comma-separated list of types to exclude can be specified.</p>
-<dt><code>&#8211;include-regex&nbsp;<wbr>&nbsp;<wbr>&lt;regex&gt;</code></p>
-<dd>Only translate Snort rules that match the specified regular expression. This is useful to build <code>fwsnort</code> policies for Snort rules that have a common characteristic (such as a string match on the word &quot;Storm&quot; for the Storm worm for example).</p>
-<dt><code>&#8211;exclude-regex&nbsp;<wbr>&nbsp;<wbr>&lt;regex&gt;</code></p>
-<dd>Translate all Snort rules except those that match the specified regular expression. This is useful to omit Snort rules from <code>fwsnort</code> policies that have a common characteristic (such as a string match on &quot;HTTP_PORTS&quot; for example).</p>
-<dt><code>&#8211;include-re-caseless</code></p>
-<dd>Make the rule matchine regular expression specified with <i>&#8211;include-regex</i> match case insensitively.</p>
-<dt><code>&#8211;exclude-re-caseless</code></p>
-<dd>Make the rule matchine regular expression specified with <i>&#8211;exclude-regex</i> match case insensitively.</p>
-<dt><code>&#8211;snort-rdir&nbsp;<wbr>&lt;snort-rules-directory&gt;</code></p>
-<dd>Manually specify the directory where the snort rules files are located. The default is <code>/etc/fwsnort/snort_rules.</code> Multiple directories are supported as a comma-separated list.</p>
-<dt><code>&#8211;snort-rfile&nbsp;<wbr>&lt;snort-rules-file&gt;</code></p>
-<dd>Manually specify a Snort rules file to translated into iptables rules. Multiple files are also supported as a comma-separated list.</p>
-<dt><code>&#8211;snort-sid&nbsp;<wbr>&lt;sid&gt;</code></p>
-<dd>Generate an iptables ruleset for a single snort rule specified by &lt;sid&gt;. A comma-separated list of sids can be specified, e.g. &quot;2001842,1834&quot;.</p>
-<dt><code>&#8211;exclude-sid&nbsp;<wbr>&lt;sid&gt;</code></p>
-<dd>Provide a list of Snort ID&#8217;s to be excluded from the translation process.</p>
-<dt><code>&#8211;ipt-script&nbsp;<wbr>&lt;script file&gt;</code></p>
-<dd>Specify the path to the iptables script generated by fwsnort. The default location is /etc/fwsnort/fwsnort.sh.</p>
-<dt><code>&#8211;NFQUEUE</code></p>
-<dd>Build an <code>fwsnort</code> policy that sends packets that match Snort <code>content</code> or <code>uricontent</code> fields to userspace via the iptables NFQUEUE target for further analysis. This is a mechanism for reducing the signature inspection load placed on snort_inline. A parallel set of Snort rules that are successfully translated are placed in the /etc/fwsnort/snort_rules_queue directory. This requires CONFIG_NETFILTER_XT_TARGET_NFQUEUE support in the Linux kernel.</p>
-<dt><code>&#8211;QUEUE</code></p>
-<dd>Same as the <code>&#8211;NFQUEUE</code> command line argument except that the older QUEUE target is used instead of the NFQUEUE target. This requires CONFIG_IP_NF_QUEUE support in the Linux kernel.</p>
-<dt><code>&#8211;queue-num&nbsp;<wbr>&lt;num&gt;</code></p>
-<dd>Specify a queue number in &#8211;NFQUEUE mode.</p>
-<dt><code>&#8211;ipt-apply</code></p>
-<dd>Execute the iptables script generated by fwsnort.</p>
-<dt><code>&#8211;ipt-flush</code></p>
-<dd>Flush all <code>fwsnort</code> currently active iptables rules (flushes the fwsnort chains).</p>
-<dt><code>&#8211;ipt-list</code></p>
-<dd>List all <code>fwsnort</code> currently active iptables rules (lists the fwsnort chains).</p>
-<dt><code>&#8211;ipt-drop</code></p>
-<dd>For each logging rule generated by <code>fwsnort</code> add a corresponding DROP rule. Note that for TCP sessions using this option will cause retransmissions as packets that are part of established sessions selectively dropped. Remember that false positives are common occurrences for intrusion detection systems, and so using this or the &#8211;ipt-reject option may break things on your network! You have been warned.</p>
-<dt><code>&#8211;ipt-reject</code></p>
-<dd>For each logging rule generated by <code>fwsnort</code> add a corresponding REJECT rule. Reset packets will be generated for TCP sessions through the use of the &quot;&#8211;reject-with tcp-reset&quot; option, and ICMP port unreachable messages will be generated for UDP packets through the use of the &quot;&#8211;reject-with icmp-port-unreachable&quot; option.</p>
-<dt><code>&#8211;no-ipt-log</code></p>
-<dd>By default fwsnort generates an iptables script that implements a logging rule for each successfully translated snort rule. This can be disabled with the &#8211;no-ipt-log option, but &#8211;ipt-drop must also be specified.</p>
-<dt><code>&#8211;no-ipt-sync</code></p>
-<dd>Do not consult the iptables policy currently running on the machine for applicable snort rules. Unless limited with the &#8211;include-type or &#8211;snort-sid options this can result in a fwsnort.sh script that contains several thousand iptables rules.</p>
-<dt><code>&#8211;no-ipt-test</code></p>
-<dd>Do not test the iptables build for existence of support for the LOG and REJECT targets, and ascii and hex string matching.</p>
-<dt><code>&#8211;no-ipt-jumps</code></p>
-<dd>Do not jump packets from the built-in iptables INPUT, OUTPUT, and FORWARD chains to the custom <code>fwsnort</code> chains. This options is mostly useful to make it easy to manually alter the placement of the jump rules in the iptables ruleset.</p>
-<dt><code>&#8211;no-ipt-rule-nums</code></p>
-<dd>By default <code>fwsnort</code> includes the rule number within the logging prefix for each of the rules it adds to the fwsnort chains. E.g. the logging prefix for rule 34 would look something like &quot;[34] SID1242 ESTAB&quot;. Use this option to not include the rule number.</p>
-<dt><code>&#8211;no-ipt-comments</code></p>
-<dd>If the iptables &quot;comment&quot; match exists, then <code>fwsnort</code> puts the Snort &quot;msg&quot;, &quot;classtype&quot;, &quot;reference&quot;, &quot;priority&quot;, and &quot;rev&quot; fields within a comment for each iptables rule. Use this option to disable this.</p>
-<dt><code>&#8211;no-ipt-INPUT</code></p>
-<dd>Do not jump packets from the iptables INPUT chain to the <code>fwsnort</code> chains.</p>
-<dt><code>&#8211;no-ipt-OUTPUT</code></p>
-<dd>Do not jump packets from the iptables OUTPUT chain to the <code>fwsnort</code> chains.</p>
-<dt><code>&#8211;no-ipt-FORWARD</code></p>
-<dd>Do not jump packets from the iptables FORWARD chain to the <code>fwsnort</code> chains.</p>
-<dt><code>-H</code>, <code>&#8211;Home-net&nbsp;<wbr>&lt;network/mask&gt;</code></p>
-<dd>Specify the internal network instead of having <code>fwsnort</code> derive it from the HOME_NET keyword in the fwsnort.conf configuration file.</p>
-<dt><code>-E</code>, <code>&#8211;External-net&nbsp;<wbr>&lt;network/mask&gt;</code></p>
-<dd>Specify the external network instead of having <code>fwsnort</code> derive it from the EXTERNAL_NET keyword in the fwsnort.conf configuration file.</p>
-<dt><code>&#8211;no-addresses</code></p>
-<dd>Disable all checks against the output of ifconfig for proper IP addresses. This is useful if <code>fwsnort</code> is running on a bridging firewall.</p>
-<dt><code>&#8211;Dump-conf</code></p>
-<dd>Print the fwsnort configuration on STDOUT and exit.</p>
-<dt><code>&#8211;debug</code></p>
-<dd>Run in debug mode. This will cause all parse errors which are normally written to the fwsnort logfile <code>/var/log/fwsnort.log</code> to be written to STDOUT instead.</p>
-<dt><code>&#8211;strict</code></p>
-<dd>Run fwsnort in &quot;strict&quot; mode. This will prevent fwsnort from translating snort rules that contain the keywords &quot;offset&quot;, &quot;uricontent&quot;, and &quot;depth&quot;.</p>
-<dt><code>-U</code>, <code>&#8211;Ulog</code></p>
-<dd>Force the usage of the ULOG target for all log messages instead of the default LOG target.</p>
-<dt><code>&#8211;ulog-nlgroup</code></p>
-<dd>Specify the netlink group for ULOG rules. Such rules are only added for Snort rules that have an action of &quot;log&quot;, or when <code>fwsnort</code> is run in <code>&#8211;Ulog</code> mode.</p>
-<dt><code>-l</code>, <code>&#8211;logfile&nbsp;<wbr>&lt;logfile&gt;</code></p>
-<dd>By default fwsnort logs all parse errors to the logfile <code>/var/log/fwsnort.log.</code> This path can be manually changed with the &#8211;logfile option.</p>
-<dt><code>-v</code>, <code>&#8211;verbose</code></p>
-<dd>Run fwsnort in verbose mode. This will cause fwsnort to add the original snort rule as a comment to the fwsnort.sh script for each successfully translated rule.</p>
-<dt><code>-V</code>, <code>&#8211;Version</code></p>
-<dd>Print the fwsnort version and exit.</p>
-<dt><code>-h</code>, <code>&#8211;help</code></p>
-<dd>Print usage information on STDOUT and exit.</dl>
+<dt><code>-c</code>, <code>&#8211;config&nbsp;<wbr>&lt;configuration file&gt;</code></dt>
+<dd>By default fwsnort makes use of the configuration file <code>/etc/fwsnort/fwsnort.conf</code> for almost all configuration parameters. fwsnort can be made to override this path by specifying a different file on the command line with the &#8211;config option.</dd>
+<dt><code>&#8211;update-rules</code></dt>
+<dd>Download the latest Emerging Threats rules from <a rel="nofollow" href="http://www.emergingthreats.net">http://www.emergingthreats.net</a> This will overwrite the emerging-all.rules file in the /etc/fwsnort/snort_rules/ directory. Note that the automatic downloading of Snort rules from <a rel="nofollow" href="http://www.snort.org/">http://www.snort.org/</a> as of March, 2005 is only offered as a pay service.</dd>
+<dt><code>&#8211;include-type&nbsp;<wbr>&nbsp;<wbr>&lt;rules type&gt;</code></dt>
+<dd>Restrict to processing snort rules of &lt;rules type&gt;. Example rule types would include &quot;ddos&quot;, &quot;backdoor&quot;, and &quot;web-attacks&quot;. This option also supports a comma-separated list of types, e.g. &quot;ddos,backdoor&quot;.</dd>
+<dt><code>&#8211;exclude-type&nbsp;<wbr>&nbsp;<wbr>&lt;rules type&gt;</code></dt>
+<dd>Exclude all Snort rules from of type &lt;rules type&gt; from the translation process. For example, if you don&#8217;t want any rules from the file emerging-all.rules to be translated, then use &quot;emerging-all&quot; as the argument to this option. A comma-separated list of types to exclude can be specified.</dd>
+<dt><code>&#8211;include-regex&nbsp;<wbr>&nbsp;<wbr>&lt;regex&gt;</code></dt>
+<dd>Only translate Snort rules that match the specified regular expression. This is useful to build <code>fwsnort</code> policies for Snort rules that have a common characteristic (such as a string match on the word &quot;Storm&quot; for the Storm worm for example).</dd>
+<dt><code>&#8211;exclude-regex&nbsp;<wbr>&nbsp;<wbr>&lt;regex&gt;</code></dt>
+<dd>Translate all Snort rules except those that match the specified regular expression. This is useful to omit Snort rules from <code>fwsnort</code> policies that have a common characteristic (such as a string match on &quot;HTTP_PORTS&quot; for example).</dd>
+<dt><code>&#8211;include-re-caseless</code></dt>
+<dd>Make the rule matchine regular expression specified with <i>&#8211;include-regex</i> match case insensitively.</dd>
+<dt><code>&#8211;exclude-re-caseless</code></dt>
+<dd>Make the rule matchine regular expression specified with <i>&#8211;exclude-regex</i> match case insensitively.</dd>
+<dt><code>&#8211;snort-rdir&nbsp;<wbr>&lt;snort-rules-directory&gt;</code></dt>
+<dd>Manually specify the directory where the snort rules files are located. The default is <code>/etc/fwsnort/snort_rules.</code> Multiple directories are supported as a comma-separated list.</dd>
+<dt><code>&#8211;snort-rfile&nbsp;<wbr>&lt;snort-rules-file&gt;</code></dt>
+<dd>Manually specify a Snort rules file to translated into iptables rules. Multiple files are also supported as a comma-separated list.</dd>
+<dt><code>&#8211;snort-sid&nbsp;<wbr>&lt;sid&gt;</code></dt>
+<dd>Generate an iptables ruleset for a single snort rule specified by &lt;sid&gt;. A comma-separated list of sids can be specified, e.g. &quot;2001842,1834&quot;.</dd>
+<dt><code>&#8211;exclude-sid&nbsp;<wbr>&lt;sid&gt;</code></dt>
+<dd>Provide a list of Snort ID&#8217;s to be excluded from the translation process.</dd>
+<dt><code>&#8211;ipt-script&nbsp;<wbr>&lt;script file&gt;</code></dt>
+<dd>Specify the path to the iptables script generated by fwsnort. The default location is /etc/fwsnort/fwsnort.sh.</dd>
+<dt><code>&#8211;NFQUEUE</code></dt>
+<dd>Build an <code>fwsnort</code> policy that sends packets that match Snort <code>content</code> or <code>uricontent</code> fields to userspace via the iptables NFQUEUE target for further analysis. This is a mechanism for reducing the signature inspection load placed on snort_inline. A parallel set of Snort rules that are successfully translated are placed in the /etc/fwsnort/snort_rules_queue directory. This requires CONFIG_NETFILTER_XT_TARGET_NFQUEUE support in the Linux kernel.</dd>
+<dt><code>&#8211;QUEUE</code></dt>
+<dd>Same as the <code>&#8211;NFQUEUE</code> command line argument except that the older QUEUE target is used instead of the NFQUEUE target. This requires CONFIG_IP_NF_QUEUE support in the Linux kernel.</dd>
+<dt><code>&#8211;queue-num&nbsp;<wbr>&lt;num&gt;</code></dt>
+<dd>Specify a queue number in &#8211;NFQUEUE mode.</dd>
+<dt><code>&#8211;ipt-apply</code></dt>
+<dd>Execute the iptables script generated by fwsnort.</dd>
+<dt><code>&#8211;ipt-flush</code></dt>
+<dd>Flush all <code>fwsnort</code> currently active iptables rules (flushes the fwsnort chains).</dd>
+<dt><code>&#8211;ipt-list</code></dt>
+<dd>List all <code>fwsnort</code> currently active iptables rules (lists the fwsnort chains).</dd>
+<dt><code>&#8211;ipt-drop</code></dt>
+<dd>For each logging rule generated by <code>fwsnort</code> add a corresponding DROP rule. Note that for TCP sessions using this option will cause retransmissions as packets that are part of established sessions selectively dropped. Remember that false positives are common occurrences for intrusion detection systems, and so using this or the &#8211;ipt-reject option may break things on your network! You have been warned.</dd>
+<dt><code>&#8211;ipt-reject</code></dt>
+<dd>For each logging rule generated by <code>fwsnort</code> add a corresponding REJECT rule. Reset packets will be generated for TCP sessions through the use of the &quot;&#8211;reject-with tcp-reset&quot; option, and ICMP port unreachable messages will be generated for UDP packets through the use of the &quot;&#8211;reject-with icmp-port-unreachable&quot; option.</dd>
+<dt><code>&#8211;no-ipt-log</code></dt>
+<dd>By default fwsnort generates an iptables script that implements a logging rule for each successfully translated snort rule. This can be disabled with the &#8211;no-ipt-log option, but &#8211;ipt-drop must also be specified.</dd>
+<dt><code>&#8211;no-ipt-sync</code></dt>
+<dd>Do not consult the iptables policy currently running on the machine for applicable snort rules. Unless limited with the &#8211;include-type or &#8211;snort-sid options this can result in a fwsnort.sh script that contains several thousand iptables rules.</dd>
+<dt><code>&#8211;no-ipt-test</code></dt>
+<dd>Do not test the iptables build for existence of support for the LOG and REJECT targets, and ascii and hex string matching.</dd>
+<dt><code>&#8211;no-ipt-jumps</code></dt>
+<dd>Do not jump packets from the built-in iptables INPUT, OUTPUT, and FORWARD chains to the custom <code>fwsnort</code> chains. This options is mostly useful to make it easy to manually alter the placement of the jump rules in the iptables ruleset.</dd>
+<dt><code>&#8211;no-ipt-rule-nums</code></dt>
+<dd>By default <code>fwsnort</code> includes the rule number within the logging prefix for each of the rules it adds to the fwsnort chains. E.g. the logging prefix for rule 34 would look something like &quot;[34] SID1242 ESTAB&quot;. Use this option to not include the rule number.</dd>
+<dt><code>&#8211;no-ipt-comments</code></dt>
+<dd>If the iptables &quot;comment&quot; match exists, then <code>fwsnort</code> puts the Snort &quot;msg&quot;, &quot;classtype&quot;, &quot;reference&quot;, &quot;priority&quot;, and &quot;rev&quot; fields within a comment for each iptables rule. Use this option to disable this.</dd>
+<dt><code>&#8211;no-ipt-INPUT</code></dt>
+<dd>Do not jump packets from the iptables INPUT chain to the <code>fwsnort</code> chains.</dd>
+<dt><code>&#8211;no-ipt-OUTPUT</code></dt>
+<dd>Do not jump packets from the iptables OUTPUT chain to the <code>fwsnort</code> chains.</dd>
+<dt><code>&#8211;no-ipt-FORWARD</code></dt>
+<dd>Do not jump packets from the iptables FORWARD chain to the <code>fwsnort</code> chains.</dd>
+<dt><code>-H</code>, <code>&#8211;Home-net&nbsp;<wbr>&lt;network/mask&gt;</code></dt>
+<dd>Specify the internal network instead of having <code>fwsnort</code> derive it from the HOME_NET keyword in the fwsnort.conf configuration file.</dd>
+<dt><code>-E</code>, <code>&#8211;External-net&nbsp;<wbr>&lt;network/mask&gt;</code></dt>
+<dd>Specify the external network instead of having <code>fwsnort</code> derive it from the EXTERNAL_NET keyword in the fwsnort.conf configuration file.</dd>
+<dt><code>&#8211;no-addresses</code></dt>
+<dd>Disable all checks against the output of ifconfig for proper IP addresses. This is useful if <code>fwsnort</code> is running on a bridging firewall.</dd>
+<dt><code>&#8211;Dump-conf</code></dt>
+<dd>Print the fwsnort configuration on STDOUT and exit.</dd>
+<dt><code>&#8211;debug</code></dt>
+<dd>Run in debug mode. This will cause all parse errors which are normally written to the fwsnort logfile <code>/var/log/fwsnort.log</code> to be written to STDOUT instead.</dd>
+<dt><code>&#8211;strict</code></dt>
+<dd>Run fwsnort in &quot;strict&quot; mode. This will prevent fwsnort from translating snort rules that contain the keywords &quot;offset&quot;, &quot;uricontent&quot;, and &quot;depth&quot;.</dd>
+<dt><code>-U</code>, <code>&#8211;Ulog</code></dt>
+<dd>Force the usage of the ULOG target for all log messages instead of the default LOG target.</dd>
+<dt><code>&#8211;ulog-nlgroup</code></dt>
+<dd>Specify the netlink group for ULOG rules. Such rules are only added for Snort rules that have an action of &quot;log&quot;, or when <code>fwsnort</code> is run in <code>&#8211;Ulog</code> mode.</dd>
+<dt><code>-l</code>, <code>&#8211;logfile&nbsp;<wbr>&lt;logfile&gt;</code></dt>
+<dd>By default fwsnort logs all parse errors to the logfile <code>/var/log/fwsnort.log.</code> This path can be manually changed with the &#8211;logfile option.</dd>
+<dt><code>-v</code>, <code>&#8211;verbose</code></dt>
+<dd>Run fwsnort in verbose mode. This will cause fwsnort to add the original snort rule as a comment to the fwsnort.sh script for each successfully translated rule.</dd>
+<dt><code>-V</code>, <code>&#8211;Version</code></dt>
+<dd>Print the fwsnort version and exit.</dd>
+<dt><code>-h</code>, <code>&#8211;help</code></dt>
+<dd>Print usage information on STDOUT and exit.</dd></dl>
 <h2>Files</h2>
 <p><code>/etc/fwnort/fwsnort.conf</code></p>
 <dl>
-<dd>The fwsnort configuration file. The path to this file can be changed on the command line with &#8211;config.</dl>
+<dd>The fwsnort configuration file. The path to this file can be changed on the command line with &#8211;config.</dd></dl>
 <p> <code>/etc/fwnort/fwsnort.sh</code></p>
 <dl>
-<dd>The iptables script generated by fwsnort. The path can be manually specified on the command line with the &#8211;ipt-script option.</dl>
+<dd>The iptables script generated by fwsnort. The path can be manually specified on the command line with the &#8211;ipt-script option.</dd></dl>
 <h2>Fwsnort Configuration Variables</h2>
 <p>This section describes what each of the more important fwsnort configuration variables do and how they can be tuned to meet your needs. These variables are located in the fwsnort configuration file <code>/etc/fwsnort/fwsnort.conf</code></p>
 <dl>
-<dt><code>HOME_NET</code></p>
-<dd><code>fwsnort</code> uses the same HOME_NET and EXTERNAL_NET variables as defined in Snort rules, and the same semantics are supported. I.e., individual IP addresses or networks in standard dotted-quad or CIDR notation can be specified, and comma separated lists are also supported.</p>
-<dt><code>EXTERNAL_NET</code></p>
-<dd>Defines the external network. See the HOME_NET variable for more information.</dl>
+<dt><code>HOME_NET</code></dt>
+<dd><code>fwsnort</code> uses the same HOME_NET and EXTERNAL_NET variables as defined in Snort rules, and the same semantics are supported. I.e., individual IP addresses or networks in standard dotted-quad or CIDR notation can be specified, and comma separated lists are also supported.</dd>
+<dt><code>EXTERNAL_NET</code></dt>
+<dd>Defines the external network. See the HOME_NET variable for more information.</dd></dl>
 <h2>Examples</h2>
 <p>The following examples illustrate the command line arguments that could be supplied to fwsnort in a few situations: </p>
 <p> Script generation in logging mode, parse errors written to the fwsnort logfile, and iptables policy checking are enabled by default without having to specify any command line arguments: </p>

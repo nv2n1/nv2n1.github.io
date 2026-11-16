@@ -19,7 +19,6 @@ void load_callback(DATAFILE *dat_obj)
 {
     static const char indicator[] = "-\|/-.oOXOo.";
     static int current = 0;
-
     /* Show a different character every time. */
     textprintf_ex(screen, font, 0, 0, makecol(0, 0, 0),
                   makecol(255, 255, 255), "%c Loading %c",

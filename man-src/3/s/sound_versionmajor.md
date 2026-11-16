@@ -19,7 +19,7 @@ description: "Sound_Version – Information the version of SDL_sound in use."
 <p> Represents the library&#8217;s version as three levels: major revision (increments with massive changes, additions, and enhancements), minor revision (increments with backwards-compatible changes to the major revision), and patchlevel (increments with fixes to the minor revision). </p>
 <p> <code>See also:</code></p>
 <dl COMPACT>
-<dd><code>SOUND_VERSION</code> </p>
+<dd><code>SOUND_VERSION</code> </dd>
 <p> <code>Sound_GetLinkedVersion</code></dl>
 <h2>Field Documentation</h2>
 <h3>int <code>Sound_Version::major</code></h3>
@@ -30,3 +30,4 @@ description: "Sound_Version – Information the version of SDL_sound in use."
 <p>patchlevel </p>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for SDL_sound from the source code.</p>
+</p>

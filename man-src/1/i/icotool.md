@@ -20,50 +20,50 @@ description: "icotool – Convert and create Win32 icon and cursor files"
 <h2>OPTIONS</h2>
 <p> These programs follow the usual GNU command line syntax, with long options starting with two dashes (`-&#8216;).</p>
 <dl>
-<dt><code>-x, &#8211;extract</code></p>
-<dd> This option tells icotool that images from all icon/cursor files given on the command line are to be extracted. Filter options (see below) can be used to control what images that will be extracted.</p>
-<dt><code>-l, &#8211;list</code></p>
-<dd> This options tells icotool that images in all given icon/cursor files are to be listed. The output will look something like this: </p>
+<dt><code>-x, &#8211;extract</code></dt>
+<dd> This option tells icotool that images from all icon/cursor files given on the command line are to be extracted. Filter options (see below) can be used to control what images that will be extracted.</dd>
+<dt><code>-l, &#8211;list</code></dt>
+<dd> This options tells icotool that images in all given icon/cursor files are to be listed. The output will look something like this: </dd>
 <p>&nbsp;<wbr>&nbsp;&#8211;icon &#8211;index=1 &#8211;width=16 &#8211;height=16 &#8211;bit-depth=4 &#8211;palette-size=16<br />
 &nbsp;<wbr>&nbsp;&#8211;icon &#8211;index=2 &#8211;width=32 &#8211;height=32 &#8211;bit-depth=8 &#8211;palette-size=256</p>
-<dt><code>-c, &#8211;create</code></p>
-<dd> This options tells icotool to create an icon/cursor file using all the PNG files given on the command line, in the order they were specified. The number of bits per pixel used in the icon/cursor file will depend on the number of colors used in the PNG file. (If the PNG image has an indexed palette, it doesn&#8217;t necessarily mean that the same palette will be used in the created icon/cursor file.)</p>
-<dt><code>-i, &#8211;index=</code><i>N</i></p>
-<dd> When listing or extracing files, this options tell icotool to list or extract only the N&#8217;th image in each file. The first image has index 1. </p>
+<dt><code>-c, &#8211;create</code></dt>
+<dd> This options tells icotool to create an icon/cursor file using all the PNG files given on the command line, in the order they were specified. The number of bits per pixel used in the icon/cursor file will depend on the number of colors used in the PNG file. (If the PNG image has an indexed palette, it doesn&#8217;t necessarily mean that the same palette will be used in the created icon/cursor file.)</dd>
+<dt><code>-i, &#8211;index=</code><i>N</i></dt>
+<dd> When listing or extracing files, this options tell icotool to list or extract only the N&#8217;th image in each file. The first image has index 1. </dd>
 <p> This option has no effect in create mode.</p>
-<dt><code>-w, &#8211;width=</code><i>PIXELS</i></p>
-<dd> Similar to &#8211;index, but this option allows the image width to be matched instead. This option has no effect in create mode.</p>
-<dt><code>-h, &#8211;height=</code><i>PIXELS</i></p>
-<dd> Similar to &#8211;index, but this option allows the image height to be matched instead. This option has no effect in create mode.</p>
-<dt><code>-b, &#8211;bit-depth=</code><i>COUNT</i></p>
-<dd> Similar to &#8211;index, but this option allows the number of bits per pixel in the image to be matched instead. Valid values are 1, 2, 4, 8, 16, 24 and 32. </p>
+<dt><code>-w, &#8211;width=</code><i>PIXELS</i></dt>
+<dd> Similar to &#8211;index, but this option allows the image width to be matched instead. This option has no effect in create mode.</dd>
+<dt><code>-h, &#8211;height=</code><i>PIXELS</i></dt>
+<dd> Similar to &#8211;index, but this option allows the image height to be matched instead. This option has no effect in create mode.</dd>
+<dt><code>-b, &#8211;bit-depth=</code><i>COUNT</i></dt>
+<dd> Similar to &#8211;index, but this option allows the number of bits per pixel in the image to be matched instead. Valid values are 1, 2, 4, 8, 16, 24 and 32. </dd>
 <p> In create mode, this option will allow you to specify a minimum bit depth for images in the icon file. If you provide the option once it will apply to all input files. If you specify it multiple times, it will apply to all input files following a particular option; in that case you should specify a bit depth for all images.</p>
-<dt><code>-p, &#8211;palette-size=</code><i>PIXELS</i></p>
-<dd> Similar to &#8211;index, but this option allows the number of colors in the image palette to be matched instead. Images with 24 or 32 bits in icon/cursor files do not have a palette, and will therefore have a palette size equal to 0. </p>
+<dt><code>-p, &#8211;palette-size=</code><i>PIXELS</i></dt>
+<dd> Similar to &#8211;index, but this option allows the number of colors in the image palette to be matched instead. Images with 24 or 32 bits in icon/cursor files do not have a palette, and will therefore have a palette size equal to 0. </dd>
 <p> This option has no effect in create mode.</p>
-<dt><code>-X, &#8211;hotspot-x=</code><i>COORD</i></p>
-<dd> Similar to &#8211;index, but this option allows the x-coordinate of the hotspot to be matched. This option only has effect on cursor files. </p>
+<dt><code>-X, &#8211;hotspot-x=</code><i>COORD</i></dt>
+<dd> Similar to &#8211;index, but this option allows the x-coordinate of the hotspot to be matched. This option only has effect on cursor files. </dd>
 <p> In create mode, this can be used to specify the hotspot x-coordinate. If you provide the option once it will apply to all input files. If you specify it multiple times, it will apply to all input files following a particular option; in that case you should specify a hotspot coordinate for all images.</p>
-<dt><code>-Y, &#8211;hotspot-y=</code><i>COORD</i></p>
-<dd> Similar to &#8211;index, but this option allows the y-coordinate of the hotspot to be matched. This option only has effect on cursor files. </p>
+<dt><code>-Y, &#8211;hotspot-y=</code><i>COORD</i></dt>
+<dd> Similar to &#8211;index, but this option allows the y-coordinate of the hotspot to be matched. This option only has effect on cursor files. </dd>
 <p> In create mode, this can be used to specify the hotspot y-coordinate. If you provide the option once it will apply to all input files. If you specify it multiple times, it will apply to all input files following a particular option; in that case you should specify a hotspot coordinate for all images.</p>
-<dt><code>&#8211;icon</code></p>
-<dd> This option specifies that only icon files are to be listed or extracted. In create mode, this option can be used to specify that an icon (instead of a cursor) is to be created. (This is default in create mode.)</p>
-<dt><code>&#8211;cursor</code></p>
-<dd> This option specifies that only cursor files are to be listed or extracted. In create mode, this can be used to specify that a cursor (instead of an icon) is to be created.</p>
-<dt><code>-t, &#8211;alpha-threshold=</code><i>LEVEL</i></p>
-<dd> Specifies the maximal alpha level in the PNG image for portions which shall become transparent in the icon created. The default value is 127. This is only used when creating icon files.</p>
-<dt><code>-o, &#8211;output=</code><i>PATH</i></p>
-<dd> In extract mode, this option specifies a directory where extracted files are to be created. If PATH does not exist, it is assumed that it refers to a non-existing file instead. The first image matched will be extracted to the file with that name. </p>
+<dt><code>&#8211;icon</code></dt>
+<dd> This option specifies that only icon files are to be listed or extracted. In create mode, this option can be used to specify that an icon (instead of a cursor) is to be created. (This is default in create mode.)</dd>
+<dt><code>&#8211;cursor</code></dt>
+<dd> This option specifies that only cursor files are to be listed or extracted. In create mode, this can be used to specify that a cursor (instead of an icon) is to be created.</dd>
+<dt><code>-t, &#8211;alpha-threshold=</code><i>LEVEL</i></dt>
+<dd> Specifies the maximal alpha level in the PNG image for portions which shall become transparent in the icon created. The default value is 127. This is only used when creating icon files.</dd>
+<dt><code>-o, &#8211;output=</code><i>PATH</i></dt>
+<dd> In extract mode, this option specifies a directory where extracted files are to be created. If PATH does not exist, it is assumed that it refers to a non-existing file instead. The first image matched will be extracted to the file with that name. </dd>
 <p> In create mode, this option specified the name of the output file. The default is to write the binary data to standard out (which icotool will refuse if standard out is the terminal). </p>
 <p> If PATH is `-&#8216;, then all output will be printed to standard out. </p>
 <p> This option has no effect in list mode.</p>
-<dt><code>-r, &#8211;raw=FILENAME</code></p>
-<dd> Store input file as raw PNG (Vista icons).</p>
-<dt><code>&#8211;help</code></p>
-<dd> Show summary of options.</p>
-<dt><code>&#8211;version</code></p>
-<dd> Output version information and exit.</dl>
+<dt><code>-r, &#8211;raw=FILENAME</code></dt>
+<dd> Store input file as raw PNG (Vista icons).</dd>
+<dt><code>&#8211;help</code></dt>
+<dd> Show summary of options.</dd>
+<dt><code>&#8211;version</code></dt>
+<dd> Output version information and exit.</dd></dl>
 <h2>EXAMPLES</h2>
 <p> List all images in the file `demo.ico&#8217;: </p>
 <p>&nbsp;<wbr>&nbsp;$&nbsp;<code>icotool -l demo.ico</code><br />

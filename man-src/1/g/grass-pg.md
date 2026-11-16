@@ -90,20 +90,16 @@ The driver name is 'pg'.
 <h3>Geometry Converters</h3>
 
 <dl>
-<dt>
-<dd>
 <dl>
 <dt>
-<dd> PostGIS with shp2pgsql: 
+</dt><dd> PostGIS with shp2pgsql: 
  shp2pgsql -D lakespy2 lakespy2 test &gt; lakespy2.sql 
-
-<dt>
-<dd> e00pg: E00 to PostGIS filter, see also <i>v.in.e00</i>. 
-
-<dt>
-<dd> GDAL/OGR ogrinfo and ogr2ogr: GIS vector format converter and library, e.g. ArcInfo or SHAPE to PostGIS. 
+</dd><dt>
+</dt><dd> e00pg: E00 to PostGIS filter, see also <i>v.in.e00</i>. 
+</dd><dt>
+</dt><dd> GDAL/OGR ogrinfo and ogr2ogr: GIS vector format converter and library, e.g. ArcInfo or SHAPE to PostGIS. 
  ogr2ogr -f &quot;PostgreSQL&quot; shapefile ?? 
-</dl>
+</dd></dl>
 </dl>
 
 <h2>SEE ALSO</h2>

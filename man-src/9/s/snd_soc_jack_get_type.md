@@ -15,11 +15,11 @@ snd_soc_jack_get_type - Based on the mic bias value, this function returns the t
 <h2>Arguments</h2>
 
 <i>jack</i>
-<dl><dd><dd>ASoC jack</dl>
+<dl><dd></dd><dd>ASoC jack</dd></dl>
  
 
  <i>micbias_voltage</i>
-<dl><dd>mic bias voltage at adc channel when jack is plugged in</dl>
+<dl><dd>mic bias voltage at adc channel when jack is plugged in</dd></dl>
 
 <h2>Description</h2>
 

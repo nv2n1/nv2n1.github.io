@@ -15,12 +15,12 @@ description: "e2ln – create hard links on an ext2 filesystem"
 <p> The <code>e2ln</code> command is used to create hard links on an ext2 filesystem.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-f</code></p>
-<dd> Force the operation to remove any existing files.</p>
-<dt><code>-s</code></p>
-<dd> Create a symlink.</p>
-<dt><code>-v</code></p>
-<dd> Be verbose.</dl>
+<dt><code>-f</code></dt>
+<dd> Force the operation to remove any existing files.</dd>
+<dt><code>-s</code></dt>
+<dd> Create a symlink.</dd>
+<dt><code>-v</code></dt>
+<dd> Be verbose.</dd></dl>
 <p> Note: creating symlinks is not operational at this time.</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/7-e2tools/">e2tools</a></code>(7), <code><a href="/docs/linux/man/1-e2mv/">e2mv</a></code>(1), <code><a href="/docs/linux/man/1-e2ls/">e2ls</a></code>(1), <code><a href="/docs/linux/man/1-e2mkdir/">e2mkdir</a></code>(1), <code><a href="/docs/linux/man/1-e2cp/">e2cp</a></code>(1), <code><a href="/docs/linux/man/1-e2rm/">e2rm</a></code>(1), <code><a href="/docs/linux/man/1-e2tail/">e2tail</a></code>(1).</p>

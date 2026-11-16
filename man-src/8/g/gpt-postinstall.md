@@ -14,16 +14,16 @@ description: "gpt-postinstall – Searches for post install scripts and executes
 <p><code>gpt-postinstall</code> Searches an installation for post-install scripts that have not been run yet and executes them. These scripts are installed by Setup packages and are designed to localize an installation. The <i>-force</i> flag can be used to re-run all of the setup scripts.</p>
 <h2>Options</h2>
 <dl>
-<dt><code>-force</code></p>
-<dd>forces all action to be taken, regardless of state.</p>
-<dt><code>-help</code></p>
-<dd>Print a brief help message and exits.</p>
-<dt><code>-man</code></p>
-<dd>Prints the manual page and exits.</p>
-<dt><code>-version</code></p>
-<dd>Prints the version of <font SIZE="-1">GPT</font> and exits.</p>
-<dt><code>-location</code></p>
-<dd>Location indicates the path to the Globus installation that will be used.</dl>
+<dt><code>-force</code></dt>
+<dd>forces all action to be taken, regardless of state.</dd>
+<dt><code>-help</code></dt>
+<dd>Print a brief help message and exits.</dd>
+<dt><code>-man</code></dt>
+<dd>Prints the manual page and exits.</dd>
+<dt><code>-version</code></dt>
+<dd>Prints the version of <font SIZE="-1">GPT</font> and exits.</dd>
+<dt><code>-location</code></dt>
+<dd>Location indicates the path to the Globus installation that will be used.</dd></dl>
 <h2>See Also</h2>
 <p><i>gpt-install</i>(1) <i>gpt-uninstall</i>(1) <i>gpt-verify</i>(1)</p>
 <h2>Author</h2>

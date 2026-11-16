@@ -18,42 +18,42 @@ description: "df – report file system disk space usage"
 <p> Show information about the file system on which each FILE resides, or all file systems by default. </p>
 <p> Mandatory arguments to long options are mandatory for short options too.</p>
 <dl>
-<dt><code>-a</code>, <code>&#8211;all</code></p>
-<dd> include pseudo, duplicate, inaccessible file systems</p>
-<dt><code>-B</code>, <code>&#8211;block-size</code>=<i>,SIZE/</i></p>
-<dd> scale sizes by SIZE before printing them; e.g., &#8216;-BM&#8217; prints sizes in units of 1,048,576 bytes; see SIZE format below</p>
-<dt><code>-h</code>, <code>&#8211;human-readable</code></p>
-<dd> print sizes in powers of 1024 (e.g., 1023M)</p>
-<dt><code>-H</code>, <code>&#8211;si</code></p>
-<dd> print sizes in powers of 1000 (e.g., 1.1G)</p>
-<dt><code>-i</code>, <code>&#8211;inodes</code></p>
-<dd> list inode information instead of block usage</p>
-<dt><code>-k</code></p>
-<dd> like <code>&#8211;block-size</code>=<i>,1K/</i></p>
-<dt><code>-l</code>, <code>&#8211;local</code></p>
-<dd> limit listing to local file systems</p>
-<dt><code>&#8211;no-sync</code></p>
-<dd> do not invoke sync before getting usage info (default)</p>
-<dt><code>&#8211;output</code>[=<i>,FIELD_LIST/</i>]</p>
-<dd> use the output format defined by FIELD_LIST, or print all fields if FIELD_LIST is omitted.</p>
-<dt><code>-P</code>, <code>&#8211;portability</code></p>
-<dd> use the POSIX output format</p>
-<dt><code>&#8211;sync</code></p>
-<dd> invoke sync before getting usage info</p>
-<dt><code>&#8211;total</code></p>
-<dd> elide all entries insignificant to available space, and produce a grand total</p>
-<dt><code>-t</code>, <code>&#8211;type</code>=<i>,TYPE/</i></p>
-<dd> limit listing to file systems of type TYPE</p>
-<dt><code>-T</code>, <code>&#8211;print-type</code></p>
-<dd> print file system type</p>
-<dt><code>-x</code>, <code>&#8211;exclude-type</code>=<i>,TYPE/</i></p>
-<dd> limit listing to file systems not of type TYPE</p>
-<dt><code>-v</code></p>
-<dd> (ignored)</p>
-<dt><code>&#8211;help</code></p>
-<dd> display this help and exit</p>
-<dt><code>&#8211;version</code></p>
-<dd> output version information and exit</dl>
+<dt><code>-a</code>, <code>&#8211;all</code></dt>
+<dd> include pseudo, duplicate, inaccessible file systems</dd>
+<dt><code>-B</code>, <code>&#8211;block-size</code>=<i>,SIZE/</i></dt>
+<dd> scale sizes by SIZE before printing them; e.g., &#8216;-BM&#8217; prints sizes in units of 1,048,576 bytes; see SIZE format below</dd>
+<dt><code>-h</code>, <code>&#8211;human-readable</code></dt>
+<dd> print sizes in powers of 1024 (e.g., 1023M)</dd>
+<dt><code>-H</code>, <code>&#8211;si</code></dt>
+<dd> print sizes in powers of 1000 (e.g., 1.1G)</dd>
+<dt><code>-i</code>, <code>&#8211;inodes</code></dt>
+<dd> list inode information instead of block usage</dd>
+<dt><code>-k</code></dt>
+<dd> like <code>&#8211;block-size</code>=<i>,1K/</i></dd>
+<dt><code>-l</code>, <code>&#8211;local</code></dt>
+<dd> limit listing to local file systems</dd>
+<dt><code>&#8211;no-sync</code></dt>
+<dd> do not invoke sync before getting usage info (default)</dd>
+<dt><code>&#8211;output</code>[=<i>,FIELD_LIST/</i>]</dt>
+<dd> use the output format defined by FIELD_LIST, or print all fields if FIELD_LIST is omitted.</dd>
+<dt><code>-P</code>, <code>&#8211;portability</code></dt>
+<dd> use the POSIX output format</dd>
+<dt><code>&#8211;sync</code></dt>
+<dd> invoke sync before getting usage info</dd>
+<dt><code>&#8211;total</code></dt>
+<dd> elide all entries insignificant to available space, and produce a grand total</dd>
+<dt><code>-t</code>, <code>&#8211;type</code>=<i>,TYPE/</i></dt>
+<dd> limit listing to file systems of type TYPE</dd>
+<dt><code>-T</code>, <code>&#8211;print-type</code></dt>
+<dd> print file system type</dd>
+<dt><code>-x</code>, <code>&#8211;exclude-type</code>=<i>,TYPE/</i></dt>
+<dd> limit listing to file systems not of type TYPE</dd>
+<dt><code>-v</code></dt>
+<dd> (ignored)</dd>
+<dt><code>&#8211;help</code></dt>
+<dd> display this help and exit</dd>
+<dt><code>&#8211;version</code></dt>
+<dd> output version information and exit</dd></dl>
 <p> Display values are in units of the first available SIZE from <code>&#8211;block-size</code>, and the DF_BLOCK_SIZE, BLOCK_SIZE and BLOCKSIZE environment variables. Otherwise, units default to 1024 bytes (or 512 if POSIXLY_CORRECT is set). </p>
 <p> The SIZE argument is an integer and optional unit (example: 10K is 10*1024). Units are K,M,G,T,P,E,Z,Y (powers of 1024) or KB,MB,&#8230; (powers of 1000). Binary prefixes can be used, too: KiB=K, MiB=M, and so on. </p>
 <p> FIELD_LIST is a comma-separated list of columns to be included. Valid field names are: &#8216;source&#8217;, &#8216;fstype&#8217;, &#8216;itotal&#8217;, &#8216;iused&#8217;, &#8216;iavail&#8217;, &#8216;ipcent&#8217;, &#8216;size&#8217;, &#8216;used&#8217;, &#8216;avail&#8217;, &#8216;pcent&#8217;, &#8216;file&#8217; and &#8216;target&#8217; (see info page).</p>

@@ -59,7 +59,7 @@ description: "Finite-differences framework –"
 <p> <code>Tests</code></p>
 <dl>
 <dt>
-<dd> coefficients are tested against constant BSM operator</dl>
+</dt><dd> coefficients are tested against constant BSM operator</dd></dl>
 <h3>typedef PdeOperator&lt;PdeShortRate&gt; OneFactorOperator</h3>
 <p> Interest-rate single factor model differential operator. </p>
 <h2>Author</h2>

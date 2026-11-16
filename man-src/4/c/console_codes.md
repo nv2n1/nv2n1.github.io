@@ -13,17 +13,17 @@ description: "console_codes – Linux console escape and control sequences"
 <h3>Linux console controls</h3>
 <p>This section describes all the control characters and escape sequences that invoke special functions (i.e., anything other than writing a glyph at the current cursor location) on the Linux console. <code>Control characters</code> A character is a control character if (before transformation according to the mapping table) it has one of the 14 codes 00 (NUL), 07 (BEL), 08 (BS), 09 (HT), 0a (LF), 0b (VT), 0c (FF), 0d (CR), 0e (SO), 0f (SI), 18 (CAN), 1a (SUB), 1b (ESC), 7f (DEL). One can set a &quot;display control characters&quot; mode (see below), and allow 07, 09, 0b, 18, 1a, 7f to be displayed as glyphs. On the other hand, in UTF-8 mode all codes 00-1f are regarded as control characters, regardless of any &quot;display control characters&quot; mode. If we have a control character, it is acted upon immediately and then discarded (even in the middle of an escape sequence) and the escape sequence continues with the next character. (However, ESC starts a new escape sequence, possibly aborting a previous unfinished one, and CAN and SUB abort any escape sequence.) The recognized control characters are BEL, BS, HT, LF, VT, FF, CR, SO, SI, CAN, SUB, ESC, DEL, CSI. They do what one would expect:</p>
 <dl>
-<dd>BEL (0x07, <code>haG</code>) beeps;</p>
-<dd>BS (0x08, <code>haH</code>) backspaces one column (but not past the beginning of the line);</p>
-<dd>HT (0x09, <code>haI</code>) goes to the next tab stop or to the end of the line if there is no earlier tab stop;</p>
-<dd>LF (0x0A, <code>haJ</code>), VT (0x0B, <code>haK</code>) and FF (0x0C, <code>haL</code>) all give a linefeed, and if LF/NL (new-line mode) is set also a carriage return;</p>
-<dd>CR (0x0D, <code>haM</code>) gives a carriage return;</p>
-<dd>SO (0x0E, <code>haN</code>) activates the G1 character set;</p>
-<dd>SI (0x0F, <code>haO</code>) activates the G0 character set;</p>
-<dd>CAN (0x18, <code>haX</code>) and SUB (0x1A, <code>haZ</code>) abort escape sequences;</p>
-<dd>ESC (0x1B, <code>ha[</code>) starts an escape sequence;</p>
-<dd>DEL (0x7F) is ignored;</p>
-<dd>CSI (0x9B) is equivalent to ESC [.</dl>
+<dd>BEL (0x07, <code>haG</code>) beeps;</dd>
+<dd>BS (0x08, <code>haH</code>) backspaces one column (but not past the beginning of the line);</dd>
+<dd>HT (0x09, <code>haI</code>) goes to the next tab stop or to the end of the line if there is no earlier tab stop;</dd>
+<dd>LF (0x0A, <code>haJ</code>), VT (0x0B, <code>haK</code>) and FF (0x0C, <code>haL</code>) all give a linefeed, and if LF/NL (new-line mode) is set also a carriage return;</dd>
+<dd>CR (0x0D, <code>haM</code>) gives a carriage return;</dd>
+<dd>SO (0x0E, <code>haN</code>) activates the G1 character set;</dd>
+<dd>SI (0x0F, <code>haO</code>) activates the G0 character set;</dd>
+<dd>CAN (0x18, <code>haX</code>) and SUB (0x1A, <code>haZ</code>) abort escape sequences;</dd>
+<dd>ESC (0x1B, <code>ha[</code>) starts an escape sequence;</dd>
+<dd>DEL (0x7F) is ignored;</dd>
+<dd>CSI (0x9B) is equivalent to ESC [.</dd></dl>
 <p> <code>ESC- but not CSI-sequences</code> </p>
 <table>
 <tr VALIGN=top>
@@ -629,38 +629,38 @@ description: "console_codes – Linux console escape and control sequences"
 </table>
 <p> <code>ECMA-48 Mode Switches</code></p>
 <dl>
-<dt>ESC [ 3 h</p>
-<dd>DECCRM (default off): Display control chars.</p>
-<dt>ESC [ 4 h</p>
-<dd>DECIM (default off): Set insert mode.</p>
-<dt>ESC [ 20 h</p>
-<dd>LF/NL (default off): Automatically follow echo of LF, VT or FF with CR.</dl>
+<dt>ESC [ 3 h</dt>
+<dd>DECCRM (default off): Display control chars.</dd>
+<dt>ESC [ 4 h</dt>
+<dd>DECIM (default off): Set insert mode.</dd>
+<dt>ESC [ 20 h</dt>
+<dd>LF/NL (default off): Automatically follow echo of LF, VT or FF with CR.</dd></dl>
 <p> <code>ECMA-48 Status Report Commands</code></p>
 <dl>
-<dt>ESC [ 5 n</p>
-<dd>Device status report (DSR): Answer is ESC [ 0 n (Terminal OK).</p>
-<dt>ESC [ 6 n</p>
-<dd>Cursor position report (CPR): Answer is ESC [ <i>y</i> ; <i>x</i> R, where <i>x,y</i> is the cursor location.</dl>
+<dt>ESC [ 5 n</dt>
+<dd>Device status report (DSR): Answer is ESC [ 0 n (Terminal OK).</dd>
+<dt>ESC [ 6 n</dt>
+<dd>Cursor position report (CPR): Answer is ESC [ <i>y</i> ; <i>x</i> R, where <i>x,y</i> is the cursor location.</dd></dl>
 <p> <code>DEC Private Mode (DECSET/DECRST) sequences</code> These are not described in ECMA-48. We list the Set Mode sequences; the Reset Mode sequences are obtained by replacing the final &#8216;h&#8217; by &#8216;l&#8217;.</p>
 <dl>
-<dt>ESC [ ? 1 h</p>
-<dd>DECCKM (default off): When set, the cursor keys send an ESC O prefix, rather than ESC [.</p>
-<dt>ESC [ ? 3 h</p>
-<dd>DECCOLM (default off = 80 columns): 80/132 col mode switch. The driver sources note that this alone does not suffice; some user-mode utility such as <code><a href="/docs/linux/man/8-resizecons/">resizecons</a></code>(8) has to change the hardware registers on the console video card.</p>
-<dt>ESC [ ? 5 h</p>
-<dd>DECSCNM (default off): Set reverse-video mode.</p>
-<dt>ESC [ ? 6 h</p>
-<dd>DECOM (default off): When set, cursor addressing is relative to the upper left corner of the scrolling region.</p>
-<dt>ESC [ ? 7 h</p>
-<dd>DECAWM (default on): Set autowrap on. In this mode, a graphic character emitted after column 80 (or column 132 of DECCOLM is on) forces a wrap to the beginning of the following line first.</p>
-<dt>ESC [ ? 8 h</p>
-<dd>DECARM (default on): Set keyboard autorepeat on.</p>
-<dt>ESC [ ? 9 h</p>
-<dd>X10 Mouse Reporting (default off): Set reporting mode to 1 (or reset to 0)&#8212;see below.</p>
-<dt>ESC [ ? 25 h</p>
-<dd>DECTECM (default on): Make cursor visible.</p>
-<dt>ESC [ ? 1000 h</p>
-<dd>X11 Mouse Reporting (default off): Set reporting mode to 2 (or reset to 0)&#8212;see below.</dl>
+<dt>ESC [ ? 1 h</dt>
+<dd>DECCKM (default off): When set, the cursor keys send an ESC O prefix, rather than ESC [.</dd>
+<dt>ESC [ ? 3 h</dt>
+<dd>DECCOLM (default off = 80 columns): 80/132 col mode switch. The driver sources note that this alone does not suffice; some user-mode utility such as <code><a href="/docs/linux/man/8-resizecons/">resizecons</a></code>(8) has to change the hardware registers on the console video card.</dd>
+<dt>ESC [ ? 5 h</dt>
+<dd>DECSCNM (default off): Set reverse-video mode.</dd>
+<dt>ESC [ ? 6 h</dt>
+<dd>DECOM (default off): When set, cursor addressing is relative to the upper left corner of the scrolling region.</dd>
+<dt>ESC [ ? 7 h</dt>
+<dd>DECAWM (default on): Set autowrap on. In this mode, a graphic character emitted after column 80 (or column 132 of DECCOLM is on) forces a wrap to the beginning of the following line first.</dd>
+<dt>ESC [ ? 8 h</dt>
+<dd>DECARM (default on): Set keyboard autorepeat on.</dd>
+<dt>ESC [ ? 9 h</dt>
+<dd>X10 Mouse Reporting (default off): Set reporting mode to 1 (or reset to 0)&#8212;see below.</dd>
+<dt>ESC [ ? 25 h</dt>
+<dd>DECTECM (default on): Make cursor visible.</dd>
+<dt>ESC [ ? 1000 h</dt>
+<dd>X11 Mouse Reporting (default off): Set reporting mode to 2 (or reset to 0)&#8212;see below.</dd></dl>
 <p> <code>Linux Console Private CSI Sequences</code> The following sequences are neither ECMA-48 nor native VT102. They are native to the Linux console driver. Colors are in SGR parameters: 0 = black, 1 = red, 2 = green, 3 = brown, 4 = blue, 5 = magenta, 6 = cyan, 7 = white; 8-15 = bright versions of 0-7. </p>
 <table>
 <tr VALIGN=top>
@@ -726,10 +726,10 @@ description: "console_codes – Linux console escape and control sequences"
 <h3>Comparisons with other terminals</h3>
 <p>Many different terminal types are described, like the Linux console, as being &quot;VT100-compatible&quot;. Here we discuss differences between the Linux console and the two most important others, the DEC VT102 and <code><a href="/docs/linux/man/1-xterm/">xterm</a></code>(1). <code>Control-character handling</code> The VT102 also recognized the following control characters:</p>
 <dl>
-<dd>NUL (0x00) was ignored;</p>
-<dd>ENQ (0x05) triggered an answerback message;</p>
-<dd>DC1 (0x11, <code>haQ</code>, XON) resumed transmission;</p>
-<dd>DC3 (0x13, <code>haS</code>, XOFF) caused VT100 to ignore (and stop transmitting) all codes except XOFF and XON.</dl>
+<dd>NUL (0x00) was ignored;</dd>
+<dd>ENQ (0x05) triggered an answerback message;</dd>
+<dd>DC1 (0x11, <code>haQ</code>, XON) resumed transmission;</dd>
+<dd>DC3 (0x13, <code>haS</code>, XOFF) caused VT100 to ignore (and stop transmitting) all codes except XOFF and XON.</dd></dl>
 <p> VT100-like DC1/DC3 processing may be enabled by the terminal driver. The <code><a href="/docs/linux/man/1-xterm/">xterm</a></code>(1) program (in VT100 mode) recognizes the control characters BEL, BS, HT, LF, VT, FF, CR, SO, SI, ESC. <code>Escape sequences</code> VT100 console sequences not implemented on the Linux console: </p>
 <table>
 <tr VALIGN=top>

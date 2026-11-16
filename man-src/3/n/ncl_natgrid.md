@@ -148,7 +148,6 @@ c_nnpntd       -  interpolate at a single point.
 c_nnpntendd    -  terminate single point mode.
 <h2>Access</h2>To use Natgrid entries, load the NCAR Graphics library ngmath.
 <h2>See Also</h2>Individual entries, natgrid_params, natgrid_errors. <pre><code>Complete documentation for Natgrid is available at URL
-
 http://ngwww.ucar.edu/ngdoc/ng/ngmath/natgrid/nnhome.html</code></pre> An NCL (NCAR Command Language) interface also exists for Natgrid procedures.
 <h2>Copyright</h2>Copyright (C) 2000 
  University Corporation for Atmospheric Research 

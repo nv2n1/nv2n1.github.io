@@ -27,7 +27,7 @@ autoconnect=true
 method=auto
 [802-3-ethernet]
 mac-address=00:23:5a:47:1f:71</pre>
-</dl>
+</dd></dl>
 <dl>
 <dd>
 <pre><code>A sample configuration for WPA-EAP (PEAP with MSCHAPv2) and always-ask secret:</code>
@@ -53,7 +53,7 @@ ca-cert=/home/joe/.cert/corp.crt
 phase1-peapver=1
 phase2-auth=mschapv2
 password-flags=2</pre>
-</dl>
+</dd></dl>
 <dl>
 <dd>
 <pre><code>A sample configuration for openvpn:</code>
@@ -79,7 +79,7 @@ method=auto
 method=auto
 ignore-auto-dns=true
 never-default=true</pre>
-</dl>
+</dd></dl>
 <dl>
 <dd>
 <pre><code>A sample configuration for a bridge and a bridge port:</code>
@@ -91,7 +91,7 @@ type=bridge type=ethernet
  master=MainBridge
 [bridge] slave-type=bridge
 interface-name=MainBridge</pre>
-</dl>
+</dd></dl>
 <dl>
 <dd>
 <pre><code>A sample configuration for a VLAN:</code>
@@ -104,18 +104,18 @@ type=vlan
 interface-name=VLAN-4A
 parent=eth0
 id=4</pre>
-</dl>
+</dd></dl>
 <h2>Details</h2>
 <p><i>keyfile</i> plugin variables for the majority of NetworkManager properties have one-to-one mapping. It means a NetworkManager property is stored in the keyfile as a variable of the same name and in the same format. There are several exceptions to this rule, mainly for making keyfile syntax easier for humans. The exceptions handled specially by <i>keyfile</i> plugin are listed below. Refer to <code><a href="/docs/linux/man/5-nm-settings/">nm-settings</a></code>(5) for all available settings and properties and their description. </p>
 <p> <code>Name aliases</code>. Some of the NetworkManager setting names are somewhat hard to type or remember. Therefore <i>keyfile</i> introduces aliases that can be used instead of the names.</p>
 <dl>
-<dd><i>setting name keyfile alias</i></dl>
+<dd><i>setting name keyfile alias</i></dd></dl>
 <dl>
-<dd>802-3-ethernet = ethernet</dl>
+<dd>802-3-ethernet = ethernet</dd></dl>
 <dl>
-<dd>802-11-wireless = wifi</dl>
+<dd>802-11-wireless = wifi</dd></dl>
 <dl>
-<dd>802-11-wireless-security = wifi-security</dl>
+<dd>802-11-wireless-security = wifi-security</dd></dl>
 <p> <code>Table 1. bridge setting (section)</code> </p>
 <table BORDER>
 <tr VALIGN=top>
@@ -129,7 +129,7 @@ id=4</pre>
 <td> mac-address </td>
 <td> mac-address </td>
 <td> usual hex-digits-and-colons notation </td>
-<td> MAC address in traditional hex-digits-and-colons notation, or semicolon separated list of 6 decimal bytes (obsolete)<code> </p>
+<td> MAC address in traditional hex-digits-and-colons notation, or semicolon separated list of 6 decimal bytes (obsolete)<code> 
 <p> Example: </code>mac-address=00:22:68:12:79:A2 mac-address=0;34;104;18;121;162;
 </td>
 </tr>
@@ -389,20 +389,21 @@ id=4</pre>
 <h3>Secret flags</h3>
 <p>Each secret property in a NetworkManager setting has an associated <i>flags</i> property that describes how to handle that secret. In the <i>keyfile</i> plugin, the value of <i>-flags</i> variable is a decimal number (0 &#8211; 7) defined as a sum of the following values: </p>
 <dl>
-<dd>&bull; 0 &#8211; (NM owned) &#8211; the system is responsible for providing and storing this secret.</dl>
+<dd>&bull; 0 &#8211; (NM owned) &#8211; the system is responsible for providing and storing this secret.</dd></dl>
 <dl>
-<dd>&bull; 1 &#8211; (agent-owned) &#8211; a user-session secret agent is responsible for providing and storing this secret; when it is required, agents will be asked to provide it.</dl>
+<dd>&bull; 1 &#8211; (agent-owned) &#8211; a user-session secret agent is responsible for providing and storing this secret; when it is required, agents will be asked to provide it.</dd></dl>
 <dl>
-<dd>&bull; 2 &#8211; (not-saved) &#8211; this secret should not be saved but should be requested from the user each time it is required.</dl>
+<dd>&bull; 2 &#8211; (not-saved) &#8211; this secret should not be saved but should be requested from the user each time it is required.</dd></dl>
 <dl>
-<dd>&bull; 4 &#8211; (not-required) &#8211; in some situations it cannot be automatically determined that a secret is required or not. This flag hints that the secret is not required and should not be requested from the user.</dl>
+<dd>&bull; 4 &#8211; (not-required) &#8211; in some situations it cannot be automatically determined that a secret is required or not. This flag hints that the secret is not required and should not be requested from the user.</dd></dl>
 <h2>Files</h2>
 <p>/etc/NetworkManager/system-connections/*</p>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/5-nm-settings/">nm-settings</a></code>(5), <code><a href="/docs/linux/man/5-nm-settings-ifcfg-rh/">nm-settings-ifcfg-rh</a></code>(5), <code><a href="/docs/linux/man/8-networkmanager/">NetworkManager</a></code>(8), <code><a href="/docs/linux/man/5-networkmanager-conf/">NetworkManager.conf</a></code>(5), <code><a href="/docs/linux/man/1-nmcli/">nmcli</a></code>(1), <code><a href="/docs/linux/man/7-nmcli-examples/">nmcli-examples</a></code>(7)</p>
 <h2>Notes</h2>
 <dl>
-<dt> 1.</p>
-<dd>GLib key file format</p>
+<dt> 1.</dt>
+<dd>GLib key file format</dd>
 <dl>
-<dd><a rel="nofollow" href="https://developer.gnome.org/glib/stable/glib-Key-value-file-parser.html#glib-Key-value-file-parser.description">https://developer.gnome.org/glib/stable/glib-Key-value-file-parser.html#glib-Key-value-file-parser.description</a></dl>
+<dd><a rel="nofollow" href="https://developer.gnome.org/glib/stable/glib-Key-value-file-parser.html#glib-Key-value-file-parser.description">https://developer.gnome.org/glib/stable/glib-Key-value-file-parser.html#glib-Key-value-file-parser.description</a></dd></dl>
+</dl>

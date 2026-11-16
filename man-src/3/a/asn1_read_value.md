@@ -14,14 +14,14 @@ description: "asn1_read_value – API function"
 <p> <code>int asn1_read_value(asn1_node </code><i>root</i><code>, const char * </code><i>name</i><code>, void * </code><i>ivalue</i><code>, int * </code><i>len</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
-<dt>asn1_node root</p>
-<dd> pointer to a structure.</p>
-<dt>const char * name</p>
-<dd> the name of the element inside a structure that you want to read.</p>
-<dt>void * ivalue</p>
-<dd> vector that will contain the element&#8217;s content, must be a pointer to memory cells already allocated (may be <code>NULL</code>).</p>
-<dt>int * len</p>
-<dd> number of bytes of *value: value[0]..value[len-1]. Initialy holds the sizeof value.</dl>
+<dt>asn1_node root</dt>
+<dd> pointer to a structure.</dd>
+<dt>const char * name</dt>
+<dd> the name of the element inside a structure that you want to read.</dd>
+<dt>void * ivalue</dt>
+<dd> vector that will contain the element&#8217;s content, must be a pointer to memory cells already allocated (may be <code>NULL</code>).</dd>
+<dt>int * len</dt>
+<dd> number of bytes of *value: value[0]..value[len-1]. Initialy holds the sizeof value.</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> Returns the value of one element inside a structure. If an element is OPTIONAL and this returns <code>ASN1_ELEMENT_NOT_FOUND</code>, it means that this element wasn&#8217;t present in the der encoding that created the structure. The first element of a SEQUENCE_OF or SET_OF is named &quot;?1&quot;. The second one &quot;?2&quot; and so on. If the <i>root</i> provided is a node to specific sequence element, then the keyword &quot;?CURRENT&quot; is also acceptable and indicates the current sequence element of this node. </p>
 <p> Note that there can be valid values with length zero. In these case this function will succeed and <i>len</i> will be zero.</p>
@@ -55,9 +55,9 @@ description: "asn1_read_value – API function"
 <p> The full documentation for <code>libtasn1</code> is maintained as a Texinfo manual. If the <code>info</code> and <code>libtasn1</code> programs are properly installed at your site, the command</p>
 <dl>
 <dt>
-<dd> <code>info libtasn1</code></dl>
+</dt><dd> <code>info libtasn1</code></dd></dl>
 <p> should give you access to the complete manual. As an alternative you may obtain the manual from:</p>
 <dl>
 <dt>
-<dd> <code><a rel="nofollow" href="http://www.gnu.org/software/libtasn1/manual/">http://www.gnu.org/software/libtasn1/manual/</a></code></dl>
+</dt><dd> <code><a rel="nofollow" href="http://www.gnu.org/software/libtasn1/manual/">http://www.gnu.org/software/libtasn1/manual/</a></code></dd></dl>
 <h2>Index</h2>

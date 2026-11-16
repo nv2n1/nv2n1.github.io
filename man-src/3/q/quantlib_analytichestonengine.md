@@ -35,6 +35,6 @@ description: "QuantLib::AnalyticHestonEngine – analytic Heston-model engine ba
 <p> J. Gatheral, The Volatility <code>Surface</code>: A Practitioner&#8217;s Guide, Wiley Finance </p>
 <p> <code>Tests</code></p>
 <dl COMPACT>
-<dd>the correctness of the returned value is tested by reproducing results available in web/literature and comparison with Black pricing.</dl>
+<dd>the correctness of the returned value is tested by reproducing results available in web/literature and comparison with Black pricing.</dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for QuantLib from the source code.</p>

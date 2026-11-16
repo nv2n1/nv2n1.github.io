@@ -11,7 +11,6 @@ std::jmp_buf - std::jmp_buf
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header &lt;csetjmp&gt;
-
 typedef /* unspecified */ jmp_buf;</code></pre> 
 The std::jmp_buf type is an array type suitable for storing information to restore a calling environment. The stored information is sufficient to restore execution at the correct block of the program and invocation of that block. The state of floating-point status flags, or open files, or any other data is not stored in an object of type jmp_buf. 
 

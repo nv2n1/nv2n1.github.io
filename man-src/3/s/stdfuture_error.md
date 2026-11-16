@@ -33,10 +33,8 @@ what <i>(public member function)</i> </p>
 <h2>Example</h2>
 <p>// Run this code </p>
 <pre><code>#include &lt;future&gt;
-
 #include &lt;iostream&gt;
 int main()
-
 {
     std::future&lt;int&gt; empty;
     try {

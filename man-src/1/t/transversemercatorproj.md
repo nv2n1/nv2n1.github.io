@@ -15,36 +15,36 @@ description: "TransverseMercatorProj — perform transverse Mercator projection"
 <p> Geodetic coordinates are provided on standard input as a set of lines containing (blank separated) <i>latitude</i> and <i>longitude</i> (decimal degrees or degrees, minutes, seconds). For each set of geodetic coordinates, the corresponding projected easting, <i>x</i>, and northing, <i>y</i>, (meters) are printed on standard output together with the meridian convergence <i>gamma</i> (degrees) and scale <i>k</i>. The meridian convergence is the bearing of the <i>y</i> axis measured clockwise from true north.</p>
 <h2>Options</h2>
 <dl>
-<dt><code>-s</code></p>
-<dd>use the sixth-order Krueger series approximation to the transverse Mercator projection instead of the exact projection.</p>
-<dt><code>-t</code></p>
-<dd>use the exact algorithm with the &#8220;<font SIZE="-1">EXTENDED DOMAIN&#8221;</font>.</p>
-<dt><code>-l</code></p>
-<dd>specify the longitude of origin <i>lon0</i> (degrees, default 0).</p>
-<dt><code>-k</code></p>
-<dd>specify the scale <i>k0</i> on the central meridian (default 0.9996).</p>
-<dt><code>-r</code></p>
-<dd>perform the reverse projection. <i>x</i> and <i>y</i> are given on standard input and each line of standard output gives <i>latitude</i>, <i>longitude</i>, <i>gamma</i>, and <i>k</i>.</p>
-<dt><code>-e</code></p>
-<dd>specify the ellipsoid via <i>a</i> <i>f</i>; the equatorial radius is <i>a</i> and the flattening is <i>f</i>. Setting <i>f</i> = 0 results in a sphere. Specify <i>f</i> &lt; 0 for a prolate ellipsoid. A simple fraction, e.g., 1/297, is allowed for <i>f</i>. (Also, if <i>f</i> &gt; 1, the flattening is set to 1/<i>f</i>.) By default, the <font SIZE="-1">WGS84</font> ellipsoid is used, <i>a</i> = 6378137 m, <i>f</i> = 1/298.257223563. If the exact algorithm is used, <i>f</i> must be positive.</p>
-<dt><code>-p</code></p>
-<dd>set the output precision to <i>prec</i> (default 6). <i>prec</i> is the number of digits after the decimal point for lengths (in meters). For latitudes and longitudes (in degrees), the number of digits after the decimal point is <i>prec</i> + 5. For the convergence (in degrees) and scale, the number of digits after the decimal point is <i>prec</i> + 6.</p>
-<dt><code>&#8211;comment-delimiter</code></p>
-<dd>set the comment delimiter to <i>commentdelim</i> (e.g., &#8220;#&#8221; or &#8220;//&#8221;). If set, the input lines will be scanned for this delimiter and, if found, the delimiter and the rest of the line will be removed prior to processing and subsequently appended to the output line (separated by a space).</p>
-<dt><code>&#8211;version</code></p>
-<dd>print version and exit.</p>
-<dt><code>-h</code></p>
-<dd>print usage and exit.</p>
-<dt><code>&#8211;help</code></p>
-<dd>print full documentation and exit.</p>
-<dt><code>&#8211;input-file</code></p>
-<dd>read input from the file <i>infile</i> instead of from standard input; a file name of &#8220;-&#8221; stands for standard input.</p>
-<dt><code>&#8211;input-string</code></p>
-<dd>read input from the string <i>instring</i> instead of from standard input. All occurrences of the line separator character (default is a semicolon) in <i>instring</i> are converted to newlines before the reading begins.</p>
-<dt><code>&#8211;line-separator</code></p>
-<dd>set the line separator character to <i>linesep</i>. By default this is a semicolon.</p>
-<dt><code>&#8211;output-file</code></p>
-<dd>write output to the file <i>outfile</i> instead of to standard output; a file name of &#8220;-&#8221; stands for standard output.</dl>
+<dt><code>-s</code></dt>
+<dd>use the sixth-order Krueger series approximation to the transverse Mercator projection instead of the exact projection.</dd>
+<dt><code>-t</code></dt>
+<dd>use the exact algorithm with the &#8220;<font SIZE="-1">EXTENDED DOMAIN&#8221;</font>.</dd>
+<dt><code>-l</code></dt>
+<dd>specify the longitude of origin <i>lon0</i> (degrees, default 0).</dd>
+<dt><code>-k</code></dt>
+<dd>specify the scale <i>k0</i> on the central meridian (default 0.9996).</dd>
+<dt><code>-r</code></dt>
+<dd>perform the reverse projection. <i>x</i> and <i>y</i> are given on standard input and each line of standard output gives <i>latitude</i>, <i>longitude</i>, <i>gamma</i>, and <i>k</i>.</dd>
+<dt><code>-e</code></dt>
+<dd>specify the ellipsoid via <i>a</i> <i>f</i>; the equatorial radius is <i>a</i> and the flattening is <i>f</i>. Setting <i>f</i> = 0 results in a sphere. Specify <i>f</i> &lt; 0 for a prolate ellipsoid. A simple fraction, e.g., 1/297, is allowed for <i>f</i>. (Also, if <i>f</i> &gt; 1, the flattening is set to 1/<i>f</i>.) By default, the <font SIZE="-1">WGS84</font> ellipsoid is used, <i>a</i> = 6378137 m, <i>f</i> = 1/298.257223563. If the exact algorithm is used, <i>f</i> must be positive.</dd>
+<dt><code>-p</code></dt>
+<dd>set the output precision to <i>prec</i> (default 6). <i>prec</i> is the number of digits after the decimal point for lengths (in meters). For latitudes and longitudes (in degrees), the number of digits after the decimal point is <i>prec</i> + 5. For the convergence (in degrees) and scale, the number of digits after the decimal point is <i>prec</i> + 6.</dd>
+<dt><code>&#8211;comment-delimiter</code></dt>
+<dd>set the comment delimiter to <i>commentdelim</i> (e.g., &#8220;#&#8221; or &#8220;//&#8221;). If set, the input lines will be scanned for this delimiter and, if found, the delimiter and the rest of the line will be removed prior to processing and subsequently appended to the output line (separated by a space).</dd>
+<dt><code>&#8211;version</code></dt>
+<dd>print version and exit.</dd>
+<dt><code>-h</code></dt>
+<dd>print usage and exit.</dd>
+<dt><code>&#8211;help</code></dt>
+<dd>print full documentation and exit.</dd>
+<dt><code>&#8211;input-file</code></dt>
+<dd>read input from the file <i>infile</i> instead of from standard input; a file name of &#8220;-&#8221; stands for standard input.</dd>
+<dt><code>&#8211;input-string</code></dt>
+<dd>read input from the string <i>instring</i> instead of from standard input. All occurrences of the line separator character (default is a semicolon) in <i>instring</i> are converted to newlines before the reading begins.</dd>
+<dt><code>&#8211;line-separator</code></dt>
+<dd>set the line separator character to <i>linesep</i>. By default this is a semicolon.</dd>
+<dt><code>&#8211;output-file</code></dt>
+<dd>write output to the file <i>outfile</i> instead of to standard output; a file name of &#8220;-&#8221; stands for standard output.</dd></dl>
 <h2>Extended Domain</h2>
 <p>The exact transverse Mercator projection has a <i>branch point</i> on the equator at longitudes (relative to <i>lon0</i>) of +/- (1 &#8211; <i>e</i>) 90, where <i>e</i> is the eccentricity of the ellipsoid. The standard convention for handling this branch point is to map positive (negative) latitudes into positive (negative) northings <i>y</i>; i.e., a branch cut is placed on the equator. With the <i>extended</i> domain, the northern sheet of the projection is extended into the south hemisphere by pushing the branch cut south from the branch points. See the reference below for details.</p>
 <h2>Examples</h2>

@@ -15,17 +15,8 @@ wl_buffer -
 <h3>Public Attributes</h3>
 
 <pre><code>struct wl_resource resource
-
-
-
 int32_t width
-
-
-
 int32_t height
-
-
-
 uint32_t busy_count
 </code></pre>
 

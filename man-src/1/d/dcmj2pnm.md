@@ -268,14 +268,14 @@ image format:
 <h2>NOTES</h2>
 <p> The following preferred interpolation algorithms can be selected using the <i>&#8211;interpolate</i> option: </p>
 <dl>
-<dt>&bull;</p>
-<dd> 1 = free scaling algorithm with interpolation from pbmplus toolkit</p>
-<dt>&bull;</p>
-<dd> 2 = free scaling algorithm with interpolation from c&#8217;t magazine</p>
-<dt>&bull;</p>
-<dd> 3 = magnification algorithm with bilinear interpolation from Eduard Stanescu</p>
-<dt>&bull;</p>
-<dd> 4 = magnification algorithm with bicubic interpolation from Eduard Stanescu</dl>
+<dt>&bull;</dt>
+<dd> 1 = free scaling algorithm with interpolation from pbmplus toolkit</dd>
+<dt>&bull;</dt>
+<dd> 2 = free scaling algorithm with interpolation from c&#8217;t magazine</dd>
+<dt>&bull;</dt>
+<dd> 3 = magnification algorithm with bilinear interpolation from Eduard Stanescu</dd>
+<dt>&bull;</dt>
+<dd> 4 = magnification algorithm with bicubic interpolation from Eduard Stanescu</dd></dl>
 <p> The <i>&#8211;write-tiff</i> option is only available when DCMTK has been configured and compiled with support for the external <code>libtiff</code> TIFF library. The availability of the TIFF compression options depends on the <code>libtiff</code> configuration. In particular, the patented LZW algorithm may not be available. </p>
 <p> The <i>&#8211;write-png</i> option is only available when DCMTK has been configured and compiled with support for the external <code>libpng</code> PNG library. Option <i>&#8211;interlace</i> enables progressive image view while loading the PNG file. Only a few applications take care of the meta info (TEXT) in a PNG file.</p>
 <h2>TRANSFER SYNTAXES</h2>

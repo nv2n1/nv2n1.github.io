@@ -20,27 +20,27 @@ description: "struct_akcipher_request – public key request"
 <h2>Members</h2>
 <p>base</p>
 <dl>
-<dd>Common attributes for async crypto requests</dl>
+<dd>Common attributes for async crypto requests</dd></dl>
 <p> src</p>
 <dl>
-<dd>Source data</dl>
+<dd>Source data</dd></dl>
 <p> dst</p>
 <dl>
-<dd>Destination data</dl>
+<dd>Destination data</dd></dl>
 <p> src_len</p>
 <dl>
-<dd>Size of the input buffer</dl>
+<dd>Size of the input buffer</dd></dl>
 <p> dst_len</p>
 <dl>
-<dd>Size of the output buffer. It needs to be at least as big as the expected result depending on the operation After operation it will be updated with the actual size of the result. In case of error where the dst sgl size was insufficient, it will be updated to the size required for the operation.</dl>
+<dd>Size of the output buffer. It needs to be at least as big as the expected result depending on the operation After operation it will be updated with the actual size of the result. In case of error where the dst sgl size was insufficient, it will be updated to the size required for the operation.</dd></dl>
 <p> __ctx[]</p>
 <dl>
-<dd>Start of private context data</dl>
+<dd>Start of private context data</dd></dl>
 <h2>Authors</h2>
 <p><code>Stephan Mueller</code> &lt;smueller [at] chronox.de&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <p> <code>Marek Vasut</code> &lt;marek [at] denx.de&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

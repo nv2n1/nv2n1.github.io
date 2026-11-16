@@ -62,14 +62,14 @@ description: "snmp_pdu_add_variable, snmp_varlist_add_variable, snmp_add_null_va
 <p> <code>snmp_varlist_add_variable</code> is similar, but appends the new varbind to the end of the varbind list provided. When adding the first varbind to an empty list, simply pass the address of the head of the list:</p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 &nbsp;<wbr>&nbsp;<wbr>netsnmp_variable_list&nbsp;<wbr>*vl&nbsp;<wbr>=&nbsp;<wbr>NULL;<br />
 &nbsp;<wbr>&nbsp;<wbr>snmp_varlist_add_variable(<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&amp;vl, name1, name1_len,<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>ASN_<i>TYPE</i>,&nbsp;<wbr>&amp;val1, val1_len);<br />
 &nbsp;<wbr>&nbsp;<wbr>snmp_varlist_add_variable(<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&amp;vl, name2, name2_len,<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>ASN_<i>TYPE</i>,&nbsp;<wbr>&amp;val2, val2_len);</dl>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>ASN_<i>TYPE</i>,&nbsp;<wbr>&amp;val2, val2_len);</dd></dl>
 <p> In both cases, the routine will return a pointer to the new varbind structure (or NULL if the varbind creation fails). </p>
 <p> <code>snmp_add_null_var</code> is a convenience function to add an empty varbind to the PDU. without needing to specify the NULL value explicitly. This is the normal mechanism for constructing a GET (or similar) information retrieval request.<br />
  Again, this returns a pointer to the new varbind, or NULL. </p>

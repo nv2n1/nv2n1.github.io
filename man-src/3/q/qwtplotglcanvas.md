@@ -50,159 +50,159 @@ description: "QwtPlotGLCanvas –"
 <p> Even if <code>QwtPlotGLCanvas</code> is not derived from QFrame it imitates its API. When using style sheets it supports the box model &#8211; beside backgrounds with rounded borders. </p>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>QwtPlot::setCanvas()</code>, <code>QwtPlotCanvas</code></dl>
+<dd><code>QwtPlot::setCanvas()</code>, <code>QwtPlotCanvas</code></dd></dl>
 <p> <code>Note:</code></p>
 <dl COMPACT>
-<dd>You might want to use the QPaintEngine::OpenGL paint engine ( see QGL::setPreferredPaintEngine() ). On a Linux test system QPaintEngine::OpenGL2 shows very basic problems ( wrong geometries of rectangles ) but also more advanced stuff like antialiasing doesn&#8217;t work. </p>
+<dd>You might want to use the QPaintEngine::OpenGL paint engine ( see QGL::setPreferredPaintEngine() ). On a Linux test system QPaintEngine::OpenGL2 shows very basic problems ( wrong geometries of rectangles ) but also more advanced stuff like antialiasing doesn&#8217;t work. </dd>
 <p> Another way to introduce OpenGL rendering to Qwt is to use QGLPixelBuffer or QGLFramebufferObject. Both type of buffers can be converted into a QImage and used in combination with a regular <code>QwtPlotCanvas</code>.</dl>
 <h2>Member Enumeration Documentation</h2>
 <h3>enum <code>QwtPlotGLCanvas::Shadow</code></h3>
 <p>Frame shadow. Unfortunately it is not possible to use QFrame::Shadow as a property of a widget that is not derived from QFrame. The following enum is made for the designer only. It is safe to use QFrame::Shadow instead. </p>
 <p> <code>Enumerator</code></p>
 <dl COMPACT>
-<dt><i>Plain </i></p>
-<dd>QFrame::Plain.</p>
-<dt><i>Raised </i></p>
-<dd>QFrame::Raised.</p>
-<dt><i>Sunken </i></p>
-<dd>QFrame::Sunken.</dl>
+<dt><i>Plain </i></dt>
+<dd>QFrame::Plain.</dd>
+<dt><i>Raised </i></dt>
+<dd>QFrame::Raised.</dd>
+<dt><i>Sunken </i></dt>
+<dd>QFrame::Sunken.</dd></dl>
 <h3>enum <code>QwtPlotGLCanvas::Shape</code></h3>
 <p>Frame shape. Unfortunately it is not possible to use QFrame::Shape as a property of a widget that is not derived from QFrame. The following enum is made for the designer only. It is safe to use QFrame::Shadow instead. </p>
 <p> <code>Note:</code></p>
 <dl COMPACT>
-<dd>QFrame::StyledPanel and QFrame::WinPanel are unsuported and will be displayed as QFrame::Panel.</dl>
+<dd>QFrame::StyledPanel and QFrame::WinPanel are unsuported and will be displayed as QFrame::Panel.</dd></dl>
 <h2>Constructor &amp; Destructor Documentation</h2>
 <h3>QwtPlotGLCanvas::QwtPlotGLCanvas (<code>QwtPlot</code> *plot = NULL) [explicit]</h3>
 <p>Constructor. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>plot</i> Parent plot widget</dl>
+<dd><i>plot</i> Parent plot widget</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>QwtPlot::setCanvas()</code></dl>
+<dd><code>QwtPlot::setCanvas()</code></dd></dl>
 <h2>Member Function Documentation</h2>
 <h3>QPainterPath QwtPlotGLCanvas::borderPath (const QRect &amp;rect) const</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>Empty path</dl>
+<dd>Empty path</dd></dl>
 <h3>void QwtPlotGLCanvas::drawBackground (QPainter *painter) [protected], [virtual]</h3>
 <p>Draw the background of the canvas </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>painter</i> Painter</dl>
+<dd><i>painter</i> Painter</dd></dl>
 <h3>void QwtPlotGLCanvas::drawBorder (QPainter *painter) [protected], [virtual]</h3>
 <p>Draw the border of the canvas </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>painter</i> Painter</dl>
+<dd><i>painter</i> Painter</dd></dl>
 <h3>void QwtPlotGLCanvas::drawItems (QPainter *painter) [protected], [virtual]</h3>
 <p>Draw the plot items </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>painter</i> Painter</dl>
+<dd><i>painter</i> Painter</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>QwtPlot::drawCanvas()</code></dl>
+<dd><code>QwtPlot::drawCanvas()</code></dd></dl>
 <h3>bool QwtPlotGLCanvas::event (QEvent *event) [virtual]</h3>
 <p>Qt event handler for QEvent::PolishRequest and QEvent::StyleChange </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>event</i> Qt Event</dl>
+<dd><i>event</i> Qt Event</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>See QGLWidget::event()</dl>
+<dd>See QGLWidget::event()</dd></dl>
 <h3>QRect QwtPlotGLCanvas::frameRect () const</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>The rectangle where the frame is drawn in.</dl>
+<dd>The rectangle where the frame is drawn in.</dd></dl>
 <h3><code>QwtPlotGLCanvas::Shadow</code> QwtPlotGLCanvas::frameShadow () const</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>Frame shadow</dl>
+<dd>Frame shadow</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>setFrameShadow()</code>, QFrame::setFrameShadow()</dl>
+<dd><code>setFrameShadow()</code>, QFrame::setFrameShadow()</dd></dl>
 <h3><code>QwtPlotGLCanvas::Shape</code> QwtPlotGLCanvas::frameShape () const</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>Frame shape</dl>
+<dd>Frame shape</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>setFrameShape()</code>, QFrame::frameShape()</dl>
+<dd><code>setFrameShape()</code>, QFrame::frameShape()</dd></dl>
 <h3>int QwtPlotGLCanvas::frameStyle () const</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>The bitwise OR between a <code>frameShape()</code> and a <code>frameShadow()</code></dl>
+<dd>The bitwise OR between a <code>frameShape()</code> and a <code>frameShadow()</code></dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>setFrameStyle()</code>, QFrame::frameStyle()</dl>
+<dd><code>setFrameStyle()</code>, QFrame::frameStyle()</dd></dl>
 <h3>int QwtPlotGLCanvas::frameWidth () const</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>Frame width depending on the style, line width and midline width.</dl>
+<dd>Frame width depending on the style, line width and midline width.</dd></dl>
 <h3>int QwtPlotGLCanvas::lineWidth () const</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>Line width of the frame</dl>
+<dd>Line width of the frame</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>setLineWidth()</code>, <code>midLineWidth()</code></dl>
+<dd><code>setLineWidth()</code>, <code>midLineWidth()</code></dd></dl>
 <h3>int QwtPlotGLCanvas::midLineWidth () const</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>Midline width of the frame</dl>
+<dd>Midline width of the frame</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>setMidLineWidth()</code>, <code>lineWidth()</code></dl>
+<dd><code>setMidLineWidth()</code>, <code>lineWidth()</code></dd></dl>
 <h3>void QwtPlotGLCanvas::paintEvent (QPaintEvent *event) [protected], [virtual]</h3>
 <p>Paint event </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>event</i> Paint event</dl>
+<dd><i>event</i> Paint event</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>QwtPlot::drawCanvas()</code></dl>
+<dd><code>QwtPlot::drawCanvas()</code></dd></dl>
 <h3>void QwtPlotGLCanvas::setFrameShadow (<code>Shadow</code>shadow)</h3>
 <p>Set the frame shadow </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>shadow</i> Frame shadow</dl>
+<dd><i>shadow</i> Frame shadow</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>frameShadow()</code>, <code>setFrameShape()</code>, QFrame::setFrameShadow()</dl>
+<dd><code>frameShadow()</code>, <code>setFrameShape()</code>, QFrame::setFrameShadow()</dd></dl>
 <h3>void QwtPlotGLCanvas::setFrameShape (<code>Shape</code>shape)</h3>
 <p>Set the frame shape </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>shape</i> Frame shape</dl>
+<dd><i>shape</i> Frame shape</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>frameShape()</code>, <code>setFrameShadow()</code>, QFrame::frameShape()</dl>
+<dd><code>frameShape()</code>, <code>setFrameShadow()</code>, QFrame::frameShape()</dd></dl>
 <h3>void QwtPlotGLCanvas::setFrameStyle (intstyle)</h3>
 <p>Set the frame style </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>style</i> The bitwise OR between a shape and a shadow.</dl>
+<dd><i>style</i> The bitwise OR between a shape and a shadow.</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>frameStyle()</code>, QFrame::setFrameStyle(), <code>setFrameShadow()</code>, <code>setFrameShape()</code></dl>
+<dd><code>frameStyle()</code>, QFrame::setFrameStyle(), <code>setFrameShadow()</code>, <code>setFrameShape()</code></dd></dl>
 <h3>void QwtPlotGLCanvas::setLineWidth (intwidth)</h3>
 <p>Set the frame line width </p>
 <p> The default line width is 2 pixels. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>width</i> Line width of the frame</dl>
+<dd><i>width</i> Line width of the frame</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>lineWidth()</code>, <code>setMidLineWidth()</code></dl>
+<dd><code>lineWidth()</code>, <code>setMidLineWidth()</code></dd></dl>
 <h3>void QwtPlotGLCanvas::setMidLineWidth (intwidth)</h3>
 <p>Set the frame mid line width </p>
 <p> The default midline width is 0 pixels. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>width</i> Midline width of the frame</dl>
+<dd><i>width</i> Midline width of the frame</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>midLineWidth()</code>, <code>setLineWidth()</code></dl>
+<dd><code>midLineWidth()</code>, <code>setLineWidth()</code></dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for Qwt User&#8217;s Guide from the source code.</p>

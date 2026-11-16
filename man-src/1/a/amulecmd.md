@@ -17,45 +17,43 @@ description: "amulecmd – Console-based program to control aMule"
 <h2>DESCRIPTION</h2>
 <p> <code>amulecmd</code> is a console-based client to control aMule.</p>
 <dl>
-<dt><code>[ -h</code> <i>&lt;host&gt;</i>, <code>&#8211;host</code>=<i>&lt;host&gt;</i> <code>]</code></p>
-<dd> Host where aMule is running (default: <i>localhost</i>). <i>&lt;host&gt;</i> might be an IP address or a DNS name</p>
-<dt><code>[ -p</code> <i>&lt;port&gt;</i>, <code>&#8211;port</code>=<i>&lt;port&gt;</i> <code>]</code></p>
-<dd> aMule&#8217;s port for External Connections, as set in Preferences-&gt;Remote Controls (default: <i>4712</i>)</p>
-<dt><code>[ -P</code> <i>&lt;password&gt;</i>, <code>&#8211;password</code>=<i>&lt;password&gt;</i> <code>]</code></p>
-<dd> External Connections password.</p>
-<dt><code>[ -f</code> <i>&lt;path&gt;</i>, <code>&#8211;config-file</code>=<i>&lt;path&gt;</i> <code>]</code></p>
-<dd> Use the given configuration file. Default configuration file is <i>~/.aMule/remote.conf</i></p>
+<dt><code>[ -h</code> <i>&lt;host&gt;</i>, <code>&#8211;host</code>=<i>&lt;host&gt;</i> <code>]</code></dt>
+<dd> Host where aMule is running (default: <i>localhost</i>). <i>&lt;host&gt;</i> might be an IP address or a DNS name</dd>
+<dt><code>[ -p</code> <i>&lt;port&gt;</i>, <code>&#8211;port</code>=<i>&lt;port&gt;</i> <code>]</code></dt>
+<dd> aMule&#8217;s port for External Connections, as set in Preferences-&gt;Remote Controls (default: <i>4712</i>)</dd>
+<dt><code>[ -P</code> <i>&lt;password&gt;</i>, <code>&#8211;password</code>=<i>&lt;password&gt;</i> <code>]</code></dt>
+<dd> External Connections password.</dd>
+<dt><code>[ -f</code> <i>&lt;path&gt;</i>, <code>&#8211;config-file</code>=<i>&lt;path&gt;</i> <code>]</code></dt>
+<dd> Use the given configuration file. Default configuration file is <i>~/.aMule/remote.conf</i></dd>
 <dt>
-<dd> Do not print any output to stdout.</p>
+</dt><dd> Do not print any output to stdout.</dd>
 <dt>
-<dd> Be verbose &#8211; show also debug messages.</p>
-<dt><code>[ -l</code> <i>&lt;lang&gt;</i>, <code>&#8211;locale</code>=<i>&lt;lang&gt;</i> <code>]</code></p>
-<dd> Sets program locale (language). See the <code>NOTES</code> section for the description of the <i>&lt;lang&gt;</i> parameter.</p>
+</dt><dd> Be verbose &#8211; show also debug messages.</dd>
+<dt><code>[ -l</code> <i>&lt;lang&gt;</i>, <code>&#8211;locale</code>=<i>&lt;lang&gt;</i> <code>]</code></dt>
+<dd> Sets program locale (language). See the <code>NOTES</code> section for the description of the <i>&lt;lang&gt;</i> parameter.</dd>
 <dt>
-<dd> Write command line options to config file and exit</p>
-<dt><code>[ -c</code> <i>&lt;command&gt;</i>, <code>&#8211;command</code>=<i>&lt;command&gt;</i> <code>]</code></p>
-<dd> Execute <i>&lt;command&gt;</i> as if it was entered at amulecmd&#8217;s prompt and exit.</p>
-<dt><code>[ &#8211;create-config-from</code>=<i>&lt;path&gt;</i> <code>]</code></p>
-<dd> Create config file based upon <i>&lt;path&gt;</i>, which must point to a valid aMule config file, and then exit.</p>
+</dt><dd> Write command line options to config file and exit</dd>
+<dt><code>[ -c</code> <i>&lt;command&gt;</i>, <code>&#8211;command</code>=<i>&lt;command&gt;</i> <code>]</code></dt>
+<dd> Execute <i>&lt;command&gt;</i> as if it was entered at amulecmd&#8217;s prompt and exit.</dd>
+<dt><code>[ &#8211;create-config-from</code>=<i>&lt;path&gt;</i> <code>]</code></dt>
+<dd> Create config file based upon <i>&lt;path&gt;</i>, which must point to a valid aMule config file, and then exit.</dd>
 <dt>
-<dd> Displays the current version number.</p>
+</dt><dd> Displays the current version number.</dd>
 <dt>
-<dd> Prints a short usage description.</dl>
+</dt><dd> Prints a short usage description.</dd></dl>
 <h2>COMMANDS</h2>
 <p> All commands are case insensitive.</p>
 <h3>Add <i>&lt;eD2k-link&gt;</i> | <i>&lt;magnet-link&gt;</i></h3>
 <p> Adds an eD2k-link or a magnet-link to the core. </p>
 <p> The eD2k link to be added can be:</p>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>&bull;</p>
-<dd> a file link (ed2k://|file|&#8230;), it will be added to the download queue;</p>
-<dt>&bull;</p>
-<dd> a server link (ed2k://|server|&#8230;), it will be added to the server list;</p>
-<dt>&bull;</p>
-<dd> a serverlist link, in which case all servers in the list will be added to the server list.</dl>
+<dt>&bull;</dt>
+<dd> a file link (ed2k://|file|&#8230;), it will be added to the download queue;</dd>
+<dt>&bull;</dt>
+<dd> a server link (ed2k://|server|&#8230;), it will be added to the server list;</dd>
+<dt>&bull;</dt>
+<dd> a serverlist link, in which case all servers in the list will be added to the server list.</dd></dl>
 </dl>
 <p> The magnet link must contain the eD2k hash and file length.</p>
 <h3>Cancel <i>&lt;hash&gt;</i> | <i>&lt;number&gt;</i></h3>
@@ -75,13 +73,11 @@ description: "amulecmd – Console-based program to control aMule"
 <p> Get and display a preference value. </p>
 <p> Available values for <i>&lt;what&gt;</i>:</p>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>BwLimits</p>
-<dd> Get bandwidth limits.</p>
-<dt>IPFilter</p>
-<dd> Get IPFilter preferences.</dl>
+<dt>BwLimits</dt>
+<dd> Get bandwidth limits.</dd>
+<dt>IPFilter</dt>
+<dd> Get IPFilter preferences.</dd></dl>
 </dl>
 <h3>Help [ <i>&lt;command&gt;</i> ]</h3>
 <p> Prints a short usage description. If called without parameter, it shows a list of available commands. If called with <i>&lt;command&gt;</i>, it shows a short description of the given command.</p>
@@ -91,17 +87,15 @@ description: "amulecmd – Console-based program to control aMule"
 <p> Set priority of a download specified by <i>&lt;hash&gt;</i> or <i>&lt;number&gt;</i>. </p>
 <p> Available values for <i>&lt;priority&gt;</i>:</p>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>Auto</p>
-<dd> Automatic priority.</p>
-<dt>High</p>
-<dd> High priority.</p>
-<dt>Low</p>
-<dd> Low priority.</p>
-<dt>Normal</p>
-<dd> Normal priority.</dl>
+<dt>Auto</dt>
+<dd> Automatic priority.</dd>
+<dt>High</dt>
+<dd> High priority.</dd>
+<dt>Low</dt>
+<dd> Low priority.</dd>
+<dt>Normal</dt>
+<dd> Normal priority.</dd></dl>
 </dl>
 <h3>_untranslated Progress</h3>
 <p> Shows the progress of an on-going search.</p>
@@ -111,13 +105,11 @@ description: "amulecmd – Console-based program to control aMule"
 <p> Reloads a given object. </p>
 <p> Available values for <i>&lt;what&gt;</i>:</p>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>Shared</p>
-<dd> Reload shared files list.</p>
-<dt>IPFilter</p>
-<dd> Reload IP filter tables.</dl>
+<dt>Shared</dt>
+<dd> Reload shared files list.</dd>
+<dt>IPFilter</dt>
+<dd> Reload IP filter tables.</dd></dl>
 </dl>
 <h3>_untranslated Reset</h3>
 <p> Reset the log.</p>
@@ -129,43 +121,37 @@ description: "amulecmd – Console-based program to control aMule"
 <p> Makes a search for the given <i>&lt;keyword&gt;</i>. A search type and a keyword to search is mandatory to do this. Example: `search kad amule&#8217; performs a kad search for `amule&#8217;. </p>
 <p> Available search types:</p>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>Global</p>
-<dd> Performs a global search.</p>
-<dt>Kad</p>
-<dd> Performs a search on the Kademlia network.</p>
-<dt>Local</p>
-<dd> Performs a local search.</dl>
+<dt>Global</dt>
+<dd> Performs a global search.</dd>
+<dt>Kad</dt>
+<dd> Performs a search on the Kademlia network.</dd>
+<dt>Local</dt>
+<dd> Performs a local search.</dd></dl>
 </dl>
 <h3>Set <i>&lt;what&gt;</i></h3>
 <p> Sets a given preferences value. </p>
 <p> Available values for <i>&lt;what&gt;</i>:</p>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>BwLimits</p>
-<dd> Set bandwidth limits.</p>
-<dt>IPFilter</p>
-<dd> Set IPFilter preferences.</dl>
+<dt>BwLimits</dt>
+<dd> Set bandwidth limits.</dd>
+<dt>IPFilter</dt>
+<dd> Set IPFilter preferences.</dd></dl>
 </dl>
 <h3>Show <i>&lt;what&gt;</i></h3>
 <p> Shows upload/download queue, servers list or shared files list. </p>
 <p> Available values for <i>&lt;what&gt;</i>:</p>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>DL</p>
-<dd> Show download queue.</p>
-<dt>Log</p>
-<dd> Show log.</p>
-<dt>Servers</p>
-<dd> Show servers list.</p>
-<dt>UL</p>
-<dd> Show upload queue.</dl>
+<dt>DL</dt>
+<dd> Show download queue.</dd>
+<dt>Log</dt>
+<dd> Show log.</dd>
+<dt>Servers</dt>
+<dd> Show servers list.</dd>
+<dt>UL</dt>
+<dd> Show upload queue.</dd></dl>
 </dl>
 <h3>_untranslated Shutdown</h3>
 <p> Shutdown the remote running core (amule/amuled). This will also shut down the text client, since it is unusable without a running core.</p>
@@ -183,11 +169,11 @@ description: "amulecmd – Console-based program to control aMule"
 <p> For example, the following strings are valid:</p>
 <dl>
 <dt>
-<dd> _untranslated<code>de</code><br />
+</dt><dd> _untranslated<code>de</code><br />
  _untranslated<code>de_DE</code><br />
  _untranslated<code>de_DE.iso88591</code><br />
  _untranslated<code>de_DE [at] euro</code><br />
- _untranslated<code>de_DE.iso88591 [at] euro</code></dl>
+ _untranslated<code>de_DE.iso88591 [at] euro</code></dd></dl>
 <p> Though all the above strings are accepted as valid language definitions, <i>encoding</i> and <i>modifier</i> are yet unused. </p>
 <p> In addition to the format above, you can also specify full language names in English &#8211; so <code>-l german</code> is also valid and is equal to <code>-l de_DE</code>. </p>
 <p> When no locale is defined, either on command-line or in config file, system default language will be used.</p>
@@ -208,17 +194,17 @@ description: "amulecmd – Console-based program to control aMule"
 <h2>AUTHOR</h2>
 <p> This manpage was written by Vollstrecker &lt;amule [at] vollstreckernet.de&gt; </p>
 <h2>Index</h2>
-<dt><a href="#lbBB">NOTES</a></p>
+<dt><a href="#lbBB">NOTES</a></dt>
 <dd>
-<dt><a href="#lbBE">FILES</a></p>
+</dd><dt><a href="#lbBE">FILES</a></dt>
 <dd>
-<dt><a href="#lbBF">EXAMPLE</a></p>
+</dd><dt><a href="#lbBF">EXAMPLE</a></dt>
 <dd>
-<dt><a href="#lbBG">REPORTING BUGS</a></p>
+</dd><dt><a href="#lbBG">REPORTING BUGS</a></dt>
 <dd>
-<dt><a href="#lbBH">COPYRIGHT</a></p>
+</dd><dt><a href="#lbBH">COPYRIGHT</a></dt>
 <dd>
-<dt><a href="#lbBI">SEE ALSO</a></p>
+</dd><dt><a href="#lbBI">SEE ALSO</a></dt>
 <dd>
-<dt><a href="#lbBJ">AUTHOR</a></p>
-<dd></dl>
+</dd><dt><a href="#lbBJ">AUTHOR</a></dt>
+<dd></dd></dl>

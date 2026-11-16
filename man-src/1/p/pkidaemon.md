@@ -14,9 +14,9 @@ description: "pkidaemon – provides status management of PKI instances"
 pkidaemon{start | status}[instance - name]
 </code></pre>
 <dl>
-<dt><code>Note:</code> Although this tool currently resides in the <code>/usr/bin</code> directory, proper use of it requires it to be run with super user privileges.</p>
+<dt><code>Note:</code> Although this tool currently resides in the <code>/usr/bin</code> directory, proper use of it requires it to be run with super user privileges.</dt>
 <dd>
-</dl>
+</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> The <code>pkidaemon</code> command with the &#8216;status&#8217; argument provides a way to display the status of all existing PKI instances on a machine. Optionally, an individual PKI instance may be specified by using an optional <code>[instance-name]</code>. </p>
 <p> The <code>pkidaemon</code> &#8216;start&#8217; argument is currently only used internally by the systemctl scripts. </p>

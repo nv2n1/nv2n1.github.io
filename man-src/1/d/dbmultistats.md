@@ -22,38 +22,38 @@ description: "dbmultistats – run dbcolstats over each group of inputs identifi
 <h2>OPTIONS</h2>
 <p> Options are the same as dbcolstats.</p>
 <dl>
-<dt><code>-k</code> or <code>&#8211;key</code> KeyField</p>
-<dd> specify which column is the key for grouping (default: the first column)</p>
-<dt><code>-a</code> or <code>&#8211;include-non-numeric</code></p>
-<dd> Compute stats over all records (treat non-numeric records as zero rather than just ignoring them).</p>
-<dt><code>-c </code><font SIZE="-1"><code>FRACTION</code></font> or <code>&#8211;confidence </code><font SIZE="-1"><code>FRACTION</code></font></p>
-<dd> Specify <font SIZE="-1">FRACTION</font> for the confidence interval. Defaults to 0.95 for a 95% confidence factor.</p>
-<dt><code>-f </code><font SIZE="-1"><code>FORMAT</code></font> or <code>&#8211;format </code><font SIZE="-1"><code>FORMAT</code></font></p>
-<dd> Specify a <i><a href="/docs/linux/man/3-printf/">printf</a></i>(3)-style format for output statistics. Defaults to <tt>&quot;%.5g&quot;</tt>.</p>
-<dt><code>-m</code> or <code>&#8211;median</code></p>
-<dd> Compute median value. (Will sort data if necessary.) (Median is the quantitle for N=2.)</p>
-<dt><code>-q N</code> or <code>&#8211;quantile N</code></p>
-<dd> Compute quantile (quartile when N is 4), or an arbitrary quantile for other values of N, where the scores that are 1 Nth of the way across the population.</p>
-<dt><code>-S</code> or <code>&#8211;pre-sorted</code></p>
-<dd> Assume data is already sorted. With one -S, we check and confirm this precondition. When repeated, we skip the check.</p>
-<dt>&lt;-T TmpDir&gt;</p>
-<dd> where to put temporary data. Only used if median or quantiles are requested. Also uses environment variable <font SIZE="-1">TMPDIR,</font> if -T is not specified. Default is /tmp.</p>
-<dt>&lt;&#8211;parallelism=N&gt;</p>
-<dd> Allow up to N reducers to run in parallel. Default is the number of CPUs in the machine.</dl>
+<dt><code>-k</code> or <code>&#8211;key</code> KeyField</dt>
+<dd> specify which column is the key for grouping (default: the first column)</dd>
+<dt><code>-a</code> or <code>&#8211;include-non-numeric</code></dt>
+<dd> Compute stats over all records (treat non-numeric records as zero rather than just ignoring them).</dd>
+<dt><code>-c </code><font SIZE="-1"><code>FRACTION</code></font> or <code>&#8211;confidence </code><font SIZE="-1"><code>FRACTION</code></font></dt>
+<dd> Specify <font SIZE="-1">FRACTION</font> for the confidence interval. Defaults to 0.95 for a 95% confidence factor.</dd>
+<dt><code>-f </code><font SIZE="-1"><code>FORMAT</code></font> or <code>&#8211;format </code><font SIZE="-1"><code>FORMAT</code></font></dt>
+<dd> Specify a <i><a href="/docs/linux/man/3-printf/">printf</a></i>(3)-style format for output statistics. Defaults to <tt>&quot;%.5g&quot;</tt>.</dd>
+<dt><code>-m</code> or <code>&#8211;median</code></dt>
+<dd> Compute median value. (Will sort data if necessary.) (Median is the quantitle for N=2.)</dd>
+<dt><code>-q N</code> or <code>&#8211;quantile N</code></dt>
+<dd> Compute quantile (quartile when N is 4), or an arbitrary quantile for other values of N, where the scores that are 1 Nth of the way across the population.</dd>
+<dt><code>-S</code> or <code>&#8211;pre-sorted</code></dt>
+<dd> Assume data is already sorted. With one -S, we check and confirm this precondition. When repeated, we skip the check.</dd>
+<dt>&lt;-T TmpDir&gt;</dt>
+<dd> where to put temporary data. Only used if median or quantiles are requested. Also uses environment variable <font SIZE="-1">TMPDIR,</font> if -T is not specified. Default is /tmp.</dd>
+<dt>&lt;&#8211;parallelism=N&gt;</dt>
+<dd> Allow up to N reducers to run in parallel. Default is the number of CPUs in the machine.</dd></dl>
 <p> This module also supports the standard fsdb options:</p>
 <dl>
-<dt><code>-d</code></p>
-<dd> Enable debugging output.</p>
-<dt><code>-i</code> or <code>&#8211;input</code> InputSource</p>
-<dd> Read from InputSource, typically a file name, or <tt>&quot;-&quot;</tt> for standard input, or (if in Perl) a IO::Handle, Fsdb::IO or Fsdb::BoundedQueue objects.</p>
-<dt><code>-o</code> or <code>&#8211;output</code> OutputDestination</p>
-<dd> Write to OutputDestination, typically a file name, or <tt>&quot;-&quot;</tt> for standard output, or (if in Perl) a IO::Handle, Fsdb::IO or Fsdb::BoundedQueue objects.</p>
-<dt><code>&#8211;autorun</code> or <code>&#8211;noautorun</code></p>
-<dd> By default, programs process automatically, but Fsdb::Filter objects in Perl do not run until you invoke the <i>run()</i> method. The <tt>&quot;--(no)autorun&quot;</tt> option controls that behavior within Perl.</p>
-<dt><code>&#8211;help</code></p>
-<dd> Show help.</p>
-<dt><code>&#8211;man</code></p>
-<dd> Show full manual.</dl>
+<dt><code>-d</code></dt>
+<dd> Enable debugging output.</dd>
+<dt><code>-i</code> or <code>&#8211;input</code> InputSource</dt>
+<dd> Read from InputSource, typically a file name, or <tt>&quot;-&quot;</tt> for standard input, or (if in Perl) a IO::Handle, Fsdb::IO or Fsdb::BoundedQueue objects.</dd>
+<dt><code>-o</code> or <code>&#8211;output</code> OutputDestination</dt>
+<dd> Write to OutputDestination, typically a file name, or <tt>&quot;-&quot;</tt> for standard output, or (if in Perl) a IO::Handle, Fsdb::IO or Fsdb::BoundedQueue objects.</dd>
+<dt><code>&#8211;autorun</code> or <code>&#8211;noautorun</code></dt>
+<dd> By default, programs process automatically, but Fsdb::Filter objects in Perl do not run until you invoke the <i>run()</i> method. The <tt>&quot;--(no)autorun&quot;</tt> option controls that behavior within Perl.</dd>
+<dt><code>&#8211;help</code></dt>
+<dd> Show help.</dd>
+<dt><code>&#8211;man</code></dt>
+<dd> Show full manual.</dd></dl>
 <h2>SAMPLE USAGE</h2>
 <h3>Input:</h3>
 <pre>

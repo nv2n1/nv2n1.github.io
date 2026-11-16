@@ -18,101 +18,101 @@ mpqcrun[options][file1.in][file2.in]...
 <h2>Running mpqcrun</h2>
 <p> mpqcrun takes the following command line options: </p>
 <dl>
-<dt>&#8211;mpqc path</p>
-<dd> The mpqc executable to use.</p>
-<dt>&#8211;objdir</p>
-<dd> Run the mpqc executable in the compile directory, rather than the install directory.</p>
-<dt>&#8211;small</p>
-<dd> Skip big runs in verification suite.</p>
-<dt>&#8211;nnodeperjob n</p>
-<dd> Run with n nodes per job. If this is nnode, use all available nodes.</p>
-<dt>&#8211;nprocpernode n</p>
-<dd> Run with n processes per node.</p>
-<dt>&#8211;nprocperjob n</p>
-<dd> Run with n processes per job. The default is to use all available processors.</p>
-<dt>&#8211;nthreadperproc n</p>
-<dd> Use n threads per process.</p>
-<dt>&#8211;threadgrp grp</p>
-<dd> Use the given threading layer.</p>
-<dt><code>grp=</code>none</p>
-<dd> Use MPQC&#8217;s default.</p>
-<dt><code>grp=</code>proc</p>
-<dd> Do a single threaded run.</p>
-<dt><code>grp=</code>posix</p>
-<dd> Use POSIX threads.</dl>
+<dt>&#8211;mpqc path</dt>
+<dd> The mpqc executable to use.</dd>
+<dt>&#8211;objdir</dt>
+<dd> Run the mpqc executable in the compile directory, rather than the install directory.</dd>
+<dt>&#8211;small</dt>
+<dd> Skip big runs in verification suite.</dd>
+<dt>&#8211;nnodeperjob n</dt>
+<dd> Run with n nodes per job. If this is nnode, use all available nodes.</dd>
+<dt>&#8211;nprocpernode n</dt>
+<dd> Run with n processes per node.</dd>
+<dt>&#8211;nprocperjob n</dt>
+<dd> Run with n processes per job. The default is to use all available processors.</dd>
+<dt>&#8211;nthreadperproc n</dt>
+<dd> Use n threads per process.</dd>
+<dt>&#8211;threadgrp grp</dt>
+<dd> Use the given threading layer.</dd>
+<dt><code>grp=</code>none</dt>
+<dd> Use MPQC&#8217;s default.</dd>
+<dt><code>grp=</code>proc</dt>
+<dd> Do a single threaded run.</dd>
+<dt><code>grp=</code>posix</dt>
+<dd> Use POSIX threads.</dd></dl>
 <dl>
-<dt>&#8211;messagegrp grp</p>
-<dd> Use the given communication layer.</p>
-<dt><code>grp=</code>none</p>
-<dd> Use MPQC&#8217;s default.</p>
-<dt><code>grp=</code>proc</p>
-<dd> Does a single processor run.</p>
-<dt><code>grp=</code>mpi</p>
-<dd> Use MPI.</dl>
+<dt>&#8211;messagegrp grp</dt>
+<dd> Use the given communication layer.</dd>
+<dt><code>grp=</code>none</dt>
+<dd> Use MPQC&#8217;s default.</dd>
+<dt><code>grp=</code>proc</dt>
+<dd> Does a single processor run.</dd>
+<dt><code>grp=</code>mpi</dt>
+<dd> Use MPI.</dd></dl>
 <dl>
-<dt>&#8211;memorygrp grp</p>
-<dd> Use the given remote memory communication layer.</p>
-<dt><code>grp=</code>none</p>
-<dd> Use MPQC&#8217;s default.</p>
-<dt><code>grp=</code>proc</p>
-<dd> Does a single processor run.</p>
-<dt><code>grp=</code>mtmpi</p>
-<dd> Use multi-threaded MPI.</p>
-<dt><code>grp=</code>armci</p>
-<dd> Use ARMCI.</dl>
+<dt>&#8211;memorygrp grp</dt>
+<dd> Use the given remote memory communication layer.</dd>
+<dt><code>grp=</code>none</dt>
+<dd> Use MPQC&#8217;s default.</dd>
+<dt><code>grp=</code>proc</dt>
+<dd> Does a single processor run.</dd>
+<dt><code>grp=</code>mtmpi</dt>
+<dd> Use multi-threaded MPI.</dd>
+<dt><code>grp=</code>armci</dt>
+<dd> Use ARMCI.</dd></dl>
 <dl>
-<dt>&#8211;launch cmd</p>
-<dd> Use the given command to launch jobs. See below.</p>
-<dt>&#8211;nodefile file</p>
-<dd> Specifies a file listing nodes to use. Duplicated nodes are removed.</p>
-<dt>&#8211;nodes nodes</p>
-<dd> Specifies list of machines to use. A range of nodes can be given with two integers separated by a dash. Groups of nodes can be separated by a comma.</p>
-<dt>&#8211;nodename fmt</p>
-<dd> This is a format string that converts the node number to its name.</p>
-<dt>&#8211;seq regex</p>
-<dd> Run inputs matching reqex sequentially. This is useful when one input requires that another be run first, and more than one job is run at a time.</p>
-<dt>&#8211;exclude regex</p>
-<dd> Exclude files matching regex.</p>
-<dt>&#8211;readdir dir</p>
-<dd> Run mpqc on all files matching dir/*.in.</p>
-<dt>&#8211;inputprefix prefix</p>
-<dd> Prepend prefix to all input file names.</p>
-<dt>&#8211;outputprefix prefix</p>
-<dd> Prepend prefix to all output file names.</p>
-<dt>&#8211;count</p>
-<dd> Print the number of input files that would be run.</p>
-<dt>&#8211;printfiles</p>
-<dd> Print the list of input files that would be run.</p>
-<dt>&#8211;rerun</p>
-<dd> Overwrite output file, even if up-to-date.</p>
-<dt>&#8211;onlynew</p>
-<dd> Do not overwrite output file, even if not up-to-date.</p>
-<dt>&#8211;simpout</p>
-<dd> Do not append extra info like nnode to filename.</p>
-<dt>&#8211;uniqout</p>
-<dd> Generate unique output filenames.</p>
-<dt>&#8211;autoout</p>
-<dd> Generate output filenames by replacing the suffix with &#8216;out&#8217;.</p>
-<dt>&#8211;verbose</p>
-<dd> Print out what action is to be taken on each file.</p>
-<dt>&#8211;debug</p>
-<dd> Don&#8217;t actually run mpqc.</p>
-<dt>&#8211;help</p>
-<dd> Print the documentation.</dl>
+<dt>&#8211;launch cmd</dt>
+<dd> Use the given command to launch jobs. See below.</dd>
+<dt>&#8211;nodefile file</dt>
+<dd> Specifies a file listing nodes to use. Duplicated nodes are removed.</dd>
+<dt>&#8211;nodes nodes</dt>
+<dd> Specifies list of machines to use. A range of nodes can be given with two integers separated by a dash. Groups of nodes can be separated by a comma.</dd>
+<dt>&#8211;nodename fmt</dt>
+<dd> This is a format string that converts the node number to its name.</dd>
+<dt>&#8211;seq regex</dt>
+<dd> Run inputs matching reqex sequentially. This is useful when one input requires that another be run first, and more than one job is run at a time.</dd>
+<dt>&#8211;exclude regex</dt>
+<dd> Exclude files matching regex.</dd>
+<dt>&#8211;readdir dir</dt>
+<dd> Run mpqc on all files matching dir/*.in.</dd>
+<dt>&#8211;inputprefix prefix</dt>
+<dd> Prepend prefix to all input file names.</dd>
+<dt>&#8211;outputprefix prefix</dt>
+<dd> Prepend prefix to all output file names.</dd>
+<dt>&#8211;count</dt>
+<dd> Print the number of input files that would be run.</dd>
+<dt>&#8211;printfiles</dt>
+<dd> Print the list of input files that would be run.</dd>
+<dt>&#8211;rerun</dt>
+<dd> Overwrite output file, even if up-to-date.</dd>
+<dt>&#8211;onlynew</dt>
+<dd> Do not overwrite output file, even if not up-to-date.</dd>
+<dt>&#8211;simpout</dt>
+<dd> Do not append extra info like nnode to filename.</dd>
+<dt>&#8211;uniqout</dt>
+<dd> Generate unique output filenames.</dd>
+<dt>&#8211;autoout</dt>
+<dd> Generate output filenames by replacing the suffix with &#8216;out&#8217;.</dd>
+<dt>&#8211;verbose</dt>
+<dd> Print out what action is to be taken on each file.</dd>
+<dt>&#8211;debug</dt>
+<dd> Don&#8217;t actually run mpqc.</dd>
+<dt>&#8211;help</dt>
+<dd> Print the documentation.</dd></dl>
 <p> The cmd given with the &#8211;launch option can contain special strings that will be substituted:</p>
 <dl>
-<dt>%MPQC%</p>
-<dd> The MPQC program to run.</p>
-<dt>%INPUT%</p>
-<dd> The input filename.</p>
-<dt>%OUTPUT%</p>
-<dd> The output filename.</p>
-<dt>%NPROC%</p>
-<dd> The number of processes to start.</p>
-<dt>%NODEFILE%</p>
-<dd> The name of a file containing the node names.</p>
-<dt>%NODELIST%</p>
-<dd> A comma separated list of node names.</dl>
+<dt>%MPQC%</dt>
+<dd> The MPQC program to run.</dd>
+<dt>%INPUT%</dt>
+<dd> The input filename.</dd>
+<dt>%OUTPUT%</dt>
+<dd> The output filename.</dd>
+<dt>%NPROC%</dt>
+<dd> The number of processes to start.</dd>
+<dt>%NODEFILE%</dt>
+<dd> The name of a file containing the node names.</dd>
+<dt>%NODELIST%</dt>
+<dd> A comma separated list of node names.</dd></dl>
 <p> For these last two, if they are contained within square brackets and a substitution is not available, then everything within the the brackets is removed. </p>
 <p> This argument will launch MPI jobs giving mpirun a nodefile. </p>
 <pre>

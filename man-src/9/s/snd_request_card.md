@@ -15,7 +15,7 @@ snd_request_card - try to load the card module
 <h2>Arguments</h2>
 
 <i>card</i>
-<dl><dd><dd>the card number</dl>
+<dl><dd></dd><dd>the card number</dd></dl>
 
 <h2>Description</h2>
 

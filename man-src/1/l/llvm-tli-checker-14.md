@@ -29,20 +29,20 @@ FAIL: LLVM TLI doesn't match SDK libraries.
 </code></pre>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>&#8211;dump-tli</code></p>
-<dd> Print “available”/”not available” for each library function, according to TargetLibraryInfo’s information for the specified triple, and exit. This option does not read any input files.</p>
-<dt><code>&#8211;help, -h</code></p>
-<dd> Print a summary of command line options and exit.</p>
-<dt><code>&#8211;libdir=&lt;directory&gt;</code></p>
-<dd> A base directory to prepend to each library file path. This is handy when there are a number of library files all in the same directory, or a list of input filenames are kept in a response file.</p>
-<dt><code>&#8211;report=&lt;level&gt;</code></p>
-<dd> The amount of information to report. &lt;level&gt; can be summary, discrepancy, or full. A summary report gives only the count of matching and mis-matching symbols; discrepancy lists the mis-matching symbols; and full lists all symbols known to TLI, matching or mis-matching. The default is discrepancy.</p>
-<dt><code>&#8211;separate</code></p>
-<dd> Read and report a summary for each library file separately. This can be useful to identify library files that don’t contribute anything that TLI knows about. Implies –report=summary (can be overridden).</p>
-<dt><code>&#8211;triple=&lt;triple&gt;</code></p>
-<dd> The triple to use for initializing TargetLibraryInfo.</p>
-<dt><code>@&lt;FILE&gt;</code></p>
-<dd> Read command-line options and/or library names from response file <i>&lt;FILE&gt;</i>.</dl>
+<dt><code>&#8211;dump-tli</code></dt>
+<dd> Print “available”/”not available” for each library function, according to TargetLibraryInfo’s information for the specified triple, and exit. This option does not read any input files.</dd>
+<dt><code>&#8211;help, -h</code></dt>
+<dd> Print a summary of command line options and exit.</dd>
+<dt><code>&#8211;libdir=&lt;directory&gt;</code></dt>
+<dd> A base directory to prepend to each library file path. This is handy when there are a number of library files all in the same directory, or a list of input filenames are kept in a response file.</dd>
+<dt><code>&#8211;report=&lt;level&gt;</code></dt>
+<dd> The amount of information to report. &lt;level&gt; can be summary, discrepancy, or full. A summary report gives only the count of matching and mis-matching symbols; discrepancy lists the mis-matching symbols; and full lists all symbols known to TLI, matching or mis-matching. The default is discrepancy.</dd>
+<dt><code>&#8211;separate</code></dt>
+<dd> Read and report a summary for each library file separately. This can be useful to identify library files that don’t contribute anything that TLI knows about. Implies –report=summary (can be overridden).</dd>
+<dt><code>&#8211;triple=&lt;triple&gt;</code></dt>
+<dd> The triple to use for initializing TargetLibraryInfo.</dd>
+<dt><code>@&lt;FILE&gt;</code></dt>
+<dd> Read command-line options and/or library names from response file <i>&lt;FILE&gt;</i>.</dd></dl>
 <h2>EXIT STATUS</h2>
 <p> <code>llvm-tli-checker</code> returns 0 even if there are mismatches. It returns a non-zero exit code if there is an unrecognized option, or no input files are provided.</p>
 <h2>AUTHOR</h2>

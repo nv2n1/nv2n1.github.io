@@ -14,14 +14,14 @@ description: "rio_destid_free – free a previously allocated destID"
 <p><i>net</i></p>
 <dl>
 <dd>
-<dd>RIO network</dl>
+</dd><dd>RIO network</dd></dl>
 <p> <i>destid</i></p>
 <dl>
-<dd>destID to free</dl>
+<dd>destID to free</dd></dl>
 <h2>Description</h2>
 <p>Makes the specified destID available for use.</p>
 <h2>Author</h2>
 <p><code>Matt Porter</code> &lt;mporter [at] kernel.crashing.org&gt;, &lt;mporter [at] mvista.com&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

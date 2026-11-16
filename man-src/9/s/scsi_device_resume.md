@@ -14,15 +14,15 @@ description: "scsi_device_resume – Restart user issued commands to a quiesced 
 <p><i>sdev</i></p>
 <dl>
 <dd>
-<dd>scsi device to resume.</dl>
+</dd><dd>scsi device to resume.</dd></dl>
 <h2>Description</h2>
 <p>Moves the device from quiesced back to running and restarts the queues. </p>
 <p> Must be called with user context, may sleep.</p>
 <h2>Authors</h2>
 <p><code>James Bottomley</code> &lt;James.Bottomley [at] hansenpartnership.com&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <p> <code>Rob Landley</code> &lt;rob [at] landley.net&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

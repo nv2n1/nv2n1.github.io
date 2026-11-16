@@ -27,6 +27,6 @@ description: "QuantLib::ObservableValue – observable and assignable proxy to c
 <p> Observers can be registered with instances of this class so that they are notified when a different value is assigned to such instances. Client code can copy the contained value or pass it to functions via implicit conversion. </p>
 <p> <code>Note:</code></p>
 <dl COMPACT>
-<dd>it is not possible to call non-const method on the returned value. This is by design, as this possibility would necessarily bypass the notification code; client code should modify the value via re-assignment instead.</dl>
+<dd>it is not possible to call non-const method on the returned value. This is by design, as this possibility would necessarily bypass the notification code; client code should modify the value via re-assignment instead.</dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for QuantLib from the source code.</p>

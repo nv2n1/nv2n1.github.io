@@ -15,9 +15,9 @@ MAPGTR - Gets the current value of a specified EZMAP parameter of type REAL.
 
  void c_mapgtr (char *pnam, float *rval)
 <h2>Description</h2><dl COMPACT><dt>PNAM
-<dd>(an input expression of type CHARACTER) specifies the name of the parameter to get. Only the first two characters of the string are examined.
-<dt>RVAL
-<dd>(an output variable of type REAL) receives the value of the parameter specified by PNAM.</dl><h2>C-Binding Description</h2>The C-binding argument descriptions are the same as the FORTRAN argument descriptions.
+</dt><dd>(an input expression of type CHARACTER) specifies the name of the parameter to get. Only the first two characters of the string are examined.
+</dd><dt>RVAL
+</dt><dd>(an output variable of type REAL) receives the value of the parameter specified by PNAM.</dd></dl><h2>C-Binding Description</h2>The C-binding argument descriptions are the same as the FORTRAN argument descriptions.
 <h2>Usage</h2>This routine allows you to retrieve the current value of EZMAP parameters. For a complete list of parameters available in this utility, see the ezmap_params man page.
 <h2>Examples</h2>Use the ncargex command to see the following relevant example: mpex07.
 <h2>Access</h2>To use MAPGTR, MAPGETR, or c_mapgtr load the NCAR Graphics libraries ncarg, ncarg_gks, and ncarg_c, preferably in that order.

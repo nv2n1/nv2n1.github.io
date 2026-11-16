@@ -16,106 +16,106 @@ description: "gnetlist – gEDA/gaf Netlist extraction/generation"
 <p> gnetlist depends heavily on guile (a scheme based scripting language). It uses guile to define the output format. Basically gnetlist reads a schematic, creates an internal representation of the various connections, and then a guile script extracts the connections into some netlist format. </p>
 <p> gnetlist is very much so a work in progress. Currently it supports the following backends: </p>
 <dl>
-<dt>[bu]</p>
-<dd> Allegro netlist format (-g allegro)</p>
-<dt>[bu]</p>
-<dd> BOM / BOM2 &#8211; Bill of Materials (-g bom and -g bom2)</p>
-<dt>[bu]</p>
-<dd> Partslist 1,2,3 &#8211; More Bill of Materials (-g partslist[1-3])</p>
-<dt>[bu]</p>
-<dd> DRC &#8211; Start of a design rule checker (-g drc)</p>
-<dt>[bu]</p>
-<dd> DRC2 &#8211; A second design rule checker (-g drc2)</p>
-<dt>[bu]</p>
-<dd> gEDA &#8211; native format, mainly used for testing (-g geda)</p>
-<dt>[bu]</p>
-<dd> Gossip netlist format (-g gossip)</p>
-<dt>[bu]</p>
-<dd> PADS netlist format (-g pads)</p>
-<dt>[bu]</p>
-<dd> PCB / PCBboard (-g PCB and -g PCBboard)</p>
-<dt>[bu]</p>
-<dd> PCB actions file for forward annotating pin/pad names from schematic to layout (-g pcbpins)</p>
-<dt>[bu]</p>
-<dd> gsch2pcb backend (-g gsch2pcb)</p>
-<dt>[bu]</p>
-<dd> ProtelII netlist format (-g protelII)</p>
-<dt>[bu]</p>
-<dd> Spice compatible netlist format (-g spice)</p>
-<dt>[bu]</p>
-<dd> Enhanced spice compatible netlist format (-g spice-sdb)</p>
-<dt>[bu]</p>
-<dd> Tango netlist format (-g tango)</p>
-<dt>[bu]</p>
-<dd> Verilog code (-g verilog)</p>
-<dt>[bu]</p>
-<dd> VHDL code (-g vhdl)</p>
-<dt>[bu]</p>
-<dd> VIPEC netlist format (-g vipec)</p>
-<dt>[bu]</p>
-<dd> Bartels Autoengineer netlist format (-g bae)</p>
-<dt>[bu]</p>
-<dd> GOSSIP system simulation system netlist format (-g gossip)</p>
-<dt>[bu]</p>
-<dd> MAXASCII netlist format (-g maxascii)</p>
-<dt>[bu]</p>
-<dd> VHDL-AMS netlist format (-g vams)</p>
-<dt>[bu]</p>
-<dd> Futurenet2 netlist format (-g futurenet2)</p>
-<dt>[bu]</p>
-<dd> SWITCAP switched capacitor simulator netlist format (-g switcap)</p>
-<dt>[bu]</p>
-<dd> RF Cascade netlist format (-g cascade)</p>
-<dt>[bu]</p>
-<dd> RACAL-REDAC netlist format (-g redac)</p>
-<dt>[bu]</p>
-<dd> SystemC netlist backend (-g systemc)</p>
-<dt>[bu]</p>
-<dd> Calay format netlist backend (-g calay)</p>
-<dt>[bu]</p>
-<dd> Osmond format netlist backend (-g osmond)</p>
-<dt>[bu]</p>
-<dd> Eagle netlist format (-g eagle)</p>
-<dt>[bu]</p>
-<dd> Netlister for symbolic circuit analysis using Mathematica (-g mathematica)</p>
-<dt>[bu]</p>
-<dd> LiquidPCB format netlist backend (-g liquidpcb) </p>
+<dt>[bu]</dt>
+<dd> Allegro netlist format (-g allegro)</dd>
+<dt>[bu]</dt>
+<dd> BOM / BOM2 &#8211; Bill of Materials (-g bom and -g bom2)</dd>
+<dt>[bu]</dt>
+<dd> Partslist 1,2,3 &#8211; More Bill of Materials (-g partslist[1-3])</dd>
+<dt>[bu]</dt>
+<dd> DRC &#8211; Start of a design rule checker (-g drc)</dd>
+<dt>[bu]</dt>
+<dd> DRC2 &#8211; A second design rule checker (-g drc2)</dd>
+<dt>[bu]</dt>
+<dd> gEDA &#8211; native format, mainly used for testing (-g geda)</dd>
+<dt>[bu]</dt>
+<dd> Gossip netlist format (-g gossip)</dd>
+<dt>[bu]</dt>
+<dd> PADS netlist format (-g pads)</dd>
+<dt>[bu]</dt>
+<dd> PCB / PCBboard (-g PCB and -g PCBboard)</dd>
+<dt>[bu]</dt>
+<dd> PCB actions file for forward annotating pin/pad names from schematic to layout (-g pcbpins)</dd>
+<dt>[bu]</dt>
+<dd> gsch2pcb backend (-g gsch2pcb)</dd>
+<dt>[bu]</dt>
+<dd> ProtelII netlist format (-g protelII)</dd>
+<dt>[bu]</dt>
+<dd> Spice compatible netlist format (-g spice)</dd>
+<dt>[bu]</dt>
+<dd> Enhanced spice compatible netlist format (-g spice-sdb)</dd>
+<dt>[bu]</dt>
+<dd> Tango netlist format (-g tango)</dd>
+<dt>[bu]</dt>
+<dd> Verilog code (-g verilog)</dd>
+<dt>[bu]</dt>
+<dd> VHDL code (-g vhdl)</dd>
+<dt>[bu]</dt>
+<dd> VIPEC netlist format (-g vipec)</dd>
+<dt>[bu]</dt>
+<dd> Bartels Autoengineer netlist format (-g bae)</dd>
+<dt>[bu]</dt>
+<dd> GOSSIP system simulation system netlist format (-g gossip)</dd>
+<dt>[bu]</dt>
+<dd> MAXASCII netlist format (-g maxascii)</dd>
+<dt>[bu]</dt>
+<dd> VHDL-AMS netlist format (-g vams)</dd>
+<dt>[bu]</dt>
+<dd> Futurenet2 netlist format (-g futurenet2)</dd>
+<dt>[bu]</dt>
+<dd> SWITCAP switched capacitor simulator netlist format (-g switcap)</dd>
+<dt>[bu]</dt>
+<dd> RF Cascade netlist format (-g cascade)</dd>
+<dt>[bu]</dt>
+<dd> RACAL-REDAC netlist format (-g redac)</dd>
+<dt>[bu]</dt>
+<dd> SystemC netlist backend (-g systemc)</dd>
+<dt>[bu]</dt>
+<dd> Calay format netlist backend (-g calay)</dd>
+<dt>[bu]</dt>
+<dd> Osmond format netlist backend (-g osmond)</dd>
+<dt>[bu]</dt>
+<dd> Eagle netlist format (-g eagle)</dd>
+<dt>[bu]</dt>
+<dd> Netlister for symbolic circuit analysis using Mathematica (-g mathematica)</dd>
+<dt>[bu]</dt>
+<dd> LiquidPCB format netlist backend (-g liquidpcb) </dd>
 <p> For more info on these formats please look at the README.* </p>
 <p> Please read the official documentation on how to use gnetlist, since this man page just describes the command line arguments and a few examples on how to run gnetlist. </p>
 </dl>
 <h2>OPTIONS</h2>
 <p> <i>gnelist</i> accepts the following options:</p>
 <dl>
-<dt><code>-q</code></p>
-<dd> Quiet mode on. This mode turns off all warnings/notes/messages. (optional)</p>
-<dt><code>-v </code></p>
-<dd> Verbose mode on. This mode gives as much feedback to the user as possible. (optional)</p>
-<dt><code>-g guile_procedure</code></p>
-<dd> Specify the guile procedure which is executed to create the netlist. Use &quot;-g help&quot; to display a list of available backends.</p>
-<dt><code>-o output_filename</code></p>
-<dd> Specify the filename which will contain the netlist generated by gnetlist. If this option is not specified the default filename is &quot;output.net&quot;.</p>
-<dt><code>-l scheme_file</code></p>
-<dd> Specify a filename which contains scheme code to be loaded and execute before any backend is loaded or any guile procedure (using -g flag) is executed. This flag can be specified multiple times and can be used to pass information to backends.</p>
-<dt><code>-e, &#8211;embed </code></p>
-<dd> Force embedding contents of .include file when using the spice-sdb backend.</p>
-<dt><code>-O string</code></p>
-<dd> Pass the given option to the specified backend.</p>
-<dt><code>-m scheme_file</code></p>
-<dd> Specify a filename which contains scheme code to be loaded and execute after the backend is loaded but still before any guile procedure (using -g flag) is executed. This flag can be specified multiple times and can be used to pass information to backends. This flag, for example, allows the user to override variables inside of the backends (such as paths).</p>
-<dt><code>-n, &#8211;nomunge</code></p>
-<dd> Do not autocorrect the refdes attributes. Only applies to the spice-sdb backend.</p>
-<dt><code>-c string</code></p>
-<dd> Pass the specified string to the guile interpreter. This allows you to execute arbitrary guile scripts from the command line. Be sure to surround the string with either single or double quotes to satisfy your shell. The string is execute before any init or netlist backend scheme code is loaded or executed.</p>
-<dt><code>-I, &#8211;include </code></p>
-<dd> Put .INCLUDE &lt;filename&gt; in output file instead of model file&#8217;s contents.</p>
-<dt><code>-h, &#8211;help</code></p>
-<dd> Print out short command line help.</p>
-<dt><code>-i </code></p>
-<dd> Interactive mode. After the schematic is read in and parsed then go into interactive mode. Interactive mode allows the user to execute guile procedures directly.</p>
-<dt><code>-s </code></p>
-<dd> Sort output netlist (for Gnucap)</p>
-<dt>schematic1 [&#8230; schematicN]</p>
-<dd> At least one schematic file must be specified. If multiple schematics are specified then they are sequentially read in and parsed with the assumption that they are all part of the same design. It is important that the schematic(s) follow all the options (ie last). </p>
+<dt><code>-q</code></dt>
+<dd> Quiet mode on. This mode turns off all warnings/notes/messages. (optional)</dd>
+<dt><code>-v </code></dt>
+<dd> Verbose mode on. This mode gives as much feedback to the user as possible. (optional)</dd>
+<dt><code>-g guile_procedure</code></dt>
+<dd> Specify the guile procedure which is executed to create the netlist. Use &quot;-g help&quot; to display a list of available backends.</dd>
+<dt><code>-o output_filename</code></dt>
+<dd> Specify the filename which will contain the netlist generated by gnetlist. If this option is not specified the default filename is &quot;output.net&quot;.</dd>
+<dt><code>-l scheme_file</code></dt>
+<dd> Specify a filename which contains scheme code to be loaded and execute before any backend is loaded or any guile procedure (using -g flag) is executed. This flag can be specified multiple times and can be used to pass information to backends.</dd>
+<dt><code>-e, &#8211;embed </code></dt>
+<dd> Force embedding contents of .include file when using the spice-sdb backend.</dd>
+<dt><code>-O string</code></dt>
+<dd> Pass the given option to the specified backend.</dd>
+<dt><code>-m scheme_file</code></dt>
+<dd> Specify a filename which contains scheme code to be loaded and execute after the backend is loaded but still before any guile procedure (using -g flag) is executed. This flag can be specified multiple times and can be used to pass information to backends. This flag, for example, allows the user to override variables inside of the backends (such as paths).</dd>
+<dt><code>-n, &#8211;nomunge</code></dt>
+<dd> Do not autocorrect the refdes attributes. Only applies to the spice-sdb backend.</dd>
+<dt><code>-c string</code></dt>
+<dd> Pass the specified string to the guile interpreter. This allows you to execute arbitrary guile scripts from the command line. Be sure to surround the string with either single or double quotes to satisfy your shell. The string is execute before any init or netlist backend scheme code is loaded or executed.</dd>
+<dt><code>-I, &#8211;include </code></dt>
+<dd> Put .INCLUDE &lt;filename&gt; in output file instead of model file&#8217;s contents.</dd>
+<dt><code>-h, &#8211;help</code></dt>
+<dd> Print out short command line help.</dd>
+<dt><code>-i </code></dt>
+<dd> Interactive mode. After the schematic is read in and parsed then go into interactive mode. Interactive mode allows the user to execute guile procedures directly.</dd>
+<dt><code>-s </code></dt>
+<dd> Sort output netlist (for Gnucap)</dd>
+<dt>schematic1 [&#8230; schematicN]</dt>
+<dd> At least one schematic file must be specified. If multiple schematics are specified then they are sequentially read in and parsed with the assumption that they are all part of the same design. It is important that the schematic(s) follow all the options (ie last). </dd>
 </dl>
 <h2>EXAMPLES</h2>
 <p> These examples assume that you have a stack_1.sch in the current directory. </p>
@@ -142,8 +142,8 @@ with the -v flag:
 <h2>ENVIRONMENT</h2>
 <p> <i>gnetlist</i> respects the following environment variable: </p>
 <dl>
-<dt><code>GEDADATA </code></p>
-<dd> Specifies where the various required scheme and rc files are located (the default is ${prefix}/share/gEDA). This environment variables does not need to be set by the end user unless they are moving the executables to a new install ${prefix}. </p>
+<dt><code>GEDADATA </code></dt>
+<dd> Specifies where the various required scheme and rc files are located (the default is ${prefix}/share/gEDA). This environment variables does not need to be set by the end user unless they are moving the executables to a new install ${prefix}. </dd>
 </dl>
 <h2>AUTHOR</h2>
 <p> Ales Hvezda and many others </p>

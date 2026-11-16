@@ -18,18 +18,18 @@ description: "chpr2.f –"
 <p> <code>CHPR2</code> <code>Purpose: </code></p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
  CHPR2  performs the hermitian rank 2 operation
     A := alpha*x*y**H + conjg( alpha )*y*x**H + A,
  where alpha is a scalar, x and y are n element vectors and A is an
  n by n hermitian matrix, supplied in packed form.
 </pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>UPLO</i> </p>
+</dt><dd> <i>UPLO</i> </dd>
 <pre>
           UPLO is CHARACTER*1
            On entry, UPLO specifies whether the upper or lower
@@ -103,18 +103,18 @@ description: "chpr2.f –"
 <p> <code>Author:</code></p>
 <dl>
 <dt>
-<dd> Univ. of Tennessee </p>
+</dt><dd> Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl>
 <dt>
-<dd> November 2011</dl>
+</dt><dd> November 2011</dd></dl>
 <p> <code>Further Details: </code></p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
   Level 2 Blas routine.
   -- Written on 22-October-1986.
@@ -123,8 +123,9 @@ description: "chpr2.f –"
      Sven Hammarling, Nag Central Office.
      Richard Hanson, Sandia National Labs.
 </pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> Definition at line 146 of file chpr2.f.</p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for LAPACK from the source code. </p>
 <h2>Index</h2>
+</p>

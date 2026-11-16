@@ -16,7 +16,7 @@ description: "SPI_finish – disconnect a procedure from the SPI manager"
 <h2>Return Value</h2>
 <p>SPI_OK_FINISH</p>
 <dl COMPACT>
-<dd>if properly disconnected</dl>
+<dd>if properly disconnected</dd></dl>
 <p> SPI_ERROR_UNCONNECTED</p>
 <dl COMPACT>
-<dd>if called from an unconnected procedure</dl>
+<dd>if called from an unconnected procedure</dd></dl>

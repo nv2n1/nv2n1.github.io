@@ -15,21 +15,21 @@ description: "fig2sxd – utility to convert .fig to .sxd"
 <p> The program tries to convert the given file in xfig format into a sxd file for OpenOffice.org Draw. If figfile ends with <code>.fig</code> or <code>.xfig</code> and sxdfile is omitted, the output file will be named like figfile ending with <code>.sxd</code> instead of <code>.(x)fig</code>. Using <code>&#8211;</code> for <i>figfile</i> makes the program read from stdin so that it is possible to use</p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <p> pstoedit -f fig <i>file.ps</i> &#8211; | fig2sxd &#8211; <i>file.sxd</i> </p>
-</dl>
+</dd></dl>
 <p> to convert ps files. (For files with many objects you might want to use something like</p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <p> pstoedit -f <code>&#8216;fig:-startdepth 9999&#8217;</code> <i>file.ps</i> &#8211; | fig2sxd &#8211; <i>file.sxd</i> </p>
-</dl>
+</dd></dl>
 <p> to get more layers; the output of pstoedit then is no longer a valid xfig file, but it makes the z ordering of the objects in OpenOffice.org Draw stay correct.) Using <code>&#8211;</code> for <i>sxdfile</i> makes the program write to stdout. With the <code>-linewidth1</code> (or <code>-lw1</code>) option, the width of lines with thickness 1 in xfig can be set, unit is 1 cm. Using 0 here gives fine lines. Example:</p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <p> pstoedit -f <code>&#8216;fig:-startdepth 9999&#8217;</code> <i>file.ps</i> &#8211; | fig2sxd -lw1 0 &#8211; <i>file.sxd</i> </p>
-</dl>
+</dd></dl>
 <p> With the <code>-w</code> option, out-of-specification values are only warnings but will be sanitized.</p>
 <h2>DEFICIENCIES</h2>
 <p> Not all of the .fig objects are converted correctly: splines look quite similar, but are not exactly the same; text placement might be a little bit wrong, especially for very small font sizes; hatches look different in many cases; hollow arrows are not supported and replaced by their filled counterparts. There are various other things that could be improved. </p>

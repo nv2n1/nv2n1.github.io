@@ -10,7 +10,6 @@ description: "setlocale – set the current locale"
 <p>setlocale &#8211; set the current locale</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;locale.h&gt;
-
 char *setlocale(int category, const char *locale);</code></pre>
 <h2>Description</h2>
 <p>The <code>setlocale</code>() function is used to set or query the program&#8217;s current locale. </p>

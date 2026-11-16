@@ -15,28 +15,28 @@ description: "snap2tzx – Convert ZX Spectrum snapshot to .tzx tape images"
 <p> snap2tzx converts a ZX Spectrum snapshot into a .tzx tape image.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt>-1 <i>string</i></p>
-<dd> causes <i>string</i> (which has a maximum of 32 characters) to be shown while loading.</p>
-<dt>-2 <i>string</i></p>
-<dd> causes <i>string</i> (maximum 32 characters) to also be shown while loading.</p>
-<dt>-b <i>colour</i></p>
-<dd> specifies the border colour while loading.</p>
-<dt>-g <i>string</i></p>
-<dd> causes <i>string</i> (maximum 32 characters) to be used as the game name while loading.</p>
-<dt>-l <i>string</i></p>
-<dd> causes <i>string</i> (maximum 8 characters) to be used as the BASIC filename in the loader.</p>
-<dt>-o <i>filename</i></p>
-<dd> causes the output to be sent to <i>filename</i>.</p>
-<dt>-r</p>
-<dd> causes the final line of attribute data in the loading screen to be bright.</p>
-<dt>-s <i>speed</i></p>
-<dd> specifies the speed of the loader; available values for <i>speed</i> are 0 (1500 bps), 1 (2250 bps), 2 (3000 bps) and 3 (6000 bps).</p>
-<dt>-v</p>
-<dd> specifies verbose output.</p>
-<dt>-$ <i>filename</i></p>
-<dd> specifies that the ZX Spectrum screen stored in <i>filename</i> should be used as the loading screen.</p>
-<dt><i>snapshot</i></p>
-<dd> specifies the snapshot (in a format supported by <i><a href="/docs/linux/man/3-libspectrum/">libspectrum</a></i>(3)) to be converted.</dl>
+<dt>-1 <i>string</i></dt>
+<dd> causes <i>string</i> (which has a maximum of 32 characters) to be shown while loading.</dd>
+<dt>-2 <i>string</i></dt>
+<dd> causes <i>string</i> (maximum 32 characters) to also be shown while loading.</dd>
+<dt>-b <i>colour</i></dt>
+<dd> specifies the border colour while loading.</dd>
+<dt>-g <i>string</i></dt>
+<dd> causes <i>string</i> (maximum 32 characters) to be used as the game name while loading.</dd>
+<dt>-l <i>string</i></dt>
+<dd> causes <i>string</i> (maximum 8 characters) to be used as the BASIC filename in the loader.</dd>
+<dt>-o <i>filename</i></dt>
+<dd> causes the output to be sent to <i>filename</i>.</dd>
+<dt>-r</dt>
+<dd> causes the final line of attribute data in the loading screen to be bright.</dd>
+<dt>-s <i>speed</i></dt>
+<dd> specifies the speed of the loader; available values for <i>speed</i> are 0 (1500 bps), 1 (2250 bps), 2 (3000 bps) and 3 (6000 bps).</dd>
+<dt>-v</dt>
+<dd> specifies verbose output.</dd>
+<dt>-$ <i>filename</i></dt>
+<dd> specifies that the ZX Spectrum screen stored in <i>filename</i> should be used as the loading screen.</dd>
+<dt><i>snapshot</i></dt>
+<dd> specifies the snapshot (in a format supported by <i><a href="/docs/linux/man/3-libspectrum/">libspectrum</a></i>(3)) to be converted.</dd></dl>
 <p> In any <i>string</i> parameter, the tilde (~) will be converted into a copyright symbol.</p>
 <h2>BUGS</h2>
 <p> None known.</p>

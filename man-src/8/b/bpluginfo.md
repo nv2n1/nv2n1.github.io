@@ -15,25 +15,25 @@ description: "bpluginfo – Bacula Plugin information utility"
 <h2>Options</h2>
 <p>A summary of options is included below.</p>
 <dl>
-<dt><code>-h</code></p>
-<dd>Show usage of the program.</p>
-<dt><code>-v</code></p>
-<dd>Verbose information printing all available data from the plugin, including plugin header and implemented API.</p>
-<dt><code>-i</code></p>
-<dd>Display short information from plugin header only. This is a default option. Option incompatible with <code>-f</code> option.</p>
-<dt><code>-f</code></p>
-<dd>Display information about implemented API functions.</p>
-<dt><code>-a&nbsp;<wbr>&lt;api&gt;</code></p>
-<dd>You can supply the plugin initialization function with a particular Bacula API number. Without this option a default API number is &#8216;1&#8217;. Option require a numeric argument.</dl>
+<dt><code>-h</code></dt>
+<dd>Show usage of the program.</dd>
+<dt><code>-v</code></dt>
+<dd>Verbose information printing all available data from the plugin, including plugin header and implemented API.</dd>
+<dt><code>-i</code></dt>
+<dd>Display short information from plugin header only. This is a default option. Option incompatible with <code>-f</code> option.</dd>
+<dt><code>-f</code></dt>
+<dd>Display information about implemented API functions.</dd>
+<dt><code>-a&nbsp;<wbr>&lt;api&gt;</code></dt>
+<dd>You can supply the plugin initialization function with a particular Bacula API number. Without this option a default API number is &#8216;1&#8217;. Option require a numeric argument.</dd></dl>
 <h2>Return Code</h2>
 <p><code>bpluginfo</code> returns 0 on success, and non-zero on error.</p>
 <dl>
-<dt>You can check return code to find what was a cause of the error.</p>
+<dt>You can check return code to find what was a cause of the error.</dt>
 <dd>&nbsp;<wbr>*&nbsp;<wbr>0 &#8211; success<br />
 &nbsp;<wbr>*&nbsp;<wbr>1 &#8211; cannot load a plugin<br />
 &nbsp;<wbr>*&nbsp;<wbr>2 &#8211; cannot find a loadPlugin function<br />
 &nbsp;<wbr>*&nbsp;<wbr>3 &#8211; cannot find an unloadPlugin function<br />
-&nbsp;<wbr>*&nbsp;<wbr>10 &#8211; not enough memory</dl>
+&nbsp;<wbr>*&nbsp;<wbr>10 &#8211; not enough memory</dd></dl>
 <h2>Example Usage</h2>
 <p>This is an example of bplufinfo usage with verbose option (-v) and default plugin. </p>
 <dl>
@@ -61,7 +61,7 @@ Plugin functions:
  createFile()
  setFileAttributes()
 </code></pre>
-</dl>
+</dd></dl>
 <h2>Author</h2>
 <p>Written by Radoslaw Korzeniewski (c) Inteos Sp. z o.o.</p>
 <h2>Bugs</h2>

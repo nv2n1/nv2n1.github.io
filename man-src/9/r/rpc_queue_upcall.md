@@ -14,10 +14,10 @@ description: "rpc_queue_upcall – queue an upcall message to userspace"
 <p><i>pipe</i></p>
 <dl>
 <dd>
-<dd>upcall pipe on which to queue given message</dl>
+</dd><dd>upcall pipe on which to queue given message</dd></dl>
 <p> <i>msg</i></p>
 <dl>
-<dd>message to queue</dl>
+<dd>message to queue</dd></dl>
 <h2>Description</h2>
 <p>Call with an <i>inode</i> created by <code>rpc_mkpipe</code> to queue an upcall. A userspace process may then later read the upcall by performing a read on an open file for this inode. It is up to the caller to initialize the fields of <i>msg</i> (other than <i>msg</i>-&gt;list) appropriately.</p>
 <h2>Copyright</h2>

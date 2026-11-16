@@ -15,15 +15,15 @@ phy_read_mmd_indirect - reads data from the MMD registers
 <h2>Arguments</h2>
 
 <i>phydev</i>
-<dl><dd><dd>The PHY device bus</dl>
+<dl><dd></dd><dd>The PHY device bus</dd></dl>
  
 
  <i>prtad</i>
-<dl><dd>MMD Address</dl>
+<dl><dd>MMD Address</dd></dl>
  
 
  <i>devad</i>
-<dl><dd>MMD DEVAD</dl>
+<dl><dd>MMD DEVAD</dd></dl>
 
 <h2>Description</h2>
 

@@ -40,7 +40,7 @@ description: "estcmd – command line interface of the core API"
 <h2>DESCRIPTION</h2>
 <p> <code>estcmd</code> is an aggregation of sub commands. The name of a sub command is specified by the first argument. Other arguments are parsed according to each sub command. The argument <i>db</i> specifies the path of an index.</p>
 <dl>
-<dt><code>estcmd create [-tr] [-apn|-acc] [-xs|-xl|-xh|-xh2|-xh3] [-sv|-si|-sa] [-attr name type] db</code></p>
+<dt><code>estcmd create [-tr] [-apn|-acc] [-xs|-xl|-xh|-xh2|-xh3] [-sv|-si|-sa] [-attr name type] db</code></dt>
 <dd> Create an index.<br />
  If <code>-tr</code> is specified, a new index is created regardless if one exists.<br />
  If <code>-apn</code> is specified, N-gram analysis is performed against European text also.<br />
@@ -53,8 +53,8 @@ description: "estcmd – command line interface of the core API"
  If <code>-sv</code> is specified, scores are stored as void.<br />
  If <code>-si</code> is specified, scores are stored as 32-bit integer.<br />
  If <code>-sa</code> is specified, scores are stored as-is and marked not to be tuned when search.<br />
- <code>-attr</code> specifies an attribute index and its data type. This option can be specified multiple times.</p>
-<dt><code>estcmd put [-tr] [-cl] [-apn|-acc] [-xs|-xl|-xh|-xh2|-xh3] [-sv|-si|-sa] db [file]</code></p>
+ <code>-attr</code> specifies an attribute index and its data type. This option can be specified multiple times.</dd>
+<dt><code>estcmd put [-tr] [-cl] [-apn|-acc] [-xs|-xl|-xh|-xh2|-xh3] [-sv|-si|-sa] db [file]</code></dt>
 <dd> Register a document of document draft to an index.<br />
  <i>file</i> specifies a target file. If it is omitted, the standard input is read.<br />
  If <code>-tr</code> is specified, a new index is created regardless if one exists.<br />
@@ -69,59 +69,59 @@ description: "estcmd – command line interface of the core API"
  If <code>-xh3</code> is specified, the index is tuned to register more than 10000000 documents.<br />
  If <code>-sv</code> is specified, scores are stored as void.<br />
  If <code>-si</code> is specified, scores are stored as 32-bit integer.<br />
- If <code>-sa</code> is specified, scores are stored as-is and marked not to be tuned when search.</p>
-<dt><code>estcmd out [-pc enc] [-cl] db expr</code></p>
+ If <code>-sa</code> is specified, scores are stored as-is and marked not to be tuned when search.</dd>
+<dt><code>estcmd out [-pc enc] [-cl] db expr</code></dt>
 <dd> Remove information of a document from an index.<br />
  <i>expr</i> specifies the ID number, the URI, or the local path of a document.<br />
  If <code>-cl</code> is specified, regions of the document are cleaned up.<br />
- <code>-pc</code> specifies the encoding of file paths. By default, it is ISO-8859-1.</p>
-<dt><code>estcmd edit [-pc enc] db expr name [value]</code></p>
+ <code>-pc</code> specifies the encoding of file paths. By default, it is ISO-8859-1.</dd>
+<dt><code>estcmd edit [-pc enc] db expr name [value]</code></dt>
 <dd> Edit an attribute of a document in an index.<br />
  <i>expr</i> specifies the ID number, the URI, or the local path of a document.<br />
  <i>name</i> specifies the name of an attribute.<br />
  <i>value</i> specifies the value of the attribute. If it is omitted, the attribute is removed.<br />
- <code>-pc</code> specifies the encoding of the file path and the attribute value. By default, it is ISO-8859-1.</p>
-<dt><code>estcmd get [-nl|-nb] [-pidx path] [-pc enc] db expr [attr]</code></p>
+ <code>-pc</code> specifies the encoding of the file path and the attribute value. By default, it is ISO-8859-1.</dd>
+<dt><code>estcmd get [-nl|-nb] [-pidx path] [-pc enc] db expr [attr]</code></dt>
 <dd> Output document draft of a document in an index.<br />
  <i>expr</i> specifies the ID number, the URI, or the local path of a document.<br />
  If <i>attr</i> is specified, only the value of the attribute is output.<br />
  If <code>-nl</code> is specified, the index is opened without file locking.<br />
  If <code>-nb</code> is specified, file locking is performed without blocking.<br />
  <code>-pidx</code> specifies the path of a pseudo index. This option can be specified multiple times.<br />
- <code>-pc</code> specifies the encoding of file paths. By default, it is ISO-8859-1.</p>
-<dt><code>estcmd list [-nl|-nb] [-lp] db</code></p>
+ <code>-pc</code> specifies the encoding of file paths. By default, it is ISO-8859-1.</dd>
+<dt><code>estcmd list [-nl|-nb] [-lp] db</code></dt>
 <dd> Output a list of all document in an index.<br />
  If <code>-nl</code> is specified, the index is opened without file locking.<br />
  If <code>-nb</code> is specified, file locking is performed without blocking.<br />
- If <code>-lp</code> is specified, local path equivalent to URL of &quot;file://&quot; is output.</p>
-<dt><code>estcmd uriid [-nl|-nb] [-pidx path] [-pc enc] db expr</code></p>
+ If <code>-lp</code> is specified, local path equivalent to URL of &quot;file://&quot; is output.</dd>
+<dt><code>estcmd uriid [-nl|-nb] [-pidx path] [-pc enc] db expr</code></dt>
 <dd> Output the ID number of a document specified by URI.<br />
  <i>expr</i> specifies the URI or the local path of a document.<br />
  If <code>-nl</code> is specified, the index is opened without file locking.<br />
  If <code>-nb</code> is specified, file locking is performed without blocking.<br />
  <code>-pidx</code> specifies the path of a pseudo index. This option can be specified multiple times.<br />
- <code>-pc</code> specifies the encoding of file paths. By default, it is ISO-8859-1.</p>
-<dt><code>estcmd meta db [name [value]]</code></p>
+ <code>-pc</code> specifies the encoding of file paths. By default, it is ISO-8859-1.</dd>
+<dt><code>estcmd meta db [name [value]]</code></dt>
 <dd> Handle meta data.<br />
  <i>name</i> specifies the name of a piece of meta data. If it is omitted, a list of all names is output.<br />
- <i>value</i> specifies the value of the meta data to be recorded. If it is omitted, the current value is output. If it is an empty string, the meta data is removed.</p>
-<dt><code>estcmd inform [-nl|-nb] db</code></p>
+ <i>value</i> specifies the value of the meta data to be recorded. If it is omitted, the current value is output. If it is an empty string, the meta data is removed.</dd>
+<dt><code>estcmd inform [-nl|-nb] db</code></dt>
 <dd> Output the number of documents and the number of unique words in an index.<br />
  If <code>-nl</code> is specified, the index is opened without file locking.<br />
- If <code>-nb</code> is specified, file locking is performed without blocking.</p>
-<dt><code>estcmd optimize [-onp] [-ond] db</code></p>
+ If <code>-nb</code> is specified, file locking is performed without blocking.</dd>
+<dt><code>estcmd optimize [-onp] [-ond] db</code></dt>
 <dd> Optimize an index and clean up dispensable regions.<br />
  If <code>-onp</code> is specified, it is omitted to clean up dispensable regions.<br />
- If <code>-ond</code> is specified, it is omitted to optimize the database files.</p>
-<dt><code>estcmd merge [-cl] db target</code></p>
+ If <code>-ond</code> is specified, it is omitted to optimize the database files.</dd>
+<dt><code>estcmd merge [-cl] db target</code></dt>
 <dd> Merge another index.<br />
  <i>target</i> specifies the path of another index.<br />
- If <code>-cl</code> is specified, regions of overwritten documents are cleaned up.</p>
-<dt><code>estcmd repair [-rst|-rsh] db</code></p>
+ If <code>-cl</code> is specified, regions of overwritten documents are cleaned up.</dd>
+<dt><code>estcmd repair [-rst|-rsh] db</code></dt>
 <dd> Repair a broken index.<br />
  If <code>-rst</code> is specified, strict consistency check is performed.<br />
- If <code>-rsh</code> is specified, consistency check is omitted.</p>
-<dt><code>estcmd search [-nl|-nb] [-pidx path] [-ic enc] [-vu|-va|-vf|-vs|-vh|-vx|-dd] [-sn wnum hnum anum] [-kn num] [-um] [-ec rn] [-gs|-gf|-ga] [-cd] [-ni] [-sf|-sfr|-sfu|-sfi] [-hs] [-attr expr] [-ord expr] [-max num] [-sk num] [-aux num] [-dis name] [-sim id] db [phrase]</code></p>
+ If <code>-rsh</code> is specified, consistency check is omitted.</dd>
+<dt><code>estcmd search [-nl|-nb] [-pidx path] [-ic enc] [-vu|-va|-vf|-vs|-vh|-vx|-dd] [-sn wnum hnum anum] [-kn num] [-um] [-ec rn] [-gs|-gf|-ga] [-cd] [-ni] [-sf|-sfr|-sfu|-sfi] [-hs] [-attr expr] [-ord expr] [-max num] [-sk num] [-aux num] [-dis name] [-sim id] db [phrase]</code></dt>
 <dd> Search an index for documents.<br />
  <i>phrase</i> specifies the search phrase.<br />
  If <code>-nl</code> is specified, the index is opened without file locking.<br />
@@ -155,8 +155,8 @@ description: "estcmd – command line interface of the core API"
  <code>-sk</code> specifies the number of documents to be skipped. By default, it is 0.<br />
  <code>-aux</code> specifies permission to adopt result of the auxiliary index. If it is not more than 0, the auxiliary index is not used. By default, it is 32.<br />
  <code>-dis</code> specifies the name of the distinct attribute.<br />
- <code>-sim</code> specifies the ID number of the seed document for similarity search.</p>
-<dt><code>estcmd gather [-tr] [-cl] [-ws] [-no] [-fe|-ft|-fh|-fm] [-fx sufs cmd] [-fz] [-fo] [-rm sufs] [-ic enc] [-il lang] [-bc] [-lt num] [-lf num] [-pc enc] [-px name] [-aa name value] [-apn|-acc] [-xs|-xl|-xh|-xh2|-xh3] [-sv|-si|-sa] [-ss name] [-sd] [-cm] [-cs num] [-ncm] [-kn num] [-um] db [file|dir]</code></p>
+ <code>-sim</code> specifies the ID number of the seed document for similarity search.</dd>
+<dt><code>estcmd gather [-tr] [-cl] [-ws] [-no] [-fe|-ft|-fh|-fm] [-fx sufs cmd] [-fz] [-fo] [-rm sufs] [-ic enc] [-il lang] [-bc] [-lt num] [-lf num] [-pc enc] [-px name] [-aa name value] [-apn|-acc] [-xs|-xl|-xh|-xh2|-xh3] [-sv|-si|-sa] [-ss name] [-sd] [-cm] [-cs num] [-ncm] [-kn num] [-um] db [file|dir]</code></dt>
 <dd> Scan the local file system and register documents into an index.<br />
  If the third argument is the name of a file, a list of paths of target documents are read from it. If it is &quot;-&quot;, the standard input is specified.<br />
  If the third argument is the name of a directory. All files under the directory are treated as target documents.<br />
@@ -196,16 +196,16 @@ description: "estcmd – command line interface of the core API"
  <code>-cs</code> specifies the size of cache memory by mega bytes. By default, it is 64MB.<br />
  If <code>-ncm</code> is specified, checking availability of the virtual memory is omitted.<br />
  <code>-kn</code> specifies the number of keywords to be extracted. By default, keyword extraction is not performed.<br />
- If <code>-um</code> is specified, morphological analyzers are used for keyword extraction.</p>
-<dt><code>estcmd purge [-cl] [-no] [-fc] [-pc enc] [-attr expr] db [prefix]</code></p>
+ If <code>-um</code> is specified, morphological analyzers are used for keyword extraction.</dd>
+<dt><code>estcmd purge [-cl] [-no] [-fc] [-pc enc] [-attr expr] db [prefix]</code></dt>
 <dd> Purge information of documents which do not exist on the file system.<br />
  If <i>prefix</i> is specified, only documents whose URIs are begins with it. It can be specified by the local path of a directory.<br />
  If <code>-cl</code> is specified, regions of the deleted documents are cleaned up.<br />
  If <code>-no</code> is specified, operations are printed but not executed actually.<br />
  If <code>-fc</code> is specified, information of all target documents are deleted.<br />
  <code>-pc</code> specifies the encoding of file paths. By default, it is ISO-8859-1.<br />
- <code>-attr</code> specifies an attribute search condition. This option can be specified multiple times.</p>
-<dt><code>estcmd extkeys [-no] [-fc] [-dfdb file] [-ncm] [-ni] [-kn num] [-um] [-attr expr] db [prefix]</code></p>
+ <code>-attr</code> specifies an attribute search condition. This option can be specified multiple times.</dd>
+<dt><code>estcmd extkeys [-no] [-fc] [-dfdb file] [-ncm] [-ni] [-kn num] [-um] [-attr expr] db [prefix]</code></dt>
 <dd> Create a database of keywords extracted from documents.<br />
  If <i>prefix</i> is specified, only documents whose URIs are begins with it.<br />
  If <code>-no</code> is specified, operations are printed but not executed actually.<br />
@@ -215,34 +215,34 @@ description: "estcmd – command line interface of the core API"
  If <code>-ni</code> is specified, TF-IDF tuning is omitted.<br />
  <code>-kn</code> specifies the number of keywords to be extracted. By default, it is 32.<br />
  If <code>-um</code> is specified, morphological analyzers are used for keyword extraction.<br />
- <code>-attr</code> specifies an attribute search condition. This option can be specified multiple times.</p>
-<dt><code>estcmd words [-nl|-nb] [-dfdb file] [-kw|-kt] db</code></p>
+ <code>-attr</code> specifies an attribute search condition. This option can be specified multiple times.</dd>
+<dt><code>estcmd words [-nl|-nb] [-dfdb file] [-kw|-kt] db</code></dt>
 <dd> Output a list of all unique words and each record size which is treated as docuemnt frequency.<br />
  If <code>-nl</code> is specified, the index is opened without file locking.<br />
  If <code>-nb</code> is specified, file locking is performed without blocking.<br />
  <code>-dfdb</code> specifies an outer database where the result is stored. By default, the result is output to the standard output as TSV. If the outer database already exists, the value of each record is incremented.<br />
  If <code>-kw</code> is specified, keywords and numbers of corresponding documents are output.<br />
- If <code>-kt</code> is specified, keywords and their related terms are output.</p>
-<dt><code>estcmd draft [-ft|-fh|-fm] [-ic enc] [-il lang] [-bc] [-lt num] [-kn num] [-um] [file]</code></p>
-<dd> For test and debug.</p>
-<dt><code>estcmd break [-ic enc] [-il lang] [-apn|-acc] [-wt] [file]</code></p>
-<dd> For test and debug.</p>
-<dt><code>estcmd iconv [-ic enc] [-il lang] [-oc enc] [file]</code></p>
-<dd> For test and debug.</p>
-<dt><code>estcmd regex [-inv] [-repl str] expr [file]</code></p>
-<dd> For test and debug.</p>
-<dt><code>estcmd scandir [-tf|-td] [-pa|-pu] [dir]</code></p>
-<dd> For test and debug.</p>
-<dt><code>estcmd multi [-db db] [-nl|-nb] [-ic enc] [-gs|-gf|-ga] [-cd] [-ni] [-sf|-sfr|-sfu|-sfi] [-hs] [-hu] [-attr expr] [-ord expr] [-max num] [-sk num] [-aux num] [-dis name] [phrase]</code></p>
-<dd> For test and debug.</p>
-<dt><code>estcmd randput [-ren|-rla|-reu|-ror|-rjp|-rch] [-cs num] db dnum</code></p>
-<dd> For test and debug.</p>
-<dt><code>estcmd wicked db dnum</code></p>
-<dd> For test and debug.</p>
-<dt><code>estcmd regression db</code></p>
-<dd> For test and debug.</p>
-<dt><code>estcmd version</code></p>
-<dd> Show the version information.</dl>
+ If <code>-kt</code> is specified, keywords and their related terms are output.</dd>
+<dt><code>estcmd draft [-ft|-fh|-fm] [-ic enc] [-il lang] [-bc] [-lt num] [-kn num] [-um] [file]</code></dt>
+<dd> For test and debug.</dd>
+<dt><code>estcmd break [-ic enc] [-il lang] [-apn|-acc] [-wt] [file]</code></dt>
+<dd> For test and debug.</dd>
+<dt><code>estcmd iconv [-ic enc] [-il lang] [-oc enc] [file]</code></dt>
+<dd> For test and debug.</dd>
+<dt><code>estcmd regex [-inv] [-repl str] expr [file]</code></dt>
+<dd> For test and debug.</dd>
+<dt><code>estcmd scandir [-tf|-td] [-pa|-pu] [dir]</code></dt>
+<dd> For test and debug.</dd>
+<dt><code>estcmd multi [-db db] [-nl|-nb] [-ic enc] [-gs|-gf|-ga] [-cd] [-ni] [-sf|-sfr|-sfu|-sfi] [-hs] [-hu] [-attr expr] [-ord expr] [-max num] [-sk num] [-aux num] [-dis name] [phrase]</code></dt>
+<dd> For test and debug.</dd>
+<dt><code>estcmd randput [-ren|-rla|-reu|-ror|-rjp|-rch] [-cs num] db dnum</code></dt>
+<dd> For test and debug.</dd>
+<dt><code>estcmd wicked db dnum</code></dt>
+<dd> For test and debug.</dd>
+<dt><code>estcmd regression db</code></dt>
+<dd> For test and debug.</dd>
+<dt><code>estcmd version</code></dt>
+<dd> Show the version information.</dd></dl>
 <p> All sub commands return 0 if the operation is success, else return 1. As for put, out, gather, purge, randput, wicked, and regression, they finish with closing the database when they catch the signal 1 (SIGHUP), 2 (SIGINT), 3 (SIGQUIT), 13 (SIGPIPE), or 15 (SIGTERM). </p>
 <p> The data type of attribute indexes specified by <code>-attr</code> option of <code>create</code> sub command should be &quot;seq&quot; for sequencial type, &quot;str&quot; for string type, or &quot;num&quot; for number type. </p>
 <p> Each pseudo index specified by <code>-pidx</code> option of <code>search</code> sub command and so on is a directory containing files of document draft. If you search a main index with pseudo indexes, meta search of the main index and pseudo indexes is performed. </p>

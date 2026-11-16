@@ -20,11 +20,11 @@ description: "started – event signalling that a job is running"
 <dd>
 <pre>start on started apache
 stop on stopping apache</pre>
-</dl>
+</dd></dl>
 <p> A task that must be run after another task or service has been started might use: </p>
 <dl>
 <dd>
 <pre>start on started postgresql</pre>
-</dl>
+</dd></dl>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/7-starting/">starting</a></code>(7) <code><a href="/docs/linux/man/7-stopping/">stopping</a></code>(7) <code><a href="/docs/linux/man/7-stopped/">stopped</a></code>(7) <code><a href="/docs/linux/man/5-init/">init</a></code>(5) </p>

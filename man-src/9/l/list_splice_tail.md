@@ -15,11 +15,11 @@ list_splice_tail - join two lists, each list being a queue
 <h2>Arguments</h2>
 
 <i>list</i>
-<dl><dd><dd>the new list to add.</dl>
+<dl><dd></dd><dd>the new list to add.</dd></dl>
  
 
  <i>head</i>
-<dl><dd>the place to add it in the first list.</dl>
+<dl><dd>the place to add it in the first list.</dd></dl>
 
 <h2>Copyright</h2>
 

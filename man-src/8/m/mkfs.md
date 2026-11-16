@@ -18,19 +18,19 @@ description: "mkfs – build a Linux filesystem"
 <h2>Options</h2>
 <p><code>-t</code>, <code>&#8211;type</code> <i>type</i></p>
 <dl>
-<dd>Specify the <i>type</i> of filesystem to be built. If not specified, the default filesystem type (currently ext2) is used.</dl>
+<dd>Specify the <i>type</i> of filesystem to be built. If not specified, the default filesystem type (currently ext2) is used.</dd></dl>
 <p> <i>fs-options</i></p>
 <dl>
-<dd>Filesystem-specific options to be passed to the real filesystem builder.</dl>
+<dd>Filesystem-specific options to be passed to the real filesystem builder.</dd></dl>
 <p> <code>-V</code>, <code>&#8211;verbose</code></p>
 <dl>
-<dd>Produce verbose output, including all filesystem-specific commands that are executed. Specifying this option more than once inhibits execution of any filesystem-specific commands. This is really only useful for testing.</dl>
+<dd>Produce verbose output, including all filesystem-specific commands that are executed. Specifying this option more than once inhibits execution of any filesystem-specific commands. This is really only useful for testing.</dd></dl>
 <p> <code>-V</code>, <code>&#8211;version</code></p>
 <dl>
-<dd>Display version information and exit. (Option <code>-V</code> will display version information only when it is the only parameter, otherwise it will work as <code>&#8211;verbose</code>.)</dl>
+<dd>Display version information and exit. (Option <code>-V</code> will display version information only when it is the only parameter, otherwise it will work as <code>&#8211;verbose</code>.)</dd></dl>
 <p> <code>-h</code>, <code>&#8211;help</code></p>
 <dl>
-<dd>Display help text and exit.</dl>
+<dd>Display help text and exit.</dd></dl>
 <h2>Bugs</h2>
 <p>All generic options must precede and not be combined with filesystem-specific options. Some filesystem-specific programs do not automatically detect the device size and require the <i>size</i> parameter to be specified.</p>
 <h2>Authors</h2>

@@ -11,7 +11,6 @@ std::streamsize - std::streamsize
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header &lt;ios&gt;
-
 typedef /*unspecified*/ streamsize;</code></pre> 
 The type std::streamsize is a signed integral type used to represent the number of characters transferred in an I/O operation or the size of an I/O buffer. It is used as a signed counterpart of std::size_t, similar to the POSIX type ssize_t. 
 Except in the constructors of std::strstreambuf, negative values of std::streamsize are never used. 

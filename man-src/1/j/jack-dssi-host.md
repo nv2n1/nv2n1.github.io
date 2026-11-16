@@ -17,25 +17,25 @@ description: "jack-dssi-host – a simple JACK host for DSSI plugins"
  As a special case, if <code>jack-dssi-host</code> is started with a name other than `jack-dssi-host&#8217;, and if that name (plus an `.so&#8217; suffix) can be found in the DSSI_PATH search path (see <code>ENVIRONMENT</code> below) as a valid plugin shared library, and if no further command line arguments are given, then the first plugin in that library will be loaded automatically. This provides a convenient way to run a plugin by simply symlinking the plugin&#8217;s basename to jack-dssi-host. </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-v</code></p>
-<dd> Verbose mode.</p>
-<dt><code>-a</code></p>
-<dd> Disable automatic connection of outputs to JACK physical outputs.</p>
-<dt><code>-n</code></p>
-<dd> Disable automatic starting of plugin user interfaces (UIs).</p>
-<dt><code>-p &lt;projdir&gt;</code></p>
-<dd> The project directory to pass to both plugin and UI.</p>
-<dt><code>-c &lt;cname&gt;</code></p>
-<dd> The client name to use for ALSA and JACK.</p>
-<dt><code>-&lt;i&gt;</code></p>
-<dd> Number of instances of the following plugin to run (max 16 total, default 1).</p>
-<dt><code>&lt;libname&gt;</code></p>
-<dd> Name of the DSSI plugin shared library (.so) to load. This may be an absolute path to the library file, or just the filename itself, in which case the DSSI search path is searched (see ENVIRONMENT below).</p>
-<dt><code>&lt;label&gt;</code></p>
-<dd> the label of the plugin to load from the library. If this is omitted, the first plugin in the library is used.</p>
-<dt><code>[&#8230;]</code></p>
+<dt><code>-v</code></dt>
+<dd> Verbose mode.</dd>
+<dt><code>-a</code></dt>
+<dd> Disable automatic connection of outputs to JACK physical outputs.</dd>
+<dt><code>-n</code></dt>
+<dd> Disable automatic starting of plugin user interfaces (UIs).</dd>
+<dt><code>-p &lt;projdir&gt;</code></dt>
+<dd> The project directory to pass to both plugin and UI.</dd>
+<dt><code>-c &lt;cname&gt;</code></dt>
+<dd> The client name to use for ALSA and JACK.</dd>
+<dt><code>-&lt;i&gt;</code></dt>
+<dd> Number of instances of the following plugin to run (max 16 total, default 1).</dd>
+<dt><code>&lt;libname&gt;</code></dt>
+<dd> Name of the DSSI plugin shared library (.so) to load. This may be an absolute path to the library file, or just the filename itself, in which case the DSSI search path is searched (see ENVIRONMENT below).</dd>
+<dt><code>&lt;label&gt;</code></dt>
+<dd> the label of the plugin to load from the library. If this is omitted, the first plugin in the library is used.</dd>
+<dt><code>[&#8230;]</code></dt>
 <dd> Optionally more instance counts, plugins and labels.
-</dl>
+</dd></dl>
 <h2>EXAMPLE</h2>
 <p> <code>jack-dssi-host -2 lib1.so -1 lib2.so:fuzzy</code><br />
  Runs two instances of the first plugin found in lib1.so, assigned to MIDI channels 1 and 2 and connected to the first available JACK outputs, and one instance of the &quot;fuzzy&quot; plugin in lib2.so on MIDI channel 3 and connected to the next available JACK output.</p>

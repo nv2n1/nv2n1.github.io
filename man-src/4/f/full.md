@@ -15,3 +15,4 @@ description: "full – always full device"
 <p>The file <i>/dev/full</i> has major device number 1 and minor device number 7. </p>
 <p> Writes to the <i>/dev/full</i> device fail with an <code>ENOSPC</code> error. This can be used to test how a program handles disk-full errors. </p>
 <p> Reads from the <i>/dev/full</i> device will return 
+</p>

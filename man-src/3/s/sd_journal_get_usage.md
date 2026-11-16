@@ -10,11 +10,10 @@ description: "sd_journal_get_usage – Journal disk usage"
 <p>sd_journal_get_usage &#8211; Journal disk usage</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;systemd/sd-journal.h&gt;
-
 int sd_journal_get_usage(sd_journal *j, uint64_t *bytes);</code></pre>
 <h2>Description</h2>
 <p><code>sd_journal_get_usage()</code></p>
-<dd>determines the total disk space currently used by journal files (in bytes). If <code>SD_JOURNAL_LOCAL_ONLY</code> was passed when opening the journal, this value will only reflect the size of journal files of the local host, otherwise of all hosts.</p>
+<dd>determines the total disk space currently used by journal files (in bytes). If <code>SD_JOURNAL_LOCAL_ONLY</code> was passed when opening the journal, this value will only reflect the size of journal files of the local host, otherwise of all hosts.</dd>
 <h2>Return Value</h2>
 <p><code>sd_journal_get_usage()</code> returns 0 on success or a negative errno-style error code.</p>
 <h2>Notes</h2>

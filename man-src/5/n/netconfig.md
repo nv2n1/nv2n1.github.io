@@ -13,36 +13,36 @@ description: "netconfig – network configuration data base"
 <h2>Description</h2>
 <p>The <code>netconfig</code> file defines a list of &#8220;transport names&#8221; describing their semantics and protocol. In Fx , this file is only used by the RPC library code. Entries have the following format: <i>network_id semantics flags family protoname device libraries</i> Entries consist of the following fields:</p>
 <dl>
-<dt><i>network_id</i></p>
-<dd>The name of the transport described.</p>
-<dt><i>semantics</i></p>
-<dd>Describes the semantics of the transport. This can be one of:</p>
+<dt><i>network_id</i></dt>
+<dd>The name of the transport described.</dd>
+<dt><i>semantics</i></dt>
+<dd>Describes the semantics of the transport. This can be one of:</dd>
 <dl>
-<dt><code>tpi_clts</code></p>
-<dd>Connectionless transport.</p>
-<dt><code>tpi_cots</code></p>
-<dd>Connection-oriented transport</p>
-<dt><code>tpi_cots_ord</code></p>
-<dd>Connection-oriented, ordered transport.</p>
-<dt><code>tpi_raw</code></p>
-<dd>A raw connection.</dl>
-<dt><i>flags</i></p>
-<dd>This field is either blank (specified by &#8220;<code>&#8211;</code> &#8221; or contains a &#8220;<code>v</code> &#8221; meaning visible to the getnetconfig(3) function.</p>
-<dt><i>family</i></p>
-<dd>The protocol family of the transport. This is currently one of:</p>
+<dt><code>tpi_clts</code></dt>
+<dd>Connectionless transport.</dd>
+<dt><code>tpi_cots</code></dt>
+<dd>Connection-oriented transport</dd>
+<dt><code>tpi_cots_ord</code></dt>
+<dd>Connection-oriented, ordered transport.</dd>
+<dt><code>tpi_raw</code></dt>
+<dd>A raw connection.</dd></dl>
+<dt><i>flags</i></dt>
+<dd>This field is either blank (specified by &#8220;<code>&#8211;</code> &#8221; or contains a &#8220;<code>v</code> &#8221; meaning visible to the getnetconfig(3) function.</dd>
+<dt><i>family</i></dt>
+<dd>The protocol family of the transport. This is currently one of:</dd>
 <dl>
-<dt><code>inet6</code></p>
-<dd>The IPv6 (<code>PF_INET6</code> ) family of protocols.</p>
-<dt><code>inet</code></p>
-<dd>The IPv4 (<code>PF_INET</code> ) family of protocols.</p>
-<dt><code>loopback</code></p>
-<dd>The <code>PF_LOCAL</code> protocol family.</dl>
-<dt><i>protoname</i></p>
-<dd>The name of the protocol used for this transport. Can currently be either <code>udp</code> <code>tcp</code> or empty.</p>
-<dt><i>device</i></p>
-<dd>This field is always empty in Fx .</p>
-<dt><i>libraries</i></p>
-<dd>This field is always empty in Fx .</dl>
+<dt><code>inet6</code></dt>
+<dd>The IPv6 (<code>PF_INET6</code> ) family of protocols.</dd>
+<dt><code>inet</code></dt>
+<dd>The IPv4 (<code>PF_INET</code> ) family of protocols.</dd>
+<dt><code>loopback</code></dt>
+<dd>The <code>PF_LOCAL</code> protocol family.</dd></dl>
+<dt><i>protoname</i></dt>
+<dd>The name of the protocol used for this transport. Can currently be either <code>udp</code> <code>tcp</code> or empty.</dd>
+<dt><i>device</i></dt>
+<dd>This field is always empty in Fx .</dd>
+<dt><i>libraries</i></dt>
+<dd>This field is always empty in Fx .</dd></dl>
 <p> The order of entries in this file will determine which transport will be preferred by the RPC library code, given a match on a specified network type. For example, if a sample network config file would look like this: </p>
 <blockquote>
 <pre>udp6 tpi_clts v inet6 udp - -
@@ -54,10 +54,8 @@ local tpi_cots_ord - loopback - - -</pre>
 </blockquote>
 <p> then using the network type <code>udp</code> in calls to the RPC library function (see <a href="/docs/linux/man/3-rpc/">rpc</a>(3)) will make the code first try <code>udp6</code> and then <code>udp</code> </p>
 <pre><code>getnetconfig(3)
-
     and associated functions will parse this file and return structures of
     the following format :
-
     struct netconfig {
     char *nc_netid;             /* Network ID */
     unsigned long nc_semantics; /* Semantics (see below) */
@@ -71,7 +69,7 @@ local tpi_cots_ord - loopback - - -</pre>
 };</code></pre>
 <h2>Files</h2>
 <dl>
-<dt><code>/etc/netconfig </code></p>
-<dd></dl>
+<dt><code>/etc/netconfig </code></dt>
+<dd></dd></dl>
 <h2>See Also</h2>
 <p>getnetconfig(3), getnetpath(3) </p>

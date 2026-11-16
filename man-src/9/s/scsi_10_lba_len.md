@@ -14,17 +14,17 @@ description: "scsi_10_lba_len – Get LBA and transfer length"
 <p><i>cdb</i></p>
 <dl>
 <dd>
-<dd>SCSI command to translate</dl>
+</dd><dd>SCSI command to translate</dd></dl>
 <p> <i>plba</i></p>
 <dl>
-<dd>the LBA</dl>
+<dd>the LBA</dd></dl>
 <p> <i>plen</i></p>
 <dl>
-<dd>the transfer length</dl>
+<dd>the transfer length</dd></dl>
 <h2>Description</h2>
 <p>Calculate LBA and transfer length for 10-byte commands.</p>
 <h2>Author</h2>
 <p><code>Jeff Garzik</code></p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

@@ -35,7 +35,7 @@ description: "log4cpp::OstreamAppender –"
 <p>Log in <code>Appender</code> specific way. Subclasses of <code>Appender</code> should implement this method to perform actual logging. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>event</i> The <code>LoggingEvent</code> to log.</dl>
+<dd><i>event</i> The <code>LoggingEvent</code> to log.</dd></dl>
 <p> Implements <code>log4cpp::AppenderSkeleton</code>.</p>
 <h3>void log4cpp::OstreamAppender::close () [virtual]</h3>
 <p>Release any resources allocated within the appender such as file handles, network connections, etc. </p>
@@ -44,7 +44,7 @@ description: "log4cpp::OstreamAppender –"
 <p>Reopens the output destination of this <code>Appender</code>, e.g. the logfile or TCP socket. </p>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>false if an error occured during reopening, true otherwise.</dl>
+<dd>false if an error occured during reopening, true otherwise.</dd></dl>
 <p> Reimplemented from <code>log4cpp::AppenderSkeleton</code>.</p>
 <h2>Member Data Documentation</h2>
 <h3>std::ostream* log4cpp::OstreamAppender::_stream [protected]</h3>

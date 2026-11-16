@@ -11,8 +11,6 @@ description: "sgbsvx.f –"
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
 <pre><code>subroutine sgbsvx (FACT, TRANS, N, KL, KU, NRHS, AB, LDAB, AFB, LDAFB, IPIV, EQUED, R, C, B, LDB, X, LDX, RCOND, FERR, BERR, WORK, IWORK, INFO)
-
-
 SGBSVX computes the solution to system of linear equations A * X = B for GB matrices</code></pre>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine sgbsvx (characterFACT, characterTRANS, integerN, integerKL, integerKU, integerNRHS, real, dimension( ldab, * )AB, integerLDAB, real, dimension( ldafb, * )AFB, integerLDAFB, integer, dimension( * )IPIV, characterEQUED, real, dimension( * )R, real, dimension( * )C, real, dimension( ldb, * )B, integerLDB, real, dimension( ldx, * )X, integerLDX, realRCOND, real, dimension( * )FERR, real, dimension( * )BERR, real, dimension( * )WORK, integer, dimension( * )IWORK, integerINFO)</h3>
@@ -26,7 +24,7 @@ SGBSVX computes the solution to system of linear equations A * X = B for GB matr
  superdiagonals, and X and B are N-by-NRHS matrices.
  Error bounds on the solution and a condition estimate are also
  provided.</pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Description: </code></p>
 <dl>
 <dd>
@@ -60,10 +58,10 @@ SGBSVX computes the solution to system of linear equations A * X = B for GB matr
  6. If equilibration was used, the matrix X is premultiplied by
  diag(C) (if TRANS = 'N') or diag(R) (if TRANS = 'T' or 'C') so
  that it solves the original system before equilibration.</pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>FACT</i> </p>
+<dd><i>FACT</i> </dd>
 <pre> FACT is CHARACTER*1
  Specifies whether or not the factored form of the matrix A is
  supplied on entry, and if not, whether the matrix A should be
@@ -244,13 +242,13 @@ SGBSVX computes the solution to system of linear equations A * X = B for GB matr
 <p>&nbsp;<wbr></dl>
 <p> <code>Author:</code></p>
 <dl>
-<dd>Univ. of Tennessee </p>
+<dd>Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl>
-<dd>April 2012</dl>
+<dd>April 2012</dd></dl>
 <p> Definition at line 367 of file sgbsvx.f.</p>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for LAPACK from the source code.</p>

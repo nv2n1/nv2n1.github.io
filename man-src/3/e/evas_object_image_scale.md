@@ -21,16 +21,16 @@ description: "Image Object Image Scaling Functions – Functions that change the
 <p> See <code>evas_object_image_smooth_scale_set</code> for more details. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>obj</i> The given image object.</dl>
+<dd><i>obj</i> The given image object.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>Whether smooth scale is being used.</dl>
+<dd>Whether smooth scale is being used.</dd></dl>
 <h3>EAPI void evas_object_image_smooth_scale_set (<code>Evas_Object</code> * obj, Evas_Bool smooth_scale)</h3>
 <p>Sets whether to use of high-quality image scaling algorithm of the given image object. </p>
 <p> When enabled, a higher quality image scaling algorithm is used when scaling images to sizes other than the source image. This gives better results but is more computationally expensive. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>obj</i> The given image object.<br />
- <i>smooth_scale</i> Whether to use smooth scale or not.</dl>
+ <i>smooth_scale</i> Whether to use smooth scale or not.</dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for Evas from the source code.</p>

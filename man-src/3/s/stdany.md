@@ -67,10 +67,8 @@ bad_any_cast exception thrown by the value-returning forms of any_cast on a type
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;any&gt;
-
 #include &lt;iostream&gt;
 int main()
-
 {
     std::cout &lt;&lt; std::boolalpha;
     // any type

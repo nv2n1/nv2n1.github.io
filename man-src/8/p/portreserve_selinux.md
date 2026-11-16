@@ -92,8 +92,8 @@ description: "portreserve_selinux – Security Enhanced Linux Policy for the por
 <p> <code>portreserve_exec_t</code> </p>
 <p> &#8211; Set files with the portreserve_exec_t type, if you want to transition an executable to the portreserve_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/sbin/portreserve, /usr/sbin/portreserve </p>
+<dt>Paths:</dt>
+<dd>/sbin/portreserve, /usr/sbin/portreserve </dd>
 </dl>
 <p> <code>portreserve_initrc_exec_t</code> </p>
 <p> &#8211; Set files with the portreserve_initrc_exec_t type, if you want to transition an executable to the portreserve_initrc_t domain. </p>

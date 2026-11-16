@@ -14,8 +14,8 @@ description: "aa_attrs – returns pointer to the text output buffer used by AA-
 <p> char *aa_attrs(aa_context *a); </code></p>
 <h2>PARAMETERS</h2>
 <dl>
-<dt><code>aa_context *a</code></p>
-<dd> Specifies the AA-lib context to operate on.</dl>
+<dt><code>aa_context *a</code></dt>
+<dd> Specifies the AA-lib context to operate on.</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> The attribute output buffer is simple array of characters specifying the attributes. The array is organizated in the aa_scrheight (a) rows of aa_scrwidth(a) characters.</p>
 <h2>RETURNS</h2>

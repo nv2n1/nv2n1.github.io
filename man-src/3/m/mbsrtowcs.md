@@ -18,7 +18,8 @@ size_t mbsrtowcs(wchar_t *dest, const char **src,
 <h2>DESCRIPTION</h2>
 <p> If <i>dest</i> is not NULL, the <code>mbsrtowcs</code>() function converts the multibyte string <i>*src</i> to a wide-character string starting at <i>dest</i>. At most <i>len</i> wide characters are written to <i>dest</i>. The shift state <i>*ps</i> is updated. The conversion is effectively performed by repeatedly calling <i>mbrtowc(dest, *src, n, ps)</i> where <i>n</i> is some positive number, as long as this call succeeds, and then incrementing <i>dest</i> by one and <i>*src</i> by the number of bytes consumed. The conversion can stop for three reasons:</p>
 <dl>
-<dt>1.</p>
-<dd> An invalid multibyte sequence has been encountered. In this case, <i>*src</i> is left pointing to the invalid multibyte sequence, <i>(size_t)&nbsp;-1</i> is returned, and <i>errno</i> is set to <code>EILSEQ</code>.</p>
-<dt>2.</p>
+<dt>1.</dt>
+<dd> An invalid multibyte sequence has been encountered. In this case, <i>*src</i> is left pointing to the invalid multibyte sequence, <i>(size_t)&nbsp;-1</i> is returned, and <i>errno</i> is set to <code>EILSEQ</code>.</dd>
+<dt>2.</dt>
 <dd> <i>len</i> non-L&#8217;
+</dd></dl>

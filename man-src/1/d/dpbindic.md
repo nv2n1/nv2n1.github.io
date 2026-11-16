@@ -15,12 +15,12 @@ description: "dpbindic – Convert a binary-form dictionary into a text-form dic
 <p> <i>dpbindic</i> outputs the file information of the binary-form dictionary file specified in <i>binary-file</i>. At this time, the word information of the dictionary can be output in text form to the standard output. To do so, use <i>test-file</i> to specify the text-form dictionary used as the source of binary-form dictionary file. If this specification is omitted, the text dictionary file information in the binary dictionary file will be output. The standard grammar file name is /usr/local/canna/lib/dic/hyoujun.gram. It will be used if the grammar file name specification is omitted. The output format of word information data is specified using an option.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-x</code></p>
-<dd> Outputs the data without using omission symbol @, which is used when the initial word represents the reading.</p>
-<dt><code>-i</code></p>
-<dd> Replaces the reading and word for output.</p>
-<dt><code>-u</code></p>
-<dd> Outputs the candidates used in conversion. Outputs all candidates having <i>frequency</i> or more. If <i>frequency</i> is omitted, all candidates having frequency 1 will be output.</dl>
+<dt><code>-x</code></dt>
+<dd> Outputs the data without using omission symbol @, which is used when the initial word represents the reading.</dd>
+<dt><code>-i</code></dt>
+<dd> Replaces the reading and word for output.</dd>
+<dt><code>-u</code></dt>
+<dd> Outputs the candidates used in conversion. Outputs all candidates having <i>frequency</i> or more. If <i>frequency</i> is omitted, all candidates having frequency 1 will be output.</dd></dl>
 <h2>EXAMPLES</h2>
 <p> (1) If the text-form dictionary file name is omitted: </p>
 <pre>

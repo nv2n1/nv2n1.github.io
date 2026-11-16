@@ -17,23 +17,23 @@ description: "setsid – run a program in a new session"
 <p> <code>-c</code>, <code>&#8211;ctty</code></p>
 <dl>
 <dt>
-<dd> Set the controlling terminal to the current one.</dl>
+</dt><dd> Set the controlling terminal to the current one.</dd></dl>
 <p> <code>-f</code>, <code>&#8211;fork</code></p>
 <dl>
 <dt>
-<dd> Always create a new process.</dl>
+</dt><dd> Always create a new process.</dd></dl>
 <p> <code>-w</code>, <code>&#8211;wait</code></p>
 <dl>
 <dt>
-<dd> Wait for the execution of the program to end, and return the exit status of this program as the exit status of <code>setsid</code>.</dl>
+</dt><dd> Wait for the execution of the program to end, and return the exit status of this program as the exit status of <code>setsid</code>.</dd></dl>
 <p> <code>-V</code>, <code>&#8211;version</code></p>
 <dl>
 <dt>
-<dd> Display version information and exit.</dl>
+</dt><dd> Display version information and exit.</dd></dl>
 <p> <code>-h</code>, <code>&#8211;help</code></p>
 <dl>
 <dt>
-<dd> Display help text and exit.</dl>
+</dt><dd> Display help text and exit.</dd></dl>
 <h2>AUTHORS</h2>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/2-setsid/">setsid</a></code>(2)</p>

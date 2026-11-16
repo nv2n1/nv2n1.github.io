@@ -26,34 +26,34 @@ description: "oggz-rip — Extract one or more logical bitstreams from an Ogg fi
 &nbsp;<wbr></p>
 <h3>Miscellaneous options</h3>
 <dl>
-<dt>-o <code>filename</code>, &#8211;output <code>filename</code></p>
+<dt>-o <code>filename</code>, &#8211;output <code>filename</code></dt>
 <dd> Write output to the specified <code>filename</code> instead of printing it to standard output.<br />
-&nbsp;<wbr></p>
-<dt>-h, &#8211;help</p>
-<dd> Display usage information and exit.</p>
-<dt>-v, &#8211;version</p>
-<dd> Output version information and exit.</dl>
+&nbsp;<wbr></dd>
+<dt>-h, &#8211;help</dt>
+<dd> Display usage information and exit.</dd>
+<dt>-v, &#8211;version</dt>
+<dd> Output version information and exit.</dd></dl>
 <h3>Filter options</h3>
 <p> These options can be used multiple times. Pages matching ANY of the filter options will be included into the output.<br />
 &nbsp;<wbr></p>
 <dl>
-<dt>-s <code>serialno</code>, &#8211;serialno <code>serialno</code></p>
-<dd> Output streams with given serialno.</p>
-<dt>-i <code>index</code>, &#8211;stream-index <code>index</code></p>
+<dt>-s <code>serialno</code>, &#8211;serialno <code>serialno</code></dt>
+<dd> Output streams with given serialno.</dd>
+<dt>-i <code>index</code>, &#8211;stream-index <code>index</code></dt>
 <dd> Filter by stream index. These are assigned to streams in the order of their BOS pages, starting at 0.<br />
-&nbsp;<wbr></p>
-<dt>-c <code>content-type</code> &#8211;content-type <code>content-type</code></p>
-<dd> Filter by content-type. Run <code><a href="/docs/linux/man/1-oggz-known-codecs/">oggz-known-codecs</a></code><code>(1)</code> for a full list of codecs known by the installed version of oggz. </p>
+&nbsp;<wbr></dd>
+<dt>-c <code>content-type</code> &#8211;content-type <code>content-type</code></dt>
+<dd> Filter by content-type. Run <code><a href="/docs/linux/man/1-oggz-known-codecs/">oggz-known-codecs</a></code><code>(1)</code> for a full list of codecs known by the installed version of oggz. </dd>
 </dl>
 <h2>EXAMPLES</h2>
 <p> Extract all bitstreams from file.ogg: </p>
 <dl>
 <dt>
-<dd> <tt>oggz rip -o output.ogg file.ogg</tt></dl>
+</dt><dd> <tt>oggz rip -o output.ogg file.ogg</tt></dd></dl>
 <p> Extract only the Theora bitstream from file.ogv: </p>
 <dl>
 <dt>
-<dd> <tt>oggz rip -c theora -o output.ogv file.ogv</tt></dl>
+</dt><dd> <tt>oggz rip -c theora -o output.ogv file.ogv</tt></dd></dl>
 <p>&nbsp;<wbr></p>
 <h2>AUTHOR</h2>
 <p> David Kuehling January 1, 2005;</p>

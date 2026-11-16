@@ -24,20 +24,20 @@ description: "docbook2texi-spec.pl – convert DocBook Booksto Texinfo documents
 <p> This program does not come close to supporting all the possible markup in DocBook, and may produce wrong output in some cases with supported markup.</p>
 <h2>To Do</h2>
 <dl>
-<dt>&bull;</p>
-<dd>How the hell do you represent a backslash (\) in Texinfo!!@? I&#8217;ve tried \ but TeX complains about it.</p>
-<dt>&bull;</p>
-<dd>Fix breakages found in the test documents.</p>
-<dt>&bull;</p>
-<dd>Add new element handling and fix existing handling. Be robust.</p>
-<dt>&bull;</p>
-<dd>Make it faster. I think most of the speed problems so far is with parsing ESIS. Rewrite <i>SGMLS.pm</i> with C and/or get input directly from <code>SP</code>.</p>
-<dt>&bull;</p>
-<dd>There are some dependencies on elements occurring when they are actually optional (according to the DTD). We need to fix that (preferably) or prominently state the requirements.</p>
-<dt>&bull;</p>
-<dd>Allow other more common document elements.</p>
-<dt>&bull;</p>
-<dd>Separate out node referencing to a separate script. Not only would it make it faster/easier to maintain because it&#8217;s separate from the main code, but also I would like it to evolve into an automatic DocBook ToC generator.</dl>
+<dt>&bull;</dt>
+<dd>How the hell do you represent a backslash (\) in Texinfo!!@? I&#8217;ve tried \ but TeX complains about it.</dd>
+<dt>&bull;</dt>
+<dd>Fix breakages found in the test documents.</dd>
+<dt>&bull;</dt>
+<dd>Add new element handling and fix existing handling. Be robust.</dd>
+<dt>&bull;</dt>
+<dd>Make it faster. I think most of the speed problems so far is with parsing ESIS. Rewrite <i>SGMLS.pm</i> with C and/or get input directly from <code>SP</code>.</dd>
+<dt>&bull;</dt>
+<dd>There are some dependencies on elements occurring when they are actually optional (according to the DTD). We need to fix that (preferably) or prominently state the requirements.</dd>
+<dt>&bull;</dt>
+<dd>Allow other more common document elements.</dd>
+<dt>&bull;</dt>
+<dd>Separate out node referencing to a separate script. Not only would it make it faster/easier to maintain because it&#8217;s separate from the main code, but also I would like it to evolve into an automatic DocBook ToC generator.</dd></dl>
 <h2>Copyright</h2>
 <p>Copyright (C) 1998-1999 Steve Cheng &lt;steve [at] ggi-project.org&gt; </p>
 <p> This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2, or (at your option) any later version. </p>

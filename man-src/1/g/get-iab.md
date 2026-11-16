@@ -21,18 +21,18 @@ description: "get-iab – Fetch the arp-scan IAB file from the IEEE website"
 <p> The directory that <code>arp-scan</code> will look for the <i>ieee-iab.txt</i> file depends on the options used when it was built. If it was built using the default options, then it will look in <i>/usr/local/share/arp-scan</i>.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-h</code></p>
-<dd> Display a brief usage message and exit.</p>
-<dt><code>-f &lt;fn&gt;</code></p>
-<dd> Write the output to the specified file instead of the default <i>ieee-iab.txt.</i></p>
-<dt><code>-u &lt;URL&gt;</code></p>
-<dd> Use the specified URL to fetch the raw IAB data from instead of the default <i><a rel="nofollow" href="http://standards.ieee.org/regauth/oui/iab.txt">http://standards.ieee.org/regauth/oui/iab.txt</a></i></p>
-<dt><code>-v</code></p>
-<dd> Display verbose progress messages.</dl>
+<dt><code>-h</code></dt>
+<dd> Display a brief usage message and exit.</dd>
+<dt><code>-f &lt;fn&gt;</code></dt>
+<dd> Write the output to the specified file instead of the default <i>ieee-iab.txt.</i></dd>
+<dt><code>-u &lt;URL&gt;</code></dt>
+<dd> Use the specified URL to fetch the raw IAB data from instead of the default <i><a rel="nofollow" href="http://standards.ieee.org/regauth/oui/iab.txt">http://standards.ieee.org/regauth/oui/iab.txt</a></i></dd>
+<dt><code>-v</code></dt>
+<dd> Display verbose progress messages.</dd></dl>
 <h2>FILES</h2>
 <dl>
-<dt><i>ieee-iab.txt</i></p>
-<dd> The default output file.</dl>
+<dt><i>ieee-iab.txt</i></dt>
+<dd> The default output file.</dd></dl>
 <h2>EXAMPLES</h2>
 <pre>
 $ get-iab -v
@@ -50,11 +50,11 @@ Opening output file ieee-iab.txt
 <p> Roy Hills &lt;Roy.Hills [at] nta-monitor.com&gt;</p>
 <h2>SEE ALSO</h2>
 <dl>
-<dt><code><a href="/docs/linux/man/1-arp-scan/">arp-scan</a></code>(1)</p>
+<dt><code><a href="/docs/linux/man/1-arp-scan/">arp-scan</a></code>(1)</dt>
 <dd>
-<dt><code><a href="/docs/linux/man/1-get-oui/">get-oui</a></code>(1)</p>
+</dd><dt><code><a href="/docs/linux/man/1-get-oui/">get-oui</a></code>(1)</dt>
 <dd>
-<dt><code><a href="/docs/linux/man/1-arp-fingerprint/">arp-fingerprint</a></code>(1)</p>
-<dd></dl>
+</dd><dt><code><a href="/docs/linux/man/1-arp-fingerprint/">arp-fingerprint</a></code>(1)</dt>
+<dd></dd></dl>
 <p> <i><a rel="nofollow" href="http://www.nta-monitor.com/wiki/">http://www.nta-monitor.com/wiki/</a></i> The arp-scan wiki page. </p>
 <h2>Index</h2>

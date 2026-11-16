@@ -18,7 +18,7 @@ description: "cgemv.f –"
 <p> <code>CGEMV</code> <code>Purpose: </code></p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
  CGEMV performs one of the matrix-vector operations
     y := alpha*A*x + beta*y,   or   y := alpha*A**T*x + beta*y,   or
@@ -26,11 +26,11 @@ description: "cgemv.f –"
  where alpha and beta are scalars, x and y are vectors and A is an
  m by n matrix.
 </pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>TRANS</i> </p>
+</dt><dd> <i>TRANS</i> </dd>
 <pre>
           TRANS is CHARACTER*1
            On entry, TRANS specifies the operation to be performed as
@@ -110,18 +110,18 @@ description: "cgemv.f –"
 <p> <code>Author:</code></p>
 <dl>
 <dt>
-<dd> Univ. of Tennessee </p>
+</dt><dd> Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl>
 <dt>
-<dd> November 2011</dl>
+</dt><dd> November 2011</dd></dl>
 <p> <code>Further Details: </code></p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
   Level 2 Blas routine.
   The vector and matrix arguments are not referenced when N = 0, or M = 0
@@ -131,8 +131,9 @@ description: "cgemv.f –"
      Sven Hammarling, Nag Central Office.
      Richard Hanson, Sandia National Labs.
 </pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> Definition at line 159 of file cgemv.f.</p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for LAPACK from the source code. </p>
 <h2>Index</h2>
+</p>

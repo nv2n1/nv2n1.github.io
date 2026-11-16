@@ -15,16 +15,16 @@ description: "glite-lb-load – utility for loading job events into the L&B data
 <p> <code>glite-lb-load </code> is utility for loading job events into the L&amp;B database. It is primarilly used for recovery purposes. By default, it loads events from the last dump. </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt>-m, &#8211;server <i>bkserver</i></p>
-<dd> L&amp;B server machine name. If not specified, the environment variable EDG_WL_QUERY_SERVER is beeing checked. </p>
-<dt>-f, &#8211;file <i>filename</i></p>
-<dd> File with dumped data to be loaded. </p>
-<dt>-h, &#8211;help</p>
-<dd> Display help. </p>
-<dt>-v, &#8211;version</p>
-<dd> Display version. </p>
-<dt>-d, &#8211;debug</p>
-<dd> Print diagnostics on the <i>stderr</i>. </p>
+<dt>-m, &#8211;server <i>bkserver</i></dt>
+<dd> L&amp;B server machine name. If not specified, the environment variable EDG_WL_QUERY_SERVER is beeing checked. </dd>
+<dt>-f, &#8211;file <i>filename</i></dt>
+<dd> File with dumped data to be loaded. </dd>
+<dt>-h, &#8211;help</dt>
+<dd> Display help. </dd>
+<dt>-v, &#8211;version</dt>
+<dd> Display version. </dd>
+<dt>-d, &#8211;debug</dt>
+<dd> Print diagnostics on the <i>stderr</i>. </dd>
 </dl>
 <h2>FILES</h2>
 <p> No configuration files needed. </p>

@@ -26,10 +26,8 @@ Errors and special cases are handled as if the function is implemented as std::a
 <h2>Example</h2>
 <p>// Run this code </p>
 <pre><code>#include &lt;iostream&gt;
-
 #include &lt;complex&gt;
 int main()
-
 {
     std::complex&lt;double&gt; z1(1, 0);
     std::cout &lt;&lt; &quot;phase angle of &quot; &lt;&lt; z1 &lt;&lt; &quot; is &quot; &lt;&lt; std::arg(z1) &lt;&lt; '

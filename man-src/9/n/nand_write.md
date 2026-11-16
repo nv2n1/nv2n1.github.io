@@ -14,23 +14,23 @@ description: "nand_write – [MTD Interface] NAND write with ECC"
 <p><i>mtd</i></p>
 <dl>
 <dd>
-<dd>MTD device structure</dl>
+</dd><dd>MTD device structure</dd></dl>
 <p> <i>to</i></p>
 <dl>
-<dd>offset to write to</dl>
+<dd>offset to write to</dd></dl>
 <p> <i>len</i></p>
 <dl>
-<dd>number of bytes to write</dl>
+<dd>number of bytes to write</dd></dl>
 <p> <i>retlen</i></p>
 <dl>
-<dd>pointer to variable to store the number of written bytes</dl>
+<dd>pointer to variable to store the number of written bytes</dd></dl>
 <p> <i>buf</i></p>
 <dl>
-<dd>the data to write</dl>
+<dd>the data to write</dd></dl>
 <h2>Description</h2>
 <p>NAND write with ECC.</p>
 <h2>Author</h2>
 <p><code>Thomas Gleixner</code> &lt;tglx [at] linutronix.de&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

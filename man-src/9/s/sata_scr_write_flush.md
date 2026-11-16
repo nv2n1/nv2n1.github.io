@@ -14,13 +14,13 @@ description: "sata_scr_write_flush – write SCR register of the specified port 
 <p><i>link</i></p>
 <dl>
 <dd>
-<dd>ATA link to write SCR for</dl>
+</dd><dd>ATA link to write SCR for</dd></dl>
 <p> <i>reg</i></p>
 <dl>
-<dd>SCR to write</dl>
+<dd>SCR to write</dd></dl>
 <p> <i>val</i></p>
 <dl>
-<dd>value to write</dl>
+<dd>value to write</dd></dl>
 <h2>Description</h2>
 <p>This function is identical to <code>sata_scr_write</code> except that this function performs flush after writing to the register. </p>
 <p> LOCKING: None if <i>link</i> is ap-&gt;link. Kernel thread context otherwise.</p>
@@ -29,5 +29,5 @@ description: "sata_scr_write_flush – write SCR register of the specified port 
 <h2>Author</h2>
 <p><code>Jeff Garzik</code></p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

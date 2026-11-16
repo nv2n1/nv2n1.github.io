@@ -11,33 +11,19 @@ std::atomic_exchange,std::atomic_exchange_explicit - std::atomic_exchange,std::a
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header &lt;atomic&gt;
-
 template&lt; class T &gt;
-
 T atomic_exchange( std::atomic&lt;T&gt;* obj,
-
 typename std::atomic&lt;T&gt;::value_type desr ) noexcept;
-
 template&lt; class T &gt;
-
 T atomic_exchange( volatile std::atomic&lt;T&gt;* obj,
-
 typename std::atomic&lt;T&gt;::value_type desr ) noexcept;
-
 template&lt; class T &gt;                                       (1) (since C++11)
-
 T atomic_exchange_explicit( std::atomic&lt;T&gt;* obj,
-
 typename std::atomic&lt;T&gt;::value_type desr,
-
 std::memory_order order ) noexcept;                                         (2) (since C++11)
-
 template&lt; class T &gt;
-
 T atomic_exchange_explicit( volatile std::atomic&lt;T&gt;* obj,
-
 typename std::atomic&lt;T&gt;::value_type desr,
-
 std::memory_order order ) noexcept;</code></pre> 
 1) Atomically replaces the value pointed to by obj with the value of desr and returns the value obj held previously, as if by obj-&gt;exchange(desr) 
 2) Atomically replaces the value pointed to by obj with the value of desr and returns the value obj held previously, as if by obj-&gt;exchange(desr, order) 
@@ -64,7 +50,6 @@ A spinlock mutex can be implemented in userspace using an atomic exchange operat
 #include &lt;atomic&gt; 
 &nbsp;<wbr>&nbsp;std::atomic&lt;bool&gt; lock(false); // holds true when locked 
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;// holds false when unlocked <pre><code>void f(int n)
-
 {
     for (int cnt = 0; cnt &lt; 100; ++cnt) {
         while (std::atomic_exchange_explicit(&amp;lock, true, std::memory_order_acquire))
@@ -73,9 +58,7 @@ A spinlock mutex can be implemented in userspace using an atomic exchange operat
         std::atomic_store_explicit(&amp;lock, false, std::memory_order_release);
     }
 }
-
 int main()
-
 {
     std::vector&lt;std::thread&gt; v;
     for (int n = 0; n &lt; 10; ++n) {

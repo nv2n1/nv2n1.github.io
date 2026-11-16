@@ -19,32 +19,32 @@ description: "owncloudcmd – Command line ownCloud client tool."
 <p> <code>NOTE:</code> Prior to the 1.6 release of owncloudcmd, the tool only accepted <code>owncloud://</code> or <code>ownclouds://</code> in place of <code>http://</code> and <code>https://</code> as a scheme. See <code>Examples</code> for details.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>&#8211;user</code>, <code>-u</code> <code>[user]</code></p>
-<dd> Use <code>user</code> as the login name.</p>
-<dt><code>&#8211;password</code>, <code>-p</code> <code>[password]</code></p>
-<dd> Use <code>password</code> as the password.</p>
-<dt><code>-n</code></p>
-<dd> Use <code>netrc (5)</code> for login.</p>
-<dt><code>&#8211;non-interactive</code></p>
-<dd> Do not prompt for questions.</p>
-<dt><code>&#8211;silent</code>, <code>&#8211;s</code></p>
-<dd> Inhibits verbose log output.</p>
-<dt><code>&#8211;trust</code></p>
-<dd> Trust any SSL certificate, including invalid ones.</p>
-<dt><code>&#8211;httpproxy <a rel="nofollow" href="http://[user@pass:]">http://[user@pass:]</a>&lt;server&gt;:&lt;port&gt;</code></p>
-<dd> Uses <code>server</code> as HTTP proxy.</p>
-<dt><code>&#8211;nonshib</code></p>
-<dd> Uses Non Shibboleth WebDAV Authentication</p>
-<dt><code>&#8211;davpath [path]</code></p>
-<dd> Overrides the WebDAV Path with <code>path</code></p>
-<dt><code>&#8211;exclude [file]</code></p>
-<dd> Exclude list file</p>
-<dt><code>&#8211;unsyncedfolders [file]</code></p>
-<dd> File containing the list of unsynced folders (selective sync)</p>
-<dt><code>&#8211;max-sync-retries [n]</code></p>
-<dd> Retries maximum n times (defaults to 3)</p>
-<dt><code>-h</code></p>
-<dd> Sync hidden files,do not ignore them</dl>
+<dt><code>&#8211;user</code>, <code>-u</code> <code>[user]</code></dt>
+<dd> Use <code>user</code> as the login name.</dd>
+<dt><code>&#8211;password</code>, <code>-p</code> <code>[password]</code></dt>
+<dd> Use <code>password</code> as the password.</dd>
+<dt><code>-n</code></dt>
+<dd> Use <code>netrc (5)</code> for login.</dd>
+<dt><code>&#8211;non-interactive</code></dt>
+<dd> Do not prompt for questions.</dd>
+<dt><code>&#8211;silent</code>, <code>&#8211;s</code></dt>
+<dd> Inhibits verbose log output.</dd>
+<dt><code>&#8211;trust</code></dt>
+<dd> Trust any SSL certificate, including invalid ones.</dd>
+<dt><code>&#8211;httpproxy <a rel="nofollow" href="http://[user@pass:]">http://[user@pass:]</a>&lt;server&gt;:&lt;port&gt;</code></dt>
+<dd> Uses <code>server</code> as HTTP proxy.</dd>
+<dt><code>&#8211;nonshib</code></dt>
+<dd> Uses Non Shibboleth WebDAV Authentication</dd>
+<dt><code>&#8211;davpath [path]</code></dt>
+<dd> Overrides the WebDAV Path with <code>path</code></dd>
+<dt><code>&#8211;exclude [file]</code></dt>
+<dd> Exclude list file</dd>
+<dt><code>&#8211;unsyncedfolders [file]</code></dt>
+<dd> File containing the list of unsynced folders (selective sync)</dd>
+<dt><code>&#8211;max-sync-retries [n]</code></dt>
+<dd> Retries maximum n times (defaults to 3)</dd>
+<dt><code>-h</code></dt>
+<dd> Sync hidden files,do not ignore them</dd></dl>
 <h2>EXAMPLE</h2>
 <p> To synchronize the ownCloud directory <code>Music</code> to the local directory <code>media/music</code> through a proxy listening on port <code>8080</code> on the gateway machine <code>192.168.178.1</code>, the command line would be: </p>
 <pre>

@@ -18,8 +18,8 @@ gdcmdump[options] dcm_file
 <h2>DESCRIPTION</h2>
 <p> The <code>gdcmdump</code> command line program dumps a DICOM file to the console. For those familiary with dcmdump output, gdcmdump has some minor differences. Namely: </p>
 <dl>
-<dt>*</p>
-<dd> For Implicit Transfer Syntax gdcmdump will print ?? instead of the dictionary VR</dl>
+<dt>*</dt>
+<dd> For Implicit Transfer Syntax gdcmdump will print ?? instead of the dictionary VR</dd></dl>
 <p> gdcmdump has a limited private dictionary that is used to lookup private element whenever possible.</p>
 <h2>PARAMETERS</h2>
 <pre>
@@ -129,3 +129,4 @@ $ gdcmdump encrypted.dcm
   (fffe,e000) na (Item with undefined length)
     (0400,0510) UI [1.2.840.10008.1.2]                            # 18,1 Encrypted Content Transfer Syntax UID
     (0400,0520) OB 30\82a
+</pre>

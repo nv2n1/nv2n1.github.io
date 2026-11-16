@@ -15,10 +15,10 @@ description: "cinnamon-screensaver – screen saver and locker"
 <p> Cinnamon Screensaver is the default screen saver and locker in a GNOME desktop. It is designed with simplicity and security in mind.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>&#8211;no-daemon</code></p>
-<dd> Don&#8217;t become a daemon</p>
-<dt><code>&#8211;debug</code></p>
-<dd> Enable debugging code</dl>
+<dt><code>&#8211;no-daemon</code></dt>
+<dd> Don&#8217;t become a daemon</dd>
+<dt><code>&#8211;debug</code></dt>
+<dd> Enable debugging code</dd></dl>
 <p> This program also accepts the standard GTK options.</p>
 <h2>AUTHORS</h2>
 <p> <code>cinnamon-screensaver</code> is written by William Jon McCann &lt;mccann [at] jhu.edu&gt;. </p>

@@ -21,18 +21,18 @@ description: "chartex – A utility to extract charts from an Excel file for ins
 </pre>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>&#8211;chartname or -c</code></p>
-<dd> This sets the root name for the extracted charts, defaults to &#8220;chart&#8221;. For example: </p>
+<dt><code>&#8211;chartname or -c</code></dt>
+<dd> This sets the root name for the extracted charts, defaults to &#8220;chart&#8221;. For example: </dd>
 <pre>
     $ chartex file.xls
     Extracting &quot;Chart1&quot; to chart01.bin
     $ chartex -c mychart file.xls
     Extracting &quot;Chart1&quot; to mychart01.bin
 </pre>
-<dt><code>&#8211;help or -h</code></p>
-<dd> Print a brief help message and exits.</p>
-<dt><code>&#8211;man or -m</code></p>
-<dd> Prints the manual page and exits.</dl>
+<dt><code>&#8211;help or -h</code></dt>
+<dd> Print a brief help message and exits.</dd>
+<dt><code>&#8211;man or -m</code></dt>
+<dd> Prints the manual page and exits.</dd></dl>
 <h2>AUTHOR</h2>
 <p> John McNamara jmcnamara [at] cpan.org</p>
 <h2>VERSION</h2>

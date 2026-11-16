@@ -20,22 +20,22 @@ description: "syscalls – Linux system calls"
 <h3>System call list</h3>
 <p> Below is a list of the Linux system calls. In the list, the <i>Kernel</i> column indicates the kernel version for those system calls that were new in Linux 2.2, or have appeared since that kernel version. Note the following points:</p>
 <dl>
-<dt>*</p>
-<dd> Where no kernel version is indicated, the system call appeared in kernel 1.0 or earlier.</p>
-<dt>*</p>
-<dd> Where a system call is marked &quot;1.2&quot; this means the system call probably appeared in a 1.1.x kernel version, and first appeared in a stable kernel with 1.2. (Development of the 1.2 kernel was initiated from a branch of kernel 1.0.6 via the 1.1.x unstable kernel series.)</p>
-<dt>*</p>
-<dd> Where a system call is marked &quot;2.0&quot; this means the system call probably appeared in a 1.3.x kernel version, and first appeared in a stable kernel with 2.0. (Development of the 2.0 kernel was initiated from a branch of kernel 1.2.x, somewhere around 1.2.10, via the 1.3.x unstable kernel series.)</p>
-<dt>*</p>
-<dd> Where a system call is marked &quot;2.2&quot; this means the system call probably appeared in a 2.1.x kernel version, and first appeared in a stable kernel with 2.2.0. (Development of the 2.2 kernel was initiated from a branch of kernel 2.0.21 via the 2.1.x unstable kernel series.)</p>
-<dt>*</p>
-<dd> Where a system call is marked &quot;2.4&quot; this means the system call probably appeared in a 2.3.x kernel version, and first appeared in a stable kernel with 2.4.0. (Development of the 2.4 kernel was initiated from a branch of kernel 2.2.8 via the 2.3.x unstable kernel series.)</p>
-<dt>*</p>
-<dd> Where a system call is marked &quot;2.6&quot; this means the system call probably appeared in a 2.5.x kernel version, and first appeared in a stable kernel with 2.6.0. (Development of kernel 2.6 was initiated from a branch of kernel 2.4.15 via the 2.5.x unstable kernel series.)</p>
-<dt>*</p>
-<dd> Starting with kernel 2.6.0, the development model changed, and new system calls may appear in each 2.6.x release. In this case, the exact version number where the system call appeared is shown. This convention continues with the 3.x kernel series, which followed on from kernel 2.6.39; and the 4.x kernel series, which followed on from kernel 3.19; and the 5.x kernel series, which followed on from kernel 4.20.</p>
-<dt>*</p>
-<dd> In some cases, a system call was added to a stable kernel series after it branched from the previous stable kernel series, and then backported into the earlier stable kernel series. For example some system calls that appeared in 2.6.x were also backported into a 2.4.x release after 2.4.15. When this is so, the version where the system call appeared in both of the major kernel series is listed.</dl>
+<dt>*</dt>
+<dd> Where no kernel version is indicated, the system call appeared in kernel 1.0 or earlier.</dd>
+<dt>*</dt>
+<dd> Where a system call is marked &quot;1.2&quot; this means the system call probably appeared in a 1.1.x kernel version, and first appeared in a stable kernel with 1.2. (Development of the 1.2 kernel was initiated from a branch of kernel 1.0.6 via the 1.1.x unstable kernel series.)</dd>
+<dt>*</dt>
+<dd> Where a system call is marked &quot;2.0&quot; this means the system call probably appeared in a 1.3.x kernel version, and first appeared in a stable kernel with 2.0. (Development of the 2.0 kernel was initiated from a branch of kernel 1.2.x, somewhere around 1.2.10, via the 1.3.x unstable kernel series.)</dd>
+<dt>*</dt>
+<dd> Where a system call is marked &quot;2.2&quot; this means the system call probably appeared in a 2.1.x kernel version, and first appeared in a stable kernel with 2.2.0. (Development of the 2.2 kernel was initiated from a branch of kernel 2.0.21 via the 2.1.x unstable kernel series.)</dd>
+<dt>*</dt>
+<dd> Where a system call is marked &quot;2.4&quot; this means the system call probably appeared in a 2.3.x kernel version, and first appeared in a stable kernel with 2.4.0. (Development of the 2.4 kernel was initiated from a branch of kernel 2.2.8 via the 2.3.x unstable kernel series.)</dd>
+<dt>*</dt>
+<dd> Where a system call is marked &quot;2.6&quot; this means the system call probably appeared in a 2.5.x kernel version, and first appeared in a stable kernel with 2.6.0. (Development of kernel 2.6 was initiated from a branch of kernel 2.4.15 via the 2.5.x unstable kernel series.)</dd>
+<dt>*</dt>
+<dd> Starting with kernel 2.6.0, the development model changed, and new system calls may appear in each 2.6.x release. In this case, the exact version number where the system call appeared is shown. This convention continues with the 3.x kernel series, which followed on from kernel 2.6.39; and the 4.x kernel series, which followed on from kernel 3.19; and the 5.x kernel series, which followed on from kernel 4.20.</dd>
+<dt>*</dt>
+<dd> In some cases, a system call was added to a stable kernel series after it branched from the previous stable kernel series, and then backported into the earlier stable kernel series. For example some system calls that appeared in 2.6.x were also backported into a 2.4.x release after 2.4.15. When this is so, the version where the system call appeared in both of the major kernel series is listed.</dd></dl>
 <p> The list of system calls that are available as at kernel 5.10 (or in a few cases only on older kernels) is as follows: </p>
 <table>
 <tr VALIGN=top>
@@ -2843,95 +2843,87 @@ description: "syscalls – Linux system calls"
 <h3>System calls on removed ports</h3>
 <p> Some system calls only ever existed on Linux architectures that have since been removed from the kernel:</p>
 <dl>
-<dt>AVR32 (port removed in Linux 4.12)</p>
+<dt>AVR32 (port removed in Linux 4.12)</dt>
 <dd>
+</dd><dl>
 <dl>
-<dt>
-<dd>
-<dl>
-<dt>*</p>
-<dd> <code><a href="/docs/linux/man/2-pread/">pread</a></code>(2)</p>
-<dt>*</p>
-<dd> <code><a href="/docs/linux/man/2-pwrite/">pwrite</a></code>(2)</dl>
+<dt>*</dt>
+<dd> <code><a href="/docs/linux/man/2-pread/">pread</a></code>(2)</dd>
+<dt>*</dt>
+<dd> <code><a href="/docs/linux/man/2-pwrite/">pwrite</a></code>(2)</dd></dl>
 </dl>
-<dt>Blackfin (port removed in Linux 4.17)</p>
+<dt>Blackfin (port removed in Linux 4.17)</dt>
 <dd>
+</dd><dl>
 <dl>
-<dt>
-<dd>
-<dl>
-<dt>*</p>
-<dd> <code>bfin_spinlock</code>(2) (added in Linux 2.6.22)</p>
-<dt>*</p>
-<dd> <code>dma_memcpy</code>(2) (added in Linux 2.6.22)</p>
-<dt>*</p>
-<dd> <code><a href="/docs/linux/man/2-pread/">pread</a></code>(2) (added in Linux 2.6.22)</p>
-<dt>*</p>
-<dd> <code><a href="/docs/linux/man/2-pwrite/">pwrite</a></code>(2) (added in Linux 2.6.22)</p>
-<dt>*</p>
-<dd> <code>sram_alloc</code>(2) (added in Linux 2.6.22)</p>
-<dt>*</p>
-<dd> <code>sram_free</code>(2) (added in Linux 2.6.22)</dl>
+<dt>*</dt>
+<dd> <code>bfin_spinlock</code>(2) (added in Linux 2.6.22)</dd>
+<dt>*</dt>
+<dd> <code>dma_memcpy</code>(2) (added in Linux 2.6.22)</dd>
+<dt>*</dt>
+<dd> <code><a href="/docs/linux/man/2-pread/">pread</a></code>(2) (added in Linux 2.6.22)</dd>
+<dt>*</dt>
+<dd> <code><a href="/docs/linux/man/2-pwrite/">pwrite</a></code>(2) (added in Linux 2.6.22)</dd>
+<dt>*</dt>
+<dd> <code>sram_alloc</code>(2) (added in Linux 2.6.22)</dd>
+<dt>*</dt>
+<dd> <code>sram_free</code>(2) (added in Linux 2.6.22)</dd></dl>
 </dl>
-<dt>Metag (port removed in Linux 4.17)</p>
+<dt>Metag (port removed in Linux 4.17)</dt>
 <dd>
+</dd><dl>
 <dl>
-<dt>
-<dd>
-<dl>
-<dt>*</p>
-<dd> <code>metag_get_tls</code>(2) (add in Linux 3.9)</p>
-<dt>*</p>
-<dd> <code>metag_set_fpu_flags</code>(2) (add in Linux 3.9)</p>
-<dt>*</p>
-<dd> <code>metag_set_tls</code>(2) (add in Linux 3.9)</p>
-<dt>*</p>
-<dd> <code>metag_setglobalbit</code>(2) (add in Linux 3.9)</dl>
+<dt>*</dt>
+<dd> <code>metag_get_tls</code>(2) (add in Linux 3.9)</dd>
+<dt>*</dt>
+<dd> <code>metag_set_fpu_flags</code>(2) (add in Linux 3.9)</dd>
+<dt>*</dt>
+<dd> <code>metag_set_tls</code>(2) (add in Linux 3.9)</dd>
+<dt>*</dt>
+<dd> <code>metag_setglobalbit</code>(2) (add in Linux 3.9)</dd></dl>
 </dl>
-<dt>Tile (port removed in Linux 4.17)</p>
+<dt>Tile (port removed in Linux 4.17)</dt>
 <dd>
+</dd><dl>
 <dl>
-<dt>
-<dd>
-<dl>
-<dt>*</p>
-<dd> <code>cmpxchg_badaddr</code>(2) (added in Linux 2.6.36)</dl>
+<dt>*</dt>
+<dd> <code>cmpxchg_badaddr</code>(2) (added in Linux 2.6.36)</dd></dl>
 </dl>
 </dl>
 <h2>NOTES</h2>
 <p> Roughly speaking, the code belonging to the system call with number __NR_xxx defined in <i>/usr/include/asm/unistd.h</i> can be found in the Linux kernel source in the routine <i>sys_xxx</i>(). There are many exceptions, however, mostly because older system calls were superseded by newer ones, and this has been treated somewhat unsystematically. On platforms with proprietary operating-system emulation, such as sparc, sparc64, and alpha, there are many additional system calls; mips64 also contains a full set of 32-bit system calls. </p>
 <p> Over time, changes to the interfaces of some system calls have been necessary. One reason for such changes was the need to increase the size of structures or scalar values passed to the system call. Because of these changes, certain architectures (notably, longstanding 32-bit architectures such as i386) now have various groups of related system calls (e.g., <code><a href="/docs/linux/man/2-truncate/">truncate</a></code>(2) and <code><a href="/docs/linux/man/2-truncate64/">truncate64</a></code>(2)) which perform similar tasks, but which vary in details such as the size of their arguments. (As noted earlier, applications are generally unaware of this: the glibc wrapper functions do some work to ensure that the right system call is invoked, and that ABI compatibility is preserved for old binaries.) Examples of systems calls that exist in multiple versions are the following:</p>
 <dl>
-<dt>*</p>
-<dd> By now there are three different versions of <code><a href="/docs/linux/man/2-stat/">stat</a></code>(2): <i>sys_stat</i>() (slot <i>__NR_oldstat</i>), <i>sys_newstat</i>() (slot <i>__NR_stat</i>), and <i>sys_stat64</i>() (slot <i>__NR_stat64</i>), with the last being the most current. A similar story applies for <code><a href="/docs/linux/man/2-lstat/">lstat</a></code>(2) and <code><a href="/docs/linux/man/2-fstat/">fstat</a></code>(2).</p>
-<dt>*</p>
-<dd> Similarly, the defines <i>__NR_oldolduname</i>, <i>__NR_olduname</i>, and <i>__NR_uname</i> refer to the routines <i>sys_olduname</i>(), <i>sys_uname</i>(), and <i>sys_newuname</i>().</p>
-<dt>*</p>
-<dd> In Linux 2.0, a new version of <code><a href="/docs/linux/man/2-vm86/">vm86</a></code>(2) appeared, with the old and the new kernel routines being named <i>sys_vm86old</i>() and <i>sys_vm86</i>().</p>
-<dt>*</p>
-<dd> In Linux 2.4, a new version of <code><a href="/docs/linux/man/2-getrlimit/">getrlimit</a></code>(2) appeared, with the old and the new kernel routines being named <i>sys_old_getrlimit</i>() (slot <i>__NR_getrlimit</i>) and <i>sys_getrlimit</i>() (slot <i>__NR_ugetrlimit</i>).</p>
-<dt>*</p>
-<dd> Linux 2.4 increased the size of user and group IDs from 16 to 32 bits. To support this change, a range of system calls were added (e.g., <code><a href="/docs/linux/man/2-chown32/">chown32</a></code>(2), <code><a href="/docs/linux/man/2-getuid32/">getuid32</a></code>(2), <code><a href="/docs/linux/man/2-getgroups32/">getgroups32</a></code>(2), <code><a href="/docs/linux/man/2-setresuid32/">setresuid32</a></code>(2)), superseding earlier calls of the same name without the &quot;32&quot; suffix.</p>
-<dt>*</p>
-<dd> Linux 2.4 added support for applications on 32-bit architectures to access large files (i.e., files for which the sizes and file offsets can&#8217;t be represented in 32 bits.) To support this change, replacements were required for system calls that deal with file offsets and sizes. Thus the following system calls were added: <code><a href="/docs/linux/man/2-fcntl64/">fcntl64</a></code>(2), <code><a href="/docs/linux/man/2-getdents64/">getdents64</a></code>(2), <code><a href="/docs/linux/man/2-stat64/">stat64</a></code>(2), <code><a href="/docs/linux/man/2-statfs64/">statfs64</a></code>(2), <code><a href="/docs/linux/man/2-truncate64/">truncate64</a></code>(2), and their analogs that work with file descriptors or symbolic links. These system calls supersede the older system calls which, except in the case of the &quot;stat&quot; calls, have the same name without the &quot;64&quot; suffix.</p>
+<dt>*</dt>
+<dd> By now there are three different versions of <code><a href="/docs/linux/man/2-stat/">stat</a></code>(2): <i>sys_stat</i>() (slot <i>__NR_oldstat</i>), <i>sys_newstat</i>() (slot <i>__NR_stat</i>), and <i>sys_stat64</i>() (slot <i>__NR_stat64</i>), with the last being the most current. A similar story applies for <code><a href="/docs/linux/man/2-lstat/">lstat</a></code>(2) and <code><a href="/docs/linux/man/2-fstat/">fstat</a></code>(2).</dd>
+<dt>*</dt>
+<dd> Similarly, the defines <i>__NR_oldolduname</i>, <i>__NR_olduname</i>, and <i>__NR_uname</i> refer to the routines <i>sys_olduname</i>(), <i>sys_uname</i>(), and <i>sys_newuname</i>().</dd>
+<dt>*</dt>
+<dd> In Linux 2.0, a new version of <code><a href="/docs/linux/man/2-vm86/">vm86</a></code>(2) appeared, with the old and the new kernel routines being named <i>sys_vm86old</i>() and <i>sys_vm86</i>().</dd>
+<dt>*</dt>
+<dd> In Linux 2.4, a new version of <code><a href="/docs/linux/man/2-getrlimit/">getrlimit</a></code>(2) appeared, with the old and the new kernel routines being named <i>sys_old_getrlimit</i>() (slot <i>__NR_getrlimit</i>) and <i>sys_getrlimit</i>() (slot <i>__NR_ugetrlimit</i>).</dd>
+<dt>*</dt>
+<dd> Linux 2.4 increased the size of user and group IDs from 16 to 32 bits. To support this change, a range of system calls were added (e.g., <code><a href="/docs/linux/man/2-chown32/">chown32</a></code>(2), <code><a href="/docs/linux/man/2-getuid32/">getuid32</a></code>(2), <code><a href="/docs/linux/man/2-getgroups32/">getgroups32</a></code>(2), <code><a href="/docs/linux/man/2-setresuid32/">setresuid32</a></code>(2)), superseding earlier calls of the same name without the &quot;32&quot; suffix.</dd>
+<dt>*</dt>
+<dd> Linux 2.4 added support for applications on 32-bit architectures to access large files (i.e., files for which the sizes and file offsets can&#8217;t be represented in 32 bits.) To support this change, replacements were required for system calls that deal with file offsets and sizes. Thus the following system calls were added: <code><a href="/docs/linux/man/2-fcntl64/">fcntl64</a></code>(2), <code><a href="/docs/linux/man/2-getdents64/">getdents64</a></code>(2), <code><a href="/docs/linux/man/2-stat64/">stat64</a></code>(2), <code><a href="/docs/linux/man/2-statfs64/">statfs64</a></code>(2), <code><a href="/docs/linux/man/2-truncate64/">truncate64</a></code>(2), and their analogs that work with file descriptors or symbolic links. These system calls supersede the older system calls which, except in the case of the &quot;stat&quot; calls, have the same name without the &quot;64&quot; suffix.</dd>
 <dt>
-<dd> On newer platforms that only have 64-bit file access and 32-bit UIDs/GIDs (e.g., alpha, ia64, s390x, x86-64), there is just a single version of the UID/GID and file access system calls. On platforms (typically, 32-bit platforms) where the *64 and *32 calls exist, the other versions are obsolete.</p>
-<dt>*</p>
-<dd> The <i>rt_sig*</i> calls were added in kernel 2.2 to support the addition of real-time signals (see <code><a href="/docs/linux/man/7-signal/">signal</a></code>(7)). These system calls supersede the older system calls of the same name without the &quot;rt_&quot; prefix.</p>
-<dt>*</p>
-<dd> The <code><a href="/docs/linux/man/2-select/">select</a></code>(2) and <code><a href="/docs/linux/man/2-mmap/">mmap</a></code>(2) system calls use five or more arguments, which caused problems in the way argument passing on the i386 used to be set up. Thus, while other architectures have <i>sys_select</i>() and <i>sys_mmap</i>() corresponding to <i>__NR_select</i> and <i>__NR_mmap</i>, on i386 one finds <i>old_select</i>() and <i>old_mmap</i>() (routines that use a pointer to an argument block) instead. These days passing five arguments is not a problem any more, and there is a <i>__NR__newselect</i> that corresponds directly to <i>sys_select</i>() and similarly <i>__NR_mmap2</i>. s390x is the only 64-bit architecture that has <i>old_mmap</i>().</dl>
+</dt><dd> On newer platforms that only have 64-bit file access and 32-bit UIDs/GIDs (e.g., alpha, ia64, s390x, x86-64), there is just a single version of the UID/GID and file access system calls. On platforms (typically, 32-bit platforms) where the *64 and *32 calls exist, the other versions are obsolete.</dd>
+<dt>*</dt>
+<dd> The <i>rt_sig*</i> calls were added in kernel 2.2 to support the addition of real-time signals (see <code><a href="/docs/linux/man/7-signal/">signal</a></code>(7)). These system calls supersede the older system calls of the same name without the &quot;rt_&quot; prefix.</dd>
+<dt>*</dt>
+<dd> The <code><a href="/docs/linux/man/2-select/">select</a></code>(2) and <code><a href="/docs/linux/man/2-mmap/">mmap</a></code>(2) system calls use five or more arguments, which caused problems in the way argument passing on the i386 used to be set up. Thus, while other architectures have <i>sys_select</i>() and <i>sys_mmap</i>() corresponding to <i>__NR_select</i> and <i>__NR_mmap</i>, on i386 one finds <i>old_select</i>() and <i>old_mmap</i>() (routines that use a pointer to an argument block) instead. These days passing five arguments is not a problem any more, and there is a <i>__NR__newselect</i> that corresponds directly to <i>sys_select</i>() and similarly <i>__NR_mmap2</i>. s390x is the only 64-bit architecture that has <i>old_mmap</i>().</dd></dl>
 <h3>Architecture-specific details: Alpha</h3>
 <dl>
-<dt>*</p>
-<dd> <code>getxgid</code>(2) returns a pair of GID and effective GID via registers <code>r0</code> and <code>r20</code>; it is provided instead of <code><a href="/docs/linux/man/2-getgid/">getgid</a></code>(2) and <code><a href="/docs/linux/man/2-getegid/">getegid</a></code>(2).</p>
-<dt>*</p>
-<dd> <code>getxpid</code>(2) returns a pair of PID and parent PID via registers <code>r0</code> and <code>r20</code>; it is provided instead of <code><a href="/docs/linux/man/2-getpid/">getpid</a></code>(2) and <code><a href="/docs/linux/man/2-getppid/">getppid</a></code>(2).</p>
-<dt>*</p>
-<dd> <code>old_adjtimex</code>(2) is a variant of <code><a href="/docs/linux/man/2-adjtimex/">adjtimex</a></code>(2) that uses <i>struct timeval32</i>, for compatibility with OSF/1.</p>
-<dt>*</p>
-<dd> <code>getxuid</code>(2) returns a pair of GID and effective GID via registers <code>r0</code> and <code>r20</code>; it is provided instead of <code><a href="/docs/linux/man/2-getuid/">getuid</a></code>(2) and <code><a href="/docs/linux/man/2-geteuid/">geteuid</a></code>(2).</p>
-<dt>*</p>
-<dd> <code>sethae</code>(2) is used for configuring the Host Address Extension register on low-cost Alphas in order to access address space beyond first 27 bits.</dl>
+<dt>*</dt>
+<dd> <code>getxgid</code>(2) returns a pair of GID and effective GID via registers <code>r0</code> and <code>r20</code>; it is provided instead of <code><a href="/docs/linux/man/2-getgid/">getgid</a></code>(2) and <code><a href="/docs/linux/man/2-getegid/">getegid</a></code>(2).</dd>
+<dt>*</dt>
+<dd> <code>getxpid</code>(2) returns a pair of PID and parent PID via registers <code>r0</code> and <code>r20</code>; it is provided instead of <code><a href="/docs/linux/man/2-getpid/">getpid</a></code>(2) and <code><a href="/docs/linux/man/2-getppid/">getppid</a></code>(2).</dd>
+<dt>*</dt>
+<dd> <code>old_adjtimex</code>(2) is a variant of <code><a href="/docs/linux/man/2-adjtimex/">adjtimex</a></code>(2) that uses <i>struct timeval32</i>, for compatibility with OSF/1.</dd>
+<dt>*</dt>
+<dd> <code>getxuid</code>(2) returns a pair of GID and effective GID via registers <code>r0</code> and <code>r20</code>; it is provided instead of <code><a href="/docs/linux/man/2-getuid/">getuid</a></code>(2) and <code><a href="/docs/linux/man/2-geteuid/">geteuid</a></code>(2).</dd>
+<dt>*</dt>
+<dd> <code>sethae</code>(2) is used for configuring the Host Address Extension register on low-cost Alphas in order to access address space beyond first 27 bits.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/2-intro/">intro</a></code>(2), <code><a href="/docs/linux/man/2-syscall/">syscall</a></code>(2), <code><a href="/docs/linux/man/2-unimplemented/">unimplemented</a></code>(2), <code><a href="/docs/linux/man/3-errno/">errno</a></code>(3), <code><a href="/docs/linux/man/7-libc/">libc</a></code>(7), <code><a href="/docs/linux/man/7-vdso/">vdso</a></code>(7)</p>
 <h2>COLOPHON</h2>

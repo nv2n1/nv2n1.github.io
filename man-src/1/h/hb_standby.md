@@ -17,16 +17,16 @@ description: "hb_standby – hb_standby is a simple linux-ha shell script. It is
 <p> nodea drbddisk::r0 Filesystem::/dev/drbd0::/local/groups::ext3 10.0.0.1 smb </p>
 <p> nodeb drbddisk::r1 Filesystem::/dev/drbd1::/local/ldap::ext3 10.0.0.2 ldap </p>
 <dl>
-<dt><code>hb_standby local</code></p>
-<dd> When run on nodea, means migrate any resources that nodea is the preferred node for. In this case Samba would be shutdown, the IP address 10.0.0.1 would be released, /local/groups would be unmounted, /dev/drbd0 would be placed into secondary and nodeb would take all these services over. When run on nodeb, OpenLDAP would shutdown, 10.0.0.2 would be released, /local/ldap would be unmounted, /dev/drbd1 would be placed into Secondary mode and nodea would take over all these services. </p>
-<dt><code>hb_standby foreign</code></p>
-<dd> When run on nodea, means migrate any resources that nodea is NOT the preferred node for. In this case OpenLDAP would shutdown, 10.0.0.2 would be released, /local/ldap would be unmounted, /dev/drbd1 would be placed into Secondary mode and nodeb would take over all these services. When run on nodeb, Samba would be shutdown, the IP address 10.0.0.1 would be released, /local/groups would be unmounted, /dev/drbd0 would be placed into secondary and nodea would take all these services over. </p>
-<dt><code>hb_standby all</code></p>
-<dd> Regardless of which node it&#8217;s run on means to release all resources so the other node takes over all resources. </p>
-<dt><code>hb_standby</code></p>
-<dd> Without an argument is the same as &quot;hb_standby all&quot; </p>
-<dt><code>hb_standby failback</code></p>
-<dd> Same as &quot;hb_standby foreign&quot; </p>
+<dt><code>hb_standby local</code></dt>
+<dd> When run on nodea, means migrate any resources that nodea is the preferred node for. In this case Samba would be shutdown, the IP address 10.0.0.1 would be released, /local/groups would be unmounted, /dev/drbd0 would be placed into secondary and nodeb would take all these services over. When run on nodeb, OpenLDAP would shutdown, 10.0.0.2 would be released, /local/ldap would be unmounted, /dev/drbd1 would be placed into Secondary mode and nodea would take over all these services. </dd>
+<dt><code>hb_standby foreign</code></dt>
+<dd> When run on nodea, means migrate any resources that nodea is NOT the preferred node for. In this case OpenLDAP would shutdown, 10.0.0.2 would be released, /local/ldap would be unmounted, /dev/drbd1 would be placed into Secondary mode and nodeb would take over all these services. When run on nodeb, Samba would be shutdown, the IP address 10.0.0.1 would be released, /local/groups would be unmounted, /dev/drbd0 would be placed into secondary and nodea would take all these services over. </dd>
+<dt><code>hb_standby all</code></dt>
+<dd> Regardless of which node it&#8217;s run on means to release all resources so the other node takes over all resources. </dd>
+<dt><code>hb_standby</code></dt>
+<dd> Without an argument is the same as &quot;hb_standby all&quot; </dd>
+<dt><code>hb_standby failback</code></dt>
+<dd> Same as &quot;hb_standby foreign&quot; </dd>
 </dl>
 <h2>CAVEATS</h2>
 <p> <code>hb_standby</code> is only usable in R1-style configurations (i.e., those configured using the <i>haresources</i> file). </p>

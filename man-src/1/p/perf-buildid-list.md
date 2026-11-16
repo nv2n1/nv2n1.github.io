@@ -20,23 +20,23 @@ description: "perf-buildid-list – List the buildids in a perf.data file"
 <p> -H, &#8211;with-hits</p>
 <dl>
 <dt>
-<dd> Show only DSOs with hits.</dl>
+</dt><dd> Show only DSOs with hits.</dd></dl>
 <p> -i, &#8211;input=</p>
 <dl>
 <dt>
-<dd> Input file name. (default: perf.data unless stdin is a fifo)</dl>
+</dt><dd> Input file name. (default: perf.data unless stdin is a fifo)</dd></dl>
 <p> -f, &#8211;force</p>
 <dl>
 <dt>
-<dd> Don&#8217;t do ownership validation.</dl>
+</dt><dd> Don&#8217;t do ownership validation.</dd></dl>
 <p> -k, &#8211;kernel</p>
 <dl>
 <dt>
-<dd> Show running kernel build id.</dl>
+</dt><dd> Show running kernel build id.</dd></dl>
 <p> -v, &#8211;verbose</p>
 <dl>
 <dt>
-<dd> Be more verbose.</dl>
+</dt><dd> Be more verbose.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-perf-record/">perf-record</a></code>(1), <code><a href="/docs/linux/man/1-perf-top/">perf-top</a></code>(1), <code><a href="/docs/linux/man/1-perf-report/">perf-report</a></code>(1) </p>
 <h2>Index</h2>

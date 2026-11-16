@@ -20,88 +20,88 @@ description: "s3virge – S3 ViRGE video driver"
 <h2>Supported Hardware</h2>
 <p>The <code>s3virge</code> driver supports PCI and AGP video cards based on the following S3 chips:</p>
 <dl>
-<dt><code>ViRGE</code></p>
-<dd>86C325</p>
-<dt><code>ViRGE VX</code></p>
-<dd>86C988</p>
-<dt><code>ViRGE DX</code></p>
-<dd>86C375</p>
-<dt><code>ViRGE GX</code></p>
-<dd>86C385</p>
-<dt><code>ViRGE GX2</code></p>
-<dd>86C357</p>
-<dt><code>ViRGE MX</code></p>
-<dd>86C260</p>
-<dt><code>ViRGE MX+</code></p>
-<dd>86C280</p>
-<dt><code>Trio 3D</code></p>
-<dd>86C365</p>
-<dt><code>Trio 3D/2X</code></p>
-<dd>86C362, 86C368</dl>
+<dt><code>ViRGE</code></dt>
+<dd>86C325</dd>
+<dt><code>ViRGE VX</code></dt>
+<dd>86C988</dd>
+<dt><code>ViRGE DX</code></dt>
+<dd>86C375</dd>
+<dt><code>ViRGE GX</code></dt>
+<dd>86C385</dd>
+<dt><code>ViRGE GX2</code></dt>
+<dd>86C357</dd>
+<dt><code>ViRGE MX</code></dt>
+<dd>86C260</dd>
+<dt><code>ViRGE MX+</code></dt>
+<dd>86C280</dd>
+<dt><code>Trio 3D</code></dt>
+<dd>86C365</dd>
+<dt><code>Trio 3D/2X</code></dt>
+<dd>86C362, 86C368</dd></dl>
 <h2>Configuration Details</h2>
 <p>Please refer to <a href="/docs/linux/man/5-xorg-conf/">xorg.conf</a>(5) for general configuration details. This section only covers configuration details specific to this driver. All options names are case and white space insensitive when parsed by the server, for example, &quot;virge vx&quot; and &quot;VIRGEvx&quot; are equivalent. </p>
 <p> The driver auto-detects the chipset type, but the following <code>ChipSet</code> names may optionally be specified in the config file <code>N&#8217;34&#8217;DeviceN&#8217;34&#8217;</code> section, and will override the auto-detection: </p>
 <dl>
-<dd>&quot;virge&quot;, &quot;86c325&quot;, &quot;virge vx&quot;, &quot;86c988&quot;, &quot;virge dx&quot;, &quot;86c375&quot;, &quot;virge gx&quot;, &quot;86c385&quot;, &quot;virge gx2&quot;, &quot;86c357&quot;, &quot;virge mx&quot;, &quot;86c260&quot;, &quot;virge mx+&quot;, &quot;86c280&quot;, &quot;trio 3d&quot;, &quot;86c365&quot;, &quot;trio 3d/2x&quot;, &quot;86c362&quot;, &quot;86c368&quot;.</dl>
+<dd>&quot;virge&quot;, &quot;86c325&quot;, &quot;virge vx&quot;, &quot;86c988&quot;, &quot;virge dx&quot;, &quot;86c375&quot;, &quot;virge gx&quot;, &quot;86c385&quot;, &quot;virge gx2&quot;, &quot;86c357&quot;, &quot;virge mx&quot;, &quot;86c260&quot;, &quot;virge mx+&quot;, &quot;86c280&quot;, &quot;trio 3d&quot;, &quot;86c365&quot;, &quot;trio 3d/2x&quot;, &quot;86c362&quot;, &quot;86c368&quot;.</dd></dl>
 <p> The following Cursor <code>Options</code> are supported:</p>
 <dl>
-<dt><code>Option N&#8217;34&#8217;HWCursorN&#8217;34&#8217; [N&#8217;34&#8217;</code><i>boolean</i><code>N&#8217;34&#8217;]</code></p>
-<dd>Enable or disable the HW cursor. Default: on.</p>
-<dt><code>Option N&#8217;34&#8217;SWCursorN&#8217;34&#8217; [N&#8217;34&#8217;</code><i>boolean</i><code>N&#8217;34&#8217;]</code></p>
-<dd>Inverse of &quot;HWCursor&quot;. Default: off. </p>
+<dt><code>Option N&#8217;34&#8217;HWCursorN&#8217;34&#8217; [N&#8217;34&#8217;</code><i>boolean</i><code>N&#8217;34&#8217;]</code></dt>
+<dd>Enable or disable the HW cursor. Default: on.</dd>
+<dt><code>Option N&#8217;34&#8217;SWCursorN&#8217;34&#8217; [N&#8217;34&#8217;</code><i>boolean</i><code>N&#8217;34&#8217;]</code></dt>
+<dd>Inverse of &quot;HWCursor&quot;. Default: off. </dd>
 </dl>
 <p> The following display <code>Options</code> are supported:</p>
 <dl>
-<dt><code>Option N&#8217;34&#8217;ShadowFBN&#8217;34&#8217; [N&#8217;34&#8217;</code><i>boolean</i><code>N&#8217;34&#8217;]</code></p>
-<dd>Use shadow framebuffer. Disables HW acceleration. Default: off.</p>
-<dt><code>Option N&#8217;34&#8217;RotateN&#8217;34&#8217; N&#8217;34&#8217;</code>cw<code> | </code>ccw<code>N&#8217;34&#8217;</code></p>
-<dd>Rotate the screen CW &#8211; clockwise or CCW &#8211; counter clockwise. Disables HW Acceleration and HW Cursor, uses ShadowFB. Default: no rotation.</p>
-<dt><code>Option N&#8217;34&#8217;XVideoN&#8217;34&#8217; [N&#8217;34&#8217;</code>boolean<code>N&#8217;34&#8217;]</code></p>
-<dd>Disable XVideo support by using the off option. This changes FIFO settings which prevent screen noise for high-res modes. Default: on </p>
+<dt><code>Option N&#8217;34&#8217;ShadowFBN&#8217;34&#8217; [N&#8217;34&#8217;</code><i>boolean</i><code>N&#8217;34&#8217;]</code></dt>
+<dd>Use shadow framebuffer. Disables HW acceleration. Default: off.</dd>
+<dt><code>Option N&#8217;34&#8217;RotateN&#8217;34&#8217; N&#8217;34&#8217;</code>cw<code> | </code>ccw<code>N&#8217;34&#8217;</code></dt>
+<dd>Rotate the screen CW &#8211; clockwise or CCW &#8211; counter clockwise. Disables HW Acceleration and HW Cursor, uses ShadowFB. Default: no rotation.</dd>
+<dt><code>Option N&#8217;34&#8217;XVideoN&#8217;34&#8217; [N&#8217;34&#8217;</code>boolean<code>N&#8217;34&#8217;]</code></dt>
+<dd>Disable XVideo support by using the off option. This changes FIFO settings which prevent screen noise for high-res modes. Default: on </dd>
 </dl>
 <p> The following video memory <code>Options</code> are supported:</p>
 <dl>
-<dt><code>Option N&#8217;34&#8217;slow_edodramN&#8217;34&#8217;</code></p>
-<dd>Switch the standard ViRGE to 2-cycle edo mode. Try this if you encounter pixel corruption on the ViRGE. Using this option will cause a large decrease in performance. Default: off.</p>
-<dt><code>Option N&#8217;34&#8217;fpm_vramN&#8217;34&#8217;</code></p>
-<dd>Switch the ViRGE/VX to fast page mode vram mode. Default: off.</p>
-<dt><code>Option N&#8217;34&#8217;slow_dram </code>|<code> fast_dramN&#8217;34&#8217;</code></p>
-<dd>Change Trio 3D and 3D/2X memory options. Default: Use BIOS defaults.</p>
-<dt><code>Option N&#8217;34&#8217;early_ras_precharge </code>|<code> late_ras_prechargeN&#8217;34&#8217;</code></p>
-<dd>adjust memory parameters. One of these will us the same settings as your video card defaults, and using neither in the config file does the same. Default: none.</p>
-<dt><code>Option N&#8217;34&#8217;set_mclkN&#8217;34&#8217; N&#8217;34&#8217;</code><i>integer</i><code>N&#8217;34&#8217;</code></p>
-<dd>sets the memory clock, where <i>integer</i> is in kHz, and <i>integer</i> &lt;= 100000. Default: probe the memory clock value, and use it at server start.</p>
-<dt><code>Option N&#8217;34&#8217;set_refclkN&#8217;34&#8217; N&#8217;34&#8217;</code><i>integer</i><code>N&#8217;34&#8217;</code></p>
-<dd>sets the ref clock for ViRGE MX, where <i>integer</i> is in kHz. Default: probe the memory clock value, and use it at server start. </p>
+<dt><code>Option N&#8217;34&#8217;slow_edodramN&#8217;34&#8217;</code></dt>
+<dd>Switch the standard ViRGE to 2-cycle edo mode. Try this if you encounter pixel corruption on the ViRGE. Using this option will cause a large decrease in performance. Default: off.</dd>
+<dt><code>Option N&#8217;34&#8217;fpm_vramN&#8217;34&#8217;</code></dt>
+<dd>Switch the ViRGE/VX to fast page mode vram mode. Default: off.</dd>
+<dt><code>Option N&#8217;34&#8217;slow_dram </code>|<code> fast_dramN&#8217;34&#8217;</code></dt>
+<dd>Change Trio 3D and 3D/2X memory options. Default: Use BIOS defaults.</dd>
+<dt><code>Option N&#8217;34&#8217;early_ras_precharge </code>|<code> late_ras_prechargeN&#8217;34&#8217;</code></dt>
+<dd>adjust memory parameters. One of these will us the same settings as your video card defaults, and using neither in the config file does the same. Default: none.</dd>
+<dt><code>Option N&#8217;34&#8217;set_mclkN&#8217;34&#8217; N&#8217;34&#8217;</code><i>integer</i><code>N&#8217;34&#8217;</code></dt>
+<dd>sets the memory clock, where <i>integer</i> is in kHz, and <i>integer</i> &lt;= 100000. Default: probe the memory clock value, and use it at server start.</dd>
+<dt><code>Option N&#8217;34&#8217;set_refclkN&#8217;34&#8217; N&#8217;34&#8217;</code><i>integer</i><code>N&#8217;34&#8217;</code></dt>
+<dd>sets the ref clock for ViRGE MX, where <i>integer</i> is in kHz. Default: probe the memory clock value, and use it at server start. </dd>
 </dl>
 <p> The following acceleration and graphics engine <code>Options</code> are supported:</p>
 <dl>
-<dt><code>Option N&#8217;34&#8217;NoAccelN&#8217;34&#8217;</code></p>
-<dd>Disable acceleration. Very useful for determining if the driver has problems with drawing and acceleration routines. This is the first option to try if your server runs but you see graphic corruption on the screen. Using it decreases performance, as it uses software emulation for drawing operations the video driver can accelerate with hardware. Default: acceleration is enabled.</p>
-<dt><code>Option N&#8217;34&#8217;UseFBN&#8217;34&#8217;</code></p>
-<dd>There are two framebuffer rendering methods. fb and cfb. Both are available in the driver. fb is the newer and default method. To switch back to cfb use this option with no, off or other negative parameter. Default: on.</p>
-<dt><code>Option N&#8217;34&#8217;fifo_aggressive </code>|<code> fifo_moderate </code>|<code> fifo_conservativeN&#8217;34&#8217;</code></p>
-<dd>alter the settings for the threshold at which the pixel FIFO takes over the internal memory bus to refill itself. The smaller this threshold, the better the acceleration performance of the card. You may try the fastest setting (<code>fifo_aggressive</code>) and move down if you encounter pixel corruption. The optimal setting will probably depend on dot-clock and on color depth. Note that specifying any of these options will also alter other memory settings which may increase performance, so trying <code>fifo_conservative</code> will in most cases be a slight benefit (this uses the chip defaults). If pixel corruption or transient streaking is observed during drawing operations then removing any fifo options is recommended. Default: none. </p>
+<dt><code>Option N&#8217;34&#8217;NoAccelN&#8217;34&#8217;</code></dt>
+<dd>Disable acceleration. Very useful for determining if the driver has problems with drawing and acceleration routines. This is the first option to try if your server runs but you see graphic corruption on the screen. Using it decreases performance, as it uses software emulation for drawing operations the video driver can accelerate with hardware. Default: acceleration is enabled.</dd>
+<dt><code>Option N&#8217;34&#8217;UseFBN&#8217;34&#8217;</code></dt>
+<dd>There are two framebuffer rendering methods. fb and cfb. Both are available in the driver. fb is the newer and default method. To switch back to cfb use this option with no, off or other negative parameter. Default: on.</dd>
+<dt><code>Option N&#8217;34&#8217;fifo_aggressive </code>|<code> fifo_moderate </code>|<code> fifo_conservativeN&#8217;34&#8217;</code></dt>
+<dd>alter the settings for the threshold at which the pixel FIFO takes over the internal memory bus to refill itself. The smaller this threshold, the better the acceleration performance of the card. You may try the fastest setting (<code>fifo_aggressive</code>) and move down if you encounter pixel corruption. The optimal setting will probably depend on dot-clock and on color depth. Note that specifying any of these options will also alter other memory settings which may increase performance, so trying <code>fifo_conservative</code> will in most cases be a slight benefit (this uses the chip defaults). If pixel corruption or transient streaking is observed during drawing operations then removing any fifo options is recommended. Default: none. </dd>
 </dl>
 <p> The following PCI bus <code>Options</code> are supported:</p>
 <dl>
-<dt><code>Option N&#8217;34&#8217;pci_burstN&#8217;34&#8217; [N&#8217;34&#8217;</code><i>boolean</i><code>N&#8217;34&#8217;]</code></p>
-<dd>will enable PCI burst mode. This should work on all but a few broken PCI chipsets, and will increase performance. Default: off.</p>
-<dt><code>Option N&#8217;34&#8217;pci_retryN&#8217;34&#8217; [N&#8217;34&#8217;</code><i>boolean</i><code>N&#8217;34&#8217;]</code></p>
-<dd>will allow the driver to rely on PCI Retry to program the ViRGE registers. <code>pci_burst</code> must be enabled for this to work. This will increase performance, especially for small fills/blits, because the driver does not have to poll the ViRGE before sending it commands to make sure it is ready. It should work on most recent PCI chipsets. Default: off.</dl>
+<dt><code>Option N&#8217;34&#8217;pci_burstN&#8217;34&#8217; [N&#8217;34&#8217;</code><i>boolean</i><code>N&#8217;34&#8217;]</code></dt>
+<dd>will enable PCI burst mode. This should work on all but a few broken PCI chipsets, and will increase performance. Default: off.</dd>
+<dt><code>Option N&#8217;34&#8217;pci_retryN&#8217;34&#8217; [N&#8217;34&#8217;</code><i>boolean</i><code>N&#8217;34&#8217;]</code></dt>
+<dd>will allow the driver to rely on PCI Retry to program the ViRGE registers. <code>pci_burst</code> must be enabled for this to work. This will increase performance, especially for small fills/blits, because the driver does not have to poll the ViRGE before sending it commands to make sure it is ready. It should work on most recent PCI chipsets. Default: off.</dd></dl>
 <p> The following ViRGE MX LCD <code>Options</code> are supported:</p>
 <dl>
-<dt><code>Option N&#8217;34&#8217;lcd_centerN&#8217;34&#8217;</code></p>
+<dt><code>Option N&#8217;34&#8217;lcd_centerN&#8217;34&#8217;</code></dt>
 <dd>
-<dt><code>Option N&#8217;34&#8217;set_lcdclkN&#8217;34&#8217; N&#8217;34&#8217;</code><i>integer</i><code>N&#8217;34&#8217;</code></p>
-<dd>allows setting the clock for a ViRGE MX LCD display. <i>integer</i> is in Hz. Default: use probed value. </p>
+</dd><dt><code>Option N&#8217;34&#8217;set_lcdclkN&#8217;34&#8217; N&#8217;34&#8217;</code><i>integer</i><code>N&#8217;34&#8217;</code></dt>
+<dd>allows setting the clock for a ViRGE MX LCD display. <i>integer</i> is in Hz. Default: use probed value. </dd>
 </dl>
 <p> The following additional <code>Options</code> are supported:</p>
 <dl>
-<dt><code>Option N&#8217;34&#8217;ShowCacheN&#8217;34&#8217; [N&#8217;34&#8217;</code><i>boolean</i><code>N&#8217;34&#8217;]</code></p>
-<dd>Enable or disable viewing offscreen cache memory. A development debug option. Default: off.</p>
-<dt><code>Option N&#8217;34&#8217;mx_cr3a_fixN&#8217;34&#8217; [N&#8217;34&#8217;</code><i>boolean</i><code>N&#8217;34&#8217;]</code></p>
-<dd>Enable or disable a cr3a fix added for ViRGE MX. Default: on. </p>
+<dt><code>Option N&#8217;34&#8217;ShowCacheN&#8217;34&#8217; [N&#8217;34&#8217;</code><i>boolean</i><code>N&#8217;34&#8217;]</code></dt>
+<dd>Enable or disable viewing offscreen cache memory. A development debug option. Default: off.</dd>
+<dt><code>Option N&#8217;34&#8217;mx_cr3a_fixN&#8217;34&#8217; [N&#8217;34&#8217;</code><i>boolean</i><code>N&#8217;34&#8217;]</code></dt>
+<dd>Enable or disable a cr3a fix added for ViRGE MX. Default: on. </dd>
 </dl>
 <h2>See Also</h2>
 <p><a href="/docs/linux/man/1-xorg/">Xorg</a>(1), <a href="/docs/linux/man/5-xorg-conf/">xorg.conf</a>(5), <a href="/docs/linux/man/1-xserver/">Xserver</a>(1), <a href="/docs/linux/man/7-x/">X</a>(7) </p>

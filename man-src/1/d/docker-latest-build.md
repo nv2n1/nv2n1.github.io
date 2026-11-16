@@ -67,19 +67,19 @@ A limit value equal to memory plus swap. Must be used with the&nbsp;<wbr>&nbsp;<
 &nbsp;<wbr>&nbsp;<wbr>This default value is defined here: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
    cat /sys/fs/cgroup/cpu/cpu.shares
    1024
 </pre>
-</dl>
+</dd></dl>
 <p> You can change this proportion by adjusting the container&#8217;s CPU share<br />
 &nbsp;<wbr>&nbsp;<wbr>weighting relative to the weighting of all other running containers. </p>
 <p> To modify the proportion from the default of 1024, use the <code>&#8211;cpu-shares</code><br />
 &nbsp;<wbr>&nbsp;<wbr>flag to set the weighting to 2 or higher. </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre><code>
 Container CPU share Flag
 {
@@ -91,7 +91,7 @@ Container CPU share Flag
 }
 40 % of CPU-- cpu - shares = 410(410 is 40 % of 1024)
 </code></pre>
-</dl>
+</dd></dl>
 <p> The proportion is only applied when CPU-intensive processes are running.<br />
 &nbsp;<wbr>&nbsp;<wbr>When tasks in one container are idle, the other containers can use the<br />
 &nbsp;<wbr>&nbsp;<wbr>left-over CPU time. The actual amount of CPU time used varies depending on<br />
@@ -104,7 +104,7 @@ Container CPU share Flag
 &nbsp;<wbr>&nbsp;<wbr>receive 16.5%, 16.5%&nbsp;<wbr>and 33%&nbsp;<wbr>of the CPU. </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <p>Container CPU share Flag CPU time<br />
 {<br />
     C0<br />
@@ -122,7 +122,7 @@ Container CPU share Flag
     C4<br />
 }<br />
 100 % &#8211;cpu &#8211; shares = 1024 33 %
-</dl>
+</dd></dl>
 <p> On a multi-core system, the shares of CPU time are distributed across the CPU<br />
 &nbsp;<wbr>&nbsp;<wbr>cores. Even if a container is limited to less than 100%&nbsp;<wbr>of CPU time, it can<br />
 &nbsp;<wbr>&nbsp;<wbr>use 100%&nbsp;<wbr>of each individual CPU core. </p>
@@ -132,7 +132,7 @@ Container CPU share Flag
 &nbsp;<wbr>&nbsp;<wbr>division of CPU shares: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre><code>
 PID container CPU CPU share 100
 {
@@ -148,7 +148,7 @@ PID container CPU CPU share 100
 }
 2 100 % of CPU2
 </code></pre>
-</dl>
+</dd></dl>
 <p> <code>&#8211;cpu-period</code>=<i>0</i><br />
 &nbsp;<wbr>&nbsp;<wbr>Limit the CPU CFS&nbsp;<wbr>(Completely Fair Scheduler)&nbsp;<wbr>period. </p>
 <p> Limit the container&#8217;s CPU usage. This flag causes the kernel to restrict the<br />
@@ -174,19 +174,19 @@ PID container CPU CPU share 100
 <p> Docker images can be built using the build command and a Dockerfile: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 docker build .
 </pre>
-</dl>
+</dd></dl>
 <p> During the build process Docker creates intermediate images. In order to keep them, you must explicitly set &#8211;rm=false. </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 docker build --rm=false .
 </pre>
-</dl>
+</dd></dl>
 <p> A good practice is to make a sub-directory with a related name and create the Dockerfile in that directory. For example, a directory called mongo may contain a Dockerfile to create a Docker MongoDB image. Likewise, another directory called httpd may be used to store Dockerfiles for Apache web server images. </p>
 <p> It is also a good practice to add the files required for the image to the sub-directory. These files will then be specified with the COPY or ADD instructions in the Dockerfile. </p>
 <p> Note: If you include a tar file (a good practice), then Docker will automatically extract the contents of the tar file specified within the ADD instruction into the specified target. </p>
@@ -196,72 +196,73 @@ docker build --rm=false .
 <p> Though it is not a good practice, image names can be arbitrary: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 docker build -t myimage .
 </pre>
-</dl>
+</dd></dl>
 <p> A better approach is to provide a fully qualified and meaningful repository, name, and tag (where the tag in this context means the qualifier after the &quot;:&quot;). In this example we build a JBoss image for the Fedora repository and give it the version 1.0: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 docker build -t fedora/jboss:1.0 .
 </pre>
-</dl>
+</dd></dl>
 <p> The next example is for the &quot;whenry&quot; user repository and uses Fedora and JBoss and gives it the version 2.1 : </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 docker build -t whenry/fedora-jboss:v2.1 .
 </pre>
-</dl>
+</dd></dl>
 <p> If you do not provide a version tag then Docker will assign latest: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 docker build -t whenry/fedora-jboss .
 </pre>
-</dl>
+</dd></dl>
 <p> When you list the images, the image above will have the tag latest. </p>
 <p> You can apply multiple tags to an image. For example, you can apply the latest tag to a newly built image and add another tag that references a specific version. For example, to tag an image both as whenry/fedora-jboss:latest and whenry/fedora-jboss:v2.1, use the following: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 docker build -t whenry/fedora-jboss:latest -t whenry/fedora-jboss:v2.1 .
 </pre>
-</dl>
+</dd></dl>
 <p> So renaming an image is arbitrary but consideration should be given to a useful convention that makes sense for consumers and should also take into account Docker community conventions. </p>
 <h2>Building an image using a URL</h2>
 <p> This will clone the specified GitHub repository from the URL and use it as context. The Dockerfile at the root of the repository is used as Dockerfile. This only works if the GitHub repository is a dedicated repository. </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 docker build github.com/scollier/purpletest
 </pre>
-</dl>
+</dd></dl>
 <p> Note: You can set an arbitrary Git repository via the git:// scheme. </p>
 <h2>Building an image using a URL to a tarball&#8217;ed context</h2>
 <p> This will send the URL itself to the Docker daemon. The daemon will fetch the tarball archive, decompress it and use its contents as the build context. The Dockerfile at the root of the archive and the rest of the archive will get used as the context of the build. If you pass an <code>-f PATH/Dockerfile</code> option as well, the system will look for that file inside the contents of the tarball. </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 docker build -f dev/Dockerfile <a rel="nofollow" href="https://10.10.10.1/docker/context.tar.gz">https://10.10.10.1/docker/context.tar.gz</a>
 </pre>
-</dl>
+</dd></dl>
 <p> Note: supported compression formats are &#8216;xz&#8217;, &#8216;bzip2&#8217;, &#8216;gzip&#8217; and &#8216;identity&#8217; (no compression). </p>
 <h2>Specify isolation technology for container (&#8211;isolation)</h2>
 <p> This option is useful in situations where you are running Docker containers on Windows. The &#8211;isolation=&lt;value&gt; option sets a container&#8217;s isolation technology. On Linux, the only supported is the default option which uses Linux namespaces. On Microsoft Windows, you can specify these values:</p>
 <dl>
-<dt>step]</p>
+<dt>step]</dt>
 <dd>
-<p> item default: Use the value specified by the Docker daemon&#8217;s &#8211;exec-opt . If the daemon does not specify an isolation technology, Microsoft Windows uses process as its default value. item process: Namespace isolation only. item hyperv: Hyper-V hypervisor partition-based isolation.</dl>
+<p> item default: Use the value specified by the Docker daemon&#8217;s &#8211;exec-opt . If the daemon does not specify an isolation technology, Microsoft Windows uses process as its default value. item process: Namespace isolation only. item hyperv: Hyper-V hypervisor partition-based isolation.</dd></dl>
 <p> Specifying the &#8211;isolation flag without a value is the same as setting &#8211;isolation=&quot;default&quot;. </p>
 <h2>HISTORY</h2>
 <p> March 2014, Originally compiled by William Henry (whenry at redhat dot com) based on docker.com source material and internal work. June 2014, updated by Sven Dowideit &lt;SvenDowideit [at] home.org.au&gt; June 2015, updated by Sally O&#8217;Malley &lt;somalley [at] redhat.com&gt; </p>
 <h2>Index</h2>
+</p>

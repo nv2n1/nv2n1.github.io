@@ -10,9 +10,7 @@ description: "xcb_query_extension – check if extension is present"
 <p>xcb_query_extension &#8211; check if extension is present</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;xcb/xproto.h&gt;
-
 Request function
-
     xcb_query_extension_cookie_t
     xcb_query_extension(xcb_connection_t *conn, uint16_t name_len, const char *name);</code></pre>
 <h3>Reply datastructure</h3>
@@ -29,31 +27,31 @@ Request function
 <h3>Reply function</h3>
 <dl>
 <dd>xcb_query_extension_reply_t *<code>xcb_query_extension_reply</code>(xcb_connection_t&nbsp;<wbr>*<i>conn</i>, xcb_query_extension_cookie_t&nbsp;<wbr><i>cookie</i>, xcb_generic_error_t&nbsp;<wbr>**<i>e</i>);
-</dl>
+</dd></dl>
 <h2>Request Arguments</h2>
 <dl>
-<dt><i>conn</i></p>
-<dd>The XCB connection to X11.</p>
-<dt><i>name_len</i></p>
-<dd>The length of <i>name</i> in bytes.</p>
-<dt><i>name</i></p>
-<dd>The name of the extension to query, for example &quot;RANDR&quot;. This is case sensitive!</dl>
+<dt><i>conn</i></dt>
+<dd>The XCB connection to X11.</dd>
+<dt><i>name_len</i></dt>
+<dd>The length of <i>name</i> in bytes.</dd>
+<dt><i>name</i></dt>
+<dd>The name of the extension to query, for example &quot;RANDR&quot;. This is case sensitive!</dd></dl>
 <h2>Reply Fields</h2>
 <dl>
-<dt><i>response_type</i></p>
-<dd>The type of this reply, in this case <i>XCB_QUERY_EXTENSION</i>. This field is also present in the <i>xcb_generic_reply_t</i> and can be used to tell replies apart from each other.</p>
-<dt><i>sequence</i></p>
-<dd>The sequence number of the last request processed by the X11 server.</p>
-<dt><i>length</i></p>
-<dd>The length of the reply, in words (a word is 4 bytes).</p>
-<dt><i>present</i></p>
-<dd>Whether the extension is present on this X11 server.</p>
-<dt><i>major_opcode</i></p>
-<dd>The major opcode for requests.</p>
-<dt><i>first_event</i></p>
-<dd>The first event code, if any.</p>
-<dt><i>first_error</i></p>
-<dd>The first error code, if any.</dl>
+<dt><i>response_type</i></dt>
+<dd>The type of this reply, in this case <i>XCB_QUERY_EXTENSION</i>. This field is also present in the <i>xcb_generic_reply_t</i> and can be used to tell replies apart from each other.</dd>
+<dt><i>sequence</i></dt>
+<dd>The sequence number of the last request processed by the X11 server.</dd>
+<dt><i>length</i></dt>
+<dd>The length of the reply, in words (a word is 4 bytes).</dd>
+<dt><i>present</i></dt>
+<dd>Whether the extension is present on this X11 server.</dd>
+<dt><i>major_opcode</i></dt>
+<dd>The major opcode for requests.</dd>
+<dt><i>first_event</i></dt>
+<dd>The first event code, if any.</dd>
+<dt><i>first_error</i></dt>
+<dd>The first error code, if any.</dd></dl>
 <h2>Description</h2>
 <p>Determines if the specified extension is present on this X11 server. </p>
 <p> Every extension has a unique <i>major_opcode</i> to identify requests, the minor opcodes and request formats are extension-specific. If the extension provides events and errors, the <i>first_event</i> and <i>first_error</i> fields in the reply are set accordingly. </p>

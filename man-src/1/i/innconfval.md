@@ -18,12 +18,12 @@ description: "innconfval – Get configuration parameters from inn.conf"
 <p> If given the <code>-C</code> option, <code>innconfval</code> instead checks <i>inn.conf</i>, reporting any problems found to standard error. <code>innconfval</code> will exit with status 0 if no problems are found and with status 1 otherwise.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-C</code></p>
-<dd> Check <i>inn.conf</i> rather than printing out the values of parameters.</p>
-<dt><code>-i</code> <i>file</i></p>
-<dd> Use <i>file</i> as the source configuration file rather than <i>inn.conf</i>. <i>file</i> must be a valid <i>inn.conf</i> file and will be parsed the same as <i>inn.conf</i> would be.</p>
-<dt><code>-p</code></p>
-<dd> Print out parameters as Perl assignment statements. The variable name will be the same as the <i>inn.conf</i> parameter, and string values will be enclosed in single quotes with appropriate escaping. Boolean values will be mapped to the strings <tt>&quot;true&quot;</tt> or <tt>&quot;false&quot;</tt>. List values will be mapped to an array of strings. <font SIZE="-1">NULL</font> values are printed out with the <tt>&quot;undef&quot;</tt> value. </p>
+<dt><code>-C</code></dt>
+<dd> Check <i>inn.conf</i> rather than printing out the values of parameters.</dd>
+<dt><code>-i</code> <i>file</i></dt>
+<dd> Use <i>file</i> as the source configuration file rather than <i>inn.conf</i>. <i>file</i> must be a valid <i>inn.conf</i> file and will be parsed the same as <i>inn.conf</i> would be.</dd>
+<dt><code>-p</code></dt>
+<dd> Print out parameters as Perl assignment statements. The variable name will be the same as the <i>inn.conf</i> parameter, and string values will be enclosed in single quotes with appropriate escaping. Boolean values will be mapped to the strings <tt>&quot;true&quot;</tt> or <tt>&quot;false&quot;</tt>. List values will be mapped to an array of strings. <font SIZE="-1">NULL</font> values are printed out with the <tt>&quot;undef&quot;</tt> value. </dd>
 <p> Here is an example: </p>
 <pre><code>
 $enableoverview = 'true';
@@ -33,8 +33,8 @@ $organization = 'Let\'s try nasty "quotes"';
 $maxforks = 10;
 </code></pre>
 <p> If <code>innconfval</code> is called via the Perl <tt>&quot;INN::Config&quot;</tt> module, all these variables are properly exported.</p>
-<dt><code>-s</code></p>
-<dd> Print out parameters as Bourne shell assignment statements. The variable name will be the <i>inn.conf</i> parameter name in all capitals, and all variables will be exported, if not <font SIZE="-1">NULL</font>. String values will be enclosed in single quotes with appropriate escaping, and boolean values will be mapped to <tt>&quot;true&quot;</tt> or <tt>&quot;false&quot;</tt>. List values will be mapped to a space-separated string representing an array of strings (as Bourne shell does not recognize arrays, contrary to several other shells, an array cannot be returned for interoperability reasons). </p>
+<dt><code>-s</code></dt>
+<dd> Print out parameters as Bourne shell assignment statements. The variable name will be the <i>inn.conf</i> parameter name in all capitals, and all variables will be exported, if not <font SIZE="-1">NULL</font>. String values will be enclosed in single quotes with appropriate escaping, and boolean values will be mapped to <tt>&quot;true&quot;</tt> or <tt>&quot;false&quot;</tt>. List values will be mapped to a space-separated string representing an array of strings (as Bourne shell does not recognize arrays, contrary to several other shells, an array cannot be returned for interoperability reasons). </dd>
 <p> Here is an example: </p>
 <pre><code>
 ENABLEOVERVIEW = true;
@@ -44,8 +44,8 @@ export EXTRAOVERVIEWADVERTISED;
 ORGANIZATION = 'Let'\''s try nasty "quotes"'; export ORGANIZATION; MAXFORKS = 10;
 export MAXFORKS;
 </code></pre>
-<dt><code>-t</code></p>
-<dd> Print out parameters as Tcl assignment statements. The variable name will be the same as the <i>inn.conf</i> parameter name but with <tt>&quot;inn_&quot;</tt> prepended, and string variables will be escaped appropriately. Boolean values will be mapped to the strings <tt>&quot;true&quot;</tt> or <tt>&quot;false&quot;</tt>. List values will be mapped to an array of strings. <font SIZE="-1">NULL</font> values are not printed out. </p>
+<dt><code>-t</code></dt>
+<dd> Print out parameters as Tcl assignment statements. The variable name will be the same as the <i>inn.conf</i> parameter name but with <tt>&quot;inn_&quot;</tt> prepended, and string variables will be escaped appropriately. Boolean values will be mapped to the strings <tt>&quot;true&quot;</tt> or <tt>&quot;false&quot;</tt>. List values will be mapped to an array of strings. <font SIZE="-1">NULL</font> values are not printed out. </dd>
 <p> Here is an example: </p>
 <pre>
     set inn_enableoverview &quot;true&quot;
@@ -53,8 +53,8 @@ export MAXFORKS;
     set inn_organization &quot;Let's try nasty \&quot;quotes\&quot;&quot;
     set inn_maxforks 10
 </pre>
-<dt><code>-v</code></p>
-<dd> Print <font SIZE="-1">INN</font>&#8216;s version. This is equivalent to <tt>&quot;innconfval version&quot;</tt>.</dl>
+<dt><code>-v</code></dt>
+<dd> Print <font SIZE="-1">INN</font>&#8216;s version. This is equivalent to <tt>&quot;innconfval version&quot;</tt>.</dd></dl>
 <h2>HISTORY</h2>
 <p> Written by Rich <tt>$alz</tt> &lt;rsalz [at] uunet.uu.net&gt; for InterNetNews. </p>
 <p> <tt>$Id:</tt> innconfval.pod 9311 2011-08-06 20:18:42Z iulius $</p>

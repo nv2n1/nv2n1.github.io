@@ -13,8 +13,8 @@ description: "mongoc_gridfs_file_save() – Saves modifications to file to the M
 mongoc_gridfs_file_save (mongoc_gridfs_file_t *file);</pre>
 <h2>Parameters</h2>
 <dl COMPACT>
-<dt><code>file</code></p>
-<dd>A <code>mongoc_gridfs_file_t</code> \&amp;.</dl>
+<dt><code>file</code></dt>
+<dd>A <code>mongoc_gridfs_file_t</code> \&amp;.</dd></dl>
 <h2>Description</h2>
 <p>Saves modifications to <code>file</code> to the MongoDB server. </p>
 <p> If an error occurred, false is returned and the error can be retrieved with <code><a href="/docs/linux/man/3-mongoc_gridfs_file_error/">mongoc_gridfs_file_error</a>(3)</code> \&amp;. </p>

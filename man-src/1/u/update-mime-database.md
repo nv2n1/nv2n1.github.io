@@ -15,19 +15,19 @@ description: "update-mime-database – a program to build the Shared MIME-Info d
 <p> <code>update-mime-database</code> is a program which is responsible for updating the shared mime-info cache according to the system described in the Shared MIME-Info Database specification from the X Desktop Group. </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-h</code></p>
-<dd> Print out a command summary.</p>
-<dt><code>-v</code></p>
-<dd> Print out the version information.</p>
-<dt><code>-V</code></p>
-<dd> Be verbose.</p>
-<dt><code>-n</code></p>
-<dd> Only update if <code>MIME-DIR</code>/packages/ or a file in that directory is newer than <code>MIME-DIR</code>/version. This is useful for package pre- and post-installation scripts. </p>
+<dt><code>-h</code></dt>
+<dd> Print out a command summary.</dd>
+<dt><code>-v</code></dt>
+<dd> Print out the version information.</dd>
+<dt><code>-V</code></dt>
+<dd> Be verbose.</dd>
+<dt><code>-n</code></dt>
+<dd> Only update if <code>MIME-DIR</code>/packages/ or a file in that directory is newer than <code>MIME-DIR</code>/version. This is useful for package pre- and post-installation scripts. </dd>
 </dl>
 <h2>ARGUMENTS</h2>
 <dl>
-<dt><code>MIME-DIR</code></p>
-<dd> This is the directory for which <code>update-mime-database</code> should rebuild the cache. Mandatory if none of the options is provided. </p>
+<dt><code>MIME-DIR</code></dt>
+<dd> This is the directory for which <code>update-mime-database</code> should rebuild the cache. Mandatory if none of the options is provided. </dd>
 </dl>
 <h2>AUTHOR</h2>
 <p> Filip Van Raemdonck (mechanix [at] debian.org) wrote this manpage for the Debian GNU/Linux project, but it may be used by others. </p>

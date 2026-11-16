@@ -136,22 +136,22 @@ description: "mozilla_selinux – Security Enhanced Linux Policy for the mozilla
 <p> <code>mozilla_exec_t</code> </p>
 <p> &#8211; Set files with the mozilla_exec_t type, if you want to transition an executable to the mozilla_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/usr/lib/[^/]*firefox[^/]*/firefox, /usr/lib/[^/]*firefox[^/]*/firefox-bin, /usr/lib/mozilla[^/]*/reg.+, /usr/lib/mozilla[^/]*/mozilla-.*, /usr/lib/firefox[^/]*/mozilla-.*, /usr/bin/mozilla-[0-9].*, /usr/lib/netscape/.+/communicator/communicator-smotif.real, /usr/bin/mozilla-bin-[0-9].*, /usr/bin/mozilla, /usr/bin/netscape, /usr/bin/epiphany, /usr/bin/epiphany-bin, /usr/lib/galeon/galeon, /usr/bin/mozilla-snapshot, /usr/lib/netscape/base-4/wrapper </p>
+<dt>Paths:</dt>
+<dd>/usr/lib/[^/]*firefox[^/]*/firefox, /usr/lib/[^/]*firefox[^/]*/firefox-bin, /usr/lib/mozilla[^/]*/reg.+, /usr/lib/mozilla[^/]*/mozilla-.*, /usr/lib/firefox[^/]*/mozilla-.*, /usr/bin/mozilla-[0-9].*, /usr/lib/netscape/.+/communicator/communicator-smotif.real, /usr/bin/mozilla-bin-[0-9].*, /usr/bin/mozilla, /usr/bin/netscape, /usr/bin/epiphany, /usr/bin/epiphany-bin, /usr/lib/galeon/galeon, /usr/bin/mozilla-snapshot, /usr/lib/netscape/base-4/wrapper </dd>
 </dl>
 <p> <code>mozilla_home_t</code> </p>
 <p> &#8211; Set files with the mozilla_home_t type, if you want to store mozilla files in the users home directory. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/home/[^/]+/.lyx(/.*)?, /home/[^/]+/.java(/.*)?, /home/[^/]+/.adobe(/.*)?, /home/[^/]+/.gnash(/.*)?, /home/[^/]+/.webex(/.*)?, /home/[^/]+/.galeon(/.*)?, /home/[^/]+/.spicec(/.*)?, /home/[^/]+/.IBMERS(/.*)?, /home/[^/]+/POkemon.*(/.*)?, /home/[^/]+/.mozilla(/.*)?, /home/[^/]+/.phoenix(/.*)?, /home/[^/]+/.icedtea(/.*)?, /home/[^/]+/.netscape(/.*)?, /home/[^/]+/.quakelive(/.*)?, /home/[^/]+/.ICAClient(/.*)?, /home/[^/]+/.macromedia(/.*)?, /home/[^/]+/.thunderbird(/.*)?, /home/[^/]+/.gcjwebplugin(/.*)?, /home/[^/]+/.grl-podcasts(/.*)?, /home/[^/]+/.cache/mozilla(/.*)?, /home/[^/]+/.icedteaplugin(/.*)?, /home/[^/]+/zimbrauserdata(/.*)?, /home/[^/]+/.config/chromium(/.*)?, /home/[^/]+/.juniper_networks(/.*)?, /home/[^/]+/.cache/icedtea-web(/.*)?, /home/[^/]+/abc, /home/[^/]+/.gnashpluginrc </p>
+<dt>Paths:</dt>
+<dd>/home/[^/]+/.lyx(/.*)?, /home/[^/]+/.java(/.*)?, /home/[^/]+/.adobe(/.*)?, /home/[^/]+/.gnash(/.*)?, /home/[^/]+/.webex(/.*)?, /home/[^/]+/.galeon(/.*)?, /home/[^/]+/.spicec(/.*)?, /home/[^/]+/.IBMERS(/.*)?, /home/[^/]+/POkemon.*(/.*)?, /home/[^/]+/.mozilla(/.*)?, /home/[^/]+/.phoenix(/.*)?, /home/[^/]+/.icedtea(/.*)?, /home/[^/]+/.netscape(/.*)?, /home/[^/]+/.quakelive(/.*)?, /home/[^/]+/.ICAClient(/.*)?, /home/[^/]+/.macromedia(/.*)?, /home/[^/]+/.thunderbird(/.*)?, /home/[^/]+/.gcjwebplugin(/.*)?, /home/[^/]+/.grl-podcasts(/.*)?, /home/[^/]+/.cache/mozilla(/.*)?, /home/[^/]+/.icedteaplugin(/.*)?, /home/[^/]+/zimbrauserdata(/.*)?, /home/[^/]+/.config/chromium(/.*)?, /home/[^/]+/.juniper_networks(/.*)?, /home/[^/]+/.cache/icedtea-web(/.*)?, /home/[^/]+/abc, /home/[^/]+/.gnashpluginrc </dd>
 </dl>
 <p> <code>mozilla_plugin_config_exec_t</code> </p>
 <p> &#8211; Set files with the mozilla_plugin_config_exec_t type, if you want to transition an executable to the mozilla_plugin_config_t domain. </p>
 <p> <code>mozilla_plugin_exec_t</code> </p>
 <p> &#8211; Set files with the mozilla_plugin_exec_t type, if you want to transition an executable to the mozilla_plugin_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/usr/lib/xulrunner[^/]*/plugin-container, /usr/lib/nspluginwrapper/npviewer.bin, /usr/bin/nspluginscan, /usr/bin/nspluginviewer, /usr/libexec/WebKitPluginProcess, /usr/lib/firefox/plugin-container </p>
+<dt>Paths:</dt>
+<dd>/usr/lib/xulrunner[^/]*/plugin-container, /usr/lib/nspluginwrapper/npviewer.bin, /usr/bin/nspluginscan, /usr/bin/nspluginviewer, /usr/libexec/WebKitPluginProcess, /usr/lib/firefox/plugin-container </dd>
 </dl>
 <p> <code>mozilla_plugin_rw_t</code> </p>
 <p> &#8211; Set files with the mozilla_plugin_rw_t type, if you want to treat the files as mozilla plugin read/write content. </p>

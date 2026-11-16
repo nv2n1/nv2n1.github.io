@@ -14,9 +14,9 @@ description: "iio_device_alloc – allocate an iio_dev from a driver"
 <p><i>sizeof_priv</i></p>
 <dl>
 <dd>
-<dd>Space to allocate for private structure.</dl>
+</dd><dd>Space to allocate for private structure.</dd></dl>
 <h2>Author</h2>
 <p><code>Daniel Baluta</code> &lt;daniel.baluta [at] intel.com&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

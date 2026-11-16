@@ -53,8 +53,8 @@ description: "mail_munin_plugin_selinux – Security Enhanced Linux Policy for t
 <p> <code>mail_munin_plugin_exec_t</code> </p>
 <p> &#8211; Set files with the mail_munin_plugin_exec_t type, if you want to transition an executable to the mail_munin_plugin_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/usr/share/munin/plugins/qmail.*, /usr/share/munin/plugins/exim_mail.*, /usr/share/munin/plugins/sendmail_.*, /usr/share/munin/plugins/courier_mta_.*, /usr/share/munin/plugins/postfix_mail.*, /usr/share/munin/plugins/mailman, /usr/share/munin/plugins/mailscanner </p>
+<dt>Paths:</dt>
+<dd>/usr/share/munin/plugins/qmail.*, /usr/share/munin/plugins/exim_mail.*, /usr/share/munin/plugins/sendmail_.*, /usr/share/munin/plugins/courier_mta_.*, /usr/share/munin/plugins/postfix_mail.*, /usr/share/munin/plugins/mailman, /usr/share/munin/plugins/mailscanner </dd>
 </dl>
 <p> <code>mail_munin_plugin_tmp_t</code> </p>
 <p> &#8211; Set files with the mail_munin_plugin_tmp_t type, if you want to store mail munin plugin temporary files in the /tmp directories. </p>

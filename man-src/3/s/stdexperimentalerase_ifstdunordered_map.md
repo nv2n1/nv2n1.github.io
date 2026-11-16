@@ -11,10 +11,8 @@ std::experimental::erase_if(std::unordered_map) - std::experimental::erase_if(st
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;experimental / unordered_map&gt;
-
     template &lt;class Key, class T, class Hash, class KeyEqual, class Alloc, class Pred&gt;
     (library fundamentals TS v2)
-
         void erase_if(std::unordered_map&lt;Key, T, Hash, KeyEqual, Alloc&gt; &amp;c, Pred pred);</code></pre> 
 Erases all elements that satisfy the predicate pred from the container. Equivalent to <pre><code>for (auto i = c.begin(), last = c.end(); i != last;) {
     if (pred(*i)) {

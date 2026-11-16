@@ -14,10 +14,10 @@ description: "cdev_init – initialize a cdev structure"
 <p><i>cdev</i></p>
 <dl>
 <dd>
-<dd>the structure to initialize</dl>
+</dd><dd>the structure to initialize</dd></dl>
 <p> <i>fops</i></p>
 <dl>
-<dd>the file_operations for this device</dl>
+<dd>the file_operations for this device</dd></dl>
 <h2>Description</h2>
 <p>Initializes <i>cdev</i>, remembering <i>fops</i>, making it ready to add to the system with <code>cdev_add</code>.</p>
 <h2>Copyright</h2>

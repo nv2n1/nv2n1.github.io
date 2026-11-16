@@ -18,13 +18,13 @@ description: "queue_conf – xxQS_NAMExx queue configuration file format"
 <dl>
 <dd>
 <pre><i>parameter parameter_value</i>[<code>,[</code><i>host_id</i><code>=</code><i>parameter_value</i><code>]</code>]...</pre>
-</dl>
+</dd></dl>
 <p> where <i>host_id</i> is a <code>host_identifier</code>, as defined in and <i>parameter_value</i> is of the correct form for each parameter, as described below. Spaces are allowed around &quot;<code>,</code>&quot; but not inside &quot;<code>[]</code>&quot;, except within list-valued <i>parameter_value</i>s. </p>
 <p> An entry without brackets is always required as the default setting for all queue instances which don&#8217;t override it. Tuples with a <code>hostgroup_name</code> (see <i>host_id</i> override the default setting. Tuples with a <code>host_name</code> <i>host_id</i> override both the default and the host group setting. As an example, PEs with different allocation rules may be specified according to the core count of different node types:</p>
 <dl>
 <dd>
 <pre>pe_list NONE,[@dual=all-mpi mpi-4],[@quad=all-mpi mpi-8]</pre>
-</dl>
+</dd></dl>
 <p> The queue configuration is rejected if a default setting is absent. </p>
 <p> Ambiguous configurations (those with more than one attribute setting for a particular host) cause the relevant queue instances to go into a &quot;configuration ambiguous&quot; state and not accept jobs. This is reported as &quot;<code>c</code>&quot; by and and may be diagnosed with <code>qstat -explain c</code>. Configurations containing override values for hosts not in the execution host list are accepted as &quot;detached&quot;, as indicated by the <code>-sds</code> argument of</p>
 <h3><code>qname</code></h3>
@@ -77,14 +77,14 @@ pe_list pe_name</pre>
 <h3><code>shell_start_mode</code></h3>
 <p>This parameter defines the mechanisms which are used to actually invoke the job scripts on the execution hosts. The following values are recognized:</p>
 <dl>
-<dt><i>unix_behavior</i></p>
-<dd>If a user starts a job shell script under UNIX interactively by invoking it just with the script name, the operating system&#8217;s executable loader uses the information provided in a comment such as `#!/bin/csh&#8217; in the first line of the script to detect which command interpreter to start to interpret the script. This mechanism is used by xxQS_NAMExx when starting jobs if <i>unix_behavior</i> is defined as <code>shell_start_mode</code>.</p>
-<dt><i>posix_compliant</i></p>
-<dd>POSIX does not consider first script line comments such as `#!/bin/csh&#8217; significant. The POSIX standard for batch queuing systems (P1003.2d) therefore requires a compliant queuing system to ignore such lines and to use user specified or configured default command interpreters instead. Thus, if <code>shell_start_mode</code> is set to <i>posix_compliant</i> xxQS_NAMExx will either use the command interpreter indicated by the <code>-S</code> option of the command or the <code>shell</code> parameter of the queue to be used (see above).</p>
-<dt><i>script_from_stdin</i></p>
+<dt><i>unix_behavior</i></dt>
+<dd>If a user starts a job shell script under UNIX interactively by invoking it just with the script name, the operating system&#8217;s executable loader uses the information provided in a comment such as `#!/bin/csh&#8217; in the first line of the script to detect which command interpreter to start to interpret the script. This mechanism is used by xxQS_NAMExx when starting jobs if <i>unix_behavior</i> is defined as <code>shell_start_mode</code>.</dd>
+<dt><i>posix_compliant</i></dt>
+<dd>POSIX does not consider first script line comments such as `#!/bin/csh&#8217; significant. The POSIX standard for batch queuing systems (P1003.2d) therefore requires a compliant queuing system to ignore such lines and to use user specified or configured default command interpreters instead. Thus, if <code>shell_start_mode</code> is set to <i>posix_compliant</i> xxQS_NAMExx will either use the command interpreter indicated by the <code>-S</code> option of the command or the <code>shell</code> parameter of the queue to be used (see above).</dd>
+<dt><i>script_from_stdin</i></dt>
 <dd>Setting the <code>shell_start_mode</code> parameter either to <i>posix_compliant</i> or <i>unix_behavior</i> requires you to set the umask in use for such that every user has read access to the active_jobs directory in the spool directory of the corresponding execution daemon. In case you have <code>prolog</code> and <code>epilog</code> scripts configured, they also need to be readable by any user who may execute jobs.<br />
  If this violates your site&#8217;s security policies you may want to set <code>shell_start_mode</code> to <i>script_from_stdin</i>. This will force xxQS_NAMExx to open the job script, as well as the epilogue and prologue scripts, for reading into STDIN as root (if was started as root) before changing to the job owner&#8217;s user account. The script is then fed into the STDIN stream of the command interpreter indicated by the <code>-S</code> option of the command or the <code>shell</code> parameter of the queue to be used (see above).<br />
- Thus setting <code>shell_start_mode</code> to <i>script_from_stdin</i> also implies <i>posix_compliant</i> behavior. <code>Note</code>, however, that feeding scripts into the STDIN stream of a command interpreter may cause trouble if commands like <i><a href="/docs/linux/man/1-rsh/">rsh</a></i>(1) are invoked inside a job script as they also process the STDIN stream of the command interpreter. These problems can usually be resolved by redirecting the STDIN channel of those commands to come from /dev/null (e.g. rsh host date &lt; /dev/null). <code>Note also</code>, that any command-line options associated with the job are passed to the executing shell. The shell will only forward them to the job if they are not recognized as valid shell options.</dl>
+ Thus setting <code>shell_start_mode</code> to <i>script_from_stdin</i> also implies <i>posix_compliant</i> behavior. <code>Note</code>, however, that feeding scripts into the STDIN stream of a command interpreter may cause trouble if commands like <i><a href="/docs/linux/man/1-rsh/">rsh</a></i>(1) are invoked inside a job script as they also process the STDIN stream of the command interpreter. These problems can usually be resolved by redirecting the STDIN channel of those commands to come from /dev/null (e.g. rsh host date &lt; /dev/null). <code>Note also</code>, that any command-line options associated with the job are passed to the executing shell. The shell will only forward them to the job if they are not recognized as valid shell options.</dd></dl>
 <p> The default for <code>shell_start_mode</code> is <i>posix_compliant</i>. Note, though, that the <code>shell_start_mode</code> can only be used for batch jobs submitted by and can&#8217;t be used for interactive jobs submitted by</p>
 <h3><code>prolog</code></h3>
 <p>This queue configuration entry overwrites cluster global or execution host-specific <code>prolog</code> definitions (see</p>
@@ -93,12 +93,12 @@ pe_list pe_name</pre>
 <h3><code>starter_method</code></h3>
 <p>The specified executable path will be used as a job starter facility responsible for starting batch jobs instead of the built-in starter (which typically passes the job to a shell). The starter method is passed as arguments the command to run. This is typically the name of a copy of the batch script file, followed by any arguments supplied at job submission. However, depending on how the job was submitted, it might be a binary (with arguments), or a more general shell command line, e.g. supplied to <i>qrsh</i>. The following environment variables are used to pass information to the job starter concerning the shell environment which was configured or requested to start the job.</p>
 <dl>
-<dt><i>SGE_STARTER_SHELL_PATH</i></p>
-<dd>The name of the requested shell to start the job</p>
-<dt><i>SGE_STARTER_SHELL_START_MODE</i></p>
-<dd>The configured <code>shell_start_mode</code></p>
-<dt><i>SGE_STARTER_USE_LOGIN_SHELL</i></p>
-<dd>Set to &quot;true&quot; if the shell is supposed to be used as a login shell (see <code>login_shells</code> in</dl>
+<dt><i>SGE_STARTER_SHELL_PATH</i></dt>
+<dd>The name of the requested shell to start the job</dd>
+<dt><i>SGE_STARTER_SHELL_START_MODE</i></dt>
+<dd>The configured <code>shell_start_mode</code></dd>
+<dt><i>SGE_STARTER_USE_LOGIN_SHELL</i></dt>
+<dd>Set to &quot;true&quot; if the shell is supposed to be used as a login shell (see <code>login_shells</code> in</dd></dl>
 <p> Ignoring those, a trivial starter method could be </p>
 <pre> #!/bin/sh
  # set the environment somehow
@@ -113,24 +113,24 @@ pe_list pe_name</pre>
 <p> If no executable path is given, xxQS_NAMExx takes the specified parameter entries as the signal to be delivered instead of the default signal. A signal must be either a positive number or a signal name with the <code>SIG</code> prefix, as printed by <i>kill -l</i> (e.g. <code>SIGTERM</code>). </p>
 <p> If an executable path is given (it must be an <i>absolute path</i> starting with a &quot;<code>/</code>&quot;); then this command, together with its arguments, is started by xxQS_NAMExx to perform the appropriate action. The following special variables are expanded at runtime, and can be used (besides any other strings which have to be interpreted by the procedures) to compose a command line:</p>
 <dl>
-<dt><i>$host</i></p>
-<dd>The name of the host on which the procedure is started.</p>
-<dt><i>$ja_task_id</i></p>
-<dd>The array job task index (0 if not an array job).</p>
-<dt><i>$job_owner</i></p>
-<dd>The user name of the job owner.</p>
-<dt><i>$job_id</i></p>
-<dd>xxQS_NAMExx&#8217;s unique job identification number.</p>
-<dt><i>$job_name</i></p>
-<dd>The name of the job.</p>
-<dt><i>$queue</i></p>
-<dd>The name of the queue.</p>
-<dt><i>$job_pid</i></p>
-<dd>The pid of the job.</p>
-<dt><i>$sge_cell</i></p>
-<dd>The SGE_CELL environment variable (useful for locating files).</p>
-<dt><i>$sge_root</i></p>
-<dd>The SGE_ROOT environment variable (useful for locating files).</dl>
+<dt><i>$host</i></dt>
+<dd>The name of the host on which the procedure is started.</dd>
+<dt><i>$ja_task_id</i></dt>
+<dd>The array job task index (0 if not an array job).</dd>
+<dt><i>$job_owner</i></dt>
+<dd>The user name of the job owner.</dd>
+<dt><i>$job_id</i></dt>
+<dd>xxQS_NAMExx&#8217;s unique job identification number.</dd>
+<dt><i>$job_name</i></dt>
+<dd>The name of the job.</dd>
+<dt><i>$queue</i></dt>
+<dd>The name of the queue.</dd>
+<dt><i>$job_pid</i></dt>
+<dd>The pid of the job.</dd>
+<dt><i>$sge_cell</i></dt>
+<dd>The SGE_CELL environment variable (useful for locating files).</dd>
+<dt><i>$sge_root</i></dt>
+<dd>The SGE_ROOT environment variable (useful for locating files).</dd></dl>
 <p> Note that a method is only executed on the master node of a parallel job, so it may be necessary to propagate the necessary action to slave nodes explicitly. (However, MPI implementations may, for instance, respond to SIGTSTP sent to the master process by stopping all the distributed processes.) If an executable is used for a method, it is started in the same environment as for the job concerned (see</p>
 <h3><code>notify</code></h3>
 <p>The time to wait between delivery of SIGUSR1/SIGUSR2 notification signals and suspend/kill signals if the job was submitted with the <i>-notify</i> option.</p>
@@ -156,19 +156,19 @@ pe_list pe_name</pre>
 <p> slots=<i>threshold</i>(<i>queue_list</i>) </p>
 <p> where</p>
 <dl>
-<dt> <i>threshold</i> =a positive integer number</p>
-<dt> <i>queue_list</i>=<i>queue_def</i>[,<i>queue_list</i>]</p>
-<dt> <i>queue_def</i> =<i>queue</i>[:<i>seq_no</i>][:<i>action</i>]</p>
-<dt> <i>queue</i> =a xxQS_NAMExx queue name in the format for <i>queue_name</i> in</p>
-<dt> &quot;<i>seq_no</i>&quot; =sequence number among all subordinated queues</p>
+<dt> <i>threshold</i> =a positive integer number</dt>
+<dt> <i>queue_list</i>=<i>queue_def</i>[,<i>queue_list</i>]</dt>
+<dt> <i>queue_def</i> =<i>queue</i>[:<i>seq_no</i>][:<i>action</i>]</dt>
+<dt> <i>queue</i> =a xxQS_NAMExx queue name in the format for <i>queue_name</i> in</dt>
+<dt> &quot;<i>seq_no</i>&quot; =sequence number among all subordinated queues</dt>
 <dd>of the same depth in the tree.<br />
- The higher the sequence number, the lower is the priority of the queue. Default is 0, which is the highest priority.</p>
-<dt> <i>action</i> =the action to be taken if the threshold is</p>
+ The higher the sequence number, the lower is the priority of the queue. Default is 0, which is the highest priority.</dd>
+<dt> <i>action</i> =the action to be taken if the threshold is</dt>
 <dd>exceeded.<br />
  Supported are:<br />
  &quot;sr&quot;: Suspend the task with the shortest run time.<br />
  &quot;lr&quot;: Suspend the task with the longest run time.<br />
- Default is &quot;sr&quot;.</dl>
+ Default is &quot;sr&quot;.</dd></dl>
 <p> Some examples of possible configurations and their functionalities: </p>
 <p> a) The simplest configuration </p>
 <p> subordinate_list slots=2(B.q) </p>
@@ -219,12 +219,12 @@ pe_list pe_name</pre>
 <h3><code>initial_state</code></h3>
 <p>defines an initial state for the queue, either when adding the queue to the system for the first time or on start-up of the on the host on which the queue resides. Possible values are:</p>
 <dl>
-<dt>default</p>
-<dd>The queue is enabled when adding the queue, or is reset to the previous status when comes up (this corresponds to the behavior in earlier xxQS_NAMExx releases not supporting initial_state).</p>
-<dt>enabled</p>
-<dd>The queue is enabled in either case. This is equivalent to a manual and explicit &#8216;<i>qmod -e</i>&#8216; command (see</p>
-<dt>disabled</p>
-<dd>The queue is disabled in either case. This is equivalent to a manual and explicit &#8216;<i>qmod -d</i>&#8216; command (see</dl>
+<dt>default</dt>
+<dd>The queue is enabled when adding the queue, or is reset to the previous status when comes up (this corresponds to the behavior in earlier xxQS_NAMExx releases not supporting initial_state).</dd>
+<dt>enabled</dt>
+<dd>The queue is enabled in either case. This is equivalent to a manual and explicit &#8216;<i>qmod -e</i>&#8216; command (see</dd>
+<dt>disabled</dt>
+<dd>The queue is disabled in either case. This is equivalent to a manual and explicit &#8216;<i>qmod -d</i>&#8216; command (see</dd></dl>
 <h2>Resource Limits</h2>
 <p>The first two resource limit parameters, <code>s_rt</code> and <code>h_rt</code>, are implemented by xxQS_NAMExx. They define the &quot;real time&quot; (also called &quot;elapsed&quot; or &quot;wall clock&quot; time) passed since the start of the job. If <code>h_rt</code> is exceeded by a job running in the queue, it is aborted via the SIGKILL signal (see <i><a href="/docs/linux/man/1-kill/">kill</a></i>(1)). If <code>s_rt</code> is exceeded, the job is first &quot;warned&quot; via the SIGUSR1 signal (which can be caught by the job) and finally aborted after the notification time defined in the queue configuration parameter <code>notify</code> (see above) has passed. In cases when <code>s_rt</code> is used in combination with job notification it might be necessary to configure a signal other than SIGUSR1 using the NOTIFY_KILL and NOTIFY_SUSP execd_params (see so that the jobs&#8217; signal-catching mechanism can differ in each case and react accordingly. </p>
 <p> The resource limit parameters <code>s_cpu</code> and <code>h_cpu</code> are implemented by xxQS_NAMExx as a job limit. They impose a limit on the amount of combined CPU time consumed by all the processes in the job. If <code>h_cpu</code> is exceeded by a job running in the queue, it is aborted via a SIGKILL signal (see <i><a href="/docs/linux/man/1-kill/">kill</a></i>(1)). If <code>s_cpu</code> is exceeded, the job is sent a SIGXCPU signal which can be caught by the job. If you wish to allow a job to be &quot;warned&quot; so it can exit gracefully before it is killed, then you should set the <code>s_cpu</code> limit to a lower value than <code>h_cpu</code>. For parallel processes, the limit is applied per slot, which means that the limit is multiplied by the number of slots being used by the job before being applied. </p>

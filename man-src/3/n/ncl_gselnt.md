@@ -12,13 +12,11 @@ GSELNT (Select normalization transformation) - selects a predefined or user-defi
 
  void gsel_norm_tran(Gint tran_num);
 <h2>Description</h2><dl COMPACT><dt>TRNUM
-<dd>(Integer, Input) - A normalization transformation number. The number of available transformations is implementation specific. In the case of NCAR GKS-0A, two normalization transformations are provided: 
-
-<dl COMPACT><dd><dl COMPACT><dt>0
-<dd>Selects the identity transformation in which both the window and viewport have the range of 0. to 1. in both coordinate directions. This is the default. 
-
-<dt>1
-<dd>Selects a normalization transformation in which the window and viewport have been defined by calls to GSWN and GSVP.</dl></dl>
+</dt><dd>(Integer, Input) - A normalization transformation number. The number of available transformations is implementation specific. In the case of NCAR GKS-0A, two normalization transformations are provided: 
+</dd><dl COMPACT><dd></dd><dl COMPACT><dt>0
+</dt><dd>Selects the identity transformation in which both the window and viewport have the range of 0. to 1. in both coordinate directions. This is the default. 
+</dd><dt>1
+</dt><dd>Selects a normalization transformation in which the window and viewport have been defined by calls to GSWN and GSVP.</dd></dl></dl>
 </dl><h2>Usage</h2>When a normalization transformation is selected, all world coordinate arguments to GKS functions are transformed by it.
 <h2>Access</h2>To use GKS routines, load the NCAR GKS-0A library ncarg_gks.
 <h2>See Also</h2>Online: set, gsup, gswn, gqclip, gsel_norm_tran 

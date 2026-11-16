@@ -23,7 +23,7 @@ description: "std::basic_ostream< _CharT, _Traits >::sentry –"
 <p>The constructor performs preparatory work. </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>__os</i> The output stream to guard.</dl>
+<dd><i>__os</i> The output stream to guard.</dd></dl>
 <p> If the stream state is good (<i>__os.good()</i> is true), then if the stream is tied to another output stream, is.tie()-&gt;flush() is called to synchronize the output sequences. </p>
 <p> If the stream state is still good, then the sentry state becomes true (<i>okay</i>). </p>
 <p> Definition at line 47 of file ostream.tcc. </p>
@@ -37,7 +37,7 @@ description: "std::basic_ostream< _CharT, _Traits >::sentry –"
 <p>Quick status checking. </p>
 <p> <code>Returns:</code></p>
 <dl>
-<dd>The sentry state.</dl>
+<dd>The sentry state.</dd></dl>
 <p> For ease of use, sentries may be converted to booleans. The return value is that of the sentry state (true == okay). </p>
 <p> Definition at line 449 of file ostream.</p>
 <h2>Author</h2>

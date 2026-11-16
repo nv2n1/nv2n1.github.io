@@ -16,24 +16,24 @@ description: "ssl_crtd – SSL certificate generator for Squid."
 <p> Because the generation and signing of SSL certificates takes time Squid must use external process to handle the work. This process generates new SSL certificates and uses a disk cache of certificatess to improve response times on repeated requests. Communication occurs via TCP sockets bound to the loopback interface.</p>
 <h2>Options</h2>
 <dl>
-<dt><code>-b fs_block_size</code></p>
-<dd>File system block size in bytes. Needed for processing natural size of certificate on disk. Default value is 2048 bytes.</p>
-<dt><code>-c</code></p>
-<dd>Initialize the SSL storage database and exit. Requires the <code>-s </code> option to determine the storage location being created.</p>
-<dt><code>-d</code></p>
-<dd>Write debug info to stderr.</p>
-<dt><code>-g</code></p>
-<dd>Display the current serial number using stderr and exit. Requires <code>-s </code> option to determine which storage directory the serial is located in.</p>
-<dt><code>-h</code></p>
-<dd>Display the binary help and command line syntax info using stderr.</p>
-<dt><code>-s directory</code></p>
-<dd>Directory path of disk storage for new SSL certificates.</p>
-<dt><code>-M size</code></p>
-<dd>Maximum size of SSL certificate disk storage.</p>
-<dt><code>-n serial number</code></p>
-<dd>HEX <code>serial number </code> to use when initializing an SSL storage database. The default value of serial number is the number of seconds since Epoch minus 1200000000.</p>
-<dt><code>-v</code></p>
-<dd>Display the binary version details using stderr.</dl>
+<dt><code>-b fs_block_size</code></dt>
+<dd>File system block size in bytes. Needed for processing natural size of certificate on disk. Default value is 2048 bytes.</dd>
+<dt><code>-c</code></dt>
+<dd>Initialize the SSL storage database and exit. Requires the <code>-s </code> option to determine the storage location being created.</dd>
+<dt><code>-d</code></dt>
+<dd>Write debug info to stderr.</dd>
+<dt><code>-g</code></dt>
+<dd>Display the current serial number using stderr and exit. Requires <code>-s </code> option to determine which storage directory the serial is located in.</dd>
+<dt><code>-h</code></dt>
+<dd>Display the binary help and command line syntax info using stderr.</dd>
+<dt><code>-s directory</code></dt>
+<dd>Directory path of disk storage for new SSL certificates.</dd>
+<dt><code>-M size</code></dt>
+<dd>Maximum size of SSL certificate disk storage.</dd>
+<dt><code>-n serial number</code></dt>
+<dd>HEX <code>serial number </code> to use when initializing an SSL storage database. The default value of serial number is the number of seconds since Epoch minus 1200000000.</dd>
+<dt><code>-v</code></dt>
+<dd>Display the binary version details using stderr.</dd></dl>
 <h2>Known Issues</h2>
 <p><code>SSL errors after changing the CA</code> </p>
 <p> Certificates are stored in this database in signed form. After any change to the signing CA in squid.conf be sure to erase and re-initialize the certificate database. </p>
@@ -43,14 +43,14 @@ description: "ssl_crtd – SSL certificate generator for Squid."
 <p>Before this helper can be used the storage area for new certificates must be initialized manually. This is done from the command line using the <code>-c </code> parameters. </p>
 <p> For example:</p>
 <dl>
-<dd><code>ssl_crtd -c -s /var/lib/ssl_db</code></dl>
+<dd><code>ssl_crtd -c -s /var/lib/ssl_db</code></dd></dl>
 <p> Certificates are stored in this database in signed form. After any change to the signing CA in squid.conf be sure to erase and re-initialize the certificate database. </p>
 <p> For simple configuration the helper defaults can be used. Only HTTP listening port options are required to enable generation and set the signign CA certificate. For Example:</p>
 <dl>
-<dd><code>http_port 3128 ssl-bump generate-host-certificates=on dynamic_cert_mem_cache_size=4MB cert=/usr/local/squid/ssl_cert/<a rel="nofollow" href="http://www.sample.com.pem">www.sample.com.pem</a></code></dl>
+<dd><code>http_port 3128 ssl-bump generate-host-certificates=on dynamic_cert_mem_cache_size=4MB cert=/usr/local/squid/ssl_cert/<a rel="nofollow" href="http://www.sample.com.pem">www.sample.com.pem</a></code></dd></dl>
 <p> For more customized configuration the helper certificate storage directory location and size can be altered with the <code>sslcrtd_program </code> configuration directive. For example:</p>
 <dl>
-<dd><code>sslcrtd_program /usr/local/squid/libexec/ssl_crtd -s /usr/local/squid/var/lib/ssl_db -M 4MB</code> <code>sslcrtd_children 5</code></dl>
+<dd><code>sslcrtd_program /usr/local/squid/libexec/ssl_crtd -s /usr/local/squid/var/lib/ssl_db -M 4MB</code> <code>sslcrtd_children 5</code></dd></dl>
 <h2>Author</h2>
 <p>This program was written by <i>Christos Tsantilas &lt;christos [at] chtsanti.net&gt;</i> </p>
 <p> This manual was written by <i>Christos Tsantilas &lt;christos [at] chtsanti.net&gt;</i> <i>Amos Jeffries &lt;squid3 [at] treenet.co.nz&gt;</i></p>

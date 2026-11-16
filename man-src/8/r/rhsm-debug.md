@@ -15,28 +15,28 @@ description: "rhsm-debug – Compiles information about system’s entitlements,
 <h2>Commands And Options</h2>
 <p><code>rhsm-debug</code> has specific options available for each module, depending on what operation is being performed. The currently supported modules are: </p>
 <dl>
-<dd>1. system </p>
+<dd>1. system </dd>
 </dl>
 <h3>Common Options</h3>
 <dl>
-<dt><code>-h, &#8211;help</code></p>
-<dd>Prints the specific help information for the given command. </p>
-<dt><code>&#8211;proxy=PROXY</code></p>
-<dd>Uses an HTTP proxy. The <i>PROXY</i> name has the format <i>hostname:port.</i> </p>
-<dt><code>&#8211;proxyuser=PROXYUSERNAME</code></p>
-<dd>Gives the username to use to authenticate to the HTTP proxy. </p>
-<dt><code>&#8211;proxypassword=PROXYPASSWORD</code></p>
-<dd>Gives the password to use to authenticate to the HTTP proxy. </p>
+<dt><code>-h, &#8211;help</code></dt>
+<dd>Prints the specific help information for the given command. </dd>
+<dt><code>&#8211;proxy=PROXY</code></dt>
+<dd>Uses an HTTP proxy. The <i>PROXY</i> name has the format <i>hostname:port.</i> </dd>
+<dt><code>&#8211;proxyuser=PROXYUSERNAME</code></dt>
+<dd>Gives the username to use to authenticate to the HTTP proxy. </dd>
+<dt><code>&#8211;proxypassword=PROXYPASSWORD</code></dt>
+<dd>Gives the password to use to authenticate to the HTTP proxy. </dd>
 </dl>
 <h3>System Options</h3>
 <p>The <code>system</code> command pulls in debug information off of the current system </p>
 <dl>
-<dt><code>&#8211;destination=DESTINATION</code></p>
-<dd>The directory to place the resulting debug data. The default is /tmp. </p>
-<dt><code>&#8211;no-archive</code></p>
-<dd>Generates an uncompressed directory instead of a gzipped file. </p>
-<dt><code>&#8211;sos</code></p>
-<dd>Excludes data files that are also collected by the sosreport tool. </p>
+<dt><code>&#8211;destination=DESTINATION</code></dt>
+<dd>The directory to place the resulting debug data. The default is /tmp. </dd>
+<dt><code>&#8211;no-archive</code></dt>
+<dd>Generates an uncompressed directory instead of a gzipped file. </dd>
+<dt><code>&#8211;sos</code></dt>
+<dd>Excludes data files that are also collected by the sosreport tool. </dd>
 </dl>
 <h2>Bugs</h2>
 <p>This tool is part of Red Hat Subscription Manager. To file bugs against this command-line tool, go to &lt;<a rel="nofollow" href="https://bugzilla.redhat.com">https://bugzilla.redhat.com</a>&gt;, and select Red Hat &gt; Red Hat Enterprise Linux &gt; subscription-manager. </p>

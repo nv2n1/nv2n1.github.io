@@ -12,13 +12,10 @@ std::error_code::error_code - std::error_code::error_code
 
 <pre><code>error_code() noexcept;
 (1)(since C++ 11)
-
     error_code(int ec, const error_category &amp;ecat) noexcept;
 (2)(since C++ 11)
-
     template &lt;class ErrorCodeEnum&gt;
     (3)(since C++ 11)
-
         error_code(ErrorCodeEnum e) noexcept;</code></pre> 
 Constructs new error code. 
 1) Constructs error code with default value. Equivalent to error_code(0, std::system_category()). 

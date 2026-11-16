@@ -21,61 +21,61 @@ long perfmonctl(int fd, int cmd, void *arg, int narg);
 <p> <code>perfmonctl</code>() applies the operation <i>cmd</i> to the input arguments specified by <i>arg</i>. The number of arguments is defined by <i>narg</i>. The <i>fd</i> argument specifies the perfmon context to operate on. </p>
 <p> Supported values for <i>cmd</i> are:</p>
 <dl>
-<dt><code>PFM_CREATE_CONTEXT</code></p>
+<dt><code>PFM_CREATE_CONTEXT</code></dt>
 <dd>
 perfmonctl(int fd, PFM_CREATE_CONTEXT, pfarg_context_t *ctxt, 1);<br />
- Set up a context.</p>
+ Set up a context.</dd>
 <dt>
-<dd> The <i>fd</i> parameter is ignored. A new perfmon context is created as specified in <i>ctxt</i> and its file descriptor is returned in <i>ctxt-&gt;ctx_fd</i>.</p>
+</dt><dd> The <i>fd</i> parameter is ignored. A new perfmon context is created as specified in <i>ctxt</i> and its file descriptor is returned in <i>ctxt-&gt;ctx_fd</i>.</dd>
 <dt>
-<dd> The file descriptor can be used in subsequent calls to <code>perfmonctl</code>() and can be used to read event notifications (type <i>pfm_msg_t</i>) using <code><a href="/docs/linux/man/2-read/">read</a></code>(2). The file descriptor is pollable using <code><a href="/docs/linux/man/2-select/">select</a></code>(2), <code><a href="/docs/linux/man/2-poll/">poll</a></code>(2), and <code><a href="/docs/linux/man/7-epoll/">epoll</a></code>(7).</p>
+</dt><dd> The file descriptor can be used in subsequent calls to <code>perfmonctl</code>() and can be used to read event notifications (type <i>pfm_msg_t</i>) using <code><a href="/docs/linux/man/2-read/">read</a></code>(2). The file descriptor is pollable using <code><a href="/docs/linux/man/2-select/">select</a></code>(2), <code><a href="/docs/linux/man/2-poll/">poll</a></code>(2), and <code><a href="/docs/linux/man/7-epoll/">epoll</a></code>(7).</dd>
 <dt>
-<dd> The context can be destroyed by calling <code><a href="/docs/linux/man/2-close/">close</a></code>(2) on the file descriptor.</p>
-<dt><code>PFM_WRITE_PMCS</code></p>
+</dt><dd> The context can be destroyed by calling <code><a href="/docs/linux/man/2-close/">close</a></code>(2) on the file descriptor.</dd>
+<dt><code>PFM_WRITE_PMCS</code></dt>
 <dd>
 perfmonctl(int fd, PFM_WRITE_PMCS, pfarg_reg_t *pmcs, n);<br />
- Set PMC registers.</p>
-<dt><code>PFM_WRITE_PMDS</code></p>
+ Set PMC registers.</dd>
+<dt><code>PFM_WRITE_PMDS</code></dt>
 <dd>
 perfmonctl(int fd, PFM_WRITE_PMDS, pfarg_reg_t *pmds, n);<br />
- Set PMD registers.</p>
-<dt><code>PFM_READ_PMDS</code></p>
+ Set PMD registers.</dd>
+<dt><code>PFM_READ_PMDS</code></dt>
 <dd>
 perfmonctl(int fd, PFM_READ_PMDS, pfarg_reg_t *pmds, n);<br />
- Read PMD registers.</p>
-<dt><code>PFM_START</code></p>
+ Read PMD registers.</dd>
+<dt><code>PFM_START</code></dt>
 <dd>
 perfmonctl(int fd, PFM_START, NULL, 0);<br />
- Start monitoring.</p>
-<dt><code>PFM_STOP</code></p>
+ Start monitoring.</dd>
+<dt><code>PFM_STOP</code></dt>
 <dd>
 perfmonctl(int fd, PFM_STOP, NULL, 0);<br />
- Stop monitoring.</p>
-<dt><code>PFM_LOAD_CONTEXT</code></p>
+ Stop monitoring.</dd>
+<dt><code>PFM_LOAD_CONTEXT</code></dt>
 <dd>
 perfmonctl(int fd, PFM_LOAD_CONTEXT, pfarg_load_t *largs, 1);<br />
- Attach the context to a thread.</p>
-<dt><code>PFM_UNLOAD_CONTEXT</code></p>
+ Attach the context to a thread.</dd>
+<dt><code>PFM_UNLOAD_CONTEXT</code></dt>
 <dd>
 perfmonctl(int fd, PFM_UNLOAD_CONTEXT, NULL, 0);<br />
- Detach the context from a thread.</p>
-<dt><code>PFM_RESTART</code></p>
+ Detach the context from a thread.</dd>
+<dt><code>PFM_RESTART</code></dt>
 <dd>
 perfmonctl(int fd, PFM_RESTART, NULL, 0);<br />
- Restart monitoring after receiving an overflow notification.</p>
-<dt><code>PFM_GET_FEATURES</code></p>
+ Restart monitoring after receiving an overflow notification.</dd>
+<dt><code>PFM_GET_FEATURES</code></dt>
 <dd>
-perfmonctl(int fd, PFM_GET_FEATURES, pfarg_features_t *arg, 1);</p>
-<dt><code>PFM_DEBUG</code></p>
+perfmonctl(int fd, PFM_GET_FEATURES, pfarg_features_t *arg, 1);</dd>
+<dt><code>PFM_DEBUG</code></dt>
 <dd>
 perfmonctl(int fd, PFM_DEBUG, val, 0);<br />
- If <i>val</i> is nonzero, enable debugging mode, otherwise disable.</p>
-<dt><code>PFM_GET_PMC_RESET_VAL</code></p>
+ If <i>val</i> is nonzero, enable debugging mode, otherwise disable.</dd>
+<dt><code>PFM_GET_PMC_RESET_VAL</code></dt>
 <dd>
 <pre><code>
 perfmonctl(int fd, PFM_GET_PMC_RESET_VAL, pfarg_reg_t *req, n);
 </code></pre>
-<p> Reset PMC registers to default values.</dl>
+<p> Reset PMC registers to default values.</dd></dl>
 <h2>RETURN VALUE</h2>
 <p> <code>perfmonctl</code>() returns zero when the operation is successful. On error, -1 is returned and <i>errno</i> is set to indicate the cause of the error.</p>
 <h2>VERSIONS</h2>
@@ -90,3 +90,4 @@ perfmonctl(int fd, PFM_GET_PMC_RESET_VAL, pfarg_reg_t *req, n);
 <h2>COLOPHON</h2>
 <p> This page is part of release 5.10 of the Linux <i>man-pages</i> project. A description of the project, information about reporting bugs, and the latest version of this page, can be found at <a rel="nofollow" href="https://www.kernel.org/doc/man-pages/.">https://www.kernel.org/doc/man-pages/.</a> </p>
 <h2>Index</h2>
+</p>

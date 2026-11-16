@@ -16,14 +16,14 @@ description: "docker-container-wait – Block until one or more containers stop,
 <h2>EXAMPLES</h2>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 $ docker run -d fedora sleep 99
 079b83f558a2bc52ecad6b2a5de13622d584e6bb1aea058c11b36511e85e7622
 $ docker container wait 079b83f558a2bc
 0
 </pre>
-</dl>
+</dd></dl>
 <h2>OPTIONS</h2>
 <p> <code>-h</code>, <code>&#8211;help</code>[=false] <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>help for wait</p>
 <h2>SEE ALSO</h2>

@@ -11,7 +11,6 @@ description: "sc::SCMatrixLTriBlock –"
 <p> The <code>SCMatrixLTriBlock</code> describes a triangular piece of a matrix.</p>
 <h2>Synopsis</h2>
 <pre><code>
-
 #include &lt;block.h&gt;</code></pre>
 <p> Inherits <code>sc::SCMatrixBlock</code>.</p>
 <h3>Public Member Functions</h3>
@@ -29,13 +28,7 @@ description: "sc::SCMatrixLTriBlock –"
  int <code>ndat</code> () const</p>
 <h3>Public Attributes</h3>
 <pre><code>int start
-
-
-
 int end
-
-
-
 double * data</code></pre>
 <h2>Detailed Description</h2>
 <p>The <code>SCMatrixLTriBlock</code> describes a triangular piece of a matrix. </p>

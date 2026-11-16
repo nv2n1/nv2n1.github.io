@@ -13,22 +13,22 @@ description: "globus-spec-creator – Generate an RPM spec file from a GPT sourc
 <p> <code>globus-spec-creator</code> [options] [patches &#8230;] </p>
 <p> Options:</p>
 <dl>
-<dt><code>-gptfile</code> filename</p>
-<dd> The package&#8217;s <font SIZE="-1">GPT</font> source package description file (mandatory)</p>
-<dt><code>-setupfile</code> filename</p>
-<dd> The corresponding setup package&#8217;s <font SIZE="-1">GPT</font> source package description file (default: none)</p>
-<dt><code>-release</code> releasenumber</p>
-<dd> The <font SIZE="-1">RPM</font> release number (default: 1)</p>
-<dt><code>-directory</code> directory</p>
-<dd> The package&#8217;s source directory in the toolkit installer</p>
-<dt><code>-toolkitversion</code> versionnumber</p>
-<dd> Globus toolkit version (default: 5.0.2)</p>
-<dt><code>-email</code> emailaddress</p>
-<dd> The packagers e-mail address (default: username [at] hostname)</p>
-<dt><code>-nodoc</code></p>
-<dd> Disable the generation of the doc <font SIZE="-1">RPM</font></p>
-<dt><code>-help</code></p>
-<dd> Show help</dl>
+<dt><code>-gptfile</code> filename</dt>
+<dd> The package&#8217;s <font SIZE="-1">GPT</font> source package description file (mandatory)</dd>
+<dt><code>-setupfile</code> filename</dt>
+<dd> The corresponding setup package&#8217;s <font SIZE="-1">GPT</font> source package description file (default: none)</dd>
+<dt><code>-release</code> releasenumber</dt>
+<dd> The <font SIZE="-1">RPM</font> release number (default: 1)</dd>
+<dt><code>-directory</code> directory</dt>
+<dd> The package&#8217;s source directory in the toolkit installer</dd>
+<dt><code>-toolkitversion</code> versionnumber</dt>
+<dd> Globus toolkit version (default: 5.0.2)</dd>
+<dt><code>-email</code> emailaddress</dt>
+<dd> The packagers e-mail address (default: username [at] hostname)</dd>
+<dt><code>-nodoc</code></dt>
+<dd> Disable the generation of the doc <font SIZE="-1">RPM</font></dd>
+<dt><code>-help</code></dt>
+<dd> Show help</dd></dl>
 <p> Arguments: </p>
 <p> Each additional argument will be added as a patch in the generated specfile.</p>
 <h2>EXAMPLE</h2>

@@ -14,10 +14,10 @@ description: "gnutls_db_set_cache_expiration – API function"
 <p> <code>void gnutls_db_set_cache_expiration(gnutls_session_t </code><i>session</i><code>, int </code><i>seconds</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
-<dt>gnutls_session_t session</p>
-<dd> is a <code>gnutls_session_t</code> structure.</p>
-<dt>int seconds</p>
-<dd> is the number of seconds.</dl>
+<dt>gnutls_session_t session</dt>
+<dd> is a <code>gnutls_session_t</code> structure.</dd>
+<dt>int seconds</dt>
+<dd> is the number of seconds.</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> Set the expiration time for resumed sessions. The default is 3600 (one hour) at the time of this writing.</p>
 <h2>REPORTING BUGS</h2>
@@ -29,6 +29,6 @@ description: "gnutls_db_set_cache_expiration – API function"
 <h2>SEE ALSO</h2>
 <p> The full documentation for <code>gnutls</code> is maintained as a Texinfo manual. If the /usr/share/doc/gnutls/ directory does not contain the HTML form visit <code></p>
 <dl>
-<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></p>
-<dd> </code></dl>
+<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></dt>
+<dd> </code></dd></dl>
 <h2>Index</h2>

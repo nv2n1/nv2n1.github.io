@@ -15,11 +15,11 @@ dev_get_phys_port_id - Get device physical port ID
 <h2>Arguments</h2>
 
 <i>dev</i>
-<dl><dd><dd>device</dl>
+<dl><dd></dd><dd>device</dd></dl>
  
 
  <i>ppid</i>
-<dl><dd>port ID</dl>
+<dl><dd>port ID</dd></dl>
 
 <h2>Description</h2>
 

@@ -47,11 +47,11 @@ description: "corosync_overview – Corosync overview"
 <h2>Environment Variables</h2>
 <p>The corosync executive process uses four environment variables during startup. If these environment variables are not set, defaults will be used. </p>
 <dl>
-<dt>COROSYNC_MAIN_CONFIG_FILE</p>
-<dd>This specifies the fully qualified path to the corosync configuration file. </p>
+<dt>COROSYNC_MAIN_CONFIG_FILE</dt>
+<dd>This specifies the fully qualified path to the corosync configuration file. </dd>
 <p> The default is /etc/corosync/corosync.conf. </p>
-<dt>COROSYNC_TOTEM_AUTHKEY_FILE</p>
-<dd>This specifies the fully qualified path to the shared key used to authenticate and encrypt data used within the Totem protocol. </p>
+<dt>COROSYNC_TOTEM_AUTHKEY_FILE</dt>
+<dd>This specifies the fully qualified path to the shared key used to authenticate and encrypt data used within the Totem protocol. </dd>
 <p> The default is /etc/corosync/authkey. </p>
 </dl>
 <h2>Security</h2>

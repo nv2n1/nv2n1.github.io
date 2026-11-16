@@ -10,21 +10,15 @@ description: "sd_journal_next, sd_journal_previous, sd_journal_next_skip, sd_jou
 <p>sd_journal_next, sd_journal_previous, sd_journal_next_skip, sd_journal_previous_skip, SD_JOURNAL_FOREACH, SD_JOURNAL_FOREACH_BACKWARDS &#8211; Advance or set back the read pointer in the journal</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;systemd/sd-journal.h&gt;
-
 int sd_journal_next(sd_journal *j);
-
 int sd_journal_previous(sd_journal *j);
-
 int sd_journal_next_skip(sd_journal *j, uint64_t skip);
-
 int sd_journal_previous_skip(sd_journal *j, uint64_t skip);
-
 SD_JOURNAL_FOREACH(sd_journal *j);
-
 SD_JOURNAL_FOREACH_BACKWARDS(sd_journal *j);</code></pre>
 <h2>Description</h2>
 <p><code>sd_journal_next()</code></p>
-<dd>advances the read pointer into the journal by one entry. The only argument taken is a journal context object as allocated via <code><a href="/docs/linux/man/3-sd_journal_open/">sd_journal_open</a></code>(3). After successful invocation the entry may be read with functions such as <code><a href="/docs/linux/man/3-sd_journal_get_data/">sd_journal_get_data</a></code>(3). </p>
+<dd>advances the read pointer into the journal by one entry. The only argument taken is a journal context object as allocated via <code><a href="/docs/linux/man/3-sd_journal_open/">sd_journal_open</a></code>(3). After successful invocation the entry may be read with functions such as <code><a href="/docs/linux/man/3-sd_journal_get_data/">sd_journal_get_data</a></code>(3). </dd>
 <p> Similarly, <code>sd_journal_previous()</code> sets the read pointer back one entry. </p>
 <p> <code>sd_journal_next_skip()</code> and <code>sd_journal_previous_skip()</code> advance/set back the read pointer by multiple entries at once, as specified in the <i>skip</i> parameter. </p>
 <p> The journal is strictly ordered by reception time, and hence advancing to the next entry guarantees that the entry then pointing to is later in time than then previous one, or has the same timestamp. </p>
@@ -39,7 +33,6 @@ SD_JOURNAL_FOREACH_BACKWARDS(sd_journal *j);</code></pre>
 <pre><code>#include &lt;stdio.h&gt;
 #include &lt;string.h&gt;
 #include &lt;systemd/sd-journal.h&gt;
-
 int main(int argc, char *argv[])
 {
     int r;
@@ -54,14 +47,12 @@ int main(int argc, char *argv[])
     {
         const char *d;
         size_t l;
-
         r = sd_journal_get_data(j, &quot;MESSAGE&quot;, (const void **)&amp;d, &amp;l);
         if (r &lt; 0) {
             fprintf(stderr, &quot;Failed to read message field: %s
 &quot;, strerror(-r));
             continue;
         }
-
         printf(&quot;%.*s
 &quot;, (int)l, d);
     }

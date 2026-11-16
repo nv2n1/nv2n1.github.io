@@ -17,20 +17,20 @@ description: "ceph-authtool – ceph keyring manipulation tool"
 <p> <code>WARNING</code> Ceph provides authentication and protection against man-in-the-middle attacks once secret keys are in place. However, data over the wire is not encrypted, which may include the messages used to configure said keys. The system is primarily intended to be used in trusted environments.</p>
 <h2>Options</h2>
 <dl>
-<dt><code>-l, &#8211;list</code></p>
-<dd>will list all keys and capabilities present in the keyring</p>
-<dt><code>-p, &#8211;print</code></p>
-<dd>will print an encoded key for the specified entityname. This is suitable for the <code>mount -o secret=</code> argument</p>
-<dt><code>-C, &#8211;create-keyring</code></p>
-<dd>will create a new keyring, overwriting any existing keyringfile</p>
-<dt><code>&#8211;gen-key</code></p>
-<dd>will generate a new secret key for the specified entityname</p>
-<dt><code>&#8211;add-key</code></p>
-<dd>will add an encoded key to the keyring</p>
-<dt><code>&#8211;cap subsystem capability</code></p>
-<dd>will set the capability for given subsystem</p>
-<dt><code>&#8211;caps capsfile</code></p>
-<dd>will set all of capabilities associated with a given key, for all subsystems</dl>
+<dt><code>-l, &#8211;list</code></dt>
+<dd>will list all keys and capabilities present in the keyring</dd>
+<dt><code>-p, &#8211;print</code></dt>
+<dd>will print an encoded key for the specified entityname. This is suitable for the <code>mount -o secret=</code> argument</dd>
+<dt><code>-C, &#8211;create-keyring</code></dt>
+<dd>will create a new keyring, overwriting any existing keyringfile</dd>
+<dt><code>&#8211;gen-key</code></dt>
+<dd>will generate a new secret key for the specified entityname</dd>
+<dt><code>&#8211;add-key</code></dt>
+<dd>will add an encoded key to the keyring</dd>
+<dt><code>&#8211;cap subsystem capability</code></dt>
+<dd>will set the capability for given subsystem</dd>
+<dt><code>&#8211;caps capsfile</code></dt>
+<dd>will set all of capabilities associated with a given key, for all subsystems</dd></dl>
 <h2>Capabilities</h2>
 <p>The subsystem is the name of a Ceph subsystem: <code>mon</code>, <code>mds</code>, or <code>osd</code>. </p>
 <p> The capability is a string describing what the given user is allowed to do. This takes the form of a comma separated list of allow clauses with a permission specifier containing one or more of rwx for read, write, and execute permission. The <code>allow *</code> grants full superuser permissions for the given subsystem. </p>

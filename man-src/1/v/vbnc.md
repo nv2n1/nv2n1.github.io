@@ -20,62 +20,62 @@ description: "vbnc – Mono Visual Basic Compiler."
 <p> The Mono Basic compiler by default only references these assemblies: mscorlib.dll, Microsoft.VisualBasic.dll, System.dll and System.Xml.dll. If you want to reference extra libraries you must manually specify them using the the -r: command line option. </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><i>-addmodule:MODULE1[,MODULE2]</i></p>
-<dd> Includes the specified modules in the resulting assembly.</p>
-<dt><i>-codepage:ID</i></p>
-<dd> Specifies the code page used to process the input files from the point it is specified on. By default files will be processed in the current code page. The compiler will also automatically detect Unicode/UTF8 files that have an embedded byte mark at the beginning.</p>
-<dt>Other popular encodings are 28591 (Latin1), 1252 (iso-8859-1) and 65001 (UTF-8).</p>
+<dt><i>-addmodule:MODULE1[,MODULE2]</i></dt>
+<dd> Includes the specified modules in the resulting assembly.</dd>
+<dt><i>-codepage:ID</i></dt>
+<dd> Specifies the code page used to process the input files from the point it is specified on. By default files will be processed in the current code page. The compiler will also automatically detect Unicode/UTF8 files that have an embedded byte mark at the beginning.</dd>
+<dt>Other popular encodings are 28591 (Latin1), 1252 (iso-8859-1) and 65001 (UTF-8).</dt>
 <dd>
-<dt><i>-define:SYMLIST, -d:SYMLIST</i></p>
-<dd> Defines the symbol listed by the semi-colon separeted list SYMLIST SYMBOL. This can be tested in the source code by the pre-processor, or can be used by methods that have been tagged with the Conditional attribute.</p>
-<dt><i>-debug:AMOUNT</i></p>
-<dd> Specify the amount of debugging information to emit. Possible values for AMOUNT are &quot;full&quot; and &quot;pdbonly&quot;.</p>
-<dt><i>-imports:import-list</i></p>
-<dd> Declare global Imports for listed namespaces.</p>
-<dt><i>-ignorewarn:XXXX</i></p>
-<dd> Ignores warning number XXXX.</p>
-<dt><i>-lib:PATHLIST, -libpath:PATHLIST</i></p>
-<dd> Each path specified in the comma-separated list will direct the compiler to look for libraries in that specified path.</p>
-<dt><i>-main:CLASS</i></p>
-<dd> Tells the compiler which CLASS or MODULE contains the entry point. Useful when you are compiling several classes with a Main method.</p>
-<dt><i>-nologo</i></p>
-<dd> Suppress printing copyright information on startup.</p>
-<dt><i>-nostdlib, -nostdlib+</i></p>
-<dd> Use this flag if you want to compile the core library. This makes the compiler load its internal types from the assembly being compiled.</p>
-<dt><i>-noconfig, -noconfig+</i></p>
-<dd> Disables the default compiler configuration to be loaded. The compiler by default has references to the system assemblies.</p>
-<dt><i>-nowarn</i></p>
-<dd> Makes the compiler ignore warnings.</p>
-<dt><i>-optioncompare:binary, -optioncompare:text </i></p>
-<dd> Select between binary and text string comparisons. The default is binary string comparisons.</p>
-<dt><i>-optionexplicit[+|-]</i></p>
-<dd> Require explicit declaration of variables</p>
-<dt><i>-optionstrict[+|-]</i></p>
-<dd> Enforce strict language semantics</p>
-<dt><i>-out:FNAME, -o FNAME</i></p>
-<dd> Names the output file to be generated.</p>
-<dt><i>-q -quiet</i></p>
-<dd> Commands the compiler to show only error messages for syntax-related errors and warnings.</p>
-<dt><i>-resource:RESOURCE[,ID]</i></p>
-<dd> Embeds to the given resource file. The optional ID can be used to give a different name to the resource. If not specified, the resource name will be the file name.</p>
-<dt><i>-linkresource:RESOURCE[,ID]</i></p>
-<dd> Links to the specified RESOURCE. The optional ID can be used to give a name to the linked resource.</p>
-<dt><i>-r:ASSEMBLY1[,ASSEMBLY2], -r ASSEMBLY1[,ASSEMBLY2]</i></p>
-<dd> Reference the named assemblies. Use this to use classes from the named assembly in your program. The assembly will be loaded from either the system directory where all the assemblies live, or from the path explicitly given with the -L option.</dl>
+</dd><dt><i>-define:SYMLIST, -d:SYMLIST</i></dt>
+<dd> Defines the symbol listed by the semi-colon separeted list SYMLIST SYMBOL. This can be tested in the source code by the pre-processor, or can be used by methods that have been tagged with the Conditional attribute.</dd>
+<dt><i>-debug:AMOUNT</i></dt>
+<dd> Specify the amount of debugging information to emit. Possible values for AMOUNT are &quot;full&quot; and &quot;pdbonly&quot;.</dd>
+<dt><i>-imports:import-list</i></dt>
+<dd> Declare global Imports for listed namespaces.</dd>
+<dt><i>-ignorewarn:XXXX</i></dt>
+<dd> Ignores warning number XXXX.</dd>
+<dt><i>-lib:PATHLIST, -libpath:PATHLIST</i></dt>
+<dd> Each path specified in the comma-separated list will direct the compiler to look for libraries in that specified path.</dd>
+<dt><i>-main:CLASS</i></dt>
+<dd> Tells the compiler which CLASS or MODULE contains the entry point. Useful when you are compiling several classes with a Main method.</dd>
+<dt><i>-nologo</i></dt>
+<dd> Suppress printing copyright information on startup.</dd>
+<dt><i>-nostdlib, -nostdlib+</i></dt>
+<dd> Use this flag if you want to compile the core library. This makes the compiler load its internal types from the assembly being compiled.</dd>
+<dt><i>-noconfig, -noconfig+</i></dt>
+<dd> Disables the default compiler configuration to be loaded. The compiler by default has references to the system assemblies.</dd>
+<dt><i>-nowarn</i></dt>
+<dd> Makes the compiler ignore warnings.</dd>
+<dt><i>-optioncompare:binary, -optioncompare:text </i></dt>
+<dd> Select between binary and text string comparisons. The default is binary string comparisons.</dd>
+<dt><i>-optionexplicit[+|-]</i></dt>
+<dd> Require explicit declaration of variables</dd>
+<dt><i>-optionstrict[+|-]</i></dt>
+<dd> Enforce strict language semantics</dd>
+<dt><i>-out:FNAME, -o FNAME</i></dt>
+<dd> Names the output file to be generated.</dd>
+<dt><i>-q -quiet</i></dt>
+<dd> Commands the compiler to show only error messages for syntax-related errors and warnings.</dd>
+<dt><i>-resource:RESOURCE[,ID]</i></dt>
+<dd> Embeds to the given resource file. The optional ID can be used to give a different name to the resource. If not specified, the resource name will be the file name.</dd>
+<dt><i>-linkresource:RESOURCE[,ID]</i></dt>
+<dd> Links to the specified RESOURCE. The optional ID can be used to give a name to the linked resource.</dd>
+<dt><i>-r:ASSEMBLY1[,ASSEMBLY2], -r ASSEMBLY1[,ASSEMBLY2]</i></dt>
+<dd> Reference the named assemblies. Use this to use classes from the named assembly in your program. The assembly will be loaded from either the system directory where all the assemblies live, or from the path explicitly given with the -L option.</dd></dl>
 <p> You can also use a semicolon to separate the assemblies instead of a comma.</p>
 <dl>
-<dt><i>-removeintchecks[+|-]</i></p>
-<dd> Remove integer checks. Default off.</p>
-<dt><i>-rootnamespace:namespace</i></p>
-<dd> Specifies the root namespace for all type declarations</p>
-<dt><i>-target:KIND, -t:KIND</i></p>
-<dd> Used to specify the desired target. The possible values are: exe (plain executable), winexe (Windows.Forms executable), library (component libraries) and module (partial library).</p>
-<dt><i>-utf8output[+|-]</i></p>
-<dd> Emit compiler output in UTF8 character encoding. Currently ignored.</p>
-<dt><i>&#8211;version</i></p>
-<dd> Shows the compiler version.</p>
-<dt><i>-warnaserror, -warnaserror+</i></p>
-<dd> Treat warnings as errors.</dl>
+<dt><i>-removeintchecks[+|-]</i></dt>
+<dd> Remove integer checks. Default off.</dd>
+<dt><i>-rootnamespace:namespace</i></dt>
+<dd> Specifies the root namespace for all type declarations</dd>
+<dt><i>-target:KIND, -t:KIND</i></dt>
+<dd> Used to specify the desired target. The possible values are: exe (plain executable), winexe (Windows.Forms executable), library (component libraries) and module (partial library).</dd>
+<dt><i>-utf8output[+|-]</i></dt>
+<dd> Emit compiler output in UTF8 character encoding. Currently ignored.</dd>
+<dt><i>&#8211;version</i></dt>
+<dd> Shows the compiler version.</dd>
+<dt><i>-warnaserror, -warnaserror+</i></dt>
+<dd> Treat warnings as errors.</dd></dl>
 <h2>STABILITY</h2>
 <p> As of early 2007, the Mono Visual Basic compiler is still considered preview software. The compiler is almost feature-complete (targeting the Microsoft Visual Basic 8 compiler), only lacking support for the &#8216;My&#8217; namespace. Frequent crashes are still occuring, especially with incorrect code. </p>
 <h2>AUTHORS</h2>

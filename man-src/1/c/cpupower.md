@@ -20,36 +20,34 @@ description: "cpupower – Shows and sets processor power related values"
 <p> &#8211;help, -h</p>
 <dl>
 <dt>
-<dd> Shows supported commands and general usage.</dl>
+</dt><dd> Shows supported commands and general usage.</dd></dl>
 <p> &#8211;cpu cpulist, -c cpulist</p>
 <dl>
 <dt>
-<dd> Only show or set values for specific cores. This option is not supported by all commands, details can be found in the manpages of the commands. </p>
+</dt><dd> Only show or set values for specific cores. This option is not supported by all commands, details can be found in the manpages of the commands. </dd>
 <p> Some commands access all cores (typically the *-set commands), some only the first core (typically the *-info commands) by default. </p>
 <p> The syntax for &lt;cpulist&gt; is based on how the kernel exports CPU bitmasks via sysfs files. Some examples:</p>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>Input</p>
-<dd> Equivalent to</p>
-<dt>all</p>
-<dd> all cores</p>
-<dt>0-3</p>
-<dd> 0,1,2,3</p>
-<dt>0-7:2</p>
-<dd> 0,2,4,6</p>
-<dt>1,3,5-7</p>
-<dd> 1,3,5,6,7</p>
-<dt>0-3:2,8-15:4</p>
+<dt>Input</dt>
+<dd> Equivalent to</dd>
+<dt>all</dt>
+<dd> all cores</dd>
+<dt>0-3</dt>
+<dd> 0,1,2,3</dd>
+<dt>0-7:2</dt>
+<dd> 0,2,4,6</dd>
+<dt>1,3,5-7</dt>
+<dd> 1,3,5,6,7</dd>
+<dt>0-3:2,8-15:4</dt>
 <dd> 0,2,8,12<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>
-</dl>
+</dd></dl>
 </dl>
 </dl>
 <p> &#8211;version, -v</p>
 <dl>
 <dt>
-<dd> Print the package name and version number. </p>
+</dt><dd> Print the package name and version number. </dd>
 </dl>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/1-cpupower-set/">cpupower-set</a>(1), <a href="/docs/linux/man/1-cpupower-info/">cpupower-info</a>(1), cpupower-idle(1), <a href="/docs/linux/man/1-cpupower-frequency-set/">cpupower-frequency-set</a>(1), <a href="/docs/linux/man/1-cpupower-frequency-info/">cpupower-frequency-info</a>(1), <a href="/docs/linux/man/1-cpupower-monitor/">cpupower-monitor</a>(1), powertop(1) </p>

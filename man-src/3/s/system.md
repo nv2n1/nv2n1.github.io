@@ -10,7 +10,6 @@ description: "system – execute a shell command"
 <p>system &#8211; execute a shell command</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;stdlib.h&gt;
-
 int system(const char *command);</code></pre>
 <h2>Description</h2>
 <p>The <code>system</code>() library function uses <code><a href="/docs/linux/man/2-fork/">fork</a></code>(2) to create a child process that executes the shell command specified in <i>command</i> using <code><a href="/docs/linux/man/3-execl/">execl</a></code>(3) as follows: </p>
@@ -21,14 +20,14 @@ int system(const char *command);</code></pre>
 <h2>Return Value</h2>
 <p>The return value of <code>system</code>() is one of the following:</p>
 <dl>
-<dt>*</p>
-<dd>If <i>command</i> is NULL, then a nonzero value if a shell is available, or 0 if no shell is available.</p>
-<dt>*</p>
-<dd>If a child process could not be created, or its status could not be retrieved, the return value is -1 and <i>errno</i> is set to indicate the error.</p>
-<dt>*</p>
-<dd>If a shell could not be executed in the child process, then the return value is as though the child shell terminated by calling <code>_exit</code>(2) with the status 127.</p>
-<dt>*</p>
-<dd>If all system calls succeed, then the return value is the termination status of the child shell used to execute <i>command</i>. (The termination status of a shell is the termination status of the last command it executes.)</dl>
+<dt>*</dt>
+<dd>If <i>command</i> is NULL, then a nonzero value if a shell is available, or 0 if no shell is available.</dd>
+<dt>*</dt>
+<dd>If a child process could not be created, or its status could not be retrieved, the return value is -1 and <i>errno</i> is set to indicate the error.</dd>
+<dt>*</dt>
+<dd>If a shell could not be executed in the child process, then the return value is as though the child shell terminated by calling <code>_exit</code>(2) with the status 127.</dd>
+<dt>*</dt>
+<dd>If all system calls succeed, then the return value is the termination status of the child shell used to execute <i>command</i>. (The termination status of a shell is the termination status of the last command it executes.)</dd></dl>
 <p> In the last two cases, the return value is a &quot;wait status&quot; that can be examined using the macros described in <code><a href="/docs/linux/man/2-waitpid/">waitpid</a></code>(2). (i.e., <code>WIFEXITED</code>(), <code>WEXITSTATUS</code>(), and so on). </p>
 <p> <code>system</code>() does not affect the wait status of any other children.</p>
 <h2>Errors</h2>

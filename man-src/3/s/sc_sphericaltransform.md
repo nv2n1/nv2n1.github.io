@@ -11,98 +11,38 @@ description: "sc::SphericalTransform –"
 <p> This is a base class for a container for a sparse Cartesian to solid harmonic basis function transformation.</p>
 <h2>Synopsis</h2>
 <pre><code>
-
 #include &lt;transform.h&gt;</code></pre>
 <p> Inherited by <code>sc::ISphericalTransform</code>, <code>sc::SphericalTransformCCA</code>, <code>sc::SphericalTransformCints</code>, and <code>sc::SphericalTransformV3</code>.</p>
 <h3>Public Member Functions</h3>
 <pre><code>void add (int a, int b, int c, double coef, int pureindex)
-
-
 Adds another SphericalTransformComponent.
-
-
 int cartindex (int i) const
-
-
 Returns the Cartesian basis function index of component i.
-
-
 int pureindex (int i) const
-
-
 Returns the solid harmonic basis function index of component i.
-
-
 double coef (int i) const
-
-
 Returns the transform coefficient of component i.
-
-
 int a (int i) const
-
-
 Returns the Cartesian basis function's x exponent of component i.
-
-
 int b (int i) const
-
-
 Returns the Cartesian basis function's y exponent of component i.
-
-
 int c (int i) const
-
-
 Returns the Cartesian basis function's z exponent of component i.
-
-
 int l () const
-
-
 Returns the angular momentum.
-
-
 int n () const
-
-
 Returns the number of components in the transformation.
-
-
 virtual SphericalTransformComponent * new_components ()=0
-
-
 This must create SphericalTransformComponent's of the appropriate specialization.
-
-
-
 Protected Member Functions
 SphericalTransform (int l, int subl=-1)
-
-
 This constructs the SphericalTransform for the given Cartesian angular momentum l and solid harmonic angular momentum subl.
-
-
 virtual void init ()
-
-
 This determines all of the components of the transformation.
-
-
-
 Protected Attributes
 int n_
-
-
-
 int l_
-
-
-
 int subl_
-
-
-
 SphericalTransformComponent * components_</code></pre>
 <h2>Detailed Description</h2>
 <p>This is a base class for a container for a sparse Cartesian to solid harmonic basis function transformation.</p>

@@ -14,14 +14,14 @@ description: "gnutls_certificate_set_openpgp_keyring_mem – API function"
 <p> <code>int gnutls_certificate_set_openpgp_keyring_mem(gnutls_certificate_credentials_t </code><i>c</i><code>, const uint8_t * </code><i>data</i><code>, size_t </code><i>dlen</i><code>, gnutls_openpgp_crt_fmt_t </code><i>format</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
-<dt>gnutls_certificate_credentials_t c</p>
-<dd> A certificate credentials structure</p>
-<dt>const uint8_t * data</p>
-<dd> buffer with keyring data.</p>
-<dt>size_t dlen</p>
-<dd> length of data buffer.</p>
-<dt>gnutls_openpgp_crt_fmt_t format</p>
-<dd> the format of the keyring</dl>
+<dt>gnutls_certificate_credentials_t c</dt>
+<dd> A certificate credentials structure</dd>
+<dt>const uint8_t * data</dt>
+<dd> buffer with keyring data.</dd>
+<dt>size_t dlen</dt>
+<dd> length of data buffer.</dd>
+<dt>gnutls_openpgp_crt_fmt_t format</dt>
+<dd> the format of the keyring</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> The function is used to set keyrings that will be used internally by various OpenPGP functions. For example to find a key when it is needed for an operations. The keyring will also be used at the verification functions.</p>
 <h2>RETURNS</h2>
@@ -35,6 +35,6 @@ description: "gnutls_certificate_set_openpgp_keyring_mem – API function"
 <h2>SEE ALSO</h2>
 <p> The full documentation for <code>gnutls</code> is maintained as a Texinfo manual. If the /usr/share/doc/gnutls/ directory does not contain the HTML form visit <code></p>
 <dl>
-<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></p>
-<dd> </code></dl>
+<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></dt>
+<dd> </code></dd></dl>
 <h2>Index</h2>

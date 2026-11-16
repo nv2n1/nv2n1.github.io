@@ -29,24 +29,24 @@ description: "rpmdep – display the full dependency of an installed rpm package
 <p> a package to analyse. Only one name may be given. It is not necessary if you are using the -all option.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-help</code></p>
-<dd> Print a brief help message and exits.</p>
-<dt><code>-man</code></p>
-<dd> Print the manual page and exits.</p>
-<dt><code>-version</code></p>
-<dd> Print the program release and exit.</p>
-<dt><code>-verbose</code></p>
-<dd> The program works and print debugging messages.</p>
-<dt><code>-dot</code></p>
-<dd> create a dot file to be used by graphviz. in normal call, an arrow from a to b means that a package depends (uses) b package. in dependings call, an arrow from a to b means that a package is used by b package.</p>
-<dt><code>-use-cache</code></p>
-<dd> the rpm query may be long (10 to 30 s). If you will run an rpmorphan tool several time, this option will allow to gain a lot of time : it save the rpm query on a file cache (first call), then use this cache instead quering rpm (others calls).</p>
-<dt><code>-clear-cache</code></p>
-<dd> to remove cache file. Can be used with -use-cache to write a new cache.</p>
-<dt><code>&#8211;depending</code></p>
-<dd> instead of showing package dependencies (rpm -qR), display packages wich are depending upon the given argument : it then act as an improved &#8216;rpm -q &#8211;whatrequires&#8217; command</p>
-<dt><code>&#8211;all</code></p>
-<dd> rpmdep will then work on all installed packages, and display the results sorted by the number of depends (or dependings).</dl>
+<dt><code>-help</code></dt>
+<dd> Print a brief help message and exits.</dd>
+<dt><code>-man</code></dt>
+<dd> Print the manual page and exits.</dd>
+<dt><code>-version</code></dt>
+<dd> Print the program release and exit.</dd>
+<dt><code>-verbose</code></dt>
+<dd> The program works and print debugging messages.</dd>
+<dt><code>-dot</code></dt>
+<dd> create a dot file to be used by graphviz. in normal call, an arrow from a to b means that a package depends (uses) b package. in dependings call, an arrow from a to b means that a package is used by b package.</dd>
+<dt><code>-use-cache</code></dt>
+<dd> the rpm query may be long (10 to 30 s). If you will run an rpmorphan tool several time, this option will allow to gain a lot of time : it save the rpm query on a file cache (first call), then use this cache instead quering rpm (others calls).</dd>
+<dt><code>-clear-cache</code></dt>
+<dd> to remove cache file. Can be used with -use-cache to write a new cache.</dd>
+<dt><code>&#8211;depending</code></dt>
+<dd> instead of showing package dependencies (rpm -qR), display packages wich are depending upon the given argument : it then act as an improved &#8216;rpm -q &#8211;whatrequires&#8217; command</dd>
+<dt><code>&#8211;all</code></dt>
+<dd> rpmdep will then work on all installed packages, and display the results sorted by the number of depends (or dependings).</dd></dl>
 <h2>USAGE</h2>
 <p> get the full list of dependencies for rpmrebuild package </p>
 <pre>
@@ -82,16 +82,16 @@ description: "rpmdep – display the full dependency of an installed rpm package
 <p> the verbose mode allow to see all the recursive work </p>
 <p> others messages are</p>
 <dl>
-<dt><code>package &#8230; is not installed</code></p>
-<dd> this is not a name of an installed package</p>
-<dt><code>&#8230; has no dependencies</code></p>
-<dd> this can comes for some admin tools (ash for example)</p>
-<dt><code>&#8230; depends upon (list)</code></p>
-<dd> return a list of sorted and comma separated packages</p>
-<dt><code>&#8230; is needed by (list)</code></p>
-<dd> return the depending package list</p>
-<dt><code>no depending : &#8230; is an orphan</code></p>
-<dd> the given package has no depending packages : it is an orphan</dl>
+<dt><code>package &#8230; is not installed</code></dt>
+<dd> this is not a name of an installed package</dd>
+<dt><code>&#8230; has no dependencies</code></dt>
+<dd> this can comes for some admin tools (ash for example)</dd>
+<dt><code>&#8230; depends upon (list)</code></dt>
+<dd> return a list of sorted and comma separated packages</dd>
+<dt><code>&#8230; is needed by (list)</code></dt>
+<dd> return the depending package list</dd>
+<dt><code>no depending : &#8230; is an orphan</code></dt>
+<dd> the given package has no depending packages : it is an orphan</dd></dl>
 <h2>EXIT STATUS</h2>
 <p> O if all is ok </p>
 <p> &gt;=1 if a problem</p>

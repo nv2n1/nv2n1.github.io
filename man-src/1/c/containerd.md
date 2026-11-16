@@ -15,7 +15,7 @@ description: "containerd"
 <p> containerd </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre><code>
 [--address | -a] = [value]
     [--config | -c] = [value]
@@ -23,15 +23,15 @@ description: "containerd"
             [--root] = [value]
                 [--state] = [value]
 </code></pre>
-</dl>
+</dd></dl>
 <p> <code>Usage</code>: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre><code>
 containerd[GLOBAL OPTIONS] command[COMMAND OPTIONS][ARGUMENTS...]
 </code></pre>
-</dl>
+</dd></dl>
 <h2>GLOBAL OPTIONS</h2>
 <p> <code>&#8211;address, -a</code>=&quot;&quot;: address for containerd&#8217;s GRPC server </p>
 <p> <code>&#8211;config, -c</code>=&quot;&quot;: path to the configuration file (default: /etc/containerd/config.toml) </p>

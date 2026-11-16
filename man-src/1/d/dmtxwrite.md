@@ -15,13 +15,13 @@ description: "dmtxwrite – create Data Matrix barcodes"
 <p> <code>dmtxwrite</code> encodes data from a file or standard input, and writes the resulting ECC200 Data Matrix barcode as an image.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-c</code>, <code>&#8211;codewords</code></p>
-<dd> Print codeword listing instead of creating barcode.</p>
-<dt><code>-d</code>, <code>&#8211;module</code>=<i>N</i></p>
-<dd> Module size in pixels.</p>
-<dt><code>-m</code>, <code>&#8211;margin</code>=<i>N</i></p>
-<dd> Margin size in pixels.</p>
-<dt><code>-e</code>, <code>&#8211;encoding</code>=[bfactxe8]</p>
+<dt><code>-c</code>, <code>&#8211;codewords</code></dt>
+<dd> Print codeword listing instead of creating barcode.</dd>
+<dt><code>-d</code>, <code>&#8211;module</code>=<i>N</i></dt>
+<dd> Module size in pixels.</dd>
+<dt><code>-m</code>, <code>&#8211;margin</code>=<i>N</i></dt>
+<dd> Margin size in pixels.</dd>
+<dt><code>-e</code>, <code>&#8211;encoding</code>=[bfactxe8]</dt>
 <dd> Encodation scheme.<br />
 b&nbsp;<wbr>=&nbsp;<wbr>Best optimized&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>best possible optimization&nbsp;<wbr>(beta)<br />
 f&nbsp;<wbr>=&nbsp;<wbr>Fast optimized&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>basic optimization&nbsp;<wbr>(not implemented)<br />
@@ -30,18 +30,18 @@ c&nbsp;<wbr>=&nbsp;<wbr>C40&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wb
 t&nbsp;<wbr>=&nbsp;<wbr>Text&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>digits and lowercase<br />
 x&nbsp;<wbr>=&nbsp;<wbr>X12&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>ANSI X12 EDI<br />
 e&nbsp;<wbr>=&nbsp;<wbr>EDIFACT&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>ASCII values 32-94<br />
-8&nbsp;<wbr>=&nbsp;<wbr>Base 256&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>all byte values 0-255</p>
-<dt><code>-f</code>, <code>&#8211;format</code>=<i>FORMAT</i></p>
-<dd> Output image format (PNG [default], TIF, GIF, PDF, etc&#8230;).</p>
-<dt><code>-l</code>, <code>&#8211;list-formats</code></p>
-<dd> List available image formats.</p>
-<dt><code>-o</code>, <code>&#8211;output</code>=<i>FILE</i></p>
-<dd> Barcode output filename. Default is standard output.</p>
-<dt><code>-p</code>, <code>&#8211;preview</code></p>
-<dd> Print ASCII art preview to standard output.</p>
-<dt><code>-r</code>, <code>&#8211;resolution</code>=<i>N</i></p>
-<dd> Set image print resolution (dpi).</p>
-<dt><code>-s</code>, <code>&#8211;symbol-size</code>=[sr|RxC] (default &quot;s&quot;)</p>
+8&nbsp;<wbr>=&nbsp;<wbr>Base 256&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>all byte values 0-255</dd>
+<dt><code>-f</code>, <code>&#8211;format</code>=<i>FORMAT</i></dt>
+<dd> Output image format (PNG [default], TIF, GIF, PDF, etc&#8230;).</dd>
+<dt><code>-l</code>, <code>&#8211;list-formats</code></dt>
+<dd> List available image formats.</dd>
+<dt><code>-o</code>, <code>&#8211;output</code>=<i>FILE</i></dt>
+<dd> Barcode output filename. Default is standard output.</dd>
+<dt><code>-p</code>, <code>&#8211;preview</code></dt>
+<dd> Print ASCII art preview to standard output.</dd>
+<dt><code>-r</code>, <code>&#8211;resolution</code>=<i>N</i></dt>
+<dd> Set image print resolution (dpi).</dd>
+<dt><code>-s</code>, <code>&#8211;symbol-size</code>=[sr|RxC] (default &quot;s&quot;)</dt>
 <dd>
 &nbsp;<wbr>&nbsp;<wbr>Automatic symbol size options:<br />
 &nbsp;<wbr>s&nbsp;<wbr>=&nbsp;<wbr>Auto square&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>r&nbsp;<wbr>=&nbsp;<wbr>Auto rectangle<br />
@@ -51,21 +51,21 @@ e&nbsp;<wbr>=&nbsp;<wbr>EDIFACT&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp
 &nbsp;<wbr>44&#215;44&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>48&#215;48&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>52&#215;52&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>64&#215;64&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>72&#215;72&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>80&#215;80<br />
 &nbsp;<wbr>88&#215;88&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>96&#215;96 104&#215;104 120&#215;120 132&#215;132 144&#215;144<br />
 &nbsp;<wbr>&nbsp;<wbr>Manually symbol size options for rectangle symbols:<br />
-&nbsp;<wbr>&nbsp;<wbr>8&#215;18&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>8&#215;32&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>12&#215;26&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>12&#215;36&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>16&#215;36&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>16&#215;48</p>
-<dt><code>-C</code>, <code>&#8211;color</code>=<i>COLOR</i></p>
-<dd> Barcode color (not implemented).</p>
-<dt><code>-B</code>, <code>&#8211;bg-color</code>=<i>COLOR</i></p>
-<dd> Background color (not implemented).</p>
-<dt><code>-M</code>, <code>&#8211;mosaic</code></p>
-<dd> Create non-standard Data Mosaic barcode.</p>
-<dt><code>-R</code>, <code>&#8211;rotate</code>=<i>DEGREES</i></p>
-<dd> Rotation angle in degrees (not implemented).</p>
-<dt><code>-v</code>, <code>&#8211;verbose</code></p>
-<dd> Use verbose messages.</p>
-<dt><code>-V</code>, <code>&#8211;version</code></p>
-<dd> Print program version information.</p>
-<dt><code>&#8211;help</code></p>
-<dd> Display this help message and quit.</dl>
+&nbsp;<wbr>&nbsp;<wbr>8&#215;18&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>8&#215;32&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>12&#215;26&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>12&#215;36&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>16&#215;36&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>16&#215;48</dd>
+<dt><code>-C</code>, <code>&#8211;color</code>=<i>COLOR</i></dt>
+<dd> Barcode color (not implemented).</dd>
+<dt><code>-B</code>, <code>&#8211;bg-color</code>=<i>COLOR</i></dt>
+<dd> Background color (not implemented).</dd>
+<dt><code>-M</code>, <code>&#8211;mosaic</code></dt>
+<dd> Create non-standard Data Mosaic barcode.</dd>
+<dt><code>-R</code>, <code>&#8211;rotate</code>=<i>DEGREES</i></dt>
+<dd> Rotation angle in degrees (not implemented).</dd>
+<dt><code>-v</code>, <code>&#8211;verbose</code></dt>
+<dd> Use verbose messages.</dd>
+<dt><code>-V</code>, <code>&#8211;version</code></dt>
+<dd> Print program version information.</dd>
+<dt><code>&#8211;help</code></dt>
+<dd> Display this help message and quit.</dd></dl>
 <h2>STANDARDS</h2>
 <p> ISO/IEC 16022:2000 </p>
 <p> ANSI/AIM BC11 ISS</p>

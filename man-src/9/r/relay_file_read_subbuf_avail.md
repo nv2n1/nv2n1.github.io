@@ -15,11 +15,11 @@ relay_file_read_subbuf_avail - return bytes available in sub-buffer
 <h2>Arguments</h2>
 
 <i>read_pos</i>
-<dl><dd><dd>file read position</dl>
+<dl><dd></dd><dd>file read position</dd></dl>
  
 
  <i>buf</i>
-<dl><dd>relay channel buffer</dl>
+<dl><dd>relay channel buffer</dd></dl>
 
 <h2>Copyright</h2>
 

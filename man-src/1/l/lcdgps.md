@@ -11,21 +11,21 @@ description: "gps, xgps, xgpsspeed, cgps, lcdgps, gegps – test clients for gps
 <p> gps, xgps, xgpsspeed, cgps, lcdgps, gegps &#8211; test clients for gpsd </p>
 <h2>SYNOPSIS</h2>
 <dl>
-<dt> <code>xgps</code> [-D&nbsp;<wbr><i>debug-level</i>] [-h] [-V] [-l&nbsp;<wbr>[[d]&nbsp;<wbr>|&nbsp;<wbr>[m]&nbsp;<wbr>|&nbsp;<wbr>[s]]] [-u&nbsp;<wbr>[[i]&nbsp;<wbr>|&nbsp;<wbr>[n]&nbsp;<wbr>|&nbsp;<wbr>[m]]] [<i>server</i> [<i>:port</i> [<i>:device</i>]]]</p>
-<dt> <code>xgpsspeed</code> [-D&nbsp;<wbr><i>debug-level</i>] [-h] [-V] [&#8211;speedunits&nbsp;<wbr>{[mph]&nbsp;<wbr>|&nbsp;<wbr>[kph]&nbsp;<wbr>|&nbsp;<wbr>[knots]}] [<i>server</i> [<i>:port</i> [<i>:device</i>]]]</p>
-<dt> <code>cgps</code> [-D&nbsp;<wbr><i>debug-level</i>] [-h] [-V] [-l&nbsp;<wbr>[[d]&nbsp;<wbr>|&nbsp;<wbr>[m]&nbsp;<wbr>|&nbsp;<wbr>[s]]] [-m] [-s] [-u&nbsp;<wbr>[[i]&nbsp;<wbr>|&nbsp;<wbr>[n]&nbsp;<wbr>|&nbsp;<wbr>[m]]] [<i>server</i> [<i>:port</i> [<i>:device</i>]]]</p>
-<dt> <code>lcdgps</code> [-h] [-V] [-l&nbsp;<wbr>[[d]&nbsp;<wbr>|&nbsp;<wbr>[m]&nbsp;<wbr>|&nbsp;<wbr>[s]]] [-u&nbsp;<wbr>[[i]&nbsp;<wbr>|&nbsp;<wbr>[n]&nbsp;<wbr>|&nbsp;<wbr>[m]]] [<i>server</i> [<i>:port</i> [<i>:device</i>]]]</p>
-<dt> <code>gpxlogger</code> [-D&nbsp;<wbr><i>debug-level</i>] [-d] [-e&nbsp;<wbr><i>export-method</i>] [-f&nbsp;<wbr><i>filename</i>] [-l] [-m&nbsp;<wbr><i>minmove</i>] [-h] [-V] [-i&nbsp;<wbr><i>track timeout</i>] [<i>server</i> [<i>:port</i> [<i>:device</i>]]]</p>
-<dt> <code>gegps</code> [-d&nbsp;<wbr><i>directory</i>] [-i]</dl>
+<dt> <code>xgps</code> [-D&nbsp;<wbr><i>debug-level</i>] [-h] [-V] [-l&nbsp;<wbr>[[d]&nbsp;<wbr>|&nbsp;<wbr>[m]&nbsp;<wbr>|&nbsp;<wbr>[s]]] [-u&nbsp;<wbr>[[i]&nbsp;<wbr>|&nbsp;<wbr>[n]&nbsp;<wbr>|&nbsp;<wbr>[m]]] [<i>server</i> [<i>:port</i> [<i>:device</i>]]]</dt>
+<dt> <code>xgpsspeed</code> [-D&nbsp;<wbr><i>debug-level</i>] [-h] [-V] [&#8211;speedunits&nbsp;<wbr>{[mph]&nbsp;<wbr>|&nbsp;<wbr>[kph]&nbsp;<wbr>|&nbsp;<wbr>[knots]}] [<i>server</i> [<i>:port</i> [<i>:device</i>]]]</dt>
+<dt> <code>cgps</code> [-D&nbsp;<wbr><i>debug-level</i>] [-h] [-V] [-l&nbsp;<wbr>[[d]&nbsp;<wbr>|&nbsp;<wbr>[m]&nbsp;<wbr>|&nbsp;<wbr>[s]]] [-m] [-s] [-u&nbsp;<wbr>[[i]&nbsp;<wbr>|&nbsp;<wbr>[n]&nbsp;<wbr>|&nbsp;<wbr>[m]]] [<i>server</i> [<i>:port</i> [<i>:device</i>]]]</dt>
+<dt> <code>lcdgps</code> [-h] [-V] [-l&nbsp;<wbr>[[d]&nbsp;<wbr>|&nbsp;<wbr>[m]&nbsp;<wbr>|&nbsp;<wbr>[s]]] [-u&nbsp;<wbr>[[i]&nbsp;<wbr>|&nbsp;<wbr>[n]&nbsp;<wbr>|&nbsp;<wbr>[m]]] [<i>server</i> [<i>:port</i> [<i>:device</i>]]]</dt>
+<dt> <code>gpxlogger</code> [-D&nbsp;<wbr><i>debug-level</i>] [-d] [-e&nbsp;<wbr><i>export-method</i>] [-f&nbsp;<wbr><i>filename</i>] [-l] [-m&nbsp;<wbr><i>minmove</i>] [-h] [-V] [-i&nbsp;<wbr><i>track timeout</i>] [<i>server</i> [<i>:port</i> [<i>:device</i>]]]</dt>
+<dt> <code>gegps</code> [-d&nbsp;<wbr><i>directory</i>] [-i]</dt></dl>
 <h2>DESCRIPTION</h2>
-<dd>These are the demonstration clients shipped with gpsd. They have some common options: </p>
+<dd>These are the demonstration clients shipped with gpsd. They have some common options: </dd>
 <p> The <code>-h</code> option causes each client to emit a summary of its options and then exit. </p>
 <p> The <code>-V</code> option causes each client to dump the package version and exit. </p>
 <p> The <code>-l</code> option, when present, sets the format of latitude and longitude reports. The value &#8216;d&#8217; produces decimal degrees and is the default. The value &#8216;m&#8217; produces degrees and decimal minutes. The value &#8216;s&#8217; produces degrees, minutes, and decimal seconds. </p>
 <p> xgps, cgps, and lcdgps look at variables in the environment to figure out what units they should default to using for display &#8212; imperial, nautical, or metric. Here are the variables and values they check: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre><code>
 GPSD_UNITS one of : imperial = miles / feet
                                            nautical = knots / feet
@@ -41,7 +41,7 @@ GPSD_UNITS one of : imperial = miles / feet
                                                                                                                                                                                                            POSIX = miles / feet
                                                                                                                                                                                                                                [other] = km / meters
 </code></pre>
-</dl>
+</dd></dl>
 <p> These preferences may be overridden by the <code>-u</code> option. </p>
 <p> Where present, the <code>-u</code> option can be used to set the system units for display; follow the keyword with &#8216;i&#8217; for &#8216;imperial&#8217; for American units (feet in altitude and error estimates, miles per hour in speeds), &#8216;n&#8217; for &#8216;nautical&#8217; (feet in altitude and error estimates, knots in speed) or &#8216;m&#8217; for &#8216;metric&#8217; (meters in altitude and error estimates, kilometers per hour in speeds). </p>
 <p> The <code>-D</code> option, when present, sets a debug level; it is primarily for use by GPSD developers. It enables various progress messages to standard error. </p>
@@ -49,19 +49,19 @@ GPSD_UNITS one of : imperial = miles / feet
 <p> localhost:/dev/ttyS1</p>
 <dl>
 <dt>
-<dd> Look at the default port of localhost, trying both IPv4 and IPv6 and watching output from serial device 1.</dl>
+</dt><dd> Look at the default port of localhost, trying both IPv4 and IPv6 and watching output from serial device 1.</dd></dl>
 <p> example.com:2317</p>
 <dl>
 <dt>
-<dd> Look at port 2317 on example.com, trying both IPv4 and IPv6.</dl>
+</dt><dd> Look at port 2317 on example.com, trying both IPv4 and IPv6.</dd></dl>
 <p> 71.162.241.5:2317:/dev/ttyS3</p>
 <dl>
 <dt>
-<dd> Look at port 2317 at the specified IPv4 address, collecting data from attached serial device 3.</dl>
+</dt><dd> Look at port 2317 at the specified IPv4 address, collecting data from attached serial device 3.</dd></dl>
 <p> [FEDC:BA98:7654:3210:FEDC:BA98:7654:3210]:2317:/dev/ttyS5</p>
 <dl>
 <dt>
-<dd> Look at port 2317 at the specified IPv6 address, collecting data from attached serial device 5.</dl>
+</dt><dd> Look at port 2317 at the specified IPv6 address, collecting data from attached serial device 5.</dd></dl>
 <p> Not all clients shipped with GPSD are documented here. See also the separate manual pages for <code><a href="/docs/linux/man/1-gpspipe/">gpspipe</a></code>(1) and <code><a href="/docs/linux/man/1-gpsmon/">gpsmon</a></code>(1).</p>
 <h3>xgps</h3>
 <p> xgps is a simple test client for gpsd with an X interface. It displays current GPS position/time/velocity information and (for GPSes that support the feature) the locations of accessible satellites. </p>

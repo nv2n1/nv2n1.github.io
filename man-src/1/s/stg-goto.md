@@ -19,11 +19,11 @@ stg goto[options][--]&lt;patch - name&gt;
 <p> -k, &#8211;keep</p>
 <dl>
 <dt>
-<dd> Keep the local changes.</dl>
+</dt><dd> Keep the local changes.</dd></dl>
 <p> -m, &#8211;merged</p>
 <dl>
 <dt>
-<dd> Check for patches merged upstream.</dl>
+</dt><dd> Check for patches merged upstream.</dd></dl>
 <h2>STGIT</h2>
 <p> Part of the StGit suite &#8211; see <code><a href="/docs/linux/man/1-stg/">stg</a></code>(1) </p>
 <h2>Index</h2>

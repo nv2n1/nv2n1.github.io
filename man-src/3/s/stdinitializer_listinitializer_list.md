@@ -26,10 +26,8 @@ Constant
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;iostream&gt;
-
 #include &lt;initializer_list&gt;
 int main()
-
 {
     std::initializer_list&lt;int&gt; empty_list;
     std::cout &lt;&lt; &quot;empty_list.size(): &quot; &lt;&lt; empty_list.size() &lt;&lt; '\n';

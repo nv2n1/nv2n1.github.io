@@ -11,27 +11,27 @@ description: "fcatch – print a stack back-trace of a program as it crashes"
 <p> fcatch &#8211; print a stack back-trace of a program as it crashes </p>
 <h2>SYNOPSIS</h2>
 <dl>
-<dt> <code>fcatch</code> [<i>options</i>] {<i>program</i>&nbsp;<wbr><i>arg</i>&nbsp;<wbr>&#8230; }</dl>
+<dt> <code>fcatch</code> [<i>options</i>] {<i>program</i>&nbsp;<wbr><i>arg</i>&nbsp;<wbr>&#8230; }</dt></dl>
 <h2>DESCRIPTION</h2>
 <p> <code>fcatch</code></p>
-<dd>generate stack backtraces from a running application as it crashes, or upon receiving a variety of signals.</p>
+<dd>generate stack backtraces from a running application as it crashes, or upon receiving a variety of signals.</dd>
 <h3>Stack Print Options</h3>
 <p> <code>-number-of-frames </code><i>count</i></p>
 <dl>
 <dt>
-<dd> Limit the back-trace to <i>count</i> frames. The default is to limit the back-trace to 10 frames. Specify 0 or &quot;all&quot; to print all frames.</dl>
+</dt><dd> Limit the back-trace to <i>count</i> frames. The default is to limit the back-trace to 10 frames. Specify 0 or &quot;all&quot; to print all frames.</dd></dl>
 <p> <code>-lite</code></p>
 <dl>
 <dt>
-<dd> Perform a light-weight stack backtrace containing only minimal information. Equivalent to <code>-print &#8211;</code>.</dl>
+</dt><dd> Perform a light-weight stack backtrace containing only minimal information. Equivalent to <code>-print &#8211;</code>.</dd></dl>
 <p> <code>-rich</code></p>
 <dl>
 <dt>
-<dd> Perform a detailed stack back-trace that includes, where possible, inlined function calls, parameter names and values, and debug-names. Equivalent to <code>-print inline,params,debug-names</code>.</dl>
+</dt><dd> Perform a detailed stack back-trace that includes, where possible, inlined function calls, parameter names and values, and debug-names. Equivalent to <code>-print inline,params,debug-names</code>.</dd></dl>
 <p> <code>-print </code><i>print-option</i><code>,&#8230;</code></p>
 <dl>
 <dt>
-<dd> Specify the level of detail to include in a stack back-trace. <i>print-option</i> can be any of: </p>
+</dt><dd> Specify the level of detail to include in a stack back-trace. <i>print-option</i> can be any of: </dd>
 <p> debug-names: use debug information, such as DWARF, to determine the name of functions </p>
 <p> paths: include the full path to source files and libraries </p>
 <p> inline: include in-line function in back-trace </p>
@@ -42,34 +42,34 @@ description: "fcatch – print a stack back-trace of a program as it crashes"
 <p> <code>-exe</code></p>
 <dl>
 <dt>
-<dd> The full path of the executable to read.</dl>
+</dt><dd> The full path of the executable to read.</dd></dl>
 <p> <code>-noexe</code></p>
 <dl>
 <dt>
-<dd> Do not attempt to read the corresponding executable when loading a core file.</dl>
+</dt><dd> Do not attempt to read the corresponding executable when loading a core file.</dd></dl>
 <p> <code>-sysroot </code><i>directory</i></p>
 <dl>
 <dt>
-<dd> The system root directory under which all executables, libraries, and source are located.</dl>
+</dt><dd> The system root directory under which all executables, libraries, and source are located.</dd></dl>
 <p> <code>-debug </code><i>class</i><code>=</code><i>level</i><code>&#8230;</code></p>
 <dl>
 <dt>
-<dd> Set internal debug-tracing of the specified Java <i>class</i> to <i>level</i> (level can be NONE, INFO, WARNING, FINE, and FINEST). If the <i>level</i> is absent, FINE is assumed; if the <i>class</i> is absent, the global level is set.</dl>
+</dt><dd> Set internal debug-tracing of the specified Java <i>class</i> to <i>level</i> (level can be NONE, INFO, WARNING, FINE, and FINEST). If the <i>level</i> is absent, FINE is assumed; if the <i>class</i> is absent, the global level is set.</dd></dl>
 <h2>EXAMPLE</h2>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 fcatch 1234
 </pre>
-</dl>
+</dd></dl>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 fcatch /usr/bin/foo
 </pre>
-</dl>
+</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/7-frysk/">frysk</a>(7)</p>
 <h2>BUGS</h2>

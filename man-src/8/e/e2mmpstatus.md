@@ -12,8 +12,8 @@ description: "e2mmpstatus – Check MMP status of an ext4 file system"
 <p><code>e2mmpstatus</code> [<code>-i</code>] &lt;<i>file</i>system<i>&gt;</i></p>
 <h2>Options</h2>
 <dl>
-<dt><code>-i</code></p>
-<dd>prints out the MMP information rather than check it.</dl>
+<dt><code>-i</code></dt>
+<dd>prints out the MMP information rather than check it.</dd></dl>
 <h2>Description</h2>
 <p><code>e2mmpstatus</code> is used to check Multiple-Mount Protection (MMP) status of an ext4 file system with the <code>mmp</code> feature enabled. The specified <i>file system</i> can be a device name (e.g. <i>/dev/hdc1</i>, <i>/dev/sdb2</i>), or an ext4 file system label or UUID, for example <code>UUID=8868abf6-88c5-4a83-98b8-bfc24057f7bd</code> or <code>LABEL=root</code>. By default, the <code>e2mmpstatus</code> program checks whether it is safe to mount the file system without taking the risk of mounting it more than once. </p>
 <p> MMP (multiple-mount protection) is a feature that adds protection against the file system being modified simultaneously by more than one node. It is NOT safe to mount a file system when one of the following conditions is true:<br />

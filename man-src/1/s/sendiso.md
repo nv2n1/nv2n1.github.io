@@ -16,16 +16,16 @@ description: "sendiso – send IEEE 1394 isochronous packets from dump file"
 <p> This program does not allocate any isochronous resources but just starts sending. It should not be used in live environments where it might interfere with properly set up isochronous transmissions, it is a debug and performance benchmarking tool.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-l</code>,<code> &#8211;loop=</code><i>COUNT</i></p>
-<dd> Send dump file <i>COUNT</i> times. Defaults to 1.</p>
-<dt><code>-i</code>,<code> &#8211;infinite</code></p>
-<dd> Send dump file in an endless loop.</p>
-<dt><code>-s</code>,<code> &#8211;speed=</code><i>SPEED</i></p>
-<dd> Send packets at speed <i>SPEED</i>, which can be given as 100, 200 and 400 (in Mbit/s) or abbreviated as 1, 2 and 4. Defaults to 100.</p>
-<dt><code>-p</code>,<code> &#8211;port=</code><i>PORT</i></p>
-<dd> Choose port <i>PORT</i> for sending. A port is a 1394 card or chip and represents one connected bus, therefore this is only relevant when you have multiple of these. Defaults to 0.</p>
-<dt><code>-h</code>,<code> &#8211;help</code></p>
-<dd> Show help text and exit.</dl>
+<dt><code>-l</code>,<code> &#8211;loop=</code><i>COUNT</i></dt>
+<dd> Send dump file <i>COUNT</i> times. Defaults to 1.</dd>
+<dt><code>-i</code>,<code> &#8211;infinite</code></dt>
+<dd> Send dump file in an endless loop.</dd>
+<dt><code>-s</code>,<code> &#8211;speed=</code><i>SPEED</i></dt>
+<dd> Send packets at speed <i>SPEED</i>, which can be given as 100, 200 and 400 (in Mbit/s) or abbreviated as 1, 2 and 4. Defaults to 100.</dd>
+<dt><code>-p</code>,<code> &#8211;port=</code><i>PORT</i></dt>
+<dd> Choose port <i>PORT</i> for sending. A port is a 1394 card or chip and represents one connected bus, therefore this is only relevant when you have multiple of these. Defaults to 0.</dd>
+<dt><code>-h</code>,<code> &#8211;help</code></dt>
+<dd> Show help text and exit.</dd></dl>
 <h2>BUGS</h2>
 <p> None known.</p>
 <h2>SEE ALSO</h2>

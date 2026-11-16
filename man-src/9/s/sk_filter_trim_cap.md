@@ -15,15 +15,15 @@ sk_filter_trim_cap - run a packet through a socket filter
 <h2>Arguments</h2>
 
 <i>sk</i>
-<dl><dd><dd>sock associated with sk_buff</dl>
+<dl><dd></dd><dd>sock associated with sk_buff</dd></dl>
  
 
  <i>skb</i>
-<dl><dd>buffer to filter</dl>
+<dl><dd>buffer to filter</dd></dl>
  
 
  <i>cap</i>
-<dl><dd>limit on how short the eBPF program may trim the packet</dl>
+<dl><dd>limit on how short the eBPF program may trim the packet</dd></dl>
 
 <h2>Description</h2>
 

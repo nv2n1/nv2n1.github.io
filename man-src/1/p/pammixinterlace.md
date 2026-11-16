@@ -23,11 +23,11 @@ description: "pammixinterlace – mix adjacent lines to merge interlaced images"
 <p> You may prefer the effect of simply extracting one of two images. You can do that with <code>pamdeinterlace</code>. </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-filter=</code>{<code>linear</code>,<code>fir</code>,<code>ffmpeg</code>}</p>
-<dd> This option chooses between one of the three filtering mechanisms. <code>linear</code> is a linear-blend formula. <code>fir</code> is a size-5 FIR low-pass filter, and <code>ffmpeg</code> is a formula pulled from the documentation of the program <code>ffmpeg</code> . </p>
+<dt><code>-filter=</code>{<code>linear</code>,<code>fir</code>,<code>ffmpeg</code>}</dt>
+<dd> This option chooses between one of the three filtering mechanisms. <code>linear</code> is a linear-blend formula. <code>fir</code> is a size-5 FIR low-pass filter, and <code>ffmpeg</code> is a formula pulled from the documentation of the program <code>ffmpeg</code> . </dd>
 <p> The default is <code>fir</code>. </p>
-<dt><code>-adaptive</code></p>
-<dd> This option turns on &quot;adaptive&quot; filtering mode. In this mode <code>pammixinterlace</code> modifies only pixels that are obviously part of a &quot;comb&quot; pattern. </p>
+<dt><code>-adaptive</code></dt>
+<dd> This option turns on &quot;adaptive&quot; filtering mode. In this mode <code>pammixinterlace</code> modifies only pixels that are obviously part of a &quot;comb&quot; pattern. </dd>
 </dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-pamdeinterlace/">pamdeinterlace</a></code>(1) , <code>pam</code>(1) </p>

@@ -10,7 +10,6 @@ description: "hsv_to_rgb, rgb_to_hsv – Converts color values between the HSV a
 <p>hsv_to_rgb, rgb_to_hsv &#8211; Converts color values between the HSV and RGB color spaces. Allegro game programming library.</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;allegro.h&gt;
-
 void hsv_to_rgb(float h, float s, float v, int *r, int *g, int *b);
 void rgb_to_hsv(int r, int g, int b, float *h, float *s, float *v);</code></pre>
 <h2>Description</h2>
@@ -20,7 +19,6 @@ float hue, saturation, value;
 ...
     /* Convert a reddish color to HSV format. */
     rgb_to_hsv(255, 0, 128, &amp;hue, &amp;saturation, &amp;value);
-
 /* Now put our tin foil hat, and verify that. */
 hsv_to_rgb(hue, saturation, value, &amp;r, &amp;g, &amp;b);
 ASSERT(r == 255);

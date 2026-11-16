@@ -17,8 +17,8 @@ fishpoke HOST[:PORT] TOPIC[SUBJECT...]
 <p> The fishpoke program is used to trigger a poll immediately instead of waiting for the configured polling interval. This man page refers to the client for the Fishpolld server.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-h, &#8211;help</code></p>
-<dd> Shows this help message. </p>
+<dt><code>-h, &#8211;help</code></dt>
+<dd> Shows this help message. </dd>
 </dl>
 <h2>EXTRAS</h2>
 <p> More information can be found by browsing the README file shipped with the package. </p>

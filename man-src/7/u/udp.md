@@ -10,11 +10,7 @@ description: "udp – User Datagram Protocol for IPv4"
 <p>udp &#8211; User Datagram Protocol for IPv4</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;sys/socket.h&gt;
-
-
 #include &lt;netinet/in.h&gt;
-
-
 #include &lt;netinet/udp.h&gt;
 udp_socket = socket(AF_INET, SOCK_DGRAM, 0);</code></pre>
 <h2>Description</h2>
@@ -26,62 +22,53 @@ udp_socket = socket(AF_INET, SOCK_DGRAM, 0);</code></pre>
 <h3>/proc interfaces</h3>
 <p>System-wide UDP parameter settings can be accessed by files in the directory <i>/proc/sys/net/ipv4/</i>.</p>
 <dl>
-<dt><i>udp_mem</i> (since Linux 2.6.25)</p>
-<dd>This is a vector of three integers governing the number of pages allowed for queueing by all UDP sockets.</p>
+<dt><i>udp_mem</i> (since Linux 2.6.25)</dt>
+<dd>This is a vector of three integers governing the number of pages allowed for queueing by all UDP sockets.</dd>
 <dl>
 <dd>
-<dl>
-<dt><i>min</i></p>
-<dd>Below this number of pages, UDP is not bothered about its memory appetite. When the amount of memory allocated by UDP exceeds this number, UDP starts to moderate memory usage.</p>
-<dt><i>pressure</i></p>
-<dd>This value was introduced to follow the format of <i>tcp_mem</i> (see <code><a href="/docs/linux/man/7-tcp/">tcp</a></code>(7)).</p>
-<dt><i>max</i></p>
-<dd>Number of pages allowed for queueing by all UDP sockets.</dl>
+</dd><dl>
+<dt><i>min</i></dt>
+<dd>Below this number of pages, UDP is not bothered about its memory appetite. When the amount of memory allocated by UDP exceeds this number, UDP starts to moderate memory usage.</dd>
+<dt><i>pressure</i></dt>
+<dd>This value was introduced to follow the format of <i>tcp_mem</i> (see <code><a href="/docs/linux/man/7-tcp/">tcp</a></code>(7)).</dd>
+<dt><i>max</i></dt>
+<dd>Number of pages allowed for queueing by all UDP sockets.</dd></dl>
 </dl>
-<dd>Defaults values for these three items are calculated at boot time from the amount of available memory.</p>
-<dt><i>udp_rmem_min</i> (integer; default value: PAGE_SIZE; since Linux 2.6.25)</p>
-<dd>Minimal size, in bytes, of receive buffers used by UDP sockets in moderation. Each UDP socket is able to use the size for receiving data, even if total pages of UDP sockets exceed <i>udp_mem</i> pressure.</p>
-<dt><i>udp_wmem_min</i> (integer; default value: PAGE_SIZE; since Linux 2.6.25)</p>
-<dd>Minimal size, in bytes, of send buffer used by UDP sockets in moderation. Each UDP socket is able to use the size for sending data, even if total pages of UDP sockets exceed <i>udp_mem</i> pressure.</dl>
+<dd>Defaults values for these three items are calculated at boot time from the amount of available memory.</dd>
+<dt><i>udp_rmem_min</i> (integer; default value: PAGE_SIZE; since Linux 2.6.25)</dt>
+<dd>Minimal size, in bytes, of receive buffers used by UDP sockets in moderation. Each UDP socket is able to use the size for receiving data, even if total pages of UDP sockets exceed <i>udp_mem</i> pressure.</dd>
+<dt><i>udp_wmem_min</i> (integer; default value: PAGE_SIZE; since Linux 2.6.25)</dt>
+<dd>Minimal size, in bytes, of send buffer used by UDP sockets in moderation. Each UDP socket is able to use the size for sending data, even if total pages of UDP sockets exceed <i>udp_mem</i> pressure.</dd></dl>
 <h3>Socket options</h3>
 <p>To set or get a UDP socket option, call <code><a href="/docs/linux/man/2-getsockopt/">getsockopt</a></code>(2) to read or <code><a href="/docs/linux/man/2-setsockopt/">setsockopt</a></code>(2) to write the option with the option level argument set to <code>IPPROTO_UDP</code>. Unless otherwise noted, <i>optval</i> is a pointer to an <i>int</i>. Following is a list of UDP-specific socket options. For details of some other socket options that are also applicable for UDP sockets, see <code><a href="/docs/linux/man/7-socket/">socket</a></code>(7).</p>
 <dl>
-<dt><code>UDP_CORK</code> (since Linux 2.5.44)</p>
-<dd>If this option is enabled, then all data output on this socket is accumulated into a single datagram that is transmitted when the option is disabled. This option should not be used in code intended to be portable.</dl>
+<dt><code>UDP_CORK</code> (since Linux 2.5.44)</dt>
+<dd>If this option is enabled, then all data output on this socket is accumulated into a single datagram that is transmitted when the option is disabled. This option should not be used in code intended to be portable.</dd></dl>
 <h3>Ioctls</h3>
 <p>These ioctls can be accessed using <code><a href="/docs/linux/man/2-ioctl/">ioctl</a></code>(2). The correct syntax is: </p>
 <pre><code>int value;
 error = ioctl(udp_socket, ioctl_type, &amp;value);
-
 FIONREAD(SIOCINQ)
-
 Gets a pointer to an integer as argument.Returns the size of the next pending datagram in the integer in bytes,
     or 0 when no datagram is pending.Warning :
-
     Using
         FIONREAD,
-
     it is impossible to distinguish the case where no datagram is pending
         from the case where the next pending datagram contains zero bytes of data.It is safer to use
             select(2),
-
     poll(2),
-
     or
         epoll(7)
-
                 to distinguish these cases.
-
             TIOCOUTQ(SIOCOUTQ)
-
                 Returns the number of data bytes in the local send queue.Supported only with Linux 2.4 and
             above.</code></pre>
 <p> In addition, all ioctls documented in <code><a href="/docs/linux/man/7-ip/">ip</a></code>(7) and <code><a href="/docs/linux/man/7-socket/">socket</a></code>(7) are supported.</p>
 <h2>Errors</h2>
 <p>All errors documented for <code><a href="/docs/linux/man/7-socket/">socket</a></code>(7) or <code><a href="/docs/linux/man/7-ip/">ip</a></code>(7) may be returned by a send or receive on a UDP socket.</p>
 <dl>
-<dt><code>ECONNREFUSED</code></p>
-<dd>No receiver was associated with the destination address. This might be caused by a previous packet sent over the socket.</dl>
+<dt><code>ECONNREFUSED</code></dt>
+<dd>No receiver was associated with the destination address. This might be caused by a previous packet sent over the socket.</dd></dl>
 <h2>Versions</h2>
 <p><code>IP_RECVERR</code> is a new feature in Linux 2.2.</p>
 <h2>See Also</h2>

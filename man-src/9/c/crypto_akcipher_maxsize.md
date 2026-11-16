@@ -14,7 +14,7 @@ description: "crypto_akcipher_maxsize – Get len for output buffer"
 <p><i>tfm</i></p>
 <dl>
 <dd>
-<dd>AKCIPHER tfm handle allocated with <code>crypto_alloc_akcipher</code></dl>
+</dd><dd>AKCIPHER tfm handle allocated with <code>crypto_alloc_akcipher</code></dd></dl>
 <h2>Description</h2>
 <p>Function returns the dest buffer size required for a given key</p>
 <h2>Return</h2>
@@ -22,8 +22,8 @@ description: "crypto_akcipher_maxsize – Get len for output buffer"
 <h2>Authors</h2>
 <p><code>Stephan Mueller</code> &lt;smueller [at] chronox.de&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <p> <code>Marek Vasut</code> &lt;marek [at] denx.de&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

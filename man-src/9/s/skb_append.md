@@ -15,15 +15,15 @@ skb_append - append a buffer
 <h2>Arguments</h2>
 
 <i>old</i>
-<dl><dd><dd>buffer to insert after</dl>
+<dl><dd></dd><dd>buffer to insert after</dd></dl>
  
 
  <i>newsk</i>
-<dl><dd>buffer to insert</dl>
+<dl><dd>buffer to insert</dd></dl>
  
 
  <i>list</i>
-<dl><dd>list to use</dl>
+<dl><dd>list to use</dd></dl>
 
 <h2>Description</h2>
 

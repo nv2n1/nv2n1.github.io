@@ -15,10 +15,10 @@ description: "nodesave – Saves NET/ROM routing information"
 <p> Typically <code>nodesave</code> would be used when taking a system off-air so that the NET/ROM routing may be quickly restored when the system is brought back on-line.</p>
 <h2>Options</h2>
 <dl>
-<dt><code>-p path</code></p>
-<dd>Set the path to the nrparms binary. This only affects the output of the program. Default is /usr/sbin.</p>
-<dt><code>-v</code></p>
-<dd>Display the version.</dl>
+<dt><code>-p path</code></dt>
+<dd>Set the path to the nrparms binary. This only affects the output of the program. Default is /usr/sbin.</dd>
+<dt><code>-v</code></dt>
+<dd>Display the version.</dd></dl>
 <h2>Files</h2>
 <pre>/proc/net/nr_neigh
 <br>

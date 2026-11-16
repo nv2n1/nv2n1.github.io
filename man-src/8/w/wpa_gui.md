@@ -15,16 +15,16 @@ description: "wpa_gui – WPA Graphical User Interface"
 <p> wpa_gui supports (almost) all of the interactive status and configuration features of the command line client, wpa_cli. Refer to the wpa_cli manpage for a comprehensive list of the interactive mode features.</p>
 <h2>Command Arguments</h2>
 <dl>
-<dt><code>-p path</code></p>
-<dd>Change the path where control sockets should be found.</p>
-<dt><code>-i ifname</code></p>
-<dd>Specify the interface that is being configured. By default, choose the first interface found with a control socket in the socket path.</p>
-<dt><code>-m seconds</code></p>
-<dd>Set the update interval in seconds for the signal strength meter. This value must be a positive integer, otherwise meter is not enabled (default behavior).</p>
-<dt><code>-t</code></p>
-<dd>Start program in the system tray only (if the window manager supports it). By default the main status window is shown.</p>
-<dt><code>-q</code></p>
-<dd>Run program in the quiet mode &#8211; do not display tray icon pop-up messages.</dl>
+<dt><code>-p path</code></dt>
+<dd>Change the path where control sockets should be found.</dd>
+<dt><code>-i ifname</code></dt>
+<dd>Specify the interface that is being configured. By default, choose the first interface found with a control socket in the socket path.</dd>
+<dt><code>-m seconds</code></dt>
+<dd>Set the update interval in seconds for the signal strength meter. This value must be a positive integer, otherwise meter is not enabled (default behavior).</dd>
+<dt><code>-t</code></dt>
+<dd>Start program in the system tray only (if the window manager supports it). By default the main status window is shown.</dd>
+<dt><code>-q</code></dt>
+<dd>Run program in the quiet mode &#8211; do not display tray icon pop-up messages.</dd></dl>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/8-wpa_cli/">wpa_cli</a></code>(8) <code><a href="/docs/linux/man/8-wpa_supplicant/">wpa_supplicant</a></code>(8)</p>
 <h2>Legal</h2>

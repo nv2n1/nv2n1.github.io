@@ -17,10 +17,10 @@ description: "innmail – Simple mail-sending program"
 <p> <code>innmail</code> was written to be suitable for the <i>mailcmd</i> setting in <i>inn.conf</i>.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-h</code></p>
-<dd> Gives usage information.</p>
-<dt><code>-s</code> <i>subject</i></p>
-<dd> Sets the Subject: header of the message. A warning is issued if this option is omitted.</dl>
+<dt><code>-h</code></dt>
+<dd> Gives usage information.</dd>
+<dt><code>-s</code> <i>subject</i></dt>
+<dd> Sets the Subject: header of the message. A warning is issued if this option is omitted.</dd></dl>
 <h2>EXAMPLES</h2>
 <p> This sends a one-line message to the local user <tt>&quot;joe&quot;</tt>: </p>
 <pre>

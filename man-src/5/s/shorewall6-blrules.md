@@ -10,7 +10,7 @@ blrules - shorewall6 Blacklist file
 
 <h2>Synopsis</h2>
 
-<dl><dt> <b>/etc/shorewall6/blrules</b></dl>
+<dl><dt> <b>/etc/shorewall6/blrules</b></dt></dl>
 
 <h2>Description</h2>
 
@@ -21,73 +21,70 @@ blrules - shorewall6 Blacklist file
  The format of rules in this file is the same as the format of rules in m[blue]<b>shorewall6-rules</b>m[]<font SIZE="-2">[2]</font>(5). The difference in the two files lies in the ACTION (first) column. 
 
  <b>ACTION- {</b><b>ACCEPT</b><b>|BLACKLIST|blacklog|CONTINUE|DROP|A_DROP|REJECT|A_REJECT|</b><b>WHITELIST</b><b>|</b><b>LOG</b><b>|</b><b>QUEUE</b><b>|</b><b>NFQUEUE</b><b>[</b><b>(</b><i>queuenumber</i><b>)</b><b>]</b><b>|[?]COMMENT</b><b>|</b><i>action</i><b>|</b><i>macro</i><b>[</b><b>(</b><i>target</i><b>)</b><b>]}</b><b>[:</b><b>{</b><i>log-level</i><b>|</b><b>none</b><b>}[</b><b>!</b><b>][</b><b>:</b><i>tag</i><b>]]</b>
-<dl><dd>Specifies the action to be taken if the packet matches the rule. Must be one of the following. 
-
+</dd><dl><dd>Specifies the action to be taken if the packet matches the rule. Must be one of the following. 
  <b>BLACKLIST</b>
-<dl><dd>Added in Shorewall 4.5.3. This is actually a macro that expands as follows: 
-
-<dl><dd>&bull; If BLACKLIST_LOGLEVEL is specified in m[blue]<b>shorewall6.conf</b>m[]<font SIZE="-2">[1]</font>(5), then the macro expands to <b>blacklog</b>.</dl><dl><dd>&bull; Otherwise it expands to the action specified for BLACKLIST_DISPOSITION in m[blue]<b>shorewall6.conf</b>m[]<font SIZE="-2">[1]</font>(5).</dl></dl>
+</dd><dl><dd>Added in Shorewall 4.5.3. This is actually a macro that expands as follows: 
+</dd><dl><dd>&bull; If BLACKLIST_LOGLEVEL is specified in m[blue]<b>shorewall6.conf</b>m[]<font SIZE="-2">[1]</font>(5), then the macro expands to <b>blacklog</b>.</dd></dl><dl><dd>&bull; Otherwise it expands to the action specified for BLACKLIST_DISPOSITION in m[blue]<b>shorewall6.conf</b>m[]<font SIZE="-2">[1]</font>(5).</dd></dl></dl>
  
 
  <b>blacklog</b>
-<dl><dd>May only be used if BLACKLIST_LOGLEVEL is specified in m[blue]<b>shorewall6.conf</b>m[]<font SIZE="-2">[1]</font>(5). Logs, audits (if specified) and applies the BLACKLIST_DISPOSITION specified in m[blue]<b>shorewall6.conf</b>m[]<font SIZE="-2">[1]</font> (5).</dl>
+<dl><dd>May only be used if BLACKLIST_LOGLEVEL is specified in m[blue]<b>shorewall6.conf</b>m[]<font SIZE="-2">[1]</font>(5). Logs, audits (if specified) and applies the BLACKLIST_DISPOSITION specified in m[blue]<b>shorewall6.conf</b>m[]<font SIZE="-2">[1]</font> (5).</dd></dl>
  
 
  <b>ACCEPT|CONTINUE|WHITELIST</b>
-<dl><dd>Exempt the packet from the remaining rules in this file.</dl>
+<dl><dd>Exempt the packet from the remaining rules in this file.</dd></dl>
  
 
  <b>DROP</b>
-<dl><dd>Ignore the packet.</dl>
+<dl><dd>Ignore the packet.</dd></dl>
  
 
  A_DROP and A_DROP!
-<dl><dd>Audited versions of DROP. Requires AUDIT_TARGET support in the kernel and ip6tables.</dl>
+<dl><dd>Audited versions of DROP. Requires AUDIT_TARGET support in the kernel and ip6tables.</dd></dl>
  
 
  <b>REJECT</b>
-<dl><dd>disallow the packet and return an icmp-unreachable or an RST packet.</dl>
+<dl><dd>disallow the packet and return an icmp-unreachable or an RST packet.</dd></dl>
  
 
  A_REJECT
-<dl><dd>Audited versions of REJECT. Require AUDIT_TARGET support in the kernel and ip6tables.</dl>
+<dl><dd>Audited versions of REJECT. Require AUDIT_TARGET support in the kernel and ip6tables.</dd></dl>
  
 
  <b>LOG</b>
-<dl><dd>Simply log the packet and continue with the next rule.</dl>
+<dl><dd>Simply log the packet and continue with the next rule.</dd></dl>
  
 
  <b>QUEUE</b>
-<dl><dd>Queue the packet to a user-space application such as ftwall (<a rel="nofollow" HREF="http://p2pwall.sf.net">http://p2pwall.sf.net</a>). The application may reinsert the packet for further processing.</dl>
+<dl><dd>Queue the packet to a user-space application such as ftwall (<a rel="nofollow" HREF="http://p2pwall.sf.net">http://p2pwall.sf.net</a>). The application may reinsert the packet for further processing.</dd></dl>
  
 
  <b>NFLOG</b>[(<i>nflog-parameters</i>)]
-<dl><dd>queues matching packets to a back end logging daemon via a netlink socket then continues to the next rule. See m[blue]<b><a rel="nofollow" HREF="http://www.shorewall.net/shorewall_logging.html">http://www.shorewall.net/shorewall_logging.html</a></b>m[]<font SIZE="-2">[3]</font>.</dl>
+<dl><dd>queues matching packets to a back end logging daemon via a netlink socket then continues to the next rule. See m[blue]<b><a rel="nofollow" HREF="http://www.shorewall.net/shorewall_logging.html">http://www.shorewall.net/shorewall_logging.html</a></b>m[]<font SIZE="-2">[3]</font>.</dd></dl>
  
 
  <b>NFQUEUE</b>
-<dl><dd>Queues the packet to a user-space application using the nfnetlink_queue mechanism. If a <i>queuenumber</i> is not specified, queue zero (0) is assumed.</dl>
+<dl><dd>Queues the packet to a user-space application using the nfnetlink_queue mechanism. If a <i>queuenumber</i> is not specified, queue zero (0) is assumed.</dd></dl>
  
 
  <b>?COMMENT</b>
-<dl><dd>the rest of the line will be attached as a comment to the Netfilter rule(s) generated by the following entries. The comment will appear delimited by &quot;/* ... */&quot; in the output of &quot;shorewall6 show &lt;chain&gt;&quot;. To stop the comment from being attached to further rules, simply include ?COMMENT on a line by itself.</dl>
+<dl><dd>the rest of the line will be attached as a comment to the Netfilter rule(s) generated by the following entries. The comment will appear delimited by &quot;/* ... */&quot; in the output of &quot;shorewall6 show &lt;chain&gt;&quot;. To stop the comment from being attached to further rules, simply include ?COMMENT on a line by itself.</dd></dl>
  
 
  <i>action</i>
-<dl><dd>The name of an <i>action</i> declared in m[blue]<b>shorewall6-actions</b>m[]<font SIZE="-2">[4]</font>(5) or in /usr/share/shorewall6/actions.std.</dl>
+<dl><dd>The name of an <i>action</i> declared in m[blue]<b>shorewall6-actions</b>m[]<font SIZE="-2">[4]</font>(5) or in /usr/share/shorewall6/actions.std.</dd></dl>
  
 
  <i>macro</i>
 <dl><dd>The name of a macro defined in a file named macro.<i>macro</i>. If the macro accepts an action parameter (Look at the macro source to see if it has PARAM in the TARGET column) then the <i>macro</i> name is followed by the parenthesized <i>target</i> (<b>ACCEPT</b>, <b>DROP</b>, <b>REJECT</b>, ...) to be substituted for the parameter. 
-
- Example: FTP(ACCEPT).</dl>
+ Example: FTP(ACCEPT).</dd></dl>
  
 
  The <b>ACTION</b> may optionally be followed by &quot;:&quot; and a syslog log level (e.g, REJECT:info or Web(ACCEPT):debug). This causes the packet to be logged at the specified level. 
 
  If the <b>ACTION</b> names an <i>action</i> declared in m[blue]<b>shorewall6-actions</b>m[]<font SIZE="-2">[4]</font>(5) or in /usr/share/shorewall6/actions.std then: 
 
-<dl><dd>&bull; If the log level is followed by &quot;!' then all rules in the action are logged at the log level.</dl><dl><dd>&bull; If the log level is not followed by &quot;!&quot; then only those rules in the action that do not specify logging are logged at the specified level.</dl><dl><dd>&bull; The special log level <b>none!</b> suppresses logging by the action.</dl>
+<dl><dd>&bull; If the log level is followed by &quot;!' then all rules in the action are logged at the log level.</dd></dl><dl><dd>&bull; If the log level is not followed by &quot;!&quot; then only those rules in the action that do not specify logging are logged at the specified level.</dd></dl><dl><dd>&bull; The special log level <b>none!</b> suppresses logging by the action.</dd></dl>
  
 
  You may also specify <b>NFLOG</b> (must be in upper case) as a log level.This will log to the NFLOG target for routing to a separate log through use of ulogd (m[blue]<b><a rel="nofollow" HREF="http://www.netfilter.org/projects/ulogd/index.html">http://www.netfilter.org/projects/ulogd/index.html</a></b>m[]). 
@@ -101,14 +98,12 @@ blrules - shorewall6 Blacklist file
 
 Example 1:
 <dl><dd>Drop Teredo packets from the net. 
-
-<dl><dd><pre>DROP net:[2001::/32] all</pre></dl></dl>
+</dd><dl><dd><pre>DROP net:[2001::/32] all</pre></dd></dl></dl>
  
 
  Example 2:
 <dl><dd>Don't subject packets from 2001:DB8::/64 to the remaining rules in the file. 
-
-<dl><dd><pre>WHITELIST net:[2001:DB8::/64] all</pre></dl></dl>
+</dd><dl><dd><pre>WHITELIST net:[2001:DB8::/64] all</pre></dd></dl></dl>
 
 <h2>Files</h2>
 
@@ -125,16 +120,17 @@ m[blue]<b><a rel="nofollow" HREF="http://www.shorewall.net/blacklisting_support.
 <h2>Notes</h2>
 
 <dl><dt> 1.
-<dd>shorewall6.conf
-<dl><dd><a rel="nofollow" HREF="http://www.shorewall.net/manpages6/shorewall6.conf.html">http://www.shorewall.net/manpages6/shorewall6.conf.html</a></dl><dt> 2.
-<dd>shorewall6-rules
-<dl><dd><a rel="nofollow" HREF="http://www.shorewall.net/manpages6/shorewall6-rules.html">http://www.shorewall.net/manpages6/shorewall6-rules.html</a></dl><dt> 3.
-<dd><a rel="nofollow" HREF="http://www.shorewall.net/shorewall_logging.html">http://www.shorewall.net/shorewall_logging.html</a>
-<dl><dd><a rel="nofollow" HREF="http://www.shorewall.net/shorewall.logging.html">http://www.shorewall.net/shorewall.logging.html</a></dl><dt> 4.
-<dd>shorewall6-actions
-<dl><dd><a rel="nofollow" HREF="http://www.shorewall.net/manpages6/shorewall6-actions.html">http://www.shorewall.net/manpages6/shorewall6-actions.html</a></dl><dt> 5.
-<dd><a rel="nofollow" HREF="http://www.shorewall.net/blacklisting_support.htm">http://www.shorewall.net/blacklisting_support.htm</a>
-<dl><dd><a rel="nofollow" HREF="http://www.shorewall.net/blacklisting_support.htm">http://www.shorewall.net/blacklisting_support.htm</a></dl><dt> 6.
-<dd><a rel="nofollow" HREF="http://www.shorewall.net/configuration_file_basics.htm#Pairs">http://www.shorewall.net/configuration_file_basics.htm#Pairs</a>
-<dl><dd><a rel="nofollow" HREF="http://www.shorewall.net/configuration_file_basics.htm#Pairs">http://www.shorewall.net/configuration_file_basics.htm#Pairs</a></dl>
+</dt><dd>shorewall6.conf
+</dd><dl><dd><a rel="nofollow" HREF="http://www.shorewall.net/manpages6/shorewall6.conf.html">http://www.shorewall.net/manpages6/shorewall6.conf.html</a></dd></dl><dt> 2.
+</dt><dd>shorewall6-rules
+</dd><dl><dd><a rel="nofollow" HREF="http://www.shorewall.net/manpages6/shorewall6-rules.html">http://www.shorewall.net/manpages6/shorewall6-rules.html</a></dd></dl><dt> 3.
+</dt><dd><a rel="nofollow" HREF="http://www.shorewall.net/shorewall_logging.html">http://www.shorewall.net/shorewall_logging.html</a>
+</dd><dl><dd><a rel="nofollow" HREF="http://www.shorewall.net/shorewall.logging.html">http://www.shorewall.net/shorewall.logging.html</a></dd></dl><dt> 4.
+</dt><dd>shorewall6-actions
+</dd><dl><dd><a rel="nofollow" HREF="http://www.shorewall.net/manpages6/shorewall6-actions.html">http://www.shorewall.net/manpages6/shorewall6-actions.html</a></dd></dl><dt> 5.
+</dt><dd><a rel="nofollow" HREF="http://www.shorewall.net/blacklisting_support.htm">http://www.shorewall.net/blacklisting_support.htm</a>
+</dd><dl><dd><a rel="nofollow" HREF="http://www.shorewall.net/blacklisting_support.htm">http://www.shorewall.net/blacklisting_support.htm</a></dd></dl><dt> 6.
+</dt><dd><a rel="nofollow" HREF="http://www.shorewall.net/configuration_file_basics.htm#Pairs">http://www.shorewall.net/configuration_file_basics.htm#Pairs</a>
+</dd><dl><dd><a rel="nofollow" HREF="http://www.shorewall.net/configuration_file_basics.htm#Pairs">http://www.shorewall.net/configuration_file_basics.htm#Pairs</a></dd></dl>
  
+</dl>

@@ -10,17 +10,11 @@ description: "devlink-health – devlink health reporting and recovery"
 <p>devlink-health &#8211; devlink health reporting and recovery</p>
 <h2>Synopsis</h2>
 <pre><code>devlink
-
 [ OPTIONS ]
-
 health
-
 { COMMAND |
-
     help }
-
 OPTIONS := {
-
     -V[ersion] }</code></pre>
 <p> <code>devlink health show</code> [ { <i>DEV</i> | <i>DEV/PORT_INDEX</i> } <code>reporter</code> REPORTER<i> ] </i><br />
  <code>devlink health recover</code> { <i>DEV</i> | <i>DEV/PORT_INDEX</i> } <code>reporter</code> <i>REPORTER</i><br />
@@ -52,44 +46,45 @@ OPTIONS := {
 <p>Please note that some params are not supported on a reporter which doesn&#8217;t support a recovery or dump method. <i>DEV</i> &#8211; specifies the devlink device.<br />
  <i>DEV/PORT_INDEX</i> &#8211; specifies the devlink port. <i>REPORTER</i> &#8211; specifies the reporter&#8217;s name registered on specified devlink device or port.</p>
 <dl>
-<dt><code>grace_period</code><i> MSEC </i></p>
-<dd>Time interval between consecutive auto recoveries.</p>
-<dt><code>auto_recover</code> { <code>true</code> | <code>false</code> }</p>
-<dd>Indicates whether the devlink should execute automatic recover on error.</p>
-<dt><code>auto_dump</code> { <code>true</code> | <code>false</code> }</p>
-<dd>Indicates whether the devlink should execute automatic dump on error. </p>
+<dt><code>grace_period</code><i> MSEC </i></dt>
+<dd>Time interval between consecutive auto recoveries.</dd>
+<dt><code>auto_recover</code> { <code>true</code> | <code>false</code> }</dt>
+<dd>Indicates whether the devlink should execute automatic recover on error.</dd>
+<dt><code>auto_dump</code> { <code>true</code> | <code>false</code> }</dt>
+<dd>Indicates whether the devlink should execute automatic dump on error. </dd>
 <h2>Examples</h2>
 <p>devlink health show</p>
 <dl>
-<dd>List status and configuration of available reporters on devices and ports.</dl>
+<dd>List status and configuration of available reporters on devices and ports.</dd></dl>
 <p> devlink health show pci/0000:00:09.0/1 reporter tx</p>
 <dl>
-<dd>List status and configuration of tx reporter registered on port on pci/0000:00:09.0/1</dl>
+<dd>List status and configuration of tx reporter registered on port on pci/0000:00:09.0/1</dd></dl>
 <p> devlink health recover pci/0000:00:09.0 reporter fw_fatal</p>
 <dl>
-<dd>Initiate recovery on fw_fatal reporter registered on device on pci/0000:00:09.0.</dl>
+<dd>Initiate recovery on fw_fatal reporter registered on device on pci/0000:00:09.0.</dd></dl>
 <p> devlink health recover pci/0000:00:09.0/1 reporter tx</p>
 <dl>
-<dd>Initiate recovery on tx reporter registered on port on pci/0000:00:09.0/1.</dl>
+<dd>Initiate recovery on tx reporter registered on port on pci/0000:00:09.0/1.</dd></dl>
 <p> devlink health diagnose pci/0000:00:09.0 reporter fw</p>
 <dl>
-<dd>List diagnostics data on the specified device and reporter.</dl>
+<dd>List diagnostics data on the specified device and reporter.</dd></dl>
 <p> devlink health dump show pci/0000:00:09.0/1 reporter tx</p>
 <dl>
-<dd>Display the last saved dump on the specified port and reporter.</dl>
+<dd>Display the last saved dump on the specified port and reporter.</dd></dl>
 <p> devlink health dump clear pci/0000:00:09.0/1 reporter tx</p>
 <dl>
-<dd>Delete saved dump on the specified port and reporter.</dl>
+<dd>Delete saved dump on the specified port and reporter.</dd></dl>
 <p> devlink health set pci/0000:00:09.0 reporter fw_fatal grace_period 3500</p>
 <dl>
-<dd>Set time interval between auto recoveries to minimum of 3500 msec on the specified device and reporter.</dl>
+<dd>Set time interval between auto recoveries to minimum of 3500 msec on the specified device and reporter.</dd></dl>
 <p> devlink health set pci/0000:00:09.0/1 reporter tx grace_period 3500</p>
 <dl>
-<dd>Set time interval between auto recoveries to minimum of 3500 msec on the specified port and reporter.</dl>
+<dd>Set time interval between auto recoveries to minimum of 3500 msec on the specified port and reporter.</dd></dl>
 <p> devlink health set pci/0000:00:09.0 reporter fw_fatal auto_recover false</p>
 <dl>
-<dd>Turn off auto recovery on the specified device and reporter. </p>
+<dd>Turn off auto recovery on the specified device and reporter. </dd>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/8-devlink/">devlink</a></code>(8), <code><a href="/docs/linux/man/8-devlink-dev/">devlink-dev</a></code>(8), <code><a href="/docs/linux/man/8-devlink-port/">devlink-port</a></code>(8), <code>devlink-param</code>(8), <code><a href="/docs/linux/man/8-devlink-region/">devlink-region</a></code>(8), </p>
 <h2>Author</h2>
 <p>Aya Levin &lt;ayal [at] mellanox.com&gt;</p>
+</dl></dl>

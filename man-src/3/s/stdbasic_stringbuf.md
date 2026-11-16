@@ -24,10 +24,8 @@ Any character in the buffer which has been initialized, regardless of whether it
 <h2>Example</h2>
 <p>// Run this code </p>
 <pre><code>#include &lt;sstream&gt;
-
 #include &lt;iostream&gt;
 struct mybuf : std::stringbuf
-
 {
     mybuf(const std::string &amp;new_str,
           std::ios_base::openmode which = std::ios_base::in | std::ios_base::out)
@@ -64,7 +62,6 @@ struct mybuf : std::stringbuf
     }
 };
 int main()
-
 {
     mybuf sbuf(&quot;123&quot;); // read-write stream
     std::iostream stream(&amp;sbuf);

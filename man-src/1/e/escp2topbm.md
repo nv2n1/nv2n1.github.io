@@ -22,12 +22,12 @@ description: "escp2topbm – convert an ESC/P2 printer file to a PBM image"
 <h2>HINTS</h2>
 <p> As <code>escp2topbm</code> is a simple program, created mainly to test <code>pbmtoescp2</code>, there are some restrictions: </p>
 <dl>
-<dt>&bull;</p>
-<dd> <code>escp2topbm</code> looks only at &quot;ESC.&quot; sequences and ignores all data outside these Escape sequences. </p>
-<dt>&bull;</p>
-<dd> <code>escp2topbm</code> assumes that only one raster graphic is in the printer stream. If this isn&#8217;t true, the result is garbage. </p>
-<dt>&bull;</p>
-<dd> <code>escp2topbm</code> assumes that all &quot;ESC.&quot; sequences use the same width value. If this isn&#8217;t true, the result is garbage. </p>
+<dt>&bull;</dt>
+<dd> <code>escp2topbm</code> looks only at &quot;ESC.&quot; sequences and ignores all data outside these Escape sequences. </dd>
+<dt>&bull;</dt>
+<dd> <code>escp2topbm</code> assumes that only one raster graphic is in the printer stream. If this isn&#8217;t true, the result is garbage. </dd>
+<dt>&bull;</dt>
+<dd> <code>escp2topbm</code> assumes that all &quot;ESC.&quot; sequences use the same width value. If this isn&#8217;t true, the result is garbage. </dd>
 </dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-pbmtoescp2/">pbmtoescp2</a></code>(1) , <code>pbm</code>(1) </p>

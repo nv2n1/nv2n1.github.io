@@ -21,28 +21,28 @@ cc files... - lieee1284
 <p> The normal sequence of events will be that the application </p>
 <dl>
 <dt>
-<dd> 1. calls <code>ieee1284_find_ports</code> to get a list of available ports</dl>
+</dt><dd> 1. calls <code>ieee1284_find_ports</code> to get a list of available ports</dd></dl>
 <dl>
 <dt>
-<dd> 2. then <code>ieee1284_get_deviceid</code> to look for a device on each port that it is interested in</dl>
+</dt><dd> 2. then <code>ieee1284_get_deviceid</code> to look for a device on each port that it is interested in</dd></dl>
 <dl>
 <dt>
-<dd> 3. and then <code>ieee1284_open</code> to open each port it finds a device it can control on.</dl>
+</dt><dd> 3. and then <code>ieee1284_open</code> to open each port it finds a device it can control on.</dd></dl>
 <dl>
 <dt>
-<dd> 4. The list of ports returned from <code>ieee1284_find_ports</code> can now be disposed of using <code>ieee1284_free_ports</code>.</dl>
+</dt><dd> 4. The list of ports returned from <code>ieee1284_find_ports</code> can now be disposed of using <code>ieee1284_free_ports</code>.</dd></dl>
 <dl>
 <dt>
-<dd> 5. Then when it wants to control the device, it will call <code>ieee1284_claim</code> to prevent other drivers from using the port</dl>
+</dt><dd> 5. Then when it wants to control the device, it will call <code>ieee1284_claim</code> to prevent other drivers from using the port</dd></dl>
 <dl>
 <dt>
-<dd> 6. then perhaps do some data transfers</dl>
+</dt><dd> 6. then perhaps do some data transfers</dd></dl>
 <dl>
 <dt>
-<dd> 7. and then <code>ieee1284_release</code> when it is finished that that particular command. This claim-control-release sequence will be repeated each time it wants to tell the device to do something.</dl>
+</dt><dd> 7. and then <code>ieee1284_release</code> when it is finished that that particular command. This claim-control-release sequence will be repeated each time it wants to tell the device to do something.</dd></dl>
 <dl>
 <dt>
-<dd> 8. Finally when the application is finished with the device it will call <code>ieee1284_close</code>.</dl>
+</dt><dd> 8. Finally when the application is finished with the device it will call <code>ieee1284_close</code>.</dd></dl>
 <p> Usually a port needs to be claimed before it can be used. This is to prevent multiple drivers from trampling on each other if they both want to use the same port. The exception to this rule is the collection of IEEE 1284 Device IDs, which has an implicit open-claim-release-close sequence. The reason for this is that it may be possible to collect a Device ID from the operating system, without bothering the device with it.</p>
 <h2>CONFIGURATION</h2>
 <p> When <code>ieee1284_find_ports</code> is first called, the library will look for a configuration file, /etc/ieee1284.conf. </p>
@@ -54,14 +54,14 @@ cc files... - lieee1284
 <p> /etc/ieee1284.conf</p>
 <dl>
 <dt>
-<dd> Configuration file.</dl>
+</dt><dd> Configuration file.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/3-parport/">parport</a>(3), <a href="/docs/linux/man/3-parport_list/">parport_list</a>(3), ieee1284_find_ports(3), ieee1284_free_ports(3), ieee1284_get_deviceid(3), ieee1284_open(3), ieee1284_close(3), ieee1284_claim(3), ieee1284_release(3), ieee1284_data(3), ieee1284_status(3), ieee1284_control(3), ieee1284_negotiation(3), ieee1284_ecp_fwd_to_rev(3), ieee1284_transfer(3), ieee1284_get_irq_fd(3), ieee1284_set_timeout(3)</p>
 <h2>AUTHOR</h2>
 <p> <code>Tim Waugh</code> &lt;twaugh [at] redhat.com&gt;</p>
 <dl>
 <dt>
-<dd> Author.</dl>
+</dt><dd> Author.</dd></dl>
 <h2>COPYRIGHT</h2>
 <p> Copyright &#169; 2001-2003 Tim Waugh </p>
 <h2>Index</h2>

@@ -11,7 +11,6 @@ description: "sc::TwoBodyMOIntsTransform_ikjy –"
 <p> <code>TwoBodyMOIntsTransform_ikjy</code> computes (ik|jy) integrals using parallel integrals-direct AO-&gt;MO transformation.</p>
 <h2>Synopsis</h2>
 <pre><code>
-
 #include &lt;transform_ikjy.h&gt;</code></pre>
 <p> Inherits <code>sc::TwoBodyMOIntsTransform</code>.</p>
 <h3>Public Member Functions</h3>

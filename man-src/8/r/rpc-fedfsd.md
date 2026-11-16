@@ -16,27 +16,27 @@ description: "rpc.fedfsd – FedFS administrative service daemon"
 <p> Because <code><a href="/docs/linux/man/8-rpc-fedfsd/">rpc.fedfsd</a></code>(8) can operate on any object in an file server&#8217;s local file systems, FedFS administrative clients should use strong security such as Kerberos when communicating with <code><a href="/docs/linux/man/8-rpc-fedfsd/">rpc.fedfsd</a></code>(8).</p>
 <h3>Command line arguments</h3>
 <dl>
-<dt><code>-?, &#8211;help</p>
-<dd>Prints <a href="/docs/linux/man/8-rpc-fedfsd/">rpc.fedfsd</a></code>(8) version and usage message on <i>stderr</i>, then exits.</p>
-<dt><code>-d, &#8211;debug</p>
-<dd>Enables additional debugging messages to be produced during operation.</p>
-<dt>-F, &#8211;foreground</p>
-<dd>Keeps <a href="/docs/linux/man/8-rpc-fedfsd/">rpc.fedfsd</a></code>(8) attached to its controlling terminal so that operation can be monitored directly, or run under a debugger. <code><a href="/docs/linux/man/8-rpc-fedfsd/">rpc.fedfsd</a></code>(8) also writes log messages on <i>stderr</i> instead of to the system log. If this option is not specified, <code><a href="/docs/linux/man/8-rpc-fedfsd/">rpc.fedfsd</a></code>(8) backgrounds itself soon after it starts.</p>
-<dt><code>-u, &#8211;uid=</code><i>id</i></p>
-<dd>Specifies the numeric or text UID that <code><a href="/docs/linux/man/8-rpc-fedfsd/">rpc.fedfsd</a></code>(8) runs under after dropping root privileges. By default, the UID for the user <i>fedfs</i> is used. If that user doesn&#8217;t exist, then the UID for <i>nobody</i> is used instead.</p>
-<dt><code>-g, &#8211;gid=</code><i>id</i></p>
-<dd>Specifies the numeric or text GID that <code><a href="/docs/linux/man/8-rpc-fedfsd/">rpc.fedfsd</a></code>(8) runs under after dropping root privileges. By default, the GID for the group <i>fedfs</i> is used. If that group doesn&#8217;t exist, then the GID for <i>nobody</i> is used instead.</p>
-<dt><code>-o, &#8211;port=</code><i>num</i></p>
-<dd>Specifies the port number used for RPC listener sockets. If this option is not specified, <code><a href="/docs/linux/man/8-rpc-fedfsd/">rpc.fedfsd</a></code>(8) chooses a random ephemeral port for each listener socket.</dl>
+<dt><code>-?, &#8211;help</dt>
+<dd>Prints <a href="/docs/linux/man/8-rpc-fedfsd/">rpc.fedfsd</a></code>(8) version and usage message on <i>stderr</i>, then exits.</dd>
+<dt><code>-d, &#8211;debug</dt>
+<dd>Enables additional debugging messages to be produced during operation.</dd>
+<dt>-F, &#8211;foreground</dt>
+<dd>Keeps <a href="/docs/linux/man/8-rpc-fedfsd/">rpc.fedfsd</a></code>(8) attached to its controlling terminal so that operation can be monitored directly, or run under a debugger. <code><a href="/docs/linux/man/8-rpc-fedfsd/">rpc.fedfsd</a></code>(8) also writes log messages on <i>stderr</i> instead of to the system log. If this option is not specified, <code><a href="/docs/linux/man/8-rpc-fedfsd/">rpc.fedfsd</a></code>(8) backgrounds itself soon after it starts.</dd>
+<dt><code>-u, &#8211;uid=</code><i>id</i></dt>
+<dd>Specifies the numeric or text UID that <code><a href="/docs/linux/man/8-rpc-fedfsd/">rpc.fedfsd</a></code>(8) runs under after dropping root privileges. By default, the UID for the user <i>fedfs</i> is used. If that user doesn&#8217;t exist, then the UID for <i>nobody</i> is used instead.</dd>
+<dt><code>-g, &#8211;gid=</code><i>id</i></dt>
+<dd>Specifies the numeric or text GID that <code><a href="/docs/linux/man/8-rpc-fedfsd/">rpc.fedfsd</a></code>(8) runs under after dropping root privileges. By default, the GID for the group <i>fedfs</i> is used. If that group doesn&#8217;t exist, then the GID for <i>nobody</i> is used instead.</dd>
+<dt><code>-o, &#8211;port=</code><i>num</i></dt>
+<dd>Specifies the port number used for RPC listener sockets. If this option is not specified, <code><a href="/docs/linux/man/8-rpc-fedfsd/">rpc.fedfsd</a></code>(8) chooses a random ephemeral port for each listener socket.</dd></dl>
 <h3>Access control</h3>
 <p>An Access Control List stored in <i>/etc/fedfsd/access.conf</i> manages whom <code><a href="/docs/linux/man/8-rpc-fedfsd/">rpc.fedfsd</a></code>(8) allows to perform ADMIN operations. The following access types are supported:</p>
 <dl>
-<dt><code>none</code></p>
-<dd>Enabling <code>none</code> allows anyone using <code>AUTH_NONE</code> security to perform ADMIN operations. <code>none</code> is for backwards compatibility only. It is not recommended for use in production deployments.</p>
-<dt><code>unix</code></p>
-<dd>This setting specifies lists of users and groups who are allowed to use <code>AUTH_SYS</code> security to perform ADMIN operations. Though the <code>unix</code> setting provides more security than the <code>none</code> setting, <code>unix</code> is not recommended for use on untrusted networks.</p>
-<dt><code>gss</code></p>
-<dd>This setting specifies which GSS mechanisms, services, and principals are authorized to perform ADMIN operations. Currently the only supported GSS mechanism is <code>kerberos_v5</code>.</dl>
+<dt><code>none</code></dt>
+<dd>Enabling <code>none</code> allows anyone using <code>AUTH_NONE</code> security to perform ADMIN operations. <code>none</code> is for backwards compatibility only. It is not recommended for use in production deployments.</dd>
+<dt><code>unix</code></dt>
+<dd>This setting specifies lists of users and groups who are allowed to use <code>AUTH_SYS</code> security to perform ADMIN operations. Though the <code>unix</code> setting provides more security than the <code>none</code> setting, <code>unix</code> is not recommended for use on untrusted networks.</dd>
+<dt><code>gss</code></dt>
+<dd>This setting specifies which GSS mechanisms, services, and principals are authorized to perform ADMIN operations. Currently the only supported GSS mechanism is <code>kerberos_v5</code>.</dd></dl>
 <p> See comments in <i>/etc/fedfsd/access.conf</i> for details on syntax of the Access Control List. </p>
 <p> To enable Kerberos security via GSS, a service principal for the <code>fedfs-admin</code> service must be created for each host running <code><a href="/docs/linux/man/8-rpc-fedfsd/">rpc.fedfsd</a></code>(8). The resulting key must be retrieved from the KDC and stored in a keytab file (usually <i>/etc/krb5.keytab</i>) on each host running <code><a href="/docs/linux/man/8-rpc-fedfsd/">rpc.fedfsd</a></code>(8). </p>
 <p> The exact procedure for creating a service principal and retrieving and storing a secret key for it depends on the type of KDC in use for the local Kerberos realm. Consult your local Kerberos realm administrator for more information.</p>
@@ -45,12 +45,12 @@ description: "rpc.fedfsd – FedFS administrative service daemon"
 <p> During each start-up, <code><a href="/docs/linux/man/8-rpc-fedfsd/">rpc.fedfsd</a></code>(8) verifies that the local NSDB connection parameter database exists and is accessible. If it does not exist, <code><a href="/docs/linux/man/8-rpc-fedfsd/">rpc.fedfsd</a></code>(8) attempts to create such a database. If it cannot, the daemon fails to start.</p>
 <h2>Files</h2>
 <dl>
-<dt><i>/var/lib/fedfs/nsdbparam.sqlite3</i></p>
-<dd>database of NSDB connection parameters</p>
-<dt><i>/var/lib/fedfs/nsdbcerts</i></p>
-<dd>local directory that stores X.509 certificates for NSDBs</p>
-<dt><i>/etc/fedfsd/access.conf</i></p>
-<dd>controls remote access to rpc.fedfsd</dl>
+<dt><i>/var/lib/fedfs/nsdbparam.sqlite3</i></dt>
+<dd>database of NSDB connection parameters</dd>
+<dt><i>/var/lib/fedfs/nsdbcerts</i></dt>
+<dd>local directory that stores X.509 certificates for NSDBs</dd>
+<dt><i>/etc/fedfsd/access.conf</i></dt>
+<dd>controls remote access to rpc.fedfsd</dd></dl>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/7-fedfs/">fedfs</a></code>(7), <code><a href="/docs/linux/man/5-nfs/">nfs</a></code>(5) </p>
 <p> RFC 5661 for the NFS version 4 specification </p>

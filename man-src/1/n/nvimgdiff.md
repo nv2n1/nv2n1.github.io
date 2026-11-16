@@ -14,16 +14,16 @@ description: "NVIDIA – manual page for NVIDIA Texture Tools – Copyright NVID
 <p> usage: nvimgdiff [options] original_file updated_file [output]</p>
 <h3>Diff options:</h3>
 <dl>
-<dt><code>-normal</code></p>
-<dd> Compare images as if they were normal maps.</p>
-<dt><code>-alpha</code></p>
-<dd> Compare alpha weighted images.</dl>
+<dt><code>-normal</code></dt>
+<dd> Compare images as if they were normal maps.</dd>
+<dt><code>-alpha</code></dt>
+<dd> Compare alpha weighted images.</dd></dl>
 <p> usage: nvimgdiff [options] original_file updated_file [output]</p>
 <h3>Diff options:</h3>
 <dl>
-<dt><code>-normal</code></p>
-<dd> Compare images as if they were normal maps.</p>
-<dt><code>-alpha</code></p>
-<dd> Compare alpha weighted images. </p>
+<dt><code>-normal</code></dt>
+<dd> Compare images as if they were normal maps.</dd>
+<dt><code>-alpha</code></dt>
+<dd> Compare alpha weighted images. </dd>
 </dl>
 <h2>Index</h2>

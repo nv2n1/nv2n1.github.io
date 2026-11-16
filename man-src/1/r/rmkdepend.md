@@ -38,32 +38,32 @@ $(SRCS)
 <h2>OPTIONS</h2>
 <p> The program will ignore any option that it does not understand so that you may use the same arguments that you would for <code><a href="/docs/linux/man/1-cc/">cc</a>(1).</code></p>
 <dl>
-<dt><code>-D</code><i>name</i>=<i>def</i> or -D<i>name</i></p>
-<dd> Define. This places a definition for <i>name</i> in <code>rmkdepend&#8217;s</code> symbol table. Without <i>=def</i> the symbol becomes defined as &#8220;1&#8221;.</p>
-<dt><code>-I</code><i>includedir</i></p>
-<dd> Include directory. This option tells <code>rmkdepend</code> to prepend <i>includedir</i> to its list of directories to search when it encounters a <i>#include</i> directive. By default, <code>rmkdepend</code> only searches the standard include directories (usually /usr/include and possibly a compiler-dependent directory).</p>
-<dt><code>-Y</code><i>includedir</i></p>
-<dd> Replace all of the standard include directories with the single specified include directory; you can omit the <i>includedir</i> to simply prevent searching the standard include directories.</p>
-<dt><code>-a</code></p>
-<dd> Append the dependencies to the end of the file instead of replacing them.</p>
-<dt><code>-f</code><i>makefile</i></p>
-<dd> Filename. This allows you to specify an alternate makefile in which <code>rmkdepend</code> can place its output. Specifying &#8220;-&#8221; as the file name (i.e., <code>-f-</code>) sends the output to standard output instead of modifying an existing file.</p>
-<dt><code>-o</code><i>objsuffix</i></p>
-<dd> Object file suffix. Some systems may have object files whose suffix is something other than &#8220;.o&#8221;. This option allows you to specify another suffix, such as &#8220;.b&#8221; with <i>-o.b</i> or &#8220;:obj&#8221; with <i>-o:obj</i> and so forth.</p>
-<dt><code>-p</code><i>objprefix</i></p>
-<dd> Object file prefix. The prefix is prepended to the name of the object file. This is usually used to designate a different directory for the object file. The default is the empty string.</p>
-<dt><code>-s</code><i>string</i></p>
-<dd> Starting string delimiter. This option permits you to specify a different string for <code>rmkdepend</code> to look for in the makefile.</p>
-<dt><code>-w</code><i>width</i></p>
-<dd> Line width. Normally, <code>rmkdepend</code> will ensure that every output line that it writes will be no wider than 78 characters for the sake of readability. This option enables you to change this width.</p>
-<dt><code>-v</code></p>
-<dd> Verbose operation. This option causes <code>rmkdepend</code> to emit the list of files included by each input file on standard output.</p>
-<dt><code>-m</code></p>
-<dd> Warn about multiple inclusion. This option causes <code>rmkdepend</code> to produce a warning if any input file includes another file more than once. In previous versions of <code>rmkdepend</code> this was the default behavior; the default has been changed to better match the behavior of the C compiler, which does not consider multiple inclusion to be an error. This option is provided for backward compatibility, and to aid in debugging problems related to multiple inclusion.</p>
-<dt><code>&#8212; </code><i>options</i> &#8212;</p>
-<dd> If <code>rmkdepend</code> encounters a double hyphen (&#8211;) in the argument list, then any unrecognized argument following it will be silently ignored; a second double hyphen terminates this special treatment. In this way, <code>rmkdepend</code> can be made to safely ignore esoteric compiler arguments that might normally be found in a CFLAGS <code>make</code> macro (see the <code>EXAMPLE</code> section above). All options that <code>rmkdepend</code> recognizes and appear between the pair of double hyphens are processed normally.</p>
-<dt><code>-t</code><i>targetfilename</i></p>
-<dd> Filename. This allows you to specify an alternate target filename to be use for the preceding file. For example if you call </p>
+<dt><code>-D</code><i>name</i>=<i>def</i> or -D<i>name</i></dt>
+<dd> Define. This places a definition for <i>name</i> in <code>rmkdepend&#8217;s</code> symbol table. Without <i>=def</i> the symbol becomes defined as &#8220;1&#8221;.</dd>
+<dt><code>-I</code><i>includedir</i></dt>
+<dd> Include directory. This option tells <code>rmkdepend</code> to prepend <i>includedir</i> to its list of directories to search when it encounters a <i>#include</i> directive. By default, <code>rmkdepend</code> only searches the standard include directories (usually /usr/include and possibly a compiler-dependent directory).</dd>
+<dt><code>-Y</code><i>includedir</i></dt>
+<dd> Replace all of the standard include directories with the single specified include directory; you can omit the <i>includedir</i> to simply prevent searching the standard include directories.</dd>
+<dt><code>-a</code></dt>
+<dd> Append the dependencies to the end of the file instead of replacing them.</dd>
+<dt><code>-f</code><i>makefile</i></dt>
+<dd> Filename. This allows you to specify an alternate makefile in which <code>rmkdepend</code> can place its output. Specifying &#8220;-&#8221; as the file name (i.e., <code>-f-</code>) sends the output to standard output instead of modifying an existing file.</dd>
+<dt><code>-o</code><i>objsuffix</i></dt>
+<dd> Object file suffix. Some systems may have object files whose suffix is something other than &#8220;.o&#8221;. This option allows you to specify another suffix, such as &#8220;.b&#8221; with <i>-o.b</i> or &#8220;:obj&#8221; with <i>-o:obj</i> and so forth.</dd>
+<dt><code>-p</code><i>objprefix</i></dt>
+<dd> Object file prefix. The prefix is prepended to the name of the object file. This is usually used to designate a different directory for the object file. The default is the empty string.</dd>
+<dt><code>-s</code><i>string</i></dt>
+<dd> Starting string delimiter. This option permits you to specify a different string for <code>rmkdepend</code> to look for in the makefile.</dd>
+<dt><code>-w</code><i>width</i></dt>
+<dd> Line width. Normally, <code>rmkdepend</code> will ensure that every output line that it writes will be no wider than 78 characters for the sake of readability. This option enables you to change this width.</dd>
+<dt><code>-v</code></dt>
+<dd> Verbose operation. This option causes <code>rmkdepend</code> to emit the list of files included by each input file on standard output.</dd>
+<dt><code>-m</code></dt>
+<dd> Warn about multiple inclusion. This option causes <code>rmkdepend</code> to produce a warning if any input file includes another file more than once. In previous versions of <code>rmkdepend</code> this was the default behavior; the default has been changed to better match the behavior of the C compiler, which does not consider multiple inclusion to be an error. This option is provided for backward compatibility, and to aid in debugging problems related to multiple inclusion.</dd>
+<dt><code>&#8212; </code><i>options</i> &#8212;</dt>
+<dd> If <code>rmkdepend</code> encounters a double hyphen (&#8211;) in the argument list, then any unrecognized argument following it will be silently ignored; a second double hyphen terminates this special treatment. In this way, <code>rmkdepend</code> can be made to safely ignore esoteric compiler arguments that might normally be found in a CFLAGS <code>make</code> macro (see the <code>EXAMPLE</code> section above). All options that <code>rmkdepend</code> recognizes and appear between the pair of double hyphens are processed normally.</dd>
+<dt><code>-t</code><i>targetfilename</i></dt>
+<dd> Filename. This allows you to specify an alternate target filename to be use for the preceding file. For example if you call </dd>
 <p>&nbsp;<wbr>&nbsp;<wbr>rmkdepend -sobj -pbuild file.cxx -tlibrary.so </p>
 <p> rather than inserting the line </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>build/file.obj: &#8230; </p>

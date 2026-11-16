@@ -14,7 +14,7 @@ description: "sata_set_spd – set SATA spd according to spd limit"
 <p><i>link</i></p>
 <dl>
 <dd>
-<dd>Link to set SATA spd for</dl>
+</dd><dd>Link to set SATA spd for</dd></dl>
 <h2>Description</h2>
 <p>Set SATA spd of <i>link</i> according to sata_spd_limit. </p>
 <p> LOCKING: Inherited from caller.</p>
@@ -23,5 +23,5 @@ description: "sata_set_spd – set SATA spd according to spd limit"
 <h2>Author</h2>
 <p><code>Jeff Garzik</code></p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

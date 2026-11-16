@@ -154,24 +154,24 @@ description: "lsassd_selinux – Security Enhanced Linux Policy for the lsassd p
 <p> <code>lsassd_exec_t</code> </p>
 <p> &#8211; Set files with the lsassd_exec_t type, if you want to transition an executable to the lsassd_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/usr/sbin/lsassd, /opt/likewise/sbin/lsassd </p>
+<dt>Paths:</dt>
+<dd>/usr/sbin/lsassd, /opt/likewise/sbin/lsassd </dd>
 </dl>
 <p> <code>lsassd_tmp_t</code> </p>
 <p> &#8211; Set files with the lsassd_tmp_t type, if you want to store lsassd temporary files in the /tmp directories. </p>
 <p> <code>lsassd_var_lib_t</code> </p>
 <p> &#8211; Set files with the lsassd_var_lib_t type, if you want to store the lsassd files under the /var/lib directory. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/var/lib/likewise/krb5cc.*, /var/lib/likewise-open/krb5cc.*, /var/lib/likewise/krb5ccr_lsass..*, /var/lib/likewise-open/krb5ccr_lsass..*, /var/lib/likewise/db/lsass-adcache.filedb..*, /var/lib/likewise-open/db/lsass-adcache.filedb..*, /var/lib/likewise/lsasd.err, /var/lib/likewise/db/sam.db, /var/lib/likewise/krb5ccr_lsass, /var/lib/likewise-open/lsasd.err, /var/lib/likewise-open/db/sam.db, /var/lib/likewise-open/krb5ccr_lsass, /var/lib/likewise/db/lsass-adcache.db, /var/lib/likewise/db/lsass-adstate.filedb, /var/lib/likewise-open/db/lsass-adcache.db, /var/lib/likewise-open/db/lsass-adstate.filedb </p>
+<dt>Paths:</dt>
+<dd>/var/lib/likewise/krb5cc.*, /var/lib/likewise-open/krb5cc.*, /var/lib/likewise/krb5ccr_lsass..*, /var/lib/likewise-open/krb5ccr_lsass..*, /var/lib/likewise/db/lsass-adcache.filedb..*, /var/lib/likewise-open/db/lsass-adcache.filedb..*, /var/lib/likewise/lsasd.err, /var/lib/likewise/db/sam.db, /var/lib/likewise/krb5ccr_lsass, /var/lib/likewise-open/lsasd.err, /var/lib/likewise-open/db/sam.db, /var/lib/likewise-open/krb5ccr_lsass, /var/lib/likewise/db/lsass-adcache.db, /var/lib/likewise/db/lsass-adstate.filedb, /var/lib/likewise-open/db/lsass-adcache.db, /var/lib/likewise-open/db/lsass-adstate.filedb </dd>
 </dl>
 <p> <code>lsassd_var_run_t</code> </p>
 <p> &#8211; Set files with the lsassd_var_run_t type, if you want to store the lsassd files under the /run or /var/run directory. </p>
 <p> <code>lsassd_var_socket_t</code> </p>
 <p> &#8211; Set files with the lsassd_var_socket_t type, if you want to treat the files as lsassd var socket data. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/var/lib/likewise/.ntlmd, /var/lib/likewise/.lsassd, /var/lib/likewise/rpc/lsass, /var/lib/likewise-open/.ntlmd, /var/lib/likewise-open/.lsassd, /var/lib/likewise-open/rpc/lsass </p>
+<dt>Paths:</dt>
+<dd>/var/lib/likewise/.ntlmd, /var/lib/likewise/.lsassd, /var/lib/likewise/rpc/lsass, /var/lib/likewise-open/.ntlmd, /var/lib/likewise-open/.lsassd, /var/lib/likewise-open/rpc/lsass </dd>
 </dl>
 <p> Note: File context can be temporarily modified with the chcon command. If you want to permanently change the file context you need to use the <code>semanage fcontext</code> command. This will modify the SELinux labeling database. You will need to use <code>restorecon</code> to apply the labels.</p>
 <h2>Commands</h2>

@@ -61,103 +61,103 @@ description: "wnintro – introduction to WordNet library functions"
 <p>Not all library functions are listed below. Missing are mainly functions that are called by documented ones, or ones that were written for specific applications or tools used during WordNet development. Data structures are defined in <code>wn.h</code>.</p>
 <h3>Database Searching Functions (search.o)</h3>
 <dl>
-<dt><code>findtheinfo </code></p>
-<dd>Primary search function for WordNet database. Returns formatted search results in text buffer. Used by WordNet interfaces to perform requested search.</p>
-<dt><code>findtheinfo_ds</code></p>
-<dd>Primary search function for WordNet database. Returns search results in linked list data structure.</p>
-<dt><code>is_defined</code></p>
-<dd>Set bit for each search type that is valid for the search word passed and return bit mask.</p>
-<dt><code>in_wn</code></p>
-<dd>Set bit for each syntactic category that search word is in.</p>
-<dt><code>index_lookup</code></p>
-<dd>Find word in index file and return parsed entry in data structure. Input word must be exact match of string in database. Called by <code>getindex()</code>.</p>
-<dt><code>getindex</code></p>
-<dd>Find word in index file, trying different techniques &#8211; replace hyphens with underscores, replace underscores with hyphens, strip hyphens and underscores, strip periods.</p>
-<dt><code>read_synset</code></p>
-<dd>Read synset from data file at byte offset passed and return parsed entry in data structure. Calls <code>parse_synset()</code>.</p>
-<dt><code>parse_synset</code></p>
-<dd>Read synset at current byte offset in file and return parsed entry in data structure.</p>
-<dt><code>free_syns</code></p>
-<dd>Free a synset linked list allocated by <code>findtheinfo_ds()</code>.</p>
-<dt><code>free_synset</code></p>
-<dd>Free a synset structure.</p>
-<dt><code>free_index</code></p>
-<dd>Free an index structure.</p>
-<dt><code>traceptrs_ds</code></p>
-<dd>Recursive search algorithm to trace a pointer tree and return results in linked list.</p>
-<dt><code>do_trace</code></p>
-<dd>Do requested search on synset passed returning formatted output in buffer. </p>
+<dt><code>findtheinfo </code></dt>
+<dd>Primary search function for WordNet database. Returns formatted search results in text buffer. Used by WordNet interfaces to perform requested search.</dd>
+<dt><code>findtheinfo_ds</code></dt>
+<dd>Primary search function for WordNet database. Returns search results in linked list data structure.</dd>
+<dt><code>is_defined</code></dt>
+<dd>Set bit for each search type that is valid for the search word passed and return bit mask.</dd>
+<dt><code>in_wn</code></dt>
+<dd>Set bit for each syntactic category that search word is in.</dd>
+<dt><code>index_lookup</code></dt>
+<dd>Find word in index file and return parsed entry in data structure. Input word must be exact match of string in database. Called by <code>getindex()</code>.</dd>
+<dt><code>getindex</code></dt>
+<dd>Find word in index file, trying different techniques &#8211; replace hyphens with underscores, replace underscores with hyphens, strip hyphens and underscores, strip periods.</dd>
+<dt><code>read_synset</code></dt>
+<dd>Read synset from data file at byte offset passed and return parsed entry in data structure. Calls <code>parse_synset()</code>.</dd>
+<dt><code>parse_synset</code></dt>
+<dd>Read synset at current byte offset in file and return parsed entry in data structure.</dd>
+<dt><code>free_syns</code></dt>
+<dd>Free a synset linked list allocated by <code>findtheinfo_ds()</code>.</dd>
+<dt><code>free_synset</code></dt>
+<dd>Free a synset structure.</dd>
+<dt><code>free_index</code></dt>
+<dd>Free an index structure.</dd>
+<dt><code>traceptrs_ds</code></dt>
+<dd>Recursive search algorithm to trace a pointer tree and return results in linked list.</dd>
+<dt><code>do_trace</code></dt>
+<dd>Do requested search on synset passed returning formatted output in buffer. </dd>
 </dl>
 <h3>Morphology Functions (morph.o)</h3>
 <dl>
-<dt><code>morphinit</code></p>
-<dd>Open exception list files.</p>
-<dt><code>re_morphinit</code></p>
-<dd>Close exception list files and reopen.</p>
-<dt><code>morphstr</code></p>
-<dd>Try to find base form (lemma) of word or collocation in syntactic category passed. Calls <code>morphword()</code> for each word in string passed.</p>
-<dt><code>morphword</code></p>
-<dd>Try to find base form (lemma) of individual word in syntactic category passed. </p>
+<dt><code>morphinit</code></dt>
+<dd>Open exception list files.</dd>
+<dt><code>re_morphinit</code></dt>
+<dd>Close exception list files and reopen.</dd>
+<dt><code>morphstr</code></dt>
+<dd>Try to find base form (lemma) of word or collocation in syntactic category passed. Calls <code>morphword()</code> for each word in string passed.</dd>
+<dt><code>morphword</code></dt>
+<dd>Try to find base form (lemma) of individual word in syntactic category passed. </dd>
 </dl>
 <h3>Utility Functions (wnutil.o)</h3>
 <dl>
-<dt><code>wninit</code></p>
-<dd>Top level function to open database files and morphology exception lists.</p>
-<dt><code>re_wninit</code></p>
-<dd>Top level function to close and reopen database files and morphology exception lists.</p>
-<dt><code>cntwords</code></p>
-<dd>Count the number of underscore or space separated words in a string.</p>
-<dt><code>strtolower</code></p>
-<dd>Convert string to lower case and remove trailing adjective marker if found.</p>
-<dt><code>ToLowerCase</code></p>
-<dd>Convert string passed to lower case.</p>
-<dt><code>strsubst</code></p>
-<dd>Replace all occurrences of <i>from</i> with <i>to</i> in <i>str</i>.</p>
-<dt><code>getptrtype</code></p>
-<dd>Return code for pointer type character passed.</p>
-<dt><code>getpos</code></p>
-<dd>Return syntactic category code for string passed.</p>
-<dt><code>getsstype</code></p>
-<dd>Return synset type code for string passed.</p>
-<dt><code>FmtSynset</code></p>
-<dd>Reconstruct synset string from synset pointer.</p>
-<dt><code>StrToPos</code></p>
-<dd>Passed string for syntactic category, returns corresponding integer value.</p>
-<dt><code>GetSynsetForSense</code></p>
-<dd>Return synset for sense key passed.</p>
-<dt><code>GetDataOffset</code></p>
-<dd>Find synset offset for sense.</p>
-<dt><code>GetPolyCount</code></p>
-<dd>Find polysemy count for sense passed.</p>
-<dt><code>GetWORD</code></p>
-<dd>Return word part of sense key.</p>
-<dt><code>GetPOS</code></p>
-<dd>Return syntactic category code for sense key passed.</p>
-<dt><code>WNSnsToStr</code></p>
-<dd>Generate sense key for index entry passed.</p>
-<dt><code>GetValidIndexPointer</code></p>
-<dd>Search for string and/or base form of word in database and return index structure for word if found.</p>
-<dt><code>GetWNSense</code></p>
-<dd>Return sense number in database for sense key.</p>
-<dt><code>GetSenseIndex</code></p>
-<dd>Return parsed sense index entry for sense key passed.</p>
-<dt><code>default_display_message</code></p>
-<dd>Default function to use as value of <code>display_message</code>. Simply returns <code>-1</code>. </p>
+<dt><code>wninit</code></dt>
+<dd>Top level function to open database files and morphology exception lists.</dd>
+<dt><code>re_wninit</code></dt>
+<dd>Top level function to close and reopen database files and morphology exception lists.</dd>
+<dt><code>cntwords</code></dt>
+<dd>Count the number of underscore or space separated words in a string.</dd>
+<dt><code>strtolower</code></dt>
+<dd>Convert string to lower case and remove trailing adjective marker if found.</dd>
+<dt><code>ToLowerCase</code></dt>
+<dd>Convert string passed to lower case.</dd>
+<dt><code>strsubst</code></dt>
+<dd>Replace all occurrences of <i>from</i> with <i>to</i> in <i>str</i>.</dd>
+<dt><code>getptrtype</code></dt>
+<dd>Return code for pointer type character passed.</dd>
+<dt><code>getpos</code></dt>
+<dd>Return syntactic category code for string passed.</dd>
+<dt><code>getsstype</code></dt>
+<dd>Return synset type code for string passed.</dd>
+<dt><code>FmtSynset</code></dt>
+<dd>Reconstruct synset string from synset pointer.</dd>
+<dt><code>StrToPos</code></dt>
+<dd>Passed string for syntactic category, returns corresponding integer value.</dd>
+<dt><code>GetSynsetForSense</code></dt>
+<dd>Return synset for sense key passed.</dd>
+<dt><code>GetDataOffset</code></dt>
+<dd>Find synset offset for sense.</dd>
+<dt><code>GetPolyCount</code></dt>
+<dd>Find polysemy count for sense passed.</dd>
+<dt><code>GetWORD</code></dt>
+<dd>Return word part of sense key.</dd>
+<dt><code>GetPOS</code></dt>
+<dd>Return syntactic category code for sense key passed.</dd>
+<dt><code>WNSnsToStr</code></dt>
+<dd>Generate sense key for index entry passed.</dd>
+<dt><code>GetValidIndexPointer</code></dt>
+<dd>Search for string and/or base form of word in database and return index structure for word if found.</dd>
+<dt><code>GetWNSense</code></dt>
+<dd>Return sense number in database for sense key.</dd>
+<dt><code>GetSenseIndex</code></dt>
+<dd>Return parsed sense index entry for sense key passed.</dd>
+<dt><code>default_display_message</code></dt>
+<dd>Default function to use as value of <code>display_message</code>. Simply returns <code>-1</code>. </dd>
 </dl>
 <h3>Binary Search Functions (binsrch.o)</h3>
 <dl>
-<dt><code>bin_search</code></p>
-<dd>General purpose binary search function to search for key as first item on line in sorted file.</p>
-<dt><code>copyfile</code></p>
-<dd>Copy contents from one file to another.</p>
-<dt><code>replace_line</code></p>
-<dd>Replace a line in a sorted file.</p>
-<dt><code>insert_line</code></p>
-<dd>Insert a line into a sorted file.</dl>
+<dt><code>bin_search</code></dt>
+<dd>General purpose binary search function to search for key as first item on line in sorted file.</dd>
+<dt><code>copyfile</code></dt>
+<dd>Copy contents from one file to another.</dd>
+<dt><code>replace_line</code></dt>
+<dd>Replace a line in a sorted file.</dd>
+<dt><code>insert_line</code></dt>
+<dd>Insert a line into a sorted file.</dd></dl>
 <h2>Header File</h2>
 <dl>
-<dt><code>wn.h</code></p>
-<dd>WordNet include file of constants, data structures, external declarations for global variables initialized in <code>wnglobal.c</code>. Also lists function prototypes for library API. It must be included to use any WordNet library functions.</dl>
+<dt><code>wn.h</code></dt>
+<dd>WordNet include file of constants, data structures, external declarations for global variables initialized in <code>wnglobal.c</code>. Also lists function prototypes for library API. It must be included to use any WordNet library functions.</dd></dl>
 <h2>Notes</h2>
 <p>All library functions that access the database files expect the files to be open. The function <code>wninit</code>(3) must be called before other database access functions such as <code>findtheinfo</code>(3) or <code>read_synset</code>(3). </p>
 <p> Inclusion of the header file <code>wn.h</code> is necessary. </p>
@@ -226,22 +226,22 @@ description: "wnintro – introduction to WordNet library functions"
 <p></center></p>
 <h2>Environment Variables (Unix)</h2>
 <dl>
-<dt><code>WNHOME</code></p>
-<dd>Base directory for WordNet. Default is <code>/usr/local/WordNet-3.0</code>.</p>
-<dt><code>WNSEARCHDIR</code></p>
-<dd>Directory in which the WordNet database has been installed. Default is <code>WNHOME/dict</code>.</dl>
+<dt><code>WNHOME</code></dt>
+<dd>Base directory for WordNet. Default is <code>/usr/local/WordNet-3.0</code>.</dd>
+<dt><code>WNSEARCHDIR</code></dt>
+<dd>Directory in which the WordNet database has been installed. Default is <code>WNHOME/dict</code>.</dd></dl>
 <h2>Registry (Windows)</h2>
 <dl>
-<dt><code>HKEY_LOCAL_MACHINE\SOFTWARE\WordNet\3.0\WNHome</code></p>
-<dd>Base directory for WordNet. Default is <code>C:\Program~Files\WordNet\3.0</code>.</dl>
+<dt><code>HKEY_LOCAL_MACHINE\SOFTWARE\WordNet\3.0\WNHome</code></dt>
+<dd>Base directory for WordNet. Default is <code>C:\Program~Files\WordNet\3.0</code>.</dd></dl>
 <h2>Files</h2>
 <dl>
-<dt><code>lib/libwn.a</code></p>
-<dd>WordNet library (Unix)</p>
-<dt><code>lib\wn.lib</code></p>
-<dd>WordNet library (Windows)</p>
-<dt><code>include</code></p>
-<dd>header files for use with WordNet library</dl>
+<dt><code>lib/libwn.a</code></dt>
+<dd>WordNet library (Unix)</dd>
+<dt><code>lib\wn.lib</code></dt>
+<dd>WordNet library (Windows)</dd>
+<dt><code>include</code></dt>
+<dd>header files for use with WordNet library</dd></dl>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/1-wnintro/">wnintro</a></code>(1), <code><a href="/docs/linux/man/3-binsrch/">binsrch</a></code>(3), <code><a href="/docs/linux/man/3-morph/">morph</a></code>(3), <code><a href="/docs/linux/man/3-wnsearch/">wnsearch</a></code>(3), <code><a href="/docs/linux/man/3-wnutil/">wnutil</a></code>(3), <code><a href="/docs/linux/man/5-wnintro/">wnintro</a></code>(5), <code><a href="/docs/linux/man/7-wnintro/">wnintro</a></code>(7). </p>
 <p> Fellbaum, C. (1998), ed. <i>&quot;WordNet: An Electronic Lexical Database&quot;</i>. MIT Press, Cambridge, MA.</p>

@@ -19,15 +19,15 @@ description: "tracker-writeback-3 – Used to write metadata set in Tracker back
 <p> <code>-?, &#8211;help</code></p>
 <dl>
 <dt>
-<dd> Show summary of options.</dl>
+</dt><dd> Show summary of options.</dd></dl>
 <p> <code>-V, &#8211;version</code></p>
 <dl>
 <dt>
-<dd> Returns the version of this binary.</dl>
+</dt><dd> Returns the version of this binary.</dd></dl>
 <p> <code>-d, &#8211;disable-shutdown</code></p>
 <dl>
 <dt>
-<dd> Disable shutting down after 30 seconds of inactivity.</dl>
+</dt><dd> Disable shutting down after 30 seconds of inactivity.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-tracker-miner-fs-3/">tracker-miner-fs-3</a></code>(1). <code><a href="/docs/linux/man/1-tracker3-extract/">tracker3-extract</a></code>(1). </p>
 <h2>Index</h2>

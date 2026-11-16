@@ -14,14 +14,14 @@ description: "beagle-imlogviewer"
 <p>Beagle tool to the logs of instant messaging programs. </p>
 <h2>Options</h2>
 <dl>
-<dt><code>&#8211;client</code></p>
-<dd>Client that the log belongs to (e.g. gaim).</p>
-<dt><code>&#8211;highlight-search</code></p>
-<dd>Words to highlight in the buffer.</p>
-<dt><code>&#8211;search</code></p>
-<dd>Search query to filter hits on.</p>
-<dt><code>&#8211;help</code></p>
-<dd>Display a summary of command-line options</dl>
+<dt><code>&#8211;client</code></dt>
+<dd>Client that the log belongs to (e.g. gaim).</dd>
+<dt><code>&#8211;highlight-search</code></dt>
+<dd>Words to highlight in the buffer.</dd>
+<dt><code>&#8211;search</code></dt>
+<dd>Search query to filter hits on.</dd>
+<dt><code>&#8211;help</code></dt>
+<dd>Display a summary of command-line options</dd></dl>
 <h2>Author</h2>
 <p>Novell, Inc.</p>
 <h2>Reporting Bugs</h2>

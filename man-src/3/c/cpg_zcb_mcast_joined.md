@@ -16,11 +16,9 @@ description: "cpg_mcast_joined – Multicasts a zero copy buffer to all groups j
 <p> The <code>cpg_zcb_mcast_joined</code> function will multicast a zero copy buffer message to all the processes that have been joined with the <code><a href="/docs/linux/man/3-cpg_join/">cpg_join</a>(3)</code> function for the same group name. Messages that are sent to any of the groups joined to the parameter <i>handle</i> will be delivered to all subscribed processes in the system. </p>
 <p> The argument <i>guarantee</i> requests a delivery guarantee for the message to be sent. The cpg_guarantee_t type is defined by:</p>
 <dl>
-<dt>
-<dd>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre><code>
 typedef enum {
     CPG_TYPE_UNORDERED, /* not implemented */
@@ -29,19 +27,18 @@ typedef enum {
     CPG_TYPE_SAFE       /* not implemented */
 } cpg_guarantee_t;
 </code></pre>
+</dd></dl>
 </dl>
-<dt>
-<dd></dl>
 <p> The meanings of the cpg_guarantee_t typedef are:</p>
 <dl>
-<dt><code>CPG_TYPE_UNORDERED</code></p>
-<dd> Messages are guaranteed to be delivered, but with no particular order. This mode is unimplemented in the CPG library.</p>
-<dt><code>CPG_TYPE_FIFO</code></p>
-<dd> Messages are guaranteed to be delivered in first sent first delivery order. In fact, this guarantee is equivalent to the CPG_TYPE_AGREED guarantee.</p>
-<dt><code>CPG_TYPE_AGREED</code></p>
-<dd> All processors must agree on the order of delivery. If a message is sent from two or more processes at about the same time, the delivery will occur in the same order to all processes.</p>
-<dt><code>CPG_TYPE_SAFE</code></p>
-<dd> All processes must agree on the order of delivery. Further all processes must have a copy of the message before any delivery takes place. This mode is unimplemented in the CPG library.</dl>
+<dt><code>CPG_TYPE_UNORDERED</code></dt>
+<dd> Messages are guaranteed to be delivered, but with no particular order. This mode is unimplemented in the CPG library.</dd>
+<dt><code>CPG_TYPE_FIFO</code></dt>
+<dd> Messages are guaranteed to be delivered in first sent first delivery order. In fact, this guarantee is equivalent to the CPG_TYPE_AGREED guarantee.</dd>
+<dt><code>CPG_TYPE_AGREED</code></dt>
+<dd> All processors must agree on the order of delivery. If a message is sent from two or more processes at about the same time, the delivery will occur in the same order to all processes.</dd>
+<dt><code>CPG_TYPE_SAFE</code></dt>
+<dd> All processes must agree on the order of delivery. Further all processes must have a copy of the message before any delivery takes place. This mode is unimplemented in the CPG library.</dd></dl>
 <p> The <i>msg</i> argument describes the zero copy buffer which is used to transmit a message. this buffer must be allocated by <code><a href="/docs/linux/man/3-cpg_zcb_alloc/">cpg_zcb_alloc</a>(3).</code> </p>
 <p> The <i>msg_len</i> argument describes the number of bytes to be transmitted in the zero copy buffer. </p>
 <h2>RETURN VALUE</h2>

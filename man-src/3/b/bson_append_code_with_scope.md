@@ -19,20 +19,20 @@ bool bson_append_code_with_scope(bson_t *bson,
 </code></pre>
 <h2>PARAMETERS</h2>
 <dl>
-<dt><code>bson</code></p>
-<dd> A <code>bson_t</code> \&amp;.</dl>
+<dt><code>bson</code></dt>
+<dd> A <code>bson_t</code> \&amp;.</dd></dl>
 <dl>
-<dt><code>key</code></p>
-<dd> An ASCII C string containing the name of the field.</dl>
+<dt><code>key</code></dt>
+<dd> An ASCII C string containing the name of the field.</dd></dl>
 <dl>
-<dt><code>key_length</code></p>
-<dd> The length of <code>key</code> in bytes, or -1 to determine the length with <code><a href="/docs/linux/man/3-strlen/">strlen</a>(3)</code> \&amp;.</dl>
+<dt><code>key_length</code></dt>
+<dd> The length of <code>key</code> in bytes, or -1 to determine the length with <code><a href="/docs/linux/man/3-strlen/">strlen</a>(3)</code> \&amp;.</dd></dl>
 <dl>
-<dt><code>javascript</code></p>
-<dd> A NULL-terminated UTF-8 encoded string containing the javascript fragment.</dl>
+<dt><code>javascript</code></dt>
+<dd> A NULL-terminated UTF-8 encoded string containing the javascript fragment.</dd></dl>
 <dl>
-<dt><code>scope</code></p>
-<dd> A <code>bson_t</code> containing the scope for <code>javascript</code> \&amp;.</dl>
+<dt><code>scope</code></dt>
+<dd> A <code>bson_t</code> containing the scope for <code>javascript</code> \&amp;.</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> The <code><a href="/docs/linux/man/3-bson_append_code_with_scope/">bson_append_code_with_scope</a>(3)</code> function shall perform like <code><a href="/docs/linux/man/3-bson_append_code/">bson_append_code</a>(3)</code> except it allows providing a scope to the javascript function in the form of a bson document. </p>
 <h2>RETURNS</h2>

@@ -21,31 +21,31 @@ description: "collectd-lua – Documentation of collectd’s \"Lua plugin\""
 <p> The minimum required Lua version is <i>5.1</i>.</p>
 <h2>Configuration</h2>
 <dl>
-<dt><code>LoadPlugin</code> <i>Lua</i></p>
-<dd>Loads the Lua plugin.</p>
-<dt><code>BasePath</code> <i>Name</i></p>
-<dd>The directory the <tt>&quot;Lua plugin&quot;</tt> looks in to find script <code>Script</code>. If set, this is also prepended to <code>package.path</code>.</p>
-<dt><code>Script</code> <i>Name</i></p>
-<dd>The script the <tt>&quot;Lua plugin&quot;</tt> is going to run. If <code>BasePath</code> is not specified, this needs to be an absolute path.</dl>
+<dt><code>LoadPlugin</code> <i>Lua</i></dt>
+<dd>Loads the Lua plugin.</dd>
+<dt><code>BasePath</code> <i>Name</i></dt>
+<dd>The directory the <tt>&quot;Lua plugin&quot;</tt> looks in to find script <code>Script</code>. If set, this is also prepended to <code>package.path</code>.</dd>
+<dt><code>Script</code> <i>Name</i></dt>
+<dd>The script the <tt>&quot;Lua plugin&quot;</tt> is going to run. If <code>BasePath</code> is not specified, this needs to be an absolute path.</dd></dl>
 <h2>Writing Your Own Plugins</h2>
 <p>Writing your own plugins is quite simple. collectd manages plugins by means of <code>dispatch functions</code> which call the appropriate <code>callback functions</code> registered by the plugins. Any plugin basically consists of the implementation of these callback functions and initializing code which registers the functions with collectd. See the section &#8220;<font SIZE="-1">EXAMPLES&#8221;</font> below for a really basic example. The following types of <code>callback functions</code> are implemented in the Lua plugin (all of them are optional):</p>
 <dl>
-<dt>read functions</p>
-<dd>These are used to collect the actual data. It is called once per interval (see the <code>Interval</code> configuration option of collectd). Usually it will call <code>collectd.dispatch_values</code> to dispatch the values to collectd which will pass them on to all registered <code>write functions</code>. If this function does not return 0 the plugin will be skipped for an increasing amount of time until it returns normally again.</p>
-<dt>write functions</p>
-<dd>These are used to write the dispatched values. They are called once for every value that was dispatched by any plugin.</dl>
+<dt>read functions</dt>
+<dd>These are used to collect the actual data. It is called once per interval (see the <code>Interval</code> configuration option of collectd). Usually it will call <code>collectd.dispatch_values</code> to dispatch the values to collectd which will pass them on to all registered <code>write functions</code>. If this function does not return 0 the plugin will be skipped for an increasing amount of time until it returns normally again.</dd>
+<dt>write functions</dt>
+<dd>These are used to write the dispatched values. They are called once for every value that was dispatched by any plugin.</dd></dl>
 <h2>Functions</h2>
 <p>The following functions are provided to Lua modules:</p>
 <dl>
-<dt>register_read(callback)</p>
-<dd>The callback will be called without arguments. If this callback function does not return 0 the next call will be delayed by an increasing interval.</p>
-<dt>register_write</p>
-<dd>The callback function will be called with one argument passed, which will be a table of values. If this callback function does not return 0 next call will be delayed by an increasing interval.</p>
-<dt>log_error, log_warning, log_notice, log_info, log_debug(<i>message</i>)</p>
-<dd>Log a message with the specified severity.</dl>
+<dt>register_read(callback)</dt>
+<dd>The callback will be called without arguments. If this callback function does not return 0 the next call will be delayed by an increasing interval.</dd>
+<dt>register_write</dt>
+<dd>The callback function will be called with one argument passed, which will be a table of values. If this callback function does not return 0 next call will be delayed by an increasing interval.</dd>
+<dt>log_error, log_warning, log_notice, log_info, log_debug(<i>message</i>)</dt>
+<dd>Log a message with the specified severity.</dd></dl>
 <h2>Examples</h2>
 <dl>
-<dd>A very simple read function might look like: </p>
+<dd>A very simple read function might look like: </dd>
 <pre><code>function read()
     collectd.log_info(&quot;read function called&quot;)
         t = {

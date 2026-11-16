@@ -20,23 +20,23 @@ description: "unexpunge – restore expunged (but yet unremoved) messages"
 <p> <i>Unexpunge</i> reads its configuration options out of the <i><a href="/docs/linux/man/5-imapd-conf/">imapd.conf</a></i>(5) file unless specified otherwise by <code>-C</code>.</p>
 <h2>Options</h2>
 <dl>
-<dt><code>-C</code><i> config-file</i></p>
-<dd>Read configuration options from <i>config-file</i>.</p>
-<dt><code>-l</code></p>
-<dd>List the expunged messages in the specified mailbox which are available for restoration.</p>
-<dt><code>-t</code><i> time-interval</i></p>
-<dd>Unexpunge messages which were expunged in the last time-interval seconds. (modifiers: m: minutes, h: hours, d: days, w: weeks).</p>
-<dt><code>-a</code></p>
-<dd>Restore <code>all</code> of the expunged messages in the specified mailbox.</p>
-<dt><code>-u</code></p>
-<dd>Restore only those messages having the specified UIDs in the specified mailbox.</p>
-<dt><code>-d</code></p>
-<dd>Unset the <i>\Deleted</i> flag on any restored messages.</p>
-<dt><code>-v</code></p>
-<dd>Enable verbose output/logging.</dl>
+<dt><code>-C</code><i> config-file</i></dt>
+<dd>Read configuration options from <i>config-file</i>.</dd>
+<dt><code>-l</code></dt>
+<dd>List the expunged messages in the specified mailbox which are available for restoration.</dd>
+<dt><code>-t</code><i> time-interval</i></dt>
+<dd>Unexpunge messages which were expunged in the last time-interval seconds. (modifiers: m: minutes, h: hours, d: days, w: weeks).</dd>
+<dt><code>-a</code></dt>
+<dd>Restore <code>all</code> of the expunged messages in the specified mailbox.</dd>
+<dt><code>-u</code></dt>
+<dd>Restore only those messages having the specified UIDs in the specified mailbox.</dd>
+<dt><code>-d</code></dt>
+<dd>Unset the <i>\Deleted</i> flag on any restored messages.</dd>
+<dt><code>-v</code></dt>
+<dd>Enable verbose output/logging.</dd></dl>
 <h2>Files</h2>
 <dl>
-<dt><code>/etc/imapd.conf</code></p>
-<dd></dl>
+<dt><code>/etc/imapd.conf</code></dt>
+<dd></dd></dl>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/5-imapd-conf/">imapd.conf</a>(5)</code> </p>

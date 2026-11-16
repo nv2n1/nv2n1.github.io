@@ -19,7 +19,7 @@ description: "chfrk.f –"
 <p> <code>Purpose: </code></p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre><code>
  Level 3 BLAS like routine for C in RFP Format.
  CHFRK performs one of the Hermitian rank--k operations
@@ -30,11 +30,11 @@ description: "chfrk.f –"
  matrix and A is an n--by--k matrix in the first case and a k--by--n
  matrix in the second case.
 </code></pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>TRANSR</i> </p>
+</dt><dd> <i>TRANSR</i> </dd>
 <pre>
           TRANSR is CHARACTER*1
           = 'N':  The Normal Form of RFP A is stored;
@@ -114,14 +114,14 @@ A is COMPLEX array, dimension(LDA, ka) where KA is K when TRANS = 'N' or 'n', an
 <p> <code>Author:</code></p>
 <dl>
 <dt>
-<dd> Univ. of Tennessee </p>
+</dt><dd> Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl>
 <dt>
-<dd> September 2012</dl>
+</dt><dd> September 2012</dd></dl>
 <p> Definition at line 168 of file chfrk.f.</p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for LAPACK from the source code. </p>

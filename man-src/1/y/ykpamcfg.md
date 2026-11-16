@@ -15,35 +15,35 @@ description: "ykpamcfg – Manage user settings for the Yubico PAM module"
 <p> <code>-1</code></p>
 <dl>
 <dt>
-<dd> use slot 1. This is the default.</dl>
+</dt><dd> use slot 1. This is the default.</dd></dl>
 <p> <code>-2</code></p>
 <dl>
 <dt>
-<dd> use slot 2.</dl>
+</dt><dd> use slot 2.</dd></dl>
 <p> <code>-A</code> <i>action</i></p>
 <dl>
 <dt>
-<dd> choose action to perform. See ACTIONS below.</dl>
+</dt><dd> choose action to perform. See ACTIONS below.</dd></dl>
 <p> <code>-p</code> <i>path</i></p>
 <dl>
 <dt>
-<dd> specify output file for, default is ~/.yubico/challenge</dl>
+</dt><dd> specify output file for, default is ~/.yubico/challenge</dd></dl>
 <p> <code>-i</code> <i>iterations</i></p>
 <dl>
 <dt>
-<dd> number of iterations to use for pbkdf2 of expected response</dl>
+</dt><dd> number of iterations to use for pbkdf2 of expected response</dd></dl>
 <p> <code>-v</code></p>
 <dl>
 <dt>
-<dd> enable verbose mode.</dl>
+</dt><dd> enable verbose mode.</dd></dl>
 <p> <code>-V</code></p>
 <dl>
 <dt>
-<dd> display version and exit</dl>
+</dt><dd> display version and exit</dd></dl>
 <p> <code>-h</code></p>
 <dl>
 <dt>
-<dd> display help and exit</dl>
+</dt><dd> display help and exit</dd></dl>
 <h2>ACTIONS</h2>
 <h3>add_hmac_chalresp</h3>
 <p> The PAM module can utilize the HMAC-SHA1 Challenge-Response mode found in YubiKeys starting with version 2.2 for <code>offline authentication</code>. This action creates the initial state information with the C/R to be issued at the next logon. </p>
@@ -54,28 +54,28 @@ description: "ykpamcfg – Manage user settings for the Yubico PAM module"
 <p> First, program a YubiKey for challenge response on Slot 2 : </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 $ ykpersonalize -2 -ochal-resp -ochal-hmac -ohmac-lt64 -oserial-api-visible
 ...
 Commit? (y/n) [n]: y
 </pre>
-</dl>
+</dd></dl>
 <p> Now, set the current user to require this YubiKey for logon : </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 $ ykpamcfg -2 -v
 ...
 Stored initial challenge and expected response in '/home/alice/.yubico/challenge-123456'.
 </pre>
-</dl>
+</dd></dl>
 <p> Then, configure authentication with PAM for example like this (<i>make a backup first</i>) : </p>
 <p> <i>/etc/pam.d/common-auth</i> (from Ubuntu 10.10) : </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 auth  required        pam_unix.so nullok_secure try_first_pass
 auth  [success=1 new_authtok_reqd=ok ignore=ignore default=die] pam_yubico.so mode=challenge-response
@@ -83,7 +83,7 @@ auth  requisite       pam_deny.so
 auth  required        pam_permit.so
 auth  optional        pam_ecryptfs.so unwrap
 </pre>
-</dl>
+</dd></dl>
 <h2>BUGS</h2>
 <p> Report ykpamcfg bugs in the issue tracker: <a rel="nofollow" href="https://github.com/Yubico/yubico-pam/issues">https://github.com/Yubico/yubico-pam/issues</a></p>
 <h2>SEE ALSO</h2>

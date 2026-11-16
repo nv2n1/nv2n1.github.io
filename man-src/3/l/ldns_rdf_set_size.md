@@ -18,14 +18,14 @@ description: "ldns_rdf_set_size, ldns_rdf_set_type, ldns_rdf_set_data"
 <p> void ldns_rdf_set_data(ldns_rdf *rd, void *data); </p>
 <h2>DESCRIPTION</h2>
 <dl>
-<dt> <i>ldns_rdf_set_size</i>()</p>
-<dd>sets the size of the rdf. .br <code>*rd</code>: the rdf to operate on .br <code>size</code>: the new size .br Returns void</dl>
+<dt> <i>ldns_rdf_set_size</i>()</dt>
+<dd>sets the size of the rdf. .br <code>*rd</code>: the rdf to operate on .br <code>size</code>: the new size .br Returns void</dd></dl>
 <dl>
-<dt> <i>ldns_rdf_set_type</i>()</p>
-<dd>sets the size of the rdf. .br <code>*rd</code>: the rdf to operate on .br <code>type</code>: the new type .br Returns void</dl>
+<dt> <i>ldns_rdf_set_type</i>()</dt>
+<dd>sets the size of the rdf. .br <code>*rd</code>: the rdf to operate on .br <code>type</code>: the new type .br Returns void</dd></dl>
 <dl>
-<dt> <i>ldns_rdf_set_data</i>()</p>
-<dd>sets the size of the rdf. .br <code>*rd</code>: the rdf to operate on .br <code>*data</code>: pointer to the new data .br Returns void</dl>
+<dt> <i>ldns_rdf_set_data</i>()</dt>
+<dd>sets the size of the rdf. .br <code>*rd</code>: the rdf to operate on .br <code>*data</code>: pointer to the new data .br Returns void</dd></dl>
 <h2>AUTHOR</h2>
 <p> The ldns team at NLnet Labs. Which consists out of Jelte Jansen and Miek Gieben. </p>
 <h2>REPORTING BUGS</h2>

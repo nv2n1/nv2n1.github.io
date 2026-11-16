@@ -15,15 +15,15 @@ rpc_bind_new_program - bind a new RPC program to an existing client
 <h2>Arguments</h2>
 
 <i>old</i>
-<dl><dd><dd>old rpc_client</dl>
+<dl><dd></dd><dd>old rpc_client</dd></dl>
  
 
  <i>program</i>
-<dl><dd>rpc program to set</dl>
+<dl><dd>rpc program to set</dd></dl>
  
 
  <i>vers</i>
-<dl><dd>rpc program version</dl>
+<dl><dd>rpc program version</dd></dl>
 
 <h2>Description</h2>
 

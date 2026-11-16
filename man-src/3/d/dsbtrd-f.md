@@ -21,10 +21,10 @@ description: "dsbtrd.f –"
 <pre> DSBTRD reduces a real symmetric band matrix A to symmetric
  tridiagonal form T by an orthogonal similarity transformation:
  Q**T * A * Q = T.</pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>VECT</i> </p>
+<dd><i>VECT</i> </dd>
 <pre> VECT is CHARACTER*1
  = 'N': do not form Q;
  = 'V': form Q;
@@ -85,18 +85,19 @@ description: "dsbtrd.f –"
 <p>&nbsp;<wbr></dl>
 <p> <code>Author:</code></p>
 <dl COMPACT>
-<dd>Univ. of Tennessee </p>
+<dd>Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl COMPACT>
-<dd>November 2011</dl>
+<dd>November 2011</dd></dl>
 <p> <code>Further Details: </code></p>
 <dl COMPACT>
 <dd>
 <pre> Modified by Linda Kaufman, Bell Labs.</pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> Definition at line 163 of file dsbtrd.f.</p>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for LAPACK from the source code.</p>
+</p>

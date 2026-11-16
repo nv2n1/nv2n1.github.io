@@ -20,30 +20,30 @@ description: "sg_wr_mode – write (modify) SCSI mode page"
 <h2>Options</h2>
 <p>Arguments to long options are mandatory for short options as well.</p>
 <dl>
-<dt><code>-c</code>, <code>&#8211;contents</code>=<i>H,H&#8230;</i></p>
-<dd>where <i>H,H&#8230;</i> is a string of comma separated hex numbers each of which should resolve to a byte value (i.e. 0 to ff inclusive). A (single) space separated string of hex numbers is also allowed but the list needs to be in quotes. This is the new contents of the mode page to be written to <i>DEVICE</i>, potentially filtered by the mask string.</p>
-<dt><code>-c</code>, <code>&#8211;contents</code>=-</p>
-<dd>reads contents string from stdin. The hex numbers in the string may be comma, space, tab or linefeed (newline) separated. If a line contains &quot;#&quot; then the remaining characters on that line are ignored. Otherwise each non separator character should resolve to a byte value (i.e. 0 to ff inclusive). This forms the new contents of the mode page to be written to <i>DEVICE</i>, potentially filtered by the mask string.</p>
-<dt><code>-d</code>, <code>&#8211;dbd</code></p>
-<dd>disable block descriptors (DBD flag in cdb). Some device types include block descriptors in the mode data returned by a MODE SENSE command. If so the same block descriptors are written by the MODE SELECT command. This option instructs the MODE SENSE command not to return any block descriptors. This would be a sensible default for this utility apart from the fact that not all SCSI devices support the DBD bit in the cdb.</p>
-<dt><code>-f</code>, <code>&#8211;force</code></p>
-<dd>force the contents string to be taken as the new mode page, or at least doesn&#8217;t do checks on the existing mode page. Note that <i>DEVICE</i> may still reject the new contents for the mode page. Cannot be given with the <i>&#8211;mask=M,M&#8230;</i> option.</p>
-<dt><code>-h</code>, <code>&#8211;help</code></p>
-<dd>output the usage message then exit.</p>
-<dt><code>-l</code>, <code>&#8211;len</code>=10 | 6</p>
-<dd>length of the SCSI commands (cdb) sent to <i>DEVICE</i>. The default is 10 so 10 byte MODE SENSE and MODE SELECT commands are issued. Some old devices don&#8217;t support the 10 byte variants hence this option.</p>
-<dt><code>-m</code>, <code>&#8211;mask</code>=<i>M,M&#8230;</i></p>
-<dd>where <i>M,M&#8230;</i> is a string of comma separated hex numbers each of which should resolve to a byte value (i.e. 0 to ff inclusive). A (single) space separated string of hex numbers is also allowed but the list needs to be in quotes. The mask chooses (bit by bit) whether the new mode page comes from the contents (mask bit set) or from the existing mode page (mask bit clear). If the mask string is shorter than the contents string then the remaining bytes are taken from the contents string. If the contents string is shorter than the existing mode page then the remaining bytes are taken from the existing mode page (i.e. they are left unaltered).</p>
-<dt><code>-p</code>, <code>&#8211;page</code>=<i>PG</i></p>
-<dd>where <i>PG</i> is the page code value to fetch and modify. The page code is in hex and should be between 0 and 3e inclusive. Notice that page code 3f to fetch all mode pages is disallowed.</p>
-<dt><code>-p</code>, <code>&#8211;page</code>=<i>PG,SPG</i></p>
-<dd>where <i>PG</i> is the page code value and <i>SPG</i> is the subpage code value to fetch and modify. Both values are in hex. The subpage code should be between 0 and fe inclusive. Notice that subpage code ff to fetch all mode subpages (for a given mode page or all mode pages in the case of 3f,ff) is disallowed.</p>
-<dt><code>-s</code>, <code>&#8211;save</code></p>
-<dd>changes the &quot;saved&quot; mode page when MODE SELECT is successful. By default (i.e. when <i>&#8211;save</i> is not used) only the &quot;current&quot; mode page values are changed when MODE SELECT is successful. In this case the new mode page will stay in effect until the device is reset (e.g. power cycled). When it restarts the &quot;saved&quot; values for the mode page will be re-instated. So to make changes permanent use the <i>&#8211;save</i> option.</p>
-<dt><code>-v</code>, <code>&#8211;verbose</code></p>
-<dd>increase the level of verbosity, (i.e. debug output).</p>
-<dt><code>-V</code>, <code>&#8211;version</code></p>
-<dd>print the version string and then exit.</dl>
+<dt><code>-c</code>, <code>&#8211;contents</code>=<i>H,H&#8230;</i></dt>
+<dd>where <i>H,H&#8230;</i> is a string of comma separated hex numbers each of which should resolve to a byte value (i.e. 0 to ff inclusive). A (single) space separated string of hex numbers is also allowed but the list needs to be in quotes. This is the new contents of the mode page to be written to <i>DEVICE</i>, potentially filtered by the mask string.</dd>
+<dt><code>-c</code>, <code>&#8211;contents</code>=-</dt>
+<dd>reads contents string from stdin. The hex numbers in the string may be comma, space, tab or linefeed (newline) separated. If a line contains &quot;#&quot; then the remaining characters on that line are ignored. Otherwise each non separator character should resolve to a byte value (i.e. 0 to ff inclusive). This forms the new contents of the mode page to be written to <i>DEVICE</i>, potentially filtered by the mask string.</dd>
+<dt><code>-d</code>, <code>&#8211;dbd</code></dt>
+<dd>disable block descriptors (DBD flag in cdb). Some device types include block descriptors in the mode data returned by a MODE SENSE command. If so the same block descriptors are written by the MODE SELECT command. This option instructs the MODE SENSE command not to return any block descriptors. This would be a sensible default for this utility apart from the fact that not all SCSI devices support the DBD bit in the cdb.</dd>
+<dt><code>-f</code>, <code>&#8211;force</code></dt>
+<dd>force the contents string to be taken as the new mode page, or at least doesn&#8217;t do checks on the existing mode page. Note that <i>DEVICE</i> may still reject the new contents for the mode page. Cannot be given with the <i>&#8211;mask=M,M&#8230;</i> option.</dd>
+<dt><code>-h</code>, <code>&#8211;help</code></dt>
+<dd>output the usage message then exit.</dd>
+<dt><code>-l</code>, <code>&#8211;len</code>=10 | 6</dt>
+<dd>length of the SCSI commands (cdb) sent to <i>DEVICE</i>. The default is 10 so 10 byte MODE SENSE and MODE SELECT commands are issued. Some old devices don&#8217;t support the 10 byte variants hence this option.</dd>
+<dt><code>-m</code>, <code>&#8211;mask</code>=<i>M,M&#8230;</i></dt>
+<dd>where <i>M,M&#8230;</i> is a string of comma separated hex numbers each of which should resolve to a byte value (i.e. 0 to ff inclusive). A (single) space separated string of hex numbers is also allowed but the list needs to be in quotes. The mask chooses (bit by bit) whether the new mode page comes from the contents (mask bit set) or from the existing mode page (mask bit clear). If the mask string is shorter than the contents string then the remaining bytes are taken from the contents string. If the contents string is shorter than the existing mode page then the remaining bytes are taken from the existing mode page (i.e. they are left unaltered).</dd>
+<dt><code>-p</code>, <code>&#8211;page</code>=<i>PG</i></dt>
+<dd>where <i>PG</i> is the page code value to fetch and modify. The page code is in hex and should be between 0 and 3e inclusive. Notice that page code 3f to fetch all mode pages is disallowed.</dd>
+<dt><code>-p</code>, <code>&#8211;page</code>=<i>PG,SPG</i></dt>
+<dd>where <i>PG</i> is the page code value and <i>SPG</i> is the subpage code value to fetch and modify. Both values are in hex. The subpage code should be between 0 and fe inclusive. Notice that subpage code ff to fetch all mode subpages (for a given mode page or all mode pages in the case of 3f,ff) is disallowed.</dd>
+<dt><code>-s</code>, <code>&#8211;save</code></dt>
+<dd>changes the &quot;saved&quot; mode page when MODE SELECT is successful. By default (i.e. when <i>&#8211;save</i> is not used) only the &quot;current&quot; mode page values are changed when MODE SELECT is successful. In this case the new mode page will stay in effect until the device is reset (e.g. power cycled). When it restarts the &quot;saved&quot; values for the mode page will be re-instated. So to make changes permanent use the <i>&#8211;save</i> option.</dd>
+<dt><code>-v</code>, <code>&#8211;verbose</code></dt>
+<dd>increase the level of verbosity, (i.e. debug output).</dd>
+<dt><code>-V</code>, <code>&#8211;version</code></dt>
+<dd>print the version string and then exit.</dd></dl>
 <h2>Notes</h2>
 <p>This utility does not check whether the contents string is trying to modify parts of the mode page which are changeable. The device should do that and if some part is not changeable then it should report: &quot;Invalid field in parameter list&quot;. </p>
 <p> Some mode pages are not saveable. If so an attempt to use the <i>&#8211;save</i> option should cause an error to be reported from the device: &quot;Illegal field in cdb&quot;. </p>
@@ -53,15 +53,10 @@ description: "sg_wr_mode – write (modify) SCSI mode page"
 <h2>Examples</h2>
 <p>This utility can be used together with the sg_modes utility. To re-instate the default mode page values (i.e. the mode page values chosen by the manufacturer of the device) as both the current and saved mode page values the following sequence could be used: </p>
 <pre><code>$ sg_modes --control=2 --page=1a -r /dev/sda &gt; t
-
 $ sg_wr_mode --page=1a --contents=- --save /dev/sda &lt; t</code></pre>
 <p> Next is an example of using a mask to modify the &quot;idle condition counter&quot; of the &quot;power condition&quot; mode page (0x1a) from 0x28 to 0x37. Note that the change is not saved so the &quot;idle condition counter&quot; will revert to 0x28 after the next power cycle. The output from sg_modes is abridged. </p>
 <pre><code>$ sg_modes --page=1a /dev/hdc
-
-
 &gt;&gt; Power condition (mmc), page_control: current
-
-
 00     1a 0a 00 03 00 00 00 28  00 00 01 2c</code></pre>
 <p>&nbsp;<wbr>$&nbsp;<wbr>sg_wr_mode -p 1a -c 0,0,0,0,0,0,0,37 -m 0,0,0,0,0,0,0,ff&nbsp;<wbr>/dev/hdc<br />
 &nbsp;<wbr>$&nbsp;<wbr>sg_modes -p 1a&nbsp;<wbr>/dev/hdc </p>

@@ -18,11 +18,11 @@ description: "pam_sge-qrsh-setup – PAM module for tight integration with xxQS_
 <h2>Example</h2>
 <p>On a typical GNU/Linux system, add the following line to <code>/etc/pam.d/sshd</code>, e.g. at the top of the file. </p>
 <dl>
-<dd>&nbsp;auth required&nbsp;/opt/sge/lib/lx-amd64/pam_sge-qrsh-setup.so </p>
+<dd>&nbsp;auth required&nbsp;/opt/sge/lib/lx-amd64/pam_sge-qrsh-setup.so </dd>
 </dl>
 <p> On some systems it might be necessary to copy pam_sge-qrsh-setup.so into, say, <code>/lib/security</code> and instead use it as </p>
 <dl>
-<dd>&nbsp;auth required pam_sge-qrsh-setup.so</dl>
+<dd>&nbsp;auth required pam_sge-qrsh-setup.so</dd></dl>
 <h2>Files</h2>
 <p><code>/var/run/sge-qrsh-setup</code><br />
  <code>$SGE_ROOT/util/resources/wrappers/rshd-wrapper</code></p>

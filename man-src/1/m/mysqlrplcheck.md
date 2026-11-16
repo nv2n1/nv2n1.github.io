@@ -11,39 +11,39 @@ description: "mysqlrplcheck – Check Replication Prerequisitiess"
 <p> mysqlrplcheck &#8211; Check Replication Prerequisitiess </p>
 <h2>SYNOPSIS</h2>
 <dl>
-<dt> <code>mysqlrplcheck [</code><i>options</i><code>]</code></dl>
+<dt> <code>mysqlrplcheck [</code><i>options</i><code>]</code></dt></dl>
 <h2>DESCRIPTION</h2>
-<dd>This utility checks the prerequisites for replication between a master and a slave. These checks (called tests) are designed to ensure a healthy replication setup. The utility performs the following tests: </p>
+<dd>This utility checks the prerequisites for replication between a master and a slave. These checks (called tests) are designed to ensure a healthy replication setup. The utility performs the following tests: </dd>
 <dl>
 <dt>
-<dd> 1. Is the binary log enabled on the master?</dl>
+</dt><dd> 1. Is the binary log enabled on the master?</dd></dl>
 <dl>
 <dt>
-<dd> 2. Are there binary logging exceptions (such as *_do_db or *_ignore_db settings)? If so, display them.</dl>
+</dt><dd> 2. Are there binary logging exceptions (such as *_do_db or *_ignore_db settings)? If so, display them.</dd></dl>
 <dl>
 <dt>
-<dd> 3. Does the replication user exist on the master with the correct privileges?</dl>
+</dt><dd> 3. Does the replication user exist on the master with the correct privileges?</dd></dl>
 <dl>
 <dt>
-<dd> 4. Are there server_id conflicts?</dl>
+</dt><dd> 4. Are there server_id conflicts?</dd></dl>
 <dl>
 <dt>
-<dd> 5. Is the slave connected to this master? If not, display the master host and port.</dl>
+</dt><dd> 5. Is the slave connected to this master? If not, display the master host and port.</dd></dl>
 <dl>
 <dt>
-<dd> 6. Are there conflicts between the master.info file on the slave and the values shown in <code>SHOW SLAVE STATUS</code> on the master?</dl>
+</dt><dd> 6. Are there conflicts between the master.info file on the slave and the values shown in <code>SHOW SLAVE STATUS</code> on the master?</dd></dl>
 <dl>
 <dt>
-<dd> 7. Are the InnoDB configurations compatible (plugin vs. native)?</dl>
+</dt><dd> 7. Are the InnoDB configurations compatible (plugin vs. native)?</dd></dl>
 <dl>
 <dt>
-<dd> 8. Are the storage engines compatible (have same on slave as master)?</dl>
+</dt><dd> 8. Are the storage engines compatible (have same on slave as master)?</dd></dl>
 <dl>
 <dt>
-<dd> 9. Are the lower_case_tables_names settings compatible? Warn if there are settings for lowercase/uppercase table names that can cause problems. See Bug #59240.</dl>
+</dt><dd> 9. Are the lower_case_tables_names settings compatible? Warn if there are settings for lowercase/uppercase table names that can cause problems. See Bug #59240.</dd></dl>
 <dl>
 <dt>
-<dd> 10. Is the slave behind the master?</dl>
+</dt><dd> 10. Is the slave behind the master?</dd></dl>
 <p> The utility runs each test in turn unless there is a fatal error preventing further testing, such as a loss of connection to the servers. </p>
 <p> Each test can complete with one of the following states: pass (the prerequisites are met), fail (the prerequisites were met but one or more errors occurred or there are exceptions to consider), or warn (the test found some unusual settings that should be examined further but may not be in error). </p>
 <p> Use the <code>&#8211;verbose</code> option to see additional information such as server IDs, lower_case_table_name settings, and the contents of the master information file on the slave. </p>
@@ -52,43 +52,43 @@ OPTIONS </p>
 <p> <code>mysqlrplcheck</code> accepts the following command-line options: </p>
 <dl>
 <dt>
-<dd> &bull; &#8211;help </p>
+</dt><dd> &bull; &#8211;help </dd>
 <p> Display a help message and exit.</dl>
 <dl>
 <dt>
-<dd> &bull; &#8211;master=&lt;source&gt; </p>
+</dt><dd> &bull; &#8211;master=&lt;source&gt; </dd>
 <p> Connection information for the master server in the format: &lt;<i>user</i>&gt;[:&lt;<i>passwd</i>&gt;]@&lt;<i>host</i>&gt;[:&lt;<i>port</i>&gt;][:&lt;<i>socket</i>&gt;]or &lt;<i>login-path</i>&gt;[:&lt;<i>port</i>&gt;][:&lt;<i>socket</i>&gt;].</dl>
 <dl>
 <dt>
-<dd> &bull; &#8211;master-info-file=&lt;file&gt; </p>
+</dt><dd> &bull; &#8211;master-info-file=&lt;file&gt; </dd>
 <p> The name of the master information file on the slave. The default is master.info read from the data directory. Note: This option requires that you run the utility on the slave and that you have appropriate read access for the file.</dl>
 <dl>
 <dt>
-<dd> &bull; &#8211;quiet, -q </p>
+</dt><dd> &bull; &#8211;quiet, -q </dd>
 <p> Turn off all messages for quiet execution. Note: Errors and warnings are not suppressed.</dl>
 <dl>
 <dt>
-<dd> &bull; &#8211;show-slave-status, -s </p>
+</dt><dd> &bull; &#8211;show-slave-status, -s </dd>
 <p> Display the values from <code>SHOW SLAVE STATUS</code> on the master.</dl>
 <dl>
 <dt>
-<dd> &bull; &#8211;slave=&lt;source&gt; </p>
+</dt><dd> &bull; &#8211;slave=&lt;source&gt; </dd>
 <p> Connection information for the slave server in the format: &lt;<i>user</i>&gt;[:&lt;<i>passwd</i>&gt;]@&lt;<i>host</i>&gt;[:&lt;<i>port</i>&gt;][:&lt;<i>socket</i>&gt;]or &lt;<i>login-path</i>&gt;[:&lt;<i>port</i>&gt;][:&lt;<i>socket</i>&gt;].</dl>
 <dl>
 <dt>
-<dd> &bull; &#8211;suppress </p>
+</dt><dd> &bull; &#8211;suppress </dd>
 <p> Suppress warning messages.</dl>
 <dl>
 <dt>
-<dd> &bull; &#8211;verbose, -v </p>
+</dt><dd> &bull; &#8211;verbose, -v </dd>
 <p> Specify how much information to display. Use this option multiple times to increase the amount of information. For example, <code>-v</code> = verbose, <code>-vv</code> = more verbose, <code>-vvv</code> = debug.</dl>
 <dl>
 <dt>
-<dd> &bull; &#8211;version </p>
+</dt><dd> &bull; &#8211;version </dd>
 <p> Display version information and exit.</dl>
 <dl>
 <dt>
-<dd> &bull; &#8211;width=&lt;number&gt; </p>
+</dt><dd> &bull; &#8211;width=&lt;number&gt; </dd>
 <p> Change the display width of the test report. The default is 75 characters.</dl>
 <p>NOTES </p>
 <p> The login user must have the appropriate permissions to execute <code>SHOW SLAVE STATUS</code>, <code>SHOW MASTER STATUS</code>, and <code>SHOW VARIABLES</code> on the appropriate servers. </p>
@@ -99,7 +99,7 @@ EXAMPLES </p>
 <p> To check the prerequisites of a master and slave that currently are actively performing replication, use the following command: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre><code>
 $ mysqlrplcheck --master=root [at] host1:3310 --slave=root [at] host2:3311
 #master on host1 : ... connected.
@@ -118,12 +118,12 @@ Checking lower_case_table_names settings                          [pass]
 Checking slave delay (seconds behind master)                      [pass]
 #... done.
 </code></pre>
-</dl>
+</dd></dl>
 <p> As shown in the example, you must provide valid login information for both the master and the slave. </p>
 <p> To perform the same command but also display the contents of the master information file on the slave and the values of <code>SHOW SLAVE STATUS</code> as well as additional details, use this command: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre><code>
 $ mysqlrplcheck --master=root [at] host1:3310 --slave=root [at] host2:3311 \
   --show-slave-status -vv
@@ -205,7 +205,7 @@ Checking slave delay (seconds behind master)                       [pass]
                 Last_SQL_Error :
 #... done.
 </code></pre>
-</dl>
+</dd></dl>
 <h2>COPYRIGHT</h2>
 <h2>SEE ALSO</h2>
 <p> For more information, please refer to the MySQL Utilities section of the MySQL Workbench Reference Manual, which is available online at <a rel="nofollow" href="http://dev.mysql.com/doc/workbench/en/.">http://dev.mysql.com/doc/workbench/en/.</a></p>

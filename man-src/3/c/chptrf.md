@@ -19,7 +19,7 @@ description: "chptrf.f –"
 <p> <code>Purpose: </code></p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
  CHPTRF computes the factorization of a complex Hermitian packed
  matrix A using the Bunch-Kaufman diagonal pivoting method:
@@ -28,11 +28,11 @@ description: "chptrf.f –"
  triangular matrices, and D is Hermitian and block diagonal with
  1-by-1 and 2-by-2 diagonal blocks.
 </pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>UPLO</i> </p>
+</dt><dd> <i>UPLO</i> </dd>
 <pre>
           UPLO is CHARACTER*1
           = 'U':  Upper triangle of A is stored;
@@ -81,18 +81,18 @@ description: "chptrf.f –"
 <p> <code>Author:</code></p>
 <dl>
 <dt>
-<dd> Univ. of Tennessee </p>
+</dt><dd> Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl>
 <dt>
-<dd> November 2011</dl>
+</dt><dd> November 2011</dd></dl>
 <p> <code>Further Details: </code></p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
   If UPLO = 'U', then A = U*D*U**H, where
      U = H(n)*H(n)* ... *P(k)U(k)* ...,
@@ -123,11 +123,11 @@ description: "chptrf.f –"
   If s = 2, the lower triangle of D(k) overwrites A(k,k), A(k+1,k),
   and A(k+1,k+1), and v overwrites A(k+2:n,k:k+1).
 </pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Contributors: </code></p>
 <dl>
 <dt>
-<dd> J. Lewis, Boeing Computer Services Company</dl>
+</dt><dd> J. Lewis, Boeing Computer Services Company</dd></dl>
 <p> Definition at line 160 of file chptrf.f.</p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for LAPACK from the source code. </p>

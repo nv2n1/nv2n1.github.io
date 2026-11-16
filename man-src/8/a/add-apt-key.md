@@ -15,28 +15,28 @@ description: "add-apt-key – Command line tool to add GPG keys to the APT keyri
 <h2>Options</h2>
 <p>This program follows the usual GNU command line syntax, with long options starting with two dashes (<code>&#8212;</code>).</p>
 <dl>
-<dt><code>-h</code>, <code>&#8211;help</code></p>
-<dd>Show online help (usage).</p>
-<dt><code>-v</code>, <code>&#8211;verbose</code></p>
-<dd>verbose mode will show each command before it is executed.</p>
-<dt><code>-k</code>, <code>&#8211;keyserver name</code></p>
-<dd>Select a specific keyserver to use.</p>
-<dt><code>keyid</code></p>
-<dd>The GPG key identifier to add.</dl>
+<dt><code>-h</code>, <code>&#8211;help</code></dt>
+<dd>Show online help (usage).</dd>
+<dt><code>-v</code>, <code>&#8211;verbose</code></dt>
+<dd>verbose mode will show each command before it is executed.</dd>
+<dt><code>-k</code>, <code>&#8211;keyserver name</code></dt>
+<dd>Select a specific keyserver to use.</dd>
+<dt><code>keyid</code></dt>
+<dd>The GPG key identifier to add.</dd></dl>
 <h2>Files</h2>
 <dl>
-<dt><code>/etc/default/add-apt-key</code></p>
-<dd>Configuration file specifying the public keyserver to use.</dl>
+<dt><code>/etc/default/add-apt-key</code></dt>
+<dd>Configuration file specifying the public keyserver to use.</dd></dl>
 <h2>Exit Values</h2>
 <p>The folling exit values are used:</p>
 <dl>
-<dt><code>0</code></p>
-<dd>Adding the keyid was successful.</p>
-<dt><code>1</code></p>
-<dd>Invalid script arguments.</p>
-<dt><code>2</code></p>
-<dd>GPG keyid cannot be retrieved (or is malformed).</p>
-<dt><code>3</code></p>
-<dd>Error in adding keyid to the APT keyring.</dl>
+<dt><code>0</code></dt>
+<dd>Adding the keyid was successful.</dd>
+<dt><code>1</code></dt>
+<dd>Invalid script arguments.</dd>
+<dt><code>2</code></dt>
+<dd>GPG keyid cannot be retrieved (or is malformed).</dd>
+<dt><code>3</code></dt>
+<dd>Error in adding keyid to the APT keyring.</dd></dl>
 <h2>See Also</h2>
 <p><a href="/docs/linux/man/1-gpg/">gpg</a>(1), <a href="/docs/linux/man/8-apt-key/">apt-key</a>(8) </p>

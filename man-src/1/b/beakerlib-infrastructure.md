@@ -28,13 +28,13 @@ url: "/docs/linux/man/1-beakerlib-infrastructure/"
 </pre>
 <dl>
 <dt>server
-<dd> <font SIZE="-1">NFS</font> server hostname.
-<dt>share
-<dd> Shared directory name.
-<dt>mountpoint
-<dd> Local mount point.
-<dt><font SIZE="-1">MOUNT_OPTS</font>
-<dd> Mount options.</dl>
+</dt><dd> <font SIZE="-1">NFS</font> server hostname.
+</dd><dt>share
+</dt><dd> Shared directory name.
+</dd><dt>mountpoint
+</dt><dd> Local mount point.
+</dd><dt><font SIZE="-1">MOUNT_OPTS</font>
+</dt><dd> Mount options.</dd></dl>
  
 
  Returns 0 if mounting the share was successful. 
@@ -50,13 +50,13 @@ rlCheckMount[-o MOUNT_OPTS] mountpoint
 </code></pre>
 <dl>
 <dt>mountpoint
-<dd> Local mount point.
-<dt>server
-<dd> <font SIZE="-1">NFS</font> server hostname
-<dt>share
-<dd> Shared directory name
-<dt><font SIZE="-1">MOUNT_OPTS</font>
-<dd> Mount options to check (comma separated list)</dl>
+</dt><dd> Local mount point.
+</dd><dt>server
+</dt><dd> <font SIZE="-1">NFS</font> server hostname
+</dd><dt>share
+</dt><dd> Shared directory name
+</dd><dt><font SIZE="-1">MOUNT_OPTS</font>
+</dt><dd> Mount options to check (comma separated list)</dd></dl>
  
 
  With one parameter, returns 0 when specified directory exists and is a mountpoint. With two parameters, returns 0 when specific directory exists, is a mountpoint and an export from specific server is mounted there. With three parameters, returns 0 if a specific shared directory is mounted on a given server on a given mountpoint 
@@ -74,13 +74,13 @@ rlAssertMount[-o MOUNT_OPTS] mountpoint
 
 <dl>
 <dt>mountpoint
-<dd> Local mount point.
-<dt>server
-<dd> <font SIZE="-1">NFS</font> server hostname
-<dt>share
-<dd> Shared directory name
-<dt><font SIZE="-1">MOUNT_OPTS</font>
-<dd> Mount options to check (comma separated list)</dl>
+</dt><dd> Local mount point.
+</dd><dt>server
+</dt><dd> <font SIZE="-1">NFS</font> server hostname
+</dd><dt>share
+</dt><dd> Shared directory name
+</dd><dt><font SIZE="-1">MOUNT_OPTS</font>
+</dt><dd> Mount options to check (comma separated list)</dd></dl>
  
 
  With one parameter, returns 0 when specified directory exists and is a mountpoint. With two parameters, returns 0 when specific directory exists, is a mountpoint and an export from specific server is mounted there. With three parameters, returns 0 if a specific shared directory is mounted on a given server on a given mountpoint. Asserts <font SIZE="-1">PASS</font> when the condition is true. 
@@ -96,18 +96,17 @@ rlHash[--decode][--algorithm HASH_ALG]-- stdin | STRING rlUnhash[--algorithm HAS
 
 <dl>
 <dt>--decode
-<dd> Unhash given string.
-<dt>--algorithm
-<dd> Use given hash algorithm. Currently supported algorithms: 
+</dt><dd> Unhash given string.
+</dd><dt>--algorithm
+</dt><dd> Use given hash algorithm. Currently supported algorithms: 
 &nbsp;<wbr>&nbsp;<wbr>base64 
 &nbsp;<wbr>&nbsp;<wbr>base64_&nbsp;<wbr>- this is standard base64 where&nbsp;<wbr>'='&nbsp;<wbr>is replaced by&nbsp;<wbr>'_' 
 &nbsp;<wbr>&nbsp;<wbr>hex 
-
  Defaults to hex. Default algorithm can be override using global variable rlHashAlgorithm.
-<dt>--stdin
-<dd> Get the string from stdin.
-<dt><font SIZE="-1">STRING</font>
-<dd> String to be hashed/unhashed.</dl>
+</dd><dt>--stdin
+</dt><dd> Get the string from stdin.
+</dd><dt><font SIZE="-1">STRING</font>
+</dt><dd> String to be hashed/unhashed.</dd></dl>
  
 
  Returns 0 if success. 
@@ -131,15 +130,15 @@ rlFileBackup[--clean][--namespace name][--missing - ok | --no - missing - ok] fi
  You can use <tt>&quot;rlRun&quot;</tt> for asserting the result but keep in mind meaning of exit codes, especialy exit code 8, if using without --clean option.
 <dl>
 <dt>--clean
-<dd> If this option is provided (have to be first option of the command), then file/dir backuped using this command (provided in next options) will be (recursively) removed before we will restore it. This option implies --missing-ok, this can be overridden by --no-missing-ok.
-<dt>--namespace name
-<dd> Specifies the namespace to use. Namespaces can be used to separate backups and their restoration.
-<dt>--missing-ok
-<dd> Do not raise an error in case of missing file to backup.
-<dt>--no-missing-ok
-<dd> Do raise an error in case of missing file to backup. This is useful with --clean. This behaviour can be globally set by global variable BEAKERLIB_FILEBACKUP_MISSING_OK=false.
-<dt>file
-<dd> Files and/or directories to be backed up.</dl>
+</dt><dd> If this option is provided (have to be first option of the command), then file/dir backuped using this command (provided in next options) will be (recursively) removed before we will restore it. This option implies --missing-ok, this can be overridden by --no-missing-ok.
+</dd><dt>--namespace name
+</dt><dd> Specifies the namespace to use. Namespaces can be used to separate backups and their restoration.
+</dd><dt>--missing-ok
+</dt><dd> Do not raise an error in case of missing file to backup.
+</dd><dt>--no-missing-ok
+</dt><dd> Do raise an error in case of missing file to backup. This is useful with --clean. This behaviour can be globally set by global variable BEAKERLIB_FILEBACKUP_MISSING_OK=false.
+</dd><dt>file
+</dt><dd> Files and/or directories to be backed up.</dd></dl>
  
 
  Returns 0 if the backup was successful. Returns 1 if parsing of parameters was not successful. Returns 2 if no files specification was provided. Returns 3 if <font SIZE="-1">BEAKERLIB_DIR</font> variable is not set, e.g. rlJournalStart was not executed. Returns 4 if creating of main backup destination directories was not successful. Returns 5 if creating of file specific backup destination directories was not successful. Returns 6 if the copy of backed up files was not successful. Returns 7 if attributes of backedup files were not successfuly copied. Returns 8 if backed up files does not exist. This can be suppressed based on other options. 
@@ -168,7 +167,7 @@ rlFileBackup[--clean][--namespace name][--missing - ok | --no - missing - ok] fi
  You can use <tt>&quot;rlRun&quot;</tt> for asserting the result.
 <dl>
 <dt>--namespace name
-<dd> Specifies the namespace to use. Namespaces can be used to separate backups and their restoration.</dl>
+</dt><dd> Specifies the namespace to use. Namespaces can be used to separate backups and their restoration.</dd></dl>
  
 
  Returns 0 if backup dir is found and files are restored successfully. 
@@ -194,7 +193,7 @@ rlFileBackup[--clean][--namespace name][--missing - ok | --no - missing - ok] fi
 </pre>
 <dl>
 <dt>service
-<dd> Name of the service(s) to start.</dl>
+</dt><dd> Name of the service(s) to start.</dd></dl>
  
 
  Returns number of services which failed to start/restart; thus zero is returned when everything is <font SIZE="-1">OK.</font> 
@@ -208,7 +207,7 @@ rlFileBackup[--clean][--namespace name][--missing - ok | --no - missing - ok] fi
 </pre>
 <dl>
 <dt>service
-<dd> Name of the service(s) to stop.</dl>
+</dt><dd> Name of the service(s) to stop.</dd></dl>
  
 
  Returns number of services which failed to become stopped; thus zero is returned when everything is <font SIZE="-1">OK.</font> 
@@ -222,7 +221,7 @@ rlFileBackup[--clean][--namespace name][--missing - ok | --no - missing - ok] fi
 </pre>
 <dl>
 <dt>service
-<dd> Name of the service(s) to restore to original state. All services will be restored in reverse order if no service name is given.</dl>
+</dt><dd> Name of the service(s) to restore to original state. All services will be restored in reverse order if no service name is given.</dd></dl>
  
 
  Returns number of services which failed to get back to their original state; thus zero is returned when everything is <font SIZE="-1">OK.</font> 
@@ -236,7 +235,7 @@ rlFileBackup[--clean][--namespace name][--missing - ok | --no - missing - ok] fi
 </pre>
 <dl>
 <dt>service
-<dd> Name of the service(s) to enable.</dl>
+</dt><dd> Name of the service(s) to enable.</dd></dl>
  
 
  Returns number of services which failed enablement; thus zero is returned when everything is <font SIZE="-1">OK.</font> 
@@ -250,7 +249,7 @@ rlFileBackup[--clean][--namespace name][--missing - ok | --no - missing - ok] fi
 </pre>
 <dl>
 <dt>service
-<dd> Name of the service(s) to disable.</dl>
+</dt><dd> Name of the service(s) to disable.</dd></dl>
  
 
  Returns number of services which failed disablement; thus zero is returned when everything is <font SIZE="-1">OK.</font>
@@ -268,7 +267,7 @@ rlFileBackup[--clean][--namespace name][--missing - ok | --no - missing - ok] fi
 </pre>
 <dl>
 <dt>socket
-<dd> Name of the socket(s) to start.</dl>
+</dt><dd> Name of the socket(s) to start.</dd></dl>
  
 
  Returns number of sockets which failed to start/restart; thus zero is returned when everything is <font SIZE="-1">OK.</font> 
@@ -282,7 +281,7 @@ rlFileBackup[--clean][--namespace name][--missing - ok | --no - missing - ok] fi
 </pre>
 <dl>
 <dt>socket
-<dd> Name of the socket(s) to stop.</dl>
+</dt><dd> Name of the socket(s) to stop.</dd></dl>
  
 
  Returns number of sockets which failed to become stopped; thus zero is returned when everything is <font SIZE="-1">OK.</font> 
@@ -298,7 +297,7 @@ rlFileBackup[--clean][--namespace name][--missing - ok | --no - missing - ok] fi
 </pre>
 <dl>
 <dt>socket
-<dd> Name of the socket(s) to restore to original state.</dl>
+</dt><dd> Name of the socket(s) to restore to original state.</dd></dl>
  
 
  Returns number of sockets which failed to get back to their original state; thus zero is returned when everything is <font SIZE="-1">OK.</font>
@@ -337,17 +336,16 @@ rlFileBackup[--clean][--namespace name][--missing - ok | --no - missing - ok] fi
 
 <dl>
 <dt>&bull;
-<dd> Petr Muller &lt;pmuller [at] redhat.com&gt;
-<dt>&bull;
-<dd> Jan Hutar &lt;jhutar [at] redhat.com&gt;
-<dt>&bull;
-<dd> Petr Splichal &lt;psplicha [at] redhat.com&gt;
-<dt>&bull;
-<dd> Ales Zelinka &lt;azelinka [at] redhat.com&gt;
-<dt>&bull;
-<dd> Karel Srot &lt;ksrot [at] redhat.com&gt; 
-
-</dl>
+</dt><dd> Petr Muller &lt;pmuller [at] redhat.com&gt;
+</dd><dt>&bull;
+</dt><dd> Jan Hutar &lt;jhutar [at] redhat.com&gt;
+</dd><dt>&bull;
+</dt><dd> Petr Splichal &lt;psplicha [at] redhat.com&gt;
+</dd><dt>&bull;
+</dt><dd> Ales Zelinka &lt;azelinka [at] redhat.com&gt;
+</dd><dt>&bull;
+</dt><dd> Karel Srot &lt;ksrot [at] redhat.com&gt; 
+</dd></dl>
 
 <h2>Index</h2>
 

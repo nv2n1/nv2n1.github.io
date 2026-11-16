@@ -15,14 +15,14 @@ description: "ALTER OPERATOR – change the definition of an operator"
 <p> You must own the operator to use <code>ALTER OPERATOR</code>. To alter the owner, you must also be a direct or indirect member of the new owning role, and that role must have CREATE privilege on the operator&#8217;s schema. (These restrictions enforce that altering the owner doesn&#8217;t do anything you couldn&#8217;t do by dropping and recreating the operator. However, a superuser can alter ownership of any operator anyway.)</p>
 <h2>Parameters</h2>
 <dl>
-<dt><i>name</i></p>
-<dd>The name (optionally schema-qualified) of an existing operator.</p>
-<dt><i>lefttype</i></p>
-<dd>The data type of the operator&#8217;s left operand; write NONE if the operator has no left operand.</p>
-<dt><i>righttype</i></p>
-<dd>The data type of the operator&#8217;s right operand; write NONE if the operator has no right operand.</p>
-<dt><i>newowner</i></p>
-<dd>The new owner of the operator.</dl>
+<dt><i>name</i></dt>
+<dd>The name (optionally schema-qualified) of an existing operator.</dd>
+<dt><i>lefttype</i></dt>
+<dd>The data type of the operator&#8217;s left operand; write NONE if the operator has no left operand.</dd>
+<dt><i>righttype</i></dt>
+<dd>The data type of the operator&#8217;s right operand; write NONE if the operator has no right operand.</dd>
+<dt><i>newowner</i></dt>
+<dd>The new owner of the operator.</dd></dl>
 <h2>Examples</h2>
 <p>Change the owner of a custom operator a @@ b for type <code>text</code>: </p>
 <pre>ALTER OPERATOR @@ (text, text) OWNER TO joe;</pre>

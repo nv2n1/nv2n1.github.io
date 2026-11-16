@@ -14,14 +14,14 @@ description: "scsi_remove_target – try to remove a target and all its devices"
 <p><i>dev</i></p>
 <dl>
 <dd>
-<dd>generic starget or parent of generic stargets to be removed</dl>
+</dd><dd>generic starget or parent of generic stargets to be removed</dd></dl>
 <h2>Note</h2>
 <p>This is slightly racy. It is possible that if the user requests the addition of another device then the target won&#8217;t be removed.</p>
 <h2>Authors</h2>
 <p><code>James Bottomley</code> &lt;James.Bottomley [at] hansenpartnership.com&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <p> <code>Rob Landley</code> &lt;rob [at] landley.net&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

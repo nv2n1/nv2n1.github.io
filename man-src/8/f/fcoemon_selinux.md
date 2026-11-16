@@ -89,8 +89,8 @@ description: "fcoemon_selinux – Security Enhanced Linux Policy for the fcoemon
 <p> <code>fcoemon_var_run_t</code> </p>
 <p> &#8211; Set files with the fcoemon_var_run_t type, if you want to store the fcoemon files under the /run or /var/run directory. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/var/run/fcm(/.*)?, /var/run/fcoemon.pid </p>
+<dt>Paths:</dt>
+<dd>/var/run/fcm(/.*)?, /var/run/fcoemon.pid </dd>
 </dl>
 <p> Note: File context can be temporarily modified with the chcon command. If you want to permanently change the file context you need to use the <code>semanage fcontext</code> command. This will modify the SELinux labeling database. You will need to use <code>restorecon</code> to apply the labels.</p>
 <h2>Commands</h2>

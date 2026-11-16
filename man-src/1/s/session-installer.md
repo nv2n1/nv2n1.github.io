@@ -19,8 +19,8 @@ description: "session-installer – allows applications to easily install and re
 <p> Normally it is not required to start this programme manually since it makes use of D-Bus activation and will be started on request automatically.</p>
 <h2>ENVIRONMENT</h2>
 <dl>
-<dt>SESSIONINSTALLER_BACKEND</p>
-<dd> Set the package manager which should be used for installation. Possible values are <i>aptdaemon</i>, <i>synaptic</i> and <i>dummy</i>.</dl>
+<dt>SESSIONINSTALLER_BACKEND</dt>
+<dd> Set the package manager which should be used for installation. Possible values are <i>aptdaemon</i>, <i>synaptic</i> and <i>dummy</i>.</dd></dl>
 <h2>HOMEPAGE</h2>
 <p> <a rel="nofollow" href="https://launchpad.net/sessioninstaller">https://launchpad.net/sessioninstaller</a></p>
 <h2>BUGS</h2>

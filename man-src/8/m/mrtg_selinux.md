@@ -95,8 +95,8 @@ description: "mrtg_selinux – Security Enhanced Linux Policy for the mrtg proce
 <p> <code>mrtg_lock_t</code> </p>
 <p> &#8211; Set files with the mrtg_lock_t type, if you want to treat the files as mrtg lock data, stored under the /var/lock directory </p>
 <dl>
-<dt>Paths:</p>
-<dd>/var/lock/mrtg(/.*)?, /var/lock/mrtg-rrd(/.*)?, /etc/mrtg/mrtg.ok, /var/lock/subsys/mrtg </p>
+<dt>Paths:</dt>
+<dd>/var/lock/mrtg(/.*)?, /var/lock/mrtg-rrd(/.*)?, /etc/mrtg/mrtg.ok, /var/lock/subsys/mrtg </dd>
 </dl>
 <p> <code>mrtg_log_t</code> </p>
 <p> &#8211; Set files with the mrtg_log_t type, if you want to treat the data as mrtg log data, usually stored under the /var/log directory. </p>

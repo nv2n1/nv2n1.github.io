@@ -24,10 +24,8 @@ Flips bits, i.e. changes true values to false and false values to true. Equivale
 <h2>Example</h2>
 <p>// Run this code </p>
 <pre><code>#include &lt;iostream&gt;
-
 #include &lt;bitset&gt;
 int main()
-
 {
     std::bitset&lt;4&gt; b;
     std::cout &lt;&lt; b &lt;&lt; &quot;
@@ -51,14 +49,7 @@ set <i>(public member function)</i><br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;sets bits to false<br />
 reset <i>(public member function)</i> </p>
 <pre><code>operator&amp;= performs binary AND, OR, XOR and NOT
-
 operator|= (public member function)
-
 operator^=
-
 operator~
-
-
-
-
 </code></pre>

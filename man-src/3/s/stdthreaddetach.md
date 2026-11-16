@@ -34,19 +34,15 @@ std::system_error if joinable() == false or an error occurs.
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;iostream&gt;
-
 #include &lt;chrono&gt;
-
 #include &lt;thread&gt;
 void independentThread()
-
 {
     std::cout &lt;&lt; &quot;Starting concurrent thread.\n&quot;;
     std::this_thread::sleep_for(std::chrono::seconds(2));
     std::cout &lt;&lt; &quot;Exiting concurrent thread.\n&quot;;
 }
 void threadCaller()
-
 {
     std::cout &lt;&lt; &quot;Starting thread caller.\n&quot;;
     std::thread t(independentThread);
@@ -55,7 +51,6 @@ void threadCaller()
     std::cout &lt;&lt; &quot;Exiting thread caller.\n&quot;;
 }
 int main()
-
 {
     threadCaller();
     std::this_thread::sleep_for(std::chrono::seconds(5));

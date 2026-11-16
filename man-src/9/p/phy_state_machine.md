@@ -15,7 +15,7 @@ phy_state_machine - Handle the state machine
 <h2>Arguments</h2>
 
 <i>work</i>
-<dl><dd><dd>work_struct that describes the work to be done</dl>
+<dl><dd></dd><dd>work_struct that describes the work to be done</dd></dl>
 
 <h2>Copyright</h2>
 

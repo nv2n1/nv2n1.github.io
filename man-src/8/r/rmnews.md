@@ -18,5 +18,5 @@ description: "rmnews – expunge and remove news articles"
 <p> <i>Rmnews</i> reads its configuration options out of the <i><a href="/docs/linux/man/5-imapd-conf/">imapd.conf</a></i>(5) file. The optional <i>newsprefix</i> option specifies a prefix to be prepended to newsgroup names to make the corresponding IMAP mailbox names. The required <i>partition-news</i> option specifies the pathname prefix to the IMAP news mailboxes. The value of <i>partition-news</i> concatenated with the dots-to-slashes-converted value of <i>newsprefix</i> must be the pathname of the news spool directory.</p>
 <h2>Files</h2>
 <dl>
-<dt><code>/etc/imapd.conf</code></p>
-<dd></dl>
+<dt><code>/etc/imapd.conf</code></dt>
+<dd></dd></dl>

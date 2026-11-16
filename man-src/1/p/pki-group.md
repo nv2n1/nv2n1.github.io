@@ -19,27 +19,27 @@ pki[CLI options]&lt;subsystem&gt; - group pki[CLI options]&lt;subsystem&gt; - gr
 <p> <code>pki</code> [CLI options] <code>&lt;subsystem&gt;-group</code></p>
 <dl>
 <dt>
-<dd> This command is to list available group commands for the subsystem.</dl>
+</dt><dd> This command is to list available group commands for the subsystem.</dd></dl>
 <p> <code>pki</code> [CLI options] <code>&lt;subsystem&gt;-group-find</code> [command options]</p>
 <dl>
 <dt>
-<dd> This command is to list groups in the subsystem.</dl>
+</dt><dd> This command is to list groups in the subsystem.</dd></dl>
 <p> <code>pki</code> [CLI options] <code>&lt;subsystem&gt;-group-show</code> &lt;group ID&gt; [command options]</p>
 <dl>
 <dt>
-<dd> This command is to view a group details in the subsystem.</dl>
+</dt><dd> This command is to view a group details in the subsystem.</dd></dl>
 <p> <code>pki</code> [CLI options] <code>&lt;subsystem&gt;-group-add</code> &lt;group ID&gt; [command options]</p>
 <dl>
 <dt>
-<dd> This command is to add a group into the subsystem.</dl>
+</dt><dd> This command is to add a group into the subsystem.</dd></dl>
 <p> <code>pki</code> [CLI options] <code>&lt;subsystem&gt;-group-mod</code> &lt;group ID&gt; [command options]</p>
 <dl>
 <dt>
-<dd> This command is to modify a group in the subsystem.</dl>
+</dt><dd> This command is to modify a group in the subsystem.</dd></dl>
 <p> <code>pki</code> [CLI options] <code>&lt;subsystem&gt;-group-del</code> &lt;group ID&gt; [command options]</p>
 <dl>
 <dt>
-<dd> This command is to delete a group from the subsystem.</dl>
+</dt><dd> This command is to delete a group from the subsystem.</dd></dl>
 <h2>OPTIONS</h2>
 <p> The CLI options are described in <code><a href="/docs/linux/man/1-pki/">pki</a></code>(1). </p>
 <h2>OPERATIONS</h2>
@@ -62,7 +62,7 @@ pki[CLI options]&lt;subsystem&gt; - group pki[CLI options]&lt;subsystem&gt; - gr
 <p> <code><a href="/docs/linux/man/1-pki-group-member/">pki-group-member</a></code>(1)</p>
 <dl>
 <dt>
-<dd> Group member management commands</dl>
+</dt><dd> Group member management commands</dd></dl>
 <h2>AUTHORS</h2>
 <p> Ade Lee &lt;alee [at] redhat.com&gt;, Endi Dewata &lt;edewata [at] redhat.com&gt;, and Matthew Harmsen &lt;mharmsen [at] redhat.com&gt;. </p>
 <h2>COPYRIGHT</h2>

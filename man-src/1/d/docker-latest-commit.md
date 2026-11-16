@@ -31,22 +31,22 @@ Pause container during commit. The default is&nbsp;<wbr><i>true</i>. </p>
 <p> An existing Fedora based container has had Apache installed while running in interactive mode with the bash shell. Apache is also running. To create a new image run docker ps to find the container&#8217;s ID and then run: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 # docker commit -m=&quot;Added Apache to Fedora base image&quot; \
   -a=&quot;A D Ministrator&quot; 98bd7fc99854 fedora/fedora_httpd:20
 </pre>
-</dl>
+</dd></dl>
 <p> Note that only a-z0-9-_. are allowed when naming images from an existing container. </p>
 <h2>Apply specified Dockerfile instructions while committing the image</h2>
 <p> If an existing container was created without the DEBUG environment variable set to &quot;true&quot;, you can create a new image based on that container by first getting the container&#8217;s ID with docker ps and then running: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 # docker commit -c=&quot;ENV DEBUG true&quot; 98bd7fc99854 debug-image
 </pre>
-</dl>
+</dd></dl>
 <h2>HISTORY</h2>
 <p> April 2014, Originally compiled by William Henry (whenry at redhat dot com) based on docker.com source material and in June 2014, updated by Sven Dowideit &lt;SvenDowideit [at] home.org.au&gt; July 2014, updated by Sven Dowideit &lt;SvenDowideit [at] home.org.au&gt; Oct 2014, updated by Daniel, Dao Quang Minh &lt;daniel at nitrous dot io&gt; June 2015, updated by Sally O&#8217;Malley &lt;somalley [at] redhat.com&gt; </p>
 <h2>Index</h2>

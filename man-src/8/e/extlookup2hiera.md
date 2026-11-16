@@ -13,4 +13,5 @@ description: "extlookup2hiera Converter for extlookup CSV files into Hiera JSON 
 <pre>-i, --in FILE Input CSV file
 -o, --out FILE Output Hiera file
 -j, --json Create JSON format file</pre>
-<dd>
+</dd><dd>
+</dd></dl>

@@ -10,21 +10,9 @@ description: "QuantLib::GaussLobattoIntegral – Integral of a one-dimensional f
 <p>QuantLib::GaussLobattoIntegral &#8211; Integral of a one-dimensional function. </p>
 <h2>Synopsis</h2>
 <pre><code>static const Real alpha_
-
-
-
 static const Real beta_
-
-
-
 static const Real x1_
-
-
-
 static const Real x2_
-
-
-
 static const Real x3_</code></pre>
 <p> Inherits QuantLib::Integrator.</p>
 <h3>Public Member Functions</h3>
@@ -41,21 +29,9 @@ static const Real x3_</code></pre>
 <p> const bool <code>useConvergenceEstimate_</code></p>
 <h3>Static Protected Attributes</h3>
 <pre><code>static const Real alpha_
-
-
-
 static const Real beta_
-
-
-
 static const Real x1_
-
-
-
 static const Real x2_
-
-
-
 static const Real x3_</code></pre>
 <h2>Detailed Description</h2>
 <p>Integral of a one-dimensional function. </p>

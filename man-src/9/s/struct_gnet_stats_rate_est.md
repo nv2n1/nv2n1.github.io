@@ -18,11 +18,11 @@ struct_gnet_stats_rate_est - rate estimator
 <h2>Members</h2>
 
 bps
-<dl><dd>current byte rate</dl>
+<dl><dd>current byte rate</dd></dl>
  
 
  pps
-<dl><dd>current packet rate</dl>
+<dl><dd>current packet rate</dd></dl>
 
 <h2>Copyright</h2>
 

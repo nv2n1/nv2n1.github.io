@@ -11,15 +11,15 @@ description: "XtGetApplicationNameAndClass – retrieve application name and cla
 <h2>Syntax</h2>
 <p>#include &lt;X11/Intrinsic.h&gt;</p>
 <dl COMPACT>
-<dd>void XtGetApplicationNameAndClass(Display* <i>display</i>, String* <i>name_return</i>, String* <i>class_return</i>);</dl>
+<dd>void XtGetApplicationNameAndClass(Display* <i>display</i>, String* <i>name_return</i>, String* <i>class_return</i>);</dd></dl>
 <h2>Arguments</h2>
 <dl COMPACT>
-<dt><i>display</i></p>
-<dd>Specifies an open display connection that has been initialized with <code>XtDisplayInitialize</code>.</p>
-<dt><i>name_return</i></p>
-<dd>Returns the application name.</p>
-<dt><i>class_return</i></p>
-<dd>Returns the application class.</dl>
+<dt><i>display</i></dt>
+<dd>Specifies an open display connection that has been initialized with <code>XtDisplayInitialize</code>.</dd>
+<dt><i>name_return</i></dt>
+<dd>Returns the application name.</dd>
+<dt><i>class_return</i></dt>
+<dd>Returns the application class.</dd></dl>
 <h2>Description</h2>
 <p><code>XtGetApplicationNameAndClass</code> returns the application name and class passed to <code>XtDisplayInitialize</code> for the specified display. If the display was never initialized or has been closed, the result is undefined. The returned strings are owned by the Intrinsics and must not be modified or freed by the caller.</p>
 <h2>See Also</h2>

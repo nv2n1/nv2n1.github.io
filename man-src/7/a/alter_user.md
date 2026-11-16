@@ -11,7 +11,6 @@ description: "ALTER USER – change a database role"
 <h2>Synopsis</h2>
 <pre>ALTER USER <i>name</i> [ [ WITH ] <i>option</i> [ ... ] ]
 where <i>option</i> can be:
- 
  SUPERUSER | NOSUPERUSER
  | CREATEDB | NOCREATEDB
  | CREATEROLE | NOCREATEROLE

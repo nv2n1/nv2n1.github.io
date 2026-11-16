@@ -15,24 +15,15 @@ description: "hbw::allocator<T> – The C++ allocator compatible with the C++ st
 #include &lt;hbw_allocator.h&gt;
 Link with - lmemkind
             hbw::allocator()
-
                 template &lt;class U&gt;
                 hbw::allocator&lt;T&gt;::allocator(const hbw::allocator&lt;U&gt; &amp;)
-
                     hbw::allocator&lt;T&gt;::~allocator()
-
                         hbw::allocator&lt;T&gt;::pointer hbw::allocator&lt;T&gt;::address(hbw::allocator&lt;T&gt;::reference x)
-
                             hbw::allocator&lt;T&gt;::const_pointer hbw::allocator&lt;T&gt;::address(hbw::allocator&lt;T&gt;::const_reference x)
-
                                 hbw::allocator&lt;T&gt;::pointer hbw::allocator&lt;T&gt;::allocate(hbw::allocator&lt;T&gt;::size_type n, const void * = 0)
-
                                     void hbw::allocator&lt;T&gt;::deallocate(hbw::allocator&lt;T&gt;::pointer p, hbw::allocator&lt;T&gt;::size_type n)
-
                                         hbw::allocator&lt;T&gt;::size_type hbw::allocator&lt;T&gt;::max_size()
-
                                             void hbw::allocator&lt;T&gt;::construct(hbw::allocator&lt;T&gt;::pointer p, const hbw::allocator&lt;T&gt;::value_type &amp;val)
-
                                                 void hbw::allocator&lt;T&gt;::destroy(hbw::allocator&lt;T&gt;::pointer p)
 </code></pre>
 <h2>DESCRIPTION</h2>
@@ -50,8 +41,8 @@ Link with - lmemkind
 <p> To find out more about <i>hbw_malloc()</i> and <i>hbw_free()</i> read <a href="/docs/linux/man/3-hbwmalloc/">hbwmalloc</a>(3) man page. </p>
 <h2>ERRORS</h2>
 <dl>
-<dt>The same as described in ERRORS section of <a href="/docs/linux/man/3-hbwmalloc/">hbwmalloc</a>(3) man page.</p>
-<dd></dl>
+<dt>The same as described in ERRORS section of <a href="/docs/linux/man/3-hbwmalloc/">hbwmalloc</a>(3) man page.</dt>
+<dd></dd></dl>
 <h2>NOTES</h2>
 <p> The <i>hbw::allocator&lt;T&gt;</i> behavior depends on hbwmalloc heap management policy. To get and set the policy please use <i>hbw_get_policy()</i> and <i>hbw_set_policy()</i> respectively.</p>
 <h2>COPYRIGHT</h2>

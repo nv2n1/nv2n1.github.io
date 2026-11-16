@@ -16,8 +16,8 @@ bson_iter_time_t(const bson_iter_t *iter);
 </code></pre>
 <h2>PARAMETERS</h2>
 <dl>
-<dt><code>iter</code></p>
-<dd> A <code>bson_iter_t</code> \&amp;.</dl>
+<dt><code>iter</code></dt>
+<dd> A <code>bson_iter_t</code> \&amp;.</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> The <code><a href="/docs/linux/man/3-bson_iter_time_t/">bson_iter_time_t</a>(3)</code> function shall return the number of seconds since the UNIX epoch, as contained in the BSON_TYPE_DATE_TIME element. </p>
 <h2>RETURNS</h2>

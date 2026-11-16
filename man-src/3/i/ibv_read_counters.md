@@ -12,7 +12,7 @@ description: "ibv_read_counters – Read counter values"
 <h2>SYNOPSIS</h2>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre><code>
 #include &lt;infiniband/verbs.h&gt;
 int ibv_read_counters(struct ibv_counters *counters,
@@ -20,23 +20,23 @@ int ibv_read_counters(struct ibv_counters *counters,
                       uint32_t ncounters,
                       uint32_t flags);
 </code></pre>
-</dl>
+</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> ibv_read_counters() returns the values of the chosen counters into counters_value array of which can accumulate ncounters. The values are filled according to the configuration defined by the user in the ibv_attach_counters_point_xxx functions.</p>
 <h2>ARGUMENTS</h2>
 <dl>
-<dt>counters</p>
-<dd> Counters object to read.</p>
-<dt>counters_value</p>
-<dd> Input buffer to hold read result.</p>
-<dt>ncounters</p>
-<dd> Number of counters to fill.</p>
-<dt>flags</p>
-<dd> Use enum ibv_read_counters_flags.</dl>
+<dt>counters</dt>
+<dd> Counters object to read.</dd>
+<dt>counters_value</dt>
+<dd> Input buffer to hold read result.</dd>
+<dt>ncounters</dt>
+<dd> Number of counters to fill.</dd>
+<dt>flags</dt>
+<dd> Use enum ibv_read_counters_flags.</dd></dl>
 <h3>flags Argument</h3>
 <dl>
-<dt><code>IBV_READ_COUNTERS_ATTR_PREFER_CACHED</code></p>
-<dd> Will prefer reading the values from driver cache, else it will do volatile hardware access which is the default.</dl>
+<dt><code>IBV_READ_COUNTERS_ATTR_PREFER_CACHED</code></dt>
+<dd> Will prefer reading the values from driver cache, else it will do volatile hardware access which is the default.</dd></dl>
 <h2>RETURN VALUE</h2>
 <p> ibv_read_counters() returns 0 on success, or the value of errno on failure (which indicates the failure reason)</p>
 <h2>EXAMPLE</h2>
@@ -44,7 +44,7 @@ int ibv_read_counters(struct ibv_counters *counters,
 <p> This example demonstrates the use of counters which are attached statically with the creation of a new flow. The counters are read from hardware periodically, and finally all resources are released.</p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre><code>
 /* create counters object and define its counters points        */
 /* create simple L2 flow with hardcoded MAC, and a count action */
@@ -139,7 +139,7 @@ supported");
     return;
 }
 </code></pre>
-</dl>
+</dd></dl>
 <h2>SEE ALSO</h2>
 <p> ibv_create_counters, ibv_destroy_counters, ibv_attach_counters_point_flow, ibv_create_flow</p>
 <h2>AUTHORS</h2>

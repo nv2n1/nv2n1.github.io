@@ -18,52 +18,52 @@ description: "ipmiutil_sol – an IPMI Serial-Over-LAN Console application"
  Be sure that the baud rate matches in all of the above places. See the ipmiutil UserGuide section 4.8 for details. </p>
 <h2>Options</h2>
 <dl>
-<dt>-a</p>
-<dd>Activate the SOL Console session, and enter console mode. Use the escape sequence (&#8216;~.&#8217;) to exit the session.</p>
-<dt>-c &#8216;^&#8217;</p>
-<dd>Set the escape Character to &#8216;^&#8217;, or another ANSI character. This changes the default two-character escape sequence (&#8216;~.&#8217;) to the specified single escape character, which will end the SOL session.</p>
-<dt>-d</p>
-<dd>Deactivate the SOL Console session. Use this if the previous session was aborted abnormally and starting a new session gives an error.</p>
-<dt>-e</p>
-<dd>Turn Encryption off in negotiation when activating a session. By default, encryption is on for Serial-Over-LAN console sessions.</p>
-<dt>-l</p>
-<dd>Use Legacy BIOS mapping for Enter key (CR+LF) instead of just LF. This is needed for BIOS Setup menus and DOS, but causes an extra LF to occur in Linux. So, only use this option if doing BIOS or DOS changes. This should be seldom be needed since now the default is to automatically detect these menus with colored backgrounds and change the mapping.</p>
-<dt>-i input_file</p>
-<dd>Use this file as an input script. The input_file will be read after the session is established. This can be used to automate certain tasks. The input_file is read one line at a time. If the input_file does not have an escape character (~) to end the session, then the input is returned to the keyboard when the file ends.</p>
-<dt>-o output_file</p>
-<dd>Use a Trace log. The output_file is created and all SOL screen output is written to the file, including VT100 escape sequences. If the output_file exists, the output is appended to it. This can be used to log what the user has done in an SOL session.</p>
-<dt>-p</p>
-<dd>Port to use. Defaults to RMCP port 623.</p>
-<dt>-r</p>
-<dd>Use Raw terminal I/O instead of custom VT100 to ANSI translation (in Windows). Use this option if the server is configured in BIOS and BMC for ANSI and the utility is being invoked from Windows.</p>
-<dt>-s NNN</p>
-<dd>For a slow link with high latency, this adds a delay of NNN microseconds between sending and receiving SOL packets. The default is 100 microseconds.</p>
-<dt>-w</p>
-<dd>(Windows only) Do not use the Windows Console buffer, but use Windows stdio instead. This does not handle cursor positioning correctly in some cases, however.</p>
-<dt>-v log_file</p>
-<dd>Causes debug messages to be displayed to the specified debug log_file. The default log_file is isoldbg.log in the current directory.</p>
-<dt>-x</p>
-<dd>Causes debug messages to be displayed to the debug log file.</p>
-<dt>-z</p>
-<dd>Causes more verbose debug messages to be displayed to the debug log file.</p>
-<dt>-N nodename</p>
-<dd>Nodename or IP address of the remote target system. If a nodename is specified, IPMI LAN interface is used. Otherwise the local system management interface is used.</p>
-<dt>-U rmt_user</p>
-<dd>Remote username for the nodename given. The default is a null username.</p>
-<dt>-P/-R rmt_pswd</p>
-<dd>Remote password for the nodename given. The default is a null password.</p>
-<dt>-E</p>
-<dd>Use the remote password from Environment variable IPMI_PASSWORD.</p>
-<dt>-F drv_t</p>
-<dd>Force the driver type to one of the followng: imb, va, open, gnu, landesk, lan, lan2, lan2i, kcs, smb. Note that lan2i means lan2 with intelplus. The default is to detect any supported driver type and use it.</p>
-<dt>-J</p>
-<dd>Use the specified LanPlus cipher suite (0 thru 17): 0=none/none/none, 1=sha1/none/none, 2=sha1/sha1/none, 3=sha1/sha1/cbc128, 4=sha1/sha1/xrc4_128, 5=sha1/sha1/xrc4_40, 6=md5/none/none, &#8230; 14=md5/md5/xrc4_40. Default is 3.</p>
-<dt>-T</p>
-<dd>Use a specified IPMI LAN Authentication Type: 0=None, 1=MD2, 2=MD5, 4=Straight Password, 5=OEM.</p>
-<dt>-V</p>
-<dd>Use a specified IPMI LAN privilege level. 1=Callback level, 2=User level, 3=Operator level, 4=Administrator level (default), 5=OEM level.</p>
-<dt>-Y</p>
-<dd>Yes, do prompt the user for the IPMI LAN remote password. Alternatives for the password are -E or -P. </p>
+<dt>-a</dt>
+<dd>Activate the SOL Console session, and enter console mode. Use the escape sequence (&#8216;~.&#8217;) to exit the session.</dd>
+<dt>-c &#8216;^&#8217;</dt>
+<dd>Set the escape Character to &#8216;^&#8217;, or another ANSI character. This changes the default two-character escape sequence (&#8216;~.&#8217;) to the specified single escape character, which will end the SOL session.</dd>
+<dt>-d</dt>
+<dd>Deactivate the SOL Console session. Use this if the previous session was aborted abnormally and starting a new session gives an error.</dd>
+<dt>-e</dt>
+<dd>Turn Encryption off in negotiation when activating a session. By default, encryption is on for Serial-Over-LAN console sessions.</dd>
+<dt>-l</dt>
+<dd>Use Legacy BIOS mapping for Enter key (CR+LF) instead of just LF. This is needed for BIOS Setup menus and DOS, but causes an extra LF to occur in Linux. So, only use this option if doing BIOS or DOS changes. This should be seldom be needed since now the default is to automatically detect these menus with colored backgrounds and change the mapping.</dd>
+<dt>-i input_file</dt>
+<dd>Use this file as an input script. The input_file will be read after the session is established. This can be used to automate certain tasks. The input_file is read one line at a time. If the input_file does not have an escape character (~) to end the session, then the input is returned to the keyboard when the file ends.</dd>
+<dt>-o output_file</dt>
+<dd>Use a Trace log. The output_file is created and all SOL screen output is written to the file, including VT100 escape sequences. If the output_file exists, the output is appended to it. This can be used to log what the user has done in an SOL session.</dd>
+<dt>-p</dt>
+<dd>Port to use. Defaults to RMCP port 623.</dd>
+<dt>-r</dt>
+<dd>Use Raw terminal I/O instead of custom VT100 to ANSI translation (in Windows). Use this option if the server is configured in BIOS and BMC for ANSI and the utility is being invoked from Windows.</dd>
+<dt>-s NNN</dt>
+<dd>For a slow link with high latency, this adds a delay of NNN microseconds between sending and receiving SOL packets. The default is 100 microseconds.</dd>
+<dt>-w</dt>
+<dd>(Windows only) Do not use the Windows Console buffer, but use Windows stdio instead. This does not handle cursor positioning correctly in some cases, however.</dd>
+<dt>-v log_file</dt>
+<dd>Causes debug messages to be displayed to the specified debug log_file. The default log_file is isoldbg.log in the current directory.</dd>
+<dt>-x</dt>
+<dd>Causes debug messages to be displayed to the debug log file.</dd>
+<dt>-z</dt>
+<dd>Causes more verbose debug messages to be displayed to the debug log file.</dd>
+<dt>-N nodename</dt>
+<dd>Nodename or IP address of the remote target system. If a nodename is specified, IPMI LAN interface is used. Otherwise the local system management interface is used.</dd>
+<dt>-U rmt_user</dt>
+<dd>Remote username for the nodename given. The default is a null username.</dd>
+<dt>-P/-R rmt_pswd</dt>
+<dd>Remote password for the nodename given. The default is a null password.</dd>
+<dt>-E</dt>
+<dd>Use the remote password from Environment variable IPMI_PASSWORD.</dd>
+<dt>-F drv_t</dt>
+<dd>Force the driver type to one of the followng: imb, va, open, gnu, landesk, lan, lan2, lan2i, kcs, smb. Note that lan2i means lan2 with intelplus. The default is to detect any supported driver type and use it.</dd>
+<dt>-J</dt>
+<dd>Use the specified LanPlus cipher suite (0 thru 17): 0=none/none/none, 1=sha1/none/none, 2=sha1/sha1/none, 3=sha1/sha1/cbc128, 4=sha1/sha1/xrc4_128, 5=sha1/sha1/xrc4_40, 6=md5/none/none, &#8230; 14=md5/md5/xrc4_40. Default is 3.</dd>
+<dt>-T</dt>
+<dd>Use a specified IPMI LAN Authentication Type: 0=None, 1=MD2, 2=MD5, 4=Straight Password, 5=OEM.</dd>
+<dt>-V</dt>
+<dd>Use a specified IPMI LAN privilege level. 1=Callback level, 2=User level, 3=Operator level, 4=Administrator level (default), 5=OEM level.</dd>
+<dt>-Y</dt>
+<dd>Yes, do prompt the user for the IPMI LAN remote password. Alternatives for the password are -E or -P. </dd>
 </dl>
 <h2>Examples</h2>
 <p>ipmiutil sol -a -N nodename -U username -P password<br />

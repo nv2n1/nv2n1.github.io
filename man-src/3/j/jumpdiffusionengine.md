@@ -19,11 +19,11 @@ description: "QuantLib::JumpDiffusionEngine – Jump-diffusion engine for vanill
 <p> <code>Tests</code></p>
 <dl COMPACT>
 <dd>
-<dl COMPACT>
-<dt>*</p>
-<dd>the correctness of the returned value is tested by reproducing results available in literature.</p>
-<dt>*</p>
-<dd>the correctness of the returned greeks is tested by reproducing numerical derivatives.</dl>
+</dd><dl COMPACT>
+<dt>*</dt>
+<dd>the correctness of the returned value is tested by reproducing results available in literature.</dd>
+<dt>*</dt>
+<dd>the correctness of the returned greeks is tested by reproducing numerical derivatives.</dd></dl>
 </dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for QuantLib from the source code.</p>

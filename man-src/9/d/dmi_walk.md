@@ -15,11 +15,11 @@ dmi_walk - Walk the DMI table and get called back for every record
 <h2>Arguments</h2>
 
 <i>decode</i>
-<dl><dd><dd>Callback function</dl>
+<dl><dd></dd><dd>Callback function</dd></dl>
  
 
  <i>private_data</i>
-<dl><dd>Private data to be passed to the callback function</dl>
+<dl><dd>Private data to be passed to the callback function</dd></dl>
 
 <h2>Description</h2>
 

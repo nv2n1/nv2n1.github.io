@@ -20,14 +20,14 @@ description: "makempx – typeset labels in MetaPost pictures with TeX or Troff"
 <h2>OPTIONS</h2>
 <p> <code>makempx</code> accepts the following options:</p>
 <dl>
-<dt><code>&#8211;help</code></p>
-<dd> Print help message and exit.</p>
-<dt><code>&#8211;tex</code></p>
-<dd> Assume input file contains TeX commands.</p>
-<dt><code>&#8211;troff</code></p>
-<dd> Assume input file contains Troff commands.</p>
-<dt><code>&#8211;version</code></p>
-<dd> Print version information and exit.</dl>
+<dt><code>&#8211;help</code></dt>
+<dd> Print help message and exit.</dd>
+<dt><code>&#8211;tex</code></dt>
+<dd> Assume input file contains TeX commands.</dd>
+<dt><code>&#8211;troff</code></dt>
+<dd> Assume input file contains Troff commands.</dd>
+<dt><code>&#8211;version</code></dt>
+<dd> Print version information and exit.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-mpost/">mpost</a></code>(1), <code><a href="/docs/linux/man/1-mpto/">mpto</a></code>(1). </p>
 <h2>Index</h2>

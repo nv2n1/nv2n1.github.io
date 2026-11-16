@@ -10,30 +10,30 @@ description: "kdeoptions – Common commandline options for all applications bas
 <p>kdeoptions &#8211; Common commandline options for all applications based on the KDE libraries</p>
 <h2>Synopsis</h2>
 <dl>
-<dt> <i>KDE application</i> [KDE Generic Options]</dl>
+<dt> <i>KDE application</i> [KDE Generic Options]</dt></dl>
 <h2>Options</h2>
-<dd>The following options apply to all KDE applications: </p>
+<dd>The following options apply to all KDE applications: </dd>
 <p> <code>&#8211;caption</code> <i>caption</i></p>
 <dl>
-<dd>Use <i>caption</i> as name in the titlebar.</dl>
+<dd>Use <i>caption</i> as name in the titlebar.</dd></dl>
 <p> <code>&#8211;icon</code> <i>icon</i></p>
 <dl>
-<dd>Use <i>icon</i> as the application icon.</dl>
+<dd>Use <i>icon</i> as the application icon.</dd></dl>
 <p> <code>&#8211;config</code> <i>filename</i></p>
 <dl>
-<dd>Use the alternative configuration <i>filename</i></dl>
+<dd>Use the alternative configuration <i>filename</i></dd></dl>
 <p> <code>&#8211;nocrashhandler</code></p>
 <dl>
-<dd>Disable the crash handler, to get core dumps.</dl>
+<dd>Disable the crash handler, to get core dumps.</dd></dl>
 <p> <code>&#8211;waitforwm</code></p>
 <dl>
-<dd>Waits for a WM_NET compatible windowmanager.</dl>
+<dd>Waits for a WM_NET compatible windowmanager.</dd></dl>
 <p> <code>&#8211;style</code> <i>style</i></p>
 <dl>
-<dd>Sets the application GUI style.</dl>
+<dd>Sets the application GUI style.</dd></dl>
 <p> <code>&#8211;geometry</code> <i>geometry</i></p>
 <dl>
-<dd>Sets the client geometry of the main widget.</dl>
+<dd>Sets the client geometry of the main widget.</dd></dl>
 <h2>See Also</h2>
 <p><i><a href="/docs/linux/man/7-qtoptions/">qtoptions</a></i>(7)</p>
 <h2>Authors</h2>
@@ -41,4 +41,4 @@ description: "kdeoptions – Common commandline options for all applications bas
 <h2>Author</h2>
 <p><code>Lauri Watts</code> &lt;lauri [at] kde.org&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>

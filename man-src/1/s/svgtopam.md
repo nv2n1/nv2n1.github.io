@@ -21,8 +21,8 @@ description: "svgtopam – convert an SVG (Scalable Vector Graphics) image to Ne
 <p> For more information on SVG, see the Worldwide Web Consortium&#8217;s SVG web page . </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-trace</code></p>
-<dd> This option makes <code>svgtopam</code> issue messages describing the drawing. </p>
+<dt><code>-trace</code></dt>
+<dd> This option makes <code>svgtopam</code> issue messages describing the drawing. </dd>
 </dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-pamtosvg/">pamtosvg</a></code>(1) , <code>pam</code>(1) , </p>

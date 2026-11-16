@@ -29,16 +29,9 @@ The name of the current source file represented by this object, represented as a
 <h2>See also</h2>
 
 <pre><code>return the line number represented by this object
-
 line          (public member function)
 return the column number represented by this object
-
 column        (public member function)
 return the name of the function represented by this object, if any
-
 function_name (public member function)
-
-
-
-
 </code></pre>

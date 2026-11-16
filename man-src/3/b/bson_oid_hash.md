@@ -16,8 +16,8 @@ bson_oid_hash(const bson_oid_t *oid);
 </code></pre>
 <h2>PARAMETERS</h2>
 <dl>
-<dt><code>oid</code></p>
-<dd> A <code>bson_oid_t</code> \&amp;.</dl>
+<dt><code>oid</code></dt>
+<dd> A <code>bson_oid_t</code> \&amp;.</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> Generates a hash code for <code>oid</code> suitable for a hashtable. </p>
 <h2>RETURNS</h2>

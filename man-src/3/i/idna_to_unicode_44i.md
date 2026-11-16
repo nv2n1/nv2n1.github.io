@@ -14,16 +14,16 @@ description: "idna_to_unicode_44i – API function"
 <p> <code>int idna_to_unicode_44i(const uint32_t * </code><i>in</i><code>, size_t </code><i>inlen</i><code>, uint32_t * </code><i>out</i><code>, size_t * </code><i>outlen</i><code>, int </code><i>flags</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
-<dt>const uint32_t * in</p>
-<dd> input array with unicode code points.</p>
-<dt>size_t inlen</p>
-<dd> length of input array with unicode code points.</p>
-<dt>uint32_t * out</p>
-<dd> output array with unicode code points.</p>
-<dt>size_t * outlen</p>
-<dd> on input, maximum size of output array with unicode code points, on exit, actual size of output array with unicode code points.</p>
-<dt>int flags</p>
-<dd> an <code>Idna_flags</code> value, e.g., <code>IDNA_ALLOW_UNASSIGNED</code> or <code>IDNA_USE_STD3_ASCII_RULES</code>.</dl>
+<dt>const uint32_t * in</dt>
+<dd> input array with unicode code points.</dd>
+<dt>size_t inlen</dt>
+<dd> length of input array with unicode code points.</dd>
+<dt>uint32_t * out</dt>
+<dd> output array with unicode code points.</dd>
+<dt>size_t * outlen</dt>
+<dd> on input, maximum size of output array with unicode code points, on exit, actual size of output array with unicode code points.</dd>
+<dt>int flags</dt>
+<dd> an <code>Idna_flags</code> value, e.g., <code>IDNA_ALLOW_UNASSIGNED</code> or <code>IDNA_USE_STD3_ASCII_RULES</code>.</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> The ToUnicode operation takes a sequence of Unicode code points that make up one domain label and returns a sequence of Unicode code points. If the input sequence is a label in ACE form, then the result is an equivalent internationalized label that is not in ACE form, otherwise the original sequence is returned unaltered. </p>
 <p> ToUnicode never fails. If any step fails, then the original input sequence is returned immediately in that step. </p>
@@ -40,6 +40,6 @@ description: "idna_to_unicode_44i – API function"
 <p> The full documentation for <code>libidn</code> is maintained as a Texinfo manual. If the <code>info</code> and <code>libidn</code> programs are properly installed at your site, the command</p>
 <dl>
 <dt>
-<dd> <code>info libidn</code></dl>
+</dt><dd> <code>info libidn</code></dd></dl>
 <p> should give you access to the complete manual. </p>
 <h2>Index</h2>

@@ -25,32 +25,32 @@ Options:
 <h2>DESCRIPTION</h2>
 <p> The gdalsrsinfo utility reports information about a given SRS from one of the following: </p>
 <dl>
-<dt>&bull;</p>
-<dd> The filename of a dataset supported by GDAL/OGR which contains SRS information</p>
-<dt>&bull;</p>
-<dd> Any of the usual GDAL/OGR forms (complete WKT, PROJ.4, EPSG:n or a file containing the SRS)</dl>
+<dt>&bull;</dt>
+<dd> The filename of a dataset supported by GDAL/OGR which contains SRS information</dd>
+<dt>&bull;</dt>
+<dd> Any of the usual GDAL/OGR forms (complete WKT, PROJ.4, EPSG:n or a file containing the SRS)</dd></dl>
 <p> Output types: </p>
 <dl>
-<dt>&bull;</p>
-<dd> <code>default</code> proj4 and wkt (default option)</p>
-<dt>&bull;</p>
-<dd> <code>all</code> all options available</p>
-<dt>&bull;</p>
-<dd> <code>wkt_all</code> all wkt options available</p>
-<dt>&bull;</p>
-<dd> <code>proj4</code> PROJ.4 string</p>
-<dt>&bull;</p>
-<dd> <code>wkt</code> OGC WKT format (full)</p>
-<dt>&bull;</p>
-<dd> <code>wkt_simple</code> OGC WKT (simplified)</p>
-<dt>&bull;</p>
-<dd> <code>wkt_noct</code> OGC WKT (without OGC CT params)</p>
-<dt>&bull;</p>
-<dd> <code>wkt_esri</code> ESRI WKT format</p>
-<dt>&bull;</p>
-<dd> <code>mapinfo</code> Mapinfo style CoordSys format</p>
-<dt>&bull;</p>
-<dd> <code>xml</code> XML format (GML based)</dl>
+<dt>&bull;</dt>
+<dd> <code>default</code> proj4 and wkt (default option)</dd>
+<dt>&bull;</dt>
+<dd> <code>all</code> all options available</dd>
+<dt>&bull;</dt>
+<dd> <code>wkt_all</code> all wkt options available</dd>
+<dt>&bull;</dt>
+<dd> <code>proj4</code> PROJ.4 string</dd>
+<dt>&bull;</dt>
+<dd> <code>wkt</code> OGC WKT format (full)</dd>
+<dt>&bull;</dt>
+<dd> <code>wkt_simple</code> OGC WKT (simplified)</dd>
+<dt>&bull;</dt>
+<dd> <code>wkt_noct</code> OGC WKT (without OGC CT params)</dd>
+<dt>&bull;</dt>
+<dd> <code>wkt_esri</code> ESRI WKT format</dd>
+<dt>&bull;</dt>
+<dd> <code>mapinfo</code> Mapinfo style CoordSys format</dd>
+<dt>&bull;</dt>
+<dd> <code>xml</code> XML format (GML based)</dd></dl>
 <h2>EXAMPLE</h2>
 <pre><code>
 $ gdalsrsinfo "EPSG:4326" PROJ .4 : '+proj=longlat +datum=WGS84 +no_defs ' OGC WKT : GEOGCS["WGS 84",
@@ -64,7 +64,6 @@ $ gdalsrsinfo "EPSG:4326" PROJ .4 : '+proj=longlat +datum=WGS84 +no_defs ' OGC W
                                                                                                  AUTHORITY["EPSG", "9122"]],
                                                                                             AUTHORITY["EPSG", "4326"]]
                                                                                          .fi
-
                                                                                              $ gdalsrsinfo -
     o proj4 osr / data / lcc_esri.prj
 </code></pre>

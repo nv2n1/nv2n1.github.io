@@ -74,7 +74,8 @@ description: "perlrequick – Perl regular expressions quick start"
 <p> In the last regex, the forward slash <tt>'/'</tt> is also backslashed, because it is used to delimit the regex. </p>
 <p> Most of the metacharacters aren&#8217;t always special, and other characters (such as the ones delimitting the pattern) become special under various circumstances. This can be confusing and lead to unexpected results. <tt>&quot;use re 'strict'&quot;</tt> can notify you of potential pitfalls. </p>
 <p> Non-printable <font SIZE="-1">ASCII</font> characters are represented by <code>escape sequences</code>. Common examples are <tt>&quot;	&quot;</tt> for a tab, <tt>&quot;
-&quot;</tt> for a newline, and <tt>&quot;&quot;</tt> for a carriage return. Arbitrary bytes are represented by octal escape sequences, e.g., <tt>&quot;&quot;</tt>, or hexadecimal escape sequences, e.g., <tt>&quot;&quot;</tt>: </p>
+&quot;</tt> for a newline, and <tt>&quot;
+&quot;</tt> for a carriage return. Arbitrary bytes are represented by octal escape sequences, e.g., <tt>&quot;&quot;</tt>, or hexadecimal escape sequences, e.g., <tt>&quot;&quot;</tt>: </p>
 <pre>
     &quot;1000	2000&quot; =~ m(0	2)  # matches
     &quot;cat&quot; =~ /\143at/  # matches in ASCII, but
@@ -134,40 +135,40 @@ description: "perlrequick – Perl regular expressions quick start"
 here &#8216;^&#8217; is ordinary</p>
 <p> Perl has several abbreviations for common character classes. (These definitions are those that Perl uses in ASCII-safe mode with the <tt>&quot;/a&quot;</tt> modifier. Otherwise they could match many more non-ASCII Unicode characters as well. See &#8220;Backslash sequences&#8221; in perlrecharclass for details.)</p>
 <dl>
-<dt>&bull;</p>
-<dd> \d is a digit and represents </p>
+<dt>&bull;</dt>
+<dd> \d is a digit and represents </dd>
 <pre>
     [0-9]
 </pre>
-<dt>&bull;</p>
-<dd> \s is a whitespace character and represents </p>
+<dt>&bull;</dt>
+<dd> \s is a whitespace character and represents </dd>
 <pre>
     [\ 	
 ]
 </pre>
-<dt>&bull;</p>
-<dd> \w is a word character (alphanumeric or _) and represents </p>
+<dt>&bull;</dt>
+<dd> \w is a word character (alphanumeric or _) and represents </dd>
 <pre>
     [0-9a-zA-Z_]
 </pre>
-<dt>&bull;</p>
-<dd> \D is a negated \d; it represents any character but a digit </p>
+<dt>&bull;</dt>
+<dd> \D is a negated \d; it represents any character but a digit </dd>
 <pre>
     [^0-9]
 </pre>
-<dt>&bull;</p>
-<dd> \S is a negated \s; it represents any non-whitespace character </p>
+<dt>&bull;</dt>
+<dd> \S is a negated \s; it represents any non-whitespace character </dd>
 <pre>
     [^\s]
 </pre>
-<dt>&bull;</p>
-<dd> \W is a negated \w; it represents any non-word character </p>
+<dt>&bull;</dt>
+<dd> \W is a negated \w; it represents any non-word character </dd>
 <pre>
     [^\w]
 </pre>
-<dt>&bull;</p>
+<dt>&bull;</dt>
 <dd> The period &#8216;.&#8217; matches any character but &#8220;
-&#8221;</dl>
+&#8221;</dd></dl>
 <p> The <tt>&quot;\d\s\w\D\S\W&quot;</tt> abbreviations can be used both inside and outside of character classes. Here are some in use: </p>
 <p>/\d\d :\d\d :\d\d / ;<br />
 #matches a hh : mm : ss time format / [\d\s] / ;<br />
@@ -242,18 +243,18 @@ $seconds = $3;</p>
 <h3>Matching repetitions</h3>
 <p> The <code>quantifier</code> metacharacters <tt>&quot;?&quot;</tt>, <tt>&quot;*&quot;</tt>, <tt>&quot;+&quot;</tt>, and <tt>&quot;{}&quot;</tt> allow us to determine the number of repeats of a portion of a regex we consider to be a match. Quantifiers are put immediately after the character, character class, or grouping that we want to specify. They have the following meanings:</p>
 <dl>
-<dt>&bull;</p>
-<dd> <tt>&quot;a?&quot;</tt> = match &#8216;a&#8217; 1 or 0 times</p>
-<dt>&bull;</p>
-<dd> <tt>&quot;a*&quot;</tt> = match &#8216;a&#8217; 0 or more times, i.e., any number of times</p>
-<dt>&bull;</p>
-<dd> <tt>&quot;a+&quot;</tt> = match &#8216;a&#8217; 1 or more times, i.e., at least once</p>
-<dt>&bull;</p>
-<dd> <tt>&quot;a{n,m}&quot;</tt> = match at least <tt>&quot;n&quot;</tt> times, but not more than <tt>&quot;m&quot;</tt> times.</p>
-<dt>&bull;</p>
-<dd> <tt>&quot;a{n,}&quot;</tt> = match at least <tt>&quot;n&quot;</tt> or more times</p>
-<dt>&bull;</p>
-<dd> <tt>&quot;a{n}&quot;</tt> = match exactly <tt>&quot;n&quot;</tt> times</dl>
+<dt>&bull;</dt>
+<dd> <tt>&quot;a?&quot;</tt> = match &#8216;a&#8217; 1 or 0 times</dd>
+<dt>&bull;</dt>
+<dd> <tt>&quot;a*&quot;</tt> = match &#8216;a&#8217; 0 or more times, i.e., any number of times</dd>
+<dt>&bull;</dt>
+<dd> <tt>&quot;a+&quot;</tt> = match &#8216;a&#8217; 1 or more times, i.e., at least once</dd>
+<dt>&bull;</dt>
+<dd> <tt>&quot;a{n,m}&quot;</tt> = match at least <tt>&quot;n&quot;</tt> times, but not more than <tt>&quot;m&quot;</tt> times.</dd>
+<dt>&bull;</dt>
+<dd> <tt>&quot;a{n,}&quot;</tt> = match at least <tt>&quot;n&quot;</tt> or more times</dd>
+<dt>&bull;</dt>
+<dd> <tt>&quot;a{n}&quot;</tt> = match exactly <tt>&quot;n&quot;</tt> times</dd></dl>
 <p> Here are some examples: </p>
 <p>/ [a &#8211; z] +\s +\d * / ;<br />
 #match a lowercase word, at least some space, and<br />

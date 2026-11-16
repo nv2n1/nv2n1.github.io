@@ -18,8 +18,8 @@ description: "pam-panel-icon – A notification area indicator of pam_timestamp 
 <p> Ordinarily, <code>pam-panel-icon</code> keeps running until the X11 desktop session ends, and then returns 0. <code>pam-panel-icon</code> only returns with non-zero status on unexpected error. </p>
 <h2>FILES</h2>
 <dl>
-<dt><code>/sbin/pam_timestamp_check</code></p>
-<dd> A hard-coded location of the <code>pam_timestamp_check</code> executable. </p>
+<dt><code>/sbin/pam_timestamp_check</code></dt>
+<dd> A hard-coded location of the <code>pam_timestamp_check</code> executable. </dd>
 </dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/8-pam_timestamp/">pam_timestamp</a></code>(8), <code><a href="/docs/linux/man/8-pam_timestamp_check/">pam_timestamp_check</a></code>(8) </p>

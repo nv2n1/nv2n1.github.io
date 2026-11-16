@@ -11,8 +11,8 @@ description: "tcdemux – demultiplex a program stream"
 <p> tcdemux &#8211; demultiplex a program stream</p>
 <h2>SYNOPSIS</h2>
 <dl>
-<dt><code>tcdemux</code></p>
-<dd> <code>-i</code> <i>name</i> [ <code>-t</code> <i>magic</i> ] [ <code>-x</code> <i>codec</i> ] [ <code>-S</code> <i>unit,[s1-s2]</i> ] [ <code>-a</code> <i>ach,[vch]</i> ] [ <code>-s</code> <i>0xnn</i> ] [ <code>-M</code> <i>mode</i> ] [ <code>-f</code> <i>fps</i> ] [ <code>-W</code> ] [ <code>-O</code> ] [ <code>-P</code> <i>name</i> ] [ <code>-A</code> <i>n[,m[,&#8230;]]</i> ] [ <code>-d</code> <i>verbosity</i> ] [ <code>-v</code> ]</dl>
+<dt><code>tcdemux</code></dt>
+<dd> <code>-i</code> <i>name</i> [ <code>-t</code> <i>magic</i> ] [ <code>-x</code> <i>codec</i> ] [ <code>-S</code> <i>unit,[s1-s2]</i> ] [ <code>-a</code> <i>ach,[vch]</i> ] [ <code>-s</code> <i>0xnn</i> ] [ <code>-M</code> <i>mode</i> ] [ <code>-f</code> <i>fps</i> ] [ <code>-W</code> ] [ <code>-O</code> ] [ <code>-P</code> <i>name</i> ] [ <code>-A</code> <i>n[,m[,&#8230;]]</i> ] [ <code>-d</code> <i>verbosity</i> ] [ <code>-v</code> ]</dd></dl>
 <h2>COPYRIGHT</h2>
 <p> <code>tcdemux</code> is Copyright (C) by Thomas Oestreich.</p>
 <h2>DESCRIPTION</h2>
@@ -21,28 +21,28 @@ description: "tcdemux – demultiplex a program stream"
  <code>tcdemux</code> reads source (from stdin if not explicitely defined) and prints on the standard output.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-i </code><i>name</i></p>
-<dd> Specify input source. If ommited, <i>stdin</i> is assumed. </p>
-<dt><code>-x </code><i>codec</i></p>
-<dd> Process only packets containing given <i>codec</i> as payload. Examples are &quot;mpeg2&quot; for MPEG video or &quot;ac3&quot; for audio packets. </p>
-<dt><code>-t </code><i>magic</i></p>
-<dd> Specify the input file type <i>magic.</i> Useful for using <code>tcdemux</code> in pipelines. This is normally autodetected. </p>
-<dt><code>-a </code><i>ach[,vch]</i></p>
-<dd> Process only packets containing given audio track <i>ach</i> and video track <i>vch.</i> Most program stream feature multiple audio tracks but only a single video stream. Default is &quot;-a 0,0&quot;. </p>
-<dt><code>-s </code><i>0xnn</i></p>
-<dd> Select specific multimedia track using the standard identifier <i>0xnn.</i> This useful to extract subtitle packets. </p>
-<dt><code>-f </code><i>fps</i></p>
-<dd> Specify the frame rate <i>fps</i> for subtitle meta information used by external applications. </p>
-<dt><code>-S </code><i>unit[,s1-s2]</i></p>
-<dd> Select a program unit <i>unit</i> and a selected GOP range <i>s1-s2</i> for processing. A <i>unit</i> is usually a set of GOPs that need to be synchronized at the very beginning. This option can be used to eleminate junk units at the beginning of the main presentation or to select certain episodes of a TV series from a DVD. A GOP is a logical unit to be properly decoded, i.e., decoding can only start at the beginning of a GOP. </p>
-<dt><code>-O</p>
-<dd> Do not skip initial sequence. Used internally by transcode. </p>
-<dt>-A </code><i>n[,m[,&#8230;]]</i></p>
-<dd> Select packets using an identifier for extracting only selected streams without processing. This is useful for size reduction of your multimedia stream. Example: </p>
+<dt><code>-i </code><i>name</i></dt>
+<dd> Specify input source. If ommited, <i>stdin</i> is assumed. </dd>
+<dt><code>-x </code><i>codec</i></dt>
+<dd> Process only packets containing given <i>codec</i> as payload. Examples are &quot;mpeg2&quot; for MPEG video or &quot;ac3&quot; for audio packets. </dd>
+<dt><code>-t </code><i>magic</i></dt>
+<dd> Specify the input file type <i>magic.</i> Useful for using <code>tcdemux</code> in pipelines. This is normally autodetected. </dd>
+<dt><code>-a </code><i>ach[,vch]</i></dt>
+<dd> Process only packets containing given audio track <i>ach</i> and video track <i>vch.</i> Most program stream feature multiple audio tracks but only a single video stream. Default is &quot;-a 0,0&quot;. </dd>
+<dt><code>-s </code><i>0xnn</i></dt>
+<dd> Select specific multimedia track using the standard identifier <i>0xnn.</i> This useful to extract subtitle packets. </dd>
+<dt><code>-f </code><i>fps</i></dt>
+<dd> Specify the frame rate <i>fps</i> for subtitle meta information used by external applications. </dd>
+<dt><code>-S </code><i>unit[,s1-s2]</i></dt>
+<dd> Select a program unit <i>unit</i> and a selected GOP range <i>s1-s2</i> for processing. A <i>unit</i> is usually a set of GOPs that need to be synchronized at the very beginning. This option can be used to eleminate junk units at the beginning of the main presentation or to select certain episodes of a TV series from a DVD. A GOP is a logical unit to be properly decoded, i.e., decoding can only start at the beginning of a GOP. </dd>
+<dt><code>-O</dt>
+<dd> Do not skip initial sequence. Used internally by transcode. </dd>
+<dt>-A </code><i>n[,m[,&#8230;]]</i></dt>
+<dd> Select packets using an identifier for extracting only selected streams without processing. This is useful for size reduction of your multimedia stream. Example: </dd>
 <p> <code>tcdemux -i big_dvd.vob -A 0xe0,0x81,0x20 &gt; small_dvd.vob</code> </p>
 <p> extracts all packets for the video stream, AC3 audio track (1) and the first subtitle stream (0). </p>
-<dt><code>-M </code><i>mode</i></p>
-<dd> Select synchronization strategy <i>mode.</i> This is how transcode selects the beginning of a video and audio stream to assure both streams are sychronized for further processing: </p>
+<dt><code>-M </code><i>mode</i></dt>
+<dd> Select synchronization strategy <i>mode.</i> This is how transcode selects the beginning of a video and audio stream to assure both streams are sychronized for further processing: </dd>
 <p> 0<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>no synchronization. Packets are printed directly to <i>stdout</i>.</p>
 <p> 1<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>synchronization based on PTS information found in the packet header. Audio packets are delayed until a suitable starting point is found. Default for PAL videos.</p>
 <p> 2<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>NTSC adapted synchronization mode. Detailed information for each GOP contained in the video stream are piped to a <i>stdout</i> to be processed by<br />
@@ -50,12 +50,12 @@ description: "tcdemux – demultiplex a program stream"
 <p> 3 more advanced synchronization mode 1 with msec granular adjustment. Details delegated to transcode. </p>
 <p> 4 more advanced synchronization mode 2 with msec granular adjustment for NTSC materail. Details delegated to transcode. </p>
 <p> 5-7<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>undocumented debugging modes for internal use.</p>
-<dt><code>-P </code><i>file</i></p>
-<dd> Write GOP meta information to <i>file</i> instead of tdout. </p>
-<dt><code>-W</p>
-<dd> Print a navigation log file for a given video stream to </code><i>stdout</i>. This is used for transcode&#8217;s &quot;psu mode&quot; and &quot;cluster mode&quot;. </p>
-<dt><code>-d</code> <i>level</i></p>
-<dd> With this option you can specify a bitmask to enable different levels of verbosity (if supported). You can combine several levels by adding the corresponding values: </p>
+<dt><code>-P </code><i>file</i></dt>
+<dd> Write GOP meta information to <i>file</i> instead of tdout. </dd>
+<dt><code>-W</dt>
+<dd> Print a navigation log file for a given video stream to </code><i>stdout</i>. This is used for transcode&#8217;s &quot;psu mode&quot; and &quot;cluster mode&quot;. </dd>
+<dt><code>-d</code> <i>level</i></dt>
+<dd> With this option you can specify a bitmask to enable different levels of verbosity (if supported). You can combine several levels by adding the corresponding values: </dd>
 <p> QUIET 0 </p>
 <p> INFO 1 </p>
 <p> DEBUG 2 </p>
@@ -66,8 +66,8 @@ description: "tcdemux – demultiplex a program stream"
 <p> SYNC 64 </p>
 <p> COUNTER 128 </p>
 <p> PRIVATE 256</p>
-<dt><code>-v</code></p>
-<dd> Print version information and exit.</dl>
+<dt><code>-v</code></dt>
+<dd> Print version information and exit.</dd></dl>
 <h2>NOTES</h2>
 <p> <code>tcdemux</code> is a front end for de-multiplexing program streams and is used in <code>transcode</code>&#8216;s import modules.</p>
 <h2>EXAMPLES</h2>

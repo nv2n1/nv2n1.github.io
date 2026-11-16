@@ -16,99 +16,99 @@ description: "qcatool – command line tool for the Qt Cryptographic Architectur
 <h2>OPTIONS</h2>
 <p> As noted above, these are all optional, and may be combined. </p>
 <dl>
-<dt><code>&#8211;pass</code>=PASSWORD</p>
-<dd> Specify the password to use. This is probably a bad idea except for testing, because anyone can read the arguments to a command line application.</p>
-<dt><code>&#8211;newpass</code>=PASSWORD</p>
-<dd> Specify the new password to use for password change with the <code>key changepass</code> and <code>keybundle changepass</code> commands. This is probably a bad idea except for testing, because anyone can read the arguments to a command line application.</p>
-<dt><code>&#8211;nonroots</code>=CERTIFICATES</p>
-<dd> Specify additional certificates, not trusted, but which may be used in the trust path if appropriate trust can be established.</p>
-<dt><code>&#8211;roots</code>=CERTIFICATES</p>
-<dd> Specify additional certificates which can be used as trusted (root) certificates.</p>
-<dt><code>&#8211;nosys</code></p>
-<dd> Disable use of the standard root certificates that are provided by the operating system.</p>
-<dt><code>&#8211;noprompt</code></p>
-<dd> Disable prompting for passwords/passphrases. If you do not provide the passphrase on the command line (with <code>&#8211;pass</code> or <code>&#8211;newpass</code>) this will cause qcatool to abort the command if a password/passphrase is required.</p>
-<dt><code>&#8211;ordered</code></p>
-<dd> If outputting certificate information fields (Distinguished Name and Subject Alternative Name), show them in same the order that they are present in the certificate rather than in a friendly sorted order.</p>
-<dt><code>&#8211;debug</code></p>
-<dd> Enable additional output to aid debugging.</p>
-<dt><code>&#8211;log-file=FILENAME</code></p>
-<dd> Log to the specified file.</p>
-<dt><code>&#8211;log-level=LEVEL</code></p>
-<dd> Log at the specified level. The log level can be between 0 (none) and 8 (most).</p>
-<dt><code>&#8211;nobundle</code></p>
-<dd> When S/MIME signing, do not bundle the signer&#8217;s certificate chain inside the signature. This results in a smaller signature output, but requires the recipient to have all of the necessary certificates in order to verify it. </p>
+<dt><code>&#8211;pass</code>=PASSWORD</dt>
+<dd> Specify the password to use. This is probably a bad idea except for testing, because anyone can read the arguments to a command line application.</dd>
+<dt><code>&#8211;newpass</code>=PASSWORD</dt>
+<dd> Specify the new password to use for password change with the <code>key changepass</code> and <code>keybundle changepass</code> commands. This is probably a bad idea except for testing, because anyone can read the arguments to a command line application.</dd>
+<dt><code>&#8211;nonroots</code>=CERTIFICATES</dt>
+<dd> Specify additional certificates, not trusted, but which may be used in the trust path if appropriate trust can be established.</dd>
+<dt><code>&#8211;roots</code>=CERTIFICATES</dt>
+<dd> Specify additional certificates which can be used as trusted (root) certificates.</dd>
+<dt><code>&#8211;nosys</code></dt>
+<dd> Disable use of the standard root certificates that are provided by the operating system.</dd>
+<dt><code>&#8211;noprompt</code></dt>
+<dd> Disable prompting for passwords/passphrases. If you do not provide the passphrase on the command line (with <code>&#8211;pass</code> or <code>&#8211;newpass</code>) this will cause qcatool to abort the command if a password/passphrase is required.</dd>
+<dt><code>&#8211;ordered</code></dt>
+<dd> If outputting certificate information fields (Distinguished Name and Subject Alternative Name), show them in same the order that they are present in the certificate rather than in a friendly sorted order.</dd>
+<dt><code>&#8211;debug</code></dt>
+<dd> Enable additional output to aid debugging.</dd>
+<dt><code>&#8211;log-file=FILENAME</code></dt>
+<dd> Log to the specified file.</dd>
+<dt><code>&#8211;log-level=LEVEL</code></dt>
+<dd> Log at the specified level. The log level can be between 0 (none) and 8 (most).</dd>
+<dt><code>&#8211;nobundle</code></dt>
+<dd> When S/MIME signing, do not bundle the signer&#8217;s certificate chain inside the signature. This results in a smaller signature output, but requires the recipient to have all of the necessary certificates in order to verify it. </dd>
 </dl>
 <h2>COMMANDS</h2>
 <dl>
-<dt><code>help</code>, <code>&#8211;help</code>, <code>-h</code></p>
-<dd> Output usage (help) information.</p>
-<dt><code>version</code>, <code>&#8211;version</code>, <code>-v</code></p>
-<dd> Output version information.</p>
-<dt><code>plugins</code></p>
-<dd> List available plugins. Use the <code>&#8211;debug</code> option to get more information on plugins which are found and which ones actually loaded.</p>
-<dt><code>config save </code><i>[provider]</i></p>
-<dd> Save provider configuration. Use this to have the provider&#8217;s default configuration written to persistent storage, which you can then edit by hand.</p>
-<dt><code>config edit </code><i>[provider]</i></p>
-<dd> Edit provider configuration. The changes are written to persistent storage.</p>
-<dt><code>key make rsa|dsa [bits]</code></p>
-<dd> Create a key pair</p>
-<dt><code>key changepass [K]</p>
-<dd> Add/change/remove passphrase of a key</p>
-<dt>cert makereq [K]</code></p>
-<dd> Create certificate request (CSR)</p>
-<dt><code>cert makeself [K]</code></p>
-<dd> Create self-signed certificate</p>
-<dt><code>cert makereqadv [K]</code></p>
-<dd> Advanced version of &#8216;makereq&#8217;</p>
-<dt><code>cert makeselfadv [K]</code></p>
-<dd> Advanced version of &#8216;makeself&#8217;</p>
-<dt><code>cert validate [C]</code></p>
-<dd> Validate certificate</p>
-<dt><code>keybundle make [K] [C]</code></p>
-<dd> Create a keybundle</p>
-<dt><code>keybundle extract [X]</code></p>
-<dd> Extract certificate(s) and key</p>
-<dt><code>keybundle changepass [X]</code></p>
-<dd> Change passphrase of a keybundle</p>
-<dt><code>keystore list-stores</code></p>
-<dd> List all available keystores</p>
-<dt><code>keystore list [storeName]</code></p>
-<dd> List content of a keystore</p>
-<dt><code>keystore monitor</code></p>
-<dd> Monitor for keystore availability</p>
-<dt><code>keystore export [E]</code></p>
-<dd> Export a keystore entry&#8217;s content</p>
-<dt><code>keystore exportref [E]</code></p>
-<dd> Export a keystore entry reference</p>
-<dt><code>keystore addkb [storeName] [cert.p12]</code></p>
-<dd> Add a keybundle into a keystore</p>
-<dt><code>keystore addpgp [storeName] [key.asc]</code></p>
-<dd> Add a PGP key into a keystore</p>
-<dt><code>keystore remove [E]</code></p>
-<dd> Remove an object from a keystore</p>
-<dt><code>show cert [C]</code></p>
-<dd> Examine a certificate</p>
-<dt><code>show req [req.pem]</code></p>
-<dd> Examine a certificate request (CSR)</p>
-<dt><code>show crl [crl.pem]</code></p>
-<dd> Examine a certificate revocation list</p>
-<dt><code>show kb [X]</code></p>
-<dd> Examine a keybundle</p>
-<dt><code>show pgp [P|S]</code></p>
-<dd> Examine a PGP key</p>
-<dt><code>message sign pgp|pgpdetach|smime [X|S]</code></p>
-<dd> Sign a message</p>
-<dt><code>message encrypt pgp|smime [C|P]</code></p>
-<dd> Encrypt a message</p>
-<dt><code>message signencrypt [S] [P]</code></p>
-<dd> PGP sign &amp; encrypt a message</p>
-<dt><code>message verify pgp|smime</code></p>
-<dd> Verify a message</p>
-<dt><code>message decrypt pgp|smime ((X) &#8230;)</code></p>
-<dd> Decrypt a message (S/MIME needs X)</p>
-<dt><code>message exportcerts</code></p>
-<dd> Export certs from S/MIME message </p>
+<dt><code>help</code>, <code>&#8211;help</code>, <code>-h</code></dt>
+<dd> Output usage (help) information.</dd>
+<dt><code>version</code>, <code>&#8211;version</code>, <code>-v</code></dt>
+<dd> Output version information.</dd>
+<dt><code>plugins</code></dt>
+<dd> List available plugins. Use the <code>&#8211;debug</code> option to get more information on plugins which are found and which ones actually loaded.</dd>
+<dt><code>config save </code><i>[provider]</i></dt>
+<dd> Save provider configuration. Use this to have the provider&#8217;s default configuration written to persistent storage, which you can then edit by hand.</dd>
+<dt><code>config edit </code><i>[provider]</i></dt>
+<dd> Edit provider configuration. The changes are written to persistent storage.</dd>
+<dt><code>key make rsa|dsa [bits]</code></dt>
+<dd> Create a key pair</dd>
+<dt><code>key changepass [K]</dt>
+<dd> Add/change/remove passphrase of a key</dd>
+<dt>cert makereq [K]</code></dt>
+<dd> Create certificate request (CSR)</dd>
+<dt><code>cert makeself [K]</code></dt>
+<dd> Create self-signed certificate</dd>
+<dt><code>cert makereqadv [K]</code></dt>
+<dd> Advanced version of &#8216;makereq&#8217;</dd>
+<dt><code>cert makeselfadv [K]</code></dt>
+<dd> Advanced version of &#8216;makeself&#8217;</dd>
+<dt><code>cert validate [C]</code></dt>
+<dd> Validate certificate</dd>
+<dt><code>keybundle make [K] [C]</code></dt>
+<dd> Create a keybundle</dd>
+<dt><code>keybundle extract [X]</code></dt>
+<dd> Extract certificate(s) and key</dd>
+<dt><code>keybundle changepass [X]</code></dt>
+<dd> Change passphrase of a keybundle</dd>
+<dt><code>keystore list-stores</code></dt>
+<dd> List all available keystores</dd>
+<dt><code>keystore list [storeName]</code></dt>
+<dd> List content of a keystore</dd>
+<dt><code>keystore monitor</code></dt>
+<dd> Monitor for keystore availability</dd>
+<dt><code>keystore export [E]</code></dt>
+<dd> Export a keystore entry&#8217;s content</dd>
+<dt><code>keystore exportref [E]</code></dt>
+<dd> Export a keystore entry reference</dd>
+<dt><code>keystore addkb [storeName] [cert.p12]</code></dt>
+<dd> Add a keybundle into a keystore</dd>
+<dt><code>keystore addpgp [storeName] [key.asc]</code></dt>
+<dd> Add a PGP key into a keystore</dd>
+<dt><code>keystore remove [E]</code></dt>
+<dd> Remove an object from a keystore</dd>
+<dt><code>show cert [C]</code></dt>
+<dd> Examine a certificate</dd>
+<dt><code>show req [req.pem]</code></dt>
+<dd> Examine a certificate request (CSR)</dd>
+<dt><code>show crl [crl.pem]</code></dt>
+<dd> Examine a certificate revocation list</dd>
+<dt><code>show kb [X]</code></dt>
+<dd> Examine a keybundle</dd>
+<dt><code>show pgp [P|S]</code></dt>
+<dd> Examine a PGP key</dd>
+<dt><code>message sign pgp|pgpdetach|smime [X|S]</code></dt>
+<dd> Sign a message</dd>
+<dt><code>message encrypt pgp|smime [C|P]</code></dt>
+<dd> Encrypt a message</dd>
+<dt><code>message signencrypt [S] [P]</code></dt>
+<dd> PGP sign &amp; encrypt a message</dd>
+<dt><code>message verify pgp|smime</code></dt>
+<dd> Verify a message</dd>
+<dt><code>message decrypt pgp|smime ((X) &#8230;)</code></dt>
+<dd> Decrypt a message (S/MIME needs X)</dd>
+<dt><code>message exportcerts</code></dt>
+<dd> Export certs from S/MIME message </dd>
 </dl>
 <h2>ARGUMENTS</h2>
 <p> The arguments to the commands are as follows. </p>

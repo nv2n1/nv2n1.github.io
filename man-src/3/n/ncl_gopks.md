@@ -12,9 +12,9 @@ GOPKS (Open GKS) - opens the GKS package
 
  void gopen_gks(const char *err_file, size_t mem_unit);
 <h2>Description</h2><dl COMPACT><dt>ERRFIL
-<dd>(Input, Integer) - The Fortran unit number to which error messages are to be written. Typically this should be unit 6.
-<dt>BUFA
-<dd>(Input, Integer) - The dimension of an internal buffer. Currently in NCAR GKS-0A, BUFA is ignored.</dl><h2>Usage</h2>To get output to any workstation, GOPKS, GOPWK and GACWK must be called in that order. For jobs producing only CGM output, the three calls to GOPKS, GOPWK and GACWK can be replaced with a call to the SPPS function OPNGKS.
+</dt><dd>(Input, Integer) - The Fortran unit number to which error messages are to be written. Typically this should be unit 6.
+</dd><dt>BUFA
+</dt><dd>(Input, Integer) - The dimension of an internal buffer. Currently in NCAR GKS-0A, BUFA is ignored.</dd></dl><h2>Usage</h2>To get output to any workstation, GOPKS, GOPWK and GACWK must be called in that order. For jobs producing only CGM output, the three calls to GOPKS, GOPWK and GACWK can be replaced with a call to the SPPS function OPNGKS.
 <h2>Access</h2>To use GKS routines, load the NCAR GKS-0A library ncarg_gks.
 <h2>See Also</h2>Online: gopwk, gacwk, gdawk, gclwk, gclks, guwk, opngks, clsgks, gopen_gks 
 

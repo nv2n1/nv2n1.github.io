@@ -21,21 +21,9 @@ description: "sc::TriangleIntegrator –"
 <p> <code>Ref</code>&lt; <code>TriInterpCoef</code> &gt; <code>coef</code> (int order, int i)</p>
 <h3>Protected Member Functions</h3>
 <pre><code>void set_r (int i, double r)
-
-
-
 void set_s (int i, double s)
-
-
-
 void set_w (int i, double w)
-
-
-
 void init_coef ()
-
-
-
 void clear_coef ()
 </code></pre>
 <h2>Author</h2>

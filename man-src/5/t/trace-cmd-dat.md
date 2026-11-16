@@ -14,19 +14,21 @@ description: "trace-cmd.dat – trace-cmd file format"
 <dl>
 <dd>
 <pre>The first three bytes contain the magic value:</pre>
-</dl>
+</dd></dl>
 <dl>
 <dd>
 <pre>0x17 0x08 0x44</pre>
-</dl>
+</dd></dl>
 <dl>
 <dd>
 <pre>The next 7 bytes contain the characters:</pre>
-</dl>
+</dd></dl>
 <dl>
 <dd>
 <pre>&quot;tracing&quot;</pre>
-</dl>
+</dd></dl>
 <dl>
 <dd>
 <pre>The next set of characters contain a null '
+</dd></dl>
+</pre>

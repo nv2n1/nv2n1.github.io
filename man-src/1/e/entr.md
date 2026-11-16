@@ -15,26 +15,26 @@ description: "entr – run arbitrary commands when files change"
 <p> A list of files provided on the standard input and the <i>utility</i> is executed using the supplied arguments if any of them change. waits for the child process to finish before responding to subsequent file system events. A TTY is also opened before entering the watch loop in order to support interactive utilities. </p>
 <p> The arguments are as follows:</p>
 <dl>
-<dt><code>-c</code></p>
-<dd> Execute /usr/bin/clear before invoking the <i>utility</i> specified on the command line.</p>
-<dt><code>-d</code></p>
-<dd> Track the directories of regular files provided as input and exit if a new file is added. This option also enables directories to be specified explicitly. Files with names beginning with `.&#8217; are ignored.</p>
-<dt><code>-p</code></p>
-<dd> Postpone the first execution of the <i>utility</i> until a file is modified.</p>
-<dt><code>-r</code></p>
-<dd> Reload a persistent child process. <code>SIGTERM</code> is used to terminate the <i>utility before it is restarted.</i> A process group is created to prevent shell scripts from masking signals. waits for the <i>utility</i> to exit to ensure that resources such as sockets have been closed.</dl>
+<dt><code>-c</code></dt>
+<dd> Execute /usr/bin/clear before invoking the <i>utility</i> specified on the command line.</dd>
+<dt><code>-d</code></dt>
+<dd> Track the directories of regular files provided as input and exit if a new file is added. This option also enables directories to be specified explicitly. Files with names beginning with `.&#8217; are ignored.</dd>
+<dt><code>-p</code></dt>
+<dd> Postpone the first execution of the <i>utility</i> until a file is modified.</dd>
+<dt><code>-r</code></dt>
+<dd> Reload a persistent child process. <code>SIGTERM</code> is used to terminate the <i>utility before it is restarted.</i> A process group is created to prevent shell scripts from masking signals. waits for the <i>utility</i> to exit to ensure that resources such as sockets have been closed.</dd></dl>
 <p> The first occurrence of <i>/_</i> on the command line will be replaced with the absolute path of the first file that was modified. If the restart option is used the first file under watch is treated as the default.</p>
 <h2>ENVIRONMENT</h2>
 <p> If <code>PAGER</code> is undefined, <code>entr</code> will assign /bin/cat to prevent interactive utilities from waiting for keyboard input if output does not fit on the screen.</p>
 <h2>EXIT STATUS</h2>
 <p> The utility exits with one of the following values: </p>
 <dl>
-<dt><code>0</code></p>
-<dd> <code>SIGINT</code> or <code>SIGTERM</code> was received</p>
-<dt><code>1</code></p>
-<dd> No regular files were provided as input or an error occurred</p>
-<dt><code>2</code></p>
-<dd> A file was added to a directory and the directory watch option was specified</dl>
+<dt><code>0</code></dt>
+<dd> <code>SIGINT</code> or <code>SIGTERM</code> was received</dd>
+<dt><code>1</code></dt>
+<dd> No regular files were provided as input or an error occurred</dd>
+<dt><code>2</code></dt>
+<dd> A file was added to a directory and the directory watch option was specified</dd></dl>
 <h2>EXAMPLES</h2>
 <p> Rebuild a project if source files change, limiting output to the first 20 lines: </p>
 <blockquote><p><tt>$ find src/ | entr sh -c 'make | head -n 20'</tt></p></blockquote>

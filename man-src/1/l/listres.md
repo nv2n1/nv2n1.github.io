@@ -16,16 +16,16 @@ description: "listres – list resources in widgets"
 <h2>OPTIONS</h2>
 <p> <i>Listres</i> accepts all of the standard toolkit command line options along with those listed below:</p>
 <dl>
-<dt><code>-all</code></p>
-<dd> This option indicates that <i>listres</i> should print information for all known widgets and objects.</p>
-<dt><code>-nosuper</code></p>
-<dd> This option indicates that resources that are inherited from a superclass should not be listed. This is useful for determining which resources are new to a subclass.</p>
-<dt><code>-variable</code></p>
-<dd> This option indicates that widgets should be identified by the names of the class record variables rather than the class name given in the variable. This is useful for distinguishing subclasses that have the same class name as their superclasses.</p>
-<dt><code>-top </code><i>name</i></p>
-<dd> This option specifies the name of the widget to be treated as the top of the hierarchy. Case is not significant, and the name may match either the class variable name or the class name. The default is &#8220;core&#8221;.</p>
-<dt><code>-format </code><i>printf-string</i></p>
-<dd> This option specifies the <i>printf</i>-style format string to be used to print out the name, instance, class, and type of each resource.</dl>
+<dt><code>-all</code></dt>
+<dd> This option indicates that <i>listres</i> should print information for all known widgets and objects.</dd>
+<dt><code>-nosuper</code></dt>
+<dd> This option indicates that resources that are inherited from a superclass should not be listed. This is useful for determining which resources are new to a subclass.</dd>
+<dt><code>-variable</code></dt>
+<dd> This option indicates that widgets should be identified by the names of the class record variables rather than the class name given in the variable. This is useful for distinguishing subclasses that have the same class name as their superclasses.</dd>
+<dt><code>-top </code><i>name</i></dt>
+<dd> This option specifies the name of the widget to be treated as the top of the hierarchy. Case is not significant, and the name may match either the class variable name or the class name. The default is &#8220;core&#8221;.</dd>
+<dt><code>-format </code><i>printf-string</i></dt>
+<dd> This option specifies the <i>printf</i>-style format string to be used to print out the name, instance, class, and type of each resource.</dd></dl>
 <h2>X DEFAULTS</h2>
 <p> To be written.</p>
 <h2>SEE ALSO</h2>

@@ -32,17 +32,17 @@ $ svn - bisect-- min 25000 --max 26000 start $ svn - bisect bad $ svn - bisect b
  Options <font SIZE="-1">MUST</font> be specified before subcommands, on the command line. Options specified after the subcommand will be passed to the subcommand; this is currently only useful for the ``run'' subcommand.
 <dl>
 <dt>--help
-<dd> Use anywhere. Output a command list, or specific help for the given command.
-<dt>--version
-<dd> Use anywhere. Tells you my version number.
-<dt>--verbose
-<dd> Use anywhere. Enable some additional informational output.
-<dt>--min
-<dd> Use with ``start''. Specify the beginning revision of the range.
-<dt>--max
-<dd> Use with ``start''. Specify the ending revision of the range.
-<dt>--back
-<dd> Use with ``reset''. Restores the original repository version.</dl>
+</dt><dd> Use anywhere. Output a command list, or specific help for the given command.
+</dd><dt>--version
+</dt><dd> Use anywhere. Tells you my version number.
+</dd><dt>--verbose
+</dt><dd> Use anywhere. Enable some additional informational output.
+</dd><dt>--min
+</dt><dd> Use with ``start''. Specify the beginning revision of the range.
+</dd><dt>--max
+</dt><dd> Use with ``start''. Specify the ending revision of the range.
+</dd><dt>--back
+</dt><dd> Use with ``reset''. Restores the original repository version.</dd></dl>
 
 <h2>SUBCOMMANDS</h2>
 
@@ -143,138 +143,93 @@ svn - bisect skip[&lt;rev&gt;[&lt;rev&gt;...]]
     $ svn co http://svn.apache.org/repos/asf/subversion/trunk/subversion
     [snip lots of subversion checkout spam]
     Checked out revision 980012.
-    
     $ cd subversion
-    
     $ ack --nocolor --nogroup 'Last Changed Rev'
     svn/info-cmd.c:362:    SVN_ERR(svn_cmdline_printf(pool, _("Last Changed Rev: %ld\n"),
     tests/cmdline/depth_tests.py:2056:      'Last Changed Rev'   : '^1$',
     tests/cmdline/upgrade_tests.py:387:      'Last Changed Rev' : '7'
     tests/cmdline/upgrade_tests.py:396:      'Last Changed Rev' : '10'
-    
     $ date
     Wed Jul 28 06:40:03 EDT 2010
-    
     $ svn-bisect --min 0 start
     $ svn-bisect after
     Fetching history from r0 to r980012; it may take a while.
     There are 24349 revs left in the pool.  Choosing r862045.
-    
     $ ack --nocolor --nogroup 'Last Changed Rev'
     svn/info-cmd.c:348:    SVN_ERR(svn_cmdline_printf(pool, _("Last Changed Rev: %ld\n"),
-    
     $ svn-bisect after
     There are 12174 revs left in the pool.  Choosing r845633.
-    
     $ ack --nocolor --nogroup 'Last Changed Rev'
     clients/cmdline/info-cmd.c:153:    printf ("Last Changed Rev: %" SVN_REVNUM_T_FMT "\n", entry-&gt;cmt_rev);
-    
     $ svn-bisect after
     There are 6087 revs left in the pool.  Choosing r840416.
-    
     $ ack --nocolor --nogroup 'Last Changed Rev'
-    
     $ svn-bisect before
     There are 3043 revs left in the pool.  Choosing r842636.
-
 #ack-- nocolor-- nogroup 'Last Changed Rev'
     clients/cmdline/info-cmd.c:153:    printf ("Last Changed Rev: %" SVN_REVNUM_T_FMT "\n", entry-&gt;cmt_rev);
-    
     $ svn-bisect after
     There are 1521 revs left in the pool.  Choosing r841463.
-    
     $ ack --nocolor --nogroup 'Last Changed Rev'
-    
     $ svn-bisect before
     There are 760 revs left in the pool.  Choosing r841993.
-    
     $ ack --nocolor --nogroup 'Last Changed Rev'
     clients/cmdline/info-cmd.c:161:        printf ("Last Changed Rev: %" SVN_REVNUM_T_FMT "\n", entry-&gt;cmt_rev);
-    
     $ svn-bisect after
     There are 380 revs left in the pool.  Choosing r841730.
-    
     $ ack --nocolor --nogroup 'Last Changed Rev'
-    
     $ svn-bisect before
     There are 189 revs left in the pool.  Choosing r841860.
-    
     $ ack --nocolor --nogroup 'Last Changed Rev'
-    
     $ svn-bisect before
     There are 94 revs left in the pool.  Choosing r841933.
-    
     $ ack --nocolor --nogroup 'Last Changed Rev'
     clients/cmdline/info-cmd.c:151:        printf ("Last Changed Rev: %" SVN_REVNUM_T_FMT "\n", entry-&gt;cmt_rev);
-    
     $ svn-bisect after
     There are 47 revs left in the pool.  Choosing r841904.
-    
     $ ack --nocolor --nogroup 'Last Changed Rev'
     clients/cmdline/info-cmd.c:150:        printf ("Last Changed Rev: %ld\n", entry-&gt;cmt_rev);
-    
     $ svn-bisect after
     There are 23 revs left in the pool.  Choosing r841880.
-    
     $ ack --nocolor --nogroup 'Last Changed Rev'
-    
     $ svn-bisect before
     There are 11 revs left in the pool.  Choosing r841890.
-    
     $ ack --nocolor --nogroup 'Last Changed Rev'
     clients/cmdline/info-cmd.c:153:            printf ("Last Changed Rev: %ld\n", entry-&gt;cmt_rev);
-    
     $ svn-bisect after
     There are 5 revs left in the pool.  Choosing r841883.
-    
     $ ack --nocolor --nogroup 'Last Changed Rev'
     clients/cmdline/info-cmd.c:153:            printf ("Last Changed Rev: %ld\n", entry-&gt;cmt_rev);
-    
     $ svn-bisect after
     There are 2 revs left in the pool.  Choosing r841882.
-    
     $ ack --nocolor --nogroup 'Last Changed Rev'
-    
     $ svn-bisect before
     This is the end of the road!
     The change occurred in r841883.
-    
     $ svn log -r841883
     ------------------------------------------------------------------------
     r841883 | rooneg | 2002-04-27 15:23:38 -0400 (Sat, 27 Apr 2002) | 30 lines
-    
     As requested by cmpilato in issue #676, add an 'svn info' command, which 
     prints out the contents of the svn_wc_entry_t for a given versioned resource.
-    
     * CHANGES
       note the addition of the 'svn info' command.
-    
     * subversion/clients/cmdline/cl.h
       add declaration for svn_cl__info.
-    
     * subversion/clients/cmdline/info-cmd.c
       new file implementing the info command.
-    
     * subversion/clients/cmdline/main.c
       hook up the info command.
-    
     * subversion/clients/cmdline/man/svn.1
       document the info command.
-    
     * subversion/tests/clients/cmdline/getopt_tests_data/svn--help_stdout
       update for the addition of info command.
-    
     * subversion/tests/clients/cmdline/getopt_tests_data/svn_help_stdout
       ditto.
-    
     * subversion/tests/clients/cmdline/getopt_tests_data/svn_stderr
       ditto.
-    
     * tools/dev/bash_completion
       add 'info' to the tab completion.
-    
     ------------------------------------------------------------------------
-    
     $ date
     Wed Jul 28 06:45:27 EDT 2010
 </code></pre> 

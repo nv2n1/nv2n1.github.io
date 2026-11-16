@@ -11,7 +11,6 @@ description: "sc::ProcThreadGrp –"
 <p> The <code>ProcThreadGrp</code> class privides a concrete thread group appropriate for an environment where there is only one thread.</p>
 <h2>Synopsis</h2>
 <pre><code>
-
 #include &lt;thread.h&gt;</code></pre>
 <p> Inherits <code>sc::ThreadGrp</code>.</p>
 <h3>Public Member Functions</h3>

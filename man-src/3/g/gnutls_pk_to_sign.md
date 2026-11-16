@@ -14,10 +14,10 @@ description: "gnutls_pk_to_sign – API function"
 <p> <code>gnutls_sign_algorithm_t gnutls_pk_to_sign(gnutls_pk_algorithm_t </code><i>pk</i><code>, gnutls_digest_algorithm_t </code><i>hash</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
-<dt>gnutls_pk_algorithm_t pk</p>
-<dd> is a public key algorithm</p>
-<dt>gnutls_digest_algorithm_t hash</p>
-<dd> a hash algorithm</dl>
+<dt>gnutls_pk_algorithm_t pk</dt>
+<dd> is a public key algorithm</dd>
+<dt>gnutls_digest_algorithm_t hash</dt>
+<dd> a hash algorithm</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> This function maps public key and hash algorithms combinations to signature algorithms.</p>
 <h2>RETURNS</h2>
@@ -31,6 +31,6 @@ description: "gnutls_pk_to_sign – API function"
 <h2>SEE ALSO</h2>
 <p> The full documentation for <code>gnutls</code> is maintained as a Texinfo manual. If the /usr/share/doc/gnutls/ directory does not contain the HTML form visit <code></p>
 <dl>
-<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></p>
-<dd> </code></dl>
+<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></dt>
+<dd> </code></dd></dl>
 <h2>Index</h2>

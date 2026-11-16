@@ -19,18 +19,18 @@ description: "cvsbug – send problem report (PR) about CVS to a central support
 <p> The more precise your problem description and the more complete your information, the faster your support team can solve your problems.</p>
 <h2>Options</h2>
 <dl>
-<dt><code>-f</code><i> problem-report</i></p>
-<dd>specify a file (<i>problem-report</i>) which already contains a complete problem report. <code>cvsbug</code> sends the contents of the file without invoking the editor. If the value for <i>problem-report</i> is <code>`-&#8216;</code>, then <code>cvsbug</code> reads from standard input.</p>
-<dt><code>-t</code><i> mail-address</i></p>
-<dd>Change mail address at the support site for problem reports. The default <i>mail-address</i> is the address used for the default <i>site</i>. Use the <i>site</i> argument rather than this option in nearly all cases.</p>
-<dt><code>-P</code></p>
-<dd>print the form specified by the environment variable <code>PR_FORM </code> on standard output. If <code>PR_FORM</code> is not set, print the standard blank PR template. No mail is sent.</p>
-<dt><code>-L</code></p>
-<dd>print the list of available categories. No mail is sent.</p>
-<dt><code>&#8211;request-id</code></p>
-<dd>sends mail to the default support site, or <i>site</i> if specified, with a request for your <i>submitter-id</i>. If you are not affiliated with <i>site</i>, use a <i>submitter-id</i> of <code>net</code>&#8216;.</p>
-<dt><code>-v</code></p>
-<dd>Display the <code>cvsbug</code> version number.</dl>
+<dt><code>-f</code><i> problem-report</i></dt>
+<dd>specify a file (<i>problem-report</i>) which already contains a complete problem report. <code>cvsbug</code> sends the contents of the file without invoking the editor. If the value for <i>problem-report</i> is <code>`-&#8216;</code>, then <code>cvsbug</code> reads from standard input.</dd>
+<dt><code>-t</code><i> mail-address</i></dt>
+<dd>Change mail address at the support site for problem reports. The default <i>mail-address</i> is the address used for the default <i>site</i>. Use the <i>site</i> argument rather than this option in nearly all cases.</dd>
+<dt><code>-P</code></dt>
+<dd>print the form specified by the environment variable <code>PR_FORM </code> on standard output. If <code>PR_FORM</code> is not set, print the standard blank PR template. No mail is sent.</dd>
+<dt><code>-L</code></dt>
+<dd>print the list of available categories. No mail is sent.</dd>
+<dt><code>&#8211;request-id</code></dt>
+<dd>sends mail to the default support site, or <i>site</i> if specified, with a request for your <i>submitter-id</i>. If you are not affiliated with <i>site</i>, use a <i>submitter-id</i> of <code>net</code>&#8216;.</dd>
+<dt><code>-v</code></dt>
+<dd>Display the <code>cvsbug</code> version number.</dd></dl>
 <p> Note: use <code>cvsbug</code> to submit problem reports rather than mailing them directly. Using both the template and <code>cvsbug</code> itself will help ensure all necessary information will reach the support site.</p>
 <h2>Environment</h2>
 <p>The environment variable <code>EDITOR</code> specifies the editor to invoke on the template.<br />
@@ -39,14 +39,14 @@ description: "cvsbug – send problem report (PR) about CVS to a central support
 <h2>How To Fill Out A Problem Report</h2>
 <p>Problem reports have to be in a particular form so that a program can easily manage them. Please remember the following guidelines:</p>
 <dl>
-<dt>&bull;</p>
-<dd>describe only <code>one problem</code> with each problem report.</p>
-<dt>&bull;</p>
-<dd>For follow-up mail, use the same subject line as the one in the automatic acknowledgement. It consists of category, PR number and the original synopsis line. This allows the support site to relate several mail messages to a particular PR and to record them automatically.</p>
-<dt>&bull;</p>
-<dd>Please try to be as accurate as possible in the subject and/or synopsis line.</p>
-<dt>&bull;</p>
-<dd>The subject and the synopsis line are not confidential. This is because open-bugs lists are compiled from them. Avoid confidential information there.</dl>
+<dt>&bull;</dt>
+<dd>describe only <code>one problem</code> with each problem report.</dd>
+<dt>&bull;</dt>
+<dd>For follow-up mail, use the same subject line as the one in the automatic acknowledgement. It consists of category, PR number and the original synopsis line. This allows the support site to relate several mail messages to a particular PR and to record them automatically.</dd>
+<dt>&bull;</dt>
+<dd>Please try to be as accurate as possible in the subject and/or synopsis line.</dd>
+<dt>&bull;</dt>
+<dd>The subject and the synopsis line are not confidential. This is because open-bugs lists are compiled from them. Avoid confidential information there.</dd></dl>
 <p> See the GNU <code>Info </code> file <code>cvsbug.info</code> or the document <i>Reporting Problems With cvsbug</i>&nbsp;<wbr>for detailed information on reporting problems</p>
 <h2>How To Submit Test Cases, Code, Etc.</h2>
 <p>Submit small code samples with the PR. Contact the support site for instructions on submitting larger test cases and problematic source code.</p>

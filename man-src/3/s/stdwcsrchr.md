@@ -11,9 +11,7 @@ std::wcsrchr - std::wcsrchr
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;cwchar&gt;
-
     const wchar_t *wcsrchr(const wchar_t *str, wchar_t ch);
-
 wchar_t *wcsrchr(wchar_t *str, wchar_t ch);</code></pre> 
 Finds the last occurrence of the wide character ch in the wide string pointed to by str. 
 

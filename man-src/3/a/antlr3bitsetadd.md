@@ -64,19 +64,19 @@ description: "src/antlr3bitset.c –"
 <h3>ANTLR3_API <code>pANTLR3_BITSET</code> antlr3BitsetLoad (<code>pANTLR3_BITSET_LIST</code> inBits)</h3>
 <p>Creates a new bitset with at least one 64 bit bset of bits, but as many 64 bit sets as are required. <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>bset</i> A variable number of bits to add to the set, ending in -1 (impossible bit).</dl>
+<dd><i>bset</i> A variable number of bits to add to the set, ending in -1 (impossible bit).</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>A new bit set with all of the specified bitmaps in it and the API initialized.</dl>
+<dd>A new bit set with all of the specified bitmaps in it and the API initialized.</dd></dl>
 <p> Call as:</p>
 <dl COMPACT>
-<dt>*</p>
-<dd>pANTLR3_BITSET = antlrBitsetLoad(bset, bset11, &#8230;, -1);</p>
-<dt>*</p>
-<dd>pANTLR3_BITSET = antlrBitsetOf(-1); Create empty bitset</dl>
+<dt>*</dt>
+<dd>pANTLR3_BITSET = antlrBitsetLoad(bset, bset11, &#8230;, -1);</dd>
+<dt>*</dt>
+<dd>pANTLR3_BITSET = antlrBitsetOf(-1); Create empty bitset</dd></dl>
 <p> <code>Remarks:</code></p>
 <dl COMPACT>
-<dd>Stdargs function &#8211; must supply -1 as last paremeter, which is NOT added to the set.</dl>
+<dd>Stdargs function &#8211; must supply -1 as last paremeter, which is NOT added to the set.</dd></dl>
 <p> References antlr3BitsetNew(), ANTLR3_BITSET_LIST_struct::bits, ANTLR3_BITSET_struct::blist, ANTLR3_BITSET_struct::grow, and ANTLR3_BITSET_LIST_struct::length. </p>
 <p> Referenced by combineFollows(), displayRecognitionError(), mismatchIsMissingToken(), and recoverFromMismatchedElement().</p>
 <h3>static <code>ANTLR3_BOOLEAN</code> antlr3BitsetMember (<code>pANTLR3_BITSET</code> bitset, <code>ANTLR3_UINT32</code> bit) [static]</h3>
@@ -91,19 +91,19 @@ description: "src/antlr3bitset.c –"
 <h3>ANTLR3_API <code>pANTLR3_BITSET</code> antlr3BitsetOf (<code>ANTLR3_INT32</code> bit, &#8230;)</h3>
 <p>Creates a new bitset with at least one element, but as many elements are required. <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>bit</i> A variable number of bits to add to the set, ending in -1 (impossible bit).</dl>
+<dd><i>bit</i> A variable number of bits to add to the set, ending in -1 (impossible bit).</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>A new bit set with all of the specified elements added into it.</dl>
+<dd>A new bit set with all of the specified elements added into it.</dd></dl>
 <p> Call as:</p>
 <dl COMPACT>
-<dt>*</p>
-<dd>pANTLR3_BITSET = antlrBitsetOf(n, n1, n2, -1);</p>
-<dt>*</p>
-<dd>pANTLR3_BITSET = antlrBitsetOf(-1); Create empty bitset</dl>
+<dt>*</dt>
+<dd>pANTLR3_BITSET = antlrBitsetOf(n, n1, n2, -1);</dd>
+<dt>*</dt>
+<dd>pANTLR3_BITSET = antlrBitsetOf(-1); Create empty bitset</dd></dl>
 <p> <code>Remarks:</code></p>
 <dl COMPACT>
-<dd>Stdargs function &#8211; must supply -1 as last paremeter, which is NOT added to the set.</dl>
+<dd>Stdargs function &#8211; must supply -1 as last paremeter, which is NOT added to the set.</dd></dl>
 <p> References antlr3BitsetAdd(), and antlr3BitsetNew(). </p>
 <p> Referenced by getTokensType().</p>
 <h3>static <code>pANTLR3_BITSET</code> antlr3BitsetOR (<code>pANTLR3_BITSET</code> bitset1, <code>pANTLR3_BITSET</code> bitset2) [static]</h3>

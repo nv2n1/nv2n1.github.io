@@ -42,7 +42,7 @@ description: "org.freedesktop.locale1 – The D-Bus interface of systemd-localed
  interface org.freedesktop.DBus.Introspectable { ... };
  interface org.freedesktop.DBus.Properties { ... };
 };</pre>
-</dl>
+</dd></dl>
 <h3>Methods</h3>
 <p>If you set a new system locale all old system locale settings will be dropped and the new settings will be saved to disk. The locale will also be passed to the system manager, and subsequently started daemons will inherit the new system locale. Note that already running daemons will not learn about the new value. </p>
 <p> The <code>SetVConsoleKeyboard()</code> method may be used to set the key mapping for the virtual console. Similarly, <code>SetX11Keyboard()</code> may be used to set the default key mapping of any X11 servers. </p>
@@ -65,16 +65,17 @@ description: "org.freedesktop.locale1 – The D-Bus interface of systemd-localed
 <pre>$ gdbus introspect --system \
  --dest org.freedesktop.locale1 \
  --object-path /org/freedesktop/locale1</pre>
-</dl>
+</dd></dl>
 <h2>Versioning</h2>
 <p>These D-Bus interfaces follow m[blue]<code>the usual interface versioning guidelines</code>m[]<font SIZE="-2">[2]</font>.</p>
 <h2>Notes</h2>
 <dl>
-<dt> 1.</p>
-<dd>polkit</p>
+<dt> 1.</dt>
+<dd>polkit</dd>
 <dl>
-<dd><a rel="nofollow" href="https://www.freedesktop.org/software/polkit/docs/latest/">https://www.freedesktop.org/software/polkit/docs/latest/</a></dl>
-<dt> 2.</p>
-<dd>the usual interface versioning guidelines</p>
+<dd><a rel="nofollow" href="https://www.freedesktop.org/software/polkit/docs/latest/">https://www.freedesktop.org/software/polkit/docs/latest/</a></dd></dl>
+<dt> 2.</dt>
+<dd>the usual interface versioning guidelines</dd>
 <dl>
-<dd><a rel="nofollow" href="http://0pointer.de/blog/projects/versioning-dbus.html">http://0pointer.de/blog/projects/versioning-dbus.html</a></dl>
+<dd><a rel="nofollow" href="http://0pointer.de/blog/projects/versioning-dbus.html">http://0pointer.de/blog/projects/versioning-dbus.html</a></dd></dl>
+</dl>

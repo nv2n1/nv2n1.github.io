@@ -26,8 +26,8 @@ time_t mktime(struct tm *tm);
 <p> <code>asctime_r</code>(), <code>ctime_r</code>(), <code>gmtime_r</code>(), <code>localtime_r</code>():</p>
 <dl>
 <dt>
-<dd> _POSIX_C_SOURCE<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Glibc versions&nbsp;&lt;=&nbsp;2.19:&nbsp;*/&nbsp;_BSD_SOURCE ||&nbsp;_SVID_SOURCE</dl>
+</dt><dd> _POSIX_C_SOURCE<br />
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Glibc versions&nbsp;&lt;=&nbsp;2.19:&nbsp;*/&nbsp;_BSD_SOURCE ||&nbsp;_SVID_SOURCE</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> The <code>ctime</code>(), <code>gmtime</code>(), and <code>localtime</code>() functions all take an argument of data type <i>time_t</i>, which represents calendar time. When interpreted as an absolute time value, it represents the number of seconds elapsed since the Epoch, 1970-01-01 00:00:00 +0000 (UTC). </p>
 <p> The <code>asctime</code>() and <code>mktime</code>() functions both take an argument representing broken-down time, which is a representation separated into year, month, day, and so on. </p>
@@ -44,24 +44,24 @@ time_t mktime(struct tm *tm);
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;int tm_isdst;&nbsp;<wbr>&nbsp;/*&nbsp;Daylight saving time&nbsp;*/ }; </p>
 <p> The members of the <i>tm</i> structure are:</p>
 <dl>
-<dt><i>tm_sec</i></p>
-<dd> The number of seconds after the minute, normally in the range 0 to 59, but can be up to 60 to allow for leap seconds.</p>
-<dt><i>tm_min</i></p>
-<dd> The number of minutes after the hour, in the range 0 to 59.</p>
-<dt><i>tm_hour</i></p>
-<dd> The number of hours past midnight, in the range 0 to 23.</p>
-<dt><i>tm_mday</i></p>
-<dd> The day of the month, in the range 1 to 31.</p>
-<dt><i>tm_mon</i></p>
-<dd> The number of months since January, in the range 0 to 11.</p>
-<dt><i>tm_year</i></p>
-<dd> The number of years since 1900.</p>
-<dt><i>tm_wday</i></p>
-<dd> The number of days since Sunday, in the range 0 to 6.</p>
-<dt><i>tm_yday</i></p>
-<dd> The number of days since January 1, in the range 0 to 365.</p>
-<dt><i>tm_isdst</i></p>
-<dd> A flag that indicates whether daylight saving time is in effect at the time described. The value is positive if daylight saving time is in effect, zero if it is not, and negative if the information is not available.</dl>
+<dt><i>tm_sec</i></dt>
+<dd> The number of seconds after the minute, normally in the range 0 to 59, but can be up to 60 to allow for leap seconds.</dd>
+<dt><i>tm_min</i></dt>
+<dd> The number of minutes after the hour, in the range 0 to 59.</dd>
+<dt><i>tm_hour</i></dt>
+<dd> The number of hours past midnight, in the range 0 to 23.</dd>
+<dt><i>tm_mday</i></dt>
+<dd> The day of the month, in the range 1 to 31.</dd>
+<dt><i>tm_mon</i></dt>
+<dd> The number of months since January, in the range 0 to 11.</dd>
+<dt><i>tm_year</i></dt>
+<dd> The number of years since 1900.</dd>
+<dt><i>tm_wday</i></dt>
+<dd> The number of days since Sunday, in the range 0 to 6.</dd>
+<dt><i>tm_yday</i></dt>
+<dd> The number of days since January 1, in the range 0 to 365.</dd>
+<dt><i>tm_isdst</i></dt>
+<dd> A flag that indicates whether daylight saving time is in effect at the time described. The value is positive if daylight saving time is in effect, zero if it is not, and negative if the information is not available.</dd></dl>
 <p> The call <code>ctime(</code><i>t</i><code>)</code> is equivalent to <code>asctime(localtime(</code><i>t</i><code>))</code><i></i>. It converts the calendar time <i>t</i> into a null-terminated string of the form </p>
 <p> &quot;Wed Jun 30 21:49:08 1993
 &quot; </p>
@@ -81,8 +81,8 @@ time_t mktime(struct tm *tm);
 <p> On error, <code>mktime</code>() returns the value <i>(time_t)&nbsp;-1</i>. The remaining functions return NULL on error. On error, <i>errno</i> is set to indicate the cause of the error.</p>
 <h2>ERRORS</h2>
 <dl>
-<dt><code>EOVERFLOW</code></p>
-<dd> The result cannot be represented.</dl>
+<dt><code>EOVERFLOW</code></dt>
+<dd> The result cannot be represented.</dd></dl>
 <h2>ATTRIBUTES</h2>
 <p> For an explanation of the terms used in this section, see <code><a href="/docs/linux/man/7-attributes/">attributes</a></code>(7). </p>
 <table BORDER>

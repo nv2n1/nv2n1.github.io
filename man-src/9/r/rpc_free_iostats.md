@@ -15,7 +15,7 @@ rpc_free_iostats - release an rpc_iostats structure
 <h2>Arguments</h2>
 
 <i>stats</i>
-<dl><dd><dd>doomed rpc_iostats structure</dl>
+<dl><dd></dd><dd>doomed rpc_iostats structure</dd></dl>
 
 <h2>Copyright</h2>
 

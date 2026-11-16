@@ -10,18 +10,15 @@ description: "rand, rand_r, srand – pseudo-random number generator"
 <p>rand, rand_r, srand &#8211; pseudo-random number generator</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;stdlib.h&gt;
-
 int rand(void);
-
 int rand_r(unsigned int *seedp);
-
 void srand(unsigned int seed);</code></pre>
 <p> Feature Test Macro Requirements for glibc (see <code><a href="/docs/linux/man/7-feature_test_macros/">feature_test_macros</a></code>(7)): <code>rand_r</code>():</p>
 <dl>
 <dd>Since glibc 2.24:<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;_POSIX_C_SOURCE&nbsp;&gt;=&nbsp;199506L<br />
  Glibc 2.23 and earlier<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;_POSIX_C_SOURCE</dl>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;_POSIX_C_SOURCE</dd></dl>
 <h2>Description</h2>
 <p>The <code>rand</code>() function returns a pseudo-random integer in the range 0 to <code>RAND_MAX</code> inclusive (i.e., the mathematical range [0,&nbsp;<code>RAND_MAX</code>]). </p>
 <p> The <code>srand</code>() function sets its argument as the seed for a new sequence of pseudo-random integers to be returned by <code>rand</code>(). These sequences are repeatable by calling <code>srand</code>() with the same seed value. </p>

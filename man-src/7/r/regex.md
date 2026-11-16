@@ -48,7 +48,7 @@ description: "regex – POSIX.2 regular expressions"
 </td>
 </tr>
 </table>
-</dl>
+</dd></dl>
 <p> These stand for the character classes defined in <code><a href="/docs/linux/man/3-wctype/">wctype</a></code>(3). A locale may provide others. A character class may not be used as an endpoint of a range. </p>
 <p> In the event that an RE could match more than one substring of a given string, the RE matches the one starting earliest in the string. If the RE could match more than one substring starting at that point, it matches the longest. Subexpressions also match the longest possible substrings, subject to the constraint that the whole match be as long as possible, with subexpressions starting earlier in the RE taking priority over ones starting later. Note that higher-level subexpressions thus take priority over their lower-level component subexpressions. </p>
 <p> Match lengths are measured in characters, not collating elements. A null string is considered longer than no match at all. For example, &quot;<i>bb*</i>&quot; matches the three middle characters of &quot;abbbc&quot;, &quot;<i>(wee|week)(knights|nights)</i>&quot; matches all ten characters of &quot;weeknights&quot;, when &quot;<i>(.*).*</i>&quot; is matched against &quot;abc&quot; the parenthesized subexpression matches all three characters, and when &quot;<i>(a*)*</i>&quot; is matched against &quot;bc&quot; both the whole RE and the parenthesized subexpression match the null string. </p>

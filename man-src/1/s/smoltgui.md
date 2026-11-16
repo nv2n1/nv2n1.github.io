@@ -14,8 +14,8 @@ description: "smoltGui – GUI for Smolt hardware profile submission"
 <p><code>smoltGui</code> is a graphical user interface that can be used to submit Smolt hardware profiles to a Smoon server. Smolt is a cross-desktop hardware reporting tool for GNU/Linux based systems.</p>
 <h2>Options</h2>
 <dl COMPACT>
-<dt><code>smoltGui</code> has no command-line options.</p>
-<dd></dl>
+<dt><code>smoltGui</code> has no command-line options.</dt>
+<dd></dd></dl>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/1-smoltsendprofile/">smoltSendProfile</a></code>(1), <code><a href="/docs/linux/man/1-smoltdeleteprofile/">smoltDeleteProfile</a></code>(1).</p>
 <h2>Author</h2>

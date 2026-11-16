@@ -19,22 +19,22 @@ hpisettime[-D nn][-N host[:port]][-C&lt;cfgfile&gt;] - d mm / dd / yyyy - t HH :
 <h2>OPTIONS</h2>
 <h3>Help Options:</h3>
 <dl>
-<dt><code>-h</code>, <code>&#8211;help</code></p>
-<dd> Show help options</dl>
+<dt><code>-h</code>, <code>&#8211;help</code></dt>
+<dd> Show help options</dd></dl>
 <h3>Application Options:</h3>
 <dl>
-<dt><code>-d</code> <i>mm/dd/yyyy</i>, <code>&#8211;date</code>=<i>mm/dd/yyyy</i></p>
-<dd> New date</p>
-<dt><code>-t</code> <i>24:12:60</i>, <code>&#8211;time</code>=<i>24:12:60</i></p>
-<dd> New time of day in 24-hr format</p>
-<dt><code>-D</code> <i>nn</i>, <code>&#8211;domain</code>=<i>nn</i></p>
-<dd> Select domain id <i>nn</i></p>
-<dt><code>-X</code>, <code>&#8211;debug</code></p>
-<dd> Display debug messages</p>
-<dt><code>-N</code> <i>&quot;host[:port]&quot;</i>, <code>&#8211;host</code>=<i>&quot;host[:port]&quot;</i></p>
-<dd> Open session to the domain served by the daemon at the specified <font SIZE="-1">URL </font>(host:port). This option overrides the <font SIZE="-1">OPENHPI_DAEMON_HOST</font> and <font SIZE="-1">OPENHPI_DAEMON_PORT</font> environment variables. If host contains &#8216;:&#8217; (for example IPv6 address) then enclose it in square brackets. For example: <i>&#8220;[::1]&#8221;</i> or <i>&#8220;[::1]:4743&#8221;</i>.</p>
-<dt><code>-C</code> <i>&quot;file&quot;</i>, <code>&#8211;cfgfile</code>=<i>&quot;file&quot;</i></p>
-<dd> Use passed file as client configuration file. This option overrides the OPENHPICLIENT_CONf environment variable.</dl>
+<dt><code>-d</code> <i>mm/dd/yyyy</i>, <code>&#8211;date</code>=<i>mm/dd/yyyy</i></dt>
+<dd> New date</dd>
+<dt><code>-t</code> <i>24:12:60</i>, <code>&#8211;time</code>=<i>24:12:60</i></dt>
+<dd> New time of day in 24-hr format</dd>
+<dt><code>-D</code> <i>nn</i>, <code>&#8211;domain</code>=<i>nn</i></dt>
+<dd> Select domain id <i>nn</i></dd>
+<dt><code>-X</code>, <code>&#8211;debug</code></dt>
+<dd> Display debug messages</dd>
+<dt><code>-N</code> <i>&quot;host[:port]&quot;</i>, <code>&#8211;host</code>=<i>&quot;host[:port]&quot;</i></dt>
+<dd> Open session to the domain served by the daemon at the specified <font SIZE="-1">URL </font>(host:port). This option overrides the <font SIZE="-1">OPENHPI_DAEMON_HOST</font> and <font SIZE="-1">OPENHPI_DAEMON_PORT</font> environment variables. If host contains &#8216;:&#8217; (for example IPv6 address) then enclose it in square brackets. For example: <i>&#8220;[::1]&#8221;</i> or <i>&#8220;[::1]:4743&#8221;</i>.</dd>
+<dt><code>-C</code> <i>&quot;file&quot;</i>, <code>&#8211;cfgfile</code>=<i>&quot;file&quot;</i></dt>
+<dd> Use passed file as client configuration file. This option overrides the OPENHPICLIENT_CONf environment variable.</dd></dl>
 <h2>SEE ALSO</h2>
 <pre>
          hpi_shell

@@ -36,14 +36,12 @@ while (pmFetch(npmid, pmidlist, &amp;result) != PM_ERR_EOL) {
 }</code></pre>
 <p> Alternatively, to replay interpolated metrics from the log in reverse chronological order, at 10 second intervals (of recorded time), the following code fragment could be used. </p>
 <pre><code>struct timeval mytime;
-
 mytime.tv_sec = 0x7fffffff; /* or use pmGetArchiveEnd(&amp;mtime) */
 pmSetMode(PM_MODE_BACK, &amp;mytime, 0);
 pmFetchArchive(&amp;result);
 mytime = result-&gt;timestamp;
 pmFreeResult(result);
 pmSetMode(PM_MODE_INTERP | PM_XTB_SET(PM_TIME_SEC), &amp;mytime, -10);
-
 while (pmFetch(numpmid, pmidlist, &amp;result) != PM_ERR_EOL) {
     /*
      * process interpolated metric values as of
@@ -73,6 +71,6 @@ else {
 <p><code><a href="/docs/linux/man/3-pmapi/">PMAPI</a></code>(3), <code><a href="/docs/linux/man/3-pmfetch/">pmFetch</a></code>(3), <code><a href="/docs/linux/man/3-pmfetcharchive/">pmFetchArchive</a></code>(3), <code><a href="/docs/linux/man/3-pmgetindom/">pmGetInDom</a></code>(3), <code><a href="/docs/linux/man/3-pmlookupdesc/">pmLookupDesc</a></code>(3), <code><a href="/docs/linux/man/3-pmlookupindom/">pmLookupInDom</a></code>(3) and <code><a href="/docs/linux/man/3-pmnameindom/">pmNameInDom</a></code>(3).</p>
 <h2>Diagnostics</h2>
 <dl>
-<dt><code>PM_ERR_MODE</code></p>
-<dd>The <i>mode</i> parameter is invalid </p>
+<dt><code>PM_ERR_MODE</code></dt>
+<dd>The <i>mode</i> parameter is invalid </dd>
 </dl>

@@ -23,35 +23,35 @@ description: "irnet – IrNET protocol device"
 <h2>Parameters</h2>
 <p>Writing commands to <code>/dev/irnet</code> allow to <i>configure</i> the IrNET connection being made. This need to be done through <i><a href="/docs/linux/man/8-pppd/">pppd</a></i>(8) (see below for examples). Commands are separated by comas.</p>
 <dl>
-<dt><code>name</code><i> &lt;peer&gt;</i></p>
-<dd>Connect to the IrDA device which IrDA nickname is <i>&lt;peer&gt;</i>. The IrDA nickname is a string up to 31 characters.</p>
-<dt><code>daddr</code><i> &lt;peer&gt;</i></p>
-<dd>Connect to the IrDA device which IrDA address is <i>&lt;peer&gt;</i>. The IrDA address is a 32 bits hexadecimal number.</p>
-<dt><code>raddr</code><i> &lt;port&gt;</i></p>
-<dd>Restrict connections to the local IrDA interface which IrDA address is <i>&lt;port&gt;</i>. The IrDA address is a 32 bits hexadecimal number.</dl>
+<dt><code>name</code><i> &lt;peer&gt;</i></dt>
+<dd>Connect to the IrDA device which IrDA nickname is <i>&lt;peer&gt;</i>. The IrDA nickname is a string up to 31 characters.</dd>
+<dt><code>daddr</code><i> &lt;peer&gt;</i></dt>
+<dd>Connect to the IrDA device which IrDA address is <i>&lt;peer&gt;</i>. The IrDA address is a 32 bits hexadecimal number.</dd>
+<dt><code>raddr</code><i> &lt;port&gt;</i></dt>
+<dd>Restrict connections to the local IrDA interface which IrDA address is <i>&lt;port&gt;</i>. The IrDA address is a 32 bits hexadecimal number.</dd></dl>
 <h2>Display</h2>
 <p>Reading from <code>/dev/irnet</code> will show various <i>IrNET events</i>. This is usually done with the command <i>cat /dev/irnet</i>.</p>
 <dl>
-<dt><code>Found</code></p>
-<dd>Dump of the current IrNET discovery log.</p>
-<dt><code>Discovered </code></p>
-<dd>New IrNET device discovered.</p>
-<dt><code>Expired</code></p>
-<dd>Previously discovered IrNET device no longer present.</p>
-<dt><code>Connected to </code></p>
-<dd>This computer successfully established an IrNET connection to a peer.</p>
-<dt><code>Connection from </code></p>
-<dd>A peer successfully established an IrNET connection to this computer.</p>
-<dt><code>Request from</code></p>
-<dd>A peer attempted to connect to this computer, but no IrNET connection was waiting for it.</p>
-<dt><code>No-answer from</code></p>
-<dd>This computer attempted to connect to a peer, but no IrNET connection was waiting for it.</p>
-<dt><code>Blocked link with</code></p>
-<dd>The IrDA link of the IrNET connection is currently blocked.</p>
-<dt><code>Disconnection from</code></p>
-<dd>A peer successfully terminated an IrNET connection with this computer.</p>
-<dt><code>Disconnected to</code></p>
-<dd>This computer successfully terminated an IrNET connection with a peer.</dl>
+<dt><code>Found</code></dt>
+<dd>Dump of the current IrNET discovery log.</dd>
+<dt><code>Discovered </code></dt>
+<dd>New IrNET device discovered.</dd>
+<dt><code>Expired</code></dt>
+<dd>Previously discovered IrNET device no longer present.</dd>
+<dt><code>Connected to </code></dt>
+<dd>This computer successfully established an IrNET connection to a peer.</dd>
+<dt><code>Connection from </code></dt>
+<dd>A peer successfully established an IrNET connection to this computer.</dd>
+<dt><code>Request from</code></dt>
+<dd>A peer attempted to connect to this computer, but no IrNET connection was waiting for it.</dd>
+<dt><code>No-answer from</code></dt>
+<dd>This computer attempted to connect to a peer, but no IrNET connection was waiting for it.</dd>
+<dt><code>Blocked link with</code></dt>
+<dd>The IrDA link of the IrNET connection is currently blocked.</dd>
+<dt><code>Disconnection from</code></dt>
+<dd>A peer successfully terminated an IrNET connection with this computer.</dd>
+<dt><code>Disconnected to</code></dt>
+<dd>This computer successfully terminated an IrNET connection with a peer.</dd></dl>
 <p> File <code>/proc/net/irda/irnet</code> will also show the current state of the various IrNET connections.</p>
 <h2>Example</h2>
 <p>Start a IrNET server accepting any incoming connection:<br />

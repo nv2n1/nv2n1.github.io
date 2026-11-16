@@ -19,7 +19,7 @@ description: "dla_syamv.f –"
 <p> <code>Purpose: </code></p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
  DLA_SYAMV  performs the matrix-vector operation
          y := alpha*abs(A)*abs(x) + beta*abs(y),
@@ -34,11 +34,11 @@ description: "dla_syamv.f –"
  entry is considered &quot;symbolic&quot; if all multiplications involved
  in computing that entry have at least one zero multiplicand.
 </pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>UPLO</i> </p>
+</dt><dd> <i>UPLO</i> </dd>
 <pre>
           UPLO is INTEGER
            On entry, UPLO specifies whether the upper or lower
@@ -119,18 +119,18 @@ description: "dla_syamv.f –"
 <p> <code>Author:</code></p>
 <dl>
 <dt>
-<dd> Univ. of Tennessee </p>
+</dt><dd> Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl>
 <dt>
-<dd> September 2012</dl>
+</dt><dd> September 2012</dd></dl>
 <p> <code>Further Details: </code></p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
   Level 2 Blas routine.
   -- Written on 22-October-1986.
@@ -141,8 +141,9 @@ description: "dla_syamv.f –"
   -- Modified for the absolute-value product, April 2006
      Jason Riedy, UC Berkeley
 </pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> Definition at line 177 of file dla_syamv.f.</p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for LAPACK from the source code. </p>
 <h2>Index</h2>
+</p>

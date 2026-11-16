@@ -15,7 +15,7 @@ usb_scuttle_anchored_urbs - unanchor all an anchor's urbs
 <h2>Arguments</h2>
 
 <i>anchor</i>
-<dl><dd><dd>the anchor whose urbs you want to unanchor</dl>
+<dl><dd></dd><dd>the anchor whose urbs you want to unanchor</dd></dl>
 
 <h2>Description</h2>
 

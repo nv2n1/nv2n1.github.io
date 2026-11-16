@@ -21,9 +21,9 @@ CALL WMSETR (PNAM,RVAL)
 <h2>Description</h2>
 
 <dl><dt>PNAM
-<dd>(an input constant or variable of type CHARACTER) specifies the name of the parameter to be set. The name must appear as the first three characters of the string.
-<dt>RVAL
-<dd>(an input expression of type REAL) is the value to be assigned to the internal parameter specified by PNAM.</dl>
+</dt><dd>(an input constant or variable of type CHARACTER) specifies the name of the parameter to be set. The name must appear as the first three characters of the string.
+</dd><dt>RVAL
+</dt><dd>(an input expression of type REAL) is the value to be assigned to the internal parameter specified by PNAM.</dd></dl>
 
 <h2>C-Binding Description</h2>
 

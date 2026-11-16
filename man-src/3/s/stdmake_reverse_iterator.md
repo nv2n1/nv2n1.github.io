@@ -11,13 +11,9 @@ std::make_reverse_iterator - std::make_reverse_iterator
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header &lt;iterator&gt;
-
 template &lt;class Iter&gt;                                                   (since C++14)
-
 std::reverse_iterator&lt;Iter&gt; make_reverse_iterator( Iter i );            (until C++17)
-
 template &lt;class Iter&gt;                                                   (since C++17)
-
 constexpr std::reverse_iterator&lt;Iter&gt; make_reverse_iterator( Iter i );</code></pre> 
 make_reverse_iterator is a convenience function template that constructs a std::reverse_iterator for the given iterator i with the type deduced from the type of the argument. 
 
@@ -40,11 +36,8 @@ A std::reverse_iterator constructed from i
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;iostream&gt;
-
 #include &lt;iterator&gt;
-
 #include &lt;vector&gt;
-
 #include &lt;algorithm&gt;
 int main()
 {

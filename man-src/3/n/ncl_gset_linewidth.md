@@ -13,8 +13,8 @@ description: "gset_linewidth (Set linewidth scale factor) – sets the linewidth
 <p> void gset_linewidth(Gdouble linewidth);</p>
 <h2>Description</h2>
 <dl COMPACT>
-<dt>linewidth</p>
-<dd>(Input) &#8211; A scale factor to control the linewidth of the polyline to be drawn. It must be greater than or equal to 0. linewidth is applied to the nominal linewidth on a given device and the linewidths are mapped to the nearest available linewidth representable on that device. </p>
+<dt>linewidth</dt>
+<dd>(Input) &#8211; A scale factor to control the linewidth of the polyline to be drawn. It must be greater than or equal to 0. linewidth is applied to the nominal linewidth on a given device and the linewidths are mapped to the nearest available linewidth representable on that device. </dd>
 <p> By default linewidth = 1.0, so setting linewidth = 2.0 will double line width on most devices.</dl>
 <h2>Access</h2>
 <p>To use the GKS C-binding routines, load the ncarg_gks and ncarg_c libraries.</p>
@@ -25,3 +25,4 @@ description: "gset_linewidth (Set linewidth scale factor) – sets the linewidth
 <p>Copyright (C) 1987-2009<br />
  University Corporation for Atmospheric Research<br />
  The use of this Software is governed by a License Agreement.</p>
+</p>

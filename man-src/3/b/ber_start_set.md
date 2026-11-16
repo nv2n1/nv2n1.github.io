@@ -35,41 +35,39 @@ description: "ber_alloc_t, ber_flush, ber_flush2, ber_printf, ber_put_int, ber_p
 <p> The <code>ber_flush2</code>() routine is used to actually write the element to a socket (or file) descriptor, once it has been fully encoded (using <code>ber_printf</code>() and friends). See <code><a href="/docs/linux/man/3-lber-sockbuf/">lber-sockbuf</a></code>(3) for more details on the Sockbuf implementation of the <i>sb</i> parameter. If the <i>freeit</i> parameter is non-zero, the supplied <i>ber</i> will be freed. If <i>LBER_FLUSH_FREE_ON_SUCCESS</i> is used, the <i>ber</i> is only freed when successfully flushed, otherwise it is left intact; if <i>LBER_FLUSH_FREE_ON_ERROR</i> is used, the <i>ber</i> is only freed when an error occurs, otherwise it is left intact; if <i>LBER_FLUSH_FREE_ALWAYS</i> is used, the <i>ber</i> is freed anyway. This function differs from the original <code><a href="/docs/linux/man/3-ber_flush/">ber_flush</a></code>(3) function, whose behavior corresponds to that indicated for <i>LBER_FLUSH_FREE_ON_SUCCESS</i>. Note that in the future, the behavior of <code><a href="/docs/linux/man/3-ber_flush/">ber_flush</a></code>(3) with <i>freeit</i> non-zero might change into that of <code>ber_flush2</code>(3) with <i>freeit</i> set to <i>LBER_FLUSH_FREE_ALWAYS</i>. </p>
 <p> The <code>ber_printf</code>() routine is used to encode a BER element in much the same way that <code><a href="/docs/linux/man/3-sprintf/">sprintf</a></code>(3) works. One important difference, though, is that some state information is kept with the <i>ber</i> parameter so that multiple calls can be made to <code>ber_printf</code>() to append things to the end of the BER element. <code>Ber_printf</code>() writes to <i>ber</i>, a pointer to a BerElement such as returned by <code>ber_alloc_t</code>(). It interprets and formats its arguments according to the format string <i>fmt</i>. The format string can contain the following characters:</p>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt><code>b</code></p>
-<dd> Boolean. An ber_int_t parameter should be supplied. A boolean element is output.</p>
-<dt><code>e</code></p>
-<dd> Enumeration. An ber_int_t parameter should be supplied. An enumeration element is output.</p>
-<dt><code>i</code></p>
-<dd> Integer. An ber_int_t parameter should be supplied. An integer element is output.</p>
-<dt><code>B</code></p>
-<dd> Bitstring. A char * pointer to the start of the bitstring is supplied, followed by the number of bits in the bitstring. A bitstring element is output.</p>
-<dt><code>n</code></p>
-<dd> Null. No parameter is required. A null element is output.</p>
-<dt><code>o</code></p>
-<dd> Octet string. A char * is supplied, followed by the length of the string pointed to. An octet string element is output.</p>
-<dt><code>O</code></p>
-<dd> Octet string. A struct berval * is supplied. An octet string element is output.</p>
-<dt><code>s</code></p>
-<dd> Octet string. A null-terminated string is supplied. An octet string element is output, not including the trailing NULL octet.</p>
-<dt><code>t</code></p>
-<dd> Tag. A ber_tag_t specifying the tag to give the next element is provided. This works across calls.</p>
-<dt><code>v</code></p>
-<dd> Several octet strings. A null-terminated array of char *&#8217;s is supplied. Note that a construct like &#8216;{v}&#8217; is required to get an actual SEQUENCE OF octet strings.</p>
-<dt><code>V</code></p>
-<dd> Several octet strings. A null-terminated array of struct berval *&#8217;s is supplied. Note that a construct like &#8216;{V}&#8217; is required to get an actual SEQUENCE OF octet strings.</p>
-<dt><code>W</code></p>
-<dd> Several octet strings. An array of struct berval&#8217;s is supplied. The array is terminated by a struct berval with a NULL bv_val. Note that a construct like &#8216;{W}&#8217; is required to get an actual SEQUENCE OF octet strings.</p>
-<dt><code>{</code></p>
-<dd> Begin sequence. No parameter is required.</p>
-<dt><code>}</code></p>
-<dd> End sequence. No parameter is required.</p>
-<dt><code>[</code></p>
-<dd> Begin set. No parameter is required.</p>
-<dt><code>]</code></p>
-<dd> End set. No parameter is required.</dl>
+<dt><code>b</code></dt>
+<dd> Boolean. An ber_int_t parameter should be supplied. A boolean element is output.</dd>
+<dt><code>e</code></dt>
+<dd> Enumeration. An ber_int_t parameter should be supplied. An enumeration element is output.</dd>
+<dt><code>i</code></dt>
+<dd> Integer. An ber_int_t parameter should be supplied. An integer element is output.</dd>
+<dt><code>B</code></dt>
+<dd> Bitstring. A char * pointer to the start of the bitstring is supplied, followed by the number of bits in the bitstring. A bitstring element is output.</dd>
+<dt><code>n</code></dt>
+<dd> Null. No parameter is required. A null element is output.</dd>
+<dt><code>o</code></dt>
+<dd> Octet string. A char * is supplied, followed by the length of the string pointed to. An octet string element is output.</dd>
+<dt><code>O</code></dt>
+<dd> Octet string. A struct berval * is supplied. An octet string element is output.</dd>
+<dt><code>s</code></dt>
+<dd> Octet string. A null-terminated string is supplied. An octet string element is output, not including the trailing NULL octet.</dd>
+<dt><code>t</code></dt>
+<dd> Tag. A ber_tag_t specifying the tag to give the next element is provided. This works across calls.</dd>
+<dt><code>v</code></dt>
+<dd> Several octet strings. A null-terminated array of char *&#8217;s is supplied. Note that a construct like &#8216;{v}&#8217; is required to get an actual SEQUENCE OF octet strings.</dd>
+<dt><code>V</code></dt>
+<dd> Several octet strings. A null-terminated array of struct berval *&#8217;s is supplied. Note that a construct like &#8216;{V}&#8217; is required to get an actual SEQUENCE OF octet strings.</dd>
+<dt><code>W</code></dt>
+<dd> Several octet strings. An array of struct berval&#8217;s is supplied. The array is terminated by a struct berval with a NULL bv_val. Note that a construct like &#8216;{W}&#8217; is required to get an actual SEQUENCE OF octet strings.</dd>
+<dt><code>{</code></dt>
+<dd> Begin sequence. No parameter is required.</dd>
+<dt><code>}</code></dt>
+<dd> End sequence. No parameter is required.</dd>
+<dt><code>[</code></dt>
+<dd> Begin set. No parameter is required.</dd>
+<dt><code>]</code></dt>
+<dd> End set. No parameter is required.</dd></dl>
 </dl>
 <p> The <code>ber_put_int</code>() routine writes the integer element <i>num</i> to the BER element <i>ber</i>. </p>
 <p> The <code>ber_put_enum</code>() routine writes the enumeration element <i>num</i> to the BER element <i>ber</i>. </p>

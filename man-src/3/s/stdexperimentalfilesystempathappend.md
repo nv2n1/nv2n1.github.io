@@ -11,21 +11,15 @@ description: "std::experimental::filesystem::path::append, – std::experimental
 <h2>Synopsis</h2>
 <pre><code>path &amp;operator/=(const path &amp;p);
 (1)(filesystem TS)
-
     template &lt;class Source&gt;
     (2)(filesystem TS)
-
         path &amp;
         operator/=(const Source &amp;source);
-
 template &lt;class Source&gt;
 (3)(filesystem TS)
-
     path &amp;append(const Source &amp;source);
-
 template &lt;class InputIt&gt;
 (4)(filesystem TS)
-
     path &amp;append(InputIt first, InputIt last);</code></pre>
 <p>1)&nbsp;<wbr>First, appends the preferred directory separator to this, except if any of the<br />
 following conditions is true:<br />
@@ -78,9 +72,7 @@ allocation fails.</p>
 &nbsp;<wbr>&quot;C:&quot;&nbsp;<wbr>/&nbsp;<wbr>&quot;Users&quot;&nbsp;<wbr>/&nbsp;<wbr>&quot;batman&quot;&nbsp;<wbr>==&nbsp;<wbr>&quot;C:Usersatman&quot;</p>
 <h2>See also</h2>
 <pre><code>concat     concatenates two paths without introducing a directory separator
-
 operator+= (public member function)
-
 operator/  concatenates two paths with a directory separator
 (function)
 </code></pre>

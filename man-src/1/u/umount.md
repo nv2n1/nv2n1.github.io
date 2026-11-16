@@ -15,8 +15,8 @@ description: "umount.ecryptfs_private – eCryptfs private unmount helper."
 <h2>OPTIONS</h2>
 <p> Options available for the <code>umount.ecryptfs_private</code> command:</p>
 <dl>
-<dt><code>-f</code></p>
-<dd> Force the unmount, ignoring the value of the mount counter in <i>/tmp/ecryptfs-USERNAME-Private</i> </p>
+<dt><code>-f</code></dt>
+<dd> Force the unmount, ignoring the value of the mount counter in <i>/tmp/ecryptfs-USERNAME-Private</i> </dd>
 </dl>
 <h2>DESCRIPTION</h2>
 <p> <code>umount.ecryptfs_private</code> is a mount helper utility for non-root users to unmount a cryptographically mounted private directory, ~/Private. </p>
@@ -36,13 +36,13 @@ description: "umount.ecryptfs_private – eCryptfs private unmount helper."
 <p> <i>/tmp/ecryptfs-USERNAME-Private</i> &#8211; file containing the mount counter, incremented on each mount, decremented on each unmount </p>
 <h2>SEE ALSO</h2>
 <dl>
-<dt><code><a href="/docs/linux/man/7-ecryptfs/">ecryptfs</a></code>(7), <code><a href="/docs/linux/man/1-ecryptfs-setup-private/">ecryptfs-setup-private</a></code>(1), <code><a href="/docs/linux/man/1-keyctl/">keyctl</a></code>(1), <code><a href="/docs/linux/man/8-mount/">mount</a></code>(8), <code><a href="/docs/linux/man/1-mount-ecryptfs_private/">mount.ecryptfs_private</a></code>(1), <code><a href="/docs/linux/man/8-pam_ecryptfs/">pam_ecryptfs</a></code>(8)</p>
+<dt><code><a href="/docs/linux/man/7-ecryptfs/">ecryptfs</a></code>(7), <code><a href="/docs/linux/man/1-ecryptfs-setup-private/">ecryptfs-setup-private</a></code>(1), <code><a href="/docs/linux/man/1-keyctl/">keyctl</a></code>(1), <code><a href="/docs/linux/man/8-mount/">mount</a></code>(8), <code><a href="/docs/linux/man/1-mount-ecryptfs_private/">mount.ecryptfs_private</a></code>(1), <code><a href="/docs/linux/man/8-pam_ecryptfs/">pam_ecryptfs</a></code>(8)</dt>
 <dd>
-<dt><i>/usr/share/doc/ecryptfs-utils/ecryptfs-faq.html</i></p>
+</dd><dt><i>/usr/share/doc/ecryptfs-utils/ecryptfs-faq.html</i></dt>
 <dd>
-<dt><i><a rel="nofollow" href="http://ecryptfs.org/">http://ecryptfs.org/</a></i></p>
+</dd><dt><i><a rel="nofollow" href="http://ecryptfs.org/">http://ecryptfs.org/</a></i></dt>
 <dd>
-</dl>
+</dd></dl>
 <h2>AUTHOR</h2>
 <p> This manpage and the <code>umount.ecryptfs_private</code> utility was written by Dustin Kirkland &lt;kirkland [at] ubuntu.com&gt; for Ubuntu systems (but may be used by others). Permission is granted to copy, distribute and/or modify this document under the terms of the GNU General Public License, Version 2 or any later version published by the Free Software Foundation. </p>
 <p> On Debian and Ubuntu systems, the complete text of the GNU General Public License can be found in /usr/share/common-licenses/GPL. </p>

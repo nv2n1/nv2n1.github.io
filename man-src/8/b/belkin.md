@@ -19,9 +19,10 @@ description: "belkin – Driver for Belkin serial UPS equipment"
 <p>There are dragons lurking within the protocol to this UPS. I have one that essentially behaves like a glorified power strip due to some invasive probing on my part. Don&#8217;t mess with it directly.</p>
 <dl>
 <dd><font SIZE="+1"> <code>Note</code> </font><br />
- the driver doesn&#8217;t go anywhere near these character sequences, so it won&#8217;t zap your UPS. I only mention this here as yet another reminder of the perils of closed hardware. </p>
+ the driver doesn&#8217;t go anywhere near these character sequences, so it won&#8217;t zap your UPS. I only mention this here as yet another reminder of the perils of closed hardware. </dd>
 <h2>See Also</h2>
 <h3>The core driver:</h3>
 <p><code><a href="/docs/linux/man/8-nutupsdrv/">nutupsdrv</a></code>(8)</p>
 <h3>Internet resources:</h3>
 <p>The NUT (Network UPS Tools) home page: <a rel="nofollow" href="http://www.networkupstools.org/">http://www.networkupstools.org/</a> </p>
+</dl>

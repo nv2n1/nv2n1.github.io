@@ -10,19 +10,19 @@ description: "sk_for_each_entry_offset_rcu – iterate over a list at a given st
 <p>sk_for_each_entry_offset_rcu &#8211; iterate over a list at a given struct offset</p>
 <h2>Synopsis</h2>
 <dl>
-<dt> <code>sk_for_each_entry_offset_rcu(</code><i>tpos</i><code>, </code><i>pos</i><code>, </code><i>head</i><code>, </code><i>offset</i><code>);</code></dl>
+<dt> <code>sk_for_each_entry_offset_rcu(</code><i>tpos</i><code>, </code><i>pos</i><code>, </code><i>head</i><code>, </code><i>offset</i><code>);</code></dt></dl>
 <h2>Arguments</h2>
 <p><i>tpos</i></p>
 <dl>
 <dd>
-<dd>the type * to use as a loop cursor.</dl>
+</dd><dd>the type * to use as a loop cursor.</dd></dl>
 <p> <i>pos</i></p>
 <dl>
-<dd>the struct hlist_node to use as a loop cursor.</dl>
+<dd>the struct hlist_node to use as a loop cursor.</dd></dl>
 <p> <i>head</i></p>
 <dl>
-<dd>the head for your list.</dl>
+<dd>the head for your list.</dd></dl>
 <p> <i>offset</i></p>
 <dl>
-<dd>offset of hlist_node within the struct.</dl>
+<dd>offset of hlist_node within the struct.</dd></dl>
 <h2>Copyright</h2>

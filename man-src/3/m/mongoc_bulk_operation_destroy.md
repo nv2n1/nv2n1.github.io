@@ -16,7 +16,7 @@ mongoc_bulk_operation_destroy (mongoc_bulk_operation_t *bulk);
 <p> Destroys a <code>mongoc_bulk_operation_t</code> and frees the structure. </p>
 <h2>Parameters</h2>
 <dl COMPACT>
-<dt><code>bulk</code></p>
-<dd> A <code>mongoc_bulk_operation_t</code> \&amp;.</dl>
+<dt><code>bulk</code></dt>
+<dd> A <code>mongoc_bulk_operation_t</code> \&amp;.</dd></dl>
 <h2>Colophon</h2>
 <p> This page is part of MongoDB C Driver. Please report any bugs at <a rel="nofollow" href="https://jira.mongodb.org/browse/CDRIVER.">https://jira.mongodb.org/browse/CDRIVER.</a></p>

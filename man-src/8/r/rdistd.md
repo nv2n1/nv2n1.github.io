@@ -16,10 +16,10 @@ description: "rdistd – remote file distribution server program"
 <p> The <code>-S</code> argument must be specified. The option is required so that <i>rdistd</i> is not accidentally started since it normally resides somewhere in a normal user&#8217;s <code>$PATH.</code></p>
 <h2>Options</h2>
 <dl>
-<dt><code>-D</code></p>
-<dd>Enable debugging messages. Messages are logged via <i><a href="/docs/linux/man/3-syslog/">syslog</a>(3).</i></p>
-<dt><code>-V</code></p>
-<dd>Print version information and exit.</dl>
+<dt><code>-D</code></dt>
+<dd>Enable debugging messages. Messages are logged via <i><a href="/docs/linux/man/3-syslog/">syslog</a>(3).</i></dd>
+<dt><code>-V</code></dt>
+<dd>Print version information and exit.</dd></dl>
 <h2>Files</h2>
 <h2>See Also</h2>
 <p><a href="/docs/linux/man/1-rdist/">rdist</a>(1), <a href="/docs/linux/man/1-rsh/">rsh</a>(1)</p>

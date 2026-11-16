@@ -19,11 +19,11 @@ description: "docker-logout – Log out from a Docker registry."
 <h2>Log out from a registry on your localhost</h2>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 # docker logout localhost:8080
 </pre>
-</dl>
+</dd></dl>
 <h2>See also</h2>
 <p> <code><a href="/docs/linux/man/1-docker-login/">docker-login</a>(1)</code> to log in to a Docker registry server. </p>
 <h2>HISTORY</h2>

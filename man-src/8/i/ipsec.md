@@ -10,12 +10,12 @@ description: "ipsec – invoke IPsec utilities"
 <p>ipsec &#8211; invoke IPsec utilities</p>
 <h2>Synopsis</h2>
 <dl>
-<dt> <code>ipsec</code> <i>command</i> [<i>argument</i>&#8230;] <i>ipsec</i> &#8211;help</p>
-<dd><i>ipsec</i> &#8211;version</p>
-<dd><i>ipsec</i> &#8211;directory</dl>
+<dt> <code>ipsec</code> <i>command</i> [<i>argument</i>&#8230;] <i>ipsec</i> &#8211;help</dt>
+<dd><i>ipsec</i> &#8211;version</dd>
+<dd><i>ipsec</i> &#8211;directory</dd></dl>
 <h2>Description</h2>
 <p><i>ipsec</i></p>
-<dd>invokes any of several utilities involved in controlling the IPsec encryption/authentication system, running the specified <i>command</i> with the specified <i>argument</i>s as if it had been invoked directly. This largely eliminates possible name collisions with other software, and also permits some centralized services. </p>
+<dd>invokes any of several utilities involved in controlling the IPsec encryption/authentication system, running the specified <i>command</i> with the specified <i>argument</i>s as if it had been invoked directly. This largely eliminates possible name collisions with other software, and also permits some centralized services. </dd>
 <p> <code>ipsec &#8211;help</code> lists the available commands. Most have their own manual pages, e.g. <code><a href="/docs/linux/man/8-ipsec_auto/">ipsec_auto</a></code>(8) for <i>auto</i>. </p>
 <p> <code>ipsec &#8211;version</code> outputs the software version. A version code of the form &#8220;U<i>xxx</i>/K<i>yyy</i>&#8221; indicates that the user-level utilities are version <i>xxx</i> but the kernel portion appears to be version <i>yyy</i> (this form is used only if the two disagree). For the NETKEY/XFRM stack, the kernel version is used, always displaying the U/K split. </p>
 <p> <code>ipsec &#8211;directory</code> reports where <code>ipsec</code> thinks the IPsec commands are stored.</p>
@@ -39,4 +39,4 @@ description: "ipsec – invoke IPsec utilities"
 <h2>Author</h2>
 <p><code>Henry Spencer</code></p>
 <dl>
-<dd></dl>
+<dd></dd></dl>

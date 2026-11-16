@@ -13,11 +13,11 @@ description: "gdk-pixbuf-pixdata – GDK Pixbuf library"
 <p> <code>gdk-pixbuf-pixdata</code> [<i>options</i>] [<i>input-file</i>] [<i>output-file</i>]</p>
 <h2>DESCRIPTION</h2>
 <dl>
-<dt><code>-h</code>, <code>&#8211;help</code></p>
-<dd> show this help message</p>
-<dt><code>-v</code>, <code>&#8211;version</code></p>
-<dd> print version information</p>
-<dt><code>&#8211;g-fatal-warnings</code></p>
-<dd> make warnings fatal (abort)</dl>
+<dt><code>-h</code>, <code>&#8211;help</code></dt>
+<dd> show this help message</dd>
+<dt><code>-v</code>, <code>&#8211;version</code></dt>
+<dd> print version information</dd>
+<dt><code>&#8211;g-fatal-warnings</code></dt>
+<dd> make warnings fatal (abort)</dd></dl>
 <p> gdk-pixbuf-pixdata comes with ABSOLUTELY NO WARRANTY. You may redistribute copies of gdk-pixbuf-pixdata under the terms of the GNU Lesser General Public License which can be found in the gdk-pixbuf source package. Sources, examples and contact information are available at <a rel="nofollow" href="http://www.gtk.org">http://www.gtk.org</a> </p>
 <h2>Index</h2>

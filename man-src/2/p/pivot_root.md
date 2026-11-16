@@ -17,41 +17,41 @@ description: "pivot_root – change the root mount"
 <p> <code>pivot_root</code>() changes the root directory and the current working directory of each process or thread in the same mount namespace to <i>new_root</i> if they point to the old root directory. (See also NOTES.) On the other hand, <code>pivot_root</code>() does not change the caller&#8217;s current working directory (unless it is on the old root directory), and thus it should be followed by a <code>chdir(&quot;/&quot;)</code> call. </p>
 <p> The following restrictions apply:</p>
 <dl>
-<dt>&#8211;</p>
-<dd> <i>new_root</i> and <i>put_old</i> must be directories.</p>
-<dt>&#8211;</p>
-<dd> <i>new_root</i> and <i>put_old</i> must not be on the same mount as the current root.</p>
-<dt>&#8211;</p>
-<dd> <i>put_old</i> must be at or underneath <i>new_root</i>; that is, adding some nonnegative number of &quot;<i>/..</i>&quot; prefixes to the pathname pointed to by <i>put_old</i> must yield the same directory as <i>new_root</i>.</p>
-<dt>&#8211;</p>
-<dd> <i>new_root</i> must be a path to a mount point, but can&#8217;t be <i>&quot;/&quot;</i>. A path that is not already a mount point can be converted into one by bind mounting the path onto itself.</p>
-<dt>&#8211;</p>
-<dd> The propagation type of the parent mount of <i>new_root</i> and the parent mount of the current root directory must not be <code>MS_SHARED</code>; similarly, if <i>put_old</i> is an existing mount point, its propagation type must not be <code>MS_SHARED</code>. These restrictions ensure that <code>pivot_root</code>() never propagates any changes to another mount namespace.</p>
-<dt>&#8211;</p>
-<dd> The current root directory must be a mount point.</dl>
+<dt>&#8211;</dt>
+<dd> <i>new_root</i> and <i>put_old</i> must be directories.</dd>
+<dt>&#8211;</dt>
+<dd> <i>new_root</i> and <i>put_old</i> must not be on the same mount as the current root.</dd>
+<dt>&#8211;</dt>
+<dd> <i>put_old</i> must be at or underneath <i>new_root</i>; that is, adding some nonnegative number of &quot;<i>/..</i>&quot; prefixes to the pathname pointed to by <i>put_old</i> must yield the same directory as <i>new_root</i>.</dd>
+<dt>&#8211;</dt>
+<dd> <i>new_root</i> must be a path to a mount point, but can&#8217;t be <i>&quot;/&quot;</i>. A path that is not already a mount point can be converted into one by bind mounting the path onto itself.</dd>
+<dt>&#8211;</dt>
+<dd> The propagation type of the parent mount of <i>new_root</i> and the parent mount of the current root directory must not be <code>MS_SHARED</code>; similarly, if <i>put_old</i> is an existing mount point, its propagation type must not be <code>MS_SHARED</code>. These restrictions ensure that <code>pivot_root</code>() never propagates any changes to another mount namespace.</dd>
+<dt>&#8211;</dt>
+<dd> The current root directory must be a mount point.</dd></dl>
 <h2>RETURN VALUE</h2>
 <p> On success, zero is returned. On error, -1 is returned, and <i>errno</i> is set appropriately.</p>
 <h2>ERRORS</h2>
 <p> <code>pivot_root</code>() may fail with any of the same errors as <code><a href="/docs/linux/man/2-stat/">stat</a></code>(2). Additionally, it may fail with the following errors:</p>
 <dl>
-<dt><code>EBUSY</code></p>
-<dd> <i>new_root</i> or <i>put_old</i> is on the current root mount. (This error covers the pathological case where <i>new_root</i> is <i>&quot;/&quot;</i>.)</p>
-<dt><code>EINVAL</code></p>
-<dd> <i>new_root</i> is not a mount point.</p>
-<dt><code>EINVAL</code></p>
-<dd> <i>put_old</i> is not at or underneath <i>new_root</i>.</p>
-<dt><code>EINVAL</code></p>
-<dd> The current root directory is not a mount point (because of an earlier <code><a href="/docs/linux/man/2-chroot/">chroot</a></code>(2)).</p>
-<dt><code>EINVAL</code></p>
-<dd> The current root is on the rootfs (initial ramfs) mount; see NOTES.</p>
-<dt><code>EINVAL</code></p>
-<dd> Either the mount point at <i>new_root</i>, or the parent mount of that mount point, has propagation type <code>MS_SHARED</code>.</p>
-<dt><code>EINVAL</code></p>
-<dd> <i>put_old</i> is a mount point and has the propagation type <code>MS_SHARED</code>.</p>
-<dt><code>ENOTDIR</code></p>
-<dd> <i>new_root</i> or <i>put_old</i> is not a directory.</p>
-<dt><code>EPERM</code></p>
-<dd> The calling process does not have the <code>CAP_SYS_ADMIN</code> capability.</dl>
+<dt><code>EBUSY</code></dt>
+<dd> <i>new_root</i> or <i>put_old</i> is on the current root mount. (This error covers the pathological case where <i>new_root</i> is <i>&quot;/&quot;</i>.)</dd>
+<dt><code>EINVAL</code></dt>
+<dd> <i>new_root</i> is not a mount point.</dd>
+<dt><code>EINVAL</code></dt>
+<dd> <i>put_old</i> is not at or underneath <i>new_root</i>.</dd>
+<dt><code>EINVAL</code></dt>
+<dd> The current root directory is not a mount point (because of an earlier <code><a href="/docs/linux/man/2-chroot/">chroot</a></code>(2)).</dd>
+<dt><code>EINVAL</code></dt>
+<dd> The current root is on the rootfs (initial ramfs) mount; see NOTES.</dd>
+<dt><code>EINVAL</code></dt>
+<dd> Either the mount point at <i>new_root</i>, or the parent mount of that mount point, has propagation type <code>MS_SHARED</code>.</dd>
+<dt><code>EINVAL</code></dt>
+<dd> <i>put_old</i> is a mount point and has the propagation type <code>MS_SHARED</code>.</dd>
+<dt><code>ENOTDIR</code></dt>
+<dd> <i>new_root</i> or <i>put_old</i> is not a directory.</dd>
+<dt><code>EPERM</code></dt>
+<dd> The calling process does not have the <code>CAP_SYS_ADMIN</code> capability.</dd></dl>
 <h2>VERSIONS</h2>
 <p> <code>pivot_root</code>() was introduced in Linux 2.3.41.</p>
 <h2>CONFORMING TO</h2>
@@ -71,8 +71,8 @@ description: "pivot_root – change the root mount"
 <p> For many years, this manual page carried the following text:</p>
 <dl>
 <dt>
-<dd>
-<p> <code>pivot_root</code>() may or may not change the current root and the current working directory of any processes or threads which use the old root directory. The caller of <code>pivot_root</code>() must ensure that processes with root or current working directory at the old root operate correctly in either case. An easy way to ensure this is to change their root and current working directory to <i>new_root</i> before invoking <code>pivot_root</code>().</dl>
+</dt><dd>
+<p> <code>pivot_root</code>() may or may not change the current root and the current working directory of any processes or threads which use the old root directory. The caller of <code>pivot_root</code>() must ensure that processes with root or current working directory at the old root operate correctly in either case. An easy way to ensure this is to change their root and current working directory to <i>new_root</i> before invoking <code>pivot_root</code>().</dd></dl>
 <p> This text, written before the system call implementation was even finalized in the kernel, was probably intended to warn users at that time that the implementation might change before final release. However, the behavior stated in DESCRIPTION has remained consistent since this system call was first implemented and will not change now.</p>
 <h2>EXAMPLES</h2>
 <p> The program below demonstrates the use of <code>pivot_root</code>() inside a mount namespace that is created using <code><a href="/docs/linux/man/2-clone/">clone</a></code>(2). After pivoting to the root directory named in the program&#8217;s first command-line argument, the child created by <code><a href="/docs/linux/man/2-clone/">clone</a></code>(2) then executes the program named in the remaining command-line arguments. </p>
@@ -136,3 +136,4 @@ description: "pivot_root – change the root mount"
 <h2>COLOPHON</h2>
 <p> This page is part of release 5.10 of the Linux <i>man-pages</i> project. A description of the project, information about reporting bugs, and the latest version of this page, can be found at <a rel="nofollow" href="https://www.kernel.org/doc/man-pages/.">https://www.kernel.org/doc/man-pages/.</a> </p>
 <h2>Index</h2>
+</p>

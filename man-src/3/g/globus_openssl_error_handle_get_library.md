@@ -34,105 +34,105 @@ description: "Globus OpenSSL Error Object –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>base_source</i> Pointer to the originating globus module.<br />
- <i>base_cause</i> The error object causing the error. This parameter should be NULL in nearly all cases, as the root cause of an error will most likely be in the OpenSSL code itself. The actual cause of the error is determined from the static stack of OpenSSL errors.</dl>
+</dt><dd> <i>base_source</i> Pointer to the originating globus module.<br />
+ <i>base_cause</i> The error object causing the error. This parameter should be NULL in nearly all cases, as the root cause of an error will most likely be in the OpenSSL code itself. The actual cause of the error is determined from the static stack of OpenSSL errors.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
 <dt>
-<dd> The resulting error object. It is the user&#8217;s responsibility to eventually free this object using globus_object_free(). A globus_result_t may be obtained by calling globus_error_put() on this object.</dl>
+</dt><dd> The resulting error object. It is the user&#8217;s responsibility to eventually free this object using globus_object_free(). A globus_result_t may be obtained by calling globus_error_put() on this object.</dd></dl>
 <h3>globus_object_t* globus_error_initialize_openssl_error (globus_object_t *error, globus_module_descriptor_t *base_source, globus_object_t *base_cause, globus_openssl_error_handle_topenssl_error_handle)</h3>
 <p> Initialize a previously allocated error of type GLOBUS_ERROR_TYPE_OPENSSL </p>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>error</i> The previously allocated error object.<br />
+</dt><dd> <i>error</i> The previously allocated error object.<br />
  <i>base_source</i> Pointer to the originating module.<br />
  <i>base_cause</i> The error object causing the error. If this is the original error this parameter may be NULL.<br />
- <i>openssl_error_handle</i> The OpenSSL error handle associated with this error, this parameter should already be initialized to contain the OpenSSL error code associated with the error.</dl>
+ <i>openssl_error_handle</i> The OpenSSL error handle associated with this error, this parameter should already be initialized to contain the OpenSSL error code associated with the error.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
 <dt>
-<dd> The resulting error object. You may have to call globus_error_put() on this object before passing it on.</dl>
+</dt><dd> The resulting error object. You may have to call globus_error_put() on this object before passing it on.</dd></dl>
 <h3>const char* globus_openssl_error_handle_get_data (globus_openssl_error_handle_thandle)</h3>
 <p> Get the OpenSSL error data which contains additional data about the error from the OpenSSL error handle </p>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>handle</i> The OpenSSL error handle</dl>
+</dt><dd> <i>handle</i> The OpenSSL error handle</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
 <dt>
-<dd> The error data</dl>
+</dt><dd> The error data</dd></dl>
 <h3>int globus_openssl_error_handle_get_data_flags (globus_openssl_error_handle_thandle)</h3>
 <p> Get the OpenSSL error data flags from the OpenSSL error handle </p>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>handle</i> The OpenSSL error handle</dl>
+</dt><dd> <i>handle</i> The OpenSSL error handle</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
 <dt>
-<dd> The error data flags</dl>
+</dt><dd> The error data flags</dd></dl>
 <h3>unsigned long globus_openssl_error_handle_get_error_code (globus_openssl_error_handle_thandle)</h3>
 <p> Get the OpenSSL error code which represents the OpenSSL error from the OpenSSL error handle </p>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>handle</i> The OpenSSL error handle</dl>
+</dt><dd> <i>handle</i> The OpenSSL error handle</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
 <dt>
-<dd> The error code</dl>
+</dt><dd> The error code</dd></dl>
 <h3>const char* globus_openssl_error_handle_get_filename (globus_openssl_error_handle_thandle)</h3>
 <p> Get the filename where the OpenSSL error occurred from the OpenSSL error handle </p>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>handle</i> The OpenSSL error handle</dl>
+</dt><dd> <i>handle</i> The OpenSSL error handle</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
 <dt>
-<dd> The filename</dl>
+</dt><dd> The filename</dd></dl>
 <h3>const char* globus_openssl_error_handle_get_function (globus_openssl_error_handle_thandle)</h3>
 <p> Get the function name where the OpenSSL error occurred from the OpenSSL error handle </p>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>handle</i> The OpenSSL error handle</dl>
+</dt><dd> <i>handle</i> The OpenSSL error handle</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
 <dt>
-<dd> The function name</dl>
+</dt><dd> The function name</dd></dl>
 <h3>const char* globus_openssl_error_handle_get_library (globus_openssl_error_handle_thandle)</h3>
 <p> Get the library name where the OpenSSL error occurred in from the OpenSSL error handle </p>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>handle</i> The OpenSSL error handle</dl>
+</dt><dd> <i>handle</i> The OpenSSL error handle</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
 <dt>
-<dd> The library name</dl>
+</dt><dd> The library name</dd></dl>
 <h3>int globus_openssl_error_handle_get_linenumber (globus_openssl_error_handle_thandle)</h3>
 <p> Get the line number on which the OpenSSL error occurred from the OpenSSL error handle </p>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>handle</i> The OpenSSL error handle</dl>
+</dt><dd> <i>handle</i> The OpenSSL error handle</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
 <dt>
-<dd> The line number</dl>
+</dt><dd> The line number</dd></dl>
 <h3>const char* globus_openssl_error_handle_get_reason (globus_openssl_error_handle_thandle)</h3>
 <p> Get the reason string which caused the OpenSSL error from the OpenSSL error handle </p>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>handle</i> The OpenSSL error handle</dl>
+</dt><dd> <i>handle</i> The OpenSSL error handle</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
 <dt>
-<dd> The reason string</dl>
+</dt><dd> The reason string</dd></dl>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for globus_gsi_openssl_error from the source code. </p>
 <h2>Index</h2>

@@ -15,22 +15,22 @@ description: "thin_ls – List thin volumes within a pool."
 <p> This tool cannot be run on live metadata unless the <code>&#8211;metadata-snap</code> option is used.</p>
 <h2>Options</h2>
 <dl>
-<dt><code>-h</code>, <code>&#8211;help</code></p>
-<dd>Print help and exit.</p>
-<dt><code>-V</code>, <code>&#8211;version</code></p>
-<dd>Print version information and exit.</p>
-<dt><code>-o</code>, <code>&#8211;format</code></p>
-<dd>Give a comma separated list of fields to be output.</dl>
+<dt><code>-h</code>, <code>&#8211;help</code></dt>
+<dd>Print help and exit.</dd>
+<dt><code>-V</code>, <code>&#8211;version</code></dt>
+<dd>Print version information and exit.</dd>
+<dt><code>-o</code>, <code>&#8211;format</code></dt>
+<dd>Give a comma separated list of fields to be output.</dd></dl>
 <pre> Valid fields are:
  DEV, MAPPED_BLOCKS, EXCLUSIVE_BLOCKS, SHARED_BLOCKS, MAPPED_SECTORS,
  EXCLUSIVE_SECTORS, SHARED_SECTORS, MAPPED_BYTES, EXCLUSIVE_BYTES,
  SHARED_BYTES, MAPPED, EXCLUSIVE, SHARED, TRANSACTION, CREATE_TIME,
  SNAP_TIME</pre>
 <dl>
-<dt><code>&#8211;no-headers</code></p>
-<dd>Don&#8217;t output headers.</p>
-<dt><code>-m</code>, <code>&#8211;metadata-snap</code></p>
-<dd>Use metadata snapshot.</dl>
+<dt><code>&#8211;no-headers</code></dt>
+<dd>Don&#8217;t output headers.</dd>
+<dt><code>-m</code>, <code>&#8211;metadata-snap</code></dt>
+<dd>Use metadata snapshot.</dd></dl>
 <pre> If you want to get information out of a live pool then you will need to
  take a metadata snapshot and use this switch.</pre>
 <h2>See Also</h2>

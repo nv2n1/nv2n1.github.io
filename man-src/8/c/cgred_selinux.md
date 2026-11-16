@@ -92,8 +92,8 @@ description: "cgred_selinux – Security Enhanced Linux Policy for the cgred pro
 <p> <code>cgred_exec_t</code> </p>
 <p> &#8211; Set files with the cgred_exec_t type, if you want to transition an executable to the cgred_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/sbin/cgrulesengd, /usr/sbin/cgrulesengd </p>
+<dt>Paths:</dt>
+<dd>/sbin/cgrulesengd, /usr/sbin/cgrulesengd </dd>
 </dl>
 <p> <code>cgred_initrc_exec_t</code> </p>
 <p> &#8211; Set files with the cgred_initrc_exec_t type, if you want to transition an executable to the cgred_initrc_t domain. </p>

@@ -13,86 +13,86 @@ description: "go – tool for managing Go source code"
 <p> Several of the flags control profiling and write an execution profile suitable for &quot;go tool pprof&quot;; run &quot;go tool pprof -h&quot; for more information. The &#8211;alloc_space, &#8211;alloc_objects, and &#8211;show_bytes options of pprof control how the information is presented. </p>
 <p> The following flags are recognized by the &#8216;go test&#8217; command and control the execution of any test:</p>
 <dl>
-<dt><code>-bench</code><i> regexp</i></p>
-<dd>Run only those benchmarks matching a regular expression. By default, no benchmarks are run. To run all benchmarks, use &#8216;-bench .&#8217; or &#8216;-bench=.&#8217;. The regular expression is split by unbracketed slash (/) characters into a sequence of regular expressions, and each part of a benchmark&#8217;s identifier must match the corresponding element in the sequence, if any. Possible parents of matches are run with b.N=1 to identify sub-benchmarks. For example, given -bench=X/Y, top-level benchmarks matching X are run with b.N=1 to find any sub-benchmarks matching Y, which are then run in full.</p>
-<dt><code>-benchtime</code><i> t</i></p>
+<dt><code>-bench</code><i> regexp</i></dt>
+<dd>Run only those benchmarks matching a regular expression. By default, no benchmarks are run. To run all benchmarks, use &#8216;-bench .&#8217; or &#8216;-bench=.&#8217;. The regular expression is split by unbracketed slash (/) characters into a sequence of regular expressions, and each part of a benchmark&#8217;s identifier must match the corresponding element in the sequence, if any. Possible parents of matches are run with b.N=1 to identify sub-benchmarks. For example, given -bench=X/Y, top-level benchmarks matching X are run with b.N=1 to find any sub-benchmarks matching Y, which are then run in full.</dd>
+<dt><code>-benchtime</code><i> t</i></dt>
 <dd>Run enough iterations of each benchmark to take <i>t</i>, specified as a time.Duration (for example, -benchtime 1h30s).<br />
  The default is 1 second (1s).<br />
- The special syntax <i>N</i>x means to run the benchmark <i>N</i> times (for example, -benchtime 100x).</p>
-<dt><code>-count</code><i> n</i></p>
+ The special syntax <i>N</i>x means to run the benchmark <i>N</i> times (for example, -benchtime 100x).</dd>
+<dt><code>-count</code><i> n</i></dt>
 <dd>Run each test and benchmark <i>n</i> times (default 1).<br />
  If -cpu is set, run n times for each GOMAXPROCS value.<br />
- Examples are always run once.</p>
-<dt><code>-cover</code></p>
+ Examples are always run once.</dd>
+<dt><code>-cover</code></dt>
 <dd>Enable coverage analysis.<br />
- Note that because coverage works by annotating the source code before compilation, compilation and test failures with coverage enabled may report line numbers that don&#8217;t correspond to the original sources.</p>
-<dt><code>-covermode</code> set,count,atomic</p>
+ Note that because coverage works by annotating the source code before compilation, compilation and test failures with coverage enabled may report line numbers that don&#8217;t correspond to the original sources.</dd>
+<dt><code>-covermode</code> set,count,atomic</dt>
 <dd>Set the mode for coverage analysis for the package[s] being tested. The default is &quot;set&quot; unless -race is enabled, in which case it is &quot;atomic&quot;.<br />
  The values:<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;set: bool: does this statement run?<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;count: int: how many times does this statement run?<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;atomic: int: count, but correct in multithreaded tests;<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;significantly more expensive.<br />
- Sets -cover.</p>
-<dt><code>-coverpkg </code><i>pattern1</i><code>,</code><i>pattern2</i><code>,</code><i>pattern3</i></p>
+ Sets -cover.</dd>
+<dt><code>-coverpkg </code><i>pattern1</i><code>,</code><i>pattern2</i><code>,</code><i>pattern3</i></dt>
 <dd>Apply coverage analysis in each test to packages matching the patterns. The default is for each test to analyze only the package being tested.<br />
  See &#8216;go help packages&#8217; for a description of package patterns.<br />
- Sets -cover.</p>
-<dt><code>-cpu </code><i>1</i><code>,</code><i>2</i><code>,</code><i>4</i></p>
-<dd>Specify a list of GOMAXPROCS values for which the tests or benchmarks should be executed. The default is the current value of GOMAXPROCS.</p>
-<dt><code>-failfast</code></p>
-<dd>Do not start new tests after the first test failure.</p>
-<dt><code>-list</code><i> regexp</i></p>
-<dd>List tests, benchmarks, or examples matching the regular expression. No tests, benchmarks or examples will be run. This will only list top-level tests. No subtest or subbenchmarks will be shown.</p>
-<dt><code>-parallel</code><i> n</i></p>
-<dd>Allow parallel execution of test functions that call t.Parallel. The value of this flag is the maximum number of tests to run simultaneously; by default, it is set to the value of GOMAXPROCS. Note that -parallel only applies within a single test binary. The &#8216;go test&#8217; command may run tests for different packages in parallel as well, according to the setting of the -p flag (see &#8216;go help build&#8217;).</p>
-<dt><code>-run</code><i> regexp</i></p>
-<dd>Run only those tests and examples matching the regular expression. For tests, the regular expression is split by unbracketed slash (/) characters into a sequence of regular expressions, and each part of a test&#8217;s identifier must match the corresponding element in the sequence, if any. Note that possible parents of matches are run too, so that -run=X/Y matches and runs and reports the result of all tests matching X, even those without sub-tests matching Y, because it must run them to look for those sub-tests.</p>
-<dt><code>-short</code></p>
-<dd>Tell long-running tests to shorten their run time. It is off by default but set during all.bash so that installing the Go tree can run a sanity check but not spend time running exhaustive tests.</p>
-<dt><code>-shuffle </code>off,on,N</p>
-<dd>Randomize the execution order of tests and benchmarks. It is off by default. If -shuffle is set to on, then it will seed the randomizer using the system clock. If -shuffle is set to an integer N, then N will be used as the seed value. In both cases, the seed will be reported for reproducibility.</p>
-<dt><code>-timeout</code><i> d</i></p>
+ Sets -cover.</dd>
+<dt><code>-cpu </code><i>1</i><code>,</code><i>2</i><code>,</code><i>4</i></dt>
+<dd>Specify a list of GOMAXPROCS values for which the tests or benchmarks should be executed. The default is the current value of GOMAXPROCS.</dd>
+<dt><code>-failfast</code></dt>
+<dd>Do not start new tests after the first test failure.</dd>
+<dt><code>-list</code><i> regexp</i></dt>
+<dd>List tests, benchmarks, or examples matching the regular expression. No tests, benchmarks or examples will be run. This will only list top-level tests. No subtest or subbenchmarks will be shown.</dd>
+<dt><code>-parallel</code><i> n</i></dt>
+<dd>Allow parallel execution of test functions that call t.Parallel. The value of this flag is the maximum number of tests to run simultaneously; by default, it is set to the value of GOMAXPROCS. Note that -parallel only applies within a single test binary. The &#8216;go test&#8217; command may run tests for different packages in parallel as well, according to the setting of the -p flag (see &#8216;go help build&#8217;).</dd>
+<dt><code>-run</code><i> regexp</i></dt>
+<dd>Run only those tests and examples matching the regular expression. For tests, the regular expression is split by unbracketed slash (/) characters into a sequence of regular expressions, and each part of a test&#8217;s identifier must match the corresponding element in the sequence, if any. Note that possible parents of matches are run too, so that -run=X/Y matches and runs and reports the result of all tests matching X, even those without sub-tests matching Y, because it must run them to look for those sub-tests.</dd>
+<dt><code>-short</code></dt>
+<dd>Tell long-running tests to shorten their run time. It is off by default but set during all.bash so that installing the Go tree can run a sanity check but not spend time running exhaustive tests.</dd>
+<dt><code>-shuffle </code>off,on,N</dt>
+<dd>Randomize the execution order of tests and benchmarks. It is off by default. If -shuffle is set to on, then it will seed the randomizer using the system clock. If -shuffle is set to an integer N, then N will be used as the seed value. In both cases, the seed will be reported for reproducibility.</dd>
+<dt><code>-timeout</code><i> d</i></dt>
 <dd>If a test binary runs longer than duration <i>d</i>, panic.<br />
  If <i>d</i> is 0, the timeout is disabled.<br />
- The default is 10 minutes (10m).</p>
-<dt><code>-v</code></p>
-<dd>Verbose output: log all tests as they are run. Also print all text from Log and Logf calls even if the test succeeds.</p>
-<dt><code>-vet</code><i> list</i></p>
+ The default is 10 minutes (10m).</dd>
+<dt><code>-v</code></dt>
+<dd>Verbose output: log all tests as they are run. Also print all text from Log and Logf calls even if the test succeeds.</dd>
+<dt><code>-vet</code><i> list</i></dt>
 <dd>Configure the invocation of &quot;go vet&quot; during &quot;go test&quot; to use the comma-separated list of vet checks.<br />
  If list is empty, &quot;go test&quot; runs &quot;go vet&quot; with a curated list of checks believed to be always worth addressing.<br />
- If list is &quot;off&quot;, &quot;go test&quot; does not run &quot;go vet&quot; at all.</dl>
+ If list is &quot;off&quot;, &quot;go test&quot; does not run &quot;go vet&quot; at all.</dd></dl>
 <p> The following flags are also recognized by &#8216;go test&#8217; and can be used to profile the tests during execution:</p>
 <dl>
-<dt><code>-benchmem</code></p>
-<dd>Print memory allocation statistics for benchmarks.</p>
-<dt><code>-blockprofile </code>block.out</p>
+<dt><code>-benchmem</code></dt>
+<dd>Print memory allocation statistics for benchmarks.</dd>
+<dt><code>-blockprofile </code>block.out</dt>
 <dd>Write a goroutine blocking profile to the specified file when all tests are complete.<br />
- Writes test binary as -c would.</p>
-<dt><code>-blockprofilerate</code><i> n</i></p>
+ Writes test binary as -c would.</dd>
+<dt><code>-blockprofilerate</code><i> n</i></dt>
 <dd>Control the detail provided in goroutine blocking profiles by calling runtime.SetBlockProfileRate with <i>n</i>.<br />
  See &#8216;go doc runtime.SetBlockProfileRate&#8217;.<br />
- The profiler aims to sample, on average, one blocking event every n nanoseconds the program spends blocked. By default, if -test.blockprofile is set without this flag, all blocking events are recorded, equivalent to -test.blockprofilerate=1.</p>
-<dt><code>-coverprofile </code>cover.out</p>
+ The profiler aims to sample, on average, one blocking event every n nanoseconds the program spends blocked. By default, if -test.blockprofile is set without this flag, all blocking events are recorded, equivalent to -test.blockprofilerate=1.</dd>
+<dt><code>-coverprofile </code>cover.out</dt>
 <dd>Write a coverage profile to the file after all tests have passed.<br />
- Sets -cover.</p>
-<dt><code>-cpuprofile </code>cpu.out</p>
+ Sets -cover.</dd>
+<dt><code>-cpuprofile </code>cpu.out</dt>
 <dd>Write a CPU profile to the specified file before exiting.<br />
- Writes test binary as -c would.</p>
-<dt><code>-memprofile </code>mem.out</p>
+ Writes test binary as -c would.</dd>
+<dt><code>-memprofile </code>mem.out</dt>
 <dd>Write an allocation profile to the file after all tests have passed.<br />
- Writes test binary as -c would.</p>
-<dt><code>-memprofilerate</code><i> n</i></p>
-<dd>Enable more precise (and expensive) memory allocation profiles by setting runtime.MemProfileRate. See &#8216;go doc runtime.MemProfileRate&#8217;. To profile all memory allocations, use -test.memprofilerate=1.</p>
-<dt><code>-mutexprofile </code>mutex.out</p>
+ Writes test binary as -c would.</dd>
+<dt><code>-memprofilerate</code><i> n</i></dt>
+<dd>Enable more precise (and expensive) memory allocation profiles by setting runtime.MemProfileRate. See &#8216;go doc runtime.MemProfileRate&#8217;. To profile all memory allocations, use -test.memprofilerate=1.</dd>
+<dt><code>-mutexprofile </code>mutex.out</dt>
 <dd>Write a mutex contention profile to the specified file when all tests are complete.<br />
- Writes test binary as -c would.</p>
-<dt><code>-mutexprofilefraction</code><i> n</i></p>
-<dd>Sample 1 in <i>n</i> stack traces of goroutines holding a contended mutex.</p>
-<dt><code>-outputdir </code><i>directory</i></p>
-<dd>Place output files from profiling in the specified directory, by default the directory in which &quot;go test&quot; is running.</p>
-<dt><code>-trace </code>trace.out</p>
-<dd>Write an execution trace to the specified file before exiting.</dl>
+ Writes test binary as -c would.</dd>
+<dt><code>-mutexprofilefraction</code><i> n</i></dt>
+<dd>Sample 1 in <i>n</i> stack traces of goroutines holding a contended mutex.</dd>
+<dt><code>-outputdir </code><i>directory</i></dt>
+<dd>Place output files from profiling in the specified directory, by default the directory in which &quot;go test&quot; is running.</dd>
+<dt><code>-trace </code>trace.out</dt>
+<dd>Write an execution trace to the specified file before exiting.</dd></dl>
 <p> Each of these flags is also recognized with an optional &#8216;test.&#8217; prefix, as in -test.v. When invoking the generated test binary (the result of &#8216;go test -c&#8217;) directly, however, the prefix is mandatory. </p>
 <p> The &#8216;go test&#8217; command rewrites or removes recognized flags, as appropriate, both before and after the optional package list, before invoking the test binary. </p>
 <p> For instance, the command </p>

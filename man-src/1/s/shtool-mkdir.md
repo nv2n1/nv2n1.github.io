@@ -17,18 +17,18 @@ description: "shtool mkdir – GNU shtool"
 <h2>OPTIONS</h2>
 <p> The following command line options are available.</p>
 <dl>
-<dt><code>-t</code>, <code>&#8211;trace</code></p>
-<dd> Shows the actually involved shell commands.</p>
-<dt><code>-f</code>, <code>&#8211;force</code></p>
-<dd> Forced continuation and no complaints if directory already exists. Default is to terminate with error.</p>
-<dt><code>-p</code>, <code>&#8211;parents</code></p>
-<dd> Automatic parent directory creation. Default is to only create the last directory in the path and fail if parents are missing.</p>
-<dt><code>-m</code>, <code>&#8211;mode</code> <i>mode</i></p>
-<dd> The directory mode applied to the directory, see <i><a href="/docs/linux/man/1-chmod/">chmod</a></i>(1). Omitting mode skips this step and leaves the operating system default which is usually based on <i><a href="/docs/linux/man/1-umask/">umask</a></i>(1). Some directory modes require superuser privileges to be set. Default is to stick with operating system defaults.</p>
-<dt><code>-o</code>, <code>&#8211;owner</code> <i>owner</i></p>
-<dd> The directory owner name or id applied to the directory, see <i><a href="/docs/linux/man/1-chown/">chown</a></i>(1). This option requires superuser privileges to execute. Default is to skip this step and leave the operating system default which is usually based on the executing uid or the parent setuid directory.</p>
-<dt><code>-g</code>, <code>&#8211;group</code> <i>group</i></p>
-<dd> The directory group name or id applied to the directory, see <i><a href="/docs/linux/man/1-chgrp/">chgrp</a></i>(1). This option requires superuser privileges to execute to the fullest extend, otherwise the choice of <i>group</i> is limited on most operating systems. Default is to skip this step and leave the operating system default which is usually based on the executing gid or the parent setgid directory.</dl>
+<dt><code>-t</code>, <code>&#8211;trace</code></dt>
+<dd> Shows the actually involved shell commands.</dd>
+<dt><code>-f</code>, <code>&#8211;force</code></dt>
+<dd> Forced continuation and no complaints if directory already exists. Default is to terminate with error.</dd>
+<dt><code>-p</code>, <code>&#8211;parents</code></dt>
+<dd> Automatic parent directory creation. Default is to only create the last directory in the path and fail if parents are missing.</dd>
+<dt><code>-m</code>, <code>&#8211;mode</code> <i>mode</i></dt>
+<dd> The directory mode applied to the directory, see <i><a href="/docs/linux/man/1-chmod/">chmod</a></i>(1). Omitting mode skips this step and leaves the operating system default which is usually based on <i><a href="/docs/linux/man/1-umask/">umask</a></i>(1). Some directory modes require superuser privileges to be set. Default is to stick with operating system defaults.</dd>
+<dt><code>-o</code>, <code>&#8211;owner</code> <i>owner</i></dt>
+<dd> The directory owner name or id applied to the directory, see <i><a href="/docs/linux/man/1-chown/">chown</a></i>(1). This option requires superuser privileges to execute. Default is to skip this step and leave the operating system default which is usually based on the executing uid or the parent setuid directory.</dd>
+<dt><code>-g</code>, <code>&#8211;group</code> <i>group</i></dt>
+<dd> The directory group name or id applied to the directory, see <i><a href="/docs/linux/man/1-chgrp/">chgrp</a></i>(1). This option requires superuser privileges to execute to the fullest extend, otherwise the choice of <i>group</i> is limited on most operating systems. Default is to skip this step and leave the operating system default which is usually based on the executing gid or the parent setgid directory.</dd></dl>
 <h2>EXAMPLE</h2>
 <pre>
  #   Makefile

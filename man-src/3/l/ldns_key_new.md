@@ -16,8 +16,8 @@ description: "ldns_key_new"
 <p> ldns_key* ldns_key_new(); </p>
 <h2>DESCRIPTION</h2>
 <dl>
-<dt> <i>ldns_key_new</i>()</p>
-<dd>Creates a new empty key structure .br Returns a new ldns_key * structure</dl>
+<dt> <i>ldns_key_new</i>()</dt>
+<dd>Creates a new empty key structure .br Returns a new ldns_key * structure</dd></dl>
 <h2>AUTHOR</h2>
 <p> The ldns team at NLnet Labs. Which consists out of Jelte Jansen and Miek Gieben. </p>
 <h2>REPORTING BUGS</h2>

@@ -15,20 +15,20 @@ description: "dump-acct – print an acct/pacct file in human-readable format"
 <h2>Options</h2>
 <p>The following options are supported:</p>
 <dl>
-<dt><code>-r, &#8211;reverse</code></p>
-<dd>Print the output in reverse order.</p>
-<dt><code>-R, &#8211;raw</code></p>
-<dd>The records will be printed without any parsing.</p>
-<dt><code>-n, &#8211;num NUMRECS</code></p>
-<dd>Display only the first NUMRECS number of records.</p>
-<dt><code>&#8211;byteswap</code></p>
-<dd>Swap the bytes (relative to your system&#8217;s native byte order) in &#8211;raw output.</p>
-<dt><code>&#8211;format</code></p>
-<dd>Set output format with &#8211;raw option.</p>
-<dt><code>&#8211;ahz FREQ</code></p>
-<dd>Set the AHZ (platform dependent frequency in Hertz) to FREQ.</p>
-<dt><code>-h, &#8211;help</code></p>
-<dd>Print a help message and the default location of the process accounting file and exit. </p>
+<dt><code>-r, &#8211;reverse</code></dt>
+<dd>Print the output in reverse order.</dd>
+<dt><code>-R, &#8211;raw</code></dt>
+<dd>The records will be printed without any parsing.</dd>
+<dt><code>-n, &#8211;num NUMRECS</code></dt>
+<dd>Display only the first NUMRECS number of records.</dd>
+<dt><code>&#8211;byteswap</code></dt>
+<dd>Swap the bytes (relative to your system&#8217;s native byte order) in &#8211;raw output.</dd>
+<dt><code>&#8211;format</code></dt>
+<dd>Set output format with &#8211;raw option.</dd>
+<dt><code>&#8211;ahz FREQ</code></dt>
+<dd>Set the AHZ (platform dependent frequency in Hertz) to FREQ.</dd>
+<dt><code>-h, &#8211;help</code></dt>
+<dd>Print a help message and the default location of the process accounting file and exit. </dd>
 </dl>
 <h2>See Also</h2>
 <p>accton (8), lastcomm (1) </p>

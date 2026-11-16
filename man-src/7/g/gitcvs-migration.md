@@ -19,29 +19,29 @@ description: "gitcvs-migration – Git for CVS users"
 <dd>
 <pre>$ git clone foo.com:/pub/repo.git/ my-project
 $ cd my-project</pre>
-</dl>
+</dd></dl>
 <p> and hack away. The equivalent of <i>cvs update</i> is </p>
 <dl>
 <dd>
 <pre>$ git pull origin</pre>
-</dl>
+</dd></dl>
 <p> which merges in any work that others might have done since the clone operation. If there are uncommitted changes in your working tree, commit them first before running git pull. </p>
 <dl>
-<dd><font SIZE="+1"> <code>Note</code> </font> </p>
+<dd><font SIZE="+1"> <code>Note</code> </font> </dd>
 <p> The <i>pull</i> command knows where to get updates from because of certain configuration variables that were set by the first <i>git clone</i> command; see <code>git config -l</code> and the <code><a href="/docs/linux/man/1-git-config/">git-config</a></code>(1) man page for details. </p>
 </dl>
 <p> You can update the shared repository with your changes by first committing your changes, and then using the <i>git push</i> command: </p>
 <dl>
 <dd>
 <pre>$ git push origin master</pre>
-</dl>
+</dd></dl>
 <p> to &quot;push&quot; those commits to the shared repository. If someone else has updated the repository more recently, <i>git push</i>, like <i>cvs commit</i>, will complain, in which case you must pull any changes before attempting the push again. </p>
 <p> In the <i>git push</i> command above we specify the name of the remote branch to update (<code>master</code>). If we leave that out, <i>git push</i> tries to update any branches in the remote repository that have the same name as a branch in the local repository. So the last <i>push</i> can be done with either of: </p>
 <dl>
 <dd>
 <pre>$ git push origin
 $ git push foo.com:/pub/project.git/</pre>
-</dl>
+</dd></dl>
 <p> as long as the shared repository does not have any branches other than <code>master</code>.</p>
 <h2>Setting Up A Shared Repository</h2>
 <p>We assume you have already created a Git repository for your project, possibly created from scratch or from a tarball (see <code><a href="/docs/linux/man/7-gittutorial/">gittutorial</a></code>(7)), or imported from an already existing CVS repository (see the next section). </p>
@@ -52,24 +52,24 @@ $ git push foo.com:/pub/project.git/</pre>
 $ cd /pub/my-repo.git
 $ git --bare init --shared
 $ git --bare fetch /home/alice/myproject master:master</pre>
-</dl>
+</dd></dl>
 <p> Next, give every team member read/write access to this repository. One easy way to do this is to give all the team members ssh access to the machine where the repository is hosted. If you don&#8217;t want to give them a full shell on the machine, there is a restricted shell which only allows users to do Git pushes and pulls; see <code><a href="/docs/linux/man/1-git-shell/">git-shell</a></code>(1). </p>
 <p> Put all the committers in the same group, and make the repository writable by that group: </p>
 <dl>
 <dd>
 <pre>$ chgrp -R $group /pub/my-repo.git</pre>
-</dl>
+</dd></dl>
 <p> Make sure committers have a umask of at most 027, so that the directories they create are writable and searchable by other group members.</p>
 <h2>Importing A Cvs Archive</h2>
 <dl>
-<dd><font SIZE="+1"> <code>Note</code> </font> </p>
+<dd><font SIZE="+1"> <code>Note</code> </font> </dd>
 <p> These instructions use the <code>git-cvsimport</code> script which ships with git, but other importers may provide better results. See the note in <code><a href="/docs/linux/man/1-git-cvsimport/">git-cvsimport</a></code>(1) for other options. </p>
 </dl>
 <p> First, install version 2.1 or higher of cvsps from m[blue]<code><a rel="nofollow" href="https://github.com/andreyvit/cvsps">https://github.com/andreyvit/cvsps</a></code>m[] and make sure it is in your path. Then cd to a checked out CVS working directory of the project you are interested in and run <code><a href="/docs/linux/man/1-git-cvsimport/">git-cvsimport</a></code>(1): </p>
 <dl>
 <dd>
 <pre>$ git cvsimport -C &lt;destination&gt; &lt;module&gt;</pre>
-</dl>
+</dd></dl>
 <p> This puts a Git archive of the named CVS module in the directory &lt;destination&gt;, which will be created if necessary. </p>
 <p> The import checks out from CVS every revision of every file. Reportedly cvsimport can average some twenty revisions per second, so for a medium-sized project this should not take more than a couple of minutes. Larger projects or remote repositories may take longer. </p>
 <p> The main trunk is stored in the Git branch named <code>origin</code>, and additional CVS branches are stored in Git branches with the same names. The most recent version of the main trunk is also left checked out on the <code>master</code> branch, so you can start adding your own changes right away. </p>
@@ -90,11 +90,12 @@ $ git --bare fetch /home/alice/myproject master:master</pre>
 <p>Part of the <code><a href="/docs/linux/man/1-git/">git</a></code>(1) suite</p>
 <h2>Notes</h2>
 <dl>
-<dt> 1.</p>
-<dd>Controlling access to branches using update hooks</p>
+<dt> 1.</dt>
+<dd>Controlling access to branches using update hooks</dd>
 <dl>
-<dd>file:///usr/share/doc/git/html/howto/update-hook-example.html</dl>
-<dt> 2.</p>
-<dd>The Git User&#8217;s Manual</p>
+<dd>file:///usr/share/doc/git/html/howto/update-hook-example.html</dd></dl>
+<dt> 2.</dt>
+<dd>The Git User&#8217;s Manual</dd>
 <dl>
-<dd>file:///usr/share/doc/git/html/user-manual.html</dl>
+<dd>file:///usr/share/doc/git/html/user-manual.html</dd></dl>
+</dl>

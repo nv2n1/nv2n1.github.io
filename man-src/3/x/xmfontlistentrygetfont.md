@@ -16,10 +16,10 @@ description: "XmFontListEntryGetFont — A font list function that retrieves fon
 <h2>Description</h2>
 <p><code>XmFontListEntryGetFont</code> retrieves font information for a specified font list entry. If the font list entry contains a font, <i>type_return</i> returns <code>XmFONT_IS_FONT</code> and the function returns a pointer to an <code>XFontStruct</code>. If the font list entry contains a font set, <i>type_return</i> returns <code>XmFONT_IS_FONTSET</code> and the function returns the <code>XFontSet</code>.</p>
 <dl COMPACT>
-<dt><i>entry</i></p>
-<dd>Specifies the font list entry.</p>
-<dt><i>type_return</i></p>
-<dd>Specifies a pointer to the type of the font element for the current entry. Valid values are <code>XmFONT_IS_FONT</code> and <code>XmFONT_IS_FONTSET</code>.</dl>
+<dt><i>entry</i></dt>
+<dd>Specifies the font list entry.</dd>
+<dt><i>type_return</i></dt>
+<dd>Specifies a pointer to the type of the font element for the current entry. Valid values are <code>XmFONT_IS_FONT</code> and <code>XmFONT_IS_FONTSET</code>.</dd></dl>
 <p> The returned <code>XFontSet</code> or <code>XFontStruct</code> is not a copy of the toolkit data and must not be freed.</p>
 <h2>Return</h2>
 <p>Returns an <code>XFontSet</code> or a pointer to an <code>XFontStruct</code> structure.</p>

@@ -16,8 +16,9 @@ description: "npm-submodule — Add a package as a git submodule"
 <p> This command also does not install missing dependencies, if the package does not include them in its git repository. If <code>npm ls</code> reports that things are missing, you can either install, link, or submodule them yourself, or you can do <code>npm explore &lt;pkgname&gt; &#8212; npm install</code> to install the dependencies into the submodule folder.</p>
 <h2>See Also</h2>
 <dl>
-<dt>&bull;</p>
-<dd>npm help json</p>
-<dt>&bull;</p>
-<dd>git help submodule</p>
+<dt>&bull;</dt>
+<dd>npm help json</dd>
+<dt>&bull;</dt>
+<dd>git help submodule</dd>
 <dd>
+</dd></dl>

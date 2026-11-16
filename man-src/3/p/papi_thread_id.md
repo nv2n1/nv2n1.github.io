@@ -26,6 +26,6 @@ printf(&quot;Initial thread id is: %lu, tid );
 <p>&nbsp;<wbr> </p>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>PAPI_thread_init</code></dl>
+<dd><code>PAPI_thread_init</code></dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for PAPI from the source code.</p>

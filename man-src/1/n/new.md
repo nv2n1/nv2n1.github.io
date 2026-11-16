@@ -14,27 +14,27 @@ description: "new – report on folders with new messages"
 <p> unseen &#8211; scan new messages in all folders with new messages </p>
 <h2>SYNOPSIS</h2>
 <dl>
-<dt> <code>new</code> [<i>sequences</i>] [<code>-mode</code> <i>mode</i>] [<code>-folders</code> <i>foldersfile</i>] [<code>-version</code>] [<code>-help</code>]</dl>
+<dt> <code>new</code> [<i>sequences</i>] [<code>-mode</code> <i>mode</i>] [<code>-folders</code> <i>foldersfile</i>] [<code>-version</code>] [<code>-help</code>]</dt></dl>
 <dl>
-<dt> <code>fnext</code></p>
-<dd>is equivalent to <code>new -mode fnext</code></dl>
+<dt> <code>fnext</code></dt>
+<dd>is equivalent to <code>new -mode fnext</code></dd></dl>
 <dl>
-<dt> <code>fprev</code></p>
-<dd>is equivalent to <code>new -mode fprev</code></dl>
+<dt> <code>fprev</code></dt>
+<dd>is equivalent to <code>new -mode fprev</code></dd></dl>
 <dl>
-<dt> <code>unseen</code></p>
-<dd>is equivalent to <code>new -mode unseen</code></dl>
+<dt> <code>unseen</code></dt>
+<dd>is equivalent to <code>new -mode unseen</code></dd></dl>
 <h2>DESCRIPTION</h2>
 <p> <code>New</code> in its default mode produces a one-line-per-folder listing of all folders containing messages in the listed <i>sequences</i> or in the sequences listed in the profile entry &#8220;<i>Unseen-Sequence</i>&#8221;. Each line contains the folder, the number of messages in the desired sequences, and the message lists from the .mh_sequences file. For example: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 foo     11.* 40-50
 bar    380.  760-772 824-828
  total    391.
 </pre>
-</dl>
+</dd></dl>
 <p> The `*&#8217; on foo indicates that it is the current folder. The last line shows the total number of messages in the desired sequences. </p>
 <p> <code>New</code> crawls the folder hierarchy recursively to find all folders, and prints them in lexicographic order. Override this behavior by providing <i>foldersfile</i> containing the pre-sorted list of folders <code>new</code> should check, one per line. </p>
 <p> In <code>fnext</code> and <code>fprev</code> modes, <code>new</code> instead changes to the next or previous matching folder, respectively. </p>

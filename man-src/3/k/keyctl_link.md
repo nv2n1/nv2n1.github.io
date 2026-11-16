@@ -24,22 +24,22 @@ long keyctl_unlink(key_serial_t key, key_serial_t keyring);
 <p> On success <code>keyctl_link</code>() and <code>keyctl_unlink</code>() return <code>0</code>. On error, the value <code>-1</code> will be returned and errno will have been set to an appropriate error.</p>
 <h2>ERRORS</h2>
 <dl>
-<dt><code>ENOKEY</code></p>
-<dd> The key or the keyring specified are invalid.</p>
-<dt><code>EKEYEXPIRED</code></p>
-<dd> The key or the keyring specified have expired.</p>
-<dt><code>EKEYREVOKED</code></p>
-<dd> The key or the keyring specified have been revoked.</p>
-<dt><code>EACCES</code></p>
-<dd> The keyring exists, but is not <code>writable</code> by the calling process.</dl>
+<dt><code>ENOKEY</code></dt>
+<dd> The key or the keyring specified are invalid.</dd>
+<dt><code>EKEYEXPIRED</code></dt>
+<dd> The key or the keyring specified have expired.</dd>
+<dt><code>EKEYREVOKED</code></dt>
+<dd> The key or the keyring specified have been revoked.</dd>
+<dt><code>EACCES</code></dt>
+<dd> The keyring exists, but is not <code>writable</code> by the calling process.</dd></dl>
 <p> For <code>keyctl_link</code>() only:</p>
 <dl>
-<dt><code>ENOMEM</code></p>
-<dd> Insufficient memory to expand the keyring</p>
-<dt><code>EDQUOT</code></p>
-<dd> Expanding the keyring would exceed the keyring owner&#8217;s quota.</p>
-<dt><code>EACCES</code></p>
-<dd> The key exists, but is not <code>linkable</code> by the calling process.</dl>
+<dt><code>ENOMEM</code></dt>
+<dd> Insufficient memory to expand the keyring</dd>
+<dt><code>EDQUOT</code></dt>
+<dd> Expanding the keyring would exceed the keyring owner&#8217;s quota.</dd>
+<dt><code>EACCES</code></dt>
+<dd> The key exists, but is not <code>linkable</code> by the calling process.</dd></dl>
 <h2>LINKING</h2>
 <p> This is a library function that can be found in <i>libkeyutils</i>. When linking, <code>-lkeyutils</code> should be specified to the linker.</p>
 <h2>SEE ALSO</h2>

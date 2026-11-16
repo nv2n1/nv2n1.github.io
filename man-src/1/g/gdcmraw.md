@@ -80,3 +80,4 @@ $ gdcmdump D_CLUNIE_CT1_J2KR.dcm
 (7fe0,0010) OB                                                    # u/l,1 Pixel Data
   (fffe,e000) ?? []                           # 0,1 Item
   (fffe,e000) ?? ff\4ff\51
+</pre>

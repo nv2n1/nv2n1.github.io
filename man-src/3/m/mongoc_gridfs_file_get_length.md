@@ -13,8 +13,8 @@ description: "mongoc_gridfs_file_get_length() – Fetches the length of the grid
 mongoc_gridfs_file_get_length (mongoc_gridfs_file_t *file);</pre>
 <h2>Parameters</h2>
 <dl COMPACT>
-<dt><code>file</code></p>
-<dd>A <code>mongoc_gridfs_file_t</code> \&amp;.</dl>
+<dt><code>file</code></dt>
+<dd>A <code>mongoc_gridfs_file_t</code> \&amp;.</dd></dl>
 <h2>Description</h2>
 <p>Fetches the length of the gridfs file in bytes. </p>
 <h2>Returns</h2>

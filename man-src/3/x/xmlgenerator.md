@@ -273,7 +273,6 @@ XML::Generator - Perl extension for generating XML
  use base 'XML::Generator';
  sub table {
  my $self = shift;
- 
  # parse our args to get namespace and attribute info
  my($namespace, $attr, @content) =
  $self-&gt;XML::Generator::util::parse_args(@_)
@@ -291,13 +290,13 @@ XML::Generator - Perl extension for generating XML
  <pre> # construct our custom tags 
  return $self-&gt;XML::Generator::util::tag('table', $attr, ...);</pre>Here, we must explicitly call <i>tag()</i> with the tag name itself as its first argument so it knows what to generate. These are the methods that you might find useful:
 <dl COMPACT><dt><i>XML::Generator::util::parse_args()</i>
-<dd>This parses the argument list and returns the namespace (arrayref), attributes (hashref), and remaining content (array), in that order.
-<dt><i>XML::Generator::util::tag()</i>
-<dd>This does the work of generating the appropriate tag. The first argument must be the name of the tag to generate.
-<dt><i>XML::Generator::util::config()</i>
-<dd>This retrieves options as set via the <i>new()</i> method.
-<dt><i>XML::Generator::util::escape()</i>
-<dd>This escapes any illegal <font SIZE="-1">XML</font> characters.</dl>
+</dt><dd>This parses the argument list and returns the namespace (arrayref), attributes (hashref), and remaining content (array), in that order.
+</dd><dt><i>XML::Generator::util::tag()</i>
+</dt><dd>This does the work of generating the appropriate tag. The first argument must be the name of the tag to generate.
+</dd><dt><i>XML::Generator::util::config()</i>
+</dt><dd>This retrieves options as set via the <i>new()</i> method.
+</dd><dt><i>XML::Generator::util::escape()</i>
+</dt><dd>This escapes any illegal <font SIZE="-1">XML</font> characters.</dd></dl>
  
 
  Remember that all of these methods must be fully-qualified with the XML::Generator::util package name. This is because <font SIZE="-1">AUTOLOAD</font> is used by the main XML::Generator package to create tags. Simply calling <i>parse_args()</i> will result in a set of <font SIZE="-1">XML</font> tags called &lt;parse_args&gt;. 
@@ -327,11 +326,10 @@ XML::Generator - Perl extension for generating XML
  &lt;title&gt;My Title&amp;copy;&lt;/title&gt;
  &lt;/head&gt;
  &lt;/html&gt;</pre><h2>Authors</h2><dl COMPACT><dt>Benjamin Holzman &lt;bholzman [at] earthlink.net&gt;
-<dd>Original author and maintainer
-<dt>Bron Gondwana &lt;perlcode [at] brong.net&gt;
-<dd>First modular version
-<dt>Nathan Wiger &lt;nate [at] nateware.com&gt;
-<dd>Modular rewrite to enable subclassing</dl><h2>See Also</h2><dl COMPACT><dt>The XML::Writer module
-<dd><a rel="nofollow" HREF="http://search.cpan.org/search?mode=module">http://search.cpan.org/search?mode=module</a>&amp;query=XML::Writer 
-
-</dl>
+</dt><dd>Original author and maintainer
+</dd><dt>Bron Gondwana &lt;perlcode [at] brong.net&gt;
+</dt><dd>First modular version
+</dd><dt>Nathan Wiger &lt;nate [at] nateware.com&gt;
+</dt><dd>Modular rewrite to enable subclassing</dd></dl><h2>See Also</h2><dl COMPACT><dt>The XML::Writer module
+</dt><dd><a rel="nofollow" HREF="http://search.cpan.org/search?mode=module">http://search.cpan.org/search?mode=module</a>&amp;query=XML::Writer 
+</dd></dl>

@@ -35,9 +35,9 @@ url: "/docs/linux/man/1-pod2markdown/"
  It accepts two optional arguments:
 <dl>
 <dt>&bull;
-<dd> input pod file (defaults to <tt>&quot;STDIN&quot;</tt>)
-<dt>&bull;
-<dd> output markdown file (defaults to <tt>&quot;STDOUT&quot;</tt>)</dl>
+</dt><dd> input pod file (defaults to <tt>&quot;STDIN&quot;</tt>)
+</dd><dt>&bull;
+</dt><dd> output markdown file (defaults to <tt>&quot;STDOUT&quot;</tt>)</dd></dl>
 
 <h2>SEE ALSO</h2>
 
@@ -47,15 +47,15 @@ url: "/docs/linux/man/1-pod2markdown/"
 
 <dl>
 <dt>&bull;
-<dd> Marcel Gruenauer &lt;marcel [at] cpan.org&gt;
-<dt>&bull;
-<dd> Victor Moral &lt;victor [at] taquiones.net&gt;
-<dt>&bull;
-<dd> Ryan C. Thompson &lt;rct at thompsonclan d0t org&gt;
-<dt>&bull;
-<dd> Aristotle Pagaltzis &lt;pagaltzis [at] gmx.de&gt;
-<dt>&bull;
-<dd> Randy Stauner &lt;rwstauner [at] cpan.org&gt;</dl>
+</dt><dd> Marcel Gruenauer &lt;marcel [at] cpan.org&gt;
+</dd><dt>&bull;
+</dt><dd> Victor Moral &lt;victor [at] taquiones.net&gt;
+</dd><dt>&bull;
+</dt><dd> Ryan C. Thompson &lt;rct at thompsonclan d0t org&gt;
+</dd><dt>&bull;
+</dt><dd> Aristotle Pagaltzis &lt;pagaltzis [at] gmx.de&gt;
+</dd><dt>&bull;
+</dt><dd> Randy Stauner &lt;rwstauner [at] cpan.org&gt;</dd></dl>
 
 <h2>COPYRIGHT AND LICENSE</h2>
 

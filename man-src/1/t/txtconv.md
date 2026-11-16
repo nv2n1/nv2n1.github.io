@@ -14,32 +14,32 @@ description: "txtconv – A tool to apply TECkit mappings to convert the encodin
 <h2>OPTIONS</h2>
 <p> <code>Required arguments:</code></p>
 <dl>
-<dt><code>-i</code> &lt;file&gt;</p>
-<dd> input file</p>
-<dt><code>-o</code> &lt;file&gt;</p>
-<dd> output file</dl>
+<dt><code>-i</code> &lt;file&gt;</dt>
+<dd> input file</dd>
+<dt><code>-o</code> &lt;file&gt;</dt>
+<dd> output file</dd></dl>
 <p> <code>Optional arguments:</code></p>
 <dl>
-<dt><code>-t</code> &lt;file&gt;</p>
-<dd> compiled TECkit mapping (.tec) file</p>
-<dt><code>-r</code></p>
-<dd> reverse (RHS-&gt;LHS, or Unicode-&gt;Byte) mapping</p>
-<dt><code>-if</code> &lt;form&gt;</p>
-<dd> input encoding form</p>
-<dt><code>-of</code> &lt;form&gt;</p>
-<dd> output encoding form</p>
-<dt><code>-nobom</code></p>
-<dd> don&#8217;t write a BOM to Unicode output</p>
-<dt><code>-nf[cd]</code></p>
-<dd> apply NFC or NFD normalization to Unicode output</p>
-<dt><code>-u</code> &lt;n&gt;</p>
-<dd> handling of unmappable input:</p>
+<dt><code>-t</code> &lt;file&gt;</dt>
+<dd> compiled TECkit mapping (.tec) file</dd>
+<dt><code>-r</code></dt>
+<dd> reverse (RHS-&gt;LHS, or Unicode-&gt;Byte) mapping</dd>
+<dt><code>-if</code> &lt;form&gt;</dt>
+<dd> input encoding form</dd>
+<dt><code>-of</code> &lt;form&gt;</dt>
+<dd> output encoding form</dd>
+<dt><code>-nobom</code></dt>
+<dd> don&#8217;t write a BOM to Unicode output</dd>
+<dt><code>-nf[cd]</code></dt>
+<dd> apply NFC or NFD normalization to Unicode output</dd>
+<dt><code>-u</code> &lt;n&gt;</dt>
+<dd> handling of unmappable input:</dd>
 <dt>
-<dd> &bull; 0 = use replacement character .IP &bull; 1 = use replacement but generate warning .IP &bull; 2 = stop conversion</dl>
+</dt><dd> &bull; 0 = use replacement character .IP &bull; 1 = use replacement but generate warning .IP &bull; 2 = stop conversion</dd></dl>
 <p> <code>Encoding forms:</code></p>
 <dl>
 <dt>
-<dd> bytes utf8 utf16be utf16le utf16 utf32be utf32le utf32</dl>
+</dt><dd> bytes utf8 utf16be utf16le utf16 utf32be utf32le utf32</dd></dl>
 <h2>Further Information</h2>
 <p> For further information see the document TECkit_Tools.pdf. On a Debian system, this can be found in /usr/share/doc/teckit. </p>
 <h2>Index</h2>

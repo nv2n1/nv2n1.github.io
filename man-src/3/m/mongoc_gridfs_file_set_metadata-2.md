@@ -14,11 +14,11 @@ mongoc_gridfs_file_set_metadata (mongoc_gridfs_file_t *file,
  const bson_t *metadata);</pre>
 <h2>Parameters</h2>
 <dl COMPACT>
-<dt><code>file</code></p>
-<dd>A <code>mongoc_gridfs_file_t</code> \&amp;.</dl>
+<dt><code>file</code></dt>
+<dd>A <code>mongoc_gridfs_file_t</code> \&amp;.</dd></dl>
 <dl COMPACT>
-<dt><code>bson</code></p>
-<dd>A <code>bson_t</code> containing metadata for <code>file</code> \&amp;.</dl>
+<dt><code>bson</code></dt>
+<dd>A <code>bson_t</code> containing metadata for <code>file</code> \&amp;.</dd></dl>
 <h2>Description</h2>
 <p>Sets the metadata associated with <code>file</code> \&amp;. </p>
 <p> You need to call <code><a href="/docs/linux/man/3-mongoc_gridfs_file_save/">mongoc_gridfs_file_save</a>(3)</code> to persist this change. </p>

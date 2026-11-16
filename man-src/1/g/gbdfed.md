@@ -17,41 +17,42 @@ description: "gbdfed – GTK-based BDF font editor"
 <h2>OPTIONS</h2>
 <p> <i>gbdfed</i> accepts the following command line arguments: </p>
 <dl>
-<dt><i>-nc</i></p>
-<dd> do not preserve comments (by default, <i>gbdfed</i> automatically collects comments that are saved with the font).</dl>
+<dt><i>-nc</i></dt>
+<dd> do not preserve comments (by default, <i>gbdfed</i> automatically collects comments that are saved with the font).</dd></dl>
 <dl>
-<dt><i>-nu</i></p>
-<dd> do not preserve unencoded glyphs (by default, <i>gbdfed</i> preserves the unencoded glyphs).</dl>
+<dt><i>-nu</i></dt>
+<dd> do not preserve unencoded glyphs (by default, <i>gbdfed</i> preserves the unencoded glyphs).</dd></dl>
 <dl>
-<dt><i>-nm</i></p>
-<dd> do not make metrics corrections (by default, <i>gbdfed</i> attempts to make metrics corrections automatically).</dl>
+<dt><i>-nm</i></dt>
+<dd> do not make metrics corrections (by default, <i>gbdfed</i> attempts to make metrics corrections automatically).</dd></dl>
 <dl>
-<dt><i>-np</i></p>
-<dd> do not pad character-cell bitmaps (by default, <i>gbdfed</i> pads character-cell bitmaps with 0&#8217;s to the cell dimensions when the font is saved).</dl>
+<dt><i>-np</i></dt>
+<dd> do not pad character-cell bitmaps (by default, <i>gbdfed</i> pads character-cell bitmaps with 0&#8217;s to the cell dimensions when the font is saved).</dd></dl>
 <dl>
-<dt><i>-bp</i></p>
-<dd> allow blank pages (by default, <i>gbdfed</i> skips blank pages).</dl>
+<dt><i>-bp</i></dt>
+<dd> allow blank pages (by default, <i>gbdfed</i> skips blank pages).</dd></dl>
 <dl>
-<dt><i>-ed</i></p>
-<dd> do not present the &quot;Really Exit?&quot; dialog (by default, this dialog always presented).</dl>
+<dt><i>-ed</i></dt>
+<dd> do not present the &quot;Really Exit?&quot; dialog (by default, this dialog always presented).</dd></dl>
 <dl>
-<dt><i>-ps n</i></p>
-<dd> set default point size (if unspecified, <i>gbdfed</i> sets it to 12).</dl>
+<dt><i>-ps n</i></dt>
+<dd> set default point size (if unspecified, <i>gbdfed</i> sets it to 12).</dd></dl>
 <dl>
-<dt><i>-hres n</i></p>
-<dd> set default horizontal resolution.</dl>
+<dt><i>-hres n</i></dt>
+<dd> set default horizontal resolution.</dd></dl>
 <dl>
-<dt><i>-vres n</i></p>
-<dd> set default vertical resolution.</dl>
+<dt><i>-vres n</i></dt>
+<dd> set default vertical resolution.</dd></dl>
 <dl>
-<dt><i>-res n</i></p>
-<dd> set both default resolutions (if unspecified, <i>gbdfed</i> sets both horizontal and vertical resolution to that of display, (e.g. 90&#215;90 dpi for Sun workstations).</dl>
+<dt><i>-res n</i></dt>
+<dd> set both default resolutions (if unspecified, <i>gbdfed</i> sets both horizontal and vertical resolution to that of display, (e.g. 90&#215;90 dpi for Sun workstations).</dd></dl>
 <dl>
-<dt><i>-sp s</i></p>
-<dd> set the default font spacing (&quot;p&quot; for Proportional, &quot;m&quot; for Monowidth, or &quot;c&quot; for Character Cell).</dl>
+<dt><i>-sp s</i></dt>
+<dd> set the default font spacing (&quot;p&quot; for Proportional, &quot;m&quot; for Monowidth, or &quot;c&quot; for Character Cell).</dd></dl>
 <dl>
-<dt><i>-eol e</i></p>
-<dd> set the default end-of-line type (&quot;u&quot; for Unix LF, &quot;d&quot; for DOS/Windows CRLF, or &quot;m&quot; for Macintosh CR). CR)</dl>
+<dt><i>-eol e</i></dt>
+<dd> set the default end-of-line type (&quot;u&quot; for Unix LF, &quot;d&quot; for DOS/Windows CRLF, or &quot;m&quot; for Macintosh CR). CR)</dd></dl>
 <dl>
-<dt><i>-g glyph-code</i></p>
+<dt><i>-g glyph-code</i></dt>
 <dd> specify the initial glyph code at startup. The glyph code can be specified in decimal, octal, or hex. Octal numbers must be prefixed with the digit 0, and hex numbers must be prefixed with one of: <i>0x, 0X, U+, U-, 
+</dd></dl>

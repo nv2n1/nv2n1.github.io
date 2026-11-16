@@ -19,21 +19,19 @@ description: "git-sync – Sync local branch with remote branch"
 <p> Sync local branch with its upstream</p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 $ git sync
 </pre>
-<dt>
-<dd></dl>
+</dd></dl>
 <p> Sync local branch with origin/master</p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 $ git sync origin master
 </pre>
-<dt>
-<dd></dl>
+</dd></dl>
 <h2>AUTHOR</h2>
 <p> Written by Takuma Yamaguchi &lt;<i>kumon0587 [at] gmail.com</i>&gt;</p>
 <h2>REPORTING BUGS</h2>

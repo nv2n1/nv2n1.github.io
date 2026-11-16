@@ -17,14 +17,14 @@ description: "Lintian::Processable::Changelog – access to collected changelog 
 <p> Lintian::Processable::Changelog provides an interface to changelog data.</p>
 <h2>Instance Methods</h2>
 <dl COMPACT>
-<dt>changelog</p>
-<dd> For binary: </p>
+<dt>changelog</dt>
+<dd> For binary: </dd>
 <p> Returns the changelog of the binary package as a Parse::DebianChangelog object, or undef if the changelog doesn&#8217;t exist. The changelog-file collection script must have been run to create the changelog file, which this method expects to find in <i>changelog</i>. </p>
 <p> Needs-Info requirements for using <i>changelog</i>: changelog-file </p>
 <p> For source: </p>
 <p> Returns the changelog of the source package as a Parse::DebianChangelog object, or <tt>&quot;undef&quot;</tt> if the changelog cannot be resolved safely.</p>
-<dt>saved_changelog</p>
-<dd> Returns the cached changelog information.</dl>
+<dt>saved_changelog</dt>
+<dd> Returns the cached changelog information.</dd></dl>
 <h2>Author</h2>
 <p> Originally written by Felix Lechner &lt;felix.lechner [at] lease-up.com&gt; for Lintian.</p>
 <h2>See Also</h2>

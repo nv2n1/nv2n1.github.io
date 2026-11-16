@@ -11,16 +11,16 @@ description: "zramctl – set up and control zram devices"
 <h2>Synopsis</h2>
 <p>Get info:</p>
 <dl>
-<dd><code>zramctl</code> [options]</dl>
+<dd><code>zramctl</code> [options]</dd></dl>
 <p> Reset zram:</p>
 <dl>
-<dd><code>zramctl</code> <code>-r</code> <i>zramdev</i>&#8230;</dl>
+<dd><code>zramctl</code> <code>-r</code> <i>zramdev</i>&#8230;</dd></dl>
 <p> Print name of first unused zram device:</p>
 <dl>
-<dd><code>zramctl</code> <code>-f</code></dl>
+<dd><code>zramctl</code> <code>-f</code></dd></dl>
 <p> Set up a zram device:</p>
 <dl>
-<dd><code>zramctl</code> [<code>-f</code> | <i>zramdev</i>] [<code>-s</code> <i>size</i>] [<code>-t</code> <i>number</i>] [<code>-a</code> <i>algorithm</i>]</dl>
+<dd><code>zramctl</code> [<code>-f</code> | <i>zramdev</i>] [<code>-s</code> <i>size</i>] [<code>-t</code> <i>number</i>] [<code>-a</code> <i>algorithm</i>]</dd></dl>
 <h2>Description</h2>
 <p><code>zramctl</code> is used to quickly set up zram device parameters, to reset zram devices, and to query the status of used zram devices. </p>
 <p> If no option is given, all non-zero size zram devices are shown. </p>
@@ -28,44 +28,44 @@ description: "zramctl – set up and control zram devices"
 <h2>Options</h2>
 <p><code>-a</code>, <code>&#8211;algorithm lzo</code>|<code>lz4</code>|<code>lz4hc</code>|<code>deflate</code>|<code>842</code></p>
 <dl>
-<dd>Set the compression algorithm to be used for compressing data in the zram device.</dl>
+<dd>Set the compression algorithm to be used for compressing data in the zram device.</dd></dl>
 <p> <code>-f</code>, <code>&#8211;find</code></p>
 <dl>
-<dd>Find the first unused zram device. If a <code>&#8211;size</code> argument is present, then initialize the device.</dl>
+<dd>Find the first unused zram device. If a <code>&#8211;size</code> argument is present, then initialize the device.</dd></dl>
 <p> <code>-n</code>, <code>&#8211;noheadings</code></p>
 <dl>
-<dd>Do not print a header line in status output.</dl>
+<dd>Do not print a header line in status output.</dd></dl>
 <p> <code>-o</code>, <code>&#8211;output</code> <i>list</i></p>
 <dl>
-<dd>Define the status output columns to be used. If no output arrangement is specified, then a default set is used. Use <code>&#8211;help</code> to get a list of all supported columns.</dl>
+<dd>Define the status output columns to be used. If no output arrangement is specified, then a default set is used. Use <code>&#8211;help</code> to get a list of all supported columns.</dd></dl>
 <p> <code>&#8211;output-all</code></p>
 <dl>
-<dd>Output all available columns.</dl>
+<dd>Output all available columns.</dd></dl>
 <p> <code>&#8211;raw</code></p>
 <dl>
-<dd>Use the raw format for status output.</dl>
+<dd>Use the raw format for status output.</dd></dl>
 <p> <code>-r</code>, <code>&#8211;reset</code></p>
 <dl>
-<dd>Reset the options of the specified zram device(s). Zram device settings can be changed only after a reset.</dl>
+<dd>Reset the options of the specified zram device(s). Zram device settings can be changed only after a reset.</dd></dl>
 <p> <code>-s</code>, <code>&#8211;size</code> <i>size</i></p>
 <dl>
-<dd>Create a zram device of the specified <i>size</i>. Zram devices are aligned to memory pages; when the requested <i>size</i> is not a multiple of the page size, it will be rounded up to the next multiple. When not otherwise specified, the unit of the <i>size</i> parameter is bytes. </p>
+<dd>Create a zram device of the specified <i>size</i>. Zram devices are aligned to memory pages; when the requested <i>size</i> is not a multiple of the page size, it will be rounded up to the next multiple. When not otherwise specified, the unit of the <i>size</i> parameter is bytes. </dd>
 <p> The <i>size</i> argument may be followed by the multiplicative suffixes KiB (=1024), MiB (=1024*1024), and so on for GiB, TiB, PiB, EiB, ZiB and YiB (the &quot;iB&quot; is optional, e.g., &quot;K&quot; has the same meaning as &quot;KiB&quot;) or the suffixes KB (=1000), MB (=1000*1000), and so on for GB, TB, PB, EB, ZB and YB.</dl>
 <p> <code>-t</code>, <code>&#8211;streams</code> <i>number</i></p>
 <dl>
-<dd>Set the maximum number of compression streams that can be used for the device. The default is use all CPUs and one stream for kernels older than 4.6.</dl>
+<dd>Set the maximum number of compression streams that can be used for the device. The default is use all CPUs and one stream for kernels older than 4.6.</dd></dl>
 <p> <code>-V</code>, <code>&#8211;version</code></p>
 <dl>
-<dd>Display version information and exit.</dl>
+<dd>Display version information and exit.</dd></dl>
 <p> <code>-h</code>, <code>&#8211;help</code></p>
 <dl>
-<dd>Display help text and exit.</dl>
+<dd>Display help text and exit.</dd></dl>
 <h2>Exit Status</h2>
 <p><code>zramctl</code> returns 0 on success, nonzero on failure.</p>
 <h2>Files</h2>
 <p><i>/dev/zram[0..N]</i></p>
 <dl>
-<dd>zram block devices</dl>
+<dd>zram block devices</dd></dl>
 <h2>Example</h2>
 <p>The following commands set up a zram device with a size of one gigabyte and use it as swap device. </p>
 <dl>
@@ -77,7 +77,7 @@ description: "zramctl – set up and control zram devices"
  ...
  # swapoff /dev/zram0
  # zramctl --reset /dev/zram0</pre>
-</dl>
+</dd></dl>
 <h2>Authors</h2>
 <h2>See Also</h2>
 <p><i>Linux kernel documentation</i> &lt;<a rel="nofollow" href="http://git.kernel.org/cgit/linux/kernel/git/torvalds/linux.git/tree/Documentation/admin-guide/blockdev/zram.rst">http://git.kernel.org/cgit/linux/kernel/git/torvalds/linux.git/tree/Documentation/admin-guide/blockdev/zram.rst</a>&gt;</p>

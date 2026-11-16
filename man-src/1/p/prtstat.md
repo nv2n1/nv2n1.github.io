@@ -16,13 +16,13 @@ description: "prtstat – print statistics of a process"
 <p> <code>prtstat</code> prints the statistics of the specified process. This information comes from the <code>/proc/</code><i>pid</i><code>/stat</code> file.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-r</code>,<code>&nbsp;&#8211;raw</code></p>
-<dd> Print the information in raw format.</p>
-<dt><code>-V</code>,<code>&nbsp;&#8211;version</code></p>
-<dd> Show the version information for <code>prtstat</code>.</dl>
+<dt><code>-r</code>,<code>&nbsp;&#8211;raw</code></dt>
+<dd> Print the information in raw format.</dd>
+<dt><code>-V</code>,<code>&nbsp;&#8211;version</code></dt>
+<dd> Show the version information for <code>prtstat</code>.</dd></dl>
 <h2>FILES</h2>
 <dl>
-<dt><code>/proc/</code><i>pid</i><code>/stat</code></p>
-<dd> source of the information <code>prtstat</code> uses. </p>
+<dt><code>/proc/</code><i>pid</i><code>/stat</code></dt>
+<dd> source of the information <code>prtstat</code> uses. </dd>
 </dl>
 <h2>Index</h2>

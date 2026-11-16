@@ -567,12 +567,12 @@ XPUSHn(value);
 
 
 <dt><a HREF="#lbAK">OP TREES</a>
-<dd>
-<dt><a HREF="#lbAL">STACKS</a>
-<dd>
+</dt><dd>
+</dd><dt><a HREF="#lbAL">STACKS</a>
+</dt><dd>
 
 
-<dt><a HREF="#lbAP">MILLIONS OF MACROS</a>
-<dd>
-<dt><a HREF="#lbAQ">FURTHER READING</a>
-<dd></dl>
+</dd><dt><a HREF="#lbAP">MILLIONS OF MACROS</a>
+</dt><dd>
+</dd><dt><a HREF="#lbAQ">FURTHER READING</a>
+</dt><dd></dd></dl>

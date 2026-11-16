@@ -20,16 +20,16 @@ description: "udisks2.conf – The udisks2 configuration file"
  modules_load_preference=ondemand
  [defaults]
  encryption=luks1</pre>
-</dl>
+</dd></dl>
 <p> <code>modules = &lt;string list&gt;</code></p>
 <dl>
-<dd>This variable controls what modules should be loaded. It may contain either a comma-separated list of modules to load or a single asterisk which stands for all the modules.</dl>
+<dd>This variable controls what modules should be loaded. It may contain either a comma-separated list of modules to load or a single asterisk which stands for all the modules.</dd></dl>
 <p> <code>modules_load_preference = ondemand|onstartup</code></p>
 <dl>
-<dd>This key tells udisksd when to load the plugins: either at startup or on demand by D-Bus <code>org.freedesktop.UDisks2.Manager.EnableModules()</code>.</dl>
+<dd>This key tells udisksd when to load the plugins: either at startup or on demand by D-Bus <code>org.freedesktop.UDisks2.Manager.EnableModules()</code>.</dd></dl>
 <p> <code>encryption = luks1|luks2</code></p>
 <dl>
-<dd>This variable controls which encryption technology will be used by default when creating an encrypted filesystem.</dl>
+<dd>This variable controls which encryption technology will be used by default when creating an encrypted filesystem.</dd></dl>
 <h2>Author</h2>
 <p>&lt;phatina [at] redhat.com&gt;</p>
 <h2>Bugs</h2>

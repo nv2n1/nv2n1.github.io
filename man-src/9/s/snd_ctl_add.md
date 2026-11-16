@@ -14,10 +14,10 @@ description: "snd_ctl_add – add the control instance to the card"
 <p><i>card</i></p>
 <dl>
 <dd>
-<dd>the card instance</dl>
+</dd><dd>the card instance</dd></dl>
 <p> <i>kcontrol</i></p>
 <dl>
-<dd>the control instance to add</dl>
+<dd>the control instance to add</dd></dl>
 <h2>Description</h2>
 <p>Adds the control instance created via <code>snd_ctl_new</code> or <code>snd_ctl_new1</code> to the given card. Assigns also an unique numid used for fast search. </p>
 <p> It frees automatically the control which cannot be added.</p>

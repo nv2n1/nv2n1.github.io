@@ -19,14 +19,14 @@ description: "git-rebase-theirs – Resolve rebase conflicts and failed cherry-p
 <p> By default it outputs to stdout, but files can be edited in-place using &#8211;in-place, which, unlike sed, creates a backup by default.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-h</code>,<code>&nbsp;<wbr>&#8211;help</code></p>
-<dd> show usage information.</p>
-<dt><code>-v</code>,<code>&nbsp;<wbr>&#8211;verbose</code></p>
-<dd> print more details in stderr.</p>
-<dt><code>&#8211;in-place</code><i>[=SUFFIX]</i></p>
-<dd> edit files in place, creating a backup with <i>SUFFIX</i> extension. Default if blank is &quot;.bak&quot;</p>
-<dt><code>&#8211;no-backup</code></p>
-<dd> disables backup</dl>
+<dt><code>-h</code>,<code>&nbsp;<wbr>&#8211;help</code></dt>
+<dd> show usage information.</dd>
+<dt><code>-v</code>,<code>&nbsp;<wbr>&#8211;verbose</code></dt>
+<dd> print more details in stderr.</dd>
+<dt><code>&#8211;in-place</code><i>[=SUFFIX]</i></dt>
+<dd> edit files in place, creating a backup with <i>SUFFIX</i> extension. Default if blank is &quot;.bak&quot;</dd>
+<dt><code>&#8211;no-backup</code></dt>
+<dd> disables backup</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a rel="nofollow" href="https://github.com/MestreLion/git-tools">https://github.com/MestreLion/git-tools</a></code></p>
 <h2>AUTHOR</h2>

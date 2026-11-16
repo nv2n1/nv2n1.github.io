@@ -13,28 +13,28 @@ description: "pinky – lightweight finger"
 <p> <code>pinky</code> [<i>,OPTION/</i>]&#8230; [<i>,USER/</i>]&#8230;</p>
 <h2>DESCRIPTION</h2>
 <dl>
-<dt><code>-l</code></p>
-<dd> produce long format output for the specified USERs</p>
-<dt><code>-b</code></p>
-<dd> omit the user&#8217;s home directory and shell in long format</p>
-<dt><code>-h</code></p>
-<dd> omit the user&#8217;s project file in long format</p>
-<dt><code>-p</code></p>
-<dd> omit the user&#8217;s plan file in long format</p>
-<dt><code>-s</code></p>
-<dd> do short format output, this is the default</p>
-<dt><code>-f</code></p>
-<dd> omit the line of column headings in short format</p>
-<dt><code>-w</code></p>
-<dd> omit the user&#8217;s full name in short format</p>
-<dt><code>-i</code></p>
-<dd> omit the user&#8217;s full name and remote host in short format</p>
-<dt><code>-q</code></p>
-<dd> omit the user&#8217;s full name, remote host and idle time in short format</p>
-<dt><code>&#8211;help</code></p>
-<dd> display this help and exit</p>
-<dt><code>&#8211;version</code></p>
-<dd> output version information and exit</dl>
+<dt><code>-l</code></dt>
+<dd> produce long format output for the specified USERs</dd>
+<dt><code>-b</code></dt>
+<dd> omit the user&#8217;s home directory and shell in long format</dd>
+<dt><code>-h</code></dt>
+<dd> omit the user&#8217;s project file in long format</dd>
+<dt><code>-p</code></dt>
+<dd> omit the user&#8217;s plan file in long format</dd>
+<dt><code>-s</code></dt>
+<dd> do short format output, this is the default</dd>
+<dt><code>-f</code></dt>
+<dd> omit the line of column headings in short format</dd>
+<dt><code>-w</code></dt>
+<dd> omit the user&#8217;s full name in short format</dd>
+<dt><code>-i</code></dt>
+<dd> omit the user&#8217;s full name and remote host in short format</dd>
+<dt><code>-q</code></dt>
+<dd> omit the user&#8217;s full name, remote host and idle time in short format</dd>
+<dt><code>&#8211;help</code></dt>
+<dd> display this help and exit</dd>
+<dt><code>&#8211;version</code></dt>
+<dd> output version information and exit</dd></dl>
 <p> A lightweight &#8216;finger&#8217; program; print user information. The utmp file will be <i>,/var/run/utmp/</i>.</p>
 <h2>AUTHOR</h2>
 <p> Written by Joseph Arceneaux, David MacKenzie, and Kaveh Ghazi.</p>

@@ -11,22 +11,16 @@ std::literals::complex_literals::operator&quot;&quot;i,operator&quot;&quot;if,op
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;complex&gt;
-
     constexpr complex&lt;double&gt; operator&quot;&quot;i(long double arg);
 (1)(since C++ 14)
-
     constexpr complex&lt;double&gt;
     operator&quot;&quot;i(unsigned long long arg);
-
 constexpr complex&lt;float&gt; operator&quot;&quot;if(long double arg);
 (2)(since C++ 14)
-
     constexpr complex&lt;float&gt;
     operator&quot;&quot;if(unsigned long long arg);
-
 constexpr complex&lt;long double&gt; operator&quot;&quot;il(long double arg);
 (3)(since C++ 14)
-
     constexpr complex&lt;long double&gt;
     operator&quot;&quot;il(unsigned long long arg);</code></pre> 
 Forms a std::complex literal representing an imaginary number. 
@@ -105,13 +99,7 @@ int main()
 <h2>See also</h2>
 
 <pre><code>constructs a complex number
-
 constructor   (public member function)
 assigns the contents
-
 operator=     (public member function)
-
-
-
-
 </code></pre>

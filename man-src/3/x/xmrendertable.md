@@ -25,14 +25,14 @@ XmRenderTable</pre>
 <pre><i>resource_spec</i> [*|.] <i>rendition</i>[*|.] <i>resource_name</i>: <i>value</i></pre>
 <p>where:</p>
 <dl COMPACT>
-<dt><i>resource_spec</i></p>
-<dd>Specifies the render table.</p>
-<dt><i>rendition</i></p>
-<dd>Is either the class Rendition or a tag.</p>
-<dt><i>resource_name</i></p>
-<dd>Is either the class or name of a particular resource.</p>
-<dt><i>value</i></p>
-<dd>Is the specification of the value to be set.</dl>
+<dt><i>resource_spec</i></dt>
+<dd>Specifies the render table.</dd>
+<dt><i>rendition</i></dt>
+<dd>Is either the class Rendition or a tag.</dd>
+<dt><i>resource_name</i></dt>
+<dd>Is either the class or name of a particular resource.</dd>
+<dt><i>value</i></dt>
+<dd>Is the specification of the value to be set.</dd></dl>
 <p> Any resource line that consists of just a resource name or class component with no rendition component or loose binding will be assumed to specify resource values for a rendition with a tag of <code>_MOTIF_DEFAULT_LOCALE</code>. In effect, this creates a default rendition in much the same way that specifying no fontlist tag for a fontlist resource causes the fontlist created to contain an entry tagged with <code>XmFONTLIST_DEFAULT_TAG</code>: </p>
 <pre><i>resource_spec</i>.<i>resource_name</i>: <i>value</i></pre>
 <p>For example, the following would set the <code>XmNrenderTable</code> resource of <code>label1</code> to a render table consisting of three renditions tagged with <code>_MOTIF_DEFAULT_LOCALE</code>, <i>bold</i>, and <i>oblique</i>, with values for resources set as described in the resource specifications. </p>

@@ -10,31 +10,15 @@ description: "QuantLib::LeastSquareProblem – Base class for least square probl
 <p>QuantLib::LeastSquareProblem &#8211; Base class for least square problem. </p>
 <h2>Synopsis</h2>
 <pre><code>virtual Size size ()=0
-
-
 size of the problem ie size of target vector
-
-
 virtual void targetAndValue (const Array &amp;x, Array &amp;target, Array &amp;fct2fit)=0
-
-
 compute the target vector and the values of the function to fit
-
-
 virtual void targetValueAndGradient (const Array &amp;x, Matrix &amp;grad_fct2fit, Array &amp;target, Array &amp;fct2fit)=0</code></pre>
 <h3>Public Member Functions</h3>
 <pre><code>virtual Size size ()=0
-
-
 size of the problem ie size of target vector
-
-
 virtual void targetAndValue (const Array &amp;x, Array &amp;target, Array &amp;fct2fit)=0
-
-
 compute the target vector and the values of the function to fit
-
-
 virtual void targetValueAndGradient (const Array &amp;x, Matrix &amp;grad_fct2fit, Array &amp;target, Array &amp;fct2fit)=0</code></pre>
 <h2>Detailed Description</h2>
 <p>Base class for least square problem.</p>

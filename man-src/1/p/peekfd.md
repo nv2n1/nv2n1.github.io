@@ -15,30 +15,30 @@ description: "peekfd – peek at file descriptors of running processes"
 <p> <code>peekfd</code> attaches to a running process and intercepts all reads and writes to file descriptors. You can specify the desired file descriptor numbers or dump all of them.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt>-8</p>
-<dd> Do no post-processing on the bytes being read or written.</p>
-<dt>-n</p>
-<dd> Do not display headers indicating the source of the bytes dumped.</p>
-<dt>-c</p>
-<dd> Also dump the requested file descriptor activity in any new child processes that are created.</p>
-<dt>-d</p>
-<dd> Remove duplicate read/writes from the output. If you&#8217;re looking at a tty with echo, you might want this.</p>
-<dt>-v</p>
-<dd> Display a version string.</p>
-<dt>-h</p>
-<dd> Display a help message.</dl>
+<dt>-8</dt>
+<dd> Do no post-processing on the bytes being read or written.</dd>
+<dt>-n</dt>
+<dd> Do not display headers indicating the source of the bytes dumped.</dd>
+<dt>-c</dt>
+<dd> Also dump the requested file descriptor activity in any new child processes that are created.</dd>
+<dt>-d</dt>
+<dd> Remove duplicate read/writes from the output. If you&#8217;re looking at a tty with echo, you might want this.</dd>
+<dt>-v</dt>
+<dd> Display a version string.</dd>
+<dt>-h</dt>
+<dd> Display a help message.</dd></dl>
 <h2>FILES</h2>
 <p> <code>/proc/</code><i>*</i><code>/fd</code></p>
 <dl>
 <dt>
-<dd> Not used but useful for the user to look at to get good file descriptor numbers.</dl>
+</dt><dd> Not used but useful for the user to look at to get good file descriptor numbers.</dd></dl>
 <h2>ENVIRONMENT</h2>
 <p> None.</p>
 <h2>DIAGNOSTICS</h2>
 <p> The following diagnostics may be issued on stderr:</p>
 <dl>
-<dt><code>Error attaching to pid </code><i>&lt;PID&gt;</i></p>
-<dd> An unknown error occurred while attempted to attach to a process, you may need to be root.</dl>
+<dt><code>Error attaching to pid </code><i>&lt;PID&gt;</i></dt>
+<dd> An unknown error occurred while attempted to attach to a process, you may need to be root.</dd></dl>
 <h2>BUGS</h2>
 <p> Probably lots. Don&#8217;t be surprised if the process you are monitoring dies.</p>
 <h2>AUTHOR</h2>

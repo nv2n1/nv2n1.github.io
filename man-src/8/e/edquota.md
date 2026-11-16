@@ -23,33 +23,33 @@ description: "edquota – edit user quotas"
 <p> Only the super-user may edit quotas.</p>
 <h2>Options</h2>
 <dl>
-<dt><code>-r, &#8211;remote</code></p>
-<dd>Edit also non-local quota use rpc.rquotad on remote server to set quota. This option is available only if quota tools were compiled with enabled support for setting quotas over RPC. The <code>-n</code> option is equivalent, and is maintained for backward compatibility.</p>
-<dt><code>-m, &#8211;no-mixed-pathnames</code></p>
-<dd>Currently, pathnames of NFSv4 mountpoints are sent without leading slash in the path. <code>rpc.rquotad</code> uses this to recognize NFSv4 mounts and properly prepend pseudoroot of NFS filesystem to the path. If you specify this option, <code>edquota</code> will always send paths with a leading slash. This can be useful for legacy reasons but be aware that quota over RPC will stop working if you are using new <code>rpc.rquotad</code>.</p>
-<dt><code>-u, &#8211;user</code></p>
-<dd>Edit the user quota. This is the default.</p>
-<dt><code>-g, &#8211;group</code></p>
-<dd>Edit the group quota.</p>
-<dt><code>-p, &#8211;prototype=</code><i>protoname</i></p>
-<dd>Duplicate the quotas of the prototypical user specified for each user specified. This is the normal mechanism used to initialize quotas for groups of users.</p>
-<dt><code>&#8211;always-resolve</code></p>
-<dd>Always try to translate user / group name to uid / gid even if the name is composed of digits only.</p>
-<dt><code>-F, &#8211;format=</code><i>format-name</i></p>
-<dd>Edit quota for specified format (ie. don&#8217;t perform format autodetection). Possible format names are: <code>vfsold</code> Original quota format with 16-bit UIDs / GIDs, <code>vfsv0</code> Quota format with 32-bit UIDs / GIDs, 64-bit space usage, 32-bit inode usage and limits, <code>vfsv1</code> Quota format with 64-bit quota limits and usage, <code>rpc</code> (quota over NFS), <code>xfs</code> (quota on XFS filesystem)</p>
-<dt><code>-f, &#8211;filesystem </code><i>filesystem</i></p>
-<dd>Perform specified operations only for given filesystem (default is to perform operations for all filesystems with quota).</p>
-<dt><code>-t, &#8211;edit-period</code></p>
-<dd>Edit the soft time limits for each filesystem. In old quota format if the time limits are zero, the default time limits in <code>&lt;linux/quota.h&gt;</code> are used. In new quota format time limits must be specified (there is no default value set in kernel). Time units of &#8216;seconds&#8217;, &#8216;minutes&#8217;, &#8216;hours&#8217;, and &#8216;days&#8217; are understood. Time limits are printed in the greatest possible time unit such that the value is greater than or equal to one.</p>
-<dt><code>-T, &#8211;edit-times</code></p>
-<dd>Edit time for the user/group when softlimit is enforced. Possible values are &#8216;unset&#8217; or number and unit. Units are the same as in <code>-t</code> option.</dl>
+<dt><code>-r, &#8211;remote</code></dt>
+<dd>Edit also non-local quota use rpc.rquotad on remote server to set quota. This option is available only if quota tools were compiled with enabled support for setting quotas over RPC. The <code>-n</code> option is equivalent, and is maintained for backward compatibility.</dd>
+<dt><code>-m, &#8211;no-mixed-pathnames</code></dt>
+<dd>Currently, pathnames of NFSv4 mountpoints are sent without leading slash in the path. <code>rpc.rquotad</code> uses this to recognize NFSv4 mounts and properly prepend pseudoroot of NFS filesystem to the path. If you specify this option, <code>edquota</code> will always send paths with a leading slash. This can be useful for legacy reasons but be aware that quota over RPC will stop working if you are using new <code>rpc.rquotad</code>.</dd>
+<dt><code>-u, &#8211;user</code></dt>
+<dd>Edit the user quota. This is the default.</dd>
+<dt><code>-g, &#8211;group</code></dt>
+<dd>Edit the group quota.</dd>
+<dt><code>-p, &#8211;prototype=</code><i>protoname</i></dt>
+<dd>Duplicate the quotas of the prototypical user specified for each user specified. This is the normal mechanism used to initialize quotas for groups of users.</dd>
+<dt><code>&#8211;always-resolve</code></dt>
+<dd>Always try to translate user / group name to uid / gid even if the name is composed of digits only.</dd>
+<dt><code>-F, &#8211;format=</code><i>format-name</i></dt>
+<dd>Edit quota for specified format (ie. don&#8217;t perform format autodetection). Possible format names are: <code>vfsold</code> Original quota format with 16-bit UIDs / GIDs, <code>vfsv0</code> Quota format with 32-bit UIDs / GIDs, 64-bit space usage, 32-bit inode usage and limits, <code>vfsv1</code> Quota format with 64-bit quota limits and usage, <code>rpc</code> (quota over NFS), <code>xfs</code> (quota on XFS filesystem)</dd>
+<dt><code>-f, &#8211;filesystem </code><i>filesystem</i></dt>
+<dd>Perform specified operations only for given filesystem (default is to perform operations for all filesystems with quota).</dd>
+<dt><code>-t, &#8211;edit-period</code></dt>
+<dd>Edit the soft time limits for each filesystem. In old quota format if the time limits are zero, the default time limits in <code>&lt;linux/quota.h&gt;</code> are used. In new quota format time limits must be specified (there is no default value set in kernel). Time units of &#8216;seconds&#8217;, &#8216;minutes&#8217;, &#8216;hours&#8217;, and &#8216;days&#8217; are understood. Time limits are printed in the greatest possible time unit such that the value is greater than or equal to one.</dd>
+<dt><code>-T, &#8211;edit-times</code></dt>
+<dd>Edit time for the user/group when softlimit is enforced. Possible values are &#8216;unset&#8217; or number and unit. Units are the same as in <code>-t</code> option.</dd></dl>
 <h2>Files</h2>
 <dl>
-<dt><code>aquota.user</code> or <code>aquota.group</code></p>
-<dd>quota file at the filesystem root (version 2 quota, non-XFS filesystems)</p>
-<dt><code>quota.user</code> or <code>quota.group</code></p>
-<dd>quota file at the filesystem root (version 1 quota, non-XFS filesystems)</p>
-<dt><code>/etc/mtab</code></p>
-<dd>mounted filesystems table</dl>
+<dt><code>aquota.user</code> or <code>aquota.group</code></dt>
+<dd>quota file at the filesystem root (version 2 quota, non-XFS filesystems)</dd>
+<dt><code>quota.user</code> or <code>quota.group</code></dt>
+<dd>quota file at the filesystem root (version 1 quota, non-XFS filesystems)</dd>
+<dt><code>/etc/mtab</code></dt>
+<dd>mounted filesystems table</dd></dl>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/1-quota/">quota</a></code>(1), <code><a href="/docs/linux/man/1-vi/">vi</a></code>(1), <code><a href="/docs/linux/man/2-quotactl/">quotactl</a></code>(2), <code><a href="/docs/linux/man/8-quotacheck/">quotacheck</a></code>(8), <code><a href="/docs/linux/man/8-quotaon/">quotaon</a></code>(8), <code><a href="/docs/linux/man/8-repquota/">repquota</a></code>(8), <code><a href="/docs/linux/man/8-setquota/">setquota</a></code>(8) </p>

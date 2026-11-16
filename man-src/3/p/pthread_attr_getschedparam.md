@@ -10,12 +10,10 @@ description: "pthread_attr_setschedparam, pthread_attr_getschedparam – set/get
 <p>pthread_attr_setschedparam, pthread_attr_getschedparam &#8211; set/get scheduling parameter attributes in thread attributes object</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;pthread.h&gt;
-
 int pthread_attr_setschedparam(pthread_attr_t *attr,
                                const struct sched_param *param);
 int pthread_attr_getschedparam(const pthread_attr_t *attr,
                                struct sched_param *param);
-
 Compile and link with - pthread.</code></pre>
 <h2>Description</h2>
 <p>The <code>pthread_attr_setschedparam</code>() function sets the scheduling parameter attributes of the thread attributes object referred to by <i>attr</i> to the values specified in the buffer pointed to by <i>param</i>. These attributes determine the scheduling parameters of a thread created using the thread attributes object <i>attr</i>. The <code>pthread_attr_getschedparam</code>() returns the scheduling parameter attributes of the thread attributes object <i>attr</i> in the buffer pointed to by <i>param</i>. Scheduling parameters are maintained in the following structure: </p>
@@ -28,8 +26,8 @@ Compile and link with - pthread.</code></pre>
 <h2>Errors</h2>
 <p><code>pthread_attr_setschedparam</code>() can fail with the following error:</p>
 <dl>
-<dt><code>EINVAL</code></p>
-<dd>The priority specified in <i>param</i> does not make sense for the current scheduling policy of <i>attr</i>.</dl>
+<dt><code>EINVAL</code></dt>
+<dd>The priority specified in <i>param</i> does not make sense for the current scheduling policy of <i>attr</i>.</dd></dl>
 <p> POSIX.1 also documents an <code>ENOTSUP</code> error for <code>pthread_attr_setschedparam</code>(). This value is never returned on Linux (but portable and future-proof applications should nevertheless handle this error return value).</p>
 <h2>Attributes</h2>
 <p>For an explanation of the terms used in this section, see <code><a href="/docs/linux/man/7-attributes/">attributes</a></code>(7). </p>

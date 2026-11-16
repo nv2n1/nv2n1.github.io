@@ -41,3 +41,4 @@ my $character_count = length $text;
 <p> On a binary string, you would do things like: </p>
 <p>my(@length_content) = unpack &#8220;(V/a)*&#8221;, $binary;<br />
 $binary = ~s /
+</p>

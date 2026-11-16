@@ -18,14 +18,14 @@ description: "i3lock – slightly improved version of slock"
 <p> Since version 1.0, i3lock supports PAM. </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-v, &#8211;version</code></p>
-<dd> Display the version of your <code>i3lock</code> </p>
-<dt><code>-n, &#8211;nofork</code></p>
-<dd> Don&#8217;t fork after starting. </p>
-<dt><code>-b, &#8211;beep</code></p>
-<dd> Enable beeping. Be sure to not do this when you are about to annoy other people, like when opening your laptop in a boring lecture. </p>
-<dt><code>-d, &#8211;dpms</code></p>
-<dd> Enable turning off your screen using DPMS. Note that, when you do not specify this option, DPMS will turn off your screen after 15 minutes of inactivity anyways (if you did not disable this in your X server). </p>
+<dt><code>-v, &#8211;version</code></dt>
+<dd> Display the version of your <code>i3lock</code> </dd>
+<dt><code>-n, &#8211;nofork</code></dt>
+<dd> Don&#8217;t fork after starting. </dd>
+<dt><code>-b, &#8211;beep</code></dt>
+<dd> Enable beeping. Be sure to not do this when you are about to annoy other people, like when opening your laptop in a boring lecture. </dd>
+<dt><code>-d, &#8211;dpms</code></dt>
+<dd> Enable turning off your screen using DPMS. Note that, when you do not specify this option, DPMS will turn off your screen after 15 minutes of inactivity anyways (if you did not disable this in your X server). </dd>
 </dl>
 <h2>AUTHOR</h2>
 <p> Michael Stapelberg &lt;michael+i3lock at stapelberg dot de&gt; </p>

@@ -18,49 +18,49 @@ description: "lpr – print files"
 <h2>OPTIONS</h2>
 <p> The following options are recognized by <i>lpr</i>:</p>
 <dl>
-<dt>-E</p>
+<dt>-E</dt>
 <dd>
- Forces encryption when connecting to the server.</p>
-<dt>-H server[:port]</p>
+ Forces encryption when connecting to the server.</dd>
+<dt>-H server[:port]</dt>
 <dd>
- Specifies an alternate server.</p>
-<dt>-C &quot;name&quot;</p>
+ Specifies an alternate server.</dd>
+<dt>-C &quot;name&quot;</dt>
 <dd>
-<dt>-J &quot;name&quot;</p>
+</dd><dt>-J &quot;name&quot;</dt>
 <dd>
-<dt>-T &quot;name&quot;</p>
+</dd><dt>-T &quot;name&quot;</dt>
 <dd>
- Sets the job name.</p>
-<dt>-P destination[/instance]</p>
+ Sets the job name.</dd>
+<dt>-P destination[/instance]</dt>
 <dd>
- Prints files to the named printer.</p>
-<dt>-U username</p>
+ Prints files to the named printer.</dd>
+<dt>-U username</dt>
 <dd>
- Specifies an alternate username.</p>
-<dt>-# <i>copies</i></p>
+ Specifies an alternate username.</dd>
+<dt>-# <i>copies</i></dt>
 <dd>
- Sets the number of copies to print from 1 to 100.</p>
-<dt>-h</p>
+ Sets the number of copies to print from 1 to 100.</dd>
+<dt>-h</dt>
 <dd>
- Disables banner printing. This option is equivalent to &quot;-o job-sheets=none&quot;.</p>
-<dt>-l</p>
+ Disables banner printing. This option is equivalent to &quot;-o job-sheets=none&quot;.</dd>
+<dt>-l</dt>
 <dd>
- Specifies that the print file is already formatted for the destination and should be sent without filtering. This option is equivalent to &quot;-o raw&quot;.</p>
-<dt>-m</p>
+ Specifies that the print file is already formatted for the destination and should be sent without filtering. This option is equivalent to &quot;-o raw&quot;.</dd>
+<dt>-m</dt>
 <dd>
- Send an email on job completion.</p>
-<dt>-o option[=value]</p>
+ Send an email on job completion.</dd>
+<dt>-o option[=value]</dt>
 <dd>
- Sets a job option.</p>
-<dt>-p</p>
+ Sets a job option.</dd>
+<dt>-p</dt>
 <dd>
- Specifies that the print file should be formatted with a shaded header with the date, time, job name, and page number. This option is equivalent to &quot;-o prettyprint&quot; and is only useful when printing text files.</p>
-<dt>-q</p>
+ Specifies that the print file should be formatted with a shaded header with the date, time, job name, and page number. This option is equivalent to &quot;-o prettyprint&quot; and is only useful when printing text files.</dd>
+<dt>-q</dt>
 <dd>
- Hold job for printing.</p>
-<dt>-r</p>
+ Hold job for printing.</dd>
+<dt>-r</dt>
 <dd>
- Specifies that the named print files should be deleted after printing them.</dl>
+ Specifies that the named print files should be deleted after printing them.</dd></dl>
 <h2>COMPATIBILITY</h2>
 <p> The &quot;c&quot;, &quot;d&quot;, &quot;f&quot;, &quot;g&quot;, &quot;i&quot;, &quot;n&quot;, &quot;t&quot;, &quot;v&quot;, and &quot;w&quot; options are not supported by CUPS and produce a warning message if used.</p>
 <h2>SEE ALSO</h2>

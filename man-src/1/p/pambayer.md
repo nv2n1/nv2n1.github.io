@@ -23,19 +23,19 @@ description: "pambayer – interpret Bayer patterns"
 <p> If you&#8217;re interested in just one of the primary colors, use <code>pamchannel</code> on the output of <code>pambayer</code> to extract it. </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-type=</code><i>n</i></p>
-<dd> This tells which Bayer pattern the input is: </p>
-<dt>1</p>
-<dd> GBG/RGR/GBG matrix</p>
-<dt>2</p>
-<dd> RGR/GBG/RGR matrix</p>
-<dt>3</p>
-<dd> BGB/GRG/BGB matrix</p>
-<dt>4</p>
-<dd> GRG/BGB/GRG matrix </p>
+<dt><code>-type=</code><i>n</i></dt>
+<dd> This tells which Bayer pattern the input is: </dd>
+<dt>1</dt>
+<dd> GBG/RGR/GBG matrix</dd>
+<dt>2</dt>
+<dd> RGR/GBG/RGR matrix</dd>
+<dt>3</dt>
+<dd> BGB/GRG/BGB matrix</dd>
+<dt>4</dt>
+<dd> GRG/BGB/GRG matrix </dd>
 <p> This option is mandatory. </p>
-<dt><code>-nointerpolate</code></p>
-<dd> Each output pixel position corresponds to one position in the input Bayer pattern, which means only one of the three color components is supplied by the input. For the other two, this option says to user zero. Without it, <code>pambayer</code> instead interpolates from the adjacent pixels that do have that color component. </p>
+<dt><code>-nointerpolate</code></dt>
+<dd> Each output pixel position corresponds to one position in the input Bayer pattern, which means only one of the three color components is supplied by the input. For the other two, this option says to user zero. Without it, <code>pambayer</code> instead interpolates from the adjacent pixels that do have that color component. </dd>
 <p> This option was new in Netpbm 10.49 (December 2009). </p>
 </dl>
 <h2>SEE ALSO</h2>

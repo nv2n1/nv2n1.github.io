@@ -14,10 +14,10 @@ description: "gnutls_openpgp_crt_get_key_usage – API function"
 <p> <code>int gnutls_openpgp_crt_get_key_usage(gnutls_openpgp_crt_t </code><i>key</i><code>, unsigned int * </code><i>key_usage</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
-<dt>gnutls_openpgp_crt_t key</p>
-<dd> should contain a gnutls_openpgp_crt_t structure</p>
-<dt>unsigned int * key_usage</p>
-<dd> where the key usage bits will be stored</dl>
+<dt>gnutls_openpgp_crt_t key</dt>
+<dd> should contain a gnutls_openpgp_crt_t structure</dd>
+<dt>unsigned int * key_usage</dt>
+<dd> where the key usage bits will be stored</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> This function will return certificate&#8217;s key usage, by checking the key algorithm. The key usage value will ORed values of the: <code>GNUTLS_KEY_DIGITAL_SIGNATURE</code>, <code>GNUTLS_KEY_KEY_ENCIPHERMENT</code>.</p>
 <h2>RETURNS</h2>
@@ -31,6 +31,6 @@ description: "gnutls_openpgp_crt_get_key_usage – API function"
 <h2>SEE ALSO</h2>
 <p> The full documentation for <code>gnutls</code> is maintained as a Texinfo manual. If the /usr/share/doc/gnutls/ directory does not contain the HTML form visit <code></p>
 <dl>
-<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></p>
-<dd> </code></dl>
+<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></dt>
+<dd> </code></dd></dl>
 <h2>Index</h2>

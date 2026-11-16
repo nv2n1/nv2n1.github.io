@@ -16,14 +16,14 @@ description: "tcsd – daemon that manages Trusted Computing resources"
 <h2>Description</h2>
 <p>Trousers is an open-source TCG Software Stack (TSS), released under the BSD License. Trousers aims to be compliant with the current (1.1b) and upcoming (1.2) TSS specifications available from the Trusted Computing Group website: <a rel="nofollow" href="http://www.trustedcomputinggroup.org.">http://www.trustedcomputinggroup.org.</a> <code>tcsd</code> is a user space daemon that should be (according to the TSS spec) the only portal to the TPM device driver. At boot time, <code>tcsd</code> should be started, it should open the TPM device driver and from that point on, all requests to the TPM should go through the TSS stack. The <code>tcsd</code> manages TPM resources and handles requests from TSP&#8217;s both local and remote.</p>
 <dl>
-<dt><code>-f, &#8211;foreground</code></p>
-<dd>run the daemon in the foreground</p>
-<dt><code>-e</code></p>
-<dd>attempt to connect to software TPMs over TCP</p>
-<dt><code>-c, &#8211;config &lt;configfile&gt;</code></p>
-<dd>use the provided configuration file rather than the default configuration file</p>
-<dt><code>-h, &#8211;help</code></p>
-<dd>display help message </p>
+<dt><code>-f, &#8211;foreground</code></dt>
+<dd>run the daemon in the foreground</dd>
+<dt><code>-e</code></dt>
+<dd>attempt to connect to software TPMs over TCP</dd>
+<dt><code>-c, &#8211;config &lt;configfile&gt;</code></dt>
+<dd>use the provided configuration file rather than the default configuration file</dd>
+<dt><code>-h, &#8211;help</code></dt>
+<dd>display help message </dd>
 <h2>Access Control</h2>
 <p>There are two types of access control for the <code>tcsd</code>, access to the daemon&#8217;s socket itself and access to specific commands internal to the <code>tcsd</code>. Access to the <code>tcsd</code>&#8216;s port should be controlled by the system administrator using firewall rules. If using iptables, the following rule will allow a specific host access to the tcsd: </p>
 <p> # iptables -A INPUT -s $IP_ADDRESS -p tcp &#8211;destination-port 30003 -j ACCEPT </p>
@@ -44,3 +44,4 @@ description: "tcsd – daemon that manages Trusted Computing resources"
 <p>Kent Yoder</p>
 <h2>Reporting Bugs</h2>
 <p>Report bugs to &lt;trousers-tech [at] lists.sf.net&gt;</p>
+</dl>

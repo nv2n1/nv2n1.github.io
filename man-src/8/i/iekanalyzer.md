@@ -13,15 +13,15 @@ description: "ipmiutil_ekanalyzer – run FRU-Ekeying analyzer with FRU files"
 <h2>Description</h2>
 <p><i>ipmiutil ekanalyzer</i> is a program that analyzes FRU Ekeying information from files saved from PICMG IPMI systems. </p>
 <dl>
-<dt><i>filename1</i></p>
-<dd>binary file that stores FRU data of a Carrier or an AMC module</p>
-<dt><i>filename2</i></p>
+<dt><i>filename1</i></dt>
+<dd>binary file that stores FRU data of a Carrier or an AMC module</dd>
+<dt><i>filename2</i></dt>
 <dd>binary file that stores FRU data of an AMC module. These binary files can be generated from this command:<br />
-&nbsp;<wbr>&nbsp;<wbr><i>ipmiutil fru -i id -d filename</i></p>
-<dt><i>filename3</i></p>
-<dd>configuration file used for configuring On-Carrier Device ID or OEM GUID. This file is optional.</p>
-<dt><i>xx</i></p>
-<dd>indicates the type of the file. It can take the following value: </p>
+&nbsp;<wbr>&nbsp;<wbr><i>ipmiutil fru -i id -d filename</i></dd>
+<dt><i>filename3</i></dt>
+<dd>configuration file used for configuring On-Carrier Device ID or OEM GUID. This file is optional.</dd>
+<dt><i>xx</i></dt>
+<dd>indicates the type of the file. It can take the following value: </dd>
 <p>&nbsp;<wbr>&nbsp;<wbr><i>oc</i>&nbsp;<wbr>: On-Carrier device </p>
 <p>&nbsp;<wbr>&nbsp;<wbr><i>a1</i>&nbsp;<wbr>: AMC slot A1 </p>
 <p>&nbsp;<wbr>&nbsp;<wbr><i>a2</i>&nbsp;<wbr>: AMC slot A2 </p>
@@ -34,41 +34,41 @@ description: "ipmiutil_ekanalyzer – run FRU-Ekeying analyzer with FRU files"
 <p>&nbsp;<wbr>&nbsp;<wbr><i>sm</i>&nbsp;<wbr>: Shelf Manager </p>
 <h2>Options</h2>
 <dl>
-<dt>-m 002000</p>
-<dd>Show FRU for a specific MC (e.g. bus 00, sa 20, lun 00). This could be used for PICMG or ATCA blade systems. The trailing character, if present, indicates SMI addressing if &#8216;s&#8217;, or IPMB addressing if &#8216;i&#8217; or not present.</p>
-<dt>-x</p>
-<dd>Causes extra debug messages to be displayed.</p>
-<dt>-N nodename</p>
-<dd>Nodename or IP address of the remote target system. If a nodename is specified, IPMI LAN interface is used. Otherwise the local system management interface is used.</p>
-<dt>-P/-R rmt_pswd</p>
-<dd>Remote password for the nodename given. The default is a null password.</p>
-<dt>-U rmt_user</p>
-<dd>Remote username for the nodename given. The default is a null username.</p>
-<dt>-E</p>
-<dd>Use the remote password from Environment variable IPMI_PASSWORD.</p>
-<dt>-F drv_t</p>
-<dd>Force the driver type to one of the followng: imb, va, open, gnu, landesk, lan, lan2, lan2i, kcs, smb. Note that lan2i means lan2 with intelplus. The default is to detect any available driver type and use it.</p>
-<dt>-J</p>
-<dd>Use the specified LanPlus cipher suite (0 thru 17): 0=none/none/none, 1=sha1/none/none, 2=sha1/sha1/none, 3=sha1/sha1/cbc128, 4=sha1/sha1/xrc4_128, 5=sha1/sha1/xrc4_40, 6=md5/none/none, &#8230; 14=md5/md5/xrc4_40. Default is 3.</p>
-<dt>-T</p>
-<dd>Use a specified IPMI LAN Authentication Type: 0=None, 1=MD2, 2=MD5, 4=Straight Password, 5=OEM.</p>
-<dt>-V</p>
-<dd>Use a specified IPMI LAN privilege level. 1=Callback level, 2=User level, 3=Operator level, 4=Administrator level (default), 5=OEM level.</p>
-<dt>-Y</p>
-<dd>Yes, do prompt the user for the IPMI LAN remote password. Alternatives for the password are -E or -P. </p>
+<dt>-m 002000</dt>
+<dd>Show FRU for a specific MC (e.g. bus 00, sa 20, lun 00). This could be used for PICMG or ATCA blade systems. The trailing character, if present, indicates SMI addressing if &#8216;s&#8217;, or IPMB addressing if &#8216;i&#8217; or not present.</dd>
+<dt>-x</dt>
+<dd>Causes extra debug messages to be displayed.</dd>
+<dt>-N nodename</dt>
+<dd>Nodename or IP address of the remote target system. If a nodename is specified, IPMI LAN interface is used. Otherwise the local system management interface is used.</dd>
+<dt>-P/-R rmt_pswd</dt>
+<dd>Remote password for the nodename given. The default is a null password.</dd>
+<dt>-U rmt_user</dt>
+<dd>Remote username for the nodename given. The default is a null username.</dd>
+<dt>-E</dt>
+<dd>Use the remote password from Environment variable IPMI_PASSWORD.</dd>
+<dt>-F drv_t</dt>
+<dd>Force the driver type to one of the followng: imb, va, open, gnu, landesk, lan, lan2, lan2i, kcs, smb. Note that lan2i means lan2 with intelplus. The default is to detect any available driver type and use it.</dd>
+<dt>-J</dt>
+<dd>Use the specified LanPlus cipher suite (0 thru 17): 0=none/none/none, 1=sha1/none/none, 2=sha1/sha1/none, 3=sha1/sha1/cbc128, 4=sha1/sha1/xrc4_128, 5=sha1/sha1/xrc4_40, 6=md5/none/none, &#8230; 14=md5/md5/xrc4_40. Default is 3.</dd>
+<dt>-T</dt>
+<dd>Use a specified IPMI LAN Authentication Type: 0=None, 1=MD2, 2=MD5, 4=Straight Password, 5=OEM.</dd>
+<dt>-V</dt>
+<dd>Use a specified IPMI LAN privilege level. 1=Callback level, 2=User level, 3=Operator level, 4=Administrator level (default), 5=OEM level.</dd>
+<dt>-Y</dt>
+<dd>Yes, do prompt the user for the IPMI LAN remote password. Alternatives for the password are -E or -P. </dd>
 </dl>
 <h2>Commands</h2>
 <dl>
-<dd>The available commands for ekanalyzer are: </p>
+<dd>The available commands for ekanalyzer are: </dd>
 <dl>
 <dd>
-<dl>
-<dt><i>print</i> [<code>carrier</code> | <code>power</code> | <code>all</code>]</p>
+</dd><dl>
+<dt><i>print</i> [<code>carrier</code> | <code>power</code> | <code>all</code>]</dt>
 <dd>
-<dl>
+</dd><dl>
 <dd>
-<dl>
-<dt><i>carrier</i> (default) <code>oc=filename1</code> <code>oc=filename2</code> <code>&#8230;</code></p>
+</dd><dl>
+<dt><i>carrier</i> (default) <code>oc=filename1</code> <code>oc=filename2</code> <code>&#8230;</code></dt>
 <dd>Display point to point physical connectivity between carriers and AMC modules.<br />
 &nbsp;<wbr>Example:<br />
 #&nbsp;<wbr>ipmiutil ekanalyzer print carrier oc=fru oc=carrierfru<br />
@@ -92,26 +92,26 @@ AMC slot B1 topology:<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Port 0&nbsp;<wbr>=====&gt;&nbsp;<wbr>AMC slot B2, Port 0<br />
 AMC slot B1 topology:<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Port 1&nbsp;<wbr>=====&gt;&nbsp;<wbr>AMC slot B2, Port 1<br />
-Number of AMC bays supported by Carrier: 2 </p>
-<dt><i>power</i> <code>xx=filename1</code> <code>xx=filename2</code> <code>&#8230;</code></p>
-<dd>Display power supply information between carrier and AMC modules.</p>
-<dt><i>all</i> <code>xx=filename</code> <code>xx=filename</code> <code>&#8230;</code></p>
-<dd>Display both physical connectivity and power supply of each carrier and AMC modules. </p>
+Number of AMC bays supported by Carrier: 2 </dd>
+<dt><i>power</i> <code>xx=filename1</code> <code>xx=filename2</code> <code>&#8230;</code></dt>
+<dd>Display power supply information between carrier and AMC modules.</dd>
+<dt><i>all</i> <code>xx=filename</code> <code>xx=filename</code> <code>&#8230;</code></dt>
+<dd>Display both physical connectivity and power supply of each carrier and AMC modules. </dd>
 </dl>
 </dl>
-<dt><i>frushow</i> <code>xx=filename</code></p>
-<dd>Convert a binary FRU file into human readable text format. Use -v option to get more display information. </p>
+<dt><i>frushow</i> <code>xx=filename</code></dt>
+<dd>Convert a binary FRU file into human readable text format. Use -v option to get more display information. </dd>
 </dl>
 </dl>
 <dl>
 <dd>
-<dl>
-<dt><i>summary</i> [<code>match</code> | <code>unmatch</code> | <code>all</code>]</p>
+</dd><dl>
+<dt><i>summary</i> [<code>match</code> | <code>unmatch</code> | <code>all</code>]</dt>
 <dd>
-<dl>
+</dd><dl>
 <dd>
-<dl>
-<dt><i>match</i> (default) <code>xx=filename</code> <code>xx=filename</code> <code>&#8230;</code></p>
+</dd><dl>
+<dt><i>match</i> (default) <code>xx=filename</code> <code>xx=filename</code> <code>&#8230;</code></dt>
 <dd>Display only matched results of Ekeying match between an On-Carrier device and an AMC module or between 2 AMC modules. Example:<br />
 &nbsp;<wbr>#&nbsp;<wbr>ipmiutil ekanalyzer summary match oc=fru b1=amcB1 a2=amcA2<br />
 &nbsp;<wbr>On-Carrier Device vs AMC slot B1<br />
@@ -168,11 +168,11 @@ To AMC slot A2<br />
 &nbsp;<wbr>&nbsp;<wbr>Link Type: AMC.3 Storage<br />
 &nbsp;<wbr>&nbsp;<wbr>Link Type extension: Serial Attached SCSI&nbsp;<wbr>(SAS/SATA)<br />
 &nbsp;<wbr>&nbsp;<wbr>Link Group ID: 0 || Link Asym. Match: FC or SAS interface&nbsp;<wbr>{exact match}<br />
-&nbsp;<wbr>*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*</p>
-<dt><i>unmatch</i> <code>xx=filename</code> <code>xx=filename</code> <code>&#8230;</code></p>
-<dd>Display the unmatched results of Ekeying match between an On-Carrier device and an AMC module or between 2 AMC modules</p>
-<dt><i>all</i> <code>xx=filename</code> <code>xx=filename</code> <code>&#8230;</code></p>
-<dd>Display both matched result and unmatched results of Ekeying match between two cards or two modules.</dl>
+&nbsp;<wbr>*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*</dd>
+<dt><i>unmatch</i> <code>xx=filename</code> <code>xx=filename</code> <code>&#8230;</code></dt>
+<dd>Display the unmatched results of Ekeying match between an On-Carrier device and an AMC module or between 2 AMC modules</dd>
+<dt><i>all</i> <code>xx=filename</code> <code>xx=filename</code> <code>&#8230;</code></dt>
+<dd>Display both matched result and unmatched results of Ekeying match between two cards or two modules.</dd></dl>
 </dl>
 </dl>
 </dl>
@@ -187,3 +187,4 @@ To AMC slot A2<br />
 <p> This utility is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY.</p>
 <h2>Author</h2>
 <p>Andy Cress &lt;arcress at users.sourceforge.net&gt;</p>
+</dl>

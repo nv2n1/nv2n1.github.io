@@ -17,42 +17,42 @@ description: "pbzip2 – parallel bzip2 file compressor, v1.1.10"
 <p> The default settings for <i>pbzip2</i> will work well in most cases. The only switch you will likely need to use is -d to decompress files and -p to set the # of processors for <i>pbzip2</i> to use if autodetect is not supported on your system, or you want to use a specific # of CPUs.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-b#</code></p>
-<dd> Where # is block size in 100k steps (default 9 = 900k)</p>
-<dt><code>-c, &#8211;stdout</code></p>
-<dd> Output to standard out (stdout)</p>
-<dt><code>-d,&#8211;decompress</code></p>
-<dd> Decompress file</p>
-<dt><code>-f,&#8211;force</code></p>
-<dd> Force, overwrite existing output file</p>
-<dt><code>-h,&#8211;help</code></p>
-<dd> Print this help message</p>
-<dt><code>-k,&#8211;keep</code></p>
-<dd> Keep input file, do not delete</p>
-<dt><code>-l,&#8211;loadavg</code></p>
-<dd> Load average determines max number processors to use</p>
-<dt><code>-m#</code></p>
-<dd> Where # is max memory usage in 1MB steps (default 100 = 100MB)</p>
-<dt><code>-p#</code></p>
-<dd> Where # is the number of processors (default: autodetect)</p>
-<dt><code>-q,&#8211;quiet</code></p>
-<dd> Quiet mode (default)</p>
-<dt><code>-r,&#8211;read</code></p>
-<dd> Read entire input file into RAM and split between processors</p>
-<dt><code>-S#</code></p>
-<dd> Child thread stack size in 1KB steps (default stack size if unspecified)</p>
-<dt><code>-t,&#8211;test</code></p>
-<dd> Test compressed file integrity</p>
-<dt><code>-v,&#8211;verbose</code></p>
-<dd> Verbose mode</p>
-<dt><code>-V</code></p>
-<dd> Display version info for <i>pbzip2</i> then exit</p>
-<dt><code>-z,&#8211;compress</code></p>
-<dd> Compress file (default)</p>
-<dt><code>-1,&#8211;fast &#8230; -9,&#8211;best</code></p>
-<dd> Set BWT block size to 100k .. 900k (default 900k).</p>
-<dt><code>&#8211;ignore-trailing-garbage=#</code></p>
-<dd> Ignore trailing garbage flag (1 &#8211; ignored; 0 &#8211; forbidden)</dl>
+<dt><code>-b#</code></dt>
+<dd> Where # is block size in 100k steps (default 9 = 900k)</dd>
+<dt><code>-c, &#8211;stdout</code></dt>
+<dd> Output to standard out (stdout)</dd>
+<dt><code>-d,&#8211;decompress</code></dt>
+<dd> Decompress file</dd>
+<dt><code>-f,&#8211;force</code></dt>
+<dd> Force, overwrite existing output file</dd>
+<dt><code>-h,&#8211;help</code></dt>
+<dd> Print this help message</dd>
+<dt><code>-k,&#8211;keep</code></dt>
+<dd> Keep input file, do not delete</dd>
+<dt><code>-l,&#8211;loadavg</code></dt>
+<dd> Load average determines max number processors to use</dd>
+<dt><code>-m#</code></dt>
+<dd> Where # is max memory usage in 1MB steps (default 100 = 100MB)</dd>
+<dt><code>-p#</code></dt>
+<dd> Where # is the number of processors (default: autodetect)</dd>
+<dt><code>-q,&#8211;quiet</code></dt>
+<dd> Quiet mode (default)</dd>
+<dt><code>-r,&#8211;read</code></dt>
+<dd> Read entire input file into RAM and split between processors</dd>
+<dt><code>-S#</code></dt>
+<dd> Child thread stack size in 1KB steps (default stack size if unspecified)</dd>
+<dt><code>-t,&#8211;test</code></dt>
+<dd> Test compressed file integrity</dd>
+<dt><code>-v,&#8211;verbose</code></dt>
+<dd> Verbose mode</dd>
+<dt><code>-V</code></dt>
+<dd> Display version info for <i>pbzip2</i> then exit</dd>
+<dt><code>-z,&#8211;compress</code></dt>
+<dd> Compress file (default)</dd>
+<dt><code>-1,&#8211;fast &#8230; -9,&#8211;best</code></dt>
+<dd> Set BWT block size to 100k .. 900k (default 900k).</dd>
+<dt><code>&#8211;ignore-trailing-garbage=#</code></dt>
+<dd> Ignore trailing garbage flag (1 &#8211; ignored; 0 &#8211; forbidden)</dd></dl>
 <p> If no file names are given, pbzip2 compresses or decompresses from standard input to standard output.</p>
 <h2>FILE SIZES</h2>
 <p> You should be able to compress files larger than 4GB with <i>pbzip2.</i> </p>

@@ -18,38 +18,38 @@ description: "thumbpdf – generate thumbnail images for a PDF file created with
 <p> <code>thumbpdf</code> calls <code><a href="/docs/linux/man/1-gs/">gs</a></code>(1) to generate PNG images of the pages within <i>PDF_FILE</i>, and <code><a href="/docs/linux/man/1-pdftex/">pdftex</a></code>(1) to create a PDF file containing the thumbnail images. </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>&#8211;help</code></p>
-<dd> print usage</p>
-<dt><code>&#8211;(no)makepng</code></p>
-<dd> make PNG thumbnail images (default: true)</p>
-<dt><code>&#8211;(no)makepdf</code></p>
-<dd> generate new PDF file containing the thumbnails (default: true)</p>
-<dt><code>&#8211;(no)makedef</code></p>
-<dd> create a TeX file for <code><a href="/docs/linux/man/1-pdftex/">pdftex</a></code>(1) to read in (default: true)</p>
-<dt><code>&#8211;(no)quiet</code></p>
-<dd> suppress messages (default: false)</p>
-<dt><code>&#8211;(no)verbose</code></p>
-<dd> verbose messages (default: false)</p>
-<dt><code>&#8211;(no)debug</code></p>
-<dd> print debugging information while parsing (default: false)</p>
-<dt><code>&#8211;resolution</code> <i>res</i></p>
-<dd> resolution for GhostScript step (default: 9)</p>
-<dt><code>&#8211;compress</code> <i>n</i></p>
-<dd> \pdfcompresslevel for <code>thumbpdf.pdf</code> (0-9; default: 9)</p>
-<dt><code>&#8211;device</code> | <code>png</code><i>dev</i></p>
-<dd> GhostScript PNG device; <i>dev</i> = `mono&#8217;, `gray&#8217;, `16&#8242;, `256&#8242;, `16m&#8217; (default: `png16m&#8217;)</dl>
+<dt><code>&#8211;help</code></dt>
+<dd> print usage</dd>
+<dt><code>&#8211;(no)makepng</code></dt>
+<dd> make PNG thumbnail images (default: true)</dd>
+<dt><code>&#8211;(no)makepdf</code></dt>
+<dd> generate new PDF file containing the thumbnails (default: true)</dd>
+<dt><code>&#8211;(no)makedef</code></dt>
+<dd> create a TeX file for <code><a href="/docs/linux/man/1-pdftex/">pdftex</a></code>(1) to read in (default: true)</dd>
+<dt><code>&#8211;(no)quiet</code></dt>
+<dd> suppress messages (default: false)</dd>
+<dt><code>&#8211;(no)verbose</code></dt>
+<dd> verbose messages (default: false)</dd>
+<dt><code>&#8211;(no)debug</code></dt>
+<dd> print debugging information while parsing (default: false)</dd>
+<dt><code>&#8211;resolution</code> <i>res</i></dt>
+<dd> resolution for GhostScript step (default: 9)</dd>
+<dt><code>&#8211;compress</code> <i>n</i></dt>
+<dd> \pdfcompresslevel for <code>thumbpdf.pdf</code> (0-9; default: 9)</dd>
+<dt><code>&#8211;device</code> | <code>png</code><i>dev</i></dt>
+<dd> GhostScript PNG device; <i>dev</i> = `mono&#8217;, `gray&#8217;, `16&#8242;, `256&#8242;, `16m&#8217; (default: `png16m&#8217;)</dd></dl>
 <h2>FILES</h2>
 <dl>
-<dt><i>thumb</i>nn<i>.png</i></p>
-<dd> PNG thumbnail images</p>
-<dt><i>thumbpdf.pdf</i></p>
-<dd> PDF file containing thumbnail images</p>
-<dt><i>thumbpdf.tex</i></p>
-<dd> A pdfTeX program to include the thumbnails file</p>
-<dt><i>thumbpdf.log</i></p>
-<dd> pdfTeX log file</p>
-<dt><i>thumbpdf.sty</i></p>
-<dd> a LaTeX package to be included in files for which a user wants to generate thumbnails</dl>
+<dt><i>thumb</i>nn<i>.png</i></dt>
+<dd> PNG thumbnail images</dd>
+<dt><i>thumbpdf.pdf</i></dt>
+<dd> PDF file containing thumbnail images</dd>
+<dt><i>thumbpdf.tex</i></dt>
+<dd> A pdfTeX program to include the thumbnails file</dd>
+<dt><i>thumbpdf.log</i></dt>
+<dd> pdfTeX log file</dd>
+<dt><i>thumbpdf.sty</i></dt>
+<dd> a LaTeX package to be included in files for which a user wants to generate thumbnails</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-gs/">gs</a></code>(1), <code><a href="/docs/linux/man/1-pdftex/">pdftex</a></code>(1). </p>
 <p> Web page: &lt;<a rel="nofollow" href="http://tug.org/teTeX/">http://tug.org/teTeX/</a>&gt; </p>

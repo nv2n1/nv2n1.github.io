@@ -19,7 +19,7 @@ description: "dsysvxx.f –"
 <p> <code>Purpose: </code></p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre><code>
 DSYSVXX uses the diagonal pivoting factorization to compute the
     solution to a double precision system of linear equations A *X = B,
@@ -43,11 +43,11 @@ see the definitions of the FACT and EQUED options.Solving with refinement and us
     user-provided factorizations and equilibration factors if they
     differ from what DSYSVXX would itself produce.
 </code></pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Description: </code></p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <p>The following steps are performed : 1. If FACT = &#8216;E&#8217;, double precision scaling factors are computed to equilibrate the system : diag(S) * A *diag(S) * inv(diag(S)) *X = diag(S) * B Whether or not the system will be equilibrated depends on the scaling of the matrix A, but if equilibration is used, A is overwritten by diag(S) * A *diag(S) and B by diag(S) *B.2. If FACT = &#8216;N&#8217; or &#8216;E&#8217;, the LU decomposition is used to factor the matrix A(after equilibration if FACT = &#8216;E&#8217;) as A = U * D * U * *T, if UPLO = &#8216;U&#8217;, or<br />
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  A = L * D * L * *T,<br />
                                           if UPLO = &#8216;L&#8217;,<br />
@@ -78,11 +78,11 @@ see the definitions of the FACT and EQUED options.Solving with refinement and us
      can pass NPARAMS = 0 which prevents the source code from accessing
      the PARAMS argument.
 </pre>
-</dl>
+</dd></dl>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>FACT</i> </p>
+</dt><dd> <i>FACT</i> </dd>
 <pre>
           FACT is CHARACTER*1
      Specifies whether or not the factored form of the matrix A is
@@ -391,14 +391,14 @@ if EQUED<br />
 <p> <code>Author:</code></p>
 <dl>
 <dt>
-<dd> Univ. of Tennessee </p>
+</dt><dd> Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl>
 <dt>
-<dd> September 2012</dl>
+</dt><dd> September 2012</dd></dl>
 <p> Definition at line 503 of file dsysvxx.f.</p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for LAPACK from the source code. </p>

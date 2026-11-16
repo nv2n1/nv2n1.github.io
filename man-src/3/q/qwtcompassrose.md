@@ -30,11 +30,11 @@ description: "QwtCompassRose –"
  <i>center</i> Center point<br />
  <i>radius</i> Radius of the rose<br />
  <i>north</i> Position<br />
- <i>colorGroup</i> Color group</dl>
+ <i>colorGroup</i> Color group</dd></dl>
 <p> Implemented in <code>QwtSimpleCompassRose</code>.</p>
 <h3>const QPalette&amp; QwtCompassRose::palette () const [inline]</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>Current palette</dl>
+<dd>Current palette</dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for Qwt User&#8217;s Guide from the source code.</p>

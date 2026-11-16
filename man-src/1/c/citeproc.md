@@ -15,10 +15,10 @@ description: "citeproc – make CSL citations and bibliography for LaTeX"
 <p> The citeproc engine is a Citation Style Lanugage processor for LaTeX. It reads the auxiliary (<code>.aux</code>) file <i>auxname</i> and creates a bibliography (<code>.bbl</code>) file</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt>-h</p>
-<dd> Prints the usage and exits.</p>
-<dt>-V</p>
-<dd> Prints the version number and exits.</dl>
+<dt>-h</dt>
+<dd> Prints the usage and exits.</dd>
+<dt>-V</dt>
+<dd> Prints the version number and exits.</dd></dl>
 <h2>AUTHOR</h2>
 <p> Zeping Lee &lt;zepinglee [at] gmail.com&gt; </p>
 <p> Please log issues on the GitHub homepage: <a rel="nofollow" href="https://github.com/zepinglee/citeproc-lua/issues.">https://github.com/zepinglee/citeproc-lua/issues.</a> </p>

@@ -33,62 +33,62 @@ description: "winemaker – generate a build infrastructure for compiling Window
 <p> &#8211; <code>winemaker</code> can read existing project files. It supports dsp, dsw, vcproj and sln files. </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>&#8211;nobanner</code></p>
-<dd> Disable the printing of the banner.</p>
-<dt><code>&#8211;backup</code></p>
-<dd> Perform a backup of all the modified source files. This is the default.</p>
-<dt><code>&#8211;nobackup</code></p>
-<dd> Do not backup modified source files.</p>
-<dt><code>&#8211;nosource-fix</code></p>
-<dd> Do no try to fix the source files (e.g. DOS to Unix conversion). This prevents complaints if the files are readonly.</p>
-<dt><code>&#8211;lower-all</code></p>
-<dd> Rename all files and directories to lowercase.</p>
-<dt><code>&#8211;lower-uppercase</code></p>
-<dd> Only rename files and directories that have an all uppercase name. So <i>HELLO.C</i> would be renamed but not <i>World.c</i>.</p>
-<dt><code>&#8211;lower-none</code></p>
-<dd> Do not rename files and directories to lower case. Note that this does not prevent the renaming of a file if its extension cannot be handled as is, e.g. &quot;.Cxx&quot;. This is the default.</p>
-<dt><code>&#8211;lower-include</code></p>
-<dd> When the file corresponding to an include statement (or other form of file reference for resource files) cannot be found, convert that filename to lowercase. This is the default.</p>
-<dt><code>&#8211;nolower-include</code></p>
-<dd> Do not modify the include statement if the referenced file cannot be found.</p>
-<dt><code>&#8211;guiexe </code>| <code>&#8211;windows</code></p>
-<dd> Assume a graphical application when an executable target or a target of unknown type is found. This is the default.</p>
-<dt><code>&#8211;cuiexe </code>| <code>&#8211;console</code></p>
-<dd> Assume a console application when an executable target or a target of unknown type is found.</p>
-<dt><code>&#8211;dll</code></p>
-<dd> Assume a dll when a target of unknown type is found, i.e. when <code>winemaker</code> is unable to determine whether it is an executable, a dll, or a static library,</p>
-<dt><code>&#8211;lib</code></p>
-<dd> Assume a static library when a target of unknown type is found, i.e. when <code>winemaker</code> is unable to determine whether it is an executable, a dll, or a static library,</p>
-<dt><code>&#8211;mfc</code></p>
-<dd> Specify that the targets are MFC based. In such a case <code>winemaker</code> adapts the include and library paths accordingly, and links the target with the MFC library.</p>
-<dt><code>&#8211;nomfc</code></p>
-<dd> Specify that targets are not MFC-based. This option disables use of MFC libraries even if <code>winemaker</code> encounters files <i>stdafx.cpp</i> or <i>stdafx.h</i> that would cause it to enable MFC automatically if neither <code>&#8211;nomfc</code> nor <code>&#8211;mfc</code> was specified.</p>
-<dt><code>-D</code><i>macro</i>[<code>=</code><i>defn</i>]</p>
-<dd> Add the specified macro definition to the global list of macro definitions.</p>
-<dt><code>-I</code><i>dir</i></p>
-<dd> Append the specified directory to the global include path.</p>
-<dt><code>-P</code><i>dir</i></p>
-<dd> Append the specified directory to the global dll path.</p>
-<dt><code>-i</code><i>dll</i></p>
-<dd> Add the Winelib library to the global list of Winelib libraries to import.</p>
-<dt><code>-L</code><i>dir</i></p>
-<dd> Append the specified directory to the global library path.</p>
-<dt><code>-l</code><i>library</i></p>
-<dd> Add the specified library to the global list of libraries to link with.</p>
-<dt><code>&#8211;nodlls</code></p>
-<dd> Do not use the standard set of Winelib libraries for imports. That is, any DLL your code uses must be explicitly passed with <code>-i</code> options. The standard set of libraries is: <i>odbc32.dll</i>, <i>odbccp32.dll</i>, <i>ole32.dll</i>, <i>oleaut32.dll</i> and <i>winspool.drv</i>.</p>
-<dt><code>&#8211;nomsvcrt</code></p>
-<dd> Set some options to tell <code>winegcc</code> not to compile against msvcrt. Use this option if you have cpp-files that include <i>&lt;string&gt;</i>.</p>
-<dt><code>&#8211;interactive</code></p>
-<dd> Use interactive mode. In this mode <code>winemaker</code> will ask you to confirm the list of targets for each directory, and then to provide directory and target specific options.</p>
-<dt><code>&#8211;single-target</code><i> name</i></p>
-<dd> Specify that there is only one target, called <i>name</i>.</p>
-<dt><code>&#8211;generated-files</code></p>
-<dd> Generate the <i>Makefile</i>. This is the default.</p>
-<dt><code>&#8211;nogenerated-files</code></p>
-<dd> Do not generate the <i>Makefile</i>.</p>
-<dt><code>&#8211;wine32</code></p>
-<dd> Generate a 32-bit target. This is useful on wow64 systems. Without that option the default architecture is used. </p>
+<dt><code>&#8211;nobanner</code></dt>
+<dd> Disable the printing of the banner.</dd>
+<dt><code>&#8211;backup</code></dt>
+<dd> Perform a backup of all the modified source files. This is the default.</dd>
+<dt><code>&#8211;nobackup</code></dt>
+<dd> Do not backup modified source files.</dd>
+<dt><code>&#8211;nosource-fix</code></dt>
+<dd> Do no try to fix the source files (e.g. DOS to Unix conversion). This prevents complaints if the files are readonly.</dd>
+<dt><code>&#8211;lower-all</code></dt>
+<dd> Rename all files and directories to lowercase.</dd>
+<dt><code>&#8211;lower-uppercase</code></dt>
+<dd> Only rename files and directories that have an all uppercase name. So <i>HELLO.C</i> would be renamed but not <i>World.c</i>.</dd>
+<dt><code>&#8211;lower-none</code></dt>
+<dd> Do not rename files and directories to lower case. Note that this does not prevent the renaming of a file if its extension cannot be handled as is, e.g. &quot;.Cxx&quot;. This is the default.</dd>
+<dt><code>&#8211;lower-include</code></dt>
+<dd> When the file corresponding to an include statement (or other form of file reference for resource files) cannot be found, convert that filename to lowercase. This is the default.</dd>
+<dt><code>&#8211;nolower-include</code></dt>
+<dd> Do not modify the include statement if the referenced file cannot be found.</dd>
+<dt><code>&#8211;guiexe </code>| <code>&#8211;windows</code></dt>
+<dd> Assume a graphical application when an executable target or a target of unknown type is found. This is the default.</dd>
+<dt><code>&#8211;cuiexe </code>| <code>&#8211;console</code></dt>
+<dd> Assume a console application when an executable target or a target of unknown type is found.</dd>
+<dt><code>&#8211;dll</code></dt>
+<dd> Assume a dll when a target of unknown type is found, i.e. when <code>winemaker</code> is unable to determine whether it is an executable, a dll, or a static library,</dd>
+<dt><code>&#8211;lib</code></dt>
+<dd> Assume a static library when a target of unknown type is found, i.e. when <code>winemaker</code> is unable to determine whether it is an executable, a dll, or a static library,</dd>
+<dt><code>&#8211;mfc</code></dt>
+<dd> Specify that the targets are MFC based. In such a case <code>winemaker</code> adapts the include and library paths accordingly, and links the target with the MFC library.</dd>
+<dt><code>&#8211;nomfc</code></dt>
+<dd> Specify that targets are not MFC-based. This option disables use of MFC libraries even if <code>winemaker</code> encounters files <i>stdafx.cpp</i> or <i>stdafx.h</i> that would cause it to enable MFC automatically if neither <code>&#8211;nomfc</code> nor <code>&#8211;mfc</code> was specified.</dd>
+<dt><code>-D</code><i>macro</i>[<code>=</code><i>defn</i>]</dt>
+<dd> Add the specified macro definition to the global list of macro definitions.</dd>
+<dt><code>-I</code><i>dir</i></dt>
+<dd> Append the specified directory to the global include path.</dd>
+<dt><code>-P</code><i>dir</i></dt>
+<dd> Append the specified directory to the global dll path.</dd>
+<dt><code>-i</code><i>dll</i></dt>
+<dd> Add the Winelib library to the global list of Winelib libraries to import.</dd>
+<dt><code>-L</code><i>dir</i></dt>
+<dd> Append the specified directory to the global library path.</dd>
+<dt><code>-l</code><i>library</i></dt>
+<dd> Add the specified library to the global list of libraries to link with.</dd>
+<dt><code>&#8211;nodlls</code></dt>
+<dd> Do not use the standard set of Winelib libraries for imports. That is, any DLL your code uses must be explicitly passed with <code>-i</code> options. The standard set of libraries is: <i>odbc32.dll</i>, <i>odbccp32.dll</i>, <i>ole32.dll</i>, <i>oleaut32.dll</i> and <i>winspool.drv</i>.</dd>
+<dt><code>&#8211;nomsvcrt</code></dt>
+<dd> Set some options to tell <code>winegcc</code> not to compile against msvcrt. Use this option if you have cpp-files that include <i>&lt;string&gt;</i>.</dd>
+<dt><code>&#8211;interactive</code></dt>
+<dd> Use interactive mode. In this mode <code>winemaker</code> will ask you to confirm the list of targets for each directory, and then to provide directory and target specific options.</dd>
+<dt><code>&#8211;single-target</code><i> name</i></dt>
+<dd> Specify that there is only one target, called <i>name</i>.</dd>
+<dt><code>&#8211;generated-files</code></dt>
+<dd> Generate the <i>Makefile</i>. This is the default.</dd>
+<dt><code>&#8211;nogenerated-files</code></dt>
+<dd> Do not generate the <i>Makefile</i>.</dd>
+<dt><code>&#8211;wine32</code></dt>
+<dd> Generate a 32-bit target. This is useful on wow64 systems. Without that option the default architecture is used. </dd>
 </dl>
 <h2>EXAMPLES</h2>
 <p> Here is a typical <code>winemaker</code> use: </p>

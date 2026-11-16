@@ -38,38 +38,38 @@ description: "gnuplot – an interactive plotting program"
 <h2>ENVIRONMENT</h2>
 <p> A number of shell environment variables are understood by gnuplot. None of these are required.</p>
 <dl>
-<dt><code>GNUTERM</code></p>
-<dd> The name of the terminal type to be used by default. This can be overridden by the gnuplotrc or .gnuplot start-up files and, of course, by later explicit &quot;set terminal&quot; commands.</p>
-<dt><code>GNUHELP </code></p>
-<dd> The pathname of the HELP file (gnuplot.gih).</p>
-<dt><code>HOME</code></p>
-<dd> The name of a directory to search for a .gnuplot file.</p>
-<dt><code>PAGER</code></p>
-<dd> An output filter for help messages.</p>
-<dt><code>SHELL</code></p>
-<dd> The program used for the &quot;shell&quot; command.</p>
-<dt><code>FIT_SCRIPT</code></p>
-<dd> Specifies a gnuplot command to be executed when a fit is interrupted&#8212;see &quot;help fit&quot;.</p>
-<dt><code>FIT_LOG</code></p>
-<dd> The name of the logfile maintained by fit.</p>
-<dt><code>GNUPLOT_LIB</code></p>
-<dd> Additional search directories for data and command files. The variable may contain a single directory name, or a list of directories separated by &#8216;:&#8217;. The contents of GNUPLOT_LIB are appended to the &quot;loadpath&quot; variable, but not saved with the &quot;save&quot; and &quot;save set&quot; commands.</p>
-<dt><code>GDFONTPATH</code></p>
-<dd> Several gnuplot terminal drivers access TrueType fonts via the gd library. This variable gives the font search path for these drivers.</p>
-<dt><code>GNUPLOT_DEFAULT_GDFONT</code></p>
-<dd> The default font for the terminal drivers that access TrueType fonts via the gd library.</p>
-<dt><code>GNUPLOT_FONTPATH</code></p>
-<dd> The font search path used by the postscript terminal. The format is the same as for GNUPLOT_LIB. The contents of GNUPLOT_FONTPATH are appended to the &quot;fontpath&quot; variable, but not saved with the &quot;save&quot; and &quot;save set&quot; commands.</p>
-<dt><code>GNUPLOT_PS_DIR</code></p>
-<dd> Used by the postscript driver to locate external prologue files. Depending on the build process, gnuplot contains either a builtin copy of those files or simply a default hardcoded path. Use this variable to test the postscript terminal with custom prologue files. See &quot;help postscript prologue&quot;.</dl>
+<dt><code>GNUTERM</code></dt>
+<dd> The name of the terminal type to be used by default. This can be overridden by the gnuplotrc or .gnuplot start-up files and, of course, by later explicit &quot;set terminal&quot; commands.</dd>
+<dt><code>GNUHELP </code></dt>
+<dd> The pathname of the HELP file (gnuplot.gih).</dd>
+<dt><code>HOME</code></dt>
+<dd> The name of a directory to search for a .gnuplot file.</dd>
+<dt><code>PAGER</code></dt>
+<dd> An output filter for help messages.</dd>
+<dt><code>SHELL</code></dt>
+<dd> The program used for the &quot;shell&quot; command.</dd>
+<dt><code>FIT_SCRIPT</code></dt>
+<dd> Specifies a gnuplot command to be executed when a fit is interrupted&#8212;see &quot;help fit&quot;.</dd>
+<dt><code>FIT_LOG</code></dt>
+<dd> The name of the logfile maintained by fit.</dd>
+<dt><code>GNUPLOT_LIB</code></dt>
+<dd> Additional search directories for data and command files. The variable may contain a single directory name, or a list of directories separated by &#8216;:&#8217;. The contents of GNUPLOT_LIB are appended to the &quot;loadpath&quot; variable, but not saved with the &quot;save&quot; and &quot;save set&quot; commands.</dd>
+<dt><code>GDFONTPATH</code></dt>
+<dd> Several gnuplot terminal drivers access TrueType fonts via the gd library. This variable gives the font search path for these drivers.</dd>
+<dt><code>GNUPLOT_DEFAULT_GDFONT</code></dt>
+<dd> The default font for the terminal drivers that access TrueType fonts via the gd library.</dd>
+<dt><code>GNUPLOT_FONTPATH</code></dt>
+<dd> The font search path used by the postscript terminal. The format is the same as for GNUPLOT_LIB. The contents of GNUPLOT_FONTPATH are appended to the &quot;fontpath&quot; variable, but not saved with the &quot;save&quot; and &quot;save set&quot; commands.</dd>
+<dt><code>GNUPLOT_PS_DIR</code></dt>
+<dd> Used by the postscript driver to locate external prologue files. Depending on the build process, gnuplot contains either a builtin copy of those files or simply a default hardcoded path. Use this variable to test the postscript terminal with custom prologue files. See &quot;help postscript prologue&quot;.</dd></dl>
 <h2>FILES</h2>
 <dl>
-<dt><i>gnuplotrc</i></p>
-<dd> When gnuplot is run, it first looks for a system-wide initialization file named gnuplotrc. The standard location of this file expected by the program is reported by the &quot;show loadpath&quot; command.</p>
-<dt><i>.gnuplot</i></p>
-<dd> After loading the system-wide initialization file, if any, Gnuplot looks for a private initialization file in the HOME directory. It may contain any legal gnuplot commands, but typically they are limited to setting the preferred terminal and line types and defining frequently-used functions or variables.</p>
-<dt><i>fit.log</i></p>
-<dd> The default name of the logfile output by the &quot;fit&quot; command.</dl>
+<dt><i>gnuplotrc</i></dt>
+<dd> When gnuplot is run, it first looks for a system-wide initialization file named gnuplotrc. The standard location of this file expected by the program is reported by the &quot;show loadpath&quot; command.</dd>
+<dt><i>.gnuplot</i></dt>
+<dd> After loading the system-wide initialization file, if any, Gnuplot looks for a private initialization file in the HOME directory. It may contain any legal gnuplot commands, but typically they are limited to setting the preferred terminal and line types and defining frequently-used functions or variables.</dd>
+<dt><i>fit.log</i></dt>
+<dd> The default name of the logfile output by the &quot;fit&quot; command.</dd></dl>
 <h2>AUTHORS</h2>
 <p> Original authors: Thomas Williams and Colin Kelley. Starting with gnuplot version 3.8, the project source is cooperatively maintained on SourceForge by a large number of contributors.</p>
 <h2>BUGS</h2>

@@ -15,19 +15,19 @@ snd_dma_program - program an ISA DMA transfer
 <h2>Arguments</h2>
 
 <i>dma</i>
-<dl><dd><dd>the dma number</dl>
+<dl><dd></dd><dd>the dma number</dd></dl>
  
 
  <i>addr</i>
-<dl><dd>the physical address of the buffer</dl>
+<dl><dd>the physical address of the buffer</dd></dl>
  
 
  <i>size</i>
-<dl><dd>the DMA transfer size</dl>
+<dl><dd>the DMA transfer size</dd></dl>
  
 
  <i>mode</i>
-<dl><dd>the DMA transfer mode, DMA_MODE_XXX</dl>
+<dl><dd>the DMA transfer mode, DMA_MODE_XXX</dd></dl>
 
 <h2>Description</h2>
 

@@ -15,8 +15,6 @@ sgbsvxx.f -
 <h3>Functions/Subroutines</h3>
 
 <pre><code>subroutine sgbsvxx (FACT, TRANS, N, KL, KU, NRHS, AB, LDAB, AFB, LDAFB, IPIV, EQUED, R, C, B, LDB, X, LDX, RCOND, RPVGRW, BERR, N_ERR_BNDS, ERR_BNDS_NORM, ERR_BNDS_COMP, NPARAMS, PARAMS, WORK, IWORK, INFO)
-
-
 SGBSVXX computes the solution to system of linear equations A * X = B for GB matrices</code></pre>
 
 <h2>Function/Subroutine Documentation</h2>
@@ -41,7 +39,7 @@ SGBSVXX computes the solution to system of linear equations A * X = B for GB mat
  SGBSVXX call will also produce a solution with either O(eps)
  errors or warnings, but we cannot make that claim for general
  user-provided factorizations and equilibration factors if they
- differ from what SGBSVXX would itself produce.</pre>&nbsp;<wbr></dl>
+ differ from what SGBSVXX would itself produce.</pre>&nbsp;<wbr></dd></dl>
  
 
  <b>Description: </b>
@@ -75,17 +73,15 @@ SGBSVXX computes the solution to system of linear equations A * X = B for GB mat
  6. If equilibration was used, the matrix X is premultiplied by
  diag(C) (if TRANS = 'N') or diag(R) (if TRANS = 'T' or 'C') so
  that it solves the original system before equilibration.</pre>&nbsp;<wbr> 
-
  <pre> Some optional parameters are bundled in the PARAMS array. These
  settings determine how refinement is performed, but often the
  defaults are acceptable. If the defaults are acceptable, users
  can pass NPARAMS = 0 which prevents the source code from accessing
- the PARAMS argument.</pre></dl>
+ the PARAMS argument.</pre></dd></dl>
  
 
  <b>Parameters:</b>
 <dl><dd><i>FACT</i> 
-
  <pre> FACT is CHARACTER*1
  Specifies whether or not the factored form of the matrix A is
  supplied on entry, and if not, whether the matrix A should be
@@ -97,27 +93,21 @@ SGBSVXX computes the solution to system of linear equations A * X = B for GB mat
  = 'N': The matrix A will be copied to AF and factored.
  = 'E': The matrix A will be equilibrated if necessary, then
  copied to AF and factored.</pre><i>TRANS</i> 
-
  <pre> TRANS is CHARACTER*1
  Specifies the form of the system of equations:
  = 'N': A * X = B (No transpose)
  = 'T': A**T * X = B (Transpose)
  = 'C': A**H * X = B (Conjugate Transpose = Transpose)</pre><i>N</i> 
-
  <pre> N is INTEGER
  The number of linear equations, i.e., the order of the
  matrix A. N &gt;= 0.</pre><i>KL</i> 
-
  <pre> KL is INTEGER
  The number of subdiagonals within the band of A. KL &gt;= 0.</pre><i>KU</i> 
-
  <pre> KU is INTEGER
  The number of superdiagonals within the band of A. KU &gt;= 0.</pre><i>NRHS</i> 
-
  <pre> NRHS is INTEGER
  The number of right hand sides, i.e., the number of columns
  of the matrices B and X. NRHS &gt;= 0.</pre><i>AB</i> 
-
  <pre> AB is REAL array, dimension (LDAB,N)
  On entry, the matrix A in band storage, in rows 1 to KL+KU+1.
  The j-th column of A is stored in the j-th column of the
@@ -131,10 +121,8 @@ SGBSVXX computes the solution to system of linear equations A * X = B for GB mat
  EQUED = 'R': A := diag(R) * A
  EQUED = 'C': A := A * diag(C)
  EQUED = 'B': A := diag(R) * A * diag(C).</pre><i>LDAB</i> 
-
  <pre> LDAB is INTEGER
  The leading dimension of the array AB. LDAB &gt;= KL+KU+1.</pre><i>AFB</i> 
-
  <pre> AFB is REAL array, dimension (LDAFB,N)
  If FACT = 'F', then AFB is an input argument and on entry
  contains details of the LU factorization of the band matrix
@@ -150,10 +138,8 @@ SGBSVXX computes the solution to system of linear equations A * X = B for GB mat
  returns the factors L and U from the factorization A = P*L*U
  of the equilibrated matrix A (see the description of A for
  the form of the equilibrated matrix).</pre><i>LDAFB</i> 
-
  <pre> LDAFB is INTEGER
  The leading dimension of the array AFB. LDAFB &gt;= 2*KL+KU+1.</pre><i>IPIV</i> 
-
  <pre> IPIV is INTEGER array, dimension (N)
  If FACT = 'F', then IPIV is an input argument and on entry
  contains the pivot indices from the factorization A = P*L*U
@@ -165,7 +151,6 @@ SGBSVXX computes the solution to system of linear equations A * X = B for GB mat
  If FACT = 'E', then IPIV is an output argument and on exit
  contains the pivot indices from the factorization A = P*L*U
  of the equilibrated matrix A.</pre><i>EQUED</i> 
-
  <pre> EQUED is CHARACTER*1
  Specifies the form of equilibration that was done.
  = 'N': No equilibration (always true if FACT = 'N').
@@ -177,7 +162,6 @@ SGBSVXX computes the solution to system of linear equations A * X = B for GB mat
  replaced by diag(R) * A * diag(C).
  EQUED is an input argument if FACT = 'F'; otherwise, it is an
  output argument.</pre><i>R</i> 
-
  <pre> R is REAL array, dimension (N)
  The row scale factors for A. If EQUED = 'R' or 'B', A is
  multiplied on the left by diag(R); if EQUED = 'N' or 'C', R
@@ -192,7 +176,6 @@ SGBSVXX computes the solution to system of linear equations A * X = B for GB mat
  lead to refining with a matrix that is not equivalent to the
  input matrix, producing error estimates that may not be
  reliable.</pre><i>C</i> 
-
  <pre> C is REAL array, dimension (N)
  The column scale factors for A. If EQUED = 'C' or 'B', A is
  multiplied on the right by diag(C); if EQUED = 'N' or 'R', C
@@ -207,7 +190,6 @@ SGBSVXX computes the solution to system of linear equations A * X = B for GB mat
  lead to refining with a matrix that is not equivalent to the
  input matrix, producing error estimates that may not be
  reliable.</pre><i>B</i> 
-
  <pre> B is REAL array, dimension (LDB,NRHS)
  On entry, the N-by-NRHS right hand side matrix B.
  On exit,
@@ -216,20 +198,16 @@ SGBSVXX computes the solution to system of linear equations A * X = B for GB mat
  diag(R)*B;
  if TRANS = 'T' or 'C' and EQUED = 'C' or 'B', B is
  overwritten by diag(C)*B.</pre><i>LDB</i> 
-
  <pre> LDB is INTEGER
  The leading dimension of the array B. LDB &gt;= max(1,N).</pre><i>X</i> 
-
  <pre> X is REAL array, dimension (LDX,NRHS)
  If INFO = 0, the N-by-NRHS solution matrix X to the original
  system of equations. Note that A and B are modified on exit
  if EQUED .ne. 'N', and the solution to the equilibrated system is
  inv(diag(C))*X if TRANS = 'N' and EQUED = 'C' or 'B', or
  inv(diag(R))*X if TRANS = 'T' or 'C' and EQUED = 'R' or 'B'.</pre><i>LDX</i> 
-
  <pre> LDX is INTEGER
  The leading dimension of the array X. LDX &gt;= max(1,N).</pre><i>RCOND</i> 
-
  <pre> RCOND is REAL
  Reciprocal scaled condition number. This is an estimate of the
  reciprocal Skeel condition number of the matrix A after
@@ -238,7 +216,6 @@ SGBSVXX computes the solution to system of linear equations A * X = B for GB mat
  to working precision. Note that the error may still be small even
  if this number is very small and the matrix appears ill-
  conditioned.</pre><i>RPVGRW</i> 
-
  <pre> RPVGRW is REAL
  Reciprocal pivot growth. On exit, this contains the reciprocal
  pivot growth factor norm(A)/norm(U). The &quot;max absolute element&quot;
@@ -249,18 +226,15 @@ SGBSVXX computes the solution to system of linear equations A * X = B for GB mat
  0&lt;INFO&lt;=N, then this contains the reciprocal pivot growth factor
  for the leading INFO columns of A. In SGESVX, this quantity is
  returned in WORK(1).</pre><i>BERR</i> 
-
  <pre> BERR is REAL array, dimension (NRHS)
  Componentwise relative backward error. This is the
  componentwise relative backward error of each solution vector X(j)
  (i.e., the smallest relative change in any element of A or B that
  makes X(j) an exact solution).</pre><i>N_ERR_BNDS</i> 
-
  <pre> N_ERR_BNDS is INTEGER
  Number of error bounds to return for each right hand side
  and each type (normwise or componentwise). See ERR_BNDS_NORM and
  ERR_BNDS_COMP below.</pre><i>ERR_BNDS_NORM</i> 
-
  <pre> ERR_BNDS_NORM is REAL array, dimension (NRHS, N_ERR_BNDS)
  For each right-hand side, this array contains information about
  various error bounds and condition numbers corresponding to the
@@ -294,7 +268,6 @@ SGBSVXX computes the solution to system of linear equations A * X = B for GB mat
  radix so all absolute row sums of Z are approximately 1.
  See Lapack Working Note 165 for further details and extra
  cautions.</pre><i>ERR_BNDS_COMP</i> 
-
  <pre> ERR_BNDS_COMP is REAL array, dimension (NRHS, N_ERR_BNDS)
  For each right-hand side, this array contains information about
  various error bounds and condition numbers corresponding to the
@@ -334,11 +307,9 @@ SGBSVXX computes the solution to system of linear equations A * X = B for GB mat
  sums of Z are approximately 1.
  See Lapack Working Note 165 for further details and extra
  cautions.</pre><i>NPARAMS</i> 
-
  <pre> NPARAMS is INTEGER
  Specifies the number of parameters set in PARAMS. If .LE. 0, the
  PARAMS array is never referenced and default values are used.</pre><i>PARAMS</i> 
-
  <pre> PARAMS is REAL array, dimension NPARAMS
  Specifies algorithm parameters. If an entry is .LT. 0.0, then
  that entry will be filled with default value used for that
@@ -368,11 +339,8 @@ SGBSVXX computes the solution to system of linear equations A * X = B for GB mat
  relative error in the double-precision algorithm. Positive
  is true, 0.0 is false.
  Default: 1.0 (attempt componentwise convergence)</pre><i>WORK</i> 
-
  <pre> WORK is REAL array, dimension (4*N)</pre><i>IWORK</i> 
-
  <pre> IWORK is INTEGER array, dimension (N)</pre><i>INFO</i> 
-
  <pre> INFO is INTEGER
  = 0: Successful exit. The solution to every right-hand side is
  guaranteed.
@@ -395,21 +363,18 @@ SGBSVXX computes the solution to system of linear equations A * X = B for GB mat
  ERR_BNDS_COMP(J,1) = 0.0). See the definition of
  ERR_BNDS_NORM(:,1) and ERR_BNDS_COMP(:,1). To get information
  about all of the right-hand sides check ERR_BNDS_NORM or
- ERR_BNDS_COMP.</pre>&nbsp;<wbr></dl>
+ ERR_BNDS_COMP.</pre>&nbsp;<wbr></dd></dl>
  
 
  <b>Author:</b>
 <dl><dd>Univ. of Tennessee 
-
  Univ. of California Berkeley 
-
  Univ. of Colorado Denver 
-
- NAG Ltd.</dl>
+ NAG Ltd.</dd></dl>
  
 
  <b>Date:</b>
-<dl><dd>April 2012</dl>
+<dl><dd>April 2012</dd></dl>
  
 
  

@@ -14,16 +14,16 @@ description: "gnutls_ext_register – Register a handler for a TLS extension"
 <p> <code>int gnutls_ext_register(int </code><i>type</i><code>, const char * </code><i>name</i><code>, gnutls_ext_parse_type_t </code><i>parse_type</i><code>, gnutls_ext_recv_func </code><i>recv_func</i><code>, gnutls_ext_send_func </code><i>send_func</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
-<dt>int type</p>
-<dd> the 16-bit integer referring to the extension type</p>
-<dt>const char * name</p>
-<dd> human printable name of the extension used for debugging</p>
-<dt>gnutls_ext_parse_type_t parse_type</p>
-<dd> either <code>GNUTLS_EXT_TLS</code> or <code>GNUTLS_EXT_APPLICATION</code>.</p>
-<dt>gnutls_ext_recv_func recv_func</p>
-<dd> a function to receive extension data</p>
-<dt>gnutls_ext_send_func send_func</p>
-<dd> a function to send extension data</dl>
+<dt>int type</dt>
+<dd> the 16-bit integer referring to the extension type</dd>
+<dt>const char * name</dt>
+<dd> human printable name of the extension used for debugging</dd>
+<dt>gnutls_ext_parse_type_t parse_type</dt>
+<dd> either <code>GNUTLS_EXT_TLS</code> or <code>GNUTLS_EXT_APPLICATION</code>.</dd>
+<dt>gnutls_ext_recv_func recv_func</dt>
+<dd> a function to receive extension data</dd>
+<dt>gnutls_ext_send_func send_func</dt>
+<dd> a function to send extension data</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> This function is used to register a new TLS extension handler.</p>
 <h2>RETURNS</h2>
@@ -39,6 +39,6 @@ description: "gnutls_ext_register – Register a handler for a TLS extension"
 <p> The full documentation for <code>gnutls</code> is maintained as a Texinfo manual. If the <code>info</code> and <code>gnutls</code> programs are properly installed at your site, the command</p>
 <dl>
 <dt>
-<dd> <code>info gnutls</code></dl>
+</dt><dd> <code>info gnutls</code></dd></dl>
 <p> should give you access to the complete manual. </p>
 <h2>Index</h2>

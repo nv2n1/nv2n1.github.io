@@ -14,7 +14,7 @@ description: "usb_poison_urb – reliably kill a transfer and prevent further us
 <p><i>urb</i></p>
 <dl>
 <dd>
-<dd>pointer to URB describing a previously submitted request, may be NULL</dl>
+</dd><dd>pointer to URB describing a previously submitted request, may be NULL</dd></dl>
 <h2>Description</h2>
 <p>This routine cancels an in-progress request. It is guaranteed that upon return all completion handlers will have finished and the URB will be totally idle and cannot be reused. These features make this an ideal way to stop I/O in a <code>disconnect</code> callback. If the request has not already finished or been unlinked the completion handler will see urb-&gt;status == -ENOENT. </p>
 <p> After and while the routine runs, attempts to resubmit the URB will fail with error -EPERM. Thus even if the URB&#8217;s completion handler always tries to resubmit, it will not succeed and the URB will become idle. </p>

@@ -11,10 +11,8 @@ std::chrono::ceil(std::chrono::duration) - std::chrono::ceil(std::chrono::durati
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;chrono&gt;
-
     template &lt;class ToDuration, class Rep, class Period&gt;
     (since C++ 17)
-
         constexpr ToDuration ceil(const duration&lt;Rep, Period&gt; &amp;d);</code></pre> 
 Returns the smallest duration t representable in ToDuration that is greater or equal to d. 
 The function does not participate in the overload resolution unless ToDuration is an instance of std::chrono::duration. 

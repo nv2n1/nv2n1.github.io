@@ -15,24 +15,24 @@ description: "synce-remove-program – removes a program from your device"
 <p> <code>synce-remove-program</code> removes a program on a device connected through SynCE. </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt>-d <i>LEVEL</i></p>
-<dd> Set debug log level:</p>
+<dt>-d <i>LEVEL</i></dt>
+<dd> Set debug log level:</dd>
 <dt>
-<dd> 0 &#8211; No logging (default)</p>
+</dt><dd> 0 &#8211; No logging (default)</dd>
 <dt>
-<dd> 1 &#8211; Errors only</p>
+</dt><dd> 1 &#8211; Errors only</dd>
 <dt>
-<dd> 2 &#8211; Errors and warnings</p>
+</dt><dd> 2 &#8211; Errors and warnings</dd>
 <dt>
-<dd> 3 &#8211; Everything </p>
-<dt>-p <i>PATH</i></p>
-<dd> Path to device </p>
-<dt>-h</p>
-<dd> Display help message. </p>
-<dt>-o <i>UNLOAD_OPT</i></p>
-<dd> Flags to pass to <i>unload.exe</i> on the remote device. Currently no flags are known, but this flag is here in case we find some. </p>
-<dt><i>NAME</i></p>
-<dd> The name of the program on the device. Program names are in the form &quot;Provider Program&quot;. This is the same way the name will appear under Settings -&gt; Remove programs on your device, or in the ouput from <i>synce-list-programs</i>. </p>
+</dt><dd> 3 &#8211; Everything </dd>
+<dt>-p <i>PATH</i></dt>
+<dd> Path to device </dd>
+<dt>-h</dt>
+<dd> Display help message. </dd>
+<dt>-o <i>UNLOAD_OPT</i></dt>
+<dd> Flags to pass to <i>unload.exe</i> on the remote device. Currently no flags are known, but this flag is here in case we find some. </dd>
+<dt><i>NAME</i></dt>
+<dd> The name of the program on the device. Program names are in the form &quot;Provider Program&quot;. This is the same way the name will appear under Settings -&gt; Remove programs on your device, or in the ouput from <i>synce-list-programs</i>. </dd>
 </dl>
 <h2>AUTHOR</h2>
 <p> David Eriksson &lt;twogood [at] users.sourceforge.net&gt;.</p>

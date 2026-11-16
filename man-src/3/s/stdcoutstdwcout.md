@@ -22,7 +22,6 @@ Once initialized, std::cout is also tie()&#8217;d to std::cerr and std::wcout is
 <h2>Example</h2>
 <p>// Run this code </p>
 <pre><code>#include &lt;iostream&gt;
-
 struct Foo {
     int n;
     Foo()
@@ -36,11 +35,8 @@ struct Foo {
 &quot;;
     }
 };
-
 Foo f; // static object
-
 int main()
-
 {
     std::cout &lt;&lt; &quot;main function
 &quot;;

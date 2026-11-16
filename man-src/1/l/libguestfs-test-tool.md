@@ -28,20 +28,20 @@ description: "libguestfs-test-tool – Diagnostics for libguestfs"
 <p> If it fails (and/or exits with non-zero error code), please paste the <i>complete, unedited</i> output of the test tool into a bug report. More information about reporting bugs can be found on the <a rel="nofollow" href="http://libguestfs.org/">http://libguestfs.org/</a> website.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>&#8211;help</code></p>
-<dd> Display short usage information and exit.</p>
-<dt><code>&#8211;qemu qemu_binary</code></p>
-<dd> If you have downloaded another qemu binary, point this option at the full path of the binary to try it.</p>
-<dt><code>&#8211;qemudir qemu_source_dir</code></p>
-<dd> If you have compiled qemu from source, point this option at the source directory to try it.</p>
-<dt><code>-t N</code></p>
+<dt><code>&#8211;help</code></dt>
+<dd> Display short usage information and exit.</dd>
+<dt><code>&#8211;qemu qemu_binary</code></dt>
+<dd> If you have downloaded another qemu binary, point this option at the full path of the binary to try it.</dd>
+<dt><code>&#8211;qemudir qemu_source_dir</code></dt>
+<dd> If you have compiled qemu from source, point this option at the source directory to try it.</dd>
+<dt><code>-t N</code></dt>
 <dd>
-<dt><code>&#8211;timeout N</code></p>
-<dd> Set the launch timeout to <tt>&quot;N&quot;</tt> seconds. The default is 600 seconds (10 minutes) which does not usually need to be adjusted.</p>
-<dt><code>-V</code></p>
+</dd><dt><code>&#8211;timeout N</code></dt>
+<dd> Set the launch timeout to <tt>&quot;N&quot;</tt> seconds. The default is 600 seconds (10 minutes) which does not usually need to be adjusted.</dd>
+<dt><code>-V</code></dt>
 <dd>
-<dt><code>&#8211;version</code></p>
-<dd> Display the libguestfs version number and exit.</dl>
+</dd><dt><code>&#8211;version</code></dt>
+<dd> Display the libguestfs version number and exit.</dd></dl>
 <h2>TRYING OUT A DIFFERENT VERSION OF QEMU</h2>
 <p> If you have compiled another version of qemu from source and would like to try that, then you can use the <i>&#8211;qemudir</i> option to point to the qemu source directory. </p>
 <p> If you have downloaded a qemu binary from somewhere, use the <i>&#8211;qemu</i> option to point to the binary. </p>
@@ -123,13 +123,13 @@ description: "libguestfs-test-tool – Diagnostics for libguestfs"
 <p> To report a new bug against libguestfs, use this link: <a rel="nofollow" href="https://bugzilla.redhat.com/enter_bug.cgi?component=libguestfs">https://bugzilla.redhat.com/enter_bug.cgi?component=libguestfs</a>&amp;product=Virtualization+Tools </p>
 <p> When reporting a bug, please supply:</p>
 <dl>
-<dt>&bull;</p>
-<dd> The version of libguestfs.</p>
-<dt>&bull;</p>
-<dd> Where you got libguestfs (eg. which Linux distro, compiled from source, etc)</p>
-<dt>&bull;</p>
-<dd> Describe the bug accurately and give a way to reproduce it.</p>
-<dt>&bull;</p>
-<dd> Run <i><a href="/docs/linux/man/1-libguestfs-test-tool/">libguestfs-test-tool</a></i>(1) and paste the <code>complete, unedited</code> output into the bug report. </p>
+<dt>&bull;</dt>
+<dd> The version of libguestfs.</dd>
+<dt>&bull;</dt>
+<dd> Where you got libguestfs (eg. which Linux distro, compiled from source, etc)</dd>
+<dt>&bull;</dt>
+<dd> Describe the bug accurately and give a way to reproduce it.</dd>
+<dt>&bull;</dt>
+<dd> Run <i><a href="/docs/linux/man/1-libguestfs-test-tool/">libguestfs-test-tool</a></i>(1) and paste the <code>complete, unedited</code> output into the bug report. </dd>
 </dl>
 <h2>Index</h2>

@@ -17,35 +17,35 @@ description: "rm – remove files or directories"
 <h2>Options</h2>
 <p>Remove (unlink) the FILE(s).</p>
 <dl>
-<dt><code>-f</code>, <code>&#8211;force</code></p>
-<dd>ignore nonexistent files and arguments, never prompt</p>
-<dt><code>-i</code></p>
-<dd>prompt before every removal</p>
-<dt><code>-I</code></p>
-<dd>prompt once before removing more than three files, or when removing recursively; less intrusive than <code>-i</code>, while still giving protection against most mistakes</p>
-<dt><code>&#8211;interactive</code>[=<i>,WHEN/</i>]</p>
-<dd>prompt according to WHEN: never, once (<code>-I</code>), or always (<code>-i</code>); without WHEN, prompt always</p>
-<dt><code>&#8211;one-file-system</code></p>
-<dd>when removing a hierarchy recursively, skip any directory that is on a file system different from that of the corresponding command line argument</p>
-<dt><code>&#8211;no-preserve-root</code></p>
-<dd>do not treat &#8216;/&#8217; specially</p>
-<dt><code>&#8211;preserve-root</code>[=<i>,all/</i>]</p>
-<dd>do not remove &#8216;/&#8217; (default); with &#8216;all&#8217;, reject any command line argument on a separate device from its parent</p>
-<dt><code>-r</code>, <code>-R</code>, <code>&#8211;recursive</code></p>
-<dd>remove directories and their contents recursively</p>
-<dt><code>-d</code>, <code>&#8211;dir</code></p>
-<dd>remove empty directories</p>
-<dt><code>-v</code>, <code>&#8211;verbose</code></p>
-<dd>explain what is being done</p>
-<dt><code>&#8211;help</code></p>
-<dd>display this help and exit</p>
-<dt><code>&#8211;version</code></p>
-<dd>output version information and exit</dl>
+<dt><code>-f</code>, <code>&#8211;force</code></dt>
+<dd>ignore nonexistent files and arguments, never prompt</dd>
+<dt><code>-i</code></dt>
+<dd>prompt before every removal</dd>
+<dt><code>-I</code></dt>
+<dd>prompt once before removing more than three files, or when removing recursively; less intrusive than <code>-i</code>, while still giving protection against most mistakes</dd>
+<dt><code>&#8211;interactive</code>[=<i>,WHEN/</i>]</dt>
+<dd>prompt according to WHEN: never, once (<code>-I</code>), or always (<code>-i</code>); without WHEN, prompt always</dd>
+<dt><code>&#8211;one-file-system</code></dt>
+<dd>when removing a hierarchy recursively, skip any directory that is on a file system different from that of the corresponding command line argument</dd>
+<dt><code>&#8211;no-preserve-root</code></dt>
+<dd>do not treat &#8216;/&#8217; specially</dd>
+<dt><code>&#8211;preserve-root</code>[=<i>,all/</i>]</dt>
+<dd>do not remove &#8216;/&#8217; (default); with &#8216;all&#8217;, reject any command line argument on a separate device from its parent</dd>
+<dt><code>-r</code>, <code>-R</code>, <code>&#8211;recursive</code></dt>
+<dd>remove directories and their contents recursively</dd>
+<dt><code>-d</code>, <code>&#8211;dir</code></dt>
+<dd>remove empty directories</dd>
+<dt><code>-v</code>, <code>&#8211;verbose</code></dt>
+<dd>explain what is being done</dd>
+<dt><code>&#8211;help</code></dt>
+<dd>display this help and exit</dd>
+<dt><code>&#8211;version</code></dt>
+<dd>output version information and exit</dd></dl>
 <p> By default, rm does not remove directories. Use the <code>&#8211;recursive</code> (<code>-r</code> or <code>-R</code>) option to remove each listed directory, too, along with all of its contents. </p>
 <p> To remove a file whose name starts with a &#8216;-&#8216;, for example &#8216;-foo&#8217;, use one of these commands:</p>
 <dl>
-<dd>rm <code>&#8212;</code> <code>-foo</code></p>
-<dd>rm ./-foo</dl>
+<dd>rm <code>&#8212;</code> <code>-foo</code></dd>
+<dd>rm ./-foo</dd></dl>
 <p> Note that if you use rm to remove a file, it might be possible to recover some of its contents, given sufficient expertise and/or time. For greater assurance that the contents are truly unrecoverable, consider using shred.</p>
 <h2>Author</h2>
 <p>Written by Paul Rubin, David MacKenzie, Richard M. Stallman, and Jim Meyering.</p>

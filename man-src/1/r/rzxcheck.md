@@ -15,8 +15,8 @@ description: "rzxcheck – Check the signature in a ZX Spectrum RZX file"
 <p> rzxcheck verifies the digital signature found in a Sinclair ZX Spectrum RZX input recording file.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><i>rzxfile</i></p>
-<dd> specifies an input recording file whose signature is to be verified.</dl>
+<dt><i>rzxfile</i></dt>
+<dd> specifies an input recording file whose signature is to be verified.</dd></dl>
 <h2>BUGS</h2>
 <p> None known.</p>
 <h2>SEE ALSO</h2>

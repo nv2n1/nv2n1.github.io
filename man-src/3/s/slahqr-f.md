@@ -22,10 +22,10 @@ description: "slahqr.f –"
  eigenvalues and Schur decomposition already computed by SHSEQR, by
  dealing with the Hessenberg submatrix in rows and columns ILO to
  IHI.</pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>WANTT</i> </p>
+<dd><i>WANTT</i> </dd>
 <pre> WANTT is LOGICAL
  = .TRUE. : the full Schur form T is required;
  = .FALSE.: only eigenvalues are required.</pre>
@@ -114,13 +114,13 @@ description: "slahqr.f –"
 <p>&nbsp;<wbr></dl>
 <p> <code>Author:</code></p>
 <dl>
-<dd>Univ. of Tennessee </p>
+<dd>Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl>
-<dd>September 2012</dl>
+<dd>September 2012</dd></dl>
 <p> <code>Further Details: </code></p>
 <dl>
 <dd>
@@ -132,7 +132,8 @@ description: "slahqr.f –"
  It is (1) more robust against overflow and underflow and
  (2) adopts the more conservative Ahues &amp; Tisseur stopping
  criterion (LAWN 122, 1997).</pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> Definition at line 207 of file slahqr.f.</p>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for LAPACK from the source code.</p>
+</p>

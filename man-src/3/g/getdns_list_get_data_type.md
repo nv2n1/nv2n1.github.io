@@ -17,46 +17,46 @@ description: "getdns_list_get, getdns_list_get_bindata, getdns_list_get_data_typ
  <code>getdns_list_get_bindata</code> (getdns_list *this_list,</p>
 <dl>
 <dt>
-<dd> size_t index,<br />
- getdns_bindata **answer)</dl>
+</dt><dd> size_t index,<br />
+ getdns_bindata **answer)</dd></dl>
 <p> getdns_return_t<br />
  <code>getdns_list_get_data_type</code> (getdns_list *this_list,</p>
 <dl>
 <dt>
-<dd> size_t index,<br />
- getdns_data_type *answer)</dl>
+</dt><dd> size_t index,<br />
+ getdns_data_type *answer)</dd></dl>
 <p> getdns_return_t<br />
  <code>getdns_list_get_dict</code> (getdns_list *this_list,</p>
 <dl>
 <dt>
-<dd> size_t index,<br />
- getdns_dict **answer)</dl>
+</dt><dd> size_t index,<br />
+ getdns_dict **answer)</dd></dl>
 <p> getdns_return_t<br />
  <code>getdns_list_get_length</code> (getdns_list *this_list,</p>
 <dl>
 <dt>
-<dd> size_t *answer)</dl>
+</dt><dd> size_t *answer)</dd></dl>
 <p> getdns_return_t<br />
  <code>getdns_list_get_list</code> (getdns_list *this_list,</p>
 <dl>
 <dt>
-<dd> size_t index,<br />
- getdns_list **answer)</dl>
+</dt><dd> size_t index,<br />
+ getdns_list **answer)</dd></dl>
 <p> getdns_return_t<br />
  <code>getdns_list_get_int</code> (getdns_list *this_list,</p>
 <dl>
 <dt>
-<dd> size_t index,<br />
- uint32_t *answer)</dl>
+</dt><dd> size_t index,<br />
+ uint32_t *answer)</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> The getdns_list type is used to manage heterogeneous lists in which the objects are each one of the data types:</p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
  getdns_bindata<br />
  getdns_dict<br />
  getdns_list<br />
- uint32_t</dl>
+ uint32_t</dd></dl>
 <p> <i>this_list</i> the list from which to retrieve the object </p>
 <p> <i>index</i> the numeric index (0 based) of the item in the list you would like copied to answer </p>
 <p> <i>answer</i> a copy of the object in the list is placed in answer, the caller is responsible for freeing the storage associated with that object by calling the appropriate destroy function. </p>

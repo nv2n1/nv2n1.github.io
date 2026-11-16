@@ -27,10 +27,10 @@ int fremovexattr(int fd, const char &amp;nbsp; *name);
 <p> On success, zero is returned. On failure, -1 is returned and <i>errno</i> is set appropriately.</p>
 <h2>ERRORS</h2>
 <dl>
-<dt><code>ENODATA</code></p>
-<dd> The named attribute does not exist.</p>
-<dt><code>ENOTSUP</code></p>
-<dd> Extended attributes are not supported by the filesystem, or are disabled.</dl>
+<dt><code>ENODATA</code></dt>
+<dd> The named attribute does not exist.</dd>
+<dt><code>ENOTSUP</code></dt>
+<dd> Extended attributes are not supported by the filesystem, or are disabled.</dd></dl>
 <p> In addition, the errors documented in <code><a href="/docs/linux/man/2-stat/">stat</a></code>(2) can also occur.</p>
 <h2>VERSIONS</h2>
 <p> These system calls have been available on Linux since kernel 2.4; glibc support is provided since version 2.3.</p>

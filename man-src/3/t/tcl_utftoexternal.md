@@ -50,27 +50,27 @@ void
 <code>Tcl_SetDefaultEncodingDir</code>(<i>path</i>)</pre>
 <h2>Arguments</h2>
 <dl COMPACT>
-<dd>Tcl_Interp <i>*interp</i> (in) Interpreter to use for error reporting, or NULL if no error reporting is desired.</p>
-<dd>const char <i>*name</i> (in) Name of encoding to load.</p>
-<dd>Tcl_Encoding <i>encoding</i> (in) The encoding to query, free, or use for converting text. If <i>encoding</i> is NULL, the current system encoding is used.</p>
-<dd>Tcl_Obj <i>*objPtr</i> (in) Name of encoding to get token for.</p>
-<dd>Tcl_Encoding <i>*encodingPtr</i> (out) Points to storage where encoding token is to be written.</p>
-<dd>const char <i>*src</i> (in) For the <code>Tcl_ExternalToUtf</code> functions, an array of bytes in the specified encoding that are to be converted to UTF-8. For the <code>Tcl_UtfToExternal</code> and <code>Tcl_WinUtfToTChar</code> functions, an array of UTF-8 characters to be converted to the specified encoding.</p>
-<dd>const TCHAR <i>*tsrc</i> (in) An array of Windows TCHAR characters to convert to UTF-8.</p>
-<dd>int <i>srcLen</i> (in) Length of <i>src</i> or <i>tsrc</i> in bytes. If the length is negative, the encoding-specific length of the string is used.</p>
-<dd>Tcl_DString <i>*dstPtr</i> (out) Pointer to an uninitialized or free <code>Tcl_DString</code> in which the converted result will be stored.</p>
-<dd>int <i>flags</i> (in) Various flag bits OR-ed together. <code>TCL_ENCODING_START</code> signifies that the source buffer is the first block in a (potentially multi-block) input stream, telling the conversion routine to reset to an initial state and perform any initialization that needs to occur before the first byte is converted. <code>TCL_ENCODING_END</code> signifies that the source buffer is the last block in a (potentially multi-block) input stream, telling the conversion routine to perform any finalization that needs to occur after the last byte is converted and then to reset to an initial state. <code>TCL_ENCODING_STOPONERROR</code> signifies that the conversion routine should return immediately upon reading a source character that does not exist in the target encoding; otherwise a default fallback character will automatically be substituted.</p>
-<dd>Tcl_EncodingState <i>*statePtr</i> (in/out) Used when converting a (generally long or indefinite length) byte stream in a piece-by-piece fashion. The conversion routine stores its current state in <i>*statePtr</i> after <i>src</i> (the buffer containing the current piece) has been converted; that state information must be passed back when converting the next piece of the stream so the conversion routine knows what state it was in when it left off at the end of the last piece. May be NULL, in which case the value specified for <i>flags</i> is ignored and the source buffer is assumed to contain the complete string to convert.</p>
-<dd>char <i>*dst</i> (out) Buffer in which the converted result will be stored. No more than <i>dstLen</i> bytes will be stored in <i>dst</i>.</p>
-<dd>int <i>dstLen</i> (in) The maximum length of the output buffer <i>dst</i> in bytes.</p>
-<dd>int <i>*srcReadPtr</i> (out) Filled with the number of bytes from <i>src</i> that were actually converted. This may be less than the original source length if there was a problem converting some source characters. May be NULL.</p>
-<dd>int <i>*dstWrotePtr</i> (out) Filled with the number of bytes that were actually stored in the output buffer as a result of the conversion. May be NULL.</p>
-<dd>int <i>*dstCharsPtr</i> (out) Filled with the number of characters that correspond to the number of bytes stored in the output buffer. May be NULL.</p>
-<dd>Tcl_DString <i>*bufPtr</i> (out) Storage for the prescribed system encoding name.</p>
-<dd>const Tcl_EncodingType <i>*typePtr</i> (in) Structure that defines a new type of encoding.</p>
-<dd>Tcl_Obj <i>*searchPath</i> (in) List of filesystem directories in which to search for encoding data files.</p>
+<dd>Tcl_Interp <i>*interp</i> (in) Interpreter to use for error reporting, or NULL if no error reporting is desired.</dd>
+<dd>const char <i>*name</i> (in) Name of encoding to load.</dd>
+<dd>Tcl_Encoding <i>encoding</i> (in) The encoding to query, free, or use for converting text. If <i>encoding</i> is NULL, the current system encoding is used.</dd>
+<dd>Tcl_Obj <i>*objPtr</i> (in) Name of encoding to get token for.</dd>
+<dd>Tcl_Encoding <i>*encodingPtr</i> (out) Points to storage where encoding token is to be written.</dd>
+<dd>const char <i>*src</i> (in) For the <code>Tcl_ExternalToUtf</code> functions, an array of bytes in the specified encoding that are to be converted to UTF-8. For the <code>Tcl_UtfToExternal</code> and <code>Tcl_WinUtfToTChar</code> functions, an array of UTF-8 characters to be converted to the specified encoding.</dd>
+<dd>const TCHAR <i>*tsrc</i> (in) An array of Windows TCHAR characters to convert to UTF-8.</dd>
+<dd>int <i>srcLen</i> (in) Length of <i>src</i> or <i>tsrc</i> in bytes. If the length is negative, the encoding-specific length of the string is used.</dd>
+<dd>Tcl_DString <i>*dstPtr</i> (out) Pointer to an uninitialized or free <code>Tcl_DString</code> in which the converted result will be stored.</dd>
+<dd>int <i>flags</i> (in) Various flag bits OR-ed together. <code>TCL_ENCODING_START</code> signifies that the source buffer is the first block in a (potentially multi-block) input stream, telling the conversion routine to reset to an initial state and perform any initialization that needs to occur before the first byte is converted. <code>TCL_ENCODING_END</code> signifies that the source buffer is the last block in a (potentially multi-block) input stream, telling the conversion routine to perform any finalization that needs to occur after the last byte is converted and then to reset to an initial state. <code>TCL_ENCODING_STOPONERROR</code> signifies that the conversion routine should return immediately upon reading a source character that does not exist in the target encoding; otherwise a default fallback character will automatically be substituted.</dd>
+<dd>Tcl_EncodingState <i>*statePtr</i> (in/out) Used when converting a (generally long or indefinite length) byte stream in a piece-by-piece fashion. The conversion routine stores its current state in <i>*statePtr</i> after <i>src</i> (the buffer containing the current piece) has been converted; that state information must be passed back when converting the next piece of the stream so the conversion routine knows what state it was in when it left off at the end of the last piece. May be NULL, in which case the value specified for <i>flags</i> is ignored and the source buffer is assumed to contain the complete string to convert.</dd>
+<dd>char <i>*dst</i> (out) Buffer in which the converted result will be stored. No more than <i>dstLen</i> bytes will be stored in <i>dst</i>.</dd>
+<dd>int <i>dstLen</i> (in) The maximum length of the output buffer <i>dst</i> in bytes.</dd>
+<dd>int <i>*srcReadPtr</i> (out) Filled with the number of bytes from <i>src</i> that were actually converted. This may be less than the original source length if there was a problem converting some source characters. May be NULL.</dd>
+<dd>int <i>*dstWrotePtr</i> (out) Filled with the number of bytes that were actually stored in the output buffer as a result of the conversion. May be NULL.</dd>
+<dd>int <i>*dstCharsPtr</i> (out) Filled with the number of characters that correspond to the number of bytes stored in the output buffer. May be NULL.</dd>
+<dd>Tcl_DString <i>*bufPtr</i> (out) Storage for the prescribed system encoding name.</dd>
+<dd>const Tcl_EncodingType <i>*typePtr</i> (in) Structure that defines a new type of encoding.</dd>
+<dd>Tcl_Obj <i>*searchPath</i> (in) List of filesystem directories in which to search for encoding data files.</dd>
 <dd>const char <i>*path</i> (in) A path to the location of the encoding file.
-</dl>
+</dd></dl>
 <h2>Introduction</h2>
 <p>These routines convert between Tcl&#8217;s internal character representation, UTF-8, and character representations used by various operating systems or file systems, such as Unicode, ASCII, or Shift-JIS. When operating on strings, such as such as obtaining the names of files or displaying characters using international fonts, the strings must be translated into one or possibly multiple formats that the various system calls can use. For instance, on a Japanese Unix workstation, a user might obtain a filename represented in the EUC-JP file encoding and then translate the characters to the jisx0208 font encoding in order to display the filename in a Tk widget. The purpose of the encoding package is to help bridge the translation gap. UTF-8 provides an intermediate staging ground for all the various encodings. In the example above, text would be translated into UTF-8 from whatever file encoding the operating system is using. Then it would be translated from UTF-8 into whatever font encoding the display routines require. </p>
 <p> Some basic encodings are compiled into Tcl. Others can be defined by the user or dynamically loaded from encoding files in a platform-independent manner.</p>
@@ -83,17 +83,17 @@ void
 <p> <code>Tcl_ExternalToUtf</code> converts a source buffer <i>src</i> from the specified <i>encoding</i> into UTF-8. Up to <i>srcLen</i> bytes are converted from the source buffer and up to <i>dstLen</i> converted bytes are stored in <i>dst</i>. In all cases, <i>*srcReadPtr</i> is filled with the number of bytes that were successfully converted from <i>src</i> and <i>*dstWrotePtr</i> is filled with the corresponding number of bytes that were stored in <i>dst</i>. The return value is one of the following:</p>
 <dl COMPACT>
 <dd>
-<dl COMPACT>
-<dt><code>TCL_OK</code></p>
-<dd>All bytes of <i>src</i> were converted.</p>
-<dt><code>TCL_CONVERT_NOSPACE</code></p>
-<dd>The destination buffer was not large enough for all of the converted data; as many characters as could fit were converted though.</p>
-<dt><code>TCL_CONVERT_MULTIBYTE</code></p>
-<dd>The last few bytes in the source buffer were the beginning of a multibyte sequence, but more bytes were needed to complete this sequence. A subsequent call to the conversion routine should pass a buffer containing the unconverted bytes that remained in <i>src</i> plus some further bytes from the source stream to properly convert the formerly split-up multibyte sequence.</p>
-<dt><code>TCL_CONVERT_SYNTAX</code></p>
-<dd>The source buffer contained an invalid character sequence. This may occur if the input stream has been damaged or if the input encoding method was misidentified.</p>
-<dt><code>TCL_CONVERT_UNKNOWN</code></p>
-<dd>The source buffer contained a character that could not be represented in the target encoding and <code>TCL_ENCODING_STOPONERROR</code> was specified.</dl>
+</dd><dl COMPACT>
+<dt><code>TCL_OK</code></dt>
+<dd>All bytes of <i>src</i> were converted.</dd>
+<dt><code>TCL_CONVERT_NOSPACE</code></dt>
+<dd>The destination buffer was not large enough for all of the converted data; as many characters as could fit were converted though.</dd>
+<dt><code>TCL_CONVERT_MULTIBYTE</code></dt>
+<dd>The last few bytes in the source buffer were the beginning of a multibyte sequence, but more bytes were needed to complete this sequence. A subsequent call to the conversion routine should pass a buffer containing the unconverted bytes that remained in <i>src</i> plus some further bytes from the source stream to properly convert the formerly split-up multibyte sequence.</dd>
+<dt><code>TCL_CONVERT_SYNTAX</code></dt>
+<dd>The source buffer contained an invalid character sequence. This may occur if the input stream has been damaged or if the input encoding method was misidentified.</dd>
+<dt><code>TCL_CONVERT_UNKNOWN</code></dt>
+<dd>The source buffer contained a character that could not be represented in the target encoding and <code>TCL_ENCODING_STOPONERROR</code> was specified.</dd></dl>
 </dl>
 <p> <code>Tcl_UtfToExternalDString</code> converts a source buffer <i>src</i> from UTF-8 into the specified <i>encoding</i>. The converted bytes are stored in <i>dstPtr</i>, which is then terminated with the appropriate encoding-specific null. The caller should eventually call <code>Tcl_DStringFree</code> to free any information stored in <i>dstPtr</i>. When converting, if any of the characters in the source buffer cannot be represented in the target encoding, a default fallback character will be used. The return value is a pointer to the value stored in the DString. </p>
 <p> <code>Tcl_UtfToExternal</code> converts a source buffer <i>src</i> from UTF-8 into the specified <i>encoding</i>. Up to <i>srcLen</i> bytes are converted from the source buffer and up to <i>dstLen</i> converted bytes are stored in <i>dst</i>. In all cases, <i>*srcReadPtr</i> is filled with the number of bytes that were successfully converted from <i>src</i> and <i>*dstWrotePtr</i> is filled with the corresponding number of bytes that were stored in <i>dst</i>. The return values are the same as the return values for <code>Tcl_ExternalToUtf</code>. </p>
@@ -108,7 +108,7 @@ void
 } else {
  nativeBuffer &lt;- Tcl_UtfToExternal(NULL, utfBuffer);
 }</pre>
-</dl>
+</dd></dl>
 <p> <code>Tcl_WinUtfToTChar</code> and <code>Tcl_WinTCharToUtf</code> automatically handle this test and use the proper encoding based on the current operating system. <code>Tcl_WinUtfToTChar</code> returns a pointer to a TCHAR string, and <code>Tcl_WinTCharToUtf</code> expects a TCHAR string pointer as the <i>src</i> string. Otherwise, these functions behave identically to <code>Tcl_UtfToExternalDString</code> and <code>Tcl_ExternalToUtfDString</code>. </p>
 <p> <code>Tcl_GetEncodingName</code> is roughly the inverse of <code>Tcl_GetEncoding</code>. Given an <i>encoding</i>, the return value is the <i>name</i> argument that was used to create the encoding. The string returned by <code>Tcl_GetEncodingName</code> is only guaranteed to persist until the <i>encoding</i> is deleted. The caller must not modify this string. </p>
 <p> <code>Tcl_SetSystemEncoding</code> sets the default encoding that should be used whenever the user passes a NULL value for the <i>encoding</i> argument to any of the other encoding functions. If <i>name</i> is NULL, the system encoding is reset to the default system encoding, <code>binary</code>. If the name did not refer to any known or loadable encoding, <code>TCL_ERROR</code> is returned and an error message is left in <i>interp</i>. Otherwise, this procedure increments the reference count of the new system encoding, decrements the reference count of the old system encoding, and returns <code>TCL_OK</code>. </p>
@@ -126,7 +126,7 @@ void
  ClientData <i>clientData</i>;
  int <i>nullSize</i>;
 } Tcl_EncodingType; </pre>
-</dl>
+</dd></dl>
 <p> The <i>encodingName</i> provides a string name for the encoding, by which it can be referred in other procedures such as <code>Tcl_GetEncoding</code>. The <i>toUtfProc</i> refers to a callback procedure to invoke to convert text from this encoding into UTF-8. The <i>fromUtfProc</i> refers to a callback procedure to invoke to convert text from UTF-8 into this encoding. The <i>freeProc</i> refers to a callback procedure to invoke when this encoding is deleted. The <i>freeProc</i> field may be NULL. The <i>clientData</i> contains an arbitrary one-word value passed to <i>toUtfProc</i>, <i>fromUtfProc</i>, and <i>freeProc</i> whenever they are called. Typically, this is a pointer to a data structure containing encoding-specific information that can be used by the callback procedures. For instance, two very similar encodings such as <code>ascii</code> and <code>macRoman</code> may use the same callback procedure, but use different values of <i>clientData</i> to control its behavior. The <i>nullSize</i> specifies the number of zero bytes that signify end-of-string in this encoding. It must be <code>1</code> (for single-byte or multi-byte encodings like ASCII or Shift-JIS) or <code>2</code> (for double-byte encodings like Unicode). Constant-sized encodings with 3 or more bytes per character (such as CNS11643) are not accepted. </p>
 <p> The callback procedures <i>toUtfProc</i> and <i>fromUtfProc</i> should match the type <code>Tcl_EncodingConvertProc</code>: </p>
 <dl COMPACT>
@@ -142,14 +142,14 @@ void
  int *<i>srcReadPtr</i>,
  int *<i>dstWrotePtr</i>,
  int *<i>dstCharsPtr</i>);</pre>
-</dl>
+</dd></dl>
 <p> The <i>toUtfProc</i> and <i>fromUtfProc</i> procedures are called by the <code>Tcl_ExternalToUtf</code> or <code>Tcl_UtfToExternal</code> family of functions to perform the actual conversion. The <i>clientData</i> parameter to these procedures is the same as the <i>clientData</i> field specified to <code>Tcl_CreateEncoding</code> when the encoding was created. The remaining arguments to the callback procedures are the same as the arguments, documented at the top, to <code>Tcl_ExternalToUtf</code> or <code>Tcl_UtfToExternal</code>, with the following exceptions. If the <i>srcLen</i> argument to one of those high-level functions is negative, the value passed to the callback procedure will be the appropriate encoding-specific string length of <i>src</i>. If any of the <i>srcReadPtr</i>, <i>dstWrotePtr</i>, or <i>dstCharsPtr</i> arguments to one of the high-level functions is NULL, the corresponding value passed to the callback procedure will be a non-NULL location. </p>
 <p> The callback procedure <i>freeProc</i>, if non-NULL, should match the type <code>Tcl_EncodingFreeProc</code>:</p>
 <dl COMPACT>
 <dd>
 <pre>typedef void Tcl_EncodingFreeProc(
  ClientData <i>clientData</i>);</pre>
-</dl>
+</dd></dl>
 <p> This <i>freeProc</i> function is called when the encoding is deleted. The <i>clientData</i> parameter is the same as the <i>clientData</i> field specified to <code>Tcl_CreateEncoding</code> when the encoding was created. </p>
 <p> <code>Tcl_GetEncodingSearchPath</code> and <code>Tcl_SetEncodingSearchPath</code> are called to access and set the list of filesystem directories searched for encoding data files. </p>
 <p> The value returned by <code>Tcl_GetEncodingSearchPath</code> is the value stored by the last successful call to <code>Tcl_SetEncodingSearchPath</code>. If no calls to <code>Tcl_SetEncodingSearchPath</code> have occurred, Tcl will compute an initial value based on the environment. There is one encoding search path for the entire process, shared by all threads in the process. </p>
@@ -159,14 +159,14 @@ void
 <p>Space would prohibit precompiling into Tcl every possible encoding algorithm, so many encodings are stored on disk as dynamically-loadable encoding files. This behavior also allows the user to create additional encoding files that can be loaded using the same mechanism. These encoding files contain information about the tables and/or escape sequences used to map between an external encoding and Unicode. The external encoding may consist of single-byte, multi-byte, or double-byte characters. </p>
 <p> Each dynamically-loadable encoding is represented as a text file. The initial line of the file, beginning with a &#8220;#&#8221; symbol, is a comment that provides a human-readable description of the file. The next line identifies the type of encoding file. It can be one of the following letters:</p>
 <dl COMPACT>
-<dt>[1] <code>S</code></p>
-<dd>A single-byte encoding, where one character is always one byte long in the encoding. An example is <code>iso8859-1</code>, used by many European languages.</p>
-<dt>[2] <code>D</code></p>
-<dd>A double-byte encoding, where one character is always two bytes long in the encoding. An example is <code>big5</code>, used for Chinese text.</p>
-<dt>[3] <code>M</code></p>
-<dd>A multi-byte encoding, where one character may be either one or two bytes long. Certain bytes are lead bytes, indicating that another byte must follow and that together the two bytes represent one character. Other bytes are not lead bytes and represent themselves. An example is <code>shiftjis</code>, used by many Japanese computers.</p>
-<dt>[4] <code>E</code></p>
-<dd>An escape-sequence encoding, specifying that certain sequences of bytes do not represent characters, but commands that describe how following bytes should be interpreted.</dl>
+<dt>[1] <code>S</code></dt>
+<dd>A single-byte encoding, where one character is always one byte long in the encoding. An example is <code>iso8859-1</code>, used by many European languages.</dd>
+<dt>[2] <code>D</code></dt>
+<dd>A double-byte encoding, where one character is always two bytes long in the encoding. An example is <code>big5</code>, used for Chinese text.</dd>
+<dt>[3] <code>M</code></dt>
+<dd>A multi-byte encoding, where one character may be either one or two bytes long. Certain bytes are lead bytes, indicating that another byte must follow and that together the two bytes represent one character. Other bytes are not lead bytes and represent themselves. An example is <code>shiftjis</code>, used by many Japanese computers.</dd>
+<dt>[4] <code>E</code></dt>
+<dd>An escape-sequence encoding, specifying that certain sequences of bytes do not represent characters, but commands that describe how following bytes should be interpreted.</dd></dl>
 <p> The rest of the lines in the file depend on the type. </p>
 <p> Cases [1], [2], and [3] are collectively referred to as table-based encoding files. The lines in a table-based encoding file are in the same format as this example taken from the <code>shiftjis</code> encoding (this is not the complete file):</p>
 <dl COMPACT>
@@ -208,7 +208,7 @@ FF0400A200A3FF05FF03FF06FF0AFF2000A72606260525CB25CF25CE25C725C6
 0000000000000000000000000000000000000000222022A52312220222072261
 2252226A226B221A223D221D2235222B222C0000000000000000000000000000
 212B2030266F266D266A2020202100B6000000000000000025EF000000000000</pre>
-</dl>
+</dd></dl>
 <p> The third line of the file is three numbers. The first number is the fallback character (in base 16) to use when converting from UTF-8 to this encoding. The second number is a <code>1</code> if this file represents the encoding for a symbol font, or <code>0</code> otherwise. The last number (in base 10) is how many pages of data follow. </p>
 <p> Subsequent lines in the example above are pages that describe how to map from the encoding into 2-byte Unicode. The first line in a page identifies the page number. Following it are 256 double-byte numbers, arranged as 16 rows of 16 numbers. Given a character in the encoding, the high byte of that character is used to select which page, and the low byte of that character is used as an index to select one of the double-byte numbers in that page &#8211; the value obtained being the corresponding Unicode character. By examination of the example above, one can see that the characters 0x7E and 0x8163 in <code>shiftjis</code> map to 203E and 2026 in Unicode, respectively. </p>
 <p> Following the first page will be all the other pages, each in the same format as the first: one number identifying the page followed by 256 double-byte Unicode characters. If a character in the encoding maps to the Unicode character 0000, it means that the character does not actually exist. If all characters on a page would map to 0000, that page can be omitted. </p>
@@ -226,7 +226,7 @@ jis0208 $B
 jis0212 $(D
 gb2312 $A
 ksc5601 $(C</pre>
-</dl>
+</dd></dl>
 <p> In the file, the first column represents an option and the second column is the associated value. <code>init</code> is a string to emit or expect before the first character is converted, while <code>final</code> is a string to emit or expect after the last character. All other options are names of table-based encodings; the associated value is the escape-sequence that marks that encoding. Tcl syntax is used for the values; in the above example, for instance, &#8220;<code>{}</code>&#8221; represents the empty string and &#8220;<code></code>&#8221; represents character 27. </p>
 <p> When <code>Tcl_GetEncoding</code> encounters an encoding <i>name</i> that has not been loaded, it attempts to load an encoding file called <i>name</i><code>.enc</code> from the <code>encoding</code> subdirectory of each directory that Tcl searches for its script library. If the encoding file exists, but is malformed, an error message will be left in <i>interp</i>.</p>
 <h2>Keywords</h2>

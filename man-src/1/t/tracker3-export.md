@@ -18,34 +18,34 @@ description: "tracker3-export – Export all data from a Tracker database."
 <p> <code>-g, &#8211;show-graphs</code></p>
 <dl>
 <dt>
-<dd> Tracker can separate data into multiple graphs. This feature is used by the filesystem miner to separate different types of content. This flag causes the relevant GRAPH statements to be output along with the data. </p>
+</dt><dd> Tracker can separate data into multiple graphs. This feature is used by the filesystem miner to separate different types of content. This flag causes the relevant GRAPH statements to be output along with the data. </dd>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 In this mode the output is TriG syntax rather than Turtle, due to
 the extra GRAPH statements. Some tools which understand Turtle do not
 understand TriG.
 </pre>
-</dl>
+</dd></dl>
 </dl>
 <p> <code>&#8211;2to3</code></p>
 <dl>
 <dt>
-<dd> Helper for migrating data from Tracker 2.x databases. This option takes an argument specifying the scope. Only the &#8220;files-starred&#8221; argument is available so far.</dl>
+</dt><dd> Helper for migrating data from Tracker 2.x databases. This option takes an argument specifying the scope. Only the &#8220;files-starred&#8221; argument is available so far.</dd></dl>
 <p> <code>&#8211;keyfile</code></p>
 <dl>
 <dt>
-<dd> Outputs the data in a key file format. Only may be used with &#8211;2to3</dl>
+</dt><dd> Outputs the data in a key file format. Only may be used with &#8211;2to3</dd></dl>
 <h2>EXAMPLES</h2>
 <p> Export all data from Tracker Index and prettify the output using <a href="/docs/linux/man/1-rapper/">rapper</a>(1).:: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 $ tracker3 export -b org.freedesktop.Tracker3.Miner.Files | rapper - -I . -i turtle -o turtle
 </pre>
-</dl>
+</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-tracker3-import/">tracker3-import</a></code>(1), <code><a href="/docs/linux/man/1-tracker3-sparql/">tracker3-sparql</a></code>(1). </p>
 <h2>Index</h2>

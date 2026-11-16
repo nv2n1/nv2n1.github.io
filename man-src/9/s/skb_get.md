@@ -15,7 +15,7 @@ skb_get - reference buffer
 <h2>Arguments</h2>
 
 <i>skb</i>
-<dl><dd><dd>buffer to reference</dl>
+<dl><dd></dd><dd>buffer to reference</dd></dl>
 
 <h2>Description</h2>
 

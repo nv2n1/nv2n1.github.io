@@ -10,21 +10,13 @@ description: "std::forward – std::forward"
 <p>std::forward &#8211; std::forward</p>
 <h2>Synopsis</h2>
 <pre><code>Defined in header &lt;utility&gt;
-
 template&lt; class T &gt;                                                            (1) (since C++11)
-
 T&amp;&amp; forward( typename std::remove_reference&lt;T&gt;::type&amp; t ) noexcept;                (until C++14)
-
 template&lt; class T &gt;                                                            (1) (since C++14)
-
 constexpr T&amp;&amp; forward( typename std::remove_reference&lt;T&gt;::type&amp; t ) noexcept;
-
 template&lt; class T &gt;                                                            (2) (since C++11)
-
 T&amp;&amp; forward( typename std::remove_reference&lt;T&gt;::type&amp;&amp; t ) noexcept;               (until C++14)
-
 template&lt; class T &gt;                                                            (2) (since C++14)
-
 constexpr T&amp;&amp; forward( typename std::remove_reference&lt;T&gt;::type&amp;&amp; t ) noexcept;</code></pre>
 <p>1) Forwards lvalues as either lvalues or as rvalues, depending on T<br />
 When t is a forwarding_reference (a function argument that is declared as an rvalue reference to a cv-unqualified function template parameter), this overload forwards the argument to another function with the value_category it had when passed to the calling function.<br />
@@ -68,9 +60,7 @@ Attempting to forward an rvalue as an lvalue, such as by instantiating the form 
 <p>This example demonstrates perfect forwarding of the parameter(s) to the argument of the constructor of class T. Also, perfect forwarding of parameter packs is demonstrated.<br />
  // Run this code </p>
 <pre><code>#include &lt;iostream&gt;
-
 #include &lt;memory&gt;
-
 #include &lt;utility&gt;
 struct A {
     A(int &amp;&amp;n)
@@ -86,7 +76,6 @@ struct A {
 };
 class B
 {
-
   public:
     template &lt;class T1, class T2, class T3&gt;
     B(T1 &amp;&amp;t1, T2 &amp;&amp;t2, T3 &amp;&amp;t3)
@@ -95,26 +84,20 @@ class B
           a3_{std::forward&lt;T3&gt;(t3)}
     {
     }
-
   private:
     A a1_, a2_, a3_;
 };
 template &lt;class T, class U&gt;
-
 std::unique_ptr&lt;T&gt; make_unique1(U &amp;&amp;u)
-
 {
     return std::unique_ptr&lt;T&gt;(new T(std::forward&lt;U&gt;(u)));
 }
 template &lt;class T, class... U&gt;
-
 std::unique_ptr&lt;T&gt; make_unique2(U &amp;&amp;...u)
-
 {
     return std::unique_ptr&lt;T&gt;(new T(std::forward&lt;U&gt;(u)...));
 }
 int main()
-
 {
     auto p1 = make_unique1&lt;A&gt;(2); // rvalue
     int i = 1;

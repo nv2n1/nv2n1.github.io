@@ -14,17 +14,17 @@ description: "nand_do_write_ops – [INTERN] NAND write with ECC"
 <p><i>mtd</i></p>
 <dl>
 <dd>
-<dd>MTD device structure</dl>
+</dd><dd>MTD device structure</dd></dl>
 <p> <i>to</i></p>
 <dl>
-<dd>offset to write to</dl>
+<dd>offset to write to</dd></dl>
 <p> <i>ops</i></p>
 <dl>
-<dd>oob operations description structure</dl>
+<dd>oob operations description structure</dd></dl>
 <h2>Description</h2>
 <p>NAND write with ECC.</p>
 <h2>Author</h2>
 <p><code>Thomas Gleixner</code> &lt;tglx [at] linutronix.de&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

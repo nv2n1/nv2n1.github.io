@@ -22,119 +22,119 @@ git archive[--format = &lt;fmt&gt;][--list][--prefix = &lt;prefix&gt; / ][&lt;ex
 <p> &#8211;format=&lt;fmt&gt;</p>
 <dl>
 <dt>
-<dd> Format of the resulting archive: <i>tar</i> or <i>zip</i>. If this option is not given, and the output file is specified, the format is inferred from the filename if possible (e.g. writing to &quot;foo.zip&quot; makes the output to be in the zip format). Otherwise the output format is <code>tar</code>.</dl>
+</dt><dd> Format of the resulting archive: <i>tar</i> or <i>zip</i>. If this option is not given, and the output file is specified, the format is inferred from the filename if possible (e.g. writing to &quot;foo.zip&quot; makes the output to be in the zip format). Otherwise the output format is <code>tar</code>.</dd></dl>
 <p> -l, &#8211;list</p>
 <dl>
 <dt>
-<dd> Show all available formats.</dl>
+</dt><dd> Show all available formats.</dd></dl>
 <p> -v, &#8211;verbose</p>
 <dl>
 <dt>
-<dd> Report progress to stderr.</dl>
+</dt><dd> Report progress to stderr.</dd></dl>
 <p> &#8211;prefix=&lt;prefix&gt;/</p>
 <dl>
 <dt>
-<dd> Prepend &lt;prefix&gt;/ to each filename in the archive.</dl>
+</dt><dd> Prepend &lt;prefix&gt;/ to each filename in the archive.</dd></dl>
 <p> -o &lt;file&gt;, &#8211;output=&lt;file&gt;</p>
 <dl>
 <dt>
-<dd> Write the archive to &lt;file&gt; instead of stdout.</dl>
+</dt><dd> Write the archive to &lt;file&gt; instead of stdout.</dd></dl>
 <p> &#8211;add-file=&lt;file&gt;</p>
 <dl>
 <dt>
-<dd> Add a non-tracked file to the archive. Can be repeated to add multiple files. The path of the file in the archive is built by concatenating the value for <code>&#8211;prefix</code> (if any) and the basename of &lt;file&gt;.</dl>
+</dt><dd> Add a non-tracked file to the archive. Can be repeated to add multiple files. The path of the file in the archive is built by concatenating the value for <code>&#8211;prefix</code> (if any) and the basename of &lt;file&gt;.</dd></dl>
 <p> &#8211;worktree-attributes</p>
 <dl>
 <dt>
-<dd> Look for attributes in .gitattributes files in the working tree as well (see the section called &#8220;ATTRIBUTES&#8221;).</dl>
+</dt><dd> Look for attributes in .gitattributes files in the working tree as well (see the section called &#8220;ATTRIBUTES&#8221;).</dd></dl>
 <p> &lt;extra&gt;</p>
 <dl>
 <dt>
-<dd> This can be any options that the archiver backend understands. See next section.</dl>
+</dt><dd> This can be any options that the archiver backend understands. See next section.</dd></dl>
 <p> &#8211;remote=&lt;repo&gt;</p>
 <dl>
 <dt>
-<dd> Instead of making a tar archive from the local repository, retrieve a tar archive from a remote repository. Note that the remote repository may place restrictions on which sha1 expressions may be allowed in <code>&lt;tree-ish&gt;</code>. See <code><a href="/docs/linux/man/1-git-upload-archive/">git-upload-archive</a></code>(1) for details.</dl>
+</dt><dd> Instead of making a tar archive from the local repository, retrieve a tar archive from a remote repository. Note that the remote repository may place restrictions on which sha1 expressions may be allowed in <code>&lt;tree-ish&gt;</code>. See <code><a href="/docs/linux/man/1-git-upload-archive/">git-upload-archive</a></code>(1) for details.</dd></dl>
 <p> &#8211;exec=&lt;git-upload-archive&gt;</p>
 <dl>
 <dt>
-<dd> Used with &#8211;remote to specify the path to the <i>git-upload-archive</i> on the remote side.</dl>
+</dt><dd> Used with &#8211;remote to specify the path to the <i>git-upload-archive</i> on the remote side.</dd></dl>
 <p> &lt;tree-ish&gt;</p>
 <dl>
 <dt>
-<dd> The tree or commit to produce an archive for.</dl>
+</dt><dd> The tree or commit to produce an archive for.</dd></dl>
 <p> &lt;path&gt;</p>
 <dl>
 <dt>
-<dd> Without an optional path parameter, all files and subdirectories of the current working directory are included in the archive. If one or more paths are specified, only these are included.</dl>
+</dt><dd> Without an optional path parameter, all files and subdirectories of the current working directory are included in the archive. If one or more paths are specified, only these are included.</dd></dl>
 <h2>BACKEND EXTRA OPTIONS</h2>
 <h3>zip</h3>
 <p> -&lt;digit&gt;</p>
 <dl>
 <dt>
-<dd> Specify compression level. Larger values allow the command to spend more time to compress to smaller size. Supported values are from <code>-0</code> (store-only) to <code>-9</code> (best ratio). Default is <code>-6</code> if not given.</dl>
+</dt><dd> Specify compression level. Larger values allow the command to spend more time to compress to smaller size. Supported values are from <code>-0</code> (store-only) to <code>-9</code> (best ratio). Default is <code>-6</code> if not given.</dd></dl>
 <h3>tar</h3>
 <p> -&lt;number&gt;</p>
 <dl>
 <dt>
-<dd> Specify compression level. The value will be passed to the compression command configured in <code>tar.&lt;format&gt;.command</code>. See manual page of the configured command for the list of supported levels and the default level if this option isn&#8217;t specified.</dl>
+</dt><dd> Specify compression level. The value will be passed to the compression command configured in <code>tar.&lt;format&gt;.command</code>. See manual page of the configured command for the list of supported levels and the default level if this option isn&#8217;t specified.</dd></dl>
 <h2>CONFIGURATION</h2>
 <p> tar.umask</p>
 <dl>
 <dt>
-<dd> This variable can be used to restrict the permission bits of tar archive entries. The default is 0002, which turns off the world write bit. The special value &quot;user&quot; indicates that the archiving user&#8217;s umask will be used instead. See <a href="/docs/linux/man/2-umask/">umask</a>(2) for details. If <code>&#8211;remote</code> is used then only the configuration of the remote repository takes effect.</dl>
+</dt><dd> This variable can be used to restrict the permission bits of tar archive entries. The default is 0002, which turns off the world write bit. The special value &quot;user&quot; indicates that the archiving user&#8217;s umask will be used instead. See <a href="/docs/linux/man/2-umask/">umask</a>(2) for details. If <code>&#8211;remote</code> is used then only the configuration of the remote repository takes effect.</dd></dl>
 <p> tar.&lt;format&gt;.command</p>
 <dl>
 <dt>
-<dd> This variable specifies a shell command through which the tar output generated by <code>git archive</code> should be piped. The command is executed using the shell with the generated tar file on its standard input, and should produce the final output on its standard output. Any compression-level options will be passed to the command (e.g., &quot;-9&quot;). An output file with the same extension as <code>&lt;format&gt;</code> will be use this format if no other format is given. </p>
+</dt><dd> This variable specifies a shell command through which the tar output generated by <code>git archive</code> should be piped. The command is executed using the shell with the generated tar file on its standard input, and should produce the final output on its standard output. Any compression-level options will be passed to the command (e.g., &quot;-9&quot;). An output file with the same extension as <code>&lt;format&gt;</code> will be use this format if no other format is given. </dd>
 <p> The &quot;tar.gz&quot; and &quot;tgz&quot; formats are defined automatically and default to <code>gzip -cn</code>. You may override them with custom commands.</dl>
 <p> tar.&lt;format&gt;.remote</p>
 <dl>
 <dt>
-<dd> If true, enable <code>&lt;format&gt;</code> for use by remote clients via <code><a href="/docs/linux/man/1-git-upload-archive/">git-upload-archive</a></code>(1). Defaults to false for user-defined formats, but true for the &quot;tar.gz&quot; and &quot;tgz&quot; formats.</dl>
+</dt><dd> If true, enable <code>&lt;format&gt;</code> for use by remote clients via <code><a href="/docs/linux/man/1-git-upload-archive/">git-upload-archive</a></code>(1). Defaults to false for user-defined formats, but true for the &quot;tar.gz&quot; and &quot;tgz&quot; formats.</dd></dl>
 <h2>ATTRIBUTES</h2>
 <p> export-ignore</p>
 <dl>
 <dt>
-<dd> Files and directories with the attribute export-ignore won&#8217;t be added to archive files. See <code><a href="/docs/linux/man/5-gitattributes/">gitattributes</a></code>(5) for details.</dl>
+</dt><dd> Files and directories with the attribute export-ignore won&#8217;t be added to archive files. See <code><a href="/docs/linux/man/5-gitattributes/">gitattributes</a></code>(5) for details.</dd></dl>
 <p> export-subst</p>
 <dl>
 <dt>
-<dd> If the attribute export-subst is set for a file then Git will expand several placeholders when adding this file to an archive. See <code><a href="/docs/linux/man/5-gitattributes/">gitattributes</a></code>(5) for details.</dl>
+</dt><dd> If the attribute export-subst is set for a file then Git will expand several placeholders when adding this file to an archive. See <code><a href="/docs/linux/man/5-gitattributes/">gitattributes</a></code>(5) for details.</dd></dl>
 <p> Note that attributes are by default taken from the <code>.gitattributes</code> files in the tree that is being archived. If you want to tweak the way the output is generated after the fact (e.g. you committed without adding an appropriate export-ignore in its <code>.gitattributes</code>), adjust the checked out <code>.gitattributes</code> file as necessary and use <code>&#8211;worktree-attributes</code> option. Alternatively you can keep necessary attributes that should apply while archiving any tree in your <code>$GIT_DIR/info/attributes</code> file.</p>
 <h2>EXAMPLES</h2>
 <p> <code>git archive &#8211;format=tar &#8211;prefix=junk/ HEAD | (cd /var/tmp/ &amp;&amp; tar xf -)</code></p>
 <dl>
 <dt>
-<dd> Create a tar archive that contains the contents of the latest commit on the current branch, and extract it in the <code>/var/tmp/junk</code> directory.</dl>
+</dt><dd> Create a tar archive that contains the contents of the latest commit on the current branch, and extract it in the <code>/var/tmp/junk</code> directory.</dd></dl>
 <p> <code>git archive &#8211;format=tar &#8211;prefix=git-1.4.0/ v1.4.0 | gzip &gt;git-1.4.0.tar.gz</code></p>
 <dl>
 <dt>
-<dd> Create a compressed tarball for v1.4.0 release.</dl>
+</dt><dd> Create a compressed tarball for v1.4.0 release.</dd></dl>
 <p> <code>git archive &#8211;format=tar.gz &#8211;prefix=git-1.4.0/ v1.4.0 &gt;git-1.4.0.tar.gz</code></p>
 <dl>
 <dt>
-<dd> Same as above, but using the builtin tar.gz handling.</dl>
+</dt><dd> Same as above, but using the builtin tar.gz handling.</dd></dl>
 <p> <code>git archive &#8211;prefix=git-1.4.0/ -o git-1.4.0.tar.gz v1.4.0</code></p>
 <dl>
 <dt>
-<dd> Same as above, but the format is inferred from the output file.</dl>
+</dt><dd> Same as above, but the format is inferred from the output file.</dd></dl>
 <p> <code>git archive &#8211;format=tar &#8211;prefix=git-1.4.0/ v1.4.0^{tree} | gzip &gt;git-1.4.0.tar.gz</code></p>
 <dl>
 <dt>
-<dd> Create a compressed tarball for v1.4.0 release, but without a global extended pax header.</dl>
+</dt><dd> Create a compressed tarball for v1.4.0 release, but without a global extended pax header.</dd></dl>
 <p> <code>git archive &#8211;format=zip &#8211;prefix=git-docs/ HEAD:Documentation/ &gt; git-1.4.0-docs.zip</code></p>
 <dl>
 <dt>
-<dd> Put everything in the current head&#8217;s Documentation/ directory into <i>git-1.4.0-docs.zip</i>, with the prefix <i>git-docs/</i>.</dl>
+</dt><dd> Put everything in the current head&#8217;s Documentation/ directory into <i>git-1.4.0-docs.zip</i>, with the prefix <i>git-docs/</i>.</dd></dl>
 <p> <code>git archive -o latest.zip HEAD</code></p>
 <dl>
 <dt>
-<dd> Create a Zip archive that contains the contents of the latest commit on the current branch. Note that the output format is inferred by the extension of the output file.</dl>
+</dt><dd> Create a Zip archive that contains the contents of the latest commit on the current branch. Note that the output format is inferred by the extension of the output file.</dd></dl>
 <p> <code>git config tar.tar.xz.command &quot;xz -c&quot;</code></p>
 <dl>
 <dt>
-<dd> Configure a &quot;tar.xz&quot; format for making LZMA-compressed tarfiles. You can use it specifying <code>&#8211;format=tar.xz</code>, or by creating an output file like <code>-o foo.tar.xz</code>.</dl>
+</dt><dd> Configure a &quot;tar.xz&quot; format for making LZMA-compressed tarfiles. You can use it specifying <code>&#8211;format=tar.xz</code>, or by creating an output file like <code>-o foo.tar.xz</code>.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/5-gitattributes/">gitattributes</a></code>(5)</p>
 <h2>GIT</h2>

@@ -15,32 +15,32 @@ description: "ykneomgr – YubiKey NEO management tool"
 <p> ykneomgr 0.1.8 </p>
 <p> YubiKey NEO management tool.</p>
 <dl>
-<dt><code>-h</code>, <code>&#8211;help</code></p>
-<dd> Print help and exit</p>
-<dt><code>-V</code>, <code>&#8211;version</code></p>
-<dd> Print version and exit</p>
-<dt><code>-m</code>, <code>&#8211;get-mode</code></p>
-<dd> Output mode of YubiKey NEO (default=off)</p>
-<dt><code>-w</code>, <code>&#8211;get-version</code></p>
-<dd> Output firmware version for YubiKey NEO (default=off)</p>
-<dt><code>-s</code>, <code>&#8211;get-serialno</code></p>
-<dd> Output serial number (default=off)</p>
-<dt><code>-l</code>, <code>&#8211;list-readers</code></p>
-<dd> List all connected PCSC devices (default=off)</p>
-<dt><code>-a</code>, <code>&#8211;applet-list</code></p>
-<dd> List applets on device (default=off)</p>
-<dt><code>-D</code>, <code>&#8211;applet-delete</code>=<i>STRING</i></p>
-<dd> Delete given applet AID from device</p>
-<dt><code>-i</code>, <code>&#8211;applet-install</code>=<i>FILE</i></p>
-<dd> Install applets on device from CAP file</p>
-<dt><code>-M</code>, <code>&#8211;set-mode</code>=<i>STRING</i></p>
-<dd> Set the USB operation mode of the YubiKey NEO. The possible MODE arguments are: 0 for HID device only, 1 for CCID device only, 81 for CCID device with touch eject, 2 for HID/CCID composite device, 3 for U2F device only, 4 for OTP/U2F composite device, 5 for U2F/CCID composite device, 6 for OTP/U2F/CCID composite device.</p>
-<dt><code>-S</code>, <code>&#8211;send-apdu</code>=<i>STRING</i></p>
-<dd> Send an arbitrary APDU to the device</p>
-<dt><code>-r</code>, <code>&#8211;reader</code>=<i>STRING</i></p>
-<dd> Use only a matching card reader</p>
-<dt><code>-d</code>, <code>&#8211;debug</code></p>
-<dd> Print debug information to standard error (default=off)</dl>
+<dt><code>-h</code>, <code>&#8211;help</code></dt>
+<dd> Print help and exit</dd>
+<dt><code>-V</code>, <code>&#8211;version</code></dt>
+<dd> Print version and exit</dd>
+<dt><code>-m</code>, <code>&#8211;get-mode</code></dt>
+<dd> Output mode of YubiKey NEO (default=off)</dd>
+<dt><code>-w</code>, <code>&#8211;get-version</code></dt>
+<dd> Output firmware version for YubiKey NEO (default=off)</dd>
+<dt><code>-s</code>, <code>&#8211;get-serialno</code></dt>
+<dd> Output serial number (default=off)</dd>
+<dt><code>-l</code>, <code>&#8211;list-readers</code></dt>
+<dd> List all connected PCSC devices (default=off)</dd>
+<dt><code>-a</code>, <code>&#8211;applet-list</code></dt>
+<dd> List applets on device (default=off)</dd>
+<dt><code>-D</code>, <code>&#8211;applet-delete</code>=<i>STRING</i></dt>
+<dd> Delete given applet AID from device</dd>
+<dt><code>-i</code>, <code>&#8211;applet-install</code>=<i>FILE</i></dt>
+<dd> Install applets on device from CAP file</dd>
+<dt><code>-M</code>, <code>&#8211;set-mode</code>=<i>STRING</i></dt>
+<dd> Set the USB operation mode of the YubiKey NEO. The possible MODE arguments are: 0 for HID device only, 1 for CCID device only, 81 for CCID device with touch eject, 2 for HID/CCID composite device, 3 for U2F device only, 4 for OTP/U2F composite device, 5 for U2F/CCID composite device, 6 for OTP/U2F/CCID composite device.</dd>
+<dt><code>-S</code>, <code>&#8211;send-apdu</code>=<i>STRING</i></dt>
+<dd> Send an arbitrary APDU to the device</dd>
+<dt><code>-r</code>, <code>&#8211;reader</code>=<i>STRING</i></dt>
+<dd> Use only a matching card reader</dd>
+<dt><code>-d</code>, <code>&#8211;debug</code></dt>
+<dd> Print debug information to standard error (default=off)</dd></dl>
 <h2>EXAMPLES</h2>
 <p> To display the firmware version of a connected YubiKey NEO you use the &#8211;get-version or -w parameter. Typical output would be the string &quot;3.0.4&quot;. </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>ykneomgr &#8211;get-version </p>

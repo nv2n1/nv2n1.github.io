@@ -34,23 +34,23 @@ char *client_user;
  request_init() initializes a structure with information about a client request. request_set() updates an already initialized request structure. Both functions take a variable-length list of key-value pairs and return their first argument. The argument lists are terminated with a zero key value. All string-valued arguments are copied. The expected keys (and corresponding value types) are:
 <dl>
 <dt>RQ_FILE (int)
-<dd> The file descriptor associated with the request.
-<dt>RQ_CLIENT_NAME (char *)
-<dd> The client host name.
-<dt>RQ_CLIENT_ADDR (char *)
-<dd> A printable representation of the client network address.
-<dt>RQ_CLIENT_SIN (struct sockaddr_in *)
-<dd> An internal representation of the client network address and port. The contents of the structure are not copied.
-<dt>RQ_SERVER_NAME (char *)
-<dd> The hostname associated with the server endpoint address.
-<dt>RQ_SERVER_ADDR (char *)
-<dd> A printable representation of the server endpoint address.
-<dt>RQ_SERVER_SIN (struct sockaddr_in *)
-<dd> An internal representation of the server endpoint address and port. The contents of the structure are not copied.
-<dt>RQ_DAEMON (char *)
-<dd> The name of the daemon process running on the server host.
-<dt>RQ_USER (char *)
-<dd> The name of the user on whose behalf the client host makes the request.</dl>
+</dt><dd> The file descriptor associated with the request.
+</dd><dt>RQ_CLIENT_NAME (char *)
+</dt><dd> The client host name.
+</dd><dt>RQ_CLIENT_ADDR (char *)
+</dt><dd> A printable representation of the client network address.
+</dd><dt>RQ_CLIENT_SIN (struct sockaddr_in *)
+</dt><dd> An internal representation of the client network address and port. The contents of the structure are not copied.
+</dd><dt>RQ_SERVER_NAME (char *)
+</dt><dd> The hostname associated with the server endpoint address.
+</dd><dt>RQ_SERVER_ADDR (char *)
+</dt><dd> A printable representation of the server endpoint address.
+</dd><dt>RQ_SERVER_SIN (struct sockaddr_in *)
+</dt><dd> An internal representation of the server endpoint address and port. The contents of the structure are not copied.
+</dd><dt>RQ_DAEMON (char *)
+</dt><dd> The name of the daemon process running on the server host.
+</dd><dt>RQ_USER (char *)
+</dt><dd> The name of the user on whose behalf the client host makes the request.</dd></dl>
  
 
  hosts_access() consults the access control tables described in the <i><a HREF="/docs/linux/man/5-hosts_access/">hosts_access</a>(5)</i> manual page. When internal endpoint information is available, host names and client user names are looked up on demand, using the request structure as a cache. hosts_access() returns zero if access should be denied. 

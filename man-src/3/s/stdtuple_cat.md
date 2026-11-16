@@ -26,14 +26,10 @@ A std::tuple object composed of all elements of all argument tuples constructed 
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;iostream&gt;
-
 #include &lt;tuple&gt;
-
 #include &lt;string&gt;
 // helper function to print a tuple of any size
-
 template &lt;class Tuple, std::size_t N&gt;
-
 struct TuplePrinter {
     static void print(const Tuple &amp;t)
     {
@@ -42,7 +38,6 @@ struct TuplePrinter {
     }
 };
 template &lt;class Tuple&gt;
-
 struct TuplePrinter&lt;Tuple, 1&gt; {
     static void print(const Tuple &amp;t)
     {
@@ -57,7 +52,6 @@ struct TuplePrinter&lt;Tuple, 1&gt; {
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;std::cout &lt;&lt; &quot;)\n&quot;; 
 &nbsp;<wbr>&nbsp;} 
 &nbsp;<wbr>&nbsp;// end helper function <pre><code>int main()
-
 {
     std::tuple&lt;int, std::string, float&gt; t1(10, &quot;Test&quot;, 3.14);
     int n = 7;

@@ -11,7 +11,6 @@ std::codecvt_base - std::codecvt_base
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header &lt;locale&gt;
-
 class codecvt_base;</code></pre> 
 The class std::codecvt_base provides the conversion status constants which are inherited and used by the std::codecvt facets. 
 

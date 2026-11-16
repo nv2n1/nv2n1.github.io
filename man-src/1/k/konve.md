@@ -20,42 +20,42 @@ description: "konve – CCD image conversion"
 <p> The alternate way, how to process a large set of files, is the batch mode. In this mode, the list of input files is read from a given file or from the standard input. The directory file, for example named <i>dirfile</i>, must have the text format and the names of the input files are written on the separate lines. If the files are placed not in the current working directory, you have to specify the proper path in full or shortened form. </p>
 <p> The <i>mask</i> parameters allows to set the naming of output files. The mask consists of letters, numbers and other characters allowed in the file name by the operating system. The special meaning has the question mark or the sequence of it. They will be replaced by the ordinal number of the output file, the number is always indented by leading zeros to the same number of decimal places as the number of the question marks. For example, when the mask <i>kout????.fts</i> is given, the output files named <i>kout0001.fts, kout0002.fts, kout0003.fts</i> will be generated. </p>
 <dl>
-<dt><code>@</code><i>dirfile</i></p>
-<dd> The program will read the list of source files from specified file.</p>
-<dt><code>@</code></p>
-<dd> The program will read the list of source files from stdin.</p>
-<dt><code>par=</code><i>file</i>, <code>-p</code><i>file</i></p>
-<dd> Optional parameter file. Default is none.</p>
-<dt><code>mask=</code><i>mask</i>, <code>-o</code><i>mark</i></p>
-<dd> Mask of output file(s). Default is <i>kout????.fts</i>.</p>
-<dt><code>tcor=</code><i>sec</i></p>
-<dd> Time correction in seconds. Default is 0.</p>
-<dt><code>flip=</code><i>xy</i>, <code>-flip</code><i>xy</i></p>
-<dd> Image flipping (values: &#8216;x&#8217;, &#8216;y&#8217;, &#8216;xy&#8217;).</p>
-<dt><code>-c</code><i>x</i></p>
-<dd> Initial counter value. Default is 1.</p>
-<dt><code>-header</code></p>
-<dd> Converts headers only, doesn&#8217;t convert image data.</p>
-<dt><code>-info</code></p>
-<dd> Prints short header informations of source files and does not generate output files.</p>
-<dt><code>-details</code></p>
-<dd> Prints full header informations of source files and does not generate output files.</p>
-<dt><code>&#8211;help</code></p>
-<dd> Prints short help.</p>
-<dt><code>&#8211;license</code></p>
-<dd> Prints the license.</p>
-<dt><code>&#8211;version</code></p>
-<dd> Prints the program name and its version.</p>
-<dt><code>&#8211;quiet</code></p>
-<dd> Quiet mode &#8212; inhibits the screen printouts.</p>
-<dt><code>&#8211;debug</code></p>
-<dd> Debug mode &#8212; extends the screen printouts. </p>
+<dt><code>@</code><i>dirfile</i></dt>
+<dd> The program will read the list of source files from specified file.</dd>
+<dt><code>@</code></dt>
+<dd> The program will read the list of source files from stdin.</dd>
+<dt><code>par=</code><i>file</i>, <code>-p</code><i>file</i></dt>
+<dd> Optional parameter file. Default is none.</dd>
+<dt><code>mask=</code><i>mask</i>, <code>-o</code><i>mark</i></dt>
+<dd> Mask of output file(s). Default is <i>kout????.fts</i>.</dd>
+<dt><code>tcor=</code><i>sec</i></dt>
+<dd> Time correction in seconds. Default is 0.</dd>
+<dt><code>flip=</code><i>xy</i>, <code>-flip</code><i>xy</i></dt>
+<dd> Image flipping (values: &#8216;x&#8217;, &#8216;y&#8217;, &#8216;xy&#8217;).</dd>
+<dt><code>-c</code><i>x</i></dt>
+<dd> Initial counter value. Default is 1.</dd>
+<dt><code>-header</code></dt>
+<dd> Converts headers only, doesn&#8217;t convert image data.</dd>
+<dt><code>-info</code></dt>
+<dd> Prints short header informations of source files and does not generate output files.</dd>
+<dt><code>-details</code></dt>
+<dd> Prints full header informations of source files and does not generate output files.</dd>
+<dt><code>&#8211;help</code></dt>
+<dd> Prints short help.</dd>
+<dt><code>&#8211;license</code></dt>
+<dd> Prints the license.</dd>
+<dt><code>&#8211;version</code></dt>
+<dd> Prints the program name and its version.</dd>
+<dt><code>&#8211;quiet</code></dt>
+<dd> Quiet mode &#8212; inhibits the screen printouts.</dd>
+<dt><code>&#8211;debug</code></dt>
+<dd> Debug mode &#8212; extends the screen printouts. </dd>
 </dl>
 <h2>EXAMPLES</h2>
 <p> The following command converts files &#8216;crcas01.st7&#8217;, &#8216;crcas02.st7&#8217; and &#8216;crcas03.st7&#8217; and writes the output to files &#8216;kout0001.fts&#8217;, &#8216;kout0002.fts&#8217; and &#8216;kout0003.fts&#8217;.</p>
 <dl>
 <dt>
-<dd> <code>konve crcas01.st7 crcas02.st7 crcas03.st7</code> </p>
+</dt><dd> <code>konve crcas01.st7 crcas02.st7 crcas03.st7</code> </dd>
 </dl>
 <h2>EXIT STATUS</h2>
 <p> konve returns a zero exist status if it succeeds to convert all specified file. Otherwise, it will stop immediately when the error occurs and returns nonzero code. </p>

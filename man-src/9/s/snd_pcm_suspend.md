@@ -14,7 +14,7 @@ description: "snd_pcm_suspend – trigger SUSPEND to all linked streams"
 <p><i>substream</i></p>
 <dl>
 <dd>
-<dd>the PCM substream</dl>
+</dd><dd>the PCM substream</dd></dl>
 <h2>Description</h2>
 <p>After this call, all streams are changed to SUSPENDED state.</p>
 <h2>Return</h2>

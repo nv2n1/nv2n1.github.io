@@ -14,44 +14,44 @@ description: "XDGA – Client library for the XFree86-DGA extension."
 <dd>Bool <code>XDGAQueryExtension</code>(<br />
  Display *<i>dpy</i>,<br />
  int *<i>eventBase</i>,<br />
- int *<i>errorBase</i>)</p>
+ int *<i>errorBase</i>)</dd>
 <dd>Bool <code>XDGAQueryVersion</code>(<br />
  Display *<i>dpy</i>,<br />
  int *<i>majorVersion</i>,<br />
- int *<i>minorVersion</i>)</p>
+ int *<i>minorVersion</i>)</dd>
 <dd>XDGAMode *<code>XDGAQueryModes</code>(<br />
  Display *<i>dpy</i>,<br />
  int <i>screen</i>,<br />
- int *<i>num</i>)</p>
+ int *<i>num</i>)</dd>
 <dd>XDGADevice *<code>XDGASetMode</code>(<br />
  Display *<i>dpy</i>,<br />
  int <i>screen</i>,<br />
- int <i>mode</i>)</p>
+ int <i>mode</i>)</dd>
 <dd>Bool <code>XDGAOpenFramebuffer</code>(<br />
  Display *<i>dpy</i>,<br />
- int <i>screen</i>)</p>
+ int <i>screen</i>)</dd>
 <dd>void <code>XDGACloseFramebuffer</code>(<br />
  Display *<i>dpy</i>,<br />
- int <i>screen</i>)</p>
+ int <i>screen</i>)</dd>
 <dd>void <code>XDGASetViewport</code>(<br />
  Display *<i>dpy</i>,<br />
  int <i>screen</i>,<br />
  int <i>x</i>,<br />
  int <i>y</i>,<br />
- int <i>flags</i>)</p>
+ int <i>flags</i>)</dd>
 <dd>void <code>XDGAInstallColormap</code>(<br />
  Display *<i>dpy</i>,<br />
  int <i>screen</i>,<br />
- Colormap <i>cmap</i>)</p>
+ Colormap <i>cmap</i>)</dd>
 <dd>Colormap <code>XDGACreateColormap</code>(<br />
  Display *<i>dpy</i>,<br />
  int <i>screen</i>,<br />
  XDGADevice *<i>device</i>,<br />
- int <i>alloc</i>)</p>
+ int <i>alloc</i>)</dd>
 <dd>void <code>XDGASelectInput</code>(<br />
  Display *<i>dpy</i>,<br />
  int <i>screen</i>,<br />
- long <i>event_mask</i>)</p>
+ long <i>event_mask</i>)</dd>
 <dd>void <code>XDGAFillRectangle</code>(<br />
  Display *<i>dpy</i>,<br />
  int <i>screen</i>,<br />
@@ -59,7 +59,7 @@ description: "XDGA – Client library for the XFree86-DGA extension."
  int <i>y</i>,<br />
  unsigned int <i>width</i>,<br />
  unsigned int <i>height</i>,<br />
- unsigned long <i>color</i>)</p>
+ unsigned long <i>color</i>)</dd>
 <dd>void <code>XDGACopyArea</code>(<br />
  Display *<i>dpy</i>,<br />
  int <i>screen</i>,<br />
@@ -68,7 +68,7 @@ description: "XDGA – Client library for the XFree86-DGA extension."
  unsigned int <i>width</i>,<br />
  unsigned int <i>height</i>,<br />
  int <i>dstx</i>,<br />
- int <i>dsty</i>)</p>
+ int <i>dsty</i>)</dd>
 <dd>void <code>XDGACopyTransparentArea</code>(<br />
  Display *<i>dpy</i>,<br />
  int <i>screen</i>,<br />
@@ -78,24 +78,24 @@ description: "XDGA – Client library for the XFree86-DGA extension."
  unsigned int <i>height</i>,<br />
  int <i>dstx</i>,<br />
  int <i>dsty</i>,<br />
- unsigned long <i>key</i>)</p>
+ unsigned long <i>key</i>)</dd>
 <dd>int <code>XDGAGetViewportStatus</code>(<br />
  Display *<i>dpy</i>,<br />
- int <i>screen</i>)</p>
+ int <i>screen</i>)</dd>
 <dd>void <code>XDGASync</code>(<br />
  Display *<i>dpy</i>,<br />
- int <i>screen</i>)</p>
+ int <i>screen</i>)</dd>
 <dd>Bool <code>XDGASetClientVersion</code>(<br />
- Display *<i>dpy</i>)</p>
+ Display *<i>dpy</i>)</dd>
 <dd>void <code>XDGAChangePixmapMode</code>(<br />
  Display *<i>dpy</i>,<br />
  int <i>screen</i>,<br />
  int *<i>x</i>,<br />
  int *<i>y</i>,<br />
- int <i>mode</i>)</p>
+ int <i>mode</i>)</dd>
 <dd>void <code>XDGAKeyEventToXKeyEvent</code>(<br />
  XDGAKeyEvent *<i>dk</i>,<br />
- XKeyEvent *<i>xk</i>) </p>
+ XKeyEvent *<i>xk</i>) </dd>
 </dl>
 <h2>Description</h2>
 <p>The <code>XFree86-DGA</code> extension is an X server extension for allowing client programs direct access to the video frame buffer. This is a brief description of the programming interface for version 2.0 of the <code>XFree86-DGA</code> extension. </p>
@@ -132,77 +132,77 @@ description: "XDGA – Client library for the XFree86-DGA extension."
 <br>
 } XDGAMode;</pre>
 <dl COMPACT>
-<dt><i>num</i></p>
-<dd>A unique identifying number (<i>num</i> &gt; 0) for the mode. This is the number referenced when initializing the mode.</p>
-<dt><i>name</i></p>
-<dd>The name of the corresponding modeline as given in the xorg.conf file.</p>
-<dt><i>verticalRefresh</i></p>
-<dd>The vertical refresh rate for the modeline (in Hz).</p>
-<dt><i>flags</i></p>
-<dd>Any of the following may be OR&#8217;d together:</p>
+<dt><i>num</i></dt>
+<dd>A unique identifying number (<i>num</i> &gt; 0) for the mode. This is the number referenced when initializing the mode.</dd>
+<dt><i>name</i></dt>
+<dd>The name of the corresponding modeline as given in the xorg.conf file.</dd>
+<dt><i>verticalRefresh</i></dt>
+<dd>The vertical refresh rate for the modeline (in Hz).</dd>
+<dt><i>flags</i></dt>
+<dd>Any of the following may be OR&#8217;d together:</dd>
 <dl COMPACT>
 <dd>
-<dl COMPACT>
-<dt><code>XDGAConcurrentAccess</code></p>
-<dd>Indicates that concurrent client/server access to the framebuffer is possible. If this flag is not set it is very important to call <code>XDGASync</code>() before directly accessing the framebuffer if a call to <code>XDGAFillRectangle</code>(), <code>XDGACopyArea</code>() or <code>XDGACopyTransparentArea</code>() or any Xlib rendering function has been made prior to such accesses.</p>
-<dt><code>XDGASolidFillRect</code></p>
-<dd>Indicates that <code>XDGAFillRectangle</code>() is supported.</p>
-<dt><code>XDGABlitRect</code></p>
-<dd>Indicates that <code>XDGACopyArea</code>() is supported.</p>
-<dt><code>XDGABlitTransRect</code></p>
-<dd>Indicates that <code>XDGACopyTransparentArea</code>() is supported.</p>
-<dt><code>XDGAPixmap</code></p>
-<dd>Indicates that a Pixmap will be returned when the mode is initialized. This means that rendering with Xlib is possible for this mode.</p>
-<dt><code>XDGAInterlaced</code></p>
+</dd><dl COMPACT>
+<dt><code>XDGAConcurrentAccess</code></dt>
+<dd>Indicates that concurrent client/server access to the framebuffer is possible. If this flag is not set it is very important to call <code>XDGASync</code>() before directly accessing the framebuffer if a call to <code>XDGAFillRectangle</code>(), <code>XDGACopyArea</code>() or <code>XDGACopyTransparentArea</code>() or any Xlib rendering function has been made prior to such accesses.</dd>
+<dt><code>XDGASolidFillRect</code></dt>
+<dd>Indicates that <code>XDGAFillRectangle</code>() is supported.</dd>
+<dt><code>XDGABlitRect</code></dt>
+<dd>Indicates that <code>XDGACopyArea</code>() is supported.</dd>
+<dt><code>XDGABlitTransRect</code></dt>
+<dd>Indicates that <code>XDGACopyTransparentArea</code>() is supported.</dd>
+<dt><code>XDGAPixmap</code></dt>
+<dd>Indicates that a Pixmap will be returned when the mode is initialized. This means that rendering with Xlib is possible for this mode.</dd>
+<dt><code>XDGAInterlaced</code></dt>
 <dd>
-<dt><code>XDGADoublescan</code></p>
-<dd>Indicates that the mode is an interlaced or doublescan mode.</dl>
+</dd><dt><code>XDGADoublescan</code></dt>
+<dd>Indicates that the mode is an interlaced or doublescan mode.</dd></dl>
 </dl>
-<dt><i>imageWidth</i></p>
+<dt><i>imageWidth</i></dt>
 <dd>
-<dt><i>imageHeight</i></p>
-<dd>The width and height of the framebuffer area accessible by the client. This rectangle is always justified to the upper left-hand corner.</p>
-<dt><i>pixmapWidth</i></p>
+</dd><dt><i>imageHeight</i></dt>
+<dd>The width and height of the framebuffer area accessible by the client. This rectangle is always justified to the upper left-hand corner.</dd>
+<dt><i>pixmapWidth</i></dt>
 <dd>
-<dt><i>pixmapHeight</i></p>
-<dd>The width and height of the framebuffer area accessible by Xlib. This rectangle is always justified to the upper left-hand corner. These fields are only valid if the <code>XDGAPixmap</code> flag is set in the <i>flags</i> field.</p>
-<dt><i>bytesPerScanline</i></p>
-<dd>The pitch of the framebuffer in bytes.</p>
-<dt><i>byteOrder</i></p>
-<dd><code>MSBFirst</code> or <code>LSBFirst</code>.</p>
-<dt><i>depth</i></p>
-<dd>The number of bits in each pixel which contain usable data.</p>
-<dt><i>bitsPerPixel</i></p>
-<dd>The number of bits taken up by each pixel.</p>
-<dt><i>redMask</i></p>
+</dd><dt><i>pixmapHeight</i></dt>
+<dd>The width and height of the framebuffer area accessible by Xlib. This rectangle is always justified to the upper left-hand corner. These fields are only valid if the <code>XDGAPixmap</code> flag is set in the <i>flags</i> field.</dd>
+<dt><i>bytesPerScanline</i></dt>
+<dd>The pitch of the framebuffer in bytes.</dd>
+<dt><i>byteOrder</i></dt>
+<dd><code>MSBFirst</code> or <code>LSBFirst</code>.</dd>
+<dt><i>depth</i></dt>
+<dd>The number of bits in each pixel which contain usable data.</dd>
+<dt><i>bitsPerPixel</i></dt>
+<dd>The number of bits taken up by each pixel.</dd>
+<dt><i>redMask</i></dt>
 <dd>
-<dt><i>greenMask</i></p>
+</dd><dt><i>greenMask</i></dt>
 <dd>
-<dt><i>blueMask</i></p>
-<dd>The RGB masks. These do not apply to color-indexed modes.</p>
-<dt><i>visualClass</i></p>
-<dd><code>TrueColor</code>, <code>PseudoColor</code>, <code>DirectColor</code>, etc.</p>
-<dt><i>viewportWidth</i></p>
+</dd><dt><i>blueMask</i></dt>
+<dd>The RGB masks. These do not apply to color-indexed modes.</dd>
+<dt><i>visualClass</i></dt>
+<dd><code>TrueColor</code>, <code>PseudoColor</code>, <code>DirectColor</code>, etc.</dd>
+<dt><i>viewportWidth</i></dt>
 <dd>
-<dt><i>viewportHeight</i></p>
-<dd>The dimensions of the portion of the framebuffer which will be displayed on the screen.</p>
-<dt><i>xViewportStep</i></p>
+</dd><dt><i>viewportHeight</i></dt>
+<dd>The dimensions of the portion of the framebuffer which will be displayed on the screen.</dd>
+<dt><i>xViewportStep</i></dt>
 <dd>
-<dt><i>yViewportStep</i></p>
-<dd>The granularity of the x,y viewport positioning possible with the <code>XDGASetViewport</code>() function.</p>
-<dt><i>maxViewportX</i></p>
+</dd><dt><i>yViewportStep</i></dt>
+<dd>The granularity of the x,y viewport positioning possible with the <code>XDGASetViewport</code>() function.</dd>
+<dt><i>maxViewportX</i></dt>
 <dd>
-<dt><i>maxViewportY</i></p>
-<dd>The maximum x and y positions possible with the <code>XDGASetViewport</code>() function.</p>
-<dt><i>viewportFlags</i></p>
-<dd>Any of the following may be OR&#8217;d together</p>
+</dd><dt><i>maxViewportY</i></dt>
+<dd>The maximum x and y positions possible with the <code>XDGASetViewport</code>() function.</dd>
+<dt><i>viewportFlags</i></dt>
+<dd>Any of the following may be OR&#8217;d together</dd>
 <dl COMPACT>
 <dd>
-<dl COMPACT>
-<dt><code>XDGAFlipRetrace</code></p>
-<dd>Indicates that the hardware can switch viewports during the vertical retrace.</p>
-<dt><code>XDGAFlipImmediate</code></p>
-<dd>Indicates that the hardware can switch viewports immediately without waiting for the vertical retrace.</dl>
+</dd><dl COMPACT>
+<dt><code>XDGAFlipRetrace</code></dt>
+<dd>Indicates that the hardware can switch viewports during the vertical retrace.</dd>
+<dt><code>XDGAFlipImmediate</code></dt>
+<dd>Indicates that the hardware can switch viewports immediately without waiting for the vertical retrace.</dd></dl>
 </dl>
 </dl>
 <p> <code>XDGASetMode</code>() initialises the <i>XDGAMode</i> corresponding to <i>num</i>. To exit DGA mode and return to normal server operation, call <code>XDGASetMode</code>() with <i>num</i> set to zero. <code>XDGASetMode</code>() returns a pointer to an <i>XDGADevice</i> if successful. The XDGADevice can be freed with <a href="/docs/linux/man/3-xfree/">XFree</a>(3). The <i>XDGADevice</i> structure is as follows: </p>
@@ -213,12 +213,12 @@ description: "XDGA – Client library for the XFree86-DGA extension."
 <br>
 } XDGADevice;</pre>
 <dl COMPACT>
-<dt><i>mode</i></p>
-<dd>The <i>XDGAMode</i> structure, identical to the information returned by <code>XDGAQueryModes</code>().</p>
-<dt><i>data</i></p>
-<dd>If direct framebuffer access is desired and possible, this field will contain a pointer to the mapped framebuffer memory. Generally, this field will be zero unless a call to <code>XDGAOpenFramebuffer</code>() is made prior to initialization of the mode.</p>
-<dt><i>pixmap</i></p>
-<dd>If the mode supports Xlib rendering as indicated by <code>XDGAPixmap</code> in the <i>flags</i> field, this will contain a Pixmap handle suitable for passing as the drawable argument to Xlib functions. This field will be zero if Xlib rendering is not supported.</dl>
+<dt><i>mode</i></dt>
+<dd>The <i>XDGAMode</i> structure, identical to the information returned by <code>XDGAQueryModes</code>().</dd>
+<dt><i>data</i></dt>
+<dd>If direct framebuffer access is desired and possible, this field will contain a pointer to the mapped framebuffer memory. Generally, this field will be zero unless a call to <code>XDGAOpenFramebuffer</code>() is made prior to initialization of the mode.</dd>
+<dt><i>pixmap</i></dt>
+<dd>If the mode supports Xlib rendering as indicated by <code>XDGAPixmap</code> in the <i>flags</i> field, this will contain a Pixmap handle suitable for passing as the drawable argument to Xlib functions. This field will be zero if Xlib rendering is not supported.</dd></dl>
 <p> <code>XDGAQueryExtension</code>() checks for the presence of the extension and returns the event and error bases. </p>
 <p> <code>XDGAQueryVersion</code>() returns the <code>XFree86-DGA</code> major and minor version numbers. </p>
 <p> <code>XDGAOpenFramebuffer</code>() maps the framebuffer memory. The client needs sufficient privileges to be able to do this. <code>XDGAOpenFramebuffer</code>() should be called prior to initializing a DGA mode if direct framebuffer access is desired for that mode. <code>XDGAOpenFramebuffer</code>() does not need to be called if direct framebuffer access is not required. If the framebuffer is opened, </p>
@@ -226,11 +226,11 @@ description: "XDGA – Client library for the XFree86-DGA extension."
 <p> <code>XDGAChangePixmapMode</code>() can be used to change between two pixmap sizes in cases where a Pixmap is available for Xlib rendering. The following values for the <i>mode</i> parameter are available:</p>
 <dl COMPACT>
 <dd>
-<dl COMPACT>
-<dt><code>XDGAPixmapModeLarge</code></p>
-<dd>The pixmap size is defined by the <i>pixmapWidth</i> and <i>pixmapHeight</i> fields in the <i>XDGAMode</i> structure. The <i>x</i> and <i>y</i> values are ignored in this case.</p>
-<dt><code>XDGAPixmapModeSmall</code></p>
-<dd>The pixmap size is defined by the <i>viewportWidth</i> and <i>viewportHeight</i> fields in the <i>XDGAMode</i> structure. In this mode, the <i>x</i> and <i>y</i> values specify where in the framebuffer this pixmap rectangle is located. It may be placed anywhere within the Xlib renderable region described by the <i>pixmapWidth</i> and <i>pixmapHeight</i> fields in the <i>XDGAMode</i>. The <i>x</i> and <i>y</i> values returned are the resultant location of the pixmap and may be different from the requested x,y location due to platform specific alignment constraints. All Xlib rendering is clipped to this pixmap rectangle.</dl>
+</dd><dl COMPACT>
+<dt><code>XDGAPixmapModeLarge</code></dt>
+<dd>The pixmap size is defined by the <i>pixmapWidth</i> and <i>pixmapHeight</i> fields in the <i>XDGAMode</i> structure. The <i>x</i> and <i>y</i> values are ignored in this case.</dd>
+<dt><code>XDGAPixmapModeSmall</code></dt>
+<dd>The pixmap size is defined by the <i>viewportWidth</i> and <i>viewportHeight</i> fields in the <i>XDGAMode</i> structure. In this mode, the <i>x</i> and <i>y</i> values specify where in the framebuffer this pixmap rectangle is located. It may be placed anywhere within the Xlib renderable region described by the <i>pixmapWidth</i> and <i>pixmapHeight</i> fields in the <i>XDGAMode</i>. The <i>x</i> and <i>y</i> values returned are the resultant location of the pixmap and may be different from the requested x,y location due to platform specific alignment constraints. All Xlib rendering is clipped to this pixmap rectangle.</dd></dl>
 </dl>
 <p> <code>XDGASetViewport</code>() sets the upper left-hand corner of the rectangle of framebuffer that is to be displayed on the screen. Not all locations may be supported by the hardware and requested locations will be adjusted according to the <i>xViewportStep</i> and <i>yViewportStep</i> fields in the <i>XDGAMode</i>. </p>
 <p> <i>flags</i> can be <code>XDGAFlipRetrace</code> or <code>XDGAFlipImmediate</code> to adjust the viewport location at the next vertical retrace or immediately. Values other than the supported values advertised in the mode&#8217;s <i>viewportFlags</i> field will result in hardware-specific default behavior. <code>XDGAFlipImmediate</code> will block until the flip is completed. <code>XDGAFlipRetrace</code> will generally NOT block so it is necessary to monitor the viewport status with <code>XDGAGetViewportStatus</code>(). <code>XDGAFlipImmediate</code> requests during pending <code>XDGAFlipRetrace</code> requests will be ignored. </p>

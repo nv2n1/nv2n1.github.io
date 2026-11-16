@@ -16,27 +16,27 @@ description: "hp2ps – convert a heap profile to a POSTSCRIPT graph"
 <h2>OPTIONS</h2>
 <p> The flags are:</p>
 <dl>
-<dt><code>-d</code></p>
-<dd> In order to make graphs more readable, <code>hp2ps</code> sorts the shaded bands for each identifier. The default sort ordering is for the bands with the largest area to be stacked on top of the smaller ones. The <code>-d</code> option causes rougher bands (those reprsenting series of values with the largest standard deviations) to be stacked on top of smoother ones.</p>
-<dt><code>-b</code></p>
-<dd> Normally, <code>hp2ps</code> puts the title of the graph in a small box at the top of the page. However, if the JOB string is too long to fit in a small box (more than 35 characters), then <code>hp2ps</code> will choose to use a big box instead. The <code>-b</code> option forces <code>hp2ps</code> to use a big box.</p>
-<dt><code>-e</code> <i>float</i>[in|mm|pt]</p>
-<dd> Generate encapsulated P<font SIZE="-2">OST</font>S<font SIZE="-2">CRIPT</font> suitable for inclusion in LaTeX documents. Usually, the P<font SIZE="-2">OST</font>S<font SIZE="-2">CRIPT</font> graph is drawn in landscape mode in an area 9 inches wide by 6 inches high, and <code>hp2ps</code> arranges for this area to be approximately centered on a sheet of a4 paper. This format is convenient of studying the graph in detail, but it is unsuitable for inclusion in LaTeX documents. The <code>-e </code> option causes the graph to be drawn in portrait mode, with <i>float</i> specifying the width in inches, millimetres or points (the default). The resulting P<font SIZE="-2">OST</font>S<font SIZE="-2">CRIPT</font> file conforms to the <i>Encapsulated Post Script</i> (EPS) convention, and it can be included in a LaTeX document using Rokicki&#8217;s dvi-to-P<font SIZE="-2">OST</font>S<font SIZE="-2">CRIPT</font> converter <code>dvips.</code> <code>hp2ps</code> requires the width to exceed 2 inches.</p>
-<dt><code>-g</code></p>
-<dd> Create output suitable for the <code>gs</code> P<font SIZE="-2">OST</font>S<font SIZE="-2">CRIPT</font> previewer (or similar). In this case the graph is printed in portrait mode without scaling. The output is unsuitable for a laser printer.</p>
-<dt><code>-p</code></p>
-<dd> Use previous parameters. By default, the P<font SIZE="-2">OST</font>S<font SIZE="-2">CRIPT</font> graph is automatically scaled both horizontally and vertically so that it fills the page. However, when preparing a seires of graphs for use in a presentation, it is often useful to draw a new graph using the same scale, shading and ordering as a previous one. The <code>-p</code> flag causes the graph to be drawn using the parameters determined by a previous run of <code>hp2ps</code> on <i>file.</i></p>
-<dt><code>-s</code></p>
-<dd> Use a small box for the title.</p>
-<dt><code>-y</code></p>
-<dd> Draw the graph in the traditional York style, ignoring marks.</p>
-<dt><code>-?</code></p>
-<dd> Print out usage information.</dl>
+<dt><code>-d</code></dt>
+<dd> In order to make graphs more readable, <code>hp2ps</code> sorts the shaded bands for each identifier. The default sort ordering is for the bands with the largest area to be stacked on top of the smaller ones. The <code>-d</code> option causes rougher bands (those reprsenting series of values with the largest standard deviations) to be stacked on top of smoother ones.</dd>
+<dt><code>-b</code></dt>
+<dd> Normally, <code>hp2ps</code> puts the title of the graph in a small box at the top of the page. However, if the JOB string is too long to fit in a small box (more than 35 characters), then <code>hp2ps</code> will choose to use a big box instead. The <code>-b</code> option forces <code>hp2ps</code> to use a big box.</dd>
+<dt><code>-e</code> <i>float</i>[in|mm|pt]</dt>
+<dd> Generate encapsulated P<font SIZE="-2">OST</font>S<font SIZE="-2">CRIPT</font> suitable for inclusion in LaTeX documents. Usually, the P<font SIZE="-2">OST</font>S<font SIZE="-2">CRIPT</font> graph is drawn in landscape mode in an area 9 inches wide by 6 inches high, and <code>hp2ps</code> arranges for this area to be approximately centered on a sheet of a4 paper. This format is convenient of studying the graph in detail, but it is unsuitable for inclusion in LaTeX documents. The <code>-e </code> option causes the graph to be drawn in portrait mode, with <i>float</i> specifying the width in inches, millimetres or points (the default). The resulting P<font SIZE="-2">OST</font>S<font SIZE="-2">CRIPT</font> file conforms to the <i>Encapsulated Post Script</i> (EPS) convention, and it can be included in a LaTeX document using Rokicki&#8217;s dvi-to-P<font SIZE="-2">OST</font>S<font SIZE="-2">CRIPT</font> converter <code>dvips.</code> <code>hp2ps</code> requires the width to exceed 2 inches.</dd>
+<dt><code>-g</code></dt>
+<dd> Create output suitable for the <code>gs</code> P<font SIZE="-2">OST</font>S<font SIZE="-2">CRIPT</font> previewer (or similar). In this case the graph is printed in portrait mode without scaling. The output is unsuitable for a laser printer.</dd>
+<dt><code>-p</code></dt>
+<dd> Use previous parameters. By default, the P<font SIZE="-2">OST</font>S<font SIZE="-2">CRIPT</font> graph is automatically scaled both horizontally and vertically so that it fills the page. However, when preparing a seires of graphs for use in a presentation, it is often useful to draw a new graph using the same scale, shading and ordering as a previous one. The <code>-p</code> flag causes the graph to be drawn using the parameters determined by a previous run of <code>hp2ps</code> on <i>file.</i></dd>
+<dt><code>-s</code></dt>
+<dd> Use a small box for the title.</dd>
+<dt><code>-y</code></dt>
+<dd> Draw the graph in the traditional York style, ignoring marks.</dd>
+<dt><code>-?</code></dt>
+<dd> Print out usage information.</dd></dl>
 <h2>INPUT FORMAT</h2>
 <p> The format of a heap profile is best described by example: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 JOB &quot;a.out -p&quot;
 DATE &quot;Fri Apr 17 11:43:45 1992&quot;
@@ -67,7 +67,7 @@ BEGIN_SAMPLE 2.00
 END_SAMPLE 2.00
 BEGIN_SAMPLE 2.82 
 END_SAMPLE 2.82 
-</dl>
+</dd></dl>
 </pre>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/1-dvips/">dvips</a>(1), <a href="/docs/linux/man/1-latex/">latex</a>(1), hbchp (1), lmlchp(1)<br />

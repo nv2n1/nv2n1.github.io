@@ -16,18 +16,18 @@ description: "cancel – cancel jobs"
 <h2>OPTIONS</h2>
 <p> The following options are recognized by <code>cancel</code>:</p>
 <dl>
-<dt><code>-a</code></p>
-<dd> Cancel all jobs on the named destination, or all jobs on all destinations if none is provided.</p>
-<dt><code>-E</code></p>
-<dd> Forces encryption when connecting to the server.</p>
-<dt><code>-h </code><i>hostname</i>[<i>:port</i>]</p>
-<dd> Specifies an alternate server.</p>
-<dt><code>-U </code><i>username</i></p>
-<dd> Specifies the username to use when connecting to the server.</p>
-<dt><code>-u </code><i>username</i></p>
-<dd> Cancels jobs owned by <i>username</i>.</p>
-<dt><code>-x</code></p>
-<dd> Deletes job data files in addition to canceling.</dl>
+<dt><code>-a</code></dt>
+<dd> Cancel all jobs on the named destination, or all jobs on all destinations if none is provided.</dd>
+<dt><code>-E</code></dt>
+<dd> Forces encryption when connecting to the server.</dd>
+<dt><code>-h </code><i>hostname</i>[<i>:port</i>]</dt>
+<dd> Specifies an alternate server.</dd>
+<dt><code>-U </code><i>username</i></dt>
+<dd> Specifies the username to use when connecting to the server.</dd>
+<dt><code>-u </code><i>username</i></dt>
+<dd> Cancels jobs owned by <i>username</i>.</dd>
+<dt><code>-x</code></dt>
+<dd> Deletes job data files in addition to canceling.</dd></dl>
 <h2>CONFORMING TO</h2>
 <p> Unlike the System V printing system, CUPS allows printer names to contain any printable character except SPACE, TAB, &quot;/&quot;, or &quot;#&quot;. Also, printer and class names are <i>not</i> case-sensitive.</p>
 <h2>EXAMPLES</h2>

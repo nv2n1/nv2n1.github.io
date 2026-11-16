@@ -33,9 +33,9 @@ url: "/docs/linux/man/1-vipe/"
 
 <dl>
 <dt><font SIZE="-1">EDITOR</font>
-<dd> Editor to use.
-<dt><font SIZE="-1">VISUAL</font>
-<dd> Also supported to determine what editor to use.</dl>
+</dt><dd> Editor to use.
+</dd><dt><font SIZE="-1">VISUAL</font>
+</dt><dd> Also supported to determine what editor to use.</dd></dl>
 
 <h2>AUTHOR</h2>
 

@@ -27,13 +27,13 @@ url: "/docs/linux/man/1-perl5162delta/"
 
 <dl>
 <dt>&bull;
-<dd> Module::CoreList has been upgraded from version 2.70 to version 2.76.</dl>
+</dt><dd> Module::CoreList has been upgraded from version 2.70 to version 2.76.</dd></dl>
 
 <h2>Configuration and Compilation</h2>
 
 <dl>
 <dt>&bull;
-<dd> configuration should no longer be confused by ls colorization</dl>
+</dt><dd> configuration should no longer be confused by ls colorization</dd></dl>
 
 <h2>Platform Support</h2>
 
@@ -41,15 +41,14 @@ url: "/docs/linux/man/1-perl5162delta/"
 
 <dl>
 <dt><font SIZE="-1">AIX</font>
-<dd> Configure now always adds -qlanglvl=extc99 to the <font SIZE="-1">CC</font> flags on <font SIZE="-1">AIX</font> when using xlC. This will make it easier to compile a number of XS-based modules that assume C99 [perl #113778].</dl>
+</dt><dd> Configure now always adds -qlanglvl=extc99 to the <font SIZE="-1">CC</font> flags on <font SIZE="-1">AIX</font> when using xlC. This will make it easier to compile a number of XS-based modules that assume C99 [perl #113778].</dd></dl>
 
 <h2>Selected Bug Fixes</h2>
 
 <dl>
 <dt>&bull;
-<dd> fix /\h/ equivalence with /[\h]/ 
-
- see [perl #114220]</dl>
+</dt><dd> fix /\h/ equivalence with /[\h]/ 
+ see [perl #114220]</dd></dl>
 
 <h2>Known Problems</h2>
 

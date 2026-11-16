@@ -32,7 +32,7 @@ url: "/docs/linux/man/1-abrt-applet/"
  -v, --verbose
 <dl>
 <dt>
-<dd> Be more verbose. Can be given multiple times.</dl>
+</dt><dd> Be more verbose. Can be given multiple times.</dd></dl>
 
 <h2>SEE ALSO</h2>
 
@@ -46,7 +46,7 @@ url: "/docs/linux/man/1-abrt-applet/"
 
 <dl>
 <dt>
-<dd> &bull; ABRT team</dl>
+</dt><dd> &bull; ABRT team</dd></dl>
  
 
 <h2>Index</h2>

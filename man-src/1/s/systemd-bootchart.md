@@ -20,65 +20,65 @@ description: "systemd-bootchart – Boot performance graphing tool"
 <p> <i>Kernel invocation</i></p>
 <dl>
 <dt>
-<dd> The kernel can invoke <code>systemd-bootchart</code> instead of the init process. In turn, <code>systemd-bootchart</code> will invoke <code>/usr/lib/systemd/systemd</code>.</dl>
+</dt><dd> The kernel can invoke <code>systemd-bootchart</code> instead of the init process. In turn, <code>systemd-bootchart</code> will invoke <code>/usr/lib/systemd/systemd</code>.</dd></dl>
 <p> <i>Started as a standalone program</i></p>
 <dl>
 <dt>
-<dd> One can execute <code>systemd-bootchart</code> as normal application from the command line. In this mode it is highly recommended to pass the <code>-r</code> flag in order to not graph the time elapsed since boot and before systemd-bootchart was started, as it may result in extremely large graphs. The time elapsed since boot might also include any time that the system was suspended.</dl>
+</dt><dd> One can execute <code>systemd-bootchart</code> as normal application from the command line. In this mode it is highly recommended to pass the <code>-r</code> flag in order to not graph the time elapsed since boot and before systemd-bootchart was started, as it may result in extremely large graphs. The time elapsed since boot might also include any time that the system was suspended.</dd></dl>
 <h2>OPTIONS</h2>
 <p> These options can also be set in the /etc/systemd/bootchart.conf file. See <code><a href="/docs/linux/man/5-bootchart-conf/">bootchart.conf</a></code>(5). </p>
 <p> <code>-h</code>, <code>&#8211;help</code></p>
 <dl>
 <dt>
-<dd> Print a short help text and exit.</dl>
+</dt><dd> Print a short help text and exit.</dd></dl>
 <p> <code>-n</code>, <code>&#8211;sample </code><i>N</i></p>
 <dl>
 <dt>
-<dd> Specify the number of samples, <i>N</i>, to record. Samples will be recorded at intervals defined with <code>&#8211;freq</code>.</dl>
+</dt><dd> Specify the number of samples, <i>N</i>, to record. Samples will be recorded at intervals defined with <code>&#8211;freq</code>.</dd></dl>
 <p> <code>-f</code>, <code>&#8211;freq </code><i>f</i></p>
 <dl>
 <dt>
-<dd> Specify the sample log frequency, a positive real <i>f</i>, in Hz. Most systems can cope with values up to 25-50 without creating too much overhead.</dl>
+</dt><dd> Specify the sample log frequency, a positive real <i>f</i>, in Hz. Most systems can cope with values up to 25-50 without creating too much overhead.</dd></dl>
 <p> <code>-r</code>, <code>&#8211;rel</code></p>
 <dl>
 <dt>
-<dd> Use relative times instead of absolute times. This is useful for using bootchart at post-boot time to profile an already booted system. Without this option the graph would become extremely large. If set, the horizontal axis starts at the first recorded sample instead of time 0.0.</dl>
+</dt><dd> Use relative times instead of absolute times. This is useful for using bootchart at post-boot time to profile an already booted system. Without this option the graph would become extremely large. If set, the horizontal axis starts at the first recorded sample instead of time 0.0.</dd></dl>
 <p> <code>-F</code>, <code>&#8211;no-filter</code></p>
 <dl>
 <dt>
-<dd> Disable filtering of tasks that did not contribute significantly to the boot. Processes that are too short-lived (only seen in one sample) or that do not consume any significant CPU time (less than 0.001 s) will not be displayed in the output graph.</dl>
+</dt><dd> Disable filtering of tasks that did not contribute significantly to the boot. Processes that are too short-lived (only seen in one sample) or that do not consume any significant CPU time (less than 0.001 s) will not be displayed in the output graph.</dd></dl>
 <p> <code>-C</code>, <code>&#8211;cmdline</code></p>
 <dl>
 <dt>
-<dd> Display the full command line with arguments of processes, instead of only the process name.</dl>
+</dt><dd> Display the full command line with arguments of processes, instead of only the process name.</dd></dl>
 <p> <code>-g</code>, <code>&#8211;control-group</code></p>
 <dl>
 <dt>
-<dd> Display process control group</dl>
+</dt><dd> Display process control group</dd></dl>
 <p> <code>-o</code>, <code>&#8211;output </code><i>path</i></p>
 <dl>
 <dt>
-<dd> Specify the output directory for the graphs. By default, bootchart writes the graphs to /run/log.</dl>
+</dt><dd> Specify the output directory for the graphs. By default, bootchart writes the graphs to /run/log.</dd></dl>
 <p> <code>-i</code>, <code>&#8211;init </code><i>path</i></p>
 <dl>
 <dt>
-<dd> Use this init binary. Defaults to <code>/usr/lib/systemd/systemd</code>.</dl>
+</dt><dd> Use this init binary. Defaults to <code>/usr/lib/systemd/systemd</code>.</dd></dl>
 <p> <code>-p</code>, <code>&#8211;pss</code></p>
 <dl>
 <dt>
-<dd> Enable logging and graphing of processes&#8217; PSS (Proportional Set Size) memory consumption. See filesystems/proc.txt in the kernel documentation for an explanation of this field.</dl>
+</dt><dd> Enable logging and graphing of processes&#8217; PSS (Proportional Set Size) memory consumption. See filesystems/proc.txt in the kernel documentation for an explanation of this field.</dd></dl>
 <p> <code>-e</code>, <code>&#8211;entropy</code></p>
 <dl>
 <dt>
-<dd> Enable logging and graphing of the kernel random entropy pool size.</dl>
+</dt><dd> Enable logging and graphing of the kernel random entropy pool size.</dd></dl>
 <p> <code>-x</code>, <code>&#8211;scale-x </code><i>N</i></p>
 <dl>
 <dt>
-<dd> Horizontal scaling factor for all variable graph components.</dl>
+</dt><dd> Horizontal scaling factor for all variable graph components.</dd></dl>
 <p> <code>-y</code>, <code>&#8211;scale-y </code><i>N</i></p>
 <dl>
 <dt>
-<dd> Vertical scaling factor for all variable graph components.</dl>
+</dt><dd> Vertical scaling factor for all variable graph components.</dd></dl>
 <h2>OUTPUT</h2>
 <p> <code>systemd-bootchart</code> generates SVG graphs. In order to render those on a graphical display any SVG capable viewer can be used. It should be noted that the SVG render engines in most browsers (including Chrome and Firefox) are many times faster than dedicated graphical applications like Gimp and Inkscape. Just point your browser at m[blue]<code>file:///run/log/</code>m[]!</p>
 <h2>HISTORY</h2>
@@ -86,19 +86,19 @@ description: "systemd-bootchart – Boot performance graphing tool"
 <p> <i>Original bash</i></p>
 <dl>
 <dt>
-<dd> The original bash/shell code implemented bootchart. This version created a compressed tarball for processing with external applications. This version did not graph anything, only generated data.</dl>
+</dt><dd> The original bash/shell code implemented bootchart. This version created a compressed tarball for processing with external applications. This version did not graph anything, only generated data.</dd></dl>
 <p> <i>Ubuntu C Implementation</i></p>
 <dl>
 <dt>
-<dd> This version replaced the shell version with a fast and efficient data logger, but also did not graph the data.</dl>
+</dt><dd> This version replaced the shell version with a fast and efficient data logger, but also did not graph the data.</dd></dl>
 <p> <i>Java bootchart</i></p>
 <dl>
 <dt>
-<dd> This was the original graphing application for charting the data, written in java.</dl>
+</dt><dd> This was the original graphing application for charting the data, written in java.</dd></dl>
 <p> <i>pybootchartgui.py</i></p>
 <dl>
 <dt>
-<dd> pybootchart created a graph from the data collected by either the bash or C version.</dl>
+</dt><dd> pybootchart created a graph from the data collected by either the bash or C version.</dd></dl>
 <p> The version of bootchart you are using now combines both the data collection and the charting into a single application, making it more efficient and simpler. There are no longer any timing issues with the data collector and the grapher, as the graphing cannot be run until the data has been collected. Also, the data kept in memory is reduced to the absolute minimum needed.</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/5-bootchart-conf/">bootchart.conf</a></code>(5)</p>
@@ -107,5 +107,5 @@ description: "systemd-bootchart – Boot performance graphing tool"
 <p> For bugs, please contact the author and current maintainer:</p>
 <dl>
 <dt>
-<dd> Auke Kok &lt;auke-jan.h.kok [at] intel.com&gt;</dl>
+</dt><dd> Auke Kok &lt;auke-jan.h.kok [at] intel.com&gt;</dd></dl>
 <h2>Index</h2>

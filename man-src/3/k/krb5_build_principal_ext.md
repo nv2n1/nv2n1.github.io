@@ -19,18 +19,18 @@ description: "krb5_get_default_principal krb5_principal krb5_build_principal krb
 <p> A principal has two parts, a <code>PrincipalName</code> and a <code>realm</code> The PrincipalName consists of one or more components. In printed form, the components are separated by /. The PrincipalName also has a name-type. </p>
 <p> Examples of a principal are <code>nisse/root [at] EXAMPLE.COM</code> and <code>host/datan.kth.se [at] KTH.SE</code> Fn krb5_parse_name and Fn krb5_parse_name_flags passes a principal name in Fa name to the kerberos principal structure. Fn krb5_parse_name_flags takes an extra Fa flags argument the following flags can be passed in</p>
 <dl>
-<dt><code>KRB5_PRINCIPAL_PARSE_NO_REALM</code></p>
-<dd> requires the input string to be without a realm, and no realm is stored in the Fa principal return argument.</p>
-<dt><code>KRB5_PRINCIPAL_PARSE_REQUIRE_REALM</code></p>
-<dd> requires the input string to with a realm.</dl>
+<dt><code>KRB5_PRINCIPAL_PARSE_NO_REALM</code></dt>
+<dd> requires the input string to be without a realm, and no realm is stored in the Fa principal return argument.</dd>
+<dt><code>KRB5_PRINCIPAL_PARSE_REQUIRE_REALM</code></dt>
+<dd> requires the input string to with a realm.</dd></dl>
 <p> Fn krb5_unparse_name and Fn krb5_unparse_name_flags prints the principal Fa princ to the string Fa name . Fa name should be freed with <a href="/docs/linux/man/3-free/">free</a>(3). To the Fa flags argument the following flags can be passed in</p>
 <dl>
-<dt><code>KRB5_PRINCIPAL_UNPARSE_SHORT</code></p>
-<dd> no realm if the realm is one of the local realms.</p>
-<dt><code>KRB5_PRINCIPAL_UNPARSE_NO_REALM</code></p>
-<dd> never include any realm in the principal name.</p>
-<dt><code>KRB5_PRINCIPAL_UNPARSE_DISPLAY</code></p>
-<dd> don&#8217;t quote</dl>
+<dt><code>KRB5_PRINCIPAL_UNPARSE_SHORT</code></dt>
+<dd> no realm if the realm is one of the local realms.</dd>
+<dt><code>KRB5_PRINCIPAL_UNPARSE_NO_REALM</code></dt>
+<dd> never include any realm in the principal name.</dd>
+<dt><code>KRB5_PRINCIPAL_UNPARSE_DISPLAY</code></dt>
+<dd> don&#8217;t quote</dd></dl>
 <p> On failure Fa name is set to <code>NULL</code> Fn krb5_unparse_name_fixed and Fn krb5_unparse_name_fixed_flags behaves just like Fn krb5_unparse , but instead unparses the principal into a fixed size buffer. </p>
 <p> Fn krb5_unparse_name_short just returns the principal without the realm if the principal is in the default realm. If the principal isn&#8217;t, the full name is returned. Fn krb5_unparse_name_fixed_short works just like Fn krb5_unparse_name_short but on a fixed size buffer. </p>
 <p> Fn krb5_build_principal builds a principal from the realm Fa realm that has the length Fa rlen . The following arguments form the components of the principal. The list of components is terminated with <code>NULL</code> </p>

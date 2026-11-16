@@ -22,12 +22,12 @@ description: "GoSnake – The Console Snake Game"
  +&#8212;+&#8212;+&#8212;+ +&#8212;-+&#8212;-+&#8212;-+ </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt>-h, &#8211;help</p>
-<dd> Print command line help </p>
-<dt>-v, &#8211;version</p>
-<dd> Display program version and exit </p>
-<dt>-l, &#8211;level n</p>
-<dd> Start playing from level &#8216;n&#8217; </p>
+<dt>-h, &#8211;help</dt>
+<dd> Print command line help </dd>
+<dt>-v, &#8211;version</dt>
+<dd> Display program version and exit </dd>
+<dt>-l, &#8211;level n</dt>
+<dd> Start playing from level &#8216;n&#8217; </dd>
 </dl>
 <h2>FILES</h2>
 <p> <i>~/.gosnake</i> Special file used to store highscores information. </p>

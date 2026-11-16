@@ -21,270 +21,271 @@ description: "editrc – configuration file for editline library"
 <p>The <code>editline</code> library has some builtin commands, which affect the way that the line editing and history functions operate. These are based on similar named builtins present in the <a href="/docs/linux/man/1-tcsh/">tcsh</a>(1) shell. </p>
 <p> The following builtin commands are available:</p>
 <dl>
-<dt><code>bind </code>[-<code>a </code>[-<code>e </code>[-<code>k </code>[-<code>l </code>[-<code>r </code>] ] ] ] ]</p>
-<dd>Oo Fl s Oc Oo Fl v Oc Oo Ar key Oo Ar command Oc Oc Without options, list all bound keys, and the editor command to which each is bound. If <i>key</i> is supplied, show the bindings for <i>key</i> If <i>key command</i> is supplied, bind <i>command</i> to <i>key</i> Options include:</p>
+<dt><code>bind </code>[-<code>a </code>[-<code>e </code>[-<code>k </code>[-<code>l </code>[-<code>r </code>] ] ] ] ]</dt>
+<dd>Oo Fl s Oc Oo Fl v Oc Oo Ar key Oo Ar command Oc Oc Without options, list all bound keys, and the editor command to which each is bound. If <i>key</i> is supplied, show the bindings for <i>key</i> If <i>key command</i> is supplied, bind <i>command</i> to <i>key</i> Options include:</dd>
 <dl>
-<dt><code>-a</code></p>
-<dd>List or change key bindings in the <a href="/docs/linux/man/1-vi/">vi</a>(1) mode alternate (command mode) key map.</p>
-<dt><code>-e</code></p>
-<dd>Bind all keys to the standard GNU Emacs-like bindings.</p>
-<dt><code>-k</code></p>
-<dd><i>key</i> is interpreted as a symbolic arrow key name, which may be one of `up&#8217; `down&#8217; `left&#8217; or `right&#8217;</p>
-<dt><code>-l</code></p>
-<dd>List all editor commands and a short description of each.</p>
-<dt><code>-r</code></p>
-<dd>Remove a key&#8217;s binding.</p>
-<dt><code>-s</code></p>
-<dd><i>command</i> is taken as a literal string and treated as terminal input when <i>key</i> is typed. Bound keys in <i>command</i> are themselves reinterpreted, and this continues for ten levels of interpretation.</p>
-<dt><code>-v</code></p>
-<dd>Bind all keys to the standard <a href="/docs/linux/man/1-vi/">vi</a>(1)Ns-like bindings.</dl>
+<dt><code>-a</code></dt>
+<dd>List or change key bindings in the <a href="/docs/linux/man/1-vi/">vi</a>(1) mode alternate (command mode) key map.</dd>
+<dt><code>-e</code></dt>
+<dd>Bind all keys to the standard GNU Emacs-like bindings.</dd>
+<dt><code>-k</code></dt>
+<dd><i>key</i> is interpreted as a symbolic arrow key name, which may be one of `up&#8217; `down&#8217; `left&#8217; or `right&#8217;</dd>
+<dt><code>-l</code></dt>
+<dd>List all editor commands and a short description of each.</dd>
+<dt><code>-r</code></dt>
+<dd>Remove a key&#8217;s binding.</dd>
+<dt><code>-s</code></dt>
+<dd><i>command</i> is taken as a literal string and treated as terminal input when <i>key</i> is typed. Bound keys in <i>command</i> are themselves reinterpreted, and this continues for ten levels of interpretation.</dd>
+<dt><code>-v</code></dt>
+<dd>Bind all keys to the standard <a href="/docs/linux/man/1-vi/">vi</a>(1)Ns-like bindings.</dd></dl>
 <p> <i>command</i> may be one of the commands documented in Sx EDITOR COMMANDS below, or another key. </p>
 <p> <i>key</i> and <i>command</i> can contain control characters of the form `<code>^ </code><i>character</i> &#8216; Po e.g. `^A&#8217; Pc , and the following backslashed escape sequences: </p>
 <dl>
-<dt><code></code></p>
-<dd>Bell</p>
-<dt><code></code></p>
-<dd>Backspace</p>
-<dt><code></code></p>
-<dd>Escape</p>
-<dt><code></code></p>
-<dd>Formfeed</p>
+<dt><code></code></dt>
+<dd>Bell</dd>
+<dt><code></code></dt>
+<dd>Backspace</dd>
+<dt><code></code></dt>
+<dd>Escape</dd>
+<dt><code></code></dt>
+<dd>Formfeed</dd>
 <dt><code>
-</code></p>
-<dd>Newline</p>
-<dt><code></code></p>
-<dd>Carriage return</p>
-<dt><code>	</code></p>
-<dd>Horizontal tab</p>
-<dt><code></code></p>
-<dd>Vertical tab</p>
-<dt><code>\ </code><i>nnn</i></p>
-<dd>The ASCII character corresponding to the octal number <i>nnn</i></dl>
+</code></dt>
+<dd>Newline</dd>
+<dt><code>
+</code></dt>
+<dd>Carriage return</dd>
+<dt><code>	</code></dt>
+<dd>Horizontal tab</dd>
+<dt><code></code></dt>
+<dd>Vertical tab</dd>
+<dt><code>\ </code><i>nnn</i></dt>
+<dd>The ASCII character corresponding to the octal number <i>nnn</i></dd></dl>
 <p> `\&#8217; nullifies the special meaning of the following character, if it has any, notably `\&#8217; and `^&#8217;</p>
-<dt><code>echotc </code>[-<code>sv </code><i>arg &#8230;</i> ]</p>
-<dd>Exercise terminal capabilities given in <i>arg &#8230;</i> If <i>arg</i> is `baud&#8217; `cols&#8217; `lines&#8217; `rows&#8217; `meta&#8217; or `tabs&#8217; the value of that capability is printed, with &#8220;yes&#8221; or &#8220;no&#8221; indicating that the terminal does or does not have that capability. </p>
+<dt><code>echotc </code>[-<code>sv </code><i>arg &#8230;</i> ]</dt>
+<dd>Exercise terminal capabilities given in <i>arg &#8230;</i> If <i>arg</i> is `baud&#8217; `cols&#8217; `lines&#8217; `rows&#8217; `meta&#8217; or `tabs&#8217; the value of that capability is printed, with &#8220;yes&#8221; or &#8220;no&#8221; indicating that the terminal does or does not have that capability. </dd>
 <p> &#8211;<code>s</code> returns an empty string for non-existent capabilities, rather than causing an error. &#8211;<code>v</code> causes messages to be verbose.</p>
-<dt><code>edit </code>[<code>on | off</code> ]</p>
-<dd>Enable or disable the <code>editline</code> functionality in a program.</p>
-<dt><code>history </code><i>list | size </i><code>n | </code><i>unique </i><code>n</code></p>
-<dd>The <i>list</i> command lists all entries in the history. The <i>size</i> command sets the history size to <code>n</code> entries. The <i>unique</i> command controls if history should keep duplicate entries. If <code>n</code> is non zero, only keep unique history entries. If <code>n</code> is zero, then keep all entries (the default).</p>
-<dt><code>settc </code><i>cap val</i></p>
-<dd>Set the terminal capability <i>cap</i> to <i>val</i> as defined in <a href="/docs/linux/man/5-termcap/">termcap</a>(5). No sanity checking is done.</p>
-<dt><code>setty </code>[-<code>a </code>[-<code>d </code>[-<code>q </code>[-<code>x </code>[<i>+mode </i>] ] ] ] ]</p>
-<dd>Oo Ar -mode Oc Oo Ar mode Oc Oo Ar char=c Oc Control which tty modes that won&#8217;t allow the user to change. &#8211;<code>d</code> &#8211;<code>q</code> or &#8211;<code>x</code> tells <code>setty</code> to act on the `edit&#8217; `quote&#8217; or `execute&#8217; set of tty modes respectively; defaulting to &#8211;<code>x</code> </p>
+<dt><code>edit </code>[<code>on | off</code> ]</dt>
+<dd>Enable or disable the <code>editline</code> functionality in a program.</dd>
+<dt><code>history </code><i>list | size </i><code>n | </code><i>unique </i><code>n</code></dt>
+<dd>The <i>list</i> command lists all entries in the history. The <i>size</i> command sets the history size to <code>n</code> entries. The <i>unique</i> command controls if history should keep duplicate entries. If <code>n</code> is non zero, only keep unique history entries. If <code>n</code> is zero, then keep all entries (the default).</dd>
+<dt><code>settc </code><i>cap val</i></dt>
+<dd>Set the terminal capability <i>cap</i> to <i>val</i> as defined in <a href="/docs/linux/man/5-termcap/">termcap</a>(5). No sanity checking is done.</dd>
+<dt><code>setty </code>[-<code>a </code>[-<code>d </code>[-<code>q </code>[-<code>x </code>[<i>+mode </i>] ] ] ] ]</dt>
+<dd>Oo Ar -mode Oc Oo Ar mode Oc Oo Ar char=c Oc Control which tty modes that won&#8217;t allow the user to change. &#8211;<code>d</code> &#8211;<code>q</code> or &#8211;<code>x</code> tells <code>setty</code> to act on the `edit&#8217; `quote&#8217; or `execute&#8217; set of tty modes respectively; defaulting to &#8211;<code>x</code> </dd>
 <p> Without other arguments, <code>setty</code> lists the modes in the chosen set which are fixed on Po `+mode&#8217; Pc or off Po `-mode&#8217; Pc . &#8211;<code>a</code> lists all tty modes in the chosen set regardless of the setting. With <i>+mode</i> <i>-mode</i> or <i>mode</i> fixes <i>mode</i> on or off or removes control of <i>mode</i> in the chosen set. </p>
 <p> <code>Setty</code> can also be used to set tty characters to particular values using <i>char=value</i> If <i>value</i> is empty then the character is set to <code>_POSIX_VDISABLE</code></p>
-<dt><code>telltc</code></p>
-<dd>List the values of all the terminal capabilities (see <a href="/docs/linux/man/5-termcap/">termcap</a>(5)).</dl>
+<dt><code>telltc</code></dt>
+<dd>List the values of all the terminal capabilities (see <a href="/docs/linux/man/5-termcap/">termcap</a>(5)).</dd></dl>
 <h2>Editor Commands</h2>
 <p>The following editor commands are available for use in key bindings:</p>
 <dl>
-<dt><code>vi-paste-next</code></p>
-<dd>Vi paste previous deletion to the right of the cursor.</p>
-<dt><code>vi-paste-prev</code></p>
-<dd>Vi paste previous deletion to the left of the cursor.</p>
-<dt><code>vi-prev-big-word</code></p>
-<dd>Vi move to the previous space delimited word.</p>
-<dt><code>vi-prev-word</code></p>
-<dd>Vi move to the previous word.</p>
-<dt><code>vi-next-big-word</code></p>
-<dd>Vi move to the next space delimited word.</p>
-<dt><code>vi-next-word</code></p>
-<dd>Vi move to the next word.</p>
-<dt><code>vi-change-case</code></p>
-<dd>Vi change case of character under the cursor and advance one character.</p>
-<dt><code>vi-change-meta</code></p>
-<dd>Vi change prefix command.</p>
-<dt><code>vi-insert-at-bol</code></p>
-<dd>Vi enter insert mode at the beginning of line.</p>
-<dt><code>vi-replace-char</code></p>
-<dd>Vi replace character under the cursor with the next character typed.</p>
-<dt><code>vi-replace-mode</code></p>
-<dd>Vi enter replace mode.</p>
-<dt><code>vi-substitute-char</code></p>
-<dd>Vi replace character under the cursor and enter insert mode.</p>
-<dt><code>vi-substitute-line</code></p>
-<dd>Vi substitute entire line.</p>
-<dt><code>vi-change-to-eol</code></p>
-<dd>Vi change to end of line.</p>
-<dt><code>vi-insert</code></p>
-<dd>Vi enter insert mode.</p>
-<dt><code>vi-add</code></p>
-<dd>Vi enter insert mode after the cursor.</p>
-<dt><code>vi-add-at-eol</code></p>
-<dd>Vi enter insert mode at end of line.</p>
-<dt><code>vi-delete-meta</code></p>
-<dd>Vi delete prefix command.</p>
-<dt><code>vi-end-big-word</code></p>
-<dd>Vi move to the end of the current space delimited word.</p>
-<dt><code>vi-end-word</code></p>
-<dd>Vi move to the end of the current word.</p>
-<dt><code>vi-undo</code></p>
-<dd>Vi undo last change.</p>
-<dt><code>vi-command-mode</code></p>
-<dd>Vi enter command mode (use alternative key bindings).</p>
-<dt><code>vi-zero</code></p>
-<dd>Vi move to the beginning of line.</p>
-<dt><code>vi-delete-prev-char</code></p>
-<dd>Vi move to previous character (backspace).</p>
-<dt><code>vi-list-or-eof</code></p>
-<dd>Vi list choices for completion or indicate end of file if empty line.</p>
-<dt><code>vi-kill-line-prev</code></p>
-<dd>Vi cut from beginning of line to cursor.</p>
-<dt><code>vi-search-prev</code></p>
-<dd>Vi search history previous.</p>
-<dt><code>vi-search-next</code></p>
-<dd>Vi search history next.</p>
-<dt><code>vi-repeat-search-next</code></p>
-<dd>Vi repeat current search in the same search direction.</p>
-<dt><code>vi-repeat-search-prev</code></p>
-<dd>Vi repeat current search in the opposite search direction.</p>
-<dt><code>vi-next-char</code></p>
-<dd>Vi move to the character specified next.</p>
-<dt><code>vi-prev-char</code></p>
-<dd>Vi move to the character specified previous.</p>
-<dt><code>vi-to-next-char</code></p>
-<dd>Vi move up to the character specified next.</p>
-<dt><code>vi-to-prev-char</code></p>
-<dd>Vi move up to the character specified previous.</p>
-<dt><code>vi-repeat-next-char</code></p>
-<dd>Vi repeat current character search in the same search direction.</p>
-<dt><code>vi-repeat-prev-char</code></p>
-<dd>Vi repeat current character search in the opposite search direction.</p>
-<dt><code>vi-match</code></p>
-<dd>Vi go to matching () {} or [].</p>
-<dt><code>vi-undo-line</code></p>
-<dd>Vi undo all changes to line.</p>
-<dt><code>vi-to-column</code></p>
-<dd>Vi go to specified column.</p>
-<dt><code>vi-yank-end</code></p>
-<dd>Vi yank to end of line.</p>
-<dt><code>vi-yank</code></p>
-<dd>Vi yank.</p>
-<dt><code>vi-comment-out</code></p>
-<dd>Vi comment out current command.</p>
-<dt><code>vi-alias</code></p>
-<dd>Vi include shell alias.</p>
-<dt><code>vi-to-history-line</code></p>
-<dd>Vi go to specified history file line..</p>
-<dt><code>vi-histedit</code></p>
-<dd>Vi edit history line with vi.</p>
-<dt><code>vi-history-word</code></p>
-<dd>Vi append word from previous input line.</p>
-<dt><code>vi-redo</code></p>
-<dd>Vi redo last non-motion command.</p>
-<dt><code>em-delete-or-list</code></p>
-<dd>Delete character under cursor or list completions if at end of line.</p>
-<dt><code>em-delete-next-word</code></p>
-<dd>Cut from cursor to end of current word.</p>
-<dt><code>em-yank</code></p>
-<dd>Paste cut buffer at cursor position.</p>
-<dt><code>em-kill-line</code></p>
-<dd>Cut the entire line and save in cut buffer.</p>
-<dt><code>em-kill-region</code></p>
-<dd>Cut area between mark and cursor and save in cut buffer.</p>
-<dt><code>em-copy-region</code></p>
-<dd>Copy area between mark and cursor to cut buffer.</p>
-<dt><code>em-gosmacs-transpose</code></p>
-<dd>Exchange the two characters before the cursor.</p>
-<dt><code>em-next-word</code></p>
-<dd>Move next to end of current word.</p>
-<dt><code>em-upper-case</code></p>
-<dd>Uppercase the characters from cursor to end of current word.</p>
-<dt><code>em-capitol-case</code></p>
-<dd>Capitalize the characters from cursor to end of current word.</p>
-<dt><code>em-lower-case</code></p>
-<dd>Lowercase the characters from cursor to end of current word.</p>
-<dt><code>em-set-mark</code></p>
-<dd>Set the mark at cursor.</p>
-<dt><code>em-exchange-mark</code></p>
-<dd>Exchange the cursor and mark.</p>
-<dt><code>em-universal-argument</code></p>
-<dd>Universal argument (argument times 4).</p>
-<dt><code>em-meta-next</code></p>
-<dd>Add 8th bit to next character typed.</p>
-<dt><code>em-toggle-overwrite</code></p>
-<dd>Switch from insert to overwrite mode or vice versa.</p>
-<dt><code>em-copy-prev-word</code></p>
-<dd>Copy current word to cursor.</p>
-<dt><code>em-inc-search-next</code></p>
-<dd>Emacs incremental next search.</p>
-<dt><code>em-inc-search-prev</code></p>
-<dd>Emacs incremental reverse search.</p>
-<dt><code>ed-end-of-file</code></p>
-<dd>Indicate end of file.</p>
-<dt><code>ed-insert</code></p>
-<dd>Add character to the line.</p>
-<dt><code>ed-delete-prev-word</code></p>
-<dd>Delete from beginning of current word to cursor.</p>
-<dt><code>ed-delete-next-char</code></p>
-<dd>Delete character under cursor.</p>
-<dt><code>ed-kill-line</code></p>
-<dd>Cut to the end of line.</p>
-<dt><code>ed-move-to-end</code></p>
-<dd>Move cursor to the end of line.</p>
-<dt><code>ed-move-to-beg</code></p>
-<dd>Move cursor to the beginning of line.</p>
-<dt><code>ed-transpose-chars</code></p>
-<dd>Exchange the character to the left of the cursor with the one under it.</p>
-<dt><code>ed-next-char</code></p>
-<dd>Move to the right one character.</p>
-<dt><code>ed-prev-word</code></p>
-<dd>Move to the beginning of the current word.</p>
-<dt><code>ed-prev-char</code></p>
-<dd>Move to the left one character.</p>
-<dt><code>ed-quoted-insert</code></p>
-<dd>Add the next character typed verbatim.</p>
-<dt><code>ed-digit</code></p>
-<dd>Adds to argument or enters a digit.</p>
-<dt><code>ed-argument-digit</code></p>
-<dd>Digit that starts argument.</p>
-<dt><code>ed-unassigned</code></p>
-<dd>Indicates unbound character.</p>
-<dt><code>ed-tty-sigint</code></p>
-<dd>Tty interrupt character.</p>
-<dt><code>ed-tty-dsusp</code></p>
-<dd>Tty delayed suspend character.</p>
-<dt><code>ed-tty-flush-output</code></p>
-<dd>Tty flush output characters.</p>
-<dt><code>ed-tty-sigquit</code></p>
-<dd>Tty quit character.</p>
-<dt><code>ed-tty-sigtstp</code></p>
-<dd>Tty suspend character.</p>
-<dt><code>ed-tty-stop-output</code></p>
-<dd>Tty disallow output characters.</p>
-<dt><code>ed-tty-start-output</code></p>
-<dd>Tty allow output characters.</p>
-<dt><code>ed-newline</code></p>
-<dd>Execute command.</p>
-<dt><code>ed-delete-prev-char</code></p>
-<dd>Delete the character to the left of the cursor.</p>
-<dt><code>ed-clear-screen</code></p>
-<dd>Clear screen leaving current line at the top.</p>
-<dt><code>ed-redisplay</code></p>
-<dd>Redisplay everything.</p>
-<dt><code>ed-start-over</code></p>
-<dd>Erase current line and start from scratch.</p>
-<dt><code>ed-sequence-lead-in</code></p>
-<dd>First character in a bound sequence.</p>
-<dt><code>ed-prev-history</code></p>
-<dd>Move to the previous history line.</p>
-<dt><code>ed-next-history</code></p>
-<dd>Move to the next history line.</p>
-<dt><code>ed-search-prev-history</code></p>
-<dd>Search previous in history for a line matching the current.</p>
-<dt><code>ed-search-next-history</code></p>
-<dd>Search next in history for a line matching the current.</p>
-<dt><code>ed-prev-line</code></p>
-<dd>Move up one line.</p>
-<dt><code>ed-next-line</code></p>
-<dd>Move down one line.</p>
-<dt><code>ed-command</code></p>
-<dd>Editline extended command.</dl>
+<dt><code>vi-paste-next</code></dt>
+<dd>Vi paste previous deletion to the right of the cursor.</dd>
+<dt><code>vi-paste-prev</code></dt>
+<dd>Vi paste previous deletion to the left of the cursor.</dd>
+<dt><code>vi-prev-big-word</code></dt>
+<dd>Vi move to the previous space delimited word.</dd>
+<dt><code>vi-prev-word</code></dt>
+<dd>Vi move to the previous word.</dd>
+<dt><code>vi-next-big-word</code></dt>
+<dd>Vi move to the next space delimited word.</dd>
+<dt><code>vi-next-word</code></dt>
+<dd>Vi move to the next word.</dd>
+<dt><code>vi-change-case</code></dt>
+<dd>Vi change case of character under the cursor and advance one character.</dd>
+<dt><code>vi-change-meta</code></dt>
+<dd>Vi change prefix command.</dd>
+<dt><code>vi-insert-at-bol</code></dt>
+<dd>Vi enter insert mode at the beginning of line.</dd>
+<dt><code>vi-replace-char</code></dt>
+<dd>Vi replace character under the cursor with the next character typed.</dd>
+<dt><code>vi-replace-mode</code></dt>
+<dd>Vi enter replace mode.</dd>
+<dt><code>vi-substitute-char</code></dt>
+<dd>Vi replace character under the cursor and enter insert mode.</dd>
+<dt><code>vi-substitute-line</code></dt>
+<dd>Vi substitute entire line.</dd>
+<dt><code>vi-change-to-eol</code></dt>
+<dd>Vi change to end of line.</dd>
+<dt><code>vi-insert</code></dt>
+<dd>Vi enter insert mode.</dd>
+<dt><code>vi-add</code></dt>
+<dd>Vi enter insert mode after the cursor.</dd>
+<dt><code>vi-add-at-eol</code></dt>
+<dd>Vi enter insert mode at end of line.</dd>
+<dt><code>vi-delete-meta</code></dt>
+<dd>Vi delete prefix command.</dd>
+<dt><code>vi-end-big-word</code></dt>
+<dd>Vi move to the end of the current space delimited word.</dd>
+<dt><code>vi-end-word</code></dt>
+<dd>Vi move to the end of the current word.</dd>
+<dt><code>vi-undo</code></dt>
+<dd>Vi undo last change.</dd>
+<dt><code>vi-command-mode</code></dt>
+<dd>Vi enter command mode (use alternative key bindings).</dd>
+<dt><code>vi-zero</code></dt>
+<dd>Vi move to the beginning of line.</dd>
+<dt><code>vi-delete-prev-char</code></dt>
+<dd>Vi move to previous character (backspace).</dd>
+<dt><code>vi-list-or-eof</code></dt>
+<dd>Vi list choices for completion or indicate end of file if empty line.</dd>
+<dt><code>vi-kill-line-prev</code></dt>
+<dd>Vi cut from beginning of line to cursor.</dd>
+<dt><code>vi-search-prev</code></dt>
+<dd>Vi search history previous.</dd>
+<dt><code>vi-search-next</code></dt>
+<dd>Vi search history next.</dd>
+<dt><code>vi-repeat-search-next</code></dt>
+<dd>Vi repeat current search in the same search direction.</dd>
+<dt><code>vi-repeat-search-prev</code></dt>
+<dd>Vi repeat current search in the opposite search direction.</dd>
+<dt><code>vi-next-char</code></dt>
+<dd>Vi move to the character specified next.</dd>
+<dt><code>vi-prev-char</code></dt>
+<dd>Vi move to the character specified previous.</dd>
+<dt><code>vi-to-next-char</code></dt>
+<dd>Vi move up to the character specified next.</dd>
+<dt><code>vi-to-prev-char</code></dt>
+<dd>Vi move up to the character specified previous.</dd>
+<dt><code>vi-repeat-next-char</code></dt>
+<dd>Vi repeat current character search in the same search direction.</dd>
+<dt><code>vi-repeat-prev-char</code></dt>
+<dd>Vi repeat current character search in the opposite search direction.</dd>
+<dt><code>vi-match</code></dt>
+<dd>Vi go to matching () {} or [].</dd>
+<dt><code>vi-undo-line</code></dt>
+<dd>Vi undo all changes to line.</dd>
+<dt><code>vi-to-column</code></dt>
+<dd>Vi go to specified column.</dd>
+<dt><code>vi-yank-end</code></dt>
+<dd>Vi yank to end of line.</dd>
+<dt><code>vi-yank</code></dt>
+<dd>Vi yank.</dd>
+<dt><code>vi-comment-out</code></dt>
+<dd>Vi comment out current command.</dd>
+<dt><code>vi-alias</code></dt>
+<dd>Vi include shell alias.</dd>
+<dt><code>vi-to-history-line</code></dt>
+<dd>Vi go to specified history file line..</dd>
+<dt><code>vi-histedit</code></dt>
+<dd>Vi edit history line with vi.</dd>
+<dt><code>vi-history-word</code></dt>
+<dd>Vi append word from previous input line.</dd>
+<dt><code>vi-redo</code></dt>
+<dd>Vi redo last non-motion command.</dd>
+<dt><code>em-delete-or-list</code></dt>
+<dd>Delete character under cursor or list completions if at end of line.</dd>
+<dt><code>em-delete-next-word</code></dt>
+<dd>Cut from cursor to end of current word.</dd>
+<dt><code>em-yank</code></dt>
+<dd>Paste cut buffer at cursor position.</dd>
+<dt><code>em-kill-line</code></dt>
+<dd>Cut the entire line and save in cut buffer.</dd>
+<dt><code>em-kill-region</code></dt>
+<dd>Cut area between mark and cursor and save in cut buffer.</dd>
+<dt><code>em-copy-region</code></dt>
+<dd>Copy area between mark and cursor to cut buffer.</dd>
+<dt><code>em-gosmacs-transpose</code></dt>
+<dd>Exchange the two characters before the cursor.</dd>
+<dt><code>em-next-word</code></dt>
+<dd>Move next to end of current word.</dd>
+<dt><code>em-upper-case</code></dt>
+<dd>Uppercase the characters from cursor to end of current word.</dd>
+<dt><code>em-capitol-case</code></dt>
+<dd>Capitalize the characters from cursor to end of current word.</dd>
+<dt><code>em-lower-case</code></dt>
+<dd>Lowercase the characters from cursor to end of current word.</dd>
+<dt><code>em-set-mark</code></dt>
+<dd>Set the mark at cursor.</dd>
+<dt><code>em-exchange-mark</code></dt>
+<dd>Exchange the cursor and mark.</dd>
+<dt><code>em-universal-argument</code></dt>
+<dd>Universal argument (argument times 4).</dd>
+<dt><code>em-meta-next</code></dt>
+<dd>Add 8th bit to next character typed.</dd>
+<dt><code>em-toggle-overwrite</code></dt>
+<dd>Switch from insert to overwrite mode or vice versa.</dd>
+<dt><code>em-copy-prev-word</code></dt>
+<dd>Copy current word to cursor.</dd>
+<dt><code>em-inc-search-next</code></dt>
+<dd>Emacs incremental next search.</dd>
+<dt><code>em-inc-search-prev</code></dt>
+<dd>Emacs incremental reverse search.</dd>
+<dt><code>ed-end-of-file</code></dt>
+<dd>Indicate end of file.</dd>
+<dt><code>ed-insert</code></dt>
+<dd>Add character to the line.</dd>
+<dt><code>ed-delete-prev-word</code></dt>
+<dd>Delete from beginning of current word to cursor.</dd>
+<dt><code>ed-delete-next-char</code></dt>
+<dd>Delete character under cursor.</dd>
+<dt><code>ed-kill-line</code></dt>
+<dd>Cut to the end of line.</dd>
+<dt><code>ed-move-to-end</code></dt>
+<dd>Move cursor to the end of line.</dd>
+<dt><code>ed-move-to-beg</code></dt>
+<dd>Move cursor to the beginning of line.</dd>
+<dt><code>ed-transpose-chars</code></dt>
+<dd>Exchange the character to the left of the cursor with the one under it.</dd>
+<dt><code>ed-next-char</code></dt>
+<dd>Move to the right one character.</dd>
+<dt><code>ed-prev-word</code></dt>
+<dd>Move to the beginning of the current word.</dd>
+<dt><code>ed-prev-char</code></dt>
+<dd>Move to the left one character.</dd>
+<dt><code>ed-quoted-insert</code></dt>
+<dd>Add the next character typed verbatim.</dd>
+<dt><code>ed-digit</code></dt>
+<dd>Adds to argument or enters a digit.</dd>
+<dt><code>ed-argument-digit</code></dt>
+<dd>Digit that starts argument.</dd>
+<dt><code>ed-unassigned</code></dt>
+<dd>Indicates unbound character.</dd>
+<dt><code>ed-tty-sigint</code></dt>
+<dd>Tty interrupt character.</dd>
+<dt><code>ed-tty-dsusp</code></dt>
+<dd>Tty delayed suspend character.</dd>
+<dt><code>ed-tty-flush-output</code></dt>
+<dd>Tty flush output characters.</dd>
+<dt><code>ed-tty-sigquit</code></dt>
+<dd>Tty quit character.</dd>
+<dt><code>ed-tty-sigtstp</code></dt>
+<dd>Tty suspend character.</dd>
+<dt><code>ed-tty-stop-output</code></dt>
+<dd>Tty disallow output characters.</dd>
+<dt><code>ed-tty-start-output</code></dt>
+<dd>Tty allow output characters.</dd>
+<dt><code>ed-newline</code></dt>
+<dd>Execute command.</dd>
+<dt><code>ed-delete-prev-char</code></dt>
+<dd>Delete the character to the left of the cursor.</dd>
+<dt><code>ed-clear-screen</code></dt>
+<dd>Clear screen leaving current line at the top.</dd>
+<dt><code>ed-redisplay</code></dt>
+<dd>Redisplay everything.</dd>
+<dt><code>ed-start-over</code></dt>
+<dd>Erase current line and start from scratch.</dd>
+<dt><code>ed-sequence-lead-in</code></dt>
+<dd>First character in a bound sequence.</dd>
+<dt><code>ed-prev-history</code></dt>
+<dd>Move to the previous history line.</dd>
+<dt><code>ed-next-history</code></dt>
+<dd>Move to the next history line.</dd>
+<dt><code>ed-search-prev-history</code></dt>
+<dd>Search previous in history for a line matching the current.</dd>
+<dt><code>ed-search-next-history</code></dt>
+<dd>Search next in history for a line matching the current.</dd>
+<dt><code>ed-prev-line</code></dt>
+<dd>Move up one line.</dd>
+<dt><code>ed-next-line</code></dt>
+<dd>Move down one line.</dd>
+<dt><code>ed-command</code></dt>
+<dd>Editline extended command.</dd></dl>
 <h2>Files</h2>
 <dl>
-<dt><code>~/.editrc </code></p>
-<dd>User configuration file for the <a href="/docs/linux/man/3-editline/">editline</a>(3) library.</dl>
+<dt><code>~/.editrc </code></dt>
+<dd>User configuration file for the <a href="/docs/linux/man/3-editline/">editline</a>(3) library.</dd></dl>
 <h2>See Also</h2>
 <p><a href="/docs/linux/man/3-editline/">editline</a>(3), <a href="/docs/linux/man/3-regex/">regex</a>(3), <a href="/docs/linux/man/5-termcap/">termcap</a>(5)</p>
 <h2>Authors</h2>

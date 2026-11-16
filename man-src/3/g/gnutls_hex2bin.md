@@ -14,14 +14,14 @@ description: "gnutls_hex2bin – API function"
 <p> <code>int gnutls_hex2bin(const char * </code><i>hex_data</i><code>, size_t </code><i>hex_size</i><code>, void * </code><i>bin_data</i><code>, size_t * </code><i>bin_size</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
-<dt>const char * hex_data</p>
-<dd> string with data in hex format</p>
-<dt>size_t hex_size</p>
-<dd> size of hex data</p>
-<dt>void * bin_data</p>
-<dd> output array with binary data</p>
-<dt>size_t * bin_size</p>
-<dd> when calling should hold maximum size of <i>bin_data</i> , on return will hold actual length of <i>bin_data</i> .</dl>
+<dt>const char * hex_data</dt>
+<dd> string with data in hex format</dd>
+<dt>size_t hex_size</dt>
+<dd> size of hex data</dd>
+<dt>void * bin_data</dt>
+<dd> output array with binary data</dd>
+<dt>size_t * bin_size</dt>
+<dd> when calling should hold maximum size of <i>bin_data</i> , on return will hold actual length of <i>bin_data</i> .</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> Convert a buffer with hex data to binary data.</p>
 <h2>RETURNS</h2>
@@ -37,6 +37,6 @@ description: "gnutls_hex2bin – API function"
 <h2>SEE ALSO</h2>
 <p> The full documentation for <code>gnutls</code> is maintained as a Texinfo manual. If the /usr/share/doc/gnutls/ directory does not contain the HTML form visit <code></p>
 <dl>
-<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></p>
-<dd> </code></dl>
+<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></dt>
+<dd> </code></dd></dl>
 <h2>Index</h2>

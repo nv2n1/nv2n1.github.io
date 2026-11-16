@@ -15,11 +15,11 @@ skb_dst_set_noref - sets skb dst, hopefully, without taking reference
 <h2>Arguments</h2>
 
 <i>skb</i>
-<dl><dd><dd>buffer</dl>
+<dl><dd></dd><dd>buffer</dd></dl>
  
 
  <i>dst</i>
-<dl><dd>dst entry</dl>
+<dl><dd>dst entry</dd></dl>
 
 <h2>Description</h2>
 

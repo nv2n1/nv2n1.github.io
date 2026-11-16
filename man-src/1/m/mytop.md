@@ -79,39 +79,39 @@ Id User Host Dbase Time Cmd Query or State-- -- -- -- -- -- -- - -- -- -- - -- -
 <h3>Arguments</h3>
 <p> <code>mytop</code> handles long and short command-line arguments. Not all options have both long and short formats, however. The long arguments can start with one or two dashes `-&#8216; or `&#8211;&#8216;. They are shown here with just one.</p>
 <dl>
-<dt><code>-u</code> or <code>-user</code> username</p>
-<dd> Username to use when logging in to the MySQL server. Default: &#8220;root&#8221;.</p>
-<dt><code>-p</code> or <code>-pass</code> or <code>-password</code> password</p>
-<dd> Password to use when logging in to the MySQL server. Default: none.</p>
-<dt><code>-h</code> or <code>-host</code> hostname[:port]</p>
-<dd> Hostname of the MySQL server. The hostname may be followed by an option port number. Note that the port is specified separate from the host when using a config file. Default: &#8220;localhost&#8221;.</p>
-<dt><code>-port</code> or <code>-P</code> port</p>
-<dd> If you&#8217;re running MySQL on a non-standard port, use this to specify the port number. Default: 3306.</p>
-<dt><code>-s</code> or <code>-delay</code> seconds</p>
-<dd> How long between display refreshes. Default: 5</p>
-<dt><code>-d</code> or <code>-db</code> or <code>-database</code> database</p>
-<dd> Use if you&#8217;d like <code>mytop</code> to connect to a specific database by default. Default: &#8220;test&#8221;.</p>
-<dt><code>-b</code> or <code>-batch</code> or <code>-batchmode</code></p>
-<dd> In batch mode, mytop runs only once, does not clear the screen, and places no limit on the number of lines it will print. This is suitable for running periodically (perhaps from cron) to capture the information into a file for later viewing. You might use batch mode in a <font SIZE="-1">CGI</font> script to occasionally display your MySQL server status on the web. </p>
+<dt><code>-u</code> or <code>-user</code> username</dt>
+<dd> Username to use when logging in to the MySQL server. Default: &#8220;root&#8221;.</dd>
+<dt><code>-p</code> or <code>-pass</code> or <code>-password</code> password</dt>
+<dd> Password to use when logging in to the MySQL server. Default: none.</dd>
+<dt><code>-h</code> or <code>-host</code> hostname[:port]</dt>
+<dd> Hostname of the MySQL server. The hostname may be followed by an option port number. Note that the port is specified separate from the host when using a config file. Default: &#8220;localhost&#8221;.</dd>
+<dt><code>-port</code> or <code>-P</code> port</dt>
+<dd> If you&#8217;re running MySQL on a non-standard port, use this to specify the port number. Default: 3306.</dd>
+<dt><code>-s</code> or <code>-delay</code> seconds</dt>
+<dd> How long between display refreshes. Default: 5</dd>
+<dt><code>-d</code> or <code>-db</code> or <code>-database</code> database</dt>
+<dd> Use if you&#8217;d like <code>mytop</code> to connect to a specific database by default. Default: &#8220;test&#8221;.</dd>
+<dt><code>-b</code> or <code>-batch</code> or <code>-batchmode</code></dt>
+<dd> In batch mode, mytop runs only once, does not clear the screen, and places no limit on the number of lines it will print. This is suitable for running periodically (perhaps from cron) to capture the information into a file for later viewing. You might use batch mode in a <font SIZE="-1">CGI</font> script to occasionally display your MySQL server status on the web. </dd>
 <p> Default: unset.</p>
-<dt><code>-S</code> or <code>-socket</code> /path/to/socket</p>
-<dd> If you&#8217;re running <code>mytop</code> on the same host as MySQL, you may wish to have it use the MySQL socket directly rather than a standard <font SIZE="-1">TCP/IP</font> connection. If you do,just specify one. </p>
+<dt><code>-S</code> or <code>-socket</code> /path/to/socket</dt>
+<dd> If you&#8217;re running <code>mytop</code> on the same host as MySQL, you may wish to have it use the MySQL socket directly rather than a standard <font SIZE="-1">TCP/IP</font> connection. If you do,just specify one. </dd>
 <p> Note that specifying a socket will make <code>mytop</code> ignore any host and/or port that you might have specified. If the socket does not exist (or the file specified is not a socket), this option will be ignored and <code>mytop</code> will use the hostname and port number instead. </p>
 <p> Default: none.</p>
-<dt><code>-header</code> or <code>-noheader</code></p>
-<dd> Sepcify if you want the header to display or not. You can toggle this with the <code>h</code> key while <code>mytop</code> is running. </p>
+<dt><code>-header</code> or <code>-noheader</code></dt>
+<dd> Sepcify if you want the header to display or not. You can toggle this with the <code>h</code> key while <code>mytop</code> is running. </dd>
 <p> Default: header.</p>
-<dt><code>-color</code> or <code>-nocolor</code></p>
-<dd> Specify if you want a color display. This has no effect if you don&#8217;t have color support available. </p>
+<dt><code>-color</code> or <code>-nocolor</code></dt>
+<dd> Specify if you want a color display. This has no effect if you don&#8217;t have color support available. </dd>
 <p> Default: If you have color support, <code>mytop</code> will try color unless you tell it not to.</p>
-<dt><code>-i</code> or <code>-idle</code> or <code>-noidle</code></p>
-<dd> Specify if you want idle (sleeping) threads to appear in the list. If sleeping threads are omitted, the default sorting order is reversed so that the longest running queries appear at the top of the list. </p>
+<dt><code>-i</code> or <code>-idle</code> or <code>-noidle</code></dt>
+<dd> Specify if you want idle (sleeping) threads to appear in the list. If sleeping threads are omitted, the default sorting order is reversed so that the longest running queries appear at the top of the list. </dd>
 <p> Default: idle.</p>
-<dt><code>-prompt</code> or <code>-noprompt</code></p>
-<dd> Specify if you want to be prompted to type in your database password. This provides a little bit more security since it not only prevents the password from viewable in a process list, but also doesn&#8217;t require the password to be stored in plain text in your ~/.mytop config file. You will <code>only</code> be prompted if a password has not been specified in your config file or through another command line option. </p>
+<dt><code>-prompt</code> or <code>-noprompt</code></dt>
+<dd> Specify if you want to be prompted to type in your database password. This provides a little bit more security since it not only prevents the password from viewable in a process list, but also doesn&#8217;t require the password to be stored in plain text in your ~/.mytop config file. You will <code>only</code> be prompted if a password has not been specified in your config file or through another command line option. </dd>
 <p> Default: noprompt.</p>
-<dt><code>-resolve</code></p>
-<dd> If you have skip-resolve set on MySQL (to keep it from doing a reverse <font SIZE="-1">DNS</font> lookup on each inbound connection), mytop can replace <font SIZE="-1">IP</font> addresses with hostnames but toggling this option. </p>
+<dt><code>-resolve</code></dt>
+<dd> If you have skip-resolve set on MySQL (to keep it from doing a reverse <font SIZE="-1">DNS</font> lookup on each inbound connection), mytop can replace <font SIZE="-1">IP</font> addresses with hostnames but toggling this option. </dd>
 <p> Default: noresolve</dl>
 <p> Command-line arguments will always take precedence over config file options. That happens because the config file is read <i></i><font SIZE="-1"><i>BEFORE</i></font><i></i> the command-line arguments are applied.</p>
 <h3>Config File</h3>
@@ -135,41 +135,41 @@ Id User Host Dbase Time Cmd Query or State-- -- -- -- -- -- -- - -- -- -- - -- -
 <h3>Shortcut Keys</h3>
 <p> The following keys perform various actions while <code>mytop</code> is running. Those which have not been implemented are listed as such. They are included to give the user idea of what is coming.</p>
 <dl>
-<dt><code>?</code></p>
-<dd> Display help.</p>
-<dt><code>c</code></p>
-<dd> Show &#8220;command counters&#8221; based on the Com_* values in <font SIZE="-1">SHOW GLOBAL STATUS. </font> This is a new feature. Feedback welcome.</p>
-<dt><code>d</code></p>
-<dd> Show only threads connected to a particular database.</p>
-<dt><code>f</code></p>
-<dd> Given a thread id, display the entire query that thread was (and still may be) running.</p>
-<dt><code>F</code></p>
-<dd> Disable all filtering (host, user, and db).</p>
-<dt><code>h</code></p>
-<dd> Only show queries from a particular host.</p>
-<dt><code>H</code></p>
-<dd> Toggle the header display. You can also specify either <tt>&quot;header=0&quot;</tt> or <tt>&quot;header=1&quot;</tt> in your config file to set the default behavior.</p>
-<dt><code>i</code></p>
-<dd> Toggle the display of idle (sleeping) threads. If sleeping threads are filtered, the default sorting order is reversed so that the longest running queries appear at the top of the list.</p>
-<dt><code>I</code></p>
-<dd> Switch to InnoDB Status mode. The output of &#8220;<font SIZE="-1">SHOW INNODB STATUS&#8221;</font> will be displayed every cycle. In a future version, this may actually summarize that data rather than producing raw output.</p>
-<dt><code>k</code></p>
-<dd> Kill a thread.</p>
-<dt><code>m</code></p>
-<dd> Toggle modes. Currently this switches from `top&#8217; mode to `qps&#8217; (Queries Per Second Mode). In this mode, mytop will write out one integer per second. The number written reflects the number of queries executed by the server in the previous one second interval. </p>
+<dt><code>?</code></dt>
+<dd> Display help.</dd>
+<dt><code>c</code></dt>
+<dd> Show &#8220;command counters&#8221; based on the Com_* values in <font SIZE="-1">SHOW GLOBAL STATUS. </font> This is a new feature. Feedback welcome.</dd>
+<dt><code>d</code></dt>
+<dd> Show only threads connected to a particular database.</dd>
+<dt><code>f</code></dt>
+<dd> Given a thread id, display the entire query that thread was (and still may be) running.</dd>
+<dt><code>F</code></dt>
+<dd> Disable all filtering (host, user, and db).</dd>
+<dt><code>h</code></dt>
+<dd> Only show queries from a particular host.</dd>
+<dt><code>H</code></dt>
+<dd> Toggle the header display. You can also specify either <tt>&quot;header=0&quot;</tt> or <tt>&quot;header=1&quot;</tt> in your config file to set the default behavior.</dd>
+<dt><code>i</code></dt>
+<dd> Toggle the display of idle (sleeping) threads. If sleeping threads are filtered, the default sorting order is reversed so that the longest running queries appear at the top of the list.</dd>
+<dt><code>I</code></dt>
+<dd> Switch to InnoDB Status mode. The output of &#8220;<font SIZE="-1">SHOW INNODB STATUS&#8221;</font> will be displayed every cycle. In a future version, this may actually summarize that data rather than producing raw output.</dd>
+<dt><code>k</code></dt>
+<dd> Kill a thread.</dd>
+<dt><code>m</code></dt>
+<dd> Toggle modes. Currently this switches from `top&#8217; mode to `qps&#8217; (Queries Per Second Mode). In this mode, mytop will write out one integer per second. The number written reflects the number of queries executed by the server in the previous one second interval. </dd>
 <p> More modes may be added in the future.</p>
-<dt><code>o</code></p>
-<dd> Reverse the default sort order.</p>
-<dt><code>p</code></p>
-<dd> Pause display.</p>
-<dt><code>q</code></p>
-<dd> Quit <code>mytop</code></p>
-<dt><code>r</code></p>
-<dd> Reset the server&#8217;s status counters via a <i></i><font SIZE="-1"><i>FLUSH STATUS</i></font><i></i> command.</p>
-<dt><code>s</code></p>
-<dd> Change the sleep time (number of seconds between display refreshes).</p>
-<dt><code>u</code></p>
-<dd> Show only threads owned by a giver user.</dl>
+<dt><code>o</code></dt>
+<dd> Reverse the default sort order.</dd>
+<dt><code>p</code></dt>
+<dd> Pause display.</dd>
+<dt><code>q</code></dt>
+<dd> Quit <code>mytop</code></dd>
+<dt><code>r</code></dt>
+<dd> Reset the server&#8217;s status counters via a <i></i><font SIZE="-1"><i>FLUSH STATUS</i></font><i></i> command.</dd>
+<dt><code>s</code></dt>
+<dd> Change the sleep time (number of seconds between display refreshes).</dd>
+<dt><code>u</code></dt>
+<dd> Show only threads owned by a giver user.</dd></dl>
 <p> The <code>s</code> key has a command-line counterpart: <code>-s</code>. </p>
 <p> The <code>h</code> key has two command-line counterparts: <code>-header</code> and <code>-noheader</code>.</p>
 <h2>BUGS</h2>
@@ -196,42 +196,42 @@ Id User Host Dbase Time Cmd Query or State-- -- -- -- -- -- -- - -- -- -- - -- -
 <p> Fix a bug. Add a feature. See your name here! </p>
 <p> Many thanks go to these fine folks:</p>
 <dl>
-<dt>Sami Ahlroos (sami [at] avis-net.de)</p>
-<dd> Suggested the idle/noidle stuff.</p>
-<dt>Jan Willamowius (jan [at] janhh.shnet.org)</p>
-<dd> Mirnor bug report. Documentation fixes.</p>
-<dt>Alex Osipov (alex [at] acky.net)</p>
-<dd> Long command-line options, Unix socket support.</p>
-<dt>Stephane Enten (tuf [at] grolier.fr)</p>
-<dd> Suggested batch mode.</p>
-<dt>Richard Ellerbrock (richarde [at] eskom.co.za)</p>
-<dd> Bug reports and usability suggestions.</p>
-<dt>William R. Mattil (wrm [at] newton.irngtx.tel.gte.com)</p>
-<dd> Bug report about empty passwords not working.</p>
-<dt>Benjamin Pflugmann (philemon [at] spin.de)</p>
-<dd> Suggested -P command-line flag as well as other changes.</p>
-<dt>Justin Mecham &lt;justin [at] aspect.net&gt;</p>
-<dd> Suggested setting <tt>$0</tt> to `mytop&#8217;.</p>
-<dt>Thorsten Kunz &lt;thorsten.kunz [at] de.tiscali.com&gt;</p>
-<dd> Provided a fix for cases when we try remove the domain name from the display even if it is actually an <font SIZE="-1">IP</font> address.</p>
-<dt>Sasha Pachev &lt;sasha [at] mysql.com&gt;</p>
-<dd> Provided the idea of real-time queries per second in the main display.</p>
-<dt>Paul DuBois &lt;paul [at] snake.net&gt;</p>
-<dd> Pointed out some option-handling bugs.</p>
-<dt>Mike Wexler &lt;mwexler [at] tias.com&gt;</p>
-<dd> Suggested that we don&#8217;t mangle (normalize) whitespace in query info by default.</p>
-<dt>Mark Zweifel &lt;markez [at] yahoo-inc.com&gt;</p>
-<dd> Make the &#8211;idle command-line argument negatable.</p>
-<dt>Axel Schwenke &lt;schwenke [at] jobpilot.de&gt;</p>
-<dd> Noticed the inccorect formula for query cache hit percentages in version 1.2.</p>
-<dt>Steven Roussey &lt;sroussey [at] network54.com&gt;</p>
-<dd> Supplied a patch to help filter binary junk in queries so that terminals don&#8217;t freak out.</p>
-<dt>jon r. luini &lt;falcon [at] chime.com&gt;</p>
-<dd> Supplied a patch that formed the basis for <tt>&quot;-prompt&quot;</tt> support. Sean Leach &lt;sleach [at] wiggum.com&gt; submitted a similar patch.</p>
-<dt>Yogish Baliga &lt;baliga [at] yahoo-inc.com&gt;</p>
-<dd> Supplied a patch that formed the basis for <tt>&quot;-resolve&quot;</tt> support.</p>
-<dt>Per Andreas Buer &lt;perbu [at] linpro.no&gt;</p>
-<dd> Supplied an excellent patch to tidy up the top display. This includes showing most values in short form, such as 10k rather than 10000.</dl>
+<dt>Sami Ahlroos (sami [at] avis-net.de)</dt>
+<dd> Suggested the idle/noidle stuff.</dd>
+<dt>Jan Willamowius (jan [at] janhh.shnet.org)</dt>
+<dd> Mirnor bug report. Documentation fixes.</dd>
+<dt>Alex Osipov (alex [at] acky.net)</dt>
+<dd> Long command-line options, Unix socket support.</dd>
+<dt>Stephane Enten (tuf [at] grolier.fr)</dt>
+<dd> Suggested batch mode.</dd>
+<dt>Richard Ellerbrock (richarde [at] eskom.co.za)</dt>
+<dd> Bug reports and usability suggestions.</dd>
+<dt>William R. Mattil (wrm [at] newton.irngtx.tel.gte.com)</dt>
+<dd> Bug report about empty passwords not working.</dd>
+<dt>Benjamin Pflugmann (philemon [at] spin.de)</dt>
+<dd> Suggested -P command-line flag as well as other changes.</dd>
+<dt>Justin Mecham &lt;justin [at] aspect.net&gt;</dt>
+<dd> Suggested setting <tt>$0</tt> to `mytop&#8217;.</dd>
+<dt>Thorsten Kunz &lt;thorsten.kunz [at] de.tiscali.com&gt;</dt>
+<dd> Provided a fix for cases when we try remove the domain name from the display even if it is actually an <font SIZE="-1">IP</font> address.</dd>
+<dt>Sasha Pachev &lt;sasha [at] mysql.com&gt;</dt>
+<dd> Provided the idea of real-time queries per second in the main display.</dd>
+<dt>Paul DuBois &lt;paul [at] snake.net&gt;</dt>
+<dd> Pointed out some option-handling bugs.</dd>
+<dt>Mike Wexler &lt;mwexler [at] tias.com&gt;</dt>
+<dd> Suggested that we don&#8217;t mangle (normalize) whitespace in query info by default.</dd>
+<dt>Mark Zweifel &lt;markez [at] yahoo-inc.com&gt;</dt>
+<dd> Make the &#8211;idle command-line argument negatable.</dd>
+<dt>Axel Schwenke &lt;schwenke [at] jobpilot.de&gt;</dt>
+<dd> Noticed the inccorect formula for query cache hit percentages in version 1.2.</dd>
+<dt>Steven Roussey &lt;sroussey [at] network54.com&gt;</dt>
+<dd> Supplied a patch to help filter binary junk in queries so that terminals don&#8217;t freak out.</dd>
+<dt>jon r. luini &lt;falcon [at] chime.com&gt;</dt>
+<dd> Supplied a patch that formed the basis for <tt>&quot;-prompt&quot;</tt> support. Sean Leach &lt;sleach [at] wiggum.com&gt; submitted a similar patch.</dd>
+<dt>Yogish Baliga &lt;baliga [at] yahoo-inc.com&gt;</dt>
+<dd> Supplied a patch that formed the basis for <tt>&quot;-resolve&quot;</tt> support.</dd>
+<dt>Per Andreas Buer &lt;perbu [at] linpro.no&gt;</dt>
+<dd> Supplied an excellent patch to tidy up the top display. This includes showing most values in short form, such as 10k rather than 10000.</dd></dl>
 <p> See the Changes file on the <code>mytop</code> distribution page for more details on what has changed.</p>
 <h2>LICENSE</h2>
 <p> <code>mytop</code> is licensed under the <font SIZE="-1">GNU</font> General Public License version 2. For the full license information, please visit <a rel="nofollow" href="http://www.gnu.org/copyleft/gpl.html">http://www.gnu.org/copyleft/gpl.html</a> </p>

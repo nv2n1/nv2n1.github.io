@@ -21,10 +21,10 @@ description: "dlaruv.f –"
 <pre> DLARUV returns a vector of n random real numbers from a uniform (0,1)
  distribution (n &lt;= 128).
  This is an auxiliary routine called by DLARNV and ZLARNV.</pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>ISEED</i> </p>
+<dd><i>ISEED</i> </dd>
 <pre> ISEED is INTEGER array, dimension (4)
  On entry, the seed of the random number generator; the array
  elements must be between 0 and 4095, and ISEED(4) must be
@@ -39,13 +39,13 @@ description: "dlaruv.f –"
 <p>&nbsp;<wbr></dl>
 <p> <code>Author:</code></p>
 <dl COMPACT>
-<dd>Univ. of Tennessee </p>
+<dd>Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl COMPACT>
-<dd>September 2012</dl>
+<dd>September 2012</dd></dl>
 <p> <code>Further Details: </code></p>
 <dl COMPACT>
 <dd>
@@ -57,7 +57,8 @@ description: "dlaruv.f –"
  48-bit integers are stored in 4 integer array elements with 12 bits
  per element. Hence the routine is portable across machines with
  integers of 32 bits or more.</pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> Definition at line 96 of file dlaruv.f.</p>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for LAPACK from the source code.</p>
+</p>

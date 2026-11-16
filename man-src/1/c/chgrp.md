@@ -15,42 +15,42 @@ description: "chgrp – change group ownership"
 <h2>DESCRIPTION</h2>
 <p> Change the group of each FILE to GROUP. With <code>&#8211;reference</code>, change the group of each FILE to that of RFILE.</p>
 <dl>
-<dt><code>-c</code>, <code>&#8211;changes</code></p>
-<dd> like verbose but report only when a change is made</p>
-<dt><code>-f</code>, <code>&#8211;silent</code>, <code>&#8211;quiet</code></p>
-<dd> suppress most error messages</p>
-<dt><code>-v</code>, <code>&#8211;verbose</code></p>
-<dd> output a diagnostic for every file processed</p>
-<dt><code>&#8211;dereference</code></p>
-<dd> affect the referent of each symbolic link (this is the default), rather than the symbolic link itself</p>
-<dt><code>-h</code>, <code>&#8211;no-dereference</code></p>
-<dd> affect symbolic links instead of any referenced file (useful only on systems that can change the ownership of a symlink)</p>
-<dt><code>&#8211;no-preserve-root</code></p>
-<dd> do not treat &#8216;/&#8217; specially (the default)</p>
-<dt><code>&#8211;preserve-root</code></p>
-<dd> fail to operate recursively on &#8216;/&#8217;</p>
-<dt><code>&#8211;reference</code>=<i>,RFILE/</i></p>
-<dd> use RFILE&#8217;s group rather than specifying a GROUP value</p>
-<dt><code>-R</code>, <code>&#8211;recursive</code></p>
-<dd> operate on files and directories recursively</dl>
+<dt><code>-c</code>, <code>&#8211;changes</code></dt>
+<dd> like verbose but report only when a change is made</dd>
+<dt><code>-f</code>, <code>&#8211;silent</code>, <code>&#8211;quiet</code></dt>
+<dd> suppress most error messages</dd>
+<dt><code>-v</code>, <code>&#8211;verbose</code></dt>
+<dd> output a diagnostic for every file processed</dd>
+<dt><code>&#8211;dereference</code></dt>
+<dd> affect the referent of each symbolic link (this is the default), rather than the symbolic link itself</dd>
+<dt><code>-h</code>, <code>&#8211;no-dereference</code></dt>
+<dd> affect symbolic links instead of any referenced file (useful only on systems that can change the ownership of a symlink)</dd>
+<dt><code>&#8211;no-preserve-root</code></dt>
+<dd> do not treat &#8216;/&#8217; specially (the default)</dd>
+<dt><code>&#8211;preserve-root</code></dt>
+<dd> fail to operate recursively on &#8216;/&#8217;</dd>
+<dt><code>&#8211;reference</code>=<i>,RFILE/</i></dt>
+<dd> use RFILE&#8217;s group rather than specifying a GROUP value</dd>
+<dt><code>-R</code>, <code>&#8211;recursive</code></dt>
+<dd> operate on files and directories recursively</dd></dl>
 <p> The following options modify how a hierarchy is traversed when the <code>-R</code> option is also specified. If more than one is specified, only the final one takes effect.</p>
 <dl>
-<dt><code>-H</code></p>
-<dd> if a command line argument is a symbolic link to a directory, traverse it</p>
-<dt><code>-L</code></p>
-<dd> traverse every symbolic link to a directory encountered</p>
-<dt><code>-P</code></p>
-<dd> do not traverse any symbolic links (default)</p>
-<dt><code>&#8211;help</code></p>
-<dd> display this help and exit</p>
-<dt><code>&#8211;version</code></p>
-<dd> output version information and exit</dl>
+<dt><code>-H</code></dt>
+<dd> if a command line argument is a symbolic link to a directory, traverse it</dd>
+<dt><code>-L</code></dt>
+<dd> traverse every symbolic link to a directory encountered</dd>
+<dt><code>-P</code></dt>
+<dd> do not traverse any symbolic links (default)</dd>
+<dt><code>&#8211;help</code></dt>
+<dd> display this help and exit</dd>
+<dt><code>&#8211;version</code></dt>
+<dd> output version information and exit</dd></dl>
 <h2>EXAMPLES</h2>
 <dl>
-<dt>chgrp staff /u</p>
-<dd> Change the group of /u to &quot;staff&quot;.</p>
-<dt>chgrp -hR staff /u</p>
-<dd> Change the group of /u and subfiles to &quot;staff&quot;.</dl>
+<dt>chgrp staff /u</dt>
+<dd> Change the group of /u to &quot;staff&quot;.</dd>
+<dt>chgrp -hR staff /u</dt>
+<dd> Change the group of /u and subfiles to &quot;staff&quot;.</dd></dl>
 <h2>AUTHOR</h2>
 <p> Written by David MacKenzie and Jim Meyering.</p>
 <h2>REPORTING BUGS</h2>

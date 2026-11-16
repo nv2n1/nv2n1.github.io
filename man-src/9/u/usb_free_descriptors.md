@@ -14,9 +14,9 @@ description: "usb_free_descriptors – free descriptors returned by usb_copy_des
 <p><i>v</i></p>
 <dl>
 <dd>
-<dd>vector of descriptors</dl>
+</dd><dd>vector of descriptors</dd></dl>
 <h2>Author</h2>
 <p><code>David Brownell</code> &lt;dbrownell [at] users.sourceforge.net&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

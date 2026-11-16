@@ -14,12 +14,12 @@ description: "nand_reset_data_interface – Reset data interface and timings"
 <p><i>chip</i></p>
 <dl>
 <dd>
-<dd>The NAND chip</dl>
+</dd><dd>The NAND chip</dd></dl>
 <h2>Description</h2>
 <p>Reset the Data interface and timings to ONFI mode 0. </p>
 <p> Returns 0 for success or negative error code otherwise.</p>
 <h2>Author</h2>
 <p><code>Thomas Gleixner</code> &lt;tglx [at] linutronix.de&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

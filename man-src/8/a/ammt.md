@@ -10,75 +10,75 @@ description: "ammt – Amanda version of mt"
 <p>ammt &#8211; Amanda version of mt</p>
 <h2>Synopsis</h2>
 <dl>
-<dt> <code>ammt</code> [-d] [-f | -t | <i>device</i>] <i>command</i> [<i>count</i>]</dl>
+<dt> <code>ammt</code> [-d] [-f | -t | <i>device</i>] <i>command</i> [<i>count</i>]</dt></dl>
 <h2>Description</h2>
 <p><code>Ammt</code></p>
-<dd>provides just enough of the standard UNIX <code>mt</code> command for the needs of <i>Amanda</i>. This is handy when doing a full restore and the standard <code>mt</code> program has not yet been found. </p>
+<dd>provides just enough of the standard UNIX <code>mt</code> command for the needs of <i>Amanda</i>. This is handy when doing a full restore and the standard <code>mt</code> program has not yet been found. </dd>
 <p> <code>Ammt</code> also provides access to the <i>Amanda</i> output drivers that support various tape simulations. </p>
 <p> See the <code><a href="/docs/linux/man/8-amanda/">amanda</a></code>(8) man page for more details about <i>Amanda</i>. See the <code>OUTPUT DRIVERS</code> section of <i><a href="/docs/linux/man/8-amanda/">amanda</a>(8)</i> for more information on the <i>Amanda</i> output drivers.</p>
 <h2>Options</h2>
 <p><code>-d</code></p>
 <dl>
-<dd>Turn on debugging output.</dl>
+<dd>Turn on debugging output.</dd></dl>
 <p> <code>-f</code><i> device</i></p>
 <dl>
-<dd>Access tape device <i>device</i>. If not specified, the <code>TAPE</code> environment variable is used.</dl>
+<dd>Access tape device <i>device</i>. If not specified, the <code>TAPE</code> environment variable is used.</dd></dl>
 <p> <code>-t</code><i> device</i></p>
 <dl>
-<dd>Same as <code>-f</code>.</dl>
+<dd>Same as <code>-f</code>.</dd></dl>
 <p> <code>command</code><i> count</i></p>
 <dl>
-<dd>Which command to issue, and an optional count of operations.</dl>
+<dd>Which command to issue, and an optional count of operations.</dd></dl>
 <h2>Commands</h2>
 <p>Each command may be abbreviated to whatever length makes it unique. </p>
 <p> <code>eof|weof</code><i> count</i></p>
 <dl>
-<dd>Write <i>count</i> (default: 1) end of file marks (tapemarks).</dl>
+<dd>Write <i>count</i> (default: 1) end of file marks (tapemarks).</dd></dl>
 <p> <code>fsf</code><i> count</i></p>
 <dl>
-<dd>Skip forward <i>count</i> (default: 1) files.</dl>
+<dd>Skip forward <i>count</i> (default: 1) files.</dd></dl>
 <p> <code>bsf</code><i> count</i></p>
 <dl>
-<dd>Skip backward <i>count</i> (default: 1) files.</dl>
+<dd>Skip backward <i>count</i> (default: 1) files.</dd></dl>
 <p> <code>asf</code><i> count</i></p>
 <dl>
-<dd>Position to file number <i>count</i> (default: 0) where zero is beginning of tape. This is the same as a <code>rewind</code> followed by a <code>fsf</code> <i>count</i>.</dl>
+<dd>Position to file number <i>count</i> (default: 0) where zero is beginning of tape. This is the same as a <code>rewind</code> followed by a <code>fsf</code> <i>count</i>.</dd></dl>
 <p> <code>rewind</code></p>
 <dl>
-<dd>Rewind to beginning of tape.</dl>
+<dd>Rewind to beginning of tape.</dd></dl>
 <p> <code>offline|rewoffl</code></p>
 <dl>
-<dd>Rewind to beginning of tape and unload the tape from the drive.</dl>
+<dd>Rewind to beginning of tape and unload the tape from the drive.</dd></dl>
 <p> <code>status</code></p>
 <dl>
-<dd>Report status information about the drive. Which data reported, and what it means, depends on the underlying operating system, and may include: </p>
+<dd>Report status information about the drive. Which data reported, and what it means, depends on the underlying operating system, and may include: </dd>
 <p> ONLINE</p>
 <dl>
-<dd>Indicates the drive is online and ready.</dl>
+<dd>Indicates the drive is online and ready.</dd></dl>
 <p> OFFLINE</p>
 <dl>
-<dd>Indicates the drive is offline or not ready.</dl>
+<dd>Indicates the drive is offline or not ready.</dd></dl>
 <p> BOT</p>
 <dl>
-<dd>Indicates the drive is at beginning of tape.</dl>
+<dd>Indicates the drive is at beginning of tape.</dd></dl>
 <p> EOT</p>
 <dl>
-<dd>Indicates the drive is at end of tape.</dl>
+<dd>Indicates the drive is at end of tape.</dd></dl>
 <p> PROTECTED</p>
 <dl>
-<dd>Indicates the tape is write protected.</dl>
+<dd>Indicates the tape is write protected.</dd></dl>
 <p> ds</p>
 <dl>
-<dd>Device status.</dl>
+<dd>Device status.</dd></dl>
 <p> er</p>
 <dl>
-<dd>Error register.</dl>
+<dd>Error register.</dd></dl>
 <p> fileno</p>
 <dl>
-<dd>Current tape file number.</dl>
+<dd>Current tape file number.</dd></dl>
 <p> blkno</p>
 <dl>
-<dd>Current tape block number file.</dl>
+<dd>Current tape block number file.</dd></dl>
 </dl>
 <p> Note </p>
 <p> Many systems only report good data when a tape is in the drive and ready.</p>

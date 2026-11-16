@@ -49,9 +49,9 @@ description: "lircd_selinux – Security Enhanced Linux Policy for the lircd pro
 <p> Policy governs the access confined processes have to these ports. SELinux lircd policy is very flexible allowing users to setup their lircd processes in as secure a method as possible. </p>
 <p> The following port types are defined for lircd: </p>
 <dl>
-<dt><code>lirc_port_t</code></p>
+<dt><code>lirc_port_t</code></dt>
 <dd>
-<dd>Default Defined Ports: tcp 8765</dl>
+</dd><dd>Default Defined Ports: tcp 8765</dd></dl>
 <h2>Managed Files</h2>
 <p>The SELinux process type lircd_t can manage files labeled with the following file types. The paths listed are the default paths for these file types. Note the processes UID still need to have DAC permissions. </p>
 <p> <code>cluster_conf_t</code> </p>
@@ -105,8 +105,8 @@ description: "lircd_selinux – Security Enhanced Linux Policy for the lircd pro
 <p> <code>lircd_etc_t</code> </p>
 <p> &#8211; Set files with the lircd_etc_t type, if you want to store lircd files in the /etc directories. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/etc/lirc(/.*)?, /etc/lircd.conf </p>
+<dt>Paths:</dt>
+<dd>/etc/lirc(/.*)?, /etc/lircd.conf </dd>
 </dl>
 <p> <code>lircd_exec_t</code> </p>
 <p> &#8211; Set files with the lircd_exec_t type, if you want to transition an executable to the lircd_t domain. </p>
@@ -115,8 +115,8 @@ description: "lircd_selinux – Security Enhanced Linux Policy for the lircd pro
 <p> <code>lircd_var_run_t</code> </p>
 <p> &#8211; Set files with the lircd_var_run_t type, if you want to store the lircd files under the /run or /var/run directory. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/var/run/lirc(/.*)?, /var/run/lircd(/.*)?, /dev/lircd, /var/run/lircd.pid </p>
+<dt>Paths:</dt>
+<dd>/var/run/lirc(/.*)?, /var/run/lircd(/.*)?, /dev/lircd, /var/run/lircd.pid </dd>
 </dl>
 <p> Note: File context can be temporarily modified with the chcon command. If you want to permanently change the file context you need to use the <code>semanage fcontext</code> command. This will modify the SELinux labeling database. You will need to use <code>restorecon</code> to apply the labels.</p>
 <h2>Commands</h2>

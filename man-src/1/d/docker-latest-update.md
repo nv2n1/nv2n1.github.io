@@ -47,27 +47,27 @@ Restart policy to apply when a container exits&nbsp;<wbr>(no, on-failure[:max-re
 <p> To limit a container&#8217;s cpu-shares to 512, first identify the container name or ID. You can use <code>docker ps</code> to find these values. You can also use the ID returned from the <code>docker run</code> command. Then, do the following: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 $ docker update --cpu-shares 512 abebf7571666
 </pre>
-</dl>
+</dd></dl>
 <h3>Update a container with cpu-shares and memory</h3>
 <p> To update multiple resource configurations for multiple containers: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 $ docker update --cpu-shares 512 -m 300M abebf7571666 hopeful_morse
 </pre>
-</dl>
+</dd></dl>
 <h3>Update a container&#8217;s restart policy</h3>
 <p> To update restart policy for one or more containers: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 $ docker update --restart=on-failure:3 abebf7571666 hopeful_morse
 </pre>
-</dl>
+</dd></dl>
 <h2>Index</h2>

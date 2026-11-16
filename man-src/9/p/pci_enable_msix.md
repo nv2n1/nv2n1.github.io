@@ -15,15 +15,15 @@ pci_enable_msix - configure device's MSI-X capability structure
 <h2>Arguments</h2>
 
 <i>dev</i>
-<dl><dd><dd>pointer to the pci_dev data structure of MSI-X device function</dl>
+<dl><dd></dd><dd>pointer to the pci_dev data structure of MSI-X device function</dd></dl>
  
 
  <i>entries</i>
-<dl><dd>pointer to an array of MSI-X entries (optional)</dl>
+<dl><dd>pointer to an array of MSI-X entries (optional)</dd></dl>
  
 
  <i>nvec</i>
-<dl><dd>number of MSI-X irqs requested for allocation by device driver</dl>
+<dl><dd>number of MSI-X irqs requested for allocation by device driver</dd></dl>
 
 <h2>Description</h2>
 

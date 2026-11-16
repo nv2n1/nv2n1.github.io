@@ -15,19 +15,19 @@ The <i>abrt-action-save-package-data</i> tool queries RPM database and saves pac
  The configuration file consists of items in the format &quot;Option = Value&quot;. A description of each item follows: 
 
  OpenGPGCheck = <i>yes</i> | <i>no</i>
-<dl><dd>When set to <i>yes</i>, <i>abrt</i> will handle only crashes in executables which belong to an installed package with valid GPG signature. The default is <i>yes</i>. The files containing trusted GPG keys which are used to verify the signatures are listed in the gpg_keys.conf configuration file.</dl>
+<dl><dd>When set to <i>yes</i>, <i>abrt</i> will handle only crashes in executables which belong to an installed package with valid GPG signature. The default is <i>yes</i>. The files containing trusted GPG keys which are used to verify the signatures are listed in the gpg_keys.conf configuration file.</dd></dl>
  
 
  BlackList = <i>packageName</i>, <i>packageName</i> ...
-<dl><dd><i>abrt</i> will ignore packages in this list and will not handle their crashes.</dl>
+<dl><dd><i>abrt</i> will ignore packages in this list and will not handle their crashes.</dd></dl>
  
 
  BlackListedPaths = <i>/path/to/ignore/*</i>, <i>*/another/ignored/path*</i> ...
-<dl><dd><i>abrt</i> will ignore crashes in executables whose absolute path matches one of specified patterns.</dl>
+<dl><dd><i>abrt</i> will ignore crashes in executables whose absolute path matches one of specified patterns.</dd></dl>
  
 
  ProcessUnpackaged = <i>yes</i> | <i>no</i>
-<dl><dd>When set to <i>yes</i>, <i>abrt</i> will catch all crashes in the system. When set to <i>no</i>, it will catch crashes only in executables which belong to an installed package. The default is <i>no</i>.</dl>
+<dl><dd>When set to <i>yes</i>, <i>abrt</i> will catch all crashes in the system. When set to <i>no</i>, it will catch crashes only in executables which belong to an installed package. The default is <i>no</i>.</dd></dl>
 
 <h2>See Also</h2>
 
@@ -35,4 +35,4 @@ The <i>abrt-action-save-package-data</i> tool queries RPM database and saves pac
 
 <h2>Authors</h2>
 
-<dl><dd>&bull; ABRT team</dl>
+<dl><dd>&bull; ABRT team</dd></dl>

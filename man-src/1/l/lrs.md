@@ -34,13 +34,11 @@ url: "/docs/linux/man/1-lrs/"
 <p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>4<br />
  This way, there is no ambiguity and minimal changes are needed. But the MP 4 is no more the end of segment 3 &#8211; 4 but the end of segment 3+2000 &#8211; 3+3000. This information must be entered to the system and it is done by optional MP attributes:</p>
 <dl>
-<dt>
-<dd>
 <dl>
 <dt>
-<dd> end_mp &#8211; end MP</p>
+</dt><dd> end_mp &#8211; end MP</dd>
 <dt>
-<dd> end_off &#8211; end offset</dl>
+</dt><dd> end_off &#8211; end offset</dd></dl>
 </dl>
 <p> In this case original MP on km 4 will have these attributes:<br />
  start_mp: 4<br />
@@ -65,17 +63,15 @@ url: "/docs/linux/man/1-lrs/"
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>| end_type<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>| integer<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>| 1: the same as specified for from_ ; 2: calculated from map along the line from previous MP; 3: defined by user </p>
 <h3>Available commands</h3>
 <dl>
-<dt>
-<dd>
 <dl>
 <dt>
-<dd> v.lrs.create to create a linear referencing system,</p>
+</dt><dd> v.lrs.create to create a linear referencing system,</dd>
 <dt>
-<dd> v.lrs.label to create stationing on the LRS,</p>
+</dt><dd> v.lrs.label to create stationing on the LRS,</dd>
 <dt>
-<dd> v.lrs.segment to create points/segments on LRS, and</p>
+</dt><dd> v.lrs.segment to create points/segments on LRS, and</dd>
 <dt>
-<dd> v.lrs.where to find line id and real km+offset for given points in vector map using linear referencing system.</dl>
+</dt><dd> v.lrs.where to find line id and real km+offset for given points in vector map using linear referencing system.</dd></dl>
 </dl>
 <h3>Input lines for v.lrs.segment and v.lrs.label</h3>
 <p> <i>v.lrs.create</i> joins all connected lines of the same line ID into one line, the LRS library and other modules using LRS expect this! LR_get_nearest_offset in the LRS library checks duplicate segments only by line_cat and map_offset, not by coordinates in map.</p>
@@ -95,19 +91,17 @@ url: "/docs/linux/man/1-lrs/"
 <h2>NOTES</h2>
 <p> Explanations of selected options:</p>
 <dl>
-<dt>
-<dd>
 <dl>
 <dt>
-<dd> llayer: vector layer in line map (usually 1; see vectorintro for &quot;layer&quot; concept)</p>
+</dt><dd> llayer: vector layer in line map (usually 1; see vectorintro for &quot;layer&quot; concept)</dd>
 <dt>
-<dd> player: vector layer in point map (usually 1; see vectorintro for &quot;layer&quot; concept)</p>
+</dt><dd> player: vector layer in point map (usually 1; see vectorintro for &quot;layer&quot; concept)</dd>
 <dt>
-<dd> rsdriver: Driver name for LRS table &#8211; DBMI SQL driver (dbf, pg, mysql, sqlite, etc)</p>
+</dt><dd> rsdriver: Driver name for LRS table &#8211; DBMI SQL driver (dbf, pg, mysql, sqlite, etc)</dd>
 <dt>
-<dd> rsdatabase: Database name for LRS table &#8211; DBMI SQL database name (e.g., &quot;lrsdb&quot;)</p>
+</dt><dd> rsdatabase: Database name for LRS table &#8211; DBMI SQL database name (e.g., &quot;lrsdb&quot;)</dd>
 <dt>
-<dd> rstable: Name of the LRS table &#8211; DBMI SQL table name (e.g., &quot;streamslrs&quot;)</dl>
+</dt><dd> rstable: Name of the LRS table &#8211; DBMI SQL table name (e.g., &quot;streamslrs&quot;)</dd></dl>
 </dl>
 <h2>SEE ALSO</h2>
 <p> <i>R. Blazek, 2004, Introducing the Linear Reference System in GRASS, Bangkok, GRASS User Conf. Proc.</i><br />

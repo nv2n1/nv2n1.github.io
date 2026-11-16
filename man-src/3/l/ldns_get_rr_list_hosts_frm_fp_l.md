@@ -16,8 +16,8 @@ description: "ldns_get_rr_list_hosts_frm_fp_l"
 <p> ldns_rr_list* ldns_get_rr_list_hosts_frm_fp_l(FILE *fp, int *line_nr); </p>
 <h2>DESCRIPTION</h2>
 <dl>
-<dt> <i>ldns_get_rr_list_hosts_frm_fp_l</i>()</p>
-<dd>wade through fp (a /etc/hosts like file) and return a rr_list containing all the defined hosts in there .br <code>fp</code>: the file pointer to use .br <code>line_nr</code>: pointer to an integer containing the current line number (for debugging purposes) .br Returns ldns_rr_list * with the names</dl>
+<dt> <i>ldns_get_rr_list_hosts_frm_fp_l</i>()</dt>
+<dd>wade through fp (a /etc/hosts like file) and return a rr_list containing all the defined hosts in there .br <code>fp</code>: the file pointer to use .br <code>line_nr</code>: pointer to an integer containing the current line number (for debugging purposes) .br Returns ldns_rr_list * with the names</dd></dl>
 <h2>AUTHOR</h2>
 <p> The ldns team at NLnet Labs. Which consists out of Jelte Jansen and Miek Gieben. </p>
 <h2>REPORTING BUGS</h2>

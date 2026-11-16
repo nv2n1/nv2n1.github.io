@@ -16,51 +16,44 @@ description: "cargo-init – Create a new cargo package in the current directory
 <p> Use the &#8211;vcs option to control the version control system to use.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-h, &#8211;help</code></p>
-<dd> Print this message.</p>
+<dt><code>-h, &#8211;help</code></dt>
+<dd> Print this message.</dd>
 <dl>
-<dt>
-<dd></dl>
-<dt><code>&#8211;vcs </code>VCS</p>
-<dd> Initialize a new repository for the given version control system (git or hg) or do not initialize any version control at all (none) overriding a global configuration.</p>
+</dl>
+<dt><code>&#8211;vcs </code>VCS</dt>
+<dd> Initialize a new repository for the given version control system (git or hg) or do not initialize any version control at all (none) overriding a global configuration.</dd>
 <dl>
-<dt>
-<dd></dl>
-<dt><code>&#8211;bin</code></p>
-<dd> Use a binary instead of a library template.</p>
+</dl>
+<dt><code>&#8211;bin</code></dt>
+<dd> Use a binary instead of a library template.</dd>
 <dl>
-<dt>
-<dd></dl>
-<dt><code>&#8211;name </code>NAME</p>
-<dd> Set the resulting package name.</p>
+</dl>
+<dt><code>&#8211;name </code>NAME</dt>
+<dd> Set the resulting package name.</dd>
 <dl>
-<dt>
-<dd></dl>
-<dt><code>-v, &#8211;verbose</code></p>
-<dd> Use verbose output.</p>
+</dl>
+<dt><code>-v, &#8211;verbose</code></dt>
+<dd> Use verbose output.</dd>
 <dl>
-<dt>
-<dd></dl>
-<dt><code>-q, &#8211;quiet</code></p>
-<dd> No output printed to stdout.</p>
+</dl>
+<dt><code>-q, &#8211;quiet</code></dt>
+<dd> No output printed to stdout.</dd>
 <dl>
-<dt>
-<dd></dl>
-<dt><code>&#8211;color </code>WHEN</p>
-<dd> Coloring: auto, always, never.</p>
+</dl>
+<dt><code>&#8211;color </code>WHEN</dt>
+<dd> Coloring: auto, always, never.</dd>
 <dl>
-<dt>
-<dd></dl>
+</dl>
 </dl>
 <h2>EXAMPLES</h2>
 <p> Initialize a binary cargo package in the current directory</p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 $&nbsp;<wbr>cargo init --bin
 </pre>
-</dl>
+</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/1-cargo/">cargo</a>(1), <a href="/docs/linux/man/1-cargo-new/">cargo-new</a>(1)</p>
 <h2>COPYRIGHT</h2>

@@ -11,10 +11,8 @@ std::negate&lt;void&gt; - std::negate&lt;void&gt;
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;functional&gt;
-
     template &lt;&gt;
     (since C++ 14)
-
         class negate&lt;void&gt;;</code></pre> 
 std::negate&lt;&gt; is a specialization of std::negate with parameter and return type deduced. 
 

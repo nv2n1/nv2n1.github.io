@@ -14,10 +14,10 @@ description: "snd_free_pages – release the pages"
 <p><i>ptr</i></p>
 <dl>
 <dd>
-<dd>the buffer pointer to release</dl>
+</dd><dd>the buffer pointer to release</dd></dl>
 <p> <i>size</i></p>
 <dl>
-<dd>the allocated buffer size</dl>
+<dd>the allocated buffer size</dd></dl>
 <h2>Description</h2>
 <p>Releases the buffer allocated via <code>snd_malloc_pages</code>.</p>
 <h2>Copyright</h2>

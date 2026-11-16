@@ -15,8 +15,8 @@ description: "XmListGetKbdItemPos — A List function that returns the position 
 <h2>Description</h2>
 <p><code>XmListGetKbdItemPos</code> returns the position of the list item at the location cursor.</p>
 <dl COMPACT>
-<dt><i>widget</i></p>
-<dd>Specifies the ID of the List widget</dl>
+<dt><i>widget</i></dt>
+<dd>Specifies the ID of the List widget</dd></dl>
 <p> For a complete definition of List and its associated resources, see <code><a href="/docs/linux/man/3-xmlist/">XmList</a></code>(3).</p>
 <h2>Return</h2>
 <p>Returns the position of the current keyboard item. A value of 1 indicates that the location cursor is at the first item of the list; a value of 2 indicates that it is at the second item; and so on. A value of 0 (zero) indicates the List widget is empty.</p>

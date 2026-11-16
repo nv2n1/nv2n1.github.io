@@ -17,17 +17,15 @@ description: "rafilteraddr – select argus(8) data based on an IANA IP address 
 <p> Rafilteraddr, reads a number of standard IANA IP address file formats that specify IPv4, CIDR and IPV4 prefix addresses. Examples of these file types are provided in ./support/Config. </p>
 <p> <code><a href="/docs/linux/man/1-rafilteraddr/">rafilteraddr</a>(1)</code> specific options are:</p>
 <dl>
-<dt><code>-f &lt;IPv4 address specification&gt;&gt;</code></p>
-<dd> Specify the list of addresses used for the address filter. This file can be in several IANA based address specification formats, and is the same format as the address labels for <code>ralabel.1</code>. </p>
-<dt><code>-v</code></p>
-<dd> Invert the logic and print flows that don&#8217;t match any of the addresses. </p>
+<dt><code>-f &lt;IPv4 address specification&gt;&gt;</code></dt>
+<dd> Specify the list of addresses used for the address filter. This file can be in several IANA based address specification formats, and is the same format as the address labels for <code>ralabel.1</code>. </dd>
+<dt><code>-v</code></dt>
+<dd> Invert the logic and print flows that don&#8217;t match any of the addresses. </dd>
 </dl>
 <h2>INVOCATION</h2>
 <p> This invocation reads <code><a href="/docs/linux/man/8-argus/">argus</a>(8)</code> data from <code>argusfile</code> and prints records that match any of the IP addresses in the iana-ipv4-addresses. </p>
 <pre>
- 
    <code>rafilteraddr</code> -r argusfile -f iana-ipv4-addresses -- ip
- 
 </pre>
 <p> An example address specification that describes a mix of CIDR addresses, IPv4 address ranges and explicit addresses: </p>
 <pre>

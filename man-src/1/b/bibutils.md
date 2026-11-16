@@ -11,10 +11,10 @@ description: "bibutils – bibliography conversion utilities"
 <p> bibutils &#8211; bibliography conversion utilities </p>
 <h2>SYNOPSIS</h2>
 <dl>
-<dt> <i>format</i><code>2xml</code> [<i>OPTIONS</i>] [<i>file.format</i>]</p>
-<dt> <code>xml2</code><i>format</i> [<i>OPTIONS</i>] [<i>file.xml</i>]</dl>
+<dt> <i>format</i><code>2xml</code> [<i>OPTIONS</i>] [<i>file.format</i>]</dt>
+<dt> <code>xml2</code><i>format</i> [<i>OPTIONS</i>] [<i>file.xml</i>]</dt></dl>
 <h2>DESCRIPTION</h2>
-<dd>The bibutils program set inter-converts between various bibliography formats using m[blue]<code>Library of Congress</code>m[]<font SIZE="-2">[1]</font>&#8216;s m[blue]<code>Metadata Object Description Schema (MODS)</code>m[]<font SIZE="-2">[2]</font>version 3.1. For example, one can convert RIS-format files to Bibtex by doing two transformations: RIS-&gt;MODS-&gt;Bibtex.</p>
+<dd>The bibutils program set inter-converts between various bibliography formats using m[blue]<code>Library of Congress</code>m[]<font SIZE="-2">[1]</font>&#8216;s m[blue]<code>Metadata Object Description Schema (MODS)</code>m[]<font SIZE="-2">[2]</font>version 3.1. For example, one can convert RIS-format files to Bibtex by doing two transformations: RIS-&gt;MODS-&gt;Bibtex.</dd>
 <h2>CONVERTING TO MODS</h2>
 <h3>Overview</h3>
 <table>
@@ -191,20 +191,20 @@ description: "bibutils – bibliography conversion utilities"
 <p> <code>bib2xml</code> converts a bibtex-formatted reference file to an XML-intermediate bibliography file. Specify file(s) to be converted on the command line. Files containing bibtex substitutions strings should be specified before the files where substitutions are specified (or in the same file before their use). If no files are specified, then bibtex information will be read from standard input. </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 bib2xml bibtex_file.bib &gt; output_file.xml
 </pre>
-</dl>
+</dd></dl>
 <h3>biblatex2xml</h3>
 <p> <code>biblatex2xml</code> converts a biblatex (not to be confused with bibtex) formatted reference file to an MODS XML-intermediate bibliography file. </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 biblatex2xml biblatex_file.bib &gt; outputfile.xml
 </pre>
-</dl>
+</dd></dl>
 <h3>copac2xml</h3>
 <p> <code>copac2xml</code>converts a COPAC formatted reference file to a MODS XML-intermediate bibliography file.</p>
 <h3>end2xml</h3>
@@ -212,11 +212,11 @@ biblatex2xml biblatex_file.bib &gt; outputfile.xml
 <p> Usage for <code>end2xml</code> is the same as <code>bib2xml</code>. </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 end2xml endnote_file.end &gt; output_file.xml
 </pre>
-</dl>
+</dd></dl>
 <h3>ebi2xml</h3>
 <p> <code>ebi2xml</code> converts a EBI XML file to a MODS XML-intermediate bibliography file.</p>
 <h3>endx2xml</h3>
@@ -226,20 +226,20 @@ end2xml endnote_file.end &gt; output_file.xml
 <p> Usage for <code>isi2xml</code> is the same as <code>bib2xml</code>. </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 isi2xml input_file.isi &gt; output_file.xml
 </pre>
-</dl>
+</dd></dl>
 <h3>ris2xml</h3>
 <p> <code>ris2xml</code> converts a RIS-formatted reference file to an XML-intermediate bibliography file. <code>ris2xml</code> usage is as <code>end2xml</code> and <code>bib2xml</code> </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 ris2xml ris_file.ris &gt;  output_file.xml
 </pre>
-</dl>
+</dd></dl>
 <h3>wordbib2xml</h3>
 <p> <code>wordbib2xml</code> convert a Word2007-formatted reference file to an XML-intermediate bibliogrpahy file.</p>
 <h2>CONVERTING FROM MODS</h2>
@@ -325,17 +325,17 @@ ris2xml ris_file.ris &gt;  output_file.xml
 <p> <code>xml2bib</code> converts the MODS XML bibliography into a bibtex-formatted reference file. <code>xml2bib</code> usage is as for other tools </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 xml2bib xml_file.xml &gt; output_file.bib
 </pre>
-</dl>
+</dd></dl>
 <p> Since the BibTeX reference format is fairly flexible and seems to have the greatest number of personal preferences, it has also accumulated a number of specific options that are not available for other formats. </p>
 <p> Starting with 3.24, xml2bib output uses lowercase tags and mixed case reference types for better interaction with other software. The older behavior with all uppercase tags/reference types can still be generated using the command-line switch -U/&#8211;uppercase. </p>
 <p> <font SIZE="+1"> <code>xml2bib-specific Options:</code></p>
 <dl>
 <dt>
-<dd> </font></p>
+</dt><dd> </font></dd>
 <table>
 <tr VALIGN=top>
 <td></td>
@@ -387,44 +387,44 @@ xml2bib xml_file.xml &gt; output_file.bib
 <p> <code>xml2ads</code> converts the MODS XML bibliography to the Smithsonian Astrophysical Observatory (SAO)/National Aeronautics and Space Administration (NASA) Astrophyics Data System or m[blue]<code>ADS reference format</code>m[]<font SIZE="-2">[6]</font> (which is very similar to the tagged Endnote style). <code>xml2ads</code> usage is as for other tools </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 xml2ads xml_file.xml &gt; output_file.ads
 </pre>
-</dl>
+</dd></dl>
 <h3>xml2ris</h3>
 <p> <code>xml2ris</code> converts the MODS XML bibliography to RIS-formatted bibliography file. <code>xml2ris</code> usage is as for other tools </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 xml2ris xml_file.xml &gt; output_file.ris
 </pre>
-</dl>
+</dd></dl>
 <h3>xml2end</h3>
 <p> <code>xml2end</code> converts the MODS XML bibliography to tagged Endnote (refer-format) bibliography file. <code>xml2end</code> usage is as for other tools </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 xml2end xml_file.xml &gt;  output_file.end
 </pre>
-</dl>
+</dd></dl>
 <h3>xml2wordbib</h3>
 <p> <code>xml2wordbib</code> converts the MODS XML bibliography to Word 2007-formatted XML bibliography file. <code>xml2wordbib</code> usage is as for other tools </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 xml2wordbib xml_file.xml &gt;  output_file.word.xml
 </pre>
-</dl>
+</dd></dl>
 <p> <code>xml2wordbib</code> was called xml2word in versions of bibutils prior to 3.40. It was renamed to avoid confusion with other tools. Hopefully this will not break too many scripts already in use.</p>
 <h2>EXAMPLES</h2>
 <p> <code>Example 1. Example refer format file</code> </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 %0 Journal Article 
 %A C. D. Putnam
@@ -436,14 +436,13 @@ xml2wordbib xml_file.xml &gt;  output_file.word.xml
 %V 12 
 %P 4970-4980 
 %F Putnam1992
-        
 </pre>
-</dl>
+</dd></dl>
 <h3>xml2bib Output Variations</h3>
 <p> <code>Example 2. Default</code> </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
               @Article{Putnam1992, 
               author=&quot;C. D. Putnam
@@ -458,13 +457,12 @@ xml2wordbib xml_file.xml &gt;  output_file.word.xml
               volume=&quot;12&quot;,
               pages=&quot;4970--4980&quot;,
               number=&quot;11&quot;}
-            
 </pre>
-</dl>
+</dd></dl>
 <p> <code>Example 3. Final Comma</code> </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
               @Article{Putnam1992,
               author=&quot;C. D. Putnam
@@ -479,13 +477,12 @@ xml2wordbib xml_file.xml &gt;  output_file.word.xml
               volume=&quot;12&quot;,
               pages=&quot;4970--4980&quot;,
               number=&quot;11&quot;,}
-            
 </pre>
-</dl>
+</dd></dl>
 <p> <code>Example 4. Single Dash</code> </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
               @Article{Putnam1992,
               author=&quot;C. D. Putnam
@@ -500,13 +497,12 @@ xml2wordbib xml_file.xml &gt;  output_file.word.xml
               volume=&quot;12&quot;,
               pages=&quot;4970-4980&quot;,
               number=&quot;11&quot;}
-            
 </pre>
-</dl>
+</dd></dl>
 <p> <code>Example 5. Whitespace</code> </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 @Article{Putnam1992,
   author =      &quot;C. D. Putnam
@@ -522,11 +518,11 @@ enhancers&quot;,
   pages =       &quot;4970--4980&quot;
 }
 </pre>
-</dl>
+</dd></dl>
 <p> <code>Example 6. Brackets</code> </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre><code>
 @Article
 {
@@ -543,11 +539,11 @@ enhancers&quot;,
         pages = { 4970 --4980 }
 }
 </code></pre>
-</dl>
+</dd></dl>
 <p> <code>Example 7. Uppercase</code> </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
               @ARTICLE{Putnam1992,
               AUTHOR=&quot;Putnam, C. D.
@@ -562,9 +558,8 @@ enhancers&quot;,
               NUMBER=&quot;11&quot;,
               PAGES=&quot;4970--4980&quot;
               }
-            
 </pre>
-</dl>
+</dd></dl>
 <h2>LICENSE</h2>
 <p> All versions of bibutils are relased under the GNU Public License (GPL). In a nutshell, feel free to download, run, and modify these programs as required. If you re-release these, you need to release the modified version of the source. (And I&#8217;d appreciate patches as well&#8230;if you care enough to make the change, then I&#8217;d like to see what you&#8217;re adding or fixing.) </p>
 <p> m[blue]<code>Chris Putnam, Ludwig Institute for Cancer Research</code>m[]<font SIZE="-2">[7]</font></p>
@@ -574,40 +569,40 @@ enhancers&quot;,
 <p> This manual page is distributed under the terms of version 2 of the GNU General Public License. </p>
 <h2>NOTES</h2>
 <dl>
-<dt> 1.</p>
-<dd> Library of Congress</p>
+<dt> 1.</dt>
+<dd> Library of Congress</dd>
 <dl>
 <dt>
-<dd> <a rel="nofollow" href="http://www.loc.gov">http://www.loc.gov</a></dl>
-<dt> 2.</p>
-<dd> Metadata Object Description Schema (MODS)</p>
+</dt><dd> <a rel="nofollow" href="http://www.loc.gov">http://www.loc.gov</a></dd></dl>
+<dt> 2.</dt>
+<dd> Metadata Object Description Schema (MODS)</dd>
 <dl>
 <dt>
-<dd> <a rel="nofollow" href="http://www.loc.gov/standards/mods/">http://www.loc.gov/standards/mods/</a></dl>
-<dt> 3.</p>
-<dd> COPAC</p>
+</dt><dd> <a rel="nofollow" href="http://www.loc.gov/standards/mods/">http://www.loc.gov/standards/mods/</a></dd></dl>
+<dt> 3.</dt>
+<dd> COPAC</dd>
 <dl>
 <dt>
-<dd> <a rel="nofollow" href="http://copac.ac.uk/">http://copac.ac.uk/</a></dl>
-<dt> 4.</p>
-<dd> <a rel="nofollow" href="http://www.kostis.net">www.kostis.net</a></p>
+</dt><dd> <a rel="nofollow" href="http://copac.ac.uk/">http://copac.ac.uk/</a></dd></dl>
+<dt> 4.</dt>
+<dd> <a rel="nofollow" href="http://www.kostis.net">www.kostis.net</a></dd>
 <dl>
 <dt>
-<dd> <a rel="nofollow" href="http://www.kostis.net/">http://www.kostis.net/</a></dl>
-<dt> 5.</p>
-<dd> <a rel="nofollow" href="http://www.sonnysoftware.com/endnoteimport.html">http://www.sonnysoftware.com/endnoteimport.html</a></p>
+</dt><dd> <a rel="nofollow" href="http://www.kostis.net/">http://www.kostis.net/</a></dd></dl>
+<dt> 5.</dt>
+<dd> <a rel="nofollow" href="http://www.sonnysoftware.com/endnoteimport.html">http://www.sonnysoftware.com/endnoteimport.html</a></dd>
 <dl>
 <dt>
-<dd> <a rel="nofollow" href="http://www.sonnysoftware.com/endnoteimport.html">http://www.sonnysoftware.com/endnoteimport.html</a></dl>
-<dt> 6.</p>
-<dd> ADS reference format</p>
+</dt><dd> <a rel="nofollow" href="http://www.sonnysoftware.com/endnoteimport.html">http://www.sonnysoftware.com/endnoteimport.html</a></dd></dl>
+<dt> 6.</dt>
+<dd> ADS reference format</dd>
 <dl>
 <dt>
-<dd> <a rel="nofollow" href="http://doc.adsabs.harvard.edu/abs_doc/help_pages/taggedformat.html">http://doc.adsabs.harvard.edu/abs_doc/help_pages/taggedformat.html</a></dl>
-<dt> 7.</p>
-<dd> Chris Putnam, Ludwig Institute for Cancer Research</p>
+</dt><dd> <a rel="nofollow" href="http://doc.adsabs.harvard.edu/abs_doc/help_pages/taggedformat.html">http://doc.adsabs.harvard.edu/abs_doc/help_pages/taggedformat.html</a></dd></dl>
+<dt> 7.</dt>
+<dd> Chris Putnam, Ludwig Institute for Cancer Research</dd>
 <dl>
 <dt>
-<dd> <a rel="nofollow" href="http://www.sourceforge.net/p/bibutils/home/Bibutils">http://www.sourceforge.net/p/bibutils/home/Bibutils</a></dl>
+</dt><dd> <a rel="nofollow" href="http://www.sourceforge.net/p/bibutils/home/Bibutils">http://www.sourceforge.net/p/bibutils/home/Bibutils</a></dd></dl>
 </dl>
 <h2>Index</h2>

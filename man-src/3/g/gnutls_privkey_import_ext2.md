@@ -14,20 +14,20 @@ description: "gnutls_privkey_import_ext2 – API function"
 <p> <code>int gnutls_privkey_import_ext2(gnutls_privkey_t </code><i>pkey</i><code>, gnutls_pk_algorithm_t </code><i>pk</i><code>, void * </code><i>userdata</i><code>, gnutls_privkey_sign_func </code><i>sign_func</i><code>, gnutls_privkey_decrypt_func </code><i>decrypt_func</i><code>, gnutls_privkey_deinit_func </code><i>deinit_func</i><code>, unsigned int </code><i>flags</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
-<dt>gnutls_privkey_t pkey</p>
-<dd> The private key</p>
-<dt>gnutls_pk_algorithm_t pk</p>
-<dd> The public key algorithm</p>
-<dt>void * userdata</p>
-<dd> private data to be provided to the callbacks</p>
-<dt>gnutls_privkey_sign_func sign_func</p>
-<dd> callback for signature operations</p>
-<dt>gnutls_privkey_decrypt_func decrypt_func</p>
-<dd> callback for decryption operations</p>
-<dt>gnutls_privkey_deinit_func deinit_func</p>
-<dd> a deinitialization function</p>
-<dt>unsigned int flags</p>
-<dd> Flags for the import</dl>
+<dt>gnutls_privkey_t pkey</dt>
+<dd> The private key</dd>
+<dt>gnutls_pk_algorithm_t pk</dt>
+<dd> The public key algorithm</dd>
+<dt>void * userdata</dt>
+<dd> private data to be provided to the callbacks</dd>
+<dt>gnutls_privkey_sign_func sign_func</dt>
+<dd> callback for signature operations</dd>
+<dt>gnutls_privkey_decrypt_func decrypt_func</dt>
+<dd> callback for decryption operations</dd>
+<dt>gnutls_privkey_deinit_func deinit_func</dt>
+<dd> a deinitialization function</dd>
+<dt>unsigned int flags</dt>
+<dd> Flags for the import</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> This function will associate the given callbacks with the <code>gnutls_privkey_t</code> structure. At least one of the two callbacks must be non-null. If a deinitialization function is provided then flags is assumed to contain <code>GNUTLS_PRIVKEY_IMPORT_AUTO_RELEASE</code>. </p>
 <p> Note that the signing function is supposed to &quot;raw&quot; sign data, i.e., without any hashing or preprocessing. In case of RSA the DigestInfo will be provided, and the signing function is expected to do the PKCS <code>1</code> 1.5 padding and the exponentiation.</p>
@@ -44,6 +44,6 @@ description: "gnutls_privkey_import_ext2 – API function"
 <h2>SEE ALSO</h2>
 <p> The full documentation for <code>gnutls</code> is maintained as a Texinfo manual. If the /usr/share/doc/gnutls/ directory does not contain the HTML form visit <code></p>
 <dl>
-<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></p>
-<dd> </code></dl>
+<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></dt>
+<dd> </code></dd></dl>
 <h2>Index</h2>

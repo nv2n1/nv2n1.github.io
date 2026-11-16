@@ -11,12 +11,9 @@ std::experimental::pmr::pool_options - std::experimental::pmr::pool_options
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;experimental / memory_resource&gt;
-
     struct pool_options {
-
     std::size_t max_blocks_per_chunk = 0;
     (library fundamentals TS)
-
         std::size_t largest_required_pool_block = 0;
 };</code></pre> 
 The struct std::experimental::pmr::pool_options contains a set of constructor options for std::experimental::pmr::synchronized_pool_resource and std::experimental::pmr::unsynchronized_pool_resource. 

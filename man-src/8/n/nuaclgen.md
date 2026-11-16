@@ -16,30 +16,30 @@ description: "nuaclgen – NUFW acl generator"
 <p> Original packaging and informations and help can be found from <a rel="nofollow" href="http://www.nufw.org/">http://www.nufw.org/</a></p>
 <h2>Options</h2>
 <dl>
-<dt><code>&#8211;Schema </code><i>eq|ineq</i></p>
-<dd>Use equality schema or not (Equality schema requires dport be specified, and is the default.</p>
-<dt><code>&#8211;AclName </code><i>Acl DN</i></p>
-<dd>Add an acl in the ldap tree with dn <i>Acl DN</i></p>
-<dt><code>&#8211;saddr </code><i>Network</i></p>
-<dd>Specify source network for the acl, with network of the form : aaa.bbb.ccc.ddd[/ee]. Default value : 0.0.0.0/0</p>
-<dt><code>&#8211;daddr </code><i>Network</i></p>
-<dd>Specify destination network for the acl, with network of the form : aaa.bbb.ccc.ddd[/ee]. Default value : 0.0.0.0/0</p>
-<dt><code>&#8211;proto </code><i>Protocol number</i></p>
-<dd>Specify protocol type for the acl</p>
-<dt><code>&#8211;sport </code><i>Source port</i></p>
-<dd>Specify source port(s) for the Acl. NNNN:MMMM can be used to specify a port range.</p>
-<dt><code>&#8211;dport </code><i>Destination port</i></p>
-<dd>Specify destination port(s) for the Acl. NNNN:MMMM can be used to specify a port range.</p>
-<dt><code>&#8211;jump </code><i>Decision</i></p>
-<dd>Specify decision for the Acl. Has to be ACCEPT or DROP.</p>
-<dt><code>&#8211;groups </code><i>Groups list</i></p>
-<dd>Specify the user group(s) on which Acl apply. Must be of the form : Group1[,Group2[,&#8230;]]</p>
-<dt><code>&#8211;List &#8211;group </code><i>Group ID</i></p>
-<dd>List Acls for the <i>Group ID</i> group</p>
-<dt><code>&#8211;Delete </code><i>Dn</i></p>
-<dd>Deletes the Acl stored in the provided Dn</p>
-<dt><code>&#8211;help </code></p>
-<dd>Displays a brief resume of available options and quits</dl>
+<dt><code>&#8211;Schema </code><i>eq|ineq</i></dt>
+<dd>Use equality schema or not (Equality schema requires dport be specified, and is the default.</dd>
+<dt><code>&#8211;AclName </code><i>Acl DN</i></dt>
+<dd>Add an acl in the ldap tree with dn <i>Acl DN</i></dd>
+<dt><code>&#8211;saddr </code><i>Network</i></dt>
+<dd>Specify source network for the acl, with network of the form : aaa.bbb.ccc.ddd[/ee]. Default value : 0.0.0.0/0</dd>
+<dt><code>&#8211;daddr </code><i>Network</i></dt>
+<dd>Specify destination network for the acl, with network of the form : aaa.bbb.ccc.ddd[/ee]. Default value : 0.0.0.0/0</dd>
+<dt><code>&#8211;proto </code><i>Protocol number</i></dt>
+<dd>Specify protocol type for the acl</dd>
+<dt><code>&#8211;sport </code><i>Source port</i></dt>
+<dd>Specify source port(s) for the Acl. NNNN:MMMM can be used to specify a port range.</dd>
+<dt><code>&#8211;dport </code><i>Destination port</i></dt>
+<dd>Specify destination port(s) for the Acl. NNNN:MMMM can be used to specify a port range.</dd>
+<dt><code>&#8211;jump </code><i>Decision</i></dt>
+<dd>Specify decision for the Acl. Has to be ACCEPT or DROP.</dd>
+<dt><code>&#8211;groups </code><i>Groups list</i></dt>
+<dd>Specify the user group(s) on which Acl apply. Must be of the form : Group1[,Group2[,&#8230;]]</dd>
+<dt><code>&#8211;List &#8211;group </code><i>Group ID</i></dt>
+<dd>List Acls for the <i>Group ID</i> group</dd>
+<dt><code>&#8211;Delete </code><i>Dn</i></dt>
+<dd>Deletes the Acl stored in the provided Dn</dd>
+<dt><code>&#8211;help </code></dt>
+<dd>Displays a brief resume of available options and quits</dd></dl>
 <h2>See Also</h2>
 <p><a href="/docs/linux/man/8-nufw/">nufw</a>(8) </p>
 <p> <a href="/docs/linux/man/8-nuauth/">nuauth</a>(8)</p>

@@ -10,7 +10,6 @@ description: "pbs_statnode – obtain status of pbs nodes"
 <p>pbs_statnode &#8211; obtain status of pbs nodes</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;pbs_error.h&gt;
-
 #include &lt;pbs_ifl.h&gt;</code></pre>
 <p> <code> struct batch_status *pbs_statnode(int connect, char&nbsp;<wbr>*id, struct attrl&nbsp;<wbr>*attrib, char&nbsp;<wbr>*extend) void pbs_statfree(struct batch_status *psj) </code></p>
 <h2>Description</h2>

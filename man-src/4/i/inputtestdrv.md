@@ -22,21 +22,21 @@ description: "inputtest – An X.Org input driver for testing"
 <p> External process can communicate with the input driver via a named socket that is created after the driver is initialized. The paths to the socket is passed via input driver options. </p>
 <p> The following driver <code>Options</code> are supported:</p>
 <dl>
-<dt><code>Option &#34;SocketPath&#34; &#34;</code><i>string</i><code>&#34;</code></p>
-<dd>Sets the path where the driver will create a named socket. Any existing file at that location will be removed.</p>
-<dt><code>Option &#34;DeviceType&#34; &#34;</code><i>string</i><code>&#34;</code></p>
-<dd>Sets the type of the device to be emulated.</p>
-<dd><code>Keyboard</code> Initializes a keyboard device.</p>
-<dd><code>Pointer</code> Initializes a relative-mode pointer device. It will have four valuators &#8211; a &quot;Rel X&quot; valuator at axis 0 and a &quot;Rel Y&quot; valuator at axis 1. A horizontal scroll valuator will be set up at axis 2. A vertical scroll valuator will be set up at axis 3.</p>
-<dd><code>PointerAbsolute</code> Initializes an absolute-mode pointer device. It will have four valuators &#8211; an &quot;Abs X&quot; valuator at axis 0 and an &quot;Abs Y&quot; valuator at axis 1. A horizontal scroll valuator will be set up at axis 2. A vertical scroll valuator will be set up at axis 3.</p>
-<dd><code>PointerAbsoluteProximity</code> Initializes an absolute-mode pointer device with proximity support. The valuators are initialized in the same way as for <code>PointerAbsolute</code> type.</p>
-<dd><code>Touch</code> Initializes a touch device. It will have 5 valuators: an &quot;Abs MT Position X&quot; at axis 0, an &quot;Abs MT Position Y&quot; valuator at axis 1, a horizontal scroll valuator on axis 2, a vertical scroll valuator on axis 3 and an &quot;Abs MT Pressure&quot; valuator at axis 4.</p>
-<dt><code>Option &#34;TouchCount&#34; &#34;</code><i>int</i><code>&#34;</code></p>
-<dd>Sets the maximum number of simultaneous touches for touch devices.</p>
-<dt><code>Option &#34;PointerButtonCount&#34; &#34;</code><i>int</i><code>&#34;</code></p>
-<dd>Sets the maximum number of buttons in pointer devices.</p>
-<dt><code>Option &#34;PointerHasPressure&#34; &#34;</code><i>bool</i><code>&#34;</code></p>
-<dd>Selects whether &quot;Abs Pressure&quot; is available at the axis 4 in pointer devices. </p>
+<dt><code>Option &#34;SocketPath&#34; &#34;</code><i>string</i><code>&#34;</code></dt>
+<dd>Sets the path where the driver will create a named socket. Any existing file at that location will be removed.</dd>
+<dt><code>Option &#34;DeviceType&#34; &#34;</code><i>string</i><code>&#34;</code></dt>
+<dd>Sets the type of the device to be emulated.</dd>
+<dd><code>Keyboard</code> Initializes a keyboard device.</dd>
+<dd><code>Pointer</code> Initializes a relative-mode pointer device. It will have four valuators &#8211; a &quot;Rel X&quot; valuator at axis 0 and a &quot;Rel Y&quot; valuator at axis 1. A horizontal scroll valuator will be set up at axis 2. A vertical scroll valuator will be set up at axis 3.</dd>
+<dd><code>PointerAbsolute</code> Initializes an absolute-mode pointer device. It will have four valuators &#8211; an &quot;Abs X&quot; valuator at axis 0 and an &quot;Abs Y&quot; valuator at axis 1. A horizontal scroll valuator will be set up at axis 2. A vertical scroll valuator will be set up at axis 3.</dd>
+<dd><code>PointerAbsoluteProximity</code> Initializes an absolute-mode pointer device with proximity support. The valuators are initialized in the same way as for <code>PointerAbsolute</code> type.</dd>
+<dd><code>Touch</code> Initializes a touch device. It will have 5 valuators: an &quot;Abs MT Position X&quot; at axis 0, an &quot;Abs MT Position Y&quot; valuator at axis 1, a horizontal scroll valuator on axis 2, a vertical scroll valuator on axis 3 and an &quot;Abs MT Pressure&quot; valuator at axis 4.</dd>
+<dt><code>Option &#34;TouchCount&#34; &#34;</code><i>int</i><code>&#34;</code></dt>
+<dd>Sets the maximum number of simultaneous touches for touch devices.</dd>
+<dt><code>Option &#34;PointerButtonCount&#34; &#34;</code><i>int</i><code>&#34;</code></dt>
+<dd>Sets the maximum number of buttons in pointer devices.</dd>
+<dt><code>Option &#34;PointerHasPressure&#34; &#34;</code><i>bool</i><code>&#34;</code></dt>
+<dd>Selects whether &quot;Abs Pressure&quot; is available at the axis 4 in pointer devices. </dd>
 </dl>
 <h2>Interface With The Driver</h2>
 <p>The communication with the driver is a binary protocol defined in include/xf86-input-inputtest-protocol.h </p>

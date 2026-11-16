@@ -14,6 +14,7 @@ description: "get_super – get the superblock of a device"
 <p><i>bdev</i></p>
 <dl>
 <dd>
-<dd>device to get the superblock for </p>
+</dd><dd>device to get the superblock for </dd>
 <p> Scans the superblock list and finds the superblock of the file system mounted on the device given. <code>NULL</code> is returned if no match is found.</dl>
 <h2>Copyright</h2>
+</p>

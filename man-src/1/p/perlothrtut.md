@@ -444,9 +444,7 @@ $DataQueue-&gt;enqueue(undef);
  Semaphores are a kind of generic locking mechanism. Unlike lock, which gets a lock on a particular scalar, Perl doesn't associate any particular thing with a semaphore so you can use them to control access to anything you like. In addition, semaphores can allow more than one thread to access a resource at once, though by default semaphores only allow one thread access at a time.
 <dl>
 <dt>Basic semaphores
-<dd> Semaphores have two methods, down and up. down decrements the resource count, while up increments it. down calls will block if the semaphore's current count would decrement below zero. This program gives a quick demonstration: 
-
- 
+</dt><dd> Semaphores have two methods, down and up. down decrements the resource count, while up increments it. down calls will block if the semaphore's current count would decrement below zero. This program gives a quick demonstration: 
 use Thread qw(yield);
 use Thread::Semaphore;
 my $semaphore = Thread::Semaphore-&gt;new ();
@@ -471,21 +469,14 @@ sub sample_sub
         $semaphore-&gt;up;
     }
 }
- 
-
  The three invocations of the subroutine all operate in sync. The semaphore, though, makes sure that only one thread is accessing the global variable at once.
-<dt>Advanced Semaphores
-<dd> By default, semaphores behave like locks, letting only one thread <i>down()</i> them at a time. However, there are other uses for semaphores. 
-
+</dd><dt>Advanced Semaphores
+</dt><dd> By default, semaphores behave like locks, letting only one thread <i>down()</i> them at a time. However, there are other uses for semaphores. 
  Each semaphore has a counter attached to it. <i>down()</i> decrements the counter and <i>up()</i> increments the counter. By default, semaphores are created with the counter set to one, <i>down()</i> decrements by one, and <i>up()</i> increments by one. If <i>down()</i> attempts to decrement the counter below zero, it blocks until the counter is large enough. Note that while a semaphore can be created with a starting count of zero, any <i>up()</i> or <i>down()</i> always changes the counter by at least one. <tt>$semaphore</tt>-&gt;<i>down</i>(0) is the same as <tt>$semaphore</tt>-&gt;<i>down</i>(1). 
-
  The question, of course, is why would you do something like this? Why create a semaphore with a starting count that's not one, or why decrement/increment it by more than one? The answer is resource availability. Many resources that you want to manage access for can be safely used by more than one thread at once. 
-
  For example, let's take a <font SIZE="-1">GUI</font> driven program. It has a semaphore that it uses to synchronize access to the display, so only one thread is ever drawing at once. Handy, but of course you don't want any thread to start drawing until things are properly set up. In this case, you can create a semaphore with a counter set to zero, and up it when things are ready for drawing. 
-
  Semaphores with counters greater than one are also useful for establishing quotas. Say, for example, that you have a number of threads that can do I/O at once. You don't want all the threads reading or writing at once though, since that can potentially swamp your I/O channels, or deplete your process' quota of filehandles. You can use a semaphore initialized to the number of concurrent I/O requests (or open files) that you want at any one time, and have your threads quietly block and unblock themselves. 
-
- Larger increments or decrements are handy in those cases where a thread needs to check out or return a number of resources at once.</dl>
+ Larger increments or decrements are handy in those cases where a thread needs to check out or return a number of resources at once.</dd></dl>
 
 <h2>Attributes: Restricting Access To Subroutines</h2>
 

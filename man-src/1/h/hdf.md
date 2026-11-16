@@ -84,11 +84,11 @@ description: "hdf – Hierarchical Data Format library"
 <p> Email: help [at] hdfgroup.org </p>
 <h2>FILES</h2>
 <dl>
-<dt><code>/usr/local/lib/hdf/{libmfhdf.a,libdf.a,libjpeg.a,libz.a [,libsz.a]}</code></p>
-<dd> hdf libraries</p>
-<dt><code>/usr/local/bin</code></p>
-<dd> Location of most hdf utilities</p>
-<dt><code>/usr/local/include/hdf</code></p>
-<dd> Location of include file hdf.h, mfhdf.h, and others </p>
+<dt><code>/usr/local/lib/hdf/{libmfhdf.a,libdf.a,libjpeg.a,libz.a [,libsz.a]}</code></dt>
+<dd> hdf libraries</dd>
+<dt><code>/usr/local/bin</code></dt>
+<dd> Location of most hdf utilities</dd>
+<dt><code>/usr/local/include/hdf</code></dt>
+<dd> Location of include file hdf.h, mfhdf.h, and others </dd>
 </dl>
 <h2>Index</h2>

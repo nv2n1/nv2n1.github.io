@@ -13,12 +13,12 @@ description: "bbl2bib.pl – convert thebibliography environment to a bib file"
 <p> bbl2bib.pl [-d] [-u] [<code>-o</code> <i>output</i>] <i>file</i></p>
 <h2>OPTIONS</h2>
 <dl>
-<dt>[-d]</p>
-<dd> Send debugging output to stdout</p>
-<dt><code>-o</code> <i>output</i></p>
-<dd> Output file. If this option is not used, the name for the output file is formed by changing the extension to <tt>&quot;.bib&quot;</tt></p>
-<dt><code>-u</code></p>
-<dd> Do not clean <font SIZE="-1">URL</font> fields. </p>
+<dt>[-d]</dt>
+<dd> Send debugging output to stdout</dd>
+<dt><code>-o</code> <i>output</i></dt>
+<dd> Output file. If this option is not used, the name for the output file is formed by changing the extension to <tt>&quot;.bib&quot;</tt></dd>
+<dt><code>-u</code></dt>
+<dd> Do not clean <font SIZE="-1">URL</font> fields. </dd>
 <p> Normally <tt>&quot;bbl2bib&quot;</tt> recognizes <font SIZE="-1">URL</font> fields of the kind <tt>&quot;<a rel="nofollow" href="http://dx.doi.org">http://dx.doi.org</a>&quot;</tt> and their variants and converts them to <font SIZE="-1">DOI</font> fields (see also <code><a href="/docs/linux/man/1-biburl2doi/">biburl2doi</a></code>(1) script). The switch <code>-u</code> suppresses this cleanup.</dl>
 <h2>DESCRIPTION</h2>
 <p> The script tries to reconstruct a <tt>&quot;bib&quot;</tt> file from the corresponding <tt>&quot;thebibliography&quot;</tt> environment. One can argue that this operation is akin to reconstructing a cow from the steak. The way the script does it is searching for the entry in the <font SIZE="-1">MR</font> database, and creating the corresponding BibTeX fields. </p>
@@ -26,8 +26,8 @@ description: "bbl2bib.pl – convert thebibliography environment to a bib file"
 <h2>INPUT FILE</h2>
 <p> We assume some structure of the input file:</p>
 <dl>
-<dt>1.</p>
-<dd> The bibliography is contained between the lines </p>
+<dt>1.</dt>
+<dd> The bibliography is contained between the lines </dd>
 <pre>
    egin{thebibliography}...
 </pre>
@@ -35,8 +35,8 @@ description: "bbl2bib.pl – convert thebibliography environment to a bib file"
 <pre>
    nd{thebibliography}
 </pre>
-<dt>2.</p>
-<dd> Each bibliography item starts from the line </p>
+<dt>2.</dt>
+<dd> Each bibliography item starts from the line </dd>
 <pre><code>
 ibitem[...]
 {

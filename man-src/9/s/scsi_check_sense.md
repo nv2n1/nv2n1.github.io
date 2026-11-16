@@ -14,7 +14,7 @@ description: "scsi_check_sense – Examine scsi cmd sense"
 <p><i>scmd</i></p>
 <dl>
 <dd>
-<dd>Cmd to have sense checked.</dl>
+</dd><dd>Cmd to have sense checked.</dd></dl>
 <h2>Description</h2>
 <p>Return value: SUCCESS or FAILED or NEEDS_RETRY or ADD_TO_MLQUEUE</p>
 <h2>Notes</h2>
@@ -22,8 +22,8 @@ description: "scsi_check_sense – Examine scsi cmd sense"
 <h2>Authors</h2>
 <p><code>James Bottomley</code> &lt;James.Bottomley [at] hansenpartnership.com&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <p> <code>Rob Landley</code> &lt;rob [at] landley.net&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

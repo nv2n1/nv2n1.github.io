@@ -22,27 +22,27 @@ description: "spice-vdagentd – Spice guest agent daemon"
 <p> Support for transferring files from the client to the agent</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-h</code></p>
-<dd> Print a short description of all command line options</p>
-<dt><code>-d</code></p>
-<dd> Log debug messages (use twice for extra info)</p>
-<dt><code>-f</code></p>
-<dd> Treat uinput device as fake; no ioctls. This is useful in combination with Xspice.</p>
-<dt><code>-o</code></p>
-<dd> The daemon will exit after processing a single session.</p>
-<dt><code>-s</code> <i>port</i></p>
-<dd> Set virtio serial <i>port</i> (default: /dev/virtio-ports/com.redhat.spice.0)</p>
-<dt><code>-u</code> <i>device</i></p>
-<dd> Set uinput <i>device</i> (default: /dev/uinput)</p>
-<dt><code>-x</code></p>
-<dd> Don&#8217;t daemonize</p>
-<dt><code>-X</code></p>
-<dd> Disable session info usage, <code>spice-vdagentd</code> needs to know which <code>spice-vdagent</code> is in the currently active X11 session. <code>spice-vdagentd</code> uses console kit or systemd-logind (compile time option) for this; The <code>-X</code> option disables this, if no session info is available only one <code>spice-vdagent</code> is allowed</dl>
+<dt><code>-h</code></dt>
+<dd> Print a short description of all command line options</dd>
+<dt><code>-d</code></dt>
+<dd> Log debug messages (use twice for extra info)</dd>
+<dt><code>-f</code></dt>
+<dd> Treat uinput device as fake; no ioctls. This is useful in combination with Xspice.</dd>
+<dt><code>-o</code></dt>
+<dd> The daemon will exit after processing a single session.</dd>
+<dt><code>-s</code> <i>port</i></dt>
+<dd> Set virtio serial <i>port</i> (default: /dev/virtio-ports/com.redhat.spice.0)</dd>
+<dt><code>-u</code> <i>device</i></dt>
+<dd> Set uinput <i>device</i> (default: /dev/uinput)</dd>
+<dt><code>-x</code></dt>
+<dd> Don&#8217;t daemonize</dd>
+<dt><code>-X</code></dt>
+<dd> Disable session info usage, <code>spice-vdagentd</code> needs to know which <code>spice-vdagent</code> is in the currently active X11 session. <code>spice-vdagentd</code> uses console kit or systemd-logind (compile time option) for this; The <code>-X</code> option disables this, if no session info is available only one <code>spice-vdagent</code> is allowed</dd></dl>
 <h2>FILES</h2>
 <p> The Sys-V initscript or systemd unit parses the following files:</p>
 <dl>
-<dt>/etc/default/spice-vdagentd</p>
-<dd> Default cmdline options can be passed to <code>spice-vdagentd</code> by setting them in the <i>SPICE_VDAGENTD_EXTRA_ARGS</i> variable in this file</dl>
+<dt>/etc/default/spice-vdagentd</dt>
+<dd> Default cmdline options can be passed to <code>spice-vdagentd</code> by setting them in the <i>SPICE_VDAGENTD_EXTRA_ARGS</i> variable in this file</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-spice-vdagent/">spice-vdagent</a></code>(1)</p>
 <h2>COPYRIGHT</h2>

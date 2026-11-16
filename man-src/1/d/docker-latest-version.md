@@ -23,7 +23,7 @@ description: "docker-version – Show the Docker version information."
 <p> The default output: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 $ docker version
 Client:
@@ -41,20 +41,20 @@ Server:
  Built:        Tue Jun 23 17:56:00 UTC 2015
  OS/Arch:      linux/amd64
 </pre>
-</dl>
+</dd></dl>
 <p> Get server version: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre><code>
 $ docker version-- format '&#123;&#123;.Server.Version}}' 1.8.0
 </code></pre>
-</dl>
+</dd></dl>
 <p> Dump raw data: </p>
 <p> To view all available fields, you can use the format &#123;&#123;json .}}. </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre><code>
 $ docker version-- format '&#123;&#123;json .}}'
 {
@@ -64,7 +64,7 @@ $ docker version-- format '&#123;&#123;json .}}'
     }
 }
 </code></pre>
-</dl>
+</dd></dl>
 <h2>HISTORY</h2>
 <p> June 2014, updated by Sven Dowideit &lt;SvenDowideit [at] home.org.au&gt; June 2015, updated by John Howard &lt;jhoward [at] microsoft.com&gt; June 2015, updated by Patrick Hemmer &lt;patrick.hemmer [at] gmail.com </p>
 <h2>Index</h2>

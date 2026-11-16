@@ -20,36 +20,36 @@ description: "Inkview – an SVG viewer and slideshow program."
 <p> You can also launch Inkview without any command-line arguments, which will bring up a file chooser that allows to select files and folders via a graphical user interface.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-?</code>, <code>&#8211;help</code></p>
-<dd> Show help options</p>
-<dt><code>-V</code>, <code>&#8211;version</code></p>
-<dd> Print Inkview version and build date (this is usually matches the Inkscape version).</p>
-<dt><code>-f</code>, <code>&#8211;fullscreen</code></p>
-<dd> Launch Inkview in fullscreen mode.</p>
-<dt><code>-r</code>, <code>&#8211;recursive</code></p>
-<dd> Search folders specified on the command line recursively for <font SIZE="-1">SVG</font> files. This means all <font SIZE="-1">SVG</font> files in all subfolders of the specified folder will be opened.</p>
-<dt><code>-t</code>, <code>&#8211;timer=NUMBER</code></p>
-<dd> Change to the next image every <font SIZE="-1">NUMBER</font> seconds</p>
-<dt><code>-s</code>, <code>&#8211;scale=NUMBER</code></p>
-<dd> Show image scaled by a factor of <font SIZE="-1">NUMBER</font> instead of using the file&#8217;s native size.</p>
-<dt><code>-p</code>, <code>&#8211;preload</code></p>
-<dd> Preloads all <font SIZE="-1">SVG</font> files. Inkview still needs to render images upon showing, however this option ensures all <font SIZE="-1">SVG</font> files are already parsed and loaded into memory. This option can also be used to verify if all files can be opened properly, without having to cycle through all files manually.</dl>
+<dt><code>-?</code>, <code>&#8211;help</code></dt>
+<dd> Show help options</dd>
+<dt><code>-V</code>, <code>&#8211;version</code></dt>
+<dd> Print Inkview version and build date (this is usually matches the Inkscape version).</dd>
+<dt><code>-f</code>, <code>&#8211;fullscreen</code></dt>
+<dd> Launch Inkview in fullscreen mode.</dd>
+<dt><code>-r</code>, <code>&#8211;recursive</code></dt>
+<dd> Search folders specified on the command line recursively for <font SIZE="-1">SVG</font> files. This means all <font SIZE="-1">SVG</font> files in all subfolders of the specified folder will be opened.</dd>
+<dt><code>-t</code>, <code>&#8211;timer=NUMBER</code></dt>
+<dd> Change to the next image every <font SIZE="-1">NUMBER</font> seconds</dd>
+<dt><code>-s</code>, <code>&#8211;scale=NUMBER</code></dt>
+<dd> Show image scaled by a factor of <font SIZE="-1">NUMBER</font> instead of using the file&#8217;s native size.</dd>
+<dt><code>-p</code>, <code>&#8211;preload</code></dt>
+<dd> Preloads all <font SIZE="-1">SVG</font> files. Inkview still needs to render images upon showing, however this option ensures all <font SIZE="-1">SVG</font> files are already parsed and loaded into memory. This option can also be used to verify if all files can be opened properly, without having to cycle through all files manually.</dd></dl>
 <h2>KEYBINDINGS</h2>
 <dl>
-<dt>&bull;</p>
-<dd> Left, Page Up, or Backspace: show previous image</p>
-<dt>&bull;</p>
-<dd> Right, Page Down, or Space: show next image</p>
-<dt>&bull;</p>
-<dd> Up, or Home: go to first image</p>
-<dt>&bull;</p>
-<dd> Down, or End: go to last image</p>
-<dt>&bull;</p>
-<dd> Return: show control window</p>
-<dt>&bull;</p>
-<dd> F11: toggle fullscreen mode</p>
-<dt>&bull;</p>
-<dd> Escape or Q: quit</dl>
+<dt>&bull;</dt>
+<dd> Left, Page Up, or Backspace: show previous image</dd>
+<dt>&bull;</dt>
+<dd> Right, Page Down, or Space: show next image</dd>
+<dt>&bull;</dt>
+<dd> Up, or Home: go to first image</dd>
+<dt>&bull;</dt>
+<dd> Down, or End: go to last image</dd>
+<dt>&bull;</dt>
+<dd> Return: show control window</dd>
+<dt>&bull;</dt>
+<dd> F11: toggle fullscreen mode</dd>
+<dt>&bull;</dt>
+<dd> Escape or Q: quit</dd></dl>
 <h2>EXAMPLES</h2>
 <p> Open two <font SIZE="-1">SVG</font> files for viewing: </p>
 <pre>

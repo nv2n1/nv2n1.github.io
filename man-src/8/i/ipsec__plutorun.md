@@ -17,4 +17,4 @@ description: "ipsec__plutorun – internal script to (re)start pluto on old SYSV
 <h2>Author</h2>
 <p><code>Paul Wouters</code></p>
 <dl>
-<dd>placeholder to suppress warning</dl>
+<dd>placeholder to suppress warning</dd></dl>

@@ -11,131 +11,42 @@ description: "sc::GaussLegendreAngularIntegrator –"
 <p> An implementation of an angular integrator using the Gauss-Legendre weights and grid points.</p>
 <h2>Synopsis</h2>
 <pre><code>
-
 #include &lt;integrator.h&gt;</code></pre>
 <p> Inherits <code>sc::AngularIntegrator</code>.</p>
 <h3>Public Member Functions</h3>
 <pre><code>GaussLegendreAngularIntegrator (const Ref&lt; KeyVal &gt; &amp;)
-
-
 Contract a GaussLegendreAngularIntegrator from KeyVal input.
-
-
 GaussLegendreAngularIntegrator (StateIn &amp;)
-
-
-
 void save_data_state (StateOut &amp;)
-
-
 Save the base classes (with save_data_state) and the members in the same order that the StateIn CTOR initializes them.
-
-
 int num_angular_points (double r_value, int ir)
-
-
-
 double angular_point_cartesian (int iangular, double r, SCVector3 &amp;integration_point) const
-
-
-
 void print (std::ostream &amp;=ExEnv::out0()) const
-
-
 Print the object.
-
-
-
 Protected Member Functions
 int get_ntheta (void) const
-
-
-
 void set_ntheta (int i)
-
-
-
 int get_nphi (void) const
-
-
-
 void set_nphi (int i)
-
-
-
 int get_Ktheta (void) const
-
-
-
 void set_Ktheta (int i)
-
-
-
 int get_ntheta_r (void) const
-
-
-
 void set_ntheta_r (int i)
-
-
-
 int get_nphi_r (void) const
-
-
-
 void set_nphi_r (int i)
-
-
-
 int get_Ktheta_r (void) const
-
-
-
 void set_Ktheta_r (int i)
-
-
-
 int nw (void) const
-
-
-
 double sin_theta (SCVector3 &amp;point) const
-
-
-
 void gauleg (double x1, double x2, int n)
-
-
-
 Protected Attributes
 int ntheta_
-
-
-
 int nphi_
-
-
-
 int Ktheta_
-
-
-
 int ntheta_r_
-
-
-
 int nphi_r_
-
-
-
 int Ktheta_r_
-
-
-
 double * theta_quad_weights_
-
-
-
 double * theta_quad_points_</code></pre>
 <h2>Detailed Description</h2>
 <p>An implementation of an angular integrator using the Gauss-Legendre weights and grid points.</p>

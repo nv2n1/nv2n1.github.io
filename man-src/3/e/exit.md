@@ -46,12 +46,12 @@ void exit(int status);
 <p> BSD has attempted to standardize exit codes (which some C libraries such as the GNU C library have also adopted); see the file <i>&lt;sysexits.h&gt;</i>. </p>
 <p> After <code>exit</code>(), the exit status must be transmitted to the parent process. There are three cases:</p>
 <dl>
-<dt>&bull;</p>
-<dd> If the parent has set <code>SA_NOCLDWAIT</code>, or has set the <code>SIGCHLD</code> handler to <code>SIG_IGN</code>, the status is discarded and the child dies immediately.</p>
-<dt>&bull;</p>
-<dd> If the parent was waiting on the child, it is notified of the exit status and the child dies immediately.</p>
-<dt>&bull;</p>
-<dd> Otherwise, the child becomes a &quot;zombie&quot; process: most of the process resources are recycled, but a slot containing minimal information about the child process (termination status, resource usage statistics) is retained in process table. This allows the parent to subsequently use <code><a href="/docs/linux/man/2-waitpid/">waitpid</a></code>(2) (or similar) to learn the termination status of the child; at that point the zombie process slot is released.</dl>
+<dt>&bull;</dt>
+<dd> If the parent has set <code>SA_NOCLDWAIT</code>, or has set the <code>SIGCHLD</code> handler to <code>SIG_IGN</code>, the status is discarded and the child dies immediately.</dd>
+<dt>&bull;</dt>
+<dd> If the parent was waiting on the child, it is notified of the exit status and the child dies immediately.</dd>
+<dt>&bull;</dt>
+<dd> Otherwise, the child becomes a &quot;zombie&quot; process: most of the process resources are recycled, but a slot containing minimal information about the child process (termination status, resource usage statistics) is retained in process table. This allows the parent to subsequently use <code><a href="/docs/linux/man/2-waitpid/">waitpid</a></code>(2) (or similar) to learn the termination status of the child; at that point the zombie process slot is released.</dd></dl>
 <p> If the implementation supports the <code>SIGCHLD</code> signal, this signal is sent to the parent. If the parent has set <code>SA_NOCLDWAIT</code>, it is undefined whether a <code>SIGCHLD</code> signal is sent.</p>
 <h3>Signals sent to other processes</h3>
 <p> If the exiting process is a session leader and its controlling terminal is the controlling terminal of the session, then each process in the foreground process group of this controlling terminal is sent a <code>SIGHUP</code> signal, and the terminal is disassociated from this session, allowing it to be acquired by a new controlling process. </p>

@@ -15,8 +15,8 @@ description: "XmFontListEntryGetTag — A font list function that retrieves the 
 <h2>Description</h2>
 <p><code>XmFontListEntryGetTag</code> retrieves a copy of the tag of the specified font list entry. This routine allocates memory for the tag string that must be freed by the application.</p>
 <dl COMPACT>
-<dt><i>entry</i></p>
-<dd>Specifies the font list entry</dl>
+<dt><i>entry</i></dt>
+<dd>Specifies the font list entry</dd></dl>
 <h2>Return</h2>
 <p>Returns the tag for the font list entry. The function allocates space to hold the returned tag. The application is responsible for managing the allocated space. The application can recover the allocated space by calling <code>XtFree</code>.</p>
 <h2>Related</h2>

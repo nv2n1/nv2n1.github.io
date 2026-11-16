@@ -19,11 +19,11 @@ description: "stg-undo – Undo the last operation"
 <p> -n N, &#8211;number N</p>
 <dl>
 <dt>
-<dd> Undo the last N commands.</dl>
+</dt><dd> Undo the last N commands.</dd></dl>
 <p> &#8211;hard</p>
 <dl>
 <dt>
-<dd> Discard changes in your index/worktree.</dl>
+</dt><dd> Discard changes in your index/worktree.</dd></dl>
 <h2>STGIT</h2>
 <p> Part of the StGit suite &#8211; see <code><a href="/docs/linux/man/1-stg/">stg</a></code>(1) </p>
 <h2>Index</h2>

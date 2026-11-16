@@ -15,7 +15,7 @@ usb_root_hub_lost_power - called by HCD if the root hub lost Vbus power
 <h2>Arguments</h2>
 
 <i>rhdev</i>
-<dl><dd><dd>struct usb_device for the root hub</dl>
+<dl><dd></dd><dd>struct usb_device for the root hub</dd></dl>
 
 <h2>Description</h2>
 

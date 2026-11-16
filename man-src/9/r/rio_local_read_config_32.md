@@ -14,17 +14,17 @@ description: "rio_local_read_config_32 – Read 32 bits from local configuration
 <p><i>port</i></p>
 <dl>
 <dd>
-<dd>Master port</dl>
+</dd><dd>Master port</dd></dl>
 <p> <i>offset</i></p>
 <dl>
-<dd>Offset into local configuration space</dl>
+<dd>Offset into local configuration space</dd></dl>
 <p> <i>data</i></p>
 <dl>
-<dd>Pointer to read data into</dl>
+<dd>Pointer to read data into</dd></dl>
 <h2>Description</h2>
 <p>Reads 32 bits of data from the specified offset within the local device&#8217;s configuration space.</p>
 <h2>Author</h2>
 <p><code>Matt Porter</code> &lt;mporter [at] kernel.crashing.org&gt;, &lt;mporter [at] mvista.com&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

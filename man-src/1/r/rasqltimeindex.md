@@ -17,15 +17,13 @@ description: "rasqltimeindex – read argus(8) data from mysql database."
 <p> Rasqltimeindex, like all ra based clients, supports a number of <code>ra options</code> <code><a href="/docs/linux/man/1-rasqltimeindex/">rasqltimeindex</a>(1)</code> specific options are: </p>
 <h2>RASQLTIMEINDEX SPECIFIC OPTIONS</h2>
 <dl>
-<dt><code>-w &lt;<a href="mysql://[user[:pass]@]host[:port]/db">mysql://[user[:pass]@]host[:port]/db</a>&gt;</code></p>
-<dd> Specify the mysql database to use in maintaining the &#8216;Seconds&#8217;, &#8216;Probe&#8217;, and &#8216;Filename&#8217; database index tables. </p>
+<dt><code>-w &lt;<a href="mysql://[user[:pass]@]host[:port]/db">mysql://[user[:pass]@]host[:port]/db</a>&gt;</code></dt>
+<dd> Specify the mysql database to use in maintaining the &#8216;Seconds&#8217;, &#8216;Probe&#8217;, and &#8216;Filename&#8217; database index tables. </dd>
 </dl>
 <h2>INVOCATION</h2>
 <p> This invocation reads <code><a href="/docs/linux/man/8-argus/">argus</a>(8)</code> data from the <i>file</i> argus.file and creates an index of every second in the file in the <i>db</i> database, using the <i>user</i> database account. </p>
 <pre>
- 
    <code>rasqltimeindex</code> -r argus.file -w <a href="mysql://user@localhost/db">mysql://user@localhost/db</a>
- 
 </pre>
 <p> To take advantage of the speedup provided by the time indexing, use <code>rasql</code> to read the mysql database, with a time filter. This example will read from the database that contains the &#8216;Seconds&#8217;, &#8216;Probe&#8217;, and &#8216;Filename&#8217; database index tables, and search for all flow records from 00:00:00 &#8211; 00:00:25, 20 days ago. </p>
 <pre>

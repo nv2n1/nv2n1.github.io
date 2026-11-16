@@ -23,34 +23,34 @@ int msgget(key_t key, int msgflg);
 <p> Upon creation, the least significant bits of the argument <i>msgflg</i> define the permissions of the message queue. These permission bits have the same format and semantics as the permissions specified for the <i>mode</i> argument of <code><a href="/docs/linux/man/2-open/">open</a></code>(2). (The execute permissions are not used.) </p>
 <p> If a new message queue is created, then its associated data structure <i>msqid_ds</i> (see <code><a href="/docs/linux/man/2-msgctl/">msgctl</a></code>(2)) is initialized as follows:</p>
 <dl>
-<dt>&bull;</p>
-<dd> <i>msg_perm.cuid</i> and <i>msg_perm.uid</i> are set to the effective user ID of the calling process.</p>
-<dt>&bull;</p>
-<dd> <i>msg_perm.cgid</i> and <i>msg_perm.gid</i> are set to the effective group ID of the calling process.</p>
-<dt>&bull;</p>
-<dd> The least significant 9 bits of <i>msg_perm.mode</i> are set to the least significant 9 bits of <i>msgflg</i>.</p>
-<dt>&bull;</p>
-<dd> <i>msg_qnum</i>, <i>msg_lspid</i>, <i>msg_lrpid</i>, <i>msg_stime</i>, and <i>msg_rtime</i> are set to 0.</p>
-<dt>&bull;</p>
-<dd> <i>msg_ctime</i> is set to the current time.</p>
-<dt>&bull;</p>
-<dd> <i>msg_qbytes</i> is set to the system limit <code>MSGMNB</code>.</dl>
+<dt>&bull;</dt>
+<dd> <i>msg_perm.cuid</i> and <i>msg_perm.uid</i> are set to the effective user ID of the calling process.</dd>
+<dt>&bull;</dt>
+<dd> <i>msg_perm.cgid</i> and <i>msg_perm.gid</i> are set to the effective group ID of the calling process.</dd>
+<dt>&bull;</dt>
+<dd> The least significant 9 bits of <i>msg_perm.mode</i> are set to the least significant 9 bits of <i>msgflg</i>.</dd>
+<dt>&bull;</dt>
+<dd> <i>msg_qnum</i>, <i>msg_lspid</i>, <i>msg_lrpid</i>, <i>msg_stime</i>, and <i>msg_rtime</i> are set to 0.</dd>
+<dt>&bull;</dt>
+<dd> <i>msg_ctime</i> is set to the current time.</dd>
+<dt>&bull;</dt>
+<dd> <i>msg_qbytes</i> is set to the system limit <code>MSGMNB</code>.</dd></dl>
 <p> If the message queue already exists the permissions are verified, and a check is made to see if it is marked for destruction.</p>
 <h2>RETURN VALUE</h2>
 <p> If successful, the return value will be the message queue identifier (a nonnegative integer), otherwise -1 with <i>errno</i> indicating the error.</p>
 <h2>ERRORS</h2>
 <p> On failure, <i>errno</i> is set to one of the following values:</p>
 <dl>
-<dt><code>EACCES</code></p>
-<dd> A message queue exists for <i>key</i>, but the calling process does not have permission to access the queue, and does not have the <code>CAP_IPC_OWNER</code> capability in the user namespace that governs its IPC namespace.</p>
-<dt><code>EEXIST</code></p>
-<dd> <code>IPC_CREAT</code> and <code>IPC_EXCL</code> were specified in <i>msgflg</i>, but a message queue already exists for <i>key</i>.</p>
-<dt><code>ENOENT</code></p>
-<dd> No message queue exists for <i>key</i> and <i>msgflg</i> did not specify <code>IPC_CREAT</code>.</p>
-<dt><code>ENOMEM</code></p>
-<dd> A message queue has to be created but the system does not have enough memory for the new data structure.</p>
-<dt><code>ENOSPC</code></p>
-<dd> A message queue has to be created but the system limit for the maximum number of message queues (<code>MSGMNI</code>) would be exceeded.</dl>
+<dt><code>EACCES</code></dt>
+<dd> A message queue exists for <i>key</i>, but the calling process does not have permission to access the queue, and does not have the <code>CAP_IPC_OWNER</code> capability in the user namespace that governs its IPC namespace.</dd>
+<dt><code>EEXIST</code></dt>
+<dd> <code>IPC_CREAT</code> and <code>IPC_EXCL</code> were specified in <i>msgflg</i>, but a message queue already exists for <i>key</i>.</dd>
+<dt><code>ENOENT</code></dt>
+<dd> No message queue exists for <i>key</i> and <i>msgflg</i> did not specify <code>IPC_CREAT</code>.</dd>
+<dt><code>ENOMEM</code></dt>
+<dd> A message queue has to be created but the system does not have enough memory for the new data structure.</dd>
+<dt><code>ENOSPC</code></dt>
+<dd> A message queue has to be created but the system limit for the maximum number of message queues (<code>MSGMNI</code>) would be exceeded.</dd></dl>
 <h2>CONFORMING TO</h2>
 <p> POSIX.1-2001, POSIX.1-2008, SVr4.</p>
 <h2>NOTES</h2>
@@ -58,8 +58,8 @@ int msgget(key_t key, int msgflg);
 <p> <code>IPC_PRIVATE</code> isn&#8217;t a flag field but a <i>key_t</i> type. If this special value is used for <i>key</i>, the system call ignores everything but the least significant 9 bits of <i>msgflg</i> and creates a new message queue (on success). </p>
 <p> The following is a system limit on message queue resources affecting a <code>msgget</code>() call:</p>
 <dl>
-<dt><code>MSGMNI</code></p>
-<dd> System-wide limit on the number of message queues. Before Linux 3.19, the default value for this limit was calculated using a formula based on available system memory. Since Linux 3.19, the default value is 32,000. On Linux, this limit can be read and modified via <i>/proc/sys/kernel/msgmni</i>.</dl>
+<dt><code>MSGMNI</code></dt>
+<dd> System-wide limit on the number of message queues. Before Linux 3.19, the default value for this limit was calculated using a formula based on available system memory. Since Linux 3.19, the default value is 32,000. On Linux, this limit can be read and modified via <i>/proc/sys/kernel/msgmni</i>.</dd></dl>
 <h3>Linux notes</h3>
 <p> Until version 2.3.20, Linux would return <code>EIDRM</code> for a <code>msgget</code>() on a message queue scheduled for deletion.</p>
 <h2>BUGS</h2>

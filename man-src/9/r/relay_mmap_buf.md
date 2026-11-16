@@ -15,11 +15,11 @@ relay_mmap_buf - mmap channel buffer to process address space
 <h2>Arguments</h2>
 
 <i>buf</i>
-<dl><dd><dd>relay channel buffer</dl>
+<dl><dd></dd><dd>relay channel buffer</dd></dl>
  
 
  <i>vma</i>
-<dl><dd>vm_area_struct describing memory to be mapped</dl>
+<dl><dd>vm_area_struct describing memory to be mapped</dd></dl>
 
 <h2>Description</h2>
 

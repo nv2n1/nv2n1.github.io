@@ -23,23 +23,23 @@ url: "/docs/linux/man/1-qsrotate/"
 
 <dl>
 <dt>-o &lt;file&gt;
-<dd> Output log file to write the data to (use an absolute path).
-<dt>-s &lt;sec&gt;
-<dd> Rotation interval in seconds, default are 86400 seconds.
-<dt>-t &lt;hours&gt;
-<dd> Offset to UTC (enables also DST support), default is 0.
-<dt>-b &lt;bytes&gt;
-<dd> File size limitation (default are 2147352576 bytes).
-<dt>-f
-<dd> Forced log rotation even no data is written.
-<dt>-z
-<dd> Compress (gzip) the rotated file.
-<dt>-g &lt;num&gt;
-<dd> Generations (number of files to keep).
-<dt>-u &lt;name&gt;
-<dd> Become another user, e.g. www-data.
-<dt>-p
-<dd> Writes data also to stdout (for piped logging).</dl>
+</dt><dd> Output log file to write the data to (use an absolute path).
+</dd><dt>-s &lt;sec&gt;
+</dt><dd> Rotation interval in seconds, default are 86400 seconds.
+</dd><dt>-t &lt;hours&gt;
+</dt><dd> Offset to UTC (enables also DST support), default is 0.
+</dd><dt>-b &lt;bytes&gt;
+</dt><dd> File size limitation (default are 2147352576 bytes).
+</dd><dt>-f
+</dt><dd> Forced log rotation even no data is written.
+</dd><dt>-z
+</dt><dd> Compress (gzip) the rotated file.
+</dd><dt>-g &lt;num&gt;
+</dt><dd> Generations (number of files to keep).
+</dd><dt>-u &lt;name&gt;
+</dt><dd> Become another user, e.g. www-data.
+</dd><dt>-p
+</dt><dd> Writes data also to stdout (for piped logging).</dd></dl>
 
 <h2>EXAMPLE</h2>
 

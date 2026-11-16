@@ -14,47 +14,47 @@ description: "scep-submit"
 <p><i>scep-submit</i> is the helper which <i>certmonger</i> can use to transmit certificate enrollment and renewal requests to servers using SCEP. It is not normally run interactively, but it can be for troubleshooting purposes. The request which is to be submitted should be a PEM-encoded SCEP pkiMessage either in a file whose name is given as an argument, or fed into <i>scep-submit</i> via stdin. </p>
 <h2>Modes</h2>
 <dl>
-<dt><code>-c</code></p>
-<dd><i>scep-submit</i> will issue a <i>GetCACaps</i> request to the server and print the results.</p>
-<dt><code>-C</code></p>
-<dd><i>scep-submit</i> will issue <i>GetCACert</i> and <i>GetCAChain</i> requests to the server, parse the responses, and then print, in order, the RA certificate, the CA certificate, and any additional certificates.</p>
-<dt><code>-p</code></p>
-<dd><i>scep-submit</i> will issue a <i>PKIOperation</i> request to the server using the passed-in message as the message content. It will parse the server&#8217;s response, verify the signature, and if the response includes an issued certificate, it will output the <i>pkcsPKIEnvelope</i> in PEM format. If the response indicates an error, it will print the error.</p>
-<dt><code>-g</code></p>
-<dd><i>scep-submit</i> will issue a <i>PKIOperation</i> request to the server using the passed-in message as the message content. It will parse the server&#8217;s response, verify the signature, and if the response includes an issued certificate, it will output the <i>pkcsPKIEnvelope</i> in PEM format. If the response indicates an error, it will print the error.</dl>
+<dt><code>-c</code></dt>
+<dd><i>scep-submit</i> will issue a <i>GetCACaps</i> request to the server and print the results.</dd>
+<dt><code>-C</code></dt>
+<dd><i>scep-submit</i> will issue <i>GetCACert</i> and <i>GetCAChain</i> requests to the server, parse the responses, and then print, in order, the RA certificate, the CA certificate, and any additional certificates.</dd>
+<dt><code>-p</code></dt>
+<dd><i>scep-submit</i> will issue a <i>PKIOperation</i> request to the server using the passed-in message as the message content. It will parse the server&#8217;s response, verify the signature, and if the response includes an issued certificate, it will output the <i>pkcsPKIEnvelope</i> in PEM format. If the response indicates an error, it will print the error.</dd>
+<dt><code>-g</code></dt>
+<dd><i>scep-submit</i> will issue a <i>PKIOperation</i> request to the server using the passed-in message as the message content. It will parse the server&#8217;s response, verify the signature, and if the response includes an issued certificate, it will output the <i>pkcsPKIEnvelope</i> in PEM format. If the response indicates an error, it will print the error.</dd></dl>
 <h2>Options</h2>
 <dl>
-<dt><code>-u</code> SERVER-URL</p>
-<dd>The location of the SCEP interface provided by the CA. This is typically <i>http://</i><code>SERVER</code>/cgi-bin/PKICLIENT.EXE or <i>http://</i><code>SERVER</code>/certsrv/mscep/mscep.dll. This option is always required.</p>
-<dt><code>-R</code> CA-certificate-file</p>
-<dd>The location of the SCEP server&#8217;s CA certificate, which was used to issue the SCEP server&#8217;s certificate, or the SCEP server&#8217;s own certificate, if it is self-signed, in PEM form. If the URL specified with the <code>-u</code> option is an <i>https</i> URL, then this option is required.</p>
-<dt><code>-r</code> RA-certificate-file</p>
-<dd>The location of the SCEP server&#8217;s RA certificate, which is expected to be used for signing responses sent by the SCEP server back to the client. This option is required when either the <code>-g</code> flag or the <code>-p</code> flag is specified.</p>
-<dt><code>-I</code> other-certificates-file</p>
-<dd>The location of a file containing other PEM-formatted certificates which may be needed in order to properly verify signed responses sent by the SCEP server back to the client. This option may be necessary when either the <code>-g</code> flag or the <code>-p</code> flag is specified.</p>
-<dt><code>-i</code> ca-identifier</p>
-<dd>When called with the <code>-c</code> or <code>-C</code> flag, this option can be used to specify the CA identifier which is passed to the server as part of the client&#8217;s request. The default is &quot;0&quot;.</p>
-<dt><code>-v</code></p>
-<dd>Increases the logging level. Use twice for more logging. This option is mainly useful for troubleshooting. </p>
+<dt><code>-u</code> SERVER-URL</dt>
+<dd>The location of the SCEP interface provided by the CA. This is typically <i>http://</i><code>SERVER</code>/cgi-bin/PKICLIENT.EXE or <i>http://</i><code>SERVER</code>/certsrv/mscep/mscep.dll. This option is always required.</dd>
+<dt><code>-R</code> CA-certificate-file</dt>
+<dd>The location of the SCEP server&#8217;s CA certificate, which was used to issue the SCEP server&#8217;s certificate, or the SCEP server&#8217;s own certificate, if it is self-signed, in PEM form. If the URL specified with the <code>-u</code> option is an <i>https</i> URL, then this option is required.</dd>
+<dt><code>-r</code> RA-certificate-file</dt>
+<dd>The location of the SCEP server&#8217;s RA certificate, which is expected to be used for signing responses sent by the SCEP server back to the client. This option is required when either the <code>-g</code> flag or the <code>-p</code> flag is specified.</dd>
+<dt><code>-I</code> other-certificates-file</dt>
+<dd>The location of a file containing other PEM-formatted certificates which may be needed in order to properly verify signed responses sent by the SCEP server back to the client. This option may be necessary when either the <code>-g</code> flag or the <code>-p</code> flag is specified.</dd>
+<dt><code>-i</code> ca-identifier</dt>
+<dd>When called with the <code>-c</code> or <code>-C</code> flag, this option can be used to specify the CA identifier which is passed to the server as part of the client&#8217;s request. The default is &quot;0&quot;.</dd>
+<dt><code>-v</code></dt>
+<dd>Increases the logging level. Use twice for more logging. This option is mainly useful for troubleshooting. </dd>
 </dl>
 <h2>Exit Status</h2>
 <dl>
-<dt>0</p>
-<dd>if the certificate was issued. The pkcsPKIEnvelope will be printed in PEM-encoded form.</p>
-<dt>1</p>
-<dd>if the CA is still thinking. A cookie (state) value will be printed.</p>
-<dt>2</p>
-<dd>if the CA rejected the request. An error message may be printed.</p>
-<dt>3</p>
-<dd>if the CA was unreachable. An error message may be printed.</p>
-<dt>4</p>
-<dd>if critical configuration information is missing. An error message may be printed.</p>
-<dt>5</p>
-<dd>if the CA is still thinking. A suggested poll delay (specified in seconds) and a cookie (state) value will be printed.</p>
-<dt>16</p>
-<dd>if the helper needs an SCEP pkiMessage, but couldn&#8217;t read one.</p>
-<dt>17</p>
-<dd>if the CA indicates that the client needs to attempt enrollment using a new key pair. </p>
+<dt>0</dt>
+<dd>if the certificate was issued. The pkcsPKIEnvelope will be printed in PEM-encoded form.</dd>
+<dt>1</dt>
+<dd>if the CA is still thinking. A cookie (state) value will be printed.</dd>
+<dt>2</dt>
+<dd>if the CA rejected the request. An error message may be printed.</dd>
+<dt>3</dt>
+<dd>if the CA was unreachable. An error message may be printed.</dd>
+<dt>4</dt>
+<dd>if critical configuration information is missing. An error message may be printed.</dd>
+<dt>5</dt>
+<dd>if the CA is still thinking. A suggested poll delay (specified in seconds) and a cookie (state) value will be printed.</dd>
+<dt>16</dt>
+<dd>if the helper needs an SCEP pkiMessage, but couldn&#8217;t read one.</dd>
+<dt>17</dt>
+<dd>if the CA indicates that the client needs to attempt enrollment using a new key pair. </dd>
 </dl>
 <h2>Bugs</h2>
 <p>Please file tickets for any that you find at <a rel="nofollow" href="https://fedorahosted.org/certmonger/">https://fedorahosted.org/certmonger/</a> </p>

@@ -20,28 +20,28 @@ debconf - apt - progress[--] command[args...] debconf - apt - progress-- config 
 <p> debconf locks its config database when it starts up, which makes it unfortunately inconvenient to have one instance of debconf displaying the progress bar and another passing through questions from packages being installed. If you&#8217;re using a multiple-segment progress bar, you&#8217;ll need to eval the output of the <code>&#8211;config</code> option before starting the debconf frontend to work around this. See &#8220;<font SIZE="-1">EXAMPLES&#8221;</font> in the <font SIZE="-1">EXAMPLES</font> section below.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>&#8211;config</code></p>
-<dd> Print environment variables necessary to start up a progress bar frontend.</p>
-<dt><code>&#8211;start</code></p>
-<dd> Start up a progress bar, running from 0 to 100 by default. Use <code>&#8211;from</code> and <code>&#8211;to</code> to use other endpoints.</p>
-<dt><code>&#8211;from</code> <i>waypoint</i></p>
-<dd> If used with <code>&#8211;start</code>, make the progress bar begin at <i>waypoint</i> rather than 0. </p>
+<dt><code>&#8211;config</code></dt>
+<dd> Print environment variables necessary to start up a progress bar frontend.</dd>
+<dt><code>&#8211;start</code></dt>
+<dd> Start up a progress bar, running from 0 to 100 by default. Use <code>&#8211;from</code> and <code>&#8211;to</code> to use other endpoints.</dd>
+<dt><code>&#8211;from</code> <i>waypoint</i></dt>
+<dd> If used with <code>&#8211;start</code>, make the progress bar begin at <i>waypoint</i> rather than 0. </dd>
 <p> Otherwise, install packages with their progress bar beginning at this &#8220;waypoint&#8221;. Must be used with <code>&#8211;to</code>.</p>
-<dt><code>&#8211;to</code> <i>waypoint</i></p>
-<dd> If used with <code>&#8211;start</code>, make the progress bar end at <i>waypoint</i> rather than 100. </p>
+<dt><code>&#8211;to</code> <i>waypoint</i></dt>
+<dd> If used with <code>&#8211;start</code>, make the progress bar end at <i>waypoint</i> rather than 100. </dd>
 <p> Otherwise, install packages with their progress bar ending at this &#8220;waypoint&#8221;. Must be used with <code>&#8211;from</code>.</p>
-<dt><code>&#8211;stop</code></p>
-<dd> Stop a running progress bar.</p>
-<dt><code>&#8211;no-progress</code></p>
-<dd> Avoid starting, stopping, or stepping the progress bar. Progress messages from apt, media change events, and debconf questions will still be passed through to debconf.</p>
-<dt><code>&#8211;dlwaypoint</code> <i>percentage</i></p>
-<dd> Specify what percent of the progress bar to use for downloading packages. The remainder will be used for installing packages. The default is to use 15% for downloading and the remaining 85% for installing.</p>
-<dt><code>&#8211;logfile</code> <i>file</i></p>
-<dd> Send the normal output from apt to the given file.</p>
-<dt><code>&#8211;logstderr</code></p>
-<dd> Send the normal output from apt to stderr. If you supply neither <code>&#8211;logfile</code> nor <code>&#8211;logstderr</code>, the normal output from apt will be discarded.</p>
-<dt><code>&#8212;</code></p>
-<dd> Terminate options. Since you will normally need to give at least the <code>-y</code> argument to the command being run, you will usually need to use <code>&#8212;</code> to prevent that being interpreted as an option to <code>debconf-apt-progress</code> itself.</dl>
+<dt><code>&#8211;stop</code></dt>
+<dd> Stop a running progress bar.</dd>
+<dt><code>&#8211;no-progress</code></dt>
+<dd> Avoid starting, stopping, or stepping the progress bar. Progress messages from apt, media change events, and debconf questions will still be passed through to debconf.</dd>
+<dt><code>&#8211;dlwaypoint</code> <i>percentage</i></dt>
+<dd> Specify what percent of the progress bar to use for downloading packages. The remainder will be used for installing packages. The default is to use 15% for downloading and the remaining 85% for installing.</dd>
+<dt><code>&#8211;logfile</code> <i>file</i></dt>
+<dd> Send the normal output from apt to the given file.</dd>
+<dt><code>&#8211;logstderr</code></dt>
+<dd> Send the normal output from apt to stderr. If you supply neither <code>&#8211;logfile</code> nor <code>&#8211;logstderr</code>, the normal output from apt will be discarded.</dd>
+<dt><code>&#8212;</code></dt>
+<dd> Terminate options. Since you will normally need to give at least the <code>-y</code> argument to the command being run, you will usually need to use <code>&#8212;</code> to prevent that being interpreted as an option to <code>debconf-apt-progress</code> itself.</dd></dl>
 <h2>EXAMPLES</h2>
 <p> Install the <font SIZE="-1">GNOME</font> desktop and an X window system development environment within a progress bar: </p>
 <pre>

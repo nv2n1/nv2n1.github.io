@@ -16,102 +16,102 @@ description: "ioping – simple disk I/O latency monitoring tool"
 <p> This tool generates various I/O patterns and lets you monitor I/O speed and latency in real time.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-c</code><i>&nbsp;<wbr>count</i></p>
-<dd> Stop after <i>count</i> requests.</p>
-<dt><code>-i</code><i>&nbsp;<wbr>interval</i></p>
-<dd> Set time between requests to <i>interval</i> (<code>1s</code>).</p>
-<dt><code>-l</code><i>&nbsp;<wbr>speed</i></p>
-<dd> Set <i>speed</i> limit in bytes per second. Set interval to request-size / speed.</p>
-<dt><code>-t</code><i>&nbsp;<wbr>time</i></p>
-<dd> Minimal valid request time (<code>0us</code>). Too fast requests are ignored in statistics.</p>
-<dt><code>-T</code><i>&nbsp;<wbr>time</i></p>
-<dd> Maximum valid request time. Too slow requests are ignored in statistics.</p>
-<dt><code>-s</code><i>&nbsp;<wbr>size</i></p>
-<dd> Request size (<code>4k</code>).</p>
-<dt><code>-S</code><i>&nbsp;<wbr>wsize</i></p>
-<dd> Working set size (<code>1m</code> for directory, whole size for file or device).</p>
-<dt><code>-o</code><i>&nbsp;<wbr>offset</i></p>
-<dd> Starting offset in the file/device (0).</p>
-<dt><code>-w</code><i>&nbsp;<wbr>deadline</i></p>
-<dd> Stop after <i>deadline</i> time passed.</p>
-<dt><code>-p</code><i>&nbsp;<wbr>period</i></p>
-<dd> Print raw statistics for every <i>period</i> requests (see format below).</p>
-<dt><code>-P</code><i>&nbsp;<wbr>period</i></p>
-<dd> Print raw statistics for every <i>period</i> in time.</p>
-<dt><code>-A</code></p>
-<dd> Use asynchronous I/O (syscalls <code><a href="/docs/linux/man/2-io_submit/">io_submit</a></code>(2), <code><a href="/docs/linux/man/2-io_submit/">io_submit</a></code>(2), etc).</p>
-<dt><code>-B</code></p>
-<dd> Batch mode. Be quiet and print final statistics in raw format.</p>
-<dt><code>-C</code></p>
-<dd> Use cached I/O. Suppress cache invalidation via <code><a href="/docs/linux/man/2-posix_fadvise/">posix_fadvise</a></code>(2)) before read and <code><a href="/docs/linux/man/2-fdatasync/">fdatasync</a></code>(2) after each write.</p>
-<dt><code>-D</code></p>
-<dd> Use direct I/O (see <code>O_DIRECT</code> in <code><a href="/docs/linux/man/2-open/">open</a></code>(2)).</p>
-<dt><code>-L</code></p>
-<dd> Use sequential operations rather than random. This also sets default request size to <code>256k</code> (as in <code>-s 256k</code>).</p>
-<dt><code>-R</code></p>
-<dd> Disk seek rate test. This option suppress human-readable output for each request (as <code>-q</code>), sets default interval to zero (<code>-i 0</code>), stops measurement after 3 seconds (<code>-w 3</code>) and increases default working set size to 64m (<code>-S 64m</code>). Working set (<code>-S</code>) should be increased accordingly if disk has huge cache.</p>
-<dt><code>-W</code></p>
-<dd> Use writes rather than reads. Safe for directory target. Write I/O gives more reliable results for systems where non-cached reads are not supported or cached at some level. Might be <code>*DANGEROUS*</code> for file/device: it will shred your data. In this case should be repeated tree times (<code>-WWW</code>).</p>
-<dt><code>-G</code></p>
-<dd> Alternate read and write requests.</p>
-<dt><code>-Y</code></p>
-<dd> Use sync I/O (see <code>O_SYNC</code> in <code><a href="/docs/linux/man/2-open/">open</a></code>(2)).</p>
-<dt><code>-y</code></p>
-<dd> Use data sync I/O (see <code>O_DSYNC</code> in <code><a href="/docs/linux/man/2-open/">open</a></code>(2)).</p>
-<dt><code>-k</code></p>
-<dd> Keep and reuse temporary working file &quot;ioping.tmp&quot; (only for directory target).</p>
-<dt><code>-q</code></p>
-<dd> Suppress periodical human-readable output.</p>
-<dt><code>-h</code></p>
-<dd> Display help message and exit.</p>
-<dt><code>-v</code></p>
-<dd> Display version and exit.</dl>
+<dt><code>-c</code><i>&nbsp;<wbr>count</i></dt>
+<dd> Stop after <i>count</i> requests.</dd>
+<dt><code>-i</code><i>&nbsp;<wbr>interval</i></dt>
+<dd> Set time between requests to <i>interval</i> (<code>1s</code>).</dd>
+<dt><code>-l</code><i>&nbsp;<wbr>speed</i></dt>
+<dd> Set <i>speed</i> limit in bytes per second. Set interval to request-size / speed.</dd>
+<dt><code>-t</code><i>&nbsp;<wbr>time</i></dt>
+<dd> Minimal valid request time (<code>0us</code>). Too fast requests are ignored in statistics.</dd>
+<dt><code>-T</code><i>&nbsp;<wbr>time</i></dt>
+<dd> Maximum valid request time. Too slow requests are ignored in statistics.</dd>
+<dt><code>-s</code><i>&nbsp;<wbr>size</i></dt>
+<dd> Request size (<code>4k</code>).</dd>
+<dt><code>-S</code><i>&nbsp;<wbr>wsize</i></dt>
+<dd> Working set size (<code>1m</code> for directory, whole size for file or device).</dd>
+<dt><code>-o</code><i>&nbsp;<wbr>offset</i></dt>
+<dd> Starting offset in the file/device (0).</dd>
+<dt><code>-w</code><i>&nbsp;<wbr>deadline</i></dt>
+<dd> Stop after <i>deadline</i> time passed.</dd>
+<dt><code>-p</code><i>&nbsp;<wbr>period</i></dt>
+<dd> Print raw statistics for every <i>period</i> requests (see format below).</dd>
+<dt><code>-P</code><i>&nbsp;<wbr>period</i></dt>
+<dd> Print raw statistics for every <i>period</i> in time.</dd>
+<dt><code>-A</code></dt>
+<dd> Use asynchronous I/O (syscalls <code><a href="/docs/linux/man/2-io_submit/">io_submit</a></code>(2), <code><a href="/docs/linux/man/2-io_submit/">io_submit</a></code>(2), etc).</dd>
+<dt><code>-B</code></dt>
+<dd> Batch mode. Be quiet and print final statistics in raw format.</dd>
+<dt><code>-C</code></dt>
+<dd> Use cached I/O. Suppress cache invalidation via <code><a href="/docs/linux/man/2-posix_fadvise/">posix_fadvise</a></code>(2)) before read and <code><a href="/docs/linux/man/2-fdatasync/">fdatasync</a></code>(2) after each write.</dd>
+<dt><code>-D</code></dt>
+<dd> Use direct I/O (see <code>O_DIRECT</code> in <code><a href="/docs/linux/man/2-open/">open</a></code>(2)).</dd>
+<dt><code>-L</code></dt>
+<dd> Use sequential operations rather than random. This also sets default request size to <code>256k</code> (as in <code>-s 256k</code>).</dd>
+<dt><code>-R</code></dt>
+<dd> Disk seek rate test. This option suppress human-readable output for each request (as <code>-q</code>), sets default interval to zero (<code>-i 0</code>), stops measurement after 3 seconds (<code>-w 3</code>) and increases default working set size to 64m (<code>-S 64m</code>). Working set (<code>-S</code>) should be increased accordingly if disk has huge cache.</dd>
+<dt><code>-W</code></dt>
+<dd> Use writes rather than reads. Safe for directory target. Write I/O gives more reliable results for systems where non-cached reads are not supported or cached at some level. Might be <code>*DANGEROUS*</code> for file/device: it will shred your data. In this case should be repeated tree times (<code>-WWW</code>).</dd>
+<dt><code>-G</code></dt>
+<dd> Alternate read and write requests.</dd>
+<dt><code>-Y</code></dt>
+<dd> Use sync I/O (see <code>O_SYNC</code> in <code><a href="/docs/linux/man/2-open/">open</a></code>(2)).</dd>
+<dt><code>-y</code></dt>
+<dd> Use data sync I/O (see <code>O_DSYNC</code> in <code><a href="/docs/linux/man/2-open/">open</a></code>(2)).</dd>
+<dt><code>-k</code></dt>
+<dd> Keep and reuse temporary working file &quot;ioping.tmp&quot; (only for directory target).</dd>
+<dt><code>-q</code></dt>
+<dd> Suppress periodical human-readable output.</dd>
+<dt><code>-h</code></dt>
+<dd> Display help message and exit.</dd>
+<dt><code>-v</code></dt>
+<dd> Display version and exit.</dd></dl>
 <h3>Argument suffixes</h3>
 <p> For options that expect time argument (<code>-i</code>, <code>-P</code> and <code>-w</code>), default is seconds, unless you specify one of the following suffixes (case-insensitive):</p>
 <dl>
-<dt><code>us</code>,&nbsp;<wbr><code>usec</code></p>
-<dd> microseconds (a millionth of a second, 1 / 1 000 000)</p>
-<dt><code>ms</code>,&nbsp;<wbr><code>msec</code></p>
-<dd> milliseconds (a thousandth of a second, 1 / 1 000)</p>
-<dt><code>s</code>,&nbsp;<wbr><code>sec</code></p>
-<dd> seconds</p>
-<dt><code>m</code>,&nbsp;<wbr><code>min</code></p>
-<dd> minutes</p>
-<dt><code>h</code>,&nbsp;<wbr><code>hour</code></p>
-<dd> hours</dl>
+<dt><code>us</code>,&nbsp;<wbr><code>usec</code></dt>
+<dd> microseconds (a millionth of a second, 1 / 1 000 000)</dd>
+<dt><code>ms</code>,&nbsp;<wbr><code>msec</code></dt>
+<dd> milliseconds (a thousandth of a second, 1 / 1 000)</dd>
+<dt><code>s</code>,&nbsp;<wbr><code>sec</code></dt>
+<dd> seconds</dd>
+<dt><code>m</code>,&nbsp;<wbr><code>min</code></dt>
+<dd> minutes</dd>
+<dt><code>h</code>,&nbsp;<wbr><code>hour</code></dt>
+<dd> hours</dd></dl>
 <p> For options that expect &quot;size&quot; argument (<code>-s</code>, <code>-S</code> and <code>-o</code>), default is bytes, unless you specify one of the following suffixes (case-insensitive):</p>
 <dl>
-<dt><code>sector</code></p>
-<dd> disk sectors (a sector is always 512).</p>
-<dt><code>KiB</code>,&nbsp;<wbr><code>k</code>,&nbsp;<wbr><code>kb</code></p>
-<dd> kilobytes (1 024 bytes)</p>
-<dt><code>page</code></p>
-<dd> memory pages (a page is always 4KiB).</p>
-<dt><code>MiB</code>,&nbsp;<wbr><code>m</code>,&nbsp;<wbr><code>mb</code></p>
-<dd> megabytes (1 048 576 bytes)</p>
-<dt><code>GiB</code>,&nbsp;<wbr><code>g</code>,&nbsp;<wbr><code>gb</code></p>
-<dd> gigabytes (1 073 741 824 bytes)</p>
-<dt><code>TiB</code>,&nbsp;<wbr><code>t</code>,&nbsp;<wbr><code>tb</code></p>
-<dd> terabytes (1 099 511 627 776 bytes)</dl>
+<dt><code>sector</code></dt>
+<dd> disk sectors (a sector is always 512).</dd>
+<dt><code>KiB</code>,&nbsp;<wbr><code>k</code>,&nbsp;<wbr><code>kb</code></dt>
+<dd> kilobytes (1 024 bytes)</dd>
+<dt><code>page</code></dt>
+<dd> memory pages (a page is always 4KiB).</dd>
+<dt><code>MiB</code>,&nbsp;<wbr><code>m</code>,&nbsp;<wbr><code>mb</code></dt>
+<dd> megabytes (1 048 576 bytes)</dd>
+<dt><code>GiB</code>,&nbsp;<wbr><code>g</code>,&nbsp;<wbr><code>gb</code></dt>
+<dd> gigabytes (1 073 741 824 bytes)</dd>
+<dt><code>TiB</code>,&nbsp;<wbr><code>t</code>,&nbsp;<wbr><code>tb</code></dt>
+<dd> terabytes (1 099 511 627 776 bytes)</dd></dl>
 <p> For options that expect &quot;number&quot; argument (<code>-p</code> and <code>-c</code>) you can optionally specify one of the following suffixes (case-insensitive):</p>
 <dl>
-<dt><code>k</code></p>
-<dd> kilo (thousands, 1 000)</p>
-<dt><code>m</code></p>
-<dd> mega (millions, 1 000 000)</p>
-<dt><code>g</code></p>
-<dd> giga (billions, 1 000 000 000)</p>
-<dt><code>t</code></p>
-<dd> tera (trillions, 1 000 000 000 000)</dl>
+<dt><code>k</code></dt>
+<dd> kilo (thousands, 1 000)</dd>
+<dt><code>m</code></dt>
+<dd> mega (millions, 1 000 000)</dd>
+<dt><code>g</code></dt>
+<dd> giga (billions, 1 000 000 000)</dd>
+<dt><code>t</code></dt>
+<dd> tera (trillions, 1 000 000 000 000)</dd></dl>
 <h2>EXIT STATUS</h2>
 <p> Returns <code>0</code> upon success. The following error codes are defined:</p>
 <dl>
-<dt><code>1</code></p>
-<dd> Invalid usage (error in arguments).</p>
-<dt><code>2</code></p>
-<dd> Error during preparation stage.</p>
-<dt><code>3</code></p>
-<dd> Error during runtime.</dl>
+<dt><code>1</code></dt>
+<dd> Invalid usage (error in arguments).</dd>
+<dt><code>2</code></dt>
+<dd> Error during preparation stage.</dd>
+<dt><code>3</code></dt>
+<dd> Error during runtime.</dd></dl>
 <h2>RAW STATISTICS</h2>
 <p> <code>ioping -p 100 -c 200 -i 0 -q .</code><br />
  <tt>100 26694 3746 15344272 188 267 1923 228 100 26694<br />
@@ -129,16 +129,16 @@ description: "ioping – simple disk I/O latency monitoring tool"
  (10) total running time (usec) </tt></p>
 <h2>EXAMPLES</h2>
 <dl>
-<dt><code>ioping .</code></p>
-<dd> Show disk I/O latency using the default values and the current directory, until interrupted. This command prepares temporary (unlinked/hidden) working file and reads random chunks from it using non-cached read requests.</p>
-<dt><code>ioping -c 10 -s 1M /tmp</code></p>
-<dd> Measure latency on <code>/tmp</code> using 10 requests of 1 megabyte each.</p>
-<dt><code>ioping -R /dev/sda</code></p>
-<dd> Measure disk seek rate.</p>
-<dt><code>ioping -RL /dev/sda</code></p>
-<dd> Measure disk sequential speed.</p>
-<dt><code>ioping -RLB . | awk &#8216;{print $4}&#8217;</code></p>
-<dd> Get disk sequential speed in bytes per second.</dl>
+<dt><code>ioping .</code></dt>
+<dd> Show disk I/O latency using the default values and the current directory, until interrupted. This command prepares temporary (unlinked/hidden) working file and reads random chunks from it using non-cached read requests.</dd>
+<dt><code>ioping -c 10 -s 1M /tmp</code></dt>
+<dd> Measure latency on <code>/tmp</code> using 10 requests of 1 megabyte each.</dd>
+<dt><code>ioping -R /dev/sda</code></dt>
+<dd> Measure disk seek rate.</dd>
+<dt><code>ioping -RL /dev/sda</code></dt>
+<dd> Measure disk sequential speed.</dd>
+<dt><code>ioping -RLB . | awk &#8216;{print $4}&#8217;</code></dt>
+<dd> Get disk sequential speed in bytes per second.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-iostat/">iostat</a></code>(1), <code><a href="/docs/linux/man/1-dd/">dd</a></code>(1), <code><a href="/docs/linux/man/1-fio/">fio</a></code>(1), <code><a href="/docs/linux/man/1-dbench/">dbench</a></code>(1), <code>fsstress,</code> <code>xfstests,</code> <code><a href="/docs/linux/man/8-hdparm/">hdparm</a></code>(8), <code><a href="/docs/linux/man/8-badblocks/">badblocks</a></code>(8),</p>
 <h2>HOMEPAGE</h2>

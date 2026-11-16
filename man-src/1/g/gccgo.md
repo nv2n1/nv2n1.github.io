@@ -22,26 +22,26 @@ description: "gccgo – A GCC-based compiler for the Go language"
 <p> One Go package may <tt>&quot;import&quot;</tt> a different Go package. The imported package must have already been compiled; <code>gccgo</code> will read the import data directly from the compiled package. When this package is later linked, the compiled form of the package must be included in the link command.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-I</code><i>dir</i></p>
-<dd> Specify a directory to use when searching for an import package at compile time.</p>
-<dt><code>-L</code><i>dir</i></p>
-<dd> When linking, specify a library search directory, as with <code>gcc</code>.</p>
-<dt><code>-fgo-pkgpath=</code><i>string</i></p>
-<dd> Set the package path to use. This sets the value returned by the PkgPath method of reflect.Type objects. It is also used for the names of globally visible symbols. The argument to this option should normally be the string that will be used to import this package after it has been installed; in other words, a pathname within the directories specified by the <code>-I</code> option.</p>
-<dt><code>-fgo-prefix=</code><i>string</i></p>
-<dd> An alternative to <code>-fgo-pkgpath</code>. The argument will be combined with the package name from the source file to produce the package path. If <code>-fgo-pkgpath</code> is used, <code>-fgo-prefix</code> will be ignored. </p>
+<dt><code>-I</code><i>dir</i></dt>
+<dd> Specify a directory to use when searching for an import package at compile time.</dd>
+<dt><code>-L</code><i>dir</i></dt>
+<dd> When linking, specify a library search directory, as with <code>gcc</code>.</dd>
+<dt><code>-fgo-pkgpath=</code><i>string</i></dt>
+<dd> Set the package path to use. This sets the value returned by the PkgPath method of reflect.Type objects. It is also used for the names of globally visible symbols. The argument to this option should normally be the string that will be used to import this package after it has been installed; in other words, a pathname within the directories specified by the <code>-I</code> option.</dd>
+<dt><code>-fgo-prefix=</code><i>string</i></dt>
+<dd> An alternative to <code>-fgo-pkgpath</code>. The argument will be combined with the package name from the source file to produce the package path. If <code>-fgo-pkgpath</code> is used, <code>-fgo-prefix</code> will be ignored. </dd>
 <p> Go permits a single program to include more than one package with the same name in the <tt>&quot;package&quot;</tt> clause in the source file, though obviously the two packages must be imported using different pathnames. In order for this to work with <code>gccgo</code>, either <code>-fgo-pkgpath</code> or <code>-fgo-prefix</code> must be specified when compiling a package. </p>
 <p> Using either <code>-fgo-pkgpath</code> or <code>-fgo-prefix</code> disables the special treatment of the <tt>&quot;main&quot;</tt> package and permits that package to be imported like any other.</p>
-<dt><code>-fgo-relative-import-path=</code><i>dir</i></p>
-<dd> A relative import is an import that starts with <i>./</i> or <i>../</i>. If this option is used, <code>gccgo</code> will use <i>dir</i> as a prefix for the relative import when searching for it.</p>
-<dt><code>-frequire-return-statement</code></p>
+<dt><code>-fgo-relative-import-path=</code><i>dir</i></dt>
+<dd> A relative import is an import that starts with <i>./</i> or <i>../</i>. If this option is used, <code>gccgo</code> will use <i>dir</i> as a prefix for the relative import when searching for it.</dd>
+<dt><code>-frequire-return-statement</code></dt>
 <dd>
-<dt><code>-fno-require-return-statement</code></p>
-<dd> By default <code>gccgo</code> will warn about functions which have one or more return parameters but lack an explicit <tt>&quot;return&quot;</tt> statement. This warning may be disabled using <code>-fno-require-return-statement</code>.</p>
-<dt><code>-fgo-check-divide-zero</code></p>
-<dd> Add explicit checks for division by zero. In Go a division (or modulos) by zero causes a panic. On Unix systems this is detected in the runtime by catching the <tt>&quot;SIGFPE&quot;</tt> signal. Some processors, such as PowerPC, do not generate a <font SIZE="-1">SIGFPE</font> on division by zero. Some runtimes do not generate a signal that can be caught. On those systems, this option may be used. Or the checks may be removed via <code>-fno-go-check-divide-zero</code>. This option is currently on by default, but in the future may be off by default on systems that do not require it.</p>
-<dt><code>-fgo-check-divide-overflow</code></p>
-<dd> Add explicit checks for division overflow. For example, division overflow occurs when computing <tt>&quot;INT_MIN / -1&quot;</tt>. In Go this should be wrapped, to produce <tt>&quot;INT_MIN&quot;</tt>. Some processors, such as x86, generate a trap on division overflow. On those systems, this option may be used. Or the checks may be removed via <code>-fno-go-check-divide-overflow</code>. This option is currently on by default, but in the future may be off by default on systems that do not require it.</dl>
+</dd><dt><code>-fno-require-return-statement</code></dt>
+<dd> By default <code>gccgo</code> will warn about functions which have one or more return parameters but lack an explicit <tt>&quot;return&quot;</tt> statement. This warning may be disabled using <code>-fno-require-return-statement</code>.</dd>
+<dt><code>-fgo-check-divide-zero</code></dt>
+<dd> Add explicit checks for division by zero. In Go a division (or modulos) by zero causes a panic. On Unix systems this is detected in the runtime by catching the <tt>&quot;SIGFPE&quot;</tt> signal. Some processors, such as PowerPC, do not generate a <font SIZE="-1">SIGFPE</font> on division by zero. Some runtimes do not generate a signal that can be caught. On those systems, this option may be used. Or the checks may be removed via <code>-fno-go-check-divide-zero</code>. This option is currently on by default, but in the future may be off by default on systems that do not require it.</dd>
+<dt><code>-fgo-check-divide-overflow</code></dt>
+<dd> Add explicit checks for division overflow. For example, division overflow occurs when computing <tt>&quot;INT_MIN / -1&quot;</tt>. In Go this should be wrapped, to produce <tt>&quot;INT_MIN&quot;</tt>. Some processors, such as x86, generate a trap on division overflow. On those systems, this option may be used. Or the checks may be removed via <code>-fno-go-check-divide-overflow</code>. This option is currently on by default, but in the future may be off by default on systems that do not require it.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <i>gpl</i>(7), <i>gfdl</i>(7), <i>fsf-funding</i>(7), <i><a href="/docs/linux/man/1-gcc/">gcc</a></i>(1) and the Info entries for <i>gccgo</i> and <i>gcc</i>.</p>
 <h2>COPYRIGHT</h2>

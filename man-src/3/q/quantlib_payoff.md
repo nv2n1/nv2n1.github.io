@@ -25,7 +25,7 @@ description: "QuantLib::Payoff – Abstract base class for option payoffs."
 <h3>virtual std::string name () const [pure virtual]</h3>
 <p><code>Warning</code></p>
 <dl COMPACT>
-<dd>This method is used for output and comparison between payoffs. It is <code>not</code> meant to be used for writing switch-on-type code.</dl>
+<dd>This method is used for output and comparison between payoffs. It is <code>not</code> meant to be used for writing switch-on-type code.</dd></dl>
 <p> Implemented in <code>ForwardTypePayoff</code>, <code>NullPayoff</code>, <code>FloatingTypePayoff</code>, <code>PlainVanillaPayoff</code>, <code>PercentageStrikePayoff</code>, <code>AssetOrNothingPayoff</code>, <code>CashOrNothingPayoff</code>, <code>GapPayoff</code>, <code>SuperFundPayoff</code>, <code>SuperSharePayoff</code>, <code>DoubleStickyRatchetPayoff</code>, <code>RatchetPayoff</code>, <code>StickyPayoff</code>, <code>RatchetMaxPayoff</code>, <code>RatchetMinPayoff</code>, <code>StickyMaxPayoff</code>, and <code>StickyMinPayoff</code>. </p>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for QuantLib from the source code.</p>

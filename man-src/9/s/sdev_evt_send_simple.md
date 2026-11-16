@@ -14,20 +14,20 @@ description: "sdev_evt_send_simple – send asserted event to uevent thread"
 <p><i>sdev</i></p>
 <dl>
 <dd>
-<dd>scsi_device event occurred on</dl>
+</dd><dd>scsi_device event occurred on</dd></dl>
 <p> <i>evt_type</i></p>
 <dl>
-<dd>type of event to send</dl>
+<dd>type of event to send</dd></dl>
 <p> <i>gfpflags</i></p>
 <dl>
-<dd>GFP flags for allocation</dl>
+<dd>GFP flags for allocation</dd></dl>
 <h2>Description</h2>
 <p>Assert scsi device event asynchronously, given an event type.</p>
 <h2>Authors</h2>
 <p><code>James Bottomley</code> &lt;James.Bottomley [at] hansenpartnership.com&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <p> <code>Rob Landley</code> &lt;rob [at] landley.net&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

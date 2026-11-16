@@ -12,7 +12,6 @@ std::char_traits&lt;CharT&gt;::find - std::char_traits&lt;CharT&gt;::find
 
 <pre><code>static const char_type *find(const char_type *p, std::size_t count, const char_type &amp;ch);
 (until C++ 17)
-
     static constexpr const char_type *find(const char_type *p, std::size_t count, const char_type &amp;ch);
 (since C++ 17)</code></pre> 
 Searches for character ch within the first count characters of the sequence pointed to by p. 

@@ -10,10 +10,8 @@ description: "std::is_member_function_pointer – std::is_member_function_pointe
 <p>std::is_member_function_pointer &#8211; std::is_member_function_pointer</p>
 <h2>Synopsis</h2>
 <pre><code>Defined in header&lt;type_traits&gt;
-
     template &lt;class T&gt;
     (since C++ 11)
-
         struct is_member_function_pointer;</code></pre>
 <p>Checks whether T is a non-static member function pointer. Provides the member constant value which is equal to true, if T is a non-static member function pointer type. Otherwise, value is equal to false. </p>
 <h2>Template parameters</h2>
@@ -48,14 +46,12 @@ type std::integral_constant&lt;bool, value&gt;</p>
 <pre><code>#include &lt;type_traits&gt;
 class A
 {
-
   public:
     void member()
     {
     }
 };
 int main()
-
 {
     // fails at compile time if A::member is a data member and not a function
     static_assert(std::is_member_function_pointer&lt;decltype(&amp;A::member)&gt;::value,

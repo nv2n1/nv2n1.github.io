@@ -21,25 +21,25 @@ description: "struct_usb_host_config – representation of a device’s configur
 <h2>Members</h2>
 <p>desc</p>
 <dl>
-<dd>the device&#8217;s configuration descriptor.</dl>
+<dd>the device&#8217;s configuration descriptor.</dd></dl>
 <p> string</p>
 <dl>
-<dd>pointer to the cached version of the iConfiguration string, if present for this configuration.</dl>
+<dd>pointer to the cached version of the iConfiguration string, if present for this configuration.</dd></dl>
 <p> intf_assoc[USB_MAXIADS]</p>
 <dl>
-<dd>list of any interface association descriptors in this config</dl>
+<dd>list of any interface association descriptors in this config</dd></dl>
 <p> interface[USB_MAXINTERFACES]</p>
 <dl>
-<dd>array of pointers to usb_interface structures, one for each interface in the configuration. The number of interfaces is stored in desc.bNumInterfaces. These pointers are valid only while the the configuration is active.</dl>
+<dd>array of pointers to usb_interface structures, one for each interface in the configuration. The number of interfaces is stored in desc.bNumInterfaces. These pointers are valid only while the the configuration is active.</dd></dl>
 <p> intf_cache[USB_MAXINTERFACES]</p>
 <dl>
-<dd>array of pointers to usb_interface_cache structures, one for each interface in the configuration. These structures exist for the entire life of the device.</dl>
+<dd>array of pointers to usb_interface_cache structures, one for each interface in the configuration. These structures exist for the entire life of the device.</dd></dl>
 <p> extra</p>
 <dl>
-<dd>pointer to buffer containing all extra descriptors associated with this configuration (those preceding the first interface descriptor).</dl>
+<dd>pointer to buffer containing all extra descriptors associated with this configuration (those preceding the first interface descriptor).</dd></dl>
 <p> extralen</p>
 <dl>
-<dd>length of the extra descriptors buffer.</dl>
+<dd>length of the extra descriptors buffer.</dd></dl>
 <h2>Description</h2>
 <p>USB devices may have multiple configurations, but only one can be active at any time. Each encapsulates a different operational environment; for example, a dual-speed device would have separate configurations for full-speed and high-speed operation. The number of configurations available is stored in the device descriptor as bNumConfigurations. </p>
 <p> A configuration can contain multiple interfaces. Each corresponds to a different function of the USB device, and all are available whenever the configuration is active. The USB standard says that interfaces are supposed to be numbered from 0 to desc.bNumInterfaces-1, but a lot of devices get this wrong. In addition, the interface array is not guaranteed to be sorted in numerical order. Use <code>usb_ifnum_to_if</code> to look up an interface entry based on its number. </p>

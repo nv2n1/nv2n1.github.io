@@ -23,34 +23,34 @@ hpialarms[-D id][-N host[:port]][-C&lt;cfgfile&gt;]
 <p> (No Option) Display alarm states</p>
 <h3>Help Options:</h3>
 <dl>
-<dt><code>-h</code>, <code>&#8211;help</code></p>
-<dd> Show help options</dl>
+<dt><code>-h</code>, <code>&#8211;help</code></dt>
+<dd> Show help options</dd></dl>
 <h3>Application Options:</h3>
 <dl>
-<dt><code>-c</code> <i>1|0</i>, &#8211;<code>-critical</code>=<i>1|0</i></p>
-<dd> Set critical alarm on|off</p>
-<dt><code>-m</code> <i>1|0</i>, &#8211;<code>-major</code>=<i>1|0</i></p>
-<dd> Set major alarm on|off</p>
-<dt><code>-n</code> <i>1|0</i>, &#8211;<code>-minor</code>=<i>1|0</i></p>
-<dd> Set minor alarm on|off</p>
-<dt><code>-a</code> <i>1|0</i>, &#8211;<code>-diska</code>=<i>1|0</i></p>
-<dd> Set diska alarm on|off</p>
-<dt><code>-b</code> <i>1|0</i>, &#8211;<code>-diskb</code>=<i>1|0</i></p>
-<dd> Set diskb alarm on|off</p>
-<dt><code>-p</code> <i>1|0</i>, &#8211;<code>-power</code>=<i>1|0</i></p>
-<dd> Set power alarm on|off</p>
-<dt><code>-i</code> <i>n</i>, &#8211;<code>-chassisid</code>=<i>n</i></p>
-<dd> Set chassis id on for <i>n</i> seconds</p>
-<dt><code>-o</code>, &#8211;<code>-all</code></p>
-<dd> Set all alarms off</p>
-<dt><code>-D</code> <i>nn</i>, <code>&#8211;domain</code>=<i>nn</i></p>
-<dd> Select domain id <i>nn</i></p>
-<dt><code>-X</code>, <code>&#8211;debug</code></p>
-<dd> Display debug messages</p>
-<dt><code>-N</code> <i>&quot;host[:port]&quot;</i>, <code>&#8211;host</code>=<i>&quot;host[:port]&quot;</i></p>
-<dd> Open session to the domain served by the daemon at the specified <font SIZE="-1">URL </font>(host:port). This option overrides the <font SIZE="-1">OPENHPI_DAEMON_HOST</font> and <font SIZE="-1">OPENHPI_DAEMON_PORT</font> environment variables. If host contains &#8216;:&#8217; (for example IPv6 address) then enclose it in square brackets. For example: <i>&#8220;[::1]&#8221;</i> or <i>&#8220;[::1]:4743&#8221;</i>.</p>
-<dt><code>-C</code> <i>&quot;file&quot;</i>, <code>&#8211;cfgfile</code>=<i>&quot;file&quot;</i></p>
-<dd> Use passed file as client configuration file. This option overrides the OPENHPICLIENT_CONf environment variable.</dl>
+<dt><code>-c</code> <i>1|0</i>, &#8211;<code>-critical</code>=<i>1|0</i></dt>
+<dd> Set critical alarm on|off</dd>
+<dt><code>-m</code> <i>1|0</i>, &#8211;<code>-major</code>=<i>1|0</i></dt>
+<dd> Set major alarm on|off</dd>
+<dt><code>-n</code> <i>1|0</i>, &#8211;<code>-minor</code>=<i>1|0</i></dt>
+<dd> Set minor alarm on|off</dd>
+<dt><code>-a</code> <i>1|0</i>, &#8211;<code>-diska</code>=<i>1|0</i></dt>
+<dd> Set diska alarm on|off</dd>
+<dt><code>-b</code> <i>1|0</i>, &#8211;<code>-diskb</code>=<i>1|0</i></dt>
+<dd> Set diskb alarm on|off</dd>
+<dt><code>-p</code> <i>1|0</i>, &#8211;<code>-power</code>=<i>1|0</i></dt>
+<dd> Set power alarm on|off</dd>
+<dt><code>-i</code> <i>n</i>, &#8211;<code>-chassisid</code>=<i>n</i></dt>
+<dd> Set chassis id on for <i>n</i> seconds</dd>
+<dt><code>-o</code>, &#8211;<code>-all</code></dt>
+<dd> Set all alarms off</dd>
+<dt><code>-D</code> <i>nn</i>, <code>&#8211;domain</code>=<i>nn</i></dt>
+<dd> Select domain id <i>nn</i></dd>
+<dt><code>-X</code>, <code>&#8211;debug</code></dt>
+<dd> Display debug messages</dd>
+<dt><code>-N</code> <i>&quot;host[:port]&quot;</i>, <code>&#8211;host</code>=<i>&quot;host[:port]&quot;</i></dt>
+<dd> Open session to the domain served by the daemon at the specified <font SIZE="-1">URL </font>(host:port). This option overrides the <font SIZE="-1">OPENHPI_DAEMON_HOST</font> and <font SIZE="-1">OPENHPI_DAEMON_PORT</font> environment variables. If host contains &#8216;:&#8217; (for example IPv6 address) then enclose it in square brackets. For example: <i>&#8220;[::1]&#8221;</i> or <i>&#8220;[::1]:4743&#8221;</i>.</dd>
+<dt><code>-C</code> <i>&quot;file&quot;</i>, <code>&#8211;cfgfile</code>=<i>&quot;file&quot;</i></dt>
+<dd> Use passed file as client configuration file. This option overrides the OPENHPICLIENT_CONf environment variable.</dd></dl>
 <h2>SAMPLE OUTPUT</h2>
 <p>hpialarmpanel ver 0.6 RptInfo : UpdateCount = 5, UpdateTime = 8a2dc6c0 rptentry[0] resourceid = 1 tag : Mullins<br />
                                                                                                             RDR[45] : ctltype = 2 : 1 oem = 0 Chassis Identify Control<br />

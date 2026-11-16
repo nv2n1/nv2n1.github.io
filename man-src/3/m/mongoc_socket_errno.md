@@ -13,8 +13,8 @@ description: "mongoc_socket_errno() – This function returns the currently capt
 mongoc_socket_errno (mongoc_socket_t *sock);</pre>
 <h2>Parameters</h2>
 <dl COMPACT>
-<dt><code>sock</code></p>
-<dd>A <code>mongoc_socket_t</code> \&amp;.</dl>
+<dt><code>sock</code></dt>
+<dd>A <code>mongoc_socket_t</code> \&amp;.</dd></dl>
 <h2>Description</h2>
 <p>This function returns the currently captured <code>errno</code> for a socket. This may be useful to check was the last errno was after another function call has been made that clears the threads errno variable. </p>
 <h2>Returns</h2>

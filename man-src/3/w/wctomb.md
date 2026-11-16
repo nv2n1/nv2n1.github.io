@@ -10,7 +10,6 @@ description: "wctomb – convert a wide character to a multibyte sequence"
 <p>wctomb &#8211; convert a wide character to a multibyte sequence</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;stdlib.h&gt;
-
 int wctomb(char *s, wchar_t wc);</code></pre>
 <h2>Description</h2>
 <p>If <i>s</i> is not NULL, the <code>wctomb</code>() function converts the wide character <i>wc</i> to its multibyte representation and stores it at the beginning of the character array pointed to by <i>s</i>. It updates the shift state, which is stored in a static anonymous variable known only to the <code>wctomb</code>() function, and returns the length of said multibyte representation, that is, the number of bytes written at <i>s</i>. </p>

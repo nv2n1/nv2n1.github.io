@@ -37,18 +37,12 @@ POSIX also specifies that in case of underflow, arg is returned unmodified, and 
 <h2>Example</h2>
 <p>// Run this code </p>
 <pre><code>#include &lt;iostream&gt;
-
 #include &lt;cmath&gt;
-
 #include &lt;cerrno&gt;
-
 #include &lt;cfenv&gt;
 #pragma STDC FENV_ACCESS ON
-
 const double pi = std::acos(-1);
-
 int main()
-
 {
     // typical usage
     std::cout &lt;&lt; &quot;sin(pi/6) = &quot; &lt;&lt; std::sin(pi / 6) &lt;&lt; '

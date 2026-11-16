@@ -22,84 +22,84 @@ description: "grid-proxy-init – Generate a new proxy certificate"
 <p> <code>-help, -usage</code></p>
 <dl>
 <dt>
-<dd> Display the command-line options to <code>grid-proxy-init</code>.</dl>
+</dt><dd> Display the command-line options to <code>grid-proxy-init</code>.</dd></dl>
 <p> <code>-version</code></p>
 <dl>
 <dt>
-<dd> Display the version number of the <code>grid-proxy-init</code> command.</dl>
+</dt><dd> Display the version number of the <code>grid-proxy-init</code> command.</dd></dl>
 <p> <code>-debug</code></p>
 <dl>
 <dt>
-<dd> Display information about the path to the certificate and key used to generate the proxy certificate, the path to the trusted certificate directory, and verbose error messages.</dl>
+</dt><dd> Display information about the path to the certificate and key used to generate the proxy certificate, the path to the trusted certificate directory, and verbose error messages.</dd></dl>
 <p> <code>-q</code></p>
 <dl>
 <dt>
-<dd> Suppress all output from <code>grid-proxy-init</code> except for pass phrase prompts.</dl>
+</dt><dd> Suppress all output from <code>grid-proxy-init</code> except for pass phrase prompts.</dd></dl>
 <p> <code>-verify</code></p>
 <dl>
 <dt>
-<dd> Perform certificate chain validity checks on the generated proxy.</dl>
+</dt><dd> Perform certificate chain validity checks on the generated proxy.</dd></dl>
 <p> <code>-valid </code><i>HOURS:MINUTES</i><code>, -hours </code><i>HOURS</i></p>
 <dl>
 <dt>
-<dd> Create a certificate that is valid for <i>HOURS</i> hours and <i>MINUTES</i> minutes. If not specified, the default of twelve hours is used.</dl>
+</dt><dd> Create a certificate that is valid for <i>HOURS</i> hours and <i>MINUTES</i> minutes. If not specified, the default of twelve hours is used.</dd></dl>
 <p> <code>-cert </code><i>CERTFILE</i><code>, -key </code><i>KEYFILE</i></p>
 <dl>
 <dt>
-<dd> Create a proxy certificate signed by the certificate located in <i>CERTFILE</i> using the key located in <i>KEYFILE</i>. If not specified the default certificate and key will be used. This overrides the values of environment variables described below.</dl>
+</dt><dd> Create a proxy certificate signed by the certificate located in <i>CERTFILE</i> using the key located in <i>KEYFILE</i>. If not specified the default certificate and key will be used. This overrides the values of environment variables described below.</dd></dl>
 <p> <code>-certdir </code><i>CERTDIR</i></p>
 <dl>
 <dt>
-<dd> Search <i>CERTDIR</i> for trusted certificates if verifying the proxy certificate. If not specified, the default trusted certificate search path is used. This overrides the value of the X509_CERT_DIR environment variable.</dl>
+</dt><dd> Search <i>CERTDIR</i> for trusted certificates if verifying the proxy certificate. If not specified, the default trusted certificate search path is used. This overrides the value of the X509_CERT_DIR environment variable.</dd></dl>
 <p> <code>-out </code><i>PROXYPATH</i></p>
 <dl>
 <dt>
-<dd> Write the generated proxy certificate file to <i>PROXYPATH</i> instead of the default path of /tmp/x509up_u&#8217;UID&#8217;.</dl>
+</dt><dd> Write the generated proxy certificate file to <i>PROXYPATH</i> instead of the default path of /tmp/x509up_u&#8217;UID&#8217;.</dd></dl>
 <p> <code>-bits </code><i>BITS</i></p>
 <dl>
 <dt>
-<dd> When creating the proxy certificate, use a <i>BITS</i> bit key instead of the default 1024-bit keys.</dl>
+</dt><dd> When creating the proxy certificate, use a <i>BITS</i> bit key instead of the default 1024-bit keys.</dd></dl>
 <p> <code>-policy </code><i>POLICYFILE</i></p>
 <dl>
 <dt>
-<dd> Add the certificate policy data described in <i>POLICYFILE</i> as the ProxyCertInfo X.509 extension to the generated proxy certificate.</dl>
+</dt><dd> Add the certificate policy data described in <i>POLICYFILE</i> as the ProxyCertInfo X.509 extension to the generated proxy certificate.</dd></dl>
 <p> <code>-pl </code><i>POLICY-OID</i><code>, -policy-language </code><i>POLICY-OID</i></p>
 <dl>
 <dt>
-<dd> Set the policy language identifier of the policy data specified by the <i>-policy</i> command-line option to the OID specified by the <i>POLICY-OID</i> string.</dl>
+</dt><dd> Set the policy language identifier of the policy data specified by the <i>-policy</i> command-line option to the OID specified by the <i>POLICY-OID</i> string.</dd></dl>
 <p> <code>-path-length </code><i>MAXIMUM</i></p>
 <dl>
 <dt>
-<dd> Set the maximum length of the chain of proxies that can be created by the generated proxy to <i>MAXIMUM</i>. If not set, the default of an unlimited proxy chain length is used.</dl>
+</dt><dd> Set the maximum length of the chain of proxies that can be created by the generated proxy to <i>MAXIMUM</i>. If not set, the default of an unlimited proxy chain length is used.</dd></dl>
 <p> <code>-pwstdin</code></p>
 <dl>
 <dt>
-<dd> Read the private key&#8217;s pass phrase from standard input instead of reading input from the controlling tty. This is useful when scripting <code>grid-proxy-init</code>.</dl>
+</dt><dd> Read the private key&#8217;s pass phrase from standard input instead of reading input from the controlling tty. This is useful when scripting <code>grid-proxy-init</code>.</dd></dl>
 <p> <code>-limited</code></p>
 <dl>
 <dt>
-<dd> Create a limited proxy. Limited proxies are generally refused by process-creating services, but may be used to authorize with other services.</dl>
+</dt><dd> Create a limited proxy. Limited proxies are generally refused by process-creating services, but may be used to authorize with other services.</dd></dl>
 <p> <code>-independent</code></p>
 <dl>
 <dt>
-<dd> Create an independent proxy. An independent proxy is not treated as an impersonation proxy but as a separate identity for authorization purposes.</dl>
+</dt><dd> Create an independent proxy. An independent proxy is not treated as an impersonation proxy but as a separate identity for authorization purposes.</dd></dl>
 <p> <code>-draft</code></p>
 <dl>
 <dt>
-<dd> Create a IETF draft proxy instead of the default RFC 3280-compliant proxy. This type of proxy uses a non-standard proxy policy identifier. This might be useful for authenticating with older versions of the Globus Toolkit.</dl>
+</dt><dd> Create a IETF draft proxy instead of the default RFC 3280-compliant proxy. This type of proxy uses a non-standard proxy policy identifier. This might be useful for authenticating with older versions of the Globus Toolkit.</dd></dl>
 <p> <code>-old</code></p>
 <dl>
 <dt>
-<dd> Create a legacy proxy instead of the default RFC 3280-compliant proxy. This type of proxy uses a non-standard method of indicating that the certificate is a proxy and whether it is limited. This might be useful for authenticating with older versions of the Globus Toolkit.</dl>
+</dt><dd> Create a legacy proxy instead of the default RFC 3280-compliant proxy. This type of proxy uses a non-standard method of indicating that the certificate is a proxy and whether it is limited. This might be useful for authenticating with older versions of the Globus Toolkit.</dd></dl>
 <p> <code>-rfc</code></p>
 <dl>
 <dt>
-<dd> Create an RFC 3820-compliant proxy certificate. This is the default for this version of <code>grid-proxy-init</code>.</dl>
+</dt><dd> Create an RFC 3820-compliant proxy certificate. This is the default for this version of <code>grid-proxy-init</code>.</dd></dl>
 <h2>EXAMPLES</h2>
 <p> To create a proxy with the default lifetime and format, run the <code>grid-proxy-init</code> program with no arguments. For example: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 % grid-proxy-init
 Your identity: /DC=org/DC=example/CN=Joe User
@@ -107,11 +107,11 @@ Enter GRID pass phrase for this identity: XXXXXXX
 Creating proxy .................................. Done
 Your proxy is valid until: Thu Mar 18 03:48:05 2010
 </pre>
-</dl>
+</dd></dl>
 <p> To create a stronger proxy that lasts for only 8 hours, use the <i>-hours</i> and <i>-bits</i> command-line options to <code>grid-proxy-init</code>. For example: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 % grid-proxy-init -hours 8 -bits 4096
 Your identity: /DC=org/DC=example/CN=Joe User
@@ -119,31 +119,31 @@ Enter GRID pass phrase for this identity: XXXXXXX
 Creating proxy .................................. Done
 Your proxy is valid until: Thu Mar 17 23:48:05 2010
 </pre>
-</dl>
+</dd></dl>
 <h2>ENVIRONMENT</h2>
 <p> The following environment variables affect the execution of <code>grid-proxy-init</code>: </p>
 <p> <code>X509_USER_CERT</code></p>
 <dl>
 <dt>
-<dd> Path to the certificate to use as issuer of the new proxy.</dl>
+</dt><dd> Path to the certificate to use as issuer of the new proxy.</dd></dl>
 <p> <code>X509_USER_KEY</code></p>
 <dl>
 <dt>
-<dd> Path to the key to use to sign the new proxy.</dl>
+</dt><dd> Path to the key to use to sign the new proxy.</dd></dl>
 <p> <code>X509_CERT_DIR</code></p>
 <dl>
 <dt>
-<dd> Path to the directory containing trusted certificates and signing policies.</dl>
+</dt><dd> Path to the directory containing trusted certificates and signing policies.</dd></dl>
 <h2>FILES</h2>
 <p> The following files affect the execution of <code>grid-proxy-init</code>: </p>
 <p> <code>$HOME/.globus/usercert.pem</code></p>
 <dl>
 <dt>
-<dd> Default path to the certificate to use as issuer of the new proxy.</dl>
+</dt><dd> Default path to the certificate to use as issuer of the new proxy.</dd></dl>
 <p> <code>$HOME/.globus/userkey.pem</code></p>
 <dl>
 <dt>
-<dd> Default path to the key to use to sign the new proxy.</dl>
+</dt><dd> Default path to the key to use to sign the new proxy.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/1-grid-proxy-destroy/">grid-proxy-destroy</a>(1), <a href="/docs/linux/man/1-grid-proxy-info/">grid-proxy-info</a>(1)</p>
 <h2>AUTHOR</h2>

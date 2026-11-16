@@ -14,8 +14,8 @@ description: "dictionary – RADIUS dictionary file"
 <p>Every line starting with a hash sign (&#8216;<code>#</code>&#8216;) is treated as comment and ignored. </p>
 <p> Each line of the file can contain one of the following strings:</p>
 <dl>
-<dt><code>ATTRIBUTE name oid type [flags]</code></p>
-<dd>Define a RADIUS attribute name to number mapping. </p>
+<dt><code>ATTRIBUTE name oid type [flags]</code></dt>
+<dd>Define a RADIUS attribute name to number mapping. </dd>
 <p> The <i>name</i> field is a printable field, taken from various specifications or vendor definitions. It is most commonly used as a series of words, separated by hyphens. e.g. &quot;User-Name&quot;. Vendor-specific attributes (VSAs) are prefixed by the vendor name, e.g. &quot;Cisco-AVPair&quot;. The names should be globally unique, as they are used as a key to look up the properties of the attribute. </p>
 <p> The <i>oid</i> field is taken from the relevant specification for that name. In most cases, it is a decimal number, such as &quot;256&quot;. For certain attributes, a &quot;dotted number&quot; notation is used, e.g. &quot;1.2&quot;. The &quot;dotted number&quot; notation is used only for certain attributes. </p>
 <p> The <i>type</i> field can be one of the standard types: </p>
@@ -43,25 +43,25 @@ description: "dictionary – RADIUS dictionary file"
 <p> The &quot;encrypt&quot; flag marks the attribute as being encrypted with one of three possible methods. &quot;1&quot; means that the attribute is encrypted with the method as defined in <i>RFC2865</i> for the User-Password attribute. &quot;2&quot; means that the password is encrypted with the method as defined in <i>RFC2868</i> for the Tunnel-Password attribute. &quot;3&quot; means that the attribute is encrypted as per Ascend&#8217;s definitions for the Ascend-Send-Secret attribute. </p>
 <p> The &quot;has_tag&quot; flag marks the attribute as being permitted to have a tag, as defined in <i>RFC2868</i>. The purpose of the tag is to allow grouping of attributes for tunneled users. See <i>RFC2868</i> for more details. </p>
 <p> When the server receives an encoded attribute in a RADIUS packet, it looks up that attribute by number in the dictionary, and uses the definition found there for printing diagnostic and log messages. When the server sees an attribute name in a configuration file, it looks up that attribute by name in the dictionary, and uses the definition found there. </p>
-<dt><code>VALUE attribute-name value-name number</code></p>
-<dd>Define an attribute value name to number mapping, for an attribute of type <i>integer</i>. The <i>attribute-name</i> field MUST be previously defined by an <i>ATTRIBUTE</i> entry. The <i>value-name</i> field can be any non-space text, but is usually taken from <i>RFC2865</i>, or other documents.. The <i>number</i> field is also taken from the relevant documents, for that name. </p>
+<dt><code>VALUE attribute-name value-name number</code></dt>
+<dd>Define an attribute value name to number mapping, for an attribute of type <i>integer</i>. The <i>attribute-name</i> field MUST be previously defined by an <i>ATTRIBUTE</i> entry. The <i>value-name</i> field can be any non-space text, but is usually taken from <i>RFC2865</i>, or other documents.. The <i>number</i> field is also taken from the relevant documents, for that name. </dd>
 <p> When the server receives an encoded value in a RADIUS packet, it looks up the value of that attribute by number in the dictionary, and uses the name found there for printing diagnostic and log messages.</p>
-<dt><code>VENDOR vendor-name number [format=&#8230;]</code></p>
-<dd>Define a Vendor Specific Attribute encapsulation for <i>vendor-name</i> to <i>number</i>. For a list of vendor names and numbers, see <a rel="nofollow" href="http://www.iana.org/enterprise-numbers.txt.">http://www.iana.org/enterprise-numbers.txt.</a> </p>
+<dt><code>VENDOR vendor-name number [format=&#8230;]</code></dt>
+<dd>Define a Vendor Specific Attribute encapsulation for <i>vendor-name</i> to <i>number</i>. For a list of vendor names and numbers, see <a rel="nofollow" href="http://www.iana.org/enterprise-numbers.txt.">http://www.iana.org/enterprise-numbers.txt.</a> </dd>
 <p> The &quot;format=t,l&quot; statement tells the server how many octets to use to encode/decode the vendor &quot;type&quot; and &quot;length&quot; fields in the attributes. The default is &quot;format=1,1&quot;, which does not have to be specified. For USR VSA&#8217;s, the format is &quot;format=4,0&quot;, for Lucent VSA&#8217;s it&#8217;s &quot;format=2,1&quot;, and for Starent VSA&#8217;s it&#8217;s &quot;format=2,2&quot;. </p>
 <p> The supported values for the number of type octets (i.e. the first digit) are 1, 2, and 4. The support values for the number of length octets (i.e. the second digit) are 0, 1, and 2. Any combination of those values will work. </p>
 <p> You can also use &quot;format=Extended-Vendor-Specific-1&quot;, through &quot;format=Extended-Vendor-Specific-6&quot;. These define VSAs in the &quot;extended vendor-specific&quot; space.</p>
-<dt><code>BEGIN-VENDOR vendor-name</code></p>
-<dd>Define the start of a block of Vendor-Specific attributes. All of the following <i>ATTRIBUTE</i> definitions are interpreted as being for the named vendor, until the block is closed by an &quot;END-VENDOR&quot; statement. </p>
+<dt><code>BEGIN-VENDOR vendor-name</code></dt>
+<dd>Define the start of a block of Vendor-Specific attributes. All of the following <i>ATTRIBUTE</i> definitions are interpreted as being for the named vendor, until the block is closed by an &quot;END-VENDOR&quot; statement. </dd>
 <p> This practice is preferred to placing the vendor name at the end of an <i>ATTRIBUTE</i> definition.</p>
-<dt><code>END-VENDOR vendor-name</code></p>
-<dd>End a previously defined BEGIN-VENDOR block. The &quot;vendor-name&quot; must match.</p>
-<dt><code>$INCLUDE filename</code></p>
-<dd>Include dictionary entries from the file <i>filename</i>. The <i>filename</i> is taken as relative to the location of the file which is asking for the inclusion.</p>
-<dt><code>BEGIN-TLV name</code></p>
-<dd>This feature is supported for backwards compatibility with older dictionaries. It should not be used. The new &quot;oid&quot; form for defining the attribute number should be used instead.</p>
-<dt><code>END-TLV name</code></p>
-<dd>This feature is supported for backwards compatibility with older dictionaries. It should not be used. The new &quot;oid&quot; form for defining the attribute number should be used instead.</dl>
+<dt><code>END-VENDOR vendor-name</code></dt>
+<dd>End a previously defined BEGIN-VENDOR block. The &quot;vendor-name&quot; must match.</dd>
+<dt><code>$INCLUDE filename</code></dt>
+<dd>Include dictionary entries from the file <i>filename</i>. The <i>filename</i> is taken as relative to the location of the file which is asking for the inclusion.</dd>
+<dt><code>BEGIN-TLV name</code></dt>
+<dd>This feature is supported for backwards compatibility with older dictionaries. It should not be used. The new &quot;oid&quot; form for defining the attribute number should be used instead.</dd>
+<dt><code>END-TLV name</code></dt>
+<dd>This feature is supported for backwards compatibility with older dictionaries. It should not be used. The new &quot;oid&quot; form for defining the attribute number should be used instead.</dd></dl>
 <h2>Files</h2>
 <p><i>/etc/raddb/dictionary,</i> <i>/usr/share/freeradius/dictionary.*</i></p>
 <h2>See Also</h2>

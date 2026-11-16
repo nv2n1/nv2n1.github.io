@@ -14,16 +14,16 @@ description: "iscsi_create_flashnode_conn – Add flashnode conn entry in sysfs"
 <p><i>shost</i></p>
 <dl>
 <dd>
-<dd>pointer to host data</dl>
+</dd><dd>pointer to host data</dd></dl>
 <p> <i>fnode_sess</i></p>
 <dl>
-<dd>pointer to the parent flashnode session entry</dl>
+<dd>pointer to the parent flashnode session entry</dd></dl>
 <p> <i>transport</i></p>
 <dl>
-<dd>pointer to transport data</dl>
+<dd>pointer to transport data</dd></dl>
 <p> <i>dd_size</i></p>
 <dl>
-<dd>total size to allocate</dl>
+<dd>total size to allocate</dd></dl>
 <h2>Description</h2>
 <p>Adds a sysfs entry for the flashnode connection attributes</p>
 <h2>Return</h2>
@@ -31,8 +31,8 @@ description: "iscsi_create_flashnode_conn – Add flashnode conn entry in sysfs"
 <h2>Authors</h2>
 <p><code>James Bottomley</code> &lt;James.Bottomley [at] hansenpartnership.com&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <p> <code>Rob Landley</code> &lt;rob [at] landley.net&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

@@ -14,12 +14,12 @@ description: "sepolicy-booleans – Query SELinux Policy to see description of b
 <p>sepolicy booleans will show all booleans and their descriptions, or you can choose individual booleans to display </p>
 <h2>Options</h2>
 <dl>
-<dt><i>-h, &#8211;help </i></p>
-<dd>Display help message</p>
-<dt><i>-a, &#8211;all</i></p>
-<dd>Display all boolean descriptions</p>
-<dt><i>-b, &#8211;boolean</i></p>
-<dd>boolean to get description </p>
+<dt><i>-h, &#8211;help </i></dt>
+<dd>Display help message</dd>
+<dt><i>-a, &#8211;all</i></dt>
+<dd>Display all boolean descriptions</dd>
+<dt><i>-b, &#8211;boolean</i></dt>
+<dd>boolean to get description </dd>
 </dl>
 <h2>Author</h2>
 <p>This man page was written by Daniel Walsh &lt;dwalsh [at] redhat.com&gt;</p>

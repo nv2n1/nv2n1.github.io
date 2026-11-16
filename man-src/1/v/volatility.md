@@ -18,191 +18,181 @@ vol[option] vol - f[image]-- profile = [profile][plugin]
 <p> Volatility supports several versions of the MS Windows, Linux and MAC OSX: </p>
 <p> MS Windows:</p>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>&bull;</p>
-<dd> 32-bit Windows XP Service Pack 2 and 3</p>
-<dt>&bull;</p>
-<dd> 32-bit Windows 2003 Server Service Pack 0, 1, 2</p>
-<dt>&bull;</p>
-<dd> 32-bit Windows Vista Service Pack 0, 1, 2</p>
-<dt>&bull;</p>
-<dd> 32-bit Windows 2008 Server Service Pack 1, 2 (there is no SP0)</p>
-<dt>&bull;</p>
-<dd> 32-bit Windows 7 Service Pack 0, 1</p>
-<dt>&bull;</p>
-<dd> 32-bit Windows 8, 8.1, and 8.1 Update 1</p>
-<dt>&bull;</p>
-<dd> 32-bit Windows 10 (initial support)</p>
-<dt>&bull;</p>
-<dd> 64-bit Windows XP Service Pack 1 and 2 (there is no SP0)</p>
-<dt>&bull;</p>
-<dd> 64-bit Windows 2003 Server Service Pack 1 and 2 (there is no SP0)</p>
-<dt>&bull;</p>
-<dd> 64-bit Windows Vista Service Pack 0, 1, 2</p>
-<dt>&bull;</p>
-<dd> 64-bit Windows 2008 Server Service Pack 1 and 2 (there is no SP0)</p>
-<dt>&bull;</p>
-<dd> 64-bit Windows 2008 R2 Server Service Pack 0 and 1</p>
-<dt>&bull;</p>
-<dd> 64-bit Windows 7 Service Pack 0 and 1</p>
-<dt>&bull;</p>
-<dd> 64-bit Windows 8, 8.1, and 8.1 Update 1</p>
-<dt>&bull;</p>
-<dd> 64-bit Windows Server 2012 and 2012 R2</p>
-<dt>&bull;</p>
-<dd> 64-bit Windows 10 (initial support)</dl>
+<dt>&bull;</dt>
+<dd> 32-bit Windows XP Service Pack 2 and 3</dd>
+<dt>&bull;</dt>
+<dd> 32-bit Windows 2003 Server Service Pack 0, 1, 2</dd>
+<dt>&bull;</dt>
+<dd> 32-bit Windows Vista Service Pack 0, 1, 2</dd>
+<dt>&bull;</dt>
+<dd> 32-bit Windows 2008 Server Service Pack 1, 2 (there is no SP0)</dd>
+<dt>&bull;</dt>
+<dd> 32-bit Windows 7 Service Pack 0, 1</dd>
+<dt>&bull;</dt>
+<dd> 32-bit Windows 8, 8.1, and 8.1 Update 1</dd>
+<dt>&bull;</dt>
+<dd> 32-bit Windows 10 (initial support)</dd>
+<dt>&bull;</dt>
+<dd> 64-bit Windows XP Service Pack 1 and 2 (there is no SP0)</dd>
+<dt>&bull;</dt>
+<dd> 64-bit Windows 2003 Server Service Pack 1 and 2 (there is no SP0)</dd>
+<dt>&bull;</dt>
+<dd> 64-bit Windows Vista Service Pack 0, 1, 2</dd>
+<dt>&bull;</dt>
+<dd> 64-bit Windows 2008 Server Service Pack 1 and 2 (there is no SP0)</dd>
+<dt>&bull;</dt>
+<dd> 64-bit Windows 2008 R2 Server Service Pack 0 and 1</dd>
+<dt>&bull;</dt>
+<dd> 64-bit Windows 7 Service Pack 0 and 1</dd>
+<dt>&bull;</dt>
+<dd> 64-bit Windows 8, 8.1, and 8.1 Update 1</dd>
+<dt>&bull;</dt>
+<dd> 64-bit Windows Server 2012 and 2012 R2</dd>
+<dt>&bull;</dt>
+<dd> 64-bit Windows 10 (initial support)</dd></dl>
 </dl>
 <p> Linux:</p>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>&bull;</p>
-<dd> 32-bit Linux kernels 2.6.11 to 4.2.3</p>
-<dt>&bull;</p>
-<dd> 64-bit Linux kernels 2.6.11 to 4.2.3</p>
-<dt>&bull;</p>
-<dd> OpenSuSE, Ubuntu, Debian, CentOS, Fedora, Mandriva, etc</dl>
+<dt>&bull;</dt>
+<dd> 32-bit Linux kernels 2.6.11 to 4.2.3</dd>
+<dt>&bull;</dt>
+<dd> 64-bit Linux kernels 2.6.11 to 4.2.3</dd>
+<dt>&bull;</dt>
+<dd> OpenSuSE, Ubuntu, Debian, CentOS, Fedora, Mandriva, etc</dd></dl>
 </dl>
 <p> Mac OSX:</p>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>&bull;</p>
-<dd> 32-bit 10.5.x Leopard (the only 64-bit 10.5 is Server, which isn&#8217;t supported)</p>
-<dt>&bull;</p>
-<dd> 32-bit 10.6.x Snow Leopard</p>
-<dt>&bull;</p>
-<dd> 64-bit 10.6.x Snow Leopard</p>
-<dt>&bull;</p>
-<dd> 32-bit 10.7.x Lion</p>
-<dt>&bull;</p>
-<dd> 64-bit 10.7.x Lion</p>
-<dt>&bull;</p>
-<dd> 64-bit 10.8.x Mountain Lion (there is no 32-bit version)</p>
-<dt>&bull;</p>
-<dd> 64-bit 10.9.x Mavericks (there is no 32-bit version)</p>
-<dt>&bull;</p>
-<dd> 64-bit 10.10.x Yosemite (there is no 32-bit version)</p>
-<dt>&bull;</p>
-<dd> 64-bit 10.11.x El Capitan (there is no 32-bit version)</dl>
+<dt>&bull;</dt>
+<dd> 32-bit 10.5.x Leopard (the only 64-bit 10.5 is Server, which isn&#8217;t supported)</dd>
+<dt>&bull;</dt>
+<dd> 32-bit 10.6.x Snow Leopard</dd>
+<dt>&bull;</dt>
+<dd> 64-bit 10.6.x Snow Leopard</dd>
+<dt>&bull;</dt>
+<dd> 32-bit 10.7.x Lion</dd>
+<dt>&bull;</dt>
+<dd> 64-bit 10.7.x Lion</dd>
+<dt>&bull;</dt>
+<dd> 64-bit 10.8.x Mountain Lion (there is no 32-bit version)</dd>
+<dt>&bull;</dt>
+<dd> 64-bit 10.9.x Mavericks (there is no 32-bit version)</dd>
+<dt>&bull;</dt>
+<dd> 64-bit 10.10.x Yosemite (there is no 32-bit version)</dd>
+<dt>&bull;</dt>
+<dd> 64-bit 10.11.x El Capitan (there is no 32-bit version)</dd></dl>
 </dl>
 <p> The memory formats supported are:</p>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>&bull;</p>
-<dd> Raw linear sample (dd)</p>
-<dt>&bull;</p>
-<dd> Hibernation file</p>
-<dt>&bull;</p>
-<dd> Crash dump file</p>
-<dt>&bull;</p>
-<dd> VirtualBox ELF64 core dump</p>
-<dt>&bull;</p>
-<dd> VMware saved state and snapshot files</p>
-<dt>&bull;</p>
-<dd> EWF format (E01)</p>
-<dt>&bull;</p>
-<dd> LiME (Linux Memory Extractor) format</p>
-<dt>&bull;</p>
-<dd> Mach-o file format</p>
-<dt>&bull;</p>
-<dd> QEMU virtual machine dumps</p>
-<dt>&bull;</p>
-<dd> Firewire</p>
-<dt>&bull;</p>
-<dd> HPAK (FDPro)</dl>
+<dt>&bull;</dt>
+<dd> Raw linear sample (dd)</dd>
+<dt>&bull;</dt>
+<dd> Hibernation file</dd>
+<dt>&bull;</dt>
+<dd> Crash dump file</dd>
+<dt>&bull;</dt>
+<dd> VirtualBox ELF64 core dump</dd>
+<dt>&bull;</dt>
+<dd> VMware saved state and snapshot files</dd>
+<dt>&bull;</dt>
+<dd> EWF format (E01)</dd>
+<dt>&bull;</dt>
+<dd> LiME (Linux Memory Extractor) format</dd>
+<dt>&bull;</dt>
+<dd> Mach-o file format</dd>
+<dt>&bull;</dt>
+<dd> QEMU virtual machine dumps</dd>
+<dt>&bull;</dt>
+<dd> Firewire</dd>
+<dt>&bull;</dt>
+<dd> HPAK (FDPro)</dd></dl>
 </dl>
 <p> The supported address spaces (RAM types) are:</p>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>&bull;</p>
-<dd> AMD64PagedMemory &#8211; Standard AMD 64-bit address space</p>
-<dt>&bull;</p>
-<dd> ArmAddressSpace &#8211; Address space for ARM processors</p>
-<dt>&bull;</p>
-<dd> FileAddressSpace &#8211; This is a direct file AS</p>
-<dt>&bull;</p>
-<dd> HPAKAddressSpace &#8211; This AS supports the HPAK format</p>
-<dt>&bull;</p>
-<dd> IA32PagedMemoryPae &#8211; This class implements the IA-32 PAE paging address space. It is responsible</p>
-<dt>&bull;</p>
-<dd> IA32PagedMemory &#8211; Standard IA-32 paging address space</p>
-<dt>&bull;</p>
-<dd> LimeAddressSpace &#8211; Address space for Lime</p>
-<dt>&bull;</p>
-<dd> MachOAddressSpace &#8211; Address space for mach-o files to support atc-ny memory reader</p>
-<dt>&bull;</p>
-<dd> OSXPmemELF &#8211; This AS supports VirtualBox ELF64 coredump format</p>
-<dt>&bull;</p>
-<dd> QemuCoreDumpElf &#8211; This AS supports Qemu ELF32 and ELF64 coredump format</p>
-<dt>&bull;</p>
-<dd> VirtualBoxCoreDumpElf64 &#8211; This AS supports VirtualBox ELF64 coredump format</p>
-<dt>&bull;</p>
-<dd> VMWareAddressSpace &#8211; This AS supports VMware snapshot (VMSS) and saved state (VMSS) files</p>
-<dt>&bull;</p>
-<dd> VMWareMetaAddressSpace &#8211; This AS supports the VMEM format with VMSN/VMSS metadata</p>
-<dt>&bull;</p>
-<dd> WindowsCrashDumpSpace32 &#8211; This AS supports windows Crash Dump format</p>
-<dt>&bull;</p>
-<dd> WindowsCrashDumpSpace64BitMap &#8211; This AS supports Windows BitMap Crash Dump format</p>
-<dt>&bull;</p>
-<dd> WindowsCrashDumpSpace64 &#8211; This AS supports windows Crash Dump format</p>
-<dt>&bull;</p>
-<dd> WindowsHiberFileSpace32 &#8211; This is a hibernate address space for windows hibernation files</dl>
+<dt>&bull;</dt>
+<dd> AMD64PagedMemory &#8211; Standard AMD 64-bit address space</dd>
+<dt>&bull;</dt>
+<dd> ArmAddressSpace &#8211; Address space for ARM processors</dd>
+<dt>&bull;</dt>
+<dd> FileAddressSpace &#8211; This is a direct file AS</dd>
+<dt>&bull;</dt>
+<dd> HPAKAddressSpace &#8211; This AS supports the HPAK format</dd>
+<dt>&bull;</dt>
+<dd> IA32PagedMemoryPae &#8211; This class implements the IA-32 PAE paging address space. It is responsible</dd>
+<dt>&bull;</dt>
+<dd> IA32PagedMemory &#8211; Standard IA-32 paging address space</dd>
+<dt>&bull;</dt>
+<dd> LimeAddressSpace &#8211; Address space for Lime</dd>
+<dt>&bull;</dt>
+<dd> MachOAddressSpace &#8211; Address space for mach-o files to support atc-ny memory reader</dd>
+<dt>&bull;</dt>
+<dd> OSXPmemELF &#8211; This AS supports VirtualBox ELF64 coredump format</dd>
+<dt>&bull;</dt>
+<dd> QemuCoreDumpElf &#8211; This AS supports Qemu ELF32 and ELF64 coredump format</dd>
+<dt>&bull;</dt>
+<dd> VirtualBoxCoreDumpElf64 &#8211; This AS supports VirtualBox ELF64 coredump format</dd>
+<dt>&bull;</dt>
+<dd> VMWareAddressSpace &#8211; This AS supports VMware snapshot (VMSS) and saved state (VMSS) files</dd>
+<dt>&bull;</dt>
+<dd> VMWareMetaAddressSpace &#8211; This AS supports the VMEM format with VMSN/VMSS metadata</dd>
+<dt>&bull;</dt>
+<dd> WindowsCrashDumpSpace32 &#8211; This AS supports windows Crash Dump format</dd>
+<dt>&bull;</dt>
+<dd> WindowsCrashDumpSpace64BitMap &#8211; This AS supports Windows BitMap Crash Dump format</dd>
+<dt>&bull;</dt>
+<dd> WindowsCrashDumpSpace64 &#8211; This AS supports windows Crash Dump format</dd>
+<dt>&bull;</dt>
+<dd> WindowsHiberFileSpace32 &#8211; This is a hibernate address space for windows hibernation files</dd></dl>
 </dl>
 <p> There are exemplar memory images for tests at <a rel="nofollow" href="https://github.com/volatilityfoundation/volatility/wiki/Memory-Samples.">https://github.com/volatilityfoundation/volatility/wiki/Memory-Samples.</a></p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-h</code>, <code>&#8211;help</code></p>
-<dd> List all available options and their default values. Default values may be set in the configuration file (/etc/volatilityrc).</p>
-<dt><code>&#8211;conf-file</code>=/root/.volatilityrc</p>
-<dd> User based configuration file.</p>
-<dt><code>-d</code>, <code>&#8211;debug</code></p>
-<dd> Debug Volatility.</p>
-<dt><code>&#8211;plugins</code>=PLUGINS</p>
-<dd> Additional <i>plugin</i> directories to use (colon separated).</p>
-<dt><code>&#8211;info</code></p>
-<dd> Print information about all registered objects.</p>
-<dt><code>&#8211;cache-directory</code>=/root/.cache/volatility</p>
-<dd> Directory where cache files are stored.</p>
-<dt><code>&#8211;cache</code></p>
-<dd> Use caching.</p>
-<dt><code>&#8211;tz</code>=TZ</p>
-<dd> Set the timezone for displaying timestamps using pytz (if installed) or tzset</p>
-<dt><code>-f</code> FILENAME, <code>&#8211;filename</code>=FILENAME</p>
-<dd> Filename to use when opening an <i>image</i>.</p>
-<dt><code>&#8211;profile</code>=WinXPSP2x86</p>
-<dd> Name of the profile to load (use <code>&#8211;info</code> to see a list of supported profiles).</p>
-<dt><code>-l</code> LOCATION, <code>&#8211;location</code>=LOCATION</p>
-<dd> A URN location from which to load an address space.</p>
-<dt><code>-w</code>, <code>&#8211;write</code></p>
-<dd> Enable write support.</p>
-<dt><code>&#8211;dtb</code>=DTB</p>
-<dd> DTB Address.</p>
-<dt><code>&#8211;shift</code>=SHIFT</p>
-<dd> Mac KASLR shift address.</p>
-<dt><code>&#8211;output</code>=text</p>
-<dd> Output in this format.</p>
-<dt><code>&#8211;output-file</code>=OUTPUT_FILE</p>
-<dd> Write output in this file.</p>
-<dt><code>-v</code>, <code>&#8211;verbose</code></p>
-<dd> Verbose information.</p>
-<dt><code>-g</code> KDBG, <code>&#8211;kdbg</code>=KDBG</p>
-<dd> Specify a specific KDBG virtual address. For 64-bit Windows 8 and above this is the address of KdCopyDataBlock.</p>
-<dt><code>&#8211;force</code></p>
-<dd> Force utilization of suspect profile.</p>
-<dt><code>-k</code> KPCR, <code>&#8211;kpcr</code>=KPCR</p>
-<dd> Specify a specific KPCR address.</p>
-<dt><code>&#8211;cookie</code>=COOKIE</p>
-<dd> Specify the address of nt!ObHeaderCookie (valid for Windows 10 only).</dl>
+<dt><code>-h</code>, <code>&#8211;help</code></dt>
+<dd> List all available options and their default values. Default values may be set in the configuration file (/etc/volatilityrc).</dd>
+<dt><code>&#8211;conf-file</code>=/root/.volatilityrc</dt>
+<dd> User based configuration file.</dd>
+<dt><code>-d</code>, <code>&#8211;debug</code></dt>
+<dd> Debug Volatility.</dd>
+<dt><code>&#8211;plugins</code>=PLUGINS</dt>
+<dd> Additional <i>plugin</i> directories to use (colon separated).</dd>
+<dt><code>&#8211;info</code></dt>
+<dd> Print information about all registered objects.</dd>
+<dt><code>&#8211;cache-directory</code>=/root/.cache/volatility</dt>
+<dd> Directory where cache files are stored.</dd>
+<dt><code>&#8211;cache</code></dt>
+<dd> Use caching.</dd>
+<dt><code>&#8211;tz</code>=TZ</dt>
+<dd> Set the timezone for displaying timestamps using pytz (if installed) or tzset</dd>
+<dt><code>-f</code> FILENAME, <code>&#8211;filename</code>=FILENAME</dt>
+<dd> Filename to use when opening an <i>image</i>.</dd>
+<dt><code>&#8211;profile</code>=WinXPSP2x86</dt>
+<dd> Name of the profile to load (use <code>&#8211;info</code> to see a list of supported profiles).</dd>
+<dt><code>-l</code> LOCATION, <code>&#8211;location</code>=LOCATION</dt>
+<dd> A URN location from which to load an address space.</dd>
+<dt><code>-w</code>, <code>&#8211;write</code></dt>
+<dd> Enable write support.</dd>
+<dt><code>&#8211;dtb</code>=DTB</dt>
+<dd> DTB Address.</dd>
+<dt><code>&#8211;shift</code>=SHIFT</dt>
+<dd> Mac KASLR shift address.</dd>
+<dt><code>&#8211;output</code>=text</dt>
+<dd> Output in this format.</dd>
+<dt><code>&#8211;output-file</code>=OUTPUT_FILE</dt>
+<dd> Write output in this file.</dd>
+<dt><code>-v</code>, <code>&#8211;verbose</code></dt>
+<dd> Verbose information.</dd>
+<dt><code>-g</code> KDBG, <code>&#8211;kdbg</code>=KDBG</dt>
+<dd> Specify a specific KDBG virtual address. For 64-bit Windows 8 and above this is the address of KdCopyDataBlock.</dd>
+<dt><code>&#8211;force</code></dt>
+<dd> Force utilization of suspect profile.</dd>
+<dt><code>-k</code> KPCR, <code>&#8211;kpcr</code>=KPCR</dt>
+<dd> Specify a specific KPCR address.</dd>
+<dt><code>&#8211;cookie</code>=COOKIE</dt>
+<dd> Specify the address of nt!ObHeaderCookie (valid for Windows 10 only).</dd></dl>
 <h2>PLUGINS AND PROFILES</h2>
 <p> The supported <i>plugin</i> commands and profiles can be viewed if using the command &#8216;$ volatility <code>&#8211;info</code>&#8216;. Note that Linux and MAC OSX allowed plugins will have the &#8216;linux_&#8217; and &#8216;mac_&#8217; prefixes. Plugins without these prefixes were designed for MS Windows. </p>
 <p> Profiles are maps used by Volatility to understand the operational systems. The allowed MS Windows profiles are provided by the Volatility. </p>
@@ -216,15 +206,13 @@ vol[option] vol - f[image]-- profile = [profile][plugin]
 <h2>ENVIRONMENT VARIABLES</h2>
 <p> On a GNU/Linux or OS X system, these variables can be set:</p>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>&bull;</p>
-<dd> VOLATILITY_PROFILE &#8211; Specifies a profile to be used as default, making unnecessary a &#8216;<code>&#8211;profile</code>&#8216; <i>option</i>.</p>
-<dt>&bull;</p>
-<dd> VOLATILITY_LOCATION &#8211; Specifies the path of an <i>image</i>. So, the Volatility command will not need a file name via &#8216;<code>-f</code>&#8216; <i>option</i>.</p>
-<dt>&bull;</p>
-<dd> VOLATILITY_KDBG &#8211; Specifies a KDBG address. See EXTRA PROCEDURES to more details.</dl>
+<dt>&bull;</dt>
+<dd> VOLATILITY_PROFILE &#8211; Specifies a profile to be used as default, making unnecessary a &#8216;<code>&#8211;profile</code>&#8216; <i>option</i>.</dd>
+<dt>&bull;</dt>
+<dd> VOLATILITY_LOCATION &#8211; Specifies the path of an <i>image</i>. So, the Volatility command will not need a file name via &#8216;<code>-f</code>&#8216; <i>option</i>.</dd>
+<dt>&bull;</dt>
+<dd> VOLATILITY_KDBG &#8211; Specifies a KDBG address. See EXTRA PROCEDURES to more details.</dd></dl>
 </dl>
 <p> Other <i>plugin</i> flags may be utilized in this way, for example KPCR, DTB or PLUGINS. When exporting variables, simply prefix VOLATILITY_ before the flag name (e.g. VOLATILITY_KPCR). Otherwise, the flag name remains the same when adding it to the configuration file. </p>
 <p> If you have a path with a space or more in the name, spaces should be replaced with %20 instead (e.g. LOCATION=file:///tmp/my%20image.img). </p>
@@ -371,13 +359,11 @@ vol[option] vol - f[image]-- profile = [profile][plugin]
 <h2>NOTES</h2>
 <p> This manpage was based in some tests and several official documents about Volatility. For other information and tutorials, see:</p>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>&bull;</p>
-<dd> <a rel="nofollow" href="http://www.volatilityfoundation.org">http://www.volatilityfoundation.org</a></p>
-<dt>&bull;</p>
-<dd> <a rel="nofollow" href="https://github.com/volatilityfoundation/volatility/wiki">https://github.com/volatilityfoundation/volatility/wiki</a></dl>
+<dt>&bull;</dt>
+<dd> <a rel="nofollow" href="http://www.volatilityfoundation.org">http://www.volatilityfoundation.org</a></dd>
+<dt>&bull;</dt>
+<dd> <a rel="nofollow" href="https://github.com/volatilityfoundation/volatility/wiki">https://github.com/volatilityfoundation/volatility/wiki</a></dd></dl>
 </dl>
 <h2>AUTHOR</h2>
 <p> Volatility was written by Volatility Foundation and several contributors. For contact, use the email &lt;info [at] volatilityfoundation.org&gt;. </p>

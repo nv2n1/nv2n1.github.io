@@ -93,7 +93,7 @@ description: "ANTLR3_COMMON_TOKEN_struct –"
 <p>The definition of an ANTLR3 common token structure, which all implementations of a token stream should provide, installing any further structures in the custom pointer element of this structure. </p>
 <p> <code>Remarks:</code></p>
 <dl COMPACT>
-<dd>Token streams are in essence provided by lexers or other programs that serve as lexers.</dl>
+<dd>Token streams are in essence provided by lexers or other programs that serve as lexers.</dd></dl>
 <h2>Field Documentation</h2>
 <h3><code>ANTLR3_UINT32</code> <code>ANTLR3_COMMON_TOKEN_struct::channel</code></h3>
 <p>The virtual channel that this token exists in. </p>

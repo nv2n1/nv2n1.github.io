@@ -42,62 +42,62 @@ Gracefully unmount volume and reset network.
 <code>__init__(self, **kwargs)</code>
 Constructor
 Initialize object's private data.
-<dl><dt><dd><dl><dt><code>host:</code>
-<dd>Hostname or IP address [default: localhost]
-<dt><code>user:</code>
-<dd>User to log in to host [default: '']
-<dt><code>server:</code>
-<dd>NFS server name or IP address [default: None]
-<dt><code>nfsversion:</code>
-<dd>NFS version [default: 4.1]
-<dt><code>proto:</code>
-<dd>NFS protocol name [default: 'tcp']
-<dt><code>port:</code>
-<dd>NFS server port [default: 2049]
-<dt><code>sec:</code>
-<dd>Security flavor [default: 'sys']
-<dt><code>export:</code>
-<dd>Exported file system to mount [default: '/']
-<dt><code>mtpoint:</code>
-<dd>Mount point [default: '/mnt/t']
-<dt><code>datadir:</code>
-<dd>Data directory where files are created [default: '']
-<dt><code>mtopts:</code>
-<dd>Mount options [default: 'hard,rsize=4096,wsize=4096']
-<dt><code>interface:</code>
-<dd>Network device interface [default: 'eth0']
-<dt><code>nomount:</code>
-<dd>Debug option so the server is not actually mounted [default: False]
-<dt><code>iptables:</code>
-<dd>Iptables command [default: '/usr/sbin/iptables']
-<dt><code>sudo:</code>
-<dd>Sudo command [default: '/usr/bin/sudo']
-</dl></dl>
+<dl><dl><dt><code>host:</code>
+</dt><dd>Hostname or IP address [default: localhost]
+</dd><dt><code>user:</code>
+</dt><dd>User to log in to host [default: '']
+</dd><dt><code>server:</code>
+</dt><dd>NFS server name or IP address [default: None]
+</dd><dt><code>nfsversion:</code>
+</dt><dd>NFS version [default: 4.1]
+</dd><dt><code>proto:</code>
+</dt><dd>NFS protocol name [default: 'tcp']
+</dd><dt><code>port:</code>
+</dt><dd>NFS server port [default: 2049]
+</dd><dt><code>sec:</code>
+</dt><dd>Security flavor [default: 'sys']
+</dd><dt><code>export:</code>
+</dt><dd>Exported file system to mount [default: '/']
+</dd><dt><code>mtpoint:</code>
+</dt><dd>Mount point [default: '/mnt/t']
+</dd><dt><code>datadir:</code>
+</dt><dd>Data directory where files are created [default: '']
+</dd><dt><code>mtopts:</code>
+</dt><dd>Mount options [default: 'hard,rsize=4096,wsize=4096']
+</dd><dt><code>interface:</code>
+</dt><dd>Network device interface [default: 'eth0']
+</dd><dt><code>nomount:</code>
+</dt><dd>Debug option so the server is not actually mounted [default: False]
+</dd><dt><code>iptables:</code>
+</dt><dd>Iptables command [default: '/usr/sbin/iptables']
+</dd><dt><code>sudo:</code>
+</dt><dd>Sudo command [default: '/usr/bin/sudo']
+</dd></dl></dl>
 <code>get_route(self, ipaddr)</code>
 Get routing information for destination IP address
 Returns a tuple: (gateway, device name, src IP address)
 <code>mount(self, **kwargs)</code>
 Mount the file system on the given mount point.
-<dl><dt><dd><dl><dt><code>server:</code>
-<dd>NFS server name or IP address [default: self.server]
-<dt><code>nfsversion:</code>
-<dd>NFS version [default: self.nfsversion]
-<dt><code>proto:</code>
-<dd>NFS protocol name [default: self.proto]
-<dt><code>port:</code>
-<dd>NFS server port [default: self.port]
-<dt><code>sec:</code>
-<dd>Security flavor [default: self.sec]
-<dt><code>export:</code>
-<dd>Exported file system to mount [default: self.export]
-<dt><code>mtpoint:</code>
-<dd>Mount point [default: self.mtpoint]
-<dt><code>datadir:</code>
-<dd>Data directory where files are created [default: self.datadir]
-<dt><code>mtopts:</code>
-<dd>Mount options [default: self.mtopts]
-</dl></dl><dl><dt><dd>Return the mount point.
-</dl>
+<dl><dl><dt><code>server:</code>
+</dt><dd>NFS server name or IP address [default: self.server]
+</dd><dt><code>nfsversion:</code>
+</dt><dd>NFS version [default: self.nfsversion]
+</dd><dt><code>proto:</code>
+</dt><dd>NFS protocol name [default: self.proto]
+</dd><dt><code>port:</code>
+</dt><dd>NFS server port [default: self.port]
+</dd><dt><code>sec:</code>
+</dt><dd>Security flavor [default: self.sec]
+</dd><dt><code>export:</code>
+</dt><dd>Exported file system to mount [default: self.export]
+</dd><dt><code>mtpoint:</code>
+</dt><dd>Mount point [default: self.mtpoint]
+</dd><dt><code>datadir:</code>
+</dt><dd>Data directory where files are created [default: self.datadir]
+</dd><dt><code>mtopts:</code>
+</dt><dd>Mount options [default: self.mtopts]
+</dd></dl></dl><dl><dt></dt><dd>Return the mount point.
+</dd></dl>
 <code>network_drop(self, ipaddr, port)</code>
 Simulate a network drop by dropping all tcp packets going to the
 given ipaddr and port using the iptables commands.
@@ -106,14 +106,14 @@ Reset the network by flushing all the chains in the table using
 the iptables command.
 <code>nfsstr(self, version=None)</code>
 Return the NFS string for the given NFS version
-<dl><dt><dd><dl><dt><code>version:</code>
-<dd>NFS version, default is the object attribute nfsversion
-</dl></dl>
+<dl><dl><dt><code>version:</code>
+</dt><dd>NFS version, default is the object attribute nfsversion
+</dd></dl></dl>
 <code>nfsvers(self, version=None)</code>
 Return major and minor version for the given NFS version
-<dl><dt><dd><dl><dt><code>version:</code>
-<dd>NFS version, default is the object attribute nfsversion
-</dl></dl>
+<dl><dl><dt><code>version:</code>
+</dt><dd>NFS version, default is the object attribute nfsversion
+</dd></dl></dl>
 <code>run_cmd(self, cmd, sudo=False, dlevel='DBG1', msg='', wait=True)</code>
 Run the command to the remote machine using ssh.
 There is no user authentication, so remote host must allow
@@ -124,53 +124,53 @@ attribute 'self.process' to be used by methods wait_cmd() and
 stop_cmd(). The standard output of the command is also stored
 in the object attribute 'self.pstdout' while the standard error
 output of the command is stored in 'self.pstderr'.
-<dl><dt><dd><dl><dt><code>cmd:</code>
-<dd>Command to execute
-<dt><code>sudo:</code>
-<dd>Run command using sudo if option is True
-<dt><code>dlevel:</code>
-<dd>Debug level for displaying the command to the user
-<dt><code>msg:</code>
-<dd>Prefix this message to the debug message to be displayed
-<dt><code>wait:</code>
-<dd>Wait for command to complete before returning
-</dl></dl><dl><dt><dd>Return the standard output of the command and the return code or
+<dl><dl><dt><code>cmd:</code>
+</dt><dd>Command to execute
+</dd><dt><code>sudo:</code>
+</dt><dd>Run command using sudo if option is True
+</dd><dt><code>dlevel:</code>
+</dt><dd>Debug level for displaying the command to the user
+</dd><dt><code>msg:</code>
+</dt><dd>Prefix this message to the debug message to be displayed
+</dd><dt><code>wait:</code>
+</dt><dd>Wait for command to complete before returning
+</dd></dl></dl><dl><dt></dt><dd>Return the standard output of the command and the return code or
 exit status is stored in the object attribute 'self.returncode'.
-</dl>
+</dd></dl>
 <code>stop_cmd(self, process=None, dlevel=None, msg='')</code>
 Terminate command started by run_cmd() by calling wait_cmd()
 with the 'terminate' option set to True.
-<dl><dt><dd><dl><dt><code>process:</code>
-<dd>The object for the process of the command to terminate,
+<dl><dl><dt><code>process:</code>
+</dt><dd>The object for the process of the command to terminate,
 or terminate all commands started by run_cmd() if this
 option is not given
-<dt><code>dlevel:</code>
-<dd>Debug level for displaying the command to the user, default
+</dd><dt><code>dlevel:</code>
+</dt><dd>Debug level for displaying the command to the user, default
 is the level given by run_cmd()
-<dt><code>msg:</code>
-<dd>Prefix this message to the debug message to be displayed
-</dl></dl><dl><dt><dd>Return the exit status of the last command
-</dl>
+</dd><dt><code>msg:</code>
+</dt><dd>Prefix this message to the debug message to be displayed
+</dd></dl></dl><dl><dt></dt><dd>Return the exit status of the last command
+</dd></dl>
 <code>sudo_cmd(self, cmd)</code>
 Prefix the SUDO command if effective user is not root.
 <code>umount(self)</code>
 Unmount the file system.
 <code>wait_cmd(self, process=None, terminate=False, dlevel=None, msg='')</code>
 Wait for command started by run_cmd() to finish.
-<dl><dt><dd><dl><dt><code>process:</code>
-<dd>The object for the process of the command to wait for,
+<dl><dl><dt><code>process:</code>
+</dt><dd>The object for the process of the command to wait for,
 or wait for all commands started by run_cmd() if this
 option is not given
-<dt><code>terminate:</code>
-<dd>If True, send a signal to terminate the command or commands
+</dd><dt><code>terminate:</code>
+</dt><dd>If True, send a signal to terminate the command or commands
 and then wait for all commands to finish
-<dt><code>dlevel:</code>
-<dd>Debug level for displaying the command to the user, default
+</dd><dt><code>dlevel:</code>
+</dt><dd>Debug level for displaying the command to the user, default
 is the level given by run_cmd()
-<dt><code>msg:</code>
-<dd>Prefix this message to the debug message to be displayed
-</dl></dl><dl><dt><dd>Return the exit status of the last command
-</dl>
+</dd><dt><code>msg:</code>
+</dt><dd>Prefix this message to the debug message to be displayed
+</dd></dl></dl><dl><dt></dt><dd>Return the exit status of the last command
+</dd></dl>
 <code>Static methods defined here:</code>
 ----------------------------
 <code>get_ip_address(host='', ipv6=False)</code>

@@ -14,11 +14,11 @@ mongoc_cursor_error (mongoc_cursor_t *cursor,
  bson_error_t *error);</pre>
 <h2>Parameters</h2>
 <dl COMPACT>
-<dt><code>cursor</code></p>
-<dd>A <code>mongoc_cursor_t</code> \&amp;.</dl>
+<dt><code>cursor</code></dt>
+<dd>A <code>mongoc_cursor_t</code> \&amp;.</dd></dl>
 <dl COMPACT>
-<dt><code>error</code></p>
-<dd>An optional location for a <code>bson_error_t</code> or <code>NULL</code> \&amp;.</dl>
+<dt><code>error</code></dt>
+<dd>An optional location for a <code>bson_error_t</code> or <code>NULL</code> \&amp;.</dd></dl>
 <h2>Description</h2>
 <p>This function checks to see if an error has occurred while iterating the cursor. </p>
 <h2>Errors</h2>

@@ -17,6 +17,6 @@ description: "QuantLib::AmericanPayoffAtExpiry – Analytic formula for American
 <p>Analytic formula for American exercise payoff at-expiry options. </p>
 <p> <code>Possible enhancements</code></p>
 <dl COMPACT>
-<dd>calculate greeks</dl>
+<dd>calculate greeks</dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for QuantLib from the source code.</p>

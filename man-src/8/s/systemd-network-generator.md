@@ -18,13 +18,13 @@ description: "systemd-network-generator.service, systemd-network-generator – G
 <p>This tool understands the following options: </p>
 <p> <i>ip=</i>, <i>rd.route=</i>, <i>rd.peerdns=</i></p>
 <dl>
-<dd>&#8212; translated into <code><a href="/docs/linux/man/5-systemd-network/">systemd.network</a></code>(5) files.</dl>
+<dd>&#8212; translated into <code><a href="/docs/linux/man/5-systemd-network/">systemd.network</a></code>(5) files.</dd></dl>
 <p> <i>ifname=</i></p>
 <dl>
-<dd>&#8212; translated into <code><a href="/docs/linux/man/5-systemd-link/">systemd.link</a></code>(5) files.</dl>
+<dd>&#8212; translated into <code><a href="/docs/linux/man/5-systemd-link/">systemd.link</a></code>(5) files.</dd></dl>
 <p> <i>vlan=</i>, <i>bond=</i>, <i>bridge=</i>, <i>bootdev=</i></p>
 <dl>
-<dd>&#8212; translated into <code><a href="/docs/linux/man/5-systemd-netdev/">systemd.netdev</a></code>(5) files.</dl>
+<dd>&#8212; translated into <code><a href="/docs/linux/man/5-systemd-netdev/">systemd.netdev</a></code>(5) files.</dd></dl>
 <p> See <code>dracut.kernel</code>(7) for option syntax and details.</p>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/1-systemd/">systemd</a></code>(1), <code><a href="/docs/linux/man/8-systemd-networkd-service/">systemd-networkd.service</a></code>(8), <code><a href="/docs/linux/man/8-dracut/">dracut</a></code>(8) </p>

@@ -14,14 +14,14 @@ description: "ata_scsi_dump_cdb – dump SCSI command contents to dmesg"
 <p><i>ap</i></p>
 <dl>
 <dd>
-<dd>ATA port to which the command was being sent</dl>
+</dd><dd>ATA port to which the command was being sent</dd></dl>
 <p> <i>cmd</i></p>
 <dl>
-<dd>SCSI command to dump</dl>
+<dd>SCSI command to dump</dd></dl>
 <h2>Description</h2>
 <p>Prints the contents of a SCSI command via <code>printk</code>.</p>
 <h2>Author</h2>
 <p><code>Jeff Garzik</code></p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

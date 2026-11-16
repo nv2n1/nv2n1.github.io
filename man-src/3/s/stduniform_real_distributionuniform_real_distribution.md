@@ -11,10 +11,8 @@ description: "std::uniform_real_distribution<RealType>::uniform_real_distributio
 <h2>Synopsis</h2>
 <pre><code>uniform_real_distribution()
     : uniform_real_distribution(0.0){}(1)(since C++ 11)
-
           explicit uniform_real_distribution(RealType a, RealType b = 1.0);
 (1)(since C++ 11)
-
     explicit uniform_real_distribution(const param_type &amp;params);
 (2)(since C++ 11)</code></pre>
 <p>Constructs a new distribution object. <code>(2)</code> uses a and b as the distribution parameters, <code>(3)</code> uses params as the distribution parameters. </p>

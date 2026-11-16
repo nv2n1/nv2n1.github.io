@@ -11,24 +11,16 @@ std::ctype&lt;CharT&gt;::tolower,std::ctype&lt;CharT&gt;::do_tolower - std::ctyp
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;locale&gt;
-
     public : (1)
-
                  CharT tolower(CharT c) const;
-
 public:
 (2)
-
     const CharT *tolower(CharT *beg, const CharT *end) const;
-
 protected:
 (3)
-
     virtual CharT do_tolower(CharT c) const;
-
 protected:
 (4)
-
     virtual const CharT *do_tolower(CharT *beg, const CharT *end) const;</code></pre> 
 1,2) public member function, calls the protected virtual member function do_tolower of the most derived class. 
 3) Converts the character c to lower case if a lower case form is defined by this locale. 
@@ -52,10 +44,8 @@ Only 1:1 character mapping can be performed by this function, e.g. the Greek upp
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;locale&gt;
-
 #include &lt;iostream&gt;
 void try_lower(const std::ctype&lt;wchar_t&gt; &amp;f, wchar_t c)
-
 {
     wchar_t up = f.tolower(c);
     if (up != c) {
@@ -65,7 +55,6 @@ void try_lower(const std::ctype&lt;wchar_t&gt; &amp;f, wchar_t c)
     }
 }
 int main()
-
 {
     std::locale::global(std::locale(&quot;en_US.utf8&quot;));
     std::wcout.imbue(std::locale());

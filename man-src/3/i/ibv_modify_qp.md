@@ -48,48 +48,48 @@ int ibv_modify_qp(struct ibv_qp *qp, struct ibv_qp_attr *attr,
 <p> For details on struct ibv_qp_cap see the description of <code>ibv_create_qp()</code>. For details on struct ibv_ah_attr see the description of <code>ibv_create_ah()</code>. </p>
 <p> The argument <i>attr_mask</i> specifies the QP attributes to be modified. The argument is either 0 or the bitwise OR of one or more of the following flags: </p>
 <dl>
-<dt><code>IBV_QP_STATE </code> Modify qp_state</p>
+<dt><code>IBV_QP_STATE </code> Modify qp_state</dt>
 <dd>
-<dt><code>IBV_QP_CUR_STATE </code> Set cur_qp_state</p>
+</dd><dt><code>IBV_QP_CUR_STATE </code> Set cur_qp_state</dt>
 <dd>
-<dt><code>IBV_QP_EN_SQD_ASYNC_NOTIFY </code> Set en_sqd_async_notify</p>
+</dd><dt><code>IBV_QP_EN_SQD_ASYNC_NOTIFY </code> Set en_sqd_async_notify</dt>
 <dd>
-<dt><code>IBV_QP_ACCESS_FLAGS </code> Set qp_access_flags</p>
+</dd><dt><code>IBV_QP_ACCESS_FLAGS </code> Set qp_access_flags</dt>
 <dd>
-<dt><code>IBV_QP_PKEY_INDEX </code> Set pkey_index</p>
+</dd><dt><code>IBV_QP_PKEY_INDEX </code> Set pkey_index</dt>
 <dd>
-<dt><code>IBV_QP_PORT </code> Set port_num</p>
+</dd><dt><code>IBV_QP_PORT </code> Set port_num</dt>
 <dd>
-<dt><code>IBV_QP_QKEY </code> Set qkey</p>
+</dd><dt><code>IBV_QP_QKEY </code> Set qkey</dt>
 <dd>
-<dt><code>IBV_QP_AV </code> Set ah_attr</p>
+</dd><dt><code>IBV_QP_AV </code> Set ah_attr</dt>
 <dd>
-<dt><code>IBV_QP_PATH_MTU </code> Set path_mtu</p>
+</dd><dt><code>IBV_QP_PATH_MTU </code> Set path_mtu</dt>
 <dd>
-<dt><code>IBV_QP_TIMEOUT </code> Set timeout</p>
+</dd><dt><code>IBV_QP_TIMEOUT </code> Set timeout</dt>
 <dd>
-<dt><code>IBV_QP_RETRY_CNT </code> Set retry_cnt</p>
+</dd><dt><code>IBV_QP_RETRY_CNT </code> Set retry_cnt</dt>
 <dd>
-<dt><code>IBV_QP_RNR_RETRY </code> Set rnr_retry</p>
+</dd><dt><code>IBV_QP_RNR_RETRY </code> Set rnr_retry</dt>
 <dd>
-<dt><code>IBV_QP_RQ_PSN </code> Set rq_psn</p>
+</dd><dt><code>IBV_QP_RQ_PSN </code> Set rq_psn</dt>
 <dd>
-<dt><code>IBV_QP_MAX_QP_RD_ATOMIC </code> Set max_rd_atomic</p>
+</dd><dt><code>IBV_QP_MAX_QP_RD_ATOMIC </code> Set max_rd_atomic</dt>
 <dd>
-<dt><code>IBV_QP_ALT_PATH </code> Set the alternative path via: alt_ah_attr, alt_pkey_index, alt_port_num, alt_timeout</p>
+</dd><dt><code>IBV_QP_ALT_PATH </code> Set the alternative path via: alt_ah_attr, alt_pkey_index, alt_port_num, alt_timeout</dt>
 <dd>
-<dt><code>IBV_QP_MIN_RNR_TIMER </code> Set min_rnr_timer</p>
+</dd><dt><code>IBV_QP_MIN_RNR_TIMER </code> Set min_rnr_timer</dt>
 <dd>
-<dt><code>IBV_QP_SQ_PSN </code> Set sq_psn</p>
+</dd><dt><code>IBV_QP_SQ_PSN </code> Set sq_psn</dt>
 <dd>
-<dt><code>IBV_QP_MAX_DEST_RD_ATOMIC </code> Set max_dest_rd_atomic</p>
+</dd><dt><code>IBV_QP_MAX_DEST_RD_ATOMIC </code> Set max_dest_rd_atomic</dt>
 <dd>
-<dt><code>IBV_QP_PATH_MIG_STATE </code> Set path_mig_state</p>
+</dd><dt><code>IBV_QP_PATH_MIG_STATE </code> Set path_mig_state</dt>
 <dd>
-<dt><code>IBV_QP_CAP </code> Set cap</p>
+</dd><dt><code>IBV_QP_CAP </code> Set cap</dt>
 <dd>
-<dt><code>IBV_QP_DEST_QPN </code> Set dest_qp_num</p>
-<dd> <code>IBV_QP_RATE_LIMIT </code> Set rate_limit</dl>
+</dd><dt><code>IBV_QP_DEST_QPN </code> Set dest_qp_num</dt>
+<dd> <code>IBV_QP_RATE_LIMIT </code> Set rate_limit</dd></dl>
 <h2>RETURN VALUE</h2>
 <p> <code>ibv_modify_qp()</code> returns 0 on success, or the value of errno on failure (which indicates the failure reason).</p>
 <h2>NOTES</h2>
@@ -108,7 +108,7 @@ For QP Transport Service Type IBV_QPT_RAW_PACKET : Next state Required attribute
 <p> <code>ibv_create_qp</code>(3), <code>ibv_destroy_qp</code>(3), <code>ibv_query_qp</code>(3), <code>ibv_create_ah</code>(3)</p>
 <h2>AUTHORS</h2>
 <dl>
-<dt>Dotan Barak &lt;dotanba [at] gmail.com&gt;</p>
+<dt>Dotan Barak &lt;dotanba [at] gmail.com&gt;</dt>
 <dd>
-</dl>
+</dd></dl>
 <h2>Index</h2>

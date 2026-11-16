@@ -15,10 +15,10 @@ description: "rxecho – Route AX.25 packets between ports transparently."
 <p> The copying of the packets is controlled by a configuration file rxecho.conf(5), which can be set up to selectively copy packets.</p>
 <h2>Options</h2>
 <dl>
-<dt><code>-l</code></p>
-<dd>Enables logging of errors to the system log, the default is off.</p>
-<dt><code>-v</code></p>
-<dd>Display the version.</dl>
+<dt><code>-l</code></dt>
+<dd>Enables logging of errors to the system log, the default is off.</dd>
+<dt><code>-v</code></dt>
+<dd>Display the version.</dd></dl>
 <h2>Files</h2>
 <pre>/etc/ax25/axports
 <br>

@@ -14,16 +14,16 @@ description: "crypto_blkcipher_decrypt_iv – decrypt ciphertext with dedicated 
 <p><i>desc</i></p>
 <dl>
 <dd>
-<dd>reference to the block cipher handle with meta data</dl>
+</dd><dd>reference to the block cipher handle with meta data</dd></dl>
 <p> <i>dst</i></p>
 <dl>
-<dd>scatter/gather list that is filled by the cipher operation with the plaintext</dl>
+<dd>scatter/gather list that is filled by the cipher operation with the plaintext</dd></dl>
 <p> <i>src</i></p>
 <dl>
-<dd>scatter/gather list that holds the ciphertext</dl>
+<dd>scatter/gather list that holds the ciphertext</dd></dl>
 <p> <i>nbytes</i></p>
 <dl>
-<dd>number of bytes of the ciphertext to decrypt.</dl>
+<dd>number of bytes of the ciphertext to decrypt.</dd></dl>
 <h2>Description</h2>
 <p>Decrypt ciphertext data with the use of an IV that is solely used for this cipher operation. Any previously set IV is not used. </p>
 <p> The blkcipher_desc data structure must be filled by the caller as documented for the crypto_blkcipher_encrypt_iv call above.</p>
@@ -32,8 +32,8 @@ description: "crypto_blkcipher_decrypt_iv – decrypt ciphertext with dedicated 
 <h2>Authors</h2>
 <p><code>Stephan Mueller</code> &lt;smueller [at] chronox.de&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <p> <code>Marek Vasut</code> &lt;marek [at] denx.de&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

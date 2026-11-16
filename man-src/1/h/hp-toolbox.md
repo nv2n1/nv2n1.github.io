@@ -15,14 +15,14 @@ description: "hp-toolbox – HP Device Manager"
 <p> <code>hp-toolbox [OPTIONS]</code></p>
 <h2>OPTIONS</h2>
 <dl>
-<dt>Set the logging level:</p>
-<dd> -l&lt;level&gt; or &#8211;logging=&lt;level&gt; &lt;level&gt;: none, info*, error, warn, debug (*default)</p>
-<dt>Run in debug mode:</p>
-<dd> -g (same as option: -ldebug)</p>
-<dt>This help information:</p>
-<dd> -h or &#8211;help</p>
-<dt>Disable dbus (Qt3 only):</p>
-<dd> -x or &#8211;disable-dbus</dl>
+<dt>Set the logging level:</dt>
+<dd> -l&lt;level&gt; or &#8211;logging=&lt;level&gt; &lt;level&gt;: none, info*, error, warn, debug (*default)</dd>
+<dt>Run in debug mode:</dt>
+<dd> -g (same as option: -ldebug)</dd>
+<dt>This help information:</dt>
+<dd> -h or &#8211;help</dd>
+<dt>Disable dbus (Qt3 only):</dt>
+<dd> -x or &#8211;disable-dbus</dd></dl>
 <h2>SEE ALSO</h2>
 <p> hp-align hp-clean hp-colorcal hp-devicesettings hp-faxsetup hp-firmware hp-info hp-levels hp-linefeedcal hp-makecopies hp-plugin hp-pqdiag hp-print hp-printsettings hp-scan hp-sendfax hp-testpage hp-timedate hp-unload</p>
 <h2>AUTHOR</h2>

@@ -18,12 +18,12 @@ description: "convcard – converts a vCard version 2.1 in a vCard version 3.0 a
  <i>FileName</i> is the vCard to convert. Output will go to stdout.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>&#8211;out</code> <i>FileName</i> Store the output in this file (No output to stdout)</p>
+<dt><code>&#8211;out</code> <i>FileName</i> Store the output in this file (No output to stdout)</dt>
 <dd>
-<dt><code>&#8211;from-vcard2.1</code> Treat file as 2.1 vCard (No autodetection)</p>
-<dd> Output will be a 3.0 vCard</p>
-<dt><code>&#8211;from-vcard3.0</code> Treat file as 3.0 vCard (No autodetection)</p>
-<dd> Output will be a 2.1 vCard</dl>
+</dd><dt><code>&#8211;from-vcard2.1</code> Treat file as 2.1 vCard (No autodetection)</dt>
+<dd> Output will be a 3.0 vCard</dd>
+<dt><code>&#8211;from-vcard3.0</code> Treat file as 3.0 vCard (No autodetection)</dt>
+<dd> Output will be a 2.1 vCard</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-msynctool/">msynctool</a></code>(1)</p>
 <h2>AUTHORS</h2>

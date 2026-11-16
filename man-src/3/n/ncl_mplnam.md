@@ -37,10 +37,10 @@ lines are to be added.</code></pre>
  If the parameter 'VS' has a value greater than zero, the group 'G2' is added to the area map; it consists of a copy of the perimeter and the limb line (if any) plus a set of vertical lines splitting the area inside the perimeter into 'VS' vertical strips. (By default, the value of 'VS' is 1.) The object of the group 'G2' is to split areas up, reducing the number of points required to define a typical area below the level at which some target hardware device begins to fail. (This is more important when using MPLNAM than it was when using MAPBLA because the new database is at a higher resolution.) 
 
  The perimeter and the limb in the groups 'G1' and 'G2' have the following left and right area identifiers:
-<dl COMPACT><dd><dl COMPACT><dt>0
-<dd>Identifies the area inside the perimeter or limb.
-<dt>-1
-<dd>Identifies the area outside the perimeter or limb.</dl></dl>
+<dl COMPACT><dd></dd><dl COMPACT><dt>0
+</dt><dd>Identifies the area inside the perimeter or limb.
+</dd><dt>-1
+</dt><dd>Identifies the area outside the perimeter or limb.</dd></dl></dl>
  
 
  The vertical lines in the group 'G2' have left and right area identifiers of 0. 

@@ -16,56 +16,56 @@ description: "slrnpull – Pull a small newsfeed for offline reading."
 <h2>OPTIONS</h2>
 <p> The following options can be used when calling <i>slrnpull</i> from the command line.</p>
 <dl>
-<dt>-d <i>spooldir</i></p>
-<dd> Set slrnpull&#8217;s root directory for this run to <i>spooldir</i>, overriding the <i>$SLRNPULL_ROOT</i> environment variable.</p>
-<dt>-h <i>host[:port]</i></p>
-<dd> Connect to the NNTP server on <i>host</i>, overriding the <i>$NNTPSERVER</i> environment variable. If no <i>port</i> is given, the default NNTP port (119) will be used.</p>
-<dt>&#8211;debug <i>file</i></p>
-<dd> Write dialogue with the server and some additional debugging output to <i>file</i>.</p>
-<dt>&#8211;expire</p>
-<dd> Expire (remove) old messages from the spool, but do not fetch news.</p>
-<dt>&#8211;fetch-score <i>n</i></p>
-<dd> Fetch article bodies with a score of at least <i>n</i> automatically (in true offline mode, the default is to fetch only bodies that were explicitly marked by the user).</p>
-<dt>&#8211;help</p>
-<dd> Show help for command line switches.</p>
-<dt>&#8211;kill-log <i>file</i></p>
-<dd> Keep a log of all articles that were killed by the scorefile in <i>file</i>. By default, no such logfile is created.</p>
-<dt>&#8211;kill-score <i>n</i></p>
-<dd> Kill all articles with a score below <i>n</i>. The default value for this is 0.</p>
-<dt>&#8211;logfile <i>file</i></p>
-<dd> Log the messages and errors that slrnpull prints to the screen to <i>file</i>. By default, they get written to the file log in slrnpull&#8217;s root directory.</p>
-<dt>&#8211;marked-bodies</p>
-<dd> Only fetch bodies that were marked for download within slrn.</p>
-<dt>&#8211;new-groups</p>
-<dd> Check for new groups, appending them to the file new.groups in the data directory.</p>
-<dt>&#8211;no-post</p>
-<dd> Do not post any articles to the server.</p>
-<dt>&#8211;post</p>
-<dd> Obsolete version of <i>&#8211;post-only</i>.</p>
-<dt>&#8211;post-only</p>
-<dd> Post outgoing articles, but do not fetch news.</p>
-<dt>&#8211;rebuild</p>
-<dd> Like &#8211;expire, but also rebuild the overview information. To be used when the overview information is damaged.</p>
-<dt>&#8211;version</p>
-<dd> Print the version number. </p>
+<dt>-d <i>spooldir</i></dt>
+<dd> Set slrnpull&#8217;s root directory for this run to <i>spooldir</i>, overriding the <i>$SLRNPULL_ROOT</i> environment variable.</dd>
+<dt>-h <i>host[:port]</i></dt>
+<dd> Connect to the NNTP server on <i>host</i>, overriding the <i>$NNTPSERVER</i> environment variable. If no <i>port</i> is given, the default NNTP port (119) will be used.</dd>
+<dt>&#8211;debug <i>file</i></dt>
+<dd> Write dialogue with the server and some additional debugging output to <i>file</i>.</dd>
+<dt>&#8211;expire</dt>
+<dd> Expire (remove) old messages from the spool, but do not fetch news.</dd>
+<dt>&#8211;fetch-score <i>n</i></dt>
+<dd> Fetch article bodies with a score of at least <i>n</i> automatically (in true offline mode, the default is to fetch only bodies that were explicitly marked by the user).</dd>
+<dt>&#8211;help</dt>
+<dd> Show help for command line switches.</dd>
+<dt>&#8211;kill-log <i>file</i></dt>
+<dd> Keep a log of all articles that were killed by the scorefile in <i>file</i>. By default, no such logfile is created.</dd>
+<dt>&#8211;kill-score <i>n</i></dt>
+<dd> Kill all articles with a score below <i>n</i>. The default value for this is 0.</dd>
+<dt>&#8211;logfile <i>file</i></dt>
+<dd> Log the messages and errors that slrnpull prints to the screen to <i>file</i>. By default, they get written to the file log in slrnpull&#8217;s root directory.</dd>
+<dt>&#8211;marked-bodies</dt>
+<dd> Only fetch bodies that were marked for download within slrn.</dd>
+<dt>&#8211;new-groups</dt>
+<dd> Check for new groups, appending them to the file new.groups in the data directory.</dd>
+<dt>&#8211;no-post</dt>
+<dd> Do not post any articles to the server.</dd>
+<dt>&#8211;post</dt>
+<dd> Obsolete version of <i>&#8211;post-only</i>.</dd>
+<dt>&#8211;post-only</dt>
+<dd> Post outgoing articles, but do not fetch news.</dd>
+<dt>&#8211;rebuild</dt>
+<dd> Like &#8211;expire, but also rebuild the overview information. To be used when the overview information is damaged.</dd>
+<dt>&#8211;version</dt>
+<dd> Print the version number. </dd>
 </dl>
 <h2>ENVIRONMENT</h2>
 <p> <i>slrnpull</i> reads the following environment variables. Note that they can be overridden by command line switches.</p>
 <dl>
-<dt><code>NNTPSERVER</code></p>
-<dd> You can use this variable to tell <i>slrnpull</i> which NNTP server to connect to. It can be overridden by the command line option -h.</p>
-<dt><code>SLRNPULL_ROOT</code></p>
-<dd> Defines the directory where <i>slrnpull</i> will look for its configuration files and spool the articles. An absolute filename is needed here. This can be overriden by the option -d.</dl>
+<dt><code>NNTPSERVER</code></dt>
+<dd> You can use this variable to tell <i>slrnpull</i> which NNTP server to connect to. It can be overridden by the command line option -h.</dd>
+<dt><code>SLRNPULL_ROOT</code></dt>
+<dd> Defines the directory where <i>slrnpull</i> will look for its configuration files and spool the articles. An absolute filename is needed here. This can be overriden by the option -d.</dd></dl>
 <h2>FILES</h2>
 <dl>
-<dt>$SLRNPULL_ROOT/authinfo</p>
-<dd> If the server requires authentication, this file needs to contain the data (username in the first line, password in the second). Be careful not to make this file world-readable!</p>
-<dt>$SLRNPULL_ROOT/log</p>
-<dd> The default file to log status and error messages to.</p>
-<dt>$SLRNPULL_ROOT/score</p>
-<dd> If you want <i>slrnpull</i> to apply scoring rules to decide which articles to download, put them into this file.</p>
-<dt>$SLRNPULL_ROOT/slrnpull.conf</p>
-<dd> The main configuration file. It tells <i>slrnpull</i> how many articles to get from which groups and when to expire them. </p>
+<dt>$SLRNPULL_ROOT/authinfo</dt>
+<dd> If the server requires authentication, this file needs to contain the data (username in the first line, password in the second). Be careful not to make this file world-readable!</dd>
+<dt>$SLRNPULL_ROOT/log</dt>
+<dd> The default file to log status and error messages to.</dd>
+<dt>$SLRNPULL_ROOT/score</dt>
+<dd> If you want <i>slrnpull</i> to apply scoring rules to decide which articles to download, put them into this file.</dd>
+<dt>$SLRNPULL_ROOT/slrnpull.conf</dt>
+<dd> The main configuration file. It tells <i>slrnpull</i> how many articles to get from which groups and when to expire them. </dd>
 </dl>
 <h2>SEE ALSO</h2>
 <p> The documentation that comes with <i>slrnpull</i>, especially README and SETUP. The FAQ of slrn also answers some questions about slrnpull. </p>

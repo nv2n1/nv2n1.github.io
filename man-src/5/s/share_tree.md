@@ -15,18 +15,18 @@ description: "share_tree – xxQS_NAMExx share tree file format"
 <h2>Format</h2>
 <p>The format of a share tree file is defined as follows:</p>
 <dl>
-<dt>&bull;</p>
-<dd>A new node starts with the attribute <code>id</code>, an equal sign and the numeric identification number of the node. Further attributes of that node follow until another <code>id</code> keyword is encountered.</p>
-<dt>&bull;</p>
-<dd>The attribute <code>type</code> defines whether a sharetree node references a user (type=0), or a project (type=1).</p>
-<dt>&bull;</p>
-<dd>The attribute <code>childnodes</code> contains a comma-separated list of child nodes to this node.</p>
-<dt>&bull;</p>
-<dd>The parameter <code>name</code> refers to an arbitrary name for the node, or to a corresponding user (see or project (see if the node is a leaf node of the share tree. The name of the root node of the tree is &quot;Root&quot; by convention.</p>
-<dt>&bull;</p>
-<dd>The parameter <code>shares</code> defines the share of the node among the nodes with the same parent node.</p>
-<dt>&bull;</p>
-<dd>A user leaf node named &#8216;default&#8217; can be defined as a descendant of a node in the share tree. The default node defines the number of shares for users who are running in the project, but who do not have a user node defined under the project. The default user node is a convenient way of specifying a single node for all users which should receive an equal share of the project resources. The default node may be specified by itself or with other nodes at the same level below a project. All users, whether explicitly specified as a user node or those which map to the &#8216;default&#8217; user node, must have a corresponding object defined in order to get shares. Do not configure a object named &#8216;default&#8217;. </p>
+<dt>&bull;</dt>
+<dd>A new node starts with the attribute <code>id</code>, an equal sign and the numeric identification number of the node. Further attributes of that node follow until another <code>id</code> keyword is encountered.</dd>
+<dt>&bull;</dt>
+<dd>The attribute <code>type</code> defines whether a sharetree node references a user (type=0), or a project (type=1).</dd>
+<dt>&bull;</dt>
+<dd>The attribute <code>childnodes</code> contains a comma-separated list of child nodes to this node.</dd>
+<dt>&bull;</dt>
+<dd>The parameter <code>name</code> refers to an arbitrary name for the node, or to a corresponding user (see or project (see if the node is a leaf node of the share tree. The name of the root node of the tree is &quot;Root&quot; by convention.</dd>
+<dt>&bull;</dt>
+<dd>The parameter <code>shares</code> defines the share of the node among the nodes with the same parent node.</dd>
+<dt>&bull;</dt>
+<dd>A user leaf node named &#8216;default&#8217; can be defined as a descendant of a node in the share tree. The default node defines the number of shares for users who are running in the project, but who do not have a user node defined under the project. The default user node is a convenient way of specifying a single node for all users which should receive an equal share of the project resources. The default node may be specified by itself or with other nodes at the same level below a project. All users, whether explicitly specified as a user node or those which map to the &#8216;default&#8217; user node, must have a corresponding object defined in order to get shares. Do not configure a object named &#8216;default&#8217;. </dd>
 </dl>
 <h2>Examples</h2>
 <p>Jobs of projects P1 and P2 get 50 shares, all other jobs get 10 shares. </p>

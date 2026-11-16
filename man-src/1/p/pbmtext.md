@@ -17,8 +17,8 @@ description: "pbmtext – render text into a bitmap"
 <p> The bitmap is just wide enough for the longest line of text, plus margins, and just high enough to contain the lines of text, plus margins. The left and right margins are twice the width of the widest character in the font; the top and bottom margins are the height of the tallest character in the font. But if the text is only one line, all the margins are half of this. </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-font</code>,<code>-builtin</code></p>
-<dd> By default, pbmtext uses a built-in font called bdf (about a 10 point Times-Roman font). You can use a fixed width font by specifying <code>-builtin fixed</code>. </p>
+<dt><code>-font</code>,<code>-builtin</code></dt>
+<dd> By default, pbmtext uses a built-in font called bdf (about a 10 point Times-Roman font). You can use a fixed width font by specifying <code>-builtin fixed</code>. </dd>
 <p> You can also specify your own font with the <code>-font</code> flag. The <i>fontfile</i> is either a BDF file from the X window system or a PBM file. </p>
 <p> If the <i>fontfile</i> is a PBM file, it is created in a very specific way. In your window system of choice, display the following text in the desired (fixed-width) font: </p>
 <pre><code>
@@ -32,11 +32,11 @@ M ",/^_[`jpqy| M
     } hijklmnopqrs } ~tuvwxyz { | } ~~M ",/^_[`jpqy| M
 </code></pre>
 <p> Do a screen grab or window dump of that text, using for instance <code>xwd</code>, <code>xgrabsc</code>, or <code>screendump</code>. Convert the result into a pbm file. If necessary, use <code>pnmcut</code> to remove everything except the text. Finally, run it through <code>pnmcrop</code> to make sure the edges are right up against the text. <code>pbmtext</code> can figure out the sizes and spacings from that. </p>
-<dt><code>-space </code><i>pixels</i></p>
-<dd> Add <i>pixels</i> pixels of space between characters. This is in addition to whatever space surrounding characters is built into the font, which is usually enough to produce a reasonable string of text. </p>
+<dt><code>-space </code><i>pixels</i></dt>
+<dd> Add <i>pixels</i> pixels of space between characters. This is in addition to whatever space surrounding characters is built into the font, which is usually enough to produce a reasonable string of text. </dd>
 <p> <i>pixels</i> may be negative to crowd text together, but the author has not put much thought or testing into how this works in every possible case, so it might cause disastrous results. </p>
-<dt>-B -lspace <i>pixels</p>
-<dd> Add pixels</i> pixels of space between lines. This is in addition to whatever space above and below characters is built into the font, which is usually enough to produce a reasonable line spacing. </p>
+<dt>-B -lspace <i>pixels</dt>
+<dd> Add pixels</i> pixels of space between lines. This is in addition to whatever space above and below characters is built into the font, which is usually enough to produce a reasonable line spacing. </dd>
 <p> <i>pixels</i> must be a whole number. </p>
 <p> <i>pixels</i> may be negative to crowd lines together, but the author has not put much thought or testing into how this works in every possible case, so it might cause disastrous results. </p>
 </dl>

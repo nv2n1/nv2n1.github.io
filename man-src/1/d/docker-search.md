@@ -24,7 +24,7 @@ description: "docker-search – Search the Docker Hub for images"
 <p> Search a registry for the term &#8216;fedora&#8217; and only display those images ranked 3 or higher: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 $ docker search --filter=stars=3 fedora
 NAME                  DESCRIPTION                                    STARS OFFICIAL  AUTOMATED
@@ -33,12 +33,12 @@ fedora                (Semi) Official Fedora base image.             38
 mattdm/fedora-small   A small Fedora image on which to build. Co...  8
 goldmann/wildfly      A WildFly application server running on a ...  3               [OK]
 </pre>
-</dl>
+</dd></dl>
 <h2>Search Docker Hub for automated images</h2>
 <p> Search Docker Hub for the term &#8216;fedora&#8217; and only display automated images ranked 1 or higher: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre><code>
 $ docker search-- filter = is - automated = true --filter = stars = 1 fedora
                                                                             NAME DESCRIPTION STARS OFFICIAL AUTOMATED
@@ -46,7 +46,7 @@ $ docker search-- filter = is - automated = true --filter = stars = 1 fedora
                                                                         wildfly A WildFly application server running on a... 3 [OK] tutum / fedora -
                                                                     20 Fedora 20 image with SSH access.For the r... 1 [OK]
 </code></pre>
-</dl>
+</dd></dl>
 <h2>OPTIONS</h2>
 <p> <code>-f</code>, <code>&#8211;filter</code>= <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>Filter output based on conditions provided</p>
 <p> <code>&#8211;format</code>=&quot;&quot; <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>Pretty-print search using a Go template</p>

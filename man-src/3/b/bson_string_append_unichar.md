@@ -17,11 +17,11 @@ bson_string_append_unichar (bson_string_t *string,
 </pre>
 <h2>PARAMETERS</h2>
 <dl>
-<dt><code>string</code></p>
-<dd> A <code>bson_string_t</code> \&amp;.</dl>
+<dt><code>string</code></dt>
+<dd> A <code>bson_string_t</code> \&amp;.</dd></dl>
 <dl>
-<dt><code>unichar</code></p>
-<dd> A <code>bson_unichar_t</code> \&amp;.</dl>
+<dt><code>unichar</code></dt>
+<dd> A <code>bson_unichar_t</code> \&amp;.</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> Appends a unicode character to string. The character will be encoded into its multi-byte UTF-8 representation. </p>
 <h2>COLOPHON</h2>

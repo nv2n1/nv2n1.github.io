@@ -16,3 +16,4 @@ description: "QuantLib::GaussLaguerreIntegration – generalized Gauss-Laguerre 
 <h2>Detailed Description</h2>
 <p>generalized Gauss-Laguerre integration </p>
 <p> This class performs a 1-dimensional Gauss-Laguerre integration. [ int_{0}^{inf} f(x) mathrm{d}x ] The weighting function is [ w(x;s)=x^s 
+</p>

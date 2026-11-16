@@ -15,15 +15,15 @@ bitmap_find_free_region - find a contiguous aligned mem region
 <h2>Arguments</h2>
 
 <i>bitmap</i>
-<dl><dd><dd>array of unsigned longs corresponding to the bitmap</dl>
+<dl><dd></dd><dd>array of unsigned longs corresponding to the bitmap</dd></dl>
  
 
  <i>bits</i>
-<dl><dd>number of bits in the bitmap</dl>
+<dl><dd>number of bits in the bitmap</dd></dl>
  
 
  <i>order</i>
-<dl><dd>region size (log base 2 of number of bits) to find</dl>
+<dl><dd>region size (log base 2 of number of bits) to find</dd></dl>
 
 <h2>Description</h2>
 

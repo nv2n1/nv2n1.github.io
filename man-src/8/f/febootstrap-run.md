@@ -18,8 +18,8 @@ description: "febootstrap-run – Run extra commands in febootstrap root filesys
 <pre> febootstrap-run ./f10 -- ls -l</pre>
 <h2>Options</h2>
 <dl>
-<dt><code>&#8211;ro</code></p>
-<dd>Usually any changes to permissions made by the command are recorded in the <tt>&quot;fakeroot.log&quot;</tt> file. However if <tt>&quot;--ro&quot;</tt> flag is given, then changes to permissions are not recorded. (Note: changes to file contents still happen).</dl>
+<dt><code>&#8211;ro</code></dt>
+<dd>Usually any changes to permissions made by the command are recorded in the <tt>&quot;fakeroot.log&quot;</tt> file. However if <tt>&quot;--ro&quot;</tt> flag is given, then changes to permissions are not recorded. (Note: changes to file contents still happen).</dd></dl>
 <h2>Examples</h2>
 <p>Remove a directory subtree safely: </p>
 <pre> febootstrap-run initramfs -- rm -r /etc</pre>

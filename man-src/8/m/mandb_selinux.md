@@ -86,20 +86,20 @@ description: "mandb_selinux – Security Enhanced Linux Policy for the mandb pro
 <p> <code>mandb_cache_t</code> </p>
 <p> &#8211; Set files with the mandb_cache_t type, if you want to store the files under the /var/cache directory. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/var/cache/man(/.*)?, /opt/local/share/man(/.*)? </p>
+<dt>Paths:</dt>
+<dd>/var/cache/man(/.*)?, /opt/local/share/man(/.*)? </dd>
 </dl>
 <p> <code>mandb_exec_t</code> </p>
 <p> &#8211; Set files with the mandb_exec_t type, if you want to transition an executable to the mandb_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/etc/cron.(daily|weekly)/man-db.*, /usr/bin/mandb </p>
+<dt>Paths:</dt>
+<dd>/etc/cron.(daily|weekly)/man-db.*, /usr/bin/mandb </dd>
 </dl>
 <p> <code>mandb_home_t</code> </p>
 <p> &#8211; Set files with the mandb_home_t type, if you want to store mandb files in the users home directory. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/root/.manpath, /home/[^/]+/.manpath </p>
+<dt>Paths:</dt>
+<dd>/root/.manpath, /home/[^/]+/.manpath </dd>
 </dl>
 <p> <code>mandb_lock_t</code> </p>
 <p> &#8211; Set files with the mandb_lock_t type, if you want to treat the files as mandb lock data, stored under the /var/lock directory </p>

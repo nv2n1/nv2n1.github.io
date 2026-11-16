@@ -15,15 +15,15 @@ snd_ac97_pcm_assign - assign AC97 slots to given PCM streams
 <h2>Arguments</h2>
 
 <i>bus</i>
-<dl><dd><dd>the ac97 bus instance</dl>
+<dl><dd></dd><dd>the ac97 bus instance</dd></dl>
  
 
  <i>pcms_count</i>
-<dl><dd>count of PCMs to be assigned</dl>
+<dl><dd>count of PCMs to be assigned</dd></dl>
  
 
  <i>pcms</i>
-<dl><dd>PCMs to be assigned</dl>
+<dl><dd>PCMs to be assigned</dd></dl>
 
 <h2>Description</h2>
 

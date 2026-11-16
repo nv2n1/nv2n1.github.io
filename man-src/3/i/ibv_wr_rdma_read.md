@@ -35,7 +35,7 @@ url: "/docs/linux/man/3-ibv_wr_rdma_read/"
 
 <dl>
 <dt>
-<dd> <pre><code>
+</dt><dd> <pre><code>
 #include &lt;infiniband/verbs.h&gt;
 void ibv_wr_abort(struct ibv_qp_ex *qp);
 int ibv_wr_complete(struct ibv_qp_ex *qp);
@@ -69,7 +69,7 @@ void ibv_wr_set_sge_list(struct ibv_qp_ex *qp, size_t num_sge,
 void ibv_wr_set_ud_addr(struct ibv_qp_ex *qp, struct ibv_ah *ah,
                         uint32_t remote_qpn, uint32_t remote_qkey);
 void ibv_wr_set_xrc_srqn(struct ibv_qp_ex *qp, uint32_t remote_srqn);
-</code></pre></dl>
+</code></pre></dd></dl>
 
 <h2>DESCRIPTION</h2>
 
@@ -100,11 +100,11 @@ void ibv_wr_set_xrc_srqn(struct ibv_qp_ex *qp, uint32_t remote_srqn);
  For example a simple send could be formed as follows:
 <dl>
 <dt>
-<dd> 
+</dt><dd> 
 qpx-&gt;wr_id = 1;
 ibv_wr_send(qpx);
 ibv_wr_set_sge(qpx, lkey, &amp;data, sizeof(data));
-</dl>
+</dd></dl>
  
 
  The section WORK REQUESTS describes the various WR builders and setters in details. 
@@ -138,9 +138,9 @@ ibv_wr_set_sge(qpx, lkey, &amp;data, sizeof(data));
  Atomic operations are only atomic so long as all writes to memory go only through the same RDMA hardware. It is not atomic with writes performed by the CPU, or by other RDMA hardware in the system.
 <dl>
 <dt>ibv_wr_atomic_cmp_swp()
-<dd> If the remote 64 bit memory location specified by rkey and remote_addr equals compare then set it to swap.
-<dt>ibv_wr_atomic_fetch_add()
-<dd> Add add to the 64 bit memory location specified rkey and remote_addr.</dl>
+</dt><dd> If the remote 64 bit memory location specified by rkey and remote_addr equals compare then set it to swap.
+</dd><dt>ibv_wr_atomic_fetch_add()
+</dt><dd> Add add to the 64 bit memory location specified rkey and remote_addr.</dd></dl>
 
 <h3>Memory Windows</h3>
 
@@ -149,39 +149,37 @@ ibv_wr_set_sge(qpx, lkey, &amp;data, sizeof(data));
  Memory window type 2 operations (See man page for ibv_alloc_mw).
 <dl>
 <dt>ibv_wr_bind_mw()
-<dd> Bind a MW type 2 specified by mw, set a new rkey and set its properties by bind_info.
-<dt>ibv_wr_local_inv()
-<dd> Invalidate a MW type 2 which is associated with rkey.</dl>
+</dt><dd> Bind a MW type 2 specified by mw, set a new rkey and set its properties by bind_info.
+</dd><dt>ibv_wr_local_inv()
+</dt><dd> Invalidate a MW type 2 which is associated with rkey.</dd></dl>
 
 <h3>RDMA</h3>
 
 <dl>
 <dt>ibv_wr_rdma_read()
-<dd> Read from the remote memory location specified rkey and remote_addr. The number of bytes to read, and the local location to store the data, is determined by the DATA buffers set after this call.
-<dt>ibv_wr_rdma_write(), ibv_wr_rdma_write_imm()
-<dd> Write to the remote memory location specified rkey and remote_addr. The number of bytes to read, and the local location to get the data, is determined by the DATA buffers set after this call.
-<dl>
+</dt><dd> Read from the remote memory location specified rkey and remote_addr. The number of bytes to read, and the local location to store the data, is determined by the DATA buffers set after this call.
+</dd><dt>ibv_wr_rdma_write(), ibv_wr_rdma_write_imm()
+</dt><dd> Write to the remote memory location specified rkey and remote_addr. The number of bytes to read, and the local location to get the data, is determined by the DATA buffers set after this call.
+</dd><dl>
 <dt>
-<dd> 
-
- The _imm version causes the remote side to get a IBV_WC_RECV_RDMA_WITH_IMM containing the 32 bits of immediate data.</dl>
+</dt><dd> 
+ The _imm version causes the remote side to get a IBV_WC_RECV_RDMA_WITH_IMM containing the 32 bits of immediate data.</dd></dl>
 </dl>
 
 <h3>Message Send</h3>
 
 <dl>
 <dt>ibv_wr_send(), ibv_wr_send_imm()
-<dd> Send a message. The number of bytes to send, and the local location to get the data, is determined by the DATA buffers set after this call.
-<dl>
+</dt><dd> Send a message. The number of bytes to send, and the local location to get the data, is determined by the DATA buffers set after this call.
+</dd><dl>
 <dt>
-<dd> 
-
- The _imm version causes the remote side to get a IBV_WC_RECV_RDMA_WITH_IMM containing the 32 bits of immediate data.</dl>
+</dt><dd> 
+ The _imm version causes the remote side to get a IBV_WC_RECV_RDMA_WITH_IMM containing the 32 bits of immediate data.</dd></dl>
 
 <dt>ibv_wr_send_inv()
-<dd> The data transfer is the same as for ibv_wr_send(), however the remote side will invalidate the MR specified by invalidate_rkey before delivering a completion.
-<dt>ibv_wr_send_tso()
-<dd> Produce multiple SEND messages using TCP Segmentation Offload. The SGE points to a TCP Stream buffer which will be segmented into MSS size SENDs. The hdr includes the entire network headers up to and including the TCP header and is prefixed before each segment.</dl>
+</dt><dd> The data transfer is the same as for ibv_wr_send(), however the remote side will invalidate the MR specified by invalidate_rkey before delivering a completion.
+</dd><dt>ibv_wr_send_tso()
+</dt><dd> Produce multiple SEND messages using TCP Segmentation Offload. The SGE points to a TCP Stream buffer which will be segmented into MSS size SENDs. The hdr includes the entire network headers up to and including the TCP header and is prefixed before each segment.</dd></dl>
 
 <h3>QP Specific setters</h3>
 
@@ -190,9 +188,9 @@ ibv_wr_set_sge(qpx, lkey, &amp;data, sizeof(data));
  Certain QP types require each post to be accompanied by additional setters, these setters are mandatory for any operation listing a QP setter in the above table.
 <dl>
 <dt>UD QPs
-<dd> ibv_wr_set_ud_addr() must be called to set the destination address of the work.
-<dt>XRC_SEND QPs
-<dd> ibv_wr_set_xrc_srqn() must be called to set the destination SRQN field.</dl>
+</dt><dd> ibv_wr_set_ud_addr() must be called to set the destination address of the work.
+</dd><dt>XRC_SEND QPs
+</dt><dd> ibv_wr_set_xrc_srqn() must be called to set the destination SRQN field.</dd></dl>
 
 <h3>DATA transfer setters</h3>
 
@@ -201,17 +199,17 @@ ibv_wr_set_sge(qpx, lkey, &amp;data, sizeof(data));
  For work that requires to transfer data one of the following setters should be called once after the WR builder:
 <dl>
 <dt>ibv_wr_set_sge()
-<dd> Transfer data to/from a single buffer given by the lkey, addr and length. This is equivalent to ibv_wr_set_sge_list() with a single element.
-<dt>ibv_wr_set_sge_list()
-<dd> Transfer data to/from a list of buffers, logically concatenated together. Each buffer is specified by an element in an array of struct ibv_sge.</dl>
+</dt><dd> Transfer data to/from a single buffer given by the lkey, addr and length. This is equivalent to ibv_wr_set_sge_list() with a single element.
+</dd><dt>ibv_wr_set_sge_list()
+</dt><dd> Transfer data to/from a list of buffers, logically concatenated together. Each buffer is specified by an element in an array of struct ibv_sge.</dd></dl>
  
 
  Inline setters will copy the send data during the setter and allows the caller to immediately re-use the buffer. This behavior is identical to the IBV_SEND_INLINE flag. Generally this copy is done in a way that optimizes SEND latency and is suitable for small messages. The provider will limit the amount of data it can support in a single operation. This limit is requested in the max_inline_data member of struct ibv_qp_init_attr. Valid only for SEND and RDMA_WRITE.
 <dl>
 <dt>ibv_wr_set_inline_data()
-<dd> Copy send data from a single buffer given by the addr and length. This is equivalent to ibv_wr_set_inline_data_list() with a single element.
-<dt>ibv_wr_set_inline_data_list()
-<dd> Copy send data from a list of buffers, logically concatenated together. Each buffer is specified by an element in an array of struct ibv_inl_data.</dl>
+</dt><dd> Copy send data from a single buffer given by the addr and length. This is equivalent to ibv_wr_set_inline_data_list() with a single element.
+</dd><dt>ibv_wr_set_inline_data_list()
+</dt><dd> Copy send data from a list of buffers, logically concatenated together. Each buffer is specified by an element in an array of struct ibv_inl_data.</dd></dl>
 
 <h3>Flags</h3>
 
@@ -220,13 +218,13 @@ ibv_wr_set_sge(qpx, lkey, &amp;data, sizeof(data));
  A bit mask of flags may be specified in wr_flags to control the behavior of the work request.
 <dl>
 <dt>IBV_SEND_FENCE
-<dd> Do not start this work request until prior work has completed.
-<dt>IBV_SEND_IP_CSUM
-<dd> Offload the IPv4 and TCP/UDP checksum calculation
-<dt>IBV_SEND_SIGNALED
-<dd> A completion will be generated in the completion queue for the operation.
-<dt>IBV_SEND_SOLICTED
-<dd> Set the solicted bit in the RDMA packet. This informs the other side to generate a completion event upon receiving the RDMA operation.</dl>
+</dt><dd> Do not start this work request until prior work has completed.
+</dd><dt>IBV_SEND_IP_CSUM
+</dt><dd> Offload the IPv4 and TCP/UDP checksum calculation
+</dd><dt>IBV_SEND_SIGNALED
+</dt><dd> A completion will be generated in the completion queue for the operation.
+</dd><dt>IBV_SEND_SOLICTED
+</dt><dd> Set the solicted bit in the RDMA packet. This informs the other side to generate a completion event upon receiving the RDMA operation.</dd></dl>
 
 <h2>CONCURRENCY</h2>
 
@@ -248,7 +246,7 @@ ibv_wr_set_sge(qpx, lkey, &amp;data, sizeof(data));
 
 <dl>
 <dt>
-<dd> <pre><code>
+</dt><dd> <pre><code>
 /* create RC QP type and specify the required send opcodes */
 qp_init_attr_ex.qp_type = IBV_QPT_RC;
 qp_init_attr_ex.comp_mask |= IBV_QP_INIT_ATTR_SEND_OPS_FLAGS;
@@ -268,7 +266,7 @@ ibv_wr_rdma_write_imm(qpx, rkey, remote_addr_2, htonl(0x1234));
 ibv_set_wr_sge(qpx, lkey, local_addr_2, length_2);
 /* Begin processing WRs */
 ret = ibv_wr_complete(qpx);
-</code></pre></dl>
+</code></pre></dd></dl>
 
 <h2>SEE ALSO</h2>
 

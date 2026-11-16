@@ -32,25 +32,25 @@ buttons. However, no two elements can have the same nonzero
 value, or a BadValue error results. If any of the buttons to be
 altered are logically in the down state,
 XSetDeviceButtonMapping returns MappingBusy, and the mapping is
-not changed.</pre></dl><dl COMPACT><dd><pre>XSetDeviceButtonMapping can generate BadDevice, BadMatch, and
-BadValue errors.</pre></dl><dl COMPACT><dd><pre>The XGetDeviceButtonMapping request returns the current mapping
+not changed.</pre></dd></dl><dl COMPACT><dd><pre>XSetDeviceButtonMapping can generate BadDevice, BadMatch, and
+BadValue errors.</pre></dd></dl><dl COMPACT><dd><pre>The XGetDeviceButtonMapping request returns the current mapping
 of the specified device. Buttons are numbered starting from
 one.XGetDeviceButtonMapping returns the number of physical
 buttons actually on the device. The nominal mapping for a
 device is map[i]=i+1. The nmap argument specifies the length of
 the array where the device mapping is returned, and only the
-first nmap elements are returned in map_return.</pre></dl><dl COMPACT><dd><pre>XGetDeviceButtonMapping can generate BadDevice or BadMatch
-errors.</pre></dl><h2>Diagnostics</h2><dl COMPACT><dd><pre>BadDevice
+first nmap elements are returned in map_return.</pre></dd></dl><dl COMPACT><dd><pre>XGetDeviceButtonMapping can generate BadDevice or BadMatch
+errors.</pre></dd></dl><h2>Diagnostics</h2><dl COMPACT><dd><pre>BadDevice
  An invalid device was specified. The specified device
  does not exist or has not been opened by this client via
  XOpenInputDevice. This error may also occur if the
- specified device is the X keyboard or X pointer device.</pre></dl><dl COMPACT><dd><pre>BadMatch
+ specified device is the X keyboard or X pointer device.</pre></dd></dl><dl COMPACT><dd><pre>BadMatch
  This error may occur if an XGetDeviceButtonMapping or
  XSetDeviceButtonMapping request was made specifying a
- device that has no buttons.</pre></dl><dl COMPACT><dd><pre>BadValue
+ device that has no buttons.</pre></dd></dl><dl COMPACT><dd><pre>BadValue
  Some numeric value falls outside the range of values
  accepted by the request. Unless a specific range is
  specified for an argument, the full range defined by the
  argument's type is accepted. Any argument defined as a
- set of alternatives can generate this error.</pre></dl><h2>See Also</h2><dl COMPACT><dd><pre>XChangeDeviceKeyboardControl(3), XChangeDeviceKeyMapping(3),
-XChangeDeviceModifierMapping(3)</pre></dl>
+ set of alternatives can generate this error.</pre></dd></dl><h2>See Also</h2><dl COMPACT><dd><pre>XChangeDeviceKeyboardControl(3), XChangeDeviceKeyMapping(3),
+XChangeDeviceModifierMapping(3)</pre></dd></dl>

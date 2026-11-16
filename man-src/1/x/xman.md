@@ -17,16 +17,16 @@ description: "xman – Manual page display program for the X Window System"
 <h2>OPTIONS</h2>
 <p> Xman supports all standard Toolkit command line arguments (see <i><a href="/docs/linux/man/7-x/">X</a></i>(7)). The following additional arguments are supported. </p>
 <dl>
-<dt><code>-helpfile</code> <i>filename</i></p>
-<dd> Specifies a helpfile to use other than the default.</p>
-<dt><code>-bothshown</code></p>
-<dd> Allows both the manual page and manual directory to be on the screen at the same time.</p>
-<dt><code>-notopbox</code></p>
-<dd> Starts without the Top Menu with the three buttons in it.</p>
-<dt><code>-geometry</code> <i>WxH+X+Y</i></p>
-<dd> Sets the size and location of the Top Menu with the three buttons in it.</p>
-<dt><code>-pagesize</code> <i>WxH+X+Y</i></p>
-<dd> Sets the size and location of all the Manual Pages.</dl>
+<dt><code>-helpfile</code> <i>filename</i></dt>
+<dd> Specifies a helpfile to use other than the default.</dd>
+<dt><code>-bothshown</code></dt>
+<dd> Allows both the manual page and manual directory to be on the screen at the same time.</dd>
+<dt><code>-notopbox</code></dt>
+<dd> Starts without the Top Menu with the three buttons in it.</dd>
+<dt><code>-geometry</code> <i>WxH+X+Y</i></dt>
+<dd> Sets the size and location of the Top Menu with the three buttons in it.</dd>
+<dt><code>-pagesize</code> <i>WxH+X+Y</i></dt>
+<dd> Sets the size and location of all the Manual Pages.</dd></dl>
 <h2>CUSTOMIZING XMAN</h2>
 <p> <i>Xman</i> allows customization of both the directories to be searched for manual pages, and the name that each directory will map to in the <i>Sections</i> menu. Xman determines which directories it will search by reading the <i>MANPATH</i> environment variable. If no <i>MANPATH</i> is found then the directory is /usr/man is searched on POSIX systems. This environment is expected to be a colon-separated list of directories for xman to search. </p>
 <pre>
@@ -215,80 +215,80 @@ Xman xman       <i>(This widget is never used)</i>
 <h2>APPLICATION RESOURCES</h2>
 <p> <i>xman</i> has the following application-specific resources which allow customizations unique to <i>xman</i>. </p>
 <dl>
-<dt><code>manualFontNormal</code> (Class <code>Font</code>)</p>
-<dd> The font to use for normal text in the manual pages.</p>
-<dt><code>manualFontBold</code> (Class <code>Font</code>)</p>
-<dd> The font to use for bold text in the manual pages.</p>
-<dt><code>manualFontItalic</code> (Class <code>Font</code>)</p>
-<dd> The font to use for italic text in the manual pages.</p>
-<dt><code>directoryFontNormal</code> (Class <code>Font</code>)</p>
-<dd> The font to use for the directory text.</p>
-<dt><code>bothShown</code> (Class <code>Boolean</code>)</p>
-<dd> Either `true&#8217; or `false,&#8217; specifies whether or not you want both the directory and the manual page shown at start up.</p>
-<dt><code>directoryHeight</code> (Class <code>DirectoryHeight</code>)</p>
-<dd> The height in pixels of the directory, when the directory and the manual page are shown simultaneously.</p>
-<dt><code>topCursor</code> (Class <code>Cursor</code>)</p>
-<dd> The cursor to use in the top box.</p>
-<dt><code>helpCursor</code> (Class <code>Cursor</code>)</p>
-<dd> The cursor to use in the help window.</p>
-<dt><code>manpageCursor</code> (Class <code>Cursor</code>)</p>
-<dd> The cursor to use in the manual page window.</p>
-<dt><code>searchEntryCursor</code> (Class <code>Cursor</code>)</p>
-<dd> The cursor to use in the search entry text widget.</p>
-<dt><code>pointerColor</code> (Class <code>Foreground</code>)</p>
-<dd> This is the color of all the cursors (pointers) specified above. The name was chosen to be compatible with xterm.</p>
-<dt><code>helpFile</code> (Class <code>File</code>)</p>
-<dd> Use this rather than the system default helpfile.</p>
-<dt><code>topBox</code> (Class <code>Boolean</code>)</p>
-<dd> Either `true&#8217; or `false,&#8217; determines whether the top box (containing the help, quit and manual page buttons) or a manual page is put on the screen at start-up. The default is true.</p>
-<dt><code>verticalList</code> (Class <code>Boolean</code>)</p>
-<dd> Either `true&#8217; or `false,&#8217; determines whether the directory listing is vertically or horizontally organized. The default is horizontal (false).</dl>
+<dt><code>manualFontNormal</code> (Class <code>Font</code>)</dt>
+<dd> The font to use for normal text in the manual pages.</dd>
+<dt><code>manualFontBold</code> (Class <code>Font</code>)</dt>
+<dd> The font to use for bold text in the manual pages.</dd>
+<dt><code>manualFontItalic</code> (Class <code>Font</code>)</dt>
+<dd> The font to use for italic text in the manual pages.</dd>
+<dt><code>directoryFontNormal</code> (Class <code>Font</code>)</dt>
+<dd> The font to use for the directory text.</dd>
+<dt><code>bothShown</code> (Class <code>Boolean</code>)</dt>
+<dd> Either `true&#8217; or `false,&#8217; specifies whether or not you want both the directory and the manual page shown at start up.</dd>
+<dt><code>directoryHeight</code> (Class <code>DirectoryHeight</code>)</dt>
+<dd> The height in pixels of the directory, when the directory and the manual page are shown simultaneously.</dd>
+<dt><code>topCursor</code> (Class <code>Cursor</code>)</dt>
+<dd> The cursor to use in the top box.</dd>
+<dt><code>helpCursor</code> (Class <code>Cursor</code>)</dt>
+<dd> The cursor to use in the help window.</dd>
+<dt><code>manpageCursor</code> (Class <code>Cursor</code>)</dt>
+<dd> The cursor to use in the manual page window.</dd>
+<dt><code>searchEntryCursor</code> (Class <code>Cursor</code>)</dt>
+<dd> The cursor to use in the search entry text widget.</dd>
+<dt><code>pointerColor</code> (Class <code>Foreground</code>)</dt>
+<dd> This is the color of all the cursors (pointers) specified above. The name was chosen to be compatible with xterm.</dd>
+<dt><code>helpFile</code> (Class <code>File</code>)</dt>
+<dd> Use this rather than the system default helpfile.</dd>
+<dt><code>topBox</code> (Class <code>Boolean</code>)</dt>
+<dd> Either `true&#8217; or `false,&#8217; determines whether the top box (containing the help, quit and manual page buttons) or a manual page is put on the screen at start-up. The default is true.</dd>
+<dt><code>verticalList</code> (Class <code>Boolean</code>)</dt>
+<dd> Either `true&#8217; or `false,&#8217; determines whether the directory listing is vertically or horizontally organized. The default is horizontal (false).</dd></dl>
 <h2>GLOBAL ACTIONS</h2>
 <p> <i>Xman</i> defines all user interaction through global actions. This allows the user to modify the translation table of any widget, and bind any event to the new user action. The list of actions supported by <i>xman</i> are:</p>
 <dl>
-<dt><code>GotoPage(</code><i>page</i><code>)</code></p>
-<dd> When used in a manual page display window this will allow the user to move between a directory and manual page display. The <i>page</i> argument can be either <code>Directory</code> or <code>ManualPage</code>.</p>
-<dt><code>Quit()</code></p>
-<dd> This action may be used anywhere, and will exit xman.</p>
-<dt><code>Search(</code><i>type</i><code>, </code><i>action</i><code>)</code></p>
-<dd> Only useful when used in a search popup, this action will cause the search widget to perform the named search type on the string in the search popup&#8217;s value widget. This action will also pop down the search widget. The <i>type</i> argument can be either <code>Apropos</code>, <code>Manpage</code> or <code>Cancel</code>. If an <i>action</i> of <code>Open</code> is specified then xman will open a new manual page to display the results of the search, otherwise xman will attempt to display the results in the parent of the search popup.</p>
-<dt><code>PopupHelp()</code></p>
-<dd> This action may be used anywhere, and will popup the help widget.</p>
-<dt><code>PopupSearch()</code></p>
-<dd> This action may be used anywhere except in a help window. It will cause the search popup to become active and visible on the screen, allowing the user search for a manual page.</p>
-<dt><code>CreateNewManpage()</code></p>
-<dd> This action may be used anywhere, and will create a new manual page display window.</p>
-<dt><code>RemoveThisManpage()</code></p>
-<dd> This action may be used in any manual page or help display window. When called it will remove the window, and clean up all resources associated with it.</p>
-<dt><code>SaveFormattedPage(</code><i>action</i>)</p>
-<dd> This action can only be used in the <code>likeToSave</code> popup widget, and tells xman whether to <code>Save</code> or <code>Cancel</code> a save of the manual page that has just been formatted.</p>
-<dt><code>ShowVersion()</code></p>
-<dd> This action may be called from any manual page or help display window, and will cause the informational display line to show the current version of xman.</dl>
+<dt><code>GotoPage(</code><i>page</i><code>)</code></dt>
+<dd> When used in a manual page display window this will allow the user to move between a directory and manual page display. The <i>page</i> argument can be either <code>Directory</code> or <code>ManualPage</code>.</dd>
+<dt><code>Quit()</code></dt>
+<dd> This action may be used anywhere, and will exit xman.</dd>
+<dt><code>Search(</code><i>type</i><code>, </code><i>action</i><code>)</code></dt>
+<dd> Only useful when used in a search popup, this action will cause the search widget to perform the named search type on the string in the search popup&#8217;s value widget. This action will also pop down the search widget. The <i>type</i> argument can be either <code>Apropos</code>, <code>Manpage</code> or <code>Cancel</code>. If an <i>action</i> of <code>Open</code> is specified then xman will open a new manual page to display the results of the search, otherwise xman will attempt to display the results in the parent of the search popup.</dd>
+<dt><code>PopupHelp()</code></dt>
+<dd> This action may be used anywhere, and will popup the help widget.</dd>
+<dt><code>PopupSearch()</code></dt>
+<dd> This action may be used anywhere except in a help window. It will cause the search popup to become active and visible on the screen, allowing the user search for a manual page.</dd>
+<dt><code>CreateNewManpage()</code></dt>
+<dd> This action may be used anywhere, and will create a new manual page display window.</dd>
+<dt><code>RemoveThisManpage()</code></dt>
+<dd> This action may be used in any manual page or help display window. When called it will remove the window, and clean up all resources associated with it.</dd>
+<dt><code>SaveFormattedPage(</code><i>action</i>)</dt>
+<dd> This action can only be used in the <code>likeToSave</code> popup widget, and tells xman whether to <code>Save</code> or <code>Cancel</code> a save of the manual page that has just been formatted.</dd>
+<dt><code>ShowVersion()</code></dt>
+<dd> This action may be called from any manual page or help display window, and will cause the informational display line to show the current version of xman.</dd></dl>
 <h2>FILES</h2>
 <dl>
-<dt><i>&lt;manpath directory&gt;</i>/man&lt;<i>character</i>&gt;</p>
+<dt><i>&lt;manpath directory&gt;</i>/man&lt;<i>character</i>&gt;</dt>
 <dd>
-<dt><i>&lt;manpath directory&gt;</i>/cat&lt;<i>character</i>&gt;</p>
+</dd><dt><i>&lt;manpath directory&gt;</i>/cat&lt;<i>character</i>&gt;</dt>
 <dd>
-<dt><i>&lt;manpath directory&gt;</i>/mandesc</p>
+</dd><dt><i>&lt;manpath directory&gt;</i>/mandesc</dt>
 <dd>
-<dt>/etc/X11/app-defaults/Xman</p>
-<dd> specifies required resources.</p>
-<dt>/tmp</p>
-<dd> <i>Xman</i> creates temporary files in /tmp for all unformatted man pages and all apropos searches.</dl>
+</dd><dt>/etc/X11/app-defaults/Xman</dt>
+<dd> specifies required resources.</dd>
+<dt>/tmp</dt>
+<dd> <i>Xman</i> creates temporary files in /tmp for all unformatted man pages and all apropos searches.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <i><a href="/docs/linux/man/7-x/">X</a></i>(7), <i><a href="/docs/linux/man/1-man/">man</a></i>(1), <i><a href="/docs/linux/man/1-apropos/">apropos</a></i>(1), <i><a href="/docs/linux/man/8-catman/">catman</a></i>(8), <i>Athena Widget Set</i></p>
 <h2>ENVIRONMENT</h2>
 <dl>
-<dt><code>DISPLAY</code></p>
-<dd> the default host and display to use.</p>
-<dt><code>MANPATH</code></p>
-<dd> the search path for manual pages. Directories are separated by colons (e.g. /usr/man:/mit/kit/man:/foo/bar/man).</p>
-<dt><code>XENVIRONMENT</code></p>
-<dd> to get the name of a resource file that overrides the global resources stored in the RESOURCE_MANAGER property.</p>
-<dt><code>XAPPLRESDIR</code></p>
+<dt><code>DISPLAY</code></dt>
+<dd> the default host and display to use.</dd>
+<dt><code>MANPATH</code></dt>
+<dd> the search path for manual pages. Directories are separated by colons (e.g. /usr/man:/mit/kit/man:/foo/bar/man).</dd>
+<dt><code>XENVIRONMENT</code></dt>
+<dd> to get the name of a resource file that overrides the global resources stored in the RESOURCE_MANAGER property.</dd>
+<dt><code>XAPPLRESDIR</code></dt>
 <dd> A string that will have &#8220;Xman&#8221; appended to it. This string will be the full path name of a user app-defaults file to be merged into the resource database after the system app-defaults file, and before the resources that are attached to the display.<br />
- See <i><a href="/docs/linux/man/7-x/">X</a>(7)</i> for a full statement of rights and permissions.</dl>
+ See <i><a href="/docs/linux/man/7-x/">X</a>(7)</i> for a full statement of rights and permissions.</dd></dl>
 <h2>AUTHORS</h2>
 <p> Chris Peterson, MIT X Consortium from the V10 version written by Barry Shein formerly of Boston University. Bug fixes and Linux support by Carlos A M dos Santos, for The XFree86 Project. </p>
 <h2>Index</h2>

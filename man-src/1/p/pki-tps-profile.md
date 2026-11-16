@@ -20,27 +20,27 @@ pki[CLI options] tps - profile pki[CLI options] tps - profile - find[command opt
 <p> <code>pki</code> [CLI options] <code>tps-profile-find</code> [command options]</p>
 <dl>
 <dt>
-<dd> This command is to list the profiles.</dl>
+</dt><dd> This command is to list the profiles.</dd></dl>
 <p> <code>pki</code> [CLI options] <code>tps-profile-show &lt;profile ID&gt;</code> [command options]</p>
 <dl>
 <dt>
-<dd> This command is to view the details of a profile.</dl>
+</dt><dd> This command is to view the details of a profile.</dd></dl>
 <p> <code>pki</code> [CLI options] <code>tps-profile-add &#8211;input &lt;file path&gt;</code> [command options]</p>
 <dl>
 <dt>
-<dd> This command is to create a new profile.</dl>
+</dt><dd> This command is to create a new profile.</dd></dl>
 <p> <code>pki</code> [CLI options] <code>tps-profile-mod &lt;profile ID&gt;&nbsp;<wbr>&#8211;action &lt;action&gt;</code> [command options]</p>
 <dl>
 <dt>
-<dd> This command is to change the status of a profile.</dl>
+</dt><dd> This command is to change the status of a profile.</dd></dl>
 <p> <code>pki</code> [CLI options] <code>tps-profile-mod &lt;profile ID&gt;&nbsp;<wbr>&#8211;input &lt;file path&gt;</code> [command options]</p>
 <dl>
 <dt>
-<dd> This command is to modify an existing profile.</dl>
+</dt><dd> This command is to modify an existing profile.</dd></dl>
 <p> <code>pki</code> [CLI options] <code>tps-profile-del &lt;profile ID&gt;</code> [command options]</p>
 <dl>
 <dt>
-<dd> This command is to delete a profile.</dl>
+</dt><dd> This command is to delete a profile.</dd></dl>
 <h2>OPTIONS</h2>
 <p> The CLI options are described in <code><a href="/docs/linux/man/1-pki/">pki</a></code>(1). </p>
 <h2>OPERATIONS</h2>
@@ -59,7 +59,7 @@ pki[CLI options] tps - profile pki[CLI options] tps - profile - find[command opt
 <p> To add a new profile, prepare an input file specifying the profile properties in the following format: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;yes&quot;?&gt;
 &lt;Profile id=&quot;...&quot; xmlns:ns2=&quot;<a rel="nofollow" href="http://www.w3.org/2005/Atom">http://www.w3.org/2005/Atom</a>&quot;&gt;
@@ -69,7 +69,7 @@ pki[CLI options] tps - profile pki[CLI options] tps - profile - find[command opt
     &lt;/Properties&gt;
 &lt;/Profile&gt;
 </pre>
-</dl>
+</dd></dl>
 <p> The profile properties are described in <code>pki-tps-profile</code>(5). Then execute the following command: </p>
 <p> <code>pki &lt;TPS admin authentication&gt; tps-profile-add &#8211;input &lt;file path&gt;</code> </p>
 <h3>Changing profile status</h3>

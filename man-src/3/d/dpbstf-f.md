@@ -27,10 +27,10 @@ description: "dpbstf.f –"
  ( M L )
  where U is upper triangular of order m = (n+kd)/2, and L is lower
  triangular of order n-m.</pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>UPLO</i> </p>
+<dd><i>UPLO</i> </dd>
 <pre> UPLO is CHARACTER*1
  = 'U': Upper triangle of A is stored;
  = 'L': Lower triangle of A is stored.</pre>
@@ -64,13 +64,13 @@ description: "dpbstf.f –"
 <p>&nbsp;<wbr></dl>
 <p> <code>Author:</code></p>
 <dl COMPACT>
-<dd>Univ. of Tennessee </p>
+<dd>Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl COMPACT>
-<dd>November 2011</dl>
+<dd>November 2011</dd></dl>
 <p> <code>Further Details: </code></p>
 <dl COMPACT>
 <dd>
@@ -94,7 +94,8 @@ description: "dpbstf.f –"
  a21 a32 a43 a54 a65 a76 * s12 s23 s34 s54 s65 s76 *
  a31 a42 a53 a64 a64 * * s13 s24 s53 s64 s75 * *
  Array elements marked * are not used by the routine.</pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> Definition at line 153 of file dpbstf.f.</p>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for LAPACK from the source code.</p>
+</p>

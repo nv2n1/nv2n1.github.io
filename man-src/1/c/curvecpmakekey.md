@@ -18,8 +18,8 @@ description: "CurveCP — Message-handling programs"
 <h2>OPTIONS</h2>
 <p> How to use <code>curvecpmakekey</code>:</p>
 <dl>
-<dt><code>keydir</code></p>
-<dd> a directory where <code>CurveCP</code> keys are going to be created. The direcoty must not exists before keys creation.</dl>
+<dt><code>keydir</code></dt>
+<dd> a directory where <code>CurveCP</code> keys are going to be created. The direcoty must not exists before keys creation.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> curvecpserver (1), curvecpclient (1), curvecpprintkey (1), inetd (8), tcpserver (1).</p>
 <h2>AUTHOR</h2>

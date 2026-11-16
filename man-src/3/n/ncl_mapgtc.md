@@ -15,11 +15,11 @@ MAPGTC - Gets the current value of a specified EZMAP parameter of type CHARACTER
 
  void c_mapgtc (char *pnam, char *cval, int len)
 <h2>Description</h2><dl COMPACT><dt>PNAM
-<dd>(an input expression of type CHARACTER) specifies the name of the parameter to get. Only the first two characters of the string are examined.
-<dt>CVAL
-<dd>(an output variable of type CHARACTER) receives the value of the parameter specified by PNAM.</dl><h2>C-Binding Description</h2>The C-binding argument descriptions are the same as the FORTRAN argument descriptions with the following exception:
+</dt><dd>(an input expression of type CHARACTER) specifies the name of the parameter to get. Only the first two characters of the string are examined.
+</dd><dt>CVAL
+</dt><dd>(an output variable of type CHARACTER) receives the value of the parameter specified by PNAM.</dd></dl><h2>C-Binding Description</h2>The C-binding argument descriptions are the same as the FORTRAN argument descriptions with the following exception:
 <dl COMPACT><dt>len
-<dd>The size of cval as dimensioned in the calling program.</dl><h2>Usage</h2>This routine allows you to retrieve the current value of EZMAP parameters. For a complete list of parameters available in this utility, see the ezmap_params man page.
+</dt><dd>The size of cval as dimensioned in the calling program.</dd></dl><h2>Usage</h2>This routine allows you to retrieve the current value of EZMAP parameters. For a complete list of parameters available in this utility, see the ezmap_params man page.
 <h2>Examples</h2>Use the ncargex command to see the following relevant example: mpex07.
 <h2>Access</h2>To use MAPGTC, MPGETC, or c_mapgtc load the NCAR Graphics libraries ncarg, ncarg_gks, and ncarg_c, preferably in that order.
 <h2>Messages</h2>See the ezmap man page for a description of all EZMAP error messages and/or informational messages.

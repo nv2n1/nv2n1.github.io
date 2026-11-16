@@ -16,12 +16,12 @@ description: "struct_platform_nand_data – container structure for platform-spe
 <h2>Members</h2>
 <p>chip</p>
 <dl>
-<dd>chip level chip structure</dl>
+<dd>chip level chip structure</dd></dl>
 <p> ctrl</p>
 <dl>
-<dd>controller level device structure</dl>
+<dd>controller level device structure</dd></dl>
 <h2>Author</h2>
 <p><code>Thomas Gleixner</code> &lt;tglx [at] linutronix.de&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

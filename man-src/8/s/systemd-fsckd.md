@@ -21,25 +21,25 @@ description: "systemd-fsckd.service, systemd-fsckd.socket, systemd-fsckd – Fil
 <p> Progress update, sent as a plymouth update message: &quot;fsckd:&lt;num_devices&gt;:&lt;progress&gt;:&lt;string&gt;&quot; </p>
 <p> &quot;&lt;num_devices&gt;&quot;</p>
 <dl>
-<dd>the current number of devices being checked (int)</dl>
+<dd>the current number of devices being checked (int)</dd></dl>
 <p> &quot;&lt;progress&gt;&quot;</p>
 <dl>
-<dd>the current minimum percentage of all devices being checking (float, from 0 to 100)</dl>
+<dd>the current minimum percentage of all devices being checking (float, from 0 to 100)</dd></dl>
 <p> &quot;&lt;string&gt;&quot;</p>
 <dl>
-<dd>a translated message ready to be displayed by the plymouth theme displaying the data above. It can be overridden by themes supporting i18n.</dl>
+<dd>a translated message ready to be displayed by the plymouth theme displaying the data above. It can be overridden by themes supporting i18n.</dd></dl>
 <p> Cancel message, sent as a traditional plymouth message: &quot;fsckd-cancel-msg:&lt;string&gt;&quot; </p>
 <p> &quot;&lt;strings&gt;&quot;</p>
 <dl>
-<dd>a translated string ready to be displayed by the plymouth theme indicating that Control+C can be used to cancel current checks. It can be overridden (matching only &quot;fsckd-cancel-msg&quot; prefix) by themes supporting i18n.</dl>
+<dd>a translated string ready to be displayed by the plymouth theme indicating that Control+C can be used to cancel current checks. It can be overridden (matching only &quot;fsckd-cancel-msg&quot; prefix) by themes supporting i18n.</dd></dl>
 <h2>Options</h2>
 <p>The following options are understood: </p>
 <p> <code>-h</code>, <code>&#8211;help</code></p>
 <dl>
-<dd>Print a short help text and exit.</dl>
+<dd>Print a short help text and exit.</dd></dl>
 <p> <code>&#8211;version</code></p>
 <dl>
-<dd>Print a short version string and exit.</dl>
+<dd>Print a short version string and exit.</dd></dl>
 <h2>Exit Status</h2>
 <p>On success, 0 is returned, a non-zero failure code otherwise. Note that the daemon stays idle for a while to accept new fsck connections before exiting.</p>
 <h2>See Also</h2>

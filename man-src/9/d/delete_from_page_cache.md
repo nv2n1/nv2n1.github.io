@@ -15,7 +15,7 @@ delete_from_page_cache - delete page from page cache
 <h2>Arguments</h2>
 
 <i>page</i>
-<dl><dd><dd>the page which the kernel is trying to remove from page cache</dl>
+<dl><dd></dd><dd>the page which the kernel is trying to remove from page cache</dd></dl>
 
 <h2>Description</h2>
 

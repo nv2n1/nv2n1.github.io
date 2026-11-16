@@ -20,27 +20,27 @@ stg log[options][--][&lt;patches&gt;]
 <p> -b BRANCH, &#8211;branch BRANCH</p>
 <dl>
 <dt>
-<dd> Use BRANCH instead of the default one.</dl>
+</dt><dd> Use BRANCH instead of the default one.</dd></dl>
 <p> -d, &#8211;diff</p>
 <dl>
 <dt>
-<dd> Show the refresh diffs.</dl>
+</dt><dd> Show the refresh diffs.</dd></dl>
 <p> -n NUMBER, &#8211;number NUMBER</p>
 <dl>
 <dt>
-<dd> Limit the output to NUMBER commits.</dl>
+</dt><dd> Limit the output to NUMBER commits.</dd></dl>
 <p> -f, &#8211;full</p>
 <dl>
 <dt>
-<dd> Show the full commit ids.</dl>
+</dt><dd> Show the full commit ids.</dd></dl>
 <p> -g, &#8211;graphical</p>
 <dl>
 <dt>
-<dd> Run gitk instead of printing.</dl>
+</dt><dd> Run gitk instead of printing.</dd></dl>
 <p> &#8211;clear</p>
 <dl>
 <dt>
-<dd> Clear the log history.</dl>
+</dt><dd> Clear the log history.</dd></dl>
 <h2>STGIT</h2>
 <p> Part of the StGit suite &#8211; see <code><a href="/docs/linux/man/1-stg/">stg</a></code>(1) </p>
 <h2>Index</h2>

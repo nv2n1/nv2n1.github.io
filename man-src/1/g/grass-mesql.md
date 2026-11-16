@@ -12,18 +12,16 @@ MySQL database driver in GRASS enables GRASS to store vector attributes in MySQL
 
  GRASS modules require 2 parameters to connect to a database. Those parameters are 'driver' and 'database'. For MySQL embedded driver the parameter 'driver' should be set to value 'mesql'. The parameter 'database' is a full path to the directory where database tables are stored. The best place is a directory in the mapset. The directory must be created before use of the driver. In the name of database it is possible to use 3 variables:
 <dl>
-<dt>
-<dd>
 <dl>
 <dt>
-<dd> 
+</dt><dd> 
 &nbsp;<wbr>$GISDBASE - path to current GISBASE
-<dt>
-<dd> 
+</dd><dt>
+</dt><dd> 
 &nbsp;<wbr>$LOCATION_NAME - name of current location
-<dt>
-<dd> 
-&nbsp;<wbr>$MAPSET - name of current mapset</dl>
+</dd><dt>
+</dt><dd> 
+&nbsp;<wbr>$MAPSET - name of current mapset</dd></dl>
 </dl>
  
 

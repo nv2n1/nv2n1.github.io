@@ -31,9 +31,9 @@ url: "/docs/linux/man/1-abrt-action-analyze-xorg/"
 
 <dl>
 <dt>
-<dd> <pre>
+</dt><dd> <pre>
 EVENT=post-create analyzer=Xorg   abrt-action-analyze-xorg
-</pre></dl>
+</pre></dd></dl>
 
 <h2>OPTIONS</h2>
 
@@ -42,13 +42,13 @@ EVENT=post-create analyzer=Xorg   abrt-action-analyze-xorg
  -d DIR
 <dl>
 <dt>
-<dd> Path to a problem directory. Current working directory is used when this option is not provided.</dl>
+</dt><dd> Path to a problem directory. Current working directory is used when this option is not provided.</dd></dl>
  
 
  -v
 <dl>
 <dt>
-<dd> Be more verbose. Can be given multiple times.</dl>
+</dt><dd> Be more verbose. Can be given multiple times.</dd></dl>
 
 <h2>FILES</h2>
 
@@ -62,7 +62,7 @@ EVENT=post-create analyzer=Xorg   abrt-action-analyze-xorg
 
 <dl>
 <dt>
-<dd> &bull; ABRT team</dl>
+</dt><dd> &bull; ABRT team</dd></dl>
  
 
 <h2>Index</h2>

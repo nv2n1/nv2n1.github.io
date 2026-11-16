@@ -19,7 +19,7 @@ description: "cgesvd.f –"
 <p> <code>Purpose: </code></p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
  CGESVD computes the singular value decomposition (SVD) of a complex
  M-by-N matrix A, optionally computing the left and/or right singular
@@ -33,11 +33,11 @@ description: "cgesvd.f –"
  U and V are the left and right singular vectors of A.
  Note that the routine returns V**H, not V.
 </pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>JOBU</i> </p>
+</dt><dd> <i>JOBU</i> </dd>
 <pre>
           JOBU is CHARACTER*1
           Specifies options for computing all or part of the matrix U:
@@ -165,14 +165,14 @@ if JOBVT
 <p> <code>Author:</code></p>
 <dl>
 <dt>
-<dd> Univ. of Tennessee </p>
+</dt><dd> Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl>
 <dt>
-<dd> April 2012</dl>
+</dt><dd> April 2012</dd></dl>
 <p> Definition at line 214 of file cgesvd.f.</p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for LAPACK from the source code. </p>

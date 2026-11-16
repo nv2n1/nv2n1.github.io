@@ -13,11 +13,12 @@ description: "system-config-keyboard – configure the keyboard layout of the sy
 <h2>Description</h2>
 <p><code>system-config-keyboard</code> is a graphical user interface that allows the user to change the default keyboard of the system.</p>
 <dl>
-<dt><code>&#8211;help</code></p>
-<dd>Display a short help message and list of keyboard types.</p>
-<dt><code>&#8211;noui</code></p>
-<dd>Run in command line mode.</p>
-<dt><code>&#8211;text</code></p>
-<dd>Run in text interface mode.</p>
-<dt><code>&lt;keyboardtype&gt;</code> Run with <code>&#8211;help</code> to get a list of supported</p>
-<dd>keyboard types. </p>
+<dt><code>&#8211;help</code></dt>
+<dd>Display a short help message and list of keyboard types.</dd>
+<dt><code>&#8211;noui</code></dt>
+<dd>Run in command line mode.</dd>
+<dt><code>&#8211;text</code></dt>
+<dd>Run in text interface mode.</dd>
+<dt><code>&lt;keyboardtype&gt;</code> Run with <code>&#8211;help</code> to get a list of supported</dt>
+<dd>keyboard types. </dd>
+</dl>

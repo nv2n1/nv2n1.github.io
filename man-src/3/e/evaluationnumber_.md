@@ -42,20 +42,20 @@ description: "QuantLib::Solver1D – Base class for 1-D solvers."
  };</pre>
 <p>&nbsp;<wbr>Before calling solveImpl, the base class will set its protected data members so that:</p>
 <dl COMPACT>
-<dt>*</p>
-<dd>xMin_ and xMax_ form a valid bracket;</p>
-<dt>*</p>
-<dd>fxMin_ and fxMax_ contain the values of the function in xMin_ and xMax_;</p>
-<dt>*</p>
-<dd>root_ is a valid initial guess. The implementation of solveImpl can safely assume all of the above.</dl>
+<dt>*</dt>
+<dd>xMin_ and xMax_ form a valid bracket;</dd>
+<dt>*</dt>
+<dd>fxMin_ and fxMax_ contain the values of the function in xMin_ and xMax_;</dd>
+<dt>*</dt>
+<dd>root_ is a valid initial guess. The implementation of solveImpl can safely assume all of the above.</dd></dl>
 <p> <code>Possible enhancements</code></p>
 <dl COMPACT>
 <dd>
-<dl COMPACT>
-<dt>*</p>
-<dd>clean up the interface so that it is clear whether the accuracy is specified for $ x $ or $ f(x) $.</p>
-<dt>*</p>
-<dd>add target value (now the target value is 0.0)</dl>
+</dd><dl COMPACT>
+<dt>*</dt>
+<dd>clean up the interface so that it is clear whether the accuracy is specified for $ x $ or $ f(x) $.</dd>
+<dt>*</dt>
+<dd>add target value (now the target value is 0.0)</dd></dl>
 </dl>
 <h2>Member Function Documentation</h2>
 <h3>Real solve (const F &amp; f, Real accuracy, Real guess, Real step) const</h3>

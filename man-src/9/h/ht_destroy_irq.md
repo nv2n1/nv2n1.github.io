@@ -15,7 +15,7 @@ ht_destroy_irq - destroy an irq created with ht_create_irq
 <h2>Arguments</h2>
 
 <i>irq</i>
-<dl><dd><dd>irq to be destroyed</dl>
+<dl><dd></dd><dd>irq to be destroyed</dd></dl>
 
 <h2>Description</h2>
 

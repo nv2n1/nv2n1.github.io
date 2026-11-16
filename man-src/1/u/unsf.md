@@ -35,33 +35,33 @@ Instrument   velocity range 2
 <p> My reference version of timidity is the one contained the the SDL_mixer library of the gaming program library SDL (Simple Direct Layer), <a rel="nofollow" href="http://www.libsdl.org.">http://www.libsdl.org.</a> As of now (Sept 2004) only the CVS version of SDL_mixer has my version of timidity. My patches for the latest released version are in the archive:</p>
 <dl>
 <dt>
-<dd>
-&nbsp;<wbr>&nbsp;<wbr><a href="ftp://ling.lll.hawaii.edu/pub/greg/Surround-SDL.tgz">ftp://ling.lll.hawaii.edu/pub/greg/Surround-SDL.tgz</a></dl>
+</dt><dd>
+&nbsp;<wbr>&nbsp;<wbr><a href="ftp://ling.lll.hawaii.edu/pub/greg/Surround-SDL.tgz">ftp://ling.lll.hawaii.edu/pub/greg/Surround-SDL.tgz</a></dd></dl>
 <p> I have also made a free standing demo version of timidity, which is in:</p>
 <dl>
 <dt>
-<dd>
-&nbsp;<wbr>&nbsp;<wbr><a href="ftp://ling.lll.hawaii.edu/pub/greg/gt-0.3.tar.gz">ftp://ling.lll.hawaii.edu/pub/greg/gt-0.3.tar.gz</a></dl>
+</dt><dd>
+&nbsp;<wbr>&nbsp;<wbr><a href="ftp://ling.lll.hawaii.edu/pub/greg/gt-0.3.tar.gz">ftp://ling.lll.hawaii.edu/pub/greg/gt-0.3.tar.gz</a></dd></dl>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-s</code></p>
-<dd> Small. Extract only a single velocity layer.</p>
-<dt><code>-m</code></p>
-<dd> Mono. Extract only the left channel of stereo patches.</p>
-<dt><code>-d</code></p>
-<dd> Drum. Assume the sf2 file is a drum kit, even though it is not marked as such in the soundfont, so that individual notes are broken out into separate drum patches.</p>
-<dt><code>-n</code></p>
-<dd> No write. Don&#8217;t write out patches or directories.</p>
-<dt><code>-V</code></p>
-<dd> Do not normalize sample volumes (it&#8217;s time-consuming).</p>
-<dt><code>-F</code></p>
-<dd> Adjust sustain by guessing which looping patches should be continued until note is released.</p>
-<dt><code>-v</code></p>
-<dd> Verbose.</p>
-<dt><code>-M </code><i>&lt;bank&gt;:&lt;instrument&gt;=&lt;layer&gt;</i></p>
-<dd> Make the given velocity <i>layer</i> the default for <i>bank:instrument</i>, this affects programs which do not know howto handle the extended GUS patch format, as they will always play the default layer, and this determines which layer gets written when using <code>-s</code>.</p>
-<dt><code>-D </code><i>&lt;bank&gt;:&lt;instrument&gt;=&lt;layer&gt;</i></p>
-<dd> Same as <code>-M</code> but then for drum banks. </p>
+<dt><code>-s</code></dt>
+<dd> Small. Extract only a single velocity layer.</dd>
+<dt><code>-m</code></dt>
+<dd> Mono. Extract only the left channel of stereo patches.</dd>
+<dt><code>-d</code></dt>
+<dd> Drum. Assume the sf2 file is a drum kit, even though it is not marked as such in the soundfont, so that individual notes are broken out into separate drum patches.</dd>
+<dt><code>-n</code></dt>
+<dd> No write. Don&#8217;t write out patches or directories.</dd>
+<dt><code>-V</code></dt>
+<dd> Do not normalize sample volumes (it&#8217;s time-consuming).</dd>
+<dt><code>-F</code></dt>
+<dd> Adjust sustain by guessing which looping patches should be continued until note is released.</dd>
+<dt><code>-v</code></dt>
+<dd> Verbose.</dd>
+<dt><code>-M </code><i>&lt;bank&gt;:&lt;instrument&gt;=&lt;layer&gt;</i></dt>
+<dd> Make the given velocity <i>layer</i> the default for <i>bank:instrument</i>, this affects programs which do not know howto handle the extended GUS patch format, as they will always play the default layer, and this determines which layer gets written when using <code>-s</code>.</dd>
+<dt><code>-D </code><i>&lt;bank&gt;:&lt;instrument&gt;=&lt;layer&gt;</i></dt>
+<dd> Same as <code>-M</code> but then for drum banks. </dd>
 </dl>
 <h2>AUTHORS</h2>
 <p> Greg Lee &lt;greg [at] ling.lll.hawaii.edu&gt;<br />

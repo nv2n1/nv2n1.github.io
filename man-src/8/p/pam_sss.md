@@ -10,49 +10,49 @@ description: "pam_sss – PAM module for SSSD"
 <p>pam_sss &#8211; PAM module for SSSD</p>
 <h2>Synopsis</h2>
 <dl>
-<dt> <code>pam_sss.so</code> [<i>quiet</i>] [<i>forward_pass</i>] [<i>use_first_pass</i>] [<i>use_authtok</i>] [<i>retry=N</i>] [<i>ignore_unknown_user</i>] [<i>ignore_authinfo_unavail</i>] [<i>domains=X</i>] [<i>allow_missing_name</i>] [<i>prompt_always</i>]</dl>
+<dt> <code>pam_sss.so</code> [<i>quiet</i>] [<i>forward_pass</i>] [<i>use_first_pass</i>] [<i>use_authtok</i>] [<i>retry=N</i>] [<i>ignore_unknown_user</i>] [<i>ignore_authinfo_unavail</i>] [<i>domains=X</i>] [<i>allow_missing_name</i>] [<i>prompt_always</i>]</dt></dl>
 <h2>Description</h2>
 <p><code>pam_sss.so</code></p>
-<dd>is the PAM interface to the System Security Services daemon (SSSD). Errors and results are logged through <code><a href="/docs/linux/man/3-syslog/">syslog</a>(3)</code> with the LOG_AUTHPRIV facility.</p>
+<dd>is the PAM interface to the System Security Services daemon (SSSD). Errors and results are logged through <code><a href="/docs/linux/man/3-syslog/">syslog</a>(3)</code> with the LOG_AUTHPRIV facility.</dd>
 <h2>Options</h2>
 <p><code>quiet</code></p>
 <dl>
-<dd>Suppress log messages for unknown users.</dl>
+<dd>Suppress log messages for unknown users.</dd></dl>
 <p> <code>forward_pass</code></p>
 <dl>
-<dd>If <code>forward_pass</code> is set the entered password is put on the stack for other PAM modules to use.</dl>
+<dd>If <code>forward_pass</code> is set the entered password is put on the stack for other PAM modules to use.</dd></dl>
 <p> <code>use_first_pass</code></p>
 <dl>
-<dd>The argument use_first_pass forces the module to use a previous stacked modules password and will never prompt the user &#8211; if no password is available or the password is not appropriate, the user will be denied access.</dl>
+<dd>The argument use_first_pass forces the module to use a previous stacked modules password and will never prompt the user &#8211; if no password is available or the password is not appropriate, the user will be denied access.</dd></dl>
 <p> <code>use_authtok</code></p>
 <dl>
-<dd>When password changing enforce the module to set the new password to the one provided by a previously stacked password module.</dl>
+<dd>When password changing enforce the module to set the new password to the one provided by a previously stacked password module.</dd></dl>
 <p> <code>retry=N</code></p>
 <dl>
-<dd>If specified the user is asked another N times for a password if authentication fails. Default is 0. </p>
+<dd>If specified the user is asked another N times for a password if authentication fails. Default is 0. </dd>
 <p> Please note that this option might not work as expected if the application calling PAM handles the user dialog on its own. A typical example is <code>sshd</code> with <code>PasswordAuthentication</code>.</dl>
 <p> <code>ignore_unknown_user</code></p>
 <dl>
-<dd>If this option is specified and the user does not exist, the PAM module will return PAM_IGNORE. This causes the PAM framework to ignore this module.</dl>
+<dd>If this option is specified and the user does not exist, the PAM module will return PAM_IGNORE. This causes the PAM framework to ignore this module.</dd></dl>
 <p> <code>ignore_authinfo_unavail</code></p>
 <dl>
-<dd>Specifies that the PAM module should return PAM_IGNORE if it cannot contact the SSSD daemon. This causes the PAM framework to ignore this module.</dl>
+<dd>Specifies that the PAM module should return PAM_IGNORE if it cannot contact the SSSD daemon. This causes the PAM framework to ignore this module.</dd></dl>
 <p> <code>domains</code></p>
 <dl>
-<dd>Allows the administrator to restrict the domains a particular PAM service is allowed to authenticate against. The format is a comma-separated list of SSSD domain names, as specified in the sssd.conf file. </p>
+<dd>Allows the administrator to restrict the domains a particular PAM service is allowed to authenticate against. The format is a comma-separated list of SSSD domain names, as specified in the sssd.conf file. </dd>
 <p> NOTE: Must be used in conjunction with the &#8220;pam_trusted_users&#8221; and &#8220;pam_public_domains&#8221; options. Please see the <code><a href="/docs/linux/man/5-sssd-conf/">sssd.conf</a></code>(5) manual page for more information on these two PAM responder options.</dl>
 <p> <code>allow_missing_name</code></p>
 <dl>
-<dd>The main purpose of this option is to let SSSD determine the user name based on additional information, e.g. the certificate from a Smartcard. </p>
+<dd>The main purpose of this option is to let SSSD determine the user name based on additional information, e.g. the certificate from a Smartcard. </dd>
 <p> The current use case are login managers which can monitor a Smartcard reader for card events. In case a Smartcard is inserted the login manager will call a PAM stack which includes a line like </p>
 <dl>
 <dd>
 <pre>auth sufficient pam_sss.so allow_missing_name</pre>
-</dl>
+</dd></dl>
 <p> In this case SSSD will try to determine the user name based on the content of the Smartcard, returns it to pam_sss which will finally put it on the PAM stack.</dl>
 <p> <code>prompt_always</code></p>
 <dl>
-<dd>Always prompt the user for credentials. With this option credentials requested by other PAM modules, typically a password, will be ignored and pam_sss will prompt for credentials again. Based on the pre-auth reply by SSSD pam_sss might prompt for a password, a Smartcard PIN or other credentials.</dl>
+<dd>Always prompt the user for credentials. With this option credentials requested by other PAM modules, typically a password, will be ignored and pam_sss will prompt for credentials again. Based on the pre-auth reply by SSSD pam_sss might prompt for a password, a Smartcard PIN or other credentials.</dd></dl>
 <h2>Module Types Provided</h2>
 <p>All module types (<code>account</code>, <code>auth</code>, <code>password</code> and <code>session</code>) are provided.</p>
 <h2>Files</h2>

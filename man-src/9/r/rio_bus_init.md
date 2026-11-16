@@ -14,11 +14,11 @@ description: "rio_bus_init – Register the RapidIO bus with the device model"
 <p><i>void</i></p>
 <dl>
 <dd>
-<dd>no arguments</dl>
+</dd><dd>no arguments</dd></dl>
 <h2>Description</h2>
 <p>Registers the RIO mport device class and RIO bus type with the Linux device model.</p>
 <h2>Author</h2>
 <p><code>Matt Porter</code> &lt;mporter [at] kernel.crashing.org&gt;, &lt;mporter [at] mvista.com&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

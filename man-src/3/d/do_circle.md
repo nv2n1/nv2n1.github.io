@@ -17,7 +17,6 @@ description: "do_circle – Calculates all the points in a circle. Allegro game 
 <pre><code>
 void draw_explosion_ring(BITMAP *bmp, int x, int y, int d){
     ...}
-
 do_circle(screen, SCREEN_W / 2, SCREEN_H / 2,
           SCREEN_H / 16, flame_color,
           draw_explosion_ring);

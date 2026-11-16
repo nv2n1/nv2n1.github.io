@@ -18,9 +18,9 @@ description: "setreuid, setregid – set real and/or effective user or group ID"
 <p> <code>setreuid</code>(), <code>setregid</code>():</p>
 <dl>
 <dt>
-<dd> _XOPEN_SOURCE&nbsp;&gt;=&nbsp;500<br />
+</dt><dd> _XOPEN_SOURCE&nbsp;&gt;=&nbsp;500<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Since glibc 2.19:&nbsp;*/&nbsp;_DEFAULT_SOURCE<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Glibc versions&nbsp;&lt;=&nbsp;2.19:&nbsp;*/&nbsp;_BSD_SOURCE</dl>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Glibc versions&nbsp;&lt;=&nbsp;2.19:&nbsp;*/&nbsp;_BSD_SOURCE</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> <code>setreuid</code>() sets real and effective user IDs of the calling process. </p>
 <p> Supplying a value of -1 for either the real or effective user ID forces the system to leave that ID unchanged. </p>
@@ -33,14 +33,14 @@ description: "setreuid, setregid – set real and/or effective user or group ID"
 <p> <i>Note</i>: there are cases where <code>setreuid</code>() can fail even when the caller is UID 0; it is a grave security error to omit checking for a failure return from <code>setreuid</code>().</p>
 <h2>ERRORS</h2>
 <dl>
-<dt><code>EAGAIN</code></p>
-<dd> The call would change the caller&#8217;s real UID (i.e., <i>ruid</i> does not match the caller&#8217;s real UID), but there was a temporary failure allocating the necessary kernel data structures.</p>
-<dt><code>EAGAIN</code></p>
-<dd> <i>ruid</i> does not match the caller&#8217;s real UID and this call would bring the number of processes belonging to the real user ID <i>ruid</i> over the caller&#8217;s <code>RLIMIT_NPROC</code> resource limit. Since Linux 3.1, this error case no longer occurs (but robust applications should check for this error); see the description of <code>EAGAIN</code> in <code><a href="/docs/linux/man/2-execve/">execve</a></code>(2).</p>
-<dt><code>EINVAL</code></p>
-<dd> One or more of the target user or group IDs is not valid in this user namespace.</p>
-<dt><code>EPERM</code></p>
-<dd> The calling process is not privileged (on Linux, does not have the necessary capability in its user namespace: <code>CAP_SETUID</code> in the case of <code>setreuid</code>(), or <code>CAP_SETGID</code> in the case of <code>setregid</code>()) and a change other than (i) swapping the effective user (group) ID with the real user (group) ID, or (ii) setting one to the value of the other or (iii) setting the effective user (group) ID to the value of the saved set-user-ID (saved set-group-ID) was specified.</dl>
+<dt><code>EAGAIN</code></dt>
+<dd> The call would change the caller&#8217;s real UID (i.e., <i>ruid</i> does not match the caller&#8217;s real UID), but there was a temporary failure allocating the necessary kernel data structures.</dd>
+<dt><code>EAGAIN</code></dt>
+<dd> <i>ruid</i> does not match the caller&#8217;s real UID and this call would bring the number of processes belonging to the real user ID <i>ruid</i> over the caller&#8217;s <code>RLIMIT_NPROC</code> resource limit. Since Linux 3.1, this error case no longer occurs (but robust applications should check for this error); see the description of <code>EAGAIN</code> in <code><a href="/docs/linux/man/2-execve/">execve</a></code>(2).</dd>
+<dt><code>EINVAL</code></dt>
+<dd> One or more of the target user or group IDs is not valid in this user namespace.</dd>
+<dt><code>EPERM</code></dt>
+<dd> The calling process is not privileged (on Linux, does not have the necessary capability in its user namespace: <code>CAP_SETUID</code> in the case of <code>setreuid</code>(), or <code>CAP_SETGID</code> in the case of <code>setregid</code>()) and a change other than (i) swapping the effective user (group) ID with the real user (group) ID, or (ii) setting one to the value of the other or (iii) setting the effective user (group) ID to the value of the saved set-user-ID (saved set-group-ID) was specified.</dd></dl>
 <h2>CONFORMING TO</h2>
 <p> POSIX.1-2001, POSIX.1-2008, 4.3BSD (<code>setreuid</code>() and <code>setregid</code>() first appeared in 4.2BSD).</p>
 <h2>NOTES</h2>

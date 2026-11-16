@@ -78,13 +78,13 @@ description: "gpg_web_selinux – Security Enhanced Linux Policy for the gpg_web
 <h2>Sharing Files</h2>
 <p>If you want to share files with multiple domains (Apache, FTP, rsync, Samba), you can set a file context of public_content_t and public_content_rw_t. These context allow any of the above domains to read the content. If you want a particular domain to write to the public_content_rw_t domain, you must set the appropriate boolean.</p>
 <dl>
-<dt>Allow gpg_web servers to read the /var/gpg_web directory by adding the public_content_t file type to the directory and by restoring the file type.</p>
-<dd></dl>
+<dt>Allow gpg_web servers to read the /var/gpg_web directory by adding the public_content_t file type to the directory and by restoring the file type.</dt>
+<dd></dd></dl>
 <p> <code>semanage fcontext -a -t public_content_t &quot;/var/gpg_web(/.*)?&quot;</code><br />
  <code>restorecon -F -R -v /var/gpg_web</code></p>
 <dl>
-<dt>Allow gpg_web servers to read and write /var/gpg_web/incoming by adding the public_content_rw_t type to the directory and by restoring the file type. You also need to turn on the gpg_web_anon_write boolean.</p>
-<dd></dl>
+<dt>Allow gpg_web servers to read and write /var/gpg_web/incoming by adding the public_content_rw_t type to the directory and by restoring the file type. You also need to turn on the gpg_web_anon_write boolean.</dt>
+<dd></dd></dl>
 <p> <code>semanage fcontext -a -t public_content_rw_t &quot;/var/gpg_web/incoming(/.*)?&quot;</code><br />
  <code>restorecon -F -R -v /var/gpg_web/incoming</code><br />
  <code>setsebool -P gpg_web_anon_write 1</code> </p>

@@ -10,10 +10,8 @@ description: "std::is_trivial – std::is_trivial"
 <p>std::is_trivial &#8211; std::is_trivial</p>
 <h2>Synopsis</h2>
 <pre><code>Defined in header&lt;type_traits&gt;
-
     template &lt;class T&gt;
     (since C++ 11)
-
         struct is_trivial;</code></pre>
 <p>If T is TrivialType (that is, a scalar type, a trivially copyable class with a trivial_default_constructor, or array of such type/class, possibly cv-qualified), provides the member constant value equal true. For any other type, value is false.<br />
 The behavior is undefined if std::remove_all_extents_t&lt;T&gt; is an incomplete type and not (possibly cv-qualified) void. </p>
@@ -47,7 +45,6 @@ type std::integral_constant&lt;bool, value&gt;</p>
 <h2>Example</h2>
 <p>// Run this code </p>
 <pre><code>#include &lt;iostream&gt;
-
 #include &lt;type_traits&gt;
 struct A {
     int m;
@@ -58,7 +55,6 @@ struct B {
     }
 };
 int main()
-
 {
     std::cout &lt;&lt; std::boolalpha;
     std::cout &lt;&lt; std::is_trivial&lt;A&gt;::value &lt;&lt; '

@@ -14,10 +14,10 @@ description: "gnutls_psk_set_server_credentials_hint – API function"
 <p> <code>int gnutls_psk_set_server_credentials_hint(gnutls_psk_server_credentials_t </code><i>res</i><code>, const char * </code><i>hint</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
-<dt>gnutls_psk_server_credentials_t res</p>
-<dd> is a <code>gnutls_psk_server_credentials_t</code> structure.</p>
-<dt>const char * hint</p>
-<dd> is the PSK identity hint string</dl>
+<dt>gnutls_psk_server_credentials_t res</dt>
+<dd> is a <code>gnutls_psk_server_credentials_t</code> structure.</dd>
+<dt>const char * hint</dt>
+<dd> is the PSK identity hint string</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> This function sets the identity hint, in a <code>gnutls_psk_server_credentials_t</code> structure. This hint is sent to the client to help it chose a good PSK credential (i.e., username and password).</p>
 <h2>RETURNS</h2>
@@ -33,6 +33,6 @@ description: "gnutls_psk_set_server_credentials_hint – API function"
 <h2>SEE ALSO</h2>
 <p> The full documentation for <code>gnutls</code> is maintained as a Texinfo manual. If the /usr/share/doc/gnutls/ directory does not contain the HTML form visit <code></p>
 <dl>
-<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></p>
-<dd> </code></dl>
+<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></dt>
+<dd> </code></dd></dl>
 <h2>Index</h2>

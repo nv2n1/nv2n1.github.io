@@ -19,6 +19,6 @@ description: "control-alt-delete – event signalling console press of Control-A
 <dl>
 <dd>
 <pre>start on control-alt-delete</pre>
-</dl>
+</dd></dl>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/7-keyboard-request/">keyboard-request</a></code>(7) <code><a href="/docs/linux/man/8-init/">init</a></code>(8) </p>

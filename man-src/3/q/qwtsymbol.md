@@ -71,95 +71,95 @@ description: "QwtSymbol –"
 <p> The default setting is AutoCache </p>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>setCachePolicy()</code>, <code>cachePolicy()</code></dl>
+<dd><code>setCachePolicy()</code>, <code>cachePolicy()</code></dd></dl>
 <p> <code>Note:</code></p>
 <dl COMPACT>
-<dd>The policy has no effect, when the symbol is painted to a vector graphics format ( PDF, SVG ).</dl>
+<dd>The policy has no effect, when the symbol is painted to a vector graphics format ( PDF, SVG ).</dd></dl>
 <p> <code>Warning:</code></p>
 <dl COMPACT>
-<dd>Since Qt 4.8 raster is the default backend on X11</dl>
+<dd>Since Qt 4.8 raster is the default backend on X11</dd></dl>
 <p> <code>Enumerator</code></p>
 <dl COMPACT>
-<dt><i>NoCache </i></p>
-<dd>Don&#8217;t use a pixmap cache.</p>
-<dt><i>Cache </i></p>
-<dd>Always use a pixmap cache.</p>
-<dt><i>AutoCache </i></p>
-<dd>Use a cache when one of the following conditions is true:</dl>
+<dt><i>NoCache </i></dt>
+<dd>Don&#8217;t use a pixmap cache.</dd>
+<dt><i>Cache </i></dt>
+<dd>Always use a pixmap cache.</dd>
+<dt><i>AutoCache </i></dt>
+<dd>Use a cache when one of the following conditions is true:</dd></dl>
 <dl COMPACT>
-<dt>&bull;</p>
-<dd>The symbol is rendered with the software renderer ( QPaintEngine::Raster )</dl>
+<dt>&bull;</dt>
+<dd>The symbol is rendered with the software renderer ( QPaintEngine::Raster )</dd></dl>
 <h3>enum <code>QwtSymbol::Style</code></h3>
 <p>Symbol Style </p>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>setStyle()</code>, <code>style()</code></dl>
+<dd><code>setStyle()</code>, <code>style()</code></dd></dl>
 <p> <code>Enumerator</code></p>
 <dl COMPACT>
-<dt><i>NoSymbol </i></p>
-<dd>No Style. The symbol cannot be drawn.</p>
-<dt><i>Ellipse </i></p>
-<dd>Ellipse or circle.</p>
-<dt><i>Rect </i></p>
-<dd>Rectangle.</p>
-<dt><i>Diamond </i></p>
-<dd>Diamond.</p>
-<dt><i>Triangle </i></p>
-<dd>Triangle pointing upwards.</p>
-<dt><i>DTriangle </i></p>
-<dd>Triangle pointing downwards.</p>
-<dt><i>UTriangle </i></p>
-<dd>Triangle pointing upwards.</p>
-<dt><i>LTriangle </i></p>
-<dd>Triangle pointing left.</p>
-<dt><i>RTriangle </i></p>
-<dd>Triangle pointing right.</p>
-<dt><i>Cross </i></p>
-<dd>Cross (+)</p>
-<dt><i>XCross </i></p>
-<dd>Diagonal cross (X)</p>
-<dt><i>HLine </i></p>
-<dd>Horizontal line.</p>
-<dt><i>VLine </i></p>
-<dd>Vertical line.</p>
-<dt><i>Star1 </i></p>
-<dd>X combined with +.</p>
-<dt><i>Star2 </i></p>
-<dd>Six-pointed star.</p>
-<dt><i>Hexagon </i></p>
-<dd>Hexagon.</p>
-<dt><i>Path </i></p>
-<dd>The symbol is represented by a painter path, where the origin ( 0, 0 ) of the path coordinate system is mapped to the position of the symbol.</dl>
+<dt><i>NoSymbol </i></dt>
+<dd>No Style. The symbol cannot be drawn.</dd>
+<dt><i>Ellipse </i></dt>
+<dd>Ellipse or circle.</dd>
+<dt><i>Rect </i></dt>
+<dd>Rectangle.</dd>
+<dt><i>Diamond </i></dt>
+<dd>Diamond.</dd>
+<dt><i>Triangle </i></dt>
+<dd>Triangle pointing upwards.</dd>
+<dt><i>DTriangle </i></dt>
+<dd>Triangle pointing downwards.</dd>
+<dt><i>UTriangle </i></dt>
+<dd>Triangle pointing upwards.</dd>
+<dt><i>LTriangle </i></dt>
+<dd>Triangle pointing left.</dd>
+<dt><i>RTriangle </i></dt>
+<dd>Triangle pointing right.</dd>
+<dt><i>Cross </i></dt>
+<dd>Cross (+)</dd>
+<dt><i>XCross </i></dt>
+<dd>Diagonal cross (X)</dd>
+<dt><i>HLine </i></dt>
+<dd>Horizontal line.</dd>
+<dt><i>VLine </i></dt>
+<dd>Vertical line.</dd>
+<dt><i>Star1 </i></dt>
+<dd>X combined with +.</dd>
+<dt><i>Star2 </i></dt>
+<dd>Six-pointed star.</dd>
+<dt><i>Hexagon </i></dt>
+<dd>Hexagon.</dd>
+<dt><i>Path </i></dt>
+<dd>The symbol is represented by a painter path, where the origin ( 0, 0 ) of the path coordinate system is mapped to the position of the symbol.</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>setPath()</code>, <code>path()</code></dl>
+<dd><code>setPath()</code>, <code>path()</code></dd></dl>
 <dl COMPACT>
-<dt><i>Pixmap </i></p>
-<dd>The symbol is represented by a pixmap. The pixmap is centered or aligned to its pin point.</dl>
+<dt><i>Pixmap </i></dt>
+<dd>The symbol is represented by a pixmap. The pixmap is centered or aligned to its pin point.</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>setPinPoint()</code></dl>
+<dd><code>setPinPoint()</code></dd></dl>
 <dl COMPACT>
-<dt><i>Graphic </i></p>
-<dd>The symbol is represented by a graphic. The graphic is centered or aligned to its pin point.</dl>
+<dt><i>Graphic </i></dt>
+<dd>The symbol is represented by a graphic. The graphic is centered or aligned to its pin point.</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>setPinPoint()</code></dl>
+<dd><code>setPinPoint()</code></dd></dl>
 <dl COMPACT>
-<dt><i>SvgDocument </i></p>
-<dd>The symbol is represented by a SVG graphic. The graphic is centered or aligned to its pin point.</dl>
+<dt><i>SvgDocument </i></dt>
+<dd>The symbol is represented by a SVG graphic. The graphic is centered or aligned to its pin point.</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>setPinPoint()</code></dl>
+<dd><code>setPinPoint()</code></dd></dl>
 <dl COMPACT>
-<dt><i>UserStyle </i></p>
-<dd>Styles &gt;= QwtSymbol::UserSymbol are reserved for derived classes of <code>QwtSymbol</code> that overload <code>drawSymbols()</code> with additional application specific symbol types.</dl>
+<dt><i>UserStyle </i></dt>
+<dd>Styles &gt;= QwtSymbol::UserSymbol are reserved for derived classes of <code>QwtSymbol</code> that overload <code>drawSymbols()</code> with additional application specific symbol types.</dd></dl>
 <h2>Constructor &amp; Destructor Documentation</h2>
 <h3>QwtSymbol::QwtSymbol (<code>Style</code>style = <code>NoSymbol</code>)</h3>
 <p>Default Constructor </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>style</i> Symbol Style</dl>
+<dd><i>style</i> Symbol Style</dd></dl>
 <p> The symbol is constructed with gray interior, black outline with zero width, no size and style &#8216;NoSymbol&#8217;.</p>
 <h3>QwtSymbol::QwtSymbol (<code>QwtSymbol::Style</code>style, const QBrush &amp;brush, const QPen &amp;pen, const QSize &amp;size)</h3>
 <p>Constructor. </p>
@@ -168,59 +168,59 @@ description: "QwtSymbol –"
 <dd><i>style</i> Symbol Style<br />
  <i>brush</i> brush to fill the interior<br />
  <i>pen</i> outline pen<br />
- <i>size</i> size</dl>
+ <i>size</i> size</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>setStyle()</code>, <code>setBrush()</code>, <code>setPen()</code>, <code>setSize()</code></dl>
+<dd><code>setStyle()</code>, <code>setBrush()</code>, <code>setPen()</code>, <code>setSize()</code></dd></dl>
 <h3>QwtSymbol::QwtSymbol (const QPainterPath &amp;path, const QBrush &amp;brush, const QPen &amp;pen)</h3>
 <p>Constructor. The symbol gets initialized by a painter path. The style is set to <code>QwtSymbol::Path</code>, the size is set to empty ( the path is displayed unscaled ). </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>path</i> painter path<br />
  <i>brush</i> brush to fill the interior<br />
- <i>pen</i> outline pen</dl>
+ <i>pen</i> outline pen</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>setPath()</code>, <code>setBrush()</code>, <code>setPen()</code>, <code>setSize()</code></dl>
+<dd><code>setPath()</code>, <code>setBrush()</code>, <code>setPen()</code>, <code>setSize()</code></dd></dl>
 <h2>Member Function Documentation</h2>
 <h3>QRect QwtSymbol::boundingRect () const [virtual]</h3>
 <p>Calculate the bounding rectangle for a symbol at position (0,0). </p>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>Bounding rectangle</dl>
+<dd>Bounding rectangle</dd></dl>
 <h3>const QBrush &amp; QwtSymbol::brush () const</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>Brush</dl>
+<dd>Brush</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>setBrush()</code></dl>
+<dd><code>setBrush()</code></dd></dl>
 <h3><code>QwtSymbol::CachePolicy</code> QwtSymbol::cachePolicy () const</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>Cache policy</dl>
+<dd>Cache policy</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>CachePolicy</code>, <code>setCachePolicy()</code></dl>
+<dd><code>CachePolicy</code>, <code>setCachePolicy()</code></dd></dl>
 <h3>void QwtSymbol::drawSymbol (QPainter *painter, const QRectF &amp;rect) const</h3>
 <p>Draw the symbol into a rectangle. The symbol is painted centered and scaled into the target rectangle. It is always painted uncached and the pin point is ignored. </p>
 <p> This method is primarily intended for drawing a symbol to the legend. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>painter</i> Painter<br />
- <i>rect</i> Target rectangle for the symbol</dl>
+ <i>rect</i> Target rectangle for the symbol</dd></dl>
 <h3>void QwtSymbol::drawSymbol (QPainter *painter, const QPointF &amp;pos) const [inline]</h3>
 <p>Draw the symbol at a specified position. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>painter</i> Painter<br />
- <i>pos</i> Position of the symbol in screen coordinates</dl>
+ <i>pos</i> Position of the symbol in screen coordinates</dd></dl>
 <h3>void QwtSymbol::drawSymbols (QPainter *painter, const QPolygonF &amp;points) const [inline]</h3>
 <p>Draw symbols at the specified points. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>painter</i> Painter<br />
- <i>points</i> Positions of the symbols in screen coordinates</dl>
+ <i>points</i> Positions of the symbols in screen coordinates</dd></dl>
 <h3>void QwtSymbol::drawSymbols (QPainter *painter, const QPointF *points, intnumPoints) const</h3>
 <p>Render an array of symbols </p>
 <p> Painting several symbols is more effective than drawing symbols one by one, as a couple of layout calculations and setting of pen/brush can be done once for the complete array. </p>
@@ -228,98 +228,98 @@ description: "QwtSymbol –"
 <dl COMPACT>
 <dd><i>painter</i> Painter<br />
  <i>points</i> Array of points<br />
- <i>numPoints</i> Number of points</dl>
+ <i>numPoints</i> Number of points</dd></dl>
 <h3>const <code>QwtGraphic</code> &amp; QwtSymbol::graphic () const</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>Assigned graphic</dl>
+<dd>Assigned graphic</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>setGraphic()</code></dl>
+<dd><code>setGraphic()</code></dd></dl>
 <h3>void QwtSymbol::invalidateCache ()</h3>
 <p>Invalidate the cached symbol pixmap </p>
 <p> The symbol invalidates its cache, whenever an attribute is changed that has an effect ob how to display a symbol. In case of derived classes with individual styles ( &gt;= <code>QwtSymbol::UserStyle</code> ) it might be necessary to call <code>invalidateCache()</code> for attributes that are relevant for this style. </p>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>CachePolicy</code>, <code>setCachePolicy()</code>, <code>drawSymbols()</code></dl>
+<dd><code>CachePolicy</code>, <code>setCachePolicy()</code>, <code>drawSymbols()</code></dd></dl>
 <h3>bool QwtSymbol::isPinPointEnabled () const</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>True, when the pin point translation is enabled</dl>
+<dd>True, when the pin point translation is enabled</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>setPinPoint()</code>, <code>setPinPointEnabled()</code></dl>
+<dd><code>setPinPoint()</code>, <code>setPinPointEnabled()</code></dd></dl>
 <h3>const QPainterPath &amp; QwtSymbol::path () const</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>Painter path for displaying the symbol</dl>
+<dd>Painter path for displaying the symbol</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>setPath()</code></dl>
+<dd><code>setPath()</code></dd></dl>
 <h3>const QPen &amp; QwtSymbol::pen () const</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>Pen</dl>
+<dd>Pen</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>setPen()</code>, <code>brush()</code></dl>
+<dd><code>setPen()</code>, <code>brush()</code></dd></dl>
 <h3>QPointF QwtSymbol::pinPoint () const</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>Pin point</dl>
+<dd>Pin point</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>setPinPoint()</code>, <code>setPinPointEnabled()</code></dl>
+<dd><code>setPinPoint()</code>, <code>setPinPointEnabled()</code></dd></dl>
 <h3>const QPixmap &amp; QwtSymbol::pixmap () const</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>Assigned pixmap</dl>
+<dd>Assigned pixmap</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>setPixmap()</code></dl>
+<dd><code>setPixmap()</code></dd></dl>
 <h3>void QwtSymbol::renderSymbols (QPainter *painter, const QPointF *points, intnumPoints) const [protected], [virtual]</h3>
 <p>Render the symbol to series of points </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>painter</i> Qt painter<br />
  <i>points</i> Positions of the symbols<br />
- <i>numPoints</i> Number of points</dl>
+ <i>numPoints</i> Number of points</dd></dl>
 <h3>void QwtSymbol::setBrush (const QBrush &amp;brush)</h3>
 <p>Assign a brush. The brush is used to draw the interior of the symbol. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>brush</i> Brush</dl>
+<dd><i>brush</i> Brush</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>brush()</code></dl>
+<dd><code>brush()</code></dd></dl>
 <h3>void QwtSymbol::setCachePolicy (<code>QwtSymbol::CachePolicy</code>policy)</h3>
 <p>Change the cache policy </p>
 <p> The default policy is AutoCache </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>policy</i> Cache policy</dl>
+<dd><i>policy</i> Cache policy</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>CachePolicy</code>, <code>cachePolicy()</code></dl>
+<dd><code>CachePolicy</code>, <code>cachePolicy()</code></dd></dl>
 <h3>void QwtSymbol::setColor (const QColor &amp;color) [virtual]</h3>
 <p>Set the color of the symbol. Change the color of the brush for symbol types with a filled area. For all other symbol types the color will be assigned to the pen. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>color</i> Color</dl>
+<dd><i>color</i> Color</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>setBrush()</code>, <code>setPen()</code>, <code>brush()</code>, <code>pen()</code></dl>
+<dd><code>setBrush()</code>, <code>setPen()</code>, <code>brush()</code>, <code>pen()</code></dd></dl>
 <h3>void QwtSymbol::setGraphic (const <code>QwtGraphic</code> &amp;graphic)</h3>
 <p>Set a graphic as symbol </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>graphic</i> Graphic</dl>
+<dd><i>graphic</i> Graphic</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>graphic()</code>, <code>setPixmap()</code></dl>
+<dd><code>graphic()</code>, <code>setPixmap()</code></dd></dl>
 <p> <code>Note:</code></p>
 <dl COMPACT>
-<dd>the <code>style()</code> is set to <code>QwtSymbol::Graphic</code> </p>
+<dd>the <code>style()</code> is set to <code>QwtSymbol::Graphic</code> </dd>
 <p> <code>brush()</code> and <code>pen()</code> have no effect</dl>
 <h3>void QwtSymbol::setPath (const QPainterPath &amp;path)</h3>
 <p>Set a painter path as symbol. The symbol is represented by a painter path, where the origin ( 0, 0 ) of the path coordinate system is mapped to the position of the symbol. </p>
@@ -346,13 +346,13 @@ symbol-&gt;setPinPoint( QPointF( 0.0, 0.0 ) );
 setSize( 10, 14 );</pre>
 <p><code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>path</i> Painter path</dl>
+<dd><i>path</i> Painter path</dd></dl>
 <p> <code>Note:</code></p>
 <dl COMPACT>
-<dd>The style is implicitely set to <code>QwtSymbol::Path</code>.</dl>
+<dd>The style is implicitely set to <code>QwtSymbol::Path</code>.</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>path()</code>, <code>setSize()</code></dl>
+<dd><code>path()</code>, <code>setSize()</code></dd></dl>
 <h3>void QwtSymbol::setPen (const QColor &amp;color, qrealwidth = 0.0, Qt::PenStylestyle = Qt::SolidLine)</h3>
 <p>Build and assign a pen </p>
 <p> In Qt5 the default pen width is 1.0 ( 0.0 in Qt4 ) what makes it non cosmetic ( see QPen::isCosmetic() ). This method has been introduced to hide this incompatibility. </p>
@@ -360,98 +360,98 @@ setSize( 10, 14 );</pre>
 <dl COMPACT>
 <dd><i>color</i> Pen color<br />
  <i>width</i> Pen width<br />
- <i>style</i> Pen style</dl>
+ <i>style</i> Pen style</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>pen()</code>, <code>brush()</code></dl>
+<dd><code>pen()</code>, <code>brush()</code></dd></dl>
 <h3>void QwtSymbol::setPen (const QPen &amp;pen)</h3>
 <p>Assign a pen </p>
 <p> The pen is used to draw the symbol&#8217;s outline. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>pen</i> Pen</dl>
+<dd><i>pen</i> Pen</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>pen()</code>, <code>setBrush()</code></dl>
+<dd><code>pen()</code>, <code>setBrush()</code></dd></dl>
 <h3>void QwtSymbol::setPinPoint (const QPointF &amp;pos, boolenable = true)</h3>
 <p>Set and enable a pin point. The position of a complex symbol is not always aligned to its center ( f.e an arrow, where the peak points to a position ). The pin point defines the position inside of a Pixmap, Graphic, SvgDocument or PainterPath symbol where the represented point has to be aligned to. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>pos</i> Position<br />
- <i>enable</i> En/Disable the pin point alignment</dl>
+ <i>enable</i> En/Disable the pin point alignment</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>pinPoint()</code>, <code>setPinPointEnabled()</code></dl>
+<dd><code>pinPoint()</code>, <code>setPinPointEnabled()</code></dd></dl>
 <h3>void QwtSymbol::setPinPointEnabled (boolon)</h3>
 <p>En/Disable the pin point alignment </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>on</i> Enabled, when on is true</dl>
+<dd><i>on</i> Enabled, when on is true</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>setPinPoint()</code>, <code>isPinPointEnabled()</code></dl>
+<dd><code>setPinPoint()</code>, <code>isPinPointEnabled()</code></dd></dl>
 <h3>void QwtSymbol::setPixmap (const QPixmap &amp;pixmap)</h3>
 <p>Set a pixmap as symbol </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>pixmap</i> Pixmap</dl>
+<dd><i>pixmap</i> Pixmap</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>pixmap()</code>, <code>setGraphic()</code></dl>
+<dd><code>pixmap()</code>, <code>setGraphic()</code></dd></dl>
 <p> <code>Note:</code></p>
 <dl COMPACT>
-<dd>the <code>style()</code> is set to <code>QwtSymbol::Pixmap</code> </p>
+<dd>the <code>style()</code> is set to <code>QwtSymbol::Pixmap</code> </dd>
 <p> <code>brush()</code> and <code>pen()</code> have no effect</dl>
 <h3>void QwtSymbol::setSize (const QSize &amp;size)</h3>
 <p>Set the symbol&#8217;s size </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>size</i> Size</dl>
+<dd><i>size</i> Size</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>size()</code></dl>
+<dd><code>size()</code></dd></dl>
 <h3>void QwtSymbol::setSize (intwidth, intheight = -1)</h3>
 <p>Specify the symbol&#8217;s size. If the &#8216;h&#8217; parameter is left out or less than 0, and the &#8216;w&#8217; parameter is greater than or equal to 0, the symbol size will be set to (w,w). </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>width</i> Width<br />
- <i>height</i> Height (defaults to -1)</dl>
+ <i>height</i> Height (defaults to -1)</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>size()</code></dl>
+<dd><code>size()</code></dd></dl>
 <h3>void QwtSymbol::setStyle (<code>QwtSymbol::Style</code>style)</h3>
 <p>Specify the symbol style </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>style</i> Style</dl>
+<dd><i>style</i> Style</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>style()</code></dl>
+<dd><code>style()</code></dd></dl>
 <h3>void QwtSymbol::setSvgDocument (const QByteArray &amp;svgDocument)</h3>
 <p>Set a SVG icon as symbol </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>svgDocument</i> SVG icon</dl>
+<dd><i>svgDocument</i> SVG icon</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>setGraphic()</code>, <code>setPixmap()</code></dl>
+<dd><code>setGraphic()</code>, <code>setPixmap()</code></dd></dl>
 <p> <code>Note:</code></p>
 <dl COMPACT>
-<dd>the <code>style()</code> is set to <code>QwtSymbol::SvgDocument</code> </p>
+<dd>the <code>style()</code> is set to <code>QwtSymbol::SvgDocument</code> </dd>
 <p> <code>brush()</code> and <code>pen()</code> have no effect</dl>
 <h3>const QSize &amp; QwtSymbol::size () const</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>Size</dl>
+<dd>Size</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>setSize()</code></dl>
+<dd><code>setSize()</code></dd></dl>
 <h3><code>QwtSymbol::Style</code> QwtSymbol::style () const</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>Current symbol style</dl>
+<dd>Current symbol style</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>setStyle()</code></dl>
+<dd><code>setStyle()</code></dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for Qwt User&#8217;s Guide from the source code.</p>

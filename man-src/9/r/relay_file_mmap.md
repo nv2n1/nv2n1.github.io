@@ -14,10 +14,10 @@ description: "relay_file_mmap – mmap file op for relay files"
 <p><i>filp</i></p>
 <dl>
 <dd>
-<dd>the file</dl>
+</dd><dd>the file</dd></dl>
 <p> <i>vma</i></p>
 <dl>
-<dd>the vma describing what to map</dl>
+<dd>the vma describing what to map</dd></dl>
 <h2>Description</h2>
 <p>Calls upon <code>relay_mmap_buf</code> to map the file into user space.</p>
 <h2>Copyright</h2>

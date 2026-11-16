@@ -423,32 +423,32 @@ myretcode&nbsp;<wbr>=&nbsp;<wbr>mng_display_resume&nbsp;<wbr>(myhandle);<br />
 <p> libmng :</p>
 <dl>
 <dt>
-<dd>
- <a rel="nofollow" href="http://www.libmng.com">http://www.libmng.com</a> </p>
+</dt><dd>
+ <a rel="nofollow" href="http://www.libmng.com">http://www.libmng.com</a> </dd>
 </dl>
 <p> zlib :</p>
 <dl>
 <dt>
-<dd>
- <a rel="nofollow" href="http://www.info-zip.org/pub/infozip/zlib/">http://www.info-zip.org/pub/infozip/zlib/</a> </p>
+</dt><dd>
+ <a rel="nofollow" href="http://www.info-zip.org/pub/infozip/zlib/">http://www.info-zip.org/pub/infozip/zlib/</a> </dd>
 </dl>
 <p> IJG JPEG library :</p>
 <dl>
 <dt>
-<dd>
- <a rel="nofollow" href="http://www.ijg.org">http://www.ijg.org</a> </p>
+</dt><dd>
+ <a rel="nofollow" href="http://www.ijg.org">http://www.ijg.org</a> </dd>
 </dl>
 <p> lcms (little CMS) by Marti Maria Saguer :</p>
 <dl>
 <dt>
-<dd>
- <a rel="nofollow" href="http://www.littlecms.com/">http://www.littlecms.com/</a> </p>
+</dt><dd>
+ <a rel="nofollow" href="http://www.littlecms.com/">http://www.littlecms.com/</a> </dd>
 </dl>
 <p> MNG specification:</p>
 <dl>
 <dt>
-<dd>
- <a rel="nofollow" href="http://www.libpng.org/pub/mng">http://www.libpng.org/pub/mng</a> </p>
+</dt><dd>
+ <a rel="nofollow" href="http://www.libpng.org/pub/mng">http://www.libpng.org/pub/mng</a> </dd>
 </dl>
 <p> In the case of any inconsistency between the MNG specification and this library, the specification takes precedence. </p>
 <h2>AUTHORS</h2>

@@ -151,16 +151,16 @@ endif()</pre>
 <p>Simplify variable reference and escape sequence evaluation. </p>
 <p> CMake 3.1 introduced a much faster implementation of evaluation of the <i>Variable References</i> and <i>Escape Sequences</i> documented in the <code><a href="/docs/linux/man/7-cmake3-language/">cmake3-language</a>(7)</code> manual. While the behavior is identical to the legacy implementation in most cases, some corner cases were cleaned up to simplify the behavior. Specifically:</p>
 <dl>
-<dt>&bull;</p>
-<dd>Expansion of <code>@VAR@</code> reference syntax defined by the <code>configure_file()</code> and <code>string(CONFIGURE)</code> commands is no longer performed in other contexts.</p>
-<dt>&bull;</p>
-<dd>Literal <code>${VAR}</code> reference syntax may contain only alphanumeric characters (<code>A-Z</code>, <code>a-z</code>, <code>0-9</code>) and the characters <code>_</code>, <code>.</code>, <code>/</code>, <code>&#8211;</code>, and <code>+</code>. Variables with other characters in their name may still be referenced indirectly, e.g. </p>
+<dt>&bull;</dt>
+<dd>Expansion of <code>@VAR@</code> reference syntax defined by the <code>configure_file()</code> and <code>string(CONFIGURE)</code> commands is no longer performed in other contexts.</dd>
+<dt>&bull;</dt>
+<dd>Literal <code>${VAR}</code> reference syntax may contain only alphanumeric characters (<code>A-Z</code>, <code>a-z</code>, <code>0-9</code>) and the characters <code>_</code>, <code>.</code>, <code>/</code>, <code>&#8211;</code>, and <code>+</code>. Variables with other characters in their name may still be referenced indirectly, e.g. </dd>
 <pre>set(varname &quot;otherwise &amp; disallowed $ characters&quot;)
 message(&quot;${${varname}}&quot;)</pre>
-<dt>&bull;</p>
-<dd>The setting of policy <code>CMP0010</code> is not considered, so improper variable reference syntax is always an error.</p>
-<dt>&bull;</p>
-<dd>More characters are allowed to be escaped in variable names. Previously, only <code>()#&quot; \@^</code> were valid characters to escape. Now any non-alphanumeric, non-semicolon, non-NUL character may be escaped following the <code>escape_identity</code> production in the <i>Escape Sequences</i> section of the <code><a href="/docs/linux/man/7-cmake3-language/">cmake3-language</a>(7)</code> manual. </p>
+<dt>&bull;</dt>
+<dd>The setting of policy <code>CMP0010</code> is not considered, so improper variable reference syntax is always an error.</dd>
+<dt>&bull;</dt>
+<dd>More characters are allowed to be escaped in variable names. Previously, only <code>()#&quot; \@^</code> were valid characters to escape. Now any non-alphanumeric, non-semicolon, non-NUL character may be escaped following the <code>escape_identity</code> production in the <i>Escape Sequences</i> section of the <code><a href="/docs/linux/man/7-cmake3-language/">cmake3-language</a>(7)</code> manual. </dd>
 <p> The <code>OLD</code> behavior for this policy is to honor the legacy behavior for variable references and escape sequences. The <code>NEW</code> behavior is to use the simpler variable expansion and escape sequence evaluation rules. </p>
 <p> This policy was introduced in CMake version 3.1. CMake version 3.6.3 warns when the policy is not set and uses <code>OLD</code> behavior. Use the <code>cmake_policy()</code> command to set it to <code>OLD</code> or <code>NEW</code> explicitly. </p>
 <p> <code>NOTE:</code> The <code>OLD</code> behavior of a policy is <code>deprecated by definition</code> and may be removed in a future version of CMake.</dl>
@@ -550,3 +550,4 @@ target_link_libraries(myexe /path/to/libA.so /path/to/libB.so)</pre>
 <p> <code>NOTE:</code> The <code>OLD</code> behavior of a policy is <code>deprecated by definition</code> and may be removed in a future version of CMake.</p>
 <h2>Copyright</h2>
 <p>2000-2016 Kitware, Inc.</p>
+</p>

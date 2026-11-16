@@ -20,30 +20,30 @@ description: "rigsmtr – measure S-Meter vs azimuth using Hamlib"
 <h2>OPTIONS</h2>
 <p> This program follow the usual GNU command line syntax, with long options starting with two dashes (`-&#8216;). A summary of options is included below.</p>
 <dl>
-<dt><code>-m, &#8211;model=id</code></p>
-<dd> Select radio model number. See model list provided by rigctl.</p>
-<dt><code>-r, &#8211;rig-file=device</code></p>
-<dd> Use <code>device</code> as the file name of the radio to operate on.</p>
-<dt><code>-s, &#8211;serial-speed=baud</code></p>
-<dd> Set radio serial speed to <code>baud</code> rate. Uses maximal rig speed as default.</p>
-<dt><code>-c, &#8211;civaddr=id</code></p>
-<dd> Use <code>id</code> as the CI-V address to communicate with the rig. Only for Icom rigs. NB: the id is in decimal, unless prefixed by <code>0x</code>, in which case it is hexadecimal.</p>
-<dt><code>-C, &#8211;set-conf=parm=val[,parm=val]*</code></p>
-<dd> Set radio config parameter. See -L option of rigctl for a list.</p>
-<dt><code>-M, &#8211;rot-model=id</code></p>
-<dd> Select radio model number. See model list provided by rotctl.</p>
-<dt><code>-R, &#8211;rot-file=device</code></p>
-<dd> Use <code>device</code> as the file name of the rotator to operate on.</p>
-<dt><code>-S, &#8211;rot-serial-speed=baud</code></p>
-<dd> Set rotator serial speed to <code>baud</code> rate. Uses maximal speed as default.</p>
-<dt><code>-N, &#8211;rot-set-conf=parm=val[,parm=val]*</code></p>
-<dd> Set rotator config parameter. See -L option of rotctl for a list.</p>
-<dt><code>-v, &#8211;verbose</code></p>
-<dd> Set verbose mode, cumulative (BUG, ERR, WARN, VERBOSE, TRACE).</p>
-<dt><code>-h, &#8211;help</code></p>
-<dd> Show summary of options and exit.</p>
-<dt><code>-V, &#8211;version</code></p>
-<dd> Show version of program and exit. </p>
+<dt><code>-m, &#8211;model=id</code></dt>
+<dd> Select radio model number. See model list provided by rigctl.</dd>
+<dt><code>-r, &#8211;rig-file=device</code></dt>
+<dd> Use <code>device</code> as the file name of the radio to operate on.</dd>
+<dt><code>-s, &#8211;serial-speed=baud</code></dt>
+<dd> Set radio serial speed to <code>baud</code> rate. Uses maximal rig speed as default.</dd>
+<dt><code>-c, &#8211;civaddr=id</code></dt>
+<dd> Use <code>id</code> as the CI-V address to communicate with the rig. Only for Icom rigs. NB: the id is in decimal, unless prefixed by <code>0x</code>, in which case it is hexadecimal.</dd>
+<dt><code>-C, &#8211;set-conf=parm=val[,parm=val]*</code></dt>
+<dd> Set radio config parameter. See -L option of rigctl for a list.</dd>
+<dt><code>-M, &#8211;rot-model=id</code></dt>
+<dd> Select radio model number. See model list provided by rotctl.</dd>
+<dt><code>-R, &#8211;rot-file=device</code></dt>
+<dd> Use <code>device</code> as the file name of the rotator to operate on.</dd>
+<dt><code>-S, &#8211;rot-serial-speed=baud</code></dt>
+<dd> Set rotator serial speed to <code>baud</code> rate. Uses maximal speed as default.</dd>
+<dt><code>-N, &#8211;rot-set-conf=parm=val[,parm=val]*</code></dt>
+<dd> Set rotator config parameter. See -L option of rotctl for a list.</dd>
+<dt><code>-v, &#8211;verbose</code></dt>
+<dd> Set verbose mode, cumulative (BUG, ERR, WARN, VERBOSE, TRACE).</dd>
+<dt><code>-h, &#8211;help</code></dt>
+<dd> Show summary of options and exit.</dd>
+<dt><code>-V, &#8211;version</code></dt>
+<dd> Show version of program and exit. </dd>
 </dl>
 <h2>RETURN VALUE</h2>
 <p> rigsmtr exits with: 0 if all operations went fine; 1 if there was an invalid command line option or arg; 2 if an error was returned by Hamlib; 3 if the rig doesn&#8217;t have the required capabilities. </p>
@@ -65,7 +65,7 @@ description: "rigsmtr – measure S-Meter vs azimuth using Hamlib"
 <p>&nbsp;<wbr>&nbsp;<wbr>330 -51&nbsp;<wbr> </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>360 -49&nbsp;<wbr> </p>
 <dl>
-<dt>Result could then be ploted with gnuplot:</p>
+<dt>Result could then be ploted with gnuplot:</dt>
 <dd>
  gnuplot<br />
  set angles degrees<br />
@@ -77,7 +77,7 @@ description: "rigsmtr – measure S-Meter vs azimuth using Hamlib"
  set rrange [-60:60]<br />
  set xrange [-60:60]<br />
  set yrange [-60:60]<br />
- plot &quot;csmtr&quot;</dl>
+ plot &quot;csmtr&quot;</dd></dl>
 <h2>AUTHOR</h2>
 <p> Man page written by Stephane Fillod.</p>
 <h2>BUGS</h2>

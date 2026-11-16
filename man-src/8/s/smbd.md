@@ -10,7 +10,7 @@ description: "smbd – server to provide SMB/CIFS services to clients"
 <p>smbd &#8211; server to provide SMB/CIFS services to clients</p>
 <h2>Synopsis</h2>
 <dl>
-<dd>smbd [-D|&#8211;daemon] [-F|&#8211;foreground] [-S|&#8211;log-stdout] [-i|&#8211;interactive] [-V] [-b|&#8211;build-options] [-d&nbsp;<wbr>&lt;debug level&gt;] [-l|&#8211;log-basename&nbsp;<wbr>&lt;log directory&gt;] [-p&nbsp;<wbr>&lt;port number(s)&gt;] [-P&nbsp;<wbr>&lt;profiling level&gt;] [-s&nbsp;<wbr>&lt;configuration file&gt;] [&#8211;no-process-group]</dl>
+<dd>smbd [-D|&#8211;daemon] [-F|&#8211;foreground] [-S|&#8211;log-stdout] [-i|&#8211;interactive] [-V] [-b|&#8211;build-options] [-d&nbsp;<wbr>&lt;debug level&gt;] [-l|&#8211;log-basename&nbsp;<wbr>&lt;log directory&gt;] [-p&nbsp;<wbr>&lt;port number(s)&gt;] [-P&nbsp;<wbr>&lt;profiling level&gt;] [-s&nbsp;<wbr>&lt;configuration file&gt;] [&#8211;no-process-group]</dd></dl>
 <h2>Description</h2>
 <p>This program is part of the <code><a href="/docs/linux/man/7-samba/">samba</a></code>(7) suite. </p>
 <p> smbd is the server daemon that provides filesharing and printing services to Windows clients. The server provides filespace and printer services to clients using the SMB (or CIFS) protocol. This is compatible with the LanManager protocol, and can service LanManager clients. These include MSCLIENT 3.0 for DOS, Windows for Workgroups, Windows 95/98/ME, Windows NT, Windows 2000, OS/2, DAVE for Macintosh, and smbfs for Linux. </p>
@@ -21,80 +21,80 @@ description: "smbd – server to provide SMB/CIFS services to clients"
 <h2>Options</h2>
 <p>-D|&#8211;daemon</p>
 <dl>
-<dd>If specified, this parameter causes the server to operate as a daemon. That is, it detaches itself and runs in the background, fielding requests on the appropriate port. Operating the server as a daemon is the recommended way of running smbd for servers that provide more than casual use file and print services. This switch is assumed if smbd is executed on the command line of a shell.</dl>
+<dd>If specified, this parameter causes the server to operate as a daemon. That is, it detaches itself and runs in the background, fielding requests on the appropriate port. Operating the server as a daemon is the recommended way of running smbd for servers that provide more than casual use file and print services. This switch is assumed if smbd is executed on the command line of a shell.</dd></dl>
 <p> -F|&#8211;foreground</p>
 <dl>
-<dd>If specified, this parameter causes the main smbd process to not daemonize, i.e. double-fork and disassociate with the terminal. Child processes are still created as normal to service each connection request, but the main process does not exit. This operation mode is suitable for running smbd under process supervisors such as supervise and svscan from Daniel J. Bernstein&#8217;s daemontools package, or the AIX process monitor.</dl>
+<dd>If specified, this parameter causes the main smbd process to not daemonize, i.e. double-fork and disassociate with the terminal. Child processes are still created as normal to service each connection request, but the main process does not exit. This operation mode is suitable for running smbd under process supervisors such as supervise and svscan from Daniel J. Bernstein&#8217;s daemontools package, or the AIX process monitor.</dd></dl>
 <p> -S|&#8211;log-stdout</p>
 <dl>
-<dd>If specified, this parameter causes smbd to log to standard output rather than a file.</dl>
+<dd>If specified, this parameter causes smbd to log to standard output rather than a file.</dd></dl>
 <p> -i|&#8211;interactive</p>
 <dl>
-<dd>If this parameter is specified it causes the server to run &quot;interactively&quot;, not as a daemon, even if the server is executed on the command line of a shell. Setting this parameter negates the implicit daemon mode when run from the command line. smbd will only accept one connection and terminate. It will also log to standard output, as if the -S parameter had been given.</dl>
+<dd>If this parameter is specified it causes the server to run &quot;interactively&quot;, not as a daemon, even if the server is executed on the command line of a shell. Setting this parameter negates the implicit daemon mode when run from the command line. smbd will only accept one connection and terminate. It will also log to standard output, as if the -S parameter had been given.</dd></dl>
 <p> -d|&#8211;debuglevel=level</p>
 <dl>
-<dd><i>level</i> is an integer from 0 to 10. The default value if this parameter is not specified is 0. </p>
+<dd><i>level</i> is an integer from 0 to 10. The default value if this parameter is not specified is 0. </dd>
 <p> The higher this value, the more detail will be logged to the log files about the activities of the server. At level 0, only critical errors and serious warnings will be logged. Level 1 is a reasonable level for day-to-day running &#8211; it generates a small amount of information about operations carried out. </p>
 <p> Levels above 1 will generate considerable amounts of log data, and should only be used when investigating a problem. Levels above 3 are designed for use only by developers and generate HUGE amounts of log data, most of which is extremely cryptic. </p>
 <p> Note that specifying this parameter here will override the m[blue]<code>log level</code>m[] parameter in the smb.conf file.</dl>
 <p> -V|&#8211;version</p>
 <dl>
-<dd>Prints the program version number.</dl>
+<dd>Prints the program version number.</dd></dl>
 <p> -s|&#8211;configfile=&lt;configuration file&gt;</p>
 <dl>
-<dd>The file specified contains the configuration details required by the server. The information in this file includes server-specific information such as what printcap file to use, as well as descriptions of all the services that the server is to provide. See smb.conf for more information. The default configuration file name is determined at compile time.</dl>
+<dd>The file specified contains the configuration details required by the server. The information in this file includes server-specific information such as what printcap file to use, as well as descriptions of all the services that the server is to provide. See smb.conf for more information. The default configuration file name is determined at compile time.</dd></dl>
 <p> -l|&#8211;log-basename=logdirectory</p>
 <dl>
-<dd>Base directory name for log/debug files. The extension <code>&quot;.progname&quot;</code> will be appended (e.g. log.smbclient, log.smbd, etc&#8230;). The log file is never removed by the client.</dl>
+<dd>Base directory name for log/debug files. The extension <code>&quot;.progname&quot;</code> will be appended (e.g. log.smbclient, log.smbd, etc&#8230;). The log file is never removed by the client.</dd></dl>
 <p> &#8211;option=&lt;name&gt;=&lt;value&gt;</p>
 <dl>
-<dd>Set the <code><a href="/docs/linux/man/5-smb-conf/">smb.conf</a></code>(5) option &quot;&lt;name&gt;&quot; to value &quot;&lt;value&gt;&quot; from the command line. This overrides compiled-in defaults and options read from the configuration file.</dl>
+<dd>Set the <code><a href="/docs/linux/man/5-smb-conf/">smb.conf</a></code>(5) option &quot;&lt;name&gt;&quot; to value &quot;&lt;value&gt;&quot; from the command line. This overrides compiled-in defaults and options read from the configuration file.</dd></dl>
 <p> -?|&#8211;help</p>
 <dl>
-<dd>Print a summary of command line options.</dl>
+<dd>Print a summary of command line options.</dd></dl>
 <p> &#8211;usage</p>
 <dl>
-<dd>Display brief usage message.</dl>
+<dd>Display brief usage message.</dd></dl>
 <p> &#8211;no-process-group</p>
 <dl>
-<dd>Do not create a new process group for smbd.</dl>
+<dd>Do not create a new process group for smbd.</dd></dl>
 <p> -b|&#8211;build-options</p>
 <dl>
-<dd>Prints information about how Samba was built.</dl>
+<dd>Prints information about how Samba was built.</dd></dl>
 <p> -p|&#8211;port&lt;port number(s)&gt;</p>
 <dl>
-<dd><i>port number(s)</i> is a space or comma-separated list of TCP ports smbd should listen on. The default value is taken from the m[blue]<code>ports</code>m[] parameter in smb.conf </p>
+<dd><i>port number(s)</i> is a space or comma-separated list of TCP ports smbd should listen on. The default value is taken from the m[blue]<code>ports</code>m[] parameter in smb.conf </dd>
 <p> The default ports are 139 (used for SMB over NetBIOS over TCP) and port 445 (used for plain SMB over TCP).</dl>
 <p> -P|&#8211;profiling-level&lt;profiling level&gt;</p>
 <dl>
-<dd><i>profiling level</i> is a number specifying the level of profiling data to be collected. 0 turns off profiling, 1 turns on counter profiling only, 2 turns on complete profiling, and 3 resets all profiling data.</dl>
+<dd><i>profiling level</i> is a number specifying the level of profiling data to be collected. 0 turns off profiling, 1 turns on counter profiling only, 2 turns on complete profiling, and 3 resets all profiling data.</dd></dl>
 <h2>Files</h2>
 <p>/etc/inetd.conf</p>
 <dl>
-<dd>If the server is to be run by the inetd meta-daemon, this file must contain suitable startup information for the meta-daemon.</dl>
+<dd>If the server is to be run by the inetd meta-daemon, this file must contain suitable startup information for the meta-daemon.</dd></dl>
 <p> /etc/rc</p>
 <dl>
-<dd>or whatever initialization script your system uses). </p>
+<dd>or whatever initialization script your system uses). </dd>
 <p> If running the server as a daemon at startup, this file will need to contain an appropriate startup sequence for the server.</dl>
 <p> /etc/services</p>
 <dl>
-<dd>If running the server via the meta-daemon inetd, this file must contain a mapping of service name (e.g., netbios-ssn) to service port (e.g., 139) and protocol type (e.g., tcp).</dl>
+<dd>If running the server via the meta-daemon inetd, this file must contain a mapping of service name (e.g., netbios-ssn) to service port (e.g., 139) and protocol type (e.g., tcp).</dd></dl>
 <p> /usr/local/samba/lib/smb.conf</p>
 <dl>
-<dd>This is the default location of the <code><a href="/docs/linux/man/5-smb-conf/">smb.conf</a></code>(5) server configuration file. Other common places that systems install this file are /usr/samba/lib/smb.conf and /etc/samba/smb.conf. </p>
+<dd>This is the default location of the <code><a href="/docs/linux/man/5-smb-conf/">smb.conf</a></code>(5) server configuration file. Other common places that systems install this file are /usr/samba/lib/smb.conf and /etc/samba/smb.conf. </dd>
 <p> This file describes all the services the server is to make available to clients. See <code><a href="/docs/linux/man/5-smb-conf/">smb.conf</a></code>(5) for more information.</dl>
 <h2>Limitations</h2>
 <p>On some systems smbd cannot change uid back to root after a setuid() call. Such systems are called trapdoor uid systems. If you have such a system, you will be unable to connect from a client (such as a PC) as two different users at once. Attempts to connect the second user will result in access denied or similar.</p>
 <h2>Environment Variables</h2>
 <p><code>PRINTER</code></p>
 <dl>
-<dd>If no printer name is specified to printable services, most systems will use the value of this variable (or <code>lp</code> if this variable is not defined) as the name of the printer to use. This is not specific to the server, however.</dl>
+<dd>If no printer name is specified to printable services, most systems will use the value of this variable (or <code>lp</code> if this variable is not defined) as the name of the printer to use. This is not specific to the server, however.</dd></dl>
 <h2>Pam Interaction</h2>
 <p>Samba uses PAM for authentication (when presented with a plaintext password), for account checking (is this account disabled?) and for session management. The degree too which samba supports PAM is restricted by the limitations of the SMB protocol and the m[blue]<code>obey pam restrictions</code>m[]<code><a href="/docs/linux/man/5-smb-conf/">smb.conf</a></code>(5) parameter. When this is set, the following restrictions apply: </p>
 <dl>
-<dd>&bull; <i>Account Validation</i>: All accesses to a samba server are checked against PAM to see if the account is valid, not disabled and is permitted to login at this time. This also applies to encrypted logins.</dl>
+<dd>&bull; <i>Account Validation</i>: All accesses to a samba server are checked against PAM to see if the account is valid, not disabled and is permitted to login at this time. This also applies to encrypted logins.</dd></dl>
 <dl>
-<dd>&bull; <i>Session Management</i>: When not using share level security, users must pass PAM&#8217;s session checks before access is granted. Note however, that this is bypassed in share level security. Note also that some older pam configuration files may need a line added for session support.</dl>
+<dd>&bull; <i>Session Management</i>: When not using share level security, users must pass PAM&#8217;s session checks before access is granted. Note however, that this is bypassed in share level security. Note also that some older pam configuration files may need a line added for session support.</dd></dl>
 <h2>Version</h2>
 <p>This man page is correct for version 3 of the Samba suite.</p>
 <h2>Diagnostics</h2>
@@ -106,67 +106,67 @@ description: "smbd – server to provide SMB/CIFS services to clients"
 <p> (*) information persistent across restarts (but not necessarily important to backup). </p>
 <p> account_policy.tdb*</p>
 <dl>
-<dd>NT account policy settings such as pw expiration, etc&#8230;</dl>
+<dd>NT account policy settings such as pw expiration, etc&#8230;</dd></dl>
 <p> brlock.tdb</p>
 <dl>
-<dd>byte range locks</dl>
+<dd>byte range locks</dd></dl>
 <p> browse.dat</p>
 <dl>
-<dd>browse lists</dl>
+<dd>browse lists</dd></dl>
 <p> gencache.tdb</p>
 <dl>
-<dd>generic caching db</dl>
+<dd>generic caching db</dd></dl>
 <p> group_mapping.tdb*</p>
 <dl>
-<dd>group mapping information</dl>
+<dd>group mapping information</dd></dl>
 <p> locking.tdb</p>
 <dl>
-<dd>share modes &amp; oplocks</dl>
+<dd>share modes &amp; oplocks</dd></dl>
 <p> login_cache.tdb*</p>
 <dl>
-<dd>bad pw attempts</dl>
+<dd>bad pw attempts</dd></dl>
 <p> messages.tdb</p>
 <dl>
-<dd>Samba messaging system</dl>
+<dd>Samba messaging system</dd></dl>
 <p> netsamlogon_cache.tdb*</p>
 <dl>
-<dd>cache of user net_info_3 struct from net_samlogon() request (as a domain member)</dl>
+<dd>cache of user net_info_3 struct from net_samlogon() request (as a domain member)</dd></dl>
 <p> ntdrivers.tdb*</p>
 <dl>
-<dd>installed printer drivers</dl>
+<dd>installed printer drivers</dd></dl>
 <p> ntforms.tdb*</p>
 <dl>
-<dd>installed printer forms</dl>
+<dd>installed printer forms</dd></dl>
 <p> ntprinters.tdb*</p>
 <dl>
-<dd>installed printer information</dl>
+<dd>installed printer information</dd></dl>
 <p> printing/</p>
 <dl>
-<dd>directory containing tdb per print queue of cached lpq output</dl>
+<dd>directory containing tdb per print queue of cached lpq output</dd></dl>
 <p> registry.tdb</p>
 <dl>
-<dd>Windows registry skeleton (connect via regedit.exe)</dl>
+<dd>Windows registry skeleton (connect via regedit.exe)</dd></dl>
 <p> smbXsrv_session_global.tdb</p>
 <dl>
-<dd>session information (e.g. support for &#8216;utmp = yes&#8217;)</dl>
+<dd>session information (e.g. support for &#8216;utmp = yes&#8217;)</dd></dl>
 <p> smbXsrv_tcon_global.tdb</p>
 <dl>
-<dd>share connections (used to enforce max connections, etc&#8230;)</dl>
+<dd>share connections (used to enforce max connections, etc&#8230;)</dd></dl>
 <p> smbXsrv_open_global.tdb</p>
 <dl>
-<dd>open file handles (used durable handles, etc&#8230;)</dl>
+<dd>open file handles (used durable handles, etc&#8230;)</dd></dl>
 <p> share_info.tdb*</p>
 <dl>
-<dd>share acls</dl>
+<dd>share acls</dd></dl>
 <p> winbindd_cache.tdb</p>
 <dl>
-<dd>winbindd&#8217;s cache of user lists, etc&#8230;</dl>
+<dd>winbindd&#8217;s cache of user lists, etc&#8230;</dd></dl>
 <p> winbindd_idmap.tdb*</p>
 <dl>
-<dd>winbindd&#8217;s local idmap db</dl>
+<dd>winbindd&#8217;s local idmap db</dd></dl>
 <p> wins.dat*</p>
 <dl>
-<dd>wins database when &#8216;wins support = yes&#8217;</dl>
+<dd>wins database when &#8216;wins support = yes&#8217;</dd></dl>
 <h2>Signals</h2>
 <p>Sending the smbd a SIGHUP will cause it to reload its smb.conf configuration file within a short period of time. </p>
 <p> To shut down a user&#8217;s smbd process it is recommended that SIGKILL (-9)<i>NOT</i> be used, except as a last resort, as this may leave the shared memory area in an inconsistent state. The safe way to terminate an smbd is to send it a SIGTERM (-15) signal and wait for it to die on its own. </p>

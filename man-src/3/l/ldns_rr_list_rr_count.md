@@ -17,11 +17,11 @@ description: "ldns_rr_list_rr_count, ldns_rr_list_set_rr_count"
 <p> void ldns_rr_list_set_rr_count(ldns_rr_list *rr_list, size_t count); </p>
 <h2>DESCRIPTION</h2>
 <dl>
-<dt> <i>ldns_rr_list_rr_count</i>()</p>
-<dd>returns the number of rr&#8217;s in an rr_list. .br <code>rr_list</code>: the rr_list to read from .br Returns the number of rr&#8217;s</dl>
+<dt> <i>ldns_rr_list_rr_count</i>()</dt>
+<dd>returns the number of rr&#8217;s in an rr_list. .br <code>rr_list</code>: the rr_list to read from .br Returns the number of rr&#8217;s</dd></dl>
 <dl>
-<dt> <i>ldns_rr_list_set_rr_count</i>()</p>
-<dd>sets the number of rr&#8217;s in an rr_list. .br <code>rr_list</code>: the rr_list to set the count on .br <code>count</code>: the number of rr in this list .br Returns void</dl>
+<dt> <i>ldns_rr_list_set_rr_count</i>()</dt>
+<dd>sets the number of rr&#8217;s in an rr_list. .br <code>rr_list</code>: the rr_list to set the count on .br <code>count</code>: the number of rr in this list .br Returns void</dd></dl>
 <h2>AUTHOR</h2>
 <p> The ldns team at NLnet Labs. Which consists out of Jelte Jansen and Miek Gieben. </p>
 <h2>REPORTING BUGS</h2>

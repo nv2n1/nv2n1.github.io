@@ -27,7 +27,7 @@ description: "QuantLib::BoundaryCondition – Abstract boundary condition class 
 <h3>enum <code>Side</code></h3>
 <p><code>Possible enhancements</code></p>
 <dl COMPACT>
-<dd>Generalize for n-dimensional conditions</dl>
+<dd>Generalize for n-dimensional conditions</dd></dl>
 <h2>Member Function Documentation</h2>
 <h3>virtual void applyBeforeApplying (operator_type &amp;) const [pure virtual]</h3>
 <p>This method modifies an operator $ L $ before it is applied to an array $ u $ so that $ v = Lu $ will satisfy the given condition. </p>

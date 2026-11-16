@@ -21,17 +21,17 @@ url: "/docs/linux/man/1-functions/"
 
 <dl>
 <dt>*
-<dd> -a or --all list all functions, even those whose name start with an underscore.
-<dt>*
-<dd> -d DESCRIPTION or --description=DESCRIPTION change the description of this function
-<dt>*
-<dd> -e or --erase causes the specified functions to be erased.
-<dt>*
-<dd> -h or --help display a help message and exit
-<dt>*
-<dd> -n or --names list only the names of all defined functions, not their definition
-<dt>*
-<dd> -q or --query test if the specified functions exist. Does not output anything, but the builtins exit status is the number of functions specified that were not defined.</dl>
+</dt><dd> -a or --all list all functions, even those whose name start with an underscore.
+</dd><dt>*
+</dt><dd> -d DESCRIPTION or --description=DESCRIPTION change the description of this function
+</dd><dt>*
+</dt><dd> -e or --erase causes the specified functions to be erased.
+</dd><dt>*
+</dt><dd> -h or --help display a help message and exit
+</dd><dt>*
+</dt><dd> -n or --names list only the names of all defined functions, not their definition
+</dd><dt>*
+</dt><dd> -q or --query test if the specified functions exist. Does not output anything, but the builtins exit status is the number of functions specified that were not defined.</dd></dl>
  
 
  

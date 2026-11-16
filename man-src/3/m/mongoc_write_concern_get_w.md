@@ -13,8 +13,8 @@ description: "mongoc_write_concern_get_w() – Fetches the w parameter of the wr
 mongoc_write_concern_get_w (const mongoc_write_concern_t *write_concern);</pre>
 <h2>Parameters</h2>
 <dl COMPACT>
-<dt><code>write_concern</code></p>
-<dd>A <code>mongoc_write_concern_t</code> \&amp;.</dl>
+<dt><code>write_concern</code></dt>
+<dd>A <code>mongoc_write_concern_t</code> \&amp;.</dd></dl>
 <h2>Description</h2>
 <p>Fetches the <code>w</code> parameter of the write concern. </p>
 <h2>Returns</h2>

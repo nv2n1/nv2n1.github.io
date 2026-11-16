@@ -24,19 +24,19 @@ url: "/docs/linux/man/1-tarantool/"
  Its key properties include:
 <dl>
 <dt>&bull;
-<dd> Licence: simplified <font SIZE="-1">BSD</font>
-<dt>&bull;
-<dd> All data is maintained in <font SIZE="-1">RAM</font>
-<dt>&bull;
-<dd> Data persistence is implemented using Write Ahead Log and snapshotting
-<dt>&bull;
-<dd> Supports asynchronous replication and hot standby
-<dt>&bull;
-<dd> Uses coroutines and asynchronous I/O to implement high-performance lock-free access to data
-<dt>&bull;
-<dd> Available on Linux, FreeBSD, Mac <font SIZE="-1">OS X</font>
-<dt>&bull;
-<dd> Stored procedures in Lua are supported.</dl>
+</dt><dd> Licence: simplified <font SIZE="-1">BSD</font>
+</dd><dt>&bull;
+</dt><dd> All data is maintained in <font SIZE="-1">RAM</font>
+</dd><dt>&bull;
+</dt><dd> Data persistence is implemented using Write Ahead Log and snapshotting
+</dd><dt>&bull;
+</dt><dd> Supports asynchronous replication and hot standby
+</dd><dt>&bull;
+</dt><dd> Uses coroutines and asynchronous I/O to implement high-performance lock-free access to data
+</dd><dt>&bull;
+</dt><dd> Available on Linux, FreeBSD, Mac <font SIZE="-1">OS X</font>
+</dd><dt>&bull;
+</dt><dd> Stored procedures in Lua are supported.</dd></dl>
 
 <h3>Data model</h3>
 
@@ -46,11 +46,10 @@ url: "/docs/linux/man/1-tarantool/"
 
 <dl>
 <dt>-h, --help
-<dd> Displays helpscreen and exits.
-<dt>-V, --version
-<dd> Prints program version and exits. 
-
-</dl>
+</dt><dd> Displays helpscreen and exits.
+</dd><dt>-V, --version
+</dt><dd> Prints program version and exits. 
+</dd></dl>
 
 <h2>Index</h2>
 

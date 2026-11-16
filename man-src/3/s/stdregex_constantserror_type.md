@@ -11,59 +11,32 @@ std::regex_constants::error_type - std::regex_constants::error_type
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header &lt;regex&gt;
-
 typedef /*implementation defined*/ error_type;                   (since C++11)
-
 constexpr error_type error_collate = /*unspecified*/;
-
 constexpr error_type error_ctype = /*unspecified*/;
-
 constexpr error_type error_escape = /*unspecified*/;
-
 constexpr error_type error_backref = /*unspecified*/;
-
 constexpr error_type error_brack = /*unspecified*/;
-
 constexpr error_type error_paren = /*unspecified*/;              (since C++11)
-
 constexpr error_type error_brace = /*unspecified*/;              (until C++17)
-
 constexpr error_type error_badbrace = /*unspecified*/;
-
 constexpr error_type error_range = /*unspecified*/;
-
 constexpr error_type error_space = /*unspecified*/;
-
 constexpr error_type error_badrepeat = /*unspecified*/;
-
 constexpr error_type error_complexity = /*unspecified*/;
-
 constexpr error_type error_stack = /*unspecified*/;
-
 inline constexpr error_type error_collate = /*unspecified*/;
-
 inline constexpr error_type error_ctype = /*unspecified*/;
-
 inline constexpr error_type error_escape = /*unspecified*/;
-
 inline constexpr error_type error_backref = /*unspecified*/;
-
 inline constexpr error_type error_brack = /*unspecified*/;
-
 inline constexpr error_type error_paren = /*unspecified*/;
-
 inline constexpr error_type error_brace = /*unspecified*/;       (since C++17)
-
 inline constexpr error_type error_badbrace = /*unspecified*/;
-
 inline constexpr error_type error_range = /*unspecified*/;
-
 inline constexpr error_type error_space = /*unspecified*/;
-
 inline constexpr error_type error_badrepeat = /*unspecified*/;
-
 inline constexpr error_type error_complexity = /*unspecified*/;
-
 inline constexpr error_type error_stack = /*unspecified*/;</code></pre> 
 The error_type is a type that describes errors that may occur during regular expression parsing. 
 

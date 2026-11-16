@@ -15,14 +15,14 @@ description: "ttv – display TV/video on a tty"
 <p> <code>ttv</code> displays TV/video on a terminal, rendering the images using aalib.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-h</code></p>
-<dd> print help text.</p>
-<dt><code>-f</code></p>
-<dd> use fast aalib render function.</p>
-<dt><code>-c device</code></p>
-<dd> video4linux device (default is /dev/video0).</p>
-<dt><code>-D driver</code></p>
-<dd> video4linux driver (default is &quot;libv4l&quot;).</dl>
+<dt><code>-h</code></dt>
+<dd> print help text.</dd>
+<dt><code>-f</code></dt>
+<dd> use fast aalib render function.</dd>
+<dt><code>-c device</code></dt>
+<dd> video4linux device (default is /dev/video0).</dd>
+<dt><code>-D driver</code></dt>
+<dd> video4linux driver (default is &quot;libv4l&quot;).</dd></dl>
 <p> There are also lots of options for aalib, check the aalib documentation for more details on them. The help text includes a list.</p>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/1-xawtv/">xawtv</a>(1), <a href="/docs/linux/man/1-fbtv/">fbtv</a>(1)</p>

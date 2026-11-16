@@ -12,7 +12,7 @@ description: "npm-cache – Manipulates packages cache"
 <h3>Synopsis</h3>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 npm cache add &lt;tarball file&gt;
 npm cache add &lt;folder&gt;
@@ -22,19 +22,17 @@ npm cache clean [&lt;path&gt;]
 aliases: npm cache clear, npm cache rm
 npm cache verify
 </pre>
-</dl>
+</dd></dl>
 <h3>Description</h3>
 <p> Used to add, list, or clean the npm cache folder.</p>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>&bull;</p>
-<dd> add: Add the specified package to the local cache. This command is primarily intended to be used internally by npm, but it can provide a way to add data to the local installation cache explicitly.</p>
-<dt>&bull;</p>
-<dd> clean: Delete all data out of the cache folder.</p>
-<dt>&bull;</p>
-<dd> verify: Verify the contents of the cache folder, garbage collecting any unneeded data, and verifying the integrity of the cache index and all cached data. </p>
+<dt>&bull;</dt>
+<dd> add: Add the specified package to the local cache. This command is primarily intended to be used internally by npm, but it can provide a way to add data to the local installation cache explicitly.</dd>
+<dt>&bull;</dt>
+<dd> clean: Delete all data out of the cache folder.</dd>
+<dt>&bull;</dt>
+<dd> verify: Verify the contents of the cache folder, garbage collecting any unneeded data, and verifying the integrity of the cache index and all cached data. </dd>
 </dl>
 </dl>
 <h3>Details</h3>
@@ -51,25 +49,23 @@ npm cache verify
 <p> The root cache folder.</p>
 <h3>See Also</h3>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>&bull;</p>
-<dd> npm help folders</p>
-<dt>&bull;</p>
-<dd> npm help config</p>
-<dt>&bull;</p>
-<dd> npm help npmrc</p>
-<dt>&bull;</p>
-<dd> npm help install</p>
-<dt>&bull;</p>
-<dd> npm help publish</p>
-<dt>&bull;</p>
-<dd> npm help pack</p>
-<dt>&bull;</p>
-<dd> <a rel="nofollow" href="https://npm.im/cacache">https://npm.im/cacache</a></p>
-<dt>&bull;</p>
-<dd> <a rel="nofollow" href="https://npm.im/pacote">https://npm.im/pacote</a> </p>
+<dt>&bull;</dt>
+<dd> npm help folders</dd>
+<dt>&bull;</dt>
+<dd> npm help config</dd>
+<dt>&bull;</dt>
+<dd> npm help npmrc</dd>
+<dt>&bull;</dt>
+<dd> npm help install</dd>
+<dt>&bull;</dt>
+<dd> npm help publish</dd>
+<dt>&bull;</dt>
+<dd> npm help pack</dd>
+<dt>&bull;</dt>
+<dd> <a rel="nofollow" href="https://npm.im/cacache">https://npm.im/cacache</a></dd>
+<dt>&bull;</dt>
+<dd> <a rel="nofollow" href="https://npm.im/pacote">https://npm.im/pacote</a> </dd>
 </dl>
 </dl>
 <h2>Index</h2>

@@ -11,10 +11,10 @@ description: "kmag – Screen magnifier"
 <p> kmag &#8211; Screen magnifier </p>
 <h2>SYNOPSIS</h2>
 <dl>
-<dt> <code>kmag</code> [KDE Generic Options] [Qt(TM)&nbsp;<wbr>Generic Options]</dl>
+<dt> <code>kmag</code> [KDE Generic Options] [Qt(TM)&nbsp;<wbr>Generic Options]</dt></dl>
 <h2>DESCRIPTION</h2>
 <p> <code>kmag</code>, also known as</p>
-<dd>KMagnifier is a screen magnifier. You can use KMagnifier to magnify a part of the screen just as you would use a lens to magnify a newspaper fine-print or a photograph. This application is useful for a variety of people: from researchers to artists to web-designers to people with low vision.</p>
+<dd>KMagnifier is a screen magnifier. You can use KMagnifier to magnify a part of the screen just as you would use a lens to magnify a newspaper fine-print or a photograph. This application is useful for a variety of people: from researchers to artists to web-designers to people with low vision.</dd>
 <h2>SEE ALSO</h2>
 <p> More detailed user documentation is available from m[blue]<code>help:/kmag</code>m[] (either enter this URL into Konqueror, or run <code>khelpcenter</code><i>help:/kmag</i>). </p>
 <p> There is also further information available at the m[blue]<code>KDE accessibility project home page.</code>m[]<font SIZE="-2">[1]</font></p>
@@ -24,13 +24,13 @@ description: "kmag – Screen magnifier"
 <p> <code>Lauri Watts</code> &lt;lauri [at] kde.org&gt;</p>
 <dl>
 <dt>
-<dd> Author.</dl>
+</dt><dd> Author.</dd></dl>
 <h2>NOTES</h2>
 <dl>
-<dt> 1.</p>
-<dd> KDE accessibility project home page.</p>
+<dt> 1.</dt>
+<dd> KDE accessibility project home page.</dd>
 <dl>
 <dt>
-<dd> <a rel="nofollow" href="http://accessibility.kde.org/">http://accessibility.kde.org/</a></dl>
+</dt><dd> <a rel="nofollow" href="http://accessibility.kde.org/">http://accessibility.kde.org/</a></dd></dl>
 </dl>
 <h2>Index</h2>

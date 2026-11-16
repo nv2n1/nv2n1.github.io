@@ -15,7 +15,7 @@ netdev_master_upper_dev_get_rcu - Get master upper device
 <h2>Arguments</h2>
 
 <i>dev</i>
-<dl><dd><dd>device</dl>
+<dl><dd></dd><dd>device</dd></dl>
 
 <h2>Description</h2>
 

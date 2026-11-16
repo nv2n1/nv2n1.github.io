@@ -14,12 +14,12 @@ description: "DROP OWNED – remove database objects owned by a database role"
 <p><code>DROP OWNED</code> drops all the objects in the current database that are owned by one of the specified roles. Any privileges granted to the given roles on objects in the current database will also be revoked.</p>
 <h2>Parameters</h2>
 <dl>
-<dt><i>name</i></p>
-<dd>The name of a role whose objects will be dropped, and whose privileges will be revoked.</p>
-<dt><code>CASCADE</code></p>
-<dd>Automatically drop objects that depend on the affected objects.</p>
-<dt><code>RESTRICT</code></p>
-<dd>Refuse to drop the objects owned by a role if any other database objects depend on one of the affected objects. This is the default.</dl>
+<dt><i>name</i></dt>
+<dd>The name of a role whose objects will be dropped, and whose privileges will be revoked.</dd>
+<dt><code>CASCADE</code></dt>
+<dd>Automatically drop objects that depend on the affected objects.</dd>
+<dt><code>RESTRICT</code></dt>
+<dd>Refuse to drop the objects owned by a role if any other database objects depend on one of the affected objects. This is the default.</dd></dl>
 <h2>Notes</h2>
 <p><code>DROP OWNED</code> is often used to prepare for the removal of one or more roles. Because <code>DROP OWNED</code> only affects the objects in the current database, it is usually necessary to execute this command in each database that contains objects owned by a role that is to be removed. </p>
 <p> Using the CASCADE option might make the command recurse to objects owned by other users. </p>

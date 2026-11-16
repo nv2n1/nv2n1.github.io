@@ -19,12 +19,12 @@ description: "XmFontListGetNextFont — A font list function that allows applica
 <p> This routine allocates memory for the character set string that must be freed by the application. The function allocates memory for <i>charset</i>. The application is responsible for managing the allocated memory. The application can recover the allocated memory by calling <code>XtFree</code>. </p>
 <p> This function is obsolete and exists for compatibility with previous releases. It is replaced by <code>XmFontListNextEntry</code>. If <code>XmFontListGetNextFont</code> is passed a context that contains a font set entry, it will return the first font of the font set. The next call to the function will move to the next entry in the font list.</p>
 <dl COMPACT>
-<dt><i>context</i></p>
-<dd>Specifies the font list context</p>
-<dt><i>charset</i></p>
-<dd>Specifies a pointer to a character set string; the routine returns the character set for the current font list element</p>
-<dt><i>font</i></p>
-<dd>Specifies a pointer to a pointer to a font structure; the routine returns the font for the current font list element</dl>
+<dt><i>context</i></dt>
+<dd>Specifies the font list context</dd>
+<dt><i>charset</i></dt>
+<dd>Specifies a pointer to a character set string; the routine returns the character set for the current font list element</dd>
+<dt><i>font</i></dt>
+<dd>Specifies a pointer to a pointer to a font structure; the routine returns the font for the current font list element</dd></dl>
 <h2>Return</h2>
 <p>Returns True if the returned values are valid; otherwise, returns False.</p>
 <h2>Related</h2>

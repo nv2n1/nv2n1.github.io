@@ -33,8 +33,9 @@ description: "QuantLib::HazardRateStructure – hazard-rate adapter for default-
 <p>default constructor </p>
 <p> <code>Warning</code></p>
 <dl COMPACT>
-<dd>term structures initialized by means of this constructor must manage their own reference date by overriding the <code>referenceDate()</code> method.</dl>
+<dd>term structures initialized by means of this constructor must manage their own reference date by overriding the <code>referenceDate()</code> method.</dd></dl>
 <h2>Member Function Documentation</h2>
 <h3>Probability survivalProbabilityImpl (Time) const [protected, virtual]</h3>
 <p>probability of survival between today (t = 0) and a given time </p>
 <p> implemented in terms of the hazard rate $ h(t) $ as [ S(t) = 
+</p>

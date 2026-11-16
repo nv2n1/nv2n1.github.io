@@ -24,14 +24,10 @@ The call std::nan(&quot;string&quot;), where string is neither an n-char-sequenc
 <h2>Example</h2>
 <p>// Run this code </p>
 <pre><code>#include &lt;iostream&gt;
-
 #include &lt;cmath&gt;
-
 #include &lt;cstdint&gt;
-
 #include &lt;cstring&gt;
 int main()
-
 {
     double f1 = std::nan(&quot;1&quot;);
     std::uint64_t f1n;

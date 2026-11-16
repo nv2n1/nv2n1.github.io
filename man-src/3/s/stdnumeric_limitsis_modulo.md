@@ -11,7 +11,6 @@ description: "std::numeric_limits<T>::is_modulo – std::numeric_limits<T>::is_m
 <h2>Synopsis</h2>
 <pre><code>static const bool is_modulo;
 (until C++ 11)
-
     static constexpr bool is_modulo;
 (since C++ 11)</code></pre>
 <p>The value of std::numeric_limits&lt;T&gt;::is_modulo is true for all arithmetic types T that<br />
@@ -46,15 +45,11 @@ long double false</p>
 <p>Demonstrates the behavior of modulo types<br />
  // Run this code </p>
 <pre><code>#include &lt;iostream&gt;
-
 #include &lt;type_traits&gt;
-
 #include &lt;limits&gt;
 template &lt;class T&gt;
-
 typename std::enable_if&lt;std::numeric_limits&lt;T&gt;::is_modulo&gt;::type
 check_overflow()
-
 {
     std::cout &lt;&lt; &quot;
 max value is &quot; &lt;&lt; std::numeric_limits&lt;T&gt;::max() &lt;&lt; '
@@ -65,7 +60,6 @@ max value is &quot; &lt;&lt; std::numeric_limits&lt;T&gt;::max() &lt;&lt; '
 ';
 }
 int main()
-
 {
     check_overflow&lt;int&gt;();
     check_overflow&lt;unsigned long&gt;();

@@ -20,18 +20,18 @@ description: "btraceback – wrapper script around gdb and bsmtp"
 <p><code>btracback</code> relies on <code>$PATH</code> to find the debugger.</p>
 <h2>Files</h2>
 <dl>
-<dt><i>/usr/lib/bacula/btraceback</i></p>
+<dt><i>/usr/lib/bacula/btraceback</i></dt>
 <dd>
-<dl>
-<dd>The script itself.</dl>
-<dt><i>/usr/sbin/btraceback</i></p>
+</dd><dl>
+<dd>The script itself.</dd></dl>
+<dt><i>/usr/sbin/btraceback</i></dt>
 <dd>
-<dl>
-<dd>symbolic link to <i>/usr/lib/bacula/btraceback</i></dl>
-<dt><i>/etc/bacula/scripts/btraceback.gdb</i></p>
+</dd><dl>
+<dd>symbolic link to <i>/usr/lib/bacula/btraceback</i></dd></dl>
+<dt><i>/etc/bacula/scripts/btraceback.gdb</i></dt>
 <dd>
-<dl>
-<dd>the GDB command batch used to output a stack trace</dl>
+</dd><dl>
+<dd>the GDB command batch used to output a stack trace</dd></dl>
 </dl>
 <h2>Author</h2>
 <p>This manual page was written by Lucas B. Cohen &lt;lbc [at] members.fsf.org&gt;</p>

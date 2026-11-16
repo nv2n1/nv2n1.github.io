@@ -14,16 +14,16 @@ description: "gnutls_pcert_import_openpgp_raw – API function"
 <p> <code>int gnutls_pcert_import_openpgp_raw(gnutls_pcert_st * </code><i>pcert</i><code>, const gnutls_datum_t * </code><i>cert</i><code>, gnutls_openpgp_crt_fmt_t </code><i>format</i><code>, gnutls_openpgp_keyid_t </code><i>keyid</i><code>, unsigned int </code><i>flags</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
-<dt>gnutls_pcert_st * pcert</p>
-<dd> The pcert structure</p>
-<dt>const gnutls_datum_t * cert</p>
-<dd> The raw certificate to be imported</p>
-<dt>gnutls_openpgp_crt_fmt_t format</p>
-<dd> The format of the certificate</p>
-<dt>gnutls_openpgp_keyid_t keyid</p>
-<dd> The key ID to use (NULL for the master key)</p>
-<dt>unsigned int flags</p>
-<dd> zero for now</dl>
+<dt>gnutls_pcert_st * pcert</dt>
+<dd> The pcert structure</dd>
+<dt>const gnutls_datum_t * cert</dt>
+<dd> The raw certificate to be imported</dd>
+<dt>gnutls_openpgp_crt_fmt_t format</dt>
+<dd> The format of the certificate</dd>
+<dt>gnutls_openpgp_keyid_t keyid</dt>
+<dd> The key ID to use (NULL for the master key)</dd>
+<dt>unsigned int flags</dt>
+<dd> zero for now</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> This convenience function will import the given certificate to a <code>gnutls_pcert_st</code> structure. The structure must be deinitialized afterwards using <code>gnutls_pcert_deinit()</code>;</p>
 <h2>RETURNS</h2>
@@ -39,6 +39,6 @@ description: "gnutls_pcert_import_openpgp_raw – API function"
 <h2>SEE ALSO</h2>
 <p> The full documentation for <code>gnutls</code> is maintained as a Texinfo manual. If the /usr/share/doc/gnutls/ directory does not contain the HTML form visit <code></p>
 <dl>
-<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></p>
-<dd> </code></dl>
+<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></dt>
+<dd> </code></dd></dl>
 <h2>Index</h2>

@@ -10,53 +10,53 @@ description: "pam_setquota – PAM module to set or modify disk quotas on sessio
 <p>pam_setquota &#8211; PAM module to set or modify disk quotas on session start</p>
 <h2>Synopsis</h2>
 <dl>
-<dt> <code>pam_setquota.so</code> [fs=<i>/home</i>] [overwrite=<i>0</i>] [debug=<i>0</i>] [startuid=<i>1000</i>] [enduid=<i>0</i>] [bsoftlimit=<i>19000</i>] [bhardlimit=<i>20000</i>] [isoftlimit=<i>3000</i>] [ihardlimit=<i>4000</i>]</dl>
+<dt> <code>pam_setquota.so</code> [fs=<i>/home</i>] [overwrite=<i>0</i>] [debug=<i>0</i>] [startuid=<i>1000</i>] [enduid=<i>0</i>] [bsoftlimit=<i>19000</i>] [bhardlimit=<i>20000</i>] [isoftlimit=<i>3000</i>] [ihardlimit=<i>4000</i>]</dt></dl>
 <h2>Description</h2>
-<dd>pam_setquota is a PAM module to set or modify a disk quota at session start </p>
+<dd>pam_setquota is a PAM module to set or modify a disk quota at session start </dd>
 <p> This makes quotas usable with central user databases, such as MySQL or LDAP.</p>
 <h2>Options</h2>
 <p><code>fs=</code><i>/home</i></p>
 <dl>
-<dd>The device file or mountpoint the policy applies to. Defaults to the filesystem containing the users home directory.</dl>
+<dd>The device file or mountpoint the policy applies to. Defaults to the filesystem containing the users home directory.</dd></dl>
 <p> <code>overwrite=</code><i>0</i></p>
 <dl>
-<dd>Overwrite an existing quota. Note: Enabling this will remove the ability for the admin to manually configure different quotas for users for a filesystem with <code><a href="/docs/linux/man/8-edquota/">edquota</a></code>(8). (Defaults to 0)</dl>
+<dd>Overwrite an existing quota. Note: Enabling this will remove the ability for the admin to manually configure different quotas for users for a filesystem with <code><a href="/docs/linux/man/8-edquota/">edquota</a></code>(8). (Defaults to 0)</dd></dl>
 <p> <code>debug=</code><i>0</i></p>
 <dl>
-<dd>Enable debugging. A value of 1 outputs the old and new quota on a device. A value of 2 also prints out the matched and found filesystems should <code>fs</code> be unset. (Defaults to 0)</dl>
+<dd>Enable debugging. A value of 1 outputs the old and new quota on a device. A value of 2 also prints out the matched and found filesystems should <code>fs</code> be unset. (Defaults to 0)</dd></dl>
 <p> <code>startuid=</code><i>1000</i></p>
 <dl>
-<dd>Describe the start of the UID range the policy is applied to. (Defaults to UID_MIN from login.defs or the uidmin value defined at compile-time if UID_MIN is undefined)</dl>
+<dd>Describe the start of the UID range the policy is applied to. (Defaults to UID_MIN from login.defs or the uidmin value defined at compile-time if UID_MIN is undefined)</dd></dl>
 <p> <code>enduid=</code><i>0</i></p>
 <dl>
-<dd>Describe the end of the UID range the policy is applied to. Setting <i>enduid=0</i> results in an open-ended UID range (i.e. all uids greater than <code>startuid</code> are included). (Defaults to 0)</dl>
+<dd>Describe the end of the UID range the policy is applied to. Setting <i>enduid=0</i> results in an open-ended UID range (i.e. all uids greater than <code>startuid</code> are included). (Defaults to 0)</dd></dl>
 <p> <code>bsoftlimit=</code><i>19000</i></p>
 <dl>
-<dd>Soft limit for disk quota blocks, as defined by <code><a href="/docs/linux/man/2-quotactl/">quotactl</a></code>(2). Note: <code>bsoftlimit</code> and <code>bhardlimit</code> <i>must</i> be set at the same time!</dl>
+<dd>Soft limit for disk quota blocks, as defined by <code><a href="/docs/linux/man/2-quotactl/">quotactl</a></code>(2). Note: <code>bsoftlimit</code> and <code>bhardlimit</code> <i>must</i> be set at the same time!</dd></dl>
 <p> <code>bhardlimit=</code><i>20000</i></p>
 <dl>
-<dd>Hard limit for disk quota blocks, as defined by <code><a href="/docs/linux/man/2-quotactl/">quotactl</a></code>(2). Note: <code>bsoftlimit</code> and <code>bhardlimit</code> <i>must</i> be set at the same time!</dl>
+<dd>Hard limit for disk quota blocks, as defined by <code><a href="/docs/linux/man/2-quotactl/">quotactl</a></code>(2). Note: <code>bsoftlimit</code> and <code>bhardlimit</code> <i>must</i> be set at the same time!</dd></dl>
 <p> <code>isoftlimit=</code><i>3000</i></p>
 <dl>
-<dd>Soft limit for inodes, as defined by <code> <a href="/docs/linux/man/2-quotactl/">quotactl</a></code>(2). Note: <code>isoftlimit</code> and <code>ihardlimit</code> <i>must</i> be set at the same time!</dl>
+<dd>Soft limit for inodes, as defined by <code> <a href="/docs/linux/man/2-quotactl/">quotactl</a></code>(2). Note: <code>isoftlimit</code> and <code>ihardlimit</code> <i>must</i> be set at the same time!</dd></dl>
 <p> <code>ihardlimit=</code><i>4000</i></p>
 <dl>
-<dd>Hard limit for inodes, as defined by <code> <a href="/docs/linux/man/2-quotactl/">quotactl</a></code>(2). Note: <code>isoftlimit</code> and <code>ihardlimit</code> <i>must</i> be set at the same time!</dl>
+<dd>Hard limit for inodes, as defined by <code> <a href="/docs/linux/man/2-quotactl/">quotactl</a></code>(2). Note: <code>isoftlimit</code> and <code>ihardlimit</code> <i>must</i> be set at the same time!</dd></dl>
 <h2>Module Types Provided</h2>
 <p>Only the <code>session</code> module type is provided.</p>
 <h2>Return Values</h2>
 <p>PAM_SUCCESS</p>
 <dl>
-<dd>The quota was set successfully.</dl>
+<dd>The quota was set successfully.</dd></dl>
 <p> PAM_IGNORE</p>
 <dl>
-<dd>No action was taken because either the UID of the user was outside of the specifed range, a quota already existed and <code>overwrite=1</code> was not configured or no limits were configured at all.</dl>
+<dd>No action was taken because either the UID of the user was outside of the specifed range, a quota already existed and <code>overwrite=1</code> was not configured or no limits were configured at all.</dd></dl>
 <p> PAM_USER_UNKNOWN</p>
 <dl>
-<dd>The user was not found.</dl>
+<dd>The user was not found.</dd></dl>
 <p> PAM_PERM_DENIED</p>
 <dl>
-<dd>/proc/mounts could not be opened. </p>
+<dd>/proc/mounts could not be opened. </dd>
 <p> The filesystem or device specified was not found. </p>
 <p> The limits for the user could not be retrieved. See syslog for more information. </p>
 <p> The limits for the user could not be set. See syslog for more information. </p>
@@ -68,7 +68,7 @@ description: "pam_setquota – PAM module to set or modify disk quotas on sessio
 <pre> session required pam_setquota.so bsoftlimit=1000 bhardlimit=2000 isoftlimit=1000 ihardlimit=2000 startuid=1000 enduid=0 fs=/home
  session required pam_setquota.so bsoftlimit=19000 bhardlimit=20000 isoftlimit=3000 ihardlimit=4000 startuid=2001 enduid=3000 fs=/dev/sda1
  session required pam_setquota.so bsoftlimit=19000 bhardlimit=20000 isoftlimit=3000 ihardlimit=4000 startuid=3001 enduid=4000 fs=/dev/sda1 overwrite=1</pre>
-</dl>
+</dd></dl>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/5-pam-conf/">pam.conf</a></code>(5), <code><a href="/docs/linux/man/5-pam-d/">pam.d</a></code>(5), <code><a href="/docs/linux/man/8-pam/">pam</a></code>(8)</p>
 <h2>Author</h2>

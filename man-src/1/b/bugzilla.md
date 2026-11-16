@@ -22,300 +22,300 @@ description: "bugzilla – command-line interface to Bugzilla over XML-RPC"
  <i></i> * info &#8211; get info about the given bugzilla instance</p>
 <h2>GLOBAL OPTIONS</h2>
 <dl>
-<dt>&#8211;version</p>
-<dd> show program&#8217;s version number and exit</p>
-<dt>&#8211;help, -h</p>
-<dd> show this help message and exit</p>
-<dt>&#8211;bugzilla=BUGZILLA</p>
-<dd> bugzilla XMLRPC URI. default: <a rel="nofollow" href="https://bugzilla.redhat.com/xmlrpc.cgi">https://bugzilla.redhat.com/xmlrpc.cgi</a></p>
-<dt>&#8211;nosslverify</p>
-<dd> Don&#8217;t error on invalid bugzilla SSL certificate</p>
-<dt>&#8211;user=USER</p>
-<dd> Optional bugzilla login username</p>
-<dt>&#8211;password=PASSWORD</p>
-<dd> Optional bugzilla login password</p>
-<dt>&#8211;login</p>
-<dd> Run interactive &quot;login&quot; before performing the specified command.</p>
-<dt>&#8211;ensure-logged-in</p>
-<dd> Raise an error if we aren&#8217;t logged in to bugzilla. Consider using this if you are depending on cached credentials, to ensure that when they expire the tool errors, rather than subtly change output.</p>
-<dt>&#8211;no-cache-credentials</p>
-<dd> Don&#8217;t save any bugzilla cookies or tokens to disk, and don&#8217;t use any pre-existing credentials.</p>
-<dt>&#8211;cookiefile=COOKIEFILE</p>
-<dd> cookie file to use for bugzilla authentication</p>
-<dt>&#8211;tokenfile=TOKENFILE</p>
-<dd> token file to use for bugzilla authentication</p>
-<dt>&#8211;verbose</p>
-<dd> give more info about what&#8217;s going on</p>
-<dt>&#8211;debug</p>
-<dd> output bunches of debugging info</dl>
+<dt>&#8211;version</dt>
+<dd> show program&#8217;s version number and exit</dd>
+<dt>&#8211;help, -h</dt>
+<dd> show this help message and exit</dd>
+<dt>&#8211;bugzilla=BUGZILLA</dt>
+<dd> bugzilla XMLRPC URI. default: <a rel="nofollow" href="https://bugzilla.redhat.com/xmlrpc.cgi">https://bugzilla.redhat.com/xmlrpc.cgi</a></dd>
+<dt>&#8211;nosslverify</dt>
+<dd> Don&#8217;t error on invalid bugzilla SSL certificate</dd>
+<dt>&#8211;user=USER</dt>
+<dd> Optional bugzilla login username</dd>
+<dt>&#8211;password=PASSWORD</dt>
+<dd> Optional bugzilla login password</dd>
+<dt>&#8211;login</dt>
+<dd> Run interactive &quot;login&quot; before performing the specified command.</dd>
+<dt>&#8211;ensure-logged-in</dt>
+<dd> Raise an error if we aren&#8217;t logged in to bugzilla. Consider using this if you are depending on cached credentials, to ensure that when they expire the tool errors, rather than subtly change output.</dd>
+<dt>&#8211;no-cache-credentials</dt>
+<dd> Don&#8217;t save any bugzilla cookies or tokens to disk, and don&#8217;t use any pre-existing credentials.</dd>
+<dt>&#8211;cookiefile=COOKIEFILE</dt>
+<dd> cookie file to use for bugzilla authentication</dd>
+<dt>&#8211;tokenfile=TOKENFILE</dt>
+<dd> token file to use for bugzilla authentication</dd>
+<dt>&#8211;verbose</dt>
+<dd> give more info about what&#8217;s going on</dd>
+<dt>&#8211;debug</dt>
+<dd> output bunches of debugging info</dd></dl>
 <h2>&#8216;NEW&#8217; OPTIONS</h2>
 <dl>
-<dt>&#8211;product=PRODUCT, -p PRODUCT</p>
-<dd> REQUIRED: product name</p>
-<dt>&#8211;version=VERSION, -v VERSION</p>
-<dd> REQUIRED: product version</p>
-<dt>&#8211;component=COMPONENT, -c COMPONENT</p>
-<dd> REQUIRED: component name</p>
-<dt>&#8211;sub-component=SUB_COMPONENT</p>
-<dd> Optional sub component name</p>
-<dt>&#8211;short_desc=SUMMARY, &#8211;summary=SUMMARY, -s SUMMARY</p>
-<dd> REQUIRED: bug summary</p>
-<dt>&#8211;comment=DESCRIPTION, -l DESCRIPTION</p>
-<dd> initial bug comment</p>
-<dt>&#8211;os=OS, -o OS</p>
-<dd> Operating system</p>
-<dt>&#8211;arch=ARCH, -a ARCH</p>
-<dd> Arch this bug occurs on</p>
-<dt>&#8211;severity=SEVERITY</p>
-<dd> Bug severity</p>
-<dt>&#8211;priority=PRIORITY</p>
-<dd> Bug priority</p>
-<dt>&#8211;url=URL, -u URL</p>
-<dd> URL for further bug info</p>
-<dt>&#8211;cc=CC[, CC, &#8230;]</p>
-<dd> add emails to initial CC list</p>
-<dt>&#8211;blocked=BUGID[, BUGID, &#8230;]</p>
-<dd> add bug_ids blocked by this bug</p>
-<dt>&#8211;dependson=BUGID[, BUGID, &#8230;]</p>
-<dd> add bug_ids that this bug depends on</p>
-<dt>&#8211;groups=GROUP[, GROUP, &#8230;]</p>
-<dd> add groups to which bug is visible</p>
-<dt>&#8211;assigned_to=ASSIGNED_TO</p>
-<dd> Assign bugzilla to specified email address</p>
-<dt>&#8211;qa_contact=QA_CONTACT</p>
-<dd> Set QA contact to specified email address</p>
-<dt>&#8211;keywords=KEYWORD[, KEYWORD, &#8230;]</p>
-<dd> Set specified keywords on new bugzilla</p>
-<dt>&#8211;alias=ALIAS</p>
-<dd> An alias (name) for the bug (must be unique)</p>
-<dt>&#8211;field=FIELD=VALUE</p>
-<dd> Set a specified field. FIELD is expected to be the raw name used by the bugzilla instance. No safety checks are perfomed when using this option. </p>
+<dt>&#8211;product=PRODUCT, -p PRODUCT</dt>
+<dd> REQUIRED: product name</dd>
+<dt>&#8211;version=VERSION, -v VERSION</dt>
+<dd> REQUIRED: product version</dd>
+<dt>&#8211;component=COMPONENT, -c COMPONENT</dt>
+<dd> REQUIRED: component name</dd>
+<dt>&#8211;sub-component=SUB_COMPONENT</dt>
+<dd> Optional sub component name</dd>
+<dt>&#8211;short_desc=SUMMARY, &#8211;summary=SUMMARY, -s SUMMARY</dt>
+<dd> REQUIRED: bug summary</dd>
+<dt>&#8211;comment=DESCRIPTION, -l DESCRIPTION</dt>
+<dd> initial bug comment</dd>
+<dt>&#8211;os=OS, -o OS</dt>
+<dd> Operating system</dd>
+<dt>&#8211;arch=ARCH, -a ARCH</dt>
+<dd> Arch this bug occurs on</dd>
+<dt>&#8211;severity=SEVERITY</dt>
+<dd> Bug severity</dd>
+<dt>&#8211;priority=PRIORITY</dt>
+<dd> Bug priority</dd>
+<dt>&#8211;url=URL, -u URL</dt>
+<dd> URL for further bug info</dd>
+<dt>&#8211;cc=CC[, CC, &#8230;]</dt>
+<dd> add emails to initial CC list</dd>
+<dt>&#8211;blocked=BUGID[, BUGID, &#8230;]</dt>
+<dd> add bug_ids blocked by this bug</dd>
+<dt>&#8211;dependson=BUGID[, BUGID, &#8230;]</dt>
+<dd> add bug_ids that this bug depends on</dd>
+<dt>&#8211;groups=GROUP[, GROUP, &#8230;]</dt>
+<dd> add groups to which bug is visible</dd>
+<dt>&#8211;assigned_to=ASSIGNED_TO</dt>
+<dd> Assign bugzilla to specified email address</dd>
+<dt>&#8211;qa_contact=QA_CONTACT</dt>
+<dd> Set QA contact to specified email address</dd>
+<dt>&#8211;keywords=KEYWORD[, KEYWORD, &#8230;]</dt>
+<dd> Set specified keywords on new bugzilla</dd>
+<dt>&#8211;alias=ALIAS</dt>
+<dd> An alias (name) for the bug (must be unique)</dd>
+<dt>&#8211;field=FIELD=VALUE</dt>
+<dd> Set a specified field. FIELD is expected to be the raw name used by the bugzilla instance. No safety checks are perfomed when using this option. </dd>
 </dl>
 <h2>OUTPUT FORMAT &#8216;NEW&#8217; OPTIONS</h2>
 <dl>
-<dt>&#8211;full, -f</p>
-<dd> output detailed bug info</p>
-<dt>&#8211;ids, -i</p>
-<dd> output only bug IDs</p>
-<dt>&#8211;extra, -e</p>
-<dd> output additional bug information (keywords, Whiteboards, etc.)</p>
-<dt>&#8211;oneline</p>
-<dd> one line summary of the bug (useful for scripts)</p>
-<dt>&#8211;raw</p>
-<dd> raw output of the bugzilla contents</p>
-<dt>&#8211;outputformat=OUTPUTFORMAT</p>
-<dd> Print output in the form given. You can use RPM-style tags that match bug fields, e.g.: &#8216;%{id}: %{summary}&#8217;. See the man page section &#8216;OUTPUT FORMAT&#8217; for more details.</dl>
+<dt>&#8211;full, -f</dt>
+<dd> output detailed bug info</dd>
+<dt>&#8211;ids, -i</dt>
+<dd> output only bug IDs</dd>
+<dt>&#8211;extra, -e</dt>
+<dd> output additional bug information (keywords, Whiteboards, etc.)</dd>
+<dt>&#8211;oneline</dt>
+<dd> one line summary of the bug (useful for scripts)</dd>
+<dt>&#8211;raw</dt>
+<dd> raw output of the bugzilla contents</dd>
+<dt>&#8211;outputformat=OUTPUTFORMAT</dt>
+<dd> Print output in the form given. You can use RPM-style tags that match bug fields, e.g.: &#8216;%{id}: %{summary}&#8217;. See the man page section &#8216;OUTPUT FORMAT&#8217; for more details.</dd></dl>
 <h2>&#8216;QUERY&#8217; OPTIONS</h2>
 <dl>
-<dt>&#8211;bug_id=BUG_ID, -b BUG_ID</p>
-<dd> specify individual bugs by IDs, separated with commas</p>
-<dt>&#8211;product=PRODUCT, -p PRODUCT</p>
-<dd> product name, comma-separated (list with &#8216;bugzilla info &#8211;products&#8217;)</p>
-<dt>&#8211;version=VERSION, -v VERSION</p>
-<dd> product version, comma-separated</p>
-<dt>&#8211;component=COMPONENT, -c COMPONENT</p>
-<dd> component name(s), comma-separated (list with &#8216;bugzilla info &#8211;components PRODUCT&#8217;)</p>
-<dt>&#8211;sub-component=SUB_COMPONENT</p>
-<dd> Sub component. Can be specified multiple times</p>
-<dt>&#8211;components_file=COMPONENTS_FILE</p>
-<dd> list of component names from a file, one component per line (list with &#8216;bugzilla info -c PRODUCT&#8217;)</p>
-<dt>&#8211;long_desc=LONG_DESC, -l LONG_DESC</p>
-<dd> search inside bug comments</p>
-<dt>&#8211;target_milestone=TARGET_MILESTONE, -m TARGET_MILESTONE</p>
-<dd> search for a target milestone</p>
-<dt>&#8211;short_desc=SHORT_DESC, -s SHORT_DESC</p>
-<dd> search bug summaries</p>
-<dt>&#8211;bug_status=BUG_STATUS, -t BUG_STATUS</p>
-<dd> comma-separated list of bug statuses to accept [Default:all]</p>
-<dt>&#8211;bug_severity=BUG_SEVERITY, &#8211;severity=BUG_SEVERITY, -x BUG_SEVERITY</p>
-<dd> search severities, comma-separated</p>
-<dt>&#8211;priority=PRIORITY, -z PRIORITY</p>
-<dd> search priorities, comma-separated</p>
-<dt>&#8211;from-url=FROM_URL</p>
-<dd> Use the query given by a query.cgi URL. (Use quotes!)</p>
-<dt>&#8211;quicksearch=QUICKSEARCH</p>
-<dd> Search using bugzilla&#8217;s quicksearch functionality.</p>
-<dt>&#8211;savedsearch=SAVEDSEARCH</p>
-<dd> Name of a bugzilla saved search. If you don&#8217;t own this saved search, you must passed &#8211;savedsearch_sharer_id.</p>
-<dt>&#8211;savedsearch-sharer-id=SAVEDSEARCH_SHARER_ID</p>
-<dd> Owner ID of the &#8211;savedsearch. You can get this ID from the URL bugzilla generates when running the saved search from the web UI.</p>
-<dt>&#8211;field=FIELD=VALUE</p>
-<dd> Query a specified field. FIELD is expected to be the raw name used by the bugzilla instance. No safety checks are perfomed when using this option. </p>
+<dt>&#8211;bug_id=BUG_ID, -b BUG_ID</dt>
+<dd> specify individual bugs by IDs, separated with commas</dd>
+<dt>&#8211;product=PRODUCT, -p PRODUCT</dt>
+<dd> product name, comma-separated (list with &#8216;bugzilla info &#8211;products&#8217;)</dd>
+<dt>&#8211;version=VERSION, -v VERSION</dt>
+<dd> product version, comma-separated</dd>
+<dt>&#8211;component=COMPONENT, -c COMPONENT</dt>
+<dd> component name(s), comma-separated (list with &#8216;bugzilla info &#8211;components PRODUCT&#8217;)</dd>
+<dt>&#8211;sub-component=SUB_COMPONENT</dt>
+<dd> Sub component. Can be specified multiple times</dd>
+<dt>&#8211;components_file=COMPONENTS_FILE</dt>
+<dd> list of component names from a file, one component per line (list with &#8216;bugzilla info -c PRODUCT&#8217;)</dd>
+<dt>&#8211;long_desc=LONG_DESC, -l LONG_DESC</dt>
+<dd> search inside bug comments</dd>
+<dt>&#8211;target_milestone=TARGET_MILESTONE, -m TARGET_MILESTONE</dt>
+<dd> search for a target milestone</dd>
+<dt>&#8211;short_desc=SHORT_DESC, -s SHORT_DESC</dt>
+<dd> search bug summaries</dd>
+<dt>&#8211;bug_status=BUG_STATUS, -t BUG_STATUS</dt>
+<dd> comma-separated list of bug statuses to accept [Default:all]</dd>
+<dt>&#8211;bug_severity=BUG_SEVERITY, &#8211;severity=BUG_SEVERITY, -x BUG_SEVERITY</dt>
+<dd> search severities, comma-separated</dd>
+<dt>&#8211;priority=PRIORITY, -z PRIORITY</dt>
+<dd> search priorities, comma-separated</dd>
+<dt>&#8211;from-url=FROM_URL</dt>
+<dd> Use the query given by a query.cgi URL. (Use quotes!)</dd>
+<dt>&#8211;quicksearch=QUICKSEARCH</dt>
+<dd> Search using bugzilla&#8217;s quicksearch functionality.</dd>
+<dt>&#8211;savedsearch=SAVEDSEARCH</dt>
+<dd> Name of a bugzilla saved search. If you don&#8217;t own this saved search, you must passed &#8211;savedsearch_sharer_id.</dd>
+<dt>&#8211;savedsearch-sharer-id=SAVEDSEARCH_SHARER_ID</dt>
+<dd> Owner ID of the &#8211;savedsearch. You can get this ID from the URL bugzilla generates when running the saved search from the web UI.</dd>
+<dt>&#8211;field=FIELD=VALUE</dt>
+<dd> Query a specified field. FIELD is expected to be the raw name used by the bugzilla instance. No safety checks are perfomed when using this option. </dd>
 </dl>
 <h2>EMAIL &#8216;QUERY&#8217; OPTIONS</h2>
 <dl>
-<dt>&#8211;emailtype=EMAILTYPE, -E EMAILTYPE</p>
-<dd> Email: specify searching option for emails, ie. substring, notsubstring, exact, &#8230; [Default: substring]</p>
-<dt>&#8211;cc=CC, -o CC</p>
-<dd> Email: search cc lists for given address</p>
-<dt>&#8211;reporter=REPORTER, -r REPORTER</p>
-<dd> Email: search reporter email for given address</p>
-<dt>&#8211;assigned_to=ASSIGNED_TO, -a ASSIGNED_TO</p>
-<dd> Email: search for bugs assigned to this address</p>
-<dt>&#8211;qa_contact=QA_CONTACT, -q QA_CONTACT</p>
-<dd> Email: search for bugs which have QA Contact assigned to this address </p>
+<dt>&#8211;emailtype=EMAILTYPE, -E EMAILTYPE</dt>
+<dd> Email: specify searching option for emails, ie. substring, notsubstring, exact, &#8230; [Default: substring]</dd>
+<dt>&#8211;cc=CC, -o CC</dt>
+<dd> Email: search cc lists for given address</dd>
+<dt>&#8211;reporter=REPORTER, -r REPORTER</dt>
+<dd> Email: search reporter email for given address</dd>
+<dt>&#8211;assigned_to=ASSIGNED_TO, -a ASSIGNED_TO</dt>
+<dd> Email: search for bugs assigned to this address</dd>
+<dt>&#8211;qa_contact=QA_CONTACT, -q QA_CONTACT</dt>
+<dd> Email: search for bugs which have QA Contact assigned to this address </dd>
 </dl>
 <h2>STRING SEARCH &#8216;QUERY&#8217; OPTIONS</h2>
 <dl>
-<dt>&#8211;url=URL, -u URL</p>
-<dd> search keywords field for given url</p>
-<dt>&#8211;url_type=URL_TYPE, -U URL_TYPE</p>
-<dd> specify searching option for urls, ie. anywords, allwords, nowords</p>
-<dt>&#8211;keywords=KEYWORDS, -k KEYWORDS</p>
-<dd> search keywords field for specified words</p>
-<dt>&#8211;keywords_type=KEYWORDS_TYPE, -K KEYWORDS_TYPE</p>
-<dd> specify searching option for keywords, ie. anywords, allwords, nowords</p>
-<dt>&#8211;status_whiteboard=STATUS_WHITEBOARD, -w STATUS_WHITEBOARD</p>
-<dd> search Status Whiteboard field for specified words</p>
-<dt>&#8211;status_whiteboard_type=STATUS_WHITEBOARD_TYPE, -W STATUS_WHITEBOARD_TYPE</p>
-<dd> specify searching option for Status Whiteboard, ie. anywords, allwords, nowords</p>
-<dt>&#8211;tags=TAGS</p>
-<dd> Search bug &#8216;tags&#8217; field </p>
+<dt>&#8211;url=URL, -u URL</dt>
+<dd> search keywords field for given url</dd>
+<dt>&#8211;url_type=URL_TYPE, -U URL_TYPE</dt>
+<dd> specify searching option for urls, ie. anywords, allwords, nowords</dd>
+<dt>&#8211;keywords=KEYWORDS, -k KEYWORDS</dt>
+<dd> search keywords field for specified words</dd>
+<dt>&#8211;keywords_type=KEYWORDS_TYPE, -K KEYWORDS_TYPE</dt>
+<dd> specify searching option for keywords, ie. anywords, allwords, nowords</dd>
+<dt>&#8211;status_whiteboard=STATUS_WHITEBOARD, -w STATUS_WHITEBOARD</dt>
+<dd> search Status Whiteboard field for specified words</dd>
+<dt>&#8211;status_whiteboard_type=STATUS_WHITEBOARD_TYPE, -W STATUS_WHITEBOARD_TYPE</dt>
+<dd> specify searching option for Status Whiteboard, ie. anywords, allwords, nowords</dd>
+<dt>&#8211;tags=TAGS</dt>
+<dd> Search bug &#8216;tags&#8217; field </dd>
 </dl>
 <h2>BOOLEAN &#8216;QUERY&#8217; OPTIONS</h2>
 <dl>
-<dt>&#8211;booleantype=BOOLEANTYPE, -B BOOLEANTYPE</p>
-<dd> specify searching option for booleans, ie. substring, notsubstring, exact, &#8230; [Default: substring]</p>
-<dt>&#8211;boolean_query=BOOLEAN_QUERY</p>
-<dd> Create your own query. Format: BooleanName-Condition-Parameter &amp;/| &#8230; . ie, keywords-substring-Partner &amp; keywords-notsubstring-OtherQA</p>
-<dt>&#8211;blocked=BLOCKED</p>
-<dd> Search for bugs that block this bug ID</p>
-<dt>&#8211;dependson=DEPENDSON</p>
-<dd> Search for bugs that depend on this bug ID</p>
-<dt>&#8211;flag=FLAG</p>
-<dd> Search for bugs that have certain flag states present. Ex &#8211;flags=dev_ack+</p>
-<dt>&#8211;qa_whiteboard=QA_WHITEBOARD</p>
-<dd> search for bugs that have certain QA Whiteboard text present</p>
-<dt>&#8211;devel_whiteboard=DEVEL_WHITEBOARD</p>
-<dd> search for bugs that have certain Devel Whiteboard text present</p>
-<dt>&#8211;alias=ALIAS</p>
-<dd> search for bugs that have the provided alias</p>
-<dt>&#8211;fixed_in=FIXED_IN</p>
-<dd> search Status Whiteboard field for specified words </p>
+<dt>&#8211;booleantype=BOOLEANTYPE, -B BOOLEANTYPE</dt>
+<dd> specify searching option for booleans, ie. substring, notsubstring, exact, &#8230; [Default: substring]</dd>
+<dt>&#8211;boolean_query=BOOLEAN_QUERY</dt>
+<dd> Create your own query. Format: BooleanName-Condition-Parameter &amp;/| &#8230; . ie, keywords-substring-Partner &amp; keywords-notsubstring-OtherQA</dd>
+<dt>&#8211;blocked=BLOCKED</dt>
+<dd> Search for bugs that block this bug ID</dd>
+<dt>&#8211;dependson=DEPENDSON</dt>
+<dd> Search for bugs that depend on this bug ID</dd>
+<dt>&#8211;flag=FLAG</dt>
+<dd> Search for bugs that have certain flag states present. Ex &#8211;flags=dev_ack+</dd>
+<dt>&#8211;qa_whiteboard=QA_WHITEBOARD</dt>
+<dd> search for bugs that have certain QA Whiteboard text present</dd>
+<dt>&#8211;devel_whiteboard=DEVEL_WHITEBOARD</dt>
+<dd> search for bugs that have certain Devel Whiteboard text present</dd>
+<dt>&#8211;alias=ALIAS</dt>
+<dd> search for bugs that have the provided alias</dd>
+<dt>&#8211;fixed_in=FIXED_IN</dt>
+<dd> search Status Whiteboard field for specified words </dd>
 </dl>
 <h2>OUTPUT FORMAT &#8216;QUERY&#8217; OPTIONS</h2>
 <dl>
-<dt>&#8211;full, -f</p>
-<dd> output detailed bug info</p>
-<dt>&#8211;ids, -i</p>
-<dd> output only bug IDs</p>
-<dt>&#8211;extra, -e</p>
-<dd> output additional bug information (keywords, Whiteboards, etc.)</p>
-<dt>&#8211;oneline</p>
-<dd> one line summary of the bug (useful for scripts)</p>
-<dt>&#8211;raw</p>
-<dd> raw output of the bugzilla contents</p>
-<dt>&#8211;outputformat=OUTPUTFORMAT</p>
-<dd> Print output in the form given. You can use RPM-style tags that match bug fields, e.g.: &#8216;%{id}: %{summary}&#8217;. See the man page section &#8216;OUTPUT FORMAT&#8217; for more details.</dl>
+<dt>&#8211;full, -f</dt>
+<dd> output detailed bug info</dd>
+<dt>&#8211;ids, -i</dt>
+<dd> output only bug IDs</dd>
+<dt>&#8211;extra, -e</dt>
+<dd> output additional bug information (keywords, Whiteboards, etc.)</dd>
+<dt>&#8211;oneline</dt>
+<dd> one line summary of the bug (useful for scripts)</dd>
+<dt>&#8211;raw</dt>
+<dd> raw output of the bugzilla contents</dd>
+<dt>&#8211;outputformat=OUTPUTFORMAT</dt>
+<dd> Print output in the form given. You can use RPM-style tags that match bug fields, e.g.: &#8216;%{id}: %{summary}&#8217;. See the man page section &#8216;OUTPUT FORMAT&#8217; for more details.</dd></dl>
 <h2>&#8216;MODIFY&#8217; OPTIONS</h2>
 <dl>
-<dt>&#8211;field=FIELD=VALUE</p>
-<dd> Modify a specified field. FIELD is expected to be the raw name used by the bugzilla instance. No safety checks are perfomed when using this option. </p>
+<dt>&#8211;field=FIELD=VALUE</dt>
+<dd> Modify a specified field. FIELD is expected to be the raw name used by the bugzilla instance. No safety checks are perfomed when using this option. </dd>
 </dl>
 <h2>BUG DETAILS</h2>
 <dl>
-<dt>&#8211;product=PRODUCT</p>
-<dd> Reassign bug to different product</p>
-<dt>&#8211;component=COMPONENT, -c COMPONENT</p>
-<dd> Reassign bug to different component</p>
-<dt>&#8211;sub-component=SUB_COMPONENT</p>
-<dd> Reassign bug to different sub-component (rhbz extension)</p>
-<dt>&#8211;version=VERSION, -v VERSION</p>
-<dd> Reassign bug to different version</p>
-<dt>&#8211;os=OS, -o OS</p>
-<dd> Change operating system this bug occurs on</p>
-<dt>&#8211;arch=ARCH, -a ARCH</p>
-<dd> Change arch this bug occurs on</p>
-<dt>&#8211;url=URL, -u URL</p>
-<dd> URL for further bug info</p>
-<dt>&#8211;alias=ALIAS</p>
-<dd> An alias (name) for the bug (must be unique) </p>
+<dt>&#8211;product=PRODUCT</dt>
+<dd> Reassign bug to different product</dd>
+<dt>&#8211;component=COMPONENT, -c COMPONENT</dt>
+<dd> Reassign bug to different component</dd>
+<dt>&#8211;sub-component=SUB_COMPONENT</dt>
+<dd> Reassign bug to different sub-component (rhbz extension)</dd>
+<dt>&#8211;version=VERSION, -v VERSION</dt>
+<dd> Reassign bug to different version</dd>
+<dt>&#8211;os=OS, -o OS</dt>
+<dd> Change operating system this bug occurs on</dd>
+<dt>&#8211;arch=ARCH, -a ARCH</dt>
+<dd> Change arch this bug occurs on</dd>
+<dt>&#8211;url=URL, -u URL</dt>
+<dd> URL for further bug info</dd>
+<dt>&#8211;alias=ALIAS</dt>
+<dd> An alias (name) for the bug (must be unique) </dd>
 </dl>
 <h2>BUG STATUS &#8216;MODIFY&#8217; OPTIONS</h2>
 <dl>
-<dt>&#8211;status=STATUS, -s STATUS</p>
-<dd> Change status of bug</p>
-<dt>&#8211;close=RESOLUTION, -k RESOLUTION</p>
-<dd> Close with the given resolution</p>
-<dt>&#8211;dupeid=ORIGINAL, -d ORIGINAL</p>
-<dd> ID of original bug (implies -k DUPLICATE)</p>
-<dt>&#8211;fixed_in=VERSION, -F VERSION</p>
-<dd> &quot;Fixed in version&quot; field </p>
+<dt>&#8211;status=STATUS, -s STATUS</dt>
+<dd> Change status of bug</dd>
+<dt>&#8211;close=RESOLUTION, -k RESOLUTION</dt>
+<dd> Close with the given resolution</dd>
+<dt>&#8211;dupeid=ORIGINAL, -d ORIGINAL</dt>
+<dd> ID of original bug (implies -k DUPLICATE)</dd>
+<dt>&#8211;fixed_in=VERSION, -F VERSION</dt>
+<dd> &quot;Fixed in version&quot; field </dd>
 </dl>
 <h2>COMMENT &#8216;MODIFY&#8217; OPTIONS</h2>
 <dl>
-<dt>&#8211;comment=COMMENT, -l COMMENT</p>
-<dd> Add a comment</p>
-<dt>&#8211;private, -p</p>
-<dd> Mark new comment as private</p>
-<dt>&#8211;summary=SUMMARY</p>
-<dd> Change bug summary </p>
+<dt>&#8211;comment=COMMENT, -l COMMENT</dt>
+<dd> Add a comment</dd>
+<dt>&#8211;private, -p</dt>
+<dd> Mark new comment as private</dd>
+<dt>&#8211;summary=SUMMARY</dt>
+<dd> Change bug summary </dd>
 </dl>
 <h2>CONTACT &#8216;MODIFY&#8217; OPTIONS</h2>
 <dl>
-<dt>&#8211;assignee=ASSIGNEE</p>
-<dd> Assign bugzilla to assignee</p>
-<dt>&#8211;cc=EMAIL</p>
-<dd> Alter CC list. EMAIL appends, -EMAIL removes.</p>
-<dt>&#8211;qa_contact=QA_CONTACT</p>
-<dd> Change QA contact</p>
-<dt>&#8211;reset-assignee</p>
-<dd> Reset assignee to component default</p>
-<dt>&#8211;reset-qa-contact</p>
-<dd> Reset QA contact to component default</p>
-<dt>&#8211;groups=GROUP[, GROUP, &#8230;]</p>
-<dd> add groups to which bug is visible </p>
+<dt>&#8211;assignee=ASSIGNEE</dt>
+<dd> Assign bugzilla to assignee</dd>
+<dt>&#8211;cc=EMAIL</dt>
+<dd> Alter CC list. EMAIL appends, -EMAIL removes.</dd>
+<dt>&#8211;qa_contact=QA_CONTACT</dt>
+<dd> Change QA contact</dd>
+<dt>&#8211;reset-assignee</dt>
+<dd> Reset assignee to component default</dd>
+<dt>&#8211;reset-qa-contact</dt>
+<dd> Reset QA contact to component default</dd>
+<dt>&#8211;groups=GROUP[, GROUP, &#8230;]</dt>
+<dd> add groups to which bug is visible </dd>
 </dl>
 <h2>TRACKING &#8216;MODIFY&#8217; OPTIONS</h2>
 <dl>
-<dt>&#8211;flag=FLAG, -f FLAG</p>
-<dd> Update bugzilla flags with requested type, ie fedora-cvs?, or needinfoX to clear (Use a new option for each flag)</p>
-<dt>&#8211;severity=SEVERITY</p>
-<dd> Change bug severity</p>
-<dt>&#8211;priority=PRIORITY</p>
-<dd> Change bug priority</p>
-<dt>&#8211;target_milestone=TARGET_MILESTONE</p>
-<dd> Set target milestone</p>
-<dt>&#8211;target_release=TARGET_RELEASE</p>
-<dd> Set target release</p>
-<dt>&#8211;blocked=BUGID[, BUGID, &#8230;]</p>
-<dd> Add bug_ids blocked by this bug. BUGID appends, -BUGID removes, =BUGID overwrites</p>
-<dt>&#8211;dependson=BUGID[, BUGID, &#8230;]</p>
-<dd> Alter depends_on list. BUGID appends, -BUGID removes, =BUGID overwrites</p>
-<dt>&#8211;keywords=KEYWORD</p>
-<dd> Alter bug keywords list. KEYWORD appends, -KEYWORD removes, =KEYWORD overwrites</p>
-<dt>&#8211;whiteboard=TEXT</p>
-<dd> Alter status whiteboard text. TEXT appends, -TEXT removes, =TEXT overwrites</p>
-<dt>&#8211;devel_whiteboard=TEXT</p>
-<dd> Alter devel whiteboard text. TEXT appends, -TEXT removes, =TEXT overwrites</p>
-<dt>&#8211;internal_whiteboard=TEXT</p>
-<dd> Alter internal whiteboard text. TEXT appends, -TEXT removes, =TEXT overwrites</p>
-<dt>&#8211;qa_whiteboard=TEXT</p>
-<dd> Alter QA whiteboard. TEXT appends, -TEXT removes, =TEXT overwrites</p>
-<dt>&#8211;tags=TEXT</p>
-<dd> Alter bug &#8216;tags&#8217; fieldTEXT appends, -TEXT removes</dl>
+<dt>&#8211;flag=FLAG, -f FLAG</dt>
+<dd> Update bugzilla flags with requested type, ie fedora-cvs?, or needinfoX to clear (Use a new option for each flag)</dd>
+<dt>&#8211;severity=SEVERITY</dt>
+<dd> Change bug severity</dd>
+<dt>&#8211;priority=PRIORITY</dt>
+<dd> Change bug priority</dd>
+<dt>&#8211;target_milestone=TARGET_MILESTONE</dt>
+<dd> Set target milestone</dd>
+<dt>&#8211;target_release=TARGET_RELEASE</dt>
+<dd> Set target release</dd>
+<dt>&#8211;blocked=BUGID[, BUGID, &#8230;]</dt>
+<dd> Add bug_ids blocked by this bug. BUGID appends, -BUGID removes, =BUGID overwrites</dd>
+<dt>&#8211;dependson=BUGID[, BUGID, &#8230;]</dt>
+<dd> Alter depends_on list. BUGID appends, -BUGID removes, =BUGID overwrites</dd>
+<dt>&#8211;keywords=KEYWORD</dt>
+<dd> Alter bug keywords list. KEYWORD appends, -KEYWORD removes, =KEYWORD overwrites</dd>
+<dt>&#8211;whiteboard=TEXT</dt>
+<dd> Alter status whiteboard text. TEXT appends, -TEXT removes, =TEXT overwrites</dd>
+<dt>&#8211;devel_whiteboard=TEXT</dt>
+<dd> Alter devel whiteboard text. TEXT appends, -TEXT removes, =TEXT overwrites</dd>
+<dt>&#8211;internal_whiteboard=TEXT</dt>
+<dd> Alter internal whiteboard text. TEXT appends, -TEXT removes, =TEXT overwrites</dd>
+<dt>&#8211;qa_whiteboard=TEXT</dt>
+<dd> Alter QA whiteboard. TEXT appends, -TEXT removes, =TEXT overwrites</dd>
+<dt>&#8211;tags=TEXT</dt>
+<dd> Alter bug &#8216;tags&#8217; fieldTEXT appends, -TEXT removes</dd></dl>
 <h2>&#8216;ATTACH&#8217; OPTIONS</h2>
 <dl>
-<dt>&#8211;file=FILENAME, -f FILENAME</p>
-<dd> File to attach, or filename for data provided on stdin</p>
-<dt>&#8211;description=DESCRIPTION, -d DESCRIPTION</p>
-<dd> A short description of the file being attached</p>
-<dt>&#8211;type=MIMETYPE, -t MIMETYPE</p>
-<dd> Mime-type for the file being attached</p>
-<dt>&#8211;get=ATTACHID, -g ATTACHID</p>
-<dd> Download the attachment with the given ID</p>
-<dt>&#8211;getall=BUGID, &#8211;get-all=BUGID</p>
-<dd> Download all attachments on the given bug</dl>
+<dt>&#8211;file=FILENAME, -f FILENAME</dt>
+<dd> File to attach, or filename for data provided on stdin</dd>
+<dt>&#8211;description=DESCRIPTION, -d DESCRIPTION</dt>
+<dd> A short description of the file being attached</dd>
+<dt>&#8211;type=MIMETYPE, -t MIMETYPE</dt>
+<dd> Mime-type for the file being attached</dd>
+<dt>&#8211;get=ATTACHID, -g ATTACHID</dt>
+<dd> Download the attachment with the given ID</dd>
+<dt>&#8211;getall=BUGID, &#8211;get-all=BUGID</dt>
+<dd> Download all attachments on the given bug</dd></dl>
 <h2>&#8216;INFO&#8217; OPTIONS</h2>
 <dl>
-<dt>&#8211;products, -p</p>
-<dd> Get a list of products</p>
-<dt>&#8211;components=PRODUCT, -c PRODUCT</p>
-<dd> List the components in the given product</p>
-<dt>&#8211;component_owners=PRODUCT, -o PRODUCT</p>
-<dd> List components (and their owners)</p>
-<dt>&#8211;versions=VERSION, -v VERSION</p>
-<dd> List the versions for the given product</dl>
+<dt>&#8211;products, -p</dt>
+<dd> Get a list of products</dd>
+<dt>&#8211;components=PRODUCT, -c PRODUCT</dt>
+<dd> List the components in the given product</dd>
+<dt>&#8211;component_owners=PRODUCT, -o PRODUCT</dt>
+<dd> List components (and their owners)</dd>
+<dt>&#8211;versions=VERSION, -v VERSION</dt>
+<dd> List the versions for the given product</dd></dl>
 <h2>OUTPUT FORMAT</h2>
 <p> The output of the bugzilla tool should NEVER BE PARSED unless you are using a custom &#8211;outputformat. For everything else, just don&#8217;t parse it, the formats are not stable and are subject to change. </p>
 <p> &#8211;outputformat allows printing arbitrary bug data in a user preferred format. For example, to print a returned bug ID, component, and product, separated with ::, do: </p>
@@ -329,7 +329,7 @@ description: "bugzilla – command-line interface to Bugzilla over XML-RPC"
 <h2>EXAMPLES</h2>
 <dl>
 <dt>
-<dd> bugzilla query &#8211;bug_id 62037 </p>
+</dt><dd> bugzilla query &#8211;bug_id 62037 </dd>
 <p> bugzilla query &#8211;version 15 &#8211;component python-bugzilla </p>
 <p> # All boolean options can be formatted like this<br />
  bugzilla query &#8211;blocked &quot;123456 | 224466&quot; </p>

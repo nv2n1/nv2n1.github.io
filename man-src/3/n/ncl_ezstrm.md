@@ -16,20 +16,20 @@ EZSTRM - A front-end to STRMLN with a simpler interface. Like STRMLN, it plots a
  
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>int imax, int jmax)
 <h2>Description</h2><dl COMPACT><dt>U
-<dd>(REAL 2-dimensional array, dimensioned IMAX x n: n &gt;= JMAX, input) By default, assumed to contain the first dimensional Cartesian components of the vector field. However, if PLR is non-zero, it is treated as containing the vector magnitudes.
-<dt>V
-<dd>(REAL 2-dimensional array, dimensioned IMAX x n: n &gt;= JMAX, input) By default, assumed to contain the second dimensional Cartesian components of the vector field. However, if PLR is non-zero, it is treated as containing the vector angles.
-<dt>WORK
-<dd>(REAL array, dimensioned n: n&gt;= 2*IMAX*JMAX working space): User provided work array used to store the normalized vector component values, and also to keep track of the grid boxes eligible for starting a streamline or placement of a directional arrow.
-<dt>IMAX
-<dd>(INTEGER, input) Actual size of the first dimension of arrays U and V
-<dt>JMAX
-<dd>(INTEGER, input) Assumed size of the second dimension of arrays U and V.</dl><h2>C-Binding Description</h2>The C-binding argument descriptions are the same as the FORTRAN argument descriptions with the following exceptions: 
+</dt><dd>(REAL 2-dimensional array, dimensioned IMAX x n: n &gt;= JMAX, input) By default, assumed to contain the first dimensional Cartesian components of the vector field. However, if PLR is non-zero, it is treated as containing the vector magnitudes.
+</dd><dt>V
+</dt><dd>(REAL 2-dimensional array, dimensioned IMAX x n: n &gt;= JMAX, input) By default, assumed to contain the second dimensional Cartesian components of the vector field. However, if PLR is non-zero, it is treated as containing the vector angles.
+</dd><dt>WORK
+</dt><dd>(REAL array, dimensioned n: n&gt;= 2*IMAX*JMAX working space): User provided work array used to store the normalized vector component values, and also to keep track of the grid boxes eligible for starting a streamline or placement of a directional arrow.
+</dd><dt>IMAX
+</dt><dd>(INTEGER, input) Actual size of the first dimension of arrays U and V
+</dd><dt>JMAX
+</dt><dd>(INTEGER, input) Assumed size of the second dimension of arrays U and V.</dd></dl><h2>C-Binding Description</h2>The C-binding argument descriptions are the same as the FORTRAN argument descriptions with the following exceptions: 
 
 <dl COMPACT><dt>imax
-<dd>The actual size of the second dimension of arrays u and v.
-<dt>jmax
-<dd>The assumed size of first dimension of arrays u and v.</dl><h2>Usage</h2>U and V are 2-dimensional vector component arrays, whose actual first dimensions must be equal to the value of IMAX, and whose second dimensions must equal or exceed the value of JMAX. The WORK array must, at minimum, be of length 2*IMAX*JMAX. 
+</dt><dd>The actual size of the second dimension of arrays u and v.
+</dd><dt>jmax
+</dt><dd>The assumed size of first dimension of arrays u and v.</dd></dl><h2>Usage</h2>U and V are 2-dimensional vector component arrays, whose actual first dimensions must be equal to the value of IMAX, and whose second dimensions must equal or exceed the value of JMAX. The WORK array must, at minimum, be of length 2*IMAX*JMAX. 
 
  Assuming the default value of the compatibility mode parameter, CPM, Streamlines always performs a SET call and draws a perimeter around the plot when accessed through the EZSTRM interface. Before the return from EZSTRM, another call to SET restores the previous coordinate system mapping. 
 

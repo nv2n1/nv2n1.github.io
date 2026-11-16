@@ -15,15 +15,15 @@ read_cache_page_gfp - read into page cache, using specified page allocation flag
 <h2>Arguments</h2>
 
 <i>mapping</i>
-<dl><dd><dd>the page's address_space</dl>
+<dl><dd></dd><dd>the page's address_space</dd></dl>
  
 
  <i>index</i>
-<dl><dd>the page index</dl>
+<dl><dd>the page index</dd></dl>
  
 
  <i>gfp</i>
-<dl><dd>the page allocator flags to use if allocating</dl>
+<dl><dd>the page allocator flags to use if allocating</dd></dl>
 
 <h2>Description</h2>
 

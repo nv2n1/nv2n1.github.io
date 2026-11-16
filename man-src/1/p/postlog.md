@@ -17,38 +17,38 @@ description: "postlog – Postfix-compatible logging utility"
 <p> By default, logging is sent to <code>syslogd</code>(8) or <code>postlogd</code>(8); when the standard error stream is connected to a terminal, logging is sent there as well. </p>
 <p> The following options are implemented:</p>
 <dl>
-<dt><code>-c </code><i>config_dir</i></p>
-<dd> Read the <code>main.cf</code> configuration file in the named directory instead of the default configuration directory.</p>
-<dt><code>-i</code> (obsolete)</p>
-<dd> Include the process ID in the logging tag. This flag is ignored as of Postfix 3.4, where the PID is always included.</p>
-<dt><code>-p </code><i>priority</i> (default: <code>info</code>)</p>
-<dd> Specifies the logging severity: <code>info</code>, <code>warn</code>, <code>error</code>, <code>fatal</code>, or <code>panic</code>. With Postfix 3.1 and later, the program will pause for 1 second after reporting a <code>fatal</code> or <code>panic</code> condition, just like other Postfix programs.</p>
-<dt><code>-t </code><i>tag</i></p>
-<dd> Specifies the logging tag, that is, the identifying name that appears at the beginning of each logging record. A default tag is used when none is specified.</p>
-<dt><code>-v</code></p>
-<dd> Enable verbose logging for debugging purposes. Multiple <code>-v</code> options make the software increasingly verbose.</dl>
+<dt><code>-c </code><i>config_dir</i></dt>
+<dd> Read the <code>main.cf</code> configuration file in the named directory instead of the default configuration directory.</dd>
+<dt><code>-i</code> (obsolete)</dt>
+<dd> Include the process ID in the logging tag. This flag is ignored as of Postfix 3.4, where the PID is always included.</dd>
+<dt><code>-p </code><i>priority</i> (default: <code>info</code>)</dt>
+<dd> Specifies the logging severity: <code>info</code>, <code>warn</code>, <code>error</code>, <code>fatal</code>, or <code>panic</code>. With Postfix 3.1 and later, the program will pause for 1 second after reporting a <code>fatal</code> or <code>panic</code> condition, just like other Postfix programs.</dd>
+<dt><code>-t </code><i>tag</i></dt>
+<dd> Specifies the logging tag, that is, the identifying name that appears at the beginning of each logging record. A default tag is used when none is specified.</dd>
+<dt><code>-v</code></dt>
+<dd> Enable verbose logging for debugging purposes. Multiple <code>-v</code> options make the software increasingly verbose.</dd></dl>
 <h2>ENVIRONMENT</h2>
 <dl>
-<dt>MAIL_CONFIG</p>
-<dd> Directory with the <code>main.cf</code> file.</dl>
+<dt>MAIL_CONFIG</dt>
+<dd> Directory with the <code>main.cf</code> file.</dd></dl>
 <h2>CONFIGURATION PARAMETERS</h2>
 <p> The following <code>main.cf</code> parameters are especially relevant to this program. </p>
 <p> The text below provides only a parameter summary. See <code><a href="/docs/linux/man/5-postconf/">postconf</a></code>(5) for more details including examples.</p>
 <dl>
-<dt><code>config_directory (see &#8216;postconf -d&#8217; output)</code></p>
-<dd> The default location of the Postfix main.cf and master.cf configuration files.</p>
-<dt><code>import_environment (see &#8216;postconf -d&#8217; output)</code></p>
-<dd> The list of environment parameters that a privileged Postfix process will import from a non-Postfix parent process, or name=value environment overrides.</p>
-<dt><code>syslog_facility (mail)</code></p>
-<dd> The syslog facility of Postfix logging.</p>
-<dt><code>syslog_name (see &#8216;postconf -d&#8217; output)</code></p>
-<dd> A prefix that is prepended to the process name in syslog records, so that, for example, &quot;smtpd&quot; becomes &quot;prefix/smtpd&quot;.</dl>
+<dt><code>config_directory (see &#8216;postconf -d&#8217; output)</code></dt>
+<dd> The default location of the Postfix main.cf and master.cf configuration files.</dd>
+<dt><code>import_environment (see &#8216;postconf -d&#8217; output)</code></dt>
+<dd> The list of environment parameters that a privileged Postfix process will import from a non-Postfix parent process, or name=value environment overrides.</dd>
+<dt><code>syslog_facility (mail)</code></dt>
+<dd> The syslog facility of Postfix logging.</dd>
+<dt><code>syslog_name (see &#8216;postconf -d&#8217; output)</code></dt>
+<dd> A prefix that is prepended to the process name in syslog records, so that, for example, &quot;smtpd&quot; becomes &quot;prefix/smtpd&quot;.</dd></dl>
 <p> Available in Postfix 3.4 and later:</p>
 <dl>
-<dt><code>maillog_file (empty)</code></p>
-<dd> The name of an optional logfile that is written by the Postfix <code>postlogd</code>(8) service.</p>
-<dt><code>postlog_service_name (postlog)</code></p>
-<dd> The name of the <code>postlogd</code>(8) service entry in master.cf.</dl>
+<dt><code>maillog_file (empty)</code></dt>
+<dd> The name of an optional logfile that is written by the Postfix <code>postlogd</code>(8) service.</dd>
+<dt><code>postlog_service_name (postlog)</code></dt>
+<dd> The name of the <code>postlogd</code>(8) service entry in master.cf.</dd></dl>
 <h2>SEE ALSO</h2>
 <pre>
 <a href="//www.systutorials.com/docs/linux/man/5-postconf/">postconf</a>(5), configuration parameters

@@ -33,7 +33,7 @@ description: "QuantLib::PiecewiseZeroSpreadedTermStructure – Term structure wi
 <p> The zero-yield spread at any given date is linearly interpolated between the input data. </p>
 <p> <code>Note:</code></p>
 <dl COMPACT>
-<dd>This term structure will remain linked to the original structure, i.e., any changes in the latter will be reflected in this structure as well.</dl>
+<dd>This term structure will remain linked to the original structure, i.e., any changes in the latter will be reflected in this structure as well.</dd></dl>
 <h2>Member Function Documentation</h2>
 <h3>void update () [protected, virtual]</h3>
 <p>This method must be implemented in derived classes. An instance of Observer does not call this method directly: instead, it will be called by the observables the instance registered with when they need to notify any changes. </p>

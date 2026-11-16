@@ -11,9 +11,7 @@ std::memchr - std::memchr
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;cstring&gt;
-
     const void *memchr(const void *ptr, int ch, std::size_t count);
-
 void *memchr(void *ptr, int ch, std::size_t count);</code></pre> 
 Converts ch to unsigned char and locates the first occurrence of that value in the initial count characters (each interpreted as unsigned char) of the object pointed to by ptr. 
 This function behaves as if it reads the characters sequentially and stops as soon as a matching character is found: if the array pointed to by ptr is smaller than count, but the match is found within the array, the behavior is well-defined <i>(since C++17)</i> 
@@ -32,10 +30,8 @@ Pointer to the location of the character, or NULL if no such character is found.
 
 Search an array of characters. 
  // Run this code <pre><code>#include &lt;iostream&gt;
-
 #include &lt;cstring&gt;
 int main()
-
 {
     char arr[] = {'a', '\0', 'a', 'A', 'a', 'a', 'A', 'a'};
     char *pc = (char *)std::memchr(arr, 'A', sizeof arr);

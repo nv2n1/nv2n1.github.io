@@ -14,74 +14,74 @@ description: "rrdgraph_libdbi – fetching data for graphing in rrdtool graph vi
 <h2>DESCRIPTION</h2>
 <p> This pseudo-rrd-filename defines a sql datasource:</p>
 <dl>
-<dt><code>sql//</code></p>
+<dt><code>sql//</code></dt>
 <dd>
 <pre>
   magic cookie-prefix for a libdbi type datasource
 </pre>
-<dt><code>&lt;libdbi driver&gt;</code></p>
+</dd><dt><code>&lt;libdbi driver&gt;</code></dt>
 <dd>
 <pre>
   which libdbi driver to use (e.g: mysql)
 </pre>
-<dt><code>&lt;driver-option-name&gt;</code>=<code>&lt;driver-option-value&gt;</code></p>
+</dd><dt><code>&lt;driver-option-name&gt;</code>=<code>&lt;driver-option-value&gt;</code></dt>
 <dd>
 <pre>
   defines the parameters that are required to connect to the database with the given libdbi driver
   (These drivers are libdbi dependent - for details please look at the driver documentation of libdbi!)
 </pre>
-<dt><code>/rrdminstepsize</code>=<code>&lt;minimum step size&gt;</code></p>
+</dd><dt><code>/rrdminstepsize</code>=<code>&lt;minimum step size&gt;</code></dt>
 <dd>
 <pre>
   defines the minimum number of the step-length used for graphing (default: 300 seconds)
 </pre>
-<dt><code>/rrdfillmissing</code>=<code>&lt;fill missing seconds&gt;</code></p>
+</dd><dt><code>/rrdfillmissing</code>=<code>&lt;fill missing seconds&gt;</code></dt>
 <dd>
 <pre>
   defines the number of seconds to fill with the last value to avoid NaN boxes due to data-insertation jitter (default: 0 seconds)
 </pre>
-<dt><code>&lt;table&gt;</code></p>
+</dd><dt><code>&lt;table&gt;</code></dt>
 <dd>
 <pre>
   defines the table from which to fetch the resultset.
   If there is a need to fetch data from several tables, these tables can be defined by separating the tablenames with a &quot;+&quot;
   hex-type-encoding via %xx are translated to the actual value, use %% to use %
 </pre>
-<dt><code>&lt;[*]unixtimestamp column&gt;</code></p>
+</dd><dt><code>&lt;[*]unixtimestamp column&gt;</code></dt>
 <dd>
 <pre>
   defines the column of E&lt;lt&gt;tableE&lt;gt&gt; which contains the unix-timestamp 
   - if this is a DATETIME field in the database, then prefix with leading '*'
   hex-type-encoding via %xx are translated to the actual value, use %% to use %
 </pre>
-<dt><code>&lt;data value column&gt;</code></p>
+</dd><dt><code>&lt;data value column&gt;</code></dt>
 <dd>
 <pre>
   defines the column of E&lt;lt&gt;tableE&lt;gt&gt; which contains the value column, which should be graphed
   hex-type-encoding via %xx are translated to the actual value, use %% to use %
 </pre>
-<dt><code>/derive</code></p>
+</dd><dt><code>/derive</code></dt>
 <dd>
 <pre>
   defines that the data value used should be the delta of the 2 consecutive values (to simulate COUNTER or DERIVE type datasources)
 </pre>
-<dt><code>/&lt;where clause(s)&gt;</code></p>
+</dd><dt><code>/&lt;where clause(s)&gt;</code></dt>
 <dd>
 <pre>
   defines one (ore more) where clauses that are joined with AND to filter the entries in the &lt;lt&gt;table&lt;gt&gt;
   hex-type-encoding via %xx are translated to the actual value, use %% to use %
 </pre>
-</dl>
+</dd></dl>
 <p> the returned value column-names, which can be used as ds-names, are:</p>
 <dl>
-<dt><code>min</code>, <code>avg</code>, <code>max</code>, <code>count</code> and <code>sigma</code></p>
+<dt><code>min</code>, <code>avg</code>, <code>max</code>, <code>count</code> and <code>sigma</code></dt>
 <dd>
 <pre>
   are returned to be used as ds-names in your DS definition.
   The reason for using this is that if the consolidation function is used for min/avg and max, then the engine is used several times.
   And this results in the same SQL Statements used several times
 </pre>
-</dl>
+</dd></dl>
 <h2>EXAMPLES</h2>
 <p> Here an example of a table in a MySQL database: </p>
 <pre><code>

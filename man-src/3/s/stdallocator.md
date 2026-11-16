@@ -67,12 +67,9 @@ std::list&lt;T, A&gt; allocates nodes of some internal type Node&lt;T&gt;, using
 <h2>Example</h2>
 <p>// Run this code </p>
 <pre><code>#include &lt;memory&gt;
-
 #include &lt;iostream&gt;
-
 #include &lt;string&gt;
 int main()
-
 {
     std::allocator&lt;int&gt; a1;  // default allocator for ints
     int *a = a1.allocate(1); // space for one int

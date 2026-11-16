@@ -10,7 +10,6 @@ description: "ugetat – Finds out the value of a character in a string. Allegro
 <p>ugetat &#8211; Finds out the value of a character in a string. Allegro game programming library.</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;allegro.h&gt;
-
 int ugetat(const char *s, int index);</code></pre>
 <h2>Description</h2>
 <p>Finds out the character value at the specified `index&#8217; in the string. A zero `index&#8217; parameter will return the first character of the string. If `index&#8217; is negative, it counts backward from the end of the string, so an `index&#8217; of `-1&#8242; will return the last character of the string. Example: </p>

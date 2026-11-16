@@ -21,29 +21,29 @@ description: "log4cpp::SimpleConfigurator –"
 <p> It is a temporary hack with an undocumented configuration format. </p>
 <p> <code>Deprecated</code></p>
 <dl COMPACT>
-<dd>As of version 0.3.2 <code>log4cpp</code> includes a log4j format compatible <code>PropertyConfigurator</code>, removing the need for <code>SimpleConfigurator</code>. This class will be removed in 0.4.0.</dl>
+<dd>As of version 0.3.2 <code>log4cpp</code> includes a log4j format compatible <code>PropertyConfigurator</code>, removing the need for <code>SimpleConfigurator</code>. This class will be removed in 0.4.0.</dd></dl>
 <h2>Member Function Documentation</h2>
 <h3>void log4cpp::SimpleConfigurator::configure (const std::string &amp;initFileName)<code>ConfigureFailure</code> [static]</h3>
 <p>Configure <code>log4cpp</code> with the configuration in the given file. NB. The configuration file format is undocumented and may change without notice. </p>
 <p> <code>Since:</code></p>
 <dl COMPACT>
-<dd>0.2.6</dl>
+<dd>0.2.6</dd></dl>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>initFileName</i> name of the configuration file</dl>
+<dd><i>initFileName</i> name of the configuration file</dd></dl>
 <p> <code>Exceptions:</code></p>
 <dl COMPACT>
-<dd><i></i><code>ConfigureFailure</code> if the method encountered a read or syntax error.</dl>
+<dd><i></i><code>ConfigureFailure</code> if the method encountered a read or syntax error.</dd></dl>
 <h3>void log4cpp::SimpleConfigurator::configure (std::istream &amp;initFile)<code>ConfigureFailure</code> [static]</h3>
 <p>Configure <code>log4cpp</code> with the configuration in the given file. NB. The configuration file format is undocumented and may change without notice. </p>
 <p> <code>Since:</code></p>
 <dl COMPACT>
-<dd>0.3.1</dl>
+<dd>0.3.1</dd></dl>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>initFile</i> an input stream to the configuration file</dl>
+<dd><i>initFile</i> an input stream to the configuration file</dd></dl>
 <p> <code>Exceptions:</code></p>
 <dl COMPACT>
-<dd><i></i><code>ConfigureFailure</code> if the method encountered a read or syntax error.</dl>
+<dd><i></i><code>ConfigureFailure</code> if the method encountered a read or syntax error.</dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for log4cpp from the source code.</p>

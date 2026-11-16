@@ -16,10 +16,10 @@ mongoc_rand_seed(const void *buf,
 <p>Seeds the mongoc random number generator with num bytes of entropy. </p>
 <h2>Parameters</h2>
 <dl COMPACT>
-<dt><code>buf</code></p>
-<dd>A buffer.</dl>
+<dt><code>buf</code></dt>
+<dd>A buffer.</dd></dl>
 <dl COMPACT>
-<dt><code>num</code></p>
-<dd>An int of number of bytes in buf.</dl>
+<dt><code>num</code></dt>
+<dd>An int of number of bytes in buf.</dd></dl>
 <h2>Colophon</h2>
 <p>This page is part of MongoDB C Driver. Please report any bugs at <a rel="nofollow" href="https://jira.mongodb.org/browse/CDRIVER.">https://jira.mongodb.org/browse/CDRIVER.</a></p>

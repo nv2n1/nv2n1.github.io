@@ -12,37 +12,30 @@ rdma_post_writev - post an RDMA write work request.
 
 <pre><code>#include &lt;rdma/rdma_verbs.h&gt;
 int rdma_post_writev
-
     (struct rdma_cm_id *id,
-
      void *context,
-
      struct ibv_sge *sgl,
-
      int nsge,
-
      int flags,
-
      uint64_t remote_addr,
-
      uint32_t rkey);</code></pre>
 
 <h2>Arguments</h2>
 
 <dl><dt>id
-<dd>A reference to a communication identifier where the request will be posted.
-<dt>context
-<dd>User-defined context associated with the request.
-<dt>sgl
-<dd>A scatter-gather list of the source buffers of the write.
-<dt>nsge
-<dd>The number of scatter-gather array entries.
-<dt>flags
-<dd>Optional flags used to control the write operation.
-<dt>remote_addr
-<dd>The address of the remote registered memory to write into.
-<dt>rkey
-<dd>The registered memory key associated with the remote address.</dl>
+</dt><dd>A reference to a communication identifier where the request will be posted.
+</dd><dt>context
+</dt><dd>User-defined context associated with the request.
+</dd><dt>sgl
+</dt><dd>A scatter-gather list of the source buffers of the write.
+</dd><dt>nsge
+</dt><dd>The number of scatter-gather array entries.
+</dd><dt>flags
+</dt><dd>Optional flags used to control the write operation.
+</dd><dt>remote_addr
+</dt><dd>The address of the remote registered memory to write into.
+</dd><dt>rkey
+</dt><dd>The registered memory key associated with the remote address.</dd></dl>
 
 <h2>Description</h2>
 

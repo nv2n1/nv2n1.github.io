@@ -16,14 +16,14 @@ description: "obprobe – create electrostatic probe grid"
 <h2>OPTIONS</h2>
 <p> If no filename is given, obprobe will give all options including the example probes.</p>
 <dl>
-<dt><code>-s </code><i>stepsize</i></p>
-<dd> Set the resolution of the grid (stepsize)</p>
-<dt><code>-p </code><i>padding</i></p>
-<dd> Set the padding &#8212; extra distance on each side of the box formed by the molecule.</p>
-<dt><i>type</i></p>
-<dd> MMFF94 atom type</p>
-<dt><i>pchg</i></p>
-<dd> MMFF94 partial charge</dl>
+<dt><code>-s </code><i>stepsize</i></dt>
+<dd> Set the resolution of the grid (stepsize)</dd>
+<dt><code>-p </code><i>padding</i></dt>
+<dd> Set the padding &#8212; extra distance on each side of the box formed by the molecule.</dd>
+<dt><i>type</i></dt>
+<dd> MMFF94 atom type</dd>
+<dt><i>pchg</i></dt>
+<dd> MMFF94 partial charge</dd></dl>
 <h2>EXAMPLES</h2>
 <p> Probe the file pyridines.sdf using a carbonyl oxygen &#8212; a hydrogen bond acceptor with partial charge -0.57: </p>
 <blockquote><p><tt>&quot;obprobe 7 -0.57 pyridines.sdf&quot;</tt></p></blockquote>

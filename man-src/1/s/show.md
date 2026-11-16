@@ -11,8 +11,8 @@ description: "show – show (display) messages"
 <p> show &#8211; show (display) messages </p>
 <h2>SYNOPSIS</h2>
 <dl>
-<dt> <code>show</code> [<i>+folder</i>] [<i>msgs</i>] [<code>-draft</code>] [-showproc <i>program</i>] [<code>-showmimeproc</code> <i>program</i>] [<code>-header</code> | <code>-noheader</code>] [<code>-checkmime</code> | <code>-nocheckmime</code>] [switches for <i>showproc</i></p>
-<dd>or <i>showmimeproc</i>] [<code>-version</code>] [<code>-help</code>]</dl>
+<dt> <code>show</code> [<i>+folder</i>] [<i>msgs</i>] [<code>-draft</code>] [-showproc <i>program</i>] [<code>-showmimeproc</code> <i>program</i>] [<code>-header</code> | <code>-noheader</code>] [<code>-checkmime</code> | <code>-nocheckmime</code>] [switches for <i>showproc</i></dt>
+<dd>or <i>showmimeproc</i>] [<code>-version</code>] [<code>-help</code>]</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> <code>Show</code> lists each of the specified messages to the standard output (typically, the terminal). </p>
 <p> By default, text (non-MIME) messages are filtered and displayed by the <code>nmh</code> command <code>mhl</code>. This command will display text messages in a nice, uniform format. It also allows you to configure the format of the displayed messages and which headers fields are shown. See the <i><a href="/docs/linux/man/1-mhl/">mhl</a></i>(1) manual page for the details about this command. This default can be changed by defining the <i>showproc</i> profile component. Any switches not recognized by <code>show</code> are passed along to that program. To override the default and the <i>showproc</i> profile component, use the <code>-showproc</code> <i>program</i> switch. For example, <code>-showproc</code> <i>more</i> will cause the <code>more</code> program to list the messages with no reformatting. Normally, this program is specified as the <i>showproc</i> in the user&#8217;s <i>.mh_profile</i>, rather than using a command line switch. </p>
@@ -55,13 +55,13 @@ description: "show – show (display) messages"
 <p> If your <i>showproc</i> is the pager <code>more</code>, then avoid running <code>show</code> in the background with only its standard output piped to another process, as in </p>
 <dl>
 <dt>
-<dd> show | imprint &amp;</dl>
+</dt><dd> show | imprint &amp;</dd></dl>
 <p> Due to a bug in <code>more</code>, show will go into a &#8220;tty input&#8221; state. To avoid this problem, re-direct <code>show</code>&#8216;s diagnostic output as well. For users of <code>csh</code>: </p>
 <dl>
 <dt>
-<dd> show |&amp; imprint &amp;</dl>
+</dt><dd> show |&amp; imprint &amp;</dd></dl>
 <p> For users of <code>sh</code>: </p>
 <dl>
 <dt>
-<dd> show 2&gt;&amp;1 | imprint &amp;</dl>
+</dt><dd> show 2&gt;&amp;1 | imprint &amp;</dd></dl>
 <h2>Index</h2>

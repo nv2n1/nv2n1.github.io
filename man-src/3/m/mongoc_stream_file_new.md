@@ -13,8 +13,8 @@ description: "mongoc_stream_file_new() – Creates a new mongoc_stream_file_t us
 mongoc_stream_file_new (int fd);</pre>
 <h2>Parameters</h2>
 <dl COMPACT>
-<dt><code>fd</code></p>
-<dd>A UNIX style file-descriptor.</dl>
+<dt><code>fd</code></dt>
+<dd>A UNIX style file-descriptor.</dd></dl>
 <p> Creates a new <code>mongoc_stream_file_t</code> using the file-descriptor provided. </p>
 <h2>Returns</h2>
 <p><code>NULL</code> upon failure, otherwise a newly allocated <code>mongoc_stream_file_t</code> that should be freed with <code><a href="/docs/linux/man/3-mongoc_stream_destroy/">mongoc_stream_destroy</a>(3)</code> when no longer in use. </p>

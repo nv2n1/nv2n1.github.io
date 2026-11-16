@@ -34,7 +34,7 @@ url: "/docs/linux/man/1-nvme-delete-ns/"
  -n &lt;nsid&gt;, --namespace-id=&lt;nsid&gt;
 <dl>
 <dt>
-<dd> The namespace identifier to delete.</dl>
+</dt><dd> The namespace identifier to delete.</dd></dl>
 
 <h2>EXAMPLES</h2>
 

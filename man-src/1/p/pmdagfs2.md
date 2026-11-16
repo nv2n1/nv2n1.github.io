@@ -25,14 +25,14 @@ description: "pmdagfs2 – Global Filesystem v2 (GFS2) PMDA"
 <p> <code>pmdagfs2</code> is launched by <code><a href="/docs/linux/man/1-pmcd/">pmcd</a></code>(1) and should never be executed directly. The Install and Remove scripts notify <code>pmcd</code> when the agent is installed or removed.</p>
 <h2>FILES</h2>
 <dl>
-<dt><code>$PCP_PMDAS_DIR/gfs2/help</code></p>
-<dd> default help text file for the GFS2 metrics</p>
-<dt><code>$PCP_PMDAS_DIR/gfs2/Install</code></p>
-<dd> installation script for the <code>pmdagfs2</code> agent</p>
-<dt><code>$PCP_PMDAS_DIR/gfs2/Remove</code></p>
-<dd> undo installation script for the <code>pmdagfs2</code> agent</p>
-<dt><code>$PCP_LOG_DIR/pmcd/gfs2.log</code></p>
-<dd> default log file for error messages from <code>pmdagfs2</code></dl>
+<dt><code>$PCP_PMDAS_DIR/gfs2/help</code></dt>
+<dd> default help text file for the GFS2 metrics</dd>
+<dt><code>$PCP_PMDAS_DIR/gfs2/Install</code></dt>
+<dd> installation script for the <code>pmdagfs2</code> agent</dd>
+<dt><code>$PCP_PMDAS_DIR/gfs2/Remove</code></dt>
+<dd> undo installation script for the <code>pmdagfs2</code> agent</dd>
+<dt><code>$PCP_LOG_DIR/pmcd/gfs2.log</code></dt>
+<dd> default log file for error messages from <code>pmdagfs2</code></dd></dl>
 <h2>PCP ENVIRONMENT</h2>
 <p> Environment variables with the prefix <code>PCP_</code> are used to parameterize the file and directory names used by <code>PCP</code>. On each installation, the file <code>/etc/pcp.conf</code> contains the local values for these variables. The <code>$PCP_CONF</code> variable may be used to specify an alternative configuration file, as described in <i><a href="/docs/linux/man/5-pcp-conf/">pcp.conf</a></i>(5).</p>
 <h2>SEE ALSO</h2>

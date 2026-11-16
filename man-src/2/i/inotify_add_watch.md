@@ -20,26 +20,26 @@ description: "inotify_add_watch – add a watch to an initialized inotify instan
 <p> On success, <code>inotify_add_watch</code>() returns a watch descriptor (a nonnegative integer). On error, -1 is returned and <i>errno</i> is set appropriately.</p>
 <h2>ERRORS</h2>
 <dl>
-<dt><code>EACCES</code></p>
-<dd> Read access to the given file is not permitted.</p>
-<dt><code>EBADF</code></p>
-<dd> The given file descriptor is not valid.</p>
-<dt><code>EEXIST</code></p>
-<dd> <i>mask</i> contains <code>IN_MASK_CREATE</code> and <i>pathname</i> refers to a file already being watched by the same <i>fd</i>.</p>
-<dt><code>EFAULT</code></p>
-<dd> <i>pathname</i> points outside of the process&#8217;s accessible address space.</p>
-<dt><code>EINVAL</code></p>
-<dd> The given event mask contains no valid events; or <i>mask</i> contains both <code>IN_MASK_ADD</code> and <code>IN_MASK_CREATE</code>; or <i>fd</i> is not an inotify file descriptor.</p>
-<dt><code>ENAMETOOLONG</code></p>
-<dd> <i>pathname</i> is too long.</p>
-<dt><code>ENOENT</code></p>
-<dd> A directory component in <i>pathname</i> does not exist or is a dangling symbolic link.</p>
-<dt><code>ENOMEM</code></p>
-<dd> Insufficient kernel memory was available.</p>
-<dt><code>ENOSPC</code></p>
-<dd> The user limit on the total number of inotify watches was reached or the kernel failed to allocate a needed resource.</p>
-<dt><code>ENOTDIR</code></p>
-<dd> <i>mask</i> contains <code>IN_ONLYDIR</code> and <i>pathname</i> is not a directory.</dl>
+<dt><code>EACCES</code></dt>
+<dd> Read access to the given file is not permitted.</dd>
+<dt><code>EBADF</code></dt>
+<dd> The given file descriptor is not valid.</dd>
+<dt><code>EEXIST</code></dt>
+<dd> <i>mask</i> contains <code>IN_MASK_CREATE</code> and <i>pathname</i> refers to a file already being watched by the same <i>fd</i>.</dd>
+<dt><code>EFAULT</code></dt>
+<dd> <i>pathname</i> points outside of the process&#8217;s accessible address space.</dd>
+<dt><code>EINVAL</code></dt>
+<dd> The given event mask contains no valid events; or <i>mask</i> contains both <code>IN_MASK_ADD</code> and <code>IN_MASK_CREATE</code>; or <i>fd</i> is not an inotify file descriptor.</dd>
+<dt><code>ENAMETOOLONG</code></dt>
+<dd> <i>pathname</i> is too long.</dd>
+<dt><code>ENOENT</code></dt>
+<dd> A directory component in <i>pathname</i> does not exist or is a dangling symbolic link.</dd>
+<dt><code>ENOMEM</code></dt>
+<dd> Insufficient kernel memory was available.</dd>
+<dt><code>ENOSPC</code></dt>
+<dd> The user limit on the total number of inotify watches was reached or the kernel failed to allocate a needed resource.</dd>
+<dt><code>ENOTDIR</code></dt>
+<dd> <i>mask</i> contains <code>IN_ONLYDIR</code> and <i>pathname</i> is not a directory.</dd></dl>
 <h2>VERSIONS</h2>
 <p> Inotify was merged into the 2.6.13 Linux kernel.</p>
 <h2>CONFORMING TO</h2>

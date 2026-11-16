@@ -14,16 +14,16 @@ description: "zap_page_range – remove user pages in a given range"
 <p><i>vma</i></p>
 <dl>
 <dd>
-<dd>vm_area_struct holding the applicable pages</dl>
+</dd><dd>vm_area_struct holding the applicable pages</dd></dl>
 <p> <i>start</i></p>
 <dl>
-<dd>starting address of pages to zap</dl>
+<dd>starting address of pages to zap</dd></dl>
 <p> <i>size</i></p>
 <dl>
-<dd>number of bytes to zap</dl>
+<dd>number of bytes to zap</dd></dl>
 <p> <i>details</i></p>
 <dl>
-<dd>details of shared cache invalidation</dl>
+<dd>details of shared cache invalidation</dd></dl>
 <h2>Description</h2>
 <p>Caller must protect the VMA list</p>
 <h2>Copyright</h2>

@@ -14,21 +14,21 @@ description: "jbd2__journal_restart – restart a handle ."
 <p><i>handle</i></p>
 <dl>
 <dd>
-<dd>handle to restart</dl>
+</dd><dd>handle to restart</dd></dl>
 <p> <i>nblocks</i></p>
 <dl>
-<dd>nr credits requested</dl>
+<dd>nr credits requested</dd></dl>
 <p> <i>gfp_mask</i></p>
 <dl>
-<dd>&#8212; undescribed &#8212;</dl>
+<dd>&#8212; undescribed &#8212;</dd></dl>
 <h2>Description</h2>
 <p>Restart a handle for a multi-transaction filesystem operation. </p>
 <p> If the <code>jbd2_journal_extend</code> call above fails to grant new buffer credits to a running handle, a call to jbd2_journal_restart will commit the handle&#8217;s transaction so far and reattach the handle to a new transaction capable of guaranteeing the requested number of credits. We preserve reserved handle if there&#8217;s any attached to the passed in handle.</p>
 <h2>Authors</h2>
 <p><code>Roger Gammans</code> &lt;rgammans [at] computer-surgery.co.uk&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <p> <code>Stephen Tweedie</code> &lt;sct [at] redhat.com&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

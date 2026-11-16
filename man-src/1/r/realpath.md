@@ -14,28 +14,28 @@ description: "realpath – print the resolved path"
 <h2>DESCRIPTION</h2>
 <p> Print the resolved absolute file name; all but the last component must exist</p>
 <dl>
-<dt><code>-e</code>, <code>&#8211;canonicalize-existing</code></p>
-<dd> all components of the path must exist</p>
-<dt><code>-m</code>, <code>&#8211;canonicalize-missing</code></p>
-<dd> no path components need exist or be a directory</p>
-<dt><code>-L</code>, <code>&#8211;logical</code></p>
-<dd> resolve &#8216;..&#8217; components before symlinks</p>
-<dt><code>-P</code>, <code>&#8211;physical</code></p>
-<dd> resolve symlinks as encountered (default)</p>
-<dt><code>-q</code>, <code>&#8211;quiet</code></p>
-<dd> suppress most error messages</p>
-<dt><code>&#8211;relative-to</code>=<i>,DIR/</i></p>
-<dd> print the resolved path relative to DIR</p>
-<dt><code>&#8211;relative-base</code>=<i>,DIR/</i></p>
-<dd> print absolute paths unless paths below DIR</p>
-<dt><code>-s</code>, <code>&#8211;strip</code>, <code>&#8211;no-symlinks</code></p>
-<dd> don&#8217;t expand symlinks</p>
-<dt><code>-z</code>, <code>&#8211;zero</code></p>
-<dd> end each output line with NUL, not newline</p>
-<dt><code>&#8211;help</code></p>
-<dd> display this help and exit</p>
-<dt><code>&#8211;version</code></p>
-<dd> output version information and exit</dl>
+<dt><code>-e</code>, <code>&#8211;canonicalize-existing</code></dt>
+<dd> all components of the path must exist</dd>
+<dt><code>-m</code>, <code>&#8211;canonicalize-missing</code></dt>
+<dd> no path components need exist or be a directory</dd>
+<dt><code>-L</code>, <code>&#8211;logical</code></dt>
+<dd> resolve &#8216;..&#8217; components before symlinks</dd>
+<dt><code>-P</code>, <code>&#8211;physical</code></dt>
+<dd> resolve symlinks as encountered (default)</dd>
+<dt><code>-q</code>, <code>&#8211;quiet</code></dt>
+<dd> suppress most error messages</dd>
+<dt><code>&#8211;relative-to</code>=<i>,DIR/</i></dt>
+<dd> print the resolved path relative to DIR</dd>
+<dt><code>&#8211;relative-base</code>=<i>,DIR/</i></dt>
+<dd> print absolute paths unless paths below DIR</dd>
+<dt><code>-s</code>, <code>&#8211;strip</code>, <code>&#8211;no-symlinks</code></dt>
+<dd> don&#8217;t expand symlinks</dd>
+<dt><code>-z</code>, <code>&#8211;zero</code></dt>
+<dd> end each output line with NUL, not newline</dd>
+<dt><code>&#8211;help</code></dt>
+<dd> display this help and exit</dd>
+<dt><code>&#8211;version</code></dt>
+<dd> output version information and exit</dd></dl>
 <h2>AUTHOR</h2>
 <p> Written by Padraig Brady.</p>
 <h2>REPORTING BUGS</h2>

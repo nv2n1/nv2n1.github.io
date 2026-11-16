@@ -15,28 +15,28 @@ description: "ipa-defaultoptions – Display or modify the IPA Search and User P
 <p> Displays or updates the IPA Search and User Policy. </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>&#8211;maxusername</code>=<i>MAXUSERNAME</i></p>
-<dd> Max. Length of a username</p>
-<dt><code>&#8211;homedir</code>=<i>HOMEDIR</i></p>
-<dd> Default location of home directories</p>
-<dt><code>&#8211;defaultshell</code>=<i>DEFAULTSHELL</i></p>
-<dd> Default shell for new users</p>
-<dt><code>&#8211;defaultgroup</code>=<i>DEFAULTGROUP</i></p>
-<dd> Default group for new users</p>
-<dt><code>&#8211;emaildomain</code>=<i>EMAILDOMAIN</i></p>
-<dd> Default e-mail domain</p>
-<dt><code>&#8211;searchtimelimit</code>=<i>SEARCHTIMELIMIT</i></p>
-<dd> Max. amount of time (sec.) for a search (-1 for unlimited)</p>
-<dt><code>&#8211;searchrecordslimit</code>=<i>SEARCHRECORDSLIMIT</i></p>
-<dd> Max. number of records to search (-1 for unlimited)</p>
-<dt><code>&#8211;usersearch</code>=<i>USERSEARCH</i></p>
-<dd> A comma-separated list of fields to search when searching for users</p>
-<dt><code>&#8211;groupsearch</code>=<i>GROUPSEARCH</i></p>
-<dd> A comma-separated list of fields to search when searching for groups</p>
-<dt><code>&#8211;show</code></p>
-<dd> Display the current password policy.</p>
-<dt><code>-v</code>, <code>&#8211;verbose</code></p>
-<dd> Display the XML-RPC request and response for more verbose debugging output</dl>
+<dt><code>&#8211;maxusername</code>=<i>MAXUSERNAME</i></dt>
+<dd> Max. Length of a username</dd>
+<dt><code>&#8211;homedir</code>=<i>HOMEDIR</i></dt>
+<dd> Default location of home directories</dd>
+<dt><code>&#8211;defaultshell</code>=<i>DEFAULTSHELL</i></dt>
+<dd> Default shell for new users</dd>
+<dt><code>&#8211;defaultgroup</code>=<i>DEFAULTGROUP</i></dt>
+<dd> Default group for new users</dd>
+<dt><code>&#8211;emaildomain</code>=<i>EMAILDOMAIN</i></dt>
+<dd> Default e-mail domain</dd>
+<dt><code>&#8211;searchtimelimit</code>=<i>SEARCHTIMELIMIT</i></dt>
+<dd> Max. amount of time (sec.) for a search (-1 for unlimited)</dd>
+<dt><code>&#8211;searchrecordslimit</code>=<i>SEARCHRECORDSLIMIT</i></dt>
+<dd> Max. number of records to search (-1 for unlimited)</dd>
+<dt><code>&#8211;usersearch</code>=<i>USERSEARCH</i></dt>
+<dd> A comma-separated list of fields to search when searching for users</dd>
+<dt><code>&#8211;groupsearch</code>=<i>GROUPSEARCH</i></dt>
+<dd> A comma-separated list of fields to search when searching for groups</dd>
+<dt><code>&#8211;show</code></dt>
+<dd> Display the current password policy.</dd>
+<dt><code>-v</code>, <code>&#8211;verbose</code></dt>
+<dd> Display the XML-RPC request and response for more verbose debugging output</dd></dl>
 <h2>EXIT STATUS</h2>
 <p> The exit status is 0 on success, nonzero on error. </p>
 <h2>Index</h2>

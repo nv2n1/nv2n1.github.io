@@ -13,10 +13,10 @@ description: "gset_seg_tran (Set segment transformation) – Associates a segmen
 <p> void gset_seg_tran(Gint seg_name, const Gtran_matrix tran_matrix);</p>
 <h2>Description</h2>
 <dl COMPACT>
-<dt>seg_name</p>
-<dd>(Input) A segment name as used in a previous gcreate_seg call.</p>
-<dt>tran_matrix</p>
-<dd>(Gfloat, Input) &#8211; A 2&#215;3 array giving the GKS segment transformation to be associated with the segment specified in seg_name.</dl>
+<dt>seg_name</dt>
+<dd>(Input) A segment name as used in a previous gcreate_seg call.</dd>
+<dt>tran_matrix</dt>
+<dd>(Gfloat, Input) &#8211; A 2&#215;3 array giving the GKS segment transformation to be associated with the segment specified in seg_name.</dd></dl>
 <h2>Usage</h2>
 <p>When the segment named in seg_name is displayed, the coordinates of its primitives are transformed by the matrix specified in tran_matrix. </p>
 <h2>Access</h2>

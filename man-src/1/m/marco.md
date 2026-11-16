@@ -17,30 +17,30 @@ description: "Marco – The MATE Window Manager"
 <p> This manual page documents the <code>marco</code> command. </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-d, &#8211;display=DISPLAY</code></p>
-<dd> X display to use.</p>
-<dt><code>&#8211;sync</code></p>
+<dt><code>-d, &#8211;display=DISPLAY</code></dt>
+<dd> X display to use.</dd>
+<dt><code>&#8211;sync</code></dt>
 <dd>
- Make X calls synchronous.</p>
-<dt><code>&#8211;replace</code></p>
-<dd> Replace the currently running window manager with Marco.</p>
-<dt><code>&#8211;sm-disable</code></p>
-<dd> Disable the connection to the session manager.</p>
-<dt><code>&#8211;sm-client-id=ID</code></p>
-<dd> Specify a session management ID.</p>
-<dt><code>&#8211;sm-save-file=FILENAME</code></p>
+ Make X calls synchronous.</dd>
+<dt><code>&#8211;replace</code></dt>
+<dd> Replace the currently running window manager with Marco.</dd>
+<dt><code>&#8211;sm-disable</code></dt>
+<dd> Disable the connection to the session manager.</dd>
+<dt><code>&#8211;sm-client-id=ID</code></dt>
+<dd> Specify a session management ID.</dd>
+<dt><code>&#8211;sm-save-file=FILENAME</code></dt>
 <dd> Restore from a session management savefile.<br />
- If no path is specified <code>marco</code> will look in ~/.config/mate-session/saved-session/</p>
-<dt><code>-c, &#8211;composite</code></p>
-<dd> Turn compositing ON. You may also use this option to start <code>marco</code> with composite &quot;true transparency&quot; effects.</p>
-<dt><code>&#8211;no-composite</code></p>
-<dd> Turn compositing OFF. You may also use this option to start <code>marco</code> without compositing effects.</p>
-<dt><code>&#8211;no-force-fullscreen</code></p>
-<dd> Do not create fullscreen windows without decorations.</p>
-<dt><code>&#8211;version</code></p>
-<dd> Print current version information and exit.</p>
-<dt><code>-?, -h, &#8211;help</code></p>
-<dd> Print standard command line options.</dl>
+ If no path is specified <code>marco</code> will look in ~/.config/mate-session/saved-session/</dd>
+<dt><code>-c, &#8211;composite</code></dt>
+<dd> Turn compositing ON. You may also use this option to start <code>marco</code> with composite &quot;true transparency&quot; effects.</dd>
+<dt><code>&#8211;no-composite</code></dt>
+<dd> Turn compositing OFF. You may also use this option to start <code>marco</code> without compositing effects.</dd>
+<dt><code>&#8211;no-force-fullscreen</code></dt>
+<dd> Do not create fullscreen windows without decorations.</dd>
+<dt><code>&#8211;version</code></dt>
+<dd> Print current version information and exit.</dd>
+<dt><code>-?, -h, &#8211;help</code></dt>
+<dd> Print standard command line options.</dd></dl>
 <h2>CONFIGURATION</h2>
 <p> Marco configuration can be found via the main MATE menus, under &quot;<i>System</i>-&gt;<i>Preferences</i>-&gt;<i>Windows</i>&quot; and &quot;<i>System</i>-&gt;<i>Preferences</i>-&gt;<i>Keyboard Shortcuts</i>&quot; or by running the commands <code>mate-window-properties</code> and <code>mate-keybinding-properties</code> respectively. Advanced configuration can also be achieved directly, via <code>dconf-editor</code> under &quot;/<i>org</i>/<i>mate</i>/<i>marco</i>/&quot;.</p>
 <h2>BUGS</h2>

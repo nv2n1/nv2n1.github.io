@@ -27,42 +27,42 @@ int getnameinfo(const struct sockaddr *addr, socklen_t addrlen,
 <p> The caller can specify that no hostname (or no service name) is required by providing a NULL <i>host</i> (or <i>serv</i>) argument or a zero <i>hostlen</i> (or <i>servlen</i>) argument. However, at least one of hostname or service name must be requested. </p>
 <p> The <i>flags</i> argument modifies the behavior of <code>getnameinfo</code>() as follows:</p>
 <dl>
-<dt><code>NI_NAMEREQD</code></p>
-<dd> If set, then an error is returned if the hostname cannot be determined.</p>
-<dt><code>NI_DGRAM</code></p>
-<dd> If set, then the service is datagram (UDP) based rather than stream (TCP) based. This is required for the few ports (512-514) that have different services for UDP and TCP.</p>
-<dt><code>NI_NOFQDN</code></p>
-<dd> If set, return only the hostname part of the fully qualified domain name for local hosts.</p>
-<dt><code>NI_NUMERICHOST</code></p>
-<dd> If set, then the numeric form of the hostname is returned. (When not set, this will still happen in case the node&#8217;s name cannot be determined.)</p>
-<dt><code>NI_NUMERICSERV</code></p>
-<dd> If set, then the numeric form of the service address is returned. (When not set, this will still happen in case the service&#8217;s name cannot be determined.)</dl>
+<dt><code>NI_NAMEREQD</code></dt>
+<dd> If set, then an error is returned if the hostname cannot be determined.</dd>
+<dt><code>NI_DGRAM</code></dt>
+<dd> If set, then the service is datagram (UDP) based rather than stream (TCP) based. This is required for the few ports (512-514) that have different services for UDP and TCP.</dd>
+<dt><code>NI_NOFQDN</code></dt>
+<dd> If set, return only the hostname part of the fully qualified domain name for local hosts.</dd>
+<dt><code>NI_NUMERICHOST</code></dt>
+<dd> If set, then the numeric form of the hostname is returned. (When not set, this will still happen in case the node&#8217;s name cannot be determined.)</dd>
+<dt><code>NI_NUMERICSERV</code></dt>
+<dd> If set, then the numeric form of the service address is returned. (When not set, this will still happen in case the service&#8217;s name cannot be determined.)</dd></dl>
 <h3>Extensions to getnameinfo() for Internationalized Domain Names</h3>
 <p> Starting with glibc 2.3.4, <code>getnameinfo</code>() has been extended to selectively allow hostnames to be transparently converted to and from the Internationalized Domain Name (IDN) format (see RFC 3490, <i>Internationalizing Domain Names in Applications (IDNA)</i>). Three new flags are defined:</p>
 <dl>
-<dt><code>NI_IDN</code></p>
-<dd> If this flag is used, then the name found in the lookup process is converted from IDN format to the locale&#8217;s encoding if necessary. ASCII-only names are not affected by the conversion, which makes this flag usable in existing programs and environments.</p>
-<dt><code>NI_IDN_ALLOW_UNASSIGNED</code>, <code>NI_IDN_USE_STD3_ASCII_RULES</code></p>
-<dd> Setting these flags will enable the IDNA_ALLOW_UNASSIGNED (allow unassigned Unicode code points) and IDNA_USE_STD3_ASCII_RULES (check output to make sure it is a STD3 conforming hostname) flags respectively to be used in the IDNA handling.</dl>
+<dt><code>NI_IDN</code></dt>
+<dd> If this flag is used, then the name found in the lookup process is converted from IDN format to the locale&#8217;s encoding if necessary. ASCII-only names are not affected by the conversion, which makes this flag usable in existing programs and environments.</dd>
+<dt><code>NI_IDN_ALLOW_UNASSIGNED</code>, <code>NI_IDN_USE_STD3_ASCII_RULES</code></dt>
+<dd> Setting these flags will enable the IDNA_ALLOW_UNASSIGNED (allow unassigned Unicode code points) and IDNA_USE_STD3_ASCII_RULES (check output to make sure it is a STD3 conforming hostname) flags respectively to be used in the IDNA handling.</dd></dl>
 <h2>RETURN VALUE</h2>
 <p> On success, 0 is returned, and node and service names, if requested, are filled with null-terminated strings, possibly truncated to fit the specified buffer lengths. On error, one of the following nonzero error codes is returned:</p>
 <dl>
-<dt><code>EAI_AGAIN</code></p>
-<dd> The name could not be resolved at this time. Try again later.</p>
-<dt><code>EAI_BADFLAGS</code></p>
-<dd> The <i>flags</i> argument has an invalid value.</p>
-<dt><code>EAI_FAIL</code></p>
-<dd> A nonrecoverable error occurred.</p>
-<dt><code>EAI_FAMILY</code></p>
-<dd> The address family was not recognized, or the address length was invalid for the specified family.</p>
-<dt><code>EAI_MEMORY</code></p>
-<dd> Out of memory.</p>
-<dt><code>EAI_NONAME</code></p>
-<dd> The name does not resolve for the supplied arguments. <code>NI_NAMEREQD</code> is set and the host&#8217;s name cannot be located, or neither hostname nor service name were requested.</p>
-<dt><code>EAI_OVERFLOW</code></p>
-<dd> The buffer pointed to by <i>host</i> or <i>serv</i> was too small.</p>
-<dt><code>EAI_SYSTEM</code></p>
-<dd> A system error occurred. The error code can be found in <i>errno</i>.</dl>
+<dt><code>EAI_AGAIN</code></dt>
+<dd> The name could not be resolved at this time. Try again later.</dd>
+<dt><code>EAI_BADFLAGS</code></dt>
+<dd> The <i>flags</i> argument has an invalid value.</dd>
+<dt><code>EAI_FAIL</code></dt>
+<dd> A nonrecoverable error occurred.</dd>
+<dt><code>EAI_FAMILY</code></dt>
+<dd> The address family was not recognized, or the address length was invalid for the specified family.</dd>
+<dt><code>EAI_MEMORY</code></dt>
+<dd> Out of memory.</dd>
+<dt><code>EAI_NONAME</code></dt>
+<dd> The name does not resolve for the supplied arguments. <code>NI_NAMEREQD</code> is set and the host&#8217;s name cannot be located, or neither hostname nor service name were requested.</dd>
+<dt><code>EAI_OVERFLOW</code></dt>
+<dd> The buffer pointed to by <i>host</i> or <i>serv</i> was too small.</dd>
+<dt><code>EAI_SYSTEM</code></dt>
+<dd> A system error occurred. The error code can be found in <i>errno</i>.</dd></dl>
 <p> The <code><a href="/docs/linux/man/3-gai_strerror/">gai_strerror</a></code>(3) function translates these error codes to a human readable string, suitable for error reporting.</p>
 <h2>FILES</h2>
 <p> <i>/etc/hosts</i><br />

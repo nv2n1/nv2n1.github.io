@@ -21,12 +21,10 @@ CUNCSD2BY1 computes the CS decomposition of an M - by - Q matrix X with orthonor
                                                                                                                                                                                                                                                       [X21][| U2][0 0 0]
                                                                                                                                                                                                                                                       [0 S 0]
                                                                                                                                                                                                                                                       [0 0 I]
-
                                                                                                                                                                                                                                                   X11 is P -
                                                                                                                                                                                                             by - Q.The unitary matrices U1,
                                                                                                                                                                                             U2, V1, and V2 are P - by - P,
                                                                                                                                                                                             (M - P) - by - (M - P), Q - by - Q, and(M - Q) - by - (M - Q), respectively.C and S are R - by - R nonnegative diagonal matrices satisfying C ^ 2 + S ^ 2 = I, in which R = MIN(P, M - P, Q, M - Q)..fi
-
                                                                                                                                                                                                                                                                                                                                                                         Parameters : JOBU1 JOBU1 is CHARACTER = 'Y' : U1 is computed;
 otherwise : U1 is not computed.
 </code></pre>
@@ -157,7 +155,6 @@ otherwise : U1 is not computed.
 <pre>
           LRWORK is INTEGER
            The dimension of the array RWORK.
- 
            If LRWORK = -1, then a workspace query is assumed; the routine
            only calculates the optimal size of the RWORK array, returns
            this value as the first entry of the work array, and no error
@@ -181,14 +178,14 @@ aram[out] IWORK
 <p> <code>Author:</code></p>
 <dl>
 <dt>
-<dd> Univ. of Tennessee </p>
+</dt><dd> Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl>
 <dt>
-<dd> July 2012</dl>
+</dt><dd> July 2012</dd></dl>
 <p> Definition at line 260 of file cuncsd2by1.f.</p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for LAPACK from the source code. </p>

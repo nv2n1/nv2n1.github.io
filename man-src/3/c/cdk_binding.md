@@ -13,7 +13,6 @@ description: "cdk_binding – Curses Development Kit Character Binding Capabilit
 <p> <code>cc</code> [ <i>flag</i> &#8230; ] <i>file</i> &#8230; <code>-lcdk</code> [ <i>library</i> &#8230; ] </p>
 <pre><code>
 #include &lt;cdk.h&gt;
-
 void bindCDKObject(
     EObjectType cdkType,
     void *object,
@@ -45,8 +44,8 @@ int getchCDKObject(
 <h2>DESCRIPTION</h2>
 <p> Cdk has the ability to create user definable key bindings. This ability makes Cdk more dynamic and usable for a wide variety of tasks. The following section outlines the binding functions, their use, and their purpose.</p>
 <dl>
-<dt><code>bindCDKObject</code></p>
-<dd> creates a key binding between a specific Cdk widget (<code>object</code>) given key (<code>key</code>). The parameter <code>cdkType</code> is of type <i>EObjectType</i> which is one of the following values.</dl>
+<dt><code>bindCDKObject</code></dt>
+<dd> creates a key binding between a specific Cdk widget (<code>object</code>) given key (<code>key</code>). The parameter <code>cdkType</code> is of type <i>EObjectType</i> which is one of the following values.</dd></dl>
 <p> <center></p>
 <table>
 <tr VALIGN=top>
@@ -291,22 +290,22 @@ int getchCDKObject(
 <p></center></p>
 <dl>
 <dt>
-<dd> The parameter <code>function</code> is the callback function. The parameter <code>data</code> points to data passed to the callback function. The parameter <code>key</code> is the key hit which triggered this callback.</dl>
+</dt><dd> The parameter <code>function</code> is the callback function. The parameter <code>data</code> points to data passed to the callback function. The parameter <code>key</code> is the key hit which triggered this callback.</dd></dl>
 <dl>
-<dt><code>checkCDKObjectBind</code></p>
-<dd> check to see if a binding for the given <code>key</code> exists. If it does, Cdk runs the associated command and returns its value, normally TRUE. If no binding exists, return FALSE.</p>
+<dt><code>checkCDKObjectBind</code></dt>
+<dd> check to see if a binding for the given <code>key</code> exists. If it does, Cdk runs the associated command and returns its value, normally TRUE. If no binding exists, return FALSE.</dd>
 <dt>
-<dd> The widgets which accept input, e.g., via &quot;inject&quot; methods, use this to check if the injected character is bound to a function. If that returns TRUE, the widget may update its <i>exitType</i> value: if <i>earlyExit</i> value is set (not equal to vNEVER_ACTIVATED), the widget sets <i>exitType</i> to that value.</p>
-<dt><code>cleanCDKObjectBindings</code></p>
-<dd> removes all user defined key bindings from the given widget.</p>
-<dt><code>isCDKObjectBind</code></p>
-<dd> check to see if a binding for the given <code>key</code> exists. If it does return TRUE. If no binding exists, return FALSE.</p>
-<dt><code>unbindCDKObject</code></p>
-<dd> removes a specific binding to an object. The parameter are the same as for <code>bindCDKObject</code>.</p>
-<dt><code>getcCDKObject</code></p>
-<dd> reads a keycode from the given widget. This is depcrecated: use <code>getchCDKObject</code>.</p>
-<dt><code>getchCDKObject</code></p>
-<dd> reads a keycode from the given widget. It sets a flag to indicate if the result is a function key. If the keycode has been bound to the special function <code>getcCDKBind</code>, then it will be translated to the value which was given for the binding data. Otherwise, a few special cases are performed: <center></p>
+</dt><dd> The widgets which accept input, e.g., via &quot;inject&quot; methods, use this to check if the injected character is bound to a function. If that returns TRUE, the widget may update its <i>exitType</i> value: if <i>earlyExit</i> value is set (not equal to vNEVER_ACTIVATED), the widget sets <i>exitType</i> to that value.</dd>
+<dt><code>cleanCDKObjectBindings</code></dt>
+<dd> removes all user defined key bindings from the given widget.</dd>
+<dt><code>isCDKObjectBind</code></dt>
+<dd> check to see if a binding for the given <code>key</code> exists. If it does return TRUE. If no binding exists, return FALSE.</dd>
+<dt><code>unbindCDKObject</code></dt>
+<dd> removes a specific binding to an object. The parameter are the same as for <code>bindCDKObject</code>.</dd>
+<dt><code>getcCDKObject</code></dt>
+<dd> reads a keycode from the given widget. This is depcrecated: use <code>getchCDKObject</code>.</dd>
+<dt><code>getchCDKObject</code></dt>
+<dd> reads a keycode from the given widget. It sets a flag to indicate if the result is a function key. If the keycode has been bound to the special function <code>getcCDKBind</code>, then it will be translated to the value which was given for the binding data. Otherwise, a few special cases are performed: <center></dd>
 <table BORDER>
 <tr VALIGN=top>
 <td><code>Key</code></td>
@@ -375,9 +374,7 @@ int getchCDKObject(
 <h2>EXAMPLE</h2>
 <p> To help demonstrate how to use the key bindings I will demonstrate a simple dialog box widget with help for each button. The following code segment creates a dialog box and a callback function named <i>dialogHelpCB</i>. </p>
 <pre><code>
-
 ________________________________________
-
 #include &lt;cdk.h&gt;
 #ifdef HAVE_XCURSES
 char *XCursesProgramName = "bind_ex";
@@ -505,3 +502,4 @@ int main(void)
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-cdk/">cdk</a></code>(3), <code><a href="/docs/linux/man/3-cdk_display/">cdk_display</a></code>(3), <code><a href="/docs/linux/man/3-cdk_screen/">cdk_screen</a></code>(3) </p>
 <h2>Index</h2>
+</p>

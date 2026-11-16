@@ -16,11 +16,11 @@ description: "alcc – text based eD2k links calculator for aMule"
 <p> Compute the eD2k links of all the input files given in the <i>&lt;inputfiles_list&gt;</i> (There can be one or more files).</p>
 <dl>
 <dt>
-<dd> Compute and add part hashes to the computed eD2k links.</p>
+</dt><dd> Compute and add part hashes to the computed eD2k links.</dd>
 <dt>
-<dd> Prints a short usage description.</p>
+</dt><dd> Prints a short usage description.</dd>
 <dt>
-<dd> Be verbose &#8211; show also calculation steps.</dl>
+</dt><dd> Be verbose &#8211; show also calculation steps.</dd></dl>
 <h2>REPORTING BUGS</h2>
 <p> Please report bugs either on our forum (<i><a rel="nofollow" href="http://forum.amule.org/">http://forum.amule.org/</a></i>), or in our bugtracker (<i><a href="http://bugs.amule.org/">http://bugs.amule.org/</a></i>). Please do not report bugs in e-mail, neither to our mailing list nor directly to any team member.</p>
 <h2>COPYRIGHT</h2>

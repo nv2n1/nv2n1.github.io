@@ -10,12 +10,8 @@ description: "vsock – Linux VSOCK address family"
 <p>vsock &#8211; Linux VSOCK address family</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;sys/socket.h&gt;
-
-
 #include &lt;linux/vm_sockets.h&gt;
 stream_socket = socket(AF_VSOCK, SOCK_STREAM, 0);
-
-
 datagram_socket = socket(AF_VSOCK, SOCK_DGRAM, 0);</code></pre>
 <h2>Description</h2>
 <p>The VSOCK address family facilitates communication between virtual machines and the host they are running on. This address family is used by guest agents and hypervisor services that need a communications channel that is independent of virtual machine network configuration. Valid socket types are <code>SOCK_STREAM</code> and <code>SOCK_DGRAM</code>. <code>SOCK_STREAM</code> provides connection-oriented byte streams with guaranteed, in-order delivery. <code>SOCK_DGRAM</code> provides a connectionless datagram packet service with best-effort delivery and best-effort ordering. Availability of these socket types is dependent on the underlying hypervisor. A new socket is created with struct sockaddr_vm {<br />
@@ -47,32 +43,32 @@ datagram_socket = socket(AF_VSOCK, SOCK_DGRAM, 0);</code></pre>
 <p>Sockets are affected by live migration of virtual machines. Connected <code>SOCK_STREAM</code> sockets become disconnected when the virtual machine migrates to a new host. Applications must reconnect when this happens. The local CID may change across live migration if the old CID is not available on the new host. Bound sockets are automatically updated to the new CID.</p>
 <h3>Ioctls</h3>
 <dl>
-<dt><code>IOCTL_VM_SOCKETS_GET_LOCAL_CID</code></p>
-<dd>Get the CID of the local machine. The argument is a pointer to an <i>unsigned int</i>.</p>
-<dd>ioctl(socket, IOCTL_VM_SOCKETS_GET_LOCAL_CID, &amp;cid);</p>
-<dd>Consider using <code>VMADDR_CID_ANY</code> when binding instead of getting the local CID with <code>IOCTL_VM_SOCKETS_GET_LOCAL_CID</code>.</dl>
+<dt><code>IOCTL_VM_SOCKETS_GET_LOCAL_CID</code></dt>
+<dd>Get the CID of the local machine. The argument is a pointer to an <i>unsigned int</i>.</dd>
+<dd>ioctl(socket, IOCTL_VM_SOCKETS_GET_LOCAL_CID, &amp;cid);</dd>
+<dd>Consider using <code>VMADDR_CID_ANY</code> when binding instead of getting the local CID with <code>IOCTL_VM_SOCKETS_GET_LOCAL_CID</code>.</dd></dl>
 <h3>Local communication</h3>
 <p><code>VMADDR_CID_LOCAL</code> (1) directs packets to the same host that generated them. This is useful for testing applications on a single host and for debugging. The local CID obtained with <code>IOCTL_VM_SOCKETS_GET_LOCAL_CID</code> can be used for the same purpose, but it is preferable to use <code>VMADDR_CID_LOCAL .</code></p>
 <h2>Errors</h2>
 <dl>
-<dt><code>EACCES</code></p>
-<dd>Unable to bind to a privileged port without the <code>CAP_NET_BIND_SERVICE</code> capability.</p>
-<dt><code>EADDRINUSE</code></p>
-<dd>Unable to bind to a port that is already in use.</p>
-<dt><code>EADDRNOTAVAIL</code></p>
-<dd>Unable to find a free port for binding or unable to bind to a nonlocal CID.</p>
-<dt><code>EINVAL</code></p>
-<dd>Invalid parameters. This includes: attempting to bind a socket that is already bound, providing an invalid struct <i>sockaddr_vm</i>, and other input validation errors.</p>
-<dt><code>ENOPROTOOPT</code></p>
-<dd>Invalid socket option in <code><a href="/docs/linux/man/2-setsockopt/">setsockopt</a></code>(2) or <code><a href="/docs/linux/man/2-getsockopt/">getsockopt</a></code>(2).</p>
-<dt><code>ENOTCONN</code></p>
-<dd>Unable to perform operation on an unconnected socket.</p>
-<dt><code>EOPNOTSUPP</code></p>
-<dd>Operation not supported. This includes: the <code>MSG_OOB</code> flag that is not implemented for the <code><a href="/docs/linux/man/2-send/">send</a></code>(2) family of syscalls and <code>MSG_PEEK</code> for the <code><a href="/docs/linux/man/2-recv/">recv</a></code>(2) family of syscalls.</p>
-<dt><code>EPROTONOSUPPORT</code></p>
-<dd>Invalid socket protocol number. The protocol should always be 0.</p>
-<dt><code>ESOCKTNOSUPPORT</code></p>
-<dd>Unsupported socket type in <code><a href="/docs/linux/man/2-socket/">socket</a></code>(2). Only <code>SOCK_STREAM</code> and <code>SOCK_DGRAM</code> are valid.</dl>
+<dt><code>EACCES</code></dt>
+<dd>Unable to bind to a privileged port without the <code>CAP_NET_BIND_SERVICE</code> capability.</dd>
+<dt><code>EADDRINUSE</code></dt>
+<dd>Unable to bind to a port that is already in use.</dd>
+<dt><code>EADDRNOTAVAIL</code></dt>
+<dd>Unable to find a free port for binding or unable to bind to a nonlocal CID.</dd>
+<dt><code>EINVAL</code></dt>
+<dd>Invalid parameters. This includes: attempting to bind a socket that is already bound, providing an invalid struct <i>sockaddr_vm</i>, and other input validation errors.</dd>
+<dt><code>ENOPROTOOPT</code></dt>
+<dd>Invalid socket option in <code><a href="/docs/linux/man/2-setsockopt/">setsockopt</a></code>(2) or <code><a href="/docs/linux/man/2-getsockopt/">getsockopt</a></code>(2).</dd>
+<dt><code>ENOTCONN</code></dt>
+<dd>Unable to perform operation on an unconnected socket.</dd>
+<dt><code>EOPNOTSUPP</code></dt>
+<dd>Operation not supported. This includes: the <code>MSG_OOB</code> flag that is not implemented for the <code><a href="/docs/linux/man/2-send/">send</a></code>(2) family of syscalls and <code>MSG_PEEK</code> for the <code><a href="/docs/linux/man/2-recv/">recv</a></code>(2) family of syscalls.</dd>
+<dt><code>EPROTONOSUPPORT</code></dt>
+<dd>Invalid socket protocol number. The protocol should always be 0.</dd>
+<dt><code>ESOCKTNOSUPPORT</code></dt>
+<dd>Unsupported socket type in <code><a href="/docs/linux/man/2-socket/">socket</a></code>(2). Only <code>SOCK_STREAM</code> and <code>SOCK_DGRAM</code> are valid.</dd></dl>
 <h2>Versions</h2>
 <p>Support for VMware (VMCI) has been available since Linux 3.9. KVM (virtio) is supported since Linux 4.8. Hyper-V is supported since Linux 4.14. </p>
 <p> VMADDR_CID_LOCAL is supported since Linux 5.6. Local communication in the guest and on the host is available since Linux 5.6. Previous versions supported only local communication within a guest (not on the host), and with only some transports (VMCI and virtio).</p>

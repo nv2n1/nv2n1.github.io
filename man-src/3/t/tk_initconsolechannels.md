@@ -14,7 +14,7 @@ description: "Tk_InitConsoleChannels – Install the console channels as standar
 <h2>Arguments</h2>
 <dl COMPACT>
 <dd>Tcl_Interp <i>*interp</i> (in) Interpreter in which the console channels are created.
-</dl>
+</dd></dl>
 <h2>Description</h2>
 <p><code>Tk_InitConsoleChannels</code> is invoked to create a set of console channels and install them as the standard channels. All I/O on these channels will be discarded until <code>Tk_CreateConsoleWindow</code> is called to attach the console to a text widget. </p>
 <p> This function is for use by shell applications based on Tk, like <code>wish</code>, on platforms which have no standard channels in graphical mode, like Win32. </p>

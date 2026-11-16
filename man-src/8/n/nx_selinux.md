@@ -24,22 +24,22 @@ description: "nx_selinux – Security Enhanced Linux Policy for the nx processes
 <p> nx_server_exec_t </code> </p>
 <p> &#8211; Set files with the nx_server_exec_t type, if you want to transition an executable to the nx_server_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/opt/NX/bin/nxserver, /usr/NX/bin/nxserver, /usr/libexec/nx/nxserver </p>
+<dt>Paths:</dt>
+<dd>/opt/NX/bin/nxserver, /usr/NX/bin/nxserver, /usr/libexec/nx/nxserver </dd>
 </dl>
 <p> <code>nx_server_home_ssh_t </code> </p>
 <p> &#8211; Set files with the nx_server_home_ssh_t type, if you want to treat the files as nx server home ssh data. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/opt/NX/home/nx/.ssh(/.*)?, /usr/NX/home/nx/.ssh(/.*)?, /var/lib/nxserver/home/.ssh(/.*)? </p>
+<dt>Paths:</dt>
+<dd>/opt/NX/home/nx/.ssh(/.*)?, /usr/NX/home/nx/.ssh(/.*)?, /var/lib/nxserver/home/.ssh(/.*)? </dd>
 </dl>
 <p> <code>nx_server_tmp_t </code> </p>
 <p> &#8211; Set files with the nx_server_tmp_t type, if you want to store nx server temporary files in the /tmp directories. </p>
 <p> <code>nx_server_var_lib_t </code> </p>
 <p> &#8211; Set files with the nx_server_var_lib_t type, if you want to store the nx server files under the /var/lib directory. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/opt/NX/home(/.*)?, /usr/NX/home(/.*)?, /var/lib/nxserver(/.*)? </p>
+<dt>Paths:</dt>
+<dd>/opt/NX/home(/.*)?, /usr/NX/home(/.*)?, /var/lib/nxserver(/.*)? </dd>
 </dl>
 <p> <code>nx_server_var_run_t </code> </p>
 <p> &#8211; Set files with the nx_server_var_run_t type, if you want to store the nx server files under the /run directory. </p>

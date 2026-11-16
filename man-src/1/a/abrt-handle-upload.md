@@ -29,7 +29,7 @@ url: "/docs/linux/man/1-abrt-handle-upload/"
 
 <dl>
 <dt>
-<dd> &bull; ABRT team</dl>
+</dt><dd> &bull; ABRT team</dd></dl>
 
 <h2>SEE ALSO</h2>
 

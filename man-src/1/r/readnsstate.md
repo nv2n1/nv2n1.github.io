@@ -13,11 +13,11 @@ description: "readnsstate – interpret the contents of cn=replica’s nsState v
 <p> Decode and display the content of the nsState attribute from a directory servers cn=replicate object. </p>
 <h2>EXAMPLES</h2>
 <pre>
-<dl><dt><dd>sudo /usr/bin/readnsstate /etc/dirsrv/slapd-localhost/dse.ldif
-</dl>
+<dl><dt></dt><dd>sudo /usr/bin/readnsstate /etc/dirsrv/slapd-localhost/dse.ldif
+</dd></dl>
 </pre>
 <pre>
-<dl><dt><dd>For replica cn=replica,cn=dc3Dexample2Cdc3Dcom,cn=mapping tree,cn=config
+<dl><dt></dt><dd>For replica cn=replica,cn=dc3Dexample2Cdc3Dcom,cn=mapping tree,cn=config
   fmtstr=[H6x3QH6x]
   size=40
   len of nsstate is 40
@@ -32,7 +32,7 @@ description: "readnsstate – interpret the contents of cn=replica’s nsState v
     System time   : Fri May 13 14:01:25 2016
     Diff in sec.  : 11617
     Day:sec diff  : 0:11617
-</dl>
+</dd></dl>
 </pre>
 <h2>AUTHOR</h2>
 <p> readnsstate was written by the 389 Project by richm.</p>

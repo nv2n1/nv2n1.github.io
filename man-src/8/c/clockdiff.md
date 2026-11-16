@@ -14,18 +14,18 @@ description: "clockdiff – measure clock difference between hosts"
 <p><code>clockdiff</code> Measures clock difference between us and <i>destination</i> with 1 msec resolution using ICMP TIMESTAMP [2] packets or, optionally, IP TIMESTAMP option [3] option added to ICMP ECHO. [1]</p>
 <h2>Options</h2>
 <dl>
-<dt><code>-o</code></p>
-<dd>Use IP TIMESTAMP with ICMP ECHO instead of ICMP TIMESTAMP messages. It is useful with some destinations, which do not support ICMP TIMESTAMP (f.e. Solaris &lt;2.4).</p>
-<dt><code>-o1</code></p>
-<dd>Slightly different form of <code>-o</code>, namely it uses three-term IP TIMESTAMP with prespecified hop addresses instead of four term one. What flavor works better depends on target host. Particularly, <code>-o</code> is better for Linux.</dl>
+<dt><code>-o</code></dt>
+<dd>Use IP TIMESTAMP with ICMP ECHO instead of ICMP TIMESTAMP messages. It is useful with some destinations, which do not support ICMP TIMESTAMP (f.e. Solaris &lt;2.4).</dd>
+<dt><code>-o1</code></dt>
+<dd>Slightly different form of <code>-o</code>, namely it uses three-term IP TIMESTAMP with prespecified hop addresses instead of four term one. What flavor works better depends on target host. Particularly, <code>-o</code> is better for Linux.</dd></dl>
 <h2>Warnings</h2>
 <dl>
-<dt>&bull;</p>
-<dd>Some nodes (Cisco) use non-standard timestamps, which is allowed by RFC, but makes timestamps mostly useless.</p>
-<dt>&bull;</p>
-<dd>Some nodes generate messed timestamps (Solaris&gt;2.4), when run <code>xntpd</code>. Seems, its IP stack uses a corrupted clock source, which is synchronized to time-of-day clock periodically and jumps randomly making timestamps mostly useless. Good news is that you can use NTP in this case, which is even better.</p>
-<dt>&bull;</p>
-<dd><code>clockdiff</code> shows difference in time modulo 24 days.</dl>
+<dt>&bull;</dt>
+<dd>Some nodes (Cisco) use non-standard timestamps, which is allowed by RFC, but makes timestamps mostly useless.</dd>
+<dt>&bull;</dt>
+<dd>Some nodes generate messed timestamps (Solaris&gt;2.4), when run <code>xntpd</code>. Seems, its IP stack uses a corrupted clock source, which is synchronized to time-of-day clock periodically and jumps randomly making timestamps mostly useless. Good news is that you can use NTP in this case, which is even better.</dd>
+<dt>&bull;</dt>
+<dd><code>clockdiff</code> shows difference in time modulo 24 days.</dd></dl>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/8-ping/">ping</a></code>(8), <code><a href="/docs/linux/man/8-arping/">arping</a></code>(8), <code><a href="/docs/linux/man/8-tracepath/">tracepath</a></code>(8).</p>
 <h2>References</h2>

@@ -18,13 +18,15 @@ int bson_snprintf(char *str,
 </code></pre>
 <h2>PARAMETERS</h2>
 <dl>
-<dt><code>str</code></p>
-<dd> The destination buffer.</dl>
+<dt><code>str</code></dt>
+<dd> The destination buffer.</dd></dl>
 <dl>
-<dt><code>size</code></p>
-<dd> The size of <code>str</code> \&amp;.</dl>
+<dt><code>size</code></dt>
+<dd> The size of <code>str</code> \&amp;.</dd></dl>
 <dl>
-<dt><code>format</code></p>
-<dd> A printf style format string.</dl>
+<dt><code>format</code></dt>
+<dd> A printf style format string.</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> This is a portable wrapper around <code><a href="/docs/linux/man/3-snprintf/">snprintf</a>(3)</code> \&amp;. It also enforces a trailing <code>
+</p>
+</code>

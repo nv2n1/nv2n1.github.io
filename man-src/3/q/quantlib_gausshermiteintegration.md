@@ -16,3 +16,4 @@ description: "QuantLib::GaussHermiteIntegration – generalized Gauss-Hermite in
 <h2>Detailed Description</h2>
 <p>generalized Gauss-Hermite integration </p>
 <p> This class performs a 1-dimensional Gauss-Hermite integration. [ int_{-inf}^{inf} f(x) mathrm{d}x ] The weighting function is [ w(x;mu)=|x|^{2mu} 
+</p>

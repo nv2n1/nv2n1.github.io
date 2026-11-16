@@ -69,28 +69,28 @@ description: "anvil – Postfix session count and request rate control"
 <p>On low-traffic mail systems, changes to <code>main.cf</code> are picked up automatically as <code><a href="/docs/linux/man/8-anvil/">anvil</a></code>(8) processes run for only a limited amount of time. On other mail systems, use the command &quot;<code>postfix reload</code>&quot; to speed up a change. </p>
 <p> The text below provides only a parameter summary. See <code><a href="/docs/linux/man/5-postconf/">postconf</a></code>(5) for more details including examples.</p>
 <dl>
-<dt><code>anvil_rate_time_unit (60s)</code></p>
-<dd>The time unit over which client connection rates and other rates are calculated.</p>
-<dt><code>anvil_status_update_time (600s)</code></p>
-<dd>How frequently the <code><a href="/docs/linux/man/8-anvil/">anvil</a></code>(8) connection and rate limiting server logs peak usage information.</p>
-<dt><code>config_directory (see &#8216;postconf -d&#8217; output)</code></p>
-<dd>The default location of the Postfix main.cf and master.cf configuration files.</p>
-<dt><code>daemon_timeout (18000s)</code></p>
-<dd>How much time a Postfix daemon process may take to handle a request before it is terminated by a built-in watchdog timer.</p>
-<dt><code>ipc_timeout (3600s)</code></p>
-<dd>The time limit for sending or receiving information over an internal communication channel.</p>
-<dt><code>max_idle (100s)</code></p>
-<dd>The maximum amount of time that an idle Postfix daemon process waits for an incoming connection before terminating voluntarily.</p>
-<dt><code>max_use (100)</code></p>
-<dd>The maximal number of incoming connections that a Postfix daemon process will service before terminating voluntarily.</p>
-<dt><code>process_id (read-only)</code></p>
-<dd>The process ID of a Postfix command or daemon process.</p>
-<dt><code>process_name (read-only)</code></p>
-<dd>The process name of a Postfix command or daemon process.</p>
-<dt><code>syslog_facility (mail)</code></p>
-<dd>The syslog facility of Postfix logging.</p>
-<dt><code>syslog_name (see &#8216;postconf -d&#8217; output)</code></p>
-<dd>The mail system name that is prepended to the process name in syslog records, so that &quot;smtpd&quot; becomes, for example, &quot;postfix/smtpd&quot;.</dl>
+<dt><code>anvil_rate_time_unit (60s)</code></dt>
+<dd>The time unit over which client connection rates and other rates are calculated.</dd>
+<dt><code>anvil_status_update_time (600s)</code></dt>
+<dd>How frequently the <code><a href="/docs/linux/man/8-anvil/">anvil</a></code>(8) connection and rate limiting server logs peak usage information.</dd>
+<dt><code>config_directory (see &#8216;postconf -d&#8217; output)</code></dt>
+<dd>The default location of the Postfix main.cf and master.cf configuration files.</dd>
+<dt><code>daemon_timeout (18000s)</code></dt>
+<dd>How much time a Postfix daemon process may take to handle a request before it is terminated by a built-in watchdog timer.</dd>
+<dt><code>ipc_timeout (3600s)</code></dt>
+<dd>The time limit for sending or receiving information over an internal communication channel.</dd>
+<dt><code>max_idle (100s)</code></dt>
+<dd>The maximum amount of time that an idle Postfix daemon process waits for an incoming connection before terminating voluntarily.</dd>
+<dt><code>max_use (100)</code></dt>
+<dd>The maximal number of incoming connections that a Postfix daemon process will service before terminating voluntarily.</dd>
+<dt><code>process_id (read-only)</code></dt>
+<dd>The process ID of a Postfix command or daemon process.</dd>
+<dt><code>process_name (read-only)</code></dt>
+<dd>The process name of a Postfix command or daemon process.</dd>
+<dt><code>syslog_facility (mail)</code></dt>
+<dd>The syslog facility of Postfix logging.</dd>
+<dt><code>syslog_name (see &#8216;postconf -d&#8217; output)</code></dt>
+<dd>The mail system name that is prepended to the process name in syslog records, so that &quot;smtpd&quot; becomes, for example, &quot;postfix/smtpd&quot;.</dd></dl>
 <h2>See Also</h2>
 <pre><a href="//www.systutorials.com/docs/linux/man/8-smtpd/">smtpd</a>(8), Postfix SMTP server
 <a href="//www.systutorials.com/docs/linux/man/5-postconf/">postconf</a>(5), configuration parameters

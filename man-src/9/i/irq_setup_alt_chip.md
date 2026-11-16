@@ -14,17 +14,17 @@ description: "irq_setup_alt_chip – Switch to alternative chip"
 <p><i>d</i></p>
 <dl>
 <dd>
-<dd>irq_data for this interrupt</dl>
+</dd><dd>irq_data for this interrupt</dd></dl>
 <p> <i>type</i></p>
 <dl>
-<dd>Flow type to be initialized</dl>
+<dd>Flow type to be initialized</dd></dl>
 <h2>Description</h2>
 <p>Only to be called from chip-&gt;<code>irq_set_type</code> callbacks.</p>
 <h2>Authors</h2>
 <p><code>Thomas Gleixner</code> &lt;tglx [at] linutronix.de&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <p> <code>Ingo Molnar</code> &lt;mingo [at] elte.hu&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

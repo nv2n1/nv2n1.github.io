@@ -18,31 +18,31 @@ description: "Axel – A light download accelerator for Linux."
 <p> One argument is required, the URL to the file you want to download. When downloading from FTP, the filename may contain wildcards and the program will try to resolve the full filename. Multiple URL&#8217;s can be specified as well and the program will use all those URL&#8217;s for the download. Please note that the program does not check whether the files are equal. </p>
 <p> Other options: </p>
 <dl>
-<dt><code>&#8211;max-speed=x</code>, <code>-s x</code></p>
-<dd> You can specify a speed (bytes per second) here and Axel will try to keep the average speed around this speed. Useful if you don&#8217;t want the program to suck up all of your bandwidth. </p>
-<dt><code>&#8211;num-connections=x</code>, <code>-n x</code></p>
-<dd> You can specify an alternative number of connections here. </p>
-<dt><code>&#8211;output=x</code>, <code>-o x</code></p>
-<dd> Downloaded data will be put in a local file with the same name, unless you specify a different name using this option. You can specify a directory as well, the program will append the filename. </p>
-<dt><code>&#8211;search[=x]</code>, <code>-S[x]</code></p>
-<dd> Axel can do a search for mirrors using the filesearching.com search engine. This search will be done if you use this option. You can specify how many different mirrors should be used for the download as well. </p>
+<dt><code>&#8211;max-speed=x</code>, <code>-s x</code></dt>
+<dd> You can specify a speed (bytes per second) here and Axel will try to keep the average speed around this speed. Useful if you don&#8217;t want the program to suck up all of your bandwidth. </dd>
+<dt><code>&#8211;num-connections=x</code>, <code>-n x</code></dt>
+<dd> You can specify an alternative number of connections here. </dd>
+<dt><code>&#8211;output=x</code>, <code>-o x</code></dt>
+<dd> Downloaded data will be put in a local file with the same name, unless you specify a different name using this option. You can specify a directory as well, the program will append the filename. </dd>
+<dt><code>&#8211;search[=x]</code>, <code>-S[x]</code></dt>
+<dd> Axel can do a search for mirrors using the filesearching.com search engine. This search will be done if you use this option. You can specify how many different mirrors should be used for the download as well. </dd>
 <p> The search for mirrors can be time-consuming because the program tests every server&#8217;s speed, and it checks whether the file&#8217;s still available. </p>
-<dt><code>&#8211;no-proxy</code>, <code>-N</code></p>
-<dd> Don&#8217;t use any proxy server to download the file. Not possible when a transparent proxy is active somewhere, of course. </p>
-<dt><code>&#8211;verbose</code></p>
-<dd> If you want to see more status messages, you can use this option. Use it more than once if you want to see more. </p>
-<dt><code>&#8211;quiet</code>, <code>-q</code></p>
-<dd> No output to stdout. </p>
-<dt><code>&#8211;alternate</code>, <code>-a</code></p>
-<dd> This will show an alternate progress indicator. A bar displays the progress and status of the different threads, along with current speed and an estimate for the remaining download time. </p>
-<dt><code>&#8211;header=x</code>, <code>-H x</code></p>
-<dd> Add an additional HTTP header. This option should be in the form &quot;Header: Value&quot;. See RFC 2616 section 4.2 and 14 for details on the format and standardized headers. </p>
-<dt><code>&#8211;user-agent=x</code>, <code>-U x</code></p>
-<dd> Set the HTTP user agent to use. Some websites serve different content based upon this parameter. The default value will include &quot;Axel&quot;, its version and the platform. </p>
-<dt><code>&#8211;help</code>, <code>-h</code></p>
-<dd> A brief summary of all the options. </p>
-<dt><code>&#8211;version</code>, <code>-V</code></p>
-<dd> Get version information. </p>
+<dt><code>&#8211;no-proxy</code>, <code>-N</code></dt>
+<dd> Don&#8217;t use any proxy server to download the file. Not possible when a transparent proxy is active somewhere, of course. </dd>
+<dt><code>&#8211;verbose</code></dt>
+<dd> If you want to see more status messages, you can use this option. Use it more than once if you want to see more. </dd>
+<dt><code>&#8211;quiet</code>, <code>-q</code></dt>
+<dd> No output to stdout. </dd>
+<dt><code>&#8211;alternate</code>, <code>-a</code></dt>
+<dd> This will show an alternate progress indicator. A bar displays the progress and status of the different threads, along with current speed and an estimate for the remaining download time. </dd>
+<dt><code>&#8211;header=x</code>, <code>-H x</code></dt>
+<dd> Add an additional HTTP header. This option should be in the form &quot;Header: Value&quot;. See RFC 2616 section 4.2 and 14 for details on the format and standardized headers. </dd>
+<dt><code>&#8211;user-agent=x</code>, <code>-U x</code></dt>
+<dd> Set the HTTP user agent to use. Some websites serve different content based upon this parameter. The default value will include &quot;Axel&quot;, its version and the platform. </dd>
+<dt><code>&#8211;help</code>, <code>-h</code></dt>
+<dd> A brief summary of all the options. </dd>
+<dt><code>&#8211;version</code>, <code>-V</code></dt>
+<dd> Get version information. </dd>
 </dl>
 <h2>NOTE</h2>
 <p> Long (double dash) options are supported only if your platform knows about the getopt_long call. If it does not (like *BSD), only the short options can be used. </p>

@@ -14,10 +14,10 @@ description: "gnutls_x509_crl_get_raw_issuer_dn – API function"
 <p> <code>int gnutls_x509_crl_get_raw_issuer_dn(gnutls_x509_crl_t </code><i>crl</i><code>, gnutls_datum_t * </code><i>dn</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
-<dt>gnutls_x509_crl_t crl</p>
-<dd> should contain a gnutls_x509_crl_t structure</p>
-<dt>gnutls_datum_t * dn</p>
-<dd> will hold the starting point of the DN</dl>
+<dt>gnutls_x509_crl_t crl</dt>
+<dd> should contain a gnutls_x509_crl_t structure</dd>
+<dt>gnutls_datum_t * dn</dt>
+<dd> will hold the starting point of the DN</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> This function will return a pointer to the DER encoded DN structure and the length.</p>
 <h2>RETURNS</h2>
@@ -33,6 +33,6 @@ description: "gnutls_x509_crl_get_raw_issuer_dn – API function"
 <h2>SEE ALSO</h2>
 <p> The full documentation for <code>gnutls</code> is maintained as a Texinfo manual. If the /usr/share/doc/gnutls/ directory does not contain the HTML form visit <code></p>
 <dl>
-<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></p>
-<dd> </code></dl>
+<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></dt>
+<dd> </code></dd></dl>
 <h2>Index</h2>

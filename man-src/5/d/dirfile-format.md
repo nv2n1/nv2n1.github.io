@@ -19,26 +19,29 @@ description: "dirfile-format — the dirfile database format specification file"
 <p> Several characters when escaped by a preceding backslash character are interpreted as special characters in tokens. The character escape sequences are:</p>
 <dl>
 <dd>
-<dl>
-<dt><code></code></p>
-<dd>an alert (bell) character (ASCII 0x07 / U+0007)</p>
-<dt><code></code></p>
-<dd>a backspace character (ASCII 0x08 / U+0008)</p>
-<dt><code></code></p>
-<dd>an escape character (ASCII 0x1B / U+001B)</p>
-<dt><code></code></p>
-<dd>a form-feed character (ASCII 0x0C / U+000C)</p>
+</dd><dl>
+<dt><code></code></dt>
+<dd>an alert (bell) character (ASCII 0x07 / U+0007)</dd>
+<dt><code></code></dt>
+<dd>a backspace character (ASCII 0x08 / U+0008)</dd>
+<dt><code></code></dt>
+<dd>an escape character (ASCII 0x1B / U+001B)</dd>
+<dt><code></code></dt>
+<dd>a form-feed character (ASCII 0x0C / U+000C)</dd>
 <dt><code>
-</code></p>
-<dd>a line-feed character (ASCII 0x0A / U+000A)</p>
-<dt><code></code></p>
-<dd>a carriage return character (ASCII 0x0D / U+000D)</p>
-<dt><code>	</code></p>
-<dd>a horizontal tab character (ASCII 0x09 / U+0009)</p>
-<dt><code></code></p>
-<dd>a vertical tab character (ASCII 0x0B / U+000B)</p>
-<dt><code>\</code></p>
-<dd>a backslash character (ASCII 0x5C / U+005C)</p>
-<dt><code>\</code><i>ooo</i></p>
-<dd>the single byte given by the octal number <i>ooo</i>.</p>
+</code></dt>
+<dd>a line-feed character (ASCII 0x0A / U+000A)</dd>
 <dt><code>
+</code></dt>
+<dd>a carriage return character (ASCII 0x0D / U+000D)</dd>
+<dt><code>	</code></dt>
+<dd>a horizontal tab character (ASCII 0x09 / U+0009)</dd>
+<dt><code></code></dt>
+<dd>a vertical tab character (ASCII 0x0B / U+000B)</dd>
+<dt><code>\</code></dt>
+<dd>a backslash character (ASCII 0x5C / U+005C)</dd>
+<dt><code>\</code><i>ooo</i></dt>
+<dd>the single byte given by the octal number <i>ooo</i>.</dd>
+<dt><code>
+</dt></dl></dl>
+</code>

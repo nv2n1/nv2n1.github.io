@@ -14,16 +14,16 @@ description: "rdev_get_drvdata – get rdev regulator driver data"
 <p><i>rdev</i></p>
 <dl>
 <dd>
-<dd>regulator</dl>
+</dd><dd>regulator</dd></dl>
 <h2>Description</h2>
 <p>Get rdev regulator driver private data. This call can be used in the regulator driver context.</p>
 <h2>Authors</h2>
 <p><code>Liam Girdwood</code> &lt;lrg [at] slimlogic.co.uk&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <p> <code>Mark Brown</code> &lt;broonie [at] opensource.wolfsonmicro.com&gt;<br />
  Wolfson Microelectronics, </p>
 <p>&nbsp;<wbr>&nbsp;<wbr></p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

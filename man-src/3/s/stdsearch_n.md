@@ -11,38 +11,23 @@ std::search_n - std::search_n
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;algorithm&gt;
-
     template &lt;class ForwardIt, class Size, class T&gt;
     (until C++ 20)
-
         ForwardIt search_n(ForwardIt first, ForwardIt last, Size count, const T &amp;value);
-
 template &lt;class ForwardIt, class Size, class T&gt;
 (since C++ 20)
-
     constexpr ForwardIt search_n(ForwardIt first, ForwardIt last, Size count, const T &amp;value);
-
 template &lt;class ExecutionPolicy, class ForwardIt, class Size, class T&gt;
 (2)(since C++ 17)
-
     ForwardIt search_n(ExecutionPolicy &amp;&amp;policy, ForwardIt first, ForwardIt last, Size count, const T &amp;value);
-
 template &lt;class ForwardIt, class Size, class T, class BinaryPredicate&gt;
-
 ForwardIt search_n(ForwardIt first, ForwardIt last, Size count, const T &amp;value, (1)(until C++ 20)
-
                                                                                     BinaryPredicate p);
-
 template &lt;class ForwardIt, class Size, class T, class BinaryPredicate&gt;
-
 constexpr ForwardIt search_n(ForwardIt first, ForwardIt last, Size count, const T &amp;value, (3)(since C++ 20)
-
                                                                                               BinaryPredicate p);
-
 template &lt;class ExecutionPolicy, class ForwardIt, class Size, class T, class BinaryPredicate&gt;
-
 ForwardIt search_n(ExecutionPolicy &amp;&amp;policy, ForwardIt first, ForwardIt last, Size count, const T &amp;value, (4)(since C++ 17)
-
                                                                                                               BinaryPredicate p);</code></pre> 
 Searches the range [first, last) for the first sequence of count identical elements, each equal to the given value value. 
 1) Elements are compared using operator==. 
@@ -168,19 +153,14 @@ The overloads with a template parameter named ExecutionPolicy report errors as f
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;iostream&gt;
-
 #include &lt;algorithm&gt;
-
 #include &lt;iterator&gt;
 template &lt;class Container, class Size, class T&gt;
-
 bool consecutive_values(const Container &amp;c, Size count, const T &amp;v)
-
 {
     return std::search_n(std::begin(c), std::end(c), count, v) != std::end(c);
 }
 int main()
-
 {
     const char sequence[] = &quot;1001010100010101001010101&quot;;
     std::cout &lt;&lt; std::boolalpha;

@@ -13,36 +13,36 @@ description: "po4a – framework to translate documentation and other materials"
 <h2>Table of content</h2>
 <p>This document is organized as follow:</p>
 <dl>
-<dt>1 Why should I use po4a? What is it good for?</p>
-<dd>This introducing chapter explains the motivation of the project and its philosophy. You should read it first if you are in the process of evaluating po4a for your own translations.</p>
-<dt>2 How to use po4a?</p>
-<dd>This chapter is a sort of reference manual, trying to answer the users&#8217; questions and to give you a better understanding of the whole process. This introduces how to do things with po4a and serve as an introduction to the documentation of the specific tools.</p>
+<dt>1 Why should I use po4a? What is it good for?</dt>
+<dd>This introducing chapter explains the motivation of the project and its philosophy. You should read it first if you are in the process of evaluating po4a for your own translations.</dd>
+<dt>2 How to use po4a?</dt>
+<dd>This chapter is a sort of reference manual, trying to answer the users&#8217; questions and to give you a better understanding of the whole process. This introduces how to do things with po4a and serve as an introduction to the documentation of the specific tools.</dd>
 <dl>
 <dd>
-<dl>
-<dt><font SIZE="-1">HOWTO</font> begin a new translation?</p>
+</dd><dl>
+<dt><font SIZE="-1">HOWTO</font> begin a new translation?</dt>
 <dd>
-<dt><font SIZE="-1">HOWTO</font> change the translation back to a documentation file?</p>
+</dd><dt><font SIZE="-1">HOWTO</font> change the translation back to a documentation file?</dt>
 <dd>
-<dt><font SIZE="-1">HOWTO</font> update a po4a translation?</p>
+</dd><dt><font SIZE="-1">HOWTO</font> update a po4a translation?</dt>
 <dd>
-<dt><font SIZE="-1">HOWTO</font> convert a pre-existing translation to po4a?</p>
+</dd><dt><font SIZE="-1">HOWTO</font> convert a pre-existing translation to po4a?</dt>
 <dd>
-<dt><font SIZE="-1">HOWTO</font> add extra text to translations (like translator&#8217;s name)?</p>
+</dd><dt><font SIZE="-1">HOWTO</font> add extra text to translations (like translator&#8217;s name)?</dt>
 <dd>
-<dt><font SIZE="-1">HOWTO</font> do all this in one program invocation?</p>
+</dd><dt><font SIZE="-1">HOWTO</font> do all this in one program invocation?</dt>
 <dd>
-<dt><font SIZE="-1">HOWTO</font> customize po4a?</p>
-<dd></dl>
+</dd><dt><font SIZE="-1">HOWTO</font> customize po4a?</dt>
+<dd></dd></dl>
 </dl>
 <dl>
-<dd></dl>
-<dt>3 How does it work?</p>
-<dd>This chapter gives you a brief overview of the po4a internals, so that you may feel more confident to help us maintaining and improving it. It may also help you understanding why it does not do what you expected, and how to solve your problems.</p>
-<dt>4 <font SIZE="-1">FAQ</font></p>
-<dd>This chapter groups the Frequently Asked Questions. In fact, most of the questions for now could be formulated that way: &#8220;Why is it designed this way, and not that one?&#8221; If you think po4a isn&#8217;t the right answer to documentation translation, you should consider reading this section. If it does not answer your question, please contact us on the &lt;po4a-devel [at] lists.alioth.debian.org&gt; mailing list. We love feedback.</p>
-<dt>5 Specific notes about modules</p>
-<dd>This chapter presents the specificities of each module from the translator and original author&#8217;s point of view. Read this to learn the syntax you will encounter when translating stuff in this module, or the rules you should follow in your original document to make translators&#8217; life easier. </p>
+<dd></dd></dl>
+<dt>3 How does it work?</dt>
+<dd>This chapter gives you a brief overview of the po4a internals, so that you may feel more confident to help us maintaining and improving it. It may also help you understanding why it does not do what you expected, and how to solve your problems.</dd>
+<dt>4 <font SIZE="-1">FAQ</font></dt>
+<dd>This chapter groups the Frequently Asked Questions. In fact, most of the questions for now could be formulated that way: &#8220;Why is it designed this way, and not that one?&#8221; If you think po4a isn&#8217;t the right answer to documentation translation, you should consider reading this section. If it does not answer your question, please contact us on the &lt;po4a-devel [at] lists.alioth.debian.org&gt; mailing list. We love feedback.</dd>
+<dt>5 Specific notes about modules</dt>
+<dd>This chapter presents the specificities of each module from the translator and original author&#8217;s point of view. Read this to learn the syntax you will encounter when translating stuff in this module, or the rules you should follow in your original document to make translators&#8217; life easier. </dd>
 <p> Actually, this section is not really part of this document. Instead, it is placed in each module&#8217;s documentation. This helps ensuring that the information is up to date by keeping the documentation and the code together.</dl>
 <h2>Why should I use po4a? What it is good for?</h2>
 <p>I like the idea of open-source software, making it possible for everybody to access software and its source code. But being French, I&#8217;m well aware that the licensing is not the only restriction to the openness of software: non-translated free software is useless for non-English speakers, and we still have some work to make it available to really everybody out there. </p>
@@ -126,12 +126,12 @@ description: "po4a – framework to translate documentation and other materials"
 <p>This section presents the needed steps required to begin a new translation with po4a. The refinements involved in converting an existing project to this system are detailed in the relevant section. </p>
 <p> To begin a new translation using po4a, you have to do the following steps:</p>
 <dl>
-<dt>&#8211;</p>
-<dd>Extract the text which have to be translated from the original &lt;<i>master.doc</i>&gt; document into a new translation template &lt;<i>translation.pot</i>&gt; file (the gettext format). For that, use the <code>po4a-gettextize</code> program this way: </p>
+<dt>&#8211;</dt>
+<dd>Extract the text which have to be translated from the original &lt;<i>master.doc</i>&gt; document into a new translation template &lt;<i>translation.pot</i>&gt; file (the gettext format). For that, use the <code>po4a-gettextize</code> program this way: </dd>
 <pre> $ po4a-gettextize -f &lt;format&gt; -m &lt;master.doc&gt; -p &lt;translation.pot&gt;</pre>
 <p>&lt;<i>format</i>&gt; is naturally the format used in the <i>master.doc</i> document. As expected, the output goes into <i>translation.pot</i>. Please refer to <i><a href="/docs/linux/man/1-po4a-gettextize/">po4a-gettextize</a></i>(1) for more details about the existing options.</p>
-<dt>&#8211;</p>
-<dd>Actually translate what should be translated. For that, you have to rename the <font SIZE="-1">POT</font> file for example to <i>doc.XX.po</i> (where <i></i><font SIZE="-1"><i>XX</i></font><i></i> is the <font SIZE="-1">ISO639</font> code of the language you are translating to, e.g. <code>fr</code> for French), and edit the resulting file. It is often a good idea to not name the file <i></i><font SIZE="-1"><i>XX</i></font><i>.po</i> to avoid confusion with the translation of the program messages, but this your call. Don&#8217;t forget to update the <font SIZE="-1">PO</font> file headers, they are important. </p>
+<dt>&#8211;</dt>
+<dd>Actually translate what should be translated. For that, you have to rename the <font SIZE="-1">POT</font> file for example to <i>doc.XX.po</i> (where <i></i><font SIZE="-1"><i>XX</i></font><i></i> is the <font SIZE="-1">ISO639</font> code of the language you are translating to, e.g. <code>fr</code> for French), and edit the resulting file. It is often a good idea to not name the file <i></i><font SIZE="-1"><i>XX</i></font><i>.po</i> to avoid confusion with the translation of the program messages, but this your call. Don&#8217;t forget to update the <font SIZE="-1">PO</font> file headers, they are important. </dd>
 <p> The actual translation can be done using the Emacs&#8217; or Vi&#8217;s <font SIZE="-1">PO</font> mode, Lokalize (<font SIZE="-1">KDE</font> based), Gtranslator (<font SIZE="-1">GNOME</font> based) or whichever program you prefer to use for them (e.g. Virtaal). </p>
 <p> If you wish to learn more about this, you definitively need to refer to the gettext documentation, available in the <code>gettext-doc</code> package.</dl>
 <h3><font SIZE="-1">HOWTO</font> change the translation back to a documentation file?</h3>
@@ -160,21 +160,21 @@ description: "po4a – framework to translate documentation and other materials"
 <p> Often the document structures don&#8217;t match exactly, preventing <code>po4a-gettextize</code> from doing its job properly. At that point, the whole game is about editing the files to get their damn structures matching. </p>
 <p> It may help to read the section <code>Gettextization: how does it work?</code> below. Understanding the internal process will help you to make this work. The good point is that <code>po4a-gettextize</code> is rather verbose about what went wrong when it happens. First, it pinpoints where in the documents the structures&#8217; discrepancies are. You will learn the strings that don&#8217;t match, their positions in the text, and the type of each of them. Moreover, the <font SIZE="-1">PO</font> file generated so far will be dumped to <i>gettextization.failed.po</i>.</p>
 <dl>
-<dt>&#8211;</p>
-<dd>Remove all extra parts of the translations, such as the section in which you give the translator name and thank every people who contributed to the translation. Addenda, which are described in the next section, will allow you to re-add them afterward.</p>
-<dt>&#8211;</p>
-<dd>Do not hesitate to edit both the original and the translation. The most important thing is to get the <font SIZE="-1">PO</font> file. You will be able to update it afterward. That being said, editing the translation should be preferred when both are possible since it makes things easier when the gettextization is done.</p>
-<dt>&#8211;</p>
-<dd>If needed, kill some parts of the original if they happen to not be translated. When synchronizing the <font SIZE="-1">PO</font> with the document afterward, they will come back from themselves.</p>
-<dt>&#8211;</p>
-<dd>If you changed the structure a bit (to merge two paragraphs, or split another one), undo those changes. If there are issues in the original, you should inform the original author. Fixing them in your translation only fixes them for a part of the community. And moreover, it&#8217;s impossible when using po4a ;)</p>
-<dt>&#8211;</p>
-<dd>Sometimes, the paragraph content does match, but their types don&#8217;t. Fixing it is rather format-dependant. In <font SIZE="-1">POD</font> and man, it often comes from the fact that one of the two contains a line beginning with a white space where the other doesn&#8217;t. In those formats, such paragraph cannot be wrapped and thus become a different type. Just remove the space and you are fine. It may also be a typo in the tag name. </p>
+<dt>&#8211;</dt>
+<dd>Remove all extra parts of the translations, such as the section in which you give the translator name and thank every people who contributed to the translation. Addenda, which are described in the next section, will allow you to re-add them afterward.</dd>
+<dt>&#8211;</dt>
+<dd>Do not hesitate to edit both the original and the translation. The most important thing is to get the <font SIZE="-1">PO</font> file. You will be able to update it afterward. That being said, editing the translation should be preferred when both are possible since it makes things easier when the gettextization is done.</dd>
+<dt>&#8211;</dt>
+<dd>If needed, kill some parts of the original if they happen to not be translated. When synchronizing the <font SIZE="-1">PO</font> with the document afterward, they will come back from themselves.</dd>
+<dt>&#8211;</dt>
+<dd>If you changed the structure a bit (to merge two paragraphs, or split another one), undo those changes. If there are issues in the original, you should inform the original author. Fixing them in your translation only fixes them for a part of the community. And moreover, it&#8217;s impossible when using po4a ;)</dd>
+<dt>&#8211;</dt>
+<dd>Sometimes, the paragraph content does match, but their types don&#8217;t. Fixing it is rather format-dependant. In <font SIZE="-1">POD</font> and man, it often comes from the fact that one of the two contains a line beginning with a white space where the other doesn&#8217;t. In those formats, such paragraph cannot be wrapped and thus become a different type. Just remove the space and you are fine. It may also be a typo in the tag name. </dd>
 <p> Likewise, two paragraphs may get merged together in <font SIZE="-1">POD</font> when the separating line contains some spaces, or when there is no empty line before the =item line and the content of the item.</p>
-<dt>&#8211;</p>
-<dd>Sometimes, there is a desynchronization between the files, and the translation is attached to the wrong original paragraph. It is the sign that the real problem was before in the files. Check <i>gettextization.failed.po</i> to see when the desynchronization begins, and fix it there.</p>
-<dt>&#8211;</p>
-<dd>Sometimes, you get the strong feeling that po4a ate some parts of the text, either the original or the translation. <i>gettextization.failed.po</i> indicates that both of them where gently matching, and then the gettextization fails because it tried to match one paragraph with the one after (or before) the right one, as if the right one disappeared. Curse po4a as I did when it first happened to me. Generously. </p>
+<dt>&#8211;</dt>
+<dd>Sometimes, there is a desynchronization between the files, and the translation is attached to the wrong original paragraph. It is the sign that the real problem was before in the files. Check <i>gettextization.failed.po</i> to see when the desynchronization begins, and fix it there.</dd>
+<dt>&#8211;</dt>
+<dd>Sometimes, you get the strong feeling that po4a ate some parts of the text, either the original or the translation. <i>gettextization.failed.po</i> indicates that both of them where gently matching, and then the gettextization fails because it tried to match one paragraph with the one after (or before) the right one, as if the right one disappeared. Curse po4a as I did when it first happened to me. Generously. </dd>
 <p> This unfortunate situation happens when the same paragraph is repeated over the document. In that case, no new entry is created in the <font SIZE="-1">PO</font> file, but a new reference is added to the existing one instead. </p>
 <p> So, when the same paragraph appears twice in the original but both are not translated in the exact same way each time, you will get the feeling that a paragraph of the original disappeared. Just kill the new translation. If you prefer to kill the first translation instead when it was actually better, remove the second one from where it is and put it in place of the first one. </p>
 <p> In the contrary, if two similar but different paragraphs were translated in the exact same way, you will get the feeling that a paragraph of the translation disappeared. A solution is to add a stupid string to the original paragraph (such as &#8220;I&#8217;m different&#8221;). Don&#8217;t be afraid, those things will disappear during the synchronization, and when the added text is short enough, gettext will match your translation to the existing text (marking it as fuzzy, but you don&#8217;t really care since all strings are fuzzy after gettextization).</dl>
@@ -189,20 +189,20 @@ description: "po4a – framework to translate documentation and other materials"
 <p> Again, it sounds scary, but the examples given below should help you to find how to write the header line you need. To illustrate the discussion, assume we want to add a section called &#8220;About this translation&#8221; after the &#8220;About this document&#8221; one. </p>
 <p> Here are the possible header keys:</p>
 <dl>
-<dt><code>position</code> (mandatory)</p>
-<dd>a regexp. The addendum will be placed near the line matching this regexp. Note that we&#8217;re speaking about the translated document here, not the original. If more than a line match this expression (or none), the addition will fail. It is indeed better to report an error than inserting the addendum at the wrong location. </p>
+<dt><code>position</code> (mandatory)</dt>
+<dd>a regexp. The addendum will be placed near the line matching this regexp. Note that we&#8217;re speaking about the translated document here, not the original. If more than a line match this expression (or none), the addition will fail. It is indeed better to report an error than inserting the addendum at the wrong location. </dd>
 <p> This line is called <i>position point</i> in the following. The point where the addendum is added is called <i>insertion point</i>. Those two points are near one from another, but not equal. For example, if you want to insert a new section, it is easier to put the <i>position point</i> on the title of the preceding section and explain po4a where the section ends (remember that <i>position point</i> is given by a regexp which should match a unique line). </p>
 <p> The localization of the <i>insertion point</i> with regard to the <i>position point</i> is controlled by the <code>mode</code>, <code>beginboundary</code> and <code>endboundary</code> fields, as explained below. </p>
 <p> In our case, we would have: </p>
 <pre> position=&lt;title&gt;About this document&lt;/title&gt;</pre>
-<dt><code>mode</code> (mandatory)</p>
-<dd>It can be either the string <code>before</code> or <code>after</code>, specifying the position of the addendum, relative to the <i>position point</i>. </p>
+<dt><code>mode</code> (mandatory)</dt>
+<dd>It can be either the string <code>before</code> or <code>after</code>, specifying the position of the addendum, relative to the <i>position point</i>. </dd>
 <p> Since we want the new section to be placed below the one we are matching, we have: </p>
 <pre> mode=after</pre>
-<dt><code>beginboundary</code> (used only when <code>mode=after</code>, and mandatory in that case)</p>
+<dt><code>beginboundary</code> (used only when <code>mode=after</code>, and mandatory in that case)</dt>
 <dd>
-<dt><code>endboundary</code> (idem)</p>
-<dd>regexp matching the end of the section after which the addendum goes. </p>
+</dd><dt><code>endboundary</code> (idem)</dt>
+<dd>regexp matching the end of the section after which the addendum goes. </dd>
 <p> When <code>mode=after</code>, the <i>insertion point</i> is after the <i>position point</i>, but not directly after! It is placed at the end of the section beginning at the <i>position point</i>, i.e., after or before the line matched by the <i>???</i><code>boundary</code> argument, depending on whether you used <code>beginboundary</code> or <code>endboundary</code>. </p>
 <p> In our case, we can choose to indicate the end of the section we match by adding: </p>
 <pre> endboundary=&lt;/section&gt;</pre>
@@ -212,22 +212,22 @@ description: "po4a – framework to translate documentation and other materials"
 <p> Both forms exist because documentation formats are different. In some of them, there is a way to mark the end of a section (just like the <code>&lt;/section&gt;</code> we just used), while some other don&#8217;t explicitly mark the end of section (like in man). In the former case, you want to make a <i>boundary</i> matching the <i>end of a section</i>, so that the <i>insertion point</i> comes after it. In the latter case, you want to make a <i>boundary</i> matching the <i>beginning of the next section</i>, so that the <i>insertion point</i> comes just before it.</dl>
 <p> This can seem obscure, but hopefully, the next examples will enlighten you.</p>
 <dl>
-<dt> To sum up the example we used so far, in order to add a section called &quot;About this translation&quot; after the &quot;About this document&quot; one in a <font SIZE="-1">SGML</font> document, you can use either of those header lines:</p>
+<dt> To sum up the example we used so far, in order to add a section called &quot;About this translation&quot; after the &quot;About this document&quot; one in a <font SIZE="-1">SGML</font> document, you can use either of those header lines:</dt>
 <dd>
 <pre> PO4A-HEADER: mode=after; position=About this document; endboundary=&lt;/section&gt;
  PO4A-HEADER: mode=after; position=About this document; beginboundary=&lt;section&gt;</pre>
-<dt> If you want to add something after the following nroff section:</p>
+</dd><dt> If you want to add something after the following nroff section:</dt>
 <dd>
 <pre> .SH &quot;AUTHORS&quot;</pre>
 <p>you should put a <code>position</code> matching this line, and a <code>beginboundary</code> matching the beginning of the next section (i.e., <code>^\.SH</code>). The addendum will then be added <code>after</code> the <i>position point</i> and immediately <code>before</code> the first line matching the <code>beginboundary</code>. That is to say: </p>
 <pre> PO4A-HEADER:mode=after;position=AUTHORS;beginboundary=\.SH</pre>
-<dt> If you want to add something into a section (like after &quot;Copyright Big Dude&quot;) instead of adding a whole section, give a <code>position</code> matching this line, and give a <code>beginboundary</code> matching any line.</p>
+</dd><dt> If you want to add something into a section (like after &quot;Copyright Big Dude&quot;) instead of adding a whole section, give a <code>position</code> matching this line, and give a <code>beginboundary</code> matching any line.</dt>
 <dd>
 <pre> PO4A-HEADER:mode=after;position=Copyright Big Dude, 2004;beginboundary=^</pre>
-<dt>If you want to add something at the end of the document, give a <code>position</code> matching any line of your document (but only one line. Po4a won&#8217;t proceed if it&#8217;s not unique), and give an <code>endboundary</code> matching nothing. Don&#8217;t use simple strings here like <code>&quot;</code><font SIZE="-1"><code>EOF&quot;</code></font>, but prefer those which have less chance to be in your document.</p>
+</dd><dt>If you want to add something at the end of the document, give a <code>position</code> matching any line of your document (but only one line. Po4a won&#8217;t proceed if it&#8217;s not unique), and give an <code>endboundary</code> matching nothing. Don&#8217;t use simple strings here like <code>&quot;</code><font SIZE="-1"><code>EOF&quot;</code></font>, but prefer those which have less chance to be in your document.</dt>
 <dd>
 <pre> PO4A-HEADER:mode=after;position=&lt;title&gt;About&lt;/title&gt;;beginboundary=FakePo4aBoundary</pre>
-</dl>
+</dd></dl>
 <p> In any case, remember that these are regexp. For example, if you want to match the end of a nroff section ending with the line </p>
 <pre> .fi</pre>
 <p>don&#8217;t use <code>.fi</code> as <code>endboundary</code>, because it will match with &#8220;the[ fi]le&#8221;, which is obviously not what you expect. The correct <code>endboundary</code> in that case is: <code>^\.fi$</code>. </p>
@@ -315,18 +315,18 @@ description: "po4a – framework to translate documentation and other materials"
 <h3>Why to translate each paragraph separately?</h3>
 <p>Yes, in po4a, each paragraph is translated separately (in fact, each module decides this, but all existing modules do so, and yours should also). There are two main advantages to this approach:</p>
 <dl>
-<dt>&bull;</p>
-<dd>When the technical parts of the document are hidden from the scene, the translator can&#8217;t mess with them. The fewer markers we present to the translator the less error he can do.</p>
-<dt>&bull;</p>
-<dd>Cutting the document helps in isolating the changes to the original document. When the original is modified, finding what parts of the translation need to be updated is eased by this process.</dl>
+<dt>&bull;</dt>
+<dd>When the technical parts of the document are hidden from the scene, the translator can&#8217;t mess with them. The fewer markers we present to the translator the less error he can do.</dd>
+<dt>&bull;</dt>
+<dd>Cutting the document helps in isolating the changes to the original document. When the original is modified, finding what parts of the translation need to be updated is eased by this process.</dd></dl>
 <p> Even with these advantages, some people don&#8217;t like the idea of translating each paragraph separately. Here are some of the answers I can give to their fear:</p>
 <dl>
-<dt>&bull;</p>
-<dd>This approach proved successfully in the <font SIZE="-1">KDE</font> project and allows people there to produce the biggest corpus of translated and up to date documentation I know.</p>
-<dt>&bull;</p>
-<dd>The translators can still use the context to translate, since the strings in the <font SIZE="-1">PO</font> file are in the same order than in the original document. Translating sequentially is thus rather comparable whether you use po4a or not. And in any case, the best way to get the context remains to convert the document to a printable format since the text formatting ones are not really readable, <font SIZE="-1">IMHO. </font></p>
-<dt>&bull;</p>
-<dd>This approach is the one used by professional translators. I agree, that they have somewhat different goals than open-source translators. The maintenance is for example often less critical to them since the content changes rarely.</dl>
+<dt>&bull;</dt>
+<dd>This approach proved successfully in the <font SIZE="-1">KDE</font> project and allows people there to produce the biggest corpus of translated and up to date documentation I know.</dd>
+<dt>&bull;</dt>
+<dd>The translators can still use the context to translate, since the strings in the <font SIZE="-1">PO</font> file are in the same order than in the original document. Translating sequentially is thus rather comparable whether you use po4a or not. And in any case, the best way to get the context remains to convert the document to a printable format since the text formatting ones are not really readable, <font SIZE="-1">IMHO. </font></dd>
+<dt>&bull;</dt>
+<dd>This approach is the one used by professional translators. I agree, that they have somewhat different goals than open-source translators. The maintenance is for example often less critical to them since the content changes rarely.</dd></dl>
 <h3>Why not to split on sentence level (or smaller)?</h3>
 <p>Professional translator tools sometimes split the document at the sentence level in order to maximize the reusability of previous translations and speed up their process. The problem is that the same sentence may have several translations, depending on the context. </p>
 <p> Paragraphs are by definition longer than sentences. It will hopefully ensure that having the same paragraph in two documents will have the same meaning (and translation), regardless of the context in each case. </p>
@@ -344,12 +344,12 @@ description: "po4a – framework to translate documentation and other materials"
  &lt;/section&gt;</pre>
 <p>But it was so problematic that a PO-based approach is now used. Only the original can be edited in the file, and the translations must take place in <font SIZE="-1">PO</font> files extracted from the master template (and placed back at package compilation time). The old system was deprecated because of several issues:</p>
 <dl>
-<dt>&bull;</p>
-<dd>maintenance problems </p>
+<dt>&bull;</dt>
+<dd>maintenance problems </dd>
 <p> If several translators provide a patch at the same time, it gets hard to merge them together. </p>
 <p> How will you detect changes to the original, which need to be applied to the translations? In order to use diff, you have to note which version of the original you translated. I.e., you need a <font SIZE="-1">PO</font> file in your file ;)</p>
-<dt>&bull;</p>
-<dd>encoding problems </p>
+<dt>&bull;</dt>
+<dd>encoding problems </dd>
 <p> This solution is viable when only European languages are involved, but the introduction of Korean, Russian and/or Arab really complicate the picture. <font SIZE="-1">UTF</font> could be a solution, but there are still some problems with it. </p>
 <p> Moreover, such problems are hard to detect (i.e., only Korean readers will detect that the encoding of Korean is broken [because of the Russian translator])</dl>
 <p> gettext solves all those problems together.</p>
@@ -358,11 +358,11 @@ description: "po4a – framework to translate documentation and other materials"
 <h3>What about the other translation tools for documentation using gettext?</h3>
 <p>As far as I know, there are only two of them:</p>
 <dl>
-<dt><code>poxml</code></p>
-<dd>This is the tool developed by <font SIZE="-1">KDE</font> people to handle DocBook <font SIZE="-1">XML. AFAIK,</font> it was the first program to extract strings to translate from documentation to <font SIZE="-1">PO</font> files, and inject them back after translation. </p>
+<dt><code>poxml</code></dt>
+<dd>This is the tool developed by <font SIZE="-1">KDE</font> people to handle DocBook <font SIZE="-1">XML. AFAIK,</font> it was the first program to extract strings to translate from documentation to <font SIZE="-1">PO</font> files, and inject them back after translation. </dd>
 <p> It can only handle <font SIZE="-1">XML,</font> and only a particular <font SIZE="-1">DTD. I</font>&#8216;m quite unhappy with the handling of lists, which end in one big msgid. When the list become big, the chunk becomes harder to shallow.</p>
-<dt><code>po-debiandoc</code></p>
-<dd>This program done by Denis Barbier is a sort of precursor of the po4a <font SIZE="-1">SGML</font> module, which more or less deprecates it. As the name says, it handles only the DebianDoc <font SIZE="-1">DTD,</font> which is more or less a deprecated <font SIZE="-1">DTD.</font></dl>
+<dt><code>po-debiandoc</code></dt>
+<dd>This program done by Denis Barbier is a sort of precursor of the po4a <font SIZE="-1">SGML</font> module, which more or less deprecates it. As the name says, it handles only the DebianDoc <font SIZE="-1">DTD,</font> which is more or less a deprecated <font SIZE="-1">DTD.</font></dd></dl>
 <p> The main advantages of po4a over them are the ease of extra content addition (which is even worse there) and the ability to achieve gettextization.</p>
 <h3>Educating developers about translation</h3>
 <p>When you try to translate documentation or programs, you face three kinds of problems; linguistics (not everybody speaks two languages), technical (that&#8217;s why po4a exists) and relational/human. Not all developers understand the necessity of translating stuff. Even when good willed, they may ignore how to ease the work of translators. To help with that, po4a comes with lot of documentation which can be referred to. </p>
@@ -399,30 +399,31 @@ description: "po4a – framework to translate documentation and other materials"
  #</pre>
 <h3><font SIZE="-1">SUMMARY</font> of the advantages of the gettext based approach</h3>
 <dl>
-<dt>&bull;</p>
-<dd>The translations are not stored along with the original, which makes it possible to detect if translations become out of date.</p>
-<dt>&bull;</p>
-<dd>The translations are stored in separate files from each other, which prevents translators of different languages from interfering, both when submitting their patch and at the file encoding level.</p>
-<dt>&bull;</p>
-<dd>It is based internally on <code>gettext</code> (but <code>po4a</code> offers a very simple interface so that you don&#8217;t need to understand the internals to use it). That way, we don&#8217;t have to re-implement the wheel, and because of their wide use, we can think that these tools are more or less bug free.</p>
-<dt>&bull;</p>
-<dd>Nothing changed for the end-user (beside the fact translations will hopefully be better maintained). The resulting documentation file distributed is exactly the same.</p>
-<dt>&bull;</p>
-<dd>No need for translators to learn a new file syntax and their favorite <font SIZE="-1">PO</font> file editor (like Emacs&#8217; <font SIZE="-1">PO</font> mode, Lokalize or Gtranslator) will work just fine.</p>
-<dt>&bull;</p>
-<dd>gettext offers a simple way to get statistics about what is done, what should be reviewed and updated, and what is still to do. Some example can be found at those addresses: </p>
+<dt>&bull;</dt>
+<dd>The translations are not stored along with the original, which makes it possible to detect if translations become out of date.</dd>
+<dt>&bull;</dt>
+<dd>The translations are stored in separate files from each other, which prevents translators of different languages from interfering, both when submitting their patch and at the file encoding level.</dd>
+<dt>&bull;</dt>
+<dd>It is based internally on <code>gettext</code> (but <code>po4a</code> offers a very simple interface so that you don&#8217;t need to understand the internals to use it). That way, we don&#8217;t have to re-implement the wheel, and because of their wide use, we can think that these tools are more or less bug free.</dd>
+<dt>&bull;</dt>
+<dd>Nothing changed for the end-user (beside the fact translations will hopefully be better maintained). The resulting documentation file distributed is exactly the same.</dd>
+<dt>&bull;</dt>
+<dd>No need for translators to learn a new file syntax and their favorite <font SIZE="-1">PO</font> file editor (like Emacs&#8217; <font SIZE="-1">PO</font> mode, Lokalize or Gtranslator) will work just fine.</dd>
+<dt>&bull;</dt>
+<dd>gettext offers a simple way to get statistics about what is done, what should be reviewed and updated, and what is still to do. Some example can be found at those addresses: </dd>
 <pre> - <a rel="nofollow" href="http://kv-53.narod.ru/kaider1.png">http://kv-53.narod.ru/kaider1.png</a>
  - <a rel="nofollow" href="http://www.debian.org/intl/l10n/">http://www.debian.org/intl/l10n/</a></pre>
 </dl>
 <p> But everything isn&#8217;t green, and this approach also has some disadvantages we have to deal with.</p>
 <dl>
-<dt>&bull;</p>
-<dd>Addenda are&#8230; strange at the first glance.</p>
-<dt>&bull;</p>
-<dd>You can&#8217;t adapt the translated text to your preferences, like splitting a paragraph here, and joining two other ones there. But in some sense, if there is an issue with the original, it should be reported as a bug anyway.</p>
-<dt>&bull;</p>
-<dd>Even with an easy interface, it remains a new tool people have to learn. </p>
+<dt>&bull;</dt>
+<dd>Addenda are&#8230; strange at the first glance.</dd>
+<dt>&bull;</dt>
+<dd>You can&#8217;t adapt the translated text to your preferences, like splitting a paragraph here, and joining two other ones there. But in some sense, if there is an issue with the original, it should be reported as a bug anyway.</dd>
+<dt>&bull;</dt>
+<dd>Even with an easy interface, it remains a new tool people have to learn. </dd>
 <p> One of my dreams would be to integrate somehow po4a to Gtranslator or Lokalize. When an <font SIZE="-1">SGML</font> file is opened, the strings are automatically extracted. When it&#8217;s saved a translated <font SIZE="-1">SGML</font> file can be written to disk. If we manage to do an <font SIZE="-1">MS</font> Word (<font SIZE="-1">TM</font>) module (or at least <font SIZE="-1">RTF</font>) professional translators may even use it.</dl>
 <h2>Authors</h2>
 <pre> Denis Barbier &lt;barbier,linuxfr.org&gt;
  Martin Quinson (mquinson#debian.org)</pre>
+</p>

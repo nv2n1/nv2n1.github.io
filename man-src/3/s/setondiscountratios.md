@@ -10,9 +10,6 @@ description: "QuantLib::LMMCurveState – Curve state for Libor market models"
 <p>QuantLib::LMMCurveState &#8211; Curve state for Libor market models </p>
 <h2>Synopsis</h2>
 <pre><code>void setOnForwardRates (const std::vector&lt; Rate &gt; &amp;fwdRates, Size firstValidIndex=0)
-
-
-
 void setOnDiscountRatios (const std::vector&lt; DiscountFactor &gt; &amp;discRatios, Size firstValidIndex=0)</code></pre>
 <p> Inherits <code>QuantLib::CurveState</code>.</p>
 <h3>Public Member Functions</h3>
@@ -20,9 +17,6 @@ void setOnDiscountRatios (const std::vector&lt; DiscountFactor &gt; &amp;discRat
 <p> std::auto_ptr&lt; <code>CurveState</code> &gt; <code>clone</code> () const<br />
  <code>Modifiers</code> </p>
 <pre><code>void setOnForwardRates (const std::vector&lt; Rate &gt; &amp;fwdRates, Size firstValidIndex=0)
-
-
-
 void setOnDiscountRatios (const std::vector&lt; DiscountFactor &gt; &amp;discRatios, Size firstValidIndex=0)</code></pre>
 <p> <code>Inspectors</code> </p>
 <p> <code>Real</code> <code>discountRatio</code> (Size i, Size j) const </p>

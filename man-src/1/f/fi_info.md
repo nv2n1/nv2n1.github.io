@@ -17,11 +17,11 @@ url: "/docs/linux/man/1-fi_info/"
 
 <dl>
 <dt>
-<dd> <pre><code>
+</dt><dd> <pre><code>
 &amp;nbsp;
 fi_info &amp;nbsp;
 [OPTIONS]
-</code></pre></dl>
+</code></pre></dd></dl>
 
 <h2>DESCRIPTION</h2>
 
@@ -69,9 +69,9 @@ fi_info &amp;nbsp;
 
 <dl>
 <dt>
-<dd> <pre>
+</dt><dd> <pre>
 $&nbsp;fi_info -n 30.0.11.1 -p usnic -t FI_EP_DGRAM
-</pre></dl>
+</pre></dd></dl>
  
 
  This will respond with all fabric interfaces that can reach address 30.0.11.1 using endpoint type FI_EP_DGRAM with the usNIC provider.
@@ -83,7 +83,7 @@ $&nbsp;fi_info -n 30.0.11.1 -p usnic -t FI_EP_DGRAM
  By default fi_info will output a summary of the fabric interfaces discovered:
 <dl>
 <dt>
-<dd> <pre><code>
+</dt><dd> <pre><code>
 $ &amp;nbsp;
 ./ fi_info - n 30.0.11.1 - p usnic - t FI_EP_DGRAM provider : usnic &amp;nbsp;
 &amp;nbsp;
@@ -108,7 +108,7 @@ type : FI_EP_DGRAM
 &amp;nbsp;
 &amp;nbsp;
 protocol : FI_PROTO_UDP
-</code></pre></dl>
+</code></pre></dd></dl>
  
 
  To see the full fi_info structure, specify the -v option.

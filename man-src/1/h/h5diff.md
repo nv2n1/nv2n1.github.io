@@ -18,20 +18,20 @@ description: "h5diff – Compares two HDF5 files and reports the differences."
 <p> Additional information, with several sample cases, can be found in the document H5diff Examples.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>file1 file2</code></p>
-<dd> The HDF5 files to be compared.</p>
-<dt><code>-h</code></p>
-<dd> Print all differences.</p>
-<dt><code>-r</code></p>
-<dd> Print only the names of objects that differ; do not print the differences. These objects may be HDF5 datasets, groups, or named datatypes.</p>
-<dt><code>-n count</code></p>
-<dd> Print difference up to count differences, then stop. count must be a positive integer.</p>
-<dt><code>-d delta</code></p>
-<dd> Print only differences that are greater than the limit delta. delta must be a positive number. The comparison criterion is whether the absolute value of the difference of two corresponding values is greater than delta (e.g., |a-b| &gt; delta, where a is a value in file1 and b is a value in file2).</p>
-<dt><code>-p relative</code></p>
-<dd> Print only differences that are greater than a relative error. relative must be a positive number. The comparison criterion is whether the absolute value of the difference 1 and the ratio of two corresponding values is greater than relative (e.g., |1-(b/a)| &gt; relative where a is a value in file1 and b is a value in file2).</p>
-<dt><code>object1 object2</code></p>
-<dd> Specific object(s) within the files to be compared.</dl>
+<dt><code>file1 file2</code></dt>
+<dd> The HDF5 files to be compared.</dd>
+<dt><code>-h</code></dt>
+<dd> Print all differences.</dd>
+<dt><code>-r</code></dt>
+<dd> Print only the names of objects that differ; do not print the differences. These objects may be HDF5 datasets, groups, or named datatypes.</dd>
+<dt><code>-n count</code></dt>
+<dd> Print difference up to count differences, then stop. count must be a positive integer.</dd>
+<dt><code>-d delta</code></dt>
+<dd> Print only differences that are greater than the limit delta. delta must be a positive number. The comparison criterion is whether the absolute value of the difference of two corresponding values is greater than delta (e.g., |a-b| &gt; delta, where a is a value in file1 and b is a value in file2).</dd>
+<dt><code>-p relative</code></dt>
+<dd> Print only differences that are greater than a relative error. relative must be a positive number. The comparison criterion is whether the absolute value of the difference 1 and the ratio of two corresponding values is greater than relative (e.g., |1-(b/a)| &gt; relative where a is a value in file1 and b is a value in file2).</dd>
+<dt><code>object1 object2</code></dt>
+<dd> Specific object(s) within the files to be compared.</dd></dl>
 <h2>EXAMPLES</h2>
 <p> The following h5diff call compares the object /a/b in file1 with the object /a/c in file2:<br />
 &nbsp;<wbr>h5diff file1 file2&nbsp;<wbr>/a/b&nbsp;<wbr>/a/c&nbsp;<wbr> </p>

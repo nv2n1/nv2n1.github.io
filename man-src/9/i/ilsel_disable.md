@@ -14,11 +14,11 @@ description: "ilsel_disable – Disable an ILSEL set"
 <p><i>irq</i></p>
 <dl>
 <dd>
-<dd>Bit position for ILSEL set value (retval from enable routines)</dl>
+</dd><dd>Bit position for ILSEL set value (retval from enable routines)</dd></dl>
 <h2>Description</h2>
 <p>Disable a previously enabled ILSEL set.</p>
 <h2>Author</h2>
 <p><code>Paul Mundt</code> &lt;lethal [at] linux-sh.org&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

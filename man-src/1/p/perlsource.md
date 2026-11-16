@@ -30,21 +30,17 @@ url: "/docs/linux/man/1-perlsource/"
  Modules shipped as part of the Perl core live in four subdirectories. Two of these directories contain modules that live in the core, and two contain modules that can also be released separately on <font SIZE="-1">CPAN.</font> Modules which can be released on cpan are known as ``dual-life'' modules.
 <dl>
 <dt>&bull;
-<dd> <i>lib/</i> 
-
+</dt><dd> <i>lib/</i> 
  This directory contains pure-Perl modules which are only released as part of the core. This directory contains <i>all</i> of the modules and their tests, unlike other core modules.
-<dt>&bull;
-<dd> <i>ext/</i> 
-
+</dd><dt>&bull;
+</dt><dd> <i>ext/</i> 
  Like <i>lib/</i>, this directory contains modules which are only released as part of the core. Unlike <i>lib/</i>, however, a module under <i>ext/</i> generally has a CPAN-style directory- and file-layout and its own <i>Makefile.PL</i>. There is no expectation that a module under <i>ext/</i> will work with earlier versions of Perl 5. Hence, such a module may take full advantage of syntactical and other improvements in Perl 5 blead.
-<dt>&bull;
-<dd> <i>dist/</i> 
-
+</dd><dt>&bull;
+</dt><dd> <i>dist/</i> 
  This directory is for dual-life modules where the blead source is canonical. Note that some modules in this directory may not yet have been released separately on <font SIZE="-1">CPAN.</font> Modules under <i>dist/</i> should make an effort to work with earlier versions of Perl 5.
-<dt>&bull;
-<dd> <i>cpan/</i> 
-
- This directory contains dual-life modules where the <font SIZE="-1">CPAN</font> module is canonical. Do not patch these modules directly! Changes to these modules should be submitted to the maintainer of the <font SIZE="-1">CPAN</font> module. Once those changes are applied and released, the new version of the module will be incorporated into the core.</dl>
+</dd><dt>&bull;
+</dt><dd> <i>cpan/</i> 
+ This directory contains dual-life modules where the <font SIZE="-1">CPAN</font> module is canonical. Do not patch these modules directly! Changes to these modules should be submitted to the maintainer of the <font SIZE="-1">CPAN</font> module. Once those changes are applied and released, the new version of the module will be incorporated into the core.</dd></dl>
  
 
  For some dual-life modules, it has not yet been determined if the <font SIZE="-1">CPAN</font> version or the blead source is canonical. Until that is done, those modules should be in <i>cpan/</i>.
@@ -54,63 +50,48 @@ url: "/docs/linux/man/1-perlsource/"
  The Perl core has an extensive test suite. If you add new tests (or new modules with tests), you may need to update the <i>t/TEST</i> file so that the tests are run.
 <dl>
 <dt>&bull;
-<dd> Module tests 
-
+</dt><dd> Module tests 
  Tests for core modules in the <i>lib/</i> directory are right next to the module itself. For example, we have <i>lib/strict.pm</i> and <i>lib/strict.t</i>. 
-
  Tests for modules in <i>ext/</i> and the dual-life modules are in <i>t/</i> subdirectories for each module, like a standard <font SIZE="-1">CPAN</font> distribution.
-<dt>&bull;
-<dd> <i>t/base/</i> 
-
+</dd><dt>&bull;
+</dt><dd> <i>t/base/</i> 
  Tests for the absolute basic functionality of Perl. This includes <tt>&quot;if&quot;</tt>, basic file reads and writes, simple regexes, etc. These are run first in the test suite and if any of them fail, something is <i>really</i> broken.
-<dt>&bull;
-<dd> <i>t/cmd/</i> 
-
+</dd><dt>&bull;
+</dt><dd> <i>t/cmd/</i> 
  Tests for basic control structures, <tt>&quot;if&quot;</tt>/<tt>&quot;else&quot;</tt>, <tt>&quot;while&quot;</tt>, subroutines, etc.
-<dt>&bull;
-<dd> <i>t/comp/</i> 
-
+</dd><dt>&bull;
+</dt><dd> <i>t/comp/</i> 
  Tests for basic issues of how Perl parses and compiles itself.
-<dt>&bull;
-<dd> <i>t/io/</i> 
-
+</dd><dt>&bull;
+</dt><dd> <i>t/io/</i> 
  Tests for built-in <font SIZE="-1">IO</font> functions, including command line arguments.
-<dt>&bull;
-<dd> <i>t/mro/</i> 
-
+</dd><dt>&bull;
+</dt><dd> <i>t/mro/</i> 
  Tests for perl's method resolution order implementations (see mro).
-<dt>&bull;
-<dd> <i>t/op/</i> 
-
+</dd><dt>&bull;
+</dt><dd> <i>t/op/</i> 
  Tests for perl's built in functions that don't fit into any of the other directories.
-<dt>&bull;
-<dd> <i>t/opbasic/</i> 
-
+</dd><dt>&bull;
+</dt><dd> <i>t/opbasic/</i> 
  Tests for perl's built in functions which, like those in <i>t/op/</i>, do not fit into any of the other directories, but which, in addition, cannot use <i>t/test.pl</i>,as that program depends on functionality which the test file itself is testing.
-<dt>&bull;
-<dd> <i>t/re/</i> 
-
+</dd><dt>&bull;
+</dt><dd> <i>t/re/</i> 
  Tests for regex related functions or behaviour. (These used to live in t/op).
-<dt>&bull;
-<dd> <i>t/run/</i> 
-
+</dd><dt>&bull;
+</dt><dd> <i>t/run/</i> 
  Tests for features of how perl actually runs, including exit codes and handling of PERL* environment variables.
-<dt>&bull;
-<dd> <i>t/uni/</i> 
-
+</dd><dt>&bull;
+</dt><dd> <i>t/uni/</i> 
  Tests for the core support of Unicode.
-<dt>&bull;
-<dd> <i>t/win32/</i> 
-
+</dd><dt>&bull;
+</dt><dd> <i>t/win32/</i> 
  Windows-specific tests.
-<dt>&bull;
-<dd> <i>t/porting/</i> 
-
+</dd><dt>&bull;
+</dt><dd> <i>t/porting/</i> 
  Tests the state of the source tree for various common errors. For example, it tests that everyone who is listed in the git log has a corresponding entry in the <i></i><font SIZE="-1"><i>AUTHORS</i></font><i></i> file.
-<dt>&bull;
-<dd> <i>t/lib/</i> 
-
- The old home for the module tests, you shouldn't put anything new in here. There are still some bits and pieces hanging around in here that need to be moved. Perhaps you could move them? Thanks!</dl>
+</dd><dt>&bull;
+</dt><dd> <i>t/lib/</i> 
+ The old home for the module tests, you shouldn't put anything new in here. There are still some bits and pieces hanging around in here that need to be moved. Perhaps you could move them? Thanks!</dd></dl>
 
 <h3>Documentation</h3>
 
@@ -123,17 +104,14 @@ url: "/docs/linux/man/1-perlsource/"
  The <i>Porting</i> directory contains a grab bag of code and documentation intended to help porters work on Perl. Some of the highlights include:
 <dl>
 <dt>&bull;
-<dd> <i>check*</i> 
-
+</dt><dd> <i>check*</i> 
  These are scripts which will check the source things like <font SIZE="-1">ANSI C</font> violations, <font SIZE="-1">POD</font> encoding issues, etc.
-<dt>&bull;
-<dd> <i>Maintainers</i>, <i>Maintainers.pl</i>, and <i>Maintainers.pm</i> 
-
+</dd><dt>&bull;
+</dt><dd> <i>Maintainers</i>, <i>Maintainers.pl</i>, and <i>Maintainers.pm</i> 
  These files contain information on who maintains which modules. Run <tt>&quot;perl Porting/Maintainers -M Module::Name&quot;</tt> to find out more information about a dual-life module.
-<dt>&bull;
-<dd> <i>podtidy</i> 
-
- Tidies a pod file. It's a good idea to run this on a pod file you've patched.</dl>
+</dd><dt>&bull;
+</dt><dd> <i>podtidy</i> 
+ Tidies a pod file. It's a good idea to run this on a pod file you've patched.</dd></dl>
 
 <h3>Build system</h3>
 

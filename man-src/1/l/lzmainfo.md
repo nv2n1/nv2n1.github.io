@@ -17,10 +17,10 @@ description: "lzmainfo – show information stored in the .lzma file header"
 <p> <code>lzmainfo</code> is included in XZ Utils primarily for backward compatibility with LZMA Utils.</p>
 <h2>EXIT STATUS</h2>
 <dl>
-<dt><code>0</code></p>
-<dd> All is good.</p>
-<dt><code>1</code></p>
-<dd> An error occurred.</dl>
+<dt><code>0</code></dt>
+<dd> All is good.</dd>
+<dt><code>1</code></dt>
+<dd> An error occurred.</dd></dl>
 <h2>BUGS</h2>
 <p> <code>lzmainfo</code> uses <code>MB</code> while the correct suffix would be <code>MiB</code> (2^20 bytes). This is to keep the output compatible with LZMA Utils.</p>
 <h2>SEE ALSO</h2>

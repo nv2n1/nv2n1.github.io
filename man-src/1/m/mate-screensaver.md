@@ -15,18 +15,18 @@ description: "mate-screensaver – The MATE Desktop Screensaver and Locker"
 <p> MATE Screensaver is the default screen saver and locker for the MATE Desktop. It is designed with simplicity and security in mind. <code>mate-screensaver</code> integrates well with the MATE desktop, and it supports User Switching and the ability to lock down configuration settings.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>&#8211;display=DISPLAY</code></p>
-<dd> X display to use.</p>
-<dt><code>&#8211;no-daemon</code></p>
-<dd> Don&#8217;t start as a daemon</p>
-<dt><code> &#8211;debug</code></p>
-<dd> Enable debugging messages for <code>mate-screensaver</code></p>
-<dt><code>&#8211;version</code></p>
-<dd> Output version information and exit.</p>
-<dt><code>-h, &#8211;help</code></p>
-<dd> Print standard command line options.</p>
-<dt><code>&#8211;help-all</code></p>
-<dd> Print all command line options.</dl>
+<dt><code>&#8211;display=DISPLAY</code></dt>
+<dd> X display to use.</dd>
+<dt><code>&#8211;no-daemon</code></dt>
+<dd> Don&#8217;t start as a daemon</dd>
+<dt><code> &#8211;debug</code></dt>
+<dd> Enable debugging messages for <code>mate-screensaver</code></dd>
+<dt><code>&#8211;version</code></dt>
+<dd> Output version information and exit.</dd>
+<dt><code>-h, &#8211;help</code></dt>
+<dd> Print standard command line options.</dd>
+<dt><code>&#8211;help-all</code></dt>
+<dd> Print all command line options.</dd></dl>
 <p> This program also accepts the standard GTK options.</p>
 <h2>BUGS</h2>
 <h3>Should you encounter any bugs, they may be reported at:</h3>

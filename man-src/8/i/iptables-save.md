@@ -15,15 +15,15 @@ description: "iptables-save — dump iptables rules"
 <h2>Description</h2>
 <p><code>iptables-save</code> and <code>ip6tables-save</code> are used to dump the contents of IP or IPv6 Table in easily parseable format either to STDOUT or to a specified file.</p>
 <dl>
-<dt><code>-M</code>, <code>&#8211;modprobe</code> <i>modprobe_program</i></p>
-<dd>Specify the path to the modprobe program. By default, iptables-save will inspect /proc/sys/kernel/modprobe to determine the executable&#8217;s path.</p>
-<dt><code>-f</code>, <code>&#8211;file</code> <i>filename</i></p>
-<dd>Specify a filename to log the output to. If not specified, iptables-save will log to STDOUT.</p>
-<dt><code>-c</code>, <code>&#8211;counters</code></p>
-<dd>include the current values of all packet and byte counters in the output</p>
-<dt><code>-t</code>, <code>&#8211;table</code> <i>tablename</i></p>
+<dt><code>-M</code>, <code>&#8211;modprobe</code> <i>modprobe_program</i></dt>
+<dd>Specify the path to the modprobe program. By default, iptables-save will inspect /proc/sys/kernel/modprobe to determine the executable&#8217;s path.</dd>
+<dt><code>-f</code>, <code>&#8211;file</code> <i>filename</i></dt>
+<dd>Specify a filename to log the output to. If not specified, iptables-save will log to STDOUT.</dd>
+<dt><code>-c</code>, <code>&#8211;counters</code></dt>
+<dd>include the current values of all packet and byte counters in the output</dd>
+<dt><code>-t</code>, <code>&#8211;table</code> <i>tablename</i></dt>
 <dd>restrict output to only one table. If the kernel is configured with automatic module loading, an attempt will be made to load the appropriate module for that table if it is not already there.<br />
- If not specified, output includes all available tables.</dl>
+ If not specified, output includes all available tables.</dd></dl>
 <h2>Bugs</h2>
 <p>None known as of iptables-1.2.1 release</p>
 <h2>Authors</h2>

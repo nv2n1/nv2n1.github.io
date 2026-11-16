@@ -15,15 +15,15 @@ bio_trim - trim a bio
 <h2>Arguments</h2>
 
 <i>bio</i>
-<dl><dd><dd>bio to trim</dl>
+<dl><dd></dd><dd>bio to trim</dd></dl>
  
 
  <i>offset</i>
-<dl><dd>number of sectors to trim from the front of <i>bio</i></dl>
+<dl><dd>number of sectors to trim from the front of <i>bio</i></dd></dl>
  
 
  <i>size</i>
-<dl><dd>size we want to trim <i>bio</i> to, in sectors</dl>
+<dl><dd>size we want to trim <i>bio</i> to, in sectors</dd></dl>
 
 <h2>Copyright</h2>
 

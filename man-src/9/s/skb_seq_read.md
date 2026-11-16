@@ -14,13 +14,13 @@ description: "skb_seq_read – Sequentially read skb data"
 <p><i>consumed</i></p>
 <dl>
 <dd>
-<dd>number of bytes consumed by the caller so far</dl>
+</dd><dd>number of bytes consumed by the caller so far</dd></dl>
 <p> <i>data</i></p>
 <dl>
-<dd>destination pointer for data to be returned</dl>
+<dd>destination pointer for data to be returned</dd></dl>
 <p> <i>st</i></p>
 <dl>
-<dd>state variable</dl>
+<dd>state variable</dd></dl>
 <h2>Description</h2>
 <p>Reads a block of skb data at <i>consumed</i> relative to the lower offset specified to <code>skb_prepare_seq_read</code>. Assigns the head of the data block to <i>data</i> and returns the length of the block or 0 if the end of the skb data or the upper offset has been reached. </p>
 <p> The caller is not required to consume all of the data returned, i.e. <i>consumed</i> is typically set to the number of bytes already consumed and the next call to <code>skb_seq_read</code> will return the remaining part of the block. </p>

@@ -17,8 +17,8 @@ description: "mate-mouse-properties – configure MATE mouse preferences"
 <h2>OPTIONS</h2>
 <p> The following options are supported:</p>
 <dl>
-<dt><code>&#8211;get-legacy</code></p>
-<dd> Retrieve and store legacy settings</dl>
+<dt><code>&#8211;get-legacy</code></dt>
+<dd> Retrieve and store legacy settings</dd></dl>
 <p> This program also accepts the standard MATE and GTK options.</p>
 <h2>AUTHORS</h2>
 <p> This manual page has been adopted for MATE by Vangelis Mouhtsis &lt;vangelis [at] gnugr.org&gt;.</p>

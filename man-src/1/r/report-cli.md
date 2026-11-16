@@ -38,73 +38,73 @@ url: "/docs/linux/man/1-report-cli/"
  -L[PREFIX]
 <dl>
 <dt>
-<dd> List possible events [which start with PREFIX]</dl>
+</dt><dd> List possible events [which start with PREFIX]</dd></dl>
  
 
  -e EVENT
 <dl>
 <dt>
-<dd> Run EVENT on PROBLEM_DIR</dl>
+</dt><dd> Run EVENT on PROBLEM_DIR</dd></dl>
  
 
  -a, --analyze
 <dl>
 <dt>
-<dd> Run analyze event(s) on PROBLEM_DIR</dl>
+</dt><dd> Run analyze event(s) on PROBLEM_DIR</dd></dl>
  
 
  -c, --collect
 <dl>
 <dt>
-<dd> Run collect event(s) on PROBLEM_DIR</dl>
+</dt><dd> Run collect event(s) on PROBLEM_DIR</dd></dl>
  
 
  -r, --report
 <dl>
 <dt>
-<dd> Analyze, collect and report problem data in PROBLEM_DIR</dl>
+</dt><dd> Analyze, collect and report problem data in PROBLEM_DIR</dd></dl>
  
 
  -d, --delete
 <dl>
 <dt>
-<dd> Remove PROBLEM_DIR after reporting</dl>
+</dt><dd> Remove PROBLEM_DIR after reporting</dd></dl>
  
 
  -y, --always
 <dl>
 <dt>
-<dd> Noninteractive: don't ask questions, assume positive answer to all of them</dl>
+</dt><dd> Noninteractive: don't ask questions, assume positive answer to all of them</dd></dl>
  
 
  -o, --report-only
 <dl>
 <dt>
-<dd> With -r: do not run analyzers, run only reporters</dl>
+</dt><dd> With -r: do not run analyzers, run only reporters</dd></dl>
  
 
  -v, --verbose
 <dl>
 <dt>
-<dd> Be verbose</dl>
+</dt><dd> Be verbose</dd></dl>
  
 
  -s
 <dl>
 <dt>
-<dd> Log to syslog</dl>
+</dt><dd> Log to syslog</dd></dl>
  
 
  -p
 <dl>
 <dt>
-<dd> Add program names to log</dl>
+</dt><dd> Add program names to log</dd></dl>
  
 
  -V, --version
 <dl>
 <dt>
-<dd> Display version and exit</dl>
+</dt><dd> Display version and exit</dd></dl>
 
 <h2>AUTHORS</h2>
 
@@ -112,7 +112,7 @@ url: "/docs/linux/man/1-report-cli/"
 
 <dl>
 <dt>
-<dd> &bull; ABRT team</dl>
+</dt><dd> &bull; ABRT team</dd></dl>
  
 
 <h2>Index</h2>

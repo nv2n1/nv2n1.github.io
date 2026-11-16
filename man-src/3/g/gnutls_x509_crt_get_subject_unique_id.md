@@ -14,12 +14,12 @@ description: "gnutls_x509_crt_get_subject_unique_id – API function"
 <p> <code>int gnutls_x509_crt_get_subject_unique_id(gnutls_x509_crt_t </code><i>crt</i><code>, char * </code><i>buf</i><code>, size_t * </code><i>buf_size</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
-<dt>gnutls_x509_crt_t crt</p>
-<dd> Holds the certificate</p>
-<dt>char * buf</p>
-<dd> user allocated memory buffer, will hold the unique id</p>
-<dt>size_t * buf_size</p>
-<dd> size of user allocated memory buffer (on input), will hold actual size of the unique ID on return.</dl>
+<dt>gnutls_x509_crt_t crt</dt>
+<dd> Holds the certificate</dd>
+<dt>char * buf</dt>
+<dd> user allocated memory buffer, will hold the unique id</dd>
+<dt>size_t * buf_size</dt>
+<dd> size of user allocated memory buffer (on input), will hold actual size of the unique ID on return.</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> This function will extract the subjectUniqueID value (if present) for the given certificate. </p>
 <p> If the user allocated memory buffer is not large enough to hold the full subjectUniqueID, then a GNUTLS_E_SHORT_MEMORY_BUFFER error will be returned, and buf_size will be set to the actual length.</p>
@@ -34,6 +34,6 @@ description: "gnutls_x509_crt_get_subject_unique_id – API function"
 <h2>SEE ALSO</h2>
 <p> The full documentation for <code>gnutls</code> is maintained as a Texinfo manual. If the /usr/share/doc/gnutls/ directory does not contain the HTML form visit <code></p>
 <dl>
-<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></p>
-<dd> </code></dl>
+<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></dt>
+<dd> </code></dd></dl>
 <h2>Index</h2>

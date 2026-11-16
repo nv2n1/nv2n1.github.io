@@ -10,9 +10,7 @@ description: "xcb_xkb_set_debugging_flags –"
 <p>xcb_xkb_set_debugging_flags &#8211;</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;xcb/xkb.h&gt;
-
 Request function
-
     xcb_xkb_set_debugging_flags_cookie_t
     xcb_xkb_set_debugging_flags(xcb_connection_t *conn, uint16_t msgLength, uint32_t affectFlags, uint32_t flags, uint32_t affectCtrls, uint32_t ctrls, const xcb_xkb_string8_t *message);</code></pre>
 <h3>Reply datastructure</h3>
@@ -30,39 +28,39 @@ Request function
 <h3>Reply function</h3>
 <dl>
 <dd>xcb_xkb_set_debugging_flags_reply_t *<code>xcb_xkb_set_debugging_flags_reply</code>(xcb_connection_t&nbsp;<wbr>*<i>conn</i>, xcb_xkb_set_debugging_flags_cookie_t&nbsp;<wbr><i>cookie</i>, xcb_generic_error_t&nbsp;<wbr>**<i>e</i>);
-</dl>
+</dd></dl>
 <h2>Request Arguments</h2>
 <dl>
-<dt><i>conn</i></p>
-<dd>The XCB connection to X11.</p>
-<dt><i>msgLength</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>affectFlags</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>flags</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>affectCtrls</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>ctrls</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>message</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</dl>
+<dt><i>conn</i></dt>
+<dd>The XCB connection to X11.</dd>
+<dt><i>msgLength</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>affectFlags</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>flags</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>affectCtrls</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>ctrls</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>message</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd></dl>
 <h2>Reply Fields</h2>
 <dl>
-<dt><i>response_type</i></p>
-<dd>The type of this reply, in this case <i>XCB_XKB_SET_DEBUGGING_FLAGS</i>. This field is also present in the <i>xcb_generic_reply_t</i> and can be used to tell replies apart from each other.</p>
-<dt><i>sequence</i></p>
-<dd>The sequence number of the last request processed by the X11 server.</p>
-<dt><i>length</i></p>
-<dd>The length of the reply, in words (a word is 4 bytes).</p>
-<dt><i>currentFlags</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>currentCtrls</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>supportedFlags</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>supportedCtrls</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</dl>
+<dt><i>response_type</i></dt>
+<dd>The type of this reply, in this case <i>XCB_XKB_SET_DEBUGGING_FLAGS</i>. This field is also present in the <i>xcb_generic_reply_t</i> and can be used to tell replies apart from each other.</dd>
+<dt><i>sequence</i></dt>
+<dd>The sequence number of the last request processed by the X11 server.</dd>
+<dt><i>length</i></dt>
+<dd>The length of the reply, in words (a word is 4 bytes).</dd>
+<dt><i>currentFlags</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>currentCtrls</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>supportedFlags</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>supportedCtrls</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd></dl>
 <h2>Description</h2>
 <h2>Return Value</h2>
 <p>Returns an <i>xcb_xkb_set_debugging_flags_cookie_t</i>. Errors have to be handled when calling the reply function <i>xcb_xkb_set_debugging_flags_reply</i>. </p>

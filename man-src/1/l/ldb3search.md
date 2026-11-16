@@ -11,7 +11,7 @@ ldbsearch - Search for records in a LDB database
 <h2>Synopsis</h2>
 
 <dl>
-<dt> FCldbsearchF[] [-h] [-s base|one|sub] [-b basedn] [-i] [-H LDB-URL] [expression] [attributes]</dl>
+<dt> FCldbsearchF[] [-h] [-s base|one|sub] [-b basedn] [-i] [-H LDB-URL] [expression] [attributes]</dt></dl>
 
 <h2>DESCRIPTION</h2>
 
@@ -24,33 +24,33 @@ ldbsearch - Search for records in a LDB database
  
 
  -h
-<dl>
+</dd><dl>
 <dt>
-<dd> Show list of available options.</dl>
+</dt><dd> Show list of available options.</dd></dl>
  
 
  -H &lt;ldb-url&gt;
 <dl>
 <dt>
-<dd> LDB URL to connect to. See ldb(7) for details.</dl>
+</dt><dd> LDB URL to connect to. See ldb(7) for details.</dd></dl>
  
 
  -s one|sub|base
 <dl>
 <dt>
-<dd> Search scope to use. One-level, subtree or base.</dl>
+</dt><dd> Search scope to use. One-level, subtree or base.</dd></dl>
  
 
  -i
 <dl>
 <dt>
-<dd> Read search expressions from stdin.</dl>
+</dt><dd> Read search expressions from stdin.</dd></dl>
  
 
  -b basedn
 <dl>
 <dt>
-<dd> Specify Base DN to use.</dl>
+</dt><dd> Specify Base DN to use.</dd></dl>
 
 <h2>ENVIRONMENT</h2>
 
@@ -59,7 +59,7 @@ ldbsearch - Search for records in a LDB database
  LDB_URL
 <dl>
 <dt>
-<dd> LDB URL to connect to (can be overrided by using the -H command-line option.)</dl>
+</dt><dd> LDB URL to connect to (can be overrided by using the -H command-line option.)</dd></dl>
 
 <h2>VERSION</h2>
 

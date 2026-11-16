@@ -16,14 +16,14 @@ description: "ipa-moddelegation – Modify an existing delegation"
 <p> A delegation is used to grant access to certain attributes from one group to another.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-a</code>, <code>&#8211;attributes</code>=<i>ATTRIBUTES</i></p>
-<dd> A comma-separated list of the the SM]attributes that may be written by the source group. This list of attributes replaces the list in the existing delegation.</p>
-<dt><code>-s</code>, <code>&#8211;source</code>=<i>SOURCE</i></p>
-<dd> The name of the group that is being granted write permission.</p>
-<dt><code>-t</code>, <code>&#8211;target</code>=<i>TARGET</i></p>
-<dd> The name of the group that will be written to.</p>
-<dt><code>-v</code>, <code>&#8211;verbose</code></p>
-<dd> Display the XML-RPC request and response for more verbose debugging output.</dl>
+<dt><code>-a</code>, <code>&#8211;attributes</code>=<i>ATTRIBUTES</i></dt>
+<dd> A comma-separated list of the the SM]attributes that may be written by the source group. This list of attributes replaces the list in the existing delegation.</dd>
+<dt><code>-s</code>, <code>&#8211;source</code>=<i>SOURCE</i></dt>
+<dd> The name of the group that is being granted write permission.</dd>
+<dt><code>-t</code>, <code>&#8211;target</code>=<i>TARGET</i></dt>
+<dd> The name of the group that will be written to.</dd>
+<dt><code>-v</code>, <code>&#8211;verbose</code></dt>
+<dd> Display the XML-RPC request and response for more verbose debugging output.</dd></dl>
 <p> At least one of -a, -s or -t is required.</p>
 <h2>EXIT STATUS</h2>
 <p> 0 if the delegation was updated successfully </p>

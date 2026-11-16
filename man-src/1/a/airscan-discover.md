@@ -17,18 +17,18 @@ description: "airscan-discover – Discover sane-airscan compatible scanners"
 <p> On success, it outputs a fragment of sane-airscan configuration file, that can be directly added to <code>/etc/sane.d/airscan.conf</code></p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-h</code></p>
-<dd> Print help screen</p>
-<dt><code>-d</code></p>
-<dd> Print debug messages to console</p>
-<dt><code>-t</code></p>
-<dd> Write a very detailed protocol trace to <code>airscan-discover-zeroconf.log</code> and <code>airscan-discover-zeroconf.tar</code></dl>
+<dt><code>-h</code></dt>
+<dd> Print help screen</dd>
+<dt><code>-d</code></dt>
+<dd> Print debug messages to console</dd>
+<dt><code>-t</code></dt>
+<dd> Write a very detailed protocol trace to <code>airscan-discover-zeroconf.log</code> and <code>airscan-discover-zeroconf.tar</code></dd></dl>
 <h2>FILES</h2>
 <dl>
-<dt><code>airscan-discover-zeroconf.log</code></p>
-<dd> Protocol trace</p>
-<dt><code>airscan-discover-zeroconf.tar</code></p>
-<dd> Non-textual messages, if any, saved here. Textual (i.e., XML) messages included directly into the .log file</dl>
+<dt><code>airscan-discover-zeroconf.log</code></dt>
+<dd> Protocol trace</dd>
+<dt><code>airscan-discover-zeroconf.tar</code></dt>
+<dd> Non-textual messages, if any, saved here. Textual (i.e., XML) messages included directly into the .log file</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/7-sane/">sane</a>(7), <a href="/docs/linux/man/5-sane-airscan/">sane-airscan</a>(5)</p>
 <h2>AUTHOR</h2>

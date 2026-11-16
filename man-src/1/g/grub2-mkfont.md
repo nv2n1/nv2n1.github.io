@@ -13,54 +13,54 @@ description: "grub-mkfont — Convert common font file formats into the PF2 form
 <p> <code>grub-mkfont</code> [&#8211;ascii-bitmaps] [-a | &#8211;force-autohint]</p>
 <dl>
 <dt>
-<dd> [-b | &#8211;bold] [-c | &#8211;asce=<i>NUM</i>] [-d | &#8211;desc=<i>NUM</i>]</dl>
+</dt><dd> [-b | &#8211;bold] [-c | &#8211;asce=<i>NUM</i>] [-d | &#8211;desc=<i>NUM</i>]</dd></dl>
 <dl>
 <dt>
-<dd> [-i | &#8211;index=<i>NUM</i>] [-n | &#8211;name=<i>NAME</i>] [&#8211;no-bitmap]</dl>
+</dt><dd> [-i | &#8211;index=<i>NUM</i>] [-n | &#8211;name=<i>NAME</i>] [&#8211;no-bitmap]</dd></dl>
 <dl>
 <dt>
-<dd> [&#8211;no-hinting] &lt;-o | &#8211;output=<i>FILE</i>&gt;</dl>
+</dt><dd> [&#8211;no-hinting] &lt;-o | &#8211;output=<i>FILE</i>&gt;</dd></dl>
 <dl>
 <dt>
-<dd> [-r | &#8211;range=<i>FROM-TO</i>[<i>,FROM-TO</i>]] [-s | &#8211;size=<i>SIZE</i>]</dl>
+</dt><dd> [-r | &#8211;range=<i>FROM-TO</i>[<i>,FROM-TO</i>]] [-s | &#8211;size=<i>SIZE</i>]</dd></dl>
 <dl>
 <dt>
-<dd> [-v | &#8211;verbose] [&#8211;width-spec] <i>FONT_FILES</i> </p>
+</dt><dd> [-v | &#8211;verbose] [&#8211;width-spec] <i>FONT_FILES</i> </dd>
 </dl>
 <h2>DESCRIPTION</h2>
 <p> <code>grub-mkfont</code> converts font files from common formats into the PF2 format used by GRUB. </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt>&#8211;ascii-bitmaps</p>
-<dd> Save only bitmaps for ASCII characters. </p>
-<dt>&#8211;force-autohint</p>
-<dd> Force generation of automatic hinting. </p>
-<dt>&#8211;bold</p>
-<dd> Convert font to bold. </p>
-<dt>&#8211;asce=<i>NUM</i></p>
-<dd> Set font ascent to <i>NUM</i>. </p>
-<dt>&#8211;desc=<i>NUM</i></p>
-<dd> Set font descent to <i>NUM</i>. </p>
-<dt>&#8211;index=<i>NUM</i></p>
-<dd> Select face index <i>NUM</i>. </p>
-<dt>&#8211;name=<i>NAME</i></p>
-<dd> Set font family to <i>NAME</i>. </p>
-<dt>&#8211;no-bitmap</p>
-<dd> Ignore bitmap strikes when loading. </p>
-<dt>&#8211;no-hinting</p>
-<dd> Disable hinting. </p>
-<dt>&#8211;output=<i>FILE</i></p>
-<dd> Save ouptut to <i>FILE</i>. This argument is required. </p>
-<dt>&#8211;range=<i>FROM-TO</i><i>,FROM-TO</i></p>
-<dd> Set the font ranges to each pair of <i>FROM</i>,<i>TO</i>. </p>
-<dt>&#8211;size=<i>SIZE</i></p>
-<dd> Set font size to <i>SIZE</i>. </p>
-<dt>&#8211;verbose</p>
-<dd> Print verbose messages. </p>
-<dt>&#8211;width-spec</p>
-<dd> Create a width summary file. </p>
-<dt><i>FONT_FILES</i></p>
-<dd> The input files to be converted. </p>
+<dt>&#8211;ascii-bitmaps</dt>
+<dd> Save only bitmaps for ASCII characters. </dd>
+<dt>&#8211;force-autohint</dt>
+<dd> Force generation of automatic hinting. </dd>
+<dt>&#8211;bold</dt>
+<dd> Convert font to bold. </dd>
+<dt>&#8211;asce=<i>NUM</i></dt>
+<dd> Set font ascent to <i>NUM</i>. </dd>
+<dt>&#8211;desc=<i>NUM</i></dt>
+<dd> Set font descent to <i>NUM</i>. </dd>
+<dt>&#8211;index=<i>NUM</i></dt>
+<dd> Select face index <i>NUM</i>. </dd>
+<dt>&#8211;name=<i>NAME</i></dt>
+<dd> Set font family to <i>NAME</i>. </dd>
+<dt>&#8211;no-bitmap</dt>
+<dd> Ignore bitmap strikes when loading. </dd>
+<dt>&#8211;no-hinting</dt>
+<dd> Disable hinting. </dd>
+<dt>&#8211;output=<i>FILE</i></dt>
+<dd> Save ouptut to <i>FILE</i>. This argument is required. </dd>
+<dt>&#8211;range=<i>FROM-TO</i><i>,FROM-TO</i></dt>
+<dd> Set the font ranges to each pair of <i>FROM</i>,<i>TO</i>. </dd>
+<dt>&#8211;size=<i>SIZE</i></dt>
+<dd> Set font size to <i>SIZE</i>. </dd>
+<dt>&#8211;verbose</dt>
+<dd> Print verbose messages. </dd>
+<dt>&#8211;width-spec</dt>
+<dd> Create a width summary file. </dd>
+<dt><i>FONT_FILES</i></dt>
+<dd> The input files to be converted. </dd>
 </dl>
 <h2>SEE ALSO</h2>
 <p> <code>info grub</code> </p>

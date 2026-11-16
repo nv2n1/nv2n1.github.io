@@ -23,10 +23,10 @@ description: "meson – a high productivity build system"
 <p> <code>meson [</code> <i>options</i> <code>] [</code> <i>build directory</i> <code>] [</code> <i>source directory</i> <code>]</code> </p>
 <h3>options:</h3>
 <dl>
-<dt><code>&#8211;version</code></p>
-<dd> print version number</p>
-<dt><code>&#8211;help</code></p>
-<dd> print command line help </p>
+<dt><code>&#8211;version</code></dt>
+<dd> print version number</dd>
+<dt><code>&#8211;help</code></dt>
+<dd> print command line help </dd>
 </dl>
 <h2>The configure command</h2>
 <p> <code>meson configure</code> provides a way to configure a Meson project from the command line. Its usage is simple: </p>
@@ -41,16 +41,16 @@ description: "meson – a high productivity build system"
 <p> If build directory is omitted, the current directory is used instead. </p>
 <h3>options:</h3>
 <dl>
-<dt><code>&#8211;targets</code></p>
-<dd> print all top level targets (executables, libraries, etc)</p>
-<dt><code>&#8211;target-files</code></p>
-<dd> print the source files of the given target</p>
-<dt><code>&#8211;buildsystem-files</code></p>
-<dd> print all files that make up the build system (meson.build, meson_options.txt etc)</p>
-<dt><code>&#8211;tests</code></p>
-<dd> print all unit tests</p>
-<dt><code>&#8211;help</code></p>
-<dd> print command line help </p>
+<dt><code>&#8211;targets</code></dt>
+<dd> print all top level targets (executables, libraries, etc)</dd>
+<dt><code>&#8211;target-files</code></dt>
+<dd> print the source files of the given target</dd>
+<dt><code>&#8211;buildsystem-files</code></dt>
+<dd> print all files that make up the build system (meson.build, meson_options.txt etc)</dd>
+<dt><code>&#8211;tests</code></dt>
+<dd> print all unit tests</dd>
+<dt><code>&#8211;help</code></dt>
+<dd> print command line help </dd>
 </dl>
 <h2>The test command</h2>
 <p> <code>meson test</code> is a helper tool for running test suites of projects using Meson. The default way of running tests is to invoke the default build command: </p>
@@ -60,34 +60,34 @@ description: "meson – a high productivity build system"
 <p> <code>git bisect run meson test -C build_dir</code> </p>
 <h3>options:</h3>
 <dl>
-<dt><code>&#8211;repeat</code></p>
-<dd> run tests as many times as specified</p>
-<dt><code>&#8211;gdb</code></p>
-<dd> run tests under gdb</p>
-<dt><code>&#8211;list</code></p>
-<dd> list all available tests</p>
-<dt><code>&#8211;wrapper</code></p>
-<dd> invoke all tests via the given wrapper (e.g. valgrind)</p>
-<dt><code>-C</code></p>
-<dd> Change into the given directory before running tests (must be root of build directory).</p>
-<dt><code>&#8211;suite</code></p>
-<dd> run tests in this suite</p>
-<dt><code>&#8211;no-suite</code></p>
-<dd> do not run tests in this suite</p>
-<dt><code>&#8211;no-stdsplit</code></p>
-<dd> do not split stderr and stdout in test logs</p>
-<dt><code>&#8211;benchmark</code></p>
-<dd> run benchmarks instead of tests</p>
-<dt><code>&#8211;logbase</code></p>
-<dd> base of file name to use for writing test logs</p>
-<dt><code>&#8211;num-processes</code></p>
-<dd> how many parallel processes to use to run tests</p>
-<dt><code>&#8211;verbose</code></p>
-<dd> do not redirect stdout and stderr</p>
-<dt><code>-t</code></p>
-<dd> a multiplier to use for test timeout values (usually something like 100 for Valgrind)</p>
-<dt><code>&#8211;setup</code></p>
-<dd> use the specified test setup </p>
+<dt><code>&#8211;repeat</code></dt>
+<dd> run tests as many times as specified</dd>
+<dt><code>&#8211;gdb</code></dt>
+<dd> run tests under gdb</dd>
+<dt><code>&#8211;list</code></dt>
+<dd> list all available tests</dd>
+<dt><code>&#8211;wrapper</code></dt>
+<dd> invoke all tests via the given wrapper (e.g. valgrind)</dd>
+<dt><code>-C</code></dt>
+<dd> Change into the given directory before running tests (must be root of build directory).</dd>
+<dt><code>&#8211;suite</code></dt>
+<dd> run tests in this suite</dd>
+<dt><code>&#8211;no-suite</code></dt>
+<dd> do not run tests in this suite</dd>
+<dt><code>&#8211;no-stdsplit</code></dt>
+<dd> do not split stderr and stdout in test logs</dd>
+<dt><code>&#8211;benchmark</code></dt>
+<dd> run benchmarks instead of tests</dd>
+<dt><code>&#8211;logbase</code></dt>
+<dd> base of file name to use for writing test logs</dd>
+<dt><code>&#8211;num-processes</code></dt>
+<dd> how many parallel processes to use to run tests</dd>
+<dt><code>&#8211;verbose</code></dt>
+<dd> do not redirect stdout and stderr</dd>
+<dt><code>-t</code></dt>
+<dd> a multiplier to use for test timeout values (usually something like 100 for Valgrind)</dd>
+<dt><code>&#8211;setup</code></dt>
+<dd> use the specified test setup </dd>
 </dl>
 <h2>The wrap command</h2>
 <p> Wraptool is a helper utility to manage source dependencies using the online wrapdb service. </p>
@@ -95,31 +95,30 @@ description: "meson – a high productivity build system"
 <p> You should run this command in the top level source directory of your project. </p>
 <h3>Commands:</h3>
 <dl>
-<dt><code>list</code></p>
-<dd> list all available projects</p>
-<dt><code>search</code></p>
-<dd> search projects by name</p>
-<dt><code>install</code></p>
-<dd> install a project with the given name</p>
-<dt><code>update</code></p>
-<dd> update the specified project to latest available version</p>
-<dt><code>info</code></p>
-<dd> show available versions of the specified project</p>
-<dt><code>status</code></p>
-<dd> show installed and available versions of currently used subprojects </p>
+<dt><code>list</code></dt>
+<dd> list all available projects</dd>
+<dt><code>search</code></dt>
+<dd> search projects by name</dd>
+<dt><code>install</code></dt>
+<dd> install a project with the given name</dd>
+<dt><code>update</code></dt>
+<dd> update the specified project to latest available version</dd>
+<dt><code>info</code></dt>
+<dd> show available versions of the specified project</dd>
+<dt><code>status</code></dt>
+<dd> show installed and available versions of currently used subprojects </dd>
 </dl>
 <h2>EXIT STATUS</h2>
 <dl>
-<dt><code>0</code></p>
-<dd> Successful.</p>
-<dt><code>1</code></p>
-<dd> Usage error, or an error parsing or executing meson.build.</p>
-<dt><code>2</code></p>
-<dd> Internal error.</p>
-<dt><code>125</code></p>
-<dd> <code>meson test</code> could not rebuild the required targets.</p>
-<dt>
-<dd></dl>
+<dt><code>0</code></dt>
+<dd> Successful.</dd>
+<dt><code>1</code></dt>
+<dd> Usage error, or an error parsing or executing meson.build.</dd>
+<dt><code>2</code></dt>
+<dd> Internal error.</dd>
+<dt><code>125</code></dt>
+<dd> <code>meson test</code> could not rebuild the required targets.</dd>
+</dl>
 <h2>SEE ALSO</h2>
 <p> <a rel="nofollow" href="http://mesonbuild.com/">http://mesonbuild.com/</a> </p>
 <p> <a rel="nofollow" href="https://wrapdb.mesonbuild.com/">https://wrapdb.mesonbuild.com/</a> </p>

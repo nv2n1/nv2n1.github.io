@@ -29,7 +29,7 @@ description: "docker-container-stats – Display a live stream of container(s) r
 <p> Running docker container stats on all running containers. </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 $ docker container stats
 CONTAINER           CPU %               MEM USAGE / LIMIT     MEM %               NET I/O             BLOCK I/O
@@ -37,26 +37,26 @@ CONTAINER           CPU %               MEM USAGE / LIMIT     MEM %             
 9c76f7834ae2        0.07%               2.746 MiB / 64 MiB      4.29%               1.266 KB / 648 B    12.4 MB / 0 B
 d1ea048f04e4        0.03%               4.583 MiB / 64 MiB      6.30%               2.854 KB / 648 B    27.7 MB / 0 B
 </pre>
-</dl>
+</dd></dl>
 <p> Running docker container stats on multiple containers by name and id. </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 $ docker container stats fervent_panini 5acfcb1b4fd1
 CONTAINER           CPU %               MEM USAGE/LIMIT     MEM %               NET I/O
 5acfcb1b4fd1        0.00%               115.2 MiB/1.045 GiB   11.03%              1.422 kB/648 B
 fervent_panini      0.02%               11.08 MiB/1.045 GiB   1.06%               648 B/648 B
 </pre>
-</dl>
+</dd></dl>
 <p> Running docker container stats with customized format on all (Running and Stopped) containers. </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre><code>
 $ docker container stats-- all-- format "table &#123;&#123;.ID}}	&#123;&#123;.Name}}	&#123;&#123;.CPUPerc}}	&#123;&#123;.MemUsage}}" CONTAINER ID NAME CPU % MEM USAGE / LIMIT c9dfa83f0317f87637d5b7e67aa4223337d947215c5a9947e697e4f7d3e0f834 ecstatic_noether 0.00 % 56KiB / 15.57GiB 8f92d01cf3b29b4f5fca4cd33d907e05def7af5a3684711b20a2369d211ec67f stoic_goodall 0.07 % 32.86MiB / 15.57GiB 38dd23dba00f307d53d040c1d18a91361bbdcccbf592315927d56cf13d8b7343 drunk_visvesvaraya 0.00 % 0B / 0B 5a8b07ec4cc52823f3cbfdb964018623c1ba307bce2c057ccdbde5f4f6990833 big_heisenberg 0.00 % 0B / 0B
 </code></pre>
-</dl>
+</dd></dl>
 <p> drunk_visvesvaraya and big_heisenberg are stopped containers in the above example. </p>
 <h2>OPTIONS</h2>
 <p> <code>-a</code>, <code>&#8211;all</code>[=false] <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>Show all containers (default shows just running)</p>

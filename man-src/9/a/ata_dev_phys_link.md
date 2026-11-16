@@ -14,7 +14,7 @@ description: "ata_dev_phys_link – find physical link for a device"
 <p><i>dev</i></p>
 <dl>
 <dd>
-<dd>ATA device to look up physical link for</dl>
+</dd><dd>ATA device to look up physical link for</dd></dl>
 <h2>Description</h2>
 <p>Look up physical link which <i>dev</i> is attached to. Note that this is different from <i>dev</i>-&gt;link only when <i>dev</i> is on slave link. For all other cases, it&#8217;s the same as <i>dev</i>-&gt;link. </p>
 <p> LOCKING: Don&#8217;t care.</p>
@@ -23,5 +23,5 @@ description: "ata_dev_phys_link – find physical link for a device"
 <h2>Author</h2>
 <p><code>Jeff Garzik</code></p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

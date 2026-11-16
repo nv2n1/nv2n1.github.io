@@ -19,12 +19,12 @@ description: "aa_initkbd – initialize the AA-lib keyboard driver."
 <p> ); </code></p>
 <h2>PARAMETERS</h2>
 <dl>
-<dt><code>struct aa_context *context</code></p>
-<dd> Specifies the AA-lib context to operate on.</p>
-<dt><code>const struct aa_kbddriver *drv</code></p>
-<dd> Driver you wish to use.</p>
-<dt><code>int mode</code></p>
-<dd> Mask of extra features you request. Can contain AA_SENDRELEASE if you are interested in release events too.</dl>
+<dt><code>struct aa_context *context</code></dt>
+<dd> Specifies the AA-lib context to operate on.</dd>
+<dt><code>const struct aa_kbddriver *drv</code></dt>
+<dd> Driver you wish to use.</dd>
+<dt><code>int mode</code></dt>
+<dd> Mask of extra features you request. Can contain AA_SENDRELEASE if you are interested in release events too.</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> This is the most primitive AA-lib keyboard initialization function. Allows better control over the process than the easier to use aa_autoinitkbd function.</p>
 <h2>RETURNS</h2>

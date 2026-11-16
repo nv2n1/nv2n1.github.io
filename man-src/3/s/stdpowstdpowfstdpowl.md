@@ -65,18 +65,12 @@ Although std::pow cannot be used to obtain a root of a negative number, std::cbr
 <h2>Example</h2>
 <p>// Run this code </p>
 <pre><code>#include &lt;iostream&gt;
-
 #include &lt;cmath&gt;
-
 #include &lt;cerrno&gt;
-
 #include &lt;cfenv&gt;
-
 #include &lt;cstring&gt;
 #pragma STDC FENV_ACCESS ON
-
 int main()
-
 {
     // typical usage
     std::cout &lt;&lt; &quot;pow(2, 10) = &quot; &lt;&lt; std::pow(2, 10) &lt;&lt; '

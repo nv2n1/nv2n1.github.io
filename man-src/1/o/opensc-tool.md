@@ -17,43 +17,43 @@ description: "opensc-tool – generic smart card utility"
 <p> <code>&#8211;atr, -a</code></p>
 <dl>
 <dt>
-<dd> Print the Answer To Reset (ATR) of the card, output is in hex byte format</dl>
+</dt><dd> Print the Answer To Reset (ATR) of the card, output is in hex byte format</dd></dl>
 <p> <code>&#8211;serial</code></p>
 <dl>
 <dt>
-<dd> Print the card serial number (normally the ICCSN), output is in hex byte format</dl>
+</dt><dd> Print the card serial number (normally the ICCSN), output is in hex byte format</dd></dl>
 <p> <code>&#8211;send-apdu</code> apdu, <code>-s</code> apdu</p>
 <dl>
 <dt>
-<dd> Sends an arbitrary APDU to the card in the format AA:BB:CC:DD:EE:FF&#8230;</dl>
+</dt><dd> Sends an arbitrary APDU to the card in the format AA:BB:CC:DD:EE:FF&#8230;</dd></dl>
 <p> <code>&#8211;list-files, -f</code></p>
 <dl>
 <dt>
-<dd> Recursively lists all files stored on card</dl>
+</dt><dd> Recursively lists all files stored on card</dd></dl>
 <p> <code>&#8211;list-readers, -l</code></p>
 <dl>
 <dt>
-<dd> Lists all configured readers</dl>
+</dt><dd> Lists all configured readers</dd></dl>
 <p> <code>&#8211;list-drivers, -D</code></p>
 <dl>
 <dt>
-<dd> Lists all installed card drivers</dl>
+</dt><dd> Lists all installed card drivers</dd></dl>
 <p> <code>&#8211;list-rdrivers, -R</code></p>
 <dl>
 <dt>
-<dd> Lists all installed reader drivers</dl>
+</dt><dd> Lists all installed reader drivers</dd></dl>
 <p> <code>&#8211;reader</code> num, <code>-r</code> num</p>
 <dl>
 <dt>
-<dd> Use the given reader number. The default is 0, the first reader in the system.</dl>
+</dt><dd> Use the given reader number. The default is 0, the first reader in the system.</dd></dl>
 <p> <code>&#8211;card-driver</code> driver, <code>-c</code> driver</p>
 <dl>
 <dt>
-<dd> Use the given card driver. The default is auto-detected.</dl>
+</dt><dd> Use the given card driver. The default is auto-detected.</dd></dl>
 <p> <code>&#8211;verbose, -v</code></p>
 <dl>
 <dt>
-<dd> Causes <code>opensc-tool</code> to be more verbose. Specify this flag several times to enable debug output in the opensc library.</dl>
+</dt><dd> Causes <code>opensc-tool</code> to be more verbose. Specify this flag several times to enable debug output in the opensc library.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> opensc(7), <a href="/docs/linux/man/1-opensc-explorer/">opensc-explorer</a>(1) </p>
 <h2>Index</h2>

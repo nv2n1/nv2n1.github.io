@@ -25,29 +25,27 @@ description: "curl_maprintf, curl_mfprintf, curl_mprintf, curl_msnprintf, curl_m
 <p> These are all functions that produce output according to a format string and given arguments. These are mostly clones of the well-known C-style functions and there will be no detailed explanation of all available formatting rules and usage here. </p>
 <p> See this table for notable exceptions.</p>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt><code>curl_mprintf()</code></p>
-<dd> Normal printf() clone.</p>
-<dt><code>curl_mfprintf()</code></p>
-<dd> Normal fprintf() clone.</p>
-<dt><code>curl_msprintf()</code></p>
-<dd> Normal sprintf() clone.</p>
-<dt><code>curl_msnprintf()</code></p>
-<dd> snprintf() clone. Many systems don&#8217;t have this. It is just like <code>sprintf</code> but with an extra argument after the buffer that specifies the length of the target buffer.</p>
-<dt><code>curl_mvprintf()</code></p>
-<dd> Normal vprintf() clone.</p>
-<dt><code>curl_mvfprintf()</code></p>
-<dd> Normal vfprintf() clone.</p>
-<dt><code>curl_mvsprintf()</code></p>
-<dd> Normal vsprintf() clone.</p>
-<dt><code>curl_mvsnprintf()</code></p>
-<dd> vsnprintf() clone. Many systems don&#8217;t have this. It is just like <code>vsprintf</code> but with an extra argument after the buffer that specifies the length of the target buffer.</p>
-<dt><code>curl_maprintf()</code></p>
-<dd> Like printf() but returns the output string as a malloc()ed string. The returned string must be free()ed by the receiver.</p>
-<dt><code>curl_mvaprintf()</code></p>
-<dd> Like curl_maprintf() but takes a va_list pointer argument instead of a variable amount of arguments.</dl>
+<dt><code>curl_mprintf()</code></dt>
+<dd> Normal printf() clone.</dd>
+<dt><code>curl_mfprintf()</code></dt>
+<dd> Normal fprintf() clone.</dd>
+<dt><code>curl_msprintf()</code></dt>
+<dd> Normal sprintf() clone.</dd>
+<dt><code>curl_msnprintf()</code></dt>
+<dd> snprintf() clone. Many systems don&#8217;t have this. It is just like <code>sprintf</code> but with an extra argument after the buffer that specifies the length of the target buffer.</dd>
+<dt><code>curl_mvprintf()</code></dt>
+<dd> Normal vprintf() clone.</dd>
+<dt><code>curl_mvfprintf()</code></dt>
+<dd> Normal vfprintf() clone.</dd>
+<dt><code>curl_mvsprintf()</code></dt>
+<dd> Normal vsprintf() clone.</dd>
+<dt><code>curl_mvsnprintf()</code></dt>
+<dd> vsnprintf() clone. Many systems don&#8217;t have this. It is just like <code>vsprintf</code> but with an extra argument after the buffer that specifies the length of the target buffer.</dd>
+<dt><code>curl_maprintf()</code></dt>
+<dd> Like printf() but returns the output string as a malloc()ed string. The returned string must be free()ed by the receiver.</dd>
+<dt><code>curl_mvaprintf()</code></dt>
+<dd> Like curl_maprintf() but takes a va_list pointer argument instead of a variable amount of arguments.</dd></dl>
 </dl>
 <p> To easily use all these cloned functions instead of the normal ones, #define _MPRINTF_REPLACE before you include the &lt;curl/mprintf.h&gt; file. Then all the normal names like printf, fprintf, sprintf etc will use the curl-functions instead.</p>
 <h2>AVAILABILITY</h2>

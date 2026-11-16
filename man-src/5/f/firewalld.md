@@ -14,52 +14,52 @@ description: "firewalld.zones – firewalld zones"
 <p> The zone defines the firewall features that are enabled in this zone: </p>
 <p> <font SIZE="+1"> <code>Predefined services</code></p>
 <dl>
-<dd>A service is a combination of port and/or protocol entries. Optionally netfilter helper modules can be added and also a IPv4 and IPv6 destination address.</dl>
+<dd>A service is a combination of port and/or protocol entries. Optionally netfilter helper modules can be added and also a IPv4 and IPv6 destination address.</dd></dl>
 <p> </font><font SIZE="+2"> <code>Ports and protocols</code></p>
 <dl>
-<dd>Definition of <i>tcp</i> or <i>udp</i> ports, where ports can be a single port or a port range.</dl>
+<dd>Definition of <i>tcp</i> or <i>udp</i> ports, where ports can be a single port or a port range.</dd></dl>
 <p> </font><font SIZE="+3"> <code>ICMP blocks</code></p>
 <dl>
-<dd>Blocks selected Internet Control Message Protocol (ICMP) messages. These messages are either information requests or created as a reply to information requests or in error conditions.</dl>
+<dd>Blocks selected Internet Control Message Protocol (ICMP) messages. These messages are either information requests or created as a reply to information requests or in error conditions.</dd></dl>
 <p> </font><font SIZE="+4"> <code>Masquerading</code></p>
 <dl>
-<dd>The addresses of a private network are mapped to and hidden behind a public IP address. This is a form of address translation.</dl>
+<dd>The addresses of a private network are mapped to and hidden behind a public IP address. This is a form of address translation.</dd></dl>
 <p> </font><font SIZE="+5"> <code>Forward ports</code></p>
 <dl>
-<dd>A forward port is either mapped to the same port on another host or to another port on the same host or to another port on another host.</dl>
+<dd>A forward port is either mapped to the same port on another host or to another port on the same host or to another port on another host.</dd></dl>
 <p> </font><font SIZE="+6"> <code>Rich language rules</code></p>
 <dl>
-<dd>The rich language extends the elements (service, port, icmp-block, masquerade and forward-port) with additional source and destination addresses, logging, actions and limits for logs and actions. It can also be used for host or network white and black listing (for more information, please have a look at <code><a href="/docs/linux/man/5-firewalld-richlanguage/">firewalld.richlanguage</a></code>(5)).</dl>
+<dd>The rich language extends the elements (service, port, icmp-block, masquerade and forward-port) with additional source and destination addresses, logging, actions and limits for logs and actions. It can also be used for host or network white and black listing (for more information, please have a look at <code><a href="/docs/linux/man/5-firewalld-richlanguage/">firewalld.richlanguage</a></code>(5)).</dd></dl>
 <p> For more information on the zone file format, please have a look at <code><a href="/docs/linux/man/5-firewalld-zone/">firewalld.zone</a></code>(5). </font></p>
 <h3>Which zones are available?</h3>
 <p>Here are the zones provided by firewalld sorted according to the default trust level of the zones from untrusted to trusted: </p>
 <p> drop</p>
 <dl>
-<dd>Any incoming network packets are dropped, there is no reply. Only outgoing network connections are possible.</dl>
+<dd>Any incoming network packets are dropped, there is no reply. Only outgoing network connections are possible.</dd></dl>
 <p> block</p>
 <dl>
-<dd>Any incoming network connections are rejected with an <i>icmp-host-prohibited</i> message for IPv4 and <i>icmp6-adm-prohibited</i> for IPv6. Only network connections initiated within this system are possible.</dl>
+<dd>Any incoming network connections are rejected with an <i>icmp-host-prohibited</i> message for IPv4 and <i>icmp6-adm-prohibited</i> for IPv6. Only network connections initiated within this system are possible.</dd></dl>
 <p> public</p>
 <dl>
-<dd>For use in public areas. You do not trust the other computers on networks to not harm your computer. Only selected incoming connections are accepted.</dl>
+<dd>For use in public areas. You do not trust the other computers on networks to not harm your computer. Only selected incoming connections are accepted.</dd></dl>
 <p> external</p>
 <dl>
-<dd>For use on external networks with masquerading enabled especially for routers. You do not trust the other computers on networks to not harm your computer. Only selected incoming connections are accepted.</dl>
+<dd>For use on external networks with masquerading enabled especially for routers. You do not trust the other computers on networks to not harm your computer. Only selected incoming connections are accepted.</dd></dl>
 <p> dmz</p>
 <dl>
-<dd>For computers in your demilitarized zone that are publicly-accessible with limited access to your internal network. Only selected incoming connections are accepted.</dl>
+<dd>For computers in your demilitarized zone that are publicly-accessible with limited access to your internal network. Only selected incoming connections are accepted.</dd></dl>
 <p> work</p>
 <dl>
-<dd>For use in work areas. You mostly trust the other computers on networks to not harm your computer. Only selected incoming connections are accepted.</dl>
+<dd>For use in work areas. You mostly trust the other computers on networks to not harm your computer. Only selected incoming connections are accepted.</dd></dl>
 <p> home</p>
 <dl>
-<dd>For use in home areas. You mostly trust the other computers on networks to not harm your computer. Only selected incoming connections are accepted.</dl>
+<dd>For use in home areas. You mostly trust the other computers on networks to not harm your computer. Only selected incoming connections are accepted.</dd></dl>
 <p> internal</p>
 <dl>
-<dd>For use on internal networks. You mostly trust the other computers on the networks to not harm your computer. Only selected incoming connections are accepted.</dl>
+<dd>For use on internal networks. You mostly trust the other computers on the networks to not harm your computer. Only selected incoming connections are accepted.</dd></dl>
 <p> trusted</p>
 <dl>
-<dd>All network connections are accepted.</dl>
+<dd>All network connections are accepted.</dd></dl>
 <h3>Which zone should be used?</h3>
 <p>A public WIFI network connection for example should be mainly untrusted, a wired home network connection should be fairly trusted. Select the zone that best matches the network you are using.</p>
 <h3>How to configure or add zones?</h3>
@@ -72,14 +72,14 @@ description: "firewalld.zones – firewalld zones"
 <h2>Notes</h2>
 <p>firewalld home page:</p>
 <dl>
-<dd>m[blue]<code><a rel="nofollow" href="http://www.firewalld.org">http://www.firewalld.org</a></code>m[]</dl>
+<dd>m[blue]<code><a rel="nofollow" href="http://www.firewalld.org">http://www.firewalld.org</a></code>m[]</dd></dl>
 <p> More documentation with examples:</p>
 <dl>
-<dd>m[blue]<code><a rel="nofollow" href="http://fedoraproject.org/wiki/FirewallD">http://fedoraproject.org/wiki/FirewallD</a></code>m[]</dl>
+<dd>m[blue]<code><a rel="nofollow" href="http://fedoraproject.org/wiki/FirewallD">http://fedoraproject.org/wiki/FirewallD</a></code>m[]</dd></dl>
 <h2>Authors</h2>
 <p><code>Thomas Woerner</code> &lt;twoerner [at] redhat.com&gt;</p>
 <dl>
-<dd>Developer</dl>
+<dd>Developer</dd></dl>
 <p> <code>Jiri Popelka</code> &lt;jpopelka [at] redhat.com&gt;</p>
 <dl>
-<dd>Developer</dl>
+<dd>Developer</dd></dl>

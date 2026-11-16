@@ -21,16 +21,16 @@ description: "ipa-addservice – Add a service principal"
 <p> The hostname must resolve to a DNS A record in order to ensure that it will work with Kerberos. Use the &#8211;force flag to force the creation of a principal.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>&#8211;force</code></p>
-<dd> Force the creation of the given principal name.</p>
-<dt><code>-v</code>, <code>&#8211;verbose</code></p>
-<dd> Display the XML-RPC request and response for more verbose debugging output.</dl>
+<dt><code>&#8211;force</code></dt>
+<dd> Force the creation of the given principal name.</dd>
+<dt><code>-v</code>, <code>&#8211;verbose</code></dt>
+<dd> Display the XML-RPC request and response for more verbose debugging output.</dd></dl>
 <h2>EXAMPLES</h2>
 <dl>
-<dt>ipa-addservice HTTP/<a rel="nofollow" href="http://www.example.com">www.example.com</a></p>
-<dd> Add a service principal for a web server</p>
-<dt>ipa-addservice host/ipa.example.com</p>
-<dd> Add a service principal for the host (for ssh, for example)</dl>
+<dt>ipa-addservice HTTP/<a rel="nofollow" href="http://www.example.com">www.example.com</a></dt>
+<dd> Add a service principal for a web server</dd>
+<dt>ipa-addservice host/ipa.example.com</dt>
+<dd> Add a service principal for the host (for ssh, for example)</dd></dl>
 <h2>EXIT STATUS</h2>
 <p> The exit status is 0 on success, nonzero on error. </p>
 <h2>Index</h2>

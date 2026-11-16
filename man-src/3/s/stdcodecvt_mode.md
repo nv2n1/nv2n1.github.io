@@ -11,15 +11,10 @@ std::codecvt_mode - std::codecvt_mode
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header &lt;codecvt&gt;
-
 enum codecvt_mode {
-
     consume_header = 4,          (since C++11)
-
     generate_header = 2,         (deprecated in C++17)
-
     little_endian = 1
-
 };</code></pre> 
 The facets std::codecvt_utf8, std::codecvt_utf16, and std::codecvt_utf8_utf16 accept an optional value of type std::codecvt_mode as a template argument, which specifies optional features of the unicode string conversion. 
 
@@ -46,16 +41,11 @@ If std::consume_header is not selected when reading a file beginning with byte o
 
 The following example demonstrates consuming the UTF-8 BOM 
  // Run this code <pre><code>#include &lt;fstream&gt;
-
 #include &lt;iostream&gt;
-
 #include &lt;string&gt;
-
 #include &lt;locale&gt;
-
 #include &lt;codecvt&gt;
 int main()
-
 {
     // UTF-8 data with BOM
     std::ofstream(&quot;text.txt&quot;) &lt;&lt; u8&quot;\ufeffz\u6c34\U0001d10b&quot;;

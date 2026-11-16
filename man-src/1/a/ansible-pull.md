@@ -20,124 +20,124 @@ description: "ansible-pull – pull playbooks from VCS server and run them using
 <p> <code>filename.yml</code></p>
 <dl>
 <dt>
-<dd> The name of one the YAML format files to run as an ansible playbook. This can be a relative path within the checkout. If not provided, ansible-pull will look for a playbook based on the host&#8217;s fully-qualified domain name, on the host hostname and finally a playbook named <code>local.yml</code>.</dl>
+</dt><dd> The name of one the YAML format files to run as an ansible playbook. This can be a relative path within the checkout. If not provided, ansible-pull will look for a playbook based on the host&#8217;s fully-qualified domain name, on the host hostname and finally a playbook named <code>local.yml</code>.</dd></dl>
 <h2>OPTIONS</h2>
 <p> <code>&#8211;accept-host-key</code></p>
 <dl>
 <dt>
-<dd> Adds the hostkey for the repo URL if not already added.</dl>
+</dt><dd> Adds the hostkey for the repo URL if not already added.</dd></dl>
 <p> <code>-b</code>, <code>&#8211;become</code></p>
 <dl>
 <dt>
-<dd> Use privilege escalation (specific one depends on become_method), this does not imply prompting for passwords.</dl>
+</dt><dd> Use privilege escalation (specific one depends on become_method), this does not imply prompting for passwords.</dd></dl>
 <p> <code>-K</code>, <code>&#8211;ask-become-pass</code></p>
 <dl>
 <dt>
-<dd> Ask for privilege escalation password.</dl>
+</dt><dd> Ask for privilege escalation password.</dd></dl>
 <p> <code>-k</code>, <code>&#8211;ask-pass</code></p>
 <dl>
 <dt>
-<dd> Prompt for the connection password, if it is needed for the transport used. For example, using ssh and not having a key-based authentication with ssh-agent.</dl>
+</dt><dd> Prompt for the connection password, if it is needed for the transport used. For example, using ssh and not having a key-based authentication with ssh-agent.</dd></dl>
 <p> <code>&#8211;ask-su-pass</code></p>
 <dl>
 <dt>
-<dd> Prompt for su password, used with &#8211;su (deprecated, use become).</dl>
+</dt><dd> Prompt for su password, used with &#8211;su (deprecated, use become).</dd></dl>
 <p> <code>&#8211;ask-sudo-pass</code></p>
 <dl>
 <dt>
-<dd> Prompt for the password to use with &#8211;sudo, if any (deprecated, use become).</dl>
+</dt><dd> Prompt for the password to use with &#8211;sudo, if any (deprecated, use become).</dd></dl>
 <p> <code>&#8211;ask-vault-pass</code></p>
 <dl>
 <dt>
-<dd> Prompt for vault password.</dl>
+</dt><dd> Prompt for vault password.</dd></dl>
 <p> <code>-C</code> <i>CHECKOUT</i>, <code>&#8211;checkout=</code><i>CHECKOUT</i></p>
 <dl>
 <dt>
-<dd> Branch/Tag/Commit to checkout. If not provided, uses default behavior of module used to check out playbook repository.</dl>
+</dt><dd> Branch/Tag/Commit to checkout. If not provided, uses default behavior of module used to check out playbook repository.</dd></dl>
 <p> <code>-d</code> <i>DEST</i>, <code>&#8211;directory=</code><i>DEST</i></p>
 <dl>
 <dt>
-<dd> Directory to checkout repository into. If not provided, a subdirectory of ~/.ansible/pull/ will be used.</dl>
+</dt><dd> Directory to checkout repository into. If not provided, a subdirectory of ~/.ansible/pull/ will be used.</dd></dl>
 <p> <code>-e</code> <i>EXTRA_VARS</i>, <code>&#8211;extra-vars=</code>&#8216;EXTRA_VARS</p>
 <dl>
 <dt>
-<dd> Extra variables to inject into a playbook, in key=value key=value format or as quoted YAML/JSON (hashes and arrays). To load variables from a file, specify the file preceded by @ (e.g. @vars.yml).</dl>
+</dt><dd> Extra variables to inject into a playbook, in key=value key=value format or as quoted YAML/JSON (hashes and arrays). To load variables from a file, specify the file preceded by @ (e.g. @vars.yml).</dd></dl>
 <p> <code>-f</code>, <code>&#8211;force</code></p>
 <dl>
 <dt>
-<dd> Force running of playbook even if unable to update playbook repository. This can be useful, for example, to enforce run-time state when a network connection may not always be up or possible.</dl>
+</dt><dd> Force running of playbook even if unable to update playbook repository. This can be useful, for example, to enforce run-time state when a network connection may not always be up or possible.</dd></dl>
 <p> <code>&#8211;full</code></p>
 <dl>
 <dt>
-<dd> Do a full clone of the repository. By default ansible-pull will do a shallow clone based on the last revision.</dl>
+</dt><dd> Do a full clone of the repository. By default ansible-pull will do a shallow clone based on the last revision.</dd></dl>
 <p> <code>-h</code>, <code>&#8211;help</code></p>
 <dl>
 <dt>
-<dd> Show the help message and exit.</dl>
+</dt><dd> Show the help message and exit.</dd></dl>
 <p> <code>-i</code> <i>PATH</i>, <code>&#8211;inventory=</code><i>PATH</i></p>
 <dl>
 <dt>
-<dd> The <i>PATH</i> to the inventory, which defaults to <i>/etc/ansible/hosts</i>. Alternatively you can use a comma separated list of hosts or single host with traling comma <i>host,</i>.</dl>
+</dt><dd> The <i>PATH</i> to the inventory, which defaults to <i>/etc/ansible/hosts</i>. Alternatively you can use a comma separated list of hosts or single host with traling comma <i>host,</i>.</dd></dl>
 <p> <code>&#8211;private-key=</code><i>PRIVATE_KEY_FILE</i></p>
 <dl>
 <dt>
-<dd> Use this file to authenticate the connection.</dl>
+</dt><dd> Use this file to authenticate the connection.</dd></dl>
 <p> <code>-m</code> <i>NAME</i>, <code>&#8211;module-name=</code><i>NAME</i></p>
 <dl>
 <dt>
-<dd> Module used to checkout playbook repository. Defaults to git.</dl>
+</dt><dd> Module used to checkout playbook repository. Defaults to git.</dd></dl>
 <p> <code>-o</code>, <code>&#8211;only-if-changed</code></p>
 <dl>
 <dt>
-<dd> Only run the playbook if the repository has been updated.</dl>
+</dt><dd> Only run the playbook if the repository has been updated.</dd></dl>
 <p> <code>&#8211;purge</code></p>
 <dl>
 <dt>
-<dd> Purge the checkout after the playbook is run.</dl>
+</dt><dd> Purge the checkout after the playbook is run.</dd></dl>
 <p> <code>-s</code> <i>SLEEP</i>, <code>&#8211;sleep=</code><i>SLEEP</i></p>
 <dl>
 <dt>
-<dd> Sleep for random interval (between 0 and SLEEP number of seconds) before starting. This is a useful way ot disperse git requests.</dl>
+</dt><dd> Sleep for random interval (between 0 and SLEEP number of seconds) before starting. This is a useful way ot disperse git requests.</dd></dl>
 <p> <code>&#8211;ssh-common-args=</code><i>&#8216;-o ProxyCommand=&quot;ssh -W %h:%p &#8230;&quot; &#8230;</i>&#8216;</p>
 <dl>
 <dt>
-<dd> Add the specified arguments to any sftp/scp/ssh command-line. Useful to set a ProxyCommand to use a jump host, but any arguments that are accepted by all three programs may be specified.</dl>
+</dt><dd> Add the specified arguments to any sftp/scp/ssh command-line. Useful to set a ProxyCommand to use a jump host, but any arguments that are accepted by all three programs may be specified.</dd></dl>
 <p> <code>&#8211;sftp-extra-args=</code><i>&#8216;-f &#8230;</i>&#8216;</p>
 <dl>
 <dt>
-<dd> Add the specified arguments to any sftp command-line.</dl>
+</dt><dd> Add the specified arguments to any sftp command-line.</dd></dl>
 <p> <code>&#8211;scp-extra-args=</code><i>&#8216;-l &#8230;</i>&#8216;</p>
 <dl>
 <dt>
-<dd> Add the specified arguments to any scp command-line.</dl>
+</dt><dd> Add the specified arguments to any scp command-line.</dd></dl>
 <p> <code>&#8211;ssh-extra-args=</code><i>&#8216;-R &#8230;</i>&#8216;</p>
 <dl>
 <dt>
-<dd> Add the specified arguments to any ssh command-line.</dl>
+</dt><dd> Add the specified arguments to any ssh command-line.</dd></dl>
 <p> <code>-t</code> <i>TAGS</i>, <code>&#8211;tags=</code><i>TAGS</i></p>
 <dl>
 <dt>
-<dd> Only run plays and tasks tagged with these values.</dl>
+</dt><dd> Only run plays and tasks tagged with these values.</dd></dl>
 <p> <code>-U</code> <i>URL</i>, <code>&#8211;url=</code><i>URL</i></p>
 <dl>
 <dt>
-<dd> URL of the playbook repository to checkout.</dl>
+</dt><dd> URL of the playbook repository to checkout.</dd></dl>
 <p> <code>&#8211;vault-password-file=</code><i>VAULT_PASSWORD_FILE</i></p>
 <dl>
 <dt>
-<dd> Vault password file.</dl>
+</dt><dd> Vault password file.</dd></dl>
 <p> <code>&#8211;clean</code></p>
 <dl>
 <dt>
-<dd> Modified files in the working repository will be discarded.</dl>
+</dt><dd> Modified files in the working repository will be discarded.</dd></dl>
 <p> <code>&#8211;track-subs</code></p>
 <dl>
 <dt>
-<dd> Submodules will track the latest changes.</dl>
+</dt><dd> Submodules will track the latest changes.</dd></dl>
 <p> <code>-v</code>, <code>&#8211;verbose</code></p>
 <dl>
 <dt>
-<dd> Pass -vvv to ansible-playbook.</dl>
+</dt><dd> Pass -vvv to ansible-playbook.</dd></dl>
 <h2>INVENTORY</h2>
 <p> Ansible stores the hosts it can potentially operate on in an inventory. This can be an ini-like file, a script, directory or a list. The ini syntax is one host per line. Groups headers are allowed and are included on their own line, enclosed in square brackets that start the line. </p>
 <p> Ranges of hosts are also supported. For more information and additional options, see the documentation on <a rel="nofollow" href="http://docs.ansible.com/.">http://docs.ansible.com/.</a></p>

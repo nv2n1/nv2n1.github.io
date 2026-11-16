@@ -11,9 +11,9 @@ description: "mhlist – list information about MIME messages"
 <p> mhlist &#8211; list information about MIME messages </p>
 <h2>SYNOPSIS</h2>
 <dl>
-<dt> <code>mhlist</code> [<i>+folder</i>] [<i>msgs</i>] [<code>-file</code> <i>file</i>] [<code>-part</code> <i>number</i>] &#8230; [<code>-type</code> <i>content</i>] &#8230; [<code>-headers</code> | <code>-noheaders</code>] [<code>-realsize</code> | <code>-norealsize</code>] [<code>-rcache</code> <i>policy</i>] [<code>-wcache</code> <i>policy</i>] [<code>-check</code> | <code>-nocheck</code>] [<code>-changecur</code> | <code>-nochangecur</code>] [<code>-verbose</code> | <code>-noverbose</code>] [<code>-disposition</code> | <code>-nodisposition</code>] [<code>-version</code>] [<code>-help</code>]</dl>
+<dt> <code>mhlist</code> [<i>+folder</i>] [<i>msgs</i>] [<code>-file</code> <i>file</i>] [<code>-part</code> <i>number</i>] &#8230; [<code>-type</code> <i>content</i>] &#8230; [<code>-headers</code> | <code>-noheaders</code>] [<code>-realsize</code> | <code>-norealsize</code>] [<code>-rcache</code> <i>policy</i>] [<code>-wcache</code> <i>policy</i>] [<code>-check</code> | <code>-nocheck</code>] [<code>-changecur</code> | <code>-nochangecur</code>] [<code>-verbose</code> | <code>-noverbose</code>] [<code>-disposition</code> | <code>-nodisposition</code>] [<code>-version</code>] [<code>-help</code>]</dt></dl>
 <h2>DESCRIPTION</h2>
-<dd>The <code>mhlist</code> command allows you to list information (essentially a table of contents) about the various parts of a collection of MIME (multi-media) messages. </p>
+<dd>The <code>mhlist</code> command allows you to list information (essentially a table of contents) about the various parts of a collection of MIME (multi-media) messages. </dd>
 <p> <code>mhlist</code> manipulates MIME (multi-media messages) as specified in RFC 2045 to RFC 2049 (See <i><a href="/docs/linux/man/1-mhbuild/">mhbuild</a></i>(1)). </p>
 <p> The <code>-headers</code> switch indicates that a one-line banner should be displayed above the listing. </p>
 <p> The <code>-realsize</code> switch tells <code>mhlist</code> to evaluate the &#8220;native&#8221; (decoded) format of each content prior to listing. This provides an accurate count at the expense of a small delay. </p>
@@ -26,11 +26,11 @@ description: "mhlist – list information about MIME messages"
 <p> A list of commonly used contents is briefly reproduced here: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre><code>
 Type Subtypes-- -- -- -- -- --text plain, enriched multipart mixed, alternative, digest, parallel message rfc822, partial, external - body application octet - stream, postscript image jpeg, gif, png audio basic video mpeg
 </code></pre>
-</dl>
+</dd></dl>
 <p> A legal MIME message must contain a subtype specification. </p>
 <p> To specify a content, regardless of its subtype, just use the name of the content, e.g., &#8220;audio&#8221;. To specify a specific subtype, separate the two with a slash, e.g., &#8220;audio/basic&#8221;. Note that regardless of the values given to the <code>-type</code> switch, a multipart content (of any subtype listed above) is always acted upon. Further note that if the <code>-type</code> switch is used, and it is desirable to act on a message/external-body content, then the <code>-type</code> switch must be used twice: once for message/external-body and once for the content externally referenced. </p>
 <p> The parts of a multipart/alternative part are listed in the reverse order of their placement in the message. The listing therefore is in decreasing order of preference, as defined in RFC 1521.</p>

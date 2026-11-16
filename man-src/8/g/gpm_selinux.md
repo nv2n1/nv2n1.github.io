@@ -83,8 +83,8 @@ description: "gpm_selinux – Security Enhanced Linux Policy for the gpm process
 <p> <code>gpm_conf_t</code> </p>
 <p> &#8211; Set files with the gpm_conf_t type, if you want to treat the files as gpm configuration data, usually stored under the /etc directory. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/etc/gpm(/.*)?, /etc/gpm-.*.conf </p>
+<dt>Paths:</dt>
+<dd>/etc/gpm(/.*)?, /etc/gpm-.*.conf </dd>
 </dl>
 <p> <code>gpm_exec_t</code> </p>
 <p> &#8211; Set files with the gpm_exec_t type, if you want to transition an executable to the gpm_t domain. </p>
@@ -97,8 +97,8 @@ description: "gpm_selinux – Security Enhanced Linux Policy for the gpm process
 <p> <code>gpmctl_t</code> </p>
 <p> &#8211; Set files with the gpmctl_t type, if you want to treat the files as gpmctl data. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/dev/gpmctl, /dev/gpmdata </p>
+<dt>Paths:</dt>
+<dd>/dev/gpmctl, /dev/gpmdata </dd>
 </dl>
 <p> Note: File context can be temporarily modified with the chcon command. If you want to permanently change the file context you need to use the <code>semanage fcontext</code> command. This will modify the SELinux labeling database. You will need to use <code>restorecon</code> to apply the labels.</p>
 <h2>Commands</h2>

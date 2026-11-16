@@ -14,18 +14,18 @@ description: "sepolicy-communicate – Generate a report showing if two SELinux 
 <p>Use sepolicy communicate to examine SELinux Policy to if a source SELinux Domain can communicate with a target SELinux Domain. The default command looks to see if there are any file types that the source domain can write, which the target domain can read. </p>
 <h2>Options</h2>
 <dl>
-<dt><i>-c, &#8211;class</i></p>
-<dd>Specify the SELinux class which the source domain will attempt to communicate with the target domain. (Default file)</p>
-<dt><i>-h, &#8211;help </i></p>
-<dd>Display help message</p>
-<dt><i>-s, &#8211;source</i></p>
-<dd>Specify the source SELinux domain type.</p>
-<dt><i>-S, &#8211;sourceaccess</i></p>
-<dd>Specify the list of accesses used by the source SELinux domain type to communicate with the target domain. Default Open, Write.</p>
-<dt><i>-t, &#8211;target</i></p>
-<dd>Specify the target SELinux domain type.</p>
-<dt><i>-T, &#8211;targetaccess</i></p>
-<dd>Specify the list of accesses used by the target SELinux domain type to receive communications from the source domain. Default Open, Read. </p>
+<dt><i>-c, &#8211;class</i></dt>
+<dd>Specify the SELinux class which the source domain will attempt to communicate with the target domain. (Default file)</dd>
+<dt><i>-h, &#8211;help </i></dt>
+<dd>Display help message</dd>
+<dt><i>-s, &#8211;source</i></dt>
+<dd>Specify the source SELinux domain type.</dd>
+<dt><i>-S, &#8211;sourceaccess</i></dt>
+<dd>Specify the list of accesses used by the source SELinux domain type to communicate with the target domain. Default Open, Write.</dd>
+<dt><i>-t, &#8211;target</i></dt>
+<dd>Specify the target SELinux domain type.</dd>
+<dt><i>-T, &#8211;targetaccess</i></dt>
+<dd>Specify the list of accesses used by the target SELinux domain type to receive communications from the source domain. Default Open, Read. </dd>
 </dl>
 <h2>Author</h2>
 <p>This man page was written by Daniel Walsh &lt;dwalsh [at] redhat.com&gt;</p>

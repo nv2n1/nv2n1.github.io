@@ -12,14 +12,14 @@ description: "ibv_attach_counters_point_flow – attach individual counter defin
 <h2>SYNOPSIS</h2>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre><code>
 #include &lt;infiniband/verbs.h&gt;
 int ibv_attach_counters_point_flow(struct ibv_counters *counters,
                                    struct ibv_counter_attach_attr *counter_attach_attr,
                                    struct ibv_flow *flow);
 </code></pre>
-</dl>
+</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> Attach counters point are a family of APIs to attach individual counter description definition to a verb object at a specific index location. </p>
 <p> Counters object will start collecting values after it is bound to the verb object resource. </p>
@@ -31,48 +31,48 @@ int ibv_attach_counters_point_flow(struct ibv_counters *counters,
 <p> The runtime values of counters can be read from the hardware by calling ibv_read_counters().</p>
 <h2>ARGUMENTS</h2>
 <dl>
-<dt>counters</p>
-<dd> Existing counters to attach new counter point on.</p>
-<dt>counter_attach_attr</p>
-<dd> An ibv_counter_attach_attr struct, as defined in verbs.h.</p>
-<dt>flow</p>
-<dd> Existing flow to attach a new counters point on (in static mode it must be NULL).</dl>
+<dt>counters</dt>
+<dd> Existing counters to attach new counter point on.</dd>
+<dt>counter_attach_attr</dt>
+<dd> An ibv_counter_attach_attr struct, as defined in verbs.h.</dd>
+<dt>flow</dt>
+<dd> Existing flow to attach a new counters point on (in static mode it must be NULL).</dd></dl>
 <h3>counter_attach_attr Argument</h3>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 struct ibv_counter_attach_attr {<br />
     enum ibv_counter_description counter_desc;<br />
     uint32_t index;<br />
     uint32_t comp_mask;<br />
 };
-</dl>
+</dd></dl>
 <h3>counter_desc Argument</h3>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre><code>
 enum ibv_counter_description {
     IBV_COUNTER_PACKETS,
     IBV_COUNTER_BYTES,
 };
 </code></pre>
-<dt>index</p>
-<dd> Desired location of the specific counter at the counters object.</p>
-<dt>comp_mask</p>
-<dd> Bitmask specifying what fields in the structure are valid.</dl>
+</dd><dt>index</dt>
+<dd> Desired location of the specific counter at the counters object.</dd>
+<dt>comp_mask</dt>
+<dd> Bitmask specifying what fields in the structure are valid.</dd></dl>
 <h2>RETURN VALUE</h2>
 <p> ibv_attach_counters_point_flow() returns 0 on success, or the value of errno on failure (which indicates the failure reason)</p>
 <h2>ERRORS</h2>
 <dl>
-<dt><code>EINVAL</code></p>
-<dd> invalid argument(s) passed</p>
-<dt><code>ENOTSUP</code></p>
-<dd> counter_desc is not supported on the requested object</p>
-<dt><code>EBUSY</code></p>
-<dd> the counter object is already bound to a flow, additional attach calls is not allowed (valid for static attach only)</p>
-<dt><code>ENOMEM</code></p>
-<dd> not enough memory</dl>
+<dt><code>EINVAL</code></dt>
+<dd> invalid argument(s) passed</dd>
+<dt><code>ENOTSUP</code></dt>
+<dd> counter_desc is not supported on the requested object</dd>
+<dt><code>EBUSY</code></dt>
+<dd> the counter object is already bound to a flow, additional attach calls is not allowed (valid for static attach only)</dd>
+<dt><code>ENOMEM</code></dt>
+<dd> not enough memory</dd></dl>
 <h2>NOTES</h2>
 <p> Counter values in each index location are cleared upon creation when calling ibv_create_counters(). Attaching counters points will only increase these values accordingly.</p>
 <h2>EXAMPLE</h2>

@@ -15,7 +15,7 @@ sock_register - add a socket protocol handler
 <h2>Arguments</h2>
 
 <i>ops</i>
-<dl><dd><dd>description of protocol</dl>
+<dl><dd></dd><dd>description of protocol</dd></dl>
 
 <h2>Description</h2>
 

@@ -14,15 +14,15 @@ NGGSOG - Returns the latitudes and longitudes of six points defining a five-poin
  void c_nggsog(float slat, float slon, float srad, float *alat, 
  float *alon)
 <h2>Description</h2><dl COMPACT><dt>SLAT
-<dd>(an input expression of type REAL) is the latitude, in degrees, of a point on the globe defining the center of the star.
-<dt>SLON
-<dd>(an input expression of type REAL) is the longitude, in degrees, of a point on the globe defining the center of the star.
-<dt>SRAD
-<dd>(an input expression of type REAL) specifies the great-circle distance, in degrees, from the center of the star to the end of one of its points.
-<dt>ALAT
-<dd>(an output array, of type REAL, dimensioned 6) is an array in which the latitudes of points on the star are to be returned.
-<dt>ALON
-<dd>(an output array, of type REAL, dimensioned 6) is an array in which the longitudes of points on the star are to be returned.</dl><h2>C-Binding Description</h2>The C binding argument descriptions are the same as the FORTRAN argument descriptions.
+</dt><dd>(an input expression of type REAL) is the latitude, in degrees, of a point on the globe defining the center of the star.
+</dd><dt>SLON
+</dt><dd>(an input expression of type REAL) is the longitude, in degrees, of a point on the globe defining the center of the star.
+</dd><dt>SRAD
+</dt><dd>(an input expression of type REAL) specifies the great-circle distance, in degrees, from the center of the star to the end of one of its points.
+</dd><dt>ALAT
+</dt><dd>(an output array, of type REAL, dimensioned 6) is an array in which the latitudes of points on the star are to be returned.
+</dd><dt>ALON
+</dt><dd>(an output array, of type REAL, dimensioned 6) is an array in which the longitudes of points on the star are to be returned.</dd></dl><h2>C-Binding Description</h2>The C binding argument descriptions are the same as the FORTRAN argument descriptions.
 <h2>Usage</h2>Let C represent (CLAT,CLON), let O represent the center of the globe, and let P represent the end of one point of the star. Then, the angle POC has the magnitude specified by SRAD. 
 
  SIN, COS, and TAN are used to generate points representing a star having the desired radius and centered at the the point with latitude 0 and longitude 0. These points are then subjected to two rotations - one that brings the star up to the desired latitude, and another that carries it to the desired longitude. 

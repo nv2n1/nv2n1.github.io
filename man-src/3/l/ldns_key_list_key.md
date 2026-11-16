@@ -27,41 +27,41 @@ description: "ldns_key_list_key_count, ldns_key_list_key, ldns_key_rsa_key, ldns
 <p> uint16_t ldns_key_flags(const ldns_key *k); </p>
 <h2>DESCRIPTION</h2>
 <dl>
-<dt> <i>ldns_key_list_key_count</i>()</p>
-<dd>returns the number of keys in the key list .br <code>key_list</code>: the key_list .br Returns the numbers of keys in the list</dl>
+<dt> <i>ldns_key_list_key_count</i>()</dt>
+<dd>returns the number of keys in the key list .br <code>key_list</code>: the key_list .br Returns the numbers of keys in the list</dd></dl>
 <dl>
-<dt> <i>ldns_key_list_key</i>()</p>
-<dd>returns a pointer to the key in the list at the given position .br <code>key</code>: the key .br <code>nr</code>: the position in the list .br Returns the key</dl>
+<dt> <i>ldns_key_list_key</i>()</dt>
+<dd>returns a pointer to the key in the list at the given position .br <code>key</code>: the key .br <code>nr</code>: the position in the list .br Returns the key</dd></dl>
 <dl>
-<dt> <i>ldns_key_rsa_key</i>()</p>
-<dd>returns the (openssl) RSA struct contained in the key .br <code>k</code>: the key to look in .br Returns the RSA * structure in the key</dl>
+<dt> <i>ldns_key_rsa_key</i>()</dt>
+<dd>returns the (openssl) RSA struct contained in the key .br <code>k</code>: the key to look in .br Returns the RSA * structure in the key</dd></dl>
 <dl>
-<dt> <i>ldns_key_dsa_key</i>()</p>
-<dd>returns the (openssl) DSA struct contained in the key</dl>
+<dt> <i>ldns_key_dsa_key</i>()</dt>
+<dd>returns the (openssl) DSA struct contained in the key</dd></dl>
 <dl>
-<dt> <i>ldns_key_algorithm</i>()</p>
-<dd>return the signing alg of the key .br <code>k</code>: the key .br Returns the algorithm</dl>
+<dt> <i>ldns_key_algorithm</i>()</dt>
+<dd>return the signing alg of the key .br <code>k</code>: the key .br Returns the algorithm</dd></dl>
 <dl>
-<dt> <i>ldns_key_hmac_key</i>()</p>
-<dd>return the hmac key data .br <code>k</code>: the key .br Returns the hmac key data</dl>
+<dt> <i>ldns_key_hmac_key</i>()</dt>
+<dd>return the hmac key data .br <code>k</code>: the key .br Returns the hmac key data</dd></dl>
 <dl>
-<dt> <i>ldns_key_origttl</i>()</p>
-<dd>return the original ttl of the key .br <code>k</code>: the key .br Returns the original ttl</dl>
+<dt> <i>ldns_key_origttl</i>()</dt>
+<dd>return the original ttl of the key .br <code>k</code>: the key .br Returns the original ttl</dd></dl>
 <dl>
-<dt> <i>ldns_key_inception</i>()</p>
-<dd>return the key&#8217;s inception date .br <code>k</code>: the key .br Returns the inception date</dl>
+<dt> <i>ldns_key_inception</i>()</dt>
+<dd>return the key&#8217;s inception date .br <code>k</code>: the key .br Returns the inception date</dd></dl>
 <dl>
-<dt> <i>ldns_key_expiration</i>()</p>
-<dd>return the key&#8217;s expiration date .br <code>k</code>: the key .br Returns the experiration date</dl>
+<dt> <i>ldns_key_expiration</i>()</dt>
+<dd>return the key&#8217;s expiration date .br <code>k</code>: the key .br Returns the experiration date</dd></dl>
 <dl>
-<dt> <i>ldns_key_keytag</i>()</p>
-<dd>return the keytag .br <code>k</code>: the key .br Returns the keytag</dl>
+<dt> <i>ldns_key_keytag</i>()</dt>
+<dd>return the keytag .br <code>k</code>: the key .br Returns the keytag</dd></dl>
 <dl>
-<dt> <i>ldns_key_pubkey_owner</i>()</p>
-<dd>return the public key&#8217;s owner .br <code>k</code>: the key .br Returns the owner</dl>
+<dt> <i>ldns_key_pubkey_owner</i>()</dt>
+<dd>return the public key&#8217;s owner .br <code>k</code>: the key .br Returns the owner</dd></dl>
 <dl>
-<dt> <i>ldns_key_flags</i>()</p>
-<dd>return the flag of the key .br <code>k</code>: the key .br Returns the flag</dl>
+<dt> <i>ldns_key_flags</i>()</dt>
+<dd>return the flag of the key .br <code>k</code>: the key .br Returns the flag</dd></dl>
 <h2>AUTHOR</h2>
 <p> The ldns team at NLnet Labs. Which consists out of Jelte Jansen and Miek Gieben. </p>
 <h2>REPORTING BUGS</h2>

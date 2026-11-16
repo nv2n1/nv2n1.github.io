@@ -59,16 +59,11 @@ operator&gt;&gt;
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;iostream&gt;
-
 #include &lt;iomanip&gt;
-
 #include &lt;string&gt;
-
 #include &lt;map&gt;
-
 #include &lt;random&gt;
 int main()
-
 {
     std::random_device rd;
     std::mt19937 gen(rd());

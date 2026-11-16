@@ -116,7 +116,7 @@ The Bib-1 attribute defines six attribute types: Use (1), Relation (2), Position
  1033 Host-item
  1034 Content-type
  1035 Anywhere
- 1036 Author-Title-Subject</pre></dl>
+ 1036 Author-Title-Subject</pre></dd></dl>
 
 <h2>Relation (2)</h2>
 
@@ -129,13 +129,13 @@ The Bib-1 attribute defines six attribute types: Use (1), Relation (2), Position
  100 Phonetic
  101 Stem
  102 Relevance
- 103 AlwaysMatches</pre></dl>
+ 103 AlwaysMatches</pre></dd></dl>
 
 <h2>Position (3)</h2>
 
 <dl><dd><pre> 1 First in field
  2 First in subfield
- 3 Any position in field</pre></dl>
+ 3 Any position in field</pre></dd></dl>
 
 <h2>Structure (4)</h2>
 
@@ -154,7 +154,7 @@ The Bib-1 attribute defines six attribute types: Use (1), Relation (2), Position
  106 Document-text
  107 Local-number
  108 String
- 109 Numeric-string</pre></dl>
+ 109 Numeric-string</pre></dd></dl>
 
 <h2>Truncation (5)</h2>
 
@@ -164,13 +164,13 @@ The Bib-1 attribute defines six attribute types: Use (1), Relation (2), Position
  100 Do not truncate
  101 Process # in search term
  102 RegExpr-1
- 103 RegExpr-2</pre></dl>
+ 103 RegExpr-2</pre></dd></dl>
 
 <h2>Completenss (6)</h2>
 
 <dl><dd><pre> 1 Incomplete subfield
  2 Complete subfield
- 3 Complete field</pre></dl>
+ 3 Complete field</pre></dd></dl>
 
 <h2>See Also</h2>
 
@@ -183,8 +183,9 @@ The Bib-1 attribute defines six attribute types: Use (1), Relation (2), Position
 <h2>Notes</h2>
 
 <dl><dt> 1.
-<dd>Bib-1 Attribute Set
-<dl><dd><a rel="nofollow" HREF="http://www.loc.gov/z3950/agency/defns/bib1.html">http://www.loc.gov/z3950/agency/defns/bib1.html</a></dl><dt> 2.
-<dd>Attibute Set Bib-1 Semantics
-<dl><dd><a rel="nofollow" HREF="http://www.loc.gov/z3950/agency/bib1.html">http://www.loc.gov/z3950/agency/bib1.html</a></dl>
+</dt><dd>Bib-1 Attribute Set
+</dd><dl><dd><a rel="nofollow" HREF="http://www.loc.gov/z3950/agency/defns/bib1.html">http://www.loc.gov/z3950/agency/defns/bib1.html</a></dd></dl><dt> 2.
+</dt><dd>Attibute Set Bib-1 Semantics
+</dd><dl><dd><a rel="nofollow" HREF="http://www.loc.gov/z3950/agency/bib1.html">http://www.loc.gov/z3950/agency/bib1.html</a></dd></dl>
  
+</dl>

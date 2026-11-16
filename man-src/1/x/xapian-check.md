@@ -17,8 +17,8 @@ description: "xapian-check – Check the consistency of a database or table"
 <h3>The btree(s) is/are always checked &#8211; control the output verbosity with:</h3>
 <dl>
 <dt>
-<dd> t = short tree printing f = full tree printing b = show bitmap v = show stats about B-tree (default) + = same as tbv e.g. xapian-check /var/lib/xapian/data/default</p>
+</dt><dd> t = short tree printing f = full tree printing b = show bitmap v = show stats about B-tree (default) + = same as tbv e.g. xapian-check /var/lib/xapian/data/default</dd>
 <dt>
-<dd> xapian-check /var/lib/xapian/data/default/postlist fbv </p>
+</dt><dd> xapian-check /var/lib/xapian/data/default/postlist fbv </dd>
 </dl>
 <h2>Index</h2>

@@ -26,33 +26,21 @@ expansions, e.g.,
 if `john' sends to `group',
 and `group' includes `john' in the expansion,
 then the letter will also be delivered to `john'.
-
 Parameters
-
-
 -Ac
-
-
 Use submit.cf even if the operation mode does not indicate
 an initial mail submission.
 -Am
-
-
 Use sendmail.cf even if the operation mode indicates
 an initial mail submission.
 -Btype
-
-
 Set the body type to
 type.
-
 Current legal values are
 7BIT
 or
 8BITMIME.
 -ba
-
-
 Go into
 ARPANET
 mode.  All input lines must end with a CR-LF,
@@ -61,11 +49,8 @@ Also,
 the ``From:'' and ``Sender:''
 fields are examined for the name of the sender.
 -bd
-
-
 Run as a daemon.
 Sendmail
-
 will fork and run in background
 listening on socket 25 for incoming
 SMTP
@@ -73,105 +58,64 @@ connections.
 This is normally run from
 /etc/rc.
 -bD
-
-
 Same as
 -bd
-
 except runs in foreground.
 -bh
-
-
 Print the persistent host status database.
 -bH
-
-
 Purge expired entries from the persistent host status database.
 -bi
-
-
 Initialize the alias database.
 -bm
-
-
 Deliver mail in the usual way (default).
 -bp
-
-
 Print a listing of the queue(s).
 -bP
-
-
 Print number of entries in the queue(s);
 only available with shared memory support.- bs
-
                                                 Use the SMTP protocol as described in RFC821 on standard input and output.This flag implies all the operations of the -
     ba
-
         flag that are compatible with
             SMTP.-
     bt
-
         Run in address test mode.This mode reads addresses and shows the steps in parsing;
 it is used for debugging configuration tables.
 -bv
-
-
 Verify names only - do not try to collect or deliver a message.
 Verify mode is normally used for validating
 users or mailing lists.
 -Cfile
-
-
 Use alternate configuration file.
 Sendmail
-
 gives up any enhanced (set-user-ID or set-group-ID) privileges
 if an alternate configuration file is specified.
 -D logfile
-
-
 Send debugging output to the indicated log file instead of stdout.
 -dcategory.level...
-
-
 Set the debugging flag for
 category
-
 to
 level.
-
 Category
-
 is either an integer or a name specifying the topic, and
 level
-
 an integer specifying the level of debugging output desired.
 Higher levels generally mean more output.
 More than one flag can be specified by separating them with commas.
 A list of numeric debugging categories can be found in the TRACEFLAGS file
 in the sendmail source distribution.
-
 The option
 -d0.1
-
 prints the version of
 sendmail
-
 and the options it was compiled with.
-
 Most other categories are only useful with, and documented in,
 sendmail's
-
 source code.
-
 -Ffullname
-
-
 Set the full name of the sender.
 -fname
-
-
 Sets the name of the ``from'' person
 (i.e., the envelope sender of the mail).
 This address may also be used in the From: header
@@ -180,36 +124,26 @@ The envelope sender address is used as the recipient
 for delivery status notifications
 and may also appear in a Return-Path: header.
 -f
-
 should only be used
 by ``trusted'' users
 (normally
 root, daemon,
-
 and
 network)
-
 or if the person you are trying to become
 is the same as the person you are.
 Otherwise,
 an X-Authentication-Warning header
 will be added to the message.
 -G
-
-
 Relay (gateway) submission of a message,
 e.g., when
 rmail
-
 calls
 sendmail .
-
 -hN
-
-
 Set the hop count to
 N.
-
 The hop count is incremented every time the mail is
 processed.
 When it reaches a limit,
@@ -218,24 +152,16 @@ the victim of an aliasing loop.
 If not specified,
 ``Received:'' lines in the message are counted.
 -i
-
-
 Do not strip a leading dot from lines in incoming messages,
 and do not treat a dot on a line by itself
 as the end of an incoming message.
 This should be set if you are reading data from a file.
 -L tag
-
-
 Set the identifier used in syslog messages to the supplied
 tag.
-
 -N dsn
-
-
 Set delivery status notification conditions to
 dsn,
-
 which can be
 `never'
 for no notifications
@@ -247,35 +173,24 @@ to be notified if delivery is delayed, and
 `success'
 to be notified when the message is successfully delivered.
 -n
-
-
 Don't do aliasing.
 -O option=value
 Set option
 option
-
 to the specified
 value.
-
 This form uses long names.  See below for more details.
 -ox value
-
-
 Set option
 x
-
 to the specified
 value.
-
 This form uses single character names only.
 The short names are not described in this manual page;
 see the
 Sendmail Installation and Operation Guide
-
 for details.
 -pprotocol
-
-
 Set the name of the protocol used to receive the message.
 This can be a simple protocol name such as ``UUCP''
 or a protocol and hostname, such as ``UUCP:ucbvax''.
@@ -283,10 +198,8 @@ or a protocol and hostname, such as ``UUCP:ucbvax''.
 Process saved messages in the queue at given intervals.
 If
 time
-
 is omitted, process the queue once.
 Time
-
 is given as a tagged number,
 with
 `s'
@@ -307,11 +220,9 @@ or
 would both set the timeout to one hour thirty minutes.
 By default,
 sendmail
-
 will run in the background.
 This option can be used safely with
 -bd.
-
 -qp[time]
 Similar to -qtime,
 except that instead of periodically forking a child to process the queue,
@@ -326,39 +237,30 @@ but run in the foreground.
 -qGname
 Process jobs in queue group called
 name
-
 only.
 -q[!]Isubstr
 Limit processed jobs to those containing
 substr
-
 as a substring of the queue id or not when
 !
-
 is specified.
 -q[!]Qsubstr
 Limit processed jobs to quarantined jobs containing
 substr
-
 as a substring of the quarantine reason or not when
 !
-
 is specified.
 -q[!]Rsubstr
 Limit processed jobs to those containing
 substr
-
 as a substring of one of the recipients or not when
 !
-
 is specified.
 -q[!]Ssubstr
 Limit processed jobs to those containing
 substr
-
 as a substring of the sender or not when
 !
-
 is specified.
 -Q[reason]
 Quarantine a normal queue items with the given reason or
@@ -366,13 +268,10 @@ unquarantine quarantined queue items if no reason is given.
 This should only be used with some sort of item matching using
 as described above.
 -R return
-
-
 Set the amount of the message to be returned
 if the message bounces.
 The
 return
-
 parameter can be
 `full'
 to return the entire message or
@@ -380,54 +279,36 @@ to return the entire message or
 to return only the headers.
 In the latter case also local bounces return only the headers.
 -rname
-
-
 An alternate and obsolete form of the
 -f
-
 flag.
 -t
-
-
 Read message for recipients.
 To:, Cc:, and Bcc: lines will be scanned for recipient addresses.
 The Bcc: line will be deleted before transmission.
 -V envid
-
-
 Set the original envelope id.
 This is propagated across SMTP to servers that support DSNs
 and is returned in DSN-compliant error messages.
 -v
-
-
 Go into verbose mode.
 Alias expansions will be announced, etc.
 -X logfile
-
-
 Log all traffic in and out of mailers in the indicated log file.
 This should only be used as a last resort
 for debugging mailer bugs.
 It will log a lot of data very quickly.
 --
-
-
 Stop processing command flags and use the rest of the arguments as
 addresses.
-
-
 Options
-
 There are also a number of processing options that may be set.
 Normally these will only be used by a system administrator.
 Options may be set either on the command line
 using the
 -o
-
 flag (for short names), the
 -O
-
 flag (for long names),
 or in the configuration file.
 This is a partial list limited to those options that are likely to be useful
@@ -435,34 +316,23 @@ on the command line
 and only shows the long names;
 for a complete list (and details), consult the
 Sendmail Installation and Operation Guide.
-
 The options are:
-
 AliasFile=file
-
-
 Use alternate alias file.
 HoldExpensive
 On mailers that are considered ``expensive'' to connect to,
 don't initiate immediate connection.
 This requires queueing.
 CheckpointInterval=N
-
-
 Checkpoint the queue file after every
 N
-
 successful deliveries (default 10).
 This avoids excessive duplicate deliveries
 when sending to long mailing lists
 interrupted by system crashes.
-
 DeliveryMode=x
-
-
 Set the delivery mode to
 x.
-
 Delivery modes are
 `i'
 for interactive (synchronous) delivery,
@@ -477,11 +347,8 @@ for deferred - the same as
 except that database lookups for maps which have set the -D option
 (default for the host map) are avoided.
 ErrorMode=x
-
-
 Set error processing to mode
 x.
-
 Valid modes are
 `m'
 to mail back the error message,
@@ -507,15 +374,12 @@ or
 and if the sender is local to this machine,
 a copy of the message is appended to the file
 dead.letter
-
 in the sender's home directory.
 SaveFromLine
 Save
 UNIX-style
 From lines at the front of messages.
 MaxHopCount=N
-
-
 The maximum number of times a message is allowed to ``hop''
 before we decide it is in a loop.
 IgnoreDots
@@ -526,20 +390,12 @@ Send error messages in MIME format.
 If not set, the DSN (Delivery Status Notification) SMTP extension
 is disabled.
 ConnectionCacheTimeout=timeout
-
-
 Set connection cache timeout.
 ConnectionCacheSize=N
-
-
 Set connection cache size.
 LogLevel=n
-
-
 The log level.
 MeToo=False
-
-
 Don't send to ``me'' (the sender) if I am in an alias expansion.
 CheckAliases
 Validate the right hand side of aliases during a
@@ -554,16 +410,10 @@ this message is guaranteed to have new style headers
 If set, an adaptive algorithm is used that will correctly
 determine the header format in most cases.
 QueueDirectory=queuedir
-
-
 Select the directory in which to queue messages.
 StatusFile=file
-
-
 Save statistics in the named file.
 Timeout.queuereturn=time
-
-
 Set the timeout on undelivered messages in the queue to the specified time.
 After delivery has failed
 (e.g., because of a host being down)
@@ -571,8 +421,6 @@ for this amount of time,
 failed messages will be returned to the sender.
 The default is five days.
 UserDatabaseSpec=userdatabase
-
-
 If set, a user database is consulted to get forwarding information.
 You can consider this an adjunct to the aliasing mechanism,
 except that the database is intended to be distributed;
@@ -586,11 +434,8 @@ May be convenient on memory-poor machines.
 SevenBitInput
 Strip incoming messages to seven bits.
 EightBitMode=mode
-
-
 Set the handling of eight bit input to seven bit destinations to
 mode:
-
 m
 (mimefy) will convert to seven-bit MIME format,
 p
@@ -599,30 +444,20 @@ and
 s
 (strict) will bounce the message.
 MinQueueAge=timeout
-
-
 Sets how long a job must ferment in the queue between attempts to send it.
 DefaultCharSet=charset
-
-
 Sets the default character set used to label 8-bit data
 that is not otherwise labelled.
 DialDelay=sleeptime
-
-
 If opening a connection fails,
 sleep for
 sleeptime
-
 seconds and try again.
 Useful on dial-on-demand sites.
 NoRecipientAction=action
-
-
 Set the behaviour when there are no recipient headers (To:, Cc: or
 Bcc:) in the message to
 action:
-
 none
 leaves the message unchanged,
 add-to
@@ -635,39 +470,36 @@ add-to-undisclosed
 adds a header reading
 `To: undisclosed-recipients:;
 '. MaxDaemonChildren = N
-
                            Sets the maximum number of children that an incoming SMTP daemon
                                will allow to spawn at any time to
                                    N.
-
                        ConnectionRateThrottle = N
-
                                                     Sets the maximum number of connections per second to the SMTP port to
                                                         N.</code></pre>
 <p> In aliases, the first character of a name may be a vertical bar to cause interpretation of the rest of the name as a command to pipe the mail to. It may be necessary to quote the name to keep <code>sendmail</code> from suppressing the blanks from between arguments. For example, a common alias is:</p>
 <dl>
-<dd>msgs: &quot;|/usr/bin/msgs -s&quot;</dl>
+<dd>msgs: &quot;|/usr/bin/msgs -s&quot;</dd></dl>
 <p> Aliases may also have the syntax &#8220;:include:<i>filename</i>&#8221; to ask <code>sendmail</code> to read the named file for a list of recipients. For example, an alias such as:</p>
 <dl>
-<dd>poets: &quot;:include:/usr/local/lib/poets.list&quot;</dl>
+<dd>poets: &quot;:include:/usr/local/lib/poets.list&quot;</dd></dl>
 <p> would read <i>/usr/local/lib/poets.list</i> for the list of addresses making up the group. <code>Sendmail</code> returns an exit status describing what it did. The codes are defined in &lt;<i>sysexits.h</i>&gt;:</p>
 <dl>
-<dt>EX_OK</p>
-<dd>Successful completion on all addresses.</p>
-<dt>EX_NOUSER</p>
-<dd>User name not recognized.</p>
-<dt>EX_UNAVAILABLE</p>
-<dd>Catchall meaning necessary resources were not available.</p>
-<dt>EX_SYNTAX</p>
-<dd>Syntax error in address.</p>
-<dt>EX_SOFTWARE</p>
-<dd>Internal software error, including bad arguments.</p>
-<dt>EX_OSERR</p>
-<dd>Temporary operating system error, such as &#8220;cannot fork&#8221;.</p>
-<dt>EX_NOHOST</p>
-<dd>Host name not recognized.</p>
-<dt>EX_TEMPFAIL</p>
-<dd>Message could not be sent immediately, but was queued.</dl>
+<dt>EX_OK</dt>
+<dd>Successful completion on all addresses.</dd>
+<dt>EX_NOUSER</dt>
+<dd>User name not recognized.</dd>
+<dt>EX_UNAVAILABLE</dt>
+<dd>Catchall meaning necessary resources were not available.</dd>
+<dt>EX_SYNTAX</dt>
+<dd>Syntax error in address.</dd>
+<dt>EX_SOFTWARE</dt>
+<dd>Internal software error, including bad arguments.</dd>
+<dt>EX_OSERR</dt>
+<dd>Temporary operating system error, such as &#8220;cannot fork&#8221;.</dd>
+<dt>EX_NOHOST</dt>
+<dd>Host name not recognized.</dd>
+<dt>EX_TEMPFAIL</dt>
+<dd>Message could not be sent immediately, but was queued.</dd></dl>
 <p> If invoked as <code>newaliases</code>, <code>sendmail</code> will rebuild the alias database. If invoked as <code>mailq</code>, <code>sendmail</code> will print the contents of the mail queue. If invoked as <code>hoststat</code>, <code>sendmail</code> will print the persistent host status database. If invoked as <code>purgestat</code>, <code>sendmail</code> will purge expired entries from the persistent host status database. If invoked as <code>smtpd</code>, <code>sendmail</code> will act as a daemon, as if the <code>-bd</code> option were specified.</p>
 <h2>Notes</h2>
 <p><code>sendmail</code> often gets blamed for many problems that are actually the result of other problems, such as overly permissive modes on directories. For this reason, <code>sendmail</code> checks the modes on system directories and files to determine if they can be trusted. Although these checks can be turned off and your system security reduced by setting the <code>DontBlameSendmail</code> option, the permission problems should be fixed. For more information, see: </p>
@@ -676,23 +508,23 @@ adds a header reading
 <p>Except for the file <i>/etc/mail/sendmail.cf</i> itself the following pathnames are all specified in <i>/etc/mail/sendmail.cf</i>. Thus, these values are only approximations. </p>
 <dl>
 <dt>
-&nbsp;<wbr>/etc/aliases</p>
-<dd>raw data for alias names</p>
+&nbsp;<wbr>/etc/aliases</dt>
+<dd>raw data for alias names</dd>
 <dt>
-&nbsp;<wbr>/etc/aliases.db</p>
-<dd>data base of alias names</p>
+&nbsp;<wbr>/etc/aliases.db</dt>
+<dd>data base of alias names</dd>
 <dt>
-&nbsp;<wbr>/etc/mail/sendmail.cf</p>
-<dd>configuration file</p>
+&nbsp;<wbr>/etc/mail/sendmail.cf</dt>
+<dd>configuration file</dd>
 <dt>
-&nbsp;<wbr>/etc/mail/helpfile</p>
-<dd>help file</p>
+&nbsp;<wbr>/etc/mail/helpfile</dt>
+<dd>help file</dd>
 <dt>
-&nbsp;<wbr>/var/log/mail/statistics</p>
-<dd>collected statistics</p>
+&nbsp;<wbr>/var/log/mail/statistics</dt>
+<dd>collected statistics</dd>
 <dt>
-&nbsp;<wbr>/var/spool/mqueue/*</p>
-<dd>temp files</dl>
+&nbsp;<wbr>/var/spool/mqueue/*</dt>
+<dd>temp files</dd></dl>
 <h2>See Also</h2>
 <p><a href="/docs/linux/man/1-mail/">mail</a>(1), rmail(1), <a href="/docs/linux/man/3-syslog/">syslog</a>(3), <a href="/docs/linux/man/5-aliases/">aliases</a>(5), <a href="/docs/linux/man/7-mailaddr/">mailaddr</a>(7), </p>
 <p> DARPA Internet Request For Comments <i>RFC819</i>, <i>RFC821</i>, <i>RFC822</i>. <i>Sendmail Installation and Operation Guide</i>, No. 8, SMM. </p>

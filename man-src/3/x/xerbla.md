@@ -19,7 +19,7 @@ description: "xerbla.f –"
 <p> <code>Purpose: </code></p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
  XERBLA  is an error handler for the LAPACK routines.
  It is called by an LAPACK routine if an input parameter has an
@@ -27,11 +27,11 @@ description: "xerbla.f –"
  Installers may consider modifying the STOP statement in order to
  call system-specific exception-handling facilities.
 </pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>SRNAME</i> </p>
+</dt><dd> <i>SRNAME</i> </dd>
 <pre>
           SRNAME is CHARACTER*(*)
           The name of the routine which called XERBLA.
@@ -46,14 +46,14 @@ description: "xerbla.f –"
 <p> <code>Author:</code></p>
 <dl>
 <dt>
-<dd> Univ. of Tennessee </p>
+</dt><dd> Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl>
 <dt>
-<dd> November 2011</dl>
+</dt><dd> November 2011</dd></dl>
 <p> Definition at line 71 of file SRC/xerbla.f.</p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for LAPACK from the source code. </p>

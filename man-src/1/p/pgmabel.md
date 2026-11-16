@@ -21,20 +21,20 @@ description: "pgmabel – create cross section using Abel Integration for Deconv
 <h2>OPTIONS</h2>
 <p> You can abbreviate any option to its shortest unique prefix. </p>
 <dl>
-<dt><code>-help</code></p>
-<dd> Prints a help message. </p>
-<dt><code>-axis</code> <i>axis</i></p>
-<dd> Position of the axis of symmetry in the image in pixels from the left edge of the image. Default is the center of the image. </p>
-<dt><code>-factor</code> <i>factor</i></p>
-<dd> User defined factor for enhancement of the output. Use a <i>factor</i> less than 1 for decreasing gary values. Default is 1.0. </p>
-<dt><code>-pixsize</code> <i>pixsize</i></p>
-<dd> The size of a pixel for getting scale invariant. Default is 0.1. </p>
-<dt><code>-left</code></p>
-<dd> Calculate only the left side of the image. You cannot specify both <code>left</code> and <code>right</code>. </p>
-<dt><code>-right</code></p>
-<dd> Analogous to <code>-left</code>. </p>
-<dt><code>-verbose</code></p>
-<dd> print information about the calculation. </p>
+<dt><code>-help</code></dt>
+<dd> Prints a help message. </dd>
+<dt><code>-axis</code> <i>axis</i></dt>
+<dd> Position of the axis of symmetry in the image in pixels from the left edge of the image. Default is the center of the image. </dd>
+<dt><code>-factor</code> <i>factor</i></dt>
+<dd> User defined factor for enhancement of the output. Use a <i>factor</i> less than 1 for decreasing gary values. Default is 1.0. </dd>
+<dt><code>-pixsize</code> <i>pixsize</i></dt>
+<dd> The size of a pixel for getting scale invariant. Default is 0.1. </dd>
+<dt><code>-left</code></dt>
+<dd> Calculate only the left side of the image. You cannot specify both <code>left</code> and <code>right</code>. </dd>
+<dt><code>-right</code></dt>
+<dd> Analogous to <code>-left</code>. </dd>
+<dt><code>-verbose</code></dt>
+<dd> print information about the calculation. </dd>
 </dl>
 <h2>EXAMPLE</h2>
 <p> Rotate a PGM image to get an image with a vertical axis of symmetry, then calculate the cross section: </p>

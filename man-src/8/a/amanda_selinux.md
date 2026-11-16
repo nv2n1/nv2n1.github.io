@@ -55,9 +55,9 @@ description: "amanda_selinux – Security Enhanced Linux Policy for the amanda p
 <p> Policy governs the access confined processes have to these ports. SELinux amanda policy is very flexible allowing users to setup their amanda processes in as secure a method as possible. </p>
 <p> The following port types are defined for amanda: </p>
 <dl>
-<dt><code>amanda_port_t</code></p>
+<dt><code>amanda_port_t</code></dt>
 <dd>
-<dd>Default Defined Ports: tcp 10080-10083 udp 10080-10082</dl>
+</dd><dd>Default Defined Ports: tcp 10080-10083 udp 10080-10082</dd></dl>
 <h2>Managed Files</h2>
 <p>The SELinux process type amanda_t can manage files labeled with the following file types. The paths listed are the default paths for these file types. Note the processes UID still need to have DAC permissions. </p>
 <p> <code>amanda_amandates_t</code> </p>
@@ -122,14 +122,14 @@ description: "amanda_selinux – Security Enhanced Linux Policy for the amanda p
 <p> <code>amanda_config_t</code> </p>
 <p> &#8211; Set files with the amanda_config_t type, if you want to treat the files as amanda configuration data, usually stored under the /etc directory. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/etc/amanda(/.*)?, /var/lib/amanda/.amandahosts </p>
+<dt>Paths:</dt>
+<dd>/etc/amanda(/.*)?, /var/lib/amanda/.amandahosts </dd>
 </dl>
 <p> <code>amanda_data_t</code> </p>
 <p> &#8211; Set files with the amanda_data_t type, if you want to treat the files as amanda content. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/etc/amanda/.*/index(/.*)?, /etc/amanda/.*/tapelist(/.*)?, /var/lib/amanda/[^/]+(/.*)?, /etc/amanda/DailySet1(/.*)? </p>
+<dt>Paths:</dt>
+<dd>/etc/amanda/.*/index(/.*)?, /etc/amanda/.*/tapelist(/.*)?, /var/lib/amanda/[^/]+(/.*)?, /etc/amanda/DailySet1(/.*)? </dd>
 </dl>
 <p> <code>amanda_dumpdates_t</code> </p>
 <p> &#8211; Set files with the amanda_dumpdates_t type, if you want to treat the files as amanda dumpdates data. </p>
@@ -140,14 +140,14 @@ description: "amanda_selinux – Security Enhanced Linux Policy for the amanda p
 <p> <code>amanda_inetd_exec_t</code> </p>
 <p> &#8211; Set files with the amanda_inetd_exec_t type, if you want to transition an executable to the amanda_inetd_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/usr/sbin/amandad, /usr/lib/amanda/amandad, /usr/lib/amanda/amindexd, /usr/lib/amanda/amidxtaped </p>
+<dt>Paths:</dt>
+<dd>/usr/sbin/amandad, /usr/lib/amanda/amandad, /usr/lib/amanda/amindexd, /usr/lib/amanda/amidxtaped </dd>
 </dl>
 <p> <code>amanda_log_t</code> </p>
 <p> &#8211; Set files with the amanda_log_t type, if you want to treat the data as amanda log data, usually stored under the /var/log directory. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/var/log/amanda(/.*)?, /var/lib/amanda/[^/]*/log(/.*)? </p>
+<dt>Paths:</dt>
+<dd>/var/log/amanda(/.*)?, /var/lib/amanda/[^/]*/log(/.*)? </dd>
 </dl>
 <p> <code>amanda_recover_dir_t</code> </p>
 <p> &#8211; Set files with the amanda_recover_dir_t type, if you want to treat the files as amanda recover dir data. </p>
@@ -162,8 +162,8 @@ description: "amanda_selinux – Security Enhanced Linux Policy for the amanda p
 <p> <code>amanda_var_lib_t</code> </p>
 <p> &#8211; Set files with the amanda_var_lib_t type, if you want to store the amanda files under the /var/lib directory. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/var/lib/amanda/[^/]+/index(/.*)?, /var/lib/amanda </p>
+<dt>Paths:</dt>
+<dd>/var/lib/amanda/[^/]+/index(/.*)?, /var/lib/amanda </dd>
 </dl>
 <p> Note: File context can be temporarily modified with the chcon command. If you want to permanently change the file context you need to use the <code>semanage fcontext</code> command. This will modify the SELinux labeling database. You will need to use <code>restorecon</code> to apply the labels.</p>
 <h2>Commands</h2>

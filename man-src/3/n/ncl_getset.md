@@ -13,31 +13,31 @@ GETSET - returns a set of values which, if used as arguments in a call to SET, w
 
  void c_getset(float *vl, float *vr, float *vb, float *vt, float *wl, float *wr, float *wb, float *wt, int *lf)
 <h2>Description</h2><dl COMPACT><dt>VL
-<dd>(an output variable of type REAL) defines the left margin of the viewport in fractional coordinates.
-<dt>VR
-<dd>(an output variable of type REAL) defines the right margin of the viewport in fractional coordinates.
-<dt>VB
-<dd>(an output variable of type REAL) defines the bottom margin of the viewport in fractional coordinates.
-<dt>VT
-<dd>(an output variable of type REAL) defines the top margin of the viewport in fractional coordinates.
-<dt>WL
-<dd>(an output variable of type REAL) defines the left margin of the window in user coordinates.
-<dt>WR
-<dd>(an output variable of type REAL) defines the right margin of the window in user coordinates.
-<dt>WB
-<dd>(an output variable of type REAL) defines the bottom margin of the window in user coordinates.
-<dt>WT
-<dd>(an output variable of type REAL) defines the top margin of the window in user coordinates.
-<dt>LS
-<dd>(an output variable of type INTEGER) defines the linear/log nature of the mapping, as follows:
-<dl COMPACT><dd><dl COMPACT><dt>1
-<dd>linear X, linear Y
-<dt>2
-<dd>linear X, log Y
-<dt>3
-<dd>log X, linear Y
-<dt>4
-<dd>log X, log Y</dl></dl>
+</dt><dd>(an output variable of type REAL) defines the left margin of the viewport in fractional coordinates.
+</dd><dt>VR
+</dt><dd>(an output variable of type REAL) defines the right margin of the viewport in fractional coordinates.
+</dd><dt>VB
+</dt><dd>(an output variable of type REAL) defines the bottom margin of the viewport in fractional coordinates.
+</dd><dt>VT
+</dt><dd>(an output variable of type REAL) defines the top margin of the viewport in fractional coordinates.
+</dd><dt>WL
+</dt><dd>(an output variable of type REAL) defines the left margin of the window in user coordinates.
+</dd><dt>WR
+</dt><dd>(an output variable of type REAL) defines the right margin of the window in user coordinates.
+</dd><dt>WB
+</dt><dd>(an output variable of type REAL) defines the bottom margin of the window in user coordinates.
+</dd><dt>WT
+</dt><dd>(an output variable of type REAL) defines the top margin of the window in user coordinates.
+</dd><dt>LS
+</dt><dd>(an output variable of type INTEGER) defines the linear/log nature of the mapping, as follows:
+</dd><dl COMPACT><dd></dd><dl COMPACT><dt>1
+</dt><dd>linear X, linear Y
+</dd><dt>2
+</dt><dd>linear X, log Y
+</dd><dt>3
+</dt><dd>log X, linear Y
+</dd><dt>4
+</dt><dd>log X, log Y</dd></dl></dl>
 </dl><h2>C-Binding Description</h2>The C-binding argument descriptions are the same as the FORTRAN argument descriptions.
 <h2>Usage</h2>Note that in setting the limits of the viewport and the window, the left margin can have a user coordinate value that is larger than the user coordinate value at the right margin. This means the X axis scale will run from a maximum value at the left to a minimum value at the right. Likewise the bottom value can exceed the top value meaning that the Y axis can run from a maximum at the bottom to a minimum at the top. This reversal of the axes is referred to as &quot;mirror imaging&quot;. It represents a substantial functional enhancement over what is provided in GKS. That is why NCAR Graphics SET calls using fractional and user coordinates are in general preferred over GKS calls to GSVP and GSWN using normalized device coordinates and world coordinates.
 <h2>Examples</h2>Use the ncargex command to see the following relevant examples: arex01, mpex07, mpex09, cpexcc.

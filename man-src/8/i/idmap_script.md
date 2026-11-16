@@ -17,11 +17,11 @@ The idmap_script plugin is a substitute for the idmap_tdb2 backend used by winbi
 <h2>Idmap Options</h2>
 
 range = low - high
-<dl><dd>Defines the available matching uid and gid range for which the backend is authoritative.</dl>
+<dl><dd>Defines the available matching uid and gid range for which the backend is authoritative.</dd></dl>
  
 
  script
-<dl><dd>This option can be used to configure an external program for performing id mappings.</dl>
+<dl><dd>This option can be used to configure an external program for performing id mappings.</dd></dl>
 
 <h2>Idmap Script</h2>
 
@@ -34,7 +34,7 @@ The tdb2 idmap backend supports an external program for performing id mappings t
 <dl><dd><pre> SIDTOID S-1-xxxx
  IDTOSID UID xxxx
  IDTOSID GID xxxx
- IDTOSID XID xxxx</pre></dl>
+ IDTOSID XID xxxx</pre></dd></dl>
  
 
  And it should return one of the following responses as a single line of text. 
@@ -43,7 +43,7 @@ The tdb2 idmap backend supports an external program for performing id mappings t
  GID:yyyy
  XID:yyyy
  SID:ssss
- ERR:yyyy</pre></dl>
+ ERR:yyyy</pre></dd></dl>
  
 
  XID indicates that the ID returned should be both a UID and a GID. That is, it requests an ID_TYPE_BOTH, but it is ultimately up to the script whether or not it can honor that request. It can choose to return a UID or a GID mapping only.
@@ -55,7 +55,7 @@ This example shows how script is used as a the default idmap backend using an ex
 <dl><dd><pre> [global]
  idmap config * : backend = script
  idmap config * : range = 1000000-2000000
- idmap config * : script = /usr/local/samba/bin/idmap_script.sh</pre></dl>
+ idmap config * : script = /usr/local/samba/bin/idmap_script.sh</pre></dd></dl>
  
 
  This shows a simple script to partially perform the task: 
@@ -74,7 +74,7 @@ This example shows how script is used as a the default idmap backend using an ex
  #echo &quot;Sending ERR: No idea what to do&quot; &gt;&gt; /tmp/idmap.sh.log
  echo &quot;ERR: No idea what to do&quot;
  exit 1
- fi</pre></dl>
+ fi</pre></dd></dl>
  
 
  Clearly, this script is not enough, as it should probably use wbinfo to determine if an incoming SID is a user or group SID and then look up the mapping in a table or use some other mechanism for mapping SIDs to UIDs and etc. 

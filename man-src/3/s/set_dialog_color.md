@@ -10,7 +10,6 @@ description: "set_dialog_color – Sets the colors of an array of dialog objects
 <p>set_dialog_color &#8211; Sets the colors of an array of dialog objects. Allegro game programming library.</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;allegro.h&gt;
-
 void set_dialog_color(DIALOG *dialog, int fg, int bg);</code></pre>
 <h2>Description</h2>
 <p>Sets the foreground and background colors of an array of dialog objects. </p>

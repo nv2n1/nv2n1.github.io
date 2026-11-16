@@ -24,6 +24,6 @@ description: "QuantLib::MCAmericanEngine – American Monte Carlo engine."
 <p> References: </p>
 <p> <code>Tests</code></p>
 <dl COMPACT>
-<dd>the correctness of the returned value is tested by reproducing results available in web/literature</dl>
+<dd>the correctness of the returned value is tested by reproducing results available in web/literature</dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for QuantLib from the source code.</p>

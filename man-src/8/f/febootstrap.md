@@ -22,38 +22,38 @@ description: "febootstrap – Bootstrap a basic Fedora system (like Debian deboo
 <p> The normal output is a root directory located at <i></i><font SIZE="-1"><i>TARGET</i></font><i></i> and a fakeroot logfile at <tt>&quot;</tt>TARGET<tt>/fakeroot.log&quot;</tt>.</p>
 <h2>Options</h2>
 <dl>
-<dt><code>-i package</code></p>
+<dt><code>-i package</code></dt>
 <dd>
-<dt><code>&#8211;install=package</code></p>
+</dd><dt><code>&#8211;install=package</code></dt>
 <dd>
-<dt><code>-g group</code></p>
+</dd><dt><code>-g group</code></dt>
 <dd>
-<dt><code>&#8211;groupinstall=group</code></p>
-<dd>Specify the package or group to install. To list multiple packages or groups, you must give multiple <tt>&quot;-i&quot;</tt> or <tt>&quot;-g&quot;</tt> options. Group names can contain spaces, so use quotes where necessary. </p>
+</dd><dt><code>&#8211;groupinstall=group</code></dt>
+<dd>Specify the package or group to install. To list multiple packages or groups, you must give multiple <tt>&quot;-i&quot;</tt> or <tt>&quot;-g&quot;</tt> options. Group names can contain spaces, so use quotes where necessary. </dd>
 <p> These are passed directly to <tt>&quot;yum install&quot;</tt> or <tt>&quot;yum groupinstall&quot;</tt> commands, and thus any dependencies are also resolved by yum. You can also use shell globs and filenames here, as with ordinary yum. </p>
 <p> If no packages or groups are given, then we install the <tt>&quot;Core&quot;</tt> group which is a small working Fedora installation (but by no means minimal). Use <tt>&quot;yum groupinfo Core&quot;</tt> to list the packages currently in the <tt>&quot;Core&quot;</tt> group.</p>
-<dt><code>&#8211;no-clean</code></p>
-<dd>Normally febootstrap will clean up the yum repository (<tt>&quot;/var/cache/yum&quot;</tt> inside the image). This contains the downloaded RPMs and metadata. However if you give the <tt>&quot;--no-clean&quot;</tt> option, then the yum repository is left. This is useful if you want to run further yum commands inside the filesystem by hand.</p>
-<dt><code>-p proxyurl</code></p>
+<dt><code>&#8211;no-clean</code></dt>
+<dd>Normally febootstrap will clean up the yum repository (<tt>&quot;/var/cache/yum&quot;</tt> inside the image). This contains the downloaded RPMs and metadata. However if you give the <tt>&quot;--no-clean&quot;</tt> option, then the yum repository is left. This is useful if you want to run further yum commands inside the filesystem by hand.</dd>
+<dt><code>-p proxyurl</code></dt>
 <dd>
-<dt><code>&#8211;proxy=proxyurl</code></p>
-<dd><font SIZE="-1">URL</font> to the proxy server that yum should use.</p>
-<dt><code>-u source</code></p>
+</dd><dt><code>&#8211;proxy=proxyurl</code></dt>
+<dd><font SIZE="-1">URL</font> to the proxy server that yum should use.</dd>
+<dt><code>-u source</code></dt>
 <dd>
-<dt><code>&#8211;updates=source</code></p>
-<dd>Pull in updates from an additional updates repository. The possible sources are:</p>
+</dd><dt><code>&#8211;updates=source</code></dt>
+<dd>Pull in updates from an additional updates repository. The possible sources are:</dd>
 <dl>
 <dd>
-<dl>
-<dt>-u <a rel="nofollow" href="http://...">http://&#8230;</a> (a <font SIZE="-1">URL</font>)</p>
-<dd>Get updates from the specific <font SIZE="-1">URL</font>.</p>
-<dt>-u updates-released-fN (an updates repository name)</p>
-<dd>Get updates from the public mirrors of the named repository (eg. <tt>&quot;updates-released-f10&quot;</tt>). See <font SIZE="-1">REPOSITORIES</font> below.</p>
-<dt>-u none (default)</p>
-<dd>Don&#8217;t add an updates repository. This is the default.</dl>
+</dd><dl>
+<dt>-u <a rel="nofollow" href="http://...">http://&#8230;</a> (a <font SIZE="-1">URL</font>)</dt>
+<dd>Get updates from the specific <font SIZE="-1">URL</font>.</dd>
+<dt>-u updates-released-fN (an updates repository name)</dt>
+<dd>Get updates from the public mirrors of the named repository (eg. <tt>&quot;updates-released-f10&quot;</tt>). See <font SIZE="-1">REPOSITORIES</font> below.</dd>
+<dt>-u none (default)</dt>
+<dd>Don&#8217;t add an updates repository. This is the default.</dd></dl>
 </dl>
 <dl>
-<dd></dl>
+<dd></dd></dl>
 </dl>
 <h2>Repositories</h2>
 <p>You can list available repositories by visiting this <font SIZE="-1">URL:</font> </p>
@@ -73,16 +73,16 @@ description: "febootstrap – Bootstrap a basic Fedora system (like Debian deboo
 <p> In most cases it&#8217;s usually safest to use <tt>&quot;febootstrap-run&quot;</tt>. </p>
 <p> You can use the fakeroot logfile in a number of ways:</p>
 <dl>
-<dt>*</p>
-<dd>Use <i><a href="/docs/linux/man/8-febootstrap-run/">febootstrap-run</a></i>(8) to run a command with the faked file permissions.</p>
-<dt>*</p>
-<dd>Use <i><a href="/docs/linux/man/8-febootstrap-install/">febootstrap-install</a></i>(8) to install a file with permissions in the root filesystem.</p>
-<dt>*</p>
-<dd>Generate an initramfs (compressed cpio) file containing the correct permissions using the tool <tt>&quot;febootstrap-to-initramfs&quot;</tt>.</p>
-<dt>*</p>
-<dd>Generate a supermin appliance using the tool <tt>&quot;febootstrap-to-supermin&quot;</tt>.</p>
-<dt>*</p>
-<dd>Apply the permissions to the target directory using the forthcoming tool <tt>&quot;febootstrap-fix-root&quot;</tt> (requires root).</dl>
+<dt>*</dt>
+<dd>Use <i><a href="/docs/linux/man/8-febootstrap-run/">febootstrap-run</a></i>(8) to run a command with the faked file permissions.</dd>
+<dt>*</dt>
+<dd>Use <i><a href="/docs/linux/man/8-febootstrap-install/">febootstrap-install</a></i>(8) to install a file with permissions in the root filesystem.</dd>
+<dt>*</dt>
+<dd>Generate an initramfs (compressed cpio) file containing the correct permissions using the tool <tt>&quot;febootstrap-to-initramfs&quot;</tt>.</dd>
+<dt>*</dt>
+<dd>Generate a supermin appliance using the tool <tt>&quot;febootstrap-to-supermin&quot;</tt>.</dd>
+<dt>*</dt>
+<dd>Apply the permissions to the target directory using the forthcoming tool <tt>&quot;febootstrap-fix-root&quot;</tt> (requires root).</dd></dl>
 <h2>Running Febootstrap As Root</h2>
 <p>There is some rudimentary support for running <tt>&quot;febootstrap&quot;</tt> as root. However it is not well-tested and generally not recommended.</p>
 <h2>Comparison To Debootstrap</h2>
@@ -91,14 +91,14 @@ description: "febootstrap – Bootstrap a basic Fedora system (like Debian deboo
 <h2>Other Restrictions And Bugs</h2>
 <p>The following programs are not run during <tt>%post</tt> scriptlets (because they are all statically linked, and fakechroot cannot run statically linked programs).</p>
 <dl>
-<dt>/sbin/ldconfig (from many packages)</p>
+<dt>/sbin/ldconfig (from many packages)</dt>
 <dd>
-<dt>/usr/sbin/glibc_post_upgrade (from glibc)</p>
+</dd><dt>/usr/sbin/glibc_post_upgrade (from glibc)</dt>
 <dd>
-<dt>/usr/sbin/build-locale-archive (from glibc-common)</p>
+</dd><dt>/usr/sbin/build-locale-archive (from glibc-common)</dt>
 <dd>
-<dt>/usr/sbin/libgcc_post_upgrade (from libgcc)</p>
-<dd></dl>
+</dd><dt>/usr/sbin/libgcc_post_upgrade (from libgcc)</dt>
+<dd></dd></dl>
 <p> If you wish, you can run them the first time you boot into the new machine. </p>
 <p> febootstrap recreates the repository anew each time, and this causes yum to download all the RPMs every time. This is very wasteful, and we should provide a way to cache the repository.</p>
 <h2>Home Page</h2>

@@ -17,10 +17,10 @@ description: "gnome-power-preferences – gnome power preferences gui"
 <h2>OPTIONS</h2>
 <p> This program follows the usual GNU command line syntax, with long options starting with two dashes (`-&#8216;). A summary of options is included below.</p>
 <dl>
-<dt><code>&#8211;help</code></p>
-<dd> Show summary of options.</p>
-<dt><code>&#8211;verbose</code></p>
-<dd> Show extra debugging.</dl>
+<dt><code>&#8211;help</code></dt>
+<dd> Show summary of options.</dd>
+<dt><code>&#8211;verbose</code></dt>
+<dd> Show extra debugging.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> gnome-power-manager (1). </p>
 <p> The programs are documented fully on <a rel="nofollow" href="http://gnome.org/projects/gnome-power-manager/">http://gnome.org/projects/gnome-power-manager/</a> .</p>

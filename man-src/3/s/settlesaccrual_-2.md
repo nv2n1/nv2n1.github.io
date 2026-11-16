@@ -10,9 +10,6 @@ description: "QuantLib::CreditDefaultSwap – Credit default swap."
 <p>QuantLib::CreditDefaultSwap &#8211; Credit default swap. </p>
 <h2>Synopsis</h2>
 <pre><code>void setupExpired () const
-
-
-
 Protected Attributes</code></pre>
 <p> Inherits <code>QuantLib::Instrument</code>.</p>
 <h3>Public Member Functions</h3>
@@ -34,9 +31,6 @@ Protected Attributes</code></pre>
  void setupExpired () const</p>
 <p>Protected Attributes <code>Instrument interface</code> </p>
 <pre><code>void setupExpired () const
-
-
-
 Protected Attributes</code></pre>
 <p> Protection::Side <code>side_</code> </p>
 <p> Real <code>notional_</code> </p>
@@ -53,10 +47,10 @@ Protected Attributes</code></pre>
 <p>Credit default swap. </p>
 <p> <code>Note:</code></p>
 <dl>
-<dd>This instrument currently assumes that the issuer did not default until today&#8217;s date.</dl>
+<dd>This instrument currently assumes that the issuer did not default until today&#8217;s date.</dd></dl>
 <p> <code>Warning</code></p>
 <dl>
-<dd>if QL_TODAYS_PAYMENTS was defined (in userconfig.hpp or when calling ./configure; it is undefined by default) payments occurring at the settlement date of the swap are included in the NPV, and therefore affect the fair-spread calculation. This might not be what you want.</dl>
+<dd>if QL_TODAYS_PAYMENTS was defined (in userconfig.hpp or when calling ./configure; it is undefined by default) payments occurring at the settlement date of the swap are included in the NPV, and therefore affect the fair-spread calculation. This might not be what you want.</dd></dl>
 <p> <code>Examples: </code> </p>
 <p> <code>CDS.cpp</code>.</p>
 <h2>Member Function Documentation</h2>

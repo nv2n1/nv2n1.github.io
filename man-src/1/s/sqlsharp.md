@@ -16,12 +16,12 @@ description: "sqlsharp – Mono SQL Query command-line tool"
 <h2>OPTIONS</h2>
 <p> The following options are supported:</p>
 <dl>
-<dt><i>-f filename</i></p>
-<dd> Output file to load SQL commands from.</p>
-<dt><i>-o filename</i></p>
-<dd> Output file to send results.</p>
-<dt><i>-s</i></p>
-<dd> Silent mode.</dl>
+<dt><i>-f filename</i></dt>
+<dd> Output file to load SQL commands from.</dd>
+<dt><i>-o filename</i></dt>
+<dd> Output file to send results.</dd>
+<dt><i>-s</i></dt>
+<dd> Silent mode.</dd></dl>
 <h2>HOW TO USE</h2>
 <p> The SQL tool accepts commands via its command line interface. Commands begin with a backslash followed by the command name. </p>
 <p> Example: </p>
@@ -29,3 +29,4 @@ description: "sqlsharp – Mono SQL Query command-line tool"
         \open
 </pre>
 <p> Basically, there are five commands a user should know: <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>\provider, 
+</p>

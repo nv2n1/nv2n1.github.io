@@ -15,11 +15,11 @@ bio_chain - chain bio completions
 <h2>Arguments</h2>
 
 <i>bio</i>
-<dl><dd><dd>the target bio</dl>
+<dl><dd></dd><dd>the target bio</dd></dl>
  
 
  <i>parent</i>
-<dl><dd>the <i>bio</i>'s parent bio</dl>
+<dl><dd>the <i>bio</i>'s parent bio</dd></dl>
 
 <h2>Description</h2>
 

@@ -19,23 +19,23 @@ description: "default_contexts – The SELinux default contexts configuration fi
  <code><a href="/docs/linux/man/3-get_default_context_with_role/">get_default_context_with_role</a></code>(3)<br />
  <code><a href="/docs/linux/man/3-get_default_context_with_rolelevel/">get_default_context_with_rolelevel</a></code>(3)<br />
  <code><a href="/docs/linux/man/3-query_user_context/">query_user_context</a></code>(3)<br />
- <code><a href="/docs/linux/man/3-manual_user_enter_context/">manual_user_enter_context</a></code>(3)</dl>
+ <code><a href="/docs/linux/man/3-manual_user_enter_context/">manual_user_enter_context</a></code>(3)</dd></dl>
 <p> The default context configuration file path for the active policy is returned by <code>selinux_default_contexts_path</code>(3). The default, default contexts file is:</p>
 <dl>
-<dd><i>/etc/selinux/{SELINUXTYPE}/contexts/default_contexts</i></dl>
+<dd><i>/etc/selinux/{SELINUXTYPE}/contexts/default_contexts</i></dd></dl>
 <p> Where <i>{SELINUXTYPE}</i> is the entry from the selinux configuration file <i>config</i> (see <code><a href="/docs/linux/man/5-selinux_config/">selinux_config</a></code>(5)).</p>
 <h2>File Format</h2>
 <p>Each line in the default configuration file consists of the following:</p>
 <dl>
-<dd><i>login_process user_login_process [user_login_process] &#8230;</i></dl>
+<dd><i>login_process user_login_process [user_login_process] &#8230;</i></dd></dl>
 <p> Where:</p>
 <dl>
-<dd><i>login_process</i></p>
+<dd><i>login_process</i></dd>
 <dl>
-<dd>This consists of a <i>role</i><code>:</code><i>type</i>[<code>:</code><i>range</i>] entry that represents the login process context that are defined in the policy.</dl>
+<dd>This consists of a <i>role</i><code>:</code><i>type</i>[<code>:</code><i>range</i>] entry that represents the login process context that are defined in the policy.</dd></dl>
 <p> <i>user_login_process</i></p>
 <dl>
-<dd>This consists of one or more <i>role</i><code>:</code><i>type</i>[<code>:</code><i>range</i>] entries that represent the user login process context defined in the policy.</dl>
+<dd>This consists of one or more <i>role</i><code>:</code><i>type</i>[<code>:</code><i>range</i>] entries that represent the user login process context defined in the policy.</dd></dl>
 </dl>
 <h2>Example</h2>
 <p># ./contexts/default_contexts<br />

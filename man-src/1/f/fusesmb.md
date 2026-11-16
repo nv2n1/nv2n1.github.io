@@ -16,15 +16,15 @@ description: "fusesmb – Mount network neighbourhood"
 <h2>OPTIONS</h2>
 <p> <code>fusesmb</code> accepts the following options:</p>
 <dl>
-<dt><code>-h</code></p>
-<dd> Show summary of options. </p>
+<dt><code>-h</code></dt>
+<dd> Show summary of options. </dd>
 </dl>
 <h2>FILES</h2>
 <dl>
-<dt><i>~/.smb/fusesmb.conf</i></p>
-<dd> Configuration file for <code>fusesmb</code>. Make sure that this file is only readable by the owner or else fusesmb will not start. </p>
-<dt><i>~/.smb/fusesmb.cache</i></p>
-<dd> A sorted list of all workgroups, servers and shares found on your network. </p>
+<dt><i>~/.smb/fusesmb.conf</i></dt>
+<dd> Configuration file for <code>fusesmb</code>. Make sure that this file is only readable by the owner or else fusesmb will not start. </dd>
+<dt><i>~/.smb/fusesmb.cache</i></dt>
+<dd> A sorted list of all workgroups, servers and shares found on your network. </dd>
 </dl>
 <h2>SEE ALSO</h2>
 <p> <code>fusesmb.conf</code>(5) </p>

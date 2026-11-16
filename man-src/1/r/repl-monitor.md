@@ -16,42 +16,42 @@ description: "repl-monitor – Directory Server replication monitor"
 <h2>OPTIONS</h2>
 <p> A summary of options is included below:</p>
 <dl>
-<dt><code>-h, &#8211;host</code> host</p>
-<dd> Hostname of DS server</p>
-<dt><code>-p, &#8211;port</code> port</p>
-<dd> TCP port</p>
-<dt><code>-f, &#8211;configfile</code> configuration-file</p>
-<dd> Configuration file</p>
-<dt><code>-c, &#8211;conn</code> connection</p>
-<dd> Uses the same format as the configfile directive</p>
-<dt><code>-a, &#8211;alias</code> alias</p>
-<dd> Uses the same format as the configfile directive</p>
-<dt><code>-k, &#8211;color</code> color</p>
-<dd> Uses the same format as the configfile directive</p>
-<dt><code>-r, &#8211;skip-header</code></p>
-<dd> Removes extra HTML tags</p>
-<dt><code>-u, &#8211;refreshurl</code> refresh url</p>
-<dd> Refresh url</p>
-<dt><code>-t, &#8211;interval</code> refresh interval</p>
-<dd> Refresh interval</p>
-<dt><code>-W, &#8211;prompt</code></p>
-<dd> Prompt for passwords</p>
-<dt><code>-s, &#8211;text</code></p>
-<dd> Print plain text report </p>
+<dt><code>-h, &#8211;host</code> host</dt>
+<dd> Hostname of DS server</dd>
+<dt><code>-p, &#8211;port</code> port</dt>
+<dd> TCP port</dd>
+<dt><code>-f, &#8211;configfile</code> configuration-file</dt>
+<dd> Configuration file</dd>
+<dt><code>-c, &#8211;conn</code> connection</dt>
+<dd> Uses the same format as the configfile directive</dd>
+<dt><code>-a, &#8211;alias</code> alias</dt>
+<dd> Uses the same format as the configfile directive</dd>
+<dt><code>-k, &#8211;color</code> color</dt>
+<dd> Uses the same format as the configfile directive</dd>
+<dt><code>-r, &#8211;skip-header</code></dt>
+<dd> Removes extra HTML tags</dd>
+<dt><code>-u, &#8211;refreshurl</code> refresh url</dt>
+<dd> Refresh url</dd>
+<dt><code>-t, &#8211;interval</code> refresh interval</dt>
+<dd> Refresh interval</dd>
+<dt><code>-W, &#8211;prompt</code></dt>
+<dd> Prompt for passwords</dd>
+<dt><code>-s, &#8211;text</code></dt>
+<dd> Print plain text report </dd>
 </dl>
 <h2>CONFIGURATION FILE</h2>
 <p> This section describes the various directives that can be used in the configuration file.</p>
 <dl>
-<dt><code>[connection]</code></p>
-<dd> The connection details about a replica </p>
+<dt><code>[connection]</code></dt>
+<dd> The connection details about a replica </dd>
 <p> host:port:binddn:bindpwd:cert_file </p>
 <p> or, </p>
 <p> host:port=shadowport:binddn:bindpwd:cert_file</p>
-<dt><code>[alias]</code></p>
-<dd> Define an alias for a server, this alias is used in the report in place of the hostname/port </p>
+<dt><code>[alias]</code></dt>
+<dd> Define an alias for a server, this alias is used in the report in place of the hostname/port </dd>
 <p> alias = host:port</p>
-<dt><code>[color]</code></p>
-<dd> Set a color based on the replicaton lag time lowmark (in minutes) </p>
+<dt><code>[color]</code></dt>
+<dd> Set a color based on the replicaton lag time lowmark (in minutes) </dd>
 </dl>
 <h2>EXAMPLE</h2>
 <p> Example of a configuration file: </p>

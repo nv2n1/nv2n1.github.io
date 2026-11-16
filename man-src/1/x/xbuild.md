@@ -16,57 +16,55 @@ description: "xbuild – Mono’s tool to build MSBuild project files"
 <p> xbuild takes the path of the project or solution file to build, as the main argument. If no file is specified then it tries to build any solution file or project file in the current directory, that has a *proj extension.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>//target:T1[,TN]</code></p>
-<dd> List of targets to build</p>
-<dt><code>//property:Name=Value</code></p>
-<dd> Set or override project properties</p>
-<dt><code>//logger:&lt;logger&gt;</code></p>
-<dd> Custom logger to log build events</p>
-<dt><code>//toolsversion:version , /tv:version</code></p>
-<dd> Specify the toolset version to use. </p>
+<dt><code>//target:T1[,TN]</code></dt>
+<dd> List of targets to build</dd>
+<dt><code>//property:Name=Value</code></dt>
+<dd> Set or override project properties</dd>
+<dt><code>//logger:&lt;logger&gt;</code></dt>
+<dd> Custom logger to log build events</dd>
+<dt><code>//toolsversion:version , /tv:version</code></dt>
+<dd> Specify the toolset version to use. </dd>
 <p> Eg. /tv:4.0<br />
 &nbsp;<wbr>This would cause 4.0 version of the Microsoft.Common.targets&nbsp;<wbr>(among others)&nbsp;<wbr>to be used. This overrides<br />
 &nbsp;<wbr>the value specified in a project file. </p>
 <p> Valid values: 2.0, 3.0, 3.5 and 4.0</p>
-<dt><code>//verbosity:&lt;level&gt;</code></p>
-<dd> Logger verbosity level : quiet, minimal, normal, detailed, diagnostic</p>
-<dt><code>//validate</code></p>
-<dd> Validate the project file against the schema</p>
-<dt><code>//validate:&lt;schema&gt;</code></p>
-<dd> Validate the project file against the specified schema</p>
-<dt><code>//consoleloggerparameters:&lt;params&gt; , /clp:&lt;params&gt;</code></p>
-<dd> Parameters for the console logger : PerfomanceSummary, Summary, NoSummary, NoItemAndPropertyList, Verbosity</p>
-<dt><code>//filelogger[n] , /fl[n]</code></p>
-<dd> Logs the output to a file, named &#8216;msbuild.log&#8217; by default. If the optional number &#8216;n&#8217; is specified, then it logs to &#8216;msbuild[n].log&#8217; . Parameters for this logger, including the log file name can be specified via a corresponding /flp[n] option. Default verbosity for file loggers is &#8216;detailed. &#8216;n&#8217; can be between 1-9.</p>
-<dt><code>//fileloggerparameters[n]:&lt;params&gt; , /flp[n]:&lt;params&gt;</code></p>
-<dd> Parameters for a file logger. This implies a corresponding /fl[n]. &#8216;n&#8217; can be between 1-9, and is used to add upto 10 file loggers. Parameters can be, besides the ones available for console logger:</p>
+<dt><code>//verbosity:&lt;level&gt;</code></dt>
+<dd> Logger verbosity level : quiet, minimal, normal, detailed, diagnostic</dd>
+<dt><code>//validate</code></dt>
+<dd> Validate the project file against the schema</dd>
+<dt><code>//validate:&lt;schema&gt;</code></dt>
+<dd> Validate the project file against the specified schema</dd>
+<dt><code>//consoleloggerparameters:&lt;params&gt; , /clp:&lt;params&gt;</code></dt>
+<dd> Parameters for the console logger : PerfomanceSummary, Summary, NoSummary, NoItemAndPropertyList, Verbosity</dd>
+<dt><code>//filelogger[n] , /fl[n]</code></dt>
+<dd> Logs the output to a file, named &#8216;msbuild.log&#8217; by default. If the optional number &#8216;n&#8217; is specified, then it logs to &#8216;msbuild[n].log&#8217; . Parameters for this logger, including the log file name can be specified via a corresponding /flp[n] option. Default verbosity for file loggers is &#8216;detailed. &#8216;n&#8217; can be between 1-9.</dd>
+<dt><code>//fileloggerparameters[n]:&lt;params&gt; , /flp[n]:&lt;params&gt;</code></dt>
+<dd> Parameters for a file logger. This implies a corresponding /fl[n]. &#8216;n&#8217; can be between 1-9, and is used to add upto 10 file loggers. Parameters can be, besides the ones available for console logger:</dd>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt><i>LogFile=&lt;file&gt;</i></p>
-<dd> File to which the build log will be written.</p>
-<dt><i>Append</i></p>
-<dd> If this is used, then the log file is appended to, else a new one will be created.</p>
-<dt><i>Encoding=&lt;encoding&gt;</i></p>
-<dd> Encoding to use for the log file, eg. UTF-8, ASCII.</p>
-<dt>Eg: xbuild foo.csproj /flp:Verbosity=normal &quot;/flp1:LogFile=build.log;Append;Encoding=ASCII&quot;</p>
-<dd></dl>
+<dt><i>LogFile=&lt;file&gt;</i></dt>
+<dd> File to which the build log will be written.</dd>
+<dt><i>Append</i></dt>
+<dd> If this is used, then the log file is appended to, else a new one will be created.</dd>
+<dt><i>Encoding=&lt;encoding&gt;</i></dt>
+<dd> Encoding to use for the log file, eg. UTF-8, ASCII.</dd>
+<dt>Eg: xbuild foo.csproj /flp:Verbosity=normal &quot;/flp1:LogFile=build.log;Append;Encoding=ASCII&quot;</dt>
+<dd></dd></dl>
 </dl>
-<dt><code>//nologo</code></p>
-<dd> Don&#8217;t show the initial xbuild banner</p>
-<dt><code>//help</code></p>
-<dd> Show xbuild usage</p>
-<dt><code>//version</code></p>
-<dd> Display xbuild version</dl>
+<dt><code>//nologo</code></dt>
+<dd> Don&#8217;t show the initial xbuild banner</dd>
+<dt><code>//help</code></dt>
+<dd> Show xbuild usage</dd>
+<dt><code>//version</code></dt>
+<dd> Display xbuild version</dd></dl>
 <h2>ENVIRONMENT VARIABLES</h2>
 <dl>
-<dt><i>XBUILD_EMIT_SOLUTION</i></p>
-<dd> If this variable is set, then the project file generated from a solution file is emitted.</p>
-<dt><i>XBUILD_LOG_REFERENCE_RESOLVER</i></p>
-<dd> References are resolved by trying a list of assembly search paths ($(AssemblySearchPaths)). If xbuild is unable to resolve a reference, then it logs details of why the various search paths failed. If this variable is set, then it logs the same even for references that were resolved successfully. These logs show up if the verbosity is set to detailed or higher.</p>
-<dt><i>MSBuildExtensionsPath</i></p>
-<dd> MSBuild extensions are usually installed in $(MSBuildExtensionsPath), which xbuild resolves to $prefix/lib/mono/xbuild . When used in Import, like: </p>
+<dt><i>XBUILD_EMIT_SOLUTION</i></dt>
+<dd> If this variable is set, then the project file generated from a solution file is emitted.</dd>
+<dt><i>XBUILD_LOG_REFERENCE_RESOLVER</i></dt>
+<dd> References are resolved by trying a list of assembly search paths ($(AssemblySearchPaths)). If xbuild is unable to resolve a reference, then it logs details of why the various search paths failed. If this variable is set, then it logs the same even for references that were resolved successfully. These logs show up if the verbosity is set to detailed or higher.</dd>
+<dt><i>MSBuildExtensionsPath</i></dt>
+<dd> MSBuild extensions are usually installed in $(MSBuildExtensionsPath), which xbuild resolves to $prefix/lib/mono/xbuild . When used in Import, like: </dd>
 <p>&nbsp;<wbr>&nbsp;<wbr>&lt;Import Project=&quot;$(MSBuildExtensionsPath)\TestTargets.targets&quot;/&gt; </p>
 <p> xbuild tries various values for the msbuild property $(MSBuildExtensionsPath), in order: </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>1. Paths specified in the environment variable&nbsp;<wbr>$MSBuildExtensionsPath.<br />
@@ -74,8 +72,8 @@ description: "xbuild – Mono’s tool to build MSBuild project files"
 &nbsp;<wbr>&nbsp;<wbr>3.&nbsp;<wbr>$XDG_CONFIG_HOME/xbuild/tasks&nbsp;<wbr>(or Environment.SpecialFolder.ApplicationData)<br />
 &nbsp;<wbr>&nbsp;<wbr>4.&nbsp;<wbr>$prefix/lib/mono/xbuild&nbsp;<wbr>(default location) </p>
 <p> Anywhere else in the project files, $(MSBuildExtensionsPath) will always resolve to the default location. This is a xbuild-only feature. This is also applicable for the properties $(MSBuildExtensionsPath32) and $(MSBuildExtensionsPath64), and the environment variables have the corresponding names &#8211; MSBuildExtensionsPath32/64 .</p>
-<dt><i>XBUILD_FRAMEWORK_FOLDERS_PATH</i></p>
-<dd> With ToolsVersion 4.0, projects can target arbitrary frameworks referenced by TargetFrameworkMoniker, which is of the format: </p>
+<dt><i>XBUILD_FRAMEWORK_FOLDERS_PATH</i></dt>
+<dd> With ToolsVersion 4.0, projects can target arbitrary frameworks referenced by TargetFrameworkMoniker, which is of the format: </dd>
 <p>&nbsp;<wbr>&nbsp;<wbr>Identifier,Version=&lt;version&gt;[,Profile=&lt;profile&gt;] </p>
 <p> Eg. &quot;.NETFramework,Version=v4.0&quot; </p>
 <p> The 3 parts of the moniker are given by the msbuild properties: </p>
@@ -96,8 +94,8 @@ description: "xbuild – Mono’s tool to build MSBuild project files"
 &nbsp;<wbr>&nbsp;<wbr>&lt;/FileList&gt; </p>
 <p> Here the TargetFrameworkDirectory attribute specifies the directory where the assemblies for this particular framework can be found. If this is not set, then the parent of the folder containing the xml file is taken as the framework directory. </p>
 <p> IncludeFramework attribute specifies the version of a framework (under the *same* $(TargetFrameworkIdentifier)) which should be included in the final list of Target framework directories. </p>
-<dt><i>XBUILD_COLORS</i></p>
-<dd> If this variable is set, it contains a string of the form &quot;type=foreground,type=..&quot; that specifies which color to use to display errors/warnings etc on some terminals. Type here can be: </p>
+<dt><i>XBUILD_COLORS</i></dt>
+<dd> If this variable is set, it contains a string of the form &quot;type=foreground,type=..&quot; that specifies which color to use to display errors/warnings etc on some terminals. Type here can be: </dd>
 <pre>
         errors, warnings, messages or events
         events: These are project/target/task start and end event

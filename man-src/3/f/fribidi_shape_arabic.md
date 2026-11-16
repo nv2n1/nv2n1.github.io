@@ -33,15 +33,15 @@ url: "/docs/linux/man/3-fribidi_shape_arabic/"
 
 <dl>
 <dt><b>FriBidiFlags flags</b>
-<dd> Shaping flags.
-<dt><b>const FriBidiLevel *embedding_levels</b>
-<dd> Not Documented.
-<dt><b>const FriBidiStrIndex len</b>
-<dd> Input string length.
-<dt><b>FriBidiArabicProp *ar_props</b>
-<dd> Input/output Arabic properties as computed by fribidi_join_arabic.
-<dt><b>FriBidiChar *str</b>
-<dd> String to shape.</dl>
+</dt><dd> Shaping flags.
+</dd><dt><b>const FriBidiLevel *embedding_levels</b>
+</dt><dd> Not Documented.
+</dd><dt><b>const FriBidiStrIndex len</b>
+</dt><dd> Input string length.
+</dd><dt><b>FriBidiArabicProp *ar_props</b>
+</dt><dd> Input/output Arabic properties as computed by fribidi_join_arabic.
+</dd><dt><b>FriBidiChar *str</b>
+</dt><dd> String to shape.</dd></dl>
 
 <h2>DESCRIPTION</h2>
 

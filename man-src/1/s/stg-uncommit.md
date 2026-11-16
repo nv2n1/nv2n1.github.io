@@ -23,15 +23,15 @@ stg uncommit[--]&lt;patch - name - 1&gt;[&lt;patch - name - 2&gt;...] stg uncomm
 <p> -n NUMBER, &#8211;number NUMBER</p>
 <dl>
 <dt>
-<dd> Uncommit the specified number of commits.</dl>
+</dt><dd> Uncommit the specified number of commits.</dd></dl>
 <p> -t TO, &#8211;to TO</p>
 <dl>
 <dt>
-<dd> Uncommit to the specified commit.</dl>
+</dt><dd> Uncommit to the specified commit.</dd></dl>
 <p> -x, &#8211;exclusive</p>
 <dl>
 <dt>
-<dd> Exclude the commit specified by the &#8211;to option.</dl>
+</dt><dd> Exclude the commit specified by the &#8211;to option.</dd></dl>
 <h2>STGIT</h2>
 <p> Part of the StGit suite &#8211; see <code><a href="/docs/linux/man/1-stg/">stg</a></code>(1) </p>
 <h2>Index</h2>

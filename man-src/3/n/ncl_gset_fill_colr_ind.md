@@ -13,8 +13,8 @@ description: "gset_fill_colr_ind (Set fill area color index) – sets the fill a
 <p> void gset_fill_colr_ind(Gint fill_colr_ind);</p>
 <h2>Description</h2>
 <dl COMPACT>
-<dt>fill_colr_ind</p>
-<dd>(Input) &#8211; A color index.</dl>
+<dt>fill_colr_ind</dt>
+<dd>(Input) &#8211; A color index.</dd></dl>
 <h2>Usage</h2>
 <p>All filled areas drawn with calls to the gfill_area output primitive will be drawn with the color associated with index fill_colr_ind until gset_fill_colr_ind is called again and a new index is assigned. </p>
 <p> For all GKS output primitives, color is assigned using a color index. The color indices run from 0 to 255, where 0 is the background color index and 1 is the foreground color index. Color values are associated with indices by calls to the GKS routine gset_colr_rep. If a color index is used that has no user-assigned color value set in a gset_colr_rep call, then a device-dependent color value will be assigned to that index.</p>

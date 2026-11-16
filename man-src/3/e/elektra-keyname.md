@@ -36,13 +36,14 @@ description: "Key :: Name Manipulation Methods –"
 <p> <code>Rules for Key Names</code>.RS 4 </p>
 <p> When using Elektra to store your application&#8217;s configuration and state, please keep in mind the following rules:</p>
 <dl>
-<dt>*</p>
-<dd> You are not allowed to create keys right under system or user.</p>
-<dt>*</p>
-<dd> You are not allowed to create folder keys right under system or user. They are reserved for very essential OS subsystems.</p>
-<dt>*</p>
-<dd> The keys for your application, called say <i>MyApp</i>, should be created under system/sw/MyApp and/or user/sw/MyApp.</p>
-<dt>*</p>
-<dd> It is suggested to make your application look for default keys under system/sw/MyApp/current and/or user/sw/MyApp/current. This way, from a sysadmin perspective, it will be possible to copy the system/sw/MyApp/current tree to something like system/sw/MyApp/old, and keep system clean and organized.</p>
-<dt>*</p>
+<dt>*</dt>
+<dd> You are not allowed to create keys right under system or user.</dd>
+<dt>*</dt>
+<dd> You are not allowed to create folder keys right under system or user. They are reserved for very essential OS subsystems.</dd>
+<dt>*</dt>
+<dd> The keys for your application, called say <i>MyApp</i>, should be created under system/sw/MyApp and/or user/sw/MyApp.</dd>
+<dt>*</dt>
+<dd> It is suggested to make your application look for default keys under system/sw/MyApp/current and/or user/sw/MyApp/current. This way, from a sysadmin perspective, it will be possible to copy the system/sw/MyApp/current tree to something like system/sw/MyApp/old, and keep system clean and organized.</dd>
+<dt>*</dt>
 <dd> 
+</dd></dl>

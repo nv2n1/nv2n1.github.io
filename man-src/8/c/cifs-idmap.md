@@ -10,7 +10,7 @@ description: "cifs.idmap – Userspace helper for mapping ids for Common Interne
 <p>cifs.idmap &#8211; Userspace helper for mapping ids for Common Internet File System (CIFS)</p>
 <h2>Synopsis</h2>
 <dl>
-<dd>cifs.idmap [&#8211;help|-h] [&#8211;timeout|-t] [&#8211;version|-v] {keyid}</dl>
+<dd>cifs.idmap [&#8211;help|-h] [&#8211;timeout|-t] [&#8211;version|-v] {keyid}</dd></dl>
 <h2>Description</h2>
 <p>This tool is part of the cifs-utils suite. </p>
 <p> cifs.idmap is a userspace helper program for the linux CIFS client filesystem. There are a number of activities that the kernel cannot easily do itself. This program is a callout program that does these things for the kernel and then returns the result. </p>
@@ -21,25 +21,25 @@ description: "cifs.idmap – Userspace helper for mapping ids for Common Interne
 <h2>Options</h2>
 <p>&#8211;help|-h</p>
 <dl>
-<dd>Print the usage message and exit.</dl>
+<dd>Print the usage message and exit.</dd></dl>
 <p> &#8211;timeout|-t</p>
 <dl>
-<dd>Set the expiration timer, in seconds on the key. The default is 600 seconds (10 minutes). Setting this to 0 will cause the key to never expire.</dl>
+<dd>Set the expiration timer, in seconds on the key. The default is 600 seconds (10 minutes). Setting this to 0 will cause the key to never expire.</dd></dl>
 <p> &#8211;version|-v</p>
 <dl>
-<dd>Print version number and exit.</dl>
+<dd>Print version number and exit.</dd></dl>
 <h2>Configuration For Keyctl</h2>
 <p>cifs.idmap is designed to be called from the kernel via the request-key callout program. This requires that request-key be told where and how to call this program. Currently cifs.idmap handles a key type of: </p>
 <p> cifs.idmap</p>
 <dl>
-<dd>This keytype is for mapping a SID to either an uid or a gid</dl>
+<dd>This keytype is for mapping a SID to either an uid or a gid</dd></dl>
 <p> To make this program useful for CIFS, you will need to set up entry for it in <a href="/docs/linux/man/5-request-key-conf/">request-key.conf</a>(5). Here is an example of an entry for this key type: </p>
 <dl>
 <dd>
 <pre>#OPERATION TYPE D C PROGRAM ARG1 ARG2...
 #========= ============= = = ================================
 create cifs.idmap * * /usr/sbin/cifs.idmap %k</pre>
-</dl>
+</dd></dl>
 <p> See <code><a href="/docs/linux/man/5-request-key-conf/">request-key.conf</a></code>(5) for more info on each field.</p>
 <h2>Notes</h2>
 <p>Support for upcalls to cifs.idmap was initially introduced in the 3.0 kernel.</p>

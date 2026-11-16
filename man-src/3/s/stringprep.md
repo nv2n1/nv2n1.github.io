@@ -13,14 +13,14 @@ description: "stringprep – API function"
 int stringprep(char *in, size_t maxlen, Stringprep_profile_flags flags, const Stringprep_profile *profile);</code></pre>
 <h2>Arguments</h2>
 <dl>
-<dt>char * in</p>
-<dd>input/ouput array with string to prepare.</p>
-<dt>size_t maxlen</p>
-<dd>maximum length of input/output array.</p>
-<dt>Stringprep_profile_flags flags</p>
-<dd>a <code>Stringprep_profile_flags</code> value, or 0.</p>
-<dt>const Stringprep_profile * profile</p>
-<dd>pointer to <code>Stringprep_profile</code> to use.</dl>
+<dt>char * in</dt>
+<dd>input/ouput array with string to prepare.</dd>
+<dt>size_t maxlen</dt>
+<dd>maximum length of input/output array.</dd>
+<dt>Stringprep_profile_flags flags</dt>
+<dd>a <code>Stringprep_profile_flags</code> value, or 0.</dd>
+<dt>const Stringprep_profile * profile</dt>
+<dd>pointer to <code>Stringprep_profile</code> to use.</dd></dl>
 <h2>Description</h2>
 <p>Prepare the input zero terminated UTF-8 string according to the stringprep profile, and write back the result to the input string. </p>
 <p> Note that you must convert strings entered in the systems locale into UTF-8 before using this function, see <code>stringprep_locale_to_utf8()</code>. </p>
@@ -37,5 +37,5 @@ int stringprep(char *in, size_t maxlen, Stringprep_profile_flags flags, const St
 <h2>See Also</h2>
 <p>The full documentation for <code>libidn</code> is maintained as a Texinfo manual. If the <code>info</code> and <code>libidn</code> programs are properly installed at your site, the command</p>
 <dl>
-<dd><code>info libidn</code></dl>
+<dd><code>info libidn</code></dd></dl>
 <p> should give you access to the complete manual. </p>

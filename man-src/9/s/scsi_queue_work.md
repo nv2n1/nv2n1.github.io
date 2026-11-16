@@ -14,17 +14,17 @@ description: "scsi_queue_work – Queue work to the Scsi_Host workqueue."
 <p><i>shost</i></p>
 <dl>
 <dd>
-<dd>Pointer to Scsi_Host.</dl>
+</dd><dd>Pointer to Scsi_Host.</dd></dl>
 <p> <i>work</i></p>
 <dl>
-<dd>Work to queue for execution.</dl>
+<dd>Work to queue for execution.</dd></dl>
 <h2>Description</h2>
 <p>Return value: 1 &#8211; work queued for execution 0 &#8211; work is already queued -EINVAL &#8211; work queue doesn&#8217;t exist</p>
 <h2>Authors</h2>
 <p><code>James Bottomley</code> &lt;James.Bottomley [at] hansenpartnership.com&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <p> <code>Rob Landley</code> &lt;rob [at] landley.net&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

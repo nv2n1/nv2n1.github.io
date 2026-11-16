@@ -17,18 +17,18 @@ description: "acpibin – ACPI binary AML file utility"
 <p> Much more detailed documentation may be found at <a rel="nofollow" href="http://www.acpica.org/documentation/.">http://www.acpica.org/documentation/.</a> </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-c &lt;file1&gt; &lt;file2&gt;</code></p>
-<dd> Compare two binary AML files</p>
-<dt><code>-d &lt;in&gt; &lt;out&gt;</code></p>
-<dd> Dump AML binary to text file</p>
-<dt><code>-e &lt;sig&gt; &lt;in&gt; &lt;out&gt;</code></p>
-<dd> Extract binary AML table from acpidump file</p>
-<dt><code>-h &lt;file&gt;</code></p>
-<dd> Display table header for binary AML file</p>
-<dt><code>-s &lt;file&gt;</code></p>
-<dd> Update checksum for binary AML file</p>
-<dt><code>-t</code></p>
-<dd> Terse mode </p>
+<dt><code>-c &lt;file1&gt; &lt;file2&gt;</code></dt>
+<dd> Compare two binary AML files</dd>
+<dt><code>-d &lt;in&gt; &lt;out&gt;</code></dt>
+<dd> Dump AML binary to text file</dd>
+<dt><code>-e &lt;sig&gt; &lt;in&gt; &lt;out&gt;</code></dt>
+<dd> Extract binary AML table from acpidump file</dd>
+<dt><code>-h &lt;file&gt;</code></dt>
+<dd> Display table header for binary AML file</dd>
+<dt><code>-s &lt;file&gt;</code></dt>
+<dd> Update checksum for binary AML file</dd>
+<dt><code>-t</code></dt>
+<dd> Terse mode </dd>
 </dl>
 <h2>AUTHOR</h2>
 <p> acpibin was written by Robert Moore &lt;robert.moore [at] intel.com&gt;. </p>

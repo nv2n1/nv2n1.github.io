@@ -11,16 +11,16 @@ description: "XkbFreeCompatMap – Free an entire compatibility map or selected 
 <h2>Synopsis</h2>
 <dl COMPACT>
 <dt> <code>void XkbFreeCompatMap</code> <code>(XkbDescPtr </code><i>xkb</i><code>,</code> <code>unsigned int </code><i>which</i><code>,</code> <code>Bool </code><i>free_map</i><code>);</code><br />
- &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</dl>
+ &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</dt></dl>
 <h2>Arguments</h2>
 <dl COMPACT>
-<dt><i>&#8211; xkb</i></p>
+<dt><i>&#8211; xkb</i></dt>
 <dd>
-<dd>Xkb description in which to free compatibility map</p>
-<dt><i>&#8211; which</i></p>
-<dd>mask of compatibility map components to free</p>
-<dt><i>&#8211; free_map</i></p>
-<dd>True =&gt; free XkbCompatMap structure itself</dl>
+</dd><dd>Xkb description in which to free compatibility map</dd>
+<dt><i>&#8211; which</i></dt>
+<dd>mask of compatibility map components to free</dd>
+<dt><i>&#8211; free_map</i></dt>
+<dd>True =&gt; free XkbCompatMap structure itself</dd></dl>
 <h2>Description</h2>
 <p><i>which </i> specifies the compatibility map components to be freed (see XkbGetCompatMap). <i>which </i> is an inclusive OR of the bits shown in Table 1. </p>
 <table>

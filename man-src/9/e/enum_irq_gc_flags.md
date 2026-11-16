@@ -19,24 +19,24 @@ description: "enum_irq_gc_flags – Initialization flags for generic irq chips"
 <h2>Constants</h2>
 <p>IRQ_GC_INIT_MASK_CACHE</p>
 <dl>
-<dd>Initialize the mask_cache by reading mask reg</dl>
+<dd>Initialize the mask_cache by reading mask reg</dd></dl>
 <p> IRQ_GC_INIT_NESTED_LOCK</p>
 <dl>
-<dd>Set the lock class of the irqs to nested for irq chips which need to call <code>irq_set_wake</code> on the parent irq. Usually GPIO implementations</dl>
+<dd>Set the lock class of the irqs to nested for irq chips which need to call <code>irq_set_wake</code> on the parent irq. Usually GPIO implementations</dd></dl>
 <p> IRQ_GC_MASK_CACHE_PER_TYPE</p>
 <dl>
-<dd>Mask cache is chip type private</dl>
+<dd>Mask cache is chip type private</dd></dl>
 <p> IRQ_GC_NO_MASK</p>
 <dl>
-<dd>Do not calculate irq_data-&gt;mask</dl>
+<dd>Do not calculate irq_data-&gt;mask</dd></dl>
 <p> IRQ_GC_BE_IO</p>
 <dl>
-<dd>Use big-endian register accesses (default: LE)</dl>
+<dd>Use big-endian register accesses (default: LE)</dd></dl>
 <h2>Authors</h2>
 <p><code>Thomas Gleixner</code> &lt;tglx [at] linutronix.de&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <p> <code>Ingo Molnar</code> &lt;mingo [at] elte.hu&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

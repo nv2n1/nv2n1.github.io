@@ -20,13 +20,13 @@ description: "QmcMetric – container for a metric and all its values"
 <h2>Instances</h2>
 <p>For metrics with an instance domain it is possible to add and remove any instance, and also update the instance list to reflect changes in a dynamic instance domain.</p>
 <dl COMPACT>
-<dt><code>bool updateIndom();</code></p>
-<dd>Update the metric to include new instances. This method will first call <code>QmcContext::update</code> to update the instance domain. If the <i>active</i> flag is set in the <code>QmcGroup::addMetric</code> call, only instances will exported by the metric, otherwise the metric will export all instances listed in the domain. </p>
+<dt><code>bool updateIndom();</code></dt>
+<dd>Update the metric to include new instances. This method will first call <code>QmcContext::update</code> to update the instance domain. If the <i>active</i> flag is set in the <code>QmcGroup::addMetric</code> call, only instances will exported by the metric, otherwise the metric will export all instances listed in the domain. </dd>
 <p> The ordering of instances may change as a result of this call. Instances that already existed will keep their current and previous values and errors, even if they are in a different order.</p>
-<dt><code>int addInst(QString const&amp; name);</code></p>
-<dd>Add the instance <code>name</code> to the metric. If the instance does not exist in the instance domain, a <code><a href="/docs/linux/man/3-pmapi/">PMAPI</a></code>(3) error will be returned. This method ignores the value of the <i>active</i> flag set in the <code>QmcMetric</code> constructor.</p>
-<dt><code>void removeInst(uint_t index);</code></p>
-<dd>Remove the instance at position <i>index </i> from the metric.</dl>
+<dt><code>int addInst(QString const&amp; name);</code></dt>
+<dd>Add the instance <code>name</code> to the metric. If the instance does not exist in the instance domain, a <code><a href="/docs/linux/man/3-pmapi/">PMAPI</a></code>(3) error will be returned. This method ignores the value of the <i>active</i> flag set in the <code>QmcMetric</code> constructor.</dd>
+<dt><code>void removeInst(uint_t index);</code></dt>
+<dd>Remove the instance at position <i>index </i> from the metric.</dd></dl>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/3-pmapi/">PMAPI</a></code>(3), <code><a href="/docs/linux/man/3-qmc/">QMC</a></code>(3), <code>QMC_Context</code>(3), <code>QMC_Group</code>(3), <code><a href="/docs/linux/man/3-pmflush/">pmflush</a></code>(3) and <code>pmprintf</code>(3).</p>
 <h2>Diagnostics</h2>

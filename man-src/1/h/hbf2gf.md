@@ -51,67 +51,67 @@ description: "hbf2gf – convert a CJK bitmap font into subfonts usable by TeX a
 <p> You can use environment variables in the configuration file. The escape character starting an environment variable in the configuration file is always &#8216; even for operating systems like DOS which has other conventions. <code>hbf2gf</code> recognizes only environment variable names which start with a letter or an underscore, followed by alphanumeric characters or underscores. You can surround the variable with braces to indicate where the variable name ends, for example To get a dollar sign you must write &#8216; The expansion of environment variables in hbf2gf itself (without the help of either kpathsea, emtexdir, or MiKTeX searching routines) is very limited; this feature has been carried over from previous versions. It can&#8217;t expand variables set in texmf.cnf; it also can&#8217;t handle more than one directory as the variable&#8217;s value. <code>Don&#8217;t use it except for the &#8216;pk_directory&#8217; and &#8216;tfm_directory&#8217;</code> <code>parameters!</code> </p>
 <p> This is the list of all necessary keywords:</p>
 <dl>
-<dt><code>hbf_header</code></p>
-<dd> The HBF header file name of the input font(s). <code>hbf2gf</code> uses the given searching mechanism (kpathsea, emtexdir, or MiKTeX) to locate this file.</p>
-<dt><code>output_name</code></p>
-<dd> The name stem of the output files. A running two digit decimal number starting with &#8216; will be appended. For Unicode fonts see the keyword <code>unicode</code> below. This value is in almost all cases identical to the name of the configuration file.</dl>
+<dt><code>hbf_header</code></dt>
+<dd> The HBF header file name of the input font(s). <code>hbf2gf</code> uses the given searching mechanism (kpathsea, emtexdir, or MiKTeX) to locate this file.</dd>
+<dt><code>output_name</code></dt>
+<dd> The name stem of the output files. A running two digit decimal number starting with &#8216; will be appended. For Unicode fonts see the keyword <code>unicode</code> below. This value is in almost all cases identical to the name of the configuration file.</dd></dl>
 <p> And now all optional keywords:</p>
 <dl>
-<dt><code>x_offset</code></p>
-<dd> Increases the character width. Will be applied on both sides; default for non-rotated glyphs is the value given in the HBF header (<code>HBF_BITMAP_BOUNDING_BOX</code>) scaled to <code>design_size</code> (in pixels).</p>
-<dt><code>y_offset</code></p>
-<dd> Shifts all characters up or down; default for non-rotated glyphs is the value given in the HBF header (<code>HBF_BITMAP_BOUNDING_BOX</code>) scaled to <code>design_size</code> (in pixels).</p>
-<dt><code>design_size</code></p>
-<dd> The design size (in points) of the font. <code>x_offset</code> and <code>y_offset</code> refer to this size. Default is 10.0.</p>
-<dt><code>slant</code></p>
-<dd> The slant of the font (given as Delta_x&nbsp;/&nbsp;Delta_y). Only values in the range 0&nbsp;&le;&nbsp;<code>slant</code>&nbsp;&le;&nbsp;1 are allowed. Default is 0.0.</p>
-<dt><code>rotation</code></p>
-<dd> If set to &#8216;yes&#8217;, all glyphs will be rotated 90 degrees counter-clockwise. The default offsets as given in the HBF header will be ignored (and set to 0). Default is &#8216;no&#8217;.</p>
-<dt><code>mag_x</code></p>
+<dt><code>x_offset</code></dt>
+<dd> Increases the character width. Will be applied on both sides; default for non-rotated glyphs is the value given in the HBF header (<code>HBF_BITMAP_BOUNDING_BOX</code>) scaled to <code>design_size</code> (in pixels).</dd>
+<dt><code>y_offset</code></dt>
+<dd> Shifts all characters up or down; default for non-rotated glyphs is the value given in the HBF header (<code>HBF_BITMAP_BOUNDING_BOX</code>) scaled to <code>design_size</code> (in pixels).</dd>
+<dt><code>design_size</code></dt>
+<dd> The design size (in points) of the font. <code>x_offset</code> and <code>y_offset</code> refer to this size. Default is 10.0.</dd>
+<dt><code>slant</code></dt>
+<dd> The slant of the font (given as Delta_x&nbsp;/&nbsp;Delta_y). Only values in the range 0&nbsp;&le;&nbsp;<code>slant</code>&nbsp;&le;&nbsp;1 are allowed. Default is 0.0.</dd>
+<dt><code>rotation</code></dt>
+<dd> If set to &#8216;yes&#8217;, all glyphs will be rotated 90 degrees counter-clockwise. The default offsets as given in the HBF header will be ignored (and set to 0). Default is &#8216;no&#8217;.</dd>
+<dt><code>mag_x</code></dt>
 <dd>
-<dt> <code>mag_y</code></p>
-<dd>Scaling values of the characters to reach design size. If only one magnification is given, x and y values are assumed to be equal. Default is <code>mag_x</code>&nbsp;=&nbsp;<code>mag_y</code>&nbsp;=&nbsp;1.0.</dl>
+</dd><dt> <code>mag_y</code></dt>
+<dd>Scaling values of the characters to reach design size. If only one magnification is given, x and y values are assumed to be equal. Default is <code>mag_x</code>&nbsp;=&nbsp;<code>mag_y</code>&nbsp;=&nbsp;1.0.</dd></dl>
 <dl>
-<dt><code>threshold</code></p>
-<dd> A value between 1 and 254 defining a threshold for converting the internal graymap into the output bitmap; lower values cut more pixels. Default value is 128.</dl>
+<dt><code>threshold</code></dt>
+<dd> A value between 1 and 254 defining a threshold for converting the internal graymap into the output bitmap; lower values cut more pixels. Default value is 128.</dd></dl>
 <dl>
-<dt><code>comment</code></p>
-<dd> A comment describing the font; default is none.</dl>
+<dt><code>comment</code></dt>
+<dd> A comment describing the font; default is none.</dd></dl>
 <dl>
-<dt><code>nmb_fonts</code></p>
-<dd> The number of subfonts to create. Default value is -1 for creating all fonts.</p>
-<dt><code>unicode</code></p>
-<dd> If &#8216;yes&#8217;, a two digit hexadecimal number will be used as a running number, starting with the value of the first byte of the first code range. Default is &#8216;no&#8217;.</p>
-<dt><code>min_char</code></p>
-<dd> The minimum value of the encoding. You should set this value to get correct subfile offsets if it is not identical to the lowest character code in the HBF file.</dl>
+<dt><code>nmb_fonts</code></dt>
+<dd> The number of subfonts to create. Default value is -1 for creating all fonts.</dd>
+<dt><code>unicode</code></dt>
+<dd> If &#8216;yes&#8217;, a two digit hexadecimal number will be used as a running number, starting with the value of the first byte of the first code range. Default is &#8216;no&#8217;.</dd>
+<dt><code>min_char</code></dt>
+<dd> The minimum value of the encoding. You should set this value to get correct subfile offsets if it is not identical to the lowest character code in the HBF file.</dd></dl>
 <dl>
-<dt><code>dpi_x</code></p>
+<dt><code>dpi_x</code></dt>
 <dd>
-<dt> <code>dpi_y</code></p>
-<dd>The horizontal and vertical resolution (in dpi) of the printer. If only one resolution is given, x and y values are assumed to be equal. Default is 300.</p>
-<dt><code>checksum</code></p>
-<dd> A checksum to identify the files with the appropriate files. The default value of this unsigned 32bit integer is 0.</p>
-<dt><code>coding</code></p>
-<dd> A comment describing the coding scheme; default is none.</dl>
+</dd><dt> <code>dpi_y</code></dt>
+<dd>The horizontal and vertical resolution (in dpi) of the printer. If only one resolution is given, x and y values are assumed to be equal. Default is 300.</dd>
+<dt><code>checksum</code></dt>
+<dd> A checksum to identify the files with the appropriate files. The default value of this unsigned 32bit integer is 0.</dd>
+<dt><code>coding</code></dt>
+<dd> A comment describing the coding scheme; default is none.</dd></dl>
 <dl>
-<dt><code>pk_directory</code></p>
-<dd> The destination directory of the files; default: none. Attention! The batch file will not check whether this directory exists.</p>
-<dt><code>tfm_directory</code></p>
-<dd> The destination directory of the files; default: none. Attention! The batch file will not check whether this directory exists.</p>
-<dt><code>pk_files</code></p>
-<dd> Whether to create files or not; default is &#8216;yes&#8217;.</p>
-<dt><code>tfm_files</code></p>
-<dd> Whether to create files or not; default is &#8216;yes&#8217;.</p>
-<dt><code>ofm_file</code></p>
-<dd> Whether to create an file or not; default is &#8216;no&#8217;. The batch file will then use <code>ovp2ovf</code> of the Omega distribution to convert it into an and an file. The file simply maps all subfonts back to a single Omega font.</p>
-<dt><code>long_extension</code></p>
-<dd> If &#8216;yes&#8217;, files will include the resolution in the extension (e.g. This affects the batch file only (default is &#8216;yes&#8217;).</p>
-<dt><code>rm_command</code></p>
-<dd> The shell command to remove files; default: &#8216;rm&#8217;.</p>
-<dt><code>cp_command</code></p>
-<dd> The shell command to copy files; default: &#8216;cp&#8217;.</p>
-<dt><code>job_extension</code></p>
-<dd> The extension of the batch file which calls <code>gftopk</code> and <code>pltotf</code> to convert the and the files into and files respectively; default is none.</dl>
+<dt><code>pk_directory</code></dt>
+<dd> The destination directory of the files; default: none. Attention! The batch file will not check whether this directory exists.</dd>
+<dt><code>tfm_directory</code></dt>
+<dd> The destination directory of the files; default: none. Attention! The batch file will not check whether this directory exists.</dd>
+<dt><code>pk_files</code></dt>
+<dd> Whether to create files or not; default is &#8216;yes&#8217;.</dd>
+<dt><code>tfm_files</code></dt>
+<dd> Whether to create files or not; default is &#8216;yes&#8217;.</dd>
+<dt><code>ofm_file</code></dt>
+<dd> Whether to create an file or not; default is &#8216;no&#8217;. The batch file will then use <code>ovp2ovf</code> of the Omega distribution to convert it into an and an file. The file simply maps all subfonts back to a single Omega font.</dd>
+<dt><code>long_extension</code></dt>
+<dd> If &#8216;yes&#8217;, files will include the resolution in the extension (e.g. This affects the batch file only (default is &#8216;yes&#8217;).</dd>
+<dt><code>rm_command</code></dt>
+<dd> The shell command to remove files; default: &#8216;rm&#8217;.</dd>
+<dt><code>cp_command</code></dt>
+<dd> The shell command to copy files; default: &#8216;cp&#8217;.</dd>
+<dt><code>job_extension</code></dt>
+<dd> The extension of the batch file which calls <code>gftopk</code> and <code>pltotf</code> to convert the and the files into and files respectively; default is none.</dd></dl>
 <h2>FILE SEARCHING</h2>
 <p> <code>hbf2gf</code> uses either the <code>kpathsea</code>, <code>emtexdir</code>, or <code>MiKTeX</code> library for searching files (<code>emtexdir</code> will work only on operating systems which have an MS-DOSish background, i.e., MS-DOS, OS/2, Windows; <code>MiKTeX</code> is for Win32 systems).</p>
 <h3>kpathsea</h3>
@@ -140,9 +140,9 @@ description: "hbf2gf – convert a CJK bitmap font into subfonts usable by TeX a
 <h2>FILES</h2>
 <dl>
 <dt>
-<dd> The <code>hbf2gf</code> configuration scripts.</p>
+</dt><dd> The <code>hbf2gf</code> configuration scripts.</dd>
 <dt>
-<dd> HBF header files which describe fixed-width bitmap fonts. Note that the bitmap font name(s) themselves as specified in the header files are irrelevant for <code>hbf2gf</code>.</dl>
+</dt><dd> HBF header files which describe fixed-width bitmap fonts. Note that the bitmap font name(s) themselves as specified in the header files are irrelevant for <code>hbf2gf</code>.</dd></dl>
 <h2>AVAILABILITY</h2>
 <p> <code>hbf2gf</code> is part of the CJK macro package for LaTeX 2e available at the CTAN hosts and its mirrors. </p>
 <p> CJK fonts together with HBF header files can be found at and its mirrors.</p>

@@ -17,10 +17,10 @@ description: "DO – execute an anonymous code block"
 <h2>Parameters</h2>
 <p><i>code</i></p>
 <dl>
-<dd>The procedural language code to be executed. This must be specified as a string literal, just as in <code>CREATE FUNCTION</code>. Use of a dollar-quoted literal is recommended.</dl>
+<dd>The procedural language code to be executed. This must be specified as a string literal, just as in <code>CREATE FUNCTION</code>. Use of a dollar-quoted literal is recommended.</dd></dl>
 <p> <i>lang_name</i></p>
 <dl>
-<dd>The name of the procedural language the code is written in. If omitted, the default is plpgsql.</dl>
+<dd>The name of the procedural language the code is written in. If omitted, the default is plpgsql.</dd></dl>
 <h2>Notes</h2>
 <p>The procedural language to be used must already have been installed into the current database by means of <code>CREATE LANGUAGE</code>. plpgsql is installed by default, but other languages are not. </p>
 <p> The user must have USAGE privilege for the procedural language, or must be a superuser if the language is untrusted. This is the same privilege requirement as for creating a function in the language.</p>

@@ -23,14 +23,14 @@ description: "run-mailcap, view, see, edit, compose, print – execute programs 
 <h3>OPTIONS</h3>
 <p> All options are in the form &#8211;&lt;opt&gt;=&lt;value&gt;.</p>
 <dl>
-<dt><code>&#8211;action=&lt;action&gt;</code></p>
-<dd> Performs the specified action on the files. Valid actions are <i>view</i>, <i>cat</i> (uses only &quot;copiousoutput&quot; rules and sends output to STDOUT) , <i>compose</i>, <i>composetyped</i>, <i>edit</i> and <i>print</i>. If no action is specified, the action will be determined by how the program was called.</p>
-<dt><code>&#8211;debug</code></p>
-<dd> Turns on extra information to find out what is happening.</p>
-<dt><code>&#8211;nopager</code></p>
-<dd> Ignores any &quot;copiousoutput&quot; directive and sends output to STDOUT.</p>
-<dt><code>&#8211;norun</code></p>
-<dd> Displays the found command without actually executing it.</dl>
+<dt><code>&#8211;action=&lt;action&gt;</code></dt>
+<dd> Performs the specified action on the files. Valid actions are <i>view</i>, <i>cat</i> (uses only &quot;copiousoutput&quot; rules and sends output to STDOUT) , <i>compose</i>, <i>composetyped</i>, <i>edit</i> and <i>print</i>. If no action is specified, the action will be determined by how the program was called.</dd>
+<dt><code>&#8211;debug</code></dt>
+<dd> Turns on extra information to find out what is happening.</dd>
+<dt><code>&#8211;nopager</code></dt>
+<dd> Ignores any &quot;copiousoutput&quot; directive and sends output to STDOUT.</dd>
+<dt><code>&#8211;norun</code></dt>
+<dd> Displays the found command without actually executing it.</dd></dl>
 <h2>SECURITY</h2>
 <p> A temporary symbolic link to the file is opened if the file name matches the Perl regular expression &quot;[^[:alnum:],.:/@%^+=_-]&quot;, in order to protect from the injection of shell commands, and to make sure that the name can always be displayed in the current locale. In addition, the file is opened using its absolute path to prevent the injection of command-line arguments, for instance using file names starting with dashes.</p>
 <h2>SEE ALSO</h2>

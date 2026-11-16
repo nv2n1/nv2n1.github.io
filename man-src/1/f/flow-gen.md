@@ -15,16 +15,16 @@ description: "flow-gen – Generate test flows"
 <p> The <code>flow-gen</code> utility generates a test pattern of flows in any of the currently supported export versions typically for debugging purposes.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-b</code><i> big</i><code>|</code><i>little</i></p>
-<dd> Byte order of output.</p>
-<dt><code>-d</code><i> debug_level</i></p>
-<dd> Enable debugging.</p>
-<dt><code>-h</code></p>
-<dd> Display help.</p>
-<dt><code>-n</code><i> count</i></p>
-<dd> Generate count flows. Default 1000.</p>
-<dt><code>-V</code><i> version</i></p>
-<dd> Generate version type exports. Supported versions are: </p>
+<dt><code>-b</code><i> big</i><code>|</code><i>little</i></dt>
+<dd> Byte order of output.</dd>
+<dt><code>-d</code><i> debug_level</i></dt>
+<dd> Enable debugging.</dd>
+<dt><code>-h</code></dt>
+<dd> Display help.</dd>
+<dt><code>-n</code><i> count</i></dt>
+<dd> Generate count flows. Default 1000.</dd>
+<dt><code>-V</code><i> version</i></dt>
+<dd> Generate version type exports. Supported versions are: </dd>
 <pre>
     1    NetFlow version 1 (No sequence numbers, AS, or mask)
     5    NetFlow version 5
@@ -46,8 +46,8 @@ description: "flow-gen – Generate test flows"
     8.14 NetFlow ToS Prefix Port Aggregation
     1005 Flow-Tools tagged version 5
 </pre>
-<dt><code>-z</code><i> z_level</i></p>
-<dd> Configure compression level to <i> z_level</i>. 0 is disabled (no compression), 9 is highest compression.</dl>
+<dt><code>-z</code><i> z_level</i></dt>
+<dd> Configure compression level to <i> z_level</i>. 0 is disabled (no compression), 9 is highest compression.</dd></dl>
 <h2>EXAMPLES</h2>
 <p> Generate a test pattern of 1000 version 5 flows and send them in the Cisco NetFlow packet format to 10.0.0.1 port 9500. </p>
 <p> <code>flow-gen -V5 | flow-send 0/10.0.0.1/9500</code></p>

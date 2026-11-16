@@ -12,29 +12,29 @@ description: "opascpall (Linux) Copies files or directories from the current sys
 <p>opascpall [-p] [-r] [-f <i>hostfile</i>] [-h &#8216;<i>hosts</i>&#8216;] [-u <i>user</i>] source_file &#8230; dest_file opascpall -t [-p] [-f <i>hostfile</i>] [-h &#8216;<i>hosts</i>&#8216;] [-u <i>user</i>] [ <i>source_dir</i>[ <i>dest_dir</i>]]</p>
 <h2>Options</h2>
 <dl>
-<dt>&#8211;help</p>
-<dd>Produces full help text.</p>
-<dt>-p</p>
-<dd>Performs copy in parallel on all hosts.</p>
-<dt>-r</p>
-<dd>Performs recursive copy of directories.</p>
-<dt>-t</p>
-<dd>Performs optimized recursive copy of directories using tar. <i>dest_dir</i> is optional. If <i>dest_dir</i> is not specified, it defaults to the current directory name. If both <i>source_dir</i> and <i>dest_dir</i> are omitted, they both default to the current directory name. </p>
-<dt>-h <i>hosts</i></p>
-<dd>List of hosts to copy to.</p>
-<dt>-f <i>hostfile</i></p>
-<dd>File with hosts in cluster. Default is /etc/sysconfig/opa/hosts file.</p>
-<dt>-u <i>user</i></p>
-<dd>User to perform copy to. Default is current user code.</p>
+<dt>&#8211;help</dt>
+<dd>Produces full help text.</dd>
+<dt>-p</dt>
+<dd>Performs copy in parallel on all hosts.</dd>
+<dt>-r</dt>
+<dd>Performs recursive copy of directories.</dd>
+<dt>-t</dt>
+<dd>Performs optimized recursive copy of directories using tar. <i>dest_dir</i> is optional. If <i>dest_dir</i> is not specified, it defaults to the current directory name. If both <i>source_dir</i> and <i>dest_dir</i> are omitted, they both default to the current directory name. </dd>
+<dt>-h <i>hosts</i></dt>
+<dd>List of hosts to copy to.</dd>
+<dt>-f <i>hostfile</i></dt>
+<dd>File with hosts in cluster. Default is /etc/sysconfig/opa/hosts file.</dd>
+<dt>-u <i>user</i></dt>
+<dd>User to perform copy to. Default is current user code.</dd>
 <dt>
-&nbsp;<wbr><i>source_file</i>&nbsp;<wbr></p>
-<dd>Name of files to copy from this system, relative to the current directory. Multiple files may be listed.</p>
+&nbsp;<wbr><i>source_file</i>&nbsp;<wbr></dt>
+<dd>Name of files to copy from this system, relative to the current directory. Multiple files may be listed.</dd>
 <dt>
-&nbsp;<wbr><i>source_dir</i>&nbsp;<wbr></p>
-<dd>Name of directory to copy from this system, relative to the current directory.</p>
+&nbsp;<wbr><i>source_dir</i>&nbsp;<wbr></dt>
+<dd>Name of directory to copy from this system, relative to the current directory.</dd>
 <dt>
-&nbsp;<wbr><i>dest_file</i>&nbsp;<wbr>or&nbsp;<wbr>&nbsp;<wbr><i>dest_dir</i>&nbsp;<wbr></p>
-<dd>Name of the file or directory on the destination system to copy to, relative to the home directory of the specified user. An absolute path name may be specified.</dl>
+&nbsp;<wbr><i>dest_file</i>&nbsp;<wbr>or&nbsp;<wbr>&nbsp;<wbr><i>dest_dir</i>&nbsp;<wbr></dt>
+<dd>Name of the file or directory on the destination system to copy to, relative to the home directory of the specified user. An absolute path name may be specified.</dd></dl>
 <h2>Example</h2>
 <p># copy a single file<br />
  opascpall MPI-PMB /root/MPI-PMB<br />
@@ -48,10 +48,10 @@ description: "opascpall (Linux) Copies files or directories from the current sys
 <h2>Environment Variables</h2>
 <p>The following environment variables are also used by this command:</p>
 <dl>
-<dt><code>HOSTS</code></p>
-<dd>List of hosts; used if -h option not supplied. </p>
-<dt><code>HOSTS_FILE</code></p>
-<dd>File containing list of hosts; used in absence of -f and -h. </p>
-<dt><code>FF_MAX_PARALLEL</code></p>
-<dd>When the -p option is used, maximum concurrent operations are performed. </p>
+<dt><code>HOSTS</code></dt>
+<dd>List of hosts; used if -h option not supplied. </dd>
+<dt><code>HOSTS_FILE</code></dt>
+<dd>File containing list of hosts; used in absence of -f and -h. </dd>
+<dt><code>FF_MAX_PARALLEL</code></dt>
+<dd>When the -p option is used, maximum concurrent operations are performed. </dd>
 </dl>

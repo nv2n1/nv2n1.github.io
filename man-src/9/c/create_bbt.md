@@ -14,20 +14,20 @@ description: "create_bbt – [GENERIC] Create a bad block table by scanning the 
 <p><i>mtd</i></p>
 <dl>
 <dd>
-<dd>MTD device structure</dl>
+</dd><dd>MTD device structure</dd></dl>
 <p> <i>buf</i></p>
 <dl>
-<dd>temporary buffer</dl>
+<dd>temporary buffer</dd></dl>
 <p> <i>bd</i></p>
 <dl>
-<dd>descriptor for the good/bad block search pattern</dl>
+<dd>descriptor for the good/bad block search pattern</dd></dl>
 <p> <i>chip</i></p>
 <dl>
-<dd>create the table for a specific chip, -1 read all chips; applies only if NAND_BBT_PERCHIP option is set</dl>
+<dd>create the table for a specific chip, -1 read all chips; applies only if NAND_BBT_PERCHIP option is set</dd></dl>
 <h2>Description</h2>
 <p>Create a bad block table by scanning the device for the given good/bad block identify pattern.</p>
 <h2>Author</h2>
 <p><code>Thomas Gleixner</code> &lt;tglx [at] linutronix.de&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

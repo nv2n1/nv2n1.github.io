@@ -15,11 +15,11 @@ xprt_complete_rqst - called when reply processing is complete
 <h2>Arguments</h2>
 
 <i>task</i>
-<dl><dd><dd>RPC request that recently completed</dl>
+<dl><dd></dd><dd>RPC request that recently completed</dd></dl>
  
 
  <i>copied</i>
-<dl><dd>actual number of bytes received from the transport</dl>
+<dl><dd>actual number of bytes received from the transport</dd></dl>
 
 <h2>Description</h2>
 

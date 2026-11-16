@@ -15,11 +15,11 @@ snd_ctl_sync_vmaster - Sync the vmaster slaves and hook
 <h2>Arguments</h2>
 
 <i>kcontrol</i>
-<dl><dd><dd>vmaster kctl element</dl>
+<dl><dd></dd><dd>vmaster kctl element</dd></dl>
  
 
  <i>hook_only</i>
-<dl><dd>sync only the hook</dl>
+<dl><dd>sync only the hook</dd></dl>
 
 <h2>Description</h2>
 

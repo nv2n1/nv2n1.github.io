@@ -16,8 +16,8 @@ description: "ldns_key2rr"
 <p> ldns_rr* ldns_key2rr(const ldns_key *k); </p>
 <h2>DESCRIPTION</h2>
 <dl>
-<dt> <i>ldns_key2rr</i>()</p>
-<dd>converts a ldns_key to a public key rr If the key data exists at an external point, the corresponding rdata field must still be added with ldns_rr_rdf_push() to the result rr of this function </p>
+<dt> <i>ldns_key2rr</i>()</dt>
+<dd>converts a ldns_key to a public key rr If the key data exists at an external point, the corresponding rdata field must still be added with ldns_rr_rdf_push() to the result rr of this function </dd>
 <p> .br <code>k</code>: the ldns_key to convert .br Returns ldns_rr representation of the key</dl>
 <h2>AUTHOR</h2>
 <p> The ldns team at NLnet Labs. Which consists out of Jelte Jansen and Miek Gieben. </p>
@@ -31,3 +31,4 @@ description: "ldns_key2rr"
 <h2>REMARKS</h2>
 <p> This manpage was automaticly generated from the ldns source code by use of Doxygen and some perl. </p>
 <h2>Index</h2>
+</p>

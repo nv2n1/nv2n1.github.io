@@ -13,16 +13,16 @@ description: "deb-shlibs – Debian shared library information file"
 <h2>Description</h2>
 <p><code>shlibs</code> files map shared library names and versions (<i>SONAMEs</i>) to dependencies suitable for a package control file. There is one entry per line. Blank lines are <code>not</code> allowed. Lines beginning with a <code>#</code> character are considered commentary, and are ignored. All other lines must have the format: </p>
 <dl>
-<dd>[<i>type</i><code>:</code>] <i>library</i> <i>version</i> <i>dependencies</i></dl>
+<dd>[<i>type</i><code>:</code>] <i>library</i> <i>version</i> <i>dependencies</i></dd></dl>
 <p> The <i>library</i> and <i>version</i> fields are whitespace-delimited, but the <i>dependencies</i> field extends to the end of the line. The <i>type</i> field is optional and normally not needed. </p>
 <p> The <i>dependencies</i> field has the same syntax as the <code>Depends</code> field in a binary control file, see <code><a href="/docs/linux/man/5-deb-control/">deb-control</a></code>(5).</p>
 <h2>Soname Formats</h2>
 <p>The <font SIZE="-1">SONAME</font> formats supported are: </p>
 <dl>
-<dd><i>name</i>.so.<i>version</i></dl>
+<dd><i>name</i>.so.<i>version</i></dd></dl>
 <p> and </p>
 <dl>
-<dd><i>name</i>&#8211;<i>version</i>.so</dl>
+<dd><i>name</i>&#8211;<i>version</i>.so</dd></dl>
 <p> where <i>name</i> is usually prefixed by <code>lib</code>.</p>
 <h2>Examples</h2>
 <p>The <code>shlibs</code> file for a typical library package, named <i>libcrunch1</i>, that provides one library whose <font SIZE="-1">SONAME</font> is <i>libcrunch.so.1</i>, might read </p>

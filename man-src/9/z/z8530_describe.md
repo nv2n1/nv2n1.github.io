@@ -14,17 +14,17 @@ description: "z8530_describe – Uniformly describe a Z8530 port"
 <p><i>dev</i></p>
 <dl>
 <dd>
-<dd>Z8530 device to describe</dl>
+</dd><dd>Z8530 device to describe</dd></dl>
 <p> <i>mapping</i></p>
 <dl>
-<dd>string holding mapping type (eg &#8220;I/O&#8221; or &#8220;Mem&#8221;)</dl>
+<dd>string holding mapping type (eg &#8220;I/O&#8221; or &#8220;Mem&#8221;)</dd></dl>
 <p> <i>io</i></p>
 <dl>
-<dd>the port value in question</dl>
+<dd>the port value in question</dd></dl>
 <h2>Description</h2>
 <p>Describe a Z8530 in a standard format. We must pass the I/O as the port offset isn&#8217;t predictable. The main reason for this function is to try and get a common format of report.</p>
 <h2>Author</h2>
 <p><code>Alan Cox</code> &lt;alan [at] lxorguk.ukuu.org.uk&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

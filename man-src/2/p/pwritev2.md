@@ -49,16 +49,16 @@ ssize_t pwritev2(int fd, const struct iovec *iov, int iovcnt,
 <p> Unlike <code>preadv</code>() and <code>pwritev</code>(), if the <i>offset</i> argument is -1, then the current file offset is used and updated. </p>
 <p> The <i>flags</i> argument contains a bitwise OR of zero or more of the following flags:</p>
 <dl>
-<dt><code>RWF_DSYNC</code> (since Linux 4.7)</p>
-<dd> Provide a per-write equivalent of the <code>O_DSYNC</code> <code><a href="/docs/linux/man/2-open/">open</a></code>(2) flag. This flag is meaningful only for <code>pwritev2</code>(), and its effect applies only to the data range written by the system call.</p>
-<dt><code>RWF_HIPRI</code> (since Linux 4.6)</p>
-<dd> High priority read/write. Allows block-based filesystems to use polling of the device, which provides lower latency, but may use additional resources. (Currently, this feature is usable only on a file descriptor opened using the <code>O_DIRECT</code> flag.)</p>
-<dt><code>RWF_SYNC</code> (since Linux 4.7)</p>
-<dd> Provide a per-write equivalent of the <code>O_SYNC</code> <code><a href="/docs/linux/man/2-open/">open</a></code>(2) flag. This flag is meaningful only for <code>pwritev2</code>(), and its effect applies only to the data range written by the system call.</p>
-<dt><code>RWF_NOWAIT</code> (since Linux 4.14)</p>
-<dd> Do not wait for data which is not immediately available. If this flag is specified, the <code>preadv2</code>() system call will return instantly if it would have to read data from the backing storage or wait for a lock. If some data was successfully read, it will return the number of bytes read. If no bytes were read, it will return -1 and set <i>errno</i> to <code>EAGAIN</code>. Currently, this flag is meaningful only for <code>preadv2</code>().</p>
-<dt><code>RWF_APPEND</code> (since Linux 4.16)</p>
-<dd> Provide a per-write equivalent of the <code>O_APPEND</code> <code><a href="/docs/linux/man/2-open/">open</a></code>(2) flag. This flag is meaningful only for <code>pwritev2</code>(), and its effect applies only to the data range written by the system call. The <i>offset</i> argument does not affect the write operation; the data is always appended to the end of the file. However, if the <i>offset</i> argument is -1, the current file offset is updated.</dl>
+<dt><code>RWF_DSYNC</code> (since Linux 4.7)</dt>
+<dd> Provide a per-write equivalent of the <code>O_DSYNC</code> <code><a href="/docs/linux/man/2-open/">open</a></code>(2) flag. This flag is meaningful only for <code>pwritev2</code>(), and its effect applies only to the data range written by the system call.</dd>
+<dt><code>RWF_HIPRI</code> (since Linux 4.6)</dt>
+<dd> High priority read/write. Allows block-based filesystems to use polling of the device, which provides lower latency, but may use additional resources. (Currently, this feature is usable only on a file descriptor opened using the <code>O_DIRECT</code> flag.)</dd>
+<dt><code>RWF_SYNC</code> (since Linux 4.7)</dt>
+<dd> Provide a per-write equivalent of the <code>O_SYNC</code> <code><a href="/docs/linux/man/2-open/">open</a></code>(2) flag. This flag is meaningful only for <code>pwritev2</code>(), and its effect applies only to the data range written by the system call.</dd>
+<dt><code>RWF_NOWAIT</code> (since Linux 4.14)</dt>
+<dd> Do not wait for data which is not immediately available. If this flag is specified, the <code>preadv2</code>() system call will return instantly if it would have to read data from the backing storage or wait for a lock. If some data was successfully read, it will return the number of bytes read. If no bytes were read, it will return -1 and set <i>errno</i> to <code>EAGAIN</code>. Currently, this flag is meaningful only for <code>preadv2</code>().</dd>
+<dt><code>RWF_APPEND</code> (since Linux 4.16)</dt>
+<dd> Provide a per-write equivalent of the <code>O_APPEND</code> <code><a href="/docs/linux/man/2-open/">open</a></code>(2) flag. This flag is meaningful only for <code>pwritev2</code>(), and its effect applies only to the data range written by the system call. The <i>offset</i> argument does not affect the write operation; the data is always appended to the end of the file. However, if the <i>offset</i> argument is -1, the current file offset is updated.</dd></dl>
 <h2>RETURN VALUE</h2>
 <p> On success, <code>readv</code>(), <code>preadv</code>(), and <code>preadv2</code>() return the number of bytes read; <code>writev</code>(), <code>pwritev</code>(), and <code>pwritev2</code>() return the number of bytes written. </p>
 <p> Note that it is not an error for a successful call to transfer fewer bytes than requested (see <code><a href="/docs/linux/man/2-read/">read</a></code>(2) and <code><a href="/docs/linux/man/2-write/">write</a></code>(2)). </p>
@@ -66,12 +66,12 @@ ssize_t pwritev2(int fd, const struct iovec *iov, int iovcnt,
 <h2>ERRORS</h2>
 <p> The errors are as given for <code><a href="/docs/linux/man/2-read/">read</a></code>(2) and <code><a href="/docs/linux/man/2-write/">write</a></code>(2). Furthermore, <code>preadv</code>(), <code>preadv2</code>(), <code>pwritev</code>(), and <code>pwritev2</code>() can also fail for the same reasons as <code><a href="/docs/linux/man/2-lseek/">lseek</a></code>(2). Additionally, the following errors are defined:</p>
 <dl>
-<dt><code>EINVAL</code></p>
-<dd> The sum of the <i>iov_len</i> values overflows an <i>ssize_t</i> value.</p>
-<dt><code>EINVAL</code></p>
-<dd> The vector count, <i>iovcnt</i>, is less than zero or greater than the permitted maximum.</p>
-<dt><code>EOPNOTSUPP</code></p>
-<dd> An unknown flag is specified in <i>flags</i>.</dl>
+<dt><code>EINVAL</code></dt>
+<dd> The sum of the <i>iov_len</i> values overflows an <i>ssize_t</i> value.</dd>
+<dt><code>EINVAL</code></dt>
+<dd> The vector count, <i>iovcnt</i>, is less than zero or greater than the permitted maximum.</dd>
+<dt><code>EOPNOTSUPP</code></dt>
+<dd> An unknown flag is specified in <i>flags</i>.</dd></dl>
 <h2>VERSIONS</h2>
 <p> <code>preadv</code>() and <code>pwritev</code>() first appeared in Linux 2.6.30; library support was added in glibc 2.10. </p>
 <p> <code>preadv2</code>() and <code>pwritev2</code>() first appeared in Linux 4.6. Library support was added in glibc 2.26.</p>

@@ -11,9 +11,7 @@ std::atomic_flag::test_and_set - std::atomic_flag::test_and_set
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header &lt;atomic&gt;
-
 bool test_and_set(std::memory_order order = std::memory_order_seq_cst) volatile noexcept; (1) (since C++11)
-
 bool test_and_set(std::memory_order order = std::memory_order_seq_cst) noexcept;          (2) (since C++11)</code></pre> 
 Atomically changes the state of a std::atomic_flag to set (true) and returns the value it held before. 
 

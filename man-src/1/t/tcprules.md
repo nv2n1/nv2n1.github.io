@@ -8,9 +8,9 @@ url: "/docs/linux/man/1-tcprules/"
 
 <h2>SYNOPSIS</h2>
 <dl>
-<dt><code>tcprules</code> [<code>OPTIONS</code>] &lt;rules.cdb&gt; &lt;rules.tmp&gt;</p>
+<dt><code>tcprules</code> [<code>OPTIONS</code>] &lt;rules.cdb&gt; &lt;rules.tmp&gt;</dt>
 <dd>
-</dl>
+</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> <code>tcprules</code> reads rules from its standard input and writes them into cdb binary format suitable for quick access by tcpserver(1). <code>tcprules</code> can be used while tcpserver(1) is running. It ensures that cdb is updated automatically. It does it by first writing the rules to a temporary file and then writing the temporary file to the cdb. If the temporary file already exists, it is destroyed. </p>
 <h2>RULE FORMAT</h2>
@@ -19,12 +19,12 @@ url: "/docs/linux/man/1-tcprules/"
 <p> The instructions in a rule must begin with an allow or deny. deny tells tcpserver(1) to drop the connection without processing any further. </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-h &#8211;help</code></p>
+<dt><code>-h &#8211;help</code></dt>
 <dd>
-&nbsp;<wbr>print this help </p>
-<dt><code>-v &#8211;version</code></p>
+&nbsp;<wbr>print this help </dd>
+<dt><code>-v &#8211;version</code></dt>
 <dd>
-&nbsp;<wbr>print version information </p>
+&nbsp;<wbr>print version information </dd>
 </dl>
 <h2>SEE</h2>
 <p> <a rel="nofollow" href="http://cr.yp.to/ucspi-tcp/tcprules.html">http://cr.yp.to/ucspi-tcp/tcprules.html</a> </p>

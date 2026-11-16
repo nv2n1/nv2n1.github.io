@@ -13,7 +13,7 @@ description: "PAPI_read –"
 <h2>Detailed Description</h2>
 <p><code>C Interface:</code></p>
 <dl COMPACT>
-<dd>#include &lt;<code>papi.h</code>&gt; </p>
+<dd>#include &lt;<code>papi.h</code>&gt; </dd>
 <p>&nbsp;<wbr>int&nbsp;<wbr><code>PAPI_read(int&nbsp;<wbr>&nbsp;<wbr>EventSet, long_long&nbsp;<wbr>*&nbsp;<wbr>values&nbsp;<wbr>)</code>;</dl>
 <p> <code>PAPI_read()</code> copies the counters of the indicated event set into the provided array. </p>
 <p> The counters continue counting after the read. </p>
@@ -22,12 +22,12 @@ description: "PAPI_read –"
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>EventSet</i> &#8212; an integer handle for a PAPI Event Set as created by <code>PAPI_create_eventset()</code><br />
- <i>*values</i> &#8212; an array to hold the counter values of the counting events</dl>
+ <i>*values</i> &#8212; an array to hold the counter values of the counting events</dd></dl>
 <p> <code>Return values:</code></p>
 <dl COMPACT>
 <dd><i>PAPI_EINVAL</i> One or more of the arguments is invalid.<br />
  <i>PAPI_ESYS</i> A system or C library call failed inside PAPI, see the errno variable.<br />
- <i>PAPI_ENOEVST</i> The event set specified does not exist.</dl>
+ <i>PAPI_ENOEVST</i> The event set specified does not exist.</dd></dl>
 <p> <code>Examples</code></p>
 <dl COMPACT>
 <dd>
@@ -45,12 +45,13 @@ description: "PAPI_read –"
 * handle_error(1);
 * // values[0] now equals 0 
 * </pre>
-</dl>
+</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>PAPI_accum</code> </p>
+<dd><code>PAPI_accum</code> </dd>
 <p> <code>PAPI_start</code> </p>
 <p> <code>PAPI_stop</code> </p>
 <p> <code>PAPI_reset</code></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for PAPI from the source code.</p>
+</p>

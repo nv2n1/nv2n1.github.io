@@ -29,11 +29,11 @@ url: "/docs/linux/man/1-papi_command_line/"
 
 <dl>
 <dt>&bull;
-<dd> -u Display output values as unsigned integers
-<dt>&bull;
-<dd> -x Display output values as hexadecimal
-<dt>&bull;
-<dd> -h Display help information about this utility.</dl>
+</dt><dd> -u Display output values as unsigned integers
+</dd><dt>&bull;
+</dt><dd> -x Display output values as hexadecimal
+</dd><dt>&bull;
+</dt><dd> -h Display help information about this utility.</dd></dl>
  
 
 <h2>Bugs</h2>

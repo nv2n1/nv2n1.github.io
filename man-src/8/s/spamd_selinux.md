@@ -65,9 +65,9 @@ description: "spamd_selinux – Security Enhanced Linux Policy for the spamd pro
 <p> Policy governs the access confined processes have to these ports. SELinux spamd policy is very flexible allowing users to setup their spamd processes in as secure a method as possible. </p>
 <p> The following port types are defined for spamd: </p>
 <dl>
-<dt><code>spamd_port_t</code></p>
+<dt><code>spamd_port_t</code></dt>
 <dd>
-<dd>Default Defined Ports: tcp 783,10026,10027</dl>
+</dd><dd>Default Defined Ports: tcp 783,10026,10027</dd></dl>
 <h2>Managed Files</h2>
 <p>The SELinux process type spamd_t can manage files labeled with the following file types. The paths listed are the default paths for these file types. Note the processes UID still need to have DAC permissions. </p>
 <p> <code>antivirus_db_t</code> </p>
@@ -169,32 +169,32 @@ description: "spamd_selinux – Security Enhanced Linux Policy for the spamd pro
 <p> <code>spamd_etc_t</code> </p>
 <p> &#8211; Set files with the spamd_etc_t type, if you want to store spamd files in the /etc directories. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/etc/pyzor(/.*)?, /etc/razor(/.*)? </p>
+<dt>Paths:</dt>
+<dd>/etc/pyzor(/.*)?, /etc/razor(/.*)? </dd>
 </dl>
 <p> <code>spamd_exec_t</code> </p>
 <p> &#8211; Set files with the spamd_exec_t type, if you want to transition an executable to the spamd_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/usr/bin/spamd, /usr/sbin/spamd, /usr/bin/pyzord, /usr/sbin/spampd, /usr/bin/mimedefang, /usr/bin/mimedefang-multiplexor, /usr/libexec/mimedefang-wrapper </p>
+<dt>Paths:</dt>
+<dd>/usr/bin/spamd, /usr/sbin/spamd, /usr/bin/pyzord, /usr/sbin/spampd, /usr/bin/mimedefang, /usr/bin/mimedefang-multiplexor, /usr/libexec/mimedefang-wrapper </dd>
 </dl>
 <p> <code>spamd_initrc_exec_t</code> </p>
 <p> &#8211; Set files with the spamd_initrc_exec_t type, if you want to transition an executable to the spamd_initrc_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/etc/rc.d/init.d/mimedefang.*, /etc/rc.d/init.d/spamd, /etc/rc.d/init.d/spampd, /etc/rc.d/init.d/pyzord </p>
+<dt>Paths:</dt>
+<dd>/etc/rc.d/init.d/mimedefang.*, /etc/rc.d/init.d/spamd, /etc/rc.d/init.d/spampd, /etc/rc.d/init.d/pyzord </dd>
 </dl>
 <p> <code>spamd_log_t</code> </p>
 <p> &#8211; Set files with the spamd_log_t type, if you want to treat the data as spamd log data, usually stored under the /var/log directory. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/var/log/spamd.log.*, /var/log/mimedefang.*, /var/log/pyzord.log.*, /var/log/razor-agent.log.* </p>
+<dt>Paths:</dt>
+<dd>/var/log/spamd.log.*, /var/log/mimedefang.*, /var/log/pyzord.log.*, /var/log/razor-agent.log.* </dd>
 </dl>
 <p> <code>spamd_spool_t</code> </p>
 <p> &#8211; Set files with the spamd_spool_t type, if you want to store the spamd files under the /var/spool directory. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/var/spool/spamd(/.*)?, /var/spool/spampd(/.*)?, /var/spool/spamassassin(/.*)? </p>
+<dt>Paths:</dt>
+<dd>/var/spool/spamd(/.*)?, /var/spool/spampd(/.*)?, /var/spool/spamassassin(/.*)? </dd>
 </dl>
 <p> <code>spamd_tmp_t</code> </p>
 <p> &#8211; Set files with the spamd_tmp_t type, if you want to store spamd temporary files in the /tmp directories. </p>
@@ -203,14 +203,14 @@ description: "spamd_selinux – Security Enhanced Linux Policy for the spamd pro
 <p> <code>spamd_var_lib_t</code> </p>
 <p> &#8211; Set files with the spamd_var_lib_t type, if you want to store the spamd files under the /var/lib directory. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/var/lib/razor(/.*)?, /var/lib/pyzord(/.*)?, /var/lib/spamassassin(/.*)? </p>
+<dt>Paths:</dt>
+<dd>/var/lib/razor(/.*)?, /var/lib/pyzord(/.*)?, /var/lib/spamassassin(/.*)? </dd>
 </dl>
 <p> <code>spamd_var_run_t</code> </p>
 <p> &#8211; Set files with the spamd_var_run_t type, if you want to store the spamd files under the /run or /var/run directory. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/var/run/spamassassin(/.*)?, /var/spool/MIMEDefang(/.*)?, /var/spool/MD-Quarantine(/.*)? </p>
+<dt>Paths:</dt>
+<dd>/var/run/spamassassin(/.*)?, /var/spool/MIMEDefang(/.*)?, /var/spool/MD-Quarantine(/.*)? </dd>
 </dl>
 <p> Note: File context can be temporarily modified with the chcon command. If you want to permanently change the file context you need to use the <code>semanage fcontext</code> command. This will modify the SELinux labeling database. You will need to use <code>restorecon</code> to apply the labels.</p>
 <h2>Commands</h2>

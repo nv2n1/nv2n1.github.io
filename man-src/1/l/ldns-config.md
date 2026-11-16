@@ -15,16 +15,16 @@ description: "ldns-config – show compiler and linker flags for ldns usage."
 <p> When writing programs using ldns, you have to tell the compiler where to look for include files and what libraries from which location to link to. <code>ldns-config</code> can be used to find out what flags to use with the C compiler and the linker. </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>&#8211;cflags</code></p>
-<dd> Show the C compiler flags needed to compile with ldns </p>
-<dt><code>&#8211;libs</code></p>
-<dd> Show the flags to be used to link with ldns </p>
-<dt><code>&#8211;libs_sec</code></p>
-<dd> Show the flags to be used to link with ldns compiled for secondary architecture. </p>
-<dt><code>&#8211;version</code></p>
-<dd> Shows the version of the installed ldns library </p>
-<dt><code>&#8211;help</code></p>
-<dd> Show <code>ldns-config</code> usage description </p>
+<dt><code>&#8211;cflags</code></dt>
+<dd> Show the C compiler flags needed to compile with ldns </dd>
+<dt><code>&#8211;libs</code></dt>
+<dd> Show the flags to be used to link with ldns </dd>
+<dt><code>&#8211;libs_sec</code></dt>
+<dd> Show the flags to be used to link with ldns compiled for secondary architecture. </dd>
+<dt><code>&#8211;version</code></dt>
+<dd> Shows the version of the installed ldns library </dd>
+<dt><code>&#8211;help</code></dt>
+<dd> Show <code>ldns-config</code> usage description </dd>
 </dl>
 <h2>AUTHOR</h2>
 <p> Written by the ldns team. </p>

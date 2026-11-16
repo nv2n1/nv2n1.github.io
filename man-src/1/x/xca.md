@@ -19,12 +19,12 @@ description: "xca – X Certificate and key management A GUI for handling X509 c
 <p> A summary of options are included below. There are some deprecated legacy options: [<i>-k</i>] [<i>-r</i>] [<i>-c</i>] [<i>-p</i>] [<i>-7</i>] [<i>-l</i>] [<i>-t</i>] [<i>-P</i>]<br />
  Before XCA 0.9.0, the type of the items had to be given. This was removed since. Just put all keys, certs, requests and the database unsorted on the commandline. For backwards compatibility those options are ignored when found.</p>
 <dl>
-<dt><code>-v</code></p>
-<dd> Show version information and exit.</p>
-<dt><code>-d</code></p>
-<dd> expect the following argument to be a new database to use.</p>
-<dt><code>-x</code></p>
-<dd> Exit after processing all commandline options. Usually after importing the items from commandline the application will startup as usual. With the <i>-x</i> option given it will exit after finishing the import dialog. This is useful if xca is used as default application for viewing certificates, keys or requests. </p>
+<dt><code>-v</code></dt>
+<dd> Show version information and exit.</dd>
+<dt><code>-d</code></dt>
+<dd> expect the following argument to be a new database to use.</dd>
+<dt><code>-x</code></dt>
+<dd> Exit after processing all commandline options. Usually after importing the items from commandline the application will startup as usual. With the <i>-x</i> option given it will exit after finishing the import dialog. This is useful if xca is used as default application for viewing certificates, keys or requests. </dd>
 </dl>
 <h2>SEE ALSO</h2>
 <p> A more detailed HTML documentation can be found in the doc directory, in the &quot;Help&quot; menu of the application or on <a rel="nofollow" href="http://xca.sf.net">http://xca.sf.net</a> </p>

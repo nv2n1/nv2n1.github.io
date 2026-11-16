@@ -16,16 +16,16 @@ description: "gtk-config – script to get information about the installed versi
 <h2>OPTIONS</h2>
 <p> <i>gtk-config</i> accepts the following options:</p>
 <dl>
-<dt><code>&#8211;version</code></p>
-<dd> Print the currently installed version of <i>GTK+</i> on the standard output.</p>
-<dt><code>&#8211;libs</code></p>
-<dd> Print the linker flags that are necessary to link a <i>GTK+</i> program.</p>
-<dt><code>&#8211;cflags</code></p>
-<dd> Print the compiler flags that are necessary to compile a <i>GTK+</i> program.</p>
-<dt><code>&#8211;prefix=PREFIX</code></p>
-<dd> If specified, use PREFIX instead of the installation prefix that <i>GTK+</i> was built with when computing the output for the &#8211;cflags and &#8211;libs options. This option is also used for the exec prefix if &#8211;exec-prefix was not specified. This option must be specified before any &#8211;libs or &#8211;cflags options.</p>
-<dt><code>&#8211;exec-prefix=PREFIX</code></p>
-<dd> If specified, use PREFIX instead of the installation exec prefix that <i>GTK+</i> was built with when computing the output for the &#8211;cflags and &#8211;libs options. This option must be specified before any &#8211;libs or &#8211;cflags options.</dl>
+<dt><code>&#8211;version</code></dt>
+<dd> Print the currently installed version of <i>GTK+</i> on the standard output.</dd>
+<dt><code>&#8211;libs</code></dt>
+<dd> Print the linker flags that are necessary to link a <i>GTK+</i> program.</dd>
+<dt><code>&#8211;cflags</code></dt>
+<dd> Print the compiler flags that are necessary to compile a <i>GTK+</i> program.</dd>
+<dt><code>&#8211;prefix=PREFIX</code></dt>
+<dd> If specified, use PREFIX instead of the installation prefix that <i>GTK+</i> was built with when computing the output for the &#8211;cflags and &#8211;libs options. This option is also used for the exec prefix if &#8211;exec-prefix was not specified. This option must be specified before any &#8211;libs or &#8211;cflags options.</dd>
+<dt><code>&#8211;exec-prefix=PREFIX</code></dt>
+<dd> If specified, use PREFIX instead of the installation exec prefix that <i>GTK+</i> was built with when computing the output for the &#8211;cflags and &#8211;libs options. This option must be specified before any &#8211;libs or &#8211;cflags options.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-gimp/">gimp</a></code>(1), <code>gimptool</code>(1)</p>
 <h2>COPYRIGHT</h2>

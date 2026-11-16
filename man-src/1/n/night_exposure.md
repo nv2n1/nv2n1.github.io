@@ -15,39 +15,39 @@ description: "night_exposure – make a single exposure on a camera"
 <p> The options are as follows: </p>
 <p> options:</p>
 <dl>
-<dt><code>-t</code></p>
+<dt><code>-t</code></dt>
 <dd>
-exposure time in seconds</p>
-<dt><code>-s</code></p>
+exposure time in seconds</dd>
+<dt><code>-s</code></dt>
 <dd>
-shutter state, on &#8211; open, off &#8211; close for dark frame</p>
-<dt><code>-r</code></p>
+shutter state, on &#8211; open, off &#8211; close for dark frame</dd>
+<dt><code>-r</code></dt>
 <dd>
-select region by format:&nbsp;<wbr>(x1,y1,x2,y2), default: full area</p>
-<dt><code>-b</code></p>
+select region by format:&nbsp;<wbr>(x1,y1,x2,y2), default: full area</dd>
+<dt><code>-b</code></dt>
 <dd>
-binning, 1 &#8211; 1&#215;1, 2 &#8211; 2&#215;2, 3 &#8211; 3&#215;3, default: 3&nbsp;<wbr></p>
-<dt><code>-c</code></p>
+binning, 1 &#8211; 1&#215;1, 2 &#8211; 2&#215;2, 3 &#8211; 3&#215;3, default: 3&nbsp;<wbr></dd>
+<dt><code>-c</code></dt>
 <dd>
-select chip, I &#8211; imaging&nbsp;<wbr>(default), T &#8211; tracking</p>
-<dt><code>-m</code></p>
+select chip, I &#8211; imaging&nbsp;<wbr>(default), T &#8211; tracking</dd>
+<dt><code>-m</code></dt>
 <dd>
-readout mode&nbsp;<wbr>(see output of&nbsp;<wbr>&#8216;night_power info&#8217;)</p>
-<dt><code>-o</code></p>
+readout mode&nbsp;<wbr>(see output of&nbsp;<wbr>&#8216;night_power info&#8217;)</dd>
+<dt><code>-o</code></dt>
 <dd>
-name of an output file, default to nightview.fits</p>
-<dt><code>-name</code></p>
-<dd> object&#8217;s name</p>
-<dt><code>-obsname</code></p>
-<dd> observer&#8217;s name</p>
-<dt><code>-p</code></p>
+name of an output file, default to nightview.fits</dd>
+<dt><code>-name</code></dt>
+<dd> object&#8217;s name</dd>
+<dt><code>-obsname</code></dt>
+<dd> observer&#8217;s name</dd>
+<dt><code>-p</code></dt>
 <dd>
-show progress indicator</p>
-<dt><code>-pn</code></p>
+show progress indicator</dd>
+<dt><code>-pn</code></dt>
 <dd>
-&nbsp;<wbr>&nbsp;<wbr>show progress indicator&nbsp;<wbr>(on new line)</p>
-<dt><code>-host</code></p>
-<dd> address:port internet address server, default: local connect</dl>
+&nbsp;<wbr>&nbsp;<wbr>show progress indicator&nbsp;<wbr>(on new line)</dd>
+<dt><code>-host</code></dt>
+<dd> address:port internet address server, default: local connect</dd></dl>
 <p> Use Ctrl-C to interrupt the exposure or download in progress.</p>
 <h2>ENVIRONMENT</h2>
 <p> Setting of environment variable NIGHTVIEW_HOST is equivalent to -host option.</p>

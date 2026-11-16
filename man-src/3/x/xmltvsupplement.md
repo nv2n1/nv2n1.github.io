@@ -13,26 +13,23 @@ XMLTV::Supplement - Supplementary file loader for XMLTV grabbers
  Supplementary files can be loaded either via http or from a local file, depending on the configuration of the module. The default is to load the files from <a rel="nofollow" HREF="http://supplement.xmltv.org.">http://supplement.xmltv.org.</a> This can be changed by setting the environment variable <font SIZE="-1">XMLTV_SUPPLEMENT</font> to the new root-directory or root-url for supplementary files.
 <h2>Exported Functions</h2>All these functions are exported on demand.
 <dl COMPACT><dt>GetSupplement
-<dd>Load a supplement file and return it as a string. Takes two parameters: directory and filename. 
-
+</dt><dd>Load a supplement file and return it as a string. Takes two parameters: directory and filename. 
  <pre> my $content = GetSupplement( 'tv_grab_uk_rt', 'channel_ids' );</pre>GetSupplement will always return a string with the content. If it fails to get the content, it prints an error-message and aborts the program.
-<dt>GetSupplementLines
-<dd>Load a supplement file and return it as an array. Any comments or blank lines will be removed. Takes two parameters: directory and filename. 
-
+</dd><dt>GetSupplementLines
+</dt><dd>Load a supplement file and return it as an array. Any comments or blank lines will be removed. Takes two parameters: directory and filename. 
  <pre> my $content = GetSupplementLines( 'tv_grab_uk_rt', 'channel_ids' );</pre>GetSupplementLines will always return an array with the content. If it fails to get the content, it prints an error-message and aborts the program.
-<dt>GetSupplementFile
-<dd>Get the supplement file from the local machine
-<dt>GetSupplementUrl
-<dd>Get the supplement file from a <font SIZE="-1">URL</font>
-<dt>GetSupplementDir
-<dd>Get the base directory containing supplementary files. 
+</dd><dt>GetSupplementFile
+</dt><dd>Get the supplement file from the local machine
+</dd><dt>GetSupplementUrl
+</dt><dd>Get the supplement file from a <font SIZE="-1">URL</font>
+</dd><dt>GetSupplementDir
+</dt><dd>Get the base directory containing supplementary files. 
 e.g.&nbsp;<wbr><tt>$ENV</tt>{<font SIZE="-1">HOME</font>}/.xmltv/supplement
-<dt>SetSupplementRoot
-<dd>Set the root directory for loading supplementary files. 
-
+</dd><dt>SetSupplementRoot
+</dt><dd>Set the root directory for loading supplementary files. 
  <pre> SetSupplementRoot( '/usr/share/xmltv' );
- SetSupplementRoot( '<a rel="nofollow" HREF="http://my.server.org/xmltv'">http://my.server.org/xmltv'</a> );</pre><dt>GetSupplementRoot
-<dd>Get the root directory for loading supplementary files.</dl><h2>Caching</h2>The module stores all downloaded files in a cache. The cache is stored on disk in ~/.xmltv/supplement on Unix and in CSIDL_LOCAL_APPDATA//xmltv/supplement on Windows. 
+ SetSupplementRoot( '<a rel="nofollow" HREF="http://my.server.org/xmltv'">http://my.server.org/xmltv'</a> );</pre></dd><dt>GetSupplementRoot
+</dt><dd>Get the root directory for loading supplementary files.</dd></dl><h2>Caching</h2>The module stores all downloaded files in a cache. The cache is stored on disk in ~/.xmltv/supplement on Unix and in CSIDL_LOCAL_APPDATA//xmltv/supplement on Windows. 
 
  If a file has been downloaded less than 1 hour ago, the file from the cache is used without contacting the server. Otherwise, if the file has been downloaded more than 1 hour ago, then the module checks with the server to see if an updated file is available and downloads it if necessary. 
 

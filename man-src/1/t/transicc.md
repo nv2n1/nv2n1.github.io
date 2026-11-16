@@ -15,32 +15,32 @@ description: "transicc – little cms ColorSpace conversion calculator."
 <p> lcms is a standalone CMM engine, which deals with the color management. It implements a fast transformation between ICC profiles. <code>transicc </code> is lcms ColorSpace conversion calculator.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-%</code></p>
-<dd> use percent % of ink.</p>
-<dt><code>-b </code></p>
-<dd> Black point compensation.</p>
-<dt><code>-c &lt;0,1,2,3&gt;</code></p>
-<dd> Precalculates transform. (0=Off, 1=Normal, 2=Hi-res, 3=LoRes) [defaults to 1]</p>
-<dt><code>-i&nbsp;</code><i>profile</i></p>
-<dd> Input profile (defaults to sRGB).</p>
-<dt><code>-l</code></p>
-<dd> Transform by device-link profile.</p>
-<dt><code>-n</code></p>
-<dd> Terse output, intended for pipe usage.</p>
-<dt><code>-o&nbsp;</code><i>profile</i></p>
+<dt><code>-%</code></dt>
+<dd> use percent % of ink.</dd>
+<dt><code>-b </code></dt>
+<dd> Black point compensation.</dd>
+<dt><code>-c &lt;0,1,2,3&gt;</code></dt>
+<dd> Precalculates transform. (0=Off, 1=Normal, 2=Hi-res, 3=LoRes) [defaults to 1]</dd>
+<dt><code>-i&nbsp;</code><i>profile</i></dt>
+<dd> Input profile (defaults to sRGB).</dd>
+<dt><code>-l</code></dt>
+<dd> Transform by device-link profile.</dd>
+<dt><code>-n</code></dt>
+<dd> Terse output, intended for pipe usage.</dd>
+<dt><code>-o&nbsp;</code><i>profile</i></dt>
 <dd>
-<dt>Output profile (defaults to sRGB).</p>
+</dd><dt>Output profile (defaults to sRGB).</dt>
 <dd>
-<dt><code>-t &lt;0,1,2,3&gt;</code></p>
-<dd> Intent (0=Perceptual, 1=Colorimetric, 2=Saturation, 3=Absolute).</p>
-<dt><code>-v</code></p>
-<dd> Verbose.</p>
-<dt><code>-w</code></p>
-<dd> Use 16 bits.</p>
-<dt><code>-x</code></p>
-<dd> Hexadecimal.</p>
-<dt>You can use &#8216;*Lab&#8217; and &#8216;*xyz&#8217; as built-in profiles.</p>
-<dd></dl>
+</dd><dt><code>-t &lt;0,1,2,3&gt;</code></dt>
+<dd> Intent (0=Perceptual, 1=Colorimetric, 2=Saturation, 3=Absolute).</dd>
+<dt><code>-v</code></dt>
+<dd> Verbose.</dd>
+<dt><code>-w</code></dt>
+<dd> Use 16 bits.</dd>
+<dt><code>-x</code></dt>
+<dd> Hexadecimal.</dd>
+<dt>You can use &#8216;*Lab&#8217; and &#8216;*xyz&#8217; as built-in profiles.</dt>
+<dd></dd></dl>
 <h2>NOTES</h2>
 <p> For suggestions, comments, bug reports etc. send mail to info [at] littlecms.com.</p>
 <h2>SEE ALSO</h2>

@@ -14,81 +14,81 @@ description: "dropbear – lightweight SSH server"
 <p><code>dropbear</code> is a small SSH server</p>
 <h2>Options</h2>
 <dl>
-<dt><code>-b </code><i>banner</i></p>
-<dd>bannerfile. Display the contents of the file <i>banner</i> before user login (default: none).</p>
-<dt><code>-r </code><i>hostkey</i></p>
-<dd>Use the contents of the file <i>hostkey</i> for the SSH hostkey. This file is generated with <code><a href="/docs/linux/man/1-dropbearkey/">dropbearkey</a></code>(1) or automatically with the &#8216;-R&#8217; option. See &quot;Host Key Files&quot; below.</p>
-<dt><code>-R</code></p>
-<dd>Generate hostkeys automatically. See &quot;Host Key Files&quot; below.</p>
-<dt><code>-F</code></p>
-<dd>Don&#8217;t fork into background.</p>
-<dt><code>-E</code></p>
-<dd>Log to standard error rather than syslog.</p>
-<dt><code>-m</code></p>
-<dd>Don&#8217;t display the message of the day on login.</p>
-<dt><code>-w</code></p>
-<dd>Disallow root logins.</p>
-<dt><code>-s</code></p>
-<dd>Disable password logins.</p>
-<dt><code>-g</code></p>
-<dd>Disable password logins for root.</p>
-<dt><code>-j</code></p>
-<dd>Disable local port forwarding.</p>
-<dt><code>-k</code></p>
-<dd>Disable remote port forwarding.</p>
-<dt><code>-p</code> [<i>address</i>:]<i>port</i></p>
-<dd>Listen on specified <i>address</i> and TCP <i>port.</i> If just a port is given listen on all addresses. up to 10 can be specified (default 22 if none specified).</p>
-<dt><code>-i</code></p>
-<dd>Service program mode. Use this option to run <code>dropbear</code> under TCP/IP servers like inetd, tcpsvd, or tcpserver. In program mode the -F option is implied, and -p options are ignored.</p>
-<dt><code>-P </code><i>pidfile</i></p>
-<dd>Specify a pidfile to create when running as a daemon. If not specified, the default is /var/run/dropbear.pid</p>
-<dt><code>-a</code></p>
-<dd>Allow remote hosts to connect to forwarded ports.</p>
-<dt><code>-W </code><i>windowsize</i></p>
-<dd>Specify the per-channel receive window buffer size. Increasing this may improve network performance at the expense of memory use. Use -h to see the default buffer size.</p>
-<dt><code>-K </code><i>timeout_seconds</i></p>
-<dd>Ensure that traffic is transmitted at a certain interval in seconds. This is useful for working around firewalls or routers that drop connections after a certain period of inactivity. The trade-off is that a session may be closed if there is a temporary lapse of network connectivity. A setting if 0 disables keepalives. If no response is received for 3 consecutive keepalives the connection will be closed.</p>
-<dt><code>-I </code><i>idle_timeout</i></p>
-<dd>Disconnect the session if no traffic is transmitted or received for <i>idle_timeout</i> seconds.</p>
-<dt><code>-V</code></p>
-<dd>Print the version </p>
+<dt><code>-b </code><i>banner</i></dt>
+<dd>bannerfile. Display the contents of the file <i>banner</i> before user login (default: none).</dd>
+<dt><code>-r </code><i>hostkey</i></dt>
+<dd>Use the contents of the file <i>hostkey</i> for the SSH hostkey. This file is generated with <code><a href="/docs/linux/man/1-dropbearkey/">dropbearkey</a></code>(1) or automatically with the &#8216;-R&#8217; option. See &quot;Host Key Files&quot; below.</dd>
+<dt><code>-R</code></dt>
+<dd>Generate hostkeys automatically. See &quot;Host Key Files&quot; below.</dd>
+<dt><code>-F</code></dt>
+<dd>Don&#8217;t fork into background.</dd>
+<dt><code>-E</code></dt>
+<dd>Log to standard error rather than syslog.</dd>
+<dt><code>-m</code></dt>
+<dd>Don&#8217;t display the message of the day on login.</dd>
+<dt><code>-w</code></dt>
+<dd>Disallow root logins.</dd>
+<dt><code>-s</code></dt>
+<dd>Disable password logins.</dd>
+<dt><code>-g</code></dt>
+<dd>Disable password logins for root.</dd>
+<dt><code>-j</code></dt>
+<dd>Disable local port forwarding.</dd>
+<dt><code>-k</code></dt>
+<dd>Disable remote port forwarding.</dd>
+<dt><code>-p</code> [<i>address</i>:]<i>port</i></dt>
+<dd>Listen on specified <i>address</i> and TCP <i>port.</i> If just a port is given listen on all addresses. up to 10 can be specified (default 22 if none specified).</dd>
+<dt><code>-i</code></dt>
+<dd>Service program mode. Use this option to run <code>dropbear</code> under TCP/IP servers like inetd, tcpsvd, or tcpserver. In program mode the -F option is implied, and -p options are ignored.</dd>
+<dt><code>-P </code><i>pidfile</i></dt>
+<dd>Specify a pidfile to create when running as a daemon. If not specified, the default is /var/run/dropbear.pid</dd>
+<dt><code>-a</code></dt>
+<dd>Allow remote hosts to connect to forwarded ports.</dd>
+<dt><code>-W </code><i>windowsize</i></dt>
+<dd>Specify the per-channel receive window buffer size. Increasing this may improve network performance at the expense of memory use. Use -h to see the default buffer size.</dd>
+<dt><code>-K </code><i>timeout_seconds</i></dt>
+<dd>Ensure that traffic is transmitted at a certain interval in seconds. This is useful for working around firewalls or routers that drop connections after a certain period of inactivity. The trade-off is that a session may be closed if there is a temporary lapse of network connectivity. A setting if 0 disables keepalives. If no response is received for 3 consecutive keepalives the connection will be closed.</dd>
+<dt><code>-I </code><i>idle_timeout</i></dt>
+<dd>Disconnect the session if no traffic is transmitted or received for <i>idle_timeout</i> seconds.</dd>
+<dt><code>-V</code></dt>
+<dd>Print the version </dd>
 </dl>
 <h2>Files</h2>
 <dl>
-<dt>Authorized Keys</p>
-<dd>~/.ssh/authorized_keys can be set up to allow remote login with a RSA, ECDSA, or DSS key. Each line is of the form</p>
-<dt>[restrictions] ssh-rsa AAAAB3NzaC1yc2EAAAABIwAAAIgAsp&#8230; [comment]</p>
-<dd>and can be extracted from a Dropbear private host key with &quot;dropbearkey -y&quot;. This is the same format as used by OpenSSH, though the restrictions are a subset (keys with unknown restrictions are ignored). Restrictions are comma separated, with double quotes around spaces in arguments. Available restrictions are: </p>
-<dt><code>no-port-forwarding</code></p>
-<dd>Don&#8217;t allow port forwarding for this connection </p>
-<dt><code>no-agent-forwarding</code></p>
-<dd>Don&#8217;t allow agent forwarding for this connection </p>
-<dt><code>no-X11-forwarding</code></p>
-<dd>Don&#8217;t allow X11 forwarding for this connection </p>
-<dt><code>no-pty</code></p>
-<dd>Disable PTY allocation. Note that a user can still obtain most of the same functionality with other means even if no-pty is set. </p>
-<dt><code>command=</code><i>forced_command</i></p>
-<dd>Disregard the command provided by the user and always run <i>forced_command</i>. </p>
+<dt>Authorized Keys</dt>
+<dd>~/.ssh/authorized_keys can be set up to allow remote login with a RSA, ECDSA, or DSS key. Each line is of the form</dd>
+<dt>[restrictions] ssh-rsa AAAAB3NzaC1yc2EAAAABIwAAAIgAsp&#8230; [comment]</dt>
+<dd>and can be extracted from a Dropbear private host key with &quot;dropbearkey -y&quot;. This is the same format as used by OpenSSH, though the restrictions are a subset (keys with unknown restrictions are ignored). Restrictions are comma separated, with double quotes around spaces in arguments. Available restrictions are: </dd>
+<dt><code>no-port-forwarding</code></dt>
+<dd>Don&#8217;t allow port forwarding for this connection </dd>
+<dt><code>no-agent-forwarding</code></dt>
+<dd>Don&#8217;t allow agent forwarding for this connection </dd>
+<dt><code>no-X11-forwarding</code></dt>
+<dd>Don&#8217;t allow X11 forwarding for this connection </dd>
+<dt><code>no-pty</code></dt>
+<dd>Disable PTY allocation. Note that a user can still obtain most of the same functionality with other means even if no-pty is set. </dd>
+<dt><code>command=</code><i>forced_command</i></dt>
+<dd>Disregard the command provided by the user and always run <i>forced_command</i>. </dd>
 <p> The authorized_keys file and its containing ~/.ssh directory must only be writable by the user, otherwise Dropbear will not allow a login using public key authentication. </p>
-<dt>Host Key Files</p>
-<dd>Host key files are read at startup from a standard location, by default /etc/dropbear/dropbear_dss_host_key, /etc/dropbear/dropbear_rsa_host_key, and /etc/dropbear/dropbear_ecdsa_host_key or specified on the commandline with -r. These are of the form generated by dropbearkey. The -R option can be used to automatically generate keys in the default location &#8211; keys will be generated after startup when the first connection is established. This had the benefit that the system /dev/urandom random number source has a better chance of being securely seeded. </p>
-<dt>Message Of The Day</p>
-<dd>By default the file /etc/motd will be printed for any login shell (unless disabled at compile-time). This can also be disabled per-user by creating a file ~/.hushlogin . </p>
+<dt>Host Key Files</dt>
+<dd>Host key files are read at startup from a standard location, by default /etc/dropbear/dropbear_dss_host_key, /etc/dropbear/dropbear_rsa_host_key, and /etc/dropbear/dropbear_ecdsa_host_key or specified on the commandline with -r. These are of the form generated by dropbearkey. The -R option can be used to automatically generate keys in the default location &#8211; keys will be generated after startup when the first connection is established. This had the benefit that the system /dev/urandom random number source has a better chance of being securely seeded. </dd>
+<dt>Message Of The Day</dt>
+<dd>By default the file /etc/motd will be printed for any login shell (unless disabled at compile-time). This can also be disabled per-user by creating a file ~/.hushlogin . </dd>
 </dl>
 <h2>Environment Variables</h2>
 <p>Dropbear sets the standard variables USER, LOGNAME, HOME, SHELL, PATH, and TERM. </p>
 <p> The variables below are set for sessions as appropriate. </p>
 <dl>
-<dt><code>SSH_TTY</code></p>
-<dd>This is set to the allocated TTY if a PTY was used. </p>
-<dt><code>SSH_CONNECTION</code></p>
-<dd>Contains &quot;&lt;remote_ip&gt; &lt;remote_port&gt; &lt;local_ip&gt; &lt;local_port&gt;&quot;. </p>
-<dt><code>DISPLAY</code></p>
-<dd>Set X11 forwarding is used. </p>
-<dt><code>SSH_ORIGINAL_COMMAND</code></p>
-<dd>If a &#8216;command=&#8217; authorized_keys option was used, the original command is specified in this variable. If a shell was requested this is set to an empty value. </p>
-<dt><code>SSH_AUTH_SOCK</code></p>
-<dd>Set to a forwarded ssh-agent connection. </p>
+<dt><code>SSH_TTY</code></dt>
+<dd>This is set to the allocated TTY if a PTY was used. </dd>
+<dt><code>SSH_CONNECTION</code></dt>
+<dd>Contains &quot;&lt;remote_ip&gt; &lt;remote_port&gt; &lt;local_ip&gt; &lt;local_port&gt;&quot;. </dd>
+<dt><code>DISPLAY</code></dt>
+<dd>Set X11 forwarding is used. </dd>
+<dt><code>SSH_ORIGINAL_COMMAND</code></dt>
+<dd>If a &#8216;command=&#8217; authorized_keys option was used, the original command is specified in this variable. If a shell was requested this is set to an empty value. </dd>
+<dt><code>SSH_AUTH_SOCK</code></dt>
+<dd>Set to a forwarded ssh-agent connection. </dd>
 </dl>
 <h2>Notes</h2>
 <p>Dropbear only supports SSH protocol version 2. </p>

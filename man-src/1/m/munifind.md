@@ -18,32 +18,32 @@ description: "munifind – Finding variable stars on CCD photometry files"
 <p> The list of input files is usualy entered directly on the command line. If you are going to process a large set of files, you can use the question marks (for a single chars) or the asterisk (for a strings of chars). </p>
 <p> The alternate way, how to process a large set of files, is the batch mode. In this mode, the list of input files is read from a given file or from the standard input. The directory file, for example named <i>dirfile</i>, must have the text format and the names of the input files are written on the separate lines. If the files are placed not in the current working directory, you have to specify the proper path in full or shortened form. </p>
 <dl>
-<dt><code>@</code><i>dirfile</i></p>
-<dd> The program will read the list of source files from specified file.</p>
-<dt><code>@</code></p>
-<dd> The program will read the list of source files from stdin.</p>
-<dt><code>src=</code><i>file</i>, <code>-a</code><i>file</i></p>
-<dd> Optional source file name in read-all format.</p>
-<dt><code>par=</code><i>file</i> <code>-p</code><i>file</i></p>
-<dd> Optional parameter file. Default is <i>munifind.ini</i>.</p>
-<dt><code>out=</code><i>file</i>, <code>-o</code><i>file</i></p>
-<dd> Name of the output file. Default is <i>munifind.dat</i>.</p>
-<dt><code>&#8211;help</code></p>
-<dd> Prints short help.</p>
-<dt><code>&#8211;license</code></p>
-<dd> Prints the license.</p>
-<dt><code>&#8211;version</code></p>
-<dd> Prints the program name and its version.</p>
-<dt><code>&#8211;quiet</code></p>
-<dd> Quiet mode &#8212; inhibits the screen printouts.</p>
-<dt><code>&#8211;debug</code></p>
-<dd> Debug mode &#8212; extends the screen printouts. </p>
+<dt><code>@</code><i>dirfile</i></dt>
+<dd> The program will read the list of source files from specified file.</dd>
+<dt><code>@</code></dt>
+<dd> The program will read the list of source files from stdin.</dd>
+<dt><code>src=</code><i>file</i>, <code>-a</code><i>file</i></dt>
+<dd> Optional source file name in read-all format.</dd>
+<dt><code>par=</code><i>file</i> <code>-p</code><i>file</i></dt>
+<dd> Optional parameter file. Default is <i>munifind.ini</i>.</dd>
+<dt><code>out=</code><i>file</i>, <code>-o</code><i>file</i></dt>
+<dd> Name of the output file. Default is <i>munifind.dat</i>.</dd>
+<dt><code>&#8211;help</code></dt>
+<dd> Prints short help.</dd>
+<dt><code>&#8211;license</code></dt>
+<dd> Prints the license.</dd>
+<dt><code>&#8211;version</code></dt>
+<dd> Prints the program name and its version.</dd>
+<dt><code>&#8211;quiet</code></dt>
+<dd> Quiet mode &#8212; inhibits the screen printouts.</dd>
+<dt><code>&#8211;debug</code></dt>
+<dd> Debug mode &#8212; extends the screen printouts. </dd>
 </dl>
 <h2>EXAMPLES</h2>
 <p> The following command demonstrates, how to create a file of magnitudes and the deviations from the source files &#8216;test1.mat&#8217;, &#8216;test2.mat&#8217; and &#8216;test3.mat&#8217;.</p>
 <dl>
 <dt>
-<dd> <code>munifind test1.mat test2.mat test3.mat</code> </p>
+</dt><dd> <code>munifind test1.mat test2.mat test3.mat</code> </dd>
 </dl>
 <h2>EXIT STATUS</h2>
 <p> munifind returns a zero exist status if it succeeds to convert all specified file. Otherwise, it will stop immediately when the error occurs and returns nonzero code. </p>

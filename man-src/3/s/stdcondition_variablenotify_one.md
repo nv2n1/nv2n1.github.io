@@ -31,21 +31,14 @@ Notifying while under the lock may nevertheless be necessary when precise schedu
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;iostream&gt;
-
 #include &lt;condition_variable&gt;
-
 #include &lt;thread&gt;
-
 #include &lt;chrono&gt;
 std::condition_variable cv;
-
 std::mutex cv_m;
-
 int i = 0;
-
 bool done = false;
 void waits()
-
 {
     std::unique_lock&lt;std::mutex&gt; lk(cv_m);
     std::cout &lt;&lt; &quot;Waiting... \n&quot;;
@@ -54,7 +47,6 @@ void waits()
     done = true;
 }
 void signals()
-
 {
     std::this_thread::sleep_for(std::chrono::seconds(1));
     std::cout &lt;&lt; &quot;Notifying falsely...\n&quot;;
@@ -71,7 +63,6 @@ void signals()
     }
 }
 int main()
-
 {
     std::thread t1(waits), t2(signals);
     t1.join();

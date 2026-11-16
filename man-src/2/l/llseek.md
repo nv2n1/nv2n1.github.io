@@ -23,7 +23,7 @@ int _llseek(unsigned int fd, unsigned long offset_high,
 <p> The <code>_llseek</code>() system call repositions the offset of the open file description associated with the file descriptor <i>fd</i> to the value</p>
 <dl>
 <dt>
-<dd> (offset_high &lt;&lt; 32) | offset_low</dl>
+</dt><dd> (offset_high &lt;&lt; 32) | offset_low</dd></dl>
 <p> This new offset is a byte offset relative to the beginning of the file, the current file offset, or the end of the file, depending on whether <i>whence</i> is <code>SEEK_SET</code>, <code>SEEK_CUR</code>, or <code>SEEK_END</code>, respectively. </p>
 <p> The new file offset is returned in the argument <i>result</i>. The type <i>loff_t</i> is a 64-bit signed type. </p>
 <p> This system call exists on various 32-bit platforms to support seeking to large file offsets.</p>
@@ -31,12 +31,12 @@ int _llseek(unsigned int fd, unsigned long offset_high,
 <p> Upon successful completion, <code>_llseek</code>() returns 0. Otherwise, a value of -1 is returned and <i>errno</i> is set to indicate the error.</p>
 <h2>ERRORS</h2>
 <dl>
-<dt><code>EBADF</code></p>
-<dd> <i>fd</i> is not an open file descriptor.</p>
-<dt><code>EFAULT</code></p>
-<dd> Problem with copying results to user space.</p>
-<dt><code>EINVAL</code></p>
-<dd> <i>whence</i> is invalid.</dl>
+<dt><code>EBADF</code></dt>
+<dd> <i>fd</i> is not an open file descriptor.</dd>
+<dt><code>EFAULT</code></dt>
+<dd> Problem with copying results to user space.</dd>
+<dt><code>EINVAL</code></dt>
+<dd> <i>whence</i> is invalid.</dd></dl>
 <h2>CONFORMING TO</h2>
 <p> This function is Linux-specific, and should not be used in programs intended to be portable.</p>
 <h2>NOTES</h2>

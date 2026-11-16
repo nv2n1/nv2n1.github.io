@@ -14,16 +14,16 @@ description: "gnutls_x509_crl_iter_crt_serial – API function"
 <p> <code>int gnutls_x509_crl_iter_crt_serial(gnutls_x509_crl_t </code><i>crl</i><code>, gnutls_x509_crl_iter_t * </code><i>iter</i><code>, unsigned char * </code><i>serial</i><code>, size_t * </code><i>serial_size</i><code>, time_t * </code><i>t</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
-<dt>gnutls_x509_crl_t crl</p>
-<dd> should contain a <code>gnutls_x509_crl_t</code> structure</p>
-<dt>gnutls_x509_crl_iter_t * iter</p>
-<dd> A pointer to an iterator (initially the iterator should be <code>NULL</code>)</p>
-<dt>unsigned char * serial</p>
-<dd> where the serial number will be copied</p>
-<dt>size_t * serial_size</p>
-<dd> initially holds the size of serial</p>
-<dt>time_t * t</p>
-<dd> if non null, will hold the time this certificate was revoked</dl>
+<dt>gnutls_x509_crl_t crl</dt>
+<dd> should contain a <code>gnutls_x509_crl_t</code> structure</dd>
+<dt>gnutls_x509_crl_iter_t * iter</dt>
+<dd> A pointer to an iterator (initially the iterator should be <code>NULL</code>)</dd>
+<dt>unsigned char * serial</dt>
+<dd> where the serial number will be copied</dd>
+<dt>size_t * serial_size</dt>
+<dd> initially holds the size of serial</dd>
+<dt>time_t * t</dt>
+<dd> if non null, will hold the time this certificate was revoked</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> This function performs the same as <code>gnutls_x509_crl_get_crt_serial()</code>, but reads sequentially and keeps state in the iterator between calls. That allows it to provide better performance in sequences with many elements (50000+). </p>
 <p> When past the last element is accessed <code>GNUTLS_E_REQUESTED_DATA_NOT_AVAILABLE</code> is returned and the iterator is reset. </p>
@@ -39,6 +39,6 @@ description: "gnutls_x509_crl_iter_crt_serial – API function"
 <h2>SEE ALSO</h2>
 <p> The full documentation for <code>gnutls</code> is maintained as a Texinfo manual. If the /usr/share/doc/gnutls/ directory does not contain the HTML form visit <code></p>
 <dl>
-<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></p>
-<dd> </code></dl>
+<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></dt>
+<dd> </code></dd></dl>
 <h2>Index</h2>

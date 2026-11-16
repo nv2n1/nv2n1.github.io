@@ -11,7 +11,6 @@ std::localtime - std::localtime
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;ctime&gt;
-
     std::tm *localtime(const std::time_t *time);</code></pre> 
 Converts given time since epoch as std::time_t value into calendar time, expressed in local time. 
 
@@ -32,14 +31,10 @@ POSIX_specifies that the timezone information is determined by this function as 
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;iostream&gt;
-
 #include &lt;iomanip&gt;
-
 #include &lt;ctime&gt;
-
 #include &lt;stdlib.h&gt; // defines putenv in POSIX
 int main()
-
 {
     std::time_t t = std::time(nullptr);
     std::cout &lt;&lt; &quot;UTC:       &quot; &lt;&lt; std::put_time(std::gmtime(&amp;t), &quot;%c %Z&quot;) &lt;&lt; '\n';

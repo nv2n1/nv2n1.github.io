@@ -17,8 +17,8 @@ description: "rstartd – a sample implementation of a Remote Start rsh helper"
 <p> This document describes the peculiarities of <i>rstartd</i> and how it is configured.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-c </code><i>configfilename</i></p>
-<dd> This option specifies the &quot;global&quot; configuration file that <i>rstartd</i> is to read. Normally, <i>rstartd</i> is a shell script that invokes <i>rstartd.real</i> with the <code>-c</code> switch, allowing local configuration of the location of the configuration file. If <i>rstartd.real</i> is started without the -c option, it reads <i>/X11/rstart/config</i>.</dl>
+<dt><code>-c </code><i>configfilename</i></dt>
+<dd> This option specifies the &quot;global&quot; configuration file that <i>rstartd</i> is to read. Normally, <i>rstartd</i> is a shell script that invokes <i>rstartd.real</i> with the <code>-c</code> switch, allowing local configuration of the location of the configuration file. If <i>rstartd.real</i> is started without the -c option, it reads <i>/X11/rstart/config</i>.</dd></dl>
 <h2>INSTALLATION</h2>
 <p> It is critical to successful interoperation of the Remote Start protocol that <i>rstartd</i> be installed in a directory which is in the &quot;default&quot; search path, so that default rsh requests and the ilk will be able to find it.</p>
 <h2>CONFIGURATION AND OPERATION</h2>
@@ -83,26 +83,26 @@ global all-contexts directory (/usr/lib/X11/rstart/commands)
 <h2>CONFIGURATION KEYWORDS</h2>
 <p> There are several &quot;special&quot; <i>rstart</i> keywords defined for <i>rstartd</i> configuration. Unless otherwise specified, there are no defaults; related features are disabled in this case. </p>
 <dl>
-<dt><code>INTERNAL-REGISTRIES name &#8230;</code></p>
-<dd> Gives a space-separated list of &quot;MISC&quot; registries that this system understands. (Registries other than this are accepted but generate a Warning.)</p>
-<dt><code>INTERNAL-LOCAL-DEFAULT relative_filename</code></p>
-<dd> Gives the name ($HOME relative) of the per-user config file.</p>
-<dt><code>INTERNAL-GLOBAL-CONTEXTS absolute_directory_name</code></p>
-<dd> Gives the name of the system-wide contexts directory.</p>
-<dt><code>INTERNAL-LOCAL-CONTEXTS relative_directory_name</code></p>
-<dd> Gives the name ($HOME relative) of the per-user contexts directory.</p>
-<dt><code>INTERNAL-GLOBAL-COMMANDS absolute_directory_name</code></p>
-<dd> Gives the name of the system-wide generic commands directory.</p>
-<dt><code>INTERNAL-LOCAL-COMMANDS relative_directory_name</code></p>
-<dd> Gives the name ($HOME relative) of the per-user generic commands directory.</p>
-<dt><code>INTERNAL-VARIABLE-PREFIX prefix</code></p>
-<dd> Gives the prefix for the configuration environment variables <i>rstartd</i> passes to its kids.</p>
-<dt><code>INTERNAL-AUTH-PROGRAM authscheme program argv[0] argv[1] &#8230;</code></p>
-<dd> Specifies the program to run to set up authentication for the specified authentication scheme. &quot;program argv[0] &#8230;&quot; gives the program to run and its arguments, in the same form as the EXEC keyword.</p>
-<dt><code>INTERNAL-AUTH-INPUT authscheme</code></p>
-<dd> Specifies the data to be given to the authorization program as its standard input. Each argument is passed as a single line. $n, where n is a number, is replaced by the n&#8217;th argument to the &quot;AUTH authscheme arg1 arg2 &#8230;&quot; line.</p>
-<dt><code>INTERNAL-PRINT arbitrary text</code></p>
-<dd> Prints its arguments as a Debug message. Mostly for <i>rstartd</i> debugging, but could be used to debug config files.</dl>
+<dt><code>INTERNAL-REGISTRIES name &#8230;</code></dt>
+<dd> Gives a space-separated list of &quot;MISC&quot; registries that this system understands. (Registries other than this are accepted but generate a Warning.)</dd>
+<dt><code>INTERNAL-LOCAL-DEFAULT relative_filename</code></dt>
+<dd> Gives the name ($HOME relative) of the per-user config file.</dd>
+<dt><code>INTERNAL-GLOBAL-CONTEXTS absolute_directory_name</code></dt>
+<dd> Gives the name of the system-wide contexts directory.</dd>
+<dt><code>INTERNAL-LOCAL-CONTEXTS relative_directory_name</code></dt>
+<dd> Gives the name ($HOME relative) of the per-user contexts directory.</dd>
+<dt><code>INTERNAL-GLOBAL-COMMANDS absolute_directory_name</code></dt>
+<dd> Gives the name of the system-wide generic commands directory.</dd>
+<dt><code>INTERNAL-LOCAL-COMMANDS relative_directory_name</code></dt>
+<dd> Gives the name ($HOME relative) of the per-user generic commands directory.</dd>
+<dt><code>INTERNAL-VARIABLE-PREFIX prefix</code></dt>
+<dd> Gives the prefix for the configuration environment variables <i>rstartd</i> passes to its kids.</dd>
+<dt><code>INTERNAL-AUTH-PROGRAM authscheme program argv[0] argv[1] &#8230;</code></dt>
+<dd> Specifies the program to run to set up authentication for the specified authentication scheme. &quot;program argv[0] &#8230;&quot; gives the program to run and its arguments, in the same form as the EXEC keyword.</dd>
+<dt><code>INTERNAL-AUTH-INPUT authscheme</code></dt>
+<dd> Specifies the data to be given to the authorization program as its standard input. Each argument is passed as a single line. $n, where n is a number, is replaced by the n&#8217;th argument to the &quot;AUTH authscheme arg1 arg2 &#8230;&quot; line.</dd>
+<dt><code>INTERNAL-PRINT arbitrary text</code></dt>
+<dd> Prints its arguments as a Debug message. Mostly for <i>rstartd</i> debugging, but could be used to debug config files.</dd></dl>
 <h2>NOTES</h2>
 <p> When using the C shell, or any other shell which runs a script every time the shell is started, the script may get run several times. In the worst case, the script may get run <code>three</code> times: </p>
 <pre>

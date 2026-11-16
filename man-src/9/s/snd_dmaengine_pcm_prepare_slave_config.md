@@ -15,15 +15,15 @@ snd_dmaengine_pcm_prepare_slave_config - Generic prepare_slave_config callback
 <h2>Arguments</h2>
 
 <i>substream</i>
-<dl><dd><dd>PCM substream</dl>
+<dl><dd></dd><dd>PCM substream</dd></dl>
  
 
  <i>params</i>
-<dl><dd>hw_params</dl>
+<dl><dd>hw_params</dd></dl>
  
 
  <i>slave_config</i>
-<dl><dd>DMA slave config to prepare</dl>
+<dl><dd>DMA slave config to prepare</dd></dl>
 
 <h2>Description</h2>
 

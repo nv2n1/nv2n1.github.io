@@ -16,26 +16,26 @@ description: "SPI_execute_plan – execute a statement prepared by SPI_prepare"
 <h2>Arguments</h2>
 <p>SPIPlanPtr <i>plan</i></p>
 <dl COMPACT>
-<dd>prepared statement (returned by <code>SPI_prepare</code>)</dl>
+<dd>prepared statement (returned by <code>SPI_prepare</code>)</dd></dl>
 <p> Datum * <i>values</i></p>
 <dl COMPACT>
-<dd>An array of actual parameter values. Must have same length as the statement&#8217;s number of arguments.</dl>
+<dd>An array of actual parameter values. Must have same length as the statement&#8217;s number of arguments.</dd></dl>
 <p> const char * <i>nulls</i></p>
 <dl COMPACT>
-<dd>An array describing which parameters are null. Must have same length as the statement&#8217;s number of arguments. n indicates a null value (entry in <i>values</i> will be ignored); a space indicates a nonnull value (entry in <i>values</i> is valid). </p>
+<dd>An array describing which parameters are null. Must have same length as the statement&#8217;s number of arguments. n indicates a null value (entry in <i>values</i> will be ignored); a space indicates a nonnull value (entry in <i>values</i> is valid). </dd>
 <p> If <i>nulls</i> is NULL then <code>SPI_execute_plan</code> assumes that no parameters are null.</dl>
 <p> bool <i>read_only</i></p>
 <dl COMPACT>
-<dd>true for read-only execution</dl>
+<dd>true for read-only execution</dd></dl>
 <p> long <i>count</i></p>
 <dl COMPACT>
-<dd>maximum number of rows to return, or 0 for no limit</dl>
+<dd>maximum number of rows to return, or 0 for no limit</dd></dl>
 <h2>Return Value</h2>
 <p>The return value is the same as for <code>SPI_execute</code>, with the following additional possible error (negative) results: </p>
 <p> SPI_ERROR_ARGUMENT</p>
 <dl COMPACT>
-<dd>if <i>plan</i> is NULL or invalid, or <i>count</i> is less than 0</dl>
+<dd>if <i>plan</i> is NULL or invalid, or <i>count</i> is less than 0</dd></dl>
 <p> SPI_ERROR_PARAM</p>
 <dl COMPACT>
-<dd>if <i>values</i> is NULL and <i>plan</i> was prepared with some parameters</dl>
+<dd>if <i>values</i> is NULL and <i>plan</i> was prepared with some parameters</dd></dl>
 <p> <i>SPI_processed</i> and <i>SPI_tuptable</i> are set as in <code>SPI_execute</code> if successful.</p>

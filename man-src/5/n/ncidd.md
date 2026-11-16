@@ -13,46 +13,45 @@ description: "ncidd.conf – ncidd configuration file"
 <p> The <i>ncidd.conf</i> file is used to set options. Options are set on a command line. A line is broken up into words. A word is either a string of non-blank characters, everything between double quotes, or an equal sign. </p>
 <p> The <i>ncidd.conf</i> file understands 5 types of lines:</p>
 <dl>
-<dt><code>blank line</code></p>
-<dd>skip it</p>
-<dt><code>comment line, beginning with &#8216;#&#8217;</code></p>
-<dd>skip it</p>
-<dt><code>command lines, beginning with &#8216;send&#8217;</code></p>
-<dd>send DATATYPE</p>
+<dt><code>blank line</code></dt>
+<dd>skip it</dd>
+<dt><code>comment line, beginning with &#8216;#&#8217;</code></dt>
+<dd>skip it</dd>
+<dt><code>command lines, beginning with &#8216;send&#8217;</code></dt>
+<dd>send DATATYPE</dd>
 <dl>
-<dd>where DATATYPE = cidlog, cidinfo</dl>
-<dt><code>command lines, beginning with &#8216;set&#8217;</code></p>
-<dd>set ITEM = VALUE [ITEM = VALUE] [&#8230;]</p>
+<dd>where DATATYPE = cidlog, cidinfo</dd></dl>
+<dt><code>command lines, beginning with &#8216;set&#8217;</code></dt>
+<dd>set ITEM = VALUE [ITEM = VALUE] [&#8230;]</dd>
 <dl>
-<dd>where ITEM = cidlog, cidlogmax, datalog, initcid, initstr, lockfile, noserial, port, ttyclocal, ttyport, ttyspeed, nomodem, verbose</dl>
+<dd>where ITEM = cidlog, cidlogmax, datalog, initcid, initstr, lockfile, noserial, port, ttyclocal, ttyport, ttyspeed, nomodem, verbose</dd></dl>
 </dl>
 <h2>Examples</h2>
 <p>Send the CID log to each client at connect:</p>
 <dl>
 <dd><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>send cidlog
-</dl>
+</dd></dl>
 <p> Send the ring count, at each ring, to each client</p>
 <dl>
 <dd><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>send cidinfo
-</dl>
+</dd></dl>
 <pre><code>Set the modem for Caller ID:
-
 set initcid = &quot;AT#CID=1&quot;</code></pre>
 <p> Set the modem port:</p>
 <dl>
 <dd><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>set ttyport=/dev/ttyS1
-</dl>
+</dd></dl>
 <p> Set the Telephone Line Indicator for the modem:</p>
 <dl>
 <dd><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>set lineid = POTS
-</dl>
+</dd></dl>
 <p> Use a modem and possibly a Gateway to obtain the Caller ID:</p>
 <dl>
 <dd><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>set noseriel = 0
-</dl>
+</dd></dl>
 <p> Do not use a modem, just use a Gateway to obtain the Caller ID:</p>
 <dl>
 <dd><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>set noseriel = 1
-</dl>
+</dd></dl>
 <h2>See Also</h2>
 <p>ncid.1, ncidtools.1, lcdncid.1, out2osd.1, ncidd.8 ncidd.alias.5 </p>

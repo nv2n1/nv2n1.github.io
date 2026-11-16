@@ -16,30 +16,30 @@ description: "mtnopt – generate shell variables from monotone workspace option
 <p> <code>mtnopt</code> prints shell variable assignments for each value in the file of monotone workspace options, <i>_MTN/options</i>, in the current directory. For instance, if <i>_MTN/options</i> contained this text:</p>
 <dl>
 <dt>
-<dd> <tt>database &quot;/home/user/src/monotone.mtn&quot;</tt><br />
+</dt><dd> <tt>database &quot;/home/user/src/monotone.mtn&quot;</tt><br />
  <tt> branch &quot;net.venge.monotone&quot;</tt><br />
- <tt> keydir &quot;/home/user/.monotone/keys&quot;</tt></dl>
+ <tt> keydir &quot;/home/user/.monotone/keys&quot;</tt></dd></dl>
 <p> <code>mtnopt</code> would print:</p>
 <dl>
 <dt>
-<dd> <tt>MTN_database=&quot;/home/user/src/monotone.mtn&quot;;</tt><br />
+</dt><dd> <tt>MTN_database=&quot;/home/user/src/monotone.mtn&quot;;</tt><br />
  <tt>MTN_branch=&quot;net.venge.monotone&quot;;</tt><br />
- <tt>MTN_keydir=&quot;/home/user/.monotone/keys&quot;;</tt></dl>
+ <tt>MTN_keydir=&quot;/home/user/.monotone/keys&quot;;</tt></dd></dl>
 <p> By default, <code>mtnopt </code> attempts to guess appropriate syntax from the value of the <code>SHELL</code> environment variable. This can be overridden with the <code>-s</code> and <code>-c</code> command-line options.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-s</code></p>
-<dd> Print variable assignments in <code><a href="/docs/linux/man/1-sh/">sh</a></code>(1) syntax.</p>
-<dt><code>-c</code></p>
-<dd> Print variable assignments in <code><a href="/docs/linux/man/1-csh/">csh</a></code>(1) syntax.</p>
-<dt><code>-v</code></p>
-<dd> Print only the values, with no indication of the corresponding option keys.</p>
-<dt><code>-d&nbsp;<wbr></code><i>directory</i></p>
-<dd> Look for <i>_MTN/options</i> in <i>directory</i>, rather than in the current directory.</p>
-<dt><code>-k&nbsp;<wbr></code><i>keys</i></p>
-<dd> Print assignments for only those options that match the <code><a href="/docs/linux/man/1-egrep/">egrep</a></code>(1) regular expression <i>keys</i>.</p>
-<dt><code>-h</code></p>
-<dd> Print a help message and exit.</dl>
+<dt><code>-s</code></dt>
+<dd> Print variable assignments in <code><a href="/docs/linux/man/1-sh/">sh</a></code>(1) syntax.</dd>
+<dt><code>-c</code></dt>
+<dd> Print variable assignments in <code><a href="/docs/linux/man/1-csh/">csh</a></code>(1) syntax.</dd>
+<dt><code>-v</code></dt>
+<dd> Print only the values, with no indication of the corresponding option keys.</dd>
+<dt><code>-d&nbsp;<wbr></code><i>directory</i></dt>
+<dd> Look for <i>_MTN/options</i> in <i>directory</i>, rather than in the current directory.</dd>
+<dt><code>-k&nbsp;<wbr></code><i>keys</i></dt>
+<dd> Print assignments for only those options that match the <code><a href="/docs/linux/man/1-egrep/">egrep</a></code>(1) regular expression <i>keys</i>.</dd>
+<dt><code>-h</code></dt>
+<dd> Print a help message and exit.</dd></dl>
 <h2>BUGS</h2>
 <p> <code>mtnopt</code> only looks in the current directory for the <i>_MTN</i> directory, so it will fail in a subdirectory of a workspace. </p>
 <p> <code>mtnopt</code> should be aware of the set of possible options, rather than blindly printing whatever is in <i>_MTN/options</i>. </p>

@@ -15,15 +15,15 @@ skb_kill_datagram - Free a datagram skbuff forcibly
 <h2>Arguments</h2>
 
 <i>sk</i>
-<dl><dd><dd>socket</dl>
+<dl><dd></dd><dd>socket</dd></dl>
  
 
  <i>skb</i>
-<dl><dd>datagram skbuff</dl>
+<dl><dd>datagram skbuff</dd></dl>
  
 
  <i>flags</i>
-<dl><dd>MSG_ flags</dl>
+<dl><dd>MSG_ flags</dd></dl>
 
 <h2>Description</h2>
 

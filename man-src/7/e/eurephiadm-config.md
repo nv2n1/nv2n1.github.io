@@ -13,14 +13,14 @@ description: "eurephiadm config – Show and modify eurephia configuration setti
 <h2>Options</h2>
 <p>The following arguments are accepted:</p>
 <dl>
-<dt><code>-l</code> | <code>&#8211;list</code></p>
-<dd>List all parameters set in the database</p>
-<dt><code>-s</code> | <code>&#8211;set</code> &lt;key&gt; &lt;value&gt;</p>
-<dd>Add or change a parameter.</p>
-<dt><code>-D</code> | <code>&#8211;delete</code> &lt;key&gt;</p>
-<dd>Remove the parameter.</p>
-<dt>If no arguments is given, you can give a key name, and the associated value will be printed.</p>
-<dd></dl>
+<dt><code>-l</code> | <code>&#8211;list</code></dt>
+<dd>List all parameters set in the database</dd>
+<dt><code>-s</code> | <code>&#8211;set</code> &lt;key&gt; &lt;value&gt;</dt>
+<dd>Add or change a parameter.</dd>
+<dt><code>-D</code> | <code>&#8211;delete</code> &lt;key&gt;</dt>
+<dd>Remove the parameter.</dd>
+<dt>If no arguments is given, you can give a key name, and the associated value will be printed.</dt>
+<dd></dd></dl>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/7-eurephiadm/">eurephiadm</a></code>(7)</p>
 <h2>Author</h2>

@@ -16,40 +16,40 @@ description: "ipmi-sel – display SEL entries"
 <h2>General Options</h2>
 <p>The following options are general options for configuring IPMI communication and executing general tool commands.</p>
 <dl>
-<dt><code>-D</code> <i>IPMIDRIVER</i>, <code>&#8211;driver-type</code>=<i>IPMIDRIVER</i></p>
-<dd>Specify the driver type to use instead of doing an auto selection. The currently available outofband drivers are LAN and LAN_2_0, which perform IPMI 1.5 and IPMI 2.0 respectively. The currently available inband drivers are KCS, SSIF, OPENIPMI, and SUNBMC.</p>
-<dt><code>&#8211;disable-auto-probe</code></p>
-<dd>Do not probe in-band IPMI devices for default settings.</p>
-<dt><code>&#8211;driver-address</code>=<i>DRIVER-ADDRESS</i></p>
-<dd>Specify the in-band driver address to be used instead of the probed value. <i>DRIVER-ADDRESS</i> should be prefixed with &quot;0x&quot; for a hex value and &#8216;0&#8217; for an octal value.</p>
-<dt><code>&#8211;driver-device</code>=<i>DEVICE</i></p>
-<dd>Specify the in-band driver device path to be used instead of the probed path.</p>
-<dt><code>&#8211;register-spacing</code>=<i>REGISTER-SPACING</i></p>
-<dd>Specify the in-band driver register spacing instead of the probed value. Argument is in bytes (i.e. 32bit register spacing = 4)</p>
-<dt><code>&#8211;target-channel-number</code>=<i>CHANNEL-NUMBERFR</p>
-<dd>Specify the in-band driver target channel number to send IPMI requests to.</p>
-<dt></i><code>&#8211;target-slave-address</code>=<i>SLAVE-ADDRESSFR</p>
-<dd>Specify the in-band driver target slave number to send IPMI requests to.</p>
-<dt></i><code>-h</code> <i>IPMIHOST1,IPMIHOST2,&#8230;</i>, <code>&#8211;hostname</code>=<i>IPMIHOST1[:PORT],IPMIHOST2[:PORT],&#8230;</i></p>
-<dd>Specify the remote host(s) to communicate with. Multiple hostnames may be separated by comma or may be specified in a range format; see HOSTRANGED SUPPORT below. An optional port can be specified with each host, which may be useful in port forwarding or similar situations.</p>
-<dt><code>-u</code> <i>USERNAME</i>, <code>&#8211;username</code>=<i>USERNAME</i></p>
-<dd>Specify the username to use when authenticating with the remote host. If not specified, a null (i.e. anonymous) username is assumed. The user must have atleast USER privileges in order for this tool to operate fully.</p>
-<dt><code>-p</code> <i>PASSWORD</i>, <code>&#8211;password</code>=<i>PASSWORD</i></p>
-<dd>Specify the password to use when authenticationg with the remote host. If not specified, a null password is assumed. Maximum password length is 16 for IPMI 1.5 and 20 for IPMI 2.0.</p>
-<dt><code>-P</code>, <code>&#8211;password-prompt</code></p>
-<dd>Prompt for password to avoid possibility of listing it in process lists.</p>
-<dt><code>-k</code> <i>K_G</i>, <code>&#8211;k-g</code>=<i>K_G</i></p>
-<dd>Specify the K_g BMC key to use when authenticating with the remote host for IPMI 2.0. If not specified, a null key is assumed. To input the key in hexadecimal form, prefix the string with &#8216;0x&#8217;. E.g., the key &#8216;abc&#8217; can be entered with the either the string &#8216;abc&#8217; or the string &#8216;0x616263&#8217;</p>
-<dt><code>-K</code>, <code>&#8211;k-g-prompt</code></p>
-<dd>Prompt for k-g to avoid possibility of listing it in process lists.</p>
-<dt><code>&#8211;session-timeout</code>=<i>MILLISECONDS</i></p>
-<dd>Specify the session timeout in milliseconds. Defaults to 20000 milliseconds (20 seconds) if not specified.</p>
-<dt><code>&#8211;retransmission-timeout</code>=<i>MILLISECONDS</i></p>
-<dd>Specify the packet retransmission timeout in milliseconds. Defaults to 1000 milliseconds (1 second) if not specified. The retransmission timeout cannot be larger than the session timeout.</p>
-<dt><code>-a</code> <i>AUTHENTICATION-TYPE</i>, <code>&#8211;authentication-type</code>=<i>AUTHENTICATION-TYPE</i></p>
-<dd>Specify the IPMI 1.5 authentication type to use. The currently available authentication types are NONE, STRAIGHT_PASSWORD_KEY, MD2, and MD5. Defaults to MD5 if not specified.</p>
-<dt><code>-I</code> <i>CIPHER-SUITE-ID</i>, <code>&#8211;cipher-suite-id</code>=<i>CIPHER-SUITE-ID</i></p>
-<dd>Specify the IPMI 2.0 cipher suite ID to use. The Cipher Suite ID identifies a set of authentication, integrity, and confidentiality algorithms to use for IPMI 2.0 communication. The authentication algorithm identifies the algorithm to use for session setup, the integrity algorithm identifies the algorithm to use for session packet signatures, and the confidentiality algorithm identifies the algorithm to use for payload encryption. Defaults to cipher suite ID 3 if not specified. The following cipher suite ids are currently supported: </p>
+<dt><code>-D</code> <i>IPMIDRIVER</i>, <code>&#8211;driver-type</code>=<i>IPMIDRIVER</i></dt>
+<dd>Specify the driver type to use instead of doing an auto selection. The currently available outofband drivers are LAN and LAN_2_0, which perform IPMI 1.5 and IPMI 2.0 respectively. The currently available inband drivers are KCS, SSIF, OPENIPMI, and SUNBMC.</dd>
+<dt><code>&#8211;disable-auto-probe</code></dt>
+<dd>Do not probe in-band IPMI devices for default settings.</dd>
+<dt><code>&#8211;driver-address</code>=<i>DRIVER-ADDRESS</i></dt>
+<dd>Specify the in-band driver address to be used instead of the probed value. <i>DRIVER-ADDRESS</i> should be prefixed with &quot;0x&quot; for a hex value and &#8216;0&#8217; for an octal value.</dd>
+<dt><code>&#8211;driver-device</code>=<i>DEVICE</i></dt>
+<dd>Specify the in-band driver device path to be used instead of the probed path.</dd>
+<dt><code>&#8211;register-spacing</code>=<i>REGISTER-SPACING</i></dt>
+<dd>Specify the in-band driver register spacing instead of the probed value. Argument is in bytes (i.e. 32bit register spacing = 4)</dd>
+<dt><code>&#8211;target-channel-number</code>=<i>CHANNEL-NUMBERFR</dt>
+<dd>Specify the in-band driver target channel number to send IPMI requests to.</dd>
+<dt></i><code>&#8211;target-slave-address</code>=<i>SLAVE-ADDRESSFR</dt>
+<dd>Specify the in-band driver target slave number to send IPMI requests to.</dd>
+<dt></i><code>-h</code> <i>IPMIHOST1,IPMIHOST2,&#8230;</i>, <code>&#8211;hostname</code>=<i>IPMIHOST1[:PORT],IPMIHOST2[:PORT],&#8230;</i></dt>
+<dd>Specify the remote host(s) to communicate with. Multiple hostnames may be separated by comma or may be specified in a range format; see HOSTRANGED SUPPORT below. An optional port can be specified with each host, which may be useful in port forwarding or similar situations.</dd>
+<dt><code>-u</code> <i>USERNAME</i>, <code>&#8211;username</code>=<i>USERNAME</i></dt>
+<dd>Specify the username to use when authenticating with the remote host. If not specified, a null (i.e. anonymous) username is assumed. The user must have atleast USER privileges in order for this tool to operate fully.</dd>
+<dt><code>-p</code> <i>PASSWORD</i>, <code>&#8211;password</code>=<i>PASSWORD</i></dt>
+<dd>Specify the password to use when authenticationg with the remote host. If not specified, a null password is assumed. Maximum password length is 16 for IPMI 1.5 and 20 for IPMI 2.0.</dd>
+<dt><code>-P</code>, <code>&#8211;password-prompt</code></dt>
+<dd>Prompt for password to avoid possibility of listing it in process lists.</dd>
+<dt><code>-k</code> <i>K_G</i>, <code>&#8211;k-g</code>=<i>K_G</i></dt>
+<dd>Specify the K_g BMC key to use when authenticating with the remote host for IPMI 2.0. If not specified, a null key is assumed. To input the key in hexadecimal form, prefix the string with &#8216;0x&#8217;. E.g., the key &#8216;abc&#8217; can be entered with the either the string &#8216;abc&#8217; or the string &#8216;0x616263&#8217;</dd>
+<dt><code>-K</code>, <code>&#8211;k-g-prompt</code></dt>
+<dd>Prompt for k-g to avoid possibility of listing it in process lists.</dd>
+<dt><code>&#8211;session-timeout</code>=<i>MILLISECONDS</i></dt>
+<dd>Specify the session timeout in milliseconds. Defaults to 20000 milliseconds (20 seconds) if not specified.</dd>
+<dt><code>&#8211;retransmission-timeout</code>=<i>MILLISECONDS</i></dt>
+<dd>Specify the packet retransmission timeout in milliseconds. Defaults to 1000 milliseconds (1 second) if not specified. The retransmission timeout cannot be larger than the session timeout.</dd>
+<dt><code>-a</code> <i>AUTHENTICATION-TYPE</i>, <code>&#8211;authentication-type</code>=<i>AUTHENTICATION-TYPE</i></dt>
+<dd>Specify the IPMI 1.5 authentication type to use. The currently available authentication types are NONE, STRAIGHT_PASSWORD_KEY, MD2, and MD5. Defaults to MD5 if not specified.</dd>
+<dt><code>-I</code> <i>CIPHER-SUITE-ID</i>, <code>&#8211;cipher-suite-id</code>=<i>CIPHER-SUITE-ID</i></dt>
+<dd>Specify the IPMI 2.0 cipher suite ID to use. The Cipher Suite ID identifies a set of authentication, integrity, and confidentiality algorithms to use for IPMI 2.0 communication. The authentication algorithm identifies the algorithm to use for session setup, the integrity algorithm identifies the algorithm to use for session packet signatures, and the confidentiality algorithm identifies the algorithm to use for payload encryption. Defaults to cipher suite ID 3 if not specified. The following cipher suite ids are currently supported: </dd>
 <p> 0 &#8211; Authentication Algorithm = None; Integrity Algorithm = None; Confidentiality Algorithm = None </p>
 <p> 1 &#8211; Authentication Algorithm = HMAC-SHA1; Integrity Algorithm = None; Confidentiality Algorithm = None </p>
 <p> 2 &#8211; Authentication Algorithm = HMAC-SHA1; Integrity Algorithm = HMAC-SHA1-96; Confidentiality Algorithm = None </p>
@@ -62,113 +62,113 @@ description: "ipmi-sel – display SEL entries"
 <p> 15 &#8211; Authentication Algorithm = HMAC-SHA256; Integrity Algorithm = None; Confidentiality Algorithm = None </p>
 <p> 16 &#8211; Authentication Algorithm = HMAC-SHA256; Integrity Algorithm = HMAC_SHA256_128; Confidentiality Algorithm = None </p>
 <p> 17 &#8211; Authentication Algorithm = HMAC-SHA256; Integrity Algorithm = HMAC_SHA256_128; Confidentiality Algorithm = AES-CBC-128</p>
-<dt><code>-l</code> <i>PRIVILEGE-LEVEL</i>, <code>&#8211;privilege-level</code>=<i>PRIVILEGE-LEVEL</i></p>
-<dd>Specify the privilege level to be used. The currently available privilege levels are USER, OPERATOR, and ADMIN. Defaults to OPERATOR if not specified.</p>
-<dt><code>&#8211;config-file</code>=<i>FILE</i></p>
-<dd>Specify an alternate configuration file.</p>
-<dt><code>-W</code> <i>WORKAROUNDS</i>, <code>&#8211;workaround-flags</code>=<i>WORKAROUNDS</i></p>
-<dd>Specify workarounds to vendor compliance issues. Multiple workarounds can be specified separated by commas. A special command line flag of &quot;none&quot;, will indicate no workarounds (may be useful for overriding configured defaults). See WORKAROUNDS below for a list of available workarounds.</p>
-<dt><code>&#8211;debug</code></p>
-<dd>Turn on debugging.</p>
-<dt><code>-?</code>, <code>&#8211;help</code></p>
-<dd>Output a help list and exit.</p>
-<dt><code>&#8211;usage</code></p>
-<dd>Output a usage message and exit.</p>
-<dt><code>-V</code>, <code>&#8211;version</code></p>
-<dd>Output the program version and exit.</dl>
+<dt><code>-l</code> <i>PRIVILEGE-LEVEL</i>, <code>&#8211;privilege-level</code>=<i>PRIVILEGE-LEVEL</i></dt>
+<dd>Specify the privilege level to be used. The currently available privilege levels are USER, OPERATOR, and ADMIN. Defaults to OPERATOR if not specified.</dd>
+<dt><code>&#8211;config-file</code>=<i>FILE</i></dt>
+<dd>Specify an alternate configuration file.</dd>
+<dt><code>-W</code> <i>WORKAROUNDS</i>, <code>&#8211;workaround-flags</code>=<i>WORKAROUNDS</i></dt>
+<dd>Specify workarounds to vendor compliance issues. Multiple workarounds can be specified separated by commas. A special command line flag of &quot;none&quot;, will indicate no workarounds (may be useful for overriding configured defaults). See WORKAROUNDS below for a list of available workarounds.</dd>
+<dt><code>&#8211;debug</code></dt>
+<dd>Turn on debugging.</dd>
+<dt><code>-?</code>, <code>&#8211;help</code></dt>
+<dd>Output a help list and exit.</dd>
+<dt><code>&#8211;usage</code></dt>
+<dd>Output a usage message and exit.</dd>
+<dt><code>-V</code>, <code>&#8211;version</code></dt>
+<dd>Output the program version and exit.</dd></dl>
 <h2>Ipmi-Sel Options</h2>
 <p>The following options are specific to <code>Ipmi-sel.</code></p>
 <dl>
-<dt><code>-v</code></p>
-<dd>Output verbose output. This option will output event direction. Event direction may be useful to differentiate severity between some events. For example, some motherboards may issue an event both when a temperature exceeds a threshold and when it goes back down below it.</p>
-<dt><code>-vv</code></p>
-<dd>Output very verbose output. This option will output additional information than verbose output. Most notably it will output additional hex codes to given information on ambiguous SEL entries. For example, it will output Generator ID hex codes for sensors without names.</p>
-<dt><code>-i</code>, <code>&#8211;info</code></p>
-<dd>Show general information about the SEL.</p>
-<dt><code>&#8211;display</code>=<i>RECORD-IDS-LIST</i></p>
-<dd>Display SEL records by record id. Accepts space or comma separated lists.</p>
-<dt><code>&#8211;exclude-display</code>=<i>RECORD-IDS-LIST</i></p>
-<dd>Exclude display of SEL records by record id. Accepts space or comma separated lists.</p>
-<dt><code>&#8211;display-range</code>=<i>START-END</i></p>
-<dd>Display SEL records from record id START to END.</p>
-<dt><code>&#8211;exclude-display-range</code>=<i>START-END</i></p>
-<dd>Exclude display of SEL records from record id START to END.</p>
-<dt><code>&#8211;date-range</code>=<i>DATE-DATE</i></p>
-<dd>Display SEL records with events occurring in the specified date range. Dates may be specified in MM/DD/YYYY or MM-DD-YYYY format. The month may be specified as a numeral or its abbreviated string name. The current local system time can be specified with &quot;now&quot;. Note that non-timestamped records will not be displayed automatically because they do not possess a timestamp.</p>
-<dt><code>&#8211;exclude-date-range</code>=<i>DATE-DATE</i></p>
-<dd>Exclude display of SEL records with events occurring in the specified date range. Dates may be specified in MM/DD/YYYY or MM-DD-YYYY format. The month may be specified as a numeral or its abbreviated string name. The current local system time can be specified with &quot;now&quot;. Note that non-timestamped records will be displayed automatically because they do not possess a timestamp.</p>
-<dt><code>-t</code> <i>SENSOR-TYPE-LIST</i>, <code>&#8211;sensor-types</code>=<i>SENSOR-TYPE-LIST</i></p>
-<dd>Specify sensor types to show SEL events for. Multiple types can be separated by commas or spaces. A special command line type of &quot;all&quot;, will indicate all types should be shown (may be useful for overriding configured defaults). Users may specify sensor types by string (see <code>&#8211;list-sensor-types</code> below) or by number (decimal or hex).</p>
-<dt><code>-T</code> <i>SENSOR-TYPE-LIST</i>, <code>&#8211;exclude-sensor-types</code>=<i>SENSOR-TYPE-LIST</i></p>
-<dd>Specify sensor types to not show SEL events for. Multiple types can be separated by commas or spaces. A special command line type of &quot;none&quot;, will indicate no types should be excluded (may be useful for overriding configured defaults). Users may specify sensor types by string (see <code>&#8211;list-sensor-types</code> below) or by number (decimal or hex).</p>
-<dt><code>-L</code>, <code>&#8211;list-sensor-types</code></p>
-<dd>List sensor types.</p>
-<dt><code>&#8211;tail</code>=<i>count</i></p>
-<dd>Display approximately the last <i>count</i> SEL records. The display count is calculated by approximating the record ids of the last SEL records. It&#8217;s correctness depends highly on the SEL implementation by the vendor.</p>
-<dt><code>&#8211;clear</code></p>
-<dd>Clear SEL.</p>
-<dt><code>&#8211;post-clear</code></p>
-<dd>Identical to <code>&#8211;clear</code>, except the SEL clearning will be performed after SEL event records are displayed. This option is useful for scripting if users intend to log SEL events to another log, then immediately clear SEL. Unlike calling <code>&#8211;clear</code> in another execution of <code>ipmi-sel,</code> this option will use SEL reservations to notify the user if a SEL change has occurred while displaying and clearing the SEL. This can protect users from a race, where a new SEL event is unknowingly generated before clearing the SEL. Note that SEL reservations are optionally implemented by vendors and may not be available on all machines.</p>
-<dt><code>&#8211;delete</code>=<i>RECORD-IDS-LIST</i></p>
-<dd>Delete records by record id in the SEL. Accepts space or comma separated lists.</p>
-<dt><code>&#8211;delete-range</code>=<i>START-END</i></p>
-<dd>Delete record ids from START to END in the SEL.</p>
-<dt><code>&#8211;system-event-only</code></p>
-<dd>Output only system event records (i.e. don&#8217;t output OEM records).</p>
-<dt><code>&#8211;oem-event-only</code></p>
-<dd>Output only OEM event records (i.e. don&#8217;t output system event records).</p>
-<dt><code>&#8211;output-manufacturer-id</code></p>
-<dd>For OEM SEL record types, output the manufacturer ID along with event data when available.</p>
-<dt><code>&#8211;output-event-state</code></p>
-<dd>Output event state in output. This will add an additional output reporting if an event should be viewed as NOMINAL, WARNING, or CRITICAL. The event state is an interpreted value based on the configuration file /etc/freeipmi//freeipmi_interpret_sel.conf and the event direction. See <code><a href="/docs/linux/man/5-freeipmi_interpret_sel-conf/">freeipmi_interpret_sel.conf</a>(5)</code> for more information.</p>
-<dt><code>&#8211;event-state-config-file</code>=<i>FILE</i></p>
-<dd>Specify an alternate event state configuration file. Option ignored if <code>&#8211;output-event-state</code> not specified.</p>
-<dt><code>&#8211;hex-dump</code></p>
-<dd>Hex-dump SEL entries.</p>
-<dt><code>&#8211;interpret-oem-data</code></p>
-<dd>Attempt to interpret OEM data, such as event data, sensor readings, or general extra info, etc. If an OEM interpretation is not available, the default output will be generated. Correctness of OEM interpretations cannot be guaranteed due to potential changes OEM vendors may make in products, firmware, etc. See OEM INTERPRETATION below for confirmed supported motherboard interpretations.</p>
-<dt><code>&#8211;output-oem-event-strings</code></p>
-<dd>Some motherboards support an IPMI OEM extension that returns the string output for a system event. Such string output may be beneficial for determining the meaning behind OEM specific events. This option will use the OEM event string to describe all system events in the <code>ipmi-sel</code> output. This option differs from <i>&#8211;interpret-oem-data</i> option in that all system events will output the vendor supplied event string, not just events that are OEM specific. The event string may be very different from the normal FreeIPMI event string output. If an OEM event strings is not available, the default output will be output. This option is confirmed to work for Fujitsu iRMC S1 and iRMC S2 systems.</p>
-<dt><code>&#8211;entity-sensor-names</code></p>
-<dd>Output sensor names prefixed with their entity id and instance number when appropriate. This may be necessary on some motherboards to help identify what sensors are referencing. For example, a motherboard may have multiple sensors named &#8216;TEMP&#8217;. The entity id and instance number may help clarify which sensor refers to &quot;Processor 1&quot; vs. &quot;Processor 2&quot;.</p>
-<dt><code>&#8211;no-sensor-type-output</code></p>
-<dd>Do not show sensor type output for each entry. On many systems, the sensor type is redundant to the name of the sensor. This can especially be true if <code>&#8211;entity-sensor-names</code> is specified. If the sensor name is sufficient, or if the sensor type is of no interest to the user, this option can be specified to condense output.</p>
-<dt><code>&#8211;comma-separated-output</p>
-<dd>Output fields in comma separated format.</p>
-<dt>&#8211;no-header-output</p>
-<dd>Do not output column headers. May be useful in scripting.</p>
-<dt>&#8211;non-abbreviated-units</code></p>
-<dd>Output non-abbreviated units (e.g. &#8216;Amps&#8217; instead of &#8216;A&#8217;). May aid in disambiguation of units (e.g. &#8216;C&#8217; for Celsius or Coulombs).</p>
-<dt><code>&#8211;legacy-output</code></p>
-<dd>Output in legacy format. Newer options may not be applicable to legacy output.</dl>
+<dt><code>-v</code></dt>
+<dd>Output verbose output. This option will output event direction. Event direction may be useful to differentiate severity between some events. For example, some motherboards may issue an event both when a temperature exceeds a threshold and when it goes back down below it.</dd>
+<dt><code>-vv</code></dt>
+<dd>Output very verbose output. This option will output additional information than verbose output. Most notably it will output additional hex codes to given information on ambiguous SEL entries. For example, it will output Generator ID hex codes for sensors without names.</dd>
+<dt><code>-i</code>, <code>&#8211;info</code></dt>
+<dd>Show general information about the SEL.</dd>
+<dt><code>&#8211;display</code>=<i>RECORD-IDS-LIST</i></dt>
+<dd>Display SEL records by record id. Accepts space or comma separated lists.</dd>
+<dt><code>&#8211;exclude-display</code>=<i>RECORD-IDS-LIST</i></dt>
+<dd>Exclude display of SEL records by record id. Accepts space or comma separated lists.</dd>
+<dt><code>&#8211;display-range</code>=<i>START-END</i></dt>
+<dd>Display SEL records from record id START to END.</dd>
+<dt><code>&#8211;exclude-display-range</code>=<i>START-END</i></dt>
+<dd>Exclude display of SEL records from record id START to END.</dd>
+<dt><code>&#8211;date-range</code>=<i>DATE-DATE</i></dt>
+<dd>Display SEL records with events occurring in the specified date range. Dates may be specified in MM/DD/YYYY or MM-DD-YYYY format. The month may be specified as a numeral or its abbreviated string name. The current local system time can be specified with &quot;now&quot;. Note that non-timestamped records will not be displayed automatically because they do not possess a timestamp.</dd>
+<dt><code>&#8211;exclude-date-range</code>=<i>DATE-DATE</i></dt>
+<dd>Exclude display of SEL records with events occurring in the specified date range. Dates may be specified in MM/DD/YYYY or MM-DD-YYYY format. The month may be specified as a numeral or its abbreviated string name. The current local system time can be specified with &quot;now&quot;. Note that non-timestamped records will be displayed automatically because they do not possess a timestamp.</dd>
+<dt><code>-t</code> <i>SENSOR-TYPE-LIST</i>, <code>&#8211;sensor-types</code>=<i>SENSOR-TYPE-LIST</i></dt>
+<dd>Specify sensor types to show SEL events for. Multiple types can be separated by commas or spaces. A special command line type of &quot;all&quot;, will indicate all types should be shown (may be useful for overriding configured defaults). Users may specify sensor types by string (see <code>&#8211;list-sensor-types</code> below) or by number (decimal or hex).</dd>
+<dt><code>-T</code> <i>SENSOR-TYPE-LIST</i>, <code>&#8211;exclude-sensor-types</code>=<i>SENSOR-TYPE-LIST</i></dt>
+<dd>Specify sensor types to not show SEL events for. Multiple types can be separated by commas or spaces. A special command line type of &quot;none&quot;, will indicate no types should be excluded (may be useful for overriding configured defaults). Users may specify sensor types by string (see <code>&#8211;list-sensor-types</code> below) or by number (decimal or hex).</dd>
+<dt><code>-L</code>, <code>&#8211;list-sensor-types</code></dt>
+<dd>List sensor types.</dd>
+<dt><code>&#8211;tail</code>=<i>count</i></dt>
+<dd>Display approximately the last <i>count</i> SEL records. The display count is calculated by approximating the record ids of the last SEL records. It&#8217;s correctness depends highly on the SEL implementation by the vendor.</dd>
+<dt><code>&#8211;clear</code></dt>
+<dd>Clear SEL.</dd>
+<dt><code>&#8211;post-clear</code></dt>
+<dd>Identical to <code>&#8211;clear</code>, except the SEL clearning will be performed after SEL event records are displayed. This option is useful for scripting if users intend to log SEL events to another log, then immediately clear SEL. Unlike calling <code>&#8211;clear</code> in another execution of <code>ipmi-sel,</code> this option will use SEL reservations to notify the user if a SEL change has occurred while displaying and clearing the SEL. This can protect users from a race, where a new SEL event is unknowingly generated before clearing the SEL. Note that SEL reservations are optionally implemented by vendors and may not be available on all machines.</dd>
+<dt><code>&#8211;delete</code>=<i>RECORD-IDS-LIST</i></dt>
+<dd>Delete records by record id in the SEL. Accepts space or comma separated lists.</dd>
+<dt><code>&#8211;delete-range</code>=<i>START-END</i></dt>
+<dd>Delete record ids from START to END in the SEL.</dd>
+<dt><code>&#8211;system-event-only</code></dt>
+<dd>Output only system event records (i.e. don&#8217;t output OEM records).</dd>
+<dt><code>&#8211;oem-event-only</code></dt>
+<dd>Output only OEM event records (i.e. don&#8217;t output system event records).</dd>
+<dt><code>&#8211;output-manufacturer-id</code></dt>
+<dd>For OEM SEL record types, output the manufacturer ID along with event data when available.</dd>
+<dt><code>&#8211;output-event-state</code></dt>
+<dd>Output event state in output. This will add an additional output reporting if an event should be viewed as NOMINAL, WARNING, or CRITICAL. The event state is an interpreted value based on the configuration file /etc/freeipmi//freeipmi_interpret_sel.conf and the event direction. See <code><a href="/docs/linux/man/5-freeipmi_interpret_sel-conf/">freeipmi_interpret_sel.conf</a>(5)</code> for more information.</dd>
+<dt><code>&#8211;event-state-config-file</code>=<i>FILE</i></dt>
+<dd>Specify an alternate event state configuration file. Option ignored if <code>&#8211;output-event-state</code> not specified.</dd>
+<dt><code>&#8211;hex-dump</code></dt>
+<dd>Hex-dump SEL entries.</dd>
+<dt><code>&#8211;interpret-oem-data</code></dt>
+<dd>Attempt to interpret OEM data, such as event data, sensor readings, or general extra info, etc. If an OEM interpretation is not available, the default output will be generated. Correctness of OEM interpretations cannot be guaranteed due to potential changes OEM vendors may make in products, firmware, etc. See OEM INTERPRETATION below for confirmed supported motherboard interpretations.</dd>
+<dt><code>&#8211;output-oem-event-strings</code></dt>
+<dd>Some motherboards support an IPMI OEM extension that returns the string output for a system event. Such string output may be beneficial for determining the meaning behind OEM specific events. This option will use the OEM event string to describe all system events in the <code>ipmi-sel</code> output. This option differs from <i>&#8211;interpret-oem-data</i> option in that all system events will output the vendor supplied event string, not just events that are OEM specific. The event string may be very different from the normal FreeIPMI event string output. If an OEM event strings is not available, the default output will be output. This option is confirmed to work for Fujitsu iRMC S1 and iRMC S2 systems.</dd>
+<dt><code>&#8211;entity-sensor-names</code></dt>
+<dd>Output sensor names prefixed with their entity id and instance number when appropriate. This may be necessary on some motherboards to help identify what sensors are referencing. For example, a motherboard may have multiple sensors named &#8216;TEMP&#8217;. The entity id and instance number may help clarify which sensor refers to &quot;Processor 1&quot; vs. &quot;Processor 2&quot;.</dd>
+<dt><code>&#8211;no-sensor-type-output</code></dt>
+<dd>Do not show sensor type output for each entry. On many systems, the sensor type is redundant to the name of the sensor. This can especially be true if <code>&#8211;entity-sensor-names</code> is specified. If the sensor name is sufficient, or if the sensor type is of no interest to the user, this option can be specified to condense output.</dd>
+<dt><code>&#8211;comma-separated-output</dt>
+<dd>Output fields in comma separated format.</dd>
+<dt>&#8211;no-header-output</dt>
+<dd>Do not output column headers. May be useful in scripting.</dd>
+<dt>&#8211;non-abbreviated-units</code></dt>
+<dd>Output non-abbreviated units (e.g. &#8216;Amps&#8217; instead of &#8216;A&#8217;). May aid in disambiguation of units (e.g. &#8216;C&#8217; for Celsius or Coulombs).</dd>
+<dt><code>&#8211;legacy-output</code></dt>
+<dd>Output in legacy format. Newer options may not be applicable to legacy output.</dd></dl>
 <h2>Sdr Cache Options</h2>
 <p>This tool requires access to the sensor data repository (SDR) cache for general operation. By default, SDR data will be downloaded and cached on the local machine. The following options apply to the SDR cache.</p>
 <dl>
-<dt><code>-f</code>, <code>&#8211;flush-cache</code></p>
-<dd>Flush a cached version of the sensor data repository (SDR) cache. The SDR is typically cached for faster subsequent access. However, it may need to be flushed and re-generated if the SDR has been updated on a system.</p>
-<dt><code>-Q</code>, <code>&#8211;quiet-cache</code></p>
-<dd>Do not output information about cache creation/deletion. May be useful in scripting.</p>
-<dt><code>&#8211;sdr-cache-recreate</code></p>
-<dd>If the SDR cache is out of date or invalid, automatically recreate the sensor data repository (SDR) cache. This option may be useful for scripting purposes.</p>
-<dt><code>&#8211;sdr-cache-file</code>=<i>FILE</i></p>
-<dd>Specify a specific sensor data repository (SDR) cache file to be stored or read from. If this option is used when multiple hosts are specified, the same SDR cache file will be used for all hosts.</p>
-<dt><code>&#8211;sdr-cache-directory</code>=<i>DIRECTORY</i></p>
-<dd>Specify an alternate directory for sensor data repository (SDR) caches to be stored or read from. Defaults to the home directory if not specified.</p>
-<dt><code>&#8211;ignore-sdr-cache</code></p>
-<dd>Ignore SDR cache related processing. May lead to incomplete or less useful information being output, however it will allow functionality for systems without SDRs or when the correct SDR cannot be loaded.</dl>
+<dt><code>-f</code>, <code>&#8211;flush-cache</code></dt>
+<dd>Flush a cached version of the sensor data repository (SDR) cache. The SDR is typically cached for faster subsequent access. However, it may need to be flushed and re-generated if the SDR has been updated on a system.</dd>
+<dt><code>-Q</code>, <code>&#8211;quiet-cache</code></dt>
+<dd>Do not output information about cache creation/deletion. May be useful in scripting.</dd>
+<dt><code>&#8211;sdr-cache-recreate</code></dt>
+<dd>If the SDR cache is out of date or invalid, automatically recreate the sensor data repository (SDR) cache. This option may be useful for scripting purposes.</dd>
+<dt><code>&#8211;sdr-cache-file</code>=<i>FILE</i></dt>
+<dd>Specify a specific sensor data repository (SDR) cache file to be stored or read from. If this option is used when multiple hosts are specified, the same SDR cache file will be used for all hosts.</dd>
+<dt><code>&#8211;sdr-cache-directory</code>=<i>DIRECTORY</i></dt>
+<dd>Specify an alternate directory for sensor data repository (SDR) caches to be stored or read from. Defaults to the home directory if not specified.</dd>
+<dt><code>&#8211;ignore-sdr-cache</code></dt>
+<dd>Ignore SDR cache related processing. May lead to incomplete or less useful information being output, however it will allow functionality for systems without SDRs or when the correct SDR cannot be loaded.</dd></dl>
 <h2>Hostranged Options</h2>
 <p>The following options manipulate hostranged output. See HOSTRANGED SUPPORT below for additional information on hostranges.</p>
 <dl>
-<dt><code>-B</code>, <code>&#8211;buffer-output</code></p>
-<dd>Buffer hostranged output. For each node, buffer standard output until the node has completed its IPMI operation. When specifying this option, data may appear to output slower to the user since the the entire IPMI operation must complete before any data can be output. See HOSTRANGED SUPPORT below for additional information.</p>
-<dt><code>-C</code>, <code>&#8211;consolidate-output</code></p>
-<dd>Consolidate hostranged output. The complete standard output from every node specified will be consolidated so that nodes with identical output are not output twice. A header will list those nodes with the consolidated output. When this option is specified, no output can be seen until the IPMI operations to all nodes has completed. If the user breaks out of the program early, all currently consolidated output will be dumped. See HOSTRANGED SUPPORT below for additional information.</p>
-<dt><code>-F</code> <i>NUM</i>, <code>&#8211;fanout</code>=<i>NUM</i></p>
-<dd>Specify multiple host fanout. A &quot;sliding window&quot; (or fanout) algorithm is used for parallel IPMI communication so that slower nodes or timed out nodes will not impede parallel communication. The maximum number of threads available at the same time is limited by the fanout. The default is 64.</p>
-<dt><code>-E</code>, <code>&#8211;eliminate</code></p>
-<dd>Eliminate hosts determined as undetected by <code>ipmidetect.</code> This attempts to remove the common issue of hostranged execution timing out due to several nodes being removed from service in a large cluster. The <code>ipmidetectd</code> daemon must be running on the node executing the command.</p>
-<dt><code>&#8211;always-prefix</code></p>
-<dd>Always prefix output, even if only one host is specified or communicating in-band. This option is primarily useful for scripting purposes. Option will be ignored if specified with the <code>-C</code> option.</dl>
+<dt><code>-B</code>, <code>&#8211;buffer-output</code></dt>
+<dd>Buffer hostranged output. For each node, buffer standard output until the node has completed its IPMI operation. When specifying this option, data may appear to output slower to the user since the the entire IPMI operation must complete before any data can be output. See HOSTRANGED SUPPORT below for additional information.</dd>
+<dt><code>-C</code>, <code>&#8211;consolidate-output</code></dt>
+<dd>Consolidate hostranged output. The complete standard output from every node specified will be consolidated so that nodes with identical output are not output twice. A header will list those nodes with the consolidated output. When this option is specified, no output can be seen until the IPMI operations to all nodes has completed. If the user breaks out of the program early, all currently consolidated output will be dumped. See HOSTRANGED SUPPORT below for additional information.</dd>
+<dt><code>-F</code> <i>NUM</i>, <code>&#8211;fanout</code>=<i>NUM</i></dt>
+<dd>Specify multiple host fanout. A &quot;sliding window&quot; (or fanout) algorithm is used for parallel IPMI communication so that slower nodes or timed out nodes will not impede parallel communication. The maximum number of threads available at the same time is limited by the fanout. The default is 64.</dd>
+<dt><code>-E</code>, <code>&#8211;eliminate</code></dt>
+<dd>Eliminate hosts determined as undetected by <code>ipmidetect.</code> This attempts to remove the common issue of hostranged execution timing out due to several nodes being removed from service in a large cluster. The <code>ipmidetectd</code> daemon must be running on the node executing the command.</dd>
+<dt><code>&#8211;always-prefix</code></dt>
+<dd>Always prefix output, even if only one host is specified or communicating in-band. This option is primarily useful for scripting purposes. Option will be ignored if specified with the <code>-C</code> option.</dd></dl>
 <h2>Hostranged Support</h2>
 <p>Multiple hosts can be input either as an explicit comma separated lists of hosts or a range of hostnames in the general form: prefix[n-m,l-k,&#8230;], where n &lt; m and l &lt; k, etc. The later form should not be confused with regular expression character classes (also denoted by []). For example, foo[19] does not represent foo1 or foo9, but rather represents a degenerate range: foo19. </p>
 <p> This range syntax is meant only as a convenience on clusters with a prefixNN naming convention and specification of ranges should not be considered necessary &#8212; the list foo1,foo9 could be specified as such, or by the range foo[1,9]. </p>

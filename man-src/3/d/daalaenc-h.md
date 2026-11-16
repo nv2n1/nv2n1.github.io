@@ -66,25 +66,25 @@ description: "daala/daalaenc.h –"
  You must link to libdaalabase and libdaalaenc if you use any of the functions in this section. </p>
 <p> The functions are listed in the order they are used in a typical encode. The basic steps are:</p>
 <dl COMPACT>
-<dt>&bull;</p>
-<dd>Fill in a <code>daala_info</code> structure with details on the format of the video you wish to encode.</p>
-<dt>&bull;</p>
-<dd>Allocate a <code>daala_enc_ctx</code> handle with daala_encode_alloc().</p>
-<dt>&bull;</p>
-<dd>Perform any additional encoder configuration required with <code>daala_encode_ctl()</code>.</p>
-<dt>&bull;</p>
-<dd>Repeatedly call daala_encode_flusheader() to retrieve all the header packets.</p>
-<dt>&bull;</p>
-<dd>For each uncompressed frame:</p>
-<dt> &bull;</p>
-<dd>Submit the compressed frame via <code>daala_encode_img_in()</code>.</p>
-<dt> &bull;</p>
-<dd>Repeatedly call <code>daala_encode_packet_out()</code> to retrieve any video data packets that are ready.</dl>
+<dt>&bull;</dt>
+<dd>Fill in a <code>daala_info</code> structure with details on the format of the video you wish to encode.</dd>
+<dt>&bull;</dt>
+<dd>Allocate a <code>daala_enc_ctx</code> handle with daala_encode_alloc().</dd>
+<dt>&bull;</dt>
+<dd>Perform any additional encoder configuration required with <code>daala_encode_ctl()</code>.</dd>
+<dt>&bull;</dt>
+<dd>Repeatedly call daala_encode_flusheader() to retrieve all the header packets.</dd>
+<dt>&bull;</dt>
+<dd>For each uncompressed frame:</dd>
+<dt> &bull;</dt>
+<dd>Submit the compressed frame via <code>daala_encode_img_in()</code>.</dd>
+<dt> &bull;</dt>
+<dd>Repeatedly call <code>daala_encode_packet_out()</code> to retrieve any video data packets that are ready.</dd></dl>
 <dl COMPACT>
-<dt>&bull;</p>
-<dd>Call <code>daala_comment_clear()</code> to release all comments allocated.</p>
-<dt>&bull;</p>
-<dd>Call <code>daala_encode_free()</code> to release all encoder memory.</dl>
+<dt>&bull;</dt>
+<dd>Call <code>daala_comment_clear()</code> to release all comments allocated.</dd>
+<dt>&bull;</dt>
+<dd>Call <code>daala_encode_free()</code> to release all encoder memory.</dd></dl>
 <p> <code>daala_enc_ctx</code> * <code>daala_encode_create</code> (const <code>daala_info</code> *info)<br />
  <i>Allocates and initializes an encoder instance. </i><br />
  int <code>daala_encode_ctl</code> (<code>daala_enc_ctx</code> *enc, int req, void *buf, size_t buf_sz)<br />

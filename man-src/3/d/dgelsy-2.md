@@ -50,10 +50,10 @@ description: "dgelsy.f –"
  o Matrix B (the right hand side) is updated with Blas-3.
  o The permutation of matrix B (the right hand side) is faster and
  more simple.</pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>M</i> </p>
+<dd><i>M</i> </dd>
 <pre> M is INTEGER
  The number of rows of the matrix A. M &gt;= 0.</pre>
 <p><i>N</i> </p>
@@ -120,19 +120,20 @@ description: "dgelsy.f –"
 <p>&nbsp;<wbr></dl>
 <p> <code>Author:</code></p>
 <dl COMPACT>
-<dd>Univ. of Tennessee </p>
+<dd>Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl COMPACT>
-<dd>November 2011</dl>
+<dd>November 2011</dd></dl>
 <p> <code>Contributors: </code></p>
 <dl COMPACT>
-<dd>A. Petitet, Computer Science Dept., Univ. of Tenn., Knoxville, USA </p>
+<dd>A. Petitet, Computer Science Dept., Univ. of Tenn., Knoxville, USA </dd>
 <p>&nbsp;<wbr>E. Quintana-Orti, Depto. de Informatica, Universidad Jaime I, Spain&nbsp;<wbr> </p>
 <p>&nbsp;<wbr>G. Quintana-Orti, Depto. de Informatica, Universidad Jaime I, Spain&nbsp;<wbr> </p>
 <p>&nbsp;<wbr></dl>
 <p> Definition at line 204 of file dgelsy.f.</p>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for LAPACK from the source code.</p>
+</p>

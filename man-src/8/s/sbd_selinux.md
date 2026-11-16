@@ -85,8 +85,8 @@ description: "sbd_selinux – Security Enhanced Linux Policy for the sbd process
 <p> <code>sbd_unit_file_t</code> </p>
 <p> &#8211; Set files with the sbd_unit_file_t type, if you want to treat the files as sbd unit content. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/usr/lib/systemd/system/sbd.service, /usr/lib/systemd/system/sbd_remote.service </p>
+<dt>Paths:</dt>
+<dd>/usr/lib/systemd/system/sbd.service, /usr/lib/systemd/system/sbd_remote.service </dd>
 </dl>
 <p> <code>sbd_var_run_t</code> </p>
 <p> &#8211; Set files with the sbd_var_run_t type, if you want to store the sbd files under the /run or /var/run directory. </p>

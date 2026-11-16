@@ -12,36 +12,22 @@ std::chrono::format - std::chrono::format
 
 <pre><code>template &lt;class CharT, class Streamable&gt;
 (1)(since C++ 20)
-
     std::basic_string&lt;CharT&gt; format(const CharT *fmt, const Streamable &amp;s);
-
 template &lt;class CharT, class Streamable&gt;
 (2)(since C++ 20)
-
     std::basic_string&lt;CharT&gt; format(const std::locale &amp;loc, const CharT *fmt, const Streamable &amp;s);
-
 template &lt;class CharT, class Traits, class Alloc, class Streamable&gt;
-
 std::basic_string&lt;CharT, Traits, Alloc&gt; format(const std::basic_string&lt;CharT, Traits, Alloc&gt; &amp;fmt, (3)(since C++ 20)
-
                                                                                                        const Streamable &amp;s);
-
 template &lt;class CharT, class Traits, class Alloc, class Streamable&gt;
-
 std::basic_string&lt;CharT, Traits, Alloc&gt; format(const std::locale &amp;loc, (4)(since C++ 20)
-
                                                                            const std::basic_string&lt;CharT, Traits, Alloc&gt; &amp;fmt,
-
                                                const Streamable &amp;s);</code></pre> 
 Formats the streamable object s using the format string fmt and the locale loc (if provided). 
 These function templates behave as if they <pre><code>*construct a std::basic_ostringstream&lt;CharT, Traits, Alloc&gt; os(where Traits is std::char_traits&lt;CharT&gt; and Alloc is std::allocator&lt;CharT&gt; for (1, 2));
-
 *execute os.exceptions(std::ios_base::failbit | std::ios_base::badbit);
-
 * call os.imbue(loc) (for overloads (2,4) only);
-
 *call to_stream(os, fmt, s)(for (1, 2)) or to_stream(os, fmt.c_str(), s)(for (3, 4)), where to_stream is called unqualified to enable argument - dependent_lookup;
-
 *then return os.str().</code></pre> 
 1-2) These overloads only participate in overload resolution if to_stream(std::declval&lt;std::basic_ostream&lt;CharT&gt;&amp;&gt;(), fmt, s) is a valid expression. 
 3-4) These overloads only participate in overload resolution if to_stream(std::declval&lt;std::basic_ostringstream&lt;CharT, Traits, Alloc&gt;&amp;&gt;(), fmt.c_str(), s) is a valid expression. 

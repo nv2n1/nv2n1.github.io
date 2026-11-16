@@ -50,15 +50,12 @@ A supermin appliance is a very specialized, highly minimized appliance which can
 
 A supermin appliance consists of two files:
 <dl><dt>supermin.img
-<dd>The image file (conventionally called <tt>&quot;supermin.img&quot;</tt>, but you can call it anything you want) is the skeleton initramfs. This is like an initramfs built by <i><a HREF="/docs/linux/man/8-febootstrap-to-initramfs/">febootstrap-to-initramfs</a></i>(8), but all libraries and binaries are removed.
-<dt>hostfiles.txt
-<dd>This plain text file contains a list of files that we need to add back from the host at runtime. ie. It's the list of libraries and binaries that we removed when we constructed <tt>&quot;supermin.img&quot;</tt>. 
-
+</dt><dd>The image file (conventionally called <tt>&quot;supermin.img&quot;</tt>, but you can call it anything you want) is the skeleton initramfs. This is like an initramfs built by <i><a HREF="/docs/linux/man/8-febootstrap-to-initramfs/">febootstrap-to-initramfs</a></i>(8), but all libraries and binaries are removed.
+</dd><dt>hostfiles.txt
+</dt><dd>This plain text file contains a list of files that we need to add back from the host at runtime. ie. It's the list of libraries and binaries that we removed when we constructed <tt>&quot;supermin.img&quot;</tt>. 
  This file usually contains wildcards. This is because we don't want the file to break on minor updates to libraries, so for example instead of listing 
-
  <pre> lib64/libreadline.so.6.1.2</pre>the file contains 
-
- <pre> lib64/libreadline.so.6.*</pre></dl>
+ <pre> lib64/libreadline.so.6.*</pre></dd></dl>
 
 <h3><font SIZE="-1">RECONSTRUCTING</font> <font SIZE="-1">AN</font> <font SIZE="-1">INITRAMFS</font> <font SIZE="-1">FROM</font> A <font SIZE="-1">SUPERMIN</font> <font SIZE="-1">APPLIANCE</font></h3>
 

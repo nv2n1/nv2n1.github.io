@@ -16,17 +16,17 @@ mongoc_gridfs_file_writev (mongoc_gridfs_file_t *file,
  uint32_t timeout_msec);</pre>
 <h2>Parameters</h2>
 <dl COMPACT>
-<dt><code>file</code></p>
-<dd>A <code>mongoc_gridfs_file_t</code> \&amp;.</dl>
+<dt><code>file</code></dt>
+<dd>A <code>mongoc_gridfs_file_t</code> \&amp;.</dd></dl>
 <dl COMPACT>
-<dt><code>iov</code></p>
-<dd>An array of <code>mongoc_iovec_t</code> \&amp;.</dl>
+<dt><code>iov</code></dt>
+<dd>An array of <code>mongoc_iovec_t</code> \&amp;.</dd></dl>
 <dl COMPACT>
-<dt><code>iovcnt</code></p>
-<dd>The number of elements in <code>iov</code> \&amp;.</dl>
+<dt><code>iovcnt</code></dt>
+<dd>The number of elements in <code>iov</code> \&amp;.</dd></dl>
 <dl COMPACT>
-<dt><code>timeout_msec</code></p>
-<dd>A uint32_t with the timeout in milliseconds.</dl>
+<dt><code>timeout_msec</code></dt>
+<dd>A uint32_t with the timeout in milliseconds.</dd></dl>
 <h2>Description</h2>
 <p>Performs a gathered write to the underlying gridfs file. </p>
 <p> If timeout is reached, then -1 is returned and errno is set to ETIMEDOUT. </p>

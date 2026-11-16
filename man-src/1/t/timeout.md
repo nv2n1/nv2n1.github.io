@@ -16,36 +16,28 @@ description: "timeout – run a command with a time limit"
 <p> Start COMMAND, and kill it if still running after DURATION. </p>
 <p> Mandatory arguments to long options are mandatory for short options too.</p>
 <dl>
-<dt> <code>&#8211;preserve-status</code></p>
+<dt> <code>&#8211;preserve-status</code></dt>
+<dd>exit with the same status as COMMAND, even when the</dd>
 <dt>
-<dd>
-<dd>exit with the same status as COMMAND, even when the</p>
+</dt><dd> command times out</dd>
+<dt> <code>&#8211;foreground</code></dt>
+<dd>when not running timeout directly from a shell prompt,</dd>
 <dt>
-<dd> command times out</p>
-<dt> <code>&#8211;foreground</code></p>
+</dt><dd> allow COMMAND to read from the TTY and get TTY signals; in this mode, children of COMMAND will not be timed out</dd>
+<dt> <code>-k</code>, <code>&#8211;kill-after</code>=<i>,DURATION/</i></dt>
+<dd>also send a KILL signal if COMMAND is still running</dd>
 <dt>
-<dd>
-<dd>when not running timeout directly from a shell prompt,</p>
+</dt><dd> this long after the initial signal was sent</dd>
+<dt> <code>-s</code>, <code>&#8211;signal</code>=<i>,SIGNAL/</i></dt>
+<dd>specify the signal to be sent on timeout;</dd>
 <dt>
-<dd> allow COMMAND to read from the TTY and get TTY signals; in this mode, children of COMMAND will not be timed out</p>
-<dt> <code>-k</code>, <code>&#8211;kill-after</code>=<i>,DURATION/</i></p>
-<dt>
-<dd>
-<dd>also send a KILL signal if COMMAND is still running</p>
-<dt>
-<dd> this long after the initial signal was sent</p>
-<dt> <code>-s</code>, <code>&#8211;signal</code>=<i>,SIGNAL/</i></p>
-<dt>
-<dd>
-<dd>specify the signal to be sent on timeout;</p>
-<dt>
-<dd> SIGNAL may be a name like &#8216;HUP&#8217; or a number; see &#8216;kill <code>-l</code>&#8216; for a list of signals</p>
-<dt><code>-v</code>, <code>&#8211;verbose</code></p>
-<dd> diagnose to stderr any signal sent upon timeout</p>
-<dt><code>&#8211;help</code></p>
-<dd> display this help and exit</p>
-<dt><code>&#8211;version</code></p>
-<dd> output version information and exit</dl>
+</dt><dd> SIGNAL may be a name like &#8216;HUP&#8217; or a number; see &#8216;kill <code>-l</code>&#8216; for a list of signals</dd>
+<dt><code>-v</code>, <code>&#8211;verbose</code></dt>
+<dd> diagnose to stderr any signal sent upon timeout</dd>
+<dt><code>&#8211;help</code></dt>
+<dd> display this help and exit</dd>
+<dt><code>&#8211;version</code></dt>
+<dd> output version information and exit</dd></dl>
 <p> DURATION is a floating point number with an optional suffix: &#8216;s&#8217; for seconds (the default), &#8216;m&#8217; for minutes, &#8216;h&#8217; for hours or &#8216;d&#8217; for days. A duration of 0 disables the associated timeout. </p>
 <p> If the command times out, and <code>&#8211;preserve-status</code> is not set, then exit with status 124. Otherwise, exit with the status of COMMAND. If no signal is specified, send the TERM signal upon timeout. The TERM signal kills any process that does not block or catch that signal. It may be necessary to use the KILL (9) signal, since this signal cannot be caught, in which case the exit status is 128+9 rather than 124.</p>
 <h2>BUGS</h2>

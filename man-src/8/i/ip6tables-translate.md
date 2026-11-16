@@ -12,14 +12,14 @@ description: "iptables-translate — translation tool to migrate from iptables t
 <h2>Description</h2>
 <p>There is a set of tools to help the system administrator translate a given ruleset from <code><a href="/docs/linux/man/8-iptables/">iptables</a>(8)</code> and <code><a href="/docs/linux/man/8-ip6tables/">ip6tables</a>(8)</code> to <code><a href="/docs/linux/man/8-nftables/">nftables</a>(8)</code>. The available commands are:</p>
 <dl>
-<dt>&bull;</p>
-<dd>iptables-translate</p>
-<dt>&bull;</p>
-<dd>iptables-restore-translate</p>
-<dt>&bull;</p>
-<dd>ip6tables-translate</p>
-<dt>&bull;</p>
-<dd>ip6tables-restore-translate </p>
+<dt>&bull;</dt>
+<dd>iptables-translate</dd>
+<dt>&bull;</dt>
+<dd>iptables-restore-translate</dd>
+<dt>&bull;</dt>
+<dd>ip6tables-translate</dd>
+<dt>&bull;</dt>
+<dd>ip6tables-restore-translate </dd>
 <h2>Usage</h2>
 <p>They take as input the original <code><a href="/docs/linux/man/8-iptables/">iptables</a>(8)</code>/<code><a href="/docs/linux/man/8-ip6tables/">ip6tables</a>(8)</code> syntax and output the native <code><a href="/docs/linux/man/8-nftables/">nftables</a>(8)</code> syntax. </p>
 <p> The <code>iptables-restore-translate</code> tool reads a ruleset in the syntax produced by <code><a href="/docs/linux/man/8-iptables-save/">iptables-save</a>(8)</code>. Likewise, the <code>ip6tables-restore-translate</code> tool reads one produced by <code><a href="/docs/linux/man/8-ip6tables-save/">ip6tables-save</a>(8)</code>. No ruleset modifications occur, these tools are text converters only. </p>
@@ -73,3 +73,4 @@ table ip filter {
 <p>The nftables framework is written by the Netfilter project (<a rel="nofollow" href="https://www.netfilter.org">https://www.netfilter.org</a>). </p>
 <p> This manual page was written by Arturo Borrero Gonzalez &lt;arturo [at] netfilter.org&gt;. </p>
 <p> This documentation is free/libre under the terms of the GPLv2+.</p>
+</dl>

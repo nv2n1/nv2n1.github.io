@@ -15,7 +15,7 @@ snd_pcm_lib_preallocate_free_for_all - release all pre-allocated buffers on the 
 <h2>Arguments</h2>
 
 <i>pcm</i>
-<dl><dd><dd>the pcm instance</dl>
+<dl><dd></dd><dd>the pcm instance</dd></dl>
 
 <h2>Description</h2>
 

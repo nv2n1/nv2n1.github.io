@@ -15,18 +15,18 @@ description: "grub-mklayout – generate a GRUB keyboard layout file"
 <p> grub-mklayout processes a keyboard layout description in <code><a href="/docs/linux/man/5-keymaps/">keymaps</a></code>(5) format into a format that can be used by GRUB&#8217;s <code>keymap</code> command. </p>
 <p> Generate GRUB keyboard layout from Linux console one.</p>
 <dl>
-<dt><code>-i</code>, <code>&#8211;input</code>=<i>,FILE/</i></p>
-<dd> set input filename. Default is STDIN</p>
-<dt><code>-o</code>, <code>&#8211;output</code>=<i>,FILE/</i></p>
-<dd> set output filename. Default is STDOUT</p>
-<dt><code>-v</code>, <code>&#8211;verbose</code></p>
-<dd> print verbose messages.</p>
-<dt>-?, <code>&#8211;help</code></p>
-<dd> give this help list</p>
-<dt><code>&#8211;usage</code></p>
-<dd> give a short usage message</p>
-<dt><code>-V</code>, <code>&#8211;version</code></p>
-<dd> print program version</dl>
+<dt><code>-i</code>, <code>&#8211;input</code>=<i>,FILE/</i></dt>
+<dd> set input filename. Default is STDIN</dd>
+<dt><code>-o</code>, <code>&#8211;output</code>=<i>,FILE/</i></dt>
+<dd> set output filename. Default is STDOUT</dd>
+<dt><code>-v</code>, <code>&#8211;verbose</code></dt>
+<dd> print verbose messages.</dd>
+<dt>-?, <code>&#8211;help</code></dt>
+<dd> give this help list</dd>
+<dt><code>&#8211;usage</code></dt>
+<dd> give a short usage message</dd>
+<dt><code>-V</code>, <code>&#8211;version</code></dt>
+<dd> print program version</dd></dl>
 <p> Mandatory or optional arguments to long options are also mandatory or optional for any corresponding short options.</p>
 <h2>REPORTING BUGS</h2>
 <p> Report bugs to &lt;bug-grub [at] gnu.org&gt;.</p>
@@ -35,6 +35,6 @@ description: "grub-mklayout – generate a GRUB keyboard layout file"
 <p> The full documentation for <code>grub-mklayout</code> is maintained as a Texinfo manual. If the <code>info</code> and <code>grub-mklayout</code> programs are properly installed at your site, the command</p>
 <dl>
 <dt>
-<dd> <code>info grub-mklayout</code></dl>
+</dt><dd> <code>info grub-mklayout</code></dd></dl>
 <p> should give you access to the complete manual. </p>
 <h2>Index</h2>

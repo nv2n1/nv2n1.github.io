@@ -23,10 +23,10 @@ description: "pamwipeout – replace detail with smooth gradient from one edge t
 <h2>OPTIONS</h2>
 <p> &lt;dl compact=&quot;compact&quot;&gt;</p>
 <dl>
-<dt><code>-tb</code> | <code>-lr</code></p>
+<dt><code>-tb</code> | <code>-lr</code></dt>
 <dd>
 <p> This option chooses between a vertical and a horizontal gradient. You must specify one of these, but not both. </p>
-</dl>
+</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code>pam</code>(1)<br />
 &nbsp;<wbr>and <code><a href="/docs/linux/man/1-pamflip/">pamflip</a></code>(1) , <code><a href="/docs/linux/man/1-pamcut/">pamcut</a></code>(1) , <code><a href="/docs/linux/man/1-pamcomp/">pamcomp</a></code>(1) , <code><a href="/docs/linux/man/1-pnmpaste/">pnmpaste</a></code>(1) </p>

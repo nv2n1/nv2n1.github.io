@@ -93,8 +93,8 @@ description: "pcp_pmie_selinux – Security Enhanced Linux Policy for the pcp_pm
 <p> <code>pcp_pmie_exec_t</code> </p>
 <p> &#8211; Set files with the pcp_pmie_exec_t type, if you want to transition an executable to the pcp_pmie_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/usr/bin/pmie, /usr/share/pcp/lib/pmie, /usr/libexec/pcp/bin/pmie </p>
+<dt>Paths:</dt>
+<dd>/usr/bin/pmie, /usr/share/pcp/lib/pmie, /usr/libexec/pcp/bin/pmie </dd>
 </dl>
 <p> <code>pcp_pmie_initrc_exec_t</code> </p>
 <p> &#8211; Set files with the pcp_pmie_initrc_exec_t type, if you want to transition an executable to the pcp_pmie_initrc_t domain. </p>

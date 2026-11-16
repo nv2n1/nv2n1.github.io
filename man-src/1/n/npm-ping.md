@@ -12,37 +12,35 @@ description: "npm-ping – Ping npm registry"
 <h3>Synopsis</h3>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 npm ping [--registry &lt;registry&gt;]
 </pre>
-</dl>
+</dd></dl>
 <h3>Description</h3>
 <p> Ping the configured or given npm registry and verify authentication. If it works it will output something like: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 Ping success: {*Details about registry*}
 </pre>
-</dl>
+</dd></dl>
 <p> otherwise you will get: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 Ping error: {*Detail about error}
 </pre>
-</dl>
+</dd></dl>
 <h3>See Also</h3>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>&bull;</p>
-<dd> npm help config</p>
-<dt>&bull;</p>
-<dd> npm help npmrc </p>
+<dt>&bull;</dt>
+<dd> npm help config</dd>
+<dt>&bull;</dt>
+<dd> npm help npmrc </dd>
 </dl>
 </dl>
 <h2>Index</h2>

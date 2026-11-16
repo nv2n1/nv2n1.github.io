@@ -19,7 +19,7 @@ description: "clabrd.f –"
 <p> <code>Purpose: </code></p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
  CLABRD reduces the first NB rows and columns of a complex general
  m by n matrix A to upper or lower real bidiagonal form by a unitary
@@ -29,11 +29,11 @@ description: "clabrd.f –"
  bidiagonal form.
  This is an auxiliary routine called by CGEBRD
 </pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>M</i> </p>
+</dt><dd> <i>M</i> </dd>
 <pre>
           M is INTEGER
           The number of rows in the matrix A.
@@ -123,18 +123,18 @@ description: "clabrd.f –"
 <p> <code>Author:</code></p>
 <dl>
 <dt>
-<dd> Univ. of Tennessee </p>
+</dt><dd> Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl>
 <dt>
-<dd> September 2012</dl>
+</dt><dd> September 2012</dd></dl>
 <p> <code>Further Details: </code></p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre><code>
 The matrices Q and P are represented as products of elementary
     reflectors : Q = H(1) H(2)...H(nb) and P = G(1) G(2)...G(nb)
@@ -169,8 +169,9 @@ tauq is stored in TAUQ(i) and taup in TAUP(i).The elements of the vectors v and 
                                                                                                                                                                                                                                                                                                                                                        of the vector defining G(i)
                                                                                                                                                                                                                                                                                                                                                            .
 </code></pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> Definition at line 212 of file clabrd.f.</p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for LAPACK from the source code. </p>
 <h2>Index</h2>
+</p>

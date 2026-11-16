@@ -73,10 +73,10 @@ description: "Lattice methods –"
 <h2>The QuantLib::DiscretizedAsset class</h2>
 <p> This class is a representation of the price of a derivative at a specific time. It is roughly an array of values, each value being associated to a state of the underlying stochastic variables. For the moment, it is only used when working with trees, but it should be quite easy to make a use of it in finite-differences methods. The two main points, when deriving classes from <code>QuantLib::DiscretizedAsset</code>, are:</p>
 <dl>
-<dt>1.</p>
-<dd> Define the initialisation procedure (e.g. terminal payoff for european stock options).</p>
-<dt>2.</p>
-<dd> Define the method adjusting values, when necessary, at each time steps (e.g. apply the step condition for american or bermudan options). Some examples are found in QuantLib::DiscretizedSwap and QuantLib::DiscretizedSwaption.</dl>
+<dt>1.</dt>
+<dd> Define the initialisation procedure (e.g. terminal payoff for european stock options).</dd>
+<dt>2.</dt>
+<dd> Define the method adjusting values, when necessary, at each time steps (e.g. apply the step condition for american or bermudan options). Some examples are found in QuantLib::DiscretizedSwap and QuantLib::DiscretizedSwaption.</dd></dl>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for QuantLib from the source code. </p>
 <h2>Index</h2>

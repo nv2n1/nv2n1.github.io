@@ -29,10 +29,10 @@ rotation&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;
 message&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>data_codeword&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>error_codeword</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-V</code>, <code>&#8211;version</code></p>
-<dd> Print program version information.</p>
-<dt><code>&#8211;help</code></p>
-<dd> Display this help message and quit.</dl>
+<dt><code>-V</code>, <code>&#8211;version</code></dt>
+<dd> Print program version information.</dd>
+<dt><code>&#8211;help</code></dt>
+<dd> Display this help message and quit.</dd></dl>
 <h2>STANDARDS</h2>
 <p> ISO/IEC 16022:2000 </p>
 <p> ANSI/AIM BC11 ISS</p>

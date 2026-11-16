@@ -588,12 +588,12 @@ print $string;</p>
 <h3>How can I lock a file?</h3>
 <p> Perl&#8217;s builtin <code>flock()</code> function (see perlfunc for details) will call <code><a href="/docs/linux/man/2-flock/">flock</a></code>(2) if that exists, <code><a href="/docs/linux/man/2-fcntl/">fcntl</a></code>(2) if it doesn&#8217;t (on perl version 5.004 and later), and <code><a href="/docs/linux/man/3-lockf/">lockf</a></code>(3) if neither of the two previous system calls exists. On some systems, it may even use a different form of native locking. Here are some gotchas with Perl&#8217;s <code>flock()</code>:</p>
 <dl>
-<dt>1.</p>
-<dd> Produces a fatal error if none of the three system calls (or their close equivalent) exists.</p>
-<dt>2.</p>
-<dd> <code><a href="/docs/linux/man/3-lockf/">lockf</a></code>(3) does not provide shared locking, and requires that the filehandle be open for writing (or appending, or read/writing).</p>
-<dt>3.</p>
-<dd> Some versions of <code>flock()</code> can&#8217;t lock files over a network (e.g. on <font SIZE="-1">NFS</font> file systems), so you&#8217;d need to force the use of <code><a href="/docs/linux/man/2-fcntl/">fcntl</a></code>(2) when you build Perl. But even this is dubious at best. See the flock entry of perlfunc and the <i></i><font SIZE="-1"><i>INSTALL</i></font><i></i> file in the source distribution for information on building Perl to do this. </p>
+<dt>1.</dt>
+<dd> Produces a fatal error if none of the three system calls (or their close equivalent) exists.</dd>
+<dt>2.</dt>
+<dd> <code><a href="/docs/linux/man/3-lockf/">lockf</a></code>(3) does not provide shared locking, and requires that the filehandle be open for writing (or appending, or read/writing).</dd>
+<dt>3.</dt>
+<dd> Some versions of <code>flock()</code> can&#8217;t lock files over a network (e.g. on <font SIZE="-1">NFS</font> file systems), so you&#8217;d need to force the use of <code><a href="/docs/linux/man/2-fcntl/">fcntl</a></code>(2) when you build Perl. But even this is dubious at best. See the flock entry of perlfunc and the <i></i><font SIZE="-1"><i>INSTALL</i></font><i></i> file in the source distribution for information on building Perl to do this. </dd>
 <p> Two potentially non-obvious but traditional flock semantics are that it waits indefinitely until the lock is granted, and that its locks are <i>merely advisory</i>. Such discretionary locks are more flexible, but offer fewer guarantees. This means that files locked with <code>flock()</code> may be modified by programs that do not also use <code>flock()</code>. Cars that stop for red lights get on well with each other, but not with cars that don&#8217;t stop for red lights. See the perlport manpage, your port&#8217;s specific documentation, or your system-specific local manpages for details. It&#8217;s best to assume traditional behavior if you&#8217;re writing portable programs. (If you&#8217;re not, you should as always feel perfectly free to write for your own system&#8217;s idiosyncrasies (sometimes called &#8220;features&#8221;). Slavish adherence to portability concerns shouldn&#8217;t get in the way of your getting your job done.) </p>
 <p> For more information on file locking, see also &#8220;File Locking&#8221; in perlopentut if you have it (new for 5.6).</dl>
 <h3>Why can&#8217;t I just open(<font SIZE="-1">FH, </font>&gt;file.lock)?</h3>
@@ -972,5 +972,5 @@ remove_tree(@directories);
 <p> This documentation is free; you can redistribute it and/or modify it under the same terms as Perl itself. </p>
 <p> Irrespective of its distribution, all code examples here are in the public domain. You are permitted and encouraged to use this code and any derivatives thereof in your own programs for fun or for profit as you see fit. A simple comment in the code giving credit to the <font SIZE="-1">FAQ</font> would be courteous but is not required. </p>
 <h2>Index</h2>
-<dt><a href="#lbBU">AUTHOR AND COPYRIGHT</a></p>
-<dd></dl>
+<dt><a href="#lbBU">AUTHOR AND COPYRIGHT</a></dt>
+<dd></dd></dl>

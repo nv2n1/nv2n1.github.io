@@ -16,32 +16,32 @@ description: "pbm2ppa – convert portable bitmap (PBM) to HP’s Printing Perfo
 <p> (Portable bitmap (PBM) format output can be produced from PostScript(tm) input by the GhostScript driver &quot;pbmraw&quot;.) </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>Iinfile</code></p>
-<dd> Input file <i>infile</i> is either a path to a file or device, or &#8216;-&#8216; to indicate stdin (defaults to stdin) </p>
-<dt><code>Ioutfile</code></p>
-<dd> Output file <i>outfile</i> is either a path to a file or device, or &#8216;-&#8216; to indicate stdout (defaults to stdout) </p>
-<dt><code>-b </code><i>bottommargin</i></p>
-<dd> Sets the bottom margin <i>bottommargin</i> in units of 1/600 inches (e.g., -b 150 = 0.25&quot;) </p>
-<dt><code>-d</code></p>
-<dd> Displays the current configuration </p>
-<dt><code>-f </code><i>configfile</i></p>
-<dd> Overrides reading the configuration from /etc/pnm2ppa.conf, and uses <i>configfile</i> instead. </p>
-<dt><code>-h</code></p>
-<dd> Displays program usage </p>
-<dt><code>-l </code><i>leftmargin</i></p>
-<dd> Sets the left margin <i>leftmargin</i> in units of 1/600 inches (e.g., -l 150 = 0.25&quot;) </p>
-<dt><code>-r </code><i>rightmargin</i></p>
-<dd> Sets the right margin <i>rightmargin</i> in units of 1/600 inches (e.g., -r 150 = 0.25&quot;) </p>
-<dt><code>-s </code><i>papersize</i></p>
-<dd> Sets the paper size. Possible values for <i>papersize</i> are <code>a4</code> (A4), <code>letter</code> or <code>us</code> (US Letter, 8.5&quot;x11&quot;), and <code>legal</code> (US Legal, 8.5&quot;x14&quot;). The default is US Letter. </p>
-<dt><code>-t </code><i>topmargin</i></p>
-<dd> Sets the top margin <i>topmargin</i> in units of 1/600 inches (ie -t 150 = 0.25&quot;) </p>
-<dt><code>-v </code><i>printertype</i></p>
-<dd> Selects the printer model. Possible values of <i>printertype</i> are: <code>710</code>, <code>712</code>, <code>720</code>, <code>722</code>, <code>820</code> and <code>1000</code>. The default is the HP DeskJet 7X0 Series (710, 712, 720, 722). </p>
-<dt><code>-x </code><i>xoffset</i></p>
-<dd> Sets the x-offset <code>xoffset</code> from the left of the page. Units are 1/600 inches </p>
-<dt><code>-y </code><i>yoffset</i></p>
-<dd> Sets the y-offset <code>yoffset</code> from the top of the page. Units are 1/600 inches </p>
+<dt><code>Iinfile</code></dt>
+<dd> Input file <i>infile</i> is either a path to a file or device, or &#8216;-&#8216; to indicate stdin (defaults to stdin) </dd>
+<dt><code>Ioutfile</code></dt>
+<dd> Output file <i>outfile</i> is either a path to a file or device, or &#8216;-&#8216; to indicate stdout (defaults to stdout) </dd>
+<dt><code>-b </code><i>bottommargin</i></dt>
+<dd> Sets the bottom margin <i>bottommargin</i> in units of 1/600 inches (e.g., -b 150 = 0.25&quot;) </dd>
+<dt><code>-d</code></dt>
+<dd> Displays the current configuration </dd>
+<dt><code>-f </code><i>configfile</i></dt>
+<dd> Overrides reading the configuration from /etc/pnm2ppa.conf, and uses <i>configfile</i> instead. </dd>
+<dt><code>-h</code></dt>
+<dd> Displays program usage </dd>
+<dt><code>-l </code><i>leftmargin</i></dt>
+<dd> Sets the left margin <i>leftmargin</i> in units of 1/600 inches (e.g., -l 150 = 0.25&quot;) </dd>
+<dt><code>-r </code><i>rightmargin</i></dt>
+<dd> Sets the right margin <i>rightmargin</i> in units of 1/600 inches (e.g., -r 150 = 0.25&quot;) </dd>
+<dt><code>-s </code><i>papersize</i></dt>
+<dd> Sets the paper size. Possible values for <i>papersize</i> are <code>a4</code> (A4), <code>letter</code> or <code>us</code> (US Letter, 8.5&quot;x11&quot;), and <code>legal</code> (US Legal, 8.5&quot;x14&quot;). The default is US Letter. </dd>
+<dt><code>-t </code><i>topmargin</i></dt>
+<dd> Sets the top margin <i>topmargin</i> in units of 1/600 inches (ie -t 150 = 0.25&quot;) </dd>
+<dt><code>-v </code><i>printertype</i></dt>
+<dd> Selects the printer model. Possible values of <i>printertype</i> are: <code>710</code>, <code>712</code>, <code>720</code>, <code>722</code>, <code>820</code> and <code>1000</code>. The default is the HP DeskJet 7X0 Series (710, 712, 720, 722). </dd>
+<dt><code>-x </code><i>xoffset</i></dt>
+<dd> Sets the x-offset <code>xoffset</code> from the left of the page. Units are 1/600 inches </dd>
+<dt><code>-y </code><i>yoffset</i></dt>
+<dd> Sets the y-offset <code>yoffset</code> from the top of the page. Units are 1/600 inches </dd>
 <p>&nbsp;<wbr></dl>
 <h2>NOTES</h2>
 <p> The configuration file is read in first. Command line arguments then modify the resulting definitions. </p>
@@ -50,8 +50,8 @@ description: "pbm2ppa – convert portable bitmap (PBM) to HP’s Printing Perfo
 <p> <a href="/docs/linux/man/5-pbm/">pbm</a>(5) </p>
 <h2>FILES</h2>
 <dl>
-<dt><i>/etc/pbm2ppa.conf</i></p>
-<dd> Default configuration file </p>
+<dt><i>/etc/pbm2ppa.conf</i></dt>
+<dd> Default configuration file </dd>
 </dl>
 <h2>AUTHOR</h2>
 <p> This code is licensed under the GNU Public License version 2. See LICENSE for details. </p>

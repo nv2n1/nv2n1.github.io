@@ -30,13 +30,13 @@ description: "machine-id – Local machine ID configuration file"
 <p>/etc/machine-id is used to decide whether a boot is the first one. The rules are as follows: </p>
 <dl>
 <dd>1. If /etc/machine-id does not exist, this is a first boot. During early boot, <code>systemd</code> will write &quot;uninitialized
-&quot; to this file and overmount a temporary file which contains the actual machine ID. Later (after first-boot-complete.target has been reached), the real machine ID will be written to disk.</dl>
+&quot; to this file and overmount a temporary file which contains the actual machine ID. Later (after first-boot-complete.target has been reached), the real machine ID will be written to disk.</dd></dl>
 <dl>
-<dd>2. If /etc/machine-id contains the string &quot;uninitialized&quot;, a boot is also considered the first boot. The same mechanism as above applies.</dl>
+<dd>2. If /etc/machine-id contains the string &quot;uninitialized&quot;, a boot is also considered the first boot. The same mechanism as above applies.</dd></dl>
 <dl>
-<dd>3. If /etc/machine-id exists and is empty, a boot is <i>not</i> considered the first boot. <code>systemd</code> will still bind-mount a file containing the actual machine-id over it and later try to commit it to disk (if /etc/ is writable).</dl>
+<dd>3. If /etc/machine-id exists and is empty, a boot is <i>not</i> considered the first boot. <code>systemd</code> will still bind-mount a file containing the actual machine-id over it and later try to commit it to disk (if /etc/ is writable).</dd></dl>
 <dl>
-<dd>4. If /etc/machine-id already contains a valid machine-id, this is not a first boot.</dl>
+<dd>4. If /etc/machine-id already contains a valid machine-id, this is not a first boot.</dd></dl>
 <p> If by any of the above rules, a first boot is detected, units with <i>ConditionFirstBoot=yes</i> will be run.</p>
 <h2>Relation To Osf Uuids</h2>
 <p>Note that the machine ID historically is not an OSF UUID as defined by m[blue]<code>RFC 4122</code>m[]<font SIZE="-2">[1]</font>, nor a Microsoft GUID; however, starting with systemd v30, newly generated machine IDs do qualify as Variant 1 Version 4 UUIDs, as per RFC 4122. </p>
@@ -47,7 +47,7 @@ description: "machine-id – Local machine ID configuration file"
 id[6] = (id[6] &amp; 0x0F) | 0x40;
 /* Set the UUID variant to DCE */
 id[8] = (id[8] &amp; 0x3F) | 0x80;</pre>
-</dl>
+</dd></dl>
 <p> (This code is inspired by &quot;generate_random_uuid()&quot; of drivers/char/random.c from the Linux kernel sources.)</p>
 <h2>History</h2>
 <p>The simple configuration file format of /etc/machine-id originates in the /var/lib/dbus/machine-id file introduced by D-Bus. In fact, this latter file might be a symlink to /etc/machine-id.</p>
@@ -55,7 +55,8 @@ id[8] = (id[8] &amp; 0x3F) | 0x80;</pre>
 <p><code><a href="/docs/linux/man/1-systemd/">systemd</a></code>(1), <code><a href="/docs/linux/man/1-systemd-machine-id-setup/">systemd-machine-id-setup</a></code>(1), <code><a href="/docs/linux/man/3-gethostid/">gethostid</a></code>(3), <code><a href="/docs/linux/man/5-hostname/">hostname</a></code>(5), <code><a href="/docs/linux/man/5-machine-info/">machine-info</a></code>(5), <code><a href="/docs/linux/man/5-os-release/">os-release</a></code>(5), <code><a href="/docs/linux/man/3-sd-id128/">sd-id128</a></code>(3), <code><a href="/docs/linux/man/3-sd_id128_get_machine/">sd_id128_get_machine</a></code>(3), <code><a href="/docs/linux/man/1-systemd-firstboot/">systemd-firstboot</a></code>(1)</p>
 <h2>Notes</h2>
 <dl>
-<dt> 1.</p>
-<dd>RFC 4122</p>
+<dt> 1.</dt>
+<dd>RFC 4122</dd>
 <dl>
-<dd><a rel="nofollow" href="https://tools.ietf.org/html/rfc4122">https://tools.ietf.org/html/rfc4122</a></dl>
+<dd><a rel="nofollow" href="https://tools.ietf.org/html/rfc4122">https://tools.ietf.org/html/rfc4122</a></dd></dl>
+</dl>

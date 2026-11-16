@@ -17,49 +17,49 @@ description: "tsql – utility to test FreeTDS connections and queries"
 <p> can be run in two ways, one which uses the freetds.conf and one which connects directly using the server&#8217;s hostname and port. The &#8211;<code>H</code> and &#8211;<code>p</code> parameters are provided to let the user verify a server is listening on the named host and port. These parameters override any configuration files and environment variables. Pl The &#8211;<code>S</code> parameter can be used to test the local configuration. FreeTDS will use freetds.conf (or equivalent) and environment variables in the normal way to determine the server&#8217;s IP address and port. You can use &#8211;<code>I</code> to specify a filename, overriding FreeTDS&#8217;s configuration file search algorithm.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-S </code><i>servername</i></p>
-<dd> database server to which to connect.</p>
-<dt><code>-D </code><i>dbname</i></p>
-<dd> database to use.</p>
-<dt><code>-I </code><i>interface</i></p>
-<dd> freetds.conf or interfaces file describing servername.</p>
-<dt><code>-H </code><i>hostname</i></p>
-<dd> DNS hostname of the server.</p>
-<dt><code>-p </code><i>port</i></p>
-<dd> port at which SQL Server is listening.</p>
-<dt><code>-U </code><i>username</i></p>
-<dd> database login name. If username is not provided, a domain login is attempted for TDS 7+ connections.</p>
-<dt><code>-P </code><i>password</i></p>
-<dd> database password.</p>
-<dt><code>-L</code></p>
-<dd> list Microsoft server instances (with &#8211;<code>H ).</code></p>
-<dt><code>-C</code></p>
-<dd> print some of the compile-time configuration parameters.</p>
-<dt><code>-o </code><i>options</i></p>
-<dd> apply the options specified to every command.</p>
+<dt><code>-S </code><i>servername</i></dt>
+<dd> database server to which to connect.</dd>
+<dt><code>-D </code><i>dbname</i></dt>
+<dd> database to use.</dd>
+<dt><code>-I </code><i>interface</i></dt>
+<dd> freetds.conf or interfaces file describing servername.</dd>
+<dt><code>-H </code><i>hostname</i></dt>
+<dd> DNS hostname of the server.</dd>
+<dt><code>-p </code><i>port</i></dt>
+<dd> port at which SQL Server is listening.</dd>
+<dt><code>-U </code><i>username</i></dt>
+<dd> database login name. If username is not provided, a domain login is attempted for TDS 7+ connections.</dd>
+<dt><code>-P </code><i>password</i></dt>
+<dd> database password.</dd>
+<dt><code>-L</code></dt>
+<dd> list Microsoft server instances (with &#8211;<code>H ).</code></dd>
+<dt><code>-C</code></dt>
+<dd> print some of the compile-time configuration parameters.</dd>
+<dt><code>-o </code><i>options</i></dt>
+<dd> apply the options specified to every command.</dd>
 <dl>
-<dt><code>-f</code></p>
-<dd> No footer Bq result count</p>
-<dt><code>-h</code></p>
-<dd> No header Bq titles</p>
-<dt><code>-t</code></p>
-<dd> Print time</p>
-<dt><code>-v</code></p>
-<dd> Print version</p>
-<dt><code>-q</code></p>
-<dd> Quiet</dl>
-<dt><code>-a </code><i>appname</i></p>
-<dd> application name.</p>
-<dt><code>-t </code><i>colterm</i></p>
-<dd> column terminator.</p>
-<dt><code>-r </code><i>rowterm</i></p>
-<dd> row terminator.</p>
-<dt><code>-r </code><i>rowterm</i></p>
-<dd> row terminator.</p>
-<dt><code>-J </code><i>charset</i></p>
-<dd> character set.</p>
-<dt><code>-v</code></p>
-<dd> verbose mode.</dl>
+<dt><code>-f</code></dt>
+<dd> No footer Bq result count</dd>
+<dt><code>-h</code></dt>
+<dd> No header Bq titles</dd>
+<dt><code>-t</code></dt>
+<dd> Print time</dd>
+<dt><code>-v</code></dt>
+<dd> Print version</dd>
+<dt><code>-q</code></dt>
+<dd> Quiet</dd></dl>
+<dt><code>-a </code><i>appname</i></dt>
+<dd> application name.</dd>
+<dt><code>-t </code><i>colterm</i></dt>
+<dd> column terminator.</dd>
+<dt><code>-r </code><i>rowterm</i></dt>
+<dd> row terminator.</dd>
+<dt><code>-r </code><i>rowterm</i></dt>
+<dd> row terminator.</dd>
+<dt><code>-J </code><i>charset</i></dt>
+<dd> character set.</dd>
+<dt><code>-v</code></dt>
+<dd> verbose mode.</dd></dl>
 <h2>NOTES</h2>
 <p> If you can connect with `tsql&#8217; -S servername Ns , your basic FreeTDS installation is working. </p>
 <p> Typing `exit&#8217; Ns , `quit&#8217; Ns , or `bye&#8217; (or <code>^D )</code> exits </p>

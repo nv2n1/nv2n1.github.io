@@ -14,15 +14,16 @@ description: "ip-mroute – multicast routing cache management"
 <p><code>mroute</code> objects are multicast routing cache entries created by a user-level mrouting daemon (f.e. <code>pimd</code> or <code>mrouted</code> ). Due to the limitations of the current interface to the multicast routing engine, it is impossible to change <code>mroute</code> objects administratively, so we can only display them. This limitation will be removed in the future.</p>
 <h3>ip mroute show &#8211; list mroute cache entries</h3>
 <dl>
-<dt><code>to</code><i> PREFIX </i><code>(default)</code></p>
-<dd>the prefix selecting the destination multicast addresses to list.</p>
-<dt><code>iif</code><i> NAME</i></p>
-<dd>the interface on which multicast packets are received.</p>
-<dt><code>from</code><i> PREFIX</i></p>
-<dd>the prefix selecting the IP source addresses of the multicast route.</p>
-<dt><code>table</code><i> TABLE_ID</i></p>
-<dd>the table id selecting the multicast table. It can be <code>local</code>, <code>main</code>, <code>default</code>, <code>all</code> or a number. </p>
+<dt><code>to</code><i> PREFIX </i><code>(default)</code></dt>
+<dd>the prefix selecting the destination multicast addresses to list.</dd>
+<dt><code>iif</code><i> NAME</i></dt>
+<dd>the interface on which multicast packets are received.</dd>
+<dt><code>from</code><i> PREFIX</i></dt>
+<dd>the prefix selecting the IP source addresses of the multicast route.</dd>
+<dt><code>table</code><i> TABLE_ID</i></dt>
+<dd>the table id selecting the multicast table. It can be <code>local</code>, <code>main</code>, <code>default</code>, <code>all</code> or a number. </dd>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/8-ip/">ip</a></code>(8) </p>
 <h2>Author</h2>
 <p>Original Manpage by Michail Litvak &lt;mci [at] owl.openwall.com&gt;</p>
+</dl>

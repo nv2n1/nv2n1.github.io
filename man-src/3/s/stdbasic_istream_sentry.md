@@ -20,9 +20,6 @@ description: "std::basic_istream< _CharT, _Traits >::sentry –"
 <p> typedef _Traits <code>traits_type</code></p>
 <h3>Public Member Functions</h3>
 <pre><code>sentry (basic_istream&lt; _CharT, _Traits &gt; &amp;__is, bool __noskipws=false)
-
-
-
 operator bool () const</code></pre>
 <h2>Detailed Description</h2>
 <h3>template&lt;typename _CharT, typename _Traits = char_traits&lt;_CharT&gt;&gt;class std::basic_istream&lt; _CharT, _Traits &gt;::sentry</h3>
@@ -39,14 +36,14 @@ operator bool () const</code></pre>
 <p> <code>Parameters:</code></p>
 <dl>
 <dd><i>__is</i> The input stream to guard.<br />
- <i>__noskipws</i> Whether to consume whitespace or not.</dl>
+ <i>__noskipws</i> Whether to consume whitespace or not.</dd></dl>
 <p> If the stream state is good (<i>__is.good()</i> is true), then the following actions are performed, otherwise the sentry state is false (<i>not okay</i>) and failbit is set in the stream state. </p>
 <p> The sentry&#8217;s preparatory actions are: </p>
 <dl>
-<dt>1.</p>
-<dd>if the stream is tied to an output stream, is.tie()-&gt;flush() is called to synchronize the output sequence</p>
-<dt>2.</p>
-<dd>if <i>__noskipws</i> is false, and ios_base::skipws is set in is.flags(), the sentry extracts and discards whitespace characters from the stream. The currently imbued locale is used to determine whether each character is whitespace.</dl>
+<dt>1.</dt>
+<dd>if the stream is tied to an output stream, is.tie()-&gt;flush() is called to synchronize the output sequence</dd>
+<dt>2.</dt>
+<dd>if <i>__noskipws</i> is false, and ios_base::skipws is set in is.flags(), the sentry extracts and discards whitespace characters from the stream. The currently imbued locale is used to determine whether each character is whitespace.</dd></dl>
 <p> If the stream state is still good, then the sentry state becomes true (<i>okay</i>). </p>
 <p> Definition at line 47 of file istream.tcc. </p>
 <p> References std::ios_base::eofbit, std::ios_base::failbit, std::ios_base::flags(), std::basic_ios&lt; _CharT, _Traits &gt;::good(), std::ios_base::goodbit, std::__ctype_abstract_base&lt; _CharT &gt;::is(), std::basic_ios&lt; _CharT, _Traits &gt;::rdbuf(), std::basic_ios&lt; _CharT, _Traits &gt;::setstate(), std::basic_streambuf&lt; _CharT, _Traits &gt;::sgetc(), std::ios_base::skipws, std::basic_streambuf&lt; _CharT, _Traits &gt;::snextc(), and std::basic_ios&lt; _CharT, _Traits &gt;::tie().</p>
@@ -55,7 +52,7 @@ operator bool () const</code></pre>
 <p>Quick status checking. </p>
 <p> <code>Returns:</code></p>
 <dl>
-<dd>The sentry state.</dl>
+<dd>The sentry state.</dd></dl>
 <p> For ease of use, sentries may be converted to booleans. The return value is that of the sentry state (true == okay). </p>
 <p> Definition at line 705 of file istream.</p>
 <h2>Author</h2>

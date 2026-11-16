@@ -10,152 +10,44 @@ description: "QuantLib::BlackCalculator – Black 1976 calculator class."
 <p>QuantLib::BlackCalculator &#8211; Black 1976 calculator class. </p>
 <h2>Synopsis</h2>
 <pre><code>BlackCalculator (const boost::shared_ptr&lt; StrikedTypePayoff &gt; &amp;payoff, Real forward, Real stdDev, Real discount=1.0)
-
-
-
 Real value () const
-
-
-
 Real deltaForward () const
-
-
-
 virtual Real delta (Real spot) const
-
-
-
 Real elasticityForward () const
-
-
-
 virtual Real elasticity (Real spot) const
-
-
-
 Real gammaForward () const
-
-
-
 virtual Real gamma (Real spot) const
-
-
-
 virtual Real theta (Real spot, Time maturity) const
-
-
-
 virtual Real thetaPerDay (Real spot, Time maturity) const
-
-
-
 Real vega (Time maturity) const
-
-
-
 Real rho (Time maturity) const
-
-
-
 Real dividendRho (Time maturity) const
-
-
-
 Real itmCashProbability () const
-
-
-
 Real itmAssetProbability () const
-
-
-
 Real strikeSensitivity () const
-
-
-
 Real alpha () const
-
-
-
 Real beta () const
-
-
-
 Protected Attributes</code></pre>
 <p> Inherited by <code>BlackScholesCalculator</code>.</p>
 <h3>Public Member Functions</h3>
 <pre><code>BlackCalculator (const boost::shared_ptr&lt; StrikedTypePayoff &gt; &amp;payoff, Real forward, Real stdDev, Real discount=1.0)
-
-
-
 Real value () const
-
-
-
 Real deltaForward () const
-
-
-
 virtual Real delta (Real spot) const
-
-
-
 Real elasticityForward () const
-
-
-
 virtual Real elasticity (Real spot) const
-
-
-
 Real gammaForward () const
-
-
-
 virtual Real gamma (Real spot) const
-
-
-
 virtual Real theta (Real spot, Time maturity) const
-
-
-
 virtual Real thetaPerDay (Real spot, Time maturity) const
-
-
-
 Real vega (Time maturity) const
-
-
-
 Real rho (Time maturity) const
-
-
-
 Real dividendRho (Time maturity) const
-
-
-
 Real itmCashProbability () const
-
-
-
 Real itmAssetProbability () const
-
-
-
 Real strikeSensitivity () const
-
-
-
 Real alpha () const
-
-
-
 Real beta () const
-
-
-
 Protected Attributes</code></pre>
 <p> <code>Real</code> <code>strike_</code> </p>
 <p> <code>Real</code> <code>forward_</code> </p>
@@ -181,7 +73,7 @@ Protected Attributes</code></pre>
 <p>Black 1976 calculator class. </p>
 <p> <code>Bug</code></p>
 <dl>
-<dd>When the variance is null, division by zero occur during the calculation of delta, delta forward, gamma, gamma forward, rho, dividend rho, vega, and strike sensitivity.</dl>
+<dd>When the variance is null, division by zero occur during the calculation of delta, delta forward, gamma, gamma forward, rho, dividend rho, vega, and strike sensitivity.</dd></dl>
 <p> <code>Examples: </code> </p>
 <p> <code>DiscreteHedging.cpp</code>.</p>
 <h2>Member Function Documentation</h2>

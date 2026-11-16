@@ -15,11 +15,11 @@ xdr_truncate_encode - truncate an encode buffer
 <h2>Arguments</h2>
 
 <i>xdr</i>
-<dl><dd><dd>pointer to xdr_stream</dl>
+<dl><dd></dd><dd>pointer to xdr_stream</dd></dl>
  
 
  <i>len</i>
-<dl><dd>new length of buffer</dl>
+<dl><dd>new length of buffer</dd></dl>
 
 <h2>Description</h2>
 

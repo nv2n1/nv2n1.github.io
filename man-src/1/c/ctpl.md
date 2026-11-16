@@ -15,20 +15,20 @@ description: "ctpl – CTPL command-line template parsing tool"
 <p> <code>ctpl</code> parses one or more <i>INPUTFILE</i> template against the provided environment and outputs the result. </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-h</code>, <code>&#8211;help</code></p>
-<dd> Prints the command line options. </p>
-<dt><code>-o</code>, <code>&#8211;output</code>=<i>FILE</i></p>
-<dd> Write output to <i>FILE</i>. If not provided, defaults to stdout. </p>
-<dt><code>-e</code>, <code>&#8211;env-file</code>=<i>ENVFILE</i></p>
-<dd> Add environment from <i>ENVFILE</i>. This option may appear more than once. </p>
-<dt><code>-c</code>, <code>&#8211;env-chunk</code>=<i>CHUNK</i></p>
-<dd> Add environment chunk <i>CHUNK</i>. This option may appear more than once. </p>
-<dt><code>-v</code>, <code>&#8211;verbose</code></p>
-<dd> Be verbose. </p>
-<dt><code>&#8211;version</code></p>
-<dd> Print the version information and exit. </p>
-<dt><code>&#8211;encoding</code>=<i>ENCODING</i></p>
-<dd> Specify the encoding of the input and output files. The default encoding is the system&#8217;s one. </p>
+<dt><code>-h</code>, <code>&#8211;help</code></dt>
+<dd> Prints the command line options. </dd>
+<dt><code>-o</code>, <code>&#8211;output</code>=<i>FILE</i></dt>
+<dd> Write output to <i>FILE</i>. If not provided, defaults to stdout. </dd>
+<dt><code>-e</code>, <code>&#8211;env-file</code>=<i>ENVFILE</i></dt>
+<dd> Add environment from <i>ENVFILE</i>. This option may appear more than once. </dd>
+<dt><code>-c</code>, <code>&#8211;env-chunk</code>=<i>CHUNK</i></dt>
+<dd> Add environment chunk <i>CHUNK</i>. This option may appear more than once. </dd>
+<dt><code>-v</code>, <code>&#8211;verbose</code></dt>
+<dd> Be verbose. </dd>
+<dt><code>&#8211;version</code></dt>
+<dd> Print the version information and exit. </dd>
+<dt><code>&#8211;encoding</code>=<i>ENCODING</i></dt>
+<dd> Specify the encoding of the input and output files. The default encoding is the system&#8217;s one. </dd>
 </dl>
 <h2>TEMPLATE AND ENVIRONMENT DESCRIPTION SYNTAX</h2>
 <p> For the documentation about the syntax of templates and environment descriptions, see the CTPL library&#8217;s documentation. </p>

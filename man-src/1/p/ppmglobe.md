@@ -28,13 +28,13 @@ description: "ppmglobe – generate strips to glue onto a sphere"
 <p> <i>filename</i> is the name of the input file. If you don&#8217;t specify this, <code>ppmglobe</code> reads the image from Standard Input. </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-background=</code><i>colorname</i></p>
-<dd> This specifies the color that goes between the strips. </p>
+<dt><code>-background=</code><i>colorname</i></dt>
+<dd> This specifies the color that goes between the strips. </dd>
 <p> Specify the color (<i>color</i>) as described for the argument of the <code>ppm_parsecolor()</code> library routine . </p>
 <p> The default is black. </p>
 <p> This option was new in Netpbm 10.31 (December 2005). Before that, the background is always black. </p>
-<dt><code>-closeok</code></p>
-<dd> This means it is OK if the background isn&#8217;t exactly the color you specify. Sometimes, it is impossible to represent a named color exactly due to the precision (i.e. maxval) of the image&#8217;s color space. If you specify <code>-closeok</code> and <code>ppmglobe</code> can&#8217;t represent the color you name exactly, it will use instead the closest color to it that is possible. If you don&#8217;t specify <code>closeok</code>, <code>ppmglobe</code> fails in that situation. </p>
+<dt><code>-closeok</code></dt>
+<dd> This means it is OK if the background isn&#8217;t exactly the color you specify. Sometimes, it is impossible to represent a named color exactly due to the precision (i.e. maxval) of the image&#8217;s color space. If you specify <code>-closeok</code> and <code>ppmglobe</code> can&#8217;t represent the color you name exactly, it will use instead the closest color to it that is possible. If you don&#8217;t specify <code>closeok</code>, <code>ppmglobe</code> fails in that situation. </dd>
 <p> This option was new in Netpbm 10.31 (December 2005). </p>
 </dl>
 <h2>SEE ALSO</h2>

@@ -10,18 +10,18 @@ description: "list_prepare_entry – prepare a pos entry for use in list_for_eac
 <p>list_prepare_entry &#8211; prepare a pos entry for use in <code>list_for_each_entry_continue</code></p>
 <h2>Synopsis</h2>
 <dl>
-<dt> <code>list_prepare_entry(</code><i>pos</i><code>, </code><i>head</i><code>, </code><i>member</i><code>);</code></dl>
+<dt> <code>list_prepare_entry(</code><i>pos</i><code>, </code><i>head</i><code>, </code><i>member</i><code>);</code></dt></dl>
 <h2>Arguments</h2>
 <p><i>pos</i></p>
 <dl>
 <dd>
-<dd>the type * to use as a start point</dl>
+</dd><dd>the type * to use as a start point</dd></dl>
 <p> <i>head</i></p>
 <dl>
-<dd>the head of the list</dl>
+<dd>the head of the list</dd></dl>
 <p> <i>member</i></p>
 <dl>
-<dd>the name of the list_head within the struct.</dl>
+<dd>the name of the list_head within the struct.</dd></dl>
 <h2>Description</h2>
 <p>Prepares a pos entry for use as a start point in <code>list_for_each_entry_continue</code>.</p>
 <h2>Copyright</h2>

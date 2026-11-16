@@ -29,16 +29,9 @@ The line number represented by this object.
 <h2>See also</h2>
 
 <pre><code>return the column number represented by this object
-
 column        (public member function)
 return the file name represented by this object
-
 file_name     (public member function)
 return the name of the function represented by this object, if any
-
 function_name (public member function)
-
-
-
-
 </code></pre>

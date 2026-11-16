@@ -16,55 +16,55 @@ description: "cimauth – add, modify, remove, or list CIM namespace authorizati
 <p>The <code>cimauth </code> command recognizes the following options:</p>
 <dl>
 <dd>
-<dl>
-<dt><code>-a</code></p>
-<dd>Adds read and/or write authorizations to the specified user on the specified namespace. If neither the <code>-R</code> nor the <code>-W </code> option is specified, adds a read authorization by default.</p>
-<dt><code>-h, &#8211;help</code></p>
-<dd>Display command usage information.</p>
-<dt><code>-l</code></p>
-<dd>Lists all the authorizations configured in the CIM Server.</p>
-<dt><code>-m</code></p>
-<dd>Modifies authorizations of the specified user on the specified namespace. If neither the <code>-R </code> nor the <code>-W </code> option is specified, modifies the authorization to be a read authorization by default.</p>
-<dt><code>-n</code> namespace</p>
-<dd>Specifies the <i>R namespace </i> for the operation.</p>
-<dt><code>-r</code></p>
-<dd>Removes authorizations of the specified user on the specified namespace. If no namespaces are specified, removes authorizations on all namespaces for the specified user.</p>
-<dt><code>-R</code></p>
-<dd>Specifies read authorization on the namespace.</p>
-<dt><code>-u</code> username</p>
-<dd>Specifies the user for the operation. The specified <i>R username </i> must represent a valid user on the local host.</p>
-<dt><code>&#8211;version</code></p>
-<dd>Display CIM Server version number.</p>
-<dt><code>-W</code></p>
-<dd>Specifies write authorization on the namespace.</dl>
+</dd><dl>
+<dt><code>-a</code></dt>
+<dd>Adds read and/or write authorizations to the specified user on the specified namespace. If neither the <code>-R</code> nor the <code>-W </code> option is specified, adds a read authorization by default.</dd>
+<dt><code>-h, &#8211;help</code></dt>
+<dd>Display command usage information.</dd>
+<dt><code>-l</code></dt>
+<dd>Lists all the authorizations configured in the CIM Server.</dd>
+<dt><code>-m</code></dt>
+<dd>Modifies authorizations of the specified user on the specified namespace. If neither the <code>-R </code> nor the <code>-W </code> option is specified, modifies the authorization to be a read authorization by default.</dd>
+<dt><code>-n</code> namespace</dt>
+<dd>Specifies the <i>R namespace </i> for the operation.</dd>
+<dt><code>-r</code></dt>
+<dd>Removes authorizations of the specified user on the specified namespace. If no namespaces are specified, removes authorizations on all namespaces for the specified user.</dd>
+<dt><code>-R</code></dt>
+<dd>Specifies read authorization on the namespace.</dd>
+<dt><code>-u</code> username</dt>
+<dd>Specifies the user for the operation. The specified <i>R username </i> must represent a valid user on the local host.</dd>
+<dt><code>&#8211;version</code></dt>
+<dd>Display CIM Server version number.</dd>
+<dt><code>-W</code></dt>
+<dd>Specifies write authorization on the namespace.</dd></dl>
 </dl>
 <h2>Exit Status</h2>
 <p>When an error occurs, an error message is written to stderr and an error value of 1 is returned. The following return values are returned:</p>
 <dl>
 <dd>
-<dl>
-<dt><code>0</code></p>
-<dd>Successful completion</p>
-<dt><code>1</code></p>
-<dd>Error</dl>
+</dd><dl>
+<dt><code>0</code></dt>
+<dd>Successful completion</dd>
+<dt><code>1</code></dt>
+<dd>Error</dd></dl>
 </dl>
 <h2>Usage Note</h2>
 <p>The <code>cimauth </code> command requires that the CIM Server is running.</p>
 <h2>Examples</h2>
 <p>Add read authorizations to user &quot;guest&quot; on namespace &quot;root/cimv2&quot;.</p>
 <dl>
-<dd><code>cimauth -a -u guest -n root/cimv2 -R</code></dl>
+<dd><code>cimauth -a -u guest -n root/cimv2 -R</code></dd></dl>
 <p> Add read and write authorizations to user &quot;guest&quot; on namespace &quot;root/system&quot;.</p>
 <dl>
-<dd><code>cimauth -a -u guest -n root/system -R -W</code></dl>
+<dd><code>cimauth -a -u guest -n root/system -R -W</code></dd></dl>
 <p> Modify authorizations of the user &quot;guest&quot; on namespace &quot;root/system&quot; to read only.</p>
 <dl>
-<dd><code>cimauth -m -u guest -n root/system -R</code></dl>
+<dd><code>cimauth -m -u guest -n root/system -R</code></dd></dl>
 <p> Remove the authorizations of the user &quot;guest&quot; on namespace &quot;root/system&quot;.</p>
 <dl>
-<dd><code>cimauth -r -u guest -n root/system</code></dl>
+<dd><code>cimauth -r -u guest -n root/system</code></dd></dl>
 <p> List all the authorizations configured in the CIM Server.</p>
 <dl>
-<dd><code>cimauth -l</code></dl>
+<dd><code>cimauth -l</code></dd></dl>
 <h2>See Also</h2>
 <p><a href="/docs/linux/man/8-cimserver/">cimserver</a>(8), <a href="/docs/linux/man/8-cimconfig/">cimconfig</a>(8). </p>

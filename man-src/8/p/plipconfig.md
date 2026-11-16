@@ -16,10 +16,10 @@ description: "plipconfig – fine tune PLIP device parameters"
 <p> If the single <code>interface</code> argument is given, <code>plipconfig</code> displays the status of the given interface only. Otherwise, it will try to set the options.</p>
 <h2>Options</h2>
 <dl>
-<dt><code>nibble NN</code></p>
-<dd>Sets the nibble wait value in microseconds. Default is 3000.</p>
-<dt><code>trigger NN</code></p>
-<dd>Sets the trigger wait value in microseconds. Default is 500.</dl>
+<dt><code>nibble NN</code></dt>
+<dd>Sets the nibble wait value in microseconds. Default is 3000.</dd>
+<dt><code>trigger NN</code></dt>
+<dd>Sets the trigger wait value in microseconds. Default is 500.</dd></dl>
 <p> PLIP speed can in some cases be improved by lowering the default values. Values which are too low may cause excess use of CPU, poor interrupt response time resulting in serial ports dropping characters, or in dropping of PLIP packets. Changing the plip MTU can also affect PLIP speed.</p>
 <h2>Note</h2>
 <p>If you get no response it is far more likely the irq is wrong and needs setting with ifconfig. The few cases where the default parameters will be too fast are those using very long cables. Something you should never do as the parallel port is not specified or designed for driving long cable runs.</p>

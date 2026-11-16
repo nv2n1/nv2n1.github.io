@@ -12,15 +12,11 @@ std::filesystem::path::assign - std::filesystem::path::assign
 
 <pre><code>path &amp;assign(string_type &amp;&amp;source);
 (1)(since C++ 17)
-
     template &lt;class Source&gt;
     (2)(since C++ 17)
-
         path &amp;assign(const Source &amp;source);
-
 template &lt;class InputIt&gt;
 (3)(since C++ 17)
-
     path &amp;assign(InputIt first, InputIt last);</code></pre> 
 Replaces the contents to the path object by a new pathname constructed from the given character sequence. 
 1) Assigns the pathname identified by the detected-format string source, which is left in valid, but unspecified state. 
@@ -46,10 +42,5 @@ The value type of InputIt must be one of the encoded character types (char, wcha
 <h2>See also</h2>
 
 <pre><code>assigns another path
-
 operator= (public member function)
-
-
-
-
 </code></pre>

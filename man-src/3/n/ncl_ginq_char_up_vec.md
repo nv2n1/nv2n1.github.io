@@ -13,12 +13,12 @@ description: "ginq_char_up_vec (Inquire character up vector) – retrieves the c
 <p> void ginq_char_up_vec(Gint *err_ind, Gvec *char_up_vec);</p>
 <h2>Description</h2>
 <dl COMPACT>
-<dt>err_ind</p>
-<dd>(Output) &#8211; If the inquired values cannot be returned correctly, a non-zero error indicator is returned in err_ind, otherwise a zero is returned. Consult &quot;User&#8217;s Guide for NCAR GKS-0A Graphics&quot; for a description of the meaning of the error indicators.</p>
-<dt>char_up_vec.delta_x</p>
-<dd>(Gfloat, Output) &#8211; Gives the X world coordinate of a the up vector.</p>
-<dt>char_up_vec.delta_y</p>
-<dd>(Gfloat, Output) &#8211; Gives the Y world coordinate of a the up vector.</dl>
+<dt>err_ind</dt>
+<dd>(Output) &#8211; If the inquired values cannot be returned correctly, a non-zero error indicator is returned in err_ind, otherwise a zero is returned. Consult &quot;User&#8217;s Guide for NCAR GKS-0A Graphics&quot; for a description of the meaning of the error indicators.</dd>
+<dt>char_up_vec.delta_x</dt>
+<dd>(Gfloat, Output) &#8211; Gives the X world coordinate of a the up vector.</dd>
+<dt>char_up_vec.delta_y</dt>
+<dd>(Gfloat, Output) &#8211; Gives the Y world coordinate of a the up vector.</dd></dl>
 <h2>Usage</h2>
 <p>The up vector is that vector formed by the two coordinate points (0.,0.) and (char_up_vec.delta_x,char_up_vec.delta_y). See gset_char_up_vec for more details on the meaning of the character up vector.</p>
 <h2>Access</h2>

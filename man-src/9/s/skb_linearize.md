@@ -15,7 +15,7 @@ skb_linearize - convert paged skb to linear one
 <h2>Arguments</h2>
 
 <i>skb</i>
-<dl><dd><dd>buffer to linarize</dl>
+<dl><dd></dd><dd>buffer to linarize</dd></dl>
 
 <h2>Description</h2>
 

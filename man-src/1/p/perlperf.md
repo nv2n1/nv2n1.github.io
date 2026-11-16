@@ -761,11 +761,11 @@ exit 0;
  The program took just over 17 wallclock seconds to run. Note the different values <tt>&quot;time&quot;</tt> outputs, it's important to always use the same one, and to not confuse what each one means.
 <dl>
 <dt>Elapsed Real Time
-<dd> The overall, or wallclock, time between when <tt>&quot;time&quot;</tt> was called, and when it terminates. The elapsed time includes both user and system times, and time spent waiting for other users and processes on the system. Inevitably, this is the most approximate of the measurements given.
-<dt>User <font SIZE="-1">CPU</font> Time
-<dd> The user time is the amount of time the entire process spent on behalf of the user on this system executing this program.
-<dt>System <font SIZE="-1">CPU</font> Time
-<dd> The system time is the amount of time the kernel itself spent executing routines, or system calls, on behalf of this process user.</dl>
+</dt><dd> The overall, or wallclock, time between when <tt>&quot;time&quot;</tt> was called, and when it terminates. The elapsed time includes both user and system times, and time spent waiting for other users and processes on the system. Inevitably, this is the most approximate of the measurements given.
+</dd><dt>User <font SIZE="-1">CPU</font> Time
+</dt><dd> The user time is the amount of time the entire process spent on behalf of the user on this system executing this program.
+</dd><dt>System <font SIZE="-1">CPU</font> Time
+</dt><dd> The system time is the amount of time the kernel itself spent executing routines, or system calls, on behalf of this process user.</dd></dl>
  
 
  Running this same process as a <tt>&quot;Schwarzian Transform&quot;</tt> it is possible to eliminate the input and output arrays for storing all the data, and work on the input directly as it arrives too. Otherwise, the code looks fairly similar: 
@@ -1025,26 +1025,26 @@ use strict 'refs';
 
 
 <dt><a HREF="#lbAH">GENERAL GUIDELINES</a>
-<dd>
-<dt><a HREF="#lbAI">BENCHMARKS</a>
-<dd>
+</dt><dd>
+</dd><dt><a HREF="#lbAI">BENCHMARKS</a>
+</dt><dd>
 
 
-<dt><a HREF="#lbAL">PROFILING TOOLS</a>
-<dd>
+</dd><dt><a HREF="#lbAL">PROFILING TOOLS</a>
+</dt><dd>
 
 
-<dt><a HREF="#lbAR">SORTING</a>
-<dd>
-<dt><a HREF="#lbAS">LOGGING</a>
-<dd>
+</dd><dt><a HREF="#lbAR">SORTING</a>
+</dt><dd>
+</dd><dt><a HREF="#lbAS">LOGGING</a>
+</dt><dd>
 
 
-<dt><a HREF="#lbAU">POSTSCRIPT</a>
-<dd>
-<dt><a HREF="#lbAV">SEE ALSO</a>
-<dd>
+</dd><dt><a HREF="#lbAU">POSTSCRIPT</a>
+</dt><dd>
+</dd><dt><a HREF="#lbAV">SEE ALSO</a>
+</dt><dd>
 
 
-<dt><a HREF="#lbBA">AUTHOR</a>
-<dd></dl>
+</dd><dt><a HREF="#lbBA">AUTHOR</a>
+</dt><dd></dd></dl>

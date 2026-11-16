@@ -18,60 +18,60 @@ description: "readom – read or write data Compact Discs"
 <h2>OPTIONS</h2>
 <p> If no options except the <i>dev=</i> option have been specified, <code>readom</code> goes into interactive mode. Select a primary function and then follow the instructions. </p>
 <dl>
-<dt><code>-version</code></p>
-<dd> Print version information and exit.</p>
-<dt><code>dev=</code><i>target</i></p>
-<dd> Sets the SCSI target for the drive, see notes above. A typical device specification is <code>dev=</code><i>6,0</i> . If a filename must be provided together with the numerical target specification, the filename is implementation specific. The correct filename in this case can be found in the system specific manuals of the target operating system. On a <i>FreeBSD</i> system without <i>CAM</i> support, you need to use the control device (e.g. <i>/dev/rcd0.ctl</i>). A correct device specification in this case may be <code>dev=</code><i>/dev/rcd0.ctl:@</i> . </p>
+<dt><code>-version</code></dt>
+<dd> Print version information and exit.</dd>
+<dt><code>dev=</code><i>target</i></dt>
+<dd> Sets the SCSI target for the drive, see notes above. A typical device specification is <code>dev=</code><i>6,0</i> . If a filename must be provided together with the numerical target specification, the filename is implementation specific. The correct filename in this case can be found in the system specific manuals of the target operating system. On a <i>FreeBSD</i> system without <i>CAM</i> support, you need to use the control device (e.g. <i>/dev/rcd0.ctl</i>). A correct device specification in this case may be <code>dev=</code><i>/dev/rcd0.ctl:@</i> . </dd>
 <p> On Linux, drives connected to a parallel port adapter are mapped to a virtual SCSI bus. Different adapters are mapped to different targets on this virtual SCSI bus. </p>
 <p> If no <i>dev</i> option is present, <code>readom</code> will try to get the device from the <code>CDR_DEVICE</code> environment. </p>
 <p> If the argument to the <code>dev=</code> option does not contain the characters &#8216;,&#8217;, &#8216;/&#8217;, &#8216;@&#8217; or &#8216;:&#8217;, it is interpreted as an label name that may be found in the file /etc/wodim.conf (see FILES section).</p>
-<dt><code>timeout=</code><i>#</i></p>
-<dd> Set the default SCSI command timeout value to <i>#</i> seconds. The default SCSI command timeout is the minimum timeout used for sending SCSI commands. If a SCSI command fails due to a timeout, you may try to raise the default SCSI command timeout above the timeout value of the failed command. If the command runs correctly with a raised command timeout, please report the better timeout value and the corresponding command to the author of the program. If no <i>timeout </i> option is present, a default timeout of 40 seconds is used.</p>
-<dt><code>debug=</code><i>#, </i><code>-d</code></p>
-<dd> Set the misc debug value to # (with debug=#) or increment the misc debug level by one (with -d). If you specify <i>-dd,</i> this equals to <code>debug=</code><i>2.</i> This may help to find problems while opening a driver for libusal. as well as with sector sizes and sector types. Using <code>-debug</code> slows down the process and may be the reason for a buffer underrun.</p>
-<dt><code>kdebug=</code>#, <code>kd=</code>#</p>
-<dd> Tell the <code>usal</code>-driver to modify the kernel debug value while SCSI commands are running.</p>
-<dt><code>-silent</code>, <code>-s</code></p>
-<dd> Do not print out a status report for failed SCSI commands.</p>
-<dt><code>-v</code></p>
-<dd> Increment the level of general verbosity by one. This is used e.g. to display the progress of the process.</p>
-<dt><code>-V</code></p>
-<dd> Increment the verbose level with respect of SCSI command transport by one. This helps to debug problems during the process, that occur in the CD-Recorder. If you get incomprehensible error messages you should use this flag to get more detailed output. <code>-VV</code> will show data buffer content in addition. Using <code>-V</code> or <code>-VV</code> slows down the process.</p>
-<dt><code>f=</code><i>file</i></p>
-<dd> Specify the filename where the output should be written or the input should be taken from. Using &#8216;-&#8216; as filename will cause <code>readom</code> to use <code>stdout</code> resp. <code>stdin</code>.</p>
-<dt><code>-w</code></p>
-<dd> Switch to write mode. If this option is not present, <code>readom</code> reads from the specified device.</p>
-<dt><code>-c2scan</code></p>
-<dd> Scans the whole CD or the range specified by the <code>sectors=</code><i>range</i> for C2 errors. C2 errors are errors that are uncorrectable after the second stage of the 24/28 + 28/32 Reed Solomon correction system at audio level (2352 bytes sector size). If an audio CD has C2 errors, interpolation is needed to hide the errors. If a data CD has C2 errors, these errors are in most cases corrected by the ECC/EDC code that makes 2352 bytes out of 2048 data bytes. The ECC/EDC code should be able to correct about 100 C2 error bytes per sector. </p>
+<dt><code>timeout=</code><i>#</i></dt>
+<dd> Set the default SCSI command timeout value to <i>#</i> seconds. The default SCSI command timeout is the minimum timeout used for sending SCSI commands. If a SCSI command fails due to a timeout, you may try to raise the default SCSI command timeout above the timeout value of the failed command. If the command runs correctly with a raised command timeout, please report the better timeout value and the corresponding command to the author of the program. If no <i>timeout </i> option is present, a default timeout of 40 seconds is used.</dd>
+<dt><code>debug=</code><i>#, </i><code>-d</code></dt>
+<dd> Set the misc debug value to # (with debug=#) or increment the misc debug level by one (with -d). If you specify <i>-dd,</i> this equals to <code>debug=</code><i>2.</i> This may help to find problems while opening a driver for libusal. as well as with sector sizes and sector types. Using <code>-debug</code> slows down the process and may be the reason for a buffer underrun.</dd>
+<dt><code>kdebug=</code>#, <code>kd=</code>#</dt>
+<dd> Tell the <code>usal</code>-driver to modify the kernel debug value while SCSI commands are running.</dd>
+<dt><code>-silent</code>, <code>-s</code></dt>
+<dd> Do not print out a status report for failed SCSI commands.</dd>
+<dt><code>-v</code></dt>
+<dd> Increment the level of general verbosity by one. This is used e.g. to display the progress of the process.</dd>
+<dt><code>-V</code></dt>
+<dd> Increment the verbose level with respect of SCSI command transport by one. This helps to debug problems during the process, that occur in the CD-Recorder. If you get incomprehensible error messages you should use this flag to get more detailed output. <code>-VV</code> will show data buffer content in addition. Using <code>-V</code> or <code>-VV</code> slows down the process.</dd>
+<dt><code>f=</code><i>file</i></dt>
+<dd> Specify the filename where the output should be written or the input should be taken from. Using &#8216;-&#8216; as filename will cause <code>readom</code> to use <code>stdout</code> resp. <code>stdin</code>.</dd>
+<dt><code>-w</code></dt>
+<dd> Switch to write mode. If this option is not present, <code>readom</code> reads from the specified device.</dd>
+<dt><code>-c2scan</code></dt>
+<dd> Scans the whole CD or the range specified by the <code>sectors=</code><i>range</i> for C2 errors. C2 errors are errors that are uncorrectable after the second stage of the 24/28 + 28/32 Reed Solomon correction system at audio level (2352 bytes sector size). If an audio CD has C2 errors, interpolation is needed to hide the errors. If a data CD has C2 errors, these errors are in most cases corrected by the ECC/EDC code that makes 2352 bytes out of 2048 data bytes. The ECC/EDC code should be able to correct about 100 C2 error bytes per sector. </dd>
 <p> If you find C2 errors you may want to reduce the speed using the <code>speed=</code> option as C2 errors may be a result of dynamic unbalance on the medium.</p>
-<dt><code>-scanbus</code></p>
-<dd> Scan all SCSI devices on all SCSI busses and print the inquiry strings. This option may be used to find SCSI address of the devices on a system. The numbers printed out as labels are computed by: <code>bus * 100 + target</code></p>
-<dt><code>sectors=</code><i>range</i></p>
-<dd> Specify a sector range that should be read. The range is specified by the starting sector number, a minus sign and the ending sector number. The end sector is not included in the list, so <code>sectors=</code>0-0 will not read anything and may be used to check for a CD in the drive.</p>
-<dt><code>speed=</code>#</p>
-<dd> Set the speed factor of the read or write process to #. # is an integer, representing a multiple of the audio speed. This is about 150 KB/s for CD-ROM and about 172 KB/s for CD-Audio. If no <i>speed</i> option is present, <code>readom</code> will use maximum speed. Only MMC compliant drives will benefit from this option. The speed of non MMC drives is not changed. </p>
+<dt><code>-scanbus</code></dt>
+<dd> Scan all SCSI devices on all SCSI busses and print the inquiry strings. This option may be used to find SCSI address of the devices on a system. The numbers printed out as labels are computed by: <code>bus * 100 + target</code></dd>
+<dt><code>sectors=</code><i>range</i></dt>
+<dd> Specify a sector range that should be read. The range is specified by the starting sector number, a minus sign and the ending sector number. The end sector is not included in the list, so <code>sectors=</code>0-0 will not read anything and may be used to check for a CD in the drive.</dd>
+<dt><code>speed=</code>#</dt>
+<dd> Set the speed factor of the read or write process to #. # is an integer, representing a multiple of the audio speed. This is about 150 KB/s for CD-ROM and about 172 KB/s for CD-Audio. If no <i>speed</i> option is present, <code>readom</code> will use maximum speed. Only MMC compliant drives will benefit from this option. The speed of non MMC drives is not changed. </dd>
 <p> Using a lower speed may increase the readability of a CD or DVD.</p>
-<dt><code>ts=</code>#</p>
-<dd> Set the maximum transfer size for a single SCSI command to #. The syntax for the <code>ts=</code> option is the same as for wodim fs=# or sdd bs=#. </p>
+<dt><code>ts=</code>#</dt>
+<dd> Set the maximum transfer size for a single SCSI command to #. The syntax for the <code>ts=</code> option is the same as for wodim fs=# or sdd bs=#. </dd>
 <p> If no <code>ts=</code> option has been specified, <code>readom</code> defaults to a transfer size of 256 kB. If libusal gets lower values from the operating system, the value is reduced to the maximum value that is possible with the current operating system. Sometimes, it may help to further reduce the transfer size or to enhance it, but note that it may take a long time to find a better value by experimenting with the <code>ts=</code> option.</p>
-<dt><code>-notrunc</code></p>
-<dd> Do not truncate the output file when opening it.</p>
-<dt><code>-fulltoc</code></p>
-<dd> Retrieve a full TOC from the current disk and print it in hex.</p>
-<dt><code>-clone</code></p>
-<dd> Do a clone read. Read the CD with all sub-channel data and a full TOC. The full TOC data will be put into a file with similar name as with the <code>f=</code> option but the suffix <code>.toc</code> added.</p>
-<dt><code>-noerror</code></p>
-<dd> Do not abort if the high level error checking in <code>readom</code> found an uncorrectable error in the data stream.</p>
-<dt><code>-nocorr</code></p>
-<dd> Switch the drive into a mode where it ignores read errors in data sectors that are a result of uncorrectable ECC/EDC errors before reading. If <code>readom</code> completes, the error recovery mode of the drive is switched back to the remembered old mode.</p>
-<dt><code>retries=</code><i>#</i></p>
-<dd> Set the retry count for high level retries in <code>readom</code> to <i>#</i>. The default is to do 128 retries which may be too much if you like to read a CD with many unreadable sectors.</p>
-<dt><code>-overhead</code></p>
-<dd> Meter the SCSI command overhead time. This is done by executing several commands 1000 times and printing the total time used. If you divide the displayed times by 1000, you get the average overhead time for a single command.</p>
-<dt><code>meshpoints=</code>#</p>
-<dd> Print read-speed at # locations. The purpose of this option is to create a list of read speed values suitable for e.g. <code>gnuplot</code>. The speed values are calculated assuming that 1000 bytes are one kilobyte as documented in the SCSI standard. The output data created for this purpose is written to <i>stdout</i>.</p>
-<dt><code>-factor</code></p>
-<dd> Output the speed values for <code>meshpoints=</code># as factor based on <i>single speed</i> of the current medium. This only works if <code>readom</code> is able to determine the current medium type.</dl>
+<dt><code>-notrunc</code></dt>
+<dd> Do not truncate the output file when opening it.</dd>
+<dt><code>-fulltoc</code></dt>
+<dd> Retrieve a full TOC from the current disk and print it in hex.</dd>
+<dt><code>-clone</code></dt>
+<dd> Do a clone read. Read the CD with all sub-channel data and a full TOC. The full TOC data will be put into a file with similar name as with the <code>f=</code> option but the suffix <code>.toc</code> added.</dd>
+<dt><code>-noerror</code></dt>
+<dd> Do not abort if the high level error checking in <code>readom</code> found an uncorrectable error in the data stream.</dd>
+<dt><code>-nocorr</code></dt>
+<dd> Switch the drive into a mode where it ignores read errors in data sectors that are a result of uncorrectable ECC/EDC errors before reading. If <code>readom</code> completes, the error recovery mode of the drive is switched back to the remembered old mode.</dd>
+<dt><code>retries=</code><i>#</i></dt>
+<dd> Set the retry count for high level retries in <code>readom</code> to <i>#</i>. The default is to do 128 retries which may be too much if you like to read a CD with many unreadable sectors.</dd>
+<dt><code>-overhead</code></dt>
+<dd> Meter the SCSI command overhead time. This is done by executing several commands 1000 times and printing the total time used. If you divide the displayed times by 1000, you get the average overhead time for a single command.</dd>
+<dt><code>meshpoints=</code>#</dt>
+<dd> Print read-speed at # locations. The purpose of this option is to create a list of read speed values suitable for e.g. <code>gnuplot</code>. The speed values are calculated assuming that 1000 bytes are one kilobyte as documented in the SCSI standard. The output data created for this purpose is written to <i>stdout</i>.</dd>
+<dt><code>-factor</code></dt>
+<dd> Output the speed values for <code>meshpoints=</code># as factor based on <i>single speed</i> of the current medium. This only works if <code>readom</code> is able to determine the current medium type.</dd></dl>
 <h2>EXAMPLES</h2>
 <p> For all examples below, it will be assumed that the drive is connected to the primary SCSI bus of the machine. The SCSI target id is set to 2. </p>
 <p> To read the complete media from a CD-ROM writing the data to the file <i>cdimage.raw</i>: </p>
@@ -82,11 +82,11 @@ description: "readom – read or write data Compact Discs"
 <p>&nbsp;<wbr>readom dev=2,0 -w f=cdimage.raw </p>
 <h2>ENVIRONMENT</h2>
 <dl>
-<dt><code>RSH</code></p>
-<dd> If the <code>RSH</code> environment is present, the remote connection will not be created via <code><a href="/docs/linux/man/3-rcmd/">rcmd</a></code>(3) but by calling the program pointed to by <code>RSH</code>. Use e.g. <code>RSH=</code>/usr/bin/ssh to create a secure shell connection. </p>
+<dt><code>RSH</code></dt>
+<dd> If the <code>RSH</code> environment is present, the remote connection will not be created via <code><a href="/docs/linux/man/3-rcmd/">rcmd</a></code>(3) but by calling the program pointed to by <code>RSH</code>. Use e.g. <code>RSH=</code>/usr/bin/ssh to create a secure shell connection. </dd>
 <p> Note that this forces <code>wodim</code> to create a pipe to the <code><a href="/docs/linux/man/1-rsh/">rsh</a>(1)</code> program and disallows <code>wodim</code> to directly access the network socket to the remote server. This makes it impossible to set up performance parameters and slows down the connection compared to a <code>root</code> initiated <code><a href="/docs/linux/man/3-rcmd/">rcmd</a>(3)</code> connection.</p>
-<dt><code>RSCSI</code></p>
-<dd> If the <code>RSCSI</code> environment is present, the remote SCSI server will not be the program <code>/opt/schily/sbin/rscsi</code> but the program pointed to by <code>RSCSI</code>. Note that the remote SCSI server program name will be ignored if you log in using an account that has been created with a remote SCSI server program as login shell.</dl>
+<dt><code>RSCSI</code></dt>
+<dd> If the <code>RSCSI</code> environment is present, the remote SCSI server will not be the program <code>/opt/schily/sbin/rscsi</code> but the program pointed to by <code>RSCSI</code>. Note that the remote SCSI server program name will be ignored if you log in using an account that has been created with a remote SCSI server program as login shell.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-wodim/">wodim</a></code>(1), <code><a href="/docs/linux/man/1-genisoimage/">genisoimage</a></code>(1), <code><a href="/docs/linux/man/3-rcmd/">rcmd</a></code>(3), <code><a href="/docs/linux/man/1-ssh/">ssh</a></code>(1). </p>
 <h2>NOTES</h2>
@@ -96,7 +96,7 @@ description: "readom – read or write data Compact Discs"
 <p> A typical error message for a SCSI command looks like: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 readom: I/O error. test unit ready: scsi sendcmd: no error
 CDB:  00 20 00 00 00 00
@@ -107,7 +107,7 @@ Sense Code: 0x25 Qual 0x00 (logical unit not supported) Fru 0x0
 Sense flags: Blk 0 (not valid)
 cmd finished after 0.002s timeout 40s
 </pre>
-</dl>
+</dd></dl>
 <p> The first line gives information about the transport of the command. The text after the first colon gives the error text for the system call from the view of the kernel. It usually is: <code>I/O error</code> unless other problems happen. The next words contain a short description for the SCSI command that fails. The rest of the line tells you if there were any problems for the transport of the command over the SCSI bus. <code>fatal error</code> means that it was not possible to transport the command (i.e. no device present at the requested SCSI address). </p>
 <p> The second line prints the SCSI command descriptor block for the failed command. </p>
 <p> The third line gives information on the SCSI status code returned by the command, if the transport of the command succeeds. This is error information from the SCSI device. </p>

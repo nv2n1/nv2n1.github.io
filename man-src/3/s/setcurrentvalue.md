@@ -10,185 +10,63 @@ description: "QuantLib::Problem – Constrained optimization problem."
 <p>QuantLib::Problem &#8211; Constrained optimization problem. </p>
 <h2>Synopsis</h2>
 <pre><code>Problem (CostFunction &amp;costFunction, Constraint &amp;constraint, const Array &amp;initialValue=Array())
-
-
 default constructor
-
-
 void reset ()
-
-
-
 Real value (const Array &amp;x)
-
-
 call cost function computation and increment evaluation counter
-
-
 Disposable&lt; Array &gt; values (const Array &amp;x)
-
-
 call cost values computation and increment evaluation counter
-
-
 void gradient (Array &amp;grad_f, const Array &amp;x)
-
-
 call cost function gradient computation and increment
-
-
 Real valueAndGradient (Array &amp;grad_f, const Array &amp;x)
-
-
 call cost function computation and it gradient
-
-
 Constraint &amp; constraint () const
-
-
 Constraint.
-
-
 CostFunction &amp; costFunction () const
-
-
 Cost function.
-
-
 void setCurrentValue (const Array &amp;currentValue)
-
-
-
 const Array &amp; currentValue () const
-
-
 current value of the local minimum
-
-
 void setFunctionValue (Real functionValue)
-
-
-
 Real functionValue () const
-
-
 value of cost function
-
-
 void setGradientNormValue (Real squaredNorm)
-
-
-
 Real gradientNormValue () const
-
-
 value of cost function gradient norm
-
-
 Integer functionEvaluation () const
-
-
 number of evaluation of cost function
-
-
 Integer gradientEvaluation () const
-
-
 number of evaluation of cost function gradient
-
-
-
 Protected Attributes</code></pre>
 <h3>Public Member Functions</h3>
 <pre><code>Problem (CostFunction &amp;costFunction, Constraint &amp;constraint, const Array &amp;initialValue=Array())
-
-
 default constructor
-
-
 void reset ()
-
-
-
 Real value (const Array &amp;x)
-
-
 call cost function computation and increment evaluation counter
-
-
 Disposable&lt; Array &gt; values (const Array &amp;x)
-
-
 call cost values computation and increment evaluation counter
-
-
 void gradient (Array &amp;grad_f, const Array &amp;x)
-
-
 call cost function gradient computation and increment
-
-
 Real valueAndGradient (Array &amp;grad_f, const Array &amp;x)
-
-
 call cost function computation and it gradient
-
-
 Constraint &amp; constraint () const
-
-
 Constraint.
-
-
 CostFunction &amp; costFunction () const
-
-
 Cost function.
-
-
 void setCurrentValue (const Array &amp;currentValue)
-
-
-
 const Array &amp; currentValue () const
-
-
 current value of the local minimum
-
-
 void setFunctionValue (Real functionValue)
-
-
-
 Real functionValue () const
-
-
 value of cost function
-
-
 void setGradientNormValue (Real squaredNorm)
-
-
-
 Real gradientNormValue () const
-
-
 value of cost function gradient norm
-
-
 Integer functionEvaluation () const
-
-
 number of evaluation of cost function
-
-
 Integer gradientEvaluation () const
-
-
 number of evaluation of cost function gradient
-
-
-
 Protected Attributes</code></pre>
 <p> <code>CostFunction</code> &amp; <code>costFunction_</code><br />
  <i>Unconstrained cost function. </i><br />
@@ -208,6 +86,6 @@ Protected Attributes</code></pre>
 <h3>void reset ()</h3>
 <p><code>Warning</code></p>
 <dl>
-<dd>it does not reset the current minumum to any initial value</dl>
+<dd>it does not reset the current minumum to any initial value</dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for QuantLib from the source code.</p>

@@ -15,15 +15,15 @@ snd_pcm_sgbuf_get_chunk_size - Compute the max size that fits within the contig.
 <h2>Arguments</h2>
 
 <i>substream</i>
-<dl><dd><dd>PCM substream</dl>
+<dl><dd></dd><dd>PCM substream</dd></dl>
  
 
  <i>ofs</i>
-<dl><dd>byte offset</dl>
+<dl><dd>byte offset</dd></dl>
  
 
  <i>size</i>
-<dl><dd>byte size to examine</dl>
+<dl><dd>byte size to examine</dd></dl>
 
 <h2>Copyright</h2>
 

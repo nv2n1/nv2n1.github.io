@@ -108,44 +108,44 @@ use_lvmlockd = 1</pre>
 <p>The type of VG access control is specified in the vgcreate command. See <code><a href="/docs/linux/man/8-vgcreate/">vgcreate</a></code>(8) for all vgcreate options. </p>
 <p> <code>vgcreate &lt;vgname&gt; &lt;devices&gt;</code> </p>
 <dl>
-<dt>&bull;</p>
-<dd>Creates a local VG with the local system ID when neither lvmlockd nor clvm are configured.</p>
-<dt>&bull;</p>
-<dd>Creates a local VG with the local system ID when lvmlockd is configured.</p>
-<dt>&bull;</p>
-<dd>Creates a clvm VG when clvm is configured. </p>
+<dt>&bull;</dt>
+<dd>Creates a local VG with the local system ID when neither lvmlockd nor clvm are configured.</dd>
+<dt>&bull;</dt>
+<dd>Creates a local VG with the local system ID when lvmlockd is configured.</dd>
+<dt>&bull;</dt>
+<dd>Creates a clvm VG when clvm is configured. </dd>
 </dl>
 <p> <code>vgcreate &#8211;shared &lt;vgname&gt; &lt;devices&gt;</code></p>
 <dl>
-<dt>&bull;</p>
-<dd>Requires lvmlockd to be configured and running.</p>
-<dt>&bull;</p>
-<dd>Creates a lockd VG with lock type sanlock|dlm depending on which lock manager is running.</p>
-<dt>&bull;</p>
-<dd>LVM commands request locks from lvmlockd to use the VG.</p>
-<dt>&bull;</p>
-<dd>lvmlockd obtains locks from the selected lock manager. </p>
+<dt>&bull;</dt>
+<dd>Requires lvmlockd to be configured and running.</dd>
+<dt>&bull;</dt>
+<dd>Creates a lockd VG with lock type sanlock|dlm depending on which lock manager is running.</dd>
+<dt>&bull;</dt>
+<dd>LVM commands request locks from lvmlockd to use the VG.</dd>
+<dt>&bull;</dt>
+<dd>lvmlockd obtains locks from the selected lock manager. </dd>
 </dl>
 <p> <code>vgcreate -c|&#8211;clustered y &lt;vgname&gt; &lt;devices&gt;</code></p>
 <dl>
-<dt>&bull;</p>
-<dd>Requires clvm to be configured and running.</p>
-<dt>&bull;</p>
-<dd>Creates a clvm VG with the &quot;clustered&quot; flag.</p>
-<dt>&bull;</p>
-<dd>LVM commands request locks from clvmd to use the VG. </p>
+<dt>&bull;</dt>
+<dd>Requires clvm to be configured and running.</dd>
+<dt>&bull;</dt>
+<dd>Creates a clvm VG with the &quot;clustered&quot; flag.</dd>
+<dt>&bull;</dt>
+<dd>LVM commands request locks from clvmd to use the VG. </dd>
 </dl>
 <h3>creating the first sanlock VG</h3>
 <p>Creating the first sanlock VG is not protected by locking and requires special attention. This is because sanlock locks exist within the VG, so they are not available until the VG exists. The first sanlock VG will contain the &quot;global lock&quot;. </p>
 <dl>
-<dt>&bull;</p>
-<dd>The first vgcreate command needs to be given the path to a device that has not yet been initialized with pvcreate. The pvcreate initialization will be done by vgcreate. This is because the pvcreate command requires the global lock, which will not be available until after the first sanlock VG is created. </p>
-<dt>&bull;</p>
-<dd>While running vgcreate for the first sanlock VG, ensure that the device being used is not used by another LVM command. Allocation of shared devices is usually protected by the global lock, but this cannot be done for the first sanlock VG which will hold the global lock. </p>
-<dt>&bull;</p>
-<dd>While running vgcreate for the first sanlock VG, ensure that the VG name being used is not used by another LVM command. Uniqueness of VG names is usually ensured by the global lock. </p>
-<dt>&bull;</p>
-<dd>Because the first sanlock VG will contain the global lock, this VG needs to be accessible to all hosts that will use sanlock shared VGs. All hosts will need to use the global lock from the first sanlock VG. </p>
+<dt>&bull;</dt>
+<dd>The first vgcreate command needs to be given the path to a device that has not yet been initialized with pvcreate. The pvcreate initialization will be done by vgcreate. This is because the pvcreate command requires the global lock, which will not be available until after the first sanlock VG is created. </dd>
+<dt>&bull;</dt>
+<dd>While running vgcreate for the first sanlock VG, ensure that the device being used is not used by another LVM command. Allocation of shared devices is usually protected by the global lock, but this cannot be done for the first sanlock VG which will hold the global lock. </dd>
+<dt>&bull;</dt>
+<dd>While running vgcreate for the first sanlock VG, ensure that the VG name being used is not used by another LVM command. Uniqueness of VG names is usually ensured by the global lock. </dd>
+<dt>&bull;</dt>
+<dd>Because the first sanlock VG will contain the global lock, this VG needs to be accessible to all hosts that will use sanlock shared VGs. All hosts will need to use the global lock from the first sanlock VG. </dd>
 <p> See below for more information about managing the sanlock global lock. </p>
 </dl>
 <h3>using lockd VGs</h3>
@@ -247,38 +247,38 @@ use_lvmlockd = 1</pre>
  vgs -o+locktype,lockargs &lt;vgname&gt; </p>
 <p> To change the dlm cluster name in the VG when the VG is still used by the original cluster: </p>
 <dl>
-<dt>&bull;</p>
+<dt>&bull;</dt>
 <dd>Stop the VG on all hosts:<br />
- vgchange &#8211;lock-stop &lt;vgname&gt; </p>
-<dt>&bull;</p>
+ vgchange &#8211;lock-stop &lt;vgname&gt; </dd>
+<dt>&bull;</dt>
 <dd>Change the VG lock type to none:<br />
- vgchange &#8211;lock-type none &lt;vgname&gt; </p>
-<dt>&bull;</p>
+ vgchange &#8211;lock-type none &lt;vgname&gt; </dd>
+<dt>&bull;</dt>
 <dd>Change the dlm cluster name on the host or move the VG to the new cluster. The new dlm cluster must now be active on the host. Verify the new name by:<br />
- cat /sys/kernel/config/dlm/cluster/cluster_name </p>
-<dt>&bull;</p>
+ cat /sys/kernel/config/dlm/cluster/cluster_name </dd>
+<dt>&bull;</dt>
 <dd>Change the VG lock type back to dlm which sets the new cluster name:<br />
- vgchange &#8211;lock-type dlm &lt;vgname&gt; </p>
-<dt>&bull;</p>
+ vgchange &#8211;lock-type dlm &lt;vgname&gt; </dd>
+<dt>&bull;</dt>
 <dd>Start the VG on hosts to use it:<br />
- vgchange &#8211;lock-start &lt;vgname&gt; </p>
+ vgchange &#8211;lock-start &lt;vgname&gt; </dd>
 </dl>
 <p> To change the dlm cluster name in the VG when the dlm cluster name has already changed, or the VG has already moved to a different cluster: </p>
 <dl>
-<dt>&bull;</p>
-<dd>Ensure the VG is not being used by any hosts. </p>
-<dt>&bull;</p>
+<dt>&bull;</dt>
+<dd>Ensure the VG is not being used by any hosts. </dd>
+<dt>&bull;</dt>
 <dd>The new dlm cluster must be active on the host making the change. The current dlm cluster name can be seen by:<br />
- cat /sys/kernel/config/dlm/cluster/cluster_name </p>
-<dt>&bull;</p>
+ cat /sys/kernel/config/dlm/cluster/cluster_name </dd>
+<dt>&bull;</dt>
 <dd>Change the VG lock type to none:<br />
- vgchange &#8211;lock-type none &#8211;force &lt;vgname&gt; </p>
-<dt>&bull;</p>
+ vgchange &#8211;lock-type none &#8211;force &lt;vgname&gt; </dd>
+<dt>&bull;</dt>
 <dd>Change the VG lock type back to dlm which sets the new cluster name:<br />
- vgchange &#8211;lock-type dlm &lt;vgname&gt; </p>
-<dt>&bull;</p>
+ vgchange &#8211;lock-type dlm &lt;vgname&gt; </dd>
+<dt>&bull;</dt>
 <dd>Start the VG on hosts to use it:<br />
- vgchange &#8211;lock-start &lt;vgname&gt; </p>
+ vgchange &#8211;lock-start &lt;vgname&gt; </dd>
 </dl>
 <h3>changing a local VG to a lockd VG</h3>
 <p>All LVs must be inactive to change the lock type. </p>
@@ -298,7 +298,7 @@ use_lvmlockd = 1</pre>
 <p> If the clvm cluster is no longer running on any nodes, then extra options can be used to forcibly make the VG local. Caution: this is only safe if all nodes have stopped using the VG: </p>
 <p> vgchange &#8211;config &#8216;global/locking_type=0 global/use_lvmlockd=0&#8217;</p>
 <dl>
-<dd>-cn &lt;vgname&gt;</dl>
+<dd>-cn &lt;vgname&gt;</dd></dl>
 <p> After the VG is local, follow the steps described in &quot;changing a local VG to a lockd VG&quot;.</p>
 <h3>limitations of lockd VGs</h3>
 <p>Things that do not yet work in lockd VGs:<br />
@@ -314,34 +314,34 @@ use_lvmlockd = 1</pre>
 <p> While lvmlockd and clvmd are entirely different systems, LVM command usage remains similar. Differences are more notable when using lvmlockd&#8217;s sanlock option. </p>
 <p> Visible usage differences between lockd VGs with lvmlockd and clvm VGs with clvmd: </p>
 <dl>
-<dt>&bull;</p>
-<dd>lvm.conf must be configured to use either lvmlockd (use_lvmlockd=1) or clvmd (locking_type=3), but not both. </p>
-<dt>&bull;</p>
-<dd>vgcreate &#8211;shared creates a lockd VG, and vgcreate &#8211;clustered y creates a clvm VG. </p>
-<dt>&bull;</p>
-<dd>lvmlockd adds the option of using sanlock for locking, avoiding the need for network clustering. </p>
-<dt>&bull;</p>
-<dd>lvmlockd defaults to the exclusive activation mode whenever the activation mode is unspecified, i.e. -ay means -aey, not -asy. </p>
-<dt>&bull;</p>
-<dd>lvmlockd commands always apply to the local host, and never have an effect on a remote host. (The activation option &#8216;l&#8217; is not used.) </p>
-<dt>&bull;</p>
-<dd>lvmlockd works with thin and cache pools and LVs. </p>
-<dt>&bull;</p>
-<dd>lvmlockd works with lvmetad. </p>
-<dt>&bull;</p>
-<dd>lvmlockd saves the cluster name for a lockd VG using dlm. Only hosts in the matching cluster can use the VG. </p>
-<dt>&bull;</p>
-<dd>lvmlockd requires starting/stopping lockd VGs with vgchange &#8211;lock-start and &#8211;lock-stop. </p>
-<dt>&bull;</p>
-<dd>vgremove of a sanlock VG may fail indicating that all hosts have not stopped the VG lockspace. Stop the VG on all hosts using vgchange &#8211;lock-stop. </p>
-<dt>&bull;</p>
-<dd>vgreduce or pvmove of a PV in a sanlock VG will fail if it holds the internal &quot;lvmlock&quot; LV that holds the sanlock locks. </p>
-<dt>&bull;</p>
-<dd>lvmlockd uses lock retries instead of lock queueing, so high lock contention may require increasing global/lvmlockd_lock_retries to avoid transient lock failures. </p>
-<dt>&bull;</p>
-<dd>lvmlockd includes VG reporting options lock_type and lock_args, and LV reporting option lock_args to view the corresponding metadata fields. </p>
-<dt>&bull;</p>
-<dd>In the &#8216;vgs&#8217; command&#8217;s sixth VG attr field, &quot;s&quot; for &quot;shared&quot; is displayed for lockd VGs. </p>
-<dt>&bull;</p>
-<dd>If lvmlockd fails or is killed while in use, locks it held remain but are orphaned in the lock manager. lvmlockd can be restarted with an option to adopt the orphan locks from the previous instance of lvmlockd. </p>
+<dt>&bull;</dt>
+<dd>lvm.conf must be configured to use either lvmlockd (use_lvmlockd=1) or clvmd (locking_type=3), but not both. </dd>
+<dt>&bull;</dt>
+<dd>vgcreate &#8211;shared creates a lockd VG, and vgcreate &#8211;clustered y creates a clvm VG. </dd>
+<dt>&bull;</dt>
+<dd>lvmlockd adds the option of using sanlock for locking, avoiding the need for network clustering. </dd>
+<dt>&bull;</dt>
+<dd>lvmlockd defaults to the exclusive activation mode whenever the activation mode is unspecified, i.e. -ay means -aey, not -asy. </dd>
+<dt>&bull;</dt>
+<dd>lvmlockd commands always apply to the local host, and never have an effect on a remote host. (The activation option &#8216;l&#8217; is not used.) </dd>
+<dt>&bull;</dt>
+<dd>lvmlockd works with thin and cache pools and LVs. </dd>
+<dt>&bull;</dt>
+<dd>lvmlockd works with lvmetad. </dd>
+<dt>&bull;</dt>
+<dd>lvmlockd saves the cluster name for a lockd VG using dlm. Only hosts in the matching cluster can use the VG. </dd>
+<dt>&bull;</dt>
+<dd>lvmlockd requires starting/stopping lockd VGs with vgchange &#8211;lock-start and &#8211;lock-stop. </dd>
+<dt>&bull;</dt>
+<dd>vgremove of a sanlock VG may fail indicating that all hosts have not stopped the VG lockspace. Stop the VG on all hosts using vgchange &#8211;lock-stop. </dd>
+<dt>&bull;</dt>
+<dd>vgreduce or pvmove of a PV in a sanlock VG will fail if it holds the internal &quot;lvmlock&quot; LV that holds the sanlock locks. </dd>
+<dt>&bull;</dt>
+<dd>lvmlockd uses lock retries instead of lock queueing, so high lock contention may require increasing global/lvmlockd_lock_retries to avoid transient lock failures. </dd>
+<dt>&bull;</dt>
+<dd>lvmlockd includes VG reporting options lock_type and lock_args, and LV reporting option lock_args to view the corresponding metadata fields. </dd>
+<dt>&bull;</dt>
+<dd>In the &#8216;vgs&#8217; command&#8217;s sixth VG attr field, &quot;s&quot; for &quot;shared&quot; is displayed for lockd VGs. </dd>
+<dt>&bull;</dt>
+<dd>If lvmlockd fails or is killed while in use, locks it held remain but are orphaned in the lock manager. lvmlockd can be restarted with an option to adopt the orphan locks from the previous instance of lvmlockd. </dd>
 </dl>

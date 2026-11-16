@@ -10,10 +10,8 @@ description: "std::negation – std::negation"
 <p>std::negation &#8211; std::negation</p>
 <h2>Synopsis</h2>
 <pre><code>Defined in header&lt;type_traits&gt;
-
     template &lt;class B&gt;
     (1)(since C++ 17)
-
         struct negation;</code></pre>
 <p>Forms the logical negation of the type trait B.<br />
 The type std::negation&lt;B&gt; is a UnaryTypeTrait with a BaseCharacteristic of std::bool_constant&lt;!bool(B::value)&gt;. </p>
@@ -43,21 +41,18 @@ type std::integral_constant&lt;bool, value&gt;</p>
 <h2>Example</h2>
 <p>// Run this code </p>
 <pre><code>#include &lt;iostream&gt;
-
 #include &lt;type_traits&gt;
 static_assert(
     std::is_same&lt;
         std::bool_constant&lt;false&gt;,
         typename std::negation&lt;std::bool_constant&lt;true&gt;&gt;::type&gt;::value,
     &quot;&quot;);
-
 static_assert(
     std::is_same&lt;
         std::bool_constant&lt;true&gt;,
         typename std::negation&lt;std::bool_constant&lt;false&gt;&gt;::type&gt;::value,
     &quot;&quot;);
 int main()
-
 {
     std::cout &lt;&lt; std::boolalpha;
     std::cout &lt;&lt; std::negation&lt;std::bool_constant&lt;true&gt;&gt;::value &lt;&lt; '

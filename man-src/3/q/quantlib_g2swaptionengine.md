@@ -18,7 +18,7 @@ description: "QuantLib::G2SwaptionEngine – Swaption priced by means of the Bla
 <p>Swaption priced by means of the Black formula </p>
 <p> <code>Warning</code></p>
 <dl COMPACT>
-<dd>The engine assumes that the exercise date equals the start date of the passed swap.</dl>
+<dd>The engine assumes that the exercise date equals the start date of the passed swap.</dd></dl>
 <p> <code>Examples: </code> </p>
 <p> <code>BermudanSwaption.cpp</code>. </p>
 <h2>Author</h2>

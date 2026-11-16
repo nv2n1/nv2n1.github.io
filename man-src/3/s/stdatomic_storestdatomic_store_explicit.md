@@ -11,35 +11,21 @@ std::atomic_store,std::atomic_store_explicit - std::atomic_store,std::atomic_sto
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;atomic&gt;
-
     template &lt;class T&gt;
-
     void atomic_store(std::atomic&lt;T&gt; *obj,
-
                       typename std::atomic&lt;T&gt;::value_type desr) noexcept;
-
 template &lt;class T&gt;
-
 void atomic_store(volatile std::atomic&lt;T&gt; *obj,
-
                   typename std::atomic&lt;T&gt;::value_type desr) noexcept;
-
 template &lt;class T&gt;
 (1)(since C++ 11)
-
     void atomic_store_explicit(std::atomic&lt;T&gt; *obj,
-
                                typename std::atomic&lt;T&gt;::value_type desr,
-
                                std::memory_order order) noexcept;
 (2)(since C++ 11)
-
     template &lt;class T&gt;
-
     void atomic_store_explicit(volatile std::atomic&lt;T&gt; *obj,
-
                                typename std::atomic&lt;T&gt;::value_type desr,
-
                                std::memory_order order) noexcept;</code></pre> 
 1) Atomically replaces the value pointed to by obj with the value of desr as if by obj-&gt;store(desr) 
 2) Atomically replaces the value pointed to by obj with the value of desr as if by obj-&gt;store(desr, order) 

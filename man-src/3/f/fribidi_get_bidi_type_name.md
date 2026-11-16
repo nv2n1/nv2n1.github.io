@@ -21,9 +21,8 @@ url: "/docs/linux/man/3-fribidi_get_bidi_type_name/"
 
 <dl>
 <dt><b>FriBidiCharType t</b>
-<dd> Input bidi type. 
-
- Since there are 23 possible values for a <b>FriBidiCharType</b>, they are not all listed here.</dl>
+</dt><dd> Input bidi type. 
+ Since there are 23 possible values for a <b>FriBidiCharType</b>, they are not all listed here.</dd></dl>
 
 <h2>DESCRIPTION</h2>
 

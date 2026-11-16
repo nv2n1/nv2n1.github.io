@@ -19,7 +19,7 @@ description: "ctzrqf.f –"
 <p> <code>Purpose: </code></p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
  This routine is deprecated and has been replaced by routine CTZRZF.
  CTZRQF reduces the M-by-N ( M&lt;=N ) complex upper trapezoidal matrix A
@@ -29,11 +29,11 @@ description: "ctzrqf.f –"
  where Z is an N-by-N unitary matrix and R is an M-by-M upper
  triangular matrix.
 </pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>M</i> </p>
+</dt><dd> <i>M</i> </dd>
 <pre>
           M is INTEGER
           The number of rows of the matrix A.  M &gt;= 0.
@@ -73,18 +73,18 @@ description: "ctzrqf.f –"
 <p> <code>Author:</code></p>
 <dl>
 <dt>
-<dd> Univ. of Tennessee </p>
+</dt><dd> Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl>
 <dt>
-<dd> November 2011</dl>
+</dt><dd> November 2011</dd></dl>
 <p> <code>Further Details: </code></p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
   The  factorization is obtained by Householder's method.  The kth
   transformation matrix, Z( k ), whose conjugate transpose is used to
@@ -105,8 +105,9 @@ description: "ctzrqf.f –"
   Z is given by
      Z =  Z( 1 ) * Z( 2 ) * ... * Z( m ).
 </pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> Definition at line 139 of file ctzrqf.f.</p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for LAPACK from the source code. </p>
 <h2>Index</h2>
+</p>

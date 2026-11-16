@@ -26,10 +26,10 @@ description: "zgebal.f –"
  close in norm as possible. Both steps are optional.
  Balancing may reduce the 1-norm of the matrix, and improve the
  accuracy of the computed eigenvalues and/or eigenvectors.</pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>JOB</i> </p>
+<dd><i>JOB</i> </dd>
 <pre> JOB is CHARACTER*1
  Specifies the operations to be performed on A:
  = 'N': none: simply set ILO = 1, IHI = N, SCALE(I) = 1.0
@@ -72,13 +72,13 @@ description: "zgebal.f –"
 <p>&nbsp;<wbr></dl>
 <p> <code>Author:</code></p>
 <dl>
-<dd>Univ. of Tennessee </p>
+<dd>Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl>
-<dd>November 2011</dl>
+<dd>November 2011</dd></dl>
 <p> <code>Further Details: </code></p>
 <dl>
 <dd>
@@ -101,7 +101,8 @@ description: "zgebal.f –"
  This subroutine is based on the EISPACK routine CBAL.
  Modified by Tzu-Yi Chen, Computer Science Division, University of
  California at Berkeley, USA</pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> Definition at line 161 of file zgebal.f.</p>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for LAPACK from the source code.</p>
+</p>

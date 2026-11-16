@@ -11,9 +11,7 @@ description: "ql/experimental/credit/randomdefaultmodel.hpp – Random default-t
 <h2>Synopsis</h2>
 <pre><code>
 #include &lt;ql/math/randomnumbers/rngtraits.hpp&gt;
-
 #include &lt;ql/experimental/credit/pool.hpp&gt;
-
 #include &lt;ql/experimental/credit/onefactorcopula.hpp&gt;</code></pre>
 <h3>Classes</h3>
 <p>class <code>RandomDefaultModel</code><br />

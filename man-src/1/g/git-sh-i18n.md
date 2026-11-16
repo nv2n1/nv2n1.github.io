@@ -20,11 +20,11 @@ description: "git-sh-i18n – Git’s i18n setup code for shell scripts"
 <p> gettext</p>
 <dl>
 <dt>
-<dd> Currently a dummy fall-through function implemented as a wrapper around <code><a href="/docs/linux/man/1-printf/">printf</a>(1)</code>. Will be replaced by a real gettext implementation in a later version.</dl>
+</dt><dd> Currently a dummy fall-through function implemented as a wrapper around <code><a href="/docs/linux/man/1-printf/">printf</a>(1)</code>. Will be replaced by a real gettext implementation in a later version.</dd></dl>
 <p> eval_gettext</p>
 <dl>
 <dt>
-<dd> Currently a dummy fall-through function implemented as a wrapper around <code><a href="/docs/linux/man/1-printf/">printf</a>(1)</code> with variables expanded by the <code>git-sh-i18n&#8211;envsubst</code>(1) helper. Will be replaced by a real gettext implementation in a later version.</dl>
+</dt><dd> Currently a dummy fall-through function implemented as a wrapper around <code><a href="/docs/linux/man/1-printf/">printf</a>(1)</code> with variables expanded by the <code>git-sh-i18n&#8211;envsubst</code>(1) helper. Will be replaced by a real gettext implementation in a later version.</dd></dl>
 <h2>GIT</h2>
 <p> Part of the <code><a href="/docs/linux/man/1-git/">git</a></code>(1) suite </p>
 <h2>Index</h2>

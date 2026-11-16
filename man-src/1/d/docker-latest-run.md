@@ -35,7 +35,7 @@ CPU shares&nbsp;<wbr>(relative weight) </p>
 <p> For example, consider a system with more than three cores. If you start one container <code>{C0}</code> with <code>-c=512</code> running one process, and another container <code>{C1}</code> with <code>-c=1024</code> running two processes, this can result in the following division of CPU shares: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre><code>
 PID container CPU CPU share 100
 {
@@ -51,7 +51,7 @@ PID container CPU CPU share 100
 }
 2 100 % of CPU2
 </code></pre>
-</dl>
+</dd></dl>
 <p> <code>&#8211;cap-add</code>=[]<br />
 Add Linux capabilities </p>
 <p> <code>&#8211;cap-drop</code>=[]<br />
@@ -211,7 +211,7 @@ Automatically remove the container when it exits&nbsp;<wbr>(incompatible with -d
 Security Options </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <p>&#8220;label=user:USER&#8221;   : Set the label user for the container<br />
 &#8220;label=role:ROLE&#8221;   : Set the label role for the container<br />
 &#8220;label=type:TYPE&#8221;   : Set the label type for the container<br />
@@ -222,7 +222,7 @@ Security Options </p>
 &#8220;seccomp=profile.json :  White listed syscalls seccomp Json file to be used as a seccomp filter<br />
 &#8220;apparmor=unconfined&#8221; : Turn off apparmor confinement for the container<br />
 &#8220;apparmor=your-profile&#8221; : Set the apparmor confinement profile for the container
-</dl>
+</dd></dl>
 <p> <code>&#8211;storage-opt</code>=[]<br />
 Storage driver options per container </p>
 <p> $ docker run -it &#8211;storage-opt size=120G fedora /bin/bash </p>
@@ -268,9 +268,9 @@ bind mounts&nbsp;<wbr>/HOST-DIR in the host to&nbsp;<wbr>/CONTAINER-DIR in the D
 container. If&nbsp;<wbr>&#8216;HOST-DIR&#8217;&nbsp;<wbr>is omitted,&nbsp;<wbr>&nbsp;<wbr>Docker automatically creates the new<br />
 volume on the host.&nbsp;<wbr>&nbsp;<wbr>The OPTIONS are a comma delimited list and can be:</p>
 <dl>
-<dt>step]</p>
+<dt>step]</dt>
 <dd>
-<p> item [rw|ro] item [z|Z] item [[r]shared|[r]slave|[r]private] item [nocopy]</dl>
+<p> item [rw|ro] item [z|Z] item [[r]shared|[r]slave|[r]private] item [nocopy]</dd></dl>
 <p> The CONTAINER-DIR must be an absolute path such as /src/docs. The HOST-DIR can be an absolute path or a name value. A name value must start with an alphanumeric character, followed by a-z0-9, _ (underscore), . (period) or &#8211; (hyphen). An absolute path starts with a / (forward slash). </p>
 <p> If you supply a HOST-DIR that is an absolute path, Docker bind-mounts to the path you specify. If you supply a name, Docker creates a named volume by that name. For example, you can specify either /foo or foo for a HOST-DIR value. If you supply the /foo value, Docker creates a bind-mount. If you supply the foo specification, Docker creates a named volume. </p>
 <p> You can specify multiple <code>-v</code> options to mount one or more mounts to a container. To use these same mounts in other containers, specify the <code>&#8211;volumes-from</code> option also. </p>
@@ -283,8 +283,8 @@ volume on the host.&nbsp;<wbr>&nbsp;<wbr>The OPTIONS are a comma delimited list 
 <p> To change propagation properties of a mount point use mount command. For example, if one wants to bind mount source directory /foo one can do mount &#8211;bind /foo /foo and mount &#8211;make-private &#8211;make-shared /foo. This will convert /foo into a shared mount point. Alternatively one can directly change propagation properties of source mount. Say / is source mount for /foo, then use mount &#8211;make-shared / to convert / into a shared mount. </p>
 <dl>
 <dt>
-<dd>
-<p> <code>Note</code>: When using systemd to manage the Docker daemon&#8217;s start and stop, in the systemd unit file there is an option to control mount propagation for the Docker daemon itself, called MountFlags. The value of this setting may cause Docker to not see mount propagation changes made on the mount point. For example, if this value is slave, you may not be able to use the shared or rshared propagation on a volume.</dl>
+</dt><dd>
+<p> <code>Note</code>: When using systemd to manage the Docker daemon&#8217;s start and stop, in the systemd unit file there is an option to control mount propagation for the Docker daemon itself, called MountFlags. The value of this setting may cause Docker to not see mount propagation changes made on the mount point. For example, if this value is slave, you may not be able to use the shared or rshared propagation on a volume.</dd></dl>
 <p> To disable automatic copying of data from the container path to the volume, use the nocopy flag. The nocopy flag can be set on bind mounts and named volumes. </p>
 <p> <code>&#8211;volume-driver</code>=&quot;&quot;<br />
 Container&#8217;s volume driver. This driver creates volumes specified either from<br />
@@ -312,157 +312,157 @@ Working directory inside the container </p>
 <p> <i>125</i> if the error is with Docker daemon <i>itself</i> </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <p>$ docker run&#8211; foo busybox;<br />
 echo $ ?<br />
 #flag provided but not defined : &#8211;foo<br />
        See &#8216;docker run &#8211;help&#8217;.125
-</dl>
+</dd></dl>
 <p> <i>126</i> if the <i>contained command</i> cannot be invoked </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 $ docker run busybox /etc; echo $?
 # exec: &quot;/etc&quot;: permission denied
   docker: Error response from daemon: Contained command could not be invoked
   126
 </pre>
-</dl>
+</dd></dl>
 <p> <i>127</i> if the <i>contained command</i> cannot be found </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 $ docker run busybox foo; echo $?
 # exec: &quot;foo&quot;: executable file not found in $PATH
   docker: Error response from daemon: Contained command not found or does not exist
   127
 </pre>
-</dl>
+</dd></dl>
 <p> <i>Exit code</i> of <i>contained command</i> otherwise </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 $ docker run busybox /bin/sh -c 'exit 3' 
 # 3
 </pre>
-</dl>
+</dd></dl>
 <h2>EXAMPLES</h2>
 <h2>Running container in read-only mode</h2>
 <p> During container image development, containers often need to write to the image content. Installing packages into /usr, for example. In production, applications seldom need to write to the image. Container applications write to volumes if they need to write to file systems at all. Applications can be made more secure by running them in read-only mode using the &#8211;read-only switch. This protects the containers image from modification. Read only containers may still need to write temporary data. The best way to handle this is to mount tmpfs directories on /run and /tmp. </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 # docker run --read-only --tmpfs /run --tmpfs /tmp -i -t fedora /bin/bash
 </pre>
-</dl>
+</dd></dl>
 <h2>Exposing log messages from the container to the host&#8217;s log</h2>
 <p> If you want messages that are logged in your container to show up in the host&#8217;s syslog/journal then you should bind mount the /dev/log directory as follows. </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 # docker run -v /dev/log:/dev/log -i -t fedora /bin/bash
 </pre>
-</dl>
+</dd></dl>
 <p> From inside the container you can test this by sending a message to the log. </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 (bash)# logger &quot;Hello from my container&quot;
 </pre>
-</dl>
+</dd></dl>
 <p> Then exit and check the journal. </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 # exit
 # journalctl -b | grep Hello
 </pre>
-</dl>
+</dd></dl>
 <p> This should list the message sent to logger. </p>
 <h2>Attaching to one or more from STDIN, STDOUT, STDERR</h2>
 <p> If you do not specify -a then Docker will attach everything (stdin,stdout,stderr) you&#8217;d like to connect instead, as in: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 # docker run -a stdin -a stdout -i -t fedora /bin/bash
 </pre>
-</dl>
+</dd></dl>
 <h2>Sharing IPC between containers</h2>
 <p> Using shm_server.c available here: &lt;<a rel="nofollow" href="https://www.cs.cf.ac.uk/Dave/C/node27.html">https://www.cs.cf.ac.uk/Dave/C/node27.html</a>&gt; </p>
 <p> Testing &#8211;ipc=host mode: </p>
 <p> Host shows a shared memory segment with 7 pids attached, happens to be from httpd: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <p>$ sudo ipcs &#8211; m&#8211; &#8212; &#8211;Shared Memory Segments&#8211; &#8212; &#8212; &#8211;key shmid owner perms bytes nattch status 0x01128e25 0 root 600 1000 7
-</dl>
+</dd></dl>
 <p> Now run a regular container, and it correctly does NOT see the shared memory segment from the host: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <p>$ docker run &#8211; it shm ipcs &#8211; m&#8211; &#8212; &#8211;Shared Memory Segments&#8211; &#8212; &#8212; &#8211;key shmid owner perms bytes nattch status
-</dl>
+</dd></dl>
 <p> Run a container with the new &#8211;ipc=host option, and it now sees the shared memory segment from the host httpd: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <p>$ docker run &#8211; it&#8211; ipc = host shm ipcs &#8211; m&#8211; &#8212; &#8211;Shared Memory Segments&#8211; &#8212; &#8212; &#8211;key shmid owner perms bytes nattch status 0x01128e25 0 root 600 1000 7
-</dl>
+</dd></dl>
 <p> Testing &#8211;ipc=container:CONTAINERID mode: </p>
 <p> Start a container with a program to create a shared memory segment: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <p>$ docker run &#8211; it shm bash $ sudo shm / shm_server $ sudo ipcs &#8211; m&#8211; &#8212; &#8211;Shared Memory Segments&#8211; &#8212; &#8212; &#8211;key shmid owner perms bytes nattch status 0x0000162e 0 root 666 27 1
-</dl>
+</dd></dl>
 <p> Create a 2nd container correctly shows no shared memory segment from 1st container: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <p>$ docker run shm ipcs &#8211; m&#8211; &#8212; &#8211;Shared Memory Segments&#8211; &#8212; &#8212; &#8211;key shmid owner perms bytes nattch status
-</dl>
+</dd></dl>
 <p> Create a 3rd container using the new &#8211;ipc=container:CONTAINERID option, now it shows the shared memory segment from the first: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre><code>
 $ docker run - it-- ipc = container : ed735b2264ac shm ipcs - m $ sudo ipcs - m-- -- --Shared Memory Segments-- -- -- --key shmid owner perms bytes nattch status 0x0000162e 0 root 666 27 1
 </code></pre>
-</dl>
+</dd></dl>
 <h2>Linking Containers</h2>
 <dl>
 <dt>
-<dd>
-<p> <code>Note</code>: This section describes linking between containers on the default (bridge) network, also known as &quot;legacy links&quot;. Using &#8211;link on user-defined networks uses the DNS-based discovery, which does not add entries to /etc/hosts, and does not set environment variables for discovery.</dl>
+</dt><dd>
+<p> <code>Note</code>: This section describes linking between containers on the default (bridge) network, also known as &quot;legacy links&quot;. Using &#8211;link on user-defined networks uses the DNS-based discovery, which does not add entries to /etc/hosts, and does not set environment variables for discovery.</dd></dl>
 <p> The link feature allows multiple containers to communicate with each other. For example, a container whose Dockerfile has exposed port 80 can be run and named as follows: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 # docker run --name=link-test -d -i -t fedora/httpd
 </pre>
-</dl>
+</dd></dl>
 <p> A second container, in this case called linker, can communicate with the httpd container, named link-test, by running with the <code>&#8211;link=&lt;name&gt;:&lt;alias&gt;</code> </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 # docker run -t -i --link=link-test:lt --name=linker fedora /bin/bash
 </pre>
-</dl>
+</dd></dl>
 <p> Now the container linker is linked to container link-test with the alias lt. Running the <code>env</code> command in the linker container shows environment variables<br />
 &nbsp;<wbr>with the LT&nbsp;<wbr>(alias)&nbsp;<wbr>context&nbsp;<wbr>(<code>LT_</code>) </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 # env
 HOSTNAME=668231cb0978
@@ -479,92 +479,92 @@ HOME=/
 LT_PORT_80_TCP_ADDR=172.17.0.3
 _=/usr/bin/env
 </pre>
-</dl>
+</dd></dl>
 <p> When linking two containers Docker will use the exposed ports of the container to create a secure tunnel for the parent to access. </p>
 <p> If a container is connected to the default bridge network and linked with other containers, then the container&#8217;s /etc/hosts file is updated with the linked container&#8217;s name. </p>
 <dl>
 <dt>
-<dd>
-<p> <code>Note</code> Since Docker may live update the container&#8217;s /etc/hosts file, there may be situations when processes inside the container can end up reading an empty or incomplete /etc/hosts file. In most cases, retrying the read again should fix the problem.</dl>
+</dt><dd>
+<p> <code>Note</code> Since Docker may live update the container&#8217;s /etc/hosts file, there may be situations when processes inside the container can end up reading an empty or incomplete /etc/hosts file. In most cases, retrying the read again should fix the problem.</dd></dl>
 <h2>Mapping Ports for External Usage</h2>
 <p> The exposed port of an application can be mapped to a host port using the <code>-p</code> flag. For example, a httpd port 80 can be mapped to the host port 8080 using the following: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 # docker run -p 8080:80 -d -i -t fedora/httpd
 </pre>
-</dl>
+</dd></dl>
 <h2>Creating and Mounting a Data Volume Container</h2>
 <p> Many applications require the sharing of persistent data across several containers. Docker allows you to create a Data Volume Container that other containers can mount from. For example, create a named container that contains directories /var/volume1 and /tmp/volume2. The image will need to contain these directories so a couple of RUN mkdir instructions might be required for you fedora-data image: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 # docker run --name=data -v /var/volume1 -v /tmp/volume2 -i -t fedora-data true
 # docker run --volumes-from=data --name=fedora-container1 -i -t fedora bash
 </pre>
-</dl>
+</dd></dl>
 <p> Multiple &#8211;volumes-from parameters will bring together multiple data volumes from multiple containers. And it&#8217;s possible to mount the volumes that came from the DATA container in yet another container via the fedora-container1 intermediary container, allowing to abstract the actual data source from users of that data: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 # docker run --volumes-from=fedora-container1 --name=fedora-container2 -i -t fedora bash
 </pre>
-</dl>
+</dd></dl>
 <h2>Mounting External Volumes</h2>
 <p> To mount a host directory as a container volume, specify the absolute path to the directory and the absolute path for the container directory separated by a colon: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 # docker run -v /var/db:/data1 -i -t fedora bash
 </pre>
-</dl>
+</dd></dl>
 <p> When using SELinux, be aware that the host has no knowledge of container SELinux policy. Therefore, in the above example, if SELinux policy is enforced, the /var/db directory is not writable to the container. A &quot;Permission Denied&quot; message will occur and an avc: message in the host&#8217;s syslog. </p>
 <p> To work around this, at time of writing this man page, the following command needs to be run in order for the proper SELinux policy type label to be attached to the host directory: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 # chcon -Rt svirt_sandbox_file_t /var/db
 </pre>
-</dl>
+</dd></dl>
 <p> Now, writing to the /data1 volume in the container will be allowed and the changes will also be reflected on the host in /var/db. </p>
 <h2>Using alternative security labeling</h2>
 <p> You can override the default labeling scheme for each container by specifying the &#8211;security-opt flag. For example, you can specify the MCS/MLS level, a requirement for MLS systems. Specifying the level in the following command allows you to share the same content between containers. </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 # docker run --security-opt label=level:s0:c100,c200 -i -t fedora bash
 </pre>
-</dl>
+</dd></dl>
 <p> An MLS example might be: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 # docker run --security-opt label=level:TopSecret -i -t rhel7 bash
 </pre>
-</dl>
+</dd></dl>
 <p> To disable the security labeling for this container versus running with the &#8211;permissive flag, use the following command: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 # docker run --security-opt label=disable -i -t fedora bash
 </pre>
-</dl>
+</dd></dl>
 <p> If you want a tighter security policy on the processes within a container, you can specify an alternate type for the container. You could run a container that is only allowed to listen on Apache ports by executing the following command: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 # docker run --security-opt label=type:svirt_apache_t -i -t centos bash
 </pre>
-</dl>
+</dd></dl>
 <p> Note: </p>
 <p> You would have to write policy defining a svirt_apache_t type. </p>
 <h2>Setting device weight</h2>
@@ -574,44 +574,44 @@ _=/usr/bin/env
 <p> This option is useful in situations where you are running Docker containers on Microsoft Windows. The &#8211;isolation &lt;value&gt; option sets a container&#8217;s isolation technology. On Linux, the only supported is the default option which uses Linux namespaces. These two commands are equivalent on Linux: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 $ docker run -d busybox top
 $ docker run -d --isolation default busybox top
 </pre>
-</dl>
+</dd></dl>
 <p> On Microsoft Windows, can take any of these values:</p>
 <dl>
-<dt>step]</p>
+<dt>step]</dt>
 <dd>
-<p> item default: Use the value specified by the Docker daemon&#8217;s &#8211;exec-opt . If the daemon does not specify an isolation technology, Microsoft Windows uses process as its default value. item process: Namespace isolation only. item hyperv: Hyper-V hypervisor partition-based isolation.</dl>
+<p> item default: Use the value specified by the Docker daemon&#8217;s &#8211;exec-opt . If the daemon does not specify an isolation technology, Microsoft Windows uses process as its default value. item process: Namespace isolation only. item hyperv: Hyper-V hypervisor partition-based isolation.</dd></dl>
 <p> In practice, when running on Microsoft Windows without a daemon option set, these two commands are equivalent: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 $ docker run -d --isolation default busybox top
 $ docker run -d --isolation process busybox top
 </pre>
-</dl>
+</dd></dl>
 <p> If you have set the &#8211;exec-opt isolation=hyperv option on the Docker daemon, any of these commands also result in hyperv isolation: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 $ docker run -d --isolation default busybox top
 $ docker run -d --isolation hyperv busybox top
 </pre>
-</dl>
+</dd></dl>
 <h2>Setting Namespaced Kernel Parameters (Sysctls)</h2>
 <p> The &#8211;sysctl sets namespaced kernel parameters (sysctls) in the container. For example, to turn on IP forwarding in the containers network namespace, run this command: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 $ docker run --sysctl net.ipv4.ip_forward=1 someimage
 </pre>
-</dl>
+</dd></dl>
 <p> Note: </p>
 <p> Not all sysctls are namespaced. Docker does not support changing sysctls inside of a container that also modify the host system. As the kernel evolves we expect to see more sysctls become namespaced. </p>
 <p> See the definition of the &#8211;sysctl option above for the current list of supported sysctls. </p>

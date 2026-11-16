@@ -20,10 +20,10 @@ unsigned char *
 <code>Tcl_SetByteArrayLength</code>(<i>objPtr, length</i>)</pre>
 <h2>Arguments</h2>
 <dl COMPACT>
-<dd>const unsigned char <i>*bytes</i> (in) The array of bytes used to initialize or set a byte-array object.</p>
-<dd>int <i>length</i> (in) The length of the array of bytes. It must be &gt;= 0.</p>
-<dd>Tcl_Obj <i>*objPtr</i> (in/out) For <code>Tcl_SetByteArrayObj</code>, this points to the object to be converted to byte-array type. For <code>Tcl_GetByteArrayFromObj</code> and <code>Tcl_SetByteArrayLength</code>, this points to the object from which to get the byte-array value; if <i>objPtr</i> does not already point to a byte-array object, it will be converted to one.</p>
-<dd>int <i>*lengthPtr</i> (out) If non-NULL, filled with the length of the array of bytes in the object. </p>
+<dd>const unsigned char <i>*bytes</i> (in) The array of bytes used to initialize or set a byte-array object.</dd>
+<dd>int <i>length</i> (in) The length of the array of bytes. It must be &gt;= 0.</dd>
+<dd>Tcl_Obj <i>*objPtr</i> (in/out) For <code>Tcl_SetByteArrayObj</code>, this points to the object to be converted to byte-array type. For <code>Tcl_GetByteArrayFromObj</code> and <code>Tcl_SetByteArrayLength</code>, this points to the object from which to get the byte-array value; if <i>objPtr</i> does not already point to a byte-array object, it will be converted to one.</dd>
+<dd>int <i>*lengthPtr</i> (out) If non-NULL, filled with the length of the array of bytes in the object. </dd>
 </dl>
 <h2>Description</h2>
 <p>These procedures are used to create, modify, and read Tcl byte-array objects from C code. Byte-array objects are typically used to hold the results of binary IO operations or data structures created with the <code>binary</code> command. In Tcl, an array of bytes is not equivalent to a string. Conceptually, a string is an array of Unicode characters, while a byte-array is an array of 8-bit quantities with no implicit meaning. Accessor functions are provided to get the string representation of a byte-array or to convert an arbitrary object to a byte-array. Obtaining the string representation of a byte-array object (by calling <code>Tcl_GetStringFromObj</code>) produces a properly formed UTF-8 sequence with a one-to-one mapping between the bytes in the internal representation and the UTF-8 characters in the string representation. </p>

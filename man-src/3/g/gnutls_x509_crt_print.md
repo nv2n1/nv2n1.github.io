@@ -14,12 +14,12 @@ description: "gnutls_x509_crt_print – API function"
 <p> <code>int gnutls_x509_crt_print(gnutls_x509_crt_t </code><i>cert</i><code>, gnutls_certificate_print_formats_t </code><i>format</i><code>, gnutls_datum_t * </code><i>out</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
-<dt>gnutls_x509_crt_t cert</p>
-<dd> The structure to be printed</p>
-<dt>gnutls_certificate_print_formats_t format</p>
-<dd> Indicate the format to use</p>
-<dt>gnutls_datum_t * out</p>
-<dd> Newly allocated datum with null terminated string.</dl>
+<dt>gnutls_x509_crt_t cert</dt>
+<dd> The structure to be printed</dd>
+<dt>gnutls_certificate_print_formats_t format</dt>
+<dd> Indicate the format to use</dd>
+<dt>gnutls_datum_t * out</dt>
+<dd> Newly allocated datum with null terminated string.</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> This function will pretty print a X.509 certificate, suitable for display to a human. </p>
 <p> If the format is <code>GNUTLS_CRT_PRINT_FULL</code> then all fields of the certificate will be output, on multiple lines. The <code>GNUTLS_CRT_PRINT_ONELINE</code> format will generate one line with some selected fields, which is useful for logging purposes. </p>
@@ -35,6 +35,6 @@ description: "gnutls_x509_crt_print – API function"
 <h2>SEE ALSO</h2>
 <p> The full documentation for <code>gnutls</code> is maintained as a Texinfo manual. If the /usr/share/doc/gnutls/ directory does not contain the HTML form visit <code></p>
 <dl>
-<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></p>
-<dd> </code></dl>
+<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></dt>
+<dd> </code></dd></dl>
 <h2>Index</h2>

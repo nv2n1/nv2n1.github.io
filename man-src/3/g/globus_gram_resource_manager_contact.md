@@ -27,25 +27,25 @@ subject = subject based on hostname
 
 <dl>
 <dt>&bull;
-<dd> host
-<dt>&bull;
-<dd> host:port
-<dt>&bull;
-<dd> host:port/service
-<dt>&bull;
-<dd> host/service
-<dt>&bull;
-<dd> host:/service
-<dt>&bull;
-<dd> host::subject
-<dt>&bull;
-<dd> host:port:subject
-<dt>&bull;
-<dd> host/service:subject
-<dt>&bull;
-<dd> host:/service:subject
-<dt>&bull;
-<dd> host:port/service:subject</dl>
+</dt><dd> host
+</dd><dt>&bull;
+</dt><dd> host:port
+</dd><dt>&bull;
+</dt><dd> host:port/service
+</dd><dt>&bull;
+</dt><dd> host/service
+</dd><dt>&bull;
+</dt><dd> host:/service
+</dd><dt>&bull;
+</dt><dd> host::subject
+</dd><dt>&bull;
+</dt><dd> host:port:subject
+</dd><dt>&bull;
+</dt><dd> host/service:subject
+</dd><dt>&bull;
+</dt><dd> host:/service:subject
+</dd><dt>&bull;
+</dt><dd> host:port/service:subject</dd></dl>
  
 
  

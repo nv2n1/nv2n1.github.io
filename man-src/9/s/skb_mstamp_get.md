@@ -15,7 +15,7 @@ skb_mstamp_get - get current timestamp
 <h2>Arguments</h2>
 
 <i>cl</i>
-<dl><dd><dd>place to store timestamps</dl>
+<dl><dd></dd><dd>place to store timestamps</dd></dl>
 
 <h2>Copyright</h2>
 

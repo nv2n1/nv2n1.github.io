@@ -15,22 +15,22 @@ description: "cupsctl – configure cupsd.conf options"
 <h2>Options</h2>
 <p>The following options are recognized:</p>
 <dl>
-<dt><code>-E</code></p>
-<dd>Enables encryption on the connection to the scheduler.</p>
-<dt><code>-U </code><i>username</i></p>
-<dd>Specifies an alternate username to use when authenticating with the scheduler.</p>
-<dt><code>-h </code><i>server</i>[<code>:</code><i>port</i>]</p>
-<dd>Specifies the server address.</p>
-<dt><code>&#8212;</code>[<code>no-</code>]<code>debug-logging</code></p>
-<dd>Enables (disables) debug logging to the <i>error_log</i> file.</p>
-<dt><code>&#8212;</code>[<code>no-</code>]<code>remote-admin</code></p>
-<dd>Enables (disables) remote administration.</p>
-<dt><code>&#8212;</code>[<code>no-</code>]<code>remote-any</code></p>
-<dd>Enables (disables) printing from any address, e.g., the Internet.</p>
-<dt><code>&#8212;</code>[<code>no-</code>]<code>share-printers</code></p>
-<dd>Enables (disables) sharing of local printers with other computers.</p>
-<dt><code>&#8212;</code>[<code>no-</code>]<code>user-cancel-any</code></p>
-<dd>Allows (prevents) users to cancel jobs owned by others.</dl>
+<dt><code>-E</code></dt>
+<dd>Enables encryption on the connection to the scheduler.</dd>
+<dt><code>-U </code><i>username</i></dt>
+<dd>Specifies an alternate username to use when authenticating with the scheduler.</dd>
+<dt><code>-h </code><i>server</i>[<code>:</code><i>port</i>]</dt>
+<dd>Specifies the server address.</dd>
+<dt><code>&#8212;</code>[<code>no-</code>]<code>debug-logging</code></dt>
+<dd>Enables (disables) debug logging to the <i>error_log</i> file.</dd>
+<dt><code>&#8212;</code>[<code>no-</code>]<code>remote-admin</code></dt>
+<dd>Enables (disables) remote administration.</dd>
+<dt><code>&#8212;</code>[<code>no-</code>]<code>remote-any</code></dt>
+<dd>Enables (disables) printing from any address, e.g., the Internet.</dd>
+<dt><code>&#8212;</code>[<code>no-</code>]<code>share-printers</code></dt>
+<dd>Enables (disables) sharing of local printers with other computers.</dd>
+<dt><code>&#8212;</code>[<code>no-</code>]<code>user-cancel-any</code></dt>
+<dd>Allows (prevents) users to cancel jobs owned by others.</dd></dl>
 <h2>Examples</h2>
 <p>Display the current settings: </p>
 <pre> cupsctl</pre>

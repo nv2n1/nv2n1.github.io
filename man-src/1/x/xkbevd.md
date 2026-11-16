@@ -22,24 +22,24 @@ description: "xkbevd – XKB event daemon"
 <p> The only currently recognized variables are <i>soundDirectory</i> and <i>soundCmd</i>. I&#8217;m sure you can figure out what they do.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-help</code></p>
-<dd> Prints a usage message that is far more up-to-date than anything in this man page.</p>
-<dt><code>-cfg </code><i>file</i></p>
-<dd> Specifies the configuration file to read. If no configuration file is specified, <i>xkbevd</i> looks for ~/.xkb/xkbevd.cf and $(LIBDIR)/xkb/xkbevd.cf in that order.</p>
-<dt><code>-sc&nbsp;</code><i>cmd</i></p>
-<dd> Specifies the command used to play sounds.</p>
-<dt><code>-sd&nbsp;</code><i>directory</i></p>
-<dd> Specifies a top-level directory for sound files.</p>
-<dt><code>-display&nbsp;</code><i>display</i></p>
-<dd> Specifies the display to use. If not present, <i>xkbevd</i> uses $DISPLAY.</p>
-<dt><code>-bg</code></p>
-<dd> Tells <i>xkbevd</i> to fork itself (and run in the background).</p>
-<dt><code>-synch</code></p>
-<dd> Forces synchronization of all X requests. Slow.</p>
-<dt><code>-v</code></p>
-<dd> Print more information, including debugging messages. Multiple specifications of <i>-v</i> cause more output, to a point.</p>
-<dt><code>-version</code></p>
-<dd> Prints the program version and exits.</dl>
+<dt><code>-help</code></dt>
+<dd> Prints a usage message that is far more up-to-date than anything in this man page.</dd>
+<dt><code>-cfg </code><i>file</i></dt>
+<dd> Specifies the configuration file to read. If no configuration file is specified, <i>xkbevd</i> looks for ~/.xkb/xkbevd.cf and $(LIBDIR)/xkb/xkbevd.cf in that order.</dd>
+<dt><code>-sc&nbsp;</code><i>cmd</i></dt>
+<dd> Specifies the command used to play sounds.</dd>
+<dt><code>-sd&nbsp;</code><i>directory</i></dt>
+<dd> Specifies a top-level directory for sound files.</dd>
+<dt><code>-display&nbsp;</code><i>display</i></dt>
+<dd> Specifies the display to use. If not present, <i>xkbevd</i> uses $DISPLAY.</dd>
+<dt><code>-bg</code></dt>
+<dd> Tells <i>xkbevd</i> to fork itself (and run in the background).</dd>
+<dt><code>-synch</code></dt>
+<dd> Forces synchronization of all X requests. Slow.</dd>
+<dt><code>-v</code></dt>
+<dd> Print more information, including debugging messages. Multiple specifications of <i>-v</i> cause more output, to a point.</dd>
+<dt><code>-version</code></dt>
+<dd> Prints the program version and exits.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-xev/">xev</a></code>(1), <code><a href="/docs/linux/man/1-xkbwatch/">xkbwatch</a></code>(1), <code><a href="/docs/linux/man/7-x/">X</a></code>(7).</p>
 <h2>COPYRIGHT</h2>

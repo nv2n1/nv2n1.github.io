@@ -13,12 +13,12 @@ description: "PAPI_set_opt –"
 <h2>Detailed Description</h2>
 <p><code>C Interface:</code></p>
 <dl COMPACT>
-<dd>#include &lt;<code>papi.h</code>&gt; </p>
+<dd>#include &lt;<code>papi.h</code>&gt; </dd>
 <p>&nbsp;<wbr>int&nbsp;<wbr><code>PAPI_set_opt(&nbsp;<wbr>&nbsp;<wbr>int option, PAPI_option_t&nbsp;<wbr>*&nbsp;<wbr>ptr&nbsp;<wbr>)</code>;</dl>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>option</i> Defines the option to be set. Possible values are briefly described in the table below.<br />
- <i>ptr</i> Pointer to a structure determined by the selected option. See <code>PAPI_option_t</code> for a description of possible structures.</dl>
+ <i>ptr</i> Pointer to a structure determined by the selected option. See <code>PAPI_option_t</code> for a description of possible structures.</dd></dl>
 <p> <code>Return values:</code></p>
 <dl COMPACT>
 <dd><i>PAPI_OK</i><br />
@@ -27,12 +27,12 @@ description: "PAPI_set_opt –"
  <i>PAPI_EISRUN</i> The EventSet is currently counting events.<br />
  <i>PAPI_ECMP</i> The option is not implemented for the current component.<br />
  <i>PAPI_ENOINIT</i> PAPI has not been initialized.<br />
- <i>PAPI_EINVAL_DOM</i> Invalid domain has been requested.</dl>
+ <i>PAPI_EINVAL_DOM</i> Invalid domain has been requested.</dd></dl>
 <p> <code>PAPI_set_opt()</code> changes the options of the PAPI library or a specific EventSet created by <code>PAPI_create_eventset</code>. Some options may require that the EventSet be bound to a component before they can execute successfully. This can be done either by adding an event or by explicitly calling <code>PAPI_assign_eventset_component</code>. </p>
 <p> Ptr is a pointer to the <code>PAPI_option_t</code> structure, which is actually a union of different structures for different options. Not all options require or return information in these structures. Each requires different values to be set. Some options require a component index to be provided. These options are handled implicitly through the option structures. </p>
 <p> <code>Note:</code></p>
 <dl COMPACT>
-<dd>Some options, such as PAPI_DOMAIN and PAPI_MULTIPLEX are also available as separate entry points in both C and Fortran.</dl>
+<dd>Some options, such as PAPI_DOMAIN and PAPI_MULTIPLEX are also available as separate entry points in both C and Fortran.</dd></dl>
 <p> The reader is encouraged to peruse the ctests code in the PAPI distribution for examples of usage of <code>PAPI_set_opt</code>. </p>
 <p> <code>Possible values for the PAPI_set_opt option parameter</code></p>
 <dl COMPACT>
@@ -51,12 +51,13 @@ description: "PAPI_set_opt –"
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>ptr-&gt;addr.start and ptr-&gt;addr.end, respectively. If exact addresses<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>cannot be instantiated, offsets are returned in ptr-&gt;addr.start_off and<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>ptr-&gt;addr.end_off. Currently implemented on Itanium only. PAPI_INSTR_ADDRESS Set instruction address range as described above. Itanium only.<br />
-&nbsp;<wbr></dl>
+&nbsp;<wbr></dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>PAPI_set_debug</code> </p>
+<dd><code>PAPI_set_debug</code> </dd>
 <p> <code>PAPI_set_multiplex</code> </p>
 <p> <code>PAPI_set_domain</code> </p>
 <p> <code>PAPI_option_t</code></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for PAPI from the source code.</p>
+</p>

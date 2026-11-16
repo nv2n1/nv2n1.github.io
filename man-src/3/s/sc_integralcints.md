@@ -11,7 +11,6 @@ description: "sc::IntegralCints –"
 <p> <code>IntegralCints</code> computes integrals between Gaussian basis functions.</p>
 <h2>Synopsis</h2>
 <pre><code>
-
 #include &lt;cints.h&gt;</code></pre>
 <p> Inherits <code>sc::Integral</code>.</p>
 <h3>Public Member Functions</h3>

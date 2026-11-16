@@ -10,7 +10,6 @@ description: "std::setvbuf – std::setvbuf"
 <p>std::setvbuf &#8211; std::setvbuf</p>
 <h2>Synopsis</h2>
 <pre><code>Defined in header&lt;cstdio&gt;
-
     int setvbuf(std::FILE *stream, char *buffer, int mode, std::size_t size);</code></pre>
 <p>Changes the the buffering mode of the given file stream stream as indicated by the argument mode. In addition,<br />
 * If buffer is a null pointer, resizes the internal buffer to size.<br />
@@ -39,14 +38,10 @@ The default buffer size BUFSIZ is expected to be the most efficient buffer size 
 <p>one use case for changing buffer size is when a better size is known<br />
  // Run this code </p>
 <pre><code>#include &lt;iostream&gt;
-
 #include &lt;cstdio&gt;
-
 #include &lt;stdlib.h&gt;
-
 #include &lt;sys/stat.h&gt;
 int main()
-
 {
     std::FILE *fp = std::fopen(&quot;test.txt&quot;, &quot;r&quot;);
     if (!fp) {

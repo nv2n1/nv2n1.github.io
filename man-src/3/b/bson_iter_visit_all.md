@@ -17,14 +17,14 @@ bool bson_iter_visit_all(bson_iter_t *iter,
 </code></pre>
 <h2>PARAMETERS</h2>
 <dl>
-<dt><code>iter</code></p>
-<dd> A <code>bson_iter_t</code> \&amp;.</dl>
+<dt><code>iter</code></dt>
+<dd> A <code>bson_iter_t</code> \&amp;.</dd></dl>
 <dl>
-<dt><code>visitor</code></p>
-<dd> A <code>bson_visitor_t</code> \&amp;.</dl>
+<dt><code>visitor</code></dt>
+<dd> A <code>bson_visitor_t</code> \&amp;.</dd></dl>
 <dl>
-<dt><code>data</code></p>
-<dd> Optional data for <code>visitor</code> \&amp;.</dl>
+<dt><code>data</code></dt>
+<dd> Optional data for <code>visitor</code> \&amp;.</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> A convenience function to iterate all remaining fields of <code>iter</code> using the callback vtable provided by <code>visitor</code> \&amp;. </p>
 <h2>RETURNS</h2>

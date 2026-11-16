@@ -16,11 +16,9 @@ description: "jstatd – Virtual Machine jstat Daemon"
 </pre>
 <h2>PARAMETERS</h2>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>options</p>
-<dd> Command-line options. The options may be in any order. If there are redundant or contradictory options, the last option specified will take precedence.</dl>
+<dt>options</dt>
+<dd> Command-line options. The options may be in any order. If there are redundant or contradictory options, the last option specified will take precedence.</dd></dl>
 </dl>
 <h2>DESCRIPTION</h2>
 <p> The <code>jstatd</code> tool is an RMI server application that monitors for the creation and termination of instrumented HotSpot Java virtual machines (JVMs) and provides a interface to allow remote monitoring tools to attach to JVMs running on the local host. </p>
@@ -29,17 +27,15 @@ description: "jstatd – Virtual Machine jstat Daemon"
 <h2>OPTIONS</h2>
 <p> The <code>jstatd</code> command supports the following options: </p>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>-nr</p>
-<dd> Do not attempt to create an internal RMI registry within the <i>jstatd</i> process when an existing RMI registry is not found.</p>
-<dt>-p&nbsp;<wbr> port</p>
-<dd> Port number where the RMI registry is expected to be found, or, if not found, created if <i>-nr</i> is not specified.</p>
-<dt>-n&nbsp;<wbr> rminame</p>
-<dd> Name to which the remote RMI object is bound in the RMI registry. The default name is <i>JStatRemoteHost</i>. If multiple <code>jstatd</code> servers are started on the same host, the name of the exported RMI object for each server can be made unique by specifying this option. However, doing so will require that the unique server name be included in the monitoring client&#8217;s <i>hostid</i> and <i>vmid</i> strings.</p>
-<dt>-Joption</p>
-<dd> Pass <i>option</i> to the <code>java</code> launcher called by <code>javac</code>. For example, <code>-J-Xms48m</code> sets the startup memory to 48 megabytes. It is a common convention for <code>-J</code> to pass options to the underlying VM executing applications written in Java.</dl>
+<dt>-nr</dt>
+<dd> Do not attempt to create an internal RMI registry within the <i>jstatd</i> process when an existing RMI registry is not found.</dd>
+<dt>-p&nbsp;<wbr> port</dt>
+<dd> Port number where the RMI registry is expected to be found, or, if not found, created if <i>-nr</i> is not specified.</dd>
+<dt>-n&nbsp;<wbr> rminame</dt>
+<dd> Name to which the remote RMI object is bound in the RMI registry. The default name is <i>JStatRemoteHost</i>. If multiple <code>jstatd</code> servers are started on the same host, the name of the exported RMI object for each server can be made unique by specifying this option. However, doing so will require that the unique server name be included in the monitoring client&#8217;s <i>hostid</i> and <i>vmid</i> strings.</dd>
+<dt>-Joption</dt>
+<dd> Pass <i>option</i> to the <code>java</code> launcher called by <code>javac</code>. For example, <code>-J-Xms48m</code> sets the startup memory to 48 megabytes. It is a common convention for <code>-J</code> to pass options to the underlying VM executing applications written in Java.</dd></dl>
 </dl>
 <h2>SECURITY</h2>
 <p> The <code>jstatd</code> server can only monitor JVMs for which it has the appropriate native access permissions. Therefor the <code>jstatd</code> process must be running with the same user credentials as the target JVMs. Some user credentials, such as the <i>root</i> user in UNIX(TM) based systems, have permission to access the instrumentation exported by any JVM on the system. A <code>jstatd</code> process running with such credentials can monitor any JVM on the system, but introduces additional security concerns. </p>
@@ -49,7 +45,6 @@ description: "jstatd – Virtual Machine jstat Daemon"
 <pre><code>
 grant codebase "file:${java.home}/../lib/tools.jar"
 {
-
     permission java.security.AllPermission;
 };
 </code></pre>
@@ -96,17 +91,15 @@ jstatd -J-Djava.security.policy=all.policy -p 2020 -n AlternateJstatdServerName<
 </pre>
 <h2>SEE ALSO</h2>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>o</p>
-<dd> <a href="/docs/linux/man/1-java/">java</a>(1) &#8211; the Java Application Launcher</p>
-<dt>o</p>
-<dd> <a href="/docs/linux/man/1-jps/">jps</a>(1) &#8211; the Java Process Status Application</p>
-<dt>o</p>
-<dd> <a href="/docs/linux/man/1-jstat/">jstat</a>(1) &#8211; the Java Virtual Machine Statistics Monitoring Tool</p>
-<dt>o</p>
-<dd> <i>rmiregistry</i> @ <a rel="nofollow" href="http://docs.oracle.com/javase/7/docs/technotes/tools/index.html#rmi">http://docs.oracle.com/javase/7/docs/technotes/tools/index.html#rmi</a> &#8211; the Java Remote Object Registry</dl>
+<dt>o</dt>
+<dd> <a href="/docs/linux/man/1-java/">java</a>(1) &#8211; the Java Application Launcher</dd>
+<dt>o</dt>
+<dd> <a href="/docs/linux/man/1-jps/">jps</a>(1) &#8211; the Java Process Status Application</dd>
+<dt>o</dt>
+<dd> <a href="/docs/linux/man/1-jstat/">jstat</a>(1) &#8211; the Java Virtual Machine Statistics Monitoring Tool</dd>
+<dt>o</dt>
+<dd> <i>rmiregistry</i> @ <a rel="nofollow" href="http://docs.oracle.com/javase/7/docs/technotes/tools/index.html#rmi">http://docs.oracle.com/javase/7/docs/technotes/tools/index.html#rmi</a> &#8211; the Java Remote Object Registry</dd></dl>
 </dl>
 <p>&nbsp;<wbr> </p>
 <h2>Index</h2>

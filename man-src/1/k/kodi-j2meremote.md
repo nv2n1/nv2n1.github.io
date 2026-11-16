@@ -15,11 +15,11 @@ description: "kodi-j2meremote – Java Bluetooth Phone Remote Control Client for
 <p> Usage for kodi-j2meremote</p>
 <h3>Arguments:</h3>
 <dl>
-<dt><code>&#8211;address</code> ADDRESS</p>
-<dd> (default: localhost)</p>
-<dt><code>&#8211;port</code> PORT</p>
-<dd> (default: 9777)</p>
-<dt><code>&#8211;help</code></p>
-<dd> (Brings up this message) </p>
+<dt><code>&#8211;address</code> ADDRESS</dt>
+<dd> (default: localhost)</dd>
+<dt><code>&#8211;port</code> PORT</dt>
+<dd> (default: 9777)</dd>
+<dt><code>&#8211;help</code></dt>
+<dd> (Brings up this message) </dd>
 </dl>
 <h2>Index</h2>

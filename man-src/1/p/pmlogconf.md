@@ -19,12 +19,12 @@ description: "pmlogconf – create/edit a pmlogger configuration file"
 <p> Group selection requires a simple <code>y</code> (yes) or <code>n</code> (no) response to the prompt <code>Log this group?</code>. </p>
 <p> Other responses at this point may be used to select additional control functions as follows:</p>
 <dl>
-<dt><code>m</code></p>
-<dd> Report the names of the metrics in the current group.</p>
-<dt><code>q</code></p>
-<dd> Finish with group selection (quit) and make no further changes to this group or any subsequent group.</p>
-<dt><code>/</code><i>pattern</i></p>
-<dd> Make no change to this group but search for a group containing <i>pattern</i> in the description of the group or the names of the associated metrics.</dl>
+<dt><code>m</code></dt>
+<dd> Report the names of the metrics in the current group.</dd>
+<dt><code>q</code></dt>
+<dd> Finish with group selection (quit) and make no further changes to this group or any subsequent group.</dd>
+<dt><code>/</code><i>pattern</i></dt>
+<dd> Make no change to this group but search for a group containing <i>pattern</i> in the description of the group or the names of the associated metrics.</dd></dl>
 <p> A logging interval is specified by responding to the <code>Logging interval?</code> prompt with the keywords <code>once</code> or <code>default</code> or a valid <code><a href="/docs/linux/man/1-pmlogger/">pmlogger</a></code>(1) interval specification of the form &#8220;<code>every</code> <i>N timeunits</i>&#8221; or simply &#8220;<i>N timeunits &#8221;</i> (the <code>every</code> is optional) where <i>N</i> is an unsigned integer and <i>timeunits</i> is one of the keywords <code>msec</code>, <code>millisecond</code>, <code>sec</code>, <code>second</code>, <code>min</code>, <code>minute</code>, <code>hour</code> or the plural form of one of the keywords. </p>
 <p> When run from automated logging setup processes, the <code>-c</code> option is used to add a message and timestamp indicating this fact. This option is not appropriate for interactive use of the tool. </p>
 <p> The <code>-q</code> option suppresses the logging interval dialog and preserves the current interval from <i>configfile</i>. </p>
@@ -34,40 +34,40 @@ description: "pmlogconf – create/edit a pmlogger configuration file"
 <p> The directory structure below <i>groupsdir</i> is arbitrary as all regular files will be found by recursive descent and considered, so add-on products and PMDA developers can easily extend the available defaults to <code>pmlogconf</code> by adding new directories and/or group files below <i>groupsdir</i>. </p>
 <p> These group files are processed in the following ways:</p>
 <dl>
-<dt>&bull;</p>
-<dd> When a new <i>configfile</i> is created, all group files are processed.</p>
-<dt>&bull;</p>
-<dd> Whenever <code>pmlogconf</code> is run with an existing <i>configfile</i>, <i>groupsdir</i> is traversed to see if any new groups have been defined and should be considered for inclusion in <i>configfile</i>.</p>
-<dt>&bull;</p>
-<dd> When <code>pmlogconf</code> processes a group in <i>configfile</i> that is enabled, the list of metrics associated with the group is taken from the group file (and replaces any previous list of metrics associated with this group in <i>configfile</i>).</p>
-<dt>&bull;</p>
-<dd> When the <code>-r</code> (reprobe) command line option is specified, every group (not just newly discovered ones) is reprocessed to see if it should be considered for inclusion in <i>configfile</i>.</dl>
+<dt>&bull;</dt>
+<dd> When a new <i>configfile</i> is created, all group files are processed.</dd>
+<dt>&bull;</dt>
+<dd> Whenever <code>pmlogconf</code> is run with an existing <i>configfile</i>, <i>groupsdir</i> is traversed to see if any new groups have been defined and should be considered for inclusion in <i>configfile</i>.</dd>
+<dt>&bull;</dt>
+<dd> When <code>pmlogconf</code> processes a group in <i>configfile</i> that is enabled, the list of metrics associated with the group is taken from the group file (and replaces any previous list of metrics associated with this group in <i>configfile</i>).</dd>
+<dt>&bull;</dt>
+<dd> When the <code>-r</code> (reprobe) command line option is specified, every group (not just newly discovered ones) is reprocessed to see if it should be considered for inclusion in <i>configfile</i>.</dd></dl>
 <p> Each group file is structured as follows:</p>
 <dl>
-<dt>&bull;</p>
-<dd> The first line must contain <code>#pmlogconf-setup 2.0</code></p>
-<dt>&bull;</p>
-<dd> Other lines beginning with <code>#</code> are treated as comments.</p>
-<dt>&bull;</p>
-<dd> Blank lines are ignored.</p>
-<dt>&bull;</p>
-<dd> One or more lines starting with the keyword <code>ident </code> are used to provide the human-readable description of the group.</p>
-<dt>&bull;</p>
-<dd> Non-blank lines beginning with white space define metrics to be associated with this group, one per line. Each metric specification follows the rules for a <code><a href="/docs/linux/man/1-pmlogger/">pmlogger</a></code>(1) configuration, namely either the name of a non-leaf node in the PMNS (implying all descendent names in the PMNS), or the name of a leaf node in the PMNS optionally followed by one or more instance names enclosed by &#8220;[&#8221; and &#8220;]&#8221;.</p>
-<dt>&bull;</p>
-<dd> A control line starting with one of the keywords <code>probe</code> or <code>force</code> must be present.</p>
-<dt>&bull;</p>
-<dd> An optional logging interval control line begins with the keyword <code>delta</code> followed by one of the <code><a href="/docs/linux/man/1-pmlogger/">pmlogger</a></code>(1) interval specification described above.</p>
-<dt>&bull;</p>
-<dd> <code>probe</code> control lines have the format:</p>
+<dt>&bull;</dt>
+<dd> The first line must contain <code>#pmlogconf-setup 2.0</code></dd>
+<dt>&bull;</dt>
+<dd> Other lines beginning with <code>#</code> are treated as comments.</dd>
+<dt>&bull;</dt>
+<dd> Blank lines are ignored.</dd>
+<dt>&bull;</dt>
+<dd> One or more lines starting with the keyword <code>ident </code> are used to provide the human-readable description of the group.</dd>
+<dt>&bull;</dt>
+<dd> Non-blank lines beginning with white space define metrics to be associated with this group, one per line. Each metric specification follows the rules for a <code><a href="/docs/linux/man/1-pmlogger/">pmlogger</a></code>(1) configuration, namely either the name of a non-leaf node in the PMNS (implying all descendent names in the PMNS), or the name of a leaf node in the PMNS optionally followed by one or more instance names enclosed by &#8220;[&#8221; and &#8220;]&#8221;.</dd>
+<dt>&bull;</dt>
+<dd> A control line starting with one of the keywords <code>probe</code> or <code>force</code> must be present.</dd>
+<dt>&bull;</dt>
+<dd> An optional logging interval control line begins with the keyword <code>delta</code> followed by one of the <code><a href="/docs/linux/man/1-pmlogger/">pmlogger</a></code>(1) interval specification described above.</dd>
+<dt>&bull;</dt>
+<dd> <code>probe</code> control lines have the format:</dd>
 <dl>
 <dt>
-<dd>
+</dt><dd>
  <center> <code>probe</code> <i>metric</i> [<i>condition</i> [<i>state_rule</i>] ]<br />
  </center><br />
  where <i>metric</i> is the name of a PCP metric (must be a leaf node in the PMNS and no instance specification is allowed) and the optional <i>condition</i> is the keyword <code>exists</code> (true if <i>metric</i> exists, i.e. is defined in the PMNS) or the keyword <code>values</code> (true if <i>metric</i> exists in the PMNS and has one or more current values) or an expression of the form<br />
  <center> <i>op</i> <i>val</i><br />
- </center> where <i>op</i> is one of the <code><a href="/docs/linux/man/1-awk/">awk</a></code>(1) operators (<code>==</code>, <code>!=</code>, <code>&gt;</code>, <code>&gt;=</code>, <code>&lt;</code>, <code>&lt;=</code>, <code>~</code> (regular expression match) or <code>!~</code> (negated regular expression match)) and <i>val</i> is a value (arbitrary sequence of characters, excluding a space) and the <i>condition</i> is true if there is some instance of <i>metric</i> that makes the expression true. </p>
+ </center> where <i>op</i> is one of the <code><a href="/docs/linux/man/1-awk/">awk</a></code>(1) operators (<code>==</code>, <code>!=</code>, <code>&gt;</code>, <code>&gt;=</code>, <code>&lt;</code>, <code>&lt;=</code>, <code>~</code> (regular expression match) or <code>!~</code> (negated regular expression match)) and <i>val</i> is a value (arbitrary sequence of characters, excluding a space) and the <i>condition</i> is true if there is some instance of <i>metric</i> that makes the expression true. </dd>
 <p> If the <i>condition</i> is missing, the default is <code>exists</code>. </p>
 <p> When an explicit <i>condition</i> is provided, there may also be an optional <i>state_rule</i> of the form<br />
  <center> <code>?</code> <i>true_state</i> <code>:</code> <i>false_state</i><br />
@@ -75,8 +75,8 @@ description: "pmlogconf – create/edit a pmlogger configuration file"
 <p> The default <i>state_rule</i> is<br />
  <center> <code><br />
  </center> ? available : exclude </code></dl>
-<dt>&bull;</p>
-<dd> <code>force</code> control lines begin with the keyword <code>force</code> followed by one of the states defined above, so one of the actions <code>include</code>, <code>exclude</code> or <code>available</code> is applied unconditionally to the group.</dl>
+<dt>&bull;</dt>
+<dd> <code>force</code> control lines begin with the keyword <code>force</code> followed by one of the states defined above, so one of the actions <code>include</code>, <code>exclude</code> or <code>available</code> is applied unconditionally to the group.</dd></dl>
 <p> Probing is only done when a new group is being added to <i>configfile</i> or when the <code>-r</code> command line option is specified. The evaluation of the probing conditions is done by contacting <code><a href="/docs/linux/man/1-pmcd/">pmcd</a></code>(1) on <i>hostname</i> (defaults to local:).</p>
 <h2>EXAMPLE</h2>
 <p> The following group file demonstrates all of the supported syntactic elements. </p>

@@ -66,8 +66,8 @@ description: "postfix_smtp_selinux – Security Enhanced Linux Policy for the po
 <p> <code>postfix_smtp_exec_t</code> </p>
 <p> &#8211; Set files with the postfix_smtp_exec_t type, if you want to transition an executable to the postfix_smtp_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/usr/libexec/postfix/lmtp, /usr/libexec/postfix/smtp, /usr/libexec/postfix/scache </p>
+<dt>Paths:</dt>
+<dd>/usr/libexec/postfix/lmtp, /usr/libexec/postfix/smtp, /usr/libexec/postfix/scache </dd>
 </dl>
 <p> <code>postfix_smtp_tmp_t</code> </p>
 <p> &#8211; Set files with the postfix_smtp_tmp_t type, if you want to store postfix smtp temporary files in the /tmp directories. </p>

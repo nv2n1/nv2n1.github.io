@@ -15,30 +15,30 @@ description: "hp-query – Model Query Utility"
 <p> <code>hp-query [MODE] [OPTIONS]</code></p>
 <h2>MODE</h2>
 <dl>
-<dt>Run in non-interactive mode:</p>
-<dd> -n or &#8211;non-interactive</dl>
+<dt>Run in non-interactive mode:</dt>
+<dd> -n or &#8211;non-interactive</dd></dl>
 <h2>OPTIONS</h2>
 <dl>
-<dt>Set the logging level:</p>
-<dd> -l&lt;level&gt; or &#8211;logging=&lt;level&gt; &lt;level&gt;: none, info*, error, warn, debug (*default)</p>
-<dt>Run in debug mode:</p>
-<dd> -g (same as option: -ldebug)</p>
-<dt>This help information:</p>
-<dd> -h or &#8211;help</p>
-<dt>Specify model by device URI:</p>
-<dd> -d&lt;device_uri&gt; or &#8211;device=&lt;device_uri&gt;</p>
-<dt>Specify normalized model name:</p>
-<dd> -m&lt;model_name&gt; or &#8211;model=&lt;model_name&gt; (normalized models.dat format)</p>
-<dt>Specify raw model name:</p>
-<dd> -r&lt;model_name&gt; or &#8211;raw=&lt;model_name&gt; (raw model name from MDL: field of device ID)</p>
-<dt>Specify key to query:</p>
-<dd> -k&lt;key&gt; or &#8211;key=&lt;key&gt; (or, use -a/&#8211;all to return all keys)</p>
-<dt>Query all keys:</p>
-<dd> -a or &#8211;all (default separator is a LF)</p>
-<dt>Specify the separator when multiple keys are queried:</p>
-<dd> -s&lt;sep&gt; &#8211;sep=&lt;sep&gt; (character or &#8216;tab&#8217;, &#8216;newline&#8217;, &#8216;cr&#8217;, &#8216;lf&#8217;, &#8216;crlf&#8217;)(only valid when used with -a/&#8211;all)</p>
-<dt>Suppress trailing linefeed:</p>
-<dd> -x</dl>
+<dt>Set the logging level:</dt>
+<dd> -l&lt;level&gt; or &#8211;logging=&lt;level&gt; &lt;level&gt;: none, info*, error, warn, debug (*default)</dd>
+<dt>Run in debug mode:</dt>
+<dd> -g (same as option: -ldebug)</dd>
+<dt>This help information:</dt>
+<dd> -h or &#8211;help</dd>
+<dt>Specify model by device URI:</dt>
+<dd> -d&lt;device_uri&gt; or &#8211;device=&lt;device_uri&gt;</dd>
+<dt>Specify normalized model name:</dt>
+<dd> -m&lt;model_name&gt; or &#8211;model=&lt;model_name&gt; (normalized models.dat format)</dd>
+<dt>Specify raw model name:</dt>
+<dd> -r&lt;model_name&gt; or &#8211;raw=&lt;model_name&gt; (raw model name from MDL: field of device ID)</dd>
+<dt>Specify key to query:</dt>
+<dd> -k&lt;key&gt; or &#8211;key=&lt;key&gt; (or, use -a/&#8211;all to return all keys)</dd>
+<dt>Query all keys:</dt>
+<dd> -a or &#8211;all (default separator is a LF)</dd>
+<dt>Specify the separator when multiple keys are queried:</dt>
+<dd> -s&lt;sep&gt; &#8211;sep=&lt;sep&gt; (character or &#8216;tab&#8217;, &#8216;newline&#8217;, &#8216;cr&#8217;, &#8216;lf&#8217;, &#8216;crlf&#8217;)(only valid when used with -a/&#8211;all)</dd>
+<dt>Suppress trailing linefeed:</dt>
+<dd> -x</dd></dl>
 <h2>SEE ALSO</h2>
 <p> hp-info</p>
 <h2>AUTHOR</h2>

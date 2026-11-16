@@ -13,17 +13,17 @@ description: "gclear_ws (Clear workstation) – clears a workstation."
 <p> void gclear_ws(Gint ws_id, Gctrl_flag ctrl_flag);</p>
 <h2>Description</h2>
 <dl COMPACT>
-<dt>ws_id</p>
-<dd>(Input) &#8211; A number identifying the workstation to be cleared. ws_id must be the same as that used in some previous gopen_ws call.</p>
-<dt>ctrl_flag</p>
-<dd>(Input) &#8211; Clear the workstation display surface. Options are:</p>
+<dt>ws_id</dt>
+<dd>(Input) &#8211; A number identifying the workstation to be cleared. ws_id must be the same as that used in some previous gopen_ws call.</dd>
+<dt>ctrl_flag</dt>
+<dd>(Input) &#8211; Clear the workstation display surface. Options are:</dd>
 <dl COMPACT>
 <dd>
-<dl COMPACT>
-<dt>GFLAG_COND</p>
-<dd>Check to see if the display surface is empty. If so, do not issue a clear surface command.</p>
-<dt>GFLAG_ALWAYS</p>
-<dd>Issue a clear surface command whether the surface has been written to or not.</dl>
+</dd><dl COMPACT>
+<dt>GFLAG_COND</dt>
+<dd>Check to see if the display surface is empty. If so, do not issue a clear surface command.</dd>
+<dt>GFLAG_ALWAYS</dt>
+<dd>Issue a clear surface command whether the surface has been written to or not.</dd></dl>
 </dl>
 </dl>
 <h2>Usage</h2>

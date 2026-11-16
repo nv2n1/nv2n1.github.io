@@ -11,10 +11,10 @@ description: "getpcaps – List Process Capabilities"
 <p> getpcaps &#8211; List Process Capabilities </p>
 <h2>SYNOPSIS</h2>
 <dl>
-<dt> <code>getpcaps</code> &lt;pid&gt; [&lt;pid&gt; &#8230;]</dl>
+<dt> <code>getpcaps</code> &lt;pid&gt; [&lt;pid&gt; &#8230;]</dt></dl>
 <h2>DESCRIPTION</h2>
 <p> <code>getpcaps</code></p>
-<dd>is a simple utility to display the capabilities on the queried process(es). The capabilities are displayed in the <a href="/docs/linux/man/3-cap_from_text/">cap_from_text</a>(3) format, portions of which are reproduced in the section &quot;TEXTUAL REPRESENTATION&quot; below.</p>
+<dd>is a simple utility to display the capabilities on the queried process(es). The capabilities are displayed in the <a href="/docs/linux/man/3-cap_from_text/">cap_from_text</a>(3) format, portions of which are reproduced in the section &quot;TEXTUAL REPRESENTATION&quot; below.</dd>
 <h2>TEXTUAL REPRESENTATION</h2>
 <p> A textual representation of capability sets consists of one or more whitespace-separated <i>clauses</i>. Each clause specifies some operations on a capability set; the set starts out with all capabilities lowered, and the meaning of the string is the state of the capability set after all the clauses have been applied in order. </p>
 <p> Each clause consists of a list of comma-separated capability names (or the word `<code>all</code>&#8216;), followed by an <i>action-list</i>. An action-list consists of a sequence of <i>operator flag</i> pairs. Legal operators are: `<code>=</code>&#8216;, &#8216;<code>+</code>&#8216;, and `<code>&#8211;</code>&#8216;. Legal flags are: `<code>e</code>&#8216;, `<code>i</code>&#8216;, and `<code>p</code>&#8216;. These flags are case-sensitive and specify the Effective, Inheritable and Permitted sets respectively. </p>

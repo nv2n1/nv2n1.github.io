@@ -16,18 +16,18 @@ description: "shtool path – GNU shtool command dealing with shell path variabl
 <h2>OPTIONS</h2>
 <p> The following command line options are available.</p>
 <dl>
-<dt><code>-s</code>, <code>&#8211;suppress</code></p>
-<dd> Supress output. Useful to only test whether a program exists with the help of the return code.</p>
-<dt><code>-r</code>, <code>&#8211;reverse</code></p>
-<dd> Transform a forward path to a subdirectory into a reverse path.</p>
-<dt><code>-d</code>, <code>&#8211;dirname</code></p>
-<dd> Output the directory name of <i>str</i>.</p>
-<dt><code>-b</code>, <code>&#8211;basename</code></p>
-<dd> Output the base name of <i>str</i>.</p>
-<dt><code>-m</code>, <code>&#8211;magic</code></p>
-<dd> Enable advanced magic search for &quot;<tt>&quot;perl&quot;</tt>&#8220; and &#8221;<tt>&quot;cpp&quot;</tt>&quot;.</p>
-<dt><code>-p</code>, <code>&#8211;path</code> <i>path</i></p>
-<dd> Search in <i>path</i>. Default is to search in <tt>$PATH</tt>.</dl>
+<dt><code>-s</code>, <code>&#8211;suppress</code></dt>
+<dd> Supress output. Useful to only test whether a program exists with the help of the return code.</dd>
+<dt><code>-r</code>, <code>&#8211;reverse</code></dt>
+<dd> Transform a forward path to a subdirectory into a reverse path.</dd>
+<dt><code>-d</code>, <code>&#8211;dirname</code></dt>
+<dd> Output the directory name of <i>str</i>.</dd>
+<dt><code>-b</code>, <code>&#8211;basename</code></dt>
+<dd> Output the base name of <i>str</i>.</dd>
+<dt><code>-m</code>, <code>&#8211;magic</code></dt>
+<dd> Enable advanced magic search for &quot;<tt>&quot;perl&quot;</tt>&#8220; and &#8221;<tt>&quot;cpp&quot;</tt>&quot;.</dd>
+<dt><code>-p</code>, <code>&#8211;path</code> <i>path</i></dt>
+<dd> Search in <i>path</i>. Default is to search in <tt>$PATH</tt>.</dd></dl>
 <h2>EXAMPLE</h2>
 <pre>
  #   shell script

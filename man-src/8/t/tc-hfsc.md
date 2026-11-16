@@ -17,13 +17,13 @@ tc class add ... hfsc [ [ <code>rt</code> SC ] [ <code>ls</code> SC ] | [ <code>
 <code>ul</code> : upperlimit service curve
 &bull; at least one of <code>rt</code>, <code>ls</code> or <code>sc</code> must be specified
 &bull; <code>ul</code> can only be specified with <code>ls</code> or <code>sc</code>
-<dl><dt>SC := [ [ <code>m1</code> BPS ] <code>d</code> SEC ] <code>m2</code> BPS<dd><code>m1</code> : slope of the first segment
+<dl><dt>SC := [ [ <code>m1</code> BPS ] <code>d</code> SEC ] <code>m2</code> BPS</dt><dd><code>m1</code> : slope of the first segment
 <code>d</code> : x-coordinate of intersection
 <code>m2</code> : slope of the second segment
-</dl><dl><dt>SC := [ [ <code>umax</code> BYTE ] <code>dmax</code> SEC ] <code>rate</code> BPS<dd><code>umax</code> : maximum unit of work
+</dd></dl><dl><dt>SC := [ [ <code>umax</code> BYTE ] <code>dmax</code> SEC ] <code>rate</code> BPS</dt><dd><code>umax</code> : maximum unit of work
 <code>dmax</code> : maximum delay
 <code>rate</code> : rate
-</dl></pre>
+</dd></dl></pre>
 <p>For description of BYTE, BPS and SEC &#8211; please see <code>UNITS</code> section of <code><a href="/docs/linux/man/8-tc/">tc</a></code>(8).</p>
 <h2>DESCRIPTION (qdisc)</h2>
 <p>HFSC qdisc has only one optional parameter &#8211; <code>default</code>. CLASSID specifies the minor part of the default classid, where packets not classified by other means (e.g. u32 filter, CLASSIFY target of iptables) will be enqueued. If <code>default</code> is not specified, unclassified packets will be dropped.</p>

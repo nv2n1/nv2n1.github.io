@@ -19,15 +19,15 @@ struct_clk_notifier - associate a clk with a notifier
 <h2>Members</h2>
 
 clk
-<dl><dd>struct clk * to associate the notifier with</dl>
+<dl><dd>struct clk * to associate the notifier with</dd></dl>
  
 
  notifier_head
-<dl><dd>a blocking_notifier_head for this clk</dl>
+<dl><dd>a blocking_notifier_head for this clk</dd></dl>
  
 
  node
-<dl><dd>linked list pointers</dl>
+<dl><dd>linked list pointers</dd></dl>
 
 <h2>Description</h2>
 

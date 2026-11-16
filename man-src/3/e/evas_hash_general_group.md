@@ -24,7 +24,7 @@ description: "Hash General Functions – Miscellaneous functions that operate on
 <p>Return memory allocation failure flag after an function requiring allocation. </p>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>The state of the allocation flag</dl>
+<dd>The state of the allocation flag</dd></dl>
 <p> This function returns the state of the memory allocation flag. This flag is set if memory allocations fail during <code>evas_hash_add()</code> calls. If they do, 1 will be returned, otherwise 0 will be returned. The flag will remain in its current state until the next call that requires allocation is called, and is then reset. </p>
 <p> Example: </p>
 <pre> Evas_Hash *hash = NULL;
@@ -46,7 +46,7 @@ description: "Hash General Functions – Miscellaneous functions that operate on
 <dl COMPACT>
 <dd><i>hash</i> The hash table whose members will be walked<br />
  <i>func</i> The function to call on each parameter<br />
- <i>fdata</i> The data pointer to pass to the function being called</dl>
+ <i>fdata</i> The data pointer to pass to the function being called</dd></dl>
 <p> This function goes through every entry in the hash table hash and calls the function func on each member. The function should NOT modify the hash table contents if it returns 1. IF the hash table contents are modified by this function or the function wishes to stop processing it must return 0, otherwise return 1 to keep processing. </p>
 <p> Example: </p>
 <pre> extern Evas_Hash *hash;
@@ -68,10 +68,10 @@ description: "Hash General Functions – Miscellaneous functions that operate on
 <p>Free an entire hash table. </p>
 <p> <code>Todo</code></p>
 <dl COMPACT>
-<dd>Complete polishing documentation for evas_hash.c. The functions&#8217; docs may be grouped, but they need some simplification.</dl>
+<dd>Complete polishing documentation for evas_hash.c. The functions&#8217; docs may be grouped, but they need some simplification.</dd></dl>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>hash</i> The hash table to be freed</dl>
+<dd><i>hash</i> The hash table to be freed</dd></dl>
 <p> This function frees up all the memory allocated to storing the specified hash tale pointed to by hash. Any entries in the table that the program has no more pointers for elsewhere may now be lost, so this should only be called if the program has lready freed any allocated data in the hash table or has the pointers for data in teh table stored elswehere as well. </p>
 <p> Example: </p>
 <pre> extern Evas_Hash *hash;
@@ -84,10 +84,10 @@ description: "Hash General Functions – Miscellaneous functions that operate on
 <p>Retrieves the number of buckets available in the given hash table. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>hash</i> The given hash table.</dl>
+<dd><i>hash</i> The given hash table.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>256 if hash is not NULL. 0 otherwise.</dl>
+<dd>256 if hash is not NULL. 0 otherwise.</dd></dl>
 <p> Referenced by evas_hash_foreach(), and evas_hash_free().</p>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for Evas from the source code.</p>

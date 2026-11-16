@@ -19,10 +19,8 @@ BITMAP *bmp;
 ...
     /* Blit src on the screen. */
     blit(bmp, screen, 0, 0, 0, 0, bmp-&gt;w, bmp-&gt;h);
-
 /* Now copy a chunk to a corner, slightly outside. /*
    blit(screen, screen, 100, 100, -10, -10, 25, 30);
-   
 </code></pre>
 <p> You can blit between any parts of any two bitmaps, even if the two memory areas overlap (ie. source and dest are the same, or one is sub-bitmap of the other). You should be aware, however, that a lot of SVGA cards don&#8217;t provide separate read and write banks, which means that blitting from one part of the screen to another requires the use of a temporary bitmap in memory, and is therefore extremely slow. As a general rule you should avoid blitting from the screen onto itself in SVGA modes. </p>
 <p> In mode-X, on the other hand, blitting from one part of the screen to another can be significantly faster than blitting from memory onto the screen, as long as the source and destination are correctly aligned with each other. Copying between overlapping screen rectangles is slow, but if the areas don&#8217;t overlap, and if they have the same plane alignment (ie. (source_x%4) == (dest_x%4)), the VGA latch registers can be used for a very fast data transfer. To take advantage of this, in mode-X it is often worth storing tile graphics in a hidden area of video memory (using a large virtual screen), and blitting them from there onto the visible part of the screen. </p>

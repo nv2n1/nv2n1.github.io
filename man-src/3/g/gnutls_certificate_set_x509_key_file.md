@@ -14,14 +14,14 @@ description: "gnutls_certificate_set_x509_key_file – API function"
 <p> <code>int gnutls_certificate_set_x509_key_file(gnutls_certificate_credentials_t </code><i>res</i><code>, const char * </code><i>certfile</i><code>, const char * </code><i>keyfile</i><code>, gnutls_x509_crt_fmt_t </code><i>type</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
-<dt>gnutls_certificate_credentials_t res</p>
-<dd> is a <code>gnutls_certificate_credentials_t</code> structure.</p>
-<dt>const char * certfile</p>
-<dd> is a file that containing the certificate list (path) for the specified private key, in PKCS7 format, or a list of certificates</p>
-<dt>const char * keyfile</p>
-<dd> is a file that contains the private key</p>
-<dt>gnutls_x509_crt_fmt_t type</p>
-<dd> is PEM or DER</dl>
+<dt>gnutls_certificate_credentials_t res</dt>
+<dd> is a <code>gnutls_certificate_credentials_t</code> structure.</dd>
+<dt>const char * certfile</dt>
+<dd> is a file that containing the certificate list (path) for the specified private key, in PKCS7 format, or a list of certificates</dd>
+<dt>const char * keyfile</dt>
+<dd> is a file that contains the private key</dd>
+<dt>gnutls_x509_crt_fmt_t type</dt>
+<dd> is PEM or DER</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> This function sets a certificate/private key pair in the gnutls_certificate_credentials_t structure. This function may be called more than once, in case multiple keys/certificates exist for the server. For clients that need to send more than its own end entity certificate, e.g., also an intermediate CA cert, then the<br />
 &nbsp;<wbr><i>certfile</i>&nbsp;<wbr>must contain the ordered certificate chain. </p>
@@ -40,6 +40,6 @@ description: "gnutls_certificate_set_x509_key_file – API function"
 <h2>SEE ALSO</h2>
 <p> The full documentation for <code>gnutls</code> is maintained as a Texinfo manual. If the /usr/share/doc/gnutls/ directory does not contain the HTML form visit <code></p>
 <dl>
-<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></p>
-<dd> </code></dl>
+<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></dt>
+<dd> </code></dd></dl>
 <h2>Index</h2>

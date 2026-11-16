@@ -11,11 +11,8 @@ std::pmr::polymorphic_allocator - std::pmr::polymorphic_allocator
 <h2>Synopsis</h2>
 
 <pre><code>template&lt; class T &gt;              (since C++17)
-
 class polymorphic_allocator;     (until C++20)
-
 template&lt; class T = std::byte &gt;  (since C++20)
-
 class polymorphic_allocator;</code></pre> 
 The class template std::pmr::polymorphic_allocator is an Allocator whose allocation behavior depends on the memory resource it is constructed with. Thus, different instances of polymorphic_allocator can exhibit entirely different allocation behavior. This runtime polymorphism allows objects using polymorphic_allocator to behave as if they used different allocator types at run time despite the identical static allocator type. 
 All specializations of polymorphic_allocator meet the Allocator_completeness_requirements. 

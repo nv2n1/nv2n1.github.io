@@ -10,7 +10,6 @@ description: "set_config_file – Sets the configuration file. Allegro game prog
 <p>set_config_file &#8211; Sets the configuration file. Allegro game programming library.</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;allegro.h&gt;
-
 void set_config_file(const char *filename);</code></pre>
 <h2>Description</h2>
 <p>Sets the configuration file to be used by all subsequent config functions. If you don&#8217;t call this function, Allegro will use the default `allegro.cfg&#8217; file, looking first in the same directory as your program and then in the directory pointed to by the ALLEGRO environment variable and the usual platform-specific paths for configuration files. For example it will look for `/etc/allegro.cfg&#8217; under Unix. All pointers returned by previous calls to get_config_string() and other related functions are invalidated when you call this function! You can call this function before install_allegro() to change the configuration file, but after set_uformat() if you want to use a text encoding format other than the default. </p>

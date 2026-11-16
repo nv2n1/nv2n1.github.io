@@ -78,8 +78,8 @@ description: "ldconfig_selinux – Security Enhanced Linux Policy for the ldconf
 <p> <code>ldconfig_exec_t</code> </p>
 <p> &#8211; Set files with the ldconfig_exec_t type, if you want to transition an executable to the ldconfig_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/sbin/ldconfig, /usr/sbin/ldconfig </p>
+<dt>Paths:</dt>
+<dd>/sbin/ldconfig, /usr/sbin/ldconfig </dd>
 </dl>
 <p> <code>ldconfig_tmp_t</code> </p>
 <p> &#8211; Set files with the ldconfig_tmp_t type, if you want to store ldconfig temporary files in the /tmp directories. </p>

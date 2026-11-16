@@ -24,22 +24,22 @@ description: "pnmcolormap – create quantization color map for a portable anyma
 <p> The single parameter, which is required, is the number of colors you want in the output colormap. <code>pnmcolormap</code> may produce a color map with slightly fewer colors than that. You may specify <code>all</code> to get a colormap of every color in the input image (no quantization). </p>
 <p> <code>OPTIONS</code></p>
 <dl>
-<dt><code>-sort</code></p>
-<dd> This option causes the output colormap to be sorted by the red component intensity, then the green, then the blue in ascending order. This is an insertion sort, so it is not very fast on large colormaps. Sorting is useful because it allows you to compare two sets of colors.</p>
-<dt><code>-square</code></p>
-<dd> By default, <code>pnmcolormap</code> produces as the color map a PPM image with one row and one column for each color in the colormap. This option causes <code>pnmcolormap</code> instead to produce a PPM image that is within one row or column of being square, with multiple pixels of the same color as necessary to create a number of pixels which is a perfect square.</p>
-<dt><code>-verbose</code></p>
-<dd> This option causes <code>pnmcolormap</code> to display messages to Standard Error about the quantization.</p>
-<dt><code>-center</code></p>
+<dt><code>-sort</code></dt>
+<dd> This option causes the output colormap to be sorted by the red component intensity, then the green, then the blue in ascending order. This is an insertion sort, so it is not very fast on large colormaps. Sorting is useful because it allows you to compare two sets of colors.</dd>
+<dt><code>-square</code></dt>
+<dd> By default, <code>pnmcolormap</code> produces as the color map a PPM image with one row and one column for each color in the colormap. This option causes <code>pnmcolormap</code> instead to produce a PPM image that is within one row or column of being square, with multiple pixels of the same color as necessary to create a number of pixels which is a perfect square.</dd>
+<dt><code>-verbose</code></dt>
+<dd> This option causes <code>pnmcolormap</code> to display messages to Standard Error about the quantization.</dd>
+<dt><code>-center</code></dt>
 <dd>
-<dt><code>-meancolor</code></p>
+</dd><dt><code>-meancolor</code></dt>
 <dd>
-<dt><code>-meanpixel</code></p>
+</dd><dt><code>-meanpixel</code></dt>
 <dd>
-<dt><code>-spreadbrightness</code></p>
+</dd><dt><code>-spreadbrightness</code></dt>
 <dd>
-<dt><code>-spreadluminosity</code></p>
-<dd> These options control the quantization algorithm. See QUANTIZATION METHOD below. </p>
+</dd><dt><code>-spreadluminosity</code></dt>
+<dd> These options control the quantization algorithm. See QUANTIZATION METHOD below. </dd>
 </dl>
 <h2>QUANTIZATION METHOD</h2>
 <p> A quantization method is a way to choose which colors, being fewer in number than in the input, you want in the output. <code>pnmcolormap</code> uses Heckbert&#8217;s &quot;median cut&quot; quantization method. </p>

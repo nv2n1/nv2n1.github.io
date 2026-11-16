@@ -10,10 +10,10 @@ description: "pwhistory_helper – Helper binary that transfers password hashes 
 <p>pwhistory_helper &#8211; Helper binary that transfers password hashes from passwd or shadow to opasswd</p>
 <h2>Synopsis</h2>
 <dl>
-<dt> <code>pwhistory_helper</code> [&#8230;]</dl>
+<dt> <code>pwhistory_helper</code> [&#8230;]</dt></dl>
 <h2>Description</h2>
 <p><i>pwhistory_helper</i></p>
-<dd>is a helper program for the <i>pam_pwhistory</i> module that transfers password hashes from passwd or shadow file to the opasswd file and checks a password supplied by user against the existing hashes in the opasswd file. </p>
+<dd>is a helper program for the <i>pam_pwhistory</i> module that transfers password hashes from passwd or shadow file to the opasswd file and checks a password supplied by user against the existing hashes in the opasswd file. </dd>
 <p> The purpose of the helper is to enable tighter confinement of login and password changing services. The helper is thus called only when SELinux is enabled on the system. </p>
 <p> The interface of the helper &#8211; command line options, and input/output data format are internal to the <i>pam_pwhistory</i> module and it should not be called directly from applications.</p>
 <h2>See Also</h2>

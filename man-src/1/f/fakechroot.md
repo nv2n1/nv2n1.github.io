@@ -23,10 +23,10 @@ description: "fakechroot – gives a fake chroot environment"
 </pre>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-l</code> <i>library</i>|<code>&#8211;lib</code> <i>library</i></p>
-<dd> Specify an alternative wrapper library.</p>
-<dt><code>-s</code>|<code>&#8211;use-system-libs</code></p>
-<dd> Use system libraries before chroot&#8217;s libraries. This might be a workaround if system dynamic linker (<i>/lib/ld-linux.so.2</i> for Linux) can not load <i>libc.so</i> from fake chroot. </p>
+<dt><code>-l</code> <i>library</i>|<code>&#8211;lib</code> <i>library</i></dt>
+<dd> Specify an alternative wrapper library.</dd>
+<dt><code>-s</code>|<code>&#8211;use-system-libs</code></dt>
+<dd> Use system libraries before chroot&#8217;s libraries. This might be a workaround if system dynamic linker (<i>/lib/ld-linux.so.2</i> for Linux) can not load <i>libc.so</i> from fake chroot. </dd>
 <p> Try this setting if you noticed following errors: </p>
 <pre>
  $ fakechroot /usr/sbin/chroot /tmp/sarge /bin/true
@@ -36,12 +36,12 @@ description: "fakechroot – gives a fake chroot environment"
  $ fakechroot /usr/sbin/chroot /tmp/centos4 /bin/true
  Segmentation fault
 </pre>
-<dt>[<code>&#8212;</code>] <i>command</i></p>
-<dd> Any command you want to be ran as fakechroot. Use &#8216;<code>&#8212;</code>&#8216; if in the command you have other options that may confuse fakechroot&#8217;s option parsing.</p>
-<dt><code>-h</code></p>
-<dd> Display help.</p>
-<dt><code>-v</code></p>
-<dd> Display version.</dl>
+<dt>[<code>&#8212;</code>] <i>command</i></dt>
+<dd> Any command you want to be ran as fakechroot. Use &#8216;<code>&#8212;</code>&#8216; if in the command you have other options that may confuse fakechroot&#8217;s option parsing.</dd>
+<dt><code>-h</code></dt>
+<dd> Display help.</dd>
+<dt><code>-v</code></dt>
+<dd> Display version.</dd></dl>
 <h2>EXAMPLES</h2>
 <p> An example session with fakechroot: </p>
 <pre>
@@ -69,51 +69,51 @@ description: "fakechroot – gives a fake chroot environment"
 <p> fakechroot is a regular, non-setuid program. It does not enhance a user&#8217;s privileges, or decrease the system&#8217;s security.</p>
 <h2>FILES</h2>
 <dl>
-<dt><i>/usr/lib/fakechroot/libfakechroot.so</i></p>
-<dd> The shared library containing the wrapper functions.</dl>
+<dt><i>/usr/lib/fakechroot/libfakechroot.so</i></dt>
+<dd> The shared library containing the wrapper functions.</dd></dl>
 <h2>ENVIRONMENT</h2>
 <dl>
-<dt><font SIZE="-1"><code>FAKECHROOT</code></font></p>
-<dd> The value is true for fake chroot environment.</p>
-<dt><font SIZE="-1"><code>FAKECHROOT_VERSION</code></font></p>
-<dd> The version of current fakechroot library.</p>
-<dt><font SIZE="-1"><code>FAKECHROOT_BASE</code></font></p>
-<dd> The root directory for fake chroot environment.</p>
-<dt><font SIZE="-1"><code>FAKECHROOT_EXCLUDE_PATH</code></font></p>
-<dd> The list of directories which are excluded from being chrooted. The elements of list are separated with colon.</p>
-<dt><font SIZE="-1"><code>FAKECHROOT_CMD_SUBST</code></font></p>
-<dd> A list of command substitutions. If a program tries to execute one of the commands given (path relative to the chroot) then the substitute command runs instead (path to substitute command is not chrooted). </p>
+<dt><font SIZE="-1"><code>FAKECHROOT</code></font></dt>
+<dd> The value is true for fake chroot environment.</dd>
+<dt><font SIZE="-1"><code>FAKECHROOT_VERSION</code></font></dt>
+<dd> The version of current fakechroot library.</dd>
+<dt><font SIZE="-1"><code>FAKECHROOT_BASE</code></font></dt>
+<dd> The root directory for fake chroot environment.</dd>
+<dt><font SIZE="-1"><code>FAKECHROOT_EXCLUDE_PATH</code></font></dt>
+<dd> The list of directories which are excluded from being chrooted. The elements of list are separated with colon.</dd>
+<dt><font SIZE="-1"><code>FAKECHROOT_CMD_SUBST</code></font></dt>
+<dd> A list of command substitutions. If a program tries to execute one of the commands given (path relative to the chroot) then the substitute command runs instead (path to substitute command is not chrooted). </dd>
 <p> For example: </p>
 <pre>
  FAKECHROOT_CMD_SUBST=/sbin/ldconfig=/tmp/ldconfig-wrapper
 </pre>
 <p> will substitute <tt>&quot;/tmp/ldconfig-wrapper&quot;</tt> for <tt>&quot;/sbin/ldconfig&quot;</tt>. </p>
 <p> Give as many substitute commands as you want, separated by <tt>&quot;:&quot;</tt> (colon) characters.</p>
-<dt><font SIZE="-1"><code>LD_LIBRARY_PATH</code></font>, <font SIZE="-1"><code>LD_PRELOAD</code></font></p>
-<dd> Fakechroot is implemented by wrapping system calls. This is accomplished by setting LD_LIBRARY_PATH=/usr/lib/fakechroot and LD_PRELOAD=libfakechroot.so. That library is loaded before the system&#8217;s C library, and so most of the library functions are intercepted by it. If you need to set either <font SIZE="-1"><code>LD_LIBRARY_PATH</code></font> or <font SIZE="-1"><code>LD_PRELOAD</code></font> from within a fakechroot environment, it should be set relative to the given paths, as in LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/foo/bar/</dl>
+<dt><font SIZE="-1"><code>LD_LIBRARY_PATH</code></font>, <font SIZE="-1"><code>LD_PRELOAD</code></font></dt>
+<dd> Fakechroot is implemented by wrapping system calls. This is accomplished by setting LD_LIBRARY_PATH=/usr/lib/fakechroot and LD_PRELOAD=libfakechroot.so. That library is loaded before the system&#8217;s C library, and so most of the library functions are intercepted by it. If you need to set either <font SIZE="-1"><code>LD_LIBRARY_PATH</code></font> or <font SIZE="-1"><code>LD_PRELOAD</code></font> from within a fakechroot environment, it should be set relative to the given paths, as in LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/foo/bar/</dd></dl>
 <h2>LIMITATIONS</h2>
 <dl>
-<dt>o</p>
-<dd> <i>/lib/ld-linux.so.2</i> is always loaded from real environment. This path is hardcoded by linker for all binaries.</p>
-<dt>o</p>
-<dd> Every command executed within fakechroot needs to be linked to the same version of the C library as fakechroot itself. If the libraries in chroot are not compatible, try to use <code>&#8211;use-system-libs</code> option.</p>
-<dt>o</p>
-<dd> You can provide symlinks to the outside. The symlink have to be created before chroot is called. It can be useful for accessing the real <i>/proc</i> and <i>/dev</i> directory. You can also set the <font SIZE="-1"><code>FAKECHROOT_EXCLUDE_PATH</code></font> environment variable: </p>
+<dt>o</dt>
+<dd> <i>/lib/ld-linux.so.2</i> is always loaded from real environment. This path is hardcoded by linker for all binaries.</dd>
+<dt>o</dt>
+<dd> Every command executed within fakechroot needs to be linked to the same version of the C library as fakechroot itself. If the libraries in chroot are not compatible, try to use <code>&#8211;use-system-libs</code> option.</dd>
+<dt>o</dt>
+<dd> You can provide symlinks to the outside. The symlink have to be created before chroot is called. It can be useful for accessing the real <i>/proc</i> and <i>/dev</i> directory. You can also set the <font SIZE="-1"><code>FAKECHROOT_EXCLUDE_PATH</code></font> environment variable: </dd>
 <pre>
  $ export FAKECHROOT_EXCLUDE_PATH=/tmp:/proc:/dev:/var/run
 </pre>
-<dt>o</p>
-<dd> Statically linked binaries doesn&#8217;t work, especially <i><a href="/docs/linux/man/8-ldconfig/">ldconfig</a></i>(8), so you have to wrap this command with dummy version and i.e. set the dpkg diversion, see: <i><a href="/docs/linux/man/8-dpkg-divert/">dpkg-divert</a></i>(8).</p>
-<dt>o</p>
-<dd> <i><a href="/docs/linux/man/1-ldd/">ldd</a></i>(1) also doesn&#8217;t work. You have to use <tt>&quot;alias ldd='LD_TRACE_LOADED_OBJECTS=1'&quot;</tt> or to use a wrapper instead. The example wrapper is available at <i>scripts/</i> directory in fakechroot&#8217;s source package and it is located at <i>/usr/share/doc/fakechroot/examples</i> directory.</p>
-<dt>o</p>
-<dd> The full screen applications hangs up if <i>/dev/tty</i> file is not a real device. Link <i>/dev/tty</i> file or whole <i>/dev</i> directory to the real one or remove it from fake chroot environment.</p>
-<dt>o</p>
-<dd> <i>lckpwdf()</i> and <i>ulckpwdf()</i> are ignored so <i><a href="/docs/linux/man/1-passwd/">passwd</a></i>(1) command should work</p>
-<dt>o</p>
-<dd> Your real uid should exist in <i>/etc/passwd</i>. Create it with adduser &#8211;uid <i>realuid</i> <i>realuser</i>.</p>
-<dt>o</p>
-<dd> <i>debuild</i>(1) cleans environment. Use &#8211;preserve-env option to prevent this behaviour.</dl>
+<dt>o</dt>
+<dd> Statically linked binaries doesn&#8217;t work, especially <i><a href="/docs/linux/man/8-ldconfig/">ldconfig</a></i>(8), so you have to wrap this command with dummy version and i.e. set the dpkg diversion, see: <i><a href="/docs/linux/man/8-dpkg-divert/">dpkg-divert</a></i>(8).</dd>
+<dt>o</dt>
+<dd> <i><a href="/docs/linux/man/1-ldd/">ldd</a></i>(1) also doesn&#8217;t work. You have to use <tt>&quot;alias ldd='LD_TRACE_LOADED_OBJECTS=1'&quot;</tt> or to use a wrapper instead. The example wrapper is available at <i>scripts/</i> directory in fakechroot&#8217;s source package and it is located at <i>/usr/share/doc/fakechroot/examples</i> directory.</dd>
+<dt>o</dt>
+<dd> The full screen applications hangs up if <i>/dev/tty</i> file is not a real device. Link <i>/dev/tty</i> file or whole <i>/dev</i> directory to the real one or remove it from fake chroot environment.</dd>
+<dt>o</dt>
+<dd> <i>lckpwdf()</i> and <i>ulckpwdf()</i> are ignored so <i><a href="/docs/linux/man/1-passwd/">passwd</a></i>(1) command should work</dd>
+<dt>o</dt>
+<dd> Your real uid should exist in <i>/etc/passwd</i>. Create it with adduser &#8211;uid <i>realuid</i> <i>realuser</i>.</dd>
+<dt>o</dt>
+<dd> <i>debuild</i>(1) cleans environment. Use &#8211;preserve-env option to prevent this behaviour.</dd></dl>
 <h2>COPYING</h2>
 <p> fakechroot is distributed under the <font SIZE="-1">GNU</font> Lesser General Public License (<font SIZE="-1">LGPL</font> 2.1 or greater).</p>
 <h2>AUTHORS</h2>

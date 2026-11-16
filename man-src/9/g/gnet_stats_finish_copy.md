@@ -14,7 +14,7 @@ description: "gnet_stats_finish_copy – finish dumping procedure"
 <p><i>d</i></p>
 <dl>
 <dd>
-<dd>dumping handle</dl>
+</dd><dd>dumping handle</dd></dl>
 <h2>Description</h2>
 <p>Corrects the length of the top level TLV to include all TLVs added by <code>gnet_stats_copy_XXX</code> calls. Adds the backward compatibility TLVs if <code>gnet_stats_start_copy_compat</code> was used and releases the statistics lock. </p>
 <p> Returns 0 on success or -1 with the statistic lock released if the room in the socket buffer was not sufficient.</p>

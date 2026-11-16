@@ -16,16 +16,16 @@ description: "ether-wake – A tool to send a Wake-On-LAN \"Magic Packet\""
 <h2>Options</h2>
 <p><code>ether-wake</code> needs a single dash (´-´) in front of options. A summary of options is included below.</p>
 <dl>
-<dt><code>-b</code></p>
-<dd>Send the wake-up packet to the broadcast address.</p>
-<dt><code>-D</code></p>
-<dd>Increase the Debug Level.</p>
-<dt><code>-i ifname</code></p>
-<dd>Use interface ifname instead of sending a wake packet to all interfaces.</p>
-<dt><code>-p passwd</code></p>
-<dd>Append a four or six byte password to the packet. Only a few adapters need or support this. A six byte password may be specified in Ethernet hex format (00:22:44:66:88:aa) or four byte dotted decimal (192.168.1.1) format. A four byte password must use the dotted decimal format. </p>
-<dt><code>-V</code></p>
-<dd>Show the program version information. </p>
+<dt><code>-b</code></dt>
+<dd>Send the wake-up packet to the broadcast address.</dd>
+<dt><code>-D</code></dt>
+<dd>Increase the Debug Level.</dd>
+<dt><code>-i ifname</code></dt>
+<dd>Use interface ifname instead of sending a wake packet to all interfaces.</dd>
+<dt><code>-p passwd</code></dt>
+<dd>Append a four or six byte password to the packet. Only a few adapters need or support this. A six byte password may be specified in Ethernet hex format (00:22:44:66:88:aa) or four byte dotted decimal (192.168.1.1) format. A four byte password must use the dotted decimal format. </dd>
+<dt><code>-V</code></dt>
+<dd>Show the program version information. </dd>
 </dl>
 <h2>Exit Status</h2>
 <p>This program returns 0 on success. A permission failures (e.g. run as a non-root user) results in an exit status of 2. Unrecognized or invalid parameters result in an exit status of 3. Failure to retrieve network interface information or send a packet will result in an exit status of 1.</p>

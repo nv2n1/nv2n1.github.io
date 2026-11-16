@@ -17,20 +17,20 @@ description: "decrypt – 802.11b packet decryption tool"
 <p> An alternate dictionary mode utilizes an input word list of potential WEP keys to attempt to find a valid key for the specified bssid. If a valid key is found packets are decrypted and copied to the specified output file.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-p </code><i>key</i></p>
-<dd> password whose length must be 5 or 13 bytes of ascii data or 5 or 13 2 digit, colon separated hex values.</p>
-<dt><code>-f </code><i>dictfile </i></p>
-<dd> the name of a file containing one password per line in the format specified above. All passwords in the file will be tried against the specified bssid.</p>
-<dt><code>-b</code></p>
-<dd> Discard beacon packets. Beacon packets will not be written in the output file.</p>
-<dt><code>-o </code><i>offset</i></p>
-<dd> Optional integer number of bytes of header that precede the first frame control byte in the 802.11b packet. <code>decrypt</code> can recognized packets captured with no prefix bytes (pcap type DLT_IEEE802_11) as well as packets prefixed with prism2 style headers (pcap type DLT_PRISM_HEADER). In these two cases, no offest argument is required.</p>
-<dt><code>-m </code><i>bssid</i></p>
-<dd> 6 byte mac address of the AP for which traffic is to be decrypted in the form xx:xx:xx:xx:xx:xx</p>
-<dt><code>-e </code><i>infile</i></p>
-<dd> The name of the file containing encrypted packets. This file is expected to be in pcap dump file format.</p>
-<dt><code>-d </code><i>outfile</i></p>
-<dd> The output file produced by decrypting all data packets associated with the named AP using the specified key. All other packets are copied from infile unchanged. This file will be in pcap dump file format. If the provided key is not a valid key for the specified bssid, all packets are copied unchanged to the output file.</dl>
+<dt><code>-p </code><i>key</i></dt>
+<dd> password whose length must be 5 or 13 bytes of ascii data or 5 or 13 2 digit, colon separated hex values.</dd>
+<dt><code>-f </code><i>dictfile </i></dt>
+<dd> the name of a file containing one password per line in the format specified above. All passwords in the file will be tried against the specified bssid.</dd>
+<dt><code>-b</code></dt>
+<dd> Discard beacon packets. Beacon packets will not be written in the output file.</dd>
+<dt><code>-o </code><i>offset</i></dt>
+<dd> Optional integer number of bytes of header that precede the first frame control byte in the 802.11b packet. <code>decrypt</code> can recognized packets captured with no prefix bytes (pcap type DLT_IEEE802_11) as well as packets prefixed with prism2 style headers (pcap type DLT_PRISM_HEADER). In these two cases, no offest argument is required.</dd>
+<dt><code>-m </code><i>bssid</i></dt>
+<dd> 6 byte mac address of the AP for which traffic is to be decrypted in the form xx:xx:xx:xx:xx:xx</dd>
+<dt><code>-e </code><i>infile</i></dt>
+<dd> The name of the file containing encrypted packets. This file is expected to be in pcap dump file format.</dd>
+<dt><code>-d </code><i>outfile</i></dt>
+<dd> The output file produced by decrypting all data packets associated with the named AP using the specified key. All other packets are copied from infile unchanged. This file will be in pcap dump file format. If the provided key is not a valid key for the specified bssid, all packets are copied unchanged to the output file.</dd></dl>
 <h2>EXAMPLES</h2>
 <p> Decrypt all trafic to/from the access point with bssid 01:02:34:56:78:9a using ascii key &quot;MyKey&quot;, reading from input file &quot;capture&quot;, writing the results to a file named &quot;decrypted&quot; </p>
 <blockquote>

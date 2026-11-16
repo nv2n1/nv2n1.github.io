@@ -15,11 +15,11 @@ description: "yaz – Z39.50 toolkit."
 <p> All rights reserved. </p>
 <p> Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met: </p>
 <dl>
-<dd>*Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.</dl>
+<dd>*Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.</dd></dl>
 <dl>
-<dd>*Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.</dl>
+<dd>*Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.</dd></dl>
 <dl>
-<dd>*Neither the name of Index Data nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.</dl>
+<dd>*Neither the name of Index Data nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.</dd></dl>
 <p> THIS SOFTWARE IS PROVIDED BY THE REGENTS AND CONTRIBUTORS &#8220;AS IS&#8221; AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE REGENTS AND CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.</p>
 <h2>See Also</h2>
 <p><code>yaz-client</code>(1), <code>yaz-ztest</code>(8), <code>yaz-config</code>(8), <code>zoomsh</code>(1) <code><a href="/docs/linux/man/7-bib1-attr/">bib1-attr</a></code>(7) </p>
@@ -28,11 +28,12 @@ description: "yaz – Z39.50 toolkit."
 <p> <i>Z39.50 Maintenance Agency Page</i>[2].</p>
 <h2>Notes</h2>
 <dl>
-<dt> 1.</p>
-<dd>YAZ home page</p>
+<dt> 1.</dt>
+<dd>YAZ home page</dd>
 <dl>
-<dd><a rel="nofollow" href="http://www.indexdata.com/yaz/">http://www.indexdata.com/yaz/</a></dl>
-<dt> 2.</p>
-<dd>Z39.50 Maintenance Agency Page</p>
+<dd><a rel="nofollow" href="http://www.indexdata.com/yaz/">http://www.indexdata.com/yaz/</a></dd></dl>
+<dt> 2.</dt>
+<dd>Z39.50 Maintenance Agency Page</dd>
 <dl>
-<dd><a rel="nofollow" href="http://www.loc.gov/z3950/agency/">http://www.loc.gov/z3950/agency/</a></dl>
+<dd><a rel="nofollow" href="http://www.loc.gov/z3950/agency/">http://www.loc.gov/z3950/agency/</a></dd></dl>
+</dl>

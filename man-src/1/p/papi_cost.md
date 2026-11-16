@@ -38,15 +38,15 @@ url: "/docs/linux/man/1-papi_cost/"
 
 <dl>
 <dt>&bull;
-<dd> -b &lt; bins &gt; Define the number of bins into which the results are partitioned for display. The default is 100.
-<dt>&bull;
-<dd> -d Display a graphical distribution of costs in a vertical histogram.
-<dt>&bull;
-<dd> -h Display help information about this utility.
-<dt>&bull;
-<dd> -s Show the number of iterations in each of the first 10 standard deviations above the mean.
-<dt>&bull;
-<dd> -t &lt; threshold &gt; Set the threshold for the number of iterations to measure costs. The default is 100,000.</dl>
+</dt><dd> -b &lt; bins &gt; Define the number of bins into which the results are partitioned for display. The default is 100.
+</dd><dt>&bull;
+</dt><dd> -d Display a graphical distribution of costs in a vertical histogram.
+</dd><dt>&bull;
+</dt><dd> -h Display help information about this utility.
+</dd><dt>&bull;
+</dt><dd> -s Show the number of iterations in each of the first 10 standard deviations above the mean.
+</dd><dt>&bull;
+</dt><dd> -t &lt; threshold &gt; Set the threshold for the number of iterations to measure costs. The default is 100,000.</dd></dl>
  
 
 <h2>Bugs</h2>

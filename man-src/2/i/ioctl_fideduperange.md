@@ -39,22 +39,22 @@ description: "ioctl_fideduperange – share some the data of one file with anoth
 <h2>ERRORS</h2>
 <p> Error codes can be one of, but are not limited to, the following:</p>
 <dl>
-<dt><code>EBADF</code></p>
-<dd> <i>src_fd</i> is not open for reading; <i>dest_fd</i> is not open for writing or is open for append-only writes; or the filesystem which <i>src_fd</i> resides on does not support deduplication.</p>
-<dt><code>EINVAL</code></p>
-<dd> The filesystem does not support deduplicating the ranges of the given files. This error can also appear if either file descriptor represents a device, FIFO, or socket. Disk filesystems generally require the offset and length arguments to be aligned to the fundamental block size. Neither Btrfs nor XFS support overlapping deduplication ranges in the same file.</p>
-<dt><code>EISDIR</code></p>
-<dd> One of the files is a directory and the filesystem does not support shared regions in directories.</p>
-<dt><code>ENOMEM</code></p>
-<dd> The kernel was unable to allocate sufficient memory to perform the operation or <i>dest_count</i> is so large that the input argument description spans more than a single page of memory.</p>
-<dt><code>EOPNOTSUPP</code></p>
-<dd> This can appear if the filesystem does not support deduplicating either file descriptor, or if either file descriptor refers to special inodes.</p>
-<dt><code>EPERM</code></p>
-<dd> <i>dest_fd</i> is immutable.</p>
-<dt><code>ETXTBSY</code></p>
-<dd> One of the files is a swap file. Swap files cannot share storage.</p>
-<dt><code>EXDEV</code></p>
-<dd> <i>dest_fd</i> and <i>src_fd</i> are not on the same mounted filesystem.</dl>
+<dt><code>EBADF</code></dt>
+<dd> <i>src_fd</i> is not open for reading; <i>dest_fd</i> is not open for writing or is open for append-only writes; or the filesystem which <i>src_fd</i> resides on does not support deduplication.</dd>
+<dt><code>EINVAL</code></dt>
+<dd> The filesystem does not support deduplicating the ranges of the given files. This error can also appear if either file descriptor represents a device, FIFO, or socket. Disk filesystems generally require the offset and length arguments to be aligned to the fundamental block size. Neither Btrfs nor XFS support overlapping deduplication ranges in the same file.</dd>
+<dt><code>EISDIR</code></dt>
+<dd> One of the files is a directory and the filesystem does not support shared regions in directories.</dd>
+<dt><code>ENOMEM</code></dt>
+<dd> The kernel was unable to allocate sufficient memory to perform the operation or <i>dest_count</i> is so large that the input argument description spans more than a single page of memory.</dd>
+<dt><code>EOPNOTSUPP</code></dt>
+<dd> This can appear if the filesystem does not support deduplicating either file descriptor, or if either file descriptor refers to special inodes.</dd>
+<dt><code>EPERM</code></dt>
+<dd> <i>dest_fd</i> is immutable.</dd>
+<dt><code>ETXTBSY</code></dt>
+<dd> One of the files is a swap file. Swap files cannot share storage.</dd>
+<dt><code>EXDEV</code></dt>
+<dd> <i>dest_fd</i> and <i>src_fd</i> are not on the same mounted filesystem.</dd></dl>
 <h2>VERSIONS</h2>
 <p> This ioctl operation first appeared in Linux 4.5. It was previously known as <code>BTRFS_IOC_FILE_EXTENT_SAME</code> and was private to Btrfs.</p>
 <h2>CONFORMING TO</h2>

@@ -17,27 +17,27 @@ description: "guilt-patchbomb – Email a series of commits interactively"
 <p> -n</p>
 <dl>
 <dt>
-<dd> Doncqt send</dl>
+</dt><dd> Doncqt send</dd></dl>
 <p> &#8211;in-reply-to &lt;msgid&gt;</p>
 <dl>
 <dt>
-<dd> Set the In-reply-to header to the specified message id. This allows the patches to be sent as replies to an arbitrary message.</dl>
+</dt><dd> Set the In-reply-to header to the specified message id. This allows the patches to be sent as replies to an arbitrary message.</dd></dl>
 <p> &#8211;git</p>
 <dl>
 <dt>
-<dd> Generate a patch which uses all the features offered by the git diff format (e.g., rename and copy detection).</dl>
+</dt><dd> Generate a patch which uses all the features offered by the git diff format (e.g., rename and copy detection).</dd></dl>
 <p> &lt;hash&gt;</p>
 <dl>
 <dt>
-<dd> Only the specified revision.</dl>
+</dt><dd> Only the specified revision.</dd></dl>
 <p> &lt;since&gt;..[&lt;until&gt;]</p>
 <dl>
 <dt>
-<dd> Revisions starting from <i>&lt;since&gt;</i> until <i>&lt;until&gt;</i>. The <i>&lt;since&gt;</i> revision it self is NOT included, while <i>&lt;until&gt;</i> is. If <i>&lt;until&gt;</i> is not specified, it is assumed to be HEAD.</dl>
+</dt><dd> Revisions starting from <i>&lt;since&gt;</i> until <i>&lt;until&gt;</i>. The <i>&lt;since&gt;</i> revision it self is NOT included, while <i>&lt;until&gt;</i> is. If <i>&lt;until&gt;</i> is not specified, it is assumed to be HEAD.</dd></dl>
 <p> ..&lt;until&gt;</p>
 <dl>
 <dt>
-<dd> All revisions until the <i>&lt;until&gt;</i> revision (inclusive).</dl>
+</dt><dd> All revisions until the <i>&lt;until&gt;</i> revision (inclusive).</dd></dl>
 <h2>AUTHOR</h2>
 <p> Written by Josef &quot;Jeff&quot; Sipek &lt;m[blue]<code>jeffpc [at] josefsipek.net</code>m[]<font SIZE="-2">[1]</font>&gt;</p>
 <h2>DOCUMENTATION</h2>
@@ -46,15 +46,15 @@ description: "guilt-patchbomb – Email a series of commits interactively"
 <p> Part of the linkguilt:guilt[7] suite (Generated for Guilt v0.33)</p>
 <h2>NOTES</h2>
 <dl>
-<dt> 1.</p>
-<dd> jeffpc [at] josefsipek.net</p>
+<dt> 1.</dt>
+<dd> jeffpc [at] josefsipek.net</dd>
 <dl>
 <dt>
-<dd> mailto:jeffpc [at] josefsipek.net</dl>
-<dt> 2.</p>
-<dd> brandon [at] ifup.org</p>
+</dt><dd> mailto:jeffpc [at] josefsipek.net</dd></dl>
+<dt> 2.</dt>
+<dd> brandon [at] ifup.org</dd>
 <dl>
 <dt>
-<dd> mailto:brandon [at] ifup.org</dl>
+</dt><dd> mailto:brandon [at] ifup.org</dd></dl>
 </dl>
 <h2>Index</h2>

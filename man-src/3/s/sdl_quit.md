@@ -18,7 +18,8 @@ atexit(SDL_Quit);
 .
 .</tt></pre>
 <dl COMPACT>
-<dd><code>Note: </p>
+<dd><code>Note: </dd>
 <p> While using atexit</code> maybe be fine for small programs, more advanced users should shut down SDL in their own cleanup code. Plus, using <code>atexit</code> in a library is a sure way to crash dynamically loaded code</dl>
 <h2>See Also</h2>
 <p><i></i><code>SDL_QuitSubsystem</code>, <i></i><code>SDL_Init</code></p>
+</p>

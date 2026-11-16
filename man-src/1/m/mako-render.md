@@ -17,8 +17,8 @@ description: "mako-render – renders Mako templates"
 <h2>OPTIONS</h2>
 <p> These programs follow the usual GNU command line syntax, with long options starting with two dashes (`-&#8216;). A summary of options is included below.</p>
 <dl>
-<dt><code>-h, &#8211;help</code></p>
-<dd> Show summary of options.</dl>
+<dt><code>-h, &#8211;help</code></dt>
+<dd> Show summary of options.</dd></dl>
 <h2>AUTHOR</h2>
 <p> mako-render script was written by Miki Tebeka &lt;miki.tebeka [at] gmail.com&gt;, Mako was written by Mike Bayer &lt;mike [at] zzzcomputing.com&gt;. </p>
 <p> This manual page was written by Piotr Ożarowski &lt;piotr [at] debian.org&gt;, for the Debian project (but may be used by others). </p>

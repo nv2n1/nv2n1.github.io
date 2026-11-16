@@ -16,10 +16,10 @@ description: "audisp-remote – plugin for remote logging"
 <p>If you are aggregating multiple machines, you should enable node information and enriched events in the audit event stream. You can do this in one of two places. If you want computer node names written to disk as well as sent in the realtime event stream, edit the name_format option in /etc/audit/auditd.conf. This is the best option for enriched events. If you only want the node names in the realtime event stream, then edit the name_format option in /etc/audisp/audispd.conf. Do not enable both as it will put 2 node fields in the event stream.</p>
 <h2>Signals</h2>
 <dl>
-<dt>SIGUSR1</p>
-<dd>Causes the audisp-remote program to write the value of some of its internal flags to syslog. The <i>suspend</i> flag tells whether or not logging has been suspended. The <i>remote_ended</i> flage tells if the connection was broken by the server saying it can&#8217;t log events. The <i>transport_ok</i> flag tells whether or not the connection to the remote server is healthy. The <i>queue_size</i> tells how many records are enqueued to be sent to the remote server.</p>
-<dt>SIGUSR2</p>
-<dd>Causes the audisp-remote program to resume logging if it were suspended due to an error. </p>
+<dt>SIGUSR1</dt>
+<dd>Causes the audisp-remote program to write the value of some of its internal flags to syslog. The <i>suspend</i> flag tells whether or not logging has been suspended. The <i>remote_ended</i> flage tells if the connection was broken by the server saying it can&#8217;t log events. The <i>transport_ok</i> flag tells whether or not the connection to the remote server is healthy. The <i>queue_size</i> tells how many records are enqueued to be sent to the remote server.</dd>
+<dt>SIGUSR2</dt>
+<dd>Causes the audisp-remote program to resume logging if it were suspended due to an error. </dd>
 </dl>
 <h2>Files</h2>
 <p>/etc/audisp/plugins.d/au-remote.conf, /etc/audit/auditd.conf, /etc/audisp/audispd.conf, /etc/audisp/audisp-remote.conf</p>

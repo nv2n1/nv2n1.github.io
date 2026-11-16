@@ -28,12 +28,9 @@ The root directory of the path.
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;iostream&gt;
-
 #include &lt;filesystem&gt;
-
 namespace fs = std::filesystem;
 int main()
-
 {
     fs::path p = fs::current_path();
     std::cout &lt;&lt; &quot;The current path &quot; &lt;&lt; p &lt;&lt; &quot; decomposes into:\n&quot;

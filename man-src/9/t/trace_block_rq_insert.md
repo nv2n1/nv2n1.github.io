@@ -14,17 +14,17 @@ description: "trace_block_rq_insert – insert block operation request into queu
 <p><i>q</i></p>
 <dl>
 <dd>
-<dd>target queue</dl>
+</dd><dd>target queue</dd></dl>
 <p> <i>rq</i></p>
 <dl>
-<dd>block IO operation request</dl>
+<dd>block IO operation request</dd></dl>
 <h2>Description</h2>
 <p>Called immediately before block operation request <i>rq</i> is inserted into queue <i>q</i>. The fields in the operation request <i>rq</i> struct can be examined to determine which device and sectors the pending operation would access.</p>
 <h2>Authors</h2>
 <p><code>Jason Baron</code> &lt;jbaron [at] redhat.com&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <p> <code>William Cohen</code> &lt;wcohen [at] redhat.com&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

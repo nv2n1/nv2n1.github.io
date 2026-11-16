@@ -15,26 +15,26 @@ description: "ndisc6 – ICMPv6 Neighbor Discovery tool"
 <p> The IPv6 address of the node must be specified, as well as the networking interface on which to perform the lookup.</p>
 <h2>Options</h2>
 <dl>
-<dt><code>-1</code> or <code>&#8211;single</code></p>
-<dd>Exit as soon as the first advertisement is received (default). </p>
-<dt><code>-h</code> or <code>&#8211;help</code></p>
-<dd>Display some help and exit. </p>
-<dt><code>-m</code> or <code>&#8211;multiple</code></p>
-<dd>Wait for possible duplicate advertisements and print all of them. </p>
-<dt><code>-n</code> or <code>&#8211;numeric</code></p>
-<dd>If the first parameter is not a valid IPv6 address, do not try to resolve it as a DNS hostname. </p>
-<dt><code>-q</code> or <code>&#8211;quiet</code></p>
-<dd>Only display link-layer address. Display nothing in case of failure. That is mostly useful when calling the program from a shell script. </p>
-<dt><code>-r attempts</code> or <code>&#8211;retry attempts</code></p>
-<dd>Send ICMPv6 Neighbor Discovery that many times until a reply is received, or abort. By default, ndisc6 will try 3 times before aborting (MAX_MULTICAST_SOLICIT and MAX_UNICAST_SOLICIT from RFC2461). </p>
-<dt><code>-s source_ip</code> or <code>&#8211;source source_ip</code></p>
-<dd>Specify the IPv6 address to be used as the source for the neighbor solicitation packets. </p>
-<dt><code>-V</code> or <code>&#8211;version</code></p>
-<dd>Display program version and license and exit. </p>
-<dt><code>-v</code> or <code>&#8211;verbose</code></p>
-<dd>Display verbose information. That is the default. </p>
-<dt><code>-w wait_ms</code> or <code>&#8211;wait wait_ms</code></p>
-<dd>Wait <i>wait_ms</i> milliseconds for a response before retrying. By default, ndisc6 waits 1 second between each attempts (RETRANS_TIMER from RFC2461). </p>
+<dt><code>-1</code> or <code>&#8211;single</code></dt>
+<dd>Exit as soon as the first advertisement is received (default). </dd>
+<dt><code>-h</code> or <code>&#8211;help</code></dt>
+<dd>Display some help and exit. </dd>
+<dt><code>-m</code> or <code>&#8211;multiple</code></dt>
+<dd>Wait for possible duplicate advertisements and print all of them. </dd>
+<dt><code>-n</code> or <code>&#8211;numeric</code></dt>
+<dd>If the first parameter is not a valid IPv6 address, do not try to resolve it as a DNS hostname. </dd>
+<dt><code>-q</code> or <code>&#8211;quiet</code></dt>
+<dd>Only display link-layer address. Display nothing in case of failure. That is mostly useful when calling the program from a shell script. </dd>
+<dt><code>-r attempts</code> or <code>&#8211;retry attempts</code></dt>
+<dd>Send ICMPv6 Neighbor Discovery that many times until a reply is received, or abort. By default, ndisc6 will try 3 times before aborting (MAX_MULTICAST_SOLICIT and MAX_UNICAST_SOLICIT from RFC2461). </dd>
+<dt><code>-s source_ip</code> or <code>&#8211;source source_ip</code></dt>
+<dd>Specify the IPv6 address to be used as the source for the neighbor solicitation packets. </dd>
+<dt><code>-V</code> or <code>&#8211;version</code></dt>
+<dd>Display program version and license and exit. </dd>
+<dt><code>-v</code> or <code>&#8211;verbose</code></dt>
+<dd>Display verbose information. That is the default. </dd>
+<dt><code>-w wait_ms</code> or <code>&#8211;wait wait_ms</code></dt>
+<dd>Wait <i>wait_ms</i> milliseconds for a response before retrying. By default, ndisc6 waits 1 second between each attempts (RETRANS_TIMER from RFC2461). </dd>
 </dl>
 <p> If <code>ndisc6</code> does not receive any response after the specified number of attempts waiting for <i>wait_ms</i> milliseconds each time, it will exit with code 2. On error, it exits with code 1. Otherwise it exits with code 0. This makes it possible to use the exit code to see if a host is on-link or not.</p>
 <h2>Diagnostics</h2>

@@ -19,73 +19,73 @@ description: "plotfont – produce character maps of fonts supported by the plot
 <h2>OPTIONS</h2>
 <h3>General Options</h3>
 <dl>
-<dt><code>-T</code><i> type</i></p>
+<dt><code>-T</code><i> type</i></dt>
 <dd>
-<dt><code>&#8211;output-format</code><i> type</i></p>
-<dd> Select <i>type</i> as the output format. It may be &quot;X&quot;, &quot;png&quot;, &quot;pnm&quot;, &quot;gif&quot;, &quot;svg&quot;, &quot;ai&quot;, &quot;ps&quot;, &quot;cgm&quot;, &quot;fig&quot;, &quot;pcl&quot;, &quot;hpgl&quot;, &quot;regis&quot;, &quot;tek&quot;, or &quot;meta&quot; (the default). These refer respectively to the X Window System, PNG (Portable Network Graphics) format, portable anymap format (PBM/PGM/PPM), a pseudo-GIF format that does not use LZW encoding, the new XML-based Scalable Vector Graphics format, the format used by Adobe Illustrator, Postscript or Encapsulated Postscript (EPS) that can be edited with <code>idraw</code>(1), CGM format (by default, confirming to the WebCGM profile), the format used by the <code><a href="/docs/linux/man/1-xfig/">xfig</a></code>(1) drawing editor, the Hewlett-Packard PCL 5 printer language, the Hewlett-Packard Graphics Language, ReGIS graphics format (which can be displayed by the <code>dxterm</code>(1) terminal emulator or by a VT330 or VT340 terminal), Tektronix format (which can be displayed by the <code><a href="/docs/linux/man/1-xterm/">xterm</a></code>(1) terminal emulator), and device-independent GNU metafile format itself. Unless <i>type</i> is &quot;X&quot;, an output file is produced and written to standard output.</p>
+</dd><dt><code>&#8211;output-format</code><i> type</i></dt>
+<dd> Select <i>type</i> as the output format. It may be &quot;X&quot;, &quot;png&quot;, &quot;pnm&quot;, &quot;gif&quot;, &quot;svg&quot;, &quot;ai&quot;, &quot;ps&quot;, &quot;cgm&quot;, &quot;fig&quot;, &quot;pcl&quot;, &quot;hpgl&quot;, &quot;regis&quot;, &quot;tek&quot;, or &quot;meta&quot; (the default). These refer respectively to the X Window System, PNG (Portable Network Graphics) format, portable anymap format (PBM/PGM/PPM), a pseudo-GIF format that does not use LZW encoding, the new XML-based Scalable Vector Graphics format, the format used by Adobe Illustrator, Postscript or Encapsulated Postscript (EPS) that can be edited with <code>idraw</code>(1), CGM format (by default, confirming to the WebCGM profile), the format used by the <code><a href="/docs/linux/man/1-xfig/">xfig</a></code>(1) drawing editor, the Hewlett-Packard PCL 5 printer language, the Hewlett-Packard Graphics Language, ReGIS graphics format (which can be displayed by the <code>dxterm</code>(1) terminal emulator or by a VT330 or VT340 terminal), Tektronix format (which can be displayed by the <code><a href="/docs/linux/man/1-xterm/">xterm</a></code>(1) terminal emulator), and device-independent GNU metafile format itself. Unless <i>type</i> is &quot;X&quot;, an output file is produced and written to standard output.</dd>
 <dt>
-<dd> Files in PNG, PNM, pseudo-GIF, AI, or Fig format contain only a single page of graphics. So if the <code>-T png</code> option, the <code>-T pnm</code> option, the <code>-T gif</code> option, the <code>-T ai</code> option, or the <code>-T fig</code> option is used, the output file will contain a character map for only the first-specified font.</p>
+</dt><dd> Files in PNG, PNM, pseudo-GIF, AI, or Fig format contain only a single page of graphics. So if the <code>-T png</code> option, the <code>-T pnm</code> option, the <code>-T gif</code> option, the <code>-T ai</code> option, or the <code>-T fig</code> option is used, the output file will contain a character map for only the first-specified font.</dd>
 <dt>
-<dd> A listing of the fonts available in any specified output format may be obtained with the <code>&#8211;help-fonts</code> option (see below). If a requested font is unavailable, a default font will be substituted. The default font is &quot;Helvetica&quot; for &quot;X&quot;, &quot;svg&quot;, &quot;ai&quot;, &quot;ps&quot;, &quot;cgm&quot;, and &quot;fig&quot;, &quot;Univers&quot; for &quot;pcl&quot;, and &quot;HersheySerif&quot; for &quot;png&quot;, &quot;pnm&quot;, &quot;gif&quot;, &quot;hpgl&quot;, &quot;regis&quot;, &quot;tek&quot;, and &quot;meta&quot;.</p>
-<dt><code>-1</code></p>
+</dt><dd> A listing of the fonts available in any specified output format may be obtained with the <code>&#8211;help-fonts</code> option (see below). If a requested font is unavailable, a default font will be substituted. The default font is &quot;Helvetica&quot; for &quot;X&quot;, &quot;svg&quot;, &quot;ai&quot;, &quot;ps&quot;, &quot;cgm&quot;, and &quot;fig&quot;, &quot;Univers&quot; for &quot;pcl&quot;, and &quot;HersheySerif&quot; for &quot;png&quot;, &quot;pnm&quot;, &quot;gif&quot;, &quot;hpgl&quot;, &quot;regis&quot;, &quot;tek&quot;, and &quot;meta&quot;.</dd>
+<dt><code>-1</code></dt>
 <dd>
-<dt><code>&#8211;lower-half</code></p>
-<dd> Generate a character map for the lower half of each specified font. This is the default.</p>
-<dt><code>-2</code></p>
+</dd><dt><code>&#8211;lower-half</code></dt>
+<dd> Generate a character map for the lower half of each specified font. This is the default.</dd>
+<dt><code>-2</code></dt>
 <dd>
-<dt><code>&#8211;upper-half</code></p>
-<dd> Generate a character map for the upper half of each specified font.</p>
-<dt><code>-o</code></p>
+</dd><dt><code>&#8211;upper-half</code></dt>
+<dd> Generate a character map for the upper half of each specified font.</dd>
+<dt><code>-o</code></dt>
 <dd>
-<dt><code>&#8211;octal</code></p>
-<dd> Number the characters in octal rather than in decimal (the default).</p>
-<dt><code>-x</code></p>
+</dd><dt><code>&#8211;octal</code></dt>
+<dd> Number the characters in octal rather than in decimal (the default).</dd>
+<dt><code>-x</code></dt>
 <dd>
-<dt><code>&#8211;hexadecimal</code></p>
-<dd> Number the characters in hexadecimal rather than in decimal (the default).</p>
-<dt><code>&#8211;box</code></p>
-<dd> Surround each character with a box, showing its extent to left and right. The default is not to do this.</p>
-<dt><code>-j</code><i> row</i></p>
+</dd><dt><code>&#8211;hexadecimal</code></dt>
+<dd> Number the characters in hexadecimal rather than in decimal (the default).</dd>
+<dt><code>&#8211;box</code></dt>
+<dd> Surround each character with a box, showing its extent to left and right. The default is not to do this.</dd>
+<dt><code>-j</code><i> row</i></dt>
 <dd>
-<dt><code>&#8211;jis-row</code><i> row</i></p>
-<dd> Generate a character map for row <i>row</i> of a Japanese font arranged according to JIS [Japanese Industrial Standard] X0208. The only such font currently available is the HersheyEUC [Extended Unix Code] font. If used, this option overrides the <code>-1</code> and <code>-2</code> options. The valid rows are 1&#8230;94. In the JIS X0208 standard, Roman characters are located in row 3, and Japanese syllabic characters (Hiragana and Katakana) are located in rows 4 and 5. Greek and Cyrillic characters are located in rows 6 and 7. Japanese ideographic characters (Kanji) are located in rows 16&#8230;84.</p>
-<dt><code>&#8211;bg-color</code><i> name</i></p>
-<dd> Set the color used for the background to be <i>name</i>. This is relevant only to <code>plotfont -T X</code>, <code>plotfont -T png</code>, <code>plotfont -T pnm</code>, <code>plotfont -T gif</code>, <code>plotfont -T svg</code>, <code>plotfont -T cgm</code>, and <code>plotfont -T regis</code>. An unrecognized name sets the color to the default, which is &quot;white&quot;. The environment variable <font SIZE="-1"><code>BG_COLOR </code></font> can equally well be used to specify the background color.</p>
+</dd><dt><code>&#8211;jis-row</code><i> row</i></dt>
+<dd> Generate a character map for row <i>row</i> of a Japanese font arranged according to JIS [Japanese Industrial Standard] X0208. The only such font currently available is the HersheyEUC [Extended Unix Code] font. If used, this option overrides the <code>-1</code> and <code>-2</code> options. The valid rows are 1&#8230;94. In the JIS X0208 standard, Roman characters are located in row 3, and Japanese syllabic characters (Hiragana and Katakana) are located in rows 4 and 5. Greek and Cyrillic characters are located in rows 6 and 7. Japanese ideographic characters (Kanji) are located in rows 16&#8230;84.</dd>
+<dt><code>&#8211;bg-color</code><i> name</i></dt>
+<dd> Set the color used for the background to be <i>name</i>. This is relevant only to <code>plotfont -T X</code>, <code>plotfont -T png</code>, <code>plotfont -T pnm</code>, <code>plotfont -T gif</code>, <code>plotfont -T svg</code>, <code>plotfont -T cgm</code>, and <code>plotfont -T regis</code>. An unrecognized name sets the color to the default, which is &quot;white&quot;. The environment variable <font SIZE="-1"><code>BG_COLOR </code></font> can equally well be used to specify the background color.</dd>
 <dt>
-<dd> If the <code>-T png</code> or <code>-T gif</code> option is used, a transparent PNG file or a transparent pseudo-GIF, respectively, may be produced by setting the <font SIZE="-1"><code>TRANSPARENT_COLOR </code></font> environment variable to the name of the background color. If the <code>-T svg</code> or <code>-T cgm</code> option is used, an output file without a background may be produced by setting the background color to &quot;none&quot;.</p>
-<dt><code>&#8211;bitmap-size</code><i> bitmap_size</i></p>
-<dd> Set the size of the graphics display in which the character map(s) will be drawn, in terms of pixels, to be <i>bitmap_size</i>. The default is &quot;570&#215;570&quot;. This is relevant only to <code>plotfont -T X</code>, <code>plotfont -T png</code>, <code>plotfont -T pnm</code>, and <code>plotfont -T gif</code>, all of which produce bitmaps. If you choose a rectangular (non-square) window size, the fonts in the character map(s) will be scaled anisotropically, i.e., by different factors in the horizontal and vertical directions. For <code>plotfont -T X</code>, this requires an X11R6 display. Any font that cannot be scaled in this way will be replaced by a default scalable font, such as the vector font &quot;HersheySerif&quot;.</p>
+</dt><dd> If the <code>-T png</code> or <code>-T gif</code> option is used, a transparent PNG file or a transparent pseudo-GIF, respectively, may be produced by setting the <font SIZE="-1"><code>TRANSPARENT_COLOR </code></font> environment variable to the name of the background color. If the <code>-T svg</code> or <code>-T cgm</code> option is used, an output file without a background may be produced by setting the background color to &quot;none&quot;.</dd>
+<dt><code>&#8211;bitmap-size</code><i> bitmap_size</i></dt>
+<dd> Set the size of the graphics display in which the character map(s) will be drawn, in terms of pixels, to be <i>bitmap_size</i>. The default is &quot;570&#215;570&quot;. This is relevant only to <code>plotfont -T X</code>, <code>plotfont -T png</code>, <code>plotfont -T pnm</code>, and <code>plotfont -T gif</code>, all of which produce bitmaps. If you choose a rectangular (non-square) window size, the fonts in the character map(s) will be scaled anisotropically, i.e., by different factors in the horizontal and vertical directions. For <code>plotfont -T X</code>, this requires an X11R6 display. Any font that cannot be scaled in this way will be replaced by a default scalable font, such as the vector font &quot;HersheySerif&quot;.</dd>
 <dt>
-<dd> The environment variable <font SIZE="-1"><code>BITMAPSIZE </code></font> can equally well be used to specify the window size. For backward compatibility, the X resource <code>Xplot.geometry</code> may be used instead.</p>
-<dt><code>&#8211;emulate-color</code><i> option</i></p>
-<dd> If <i>option</i> is <i>yes</i>, replace each color in the output by an appropriate shade of gray. This is seldom useful, except when using <code>plotfont -T pcl</code> to prepare output for a PCL 5 device. (Many monochrome PCL 5 devices, such as monochrome LaserJets, do a poor job of emulating color on their own.) You may equally well request color emulation by setting the environment variable <font SIZE="-1"><code>EMULATE_COLOR </code></font> to &quot;yes&quot;.</p>
-<dt><code>&#8211;numbering-font</code><i> name</i></p>
-<dd> Set the font used for the numbering of the characters in the character map(s) to be <i>name</i>, rather than the default.</p>
-<dt><code>&#8211;page-size</code><i> pagesize</i></p>
-<dd> Set the size of size of the page on which the character map(s) will be positioned. This is relevant only to <code>plotfont -T svg</code>, <code>plotfont -T ai</code>, <code>plotfont -T ps</code>, <code>plotfont -T cgm</code>, <code>plotfont -T fig</code>, <code>plotfont -T pcl</code>, and <code>plotfont -T hpgl</code>. The default is &quot;letter&quot;, which means an 8.5 inch by 11 inch page. Any ISO page size in the range &quot;a0&quot;&#8230;&quot;a4&quot; or ANSI page size in the range &quot;a&quot;&#8230;&quot;e&quot; may be specified (&quot;letter&quot; is an alias for &quot;a&quot; and &quot;tabloid&quot; is an alias for &quot;b&quot;). &quot;legal&quot; and &quot;ledger&quot; are recognized page sizes also. The environment variable <font SIZE="-1"><code>PAGESIZE </code></font> can equally well be used to specify the page size.</p>
+</dt><dd> The environment variable <font SIZE="-1"><code>BITMAPSIZE </code></font> can equally well be used to specify the window size. For backward compatibility, the X resource <code>Xplot.geometry</code> may be used instead.</dd>
+<dt><code>&#8211;emulate-color</code><i> option</i></dt>
+<dd> If <i>option</i> is <i>yes</i>, replace each color in the output by an appropriate shade of gray. This is seldom useful, except when using <code>plotfont -T pcl</code> to prepare output for a PCL 5 device. (Many monochrome PCL 5 devices, such as monochrome LaserJets, do a poor job of emulating color on their own.) You may equally well request color emulation by setting the environment variable <font SIZE="-1"><code>EMULATE_COLOR </code></font> to &quot;yes&quot;.</dd>
+<dt><code>&#8211;numbering-font</code><i> name</i></dt>
+<dd> Set the font used for the numbering of the characters in the character map(s) to be <i>name</i>, rather than the default.</dd>
+<dt><code>&#8211;page-size</code><i> pagesize</i></dt>
+<dd> Set the size of size of the page on which the character map(s) will be positioned. This is relevant only to <code>plotfont -T svg</code>, <code>plotfont -T ai</code>, <code>plotfont -T ps</code>, <code>plotfont -T cgm</code>, <code>plotfont -T fig</code>, <code>plotfont -T pcl</code>, and <code>plotfont -T hpgl</code>. The default is &quot;letter&quot;, which means an 8.5 inch by 11 inch page. Any ISO page size in the range &quot;a0&quot;&#8230;&quot;a4&quot; or ANSI page size in the range &quot;a&quot;&#8230;&quot;e&quot; may be specified (&quot;letter&quot; is an alias for &quot;a&quot; and &quot;tabloid&quot; is an alias for &quot;b&quot;). &quot;legal&quot; and &quot;ledger&quot; are recognized page sizes also. The environment variable <font SIZE="-1"><code>PAGESIZE </code></font> can equally well be used to specify the page size.</dd>
 <dt>
-<dd> The graphics display in which each character map is drawn will be a square region that would occupy nearly the full width of the specified page. An alternative size for the graphics display can be specified. For example, the page size could be specified as &quot;letter,xsize=4in,ysize=6in&quot;, or &quot;a4,xsize=5.0cm,ysize=100mm&quot;. For all of the above except <code>plotfont -T hpgl</code>, the graphics display will, by default, be centered on the page. For all of the above except <code>plotfont -T svg</code> and <code>plotfont -T cgm</code>, the graphics display may be repositioned manually, by specifying the location of its lower left corner, relative to the lower left corner of the page. For example, the page size could be specified as &quot;letter,xorigin=2in,yorigin=3in&quot;, or &quot;a4,xorigin=0.5cm,yorigin=0.5cm&quot;. It is also possible to specify an offset vector. For example, the page size could be specified as &quot;letter,xoffset=1in&quot;, or &quot;letter,xoffset=1in,yoffset=1.2in&quot;, or &quot;a4,yoffset=-1cm&quot;. In SVG format and WebCGM format it is possible to specify the size of the graphics display, but not its position.</p>
-<dt><code>&#8211;rotation</code><i> angle</i></p>
-<dd> Rotate the graphics display by <i>angle</i> degrees. Recognized values are &quot;0&quot;, &quot;90&quot;, &quot;180&quot;, and &quot;270&quot;. &quot;no&quot; and &quot;yes&quot; are equivalent to &quot;0&quot; and &quot;90&quot;, respectively. The environment variable <font SIZE="-1"><code>ROTATION </code></font> can also be used to specify a rotation angle.</p>
-<dt><code>&#8211;pen-color</code><i> name</i></p>
-<dd> Set the pen color to be <i>name</i>. An unrecognized name sets the pen color to the default, which is &quot;black&quot;.</dl>
+</dt><dd> The graphics display in which each character map is drawn will be a square region that would occupy nearly the full width of the specified page. An alternative size for the graphics display can be specified. For example, the page size could be specified as &quot;letter,xsize=4in,ysize=6in&quot;, or &quot;a4,xsize=5.0cm,ysize=100mm&quot;. For all of the above except <code>plotfont -T hpgl</code>, the graphics display will, by default, be centered on the page. For all of the above except <code>plotfont -T svg</code> and <code>plotfont -T cgm</code>, the graphics display may be repositioned manually, by specifying the location of its lower left corner, relative to the lower left corner of the page. For example, the page size could be specified as &quot;letter,xorigin=2in,yorigin=3in&quot;, or &quot;a4,xorigin=0.5cm,yorigin=0.5cm&quot;. It is also possible to specify an offset vector. For example, the page size could be specified as &quot;letter,xoffset=1in&quot;, or &quot;letter,xoffset=1in,yoffset=1.2in&quot;, or &quot;a4,yoffset=-1cm&quot;. In SVG format and WebCGM format it is possible to specify the size of the graphics display, but not its position.</dd>
+<dt><code>&#8211;rotation</code><i> angle</i></dt>
+<dd> Rotate the graphics display by <i>angle</i> degrees. Recognized values are &quot;0&quot;, &quot;90&quot;, &quot;180&quot;, and &quot;270&quot;. &quot;no&quot; and &quot;yes&quot; are equivalent to &quot;0&quot; and &quot;90&quot;, respectively. The environment variable <font SIZE="-1"><code>ROTATION </code></font> can also be used to specify a rotation angle.</dd>
+<dt><code>&#8211;pen-color</code><i> name</i></dt>
+<dd> Set the pen color to be <i>name</i>. An unrecognized name sets the pen color to the default, which is &quot;black&quot;.</dd></dl>
 <h3>Options for Metafile Output</h3>
 <p> The following option is relevant only if the <code>-T</code> option is omitted or if <code>-T meta</code> is used. In this case the output of <code>plotfont</code> will be in GNU graphics metafile format. It may be translated to other formats by invoking <code><a href="/docs/linux/man/1-plot/">plot</a></code>(1).</p>
 <dl>
-<dt><code>-O</code></p>
+<dt><code>-O</code></dt>
 <dd>
-<dt><code>&#8211;portable-output</code></p>
-<dd> Output the portable (human-readable) version of GNU metafile format, rather than the binary version (the default). The format of the binary version is machine-dependent.</dl>
+</dd><dt><code>&#8211;portable-output</code></dt>
+<dd> Output the portable (human-readable) version of GNU metafile format, rather than the binary version (the default). The format of the binary version is machine-dependent.</dd></dl>
 <h3>Informational Options</h3>
 <dl>
-<dt><code>&#8211;help</code></p>
-<dd> Print a list of command-line options, and exit.</p>
-<dt><code>&#8211;help-fonts</code></p>
-<dd> Print a table of available fonts, and exit. The table will depend on which output format is specified with the <code>-T </code> option. <code>plotfont -T X</code>, <code>plotfont -T svg</code>, <code>plotfont -T ai</code>, <code>plotfont -T ps</code>, <code>plotfont -T cgm</code>, and <code>plotfont -T fig</code> each support the 35 standard Postscript fonts. <code>plotfont -T svg</code>, <code>plotfont -T pcl</code>, and <code>plotfont -T hpgl</code> support the 45 standard PCL 5 fonts, and the latter two support a number of Hewlett-Packard vector fonts. All seven support a set of 22 Hershey vector fonts, as do <code>plotfont -T png</code>, <code>plotfont -T pnm</code>, <code>plotfont -T gif</code>, <code>plotfont -T regis</code>, and <code>plotfont -T tek</code>. <code>plotfont</code> without a <code>-T</code> option in principle supports any of these fonts, since its output must be translated to other formats by invoking <code><a href="/docs/linux/man/1-plot/">plot</a></code>(1).</p>
-<dt><code>&#8211;list-fonts</code></p>
-<dd> Like <code>&#8211;help-fonts</code>, but lists the fonts in a single column to facilitate piping to other programs. If no output format is specified with the <code>-T</code> option, the full set of supported fonts is listed.</p>
-<dt><code>&#8211;version</code></p>
-<dd> Print the version number of <code>plotfont</code> and the plotting utilities package, and exit.</dl>
+<dt><code>&#8211;help</code></dt>
+<dd> Print a list of command-line options, and exit.</dd>
+<dt><code>&#8211;help-fonts</code></dt>
+<dd> Print a table of available fonts, and exit. The table will depend on which output format is specified with the <code>-T </code> option. <code>plotfont -T X</code>, <code>plotfont -T svg</code>, <code>plotfont -T ai</code>, <code>plotfont -T ps</code>, <code>plotfont -T cgm</code>, and <code>plotfont -T fig</code> each support the 35 standard Postscript fonts. <code>plotfont -T svg</code>, <code>plotfont -T pcl</code>, and <code>plotfont -T hpgl</code> support the 45 standard PCL 5 fonts, and the latter two support a number of Hewlett-Packard vector fonts. All seven support a set of 22 Hershey vector fonts, as do <code>plotfont -T png</code>, <code>plotfont -T pnm</code>, <code>plotfont -T gif</code>, <code>plotfont -T regis</code>, and <code>plotfont -T tek</code>. <code>plotfont</code> without a <code>-T</code> option in principle supports any of these fonts, since its output must be translated to other formats by invoking <code><a href="/docs/linux/man/1-plot/">plot</a></code>(1).</dd>
+<dt><code>&#8211;list-fonts</code></dt>
+<dd> Like <code>&#8211;help-fonts</code>, but lists the fonts in a single column to facilitate piping to other programs. If no output format is specified with the <code>-T</code> option, the full set of supported fonts is listed.</dd>
+<dt><code>&#8211;version</code></dt>
+<dd> Print the version number of <code>plotfont</code> and the plotting utilities package, and exit.</dd></dl>
 <h2>ENVIRONMENT</h2>
 <p> The environment variables <font SIZE="-1"><code>BITMAPSIZE, </code></font> <font SIZE="-1"><code>PAGESIZE, </code></font> <font SIZE="-1"><code>BG_COLOR, </code></font> <font SIZE="-1"><code>EMULATE_COLOR, </code></font> and <font SIZE="-1"><code>ROTATION </code></font> serve as backups for the options <code>&#8211;bitmap-size</code>, <code>&#8211;page-size</code>, <code>&#8211;bg-color</code>, <code>&#8211;emulate-color</code>, and <code>&#8211;rotation</code>, respectively. The remaining environment variables are specific to individual output formats. </p>
 <p> <code>plotfont -T X</code>, which pops up a window on an X Window System display for each character map, checks the <font SIZE="-1"><code>DISPLAY </code></font> environment variable. Its value determines the display that will be used. </p>

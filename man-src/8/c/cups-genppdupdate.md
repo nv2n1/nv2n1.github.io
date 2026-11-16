@@ -17,20 +17,20 @@ description: "cups-genppdupdate – update CUPS+Gutenprint PPD files"
 <p> <code>cups-genppdupdate</code> does <code>not</code> restart cupsd. cupsd will need manually reloading (or send SIGHUP) once <code>cups-genppdupdate</code> has completed.</p>
 <h2>Options</h2>
 <dl>
-<dt><code>-h</code></p>
-<dd>Show a help message.</p>
-<dt><code>-n</code></p>
-<dd>No action. The program will run, but the old PPD files will not be replaced.</p>
-<dt><code>-q</code></p>
-<dd>Quiet mode. No messages will be issued, apart from errors.</p>
-<dt><code>-v</code></p>
-<dd>Verbose mode. More informative messages will be issued. Note that extremely verbose output may be turned on by setting $debug=1 in the source, but this output will not be of use to the average user.</p>
-<dt><code>-s </code><i>ppd-directory</i></p>
-<dd>Use <i>ppd-directory</i> as the base directory to read PPD files from. By default, the base directory is /usr/share/cups/model/gutenprint. Under this directory, the PPD files are located in subdirectories according to language code and territory.</p>
-<dt><code>-o </code><i>output-directory</i></p>
-<dd>Place updated PPD files in <i>output-directory</i>. By default, this is the same as the input directory.</p>
-<dt><code>-N</code></p>
-<dd>Reset all options to their defaults (do not merge options from the current PPD file)</dl>
+<dt><code>-h</code></dt>
+<dd>Show a help message.</dd>
+<dt><code>-n</code></dt>
+<dd>No action. The program will run, but the old PPD files will not be replaced.</dd>
+<dt><code>-q</code></dt>
+<dd>Quiet mode. No messages will be issued, apart from errors.</dd>
+<dt><code>-v</code></dt>
+<dd>Verbose mode. More informative messages will be issued. Note that extremely verbose output may be turned on by setting $debug=1 in the source, but this output will not be of use to the average user.</dd>
+<dt><code>-s </code><i>ppd-directory</i></dt>
+<dd>Use <i>ppd-directory</i> as the base directory to read PPD files from. By default, the base directory is /usr/share/cups/model/gutenprint. Under this directory, the PPD files are located in subdirectories according to language code and territory.</dd>
+<dt><code>-o </code><i>output-directory</i></dt>
+<dd>Place updated PPD files in <i>output-directory</i>. By default, this is the same as the input directory.</dd>
+<dt><code>-N</code></dt>
+<dd>Reset all options to their defaults (do not merge options from the current PPD file)</dd></dl>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/8-cups-genppd/">cups-genppd</a></code>(8), <code>cups-genppdconfig</code>(8), CUPS Software Administrators Manual, <a rel="nofollow" href="http://localhost:631/documentation.html">http://localhost:631/documentation.html</a></p>
 <h2>Copyright</h2>

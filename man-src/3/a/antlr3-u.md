@@ -127,5 +127,5 @@ description: "ANTLR3_BASE_TREE_struct –"
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for ANTLR3C from the source code. </p>
 <h2>Index</h2>
-<dt><a href="#lbBM">Author</a></p>
-<dd></dl>
+<dt><a href="#lbBM">Author</a></dt>
+<dd></dd></dl>

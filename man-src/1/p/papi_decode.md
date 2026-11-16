@@ -46,9 +46,9 @@ url: "/docs/linux/man/1-papi_decode/"
 
 <dl>
 <dt>&bull;
-<dd> -a Convert only the available PAPI preset events.
-<dt>&bull;
-<dd> -h Display help information about this utility.</dl>
+</dt><dd> -a Convert only the available PAPI preset events.
+</dd><dt>&bull;
+</dt><dd> -h Display help information about this utility.</dd></dl>
  
 
 <h2>Bugs</h2>

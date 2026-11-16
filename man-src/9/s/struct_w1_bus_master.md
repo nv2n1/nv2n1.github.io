@@ -26,44 +26,44 @@ description: "struct_w1_bus_master – operations available on a bus master"
 <h2>Members</h2>
 <p>data</p>
 <dl>
-<dd>the first parameter in all the functions below</dl>
+<dd>the first parameter in all the functions below</dd></dl>
 <p> read_bit</p>
 <dl>
-<dd>Sample the line level <i>return</i> the level read (0 or 1)</dl>
+<dd>Sample the line level <i>return</i> the level read (0 or 1)</dd></dl>
 <p> write_bit</p>
 <dl>
-<dd>Sets the line level</dl>
+<dd>Sets the line level</dd></dl>
 <p> touch_bit</p>
 <dl>
-<dd>the lowest-level function for devices that really support the 1-wire protocol. touch_bit(0) = write-0 cycle touch_bit(1) = write-1 / read cycle <i>return</i> the bit read (0 or 1)</dl>
+<dd>the lowest-level function for devices that really support the 1-wire protocol. touch_bit(0) = write-0 cycle touch_bit(1) = write-1 / read cycle <i>return</i> the bit read (0 or 1)</dd></dl>
 <p> read_byte</p>
 <dl>
-<dd>Reads a bytes. Same as 8 touch_bit(1) calls. <i>return</i> the byte read</dl>
+<dd>Reads a bytes. Same as 8 touch_bit(1) calls. <i>return</i> the byte read</dd></dl>
 <p> write_byte</p>
 <dl>
-<dd>Writes a byte. Same as 8 touch_bit(x) calls.</dl>
+<dd>Writes a byte. Same as 8 touch_bit(x) calls.</dd></dl>
 <p> read_block</p>
 <dl>
-<dd>Same as a series of <code>read_byte</code> calls <i>return</i> the number of bytes read</dl>
+<dd>Same as a series of <code>read_byte</code> calls <i>return</i> the number of bytes read</dd></dl>
 <p> write_block</p>
 <dl>
-<dd>Same as a series of <code>write_byte</code> calls</dl>
+<dd>Same as a series of <code>write_byte</code> calls</dd></dl>
 <p> triplet</p>
 <dl>
-<dd>Combines two reads and a smart write for ROM searches <i>return</i> bit0=Id bit1=comp_id bit2=dir_taken</dl>
+<dd>Combines two reads and a smart write for ROM searches <i>return</i> bit0=Id bit1=comp_id bit2=dir_taken</dd></dl>
 <p> reset_bus</p>
 <dl>
-<dd>long write-0 with a read for the presence pulse detection <i>return</i> -1=Error, 0=Device present, 1=No device present</dl>
+<dd>long write-0 with a read for the presence pulse detection <i>return</i> -1=Error, 0=Device present, 1=No device present</dd></dl>
 <p> set_pullup</p>
 <dl>
-<dd>Put out a strong pull-up pulse of the specified duration. <i>return</i> -1=Error, 0=completed</dl>
+<dd>Put out a strong pull-up pulse of the specified duration. <i>return</i> -1=Error, 0=completed</dd></dl>
 <p> search</p>
 <dl>
-<dd>Really nice hardware can handles the different types of ROM search w1_master* is passed to the slave found callback. u8 is search_type, W1_SEARCH or W1_ALARM_SEARCH</dl>
+<dd>Really nice hardware can handles the different types of ROM search w1_master* is passed to the slave found callback. u8 is search_type, W1_SEARCH or W1_ALARM_SEARCH</dd></dl>
 <h2>Note</h2>
 <p>read_bit and write_bit are very low level functions and should only be used with hardware that doesn&#8217;t really support 1-wire operations, like a parallel/serial port. Either define read_bit and write_bit OR define, at minimum, touch_bit and reset_bus.</p>
 <h2>Author</h2>
 <p><code>David Fries</code> &lt;David [at] Fries.net&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

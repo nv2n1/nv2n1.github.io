@@ -482,18 +482,18 @@ description: "XmDisplay — The Display widget class"
 </table>
 </table>
 <dl COMPACT>
-<dt><code>XmNdefaultButtonEmphasis</code></p>
-<dd>Specifies whether to change the look of the PushButton widget and gadget that have the <code>XmNshowAsDefault</code> resource set. When the PushButton is the default, it has an etched out button which is enclosed with another etched in border. The <code>XmNdefaultButtonEmphasis</code> has the follow possible values, which affect the location cursor:</p>
+<dt><code>XmNdefaultButtonEmphasis</code></dt>
+<dd>Specifies whether to change the look of the PushButton widget and gadget that have the <code>XmNshowAsDefault</code> resource set. When the PushButton is the default, it has an etched out button which is enclosed with another etched in border. The <code>XmNdefaultButtonEmphasis</code> has the follow possible values, which affect the location cursor:</dd>
 <dl COMPACT>
 <dd>
-<dl COMPACT>
-<dt><code>XmINTERNAL_HIGHLIGHT</code></p>
-<dd>Causes the location cursor to appear in between the two etched borders to minimize the space required.</p>
-<dt><code>XmEXTERNAL_HIGHLIGHT</code></p>
-<dd>Causes the PushButton to draw the location cursor outside the second border.</dl>
+</dd><dl COMPACT>
+<dt><code>XmINTERNAL_HIGHLIGHT</code></dt>
+<dd>Causes the location cursor to appear in between the two etched borders to minimize the space required.</dd>
+<dt><code>XmEXTERNAL_HIGHLIGHT</code></dt>
+<dd>Causes the PushButton to draw the location cursor outside the second border.</dd></dl>
 </dl>
-<dt><code>XmNdefaultVirtualBindings</code></p>
-<dd>Specifies the default virtual bindings for the display. Following is an example of a specification for the <code>defaultVirtualBindings</code> resource in a resource file:</dl>
+<dt><code>XmNdefaultVirtualBindings</code></dt>
+<dd>Specifies the default virtual bindings for the display. Following is an example of a specification for the <code>defaultVirtualBindings</code> resource in a resource file:</dd></dl>
 <pre><tt>*defaultVirtualBindings: \
  osfBackSpace: &lt;Key&gt;BackSpace 
 \
@@ -504,46 +504,46 @@ description: "XmDisplay — The Display widget class"
  ...
  osfLeft: &lt;Key&gt;left, Ctrl&lt;Key&gt;H</tt></pre>
 <dl COMPACT>
-<dt><code>XmNdragInitiatorProtocolStyle</code></p>
-<dd>Specifies the drag and drop protocol requirements or preference when the client is an initiator. The possible values are</p>
+<dt><code>XmNdragInitiatorProtocolStyle</code></dt>
+<dd>Specifies the drag and drop protocol requirements or preference when the client is an initiator. The possible values are</dd>
 <dl COMPACT>
 <dd>
-<dl COMPACT>
-<dt><code>XmDRAG_PREREGISTER</code></p>
-<dd>As an initiator, this client does not use the dynamic protocol and can only arrange visual effects with receivers who provide preregistered information.</p>
-<dt><code>XmDRAG_DYNAMIC</code></p>
-<dd>As an initiator, this client does not make use of any preregistered drop site information made available by other clients, and can only arrange visual effects with receivers who use the dynamic protocol.</p>
-<dt><code>XmDRAG_NONE</code></p>
-<dd>Specifies that drag and drop is disabled for this client.</p>
-<dt><code>XmDRAG_DROP_ONLY</code></p>
-<dd>As an initiator, this client does not use either the preregistered drop site information or the dynamic protocol. It supports dragging, and any time the cursor is over a client that supports drag and drop, valid feedback is provided. There are no other visual effects.</p>
-<dt><code>XmDRAG_PREFER_DYNAMIC</code></p>
-<dd>As an initiator, this client can support both the preregister and dynamic protocols, but prefers to use dynamic protocols whenever possible in order to provide high-quality drag-under feedback.</p>
-<dt><code>XmDRAG_PREFER_PREREGISTER</code></p>
-<dd>As an initiator, this client can support both the preregister and dynamic protocols, but prefers to use the preregister protocol whenever possible in order to accommodate performance needs or to provide consistent drag-over feedback.</p>
-<dt><code>XmDRAG_PREFER_RECEIVER</code></p>
-<dd>Indicates that this client can support both preregister and dynamic protocols, but will defer to the preference of the receiver client. This value is valid only for the <code>XmNdragInitiatorProtocolStyle</code> resource, and is its default value.</dl>
+</dd><dl COMPACT>
+<dt><code>XmDRAG_PREREGISTER</code></dt>
+<dd>As an initiator, this client does not use the dynamic protocol and can only arrange visual effects with receivers who provide preregistered information.</dd>
+<dt><code>XmDRAG_DYNAMIC</code></dt>
+<dd>As an initiator, this client does not make use of any preregistered drop site information made available by other clients, and can only arrange visual effects with receivers who use the dynamic protocol.</dd>
+<dt><code>XmDRAG_NONE</code></dt>
+<dd>Specifies that drag and drop is disabled for this client.</dd>
+<dt><code>XmDRAG_DROP_ONLY</code></dt>
+<dd>As an initiator, this client does not use either the preregistered drop site information or the dynamic protocol. It supports dragging, and any time the cursor is over a client that supports drag and drop, valid feedback is provided. There are no other visual effects.</dd>
+<dt><code>XmDRAG_PREFER_DYNAMIC</code></dt>
+<dd>As an initiator, this client can support both the preregister and dynamic protocols, but prefers to use dynamic protocols whenever possible in order to provide high-quality drag-under feedback.</dd>
+<dt><code>XmDRAG_PREFER_PREREGISTER</code></dt>
+<dd>As an initiator, this client can support both the preregister and dynamic protocols, but prefers to use the preregister protocol whenever possible in order to accommodate performance needs or to provide consistent drag-over feedback.</dd>
+<dt><code>XmDRAG_PREFER_RECEIVER</code></dt>
+<dd>Indicates that this client can support both preregister and dynamic protocols, but will defer to the preference of the receiver client. This value is valid only for the <code>XmNdragInitiatorProtocolStyle</code> resource, and is its default value.</dd></dl>
 </dl>
-<dt><code>XmNdragReceiverProtocolStyle</code></p>
-<dd>Specifies the drag and drop protocol requirements or preference when this client is a receiver. The values are</p>
+<dt><code>XmNdragReceiverProtocolStyle</code></dt>
+<dd>Specifies the drag and drop protocol requirements or preference when this client is a receiver. The values are</dd>
 <dl COMPACT>
 <dd>
-<dl COMPACT>
-<dt><code>XmDRAG_PREREGISTER</code></p>
-<dd>As a receiver, this client preregisters drop site information and does not use the dynamic protocol. It can only arrange visual effects with initiators who make use of the preregistered information.</p>
-<dt><code>XmDRAG_DYNAMIC</code></p>
-<dd>As a receiver, this client uses the dynamic protocol and does not preregister drop site information. It can only arrange visual effects with initiators who use the dynamic protocol.</p>
-<dt><code>XmDRAG_NONE</code></p>
-<dd>Specifies that drag and drop is disabled for this client.</p>
-<dt><code>XmDRAG_DROP_ONLY</code></p>
-<dd>As a receiver, this client neither uses the dynamic protocol nor preregisters drop site information. It supports dropping, and when dragging over this client, valid feedback is always provided, but there are no other visual effects.</p>
-<dt><code>XmDRAG_PREFER_DYNAMIC</code></p>
-<dd>As a receiver, this client can support both the preregister and dynamic protocols, but prefers to use the dynamic protocol whenever possible in order to provide high-quality drag-under feedback.</p>
-<dt><code>XmDRAG_PREFER_PREREGISTER</code></p>
-<dd>As a receiver, this client can support both the preregister and dynamic protocols, but prefers to use the preregister protocol whenever possible in order to accommodate performance needs.</dl>
+</dd><dl COMPACT>
+<dt><code>XmDRAG_PREREGISTER</code></dt>
+<dd>As a receiver, this client preregisters drop site information and does not use the dynamic protocol. It can only arrange visual effects with initiators who make use of the preregistered information.</dd>
+<dt><code>XmDRAG_DYNAMIC</code></dt>
+<dd>As a receiver, this client uses the dynamic protocol and does not preregister drop site information. It can only arrange visual effects with initiators who use the dynamic protocol.</dd>
+<dt><code>XmDRAG_NONE</code></dt>
+<dd>Specifies that drag and drop is disabled for this client.</dd>
+<dt><code>XmDRAG_DROP_ONLY</code></dt>
+<dd>As a receiver, this client neither uses the dynamic protocol nor preregisters drop site information. It supports dropping, and when dragging over this client, valid feedback is always provided, but there are no other visual effects.</dd>
+<dt><code>XmDRAG_PREFER_DYNAMIC</code></dt>
+<dd>As a receiver, this client can support both the preregister and dynamic protocols, but prefers to use the dynamic protocol whenever possible in order to provide high-quality drag-under feedback.</dd>
+<dt><code>XmDRAG_PREFER_PREREGISTER</code></dt>
+<dd>As a receiver, this client can support both the preregister and dynamic protocols, but prefers to use the preregister protocol whenever possible in order to accommodate performance needs.</dd></dl>
 </dl>
-<dd>The default value of this resource is dependent on the capabilities of the display. If the display supports the shape extension, allowing the dynamic protocol to use arbitrarily sized drag cursors, the default of this resource is <code>XmDRAG_PREFER_DYNAMIC</code>, otherwise the default is <code>XmDRAG_PREFER_PREREGISTER</code>.</p>
-<dd>The actual protocol used between an initiator and a receiver is based on the protocol style of the receiver and initiator. The decision matrix is described in the following table. </p>
+<dd>The default value of this resource is dependent on the capabilities of the display. If the display supports the shape extension, allowing the dynamic protocol to use arbitrarily sized drag cursors, the default of this resource is <code>XmDRAG_PREFER_DYNAMIC</code>, otherwise the default is <code>XmDRAG_PREFER_PREREGISTER</code>.</dd>
+<dd>The actual protocol used between an initiator and a receiver is based on the protocol style of the receiver and initiator. The decision matrix is described in the following table. </dd>
 <table BORDER>
 <tr>
 <td>
@@ -725,56 +725,56 @@ description: "XmDisplay — The Display widget class"
 </tr>
 </table>
 </table>
-<dd>The value <code>XmDRAG_NONE</code> does not appear in the matrix. When specified for either the initiator or receiver side, <code>XmDRAG_NONE</code> implies that drag and drop transactions are not supported. A value of <code>XmDRAG_DROP_ONLY</code> (Drop Only) results when an initiator and receiver cannot compromise protocol styles, that is, one client requires dynamic mode while the other can only support preregister mode, or if either explicitly has specified <code>XmDRAG_DROP_ONLY</code>.</p>
-<dt><code>XmNdragStartCallback</code></p>
-<dd>Specifies the list of callbacks that are invoked when the <code>XmDragStart</code> function is called. The type of structure whose address is passed to this callback is <code>XmDragStartCallbackStruct</code>. The callback reason is <code>XmCR_DRAG_START</code>.</p>
-<dt><code>XmNenableBtn1Transfer</code></p>
-<dd>Specifies if selection and transfer actions are integrated on Btn1 and extend actions are activated on Btn2. This resource can take the following values:</p>
+<dd>The value <code>XmDRAG_NONE</code> does not appear in the matrix. When specified for either the initiator or receiver side, <code>XmDRAG_NONE</code> implies that drag and drop transactions are not supported. A value of <code>XmDRAG_DROP_ONLY</code> (Drop Only) results when an initiator and receiver cannot compromise protocol styles, that is, one client requires dynamic mode while the other can only support preregister mode, or if either explicitly has specified <code>XmDRAG_DROP_ONLY</code>.</dd>
+<dt><code>XmNdragStartCallback</code></dt>
+<dd>Specifies the list of callbacks that are invoked when the <code>XmDragStart</code> function is called. The type of structure whose address is passed to this callback is <code>XmDragStartCallbackStruct</code>. The callback reason is <code>XmCR_DRAG_START</code>.</dd>
+<dt><code>XmNenableBtn1Transfer</code></dt>
+<dd>Specifies if selection and transfer actions are integrated on Btn1 and extend actions are activated on Btn2. This resource can take the following values:</dd>
 <dl COMPACT>
 <dd>
-<dl COMPACT>
-<dt><code>XmOFF</code></p>
-<dd>Disables integration and selection activation on Btn1.</p>
-<dt><code>XmBUTTON2_TRANSFER</code></p>
-<dd>Enables integration and selection activation on Btn1 and transfer on Btn2.</p>
-<dt><code>XmBUTTON2_ADJUST</code></p>
-<dd>Enables integration and selection activation on Btn1 and adjust on Btn2.</dl>
+</dd><dl COMPACT>
+<dt><code>XmOFF</code></dt>
+<dd>Disables integration and selection activation on Btn1.</dd>
+<dt><code>XmBUTTON2_TRANSFER</code></dt>
+<dd>Enables integration and selection activation on Btn1 and transfer on Btn2.</dd>
+<dt><code>XmBUTTON2_ADJUST</code></dt>
+<dd>Enables integration and selection activation on Btn1 and adjust on Btn2.</dd></dl>
 </dl>
-<dd>This resource affects the actions of Text, TextField, List, and Container.</p>
-<dt><code>XmNenableButtonTab</code></p>
-<dd>Specifies if the action for the <code>&lt;Tab&gt;</code> key (<code>KNextField</code> and <code>KPrevField</code> actions) is to be modified. A value of True modifies the key to move as an arrow key until the boundary of a tab group is reached. Then, at the boundary of the tab group, <code>KNextField</code> and <code>KPrevField</code> will move to the next or previous tab group, respectively. A value of False does not cause modification.</p>
-<dt><code>XmNenableDragIcon</code></p>
-<dd>Specifies which set of icons are to be used for system default cursors during drag and drop operations. A value of False specifies that earlier versions of Motif release icons are used, a value of True specifies that alternate icons are used. This resource affects both the 16&#215;16 and the 32&#215;32 icons that the system defaults for each of the Screen objects associated with this display.</p>
-<dt><code>XmNenableEtchedInMenu</code></p>
-<dd>Specifies the shadowing of the button widgets and gadgets in menus when the control is activated. A value of True causes the selected menu to be drawn with the shadow etched in; this shadow style is consistent with the selected appearance of other button widgets outside of menus. A value of False causes the selected menu to be draw with the shadow etched out. This resource affects the actions of PushButton, ToggleButton, and CascadeButton widgets and gadgets when they are children of Menu.</p>
-<dd>When this resource is set, the background of a button in a menu uses the <code>XmNselectColor</code> (derived from the <code>XmNselectPixel</code>) when armed as a default. A <code>PushButton</code> uses the <code>XmNarmColor</code> if it is defined. A <code>ToggleButton</code> uses the <code>XmNselectColor</code> if <code>XmNindicatorOn</code> is <code>False</code> and <code>XmNfillOnSelect</code> is <code>True</code>.</p>
-<dt><code>XmNenableToggleColor</code></p>
-<dd>Specifies how to determine the default value of the <code>XmNselectColor</code> resource of ToggleButton and ToggleButtonGadget. A value of True causes the default value of <code>XmNselectColor</code> to be set to the value of <code>XmNhighlightColor</code>. A value of False causes the default value of <code>XmNselectColor</code> to be set to the value of <code>XmNbackground</code>. This resource only affects the appearance of ToggleButton widgets and gadgets that are in <code>XmONE_OF_MANY</code> or <code>XmONE_OF_MANY_ROUND</code> mode. In addition, <code>XmNenableToggleColor</code> only influences the default value of <code>XmNselectColor</code>. That is, if the user or application sets a value for <code>XmNselectColor</code>, then <code>XmNenableToggleColor</code> is ignored.</p>
-<dt><code>XmNenableToggleVisual</code></p>
-<dd>Specifies the visual appearance of the ToggleButton widget and/or gadget. This resource affects the default value of the ToggleButton[Gadget] <code>XmNindicatorType</code> and <code>XmNindicatorOn</code> resources. When the ToggleButton is in a RadioBox, a value of True causes the <code>XmONE_OF_MANY_ROUND</code> (a shadowed circle) to be the default. Otherwise, when this resource is True, the ToggleButton <code>XmNindicatorOn</code> resource causes a default of <code>XmN_OF_MANY</code>, which will be a shadowed square with a check mark (check box).</p>
-<dd>A value of False causes the following:</p>
+<dd>This resource affects the actions of Text, TextField, List, and Container.</dd>
+<dt><code>XmNenableButtonTab</code></dt>
+<dd>Specifies if the action for the <code>&lt;Tab&gt;</code> key (<code>KNextField</code> and <code>KPrevField</code> actions) is to be modified. A value of True modifies the key to move as an arrow key until the boundary of a tab group is reached. Then, at the boundary of the tab group, <code>KNextField</code> and <code>KPrevField</code> will move to the next or previous tab group, respectively. A value of False does not cause modification.</dd>
+<dt><code>XmNenableDragIcon</code></dt>
+<dd>Specifies which set of icons are to be used for system default cursors during drag and drop operations. A value of False specifies that earlier versions of Motif release icons are used, a value of True specifies that alternate icons are used. This resource affects both the 16&#215;16 and the 32&#215;32 icons that the system defaults for each of the Screen objects associated with this display.</dd>
+<dt><code>XmNenableEtchedInMenu</code></dt>
+<dd>Specifies the shadowing of the button widgets and gadgets in menus when the control is activated. A value of True causes the selected menu to be drawn with the shadow etched in; this shadow style is consistent with the selected appearance of other button widgets outside of menus. A value of False causes the selected menu to be draw with the shadow etched out. This resource affects the actions of PushButton, ToggleButton, and CascadeButton widgets and gadgets when they are children of Menu.</dd>
+<dd>When this resource is set, the background of a button in a menu uses the <code>XmNselectColor</code> (derived from the <code>XmNselectPixel</code>) when armed as a default. A <code>PushButton</code> uses the <code>XmNarmColor</code> if it is defined. A <code>ToggleButton</code> uses the <code>XmNselectColor</code> if <code>XmNindicatorOn</code> is <code>False</code> and <code>XmNfillOnSelect</code> is <code>True</code>.</dd>
+<dt><code>XmNenableToggleColor</code></dt>
+<dd>Specifies how to determine the default value of the <code>XmNselectColor</code> resource of ToggleButton and ToggleButtonGadget. A value of True causes the default value of <code>XmNselectColor</code> to be set to the value of <code>XmNhighlightColor</code>. A value of False causes the default value of <code>XmNselectColor</code> to be set to the value of <code>XmNbackground</code>. This resource only affects the appearance of ToggleButton widgets and gadgets that are in <code>XmONE_OF_MANY</code> or <code>XmONE_OF_MANY_ROUND</code> mode. In addition, <code>XmNenableToggleColor</code> only influences the default value of <code>XmNselectColor</code>. That is, if the user or application sets a value for <code>XmNselectColor</code>, then <code>XmNenableToggleColor</code> is ignored.</dd>
+<dt><code>XmNenableToggleVisual</code></dt>
+<dd>Specifies the visual appearance of the ToggleButton widget and/or gadget. This resource affects the default value of the ToggleButton[Gadget] <code>XmNindicatorType</code> and <code>XmNindicatorOn</code> resources. When the ToggleButton is in a RadioBox, a value of True causes the <code>XmONE_OF_MANY_ROUND</code> (a shadowed circle) to be the default. Otherwise, when this resource is True, the ToggleButton <code>XmNindicatorOn</code> resource causes a default of <code>XmN_OF_MANY</code>, which will be a shadowed square with a check mark (check box).</dd>
+<dd>A value of False causes the following:</dd>
 <dl COMPACT>
 <dd>
-<dl COMPACT>
-<dt><code>XmONE_OF_MANY</code></p>
-<dd>Is a shadowed diamond.</p>
-<dt><code>XmN_OF_MANY</code></p>
-<dd>Is a shadowed square.</dl>
+</dd><dl COMPACT>
+<dt><code>XmONE_OF_MANY</code></dt>
+<dd>Is a shadowed diamond.</dd>
+<dt><code>XmN_OF_MANY</code></dt>
+<dd>Is a shadowed square.</dd></dl>
 </dl>
-<dt><code>XmNenableUnselectableDrag</code></p>
-<dd>Specifies whether or not it is possible to drag from Label and Scale. A value of True enables the drag; a value of False disables it.</p>
-<dt><code>XmNenableWarp</code></p>
-<dd>Specifies if an application is allowed to warp the pointer from the user. A value of True enables warping, a value of False does not.</p>
-<dt><code>XmNmotifVersion</code></p>
-<dd>Specifies the current version of Motif that the current implementation is supposed to behave like. By default, this resource gets its value from release values in <code>Xm.h</code>.</p>
-<dt><code>XmNnoFontCallback</code></p>
-<dd>This callback is called whenever a rendition attempts to load a font or fontset and fails. This can happen on creation if the font is specified as <code>XmLOAD_IMMEDIATE</code> or when an attempt is made to render an <code>XmString</code> using a font specified as <code>XmLOAD_DEFERRED</code>. An application can have this callback attempt to remedy this problem by calling <code>XmRenditionUpdate</code> on the input rendition to provide a font for the widget to use. This may be done by either providing an an alternative font name to be loaded using the <code>XmNfontName</code> and <code>XmNfontType</code> resources or with an already loaded font using the <code>XmNfont</code> resource. The callback reason is <code>XmCR_NO_FONT</code>. This callback uses the <code>XmDisplayCallbackStruct</code> structure.</p>
-<dt><code>XmNnoRenditionCallback</code></p>
-<dd>This callback is called whenever an attempt is made to render a segment with a <code>RENDITION</code> tag which does not match any renditions in a given render table. The callback reason is <code>XmCR_NO_RENDITION</code>. This callback uses the <code>XmDisplayCallbackStruct</code> structure.</p>
-<dd>An application can have this callback attempt to remedy this problem by creating a new rendition with the given tag and adding it to <code>render_table</code>.</p>
-<dd>The <code>XmNnoRenditionCallback</code> should deallocate the render table passed in in the <code>render_table</code> field of the callback structure. Note that the table will automatically be deallocated if the <code>XmRenderTableAddRenditions</code> function is called on it. The callback should NOT deallocate the modified render table that is passed back to Motif in the <code>render_table</code> field. If the application wishes to manipulate this render table further, it should make a copy with the <code>XmRenderTableCopy</code> function before returning from the callback.</p>
-<dt><code>XmNuserData</code></p>
-<dd>Specifies a client data pointer for applications. An internally unused resource.</dl>
+<dt><code>XmNenableUnselectableDrag</code></dt>
+<dd>Specifies whether or not it is possible to drag from Label and Scale. A value of True enables the drag; a value of False disables it.</dd>
+<dt><code>XmNenableWarp</code></dt>
+<dd>Specifies if an application is allowed to warp the pointer from the user. A value of True enables warping, a value of False does not.</dd>
+<dt><code>XmNmotifVersion</code></dt>
+<dd>Specifies the current version of Motif that the current implementation is supposed to behave like. By default, this resource gets its value from release values in <code>Xm.h</code>.</dd>
+<dt><code>XmNnoFontCallback</code></dt>
+<dd>This callback is called whenever a rendition attempts to load a font or fontset and fails. This can happen on creation if the font is specified as <code>XmLOAD_IMMEDIATE</code> or when an attempt is made to render an <code>XmString</code> using a font specified as <code>XmLOAD_DEFERRED</code>. An application can have this callback attempt to remedy this problem by calling <code>XmRenditionUpdate</code> on the input rendition to provide a font for the widget to use. This may be done by either providing an an alternative font name to be loaded using the <code>XmNfontName</code> and <code>XmNfontType</code> resources or with an already loaded font using the <code>XmNfont</code> resource. The callback reason is <code>XmCR_NO_FONT</code>. This callback uses the <code>XmDisplayCallbackStruct</code> structure.</dd>
+<dt><code>XmNnoRenditionCallback</code></dt>
+<dd>This callback is called whenever an attempt is made to render a segment with a <code>RENDITION</code> tag which does not match any renditions in a given render table. The callback reason is <code>XmCR_NO_RENDITION</code>. This callback uses the <code>XmDisplayCallbackStruct</code> structure.</dd>
+<dd>An application can have this callback attempt to remedy this problem by creating a new rendition with the given tag and adding it to <code>render_table</code>.</dd>
+<dd>The <code>XmNnoRenditionCallback</code> should deallocate the render table passed in in the <code>render_table</code> field of the callback structure. Note that the table will automatically be deallocated if the <code>XmRenderTableAddRenditions</code> function is called on it. The callback should NOT deallocate the modified render table that is passed back to Motif in the <code>render_table</code> field. If the application wishes to manipulate this render table further, it should make a copy with the <code>XmRenderTableCopy</code> function before returning from the callback.</dd>
+<dt><code>XmNuserData</code></dt>
+<dd>Specifies a client data pointer for applications. An internally unused resource.</dd></dl>
 <h3>Inherited Resources</h3>
 <p>All of the superclass resources inherited by XmDisplay are designated N/A (not applicable).</p>
 <h3>Callback Information</h3>
@@ -787,14 +787,14 @@ description: "XmDisplay — The Display widget class"
  Boolean <i>doit</i>;
 }XmDragStartCallbackStruct;</pre>
 <dl COMPACT>
-<dt><i>reason</i></p>
-<dd>Indicates why the callback was invoked</p>
-<dt><i>event</i></p>
-<dd>Points to the <code>XEvent</code> that triggered the callback</p>
-<dt><i>widget</i></p>
-<dd>Indicates the ID of the widget from which the drag was initiated.</p>
-<dt><i>doit</i></p>
-<dd>Is an IN/OUT member that allows the callback to determine whether to continue with the drag or cancel. Setting <i>doit</i> to False will cancel the drag. The default value is NULL.</dl>
+<dt><i>reason</i></dt>
+<dd>Indicates why the callback was invoked</dd>
+<dt><i>event</i></dt>
+<dd>Points to the <code>XEvent</code> that triggered the callback</dd>
+<dt><i>widget</i></dt>
+<dd>Indicates the ID of the widget from which the drag was initiated.</dd>
+<dt><i>doit</i></dt>
+<dd>Is an IN/OUT member that allows the callback to determine whether to continue with the drag or cancel. Setting <i>doit</i> to False will cancel the drag. The default value is NULL.</dd></dl>
 <p> A pointer to the following structure is passed to the <code>XmNnoFontCallback</code> and <code>XmNnoRenditionCallback</code> callbacks: </p>
 <pre>typedef struct
 {
@@ -806,18 +806,18 @@ description: "XmDisplay — The Display widget class"
  XmStringTag <i>tag</i>;
 }XmDisplayCallbackStruct;</pre>
 <dl COMPACT>
-<dt><i>reason</i></p>
-<dd>Indicates why the callback was invoked.</p>
-<dt><i>event</i></p>
-<dd>Points to the <code>XEvent</code> that triggered the callback. It can be NULL.</p>
-<dt><i>rendition</i></p>
-<dd>Specifies the rendition with the missing font.</p>
-<dt><i>font_name</i></p>
-<dd>Specifies the name of the font or font set which could not be loaded.</p>
-<dt><code>render_table</code></p>
-<dd>Specifies the render table with the missing rendition.</p>
-<dt><i>tag</i></p>
-<dd>Specifies the tag of the missing rendition.</dl>
+<dt><i>reason</i></dt>
+<dd>Indicates why the callback was invoked.</dd>
+<dt><i>event</i></dt>
+<dd>Points to the <code>XEvent</code> that triggered the callback. It can be NULL.</dd>
+<dt><i>rendition</i></dt>
+<dd>Specifies the rendition with the missing font.</dd>
+<dt><i>font_name</i></dt>
+<dd>Specifies the name of the font or font set which could not be loaded.</dd>
+<dt><code>render_table</code></dt>
+<dd>Specifies the render table with the missing rendition.</dd>
+<dt><i>tag</i></dt>
+<dd>Specifies the tag of the missing rendition.</dd></dl>
 <p> The following table describes the reasons for which the individual callback structure fields are valid. </p>
 <table BORDER>
 <tr>

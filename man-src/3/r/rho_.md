@@ -10,9 +10,6 @@ description: "QuantLib::MultiAssetOption – Base class for options on multiple 
 <p>QuantLib::MultiAssetOption &#8211; Base class for options on multiple assets. </p>
 <h2>Synopsis</h2>
 <pre><code>void setupExpired () const
-
-
-
 Protected Attributes</code></pre>
 <p> Inherits <code>QuantLib::Option</code>. Inherited by <code>BasketOption</code>, EverestOption, <code>HimalayaOption</code>, and <code>PagodaOption</code>.</p>
 <h3>Classes</h3>
@@ -33,9 +30,6 @@ Protected Attributes</code></pre>
 <p> <code>Real</code> <code>dividendRho</code> () const</p>
 <h3>Protected Member Functions</h3>
 <pre><code>void setupExpired () const
-
-
-
 Protected Attributes</code></pre>
 <p> <code>Real</code> <code>delta_</code> </p>
 <p> <code>Real</code> <code>gamma_</code> </p>

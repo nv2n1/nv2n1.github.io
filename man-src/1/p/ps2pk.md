@@ -25,7 +25,7 @@ url: "/docs/linux/man/1-ps2pk/"
 
 <dl>
 <dt>
-<dd> <pre>
+</dt><dd> <pre>
 % This is the EC encoding.
 /ECEncoding [          % now 256 chars follow
 % 0x00
@@ -37,51 +37,38 @@ url: "/docs/linux/man/1-ps2pk/"
   /eth /ntilde /ograve /oacute /ocircumflex /otilde
   /odieresis /oe /oslash /ugrave /uacute /ucircumflex
   /udieresis /yacute /thorn /germandbls ] def
-</pre></dl>
+</pre></dd></dl>
  
 
  Options and arguments:
 <dl>
 <dt>-a<i>AFMfile</i>
-<dd> Overrules the name that is used to locate the AFM file. 
-
-<dt>-e<i>enc</i>
-<dd> Name of a file containing an encoding scheme (default - the encoding named in the AFM-file is used). The actual PostScript name of the encoding scheme is written as a &quot;special&quot; at the end of the pkfont. 
-
-<dt>-E<i>extension</i>
-<dd> The extension factor (real value, default 1.0). 
-
-<dt>-m<i>modename</i>
-<dd> A modename such as would be used by METAFONT (default &quot;Unknown mode&quot;). 
-
-<dt>-P<i>pointsize</i>
-<dd> The desired pointsize (real value, default 10.0 points). 
-
-<dt>-R<i>baseres</i>
-<dd> The desired base resolution (integer value, default 300 dpi). If this differs from the value of <i>xres</i>, the appropriate magnification will be shown in the &quot;specials&quot; at the end of the pkfont. If possible, this will be expressed as a magstep, otherwise as a real number. For example, a pkfont with an <i>xres</i> of 329, using the default base resolution of 300, will include the &quot;special&quot; text &quot;mag=magstep(0.5)&quot; at the end of the font. 
-
-<dt>-r<i>aspectratio</i>
-<dd> The desired aspect ratio (expression, integerY/integerX, default 300/300). This will be shown in the &quot;specials&quot; at the end of the pkfont. Setting the aspect ratio creates a value for <i>yres</i> but an explicit <i>yres</i> value will take precedence. Argument must be in &quot;&quot; if spaces are left around `/'. 
-
-<dt>-S<i>slant</i>
-<dd> The slant (real value, default 0.0). 
-
-<dt>-X<i>xres</i>
-<dd> The resolution in the X direction (integer value, default 300 dpi). 
-
-<dt>-Y<i>yres</i>
-<dd> The resolution in the Y direction (integer value, default the value of <i>xres</i>). If <i>yres</i> differs from <i>xres</i>, a &quot;special&quot; text giving the aspect ratio will be written at the end of the pkfont. 
-
-<dt>-v
-<dd> Verbose flag. (Tells what the program is doing.) 
-
-<dt>type1
-<dd> The name of the PostScript type1 font. The name of the AFM-file will be constructed from this name by removing the extension (if suplied) and adding &quot;.afm&quot;. The PostScript &quot;FontName&quot; is extracted from the AFM-file and written into a &quot;special&quot; at the end of the pkfont. 
-
-<dt>[pkfont]
-<dd> The name of the resulting pkfont can be overruled with this name. The default name of pkfont is derived from the basename of the type1 font, the pointsize and <i>xres</i>. For example `ps2pk -P17.28 Utopia-Regular' will result in `Utopia-Regular17.300pk'. An explicit value for the name of the pkfont is necessary when the type1 font name already shows the point size, otherwise the <i>pointsize</i> value is catenated on to the pkfont basename which is usually not what is wanted. 
-
-</dl>
+</dt><dd> Overrules the name that is used to locate the AFM file. 
+</dd><dt>-e<i>enc</i>
+</dt><dd> Name of a file containing an encoding scheme (default - the encoding named in the AFM-file is used). The actual PostScript name of the encoding scheme is written as a &quot;special&quot; at the end of the pkfont. 
+</dd><dt>-E<i>extension</i>
+</dt><dd> The extension factor (real value, default 1.0). 
+</dd><dt>-m<i>modename</i>
+</dt><dd> A modename such as would be used by METAFONT (default &quot;Unknown mode&quot;). 
+</dd><dt>-P<i>pointsize</i>
+</dt><dd> The desired pointsize (real value, default 10.0 points). 
+</dd><dt>-R<i>baseres</i>
+</dt><dd> The desired base resolution (integer value, default 300 dpi). If this differs from the value of <i>xres</i>, the appropriate magnification will be shown in the &quot;specials&quot; at the end of the pkfont. If possible, this will be expressed as a magstep, otherwise as a real number. For example, a pkfont with an <i>xres</i> of 329, using the default base resolution of 300, will include the &quot;special&quot; text &quot;mag=magstep(0.5)&quot; at the end of the font. 
+</dd><dt>-r<i>aspectratio</i>
+</dt><dd> The desired aspect ratio (expression, integerY/integerX, default 300/300). This will be shown in the &quot;specials&quot; at the end of the pkfont. Setting the aspect ratio creates a value for <i>yres</i> but an explicit <i>yres</i> value will take precedence. Argument must be in &quot;&quot; if spaces are left around `/'. 
+</dd><dt>-S<i>slant</i>
+</dt><dd> The slant (real value, default 0.0). 
+</dd><dt>-X<i>xres</i>
+</dt><dd> The resolution in the X direction (integer value, default 300 dpi). 
+</dd><dt>-Y<i>yres</i>
+</dt><dd> The resolution in the Y direction (integer value, default the value of <i>xres</i>). If <i>yres</i> differs from <i>xres</i>, a &quot;special&quot; text giving the aspect ratio will be written at the end of the pkfont. 
+</dd><dt>-v
+</dt><dd> Verbose flag. (Tells what the program is doing.) 
+</dd><dt>type1
+</dt><dd> The name of the PostScript type1 font. The name of the AFM-file will be constructed from this name by removing the extension (if suplied) and adding &quot;.afm&quot;. The PostScript &quot;FontName&quot; is extracted from the AFM-file and written into a &quot;special&quot; at the end of the pkfont. 
+</dd><dt>[pkfont]
+</dt><dd> The name of the resulting pkfont can be overruled with this name. The default name of pkfont is derived from the basename of the type1 font, the pointsize and <i>xres</i>. For example `ps2pk -P17.28 Utopia-Regular' will result in `Utopia-Regular17.300pk'. An explicit value for the name of the pkfont is necessary when the type1 font name already shows the point size, otherwise the <i>pointsize</i> value is catenated on to the pkfont basename which is usually not what is wanted. 
+</dd></dl>
  
 
  The following PK &quot;specials&quot; provide an internal check on the characteristics of the pkfont, in accordance with the recommendations of the TeX Working Group on the TeX Directory Standard (TWG-TDS): 

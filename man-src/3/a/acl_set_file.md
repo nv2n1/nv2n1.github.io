@@ -23,28 +23,28 @@ description: "acl_set_file – set an ACL by filename"
 <h2>ERRORS</h2>
 <p> If any of the following conditions occur, the Fn acl_set_file function returns <code>-1</code> and sets <i>errno</i> to the corresponding value:</p>
 <dl>
-<dt><code>Bq </code>Er EACCES</p>
-<dd> Search permission is denied for a component of the path prefix or the object exists and the process does not have appropriate access rights. </p>
+<dt><code>Bq </code>Er EACCES</dt>
+<dd> Search permission is denied for a component of the path prefix or the object exists and the process does not have appropriate access rights. </dd>
 <p> Argument <i>type</i> specifies a type of ACL that cannot be associated with <i>path_p</i></p>
-<dt><code>Bq </code>Er EINVAL</p>
-<dd> The argument <i>acl</i> does not point to a valid ACL. </p>
+<dt><code>Bq </code>Er EINVAL</dt>
+<dd> The argument <i>acl</i> does not point to a valid ACL. </dd>
 <p> The ACL has more entries than the file referred to by <i>path_p</i> can obtain. </p>
 <p> The <i>type</i> parameter is not ACL_TYPE_ACCESS or ACL_TYPE_DEFAULT. </p>
 <p> The <i>type</i> parameter is ACL_TYPE_DEFAULT, but the file referred to by <i>path_p</i> is not a directory.</p>
-<dt><code>Bq </code>Er ENAMETOOLONG</p>
-<dd> The length of the argument <i>path_p</i> is too long.</p>
-<dt><code>Bq </code>Er ENOENT</p>
-<dd> The named object does not exist or the argument <i>path_p</i> points to an empty string.</p>
-<dt><code>Bq </code>Er ENOSPC</p>
-<dd> The directory or file system that would contain the new ACL cannot be extended or the file system is out of file allocation resources.</p>
-<dt><code>Bq </code>Er ENOTDIR</p>
-<dd> A component of the path prefix is not a directory.</p>
-<dt><code>Bq </code>Er ENOTSUP</p>
-<dd> The file identified by <i>path_p </i> cannot be associated with the ACL because the file system on which the file is located does not support this.</p>
-<dt><code>Bq </code>Er EPERM</p>
-<dd> The process does not have appropriate privilege to perform the operation to set the ACL.</p>
-<dt><code>Bq </code>Er EROFS</p>
-<dd> This function requires modification of a file system which is currently read-only.</dl>
+<dt><code>Bq </code>Er ENAMETOOLONG</dt>
+<dd> The length of the argument <i>path_p</i> is too long.</dd>
+<dt><code>Bq </code>Er ENOENT</dt>
+<dd> The named object does not exist or the argument <i>path_p</i> points to an empty string.</dd>
+<dt><code>Bq </code>Er ENOSPC</dt>
+<dd> The directory or file system that would contain the new ACL cannot be extended or the file system is out of file allocation resources.</dd>
+<dt><code>Bq </code>Er ENOTDIR</dt>
+<dd> A component of the path prefix is not a directory.</dd>
+<dt><code>Bq </code>Er ENOTSUP</dt>
+<dd> The file identified by <i>path_p </i> cannot be associated with the ACL because the file system on which the file is located does not support this.</dd>
+<dt><code>Bq </code>Er EPERM</dt>
+<dd> The process does not have appropriate privilege to perform the operation to set the ACL.</dd>
+<dt><code>Bq </code>Er EROFS</dt>
+<dd> This function requires modification of a file system which is currently read-only.</dd></dl>
 <h2>STANDARDS</h2>
 <p> IEEE Std 1003.1e draft 17 (&#8220;POSIX.1e&#8221;, abandoned) </p>
 <p> The behavior of Fn acl_set_file when the <i>acl</i> parameter refers to an empty ACL and the <i>type</i> parameter is ACL_TYPE_DEFAULT is an extension in the Linux implementation, in order that all values returned by Fn acl_get_file can be passed to Fn acl_set_file . The POSIX.1e function for removing a default ACL is Fn acl_delete_def_file .</p>

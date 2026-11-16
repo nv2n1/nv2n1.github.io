@@ -16,10 +16,10 @@ description: "osinfo-detect – Detect the operating system on installable media
 <p> The output information is formatted for humans; to obtain machine readable output, the option <tt>&quot;--format=env&quot;</tt> should be given to produce shell-like key/value pairs.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>&#8211;format=plain|env</code></p>
-<dd> Switch between human readable output (<code>plain</code>, the default) or machine readable output (<code>env</code>).</p>
-<dt><code>&#8211;type=media|tree</code></p>
-<dd> Switch between looking for <font SIZE="-1">CD/DVD ISO</font> media (<code>media</code>, the default) or install trees (<code>tree</code>)</dl>
+<dt><code>&#8211;format=plain|env</code></dt>
+<dd> Switch between human readable output (<code>plain</code>, the default) or machine readable output (<code>env</code>).</dd>
+<dt><code>&#8211;type=media|tree</code></dt>
+<dd> Switch between looking for <font SIZE="-1">CD/DVD ISO</font> media (<code>media</code>, the default) or install trees (<code>tree</code>)</dd></dl>
 <h2>EXIT STATUS</h2>
 <p> The exit status will be 0 if an operating system was detected, or 1 if none was found.</p>
 <h2>AUTHORS</h2>

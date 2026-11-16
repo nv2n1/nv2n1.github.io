@@ -14,16 +14,16 @@ description: "get_user_pages_fast – pin user pages in memory"
 <p><i>start</i></p>
 <dl>
 <dd>
-<dd>starting user address</dl>
+</dd><dd>starting user address</dd></dl>
 <p> <i>nr_pages</i></p>
 <dl>
-<dd>number of pages from start to pin</dl>
+<dd>number of pages from start to pin</dd></dl>
 <p> <i>write</i></p>
 <dl>
-<dd>whether pages will be written to</dl>
+<dd>whether pages will be written to</dd></dl>
 <p> <i>pages</i></p>
 <dl>
-<dd>array that receives pointers to the pages pinned. Should be at least nr_pages long.</dl>
+<dd>array that receives pointers to the pages pinned. Should be at least nr_pages long.</dd></dl>
 <h2>Description</h2>
 <p>Returns number of pages pinned. This may be fewer than the number requested. If nr_pages is 0 or negative, returns 0. If no pages were pinned, returns -errno. </p>
 <p> get_user_pages_fast provides equivalent functionality to get_user_pages, operating on current and current-&gt;mm, with force=0 and vma=NULL. However unlike get_user_pages, it must be called without mmap_sem held. </p>

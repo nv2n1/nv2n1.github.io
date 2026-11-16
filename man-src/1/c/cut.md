@@ -16,38 +16,38 @@ description: "cut – remove sections from each line of files"
 <p> With no FILE, or when FILE is -, read standard input. </p>
 <p> Mandatory arguments to long options are mandatory for short options too.</p>
 <dl>
-<dt><code>-b</code>, <code>&#8211;bytes</code>=<i>,LIST/</i></p>
-<dd> select only these bytes</p>
-<dt><code>-c</code>, <code>&#8211;characters</code>=<i>,LIST/</i></p>
-<dd> select only these characters</p>
-<dt><code>-d</code>, <code>&#8211;delimiter</code>=<i>,DELIM/</i></p>
-<dd> use DELIM instead of TAB for field delimiter</p>
-<dt><code>-f</code>, <code>&#8211;fields</code>=<i>,LIST/</i></p>
-<dd> select only these fields; also print any line that contains no delimiter character, unless the <code>-s</code> option is specified</p>
-<dt><code>-n</code></p>
-<dd> (ignored)</p>
-<dt><code>&#8211;complement</code></p>
-<dd> complement the set of selected bytes, characters or fields</p>
-<dt><code>-s</code>, <code>&#8211;only-delimited</code></p>
-<dd> do not print lines not containing delimiters</p>
-<dt><code>&#8211;output-delimiter</code>=<i>,STRING/</i></p>
-<dd> use STRING as the output delimiter the default is to use the input delimiter</p>
-<dt><code>-z</code>, <code>&#8211;zero-terminated</code></p>
-<dd> line delimiter is NUL, not newline</p>
-<dt><code>&#8211;help</code></p>
-<dd> display this help and exit</p>
-<dt><code>&#8211;version</code></p>
-<dd> output version information and exit</dl>
+<dt><code>-b</code>, <code>&#8211;bytes</code>=<i>,LIST/</i></dt>
+<dd> select only these bytes</dd>
+<dt><code>-c</code>, <code>&#8211;characters</code>=<i>,LIST/</i></dt>
+<dd> select only these characters</dd>
+<dt><code>-d</code>, <code>&#8211;delimiter</code>=<i>,DELIM/</i></dt>
+<dd> use DELIM instead of TAB for field delimiter</dd>
+<dt><code>-f</code>, <code>&#8211;fields</code>=<i>,LIST/</i></dt>
+<dd> select only these fields; also print any line that contains no delimiter character, unless the <code>-s</code> option is specified</dd>
+<dt><code>-n</code></dt>
+<dd> (ignored)</dd>
+<dt><code>&#8211;complement</code></dt>
+<dd> complement the set of selected bytes, characters or fields</dd>
+<dt><code>-s</code>, <code>&#8211;only-delimited</code></dt>
+<dd> do not print lines not containing delimiters</dd>
+<dt><code>&#8211;output-delimiter</code>=<i>,STRING/</i></dt>
+<dd> use STRING as the output delimiter the default is to use the input delimiter</dd>
+<dt><code>-z</code>, <code>&#8211;zero-terminated</code></dt>
+<dd> line delimiter is NUL, not newline</dd>
+<dt><code>&#8211;help</code></dt>
+<dd> display this help and exit</dd>
+<dt><code>&#8211;version</code></dt>
+<dd> output version information and exit</dd></dl>
 <p> Use one, and only one of <code>-b</code>, <code>-c</code> or <code>-f</code>. Each LIST is made up of one range, or many ranges separated by commas. Selected input is written in the same order that it is read, and is written exactly once. Each range is one of:</p>
 <dl>
-<dt>N</p>
-<dd> N&#8217;th byte, character or field, counted from 1</p>
-<dt>N-</p>
-<dd> from N&#8217;th byte, character or field, to end of line</p>
-<dt>N-M</p>
-<dd> from N&#8217;th to M&#8217;th (included) byte, character or field</p>
-<dt><code>-M</code></p>
-<dd> from first to M&#8217;th (included) byte, character or field</dl>
+<dt>N</dt>
+<dd> N&#8217;th byte, character or field, counted from 1</dd>
+<dt>N-</dt>
+<dd> from N&#8217;th byte, character or field, to end of line</dd>
+<dt>N-M</dt>
+<dd> from N&#8217;th to M&#8217;th (included) byte, character or field</dd>
+<dt><code>-M</code></dt>
+<dd> from first to M&#8217;th (included) byte, character or field</dd></dl>
 <h2>AUTHOR</h2>
 <p> Written by David M. Ihnat, David MacKenzie, and Jim Meyering.</p>
 <h2>REPORTING BUGS</h2>

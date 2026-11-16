@@ -14,10 +14,10 @@ description: "crypto_ahash_export – extract current message digest state"
 <p><i>req</i></p>
 <dl>
 <dd>
-<dd>reference to the ahash_request handle whose state is exported</dl>
+</dd><dd>reference to the ahash_request handle whose state is exported</dd></dl>
 <p> <i>out</i></p>
 <dl>
-<dd>output buffer of sufficient size that can hold the hash state</dl>
+<dd>output buffer of sufficient size that can hold the hash state</dd></dl>
 <h2>Description</h2>
 <p>This function exports the hash state of the ahash_request handle into the caller-allocated output buffer out which must have sufficient size (e.g. by calling crypto_ahash_reqsize).</p>
 <h2>Return</h2>
@@ -25,8 +25,8 @@ description: "crypto_ahash_export – extract current message digest state"
 <h2>Authors</h2>
 <p><code>Stephan Mueller</code> &lt;smueller [at] chronox.de&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <p> <code>Marek Vasut</code> &lt;marek [at] denx.de&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

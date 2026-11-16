@@ -14,19 +14,19 @@ description: "wimax_msg – Send a message to user space"
 <p><i>wimax_dev</i></p>
 <dl>
 <dd>
-<dd>WiMAX device descriptor (properly referenced)</dl>
+</dd><dd>WiMAX device descriptor (properly referenced)</dd></dl>
 <p> <i>pipe_name</i></p>
 <dl>
-<dd>&quot;named pipe&quot; the message will be sent to</dl>
+<dd>&quot;named pipe&quot; the message will be sent to</dd></dl>
 <p> <i>buf</i></p>
 <dl>
-<dd>pointer to the message to send.</dl>
+<dd>pointer to the message to send.</dd></dl>
 <p> <i>size</i></p>
 <dl>
-<dd>size of the buffer pointed to by <i>buf</i> (in bytes).</dl>
+<dd>size of the buffer pointed to by <i>buf</i> (in bytes).</dd></dl>
 <p> <i>gfp_flags</i></p>
 <dl>
-<dd>flags for memory allocation.</dl>
+<dd>flags for memory allocation.</dd></dl>
 <h2>Return</h2>
 <p><code>0</code> if ok, negative errno code on error.</p>
 <h2>Description</h2>

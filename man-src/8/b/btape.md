@@ -15,80 +15,80 @@ description: "btape – Bacula’s Tape interface test program"
 <h2>Options</h2>
 <p>A summary of options is included below.</p>
 <dl>
-<dt><code>-?</code></p>
-<dd>Show summary of options and commands.</p>
-<dt><code>-b&nbsp;<wbr></code><i>bootstrap</i></p>
-<dd>Specify a bootstrap file.</p>
-<dt><code>-c&nbsp;<wbr></code><i>config</i></p>
-<dd>Specify configuration file.</p>
-<dt><code>-d&nbsp;<wbr></code><i>nn</i></p>
-<dd>Set debug level to <i>nn</i>.</p>
-<dt><code>-p</code></p>
-<dd>Proceed inspite of I/O errors.</p>
-<dt><code>-s</code></p>
-<dd>No signals (for debugging).</p>
-<dt><code>-v</code></p>
-<dd>Set verbose mode. </p>
+<dt><code>-?</code></dt>
+<dd>Show summary of options and commands.</dd>
+<dt><code>-b&nbsp;<wbr></code><i>bootstrap</i></dt>
+<dd>Specify a bootstrap file.</dd>
+<dt><code>-c&nbsp;<wbr></code><i>config</i></dt>
+<dd>Specify configuration file.</dd>
+<dt><code>-d&nbsp;<wbr></code><i>nn</i></dt>
+<dd>Set debug level to <i>nn</i>.</dd>
+<dt><code>-p</code></dt>
+<dd>Proceed inspite of I/O errors.</dd>
+<dt><code>-s</code></dt>
+<dd>No signals (for debugging).</dd>
+<dt><code>-v</code></dt>
+<dd>Set verbose mode. </dd>
 </dl>
 <h2>Commands</h2>
 <dl>
-<dt><code>autochanger</code></p>
-<dd>test autochanger</p>
-<dt><code>bsf</code></p>
-<dd>backspace file</p>
-<dt><code>bsr</code></p>
-<dd>backspace record</p>
-<dt><code>cap</code></p>
-<dd>list device capabilities</p>
-<dt><code>clear</code></p>
-<dd>clear tape errors</p>
-<dt><code>eod</code></p>
-<dd>go to end of Bacula data for append</p>
-<dt><code>eom</code></p>
-<dd>go to the physical end of medium</p>
-<dt><code>fill</code></p>
-<dd>fill tape, write onto second volume</p>
-<dt><code>unfill</code></p>
-<dd>read filled tape</p>
-<dt><code>fsf</code></p>
-<dd>forward space a file</p>
-<dt><code>fsr</code></p>
-<dd>forward space a record</p>
-<dt><code>help</code></p>
-<dd>print this reference</p>
-<dt><code>label</code></p>
-<dd>write a Bacula label to the tape</p>
-<dt><code>load</code></p>
-<dd>load a tape</p>
-<dt><code>quit</code></p>
-<dd>quit btape</p>
-<dt><code>rawfill</code></p>
-<dd>use write() to fill tape</p>
-<dt><code>readlabel</code></p>
-<dd>read and print the Bacula tape label</p>
-<dt><code>rectest</code></p>
-<dd>test record handling functions</p>
-<dt><code>rewind</code></p>
-<dd>rewind the tape</p>
-<dt><code>scan</code></p>
-<dd>read() tape block by block to EOT and report</p>
-<dt><code>scanblocks</code></p>
-<dd>Bacula read block by block to EOT and report</p>
-<dt><code>status</code></p>
-<dd>print tape status</p>
-<dt><code>test</code></p>
-<dd>General test Bacula tape functions</p>
-<dt><code>weof</code></p>
-<dd>write an EOF on the tape</p>
-<dt><code>wr</code></p>
-<dd>write a single Bacula block</p>
-<dt><code>rr</code></p>
-<dd>read a single record</p>
-<dt><code>rb</code></p>
-<dd>read a single bacula block</p>
-<dt><code>qfill</code></p>
+<dt><code>autochanger</code></dt>
+<dd>test autochanger</dd>
+<dt><code>bsf</code></dt>
+<dd>backspace file</dd>
+<dt><code>bsr</code></dt>
+<dd>backspace record</dd>
+<dt><code>cap</code></dt>
+<dd>list device capabilities</dd>
+<dt><code>clear</code></dt>
+<dd>clear tape errors</dd>
+<dt><code>eod</code></dt>
+<dd>go to end of Bacula data for append</dd>
+<dt><code>eom</code></dt>
+<dd>go to the physical end of medium</dd>
+<dt><code>fill</code></dt>
+<dd>fill tape, write onto second volume</dd>
+<dt><code>unfill</code></dt>
+<dd>read filled tape</dd>
+<dt><code>fsf</code></dt>
+<dd>forward space a file</dd>
+<dt><code>fsr</code></dt>
+<dd>forward space a record</dd>
+<dt><code>help</code></dt>
+<dd>print this reference</dd>
+<dt><code>label</code></dt>
+<dd>write a Bacula label to the tape</dd>
+<dt><code>load</code></dt>
+<dd>load a tape</dd>
+<dt><code>quit</code></dt>
+<dd>quit btape</dd>
+<dt><code>rawfill</code></dt>
+<dd>use write() to fill tape</dd>
+<dt><code>readlabel</code></dt>
+<dd>read and print the Bacula tape label</dd>
+<dt><code>rectest</code></dt>
+<dd>test record handling functions</dd>
+<dt><code>rewind</code></dt>
+<dd>rewind the tape</dd>
+<dt><code>scan</code></dt>
+<dd>read() tape block by block to EOT and report</dd>
+<dt><code>scanblocks</code></dt>
+<dd>Bacula read block by block to EOT and report</dd>
+<dt><code>status</code></dt>
+<dd>print tape status</dd>
+<dt><code>test</code></dt>
+<dd>General test Bacula tape functions</dd>
+<dt><code>weof</code></dt>
+<dd>write an EOF on the tape</dd>
+<dt><code>wr</code></dt>
+<dd>write a single Bacula block</dd>
+<dt><code>rr</code></dt>
+<dd>read a single record</dd>
+<dt><code>rb</code></dt>
+<dd>read a single bacula block</dd>
+<dt><code>qfill</code></dt>
 <dd>quick fill command
-</dl>
+</dd></dl>
 <h2>See Also</h2>
 <p><code>bscan</code>(1), <code>bextract</code>(1).</p>
 <h2>Author</h2>

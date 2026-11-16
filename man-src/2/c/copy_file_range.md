@@ -21,10 +21,10 @@ ssize_t copy_file_range(int fd_in, loff_t *off_in,
 <p> The <code>copy_file_range</code>() system call performs an in-kernel copy between two file descriptors without the additional cost of transferring data from the kernel to user space and then back into the kernel. It copies up to <i>len</i> bytes of data from the source file descriptor <i>fd_in</i> to the target file descriptor <i>fd_out</i>, overwriting any data that exists within the requested range of the target file. </p>
 <p> The following semantics apply for <i>off_in</i>, and similar statements apply to <i>off_out</i>:</p>
 <dl>
-<dt>*</p>
-<dd> If <i>off_in</i> is NULL, then bytes are read from <i>fd_in</i> starting from the file offset, and the file offset is adjusted by the number of bytes copied.</p>
-<dt>*</p>
-<dd> If <i>off_in</i> is not NULL, then <i>off_in</i> must point to a buffer that specifies the starting offset where bytes from <i>fd_in</i> will be read. The file offset of <i>fd_in</i> is not changed, but <i>off_in</i> is adjusted appropriately.</dl>
+<dt>*</dt>
+<dd> If <i>off_in</i> is NULL, then bytes are read from <i>fd_in</i> starting from the file offset, and the file offset is adjusted by the number of bytes copied.</dd>
+<dt>*</dt>
+<dd> If <i>off_in</i> is not NULL, then <i>off_in</i> must point to a buffer that specifies the starting offset where bytes from <i>fd_in</i> will be read. The file offset of <i>fd_in</i> is not changed, but <i>off_in</i> is adjusted appropriately.</dd></dl>
 <p> <i>fd_in</i> and <i>fd_out</i> can refer to the same file. If they refer to the same file, then the source and target ranges are not allowed to overlap. </p>
 <p> The <i>flags</i> argument is provided to allow for future extensions and currently must be set to 0.</p>
 <h2>RETURN VALUE</h2>
@@ -32,40 +32,40 @@ ssize_t copy_file_range(int fd_in, loff_t *off_in,
 <p> On error, <code>copy_file_range</code>() returns -1 and <i>errno</i> is set to indicate the error.</p>
 <h2>ERRORS</h2>
 <dl>
-<dt><code>EBADF</code></p>
-<dd> One or more file descriptors are not valid.</p>
-<dt><code>EBADF</code></p>
-<dd> <i>fd_in</i> is not open for reading; or <i>fd_out</i> is not open for writing.</p>
-<dt><code>EBADF</code></p>
-<dd> The <code>O_APPEND</code> flag is set for the open file description (see <code><a href="/docs/linux/man/2-open/">open</a></code>(2)) referred to by the file descriptor <i>fd_out</i>.</p>
-<dt><code>EFBIG</code></p>
-<dd> An attempt was made to write at a position past the maximum file offset the kernel supports.</p>
-<dt><code>EFBIG</code></p>
-<dd> An attempt was made to write a range that exceeds the allowed maximum file size. The maximum file size differs between filesystem implementations and can be different from the maximum allowed file offset.</p>
-<dt><code>EFBIG</code></p>
-<dd> An attempt was made to write beyond the process&#8217;s file size resource limit. This may also result in the process receiving a <code>SIGXFSZ</code> signal.</p>
-<dt><code>EINVAL</code></p>
-<dd> The <i>flags</i> argument is not 0.</p>
-<dt><code>EINVAL</code></p>
-<dd> <i>fd_in</i> and <i>fd_out</i> refer to the same file and the source and target ranges overlap.</p>
-<dt><code>EINVAL</code></p>
-<dd> Either <i>fd_in</i> or <i>fd_out</i> is not a regular file.</p>
-<dt><code>EIO</code></p>
-<dd> A low-level I/O error occurred while copying.</p>
-<dt><code>EISDIR</code></p>
-<dd> Either <i>fd_in</i> or <i>fd_out</i> refers to a directory.</p>
-<dt><code>ENOMEM</code></p>
-<dd> Out of memory.</p>
-<dt><code>ENOSPC</code></p>
-<dd> There is not enough space on the target filesystem to complete the copy.</p>
-<dt><code>EOVERFLOW</code></p>
-<dd> The requested source or destination range is too large to represent in the specified data types.</p>
-<dt><code>EPERM</code></p>
-<dd> <i>fd_out</i> refers to an immutable file.</p>
-<dt><code>ETXTBSY</code></p>
-<dd> Either <i>fd_in</i> or <i>fd_out</i> refers to an active swap file.</p>
-<dt><code>EXDEV</code></p>
-<dd> The files referred to by <i>fd_in</i> and <i>fd_out</i> are not on the same mounted filesystem (pre Linux 5.3).</dl>
+<dt><code>EBADF</code></dt>
+<dd> One or more file descriptors are not valid.</dd>
+<dt><code>EBADF</code></dt>
+<dd> <i>fd_in</i> is not open for reading; or <i>fd_out</i> is not open for writing.</dd>
+<dt><code>EBADF</code></dt>
+<dd> The <code>O_APPEND</code> flag is set for the open file description (see <code><a href="/docs/linux/man/2-open/">open</a></code>(2)) referred to by the file descriptor <i>fd_out</i>.</dd>
+<dt><code>EFBIG</code></dt>
+<dd> An attempt was made to write at a position past the maximum file offset the kernel supports.</dd>
+<dt><code>EFBIG</code></dt>
+<dd> An attempt was made to write a range that exceeds the allowed maximum file size. The maximum file size differs between filesystem implementations and can be different from the maximum allowed file offset.</dd>
+<dt><code>EFBIG</code></dt>
+<dd> An attempt was made to write beyond the process&#8217;s file size resource limit. This may also result in the process receiving a <code>SIGXFSZ</code> signal.</dd>
+<dt><code>EINVAL</code></dt>
+<dd> The <i>flags</i> argument is not 0.</dd>
+<dt><code>EINVAL</code></dt>
+<dd> <i>fd_in</i> and <i>fd_out</i> refer to the same file and the source and target ranges overlap.</dd>
+<dt><code>EINVAL</code></dt>
+<dd> Either <i>fd_in</i> or <i>fd_out</i> is not a regular file.</dd>
+<dt><code>EIO</code></dt>
+<dd> A low-level I/O error occurred while copying.</dd>
+<dt><code>EISDIR</code></dt>
+<dd> Either <i>fd_in</i> or <i>fd_out</i> refers to a directory.</dd>
+<dt><code>ENOMEM</code></dt>
+<dd> Out of memory.</dd>
+<dt><code>ENOSPC</code></dt>
+<dd> There is not enough space on the target filesystem to complete the copy.</dd>
+<dt><code>EOVERFLOW</code></dt>
+<dd> The requested source or destination range is too large to represent in the specified data types.</dd>
+<dt><code>EPERM</code></dt>
+<dd> <i>fd_out</i> refers to an immutable file.</dd>
+<dt><code>ETXTBSY</code></dt>
+<dd> Either <i>fd_in</i> or <i>fd_out</i> refers to an active swap file.</dd>
+<dt><code>EXDEV</code></dt>
+<dd> The files referred to by <i>fd_in</i> and <i>fd_out</i> are not on the same mounted filesystem (pre Linux 5.3).</dd></dl>
 <h2>VERSIONS</h2>
 <p> The <code>copy_file_range</code>() system call first appeared in Linux 4.5, but glibc 2.27 provides a user-space emulation when it is not available. </p>
 <p> A major rework of the kernel implementation occurred in 5.3. Areas of the API that weren&#8217;t clearly defined were clarified and the API bounds are much more strictly checked than on earlier kernels. Applications should target the behaviour and requirements of 5.3 kernels. </p>

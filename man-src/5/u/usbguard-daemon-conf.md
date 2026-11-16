@@ -15,12 +15,12 @@ The usbguard-daemon.conf file is loaded by the USBGuard daemon after it parses i
 <h2>Options</h2>
 
 <dl><dt>RuleFile=&lt;path&gt;
-<dd>The USBGuard daemon will use this file to load the policy rule set from it and to write new rules received via the IPC interface.
-<dl><dd></dl><dt>IPCAllowedUsers=&lt;username&gt;&nbsp;<wbr>[&lt;username&gt;&nbsp;<wbr>...]
-<dd>A space delimited list of usernames that the daemon will accept IPC connections from.
-<dl><dd></dl><dt>IPCAllowedGroups=&lt;groupname&gt;&nbsp;<wbr>[&lt;groupname&gt;&nbsp;<wbr>...]
-<dd>A space delimited list of groupnames that the daemon will accept IPC connections from.
-<dl><dd></dl></dl>
+</dt><dd>The USBGuard daemon will use this file to load the policy rule set from it and to write new rules received via the IPC interface.
+</dd><dl><dd></dd></dl><dt>IPCAllowedUsers=&lt;username&gt;&nbsp;<wbr>[&lt;username&gt;&nbsp;<wbr>...]
+</dt><dd>A space delimited list of usernames that the daemon will accept IPC connections from.
+</dd><dl><dd></dd></dl><dt>IPCAllowedGroups=&lt;groupname&gt;&nbsp;<wbr>[&lt;groupname&gt;&nbsp;<wbr>...]
+</dt><dd>A space delimited list of groupnames that the daemon will accept IPC connections from.
+</dd><dl><dd></dd></dl></dl>
 
 <h2>Security Considerations</h2>
 

@@ -18,14 +18,14 @@ description: "ldns_rr_list_cat, ldns_rr_list_push_rr, ldns_rr_list_pop_rr"
 <p> ldns_rr* ldns_rr_list_pop_rr(ldns_rr_list *rr_list); </p>
 <h2>DESCRIPTION</h2>
 <dl>
-<dt> <i>ldns_rr_list_cat</i>()</p>
-<dd>concatenates two ldns_rr_lists together. This modifies *left (to extend it and add the pointers from *right). .br <code>left</code>: the leftside .br <code>right</code>: the rightside .br Returns a left with right concatenated to it</dl>
+<dt> <i>ldns_rr_list_cat</i>()</dt>
+<dd>concatenates two ldns_rr_lists together. This modifies *left (to extend it and add the pointers from *right). .br <code>left</code>: the leftside .br <code>right</code>: the rightside .br Returns a left with right concatenated to it</dd></dl>
 <dl>
-<dt> <i>ldns_rr_list_push_rr</i>()</p>
-<dd>pushes an rr to an rrlist. .br <code>rr_list</code>: the rr_list to push to .br <code>rr</code>: the rr to push .br Returns false on error, otherwise true</dl>
+<dt> <i>ldns_rr_list_push_rr</i>()</dt>
+<dd>pushes an rr to an rrlist. .br <code>rr_list</code>: the rr_list to push to .br <code>rr</code>: the rr to push .br Returns false on error, otherwise true</dd></dl>
 <dl>
-<dt> <i>ldns_rr_list_pop_rr</i>()</p>
-<dd>pops the last rr from an rrlist. .br <code>rr_list</code>: the rr_list to pop from .br Returns NULL if nothing to pop. Otherwise the popped RR</dl>
+<dt> <i>ldns_rr_list_pop_rr</i>()</dt>
+<dd>pops the last rr from an rrlist. .br <code>rr_list</code>: the rr_list to pop from .br Returns NULL if nothing to pop. Otherwise the popped RR</dd></dl>
 <h2>AUTHOR</h2>
 <p> The ldns team at NLnet Labs. Which consists out of Jelte Jansen and Miek Gieben. </p>
 <h2>REPORTING BUGS</h2>

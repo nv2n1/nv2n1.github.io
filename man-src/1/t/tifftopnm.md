@@ -21,14 +21,14 @@ description: "tifftopnm – convert a TIFF file into a portable anymap"
 <p> The <i>tiff-filename</i> argument names the regular file that contains the Tiff image. If you specify &quot;-&quot; or don&#8217;t specify this argument, <code>tfftopnm</code> uses Standard Input. In either case, the file must be seekable. That means no pipe, but any regular file is fine. </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-alphaout=</code><i>alpha-filename</i></p>
-<dd> <code>tifftopnm </code> creates a PGM (portable graymap) file containing the alpha channel values in the input image. If the input image doesn&#8217;t contain an alpha channel, the <i>alpha-filename</i> file contains all zero (transparent) alpha values. If you don&#8217;t specify <code>-alphaout</code>, <code>tifftopnm</code> does not generate an alpha file, and if the input image has an alpha channel, <code>tifftopnm</code> simply discards it. </p>
+<dt><code>-alphaout=</code><i>alpha-filename</i></dt>
+<dd> <code>tifftopnm </code> creates a PGM (portable graymap) file containing the alpha channel values in the input image. If the input image doesn&#8217;t contain an alpha channel, the <i>alpha-filename</i> file contains all zero (transparent) alpha values. If you don&#8217;t specify <code>-alphaout</code>, <code>tifftopnm</code> does not generate an alpha file, and if the input image has an alpha channel, <code>tifftopnm</code> simply discards it. </dd>
 <p> If you specify <code>&#8211;</code> as the filename, <code>tifftopnm</code> writes the alpha output to Standard Output and discards the image. </p>
 <p> See <code><a href="/docs/linux/man/1-pnmcomp/">pnmcomp</a></code>(1) for one way to use the alpha output file.</p>
-<dt><code>-respectfillorder</code></p>
-<dd> By default, <code>tifftopnm </code> ignores the &quot;fillorder&quot; tag in the TIFF input, which means it may incorrectly interpret the image. To make it follow the spec, use this option. For a lengthy but engaging discussion of why <code>tifftopnm</code> works this way and how to use the <code>-respectfillorder</code> option, see the note on fillorder below. </p>
-<dt><code>-headerdump</code></p>
-<dd> Dump TIFF file information to stderr. This information may be useful in debugging TIFF file conversion problems.</dl>
+<dt><code>-respectfillorder</code></dt>
+<dd> By default, <code>tifftopnm </code> ignores the &quot;fillorder&quot; tag in the TIFF input, which means it may incorrectly interpret the image. To make it follow the spec, use this option. For a lengthy but engaging discussion of why <code>tifftopnm</code> works this way and how to use the <code>-respectfillorder</code> option, see the note on fillorder below. </dd>
+<dt><code>-headerdump</code></dt>
+<dd> Dump TIFF file information to stderr. This information may be useful in debugging TIFF file conversion problems.</dd></dl>
 <p> All options can be abbreviated to their shortest unique prefix. </p>
 <h2>NOTES</h2>
 <h3>Fillorder</h3>

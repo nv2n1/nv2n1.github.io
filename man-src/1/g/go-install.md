@@ -16,16 +16,16 @@ description: "go – tool for managing Go source code"
 <p> Executables are installed in the directory named by the GOBIN environment variable, which defaults to $GOPATH/bin or $HOME/go/bin if the GOPATH environment variable is not set. Executables in $GOROOT are installed in $GOROOT/bin or $GOTOOLDIR instead of $GOBIN. </p>
 <p> If the arguments have version suffixes (like @latest or @v1.0.0), &quot;go install&quot; builds packages in module-aware mode, ignoring the go.mod file in the current directory or any parent directory, if there is one. This is useful for installing executables without affecting the dependencies of the main module. To eliminate ambiguity about which module versions are used in the build, the arguments must satisfy the following constraints:</p>
 <dl>
-<dt>&bull;</p>
-<dd> Arguments must be package paths or package patterns (with &quot;&#8230;&quot; wildcards). They must not be standard packages (like fmt), meta-patterns (std, cmd, all), or relative or absolute file paths.</p>
-<dt>&bull;</p>
-<dd> All arguments must have the same version suffix. Different queries are not allowed, even if they refer to the same version.</p>
-<dt>&bull;</p>
-<dd> All arguments must refer to packages in the same module at the same version.</p>
-<dt>&bull;</p>
-<dd> No module is considered the &quot;main&quot; module. If the module containing packages named on the command line has a go.mod file, it must not contain directives (replace and exclude) that would cause it to be interpreted differently than if it were the main module. The module must not require a higher version of itself.</p>
-<dt>&bull;</p>
-<dd> Package path arguments must refer to main packages. Pattern arguments will only match main packages.</dl>
+<dt>&bull;</dt>
+<dd> Arguments must be package paths or package patterns (with &quot;&#8230;&quot; wildcards). They must not be standard packages (like fmt), meta-patterns (std, cmd, all), or relative or absolute file paths.</dd>
+<dt>&bull;</dt>
+<dd> All arguments must have the same version suffix. Different queries are not allowed, even if they refer to the same version.</dd>
+<dt>&bull;</dt>
+<dd> All arguments must refer to packages in the same module at the same version.</dd>
+<dt>&bull;</dt>
+<dd> No module is considered the &quot;main&quot; module. If the module containing packages named on the command line has a go.mod file, it must not contain directives (replace and exclude) that would cause it to be interpreted differently than if it were the main module. The module must not require a higher version of itself.</dd>
+<dt>&bull;</dt>
+<dd> Package path arguments must refer to main packages. Pattern arguments will only match main packages.</dd></dl>
 <p> If the arguments don&#8217;t have version suffixes, &quot;go install&quot; may run in module-aware mode or GOPATH mode, depending on the GO111MODULE environment variable and the presence of a go.mod file. See &#8216;go help modules&#8217; for details. If module-aware mode is enabled, &quot;go install&quot; runs in the context of the main module. </p>
 <p> When module-aware mode is disabled, other packages are installed in the directory $GOPATH/pkg/$GOOS_$GOARCH. When module-aware mode is enabled, other packages are built and cached but not installed. </p>
 <p> The -i flag installs the dependencies of the named packages as well.<br />

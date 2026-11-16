@@ -15,10 +15,10 @@ description: "e2rm – removes files and directories on an ext2 filesystem"
 <p> The <code>e2rm</code> command removes files and directories on an ext2 filesystem.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-r</code></p>
-<dd> Recursively delete files if a directory name is given.</p>
-<dt><code>-v</code></p>
-<dd> Be verbose.</dl>
+<dt><code>-r</code></dt>
+<dd> Recursively delete files if a directory name is given.</dd>
+<dt><code>-v</code></dt>
+<dd> Be verbose.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/7-e2tools/">e2tools</a></code>(7), <code><a href="/docs/linux/man/1-e2ln/">e2ln</a></code>(1), <code><a href="/docs/linux/man/1-e2ls/">e2ls</a></code>(1), <code><a href="/docs/linux/man/1-e2mkdir/">e2mkdir</a></code>(1), <code><a href="/docs/linux/man/1-e2cp/">e2cp</a></code>(1), <code><a href="/docs/linux/man/1-e2mv/">e2mv</a></code>(1), <code><a href="/docs/linux/man/1-e2tail/">e2tail</a></code>(1).</p>
 <h2>AUTHOR</h2>

@@ -11,10 +11,8 @@ description: "RXVT REFERENCE – FAQ, command sequences and other background inf
 <h2>Synopsis</h2>
 <pre><code># set a new font set
 printf '\33]50;%s' 9x15,xft:Kochi&quot; Mincho&quot;
-
 # change the locale and tell rxvt-unicode about it
 export LC_CTYPE=ja_JP.EUC-JP; printf &quot;\33]701;$LC_CTYPE&quot;
-
 # set window title
 printf '\33]2;%s' &quot;new window title&quot;</code></pre>
 <h2>Description</h2>
@@ -422,14 +420,14 @@ printf '\33]2;%s' &quot;new window title&quot;</code></pre>
 <p> Try a search engine, as this is slightly different for every input method server. </p>
 <p> Here is a checklist:</p>
 <dl>
-<dt>&#8211; Make sure your locale <i>and</i> the imLocale are supported on your <font SIZE="-1">OS.</font></p>
-<dd>Try <tt>&quot;locale -a&quot;</tt> or check the documentation for your <font SIZE="-1">OS.</font></p>
-<dt>&#8211; Make sure your locale or imLocale matches a locale supported by your <font SIZE="-1">XIM.</font></p>
-<dd>For example, <code>kinput2</code> does not support <font SIZE="-1">UTF-8</font> locales, you should use <tt>&quot;ja_JP.EUC-JP&quot;</tt> or equivalent.</p>
-<dt>&#8211; Make sure your <font SIZE="-1">XIM</font> server is actually running.</p>
+<dt>&#8211; Make sure your locale <i>and</i> the imLocale are supported on your <font SIZE="-1">OS.</font></dt>
+<dd>Try <tt>&quot;locale -a&quot;</tt> or check the documentation for your <font SIZE="-1">OS.</font></dd>
+<dt>&#8211; Make sure your locale or imLocale matches a locale supported by your <font SIZE="-1">XIM.</font></dt>
+<dd>For example, <code>kinput2</code> does not support <font SIZE="-1">UTF-8</font> locales, you should use <tt>&quot;ja_JP.EUC-JP&quot;</tt> or equivalent.</dd>
+<dt>&#8211; Make sure your <font SIZE="-1">XIM</font> server is actually running.</dt>
 <dd>
-<dt>&#8211; Make sure the &quot;XMODIFIERS&quot; environment variable is set correctly when <i>starting</i> rxvt-unicode.</p>
-<dd>When you want to use e.g. <code>kinput2</code>, it must be set to <tt>&quot;@im=kinput2&quot;</tt>. For <code>scim</code>, use <tt>&quot;@im=SCIM&quot;</tt>. You can see what input method servers are running with this command: </p>
+</dd><dt>&#8211; Make sure the &quot;XMODIFIERS&quot; environment variable is set correctly when <i>starting</i> rxvt-unicode.</dt>
+<dd>When you want to use e.g. <code>kinput2</code>, it must be set to <tt>&quot;@im=kinput2&quot;</tt>. For <code>scim</code>, use <tt>&quot;@im=SCIM&quot;</tt>. You can see what input method servers are running with this command: </dd>
 <pre> xprop -root XIM_SERVERS</pre>
 </dl>
 <p> <i>My input method wants &lt;some encoding&gt; but I want </i><font SIZE="-1"><i>UTF-8,</i></font><i> what can I do?</i> </p>
@@ -466,83 +464,83 @@ printf '\33]2;%s' &quot;new window title&quot;</code></pre>
 <p>The rest of this document describes various technical aspects of <code>rxvt-unicode</code>. First the description of supported command sequences, followed by pixmap support and last by a description of all features selectable at <tt>&quot;configure&quot;</tt> time.</p>
 <h3>Definitions</h3>
 <dl>
-<dt><code>&quot;c&quot;</code></p>
-<dd>The literal character c (potentially a multi-byte character).</p>
-<dt><code>&quot;C&quot;</code></p>
-<dd>A single (required) character.</p>
-<dt><code>&quot;Ps&quot;</code></p>
-<dd>A single (usually optional) numeric parameter, composed of one or more digits.</p>
-<dt><code>&quot;Pm&quot;</code></p>
-<dd>A multiple numeric parameter composed of any number of single numeric parameters, separated by <tt>&quot;;&quot;</tt> character(s).</p>
-<dt><code>&quot;Pt&quot;</code></p>
-<dd>A text parameter composed of printable characters.</dl>
+<dt><code>&quot;c&quot;</code></dt>
+<dd>The literal character c (potentially a multi-byte character).</dd>
+<dt><code>&quot;C&quot;</code></dt>
+<dd>A single (required) character.</dd>
+<dt><code>&quot;Ps&quot;</code></dt>
+<dd>A single (usually optional) numeric parameter, composed of one or more digits.</dd>
+<dt><code>&quot;Pm&quot;</code></dt>
+<dd>A multiple numeric parameter composed of any number of single numeric parameters, separated by <tt>&quot;;&quot;</tt> character(s).</dd>
+<dt><code>&quot;Pt&quot;</code></dt>
+<dd>A text parameter composed of printable characters.</dd></dl>
 <h3>Values</h3>
 <dl>
-<dt><code>&quot;ENQ&quot;</code></p>
-<dd>Enquiry (Ctrl-E) = Send Device Attributes (<font SIZE="-1">DA</font>) request attributes from terminal. See &quot;ESC [ Ps c&quot;.</p>
-<dt><code>&quot;BEL&quot;</code></p>
-<dd>Bell (Ctrl-G)</p>
-<dt><code>&quot;BS&quot;</code></p>
-<dd>Backspace (Ctrl-H)</p>
-<dt><code>&quot;TAB&quot;</code></p>
-<dd>Horizontal Tab (<font SIZE="-1">HT</font>) (Ctrl-I)</p>
-<dt><code>&quot;LF&quot;</code></p>
-<dd>Line Feed or New Line (<font SIZE="-1">NL</font>) (Ctrl-J)</p>
-<dt><code>&quot;VT&quot;</code></p>
-<dd>Vertical Tab (Ctrl-K) same as &quot;LF&quot;</p>
-<dt><code>&quot;FF&quot;</code></p>
-<dd>Form Feed or New Page (<font SIZE="-1">NP</font>) (Ctrl-L) same as &quot;LF&quot;</p>
-<dt><code>&quot;CR&quot;</code></p>
-<dd>Carriage Return (Ctrl-M)</p>
-<dt><code>&quot;SO&quot;</code></p>
-<dd>Shift Out (Ctrl-N), invokes the G1 character set. Switch to Alternate Character Set</p>
-<dt><code>&quot;SI&quot;</code></p>
-<dd>Shift In (Ctrl-O), invokes the G0 character set (the default). Switch to Standard Character Set</p>
-<dt><code>&quot;SP&quot;</code></p>
-<dd>Space Character</dl>
+<dt><code>&quot;ENQ&quot;</code></dt>
+<dd>Enquiry (Ctrl-E) = Send Device Attributes (<font SIZE="-1">DA</font>) request attributes from terminal. See &quot;ESC [ Ps c&quot;.</dd>
+<dt><code>&quot;BEL&quot;</code></dt>
+<dd>Bell (Ctrl-G)</dd>
+<dt><code>&quot;BS&quot;</code></dt>
+<dd>Backspace (Ctrl-H)</dd>
+<dt><code>&quot;TAB&quot;</code></dt>
+<dd>Horizontal Tab (<font SIZE="-1">HT</font>) (Ctrl-I)</dd>
+<dt><code>&quot;LF&quot;</code></dt>
+<dd>Line Feed or New Line (<font SIZE="-1">NL</font>) (Ctrl-J)</dd>
+<dt><code>&quot;VT&quot;</code></dt>
+<dd>Vertical Tab (Ctrl-K) same as &quot;LF&quot;</dd>
+<dt><code>&quot;FF&quot;</code></dt>
+<dd>Form Feed or New Page (<font SIZE="-1">NP</font>) (Ctrl-L) same as &quot;LF&quot;</dd>
+<dt><code>&quot;CR&quot;</code></dt>
+<dd>Carriage Return (Ctrl-M)</dd>
+<dt><code>&quot;SO&quot;</code></dt>
+<dd>Shift Out (Ctrl-N), invokes the G1 character set. Switch to Alternate Character Set</dd>
+<dt><code>&quot;SI&quot;</code></dt>
+<dd>Shift In (Ctrl-O), invokes the G0 character set (the default). Switch to Standard Character Set</dd>
+<dt><code>&quot;SP&quot;</code></dt>
+<dd>Space Character</dd></dl>
 <h3>Escape Sequences</h3>
 <dl>
-<dt><code>&quot;ESC # 8&quot;</code></p>
-<dd><font SIZE="-1">DEC</font> Screen Alignment Test (<font SIZE="-1">DECALN</font>)</p>
-<dt><code>&quot;ESC 7&quot;</code></p>
-<dd>Save Cursor (<font SIZE="-1">SC</font>)</p>
-<dt><code>&quot;ESC 8&quot;</code></p>
-<dd>Restore Cursor</p>
-<dt><code>&quot;ESC =&quot;</code></p>
-<dd>Application Keypad (<font SIZE="-1">SMKX</font>). See also next sequence.</p>
-<dt><code>&quot;ESC &gt;&quot;</code></p>
-<dd>Normal Keypad (<font SIZE="-1">RMKX</font>) </p>
+<dt><code>&quot;ESC # 8&quot;</code></dt>
+<dd><font SIZE="-1">DEC</font> Screen Alignment Test (<font SIZE="-1">DECALN</font>)</dd>
+<dt><code>&quot;ESC 7&quot;</code></dt>
+<dd>Save Cursor (<font SIZE="-1">SC</font>)</dd>
+<dt><code>&quot;ESC 8&quot;</code></dt>
+<dd>Restore Cursor</dd>
+<dt><code>&quot;ESC =&quot;</code></dt>
+<dd>Application Keypad (<font SIZE="-1">SMKX</font>). See also next sequence.</dd>
+<dt><code>&quot;ESC &gt;&quot;</code></dt>
+<dd>Normal Keypad (<font SIZE="-1">RMKX</font>) </dd>
 <p> <code>Note:</code> numbers or control functions are generated by the numeric keypad in normal or application mode, respectively (see Key Codes).</p>
-<dt><code>&quot;ESC D&quot;</code></p>
-<dd>Index (<font SIZE="-1">IND</font>)</p>
-<dt><code>&quot;ESC E&quot;</code></p>
-<dd>Next Line (<font SIZE="-1">NEL</font>)</p>
-<dt><code>&quot;ESC H&quot;</code></p>
-<dd>Tab Set (<font SIZE="-1">HTS</font>)</p>
-<dt><code>&quot;ESC M&quot;</code></p>
-<dd>Reverse Index (<font SIZE="-1">RI</font>)</p>
-<dt><code>&quot;ESC N&quot;</code></p>
-<dd>Single Shift Select of G2 Character Set (<font SIZE="-1">SS2</font>): affects next character only <i>unimplemented</i></p>
-<dt><code>&quot;ESC O&quot;</code></p>
-<dd>Single Shift Select of G3 Character Set (<font SIZE="-1">SS3</font>): affects next character only <i>unimplemented</i></p>
-<dt><code>&quot;ESC Z&quot;</code></p>
-<dd>Obsolete form of returns: &quot;ESC [ ? 1 ; 2 C&quot; <i>rxvt-unicode compile-time option</i></p>
-<dt><code>&quot;ESC c&quot;</code></p>
-<dd>Full reset (<font SIZE="-1">RIS</font>)</p>
-<dt><code>&quot;ESC n&quot;</code></p>
-<dd>Invoke the G2 Character Set (<font SIZE="-1">LS2</font>)</p>
-<dt><code>&quot;ESC o&quot;</code></p>
-<dd>Invoke the G3 Character Set (<font SIZE="-1">LS3</font>)</p>
-<dt><code>&quot;ESC ( C&quot;</code></p>
-<dd>Designate G0 Character Set (<font SIZE="-1">ISO 2022</font>), see below for values of <tt>&quot;C&quot;</tt>.</p>
-<dt><code>&quot;ESC ) C&quot;</code></p>
-<dd>Designate G1 Character Set (<font SIZE="-1">ISO 2022</font>), see below for values of <tt>&quot;C&quot;</tt>.</p>
-<dt><code>&quot;ESC * C&quot;</code></p>
-<dd>Designate G2 Character Set (<font SIZE="-1">ISO 2022</font>), see below for values of <tt>&quot;C&quot;</tt>.</p>
-<dt><code>&quot;ESC + C&quot;</code></p>
-<dd>Designate G3 Character Set (<font SIZE="-1">ISO 2022</font>), see below for values of <tt>&quot;C&quot;</tt>.</p>
-<dt><code>&quot;ESC $ C&quot;</code></p>
-<dd>Designate Kanji Character Set </p>
+<dt><code>&quot;ESC D&quot;</code></dt>
+<dd>Index (<font SIZE="-1">IND</font>)</dd>
+<dt><code>&quot;ESC E&quot;</code></dt>
+<dd>Next Line (<font SIZE="-1">NEL</font>)</dd>
+<dt><code>&quot;ESC H&quot;</code></dt>
+<dd>Tab Set (<font SIZE="-1">HTS</font>)</dd>
+<dt><code>&quot;ESC M&quot;</code></dt>
+<dd>Reverse Index (<font SIZE="-1">RI</font>)</dd>
+<dt><code>&quot;ESC N&quot;</code></dt>
+<dd>Single Shift Select of G2 Character Set (<font SIZE="-1">SS2</font>): affects next character only <i>unimplemented</i></dd>
+<dt><code>&quot;ESC O&quot;</code></dt>
+<dd>Single Shift Select of G3 Character Set (<font SIZE="-1">SS3</font>): affects next character only <i>unimplemented</i></dd>
+<dt><code>&quot;ESC Z&quot;</code></dt>
+<dd>Obsolete form of returns: &quot;ESC [ ? 1 ; 2 C&quot; <i>rxvt-unicode compile-time option</i></dd>
+<dt><code>&quot;ESC c&quot;</code></dt>
+<dd>Full reset (<font SIZE="-1">RIS</font>)</dd>
+<dt><code>&quot;ESC n&quot;</code></dt>
+<dd>Invoke the G2 Character Set (<font SIZE="-1">LS2</font>)</dd>
+<dt><code>&quot;ESC o&quot;</code></dt>
+<dd>Invoke the G3 Character Set (<font SIZE="-1">LS3</font>)</dd>
+<dt><code>&quot;ESC ( C&quot;</code></dt>
+<dd>Designate G0 Character Set (<font SIZE="-1">ISO 2022</font>), see below for values of <tt>&quot;C&quot;</tt>.</dd>
+<dt><code>&quot;ESC ) C&quot;</code></dt>
+<dd>Designate G1 Character Set (<font SIZE="-1">ISO 2022</font>), see below for values of <tt>&quot;C&quot;</tt>.</dd>
+<dt><code>&quot;ESC * C&quot;</code></dt>
+<dd>Designate G2 Character Set (<font SIZE="-1">ISO 2022</font>), see below for values of <tt>&quot;C&quot;</tt>.</dd>
+<dt><code>&quot;ESC + C&quot;</code></dt>
+<dd>Designate G3 Character Set (<font SIZE="-1">ISO 2022</font>), see below for values of <tt>&quot;C&quot;</tt>.</dd>
+<dt><code>&quot;ESC $ C&quot;</code></dt>
+<dd>Designate Kanji Character Set </dd>
 <p> Where &quot;C&quot; is one of: </p>
 <table>
 <tr VALIGN=top>
@@ -584,28 +582,28 @@ printf '\33]2;%s' &quot;new window title&quot;</code></pre>
 </dl>
 <h3><font SIZE="-1">CSI </font>(Command Sequence Introducer) Sequences</h3>
 <dl>
-<dt><code>&quot;ESC [ Ps @&quot;</code></p>
-<dd>Insert &quot;Ps&quot; (Blank) Character(s) [default: 1] (<font SIZE="-1">ICH</font>)</p>
-<dt><code>&quot;ESC [ Ps A&quot;</code></p>
-<dd>Cursor Up &quot;Ps&quot; Times [default: 1] (<font SIZE="-1">CUU</font>)</p>
-<dt><code>&quot;ESC [ Ps B&quot;</code></p>
-<dd>Cursor Down &quot;Ps&quot; Times [default: 1] (<font SIZE="-1">CUD</font>)</p>
-<dt><code>&quot;ESC [ Ps C&quot;</code></p>
-<dd>Cursor Forward &quot;Ps&quot; Times [default: 1] (<font SIZE="-1">CUF</font>)</p>
-<dt><code>&quot;ESC [ Ps D&quot;</code></p>
-<dd>Cursor Backward &quot;Ps&quot; Times [default: 1] (<font SIZE="-1">CUB</font>)</p>
-<dt><code>&quot;ESC [ Ps E&quot;</code></p>
-<dd>Cursor Down &quot;Ps&quot; Times [default: 1] and to first column</p>
-<dt><code>&quot;ESC [ Ps F&quot;</code></p>
-<dd>Cursor Up &quot;Ps&quot; Times [default: 1] and to first column</p>
-<dt><code>&quot;ESC [ Ps G&quot;</code></p>
-<dd>Cursor to Column &quot;Ps&quot; (<font SIZE="-1">HPA</font>)</p>
-<dt><code>&quot;ESC [ Ps;Ps H&quot;</code></p>
-<dd>Cursor Position [row;column] [default: 1;1] (<font SIZE="-1">CUP</font>)</p>
-<dt><code>&quot;ESC [ Ps I&quot;</code></p>
-<dd>Move forward &quot;Ps&quot; tab stops [default: 1]</p>
-<dt><code>&quot;ESC [ Ps J&quot;</code></p>
-<dd>Erase in Display (<font SIZE="-1">ED</font>) </p>
+<dt><code>&quot;ESC [ Ps @&quot;</code></dt>
+<dd>Insert &quot;Ps&quot; (Blank) Character(s) [default: 1] (<font SIZE="-1">ICH</font>)</dd>
+<dt><code>&quot;ESC [ Ps A&quot;</code></dt>
+<dd>Cursor Up &quot;Ps&quot; Times [default: 1] (<font SIZE="-1">CUU</font>)</dd>
+<dt><code>&quot;ESC [ Ps B&quot;</code></dt>
+<dd>Cursor Down &quot;Ps&quot; Times [default: 1] (<font SIZE="-1">CUD</font>)</dd>
+<dt><code>&quot;ESC [ Ps C&quot;</code></dt>
+<dd>Cursor Forward &quot;Ps&quot; Times [default: 1] (<font SIZE="-1">CUF</font>)</dd>
+<dt><code>&quot;ESC [ Ps D&quot;</code></dt>
+<dd>Cursor Backward &quot;Ps&quot; Times [default: 1] (<font SIZE="-1">CUB</font>)</dd>
+<dt><code>&quot;ESC [ Ps E&quot;</code></dt>
+<dd>Cursor Down &quot;Ps&quot; Times [default: 1] and to first column</dd>
+<dt><code>&quot;ESC [ Ps F&quot;</code></dt>
+<dd>Cursor Up &quot;Ps&quot; Times [default: 1] and to first column</dd>
+<dt><code>&quot;ESC [ Ps G&quot;</code></dt>
+<dd>Cursor to Column &quot;Ps&quot; (<font SIZE="-1">HPA</font>)</dd>
+<dt><code>&quot;ESC [ Ps;Ps H&quot;</code></dt>
+<dd>Cursor Position [row;column] [default: 1;1] (<font SIZE="-1">CUP</font>)</dd>
+<dt><code>&quot;ESC [ Ps I&quot;</code></dt>
+<dd>Move forward &quot;Ps&quot; tab stops [default: 1]</dd>
+<dt><code>&quot;ESC [ Ps J&quot;</code></dt>
+<dd>Erase in Display (<font SIZE="-1">ED</font>) </dd>
 <table>
 <tr VALIGN=top>
 <td>Ps = 0</td>
@@ -623,8 +621,8 @@ printf '\33]2;%s' &quot;new window title&quot;</code></pre>
 </td>
 </tr>
 </table>
-<dt><code>&quot;ESC [ Ps K&quot;</code></p>
-<dd>Erase in Line (<font SIZE="-1">EL</font>) </p>
+<dt><code>&quot;ESC [ Ps K&quot;</code></dt>
+<dd>Erase in Line (<font SIZE="-1">EL</font>) </dd>
 <table>
 <tr VALIGN=top>
 <td>Ps = 0</td>
@@ -662,16 +660,16 @@ printf '\33]2;%s' &quot;new window title&quot;</code></pre>
 </td>
 </tr>
 </table>
-<dt><code>&quot;ESC [ Ps L&quot;</code></p>
-<dd>Insert &quot;Ps&quot; Line(s) [default: 1] (<font SIZE="-1">IL</font>)</p>
-<dt><code>&quot;ESC [ Ps M&quot;</code></p>
-<dd>Delete &quot;Ps&quot; Line(s) [default: 1] (<font SIZE="-1">DL</font>)</p>
-<dt><code>&quot;ESC [ Ps P&quot;</code></p>
-<dd>Delete &quot;Ps&quot; Character(s) [default: 1] (<font SIZE="-1">DCH</font>)</p>
-<dt><code>&quot;ESC [ Ps;Ps;Ps;Ps;Ps T&quot;</code></p>
-<dd>Initiate . <i>unimplemented</i> Parameters are [func;startx;starty;firstrow;lastrow].</p>
-<dt><code>&quot;ESC [ Ps W&quot;</code></p>
-<dd>Tabulator functions </p>
+<dt><code>&quot;ESC [ Ps L&quot;</code></dt>
+<dd>Insert &quot;Ps&quot; Line(s) [default: 1] (<font SIZE="-1">IL</font>)</dd>
+<dt><code>&quot;ESC [ Ps M&quot;</code></dt>
+<dd>Delete &quot;Ps&quot; Line(s) [default: 1] (<font SIZE="-1">DL</font>)</dd>
+<dt><code>&quot;ESC [ Ps P&quot;</code></dt>
+<dd>Delete &quot;Ps&quot; Character(s) [default: 1] (<font SIZE="-1">DCH</font>)</dd>
+<dt><code>&quot;ESC [ Ps;Ps;Ps;Ps;Ps T&quot;</code></dt>
+<dd>Initiate . <i>unimplemented</i> Parameters are [func;startx;starty;firstrow;lastrow].</dd>
+<dt><code>&quot;ESC [ Ps W&quot;</code></dt>
+<dd>Tabulator functions </dd>
 <table>
 <tr VALIGN=top>
 <td>Ps = 0</td>
@@ -689,24 +687,24 @@ printf '\33]2;%s' &quot;new window title&quot;</code></pre>
 </td>
 </tr>
 </table>
-<dt><code>&quot;ESC [ Ps X&quot;</code></p>
-<dd>Erase &quot;Ps&quot; Character(s) [default: 1] (<font SIZE="-1">ECH</font>)</p>
-<dt><code>&quot;ESC [ Ps Z&quot;</code></p>
-<dd>Move backward &quot;Ps&quot; [default: 1] tab stops</p>
-<dt><code>&quot;ESC [ Ps &#8216;&quot;</code></p>
-<dd>See &quot;ESC [ Ps G&quot;</p>
-<dt><code>&quot;ESC [ Ps a&quot;</code></p>
-<dd>See &quot;ESC [ Ps C&quot;</p>
-<dt><code>&quot;ESC [ Ps c&quot;</code></p>
-<dd>Send Device Attributes (<font SIZE="-1">DA</font>) &quot;Ps = 0&quot; (or omitted): request attributes from terminal returns: &quot;ESC [ ? 1 ; 2 c&quot; (&#8220;I am a <font SIZE="-1">VT100</font> with Advanced Video Option&#8221;)</p>
-<dt><code>&quot;ESC [ Ps d&quot;</code></p>
-<dd>Cursor to Line &quot;Ps&quot; (<font SIZE="-1">VPA</font>)</p>
-<dt><code>&quot;ESC [ Ps e&quot;</code></p>
-<dd>See &quot;ESC [ Ps A&quot;</p>
-<dt><code>&quot;ESC [ Ps;Ps f&quot;</code></p>
-<dd>Horizontal and Vertical Position [row;column] (<font SIZE="-1">HVP</font>) [default: 1;1]</p>
-<dt><code>&quot;ESC [ Ps g&quot;</code></p>
-<dd>Tab Clear (<font SIZE="-1">TBC</font>) </p>
+<dt><code>&quot;ESC [ Ps X&quot;</code></dt>
+<dd>Erase &quot;Ps&quot; Character(s) [default: 1] (<font SIZE="-1">ECH</font>)</dd>
+<dt><code>&quot;ESC [ Ps Z&quot;</code></dt>
+<dd>Move backward &quot;Ps&quot; [default: 1] tab stops</dd>
+<dt><code>&quot;ESC [ Ps &#8216;&quot;</code></dt>
+<dd>See &quot;ESC [ Ps G&quot;</dd>
+<dt><code>&quot;ESC [ Ps a&quot;</code></dt>
+<dd>See &quot;ESC [ Ps C&quot;</dd>
+<dt><code>&quot;ESC [ Ps c&quot;</code></dt>
+<dd>Send Device Attributes (<font SIZE="-1">DA</font>) &quot;Ps = 0&quot; (or omitted): request attributes from terminal returns: &quot;ESC [ ? 1 ; 2 c&quot; (&#8220;I am a <font SIZE="-1">VT100</font> with Advanced Video Option&#8221;)</dd>
+<dt><code>&quot;ESC [ Ps d&quot;</code></dt>
+<dd>Cursor to Line &quot;Ps&quot; (<font SIZE="-1">VPA</font>)</dd>
+<dt><code>&quot;ESC [ Ps e&quot;</code></dt>
+<dd>See &quot;ESC [ Ps A&quot;</dd>
+<dt><code>&quot;ESC [ Ps;Ps f&quot;</code></dt>
+<dd>Horizontal and Vertical Position [row;column] (<font SIZE="-1">HVP</font>) [default: 1;1]</dd>
+<dt><code>&quot;ESC [ Ps g&quot;</code></dt>
+<dd>Tab Clear (<font SIZE="-1">TBC</font>) </dd>
 <table>
 <tr VALIGN=top>
 <td>Ps = 0</td>
@@ -719,10 +717,10 @@ printf '\33]2;%s' &quot;new window title&quot;</code></pre>
 </td>
 </tr>
 </table>
-<dt><code>&quot;ESC [ Pm h&quot;</code></p>
-<dd>Set Mode (<font SIZE="-1">SM</font>). See &quot;ESC [ Pm l&quot; sequence for description of <tt>&quot;Pm&quot;</tt>.</p>
-<dt><code>&quot;ESC [ Ps i&quot;</code></p>
-<dd>Printing. See also the <tt>&quot;print-pipe&quot;</tt> resource. </p>
+<dt><code>&quot;ESC [ Pm h&quot;</code></dt>
+<dd>Set Mode (<font SIZE="-1">SM</font>). See &quot;ESC [ Pm l&quot; sequence for description of <tt>&quot;Pm&quot;</tt>.</dd>
+<dt><code>&quot;ESC [ Ps i&quot;</code></dt>
+<dd>Printing. See also the <tt>&quot;print-pipe&quot;</tt> resource. </dd>
 <table>
 <tr VALIGN=top>
 <td>Ps = 0</td>
@@ -740,12 +738,12 @@ printf '\33]2;%s' &quot;new window title&quot;</code></pre>
 </td>
 </tr>
 </table>
-<dt><code>&quot;ESC [ Pm l&quot;</code></p>
-<dd>Reset Mode (<font SIZE="-1">RM</font>)</p>
+<dt><code>&quot;ESC [ Pm l&quot;</code></dt>
+<dd>Reset Mode (<font SIZE="-1">RM</font>)</dd>
 <dl>
 <dd>
-<dl>
-<dt><code>&quot;Ps = 4&quot;</code></p>
+</dd><dl>
+<dt><code>&quot;Ps = 4&quot;</code></dt>
 <dd>
 <table>
 <tr VALIGN=top>
@@ -759,7 +757,7 @@ printf '\33]2;%s' &quot;new window title&quot;</code></pre>
 </td>
 </tr>
 </table>
-<dt><code>&quot;Ps = 20&quot;</code> (partially implemented)</p>
+</dd><dt><code>&quot;Ps = 20&quot;</code> (partially implemented)</dt>
 <dd>
 <table>
 <tr VALIGN=top>
@@ -773,12 +771,12 @@ printf '\33]2;%s' &quot;new window title&quot;</code></pre>
 </td>
 </tr>
 </table>
-</dl>
+</dd></dl>
 </dl>
 <dl>
-<dd></dl>
-<dt><code>&quot;ESC [ Pm m&quot;</code></p>
-<dd>Character Attributes (<font SIZE="-1">SGR</font>) </p>
+<dd></dd></dl>
+<dt><code>&quot;ESC [ Pm m&quot;</code></dt>
+<dd>Character Attributes (<font SIZE="-1">SGR</font>) </dd>
 <table>
 <tr VALIGN=top>
 <td>Pm = 0</td>
@@ -916,8 +914,8 @@ printf '\33]2;%s' &quot;new window title&quot;</code></pre>
 </td>
 </tr>
 </table>
-<dt><code>&quot;ESC [ Ps n&quot;</code></p>
-<dd>Device Status Report (<font SIZE="-1">DSR</font>) </p>
+<dt><code>&quot;ESC [ Ps n&quot;</code></dt>
+<dd>Device Status Report (<font SIZE="-1">DSR</font>) </dd>
 <table>
 <tr VALIGN=top>
 <td>Ps = 5</td>
@@ -940,8 +938,8 @@ printf '\33]2;%s' &quot;new window title&quot;</code></pre>
 </td>
 </tr>
 </table>
-<dt><code>&quot;ESC [ Ps SP q&quot;</code></p>
-<dd>Set Cursor Style (<font SIZE="-1">DECSCUSR</font>) </p>
+<dt><code>&quot;ESC [ Ps SP q&quot;</code></dt>
+<dd>Set Cursor Style (<font SIZE="-1">DECSCUSR</font>) </dd>
 <table>
 <tr VALIGN=top>
 <td>Ps = 0</td>
@@ -979,12 +977,12 @@ printf '\33]2;%s' &quot;new window title&quot;</code></pre>
 </td>
 </tr>
 </table>
-<dt><code>&quot;ESC [ Ps;Ps r&quot;</code></p>
-<dd>Set Scrolling Region [top;bottom] [default: full size of window] (<font SIZE="-1">CSR</font>)</p>
-<dt><code>&quot;ESC [ s&quot;</code></p>
-<dd>Save Cursor (<font SIZE="-1">SC</font>)</p>
-<dt><code>&quot;ESC [ Ps;Pt t&quot;</code></p>
-<dd>Window Operations </p>
+<dt><code>&quot;ESC [ Ps;Ps r&quot;</code></dt>
+<dd>Set Scrolling Region [top;bottom] [default: full size of window] (<font SIZE="-1">CSR</font>)</dd>
+<dt><code>&quot;ESC [ s&quot;</code></dt>
+<dd>Save Cursor (<font SIZE="-1">SC</font>)</dd>
+<dt><code>&quot;ESC [ Ps;Pt t&quot;</code></dt>
+<dd>Window Operations </dd>
 <table>
 <tr VALIGN=top>
 <td>Ps = 1</td>
@@ -1067,26 +1065,26 @@ printf '\33]2;%s' &quot;new window title&quot;</code></pre>
 </td>
 </tr>
 </table>
-<dt><code>&quot;ESC [ u&quot;</code></p>
-<dd>Restore Cursor</p>
-<dt><code>&quot;ESC [ Ps x&quot;</code></p>
-<dd>Request Terminal Parameters (<font SIZE="-1">DECREQTPARM</font>)</dl>
+<dt><code>&quot;ESC [ u&quot;</code></dt>
+<dd>Restore Cursor</dd>
+<dt><code>&quot;ESC [ Ps x&quot;</code></dt>
+<dd>Request Terminal Parameters (<font SIZE="-1">DECREQTPARM</font>)</dd></dl>
 <h3><font SIZE="-1">DEC</font> Private Modes</h3>
 <dl>
-<dt><code>&quot;ESC [ ? Pm h&quot;</code></p>
-<dd><font SIZE="-1">DEC</font> Private Mode Set (<font SIZE="-1">DECSET</font>)</p>
-<dt><code>&quot;ESC [ ? Pm l&quot;</code></p>
-<dd><font SIZE="-1">DEC</font> Private Mode Reset (<font SIZE="-1">DECRST</font>)</p>
-<dt><code>&quot;ESC [ ? Pm r&quot;</code></p>
-<dd>Restore previously saved <font SIZE="-1">DEC</font> Private Mode Values.</p>
-<dt><code>&quot;ESC [ ? Pm s&quot;</code></p>
-<dd>Save <font SIZE="-1">DEC</font> Private Mode Values.</p>
-<dt><code>&quot;ESC [ ? Pm t&quot;</code></p>
-<dd>Toggle <font SIZE="-1">DEC</font> Private Mode Values (rxvt extension). <i>where</i></p>
+<dt><code>&quot;ESC [ ? Pm h&quot;</code></dt>
+<dd><font SIZE="-1">DEC</font> Private Mode Set (<font SIZE="-1">DECSET</font>)</dd>
+<dt><code>&quot;ESC [ ? Pm l&quot;</code></dt>
+<dd><font SIZE="-1">DEC</font> Private Mode Reset (<font SIZE="-1">DECRST</font>)</dd>
+<dt><code>&quot;ESC [ ? Pm r&quot;</code></dt>
+<dd>Restore previously saved <font SIZE="-1">DEC</font> Private Mode Values.</dd>
+<dt><code>&quot;ESC [ ? Pm s&quot;</code></dt>
+<dd>Save <font SIZE="-1">DEC</font> Private Mode Values.</dd>
+<dt><code>&quot;ESC [ ? Pm t&quot;</code></dt>
+<dd>Toggle <font SIZE="-1">DEC</font> Private Mode Values (rxvt extension). <i>where</i></dd>
 <dl>
 <dd>
-<dl>
-<dt><code>&quot;Pm = 1&quot;</code> (<font SIZE="-1">DECCKM</font>)</p>
+</dd><dl>
+<dt><code>&quot;Pm = 1&quot;</code> (<font SIZE="-1">DECCKM</font>)</dt>
 <dd>
 <table>
 <tr VALIGN=top>
@@ -1100,7 +1098,7 @@ printf '\33]2;%s' &quot;new window title&quot;</code></pre>
 </td>
 </tr>
 </table>
-<dt><code>&quot;Pm = 2&quot;</code> (<font SIZE="-1">DECANM</font>)</p>
+</dd><dt><code>&quot;Pm = 2&quot;</code> (<font SIZE="-1">DECANM</font>)</dt>
 <dd>
 <table>
 <tr VALIGN=top>
@@ -1114,7 +1112,7 @@ printf '\33]2;%s' &quot;new window title&quot;</code></pre>
 </td>
 </tr>
 </table>
-<dt><code>&quot;Pm = 3&quot;</code> (<font SIZE="-1">DECCOLM</font>)</p>
+</dd><dt><code>&quot;Pm = 3&quot;</code> (<font SIZE="-1">DECCOLM</font>)</dt>
 <dd>
 <table>
 <tr VALIGN=top>
@@ -1128,7 +1126,7 @@ printf '\33]2;%s' &quot;new window title&quot;</code></pre>
 </td>
 </tr>
 </table>
-<dt><code>&quot;Pm = 4&quot;</code> (<font SIZE="-1">DECSCLM</font>)</p>
+</dd><dt><code>&quot;Pm = 4&quot;</code> (<font SIZE="-1">DECSCLM</font>)</dt>
 <dd>
 <table>
 <tr VALIGN=top>
@@ -1142,7 +1140,7 @@ printf '\33]2;%s' &quot;new window title&quot;</code></pre>
 </td>
 </tr>
 </table>
-<dt><code>&quot;Pm = 5&quot;</code> (<font SIZE="-1">DECSCNM</font>)</p>
+</dd><dt><code>&quot;Pm = 5&quot;</code> (<font SIZE="-1">DECSCNM</font>)</dt>
 <dd>
 <table>
 <tr VALIGN=top>
@@ -1156,7 +1154,7 @@ printf '\33]2;%s' &quot;new window title&quot;</code></pre>
 </td>
 </tr>
 </table>
-<dt><code>&quot;Pm = 6&quot;</code> (<font SIZE="-1">DECOM</font>)</p>
+</dd><dt><code>&quot;Pm = 6&quot;</code> (<font SIZE="-1">DECOM</font>)</dt>
 <dd>
 <table>
 <tr VALIGN=top>
@@ -1170,7 +1168,7 @@ printf '\33]2;%s' &quot;new window title&quot;</code></pre>
 </td>
 </tr>
 </table>
-<dt><code>&quot;Pm = 7&quot;</code> (<font SIZE="-1">DECAWM</font>)</p>
+</dd><dt><code>&quot;Pm = 7&quot;</code> (<font SIZE="-1">DECAWM</font>)</dt>
 <dd>
 <table>
 <tr VALIGN=top>
@@ -1184,7 +1182,7 @@ printf '\33]2;%s' &quot;new window title&quot;</code></pre>
 </td>
 </tr>
 </table>
-<dt><code>&quot;Pm = 8&quot;</code> (<font SIZE="-1">DECARM</font>) <i>unimplemented</i></p>
+</dd><dt><code>&quot;Pm = 8&quot;</code> (<font SIZE="-1">DECARM</font>) <i>unimplemented</i></dt>
 <dd>
 <table>
 <tr VALIGN=top>
@@ -1198,7 +1196,7 @@ printf '\33]2;%s' &quot;new window title&quot;</code></pre>
 </td>
 </tr>
 </table>
-<dt><code>&quot;Pm = 9&quot;</code> (X10 XTerm mouse protocol)</p>
+</dd><dt><code>&quot;Pm = 9&quot;</code> (X10 XTerm mouse protocol)</dt>
 <dd>
 <table>
 <tr VALIGN=top>
@@ -1212,7 +1210,7 @@ printf '\33]2;%s' &quot;new window title&quot;</code></pre>
 </td>
 </tr>
 </table>
-<dt><code>&quot;Pm = 12&quot;</code> (<font SIZE="-1">AT&amp;T 610,</font> XTerm)</p>
+</dd><dt><code>&quot;Pm = 12&quot;</code> (<font SIZE="-1">AT&amp;T 610,</font> XTerm)</dt>
 <dd>
 <table>
 <tr VALIGN=top>
@@ -1226,7 +1224,7 @@ printf '\33]2;%s' &quot;new window title&quot;</code></pre>
 </td>
 </tr>
 </table>
-<dt><code>&quot;Pm = 25&quot;</code> (<font SIZE="-1">DECTCEM</font>)</p>
+</dd><dt><code>&quot;Pm = 25&quot;</code> (<font SIZE="-1">DECTCEM</font>)</dt>
 <dd>
 <table>
 <tr VALIGN=top>
@@ -1240,7 +1238,7 @@ printf '\33]2;%s' &quot;new window title&quot;</code></pre>
 </td>
 </tr>
 </table>
-<dt><code>&quot;Pm = 30&quot;</code> (<code>rxvt</code>)</p>
+</dd><dt><code>&quot;Pm = 30&quot;</code> (<code>rxvt</code>)</dt>
 <dd>
 <table>
 <tr VALIGN=top>
@@ -1254,7 +1252,7 @@ printf '\33]2;%s' &quot;new window title&quot;</code></pre>
 </td>
 </tr>
 </table>
-<dt><code>&quot;Pm = 35&quot;</code> (<code>rxvt</code>)</p>
+</dd><dt><code>&quot;Pm = 35&quot;</code> (<code>rxvt</code>)</dt>
 <dd>
 <table>
 <tr VALIGN=top>
@@ -1268,9 +1266,9 @@ printf '\33]2;%s' &quot;new window title&quot;</code></pre>
 </td>
 </tr>
 </table>
-<dt><code>&quot;Pm = 38&quot;</code> <i>unimplemented</i></p>
-<dd>Enter Tektronix Mode (<font SIZE="-1">DECTEK</font>)</p>
-<dt><code>&quot;Pm = 40&quot;</code></p>
+</dd><dt><code>&quot;Pm = 38&quot;</code> <i>unimplemented</i></dt>
+<dd>Enter Tektronix Mode (<font SIZE="-1">DECTEK</font>)</dd>
+<dt><code>&quot;Pm = 40&quot;</code></dt>
 <dd>
 <table>
 <tr VALIGN=top>
@@ -1284,7 +1282,7 @@ printf '\33]2;%s' &quot;new window title&quot;</code></pre>
 </td>
 </tr>
 </table>
-<dt><code>&quot;Pm = 44&quot;</code> <i>unimplemented</i></p>
+</dd><dt><code>&quot;Pm = 44&quot;</code> <i>unimplemented</i></dt>
 <dd>
 <table>
 <tr VALIGN=top>
@@ -1298,7 +1296,7 @@ printf '\33]2;%s' &quot;new window title&quot;</code></pre>
 </td>
 </tr>
 </table>
-<dt><code>&quot;Pm = 45&quot;</code> <i>unimplemented</i></p>
+</dd><dt><code>&quot;Pm = 45&quot;</code> <i>unimplemented</i></dt>
 <dd>
 <table>
 <tr VALIGN=top>
@@ -1312,9 +1310,9 @@ printf '\33]2;%s' &quot;new window title&quot;</code></pre>
 </td>
 </tr>
 </table>
-<dt><code>&quot;Pm = 46&quot;</code> <i>unimplemented</i></p>
+</dd><dt><code>&quot;Pm = 46&quot;</code> <i>unimplemented</i></dt>
 <dd>
-<dt><code>&quot;Pm = 47&quot;</code></p>
+</dd><dt><code>&quot;Pm = 47&quot;</code></dt>
 <dd>
 <table>
 <tr VALIGN=top>
@@ -1328,7 +1326,7 @@ printf '\33]2;%s' &quot;new window title&quot;</code></pre>
 </td>
 </tr>
 </table>
-<dt><code>&quot;Pm = 66&quot;</code> (<font SIZE="-1">DECNKM</font>)</p>
+</dd><dt><code>&quot;Pm = 66&quot;</code> (<font SIZE="-1">DECNKM</font>)</dt>
 <dd>
 <table>
 <tr VALIGN=top>
@@ -1342,7 +1340,7 @@ printf '\33]2;%s' &quot;new window title&quot;</code></pre>
 </td>
 </tr>
 </table>
-<dt><code>&quot;Pm = 67&quot;</code> (<font SIZE="-1">DECBKM</font>)</p>
+</dd><dt><code>&quot;Pm = 67&quot;</code> (<font SIZE="-1">DECBKM</font>)</dt>
 <dd>
 <table>
 <tr VALIGN=top>
@@ -1356,7 +1354,7 @@ printf '\33]2;%s' &quot;new window title&quot;</code></pre>
 </td>
 </tr>
 </table>
-<dt><code>&quot;Pm = 1000&quot;</code> (X11 XTerm mouse protocol)</p>
+</dd><dt><code>&quot;Pm = 1000&quot;</code> (X11 XTerm mouse protocol)</dt>
 <dd>
 <table>
 <tr VALIGN=top>
@@ -1370,7 +1368,7 @@ printf '\33]2;%s' &quot;new window title&quot;</code></pre>
 </td>
 </tr>
 </table>
-<dt><code>&quot;Pm = 1001&quot;</code> (X11 XTerm) <i>unimplemented</i></p>
+</dd><dt><code>&quot;Pm = 1001&quot;</code> (X11 XTerm) <i>unimplemented</i></dt>
 <dd>
 <table>
 <tr VALIGN=top>
@@ -1384,7 +1382,7 @@ printf '\33]2;%s' &quot;new window title&quot;</code></pre>
 </td>
 </tr>
 </table>
-<dt><code>&quot;Pm = 1002&quot;</code> (X11 XTerm cell motion mouse tracking)</p>
+</dd><dt><code>&quot;Pm = 1002&quot;</code> (X11 XTerm cell motion mouse tracking)</dt>
 <dd>
 <table>
 <tr VALIGN=top>
@@ -1398,7 +1396,7 @@ printf '\33]2;%s' &quot;new window title&quot;</code></pre>
 </td>
 </tr>
 </table>
-<dt><code>&quot;Pm = 1003&quot;</code> (X11 XTerm all motion mouse tracking)</p>
+</dd><dt><code>&quot;Pm = 1003&quot;</code> (X11 XTerm all motion mouse tracking)</dt>
 <dd>
 <table>
 <tr VALIGN=top>
@@ -1412,7 +1410,7 @@ printf '\33]2;%s' &quot;new window title&quot;</code></pre>
 </td>
 </tr>
 </table>
-<dt><code>&quot;Pm = 1004&quot;</code> (X11 XTerm focus in/focus out events) <i>unimplemented</i></p>
+</dd><dt><code>&quot;Pm = 1004&quot;</code> (X11 XTerm focus in/focus out events) <i>unimplemented</i></dt>
 <dd>
 <table>
 <tr VALIGN=top>
@@ -1426,8 +1424,8 @@ printf '\33]2;%s' &quot;new window title&quot;</code></pre>
 </td>
 </tr>
 </table>
-<dt><code>&quot;Pm = 1005&quot;</code> (X11 XTerm <font SIZE="-1">UTF-8</font> mouse mode) (Compile frills)</p>
-<dd>Try to avoid this mode, it doesn&#8217;t work sensibly in non-UTF-8 locales. Use mode <tt>1015</tt> instead. </p>
+</dd><dt><code>&quot;Pm = 1005&quot;</code> (X11 XTerm <font SIZE="-1">UTF-8</font> mouse mode) (Compile frills)</dt>
+<dd>Try to avoid this mode, it doesn&#8217;t work sensibly in non-UTF-8 locales. Use mode <tt>1015</tt> instead. </dd>
 <p> Unlike XTerm, coordinates larger than 2015) will work fine. </p>
 <table>
 <tr VALIGN=top>
@@ -1441,7 +1439,7 @@ printf '\33]2;%s' &quot;new window title&quot;</code></pre>
 </td>
 </tr>
 </table>
-<dt><code>&quot;Pm = 1010&quot;</code> (<code>rxvt</code>)</p>
+<dt><code>&quot;Pm = 1010&quot;</code> (<code>rxvt</code>)</dt>
 <dd>
 <table>
 <tr VALIGN=top>
@@ -1455,7 +1453,7 @@ printf '\33]2;%s' &quot;new window title&quot;</code></pre>
 </td>
 </tr>
 </table>
-<dt><code>&quot;Pm = 1011&quot;</code> (<code>rxvt</code>)</p>
+</dd><dt><code>&quot;Pm = 1011&quot;</code> (<code>rxvt</code>)</dt>
 <dd>
 <table>
 <tr VALIGN=top>
@@ -1469,7 +1467,7 @@ printf '\33]2;%s' &quot;new window title&quot;</code></pre>
 </td>
 </tr>
 </table>
-<dt><code>&quot;Pm = 1015&quot;</code> (<code>rxvt-unicode</code>) (Compile frills)</p>
+</dd><dt><code>&quot;Pm = 1015&quot;</code> (<code>rxvt-unicode</code>) (Compile frills)</dt>
 <dd>
 <table>
 <tr VALIGN=top>
@@ -1495,7 +1493,7 @@ printf '\33]2;%s' &quot;new window title&quot;</code></pre>
 <p>One can use this feature by simply enabling it and then looking for parameters to the <tt>&quot;ESC [ M&quot;</tt> reply &#8211; if there are any, this mode is active, otherwise one of the old reporting styles is used. </p>
 <p> Other (to be implemented) reply sequences will use a similar encoding. </p>
 <p> In the future, more parameters might get added (pixel coordinates for example &#8211; anybody out there who needs this?).</p>
-<dt><code>&quot;Pm = 1021&quot;</code> (<code>rxvt</code>)</p>
+</dd><dt><code>&quot;Pm = 1021&quot;</code> (<code>rxvt</code>)</dt>
 <dd>
 <table>
 <tr VALIGN=top>
@@ -1509,7 +1507,7 @@ printf '\33]2;%s' &quot;new window title&quot;</code></pre>
 </td>
 </tr>
 </table>
-<dt><code>&quot;Pm = 1047&quot;</code> (X11 XTerm alternate screen buffer)</p>
+</dd><dt><code>&quot;Pm = 1047&quot;</code> (X11 XTerm alternate screen buffer)</dt>
 <dd>
 <table>
 <tr VALIGN=top>
@@ -1523,7 +1521,7 @@ printf '\33]2;%s' &quot;new window title&quot;</code></pre>
 </td>
 </tr>
 </table>
-<dt><code>&quot;Pm = 1048&quot;</code> (X11 XTerm alternate <font SIZE="-1">DECSC</font>)</p>
+</dd><dt><code>&quot;Pm = 1048&quot;</code> (X11 XTerm alternate <font SIZE="-1">DECSC</font>)</dt>
 <dd>
 <table>
 <tr VALIGN=top>
@@ -1537,7 +1535,7 @@ printf '\33]2;%s' &quot;new window title&quot;</code></pre>
 </td>
 </tr>
 </table>
-<dt><code>&quot;Pm = 1049&quot;</code> (X11 XTerm 1047 + 1048)</p>
+</dd><dt><code>&quot;Pm = 1049&quot;</code> (X11 XTerm 1047 + 1048)</dt>
 <dd>
 <table>
 <tr VALIGN=top>
@@ -1551,7 +1549,7 @@ printf '\33]2;%s' &quot;new window title&quot;</code></pre>
 </td>
 </tr>
 </table>
-<dt><code>&quot;Pm = 2004&quot;</code> (X11 XTerm bracketed paste mode)</p>
+</dd><dt><code>&quot;Pm = 2004&quot;</code> (X11 XTerm bracketed paste mode)</dt>
 <dd>
 <table>
 <tr VALIGN=top>
@@ -1565,15 +1563,15 @@ printf '\33]2;%s' &quot;new window title&quot;</code></pre>
 </td>
 </tr>
 </table>
-</dl>
+</dd></dl>
 </dl>
 <dl>
-<dd></dl>
+<dd></dd></dl>
 </dl>
 <h3>XTerm Operating System Commands</h3>
 <dl>
-<dt><code>&quot;ESC ] Ps;Pt ST&quot;</code></p>
-<dd>Set XTerm Parameters. 8-bit <font SIZE="-1">ST:</font> 0x9c, 7-bit <font SIZE="-1">ST</font> sequence: <font SIZE="-1">ESC</font> \ (0x1b, 0x5c), backwards compatible terminator <font SIZE="-1">BEL </font>(0x07) is also accepted. any <code>octet</code> can be escaped by prefixing it with <font SIZE="-1">SYN </font>(0x16, ^V). </p>
+<dt><code>&quot;ESC ] Ps;Pt ST&quot;</code></dt>
+<dd>Set XTerm Parameters. 8-bit <font SIZE="-1">ST:</font> 0x9c, 7-bit <font SIZE="-1">ST</font> sequence: <font SIZE="-1">ESC</font> \ (0x1b, 0x5c), backwards compatible terminator <font SIZE="-1">BEL </font>(0x07) is also accepted. any <code>octet</code> can be escaped by prefixing it with <font SIZE="-1">SYN </font>(0x16, ^V). </dd>
 <table>
 <tr VALIGN=top>
 <td>Ps = 0</td>
@@ -1735,19 +1733,19 @@ printf '\33]2;%s' &quot;new window title&quot;</code></pre>
 <h2>Background Image</h2>
 <p>For the <font SIZE="-1">BACKGROUND IMAGE</font> XTerm escape sequence &quot;ESC ] 20 ; Pt ST&quot; the value of &quot;Pt&quot; can be one of the following commands:</p>
 <dl>
-<dt><code>&quot;?&quot;</code></p>
-<dd>display scale and position in the title</p>
-<dt><code>&quot;;WxH+X+Y&quot;</code></p>
-<dd>change scale and/or position</p>
-<dt><code>&quot;FILE;WxH+X+Y&quot;</code></p>
-<dd>change background image</dl>
+<dt><code>&quot;?&quot;</code></dt>
+<dd>display scale and position in the title</dd>
+<dt><code>&quot;;WxH+X+Y&quot;</code></dt>
+<dd>change scale and/or position</dd>
+<dt><code>&quot;FILE;WxH+X+Y&quot;</code></dt>
+<dd>change background image</dd></dl>
 <h2>Mouse Reporting</h2>
 <dl>
-<dt><code>&quot;ESC [ M &lt;b&gt; &lt;x&gt; &lt;y&gt;&quot;</code></p>
-<dd>report mouse position</dl>
+<dt><code>&quot;ESC [ M &lt;b&gt; &lt;x&gt; &lt;y&gt;&quot;</code></dt>
+<dd>report mouse position</dd></dl>
 <p> The lower 2 bits of &quot;&lt;b&gt;&quot; indicate the button:</p>
 <dl>
-<dt>Button = <code>&quot;(&lt;b&gt; &#8211; SPACE) &amp; 3&quot;</code></p>
+<dt>Button = <code>&quot;(&lt;b&gt; &#8211; SPACE) &amp; 3&quot;</code></dt>
 <dd>
 <table>
 <tr VALIGN=top>
@@ -1771,10 +1769,10 @@ printf '\33]2;%s' &quot;new window title&quot;</code></pre>
 </td>
 </tr>
 </table>
-</dl>
+</dd></dl>
 <p> The upper bits of &quot;&lt;b&gt;&quot; indicate the modifiers when the button was pressed and are added together (X11 mouse report only):</p>
 <dl>
-<dt>State = <code>&quot;(&lt;b&gt; &#8211; SPACE) &amp; ~3&quot;</code></p>
+<dt>State = <code>&quot;(&lt;b&gt; &#8211; SPACE) &amp; ~3&quot;</code></dt>
 <dd>
 <table>
 <tr VALIGN=top>
@@ -1809,7 +1807,7 @@ printf '\33]2;%s' &quot;new window title&quot;</code></pre>
 </tr>
 </table>
 <p> Col = &quot;&lt;x&gt; &#8211; SPACE&quot; </p>
-<p> Row = &quot;&lt;y&gt; &#8211; SPACE&quot;</dl>
+<p> Row = &quot;&lt;y&gt; &#8211; SPACE&quot;</dd></dl>
 <h2>Key Codes</h2>
 <p>Note: <code>Shift</code> + <code>F1</code>&#8211;<code>F10</code> generates <code>F11</code>&#8211;<code>F20</code> </p>
 <p> For the keypad, use <code>Shift</code> to temporarily toggle Application Keypad mode and use <code>Num_Lock</code> to override Application Keypad mode, i.e. if <code>Num_Lock</code> is on the keypad is in normal mode. Also note that the values of <code>BackSpace</code>, <code>Delete</code> may have been compiled differently on your system. </p>
@@ -2283,15 +2281,15 @@ printf '\33]2;%s' &quot;new window title&quot;</code></pre>
 <p>General hint: if you get compile errors, then likely your configuration hasn&#8217;t been tested well. Either try with <tt>&quot;--enable-everything&quot;</tt> or use the default configuration (i.e. no <tt>&quot;--enable-xxx&quot;</tt> or <tt>&quot;--disable-xxx&quot;</tt> switches). Of course, you should always report when a combination doesn&#8217;t work, so it can be fixed. Marc Lehmann &lt;rxvt [at] schmorp.de&gt;. </p>
 <p> All</p>
 <dl>
-<dt>&#8211;enable-everything</p>
-<dd>Add (or remove) support for all non-multichoice options listed in <tt>&quot;./configure --help&quot;</tt>, except for <tt>&quot;--enable-assert&quot;</tt> and <tt>&quot;--enable-256-color&quot;</tt>. </p>
+<dt>&#8211;enable-everything</dt>
+<dd>Add (or remove) support for all non-multichoice options listed in <tt>&quot;./configure --help&quot;</tt>, except for <tt>&quot;--enable-assert&quot;</tt> and <tt>&quot;--enable-256-color&quot;</tt>. </dd>
 <p> You can specify this and then disable options you do not like by <i>following</i> this with the appropriate <tt>&quot;--disable-...&quot;</tt> arguments, or you can start with a minimal configuration by specifying <tt>&quot;--disable-everything&quot;</tt> and than adding just the <tt>&quot;--enable-...&quot;</tt> arguments you want.</p>
-<dt>&#8211;enable-xft (default: on)</p>
-<dd>Add support for Xft (anti-aliased, among others) fonts. Xft fonts are slower and require lots of memory, but as long as you don&#8217;t use them, you don&#8217;t pay for them.</p>
-<dt>&#8211;enable-font-styles (default: on)</p>
-<dd>Add support for <code>bold</code>, <i>italic</i> and bold italic font styles. The fonts can be set manually or automatically.</p>
-<dt>&#8211;with-codesets=CS,&#8230; (default: all)</p>
-<dd>Compile in support for additional codeset (encoding) groups (<tt>&quot;eu&quot;</tt>, <tt>&quot;vn&quot;</tt> are always compiled in, which includes most 8-bit character sets). These codeset tables are used for driving X11 core fonts, they are not required for Xft fonts, although having them compiled in lets rxvt-unicode choose replacement fonts more intelligently. Compiling them in will make your binary bigger (all of together cost about 700kB), but it doesn&#8217;t increase memory usage unless you use a font requiring one of these encodings. </p>
+<dt>&#8211;enable-xft (default: on)</dt>
+<dd>Add support for Xft (anti-aliased, among others) fonts. Xft fonts are slower and require lots of memory, but as long as you don&#8217;t use them, you don&#8217;t pay for them.</dd>
+<dt>&#8211;enable-font-styles (default: on)</dt>
+<dd>Add support for <code>bold</code>, <i>italic</i> and bold italic font styles. The fonts can be set manually or automatically.</dd>
+<dt>&#8211;with-codesets=CS,&#8230; (default: all)</dt>
+<dd>Compile in support for additional codeset (encoding) groups (<tt>&quot;eu&quot;</tt>, <tt>&quot;vn&quot;</tt> are always compiled in, which includes most 8-bit character sets). These codeset tables are used for driving X11 core fonts, they are not required for Xft fonts, although having them compiled in lets rxvt-unicode choose replacement fonts more intelligently. Compiling them in will make your binary bigger (all of together cost about 700kB), but it doesn&#8217;t increase memory usage unless you use a font requiring one of these encodings. </dd>
 <table>
 <tr VALIGN=top>
 <td>all</td>
@@ -2324,53 +2322,53 @@ printf '\33]2;%s' &quot;new window title&quot;</code></pre>
 </td>
 </tr>
 </table>
-<dt>&#8211;enable-xim (default: on)</p>
-<dd>Add support for <font SIZE="-1">XIM </font>(X Input Method) protocol. This allows using alternative input methods (e.g. kinput2) and will also correctly set up the input for people using dead keys or compose keys.</p>
-<dt>&#8211;enable-unicode3 (default: off)</p>
-<dd>Recommended to stay off unless you really need non-BMP characters. </p>
+<dt>&#8211;enable-xim (default: on)</dt>
+<dd>Add support for <font SIZE="-1">XIM </font>(X Input Method) protocol. This allows using alternative input methods (e.g. kinput2) and will also correctly set up the input for people using dead keys or compose keys.</dd>
+<dt>&#8211;enable-unicode3 (default: off)</dt>
+<dd>Recommended to stay off unless you really need non-BMP characters. </dd>
 <p> Enable direct support for displaying unicode codepoints above 65535 (the basic multilingual page). This increases storage requirements per character from 2 to 4 bytes. X11 fonts do not yet support these extra characters, but Xft does. </p>
 <p> Please note that rxvt-unicode can store unicode code points &gt;65535 even without this flag, but the number of such characters is limited to a few thousand (shared with combining characters, see next switch), and right now rxvt-unicode cannot display them (input/output and cut&amp;paste still work, though).</p>
-<dt>&#8211;enable-combining (default: on)</p>
-<dd>Enable automatic composition of combining characters into composite characters. This is required for proper viewing of text where accents are encoded as separate unicode characters. This is done by using precomposed characters when available or creating new pseudo-characters when no precomposed form exists. </p>
+<dt>&#8211;enable-combining (default: on)</dt>
+<dd>Enable automatic composition of combining characters into composite characters. This is required for proper viewing of text where accents are encoded as separate unicode characters. This is done by using precomposed characters when available or creating new pseudo-characters when no precomposed form exists. </dd>
 <p> Without &#8211;enable-unicode3, the number of additional precomposed characters is somewhat limited (the 6400 private use characters will be (ab-)used). With &#8211;enable-unicode3, no practical limit exists. </p>
 <p> This option will also enable storage (but not display) of characters beyond plane 0 (&gt;65535) when &#8211;enable-unicode3 was not specified. </p>
 <p> The combining table also contains entries for arabic presentation forms, but these are not currently used. Bug me if you want these to be used (and tell me how these are to be used&#8230;).</p>
-<dt>&#8211;enable-fallback[=CLASS] (default: Rxvt)</p>
-<dd>When reading resource settings, also read settings for class <font SIZE="-1">CLASS.</font> To disable resource fallback use &#8211;disable-fallback.</p>
-<dt>&#8211;with-res-name=NAME (default: urxvt)</p>
-<dd>Use the given name as default application name when reading resources. Specify &#8211;with-res-name=rxvt to replace rxvt.</p>
-<dt>&#8211;with-res-class=CLASS (default: URxvt)</p>
-<dd>Use the given class as default application class when reading resources. Specify &#8211;with-res-class=Rxvt to replace rxvt.</p>
-<dt>&#8211;enable-utmp (default: on)</p>
-<dd>Write user and tty to utmp file (used by programs like <i>w</i>) at start of rxvt execution and delete information when rxvt exits.</p>
-<dt>&#8211;enable-wtmp (default: on)</p>
-<dd>Write user and tty to wtmp file (used by programs like <i>last</i>) at start of rxvt execution and write logout when rxvt exits. This option requires &#8211;enable-utmp to also be specified.</p>
-<dt>&#8211;enable-lastlog (default: on)</p>
-<dd>Write user and tty to lastlog file (used by programs like <i>lastlogin</i>) at start of rxvt execution. This option requires &#8211;enable-utmp to also be specified.</p>
-<dt>&#8211;enable-pixbuf (default: on)</p>
-<dd>Add support for GDK-PixBuf to be used for background images. It adds support for many file formats including <font SIZE="-1">JPG, PNG, TIFF, GIF, XPM, BMP, ICO</font> and <font SIZE="-1">TGA.</font></p>
-<dt>&#8211;enable-startup-notification (default: on)</p>
-<dd>Add support for freedesktop startup notifications. This allows window managers to display some kind of progress indicator during startup.</p>
-<dt>&#8211;enable-transparency (default: on)</p>
-<dd>Add support for using the root pixmap as background to simulate transparency. Note that this feature depends on libXrender and on the availability of the <font SIZE="-1">RENDER</font> extension in the X server.</p>
-<dt>&#8211;enable-fading (default: on)</p>
-<dd>Add support for fading the text when focus is lost.</p>
-<dt>&#8211;enable-rxvt-scroll (default: on)</p>
-<dd>Add support for the original rxvt scrollbar.</p>
-<dt>&#8211;enable-next-scroll (default: on)</p>
-<dd>Add support for a NeXT-like scrollbar.</p>
-<dt>&#8211;enable-xterm-scroll (default: on)</p>
-<dd>Add support for an Xterm-like scrollbar.</p>
-<dt>&#8211;disable-backspace-key</p>
-<dd>Removes any handling of the backspace key by us &#8211; let the X server do it.</p>
-<dt>&#8211;disable-delete-key</p>
-<dd>Removes any handling of the delete key by us &#8211; let the X server do it.</p>
-<dt>&#8211;disable-resources</p>
-<dd>Removes any support for resource checking.</p>
-<dt>&#8211;disable-swapscreen</p>
-<dd>Remove support for secondary/swap screen.</p>
-<dt>&#8211;enable-frills (default: on)</p>
-<dd>Add support for many small features that are not essential but nice to have. Normally you want this, but for very small binaries you may want to disable this. </p>
+<dt>&#8211;enable-fallback[=CLASS] (default: Rxvt)</dt>
+<dd>When reading resource settings, also read settings for class <font SIZE="-1">CLASS.</font> To disable resource fallback use &#8211;disable-fallback.</dd>
+<dt>&#8211;with-res-name=NAME (default: urxvt)</dt>
+<dd>Use the given name as default application name when reading resources. Specify &#8211;with-res-name=rxvt to replace rxvt.</dd>
+<dt>&#8211;with-res-class=CLASS (default: URxvt)</dt>
+<dd>Use the given class as default application class when reading resources. Specify &#8211;with-res-class=Rxvt to replace rxvt.</dd>
+<dt>&#8211;enable-utmp (default: on)</dt>
+<dd>Write user and tty to utmp file (used by programs like <i>w</i>) at start of rxvt execution and delete information when rxvt exits.</dd>
+<dt>&#8211;enable-wtmp (default: on)</dt>
+<dd>Write user and tty to wtmp file (used by programs like <i>last</i>) at start of rxvt execution and write logout when rxvt exits. This option requires &#8211;enable-utmp to also be specified.</dd>
+<dt>&#8211;enable-lastlog (default: on)</dt>
+<dd>Write user and tty to lastlog file (used by programs like <i>lastlogin</i>) at start of rxvt execution. This option requires &#8211;enable-utmp to also be specified.</dd>
+<dt>&#8211;enable-pixbuf (default: on)</dt>
+<dd>Add support for GDK-PixBuf to be used for background images. It adds support for many file formats including <font SIZE="-1">JPG, PNG, TIFF, GIF, XPM, BMP, ICO</font> and <font SIZE="-1">TGA.</font></dd>
+<dt>&#8211;enable-startup-notification (default: on)</dt>
+<dd>Add support for freedesktop startup notifications. This allows window managers to display some kind of progress indicator during startup.</dd>
+<dt>&#8211;enable-transparency (default: on)</dt>
+<dd>Add support for using the root pixmap as background to simulate transparency. Note that this feature depends on libXrender and on the availability of the <font SIZE="-1">RENDER</font> extension in the X server.</dd>
+<dt>&#8211;enable-fading (default: on)</dt>
+<dd>Add support for fading the text when focus is lost.</dd>
+<dt>&#8211;enable-rxvt-scroll (default: on)</dt>
+<dd>Add support for the original rxvt scrollbar.</dd>
+<dt>&#8211;enable-next-scroll (default: on)</dt>
+<dd>Add support for a NeXT-like scrollbar.</dd>
+<dt>&#8211;enable-xterm-scroll (default: on)</dt>
+<dd>Add support for an Xterm-like scrollbar.</dd>
+<dt>&#8211;disable-backspace-key</dt>
+<dd>Removes any handling of the backspace key by us &#8211; let the X server do it.</dd>
+<dt>&#8211;disable-delete-key</dt>
+<dd>Removes any handling of the delete key by us &#8211; let the X server do it.</dd>
+<dt>&#8211;disable-resources</dt>
+<dd>Removes any support for resource checking.</dd>
+<dt>&#8211;disable-swapscreen</dt>
+<dd>Remove support for secondary/swap screen.</dd>
+<dt>&#8211;enable-frills (default: on)</dt>
+<dd>Add support for many small features that are not essential but nice to have. Normally you want this, but for very small binaries you may want to disable this. </dd>
 <p> A non-exhaustive list of features enabled by <tt>&quot;--enable-frills&quot;</tt> (possibly in combination with other switches) is: </p>
 <pre> MWM-hints
  EWMH-hints (pid, utf8 names) and protocols (ping)
@@ -2404,37 +2402,37 @@ printf '\33]2;%s' &quot;new window title&quot;</code></pre>
  rectangular selections
  trailing space removal for selections
  verbose X error handling</pre>
-<dt>&#8211;enable-iso14755 (default: on)</p>
-<dd>Enable extended <font SIZE="-1">ISO 14755</font> support (see <a href="/docs/linux/man/1-urxvt256c/">urxvt256c</a>(1)). Basic support (section 5.1) is enabled by <tt>&quot;--enable-frills&quot;</tt>, while support for 5.2, 5.3 and 5.4 is enabled with this switch.</p>
-<dt>&#8211;enable-keepscrolling (default: on)</p>
-<dd>Add support for continual scrolling of the display when you hold the mouse button down on a scrollbar arrow.</p>
-<dt>&#8211;enable-selectionscrolling (default: on)</p>
-<dd>Add support for scrolling when the selection moves to the top or bottom of the screen.</p>
-<dt>&#8211;enable-mousewheel (default: on)</p>
-<dd>Add support for scrolling via mouse wheel or buttons 4 &amp; 5.</p>
-<dt>&#8211;enable-slipwheeling (default: on)</p>
-<dd>Add support for continual scrolling (using the mouse wheel as an accelerator) while the control key is held down. This option requires &#8211;enable-mousewheel to also be specified.</p>
-<dt>&#8211;enable-smart-resize (default: off)</p>
-<dd>Add smart growth/shrink behaviour when resizing. This should keep the window corner which is closest to a corner of the screen in a fixed position.</p>
-<dt>&#8211;enable-text-blink (default: on)</p>
-<dd>Add support for blinking text.</p>
-<dt>&#8211;enable-pointer-blank (default: on)</p>
-<dd>Add support to have the pointer disappear when typing or inactive.</p>
-<dt>&#8211;enable-perl (default: on)</p>
-<dd>Enable an embedded perl interpreter. See the <code>urxvt256c</code>perl<code>(3)</code> manpage for more info on this feature, or the files in <i>src/perl/</i> for the extensions that are installed by default. The perl interpreter that is used can be specified via the <tt>&quot;PERL&quot;</tt> environment variable when running configure. Even when compiled in, perl will <i>not</i> be initialised when all extensions have been disabled <tt>&quot;-pe &quot;&quot; --perl-ext-common &quot;&quot;&quot;</tt>, so it should be safe to enable from a resource standpoint.</p>
-<dt>&#8211;enable-assert (default: off)</p>
-<dd>Enables the assertions in the code, normally disabled. This switch is only useful when developing rxvt-unicode.</p>
-<dt>&#8211;enable-256-color (default: off)</p>
-<dd>Force use of so-called 256 colour mode, to work around buggy applications that do not support termcap/terminfo, or simply improve support for applications hardcoding the xterm 256 colour table. </p>
+<dt>&#8211;enable-iso14755 (default: on)</dt>
+<dd>Enable extended <font SIZE="-1">ISO 14755</font> support (see <a href="/docs/linux/man/1-urxvt256c/">urxvt256c</a>(1)). Basic support (section 5.1) is enabled by <tt>&quot;--enable-frills&quot;</tt>, while support for 5.2, 5.3 and 5.4 is enabled with this switch.</dd>
+<dt>&#8211;enable-keepscrolling (default: on)</dt>
+<dd>Add support for continual scrolling of the display when you hold the mouse button down on a scrollbar arrow.</dd>
+<dt>&#8211;enable-selectionscrolling (default: on)</dt>
+<dd>Add support for scrolling when the selection moves to the top or bottom of the screen.</dd>
+<dt>&#8211;enable-mousewheel (default: on)</dt>
+<dd>Add support for scrolling via mouse wheel or buttons 4 &amp; 5.</dd>
+<dt>&#8211;enable-slipwheeling (default: on)</dt>
+<dd>Add support for continual scrolling (using the mouse wheel as an accelerator) while the control key is held down. This option requires &#8211;enable-mousewheel to also be specified.</dd>
+<dt>&#8211;enable-smart-resize (default: off)</dt>
+<dd>Add smart growth/shrink behaviour when resizing. This should keep the window corner which is closest to a corner of the screen in a fixed position.</dd>
+<dt>&#8211;enable-text-blink (default: on)</dt>
+<dd>Add support for blinking text.</dd>
+<dt>&#8211;enable-pointer-blank (default: on)</dt>
+<dd>Add support to have the pointer disappear when typing or inactive.</dd>
+<dt>&#8211;enable-perl (default: on)</dt>
+<dd>Enable an embedded perl interpreter. See the <code>urxvt256c</code>perl<code>(3)</code> manpage for more info on this feature, or the files in <i>src/perl/</i> for the extensions that are installed by default. The perl interpreter that is used can be specified via the <tt>&quot;PERL&quot;</tt> environment variable when running configure. Even when compiled in, perl will <i>not</i> be initialised when all extensions have been disabled <tt>&quot;-pe &quot;&quot; --perl-ext-common &quot;&quot;&quot;</tt>, so it should be safe to enable from a resource standpoint.</dd>
+<dt>&#8211;enable-assert (default: off)</dt>
+<dd>Enables the assertions in the code, normally disabled. This switch is only useful when developing rxvt-unicode.</dd>
+<dt>&#8211;enable-256-color (default: off)</dt>
+<dd>Force use of so-called 256 colour mode, to work around buggy applications that do not support termcap/terminfo, or simply improve support for applications hardcoding the xterm 256 colour table. </dd>
 <p> This switch breaks termcap/terminfo compatibility to <tt>&quot;TERM=rxvt-unicode&quot;</tt>, and consequently sets <tt>&quot;TERM&quot;</tt> to <tt>&quot;rxvt-unicode-256color&quot;</tt> by default (<i>doc/etc/</i> contains termcap/terminfo definitions for both). </p>
 <p> It also results in higher memory usage and can slow down urxvt256c dramatically when more than six fonts are in use by a terminal instance.</p>
-<dt>&#8211;with-name=NAME (default: urxvt)</p>
-<dd>Set the basename for the installed binaries, resulting in <tt>&quot;urxvt&quot;</tt>, <tt>&quot;urxvtd&quot;</tt> etc.). Specify <tt>&quot;--with-name=rxvt&quot;</tt> to replace with <tt>&quot;rxvt&quot;</tt>.</p>
-<dt>&#8211;with-term=NAME (default: rxvt-unicode)</p>
-<dd>Change the environmental variable for the terminal to <font SIZE="-1">NAME.</font></p>
-<dt>&#8211;with-terminfo=PATH</p>
-<dd>Change the environmental variable for the path to the terminfo tree to <font SIZE="-1">PATH.</font></p>
-<dt>&#8211;with-x</p>
-<dd>Use the X Window System (pretty much default, eh?).</dl>
+<dt>&#8211;with-name=NAME (default: urxvt)</dt>
+<dd>Set the basename for the installed binaries, resulting in <tt>&quot;urxvt&quot;</tt>, <tt>&quot;urxvtd&quot;</tt> etc.). Specify <tt>&quot;--with-name=rxvt&quot;</tt> to replace with <tt>&quot;rxvt&quot;</tt>.</dd>
+<dt>&#8211;with-term=NAME (default: rxvt-unicode)</dt>
+<dd>Change the environmental variable for the terminal to <font SIZE="-1">NAME.</font></dd>
+<dt>&#8211;with-terminfo=PATH</dt>
+<dd>Change the environmental variable for the path to the terminfo tree to <font SIZE="-1">PATH.</font></dd>
+<dt>&#8211;with-x</dt>
+<dd>Use the X Window System (pretty much default, eh?).</dd></dl>
 <h2>Authors</h2>
 <p>Marc Lehmann &lt;rxvt [at] schmorp.de&gt; converted this document to pod and reworked it from the original Rxvt documentation, which was done by Geoff Wing &lt;gcw [at] pobox.com&gt;, who in turn used the XTerm documentation and other sources.</p>

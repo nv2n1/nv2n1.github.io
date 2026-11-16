@@ -86,3 +86,4 @@ virt - ls[--options] domname directory virt - ls[--options] disk.img[disk.img...
  [etc.]
 </pre>
 <p> To generate this output, <tt>&quot;virt-ls&quot;</tt> runs the <tt>&quot;guestfs_find0&quot;</tt> function and converts <tt>&quot;
+</p>

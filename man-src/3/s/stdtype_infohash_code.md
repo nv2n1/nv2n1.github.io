@@ -27,15 +27,10 @@ A value that is identical for all type_info objects referring to the same type.
 
 The following program is an example of an efficient type-value mapping without using std::type_index. 
  // Run this code <pre><code>#include &lt;iostream&gt;
-
 #include &lt;typeinfo&gt;
-
 #include &lt;unordered_map&gt;
-
 #include &lt;string&gt;
-
 #include &lt;functional&gt;
-
 #include &lt;memory&gt;
 struct A {
     virtual ~A()
@@ -44,7 +39,6 @@ struct A {
 };
 struct B : A {
 };
-
 struct C : A {
 };
 using TypeInfoRef = std::reference_wrapper&lt;const std::type_info&gt;;
@@ -61,7 +55,6 @@ struct EqualTo {
     }
 };
 int main()
-
 {
     std::unordered_map&lt;TypeInfoRef, std::string, Hasher, EqualTo&gt; type_names;
     type_names[typeid(int)] = &quot;int&quot;;

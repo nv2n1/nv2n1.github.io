@@ -21,18 +21,18 @@ description: "XmSetWMProtocolHooks — A VendorShell convenience interface that 
 <h2>Description</h2>
 <p><code>XmSetWMProtocolHooks</code> is a convenience interface. It calls <code>XmSetProtocolHooks</code> with the property value set to the atom returned by interning <code>WM_PROTOCOLS</code>.</p>
 <dl COMPACT>
-<dt><i>shell</i></p>
-<dd>Specifies the widget with which the protocol property is associated</p>
-<dt><i>protocol</i></p>
-<dd>Specifies the protocol atom (or an <i>int</i> cast to <code>Atom</code>)</p>
-<dt><i>prehook</i></p>
-<dd>Specifies the procedure to call before calling entries on the client callback list</p>
-<dt><i>pre_closure</i></p>
-<dd>Specifies the client data to be passed to the prehook when it is invoked</p>
-<dt><i>posthook</i></p>
-<dd>Specifies the procedure to call after calling entries on the client callback list</p>
-<dt><i>post_closure</i></p>
-<dd>Specifies the client data to be passed to the posthook when it is invoked</dl>
+<dt><i>shell</i></dt>
+<dd>Specifies the widget with which the protocol property is associated</dd>
+<dt><i>protocol</i></dt>
+<dd>Specifies the protocol atom (or an <i>int</i> cast to <code>Atom</code>)</dd>
+<dt><i>prehook</i></dt>
+<dd>Specifies the procedure to call before calling entries on the client callback list</dd>
+<dt><i>pre_closure</i></dt>
+<dd>Specifies the client data to be passed to the prehook when it is invoked</dd>
+<dt><i>posthook</i></dt>
+<dd>Specifies the procedure to call after calling entries on the client callback list</dd>
+<dt><i>post_closure</i></dt>
+<dd>Specifies the client data to be passed to the posthook when it is invoked</dd></dl>
 <p> For a complete definition of VendorShell and its associated resources, see <code><a href="/docs/linux/man/3-vendorshell/">VendorShell</a></code>(3).</p>
 <h2>Related</h2>
 <p><code><a href="/docs/linux/man/3-vendorshell/">VendorShell</a></code>(3), <code><a href="/docs/linux/man/3-xminternatom/">XmInternAtom</a></code>(3), and <code><a href="/docs/linux/man/3-xmsetprotocolhooks/">XmSetProtocolHooks</a></code>(3).</p>

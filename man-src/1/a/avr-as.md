@@ -217,525 +217,523 @@ description: "AS – the portable GNU assembler."
 <p> Usually you do not need to use this <code>-Wa</code> mechanism, since many compiler command-line options are automatically passed to the assembler by the compiler. (You can call the <font SIZE="-1">GNU</font> compiler driver with the <code>-v</code> option to see precisely what options it passes to each compilation pass, including the assembler.)</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>@</code><i>file</i></p>
-<dd> Read command-line options from <i>file</i>. The options read are inserted in place of the original @<i>file</i> option. If <i>file</i> does not exist, or cannot be read, then the option will be treated literally, and not removed. </p>
+<dt><code>@</code><i>file</i></dt>
+<dd> Read command-line options from <i>file</i>. The options read are inserted in place of the original @<i>file</i> option. If <i>file</i> does not exist, or cannot be read, then the option will be treated literally, and not removed. </dd>
 <p> Options in <i>file</i> are separated by whitespace. A whitespace character may be included in an option by surrounding the entire option in either single or double quotes. Any character (including a backslash) may be included by prefixing the character to be included with a backslash. The <i>file</i> may itself contain additional @<i>file</i> options; any such options will be processed recursively.</p>
-<dt><code>-a[cdghlmns]</code></p>
-<dd> Turn on listings, in any of a variety of ways:</p>
+<dt><code>-a[cdghlmns]</code></dt>
+<dd> Turn on listings, in any of a variety of ways:</dd>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt><code>-ac</code></p>
-<dd> omit false conditionals</p>
-<dt><code>-ad</code></p>
-<dd> omit debugging directives</p>
-<dt><code>-ag</code></p>
-<dd> include general information, like as version and options passed</p>
-<dt><code>-ah</code></p>
-<dd> include high-level source</p>
-<dt><code>-al</code></p>
-<dd> include assembly</p>
-<dt><code>-am</code></p>
-<dd> include macro expansions</p>
-<dt><code>-an</code></p>
-<dd> omit forms processing</p>
-<dt><code>-as</code></p>
-<dd> include symbols</p>
-<dt><code>=file</code></p>
-<dd> set the name of the listing file</dl>
+<dt><code>-ac</code></dt>
+<dd> omit false conditionals</dd>
+<dt><code>-ad</code></dt>
+<dd> omit debugging directives</dd>
+<dt><code>-ag</code></dt>
+<dd> include general information, like as version and options passed</dd>
+<dt><code>-ah</code></dt>
+<dd> include high-level source</dd>
+<dt><code>-al</code></dt>
+<dd> include assembly</dd>
+<dt><code>-am</code></dt>
+<dd> include macro expansions</dd>
+<dt><code>-an</code></dt>
+<dd> omit forms processing</dd>
+<dt><code>-as</code></dt>
+<dd> include symbols</dd>
+<dt><code>=file</code></dt>
+<dd> set the name of the listing file</dd></dl>
 </dl>
 <dl>
 <dt>
+</dt><dd>
+<p> You may combine these options; for example, use <code>-aln</code> for assembly listing without forms processing. The <code>=file</code> option, if used, must be the last one. By itself, <code>-a</code> defaults to <code>-ahls</code>.</dd></dl>
+<dt><code>&#8211;alternate</code></dt>
+<dd> Begin in alternate macro mode.</dd>
+<dt><code>&#8211;compress-debug-sections</code></dt>
+<dd> Compress <font SIZE="-1">DWARF</font> debug sections using zlib. The debug sections are renamed to begin with <code>.zdebug</code>, and the resulting object file may not be compatible with older linkers and object file utilities.</dd>
+<dt><code>&#8211;nocompress-debug-sections</code></dt>
+<dd> Do not compress <font SIZE="-1">DWARF</font> debug sections. This is the default.</dd>
+<dt><code>-D</code></dt>
+<dd> Ignored. This option is accepted for script compatibility with calls to other assemblers.</dd>
+<dt><code>&#8211;debug-prefix-map</code> <i>old</i><code>=</code><i>new</i></dt>
+<dd> When assembling files in directory <i>old</i>, record debugging information describing them as in <i>new</i> instead.</dd>
+<dt><code>&#8211;defsym</code> <i>sym</i><code>=</code><i>value</i></dt>
+<dd> Define the symbol <i>sym</i> to be <i>value</i> before assembling the input file. <i>value</i> must be an integer constant. As in C, a leading <code>0x</code> indicates a hexadecimal value, and a leading <code>0</code> indicates an octal value. The value of the symbol can be overridden inside a source file via the use of a <tt>&quot;.set&quot;</tt> pseudo-op.</dd>
+<dt><code>-f</code></dt>
+<dd> &#8220;fast&#8221;&#8212;skip whitespace and comment preprocessing (assume source is compiler output).</dd>
+<dt><code>-g</code></dt>
 <dd>
-<p> You may combine these options; for example, use <code>-aln</code> for assembly listing without forms processing. The <code>=file</code> option, if used, must be the last one. By itself, <code>-a</code> defaults to <code>-ahls</code>.</dl>
-<dt><code>&#8211;alternate</code></p>
-<dd> Begin in alternate macro mode.</p>
-<dt><code>&#8211;compress-debug-sections</code></p>
-<dd> Compress <font SIZE="-1">DWARF</font> debug sections using zlib. The debug sections are renamed to begin with <code>.zdebug</code>, and the resulting object file may not be compatible with older linkers and object file utilities.</p>
-<dt><code>&#8211;nocompress-debug-sections</code></p>
-<dd> Do not compress <font SIZE="-1">DWARF</font> debug sections. This is the default.</p>
-<dt><code>-D</code></p>
-<dd> Ignored. This option is accepted for script compatibility with calls to other assemblers.</p>
-<dt><code>&#8211;debug-prefix-map</code> <i>old</i><code>=</code><i>new</i></p>
-<dd> When assembling files in directory <i>old</i>, record debugging information describing them as in <i>new</i> instead.</p>
-<dt><code>&#8211;defsym</code> <i>sym</i><code>=</code><i>value</i></p>
-<dd> Define the symbol <i>sym</i> to be <i>value</i> before assembling the input file. <i>value</i> must be an integer constant. As in C, a leading <code>0x</code> indicates a hexadecimal value, and a leading <code>0</code> indicates an octal value. The value of the symbol can be overridden inside a source file via the use of a <tt>&quot;.set&quot;</tt> pseudo-op.</p>
-<dt><code>-f</code></p>
-<dd> &#8220;fast&#8221;&#8212;skip whitespace and comment preprocessing (assume source is compiler output).</p>
-<dt><code>-g</code></p>
+</dd><dt><code>&#8211;gen-debug</code></dt>
+<dd> Generate debugging information for each assembler source line using whichever debug format is preferred by the target. This currently means either <font SIZE="-1">STABS</font>, <font SIZE="-1">ECOFF</font> or <font SIZE="-1">DWARF2</font>.</dd>
+<dt><code>&#8211;gstabs</code></dt>
+<dd> Generate stabs debugging information for each assembler line. This may help debugging assembler code, if the debugger can handle it.</dd>
+<dt><code>&#8211;gstabs+</code></dt>
+<dd> Generate stabs debugging information for each assembler line, with <font SIZE="-1">GNU</font> extensions that probably only gdb can handle, and that could make other debuggers crash or refuse to read your program. This may help debugging assembler code. Currently the only <font SIZE="-1">GNU</font> extension is the location of the current working directory at assembling time.</dd>
+<dt><code>&#8211;gdwarf-2</code></dt>
+<dd> Generate <font SIZE="-1">DWARF2</font> debugging information for each assembler line. This may help debugging assembler code, if the debugger can handle it. Note&#8212;this option is only supported by some targets, not all of them.</dd>
+<dt><code>&#8211;gdwarf-sections</code></dt>
+<dd> Instead of creating a .debug_line section, create a series of .debug_line.<i>foo</i> sections where <i>foo</i> is the name of the corresponding code section. For example a code section called <i>.text.func</i> will have its dwarf line number information placed into a section called <i>.debug_line.text.func</i>. If the code section is just called <i>.text</i> then debug line section will still be called just <i>.debug_line</i> without any suffix.</dd>
+<dt><code>&#8211;size-check=error</code></dt>
 <dd>
-<dt><code>&#8211;gen-debug</code></p>
-<dd> Generate debugging information for each assembler source line using whichever debug format is preferred by the target. This currently means either <font SIZE="-1">STABS</font>, <font SIZE="-1">ECOFF</font> or <font SIZE="-1">DWARF2</font>.</p>
-<dt><code>&#8211;gstabs</code></p>
-<dd> Generate stabs debugging information for each assembler line. This may help debugging assembler code, if the debugger can handle it.</p>
-<dt><code>&#8211;gstabs+</code></p>
-<dd> Generate stabs debugging information for each assembler line, with <font SIZE="-1">GNU</font> extensions that probably only gdb can handle, and that could make other debuggers crash or refuse to read your program. This may help debugging assembler code. Currently the only <font SIZE="-1">GNU</font> extension is the location of the current working directory at assembling time.</p>
-<dt><code>&#8211;gdwarf-2</code></p>
-<dd> Generate <font SIZE="-1">DWARF2</font> debugging information for each assembler line. This may help debugging assembler code, if the debugger can handle it. Note&#8212;this option is only supported by some targets, not all of them.</p>
-<dt><code>&#8211;gdwarf-sections</code></p>
-<dd> Instead of creating a .debug_line section, create a series of .debug_line.<i>foo</i> sections where <i>foo</i> is the name of the corresponding code section. For example a code section called <i>.text.func</i> will have its dwarf line number information placed into a section called <i>.debug_line.text.func</i>. If the code section is just called <i>.text</i> then debug line section will still be called just <i>.debug_line</i> without any suffix.</p>
-<dt><code>&#8211;size-check=error</code></p>
+</dd><dt><code>&#8211;size-check=warning</code></dt>
+<dd> Issue an error or warning for invalid <font SIZE="-1">ELF</font> .size directive.</dd>
+<dt><code>&#8211;help</code></dt>
+<dd> Print a summary of the command line options and exit.</dd>
+<dt><code>&#8211;target-help</code></dt>
+<dd> Print a summary of all target specific options and exit.</dd>
+<dt><code>-I</code> <i>dir</i></dt>
+<dd> Add directory <i>dir</i> to the search list for <tt>&quot;.include&quot;</tt> directives.</dd>
+<dt><code>-J</code></dt>
+<dd> Don&#8217;t warn about signed overflow.</dd>
+<dt><code>-K</code></dt>
+<dd> Issue warnings when difference tables altered for long displacements.</dd>
+<dt><code>-L</code></dt>
 <dd>
-<dt><code>&#8211;size-check=warning</code></p>
-<dd> Issue an error or warning for invalid <font SIZE="-1">ELF</font> .size directive.</p>
-<dt><code>&#8211;help</code></p>
-<dd> Print a summary of the command line options and exit.</p>
-<dt><code>&#8211;target-help</code></p>
-<dd> Print a summary of all target specific options and exit.</p>
-<dt><code>-I</code> <i>dir</i></p>
-<dd> Add directory <i>dir</i> to the search list for <tt>&quot;.include&quot;</tt> directives.</p>
-<dt><code>-J</code></p>
-<dd> Don&#8217;t warn about signed overflow.</p>
-<dt><code>-K</code></p>
-<dd> Issue warnings when difference tables altered for long displacements.</p>
-<dt><code>-L</code></p>
-<dd>
-<dt><code>&#8211;keep-locals</code></p>
-<dd> Keep (in the symbol table) local symbols. These symbols start with system-specific local label prefixes, typically <code>.L</code> for <font SIZE="-1">ELF</font> systems or <code>L</code> for traditional a.out systems.</p>
-<dt><code>&#8211;listing-lhs-width=</code><i>number</i></p>
-<dd> Set the maximum width, in words, of the output data column for an assembler listing to <i>number</i>.</p>
-<dt><code>&#8211;listing-lhs-width2=</code><i>number</i></p>
-<dd> Set the maximum width, in words, of the output data column for continuation lines in an assembler listing to <i>number</i>.</p>
-<dt><code>&#8211;listing-rhs-width=</code><i>number</i></p>
-<dd> Set the maximum width of an input source line, as displayed in a listing, to <i>number</i> bytes.</p>
-<dt><code>&#8211;listing-cont-lines=</code><i>number</i></p>
-<dd> Set the maximum number of lines printed in a listing for a single line of input to <i>number</i> + 1.</p>
-<dt><code>-o</code> <i>objfile</i></p>
-<dd> Name the object-file output from <code>as</code> <i>objfile</i>.</p>
-<dt><code>-R</code></p>
-<dd> Fold the data section into the text section. </p>
+</dd><dt><code>&#8211;keep-locals</code></dt>
+<dd> Keep (in the symbol table) local symbols. These symbols start with system-specific local label prefixes, typically <code>.L</code> for <font SIZE="-1">ELF</font> systems or <code>L</code> for traditional a.out systems.</dd>
+<dt><code>&#8211;listing-lhs-width=</code><i>number</i></dt>
+<dd> Set the maximum width, in words, of the output data column for an assembler listing to <i>number</i>.</dd>
+<dt><code>&#8211;listing-lhs-width2=</code><i>number</i></dt>
+<dd> Set the maximum width, in words, of the output data column for continuation lines in an assembler listing to <i>number</i>.</dd>
+<dt><code>&#8211;listing-rhs-width=</code><i>number</i></dt>
+<dd> Set the maximum width of an input source line, as displayed in a listing, to <i>number</i> bytes.</dd>
+<dt><code>&#8211;listing-cont-lines=</code><i>number</i></dt>
+<dd> Set the maximum number of lines printed in a listing for a single line of input to <i>number</i> + 1.</dd>
+<dt><code>-o</code> <i>objfile</i></dt>
+<dd> Name the object-file output from <code>as</code> <i>objfile</i>.</dd>
+<dt><code>-R</code></dt>
+<dd> Fold the data section into the text section. </dd>
 <p> Set the default size of <font SIZE="-1">GAS</font>&#8216;s hash tables to a prime number close to <i>number</i>. Increasing this value can reduce the length of time it takes the assembler to perform its tasks, at the expense of increasing the assembler&#8217;s memory requirements. Similarly reducing this value can reduce the memory requirements at the expense of speed.</p>
-<dt><code>&#8211;reduce-memory-overheads</code></p>
-<dd> This option reduces <font SIZE="-1">GAS</font>&#8216;s memory requirements, at the expense of making the assembly processes slower. Currently this switch is a synonym for <code>&#8211;hash-size=4051</code>, but in the future it may have other effects as well.</p>
-<dt><code>&#8211;statistics</code></p>
-<dd> Print the maximum space (in bytes) and total time (in seconds) used by assembly.</p>
-<dt><code>&#8211;strip-local-absolute</code></p>
-<dd> Remove local absolute symbols from the outgoing symbol table.</p>
-<dt><code>-v</code></p>
+<dt><code>&#8211;reduce-memory-overheads</code></dt>
+<dd> This option reduces <font SIZE="-1">GAS</font>&#8216;s memory requirements, at the expense of making the assembly processes slower. Currently this switch is a synonym for <code>&#8211;hash-size=4051</code>, but in the future it may have other effects as well.</dd>
+<dt><code>&#8211;statistics</code></dt>
+<dd> Print the maximum space (in bytes) and total time (in seconds) used by assembly.</dd>
+<dt><code>&#8211;strip-local-absolute</code></dt>
+<dd> Remove local absolute symbols from the outgoing symbol table.</dd>
+<dt><code>-v</code></dt>
 <dd>
-<dt><code>-version</code></p>
-<dd> Print the <code>as</code> version.</p>
-<dt><code>&#8211;version</code></p>
-<dd> Print the <code>as</code> version and exit.</p>
-<dt><code>-W</code></p>
+</dd><dt><code>-version</code></dt>
+<dd> Print the <code>as</code> version.</dd>
+<dt><code>&#8211;version</code></dt>
+<dd> Print the <code>as</code> version and exit.</dd>
+<dt><code>-W</code></dt>
 <dd>
-<dt><code>&#8211;no-warn</code></p>
-<dd> Suppress warning messages.</p>
-<dt><code>&#8211;fatal-warnings</code></p>
-<dd> Treat warnings as errors.</p>
-<dt><code>&#8211;warn</code></p>
-<dd> Don&#8217;t suppress warning messages or treat them as errors.</p>
-<dt><code>-w</code></p>
-<dd> Ignored.</p>
-<dt><code>-x</code></p>
-<dd> Ignored.</p>
-<dt><code>-Z</code></p>
-<dd> Generate an object file even after errors.</p>
-<dt><code>&#8212; |</code> <i>files</i> <code>&#8230;</code></p>
-<dd> Standard input, or source files to assemble.</dl>
+</dd><dt><code>&#8211;no-warn</code></dt>
+<dd> Suppress warning messages.</dd>
+<dt><code>&#8211;fatal-warnings</code></dt>
+<dd> Treat warnings as errors.</dd>
+<dt><code>&#8211;warn</code></dt>
+<dd> Don&#8217;t suppress warning messages or treat them as errors.</dd>
+<dt><code>-w</code></dt>
+<dd> Ignored.</dd>
+<dt><code>-x</code></dt>
+<dd> Ignored.</dd>
+<dt><code>-Z</code></dt>
+<dd> Generate an object file even after errors.</dd>
+<dt><code>&#8212; |</code> <i>files</i> <code>&#8230;</code></dt>
+<dd> Standard input, or source files to assemble.</dd></dl>
 <p> The following options are available when as is configured for the 64-bit mode of the <font SIZE="-1">ARM</font> Architecture (AArch64).</p>
 <dl>
-<dt><code>-EB</code></p>
-<dd> This option specifies that the output generated by the assembler should be marked as being encoded for a big-endian processor.</p>
-<dt><code>-EL</code></p>
-<dd> This option specifies that the output generated by the assembler should be marked as being encoded for a little-endian processor.</p>
-<dt><code>-mabi=</code><i>abi</i></p>
-<dd> Specify which <font SIZE="-1">ABI</font> the source code uses. The recognized arguments are: <tt>&quot;ilp32&quot;</tt> and <tt>&quot;lp64&quot;</tt>, which decides the generated object file in <font SIZE="-1">ELF32</font> and <font SIZE="-1">ELF64</font> format respectively. The default is <tt>&quot;lp64&quot;</tt>.</dl>
+<dt><code>-EB</code></dt>
+<dd> This option specifies that the output generated by the assembler should be marked as being encoded for a big-endian processor.</dd>
+<dt><code>-EL</code></dt>
+<dd> This option specifies that the output generated by the assembler should be marked as being encoded for a little-endian processor.</dd>
+<dt><code>-mabi=</code><i>abi</i></dt>
+<dd> Specify which <font SIZE="-1">ABI</font> the source code uses. The recognized arguments are: <tt>&quot;ilp32&quot;</tt> and <tt>&quot;lp64&quot;</tt>, which decides the generated object file in <font SIZE="-1">ELF32</font> and <font SIZE="-1">ELF64</font> format respectively. The default is <tt>&quot;lp64&quot;</tt>.</dd></dl>
 <p> The following options are available when as is configured for an Alpha processor.</p>
 <dl>
-<dt><code>-m</code><i>cpu</i></p>
-<dd> This option specifies the target processor. If an attempt is made to assemble an instruction which will not execute on the target processor, the assembler may either expand the instruction as a macro or issue an error message. This option is equivalent to the <tt>&quot;.arch&quot;</tt> directive. </p>
+<dt><code>-m</code><i>cpu</i></dt>
+<dd> This option specifies the target processor. If an attempt is made to assemble an instruction which will not execute on the target processor, the assembler may either expand the instruction as a macro or issue an error message. This option is equivalent to the <tt>&quot;.arch&quot;</tt> directive. </dd>
 <p> The following processor names are recognized: <tt>21064</tt>, <tt>&quot;21064a&quot;</tt>, <tt>21066</tt>, <tt>21068</tt>, <tt>21164</tt>, <tt>&quot;21164a&quot;</tt>, <tt>&quot;21164pc&quot;</tt>, <tt>21264</tt>, <tt>&quot;21264a&quot;</tt>, <tt>&quot;21264b&quot;</tt>, <tt>&quot;ev4&quot;</tt>, <tt>&quot;ev5&quot;</tt>, <tt>&quot;lca45&quot;</tt>, <tt>&quot;ev5&quot;</tt>, <tt>&quot;ev56&quot;</tt>, <tt>&quot;pca56&quot;</tt>, <tt>&quot;ev6&quot;</tt>, <tt>&quot;ev67&quot;</tt>, <tt>&quot;ev68&quot;</tt>. The special name <tt>&quot;all&quot;</tt> may be used to allow the assembler to accept instructions valid for any Alpha processor. </p>
 <p> In order to support existing practice in <font SIZE="-1">OSF/1</font> with respect to <tt>&quot;.arch&quot;</tt>, and existing practice within <font SIZE="-1"><code>MILO</code></font> (the Linux <font SIZE="-1">ARC</font> bootloader), the numbered processor names (e.g. 21064) enable the processor-specific PALcode instructions, while the &#8220;electro-vlasic&#8221; names (e.g. <tt>&quot;ev4&quot;</tt>) do not.</p>
-<dt><code>-mdebug</code></p>
+<dt><code>-mdebug</code></dt>
 <dd>
-<dt><code>-no-mdebug</code></p>
-<dd> Enables or disables the generation of <tt>&quot;.mdebug&quot;</tt> encapsulation for stabs directives and procedure descriptors. The default is to automatically enable <tt>&quot;.mdebug&quot;</tt> when the first stabs directive is seen.</p>
-<dt><code>-relax</code></p>
-<dd> This option forces all relocations to be put into the object file, instead of saving space and resolving some relocations at assembly time. Note that this option does not propagate all symbol arithmetic into the object file, because not all symbol arithmetic can be represented. However, the option can still be useful in specific applications.</p>
-<dt><code>-replace</code></p>
+</dd><dt><code>-no-mdebug</code></dt>
+<dd> Enables or disables the generation of <tt>&quot;.mdebug&quot;</tt> encapsulation for stabs directives and procedure descriptors. The default is to automatically enable <tt>&quot;.mdebug&quot;</tt> when the first stabs directive is seen.</dd>
+<dt><code>-relax</code></dt>
+<dd> This option forces all relocations to be put into the object file, instead of saving space and resolving some relocations at assembly time. Note that this option does not propagate all symbol arithmetic into the object file, because not all symbol arithmetic can be represented. However, the option can still be useful in specific applications.</dd>
+<dt><code>-replace</code></dt>
 <dd>
-<dt><code>-noreplace</code></p>
-<dd> Enables or disables the optimization of procedure calls, both at assemblage and at link time. These options are only available for <font SIZE="-1">VMS</font> targets and <tt>&quot;-replace&quot;</tt> is the default. See section 1.4.1 of the OpenVMS Linker Utility Manual.</p>
-<dt><code>-g</code></p>
-<dd> This option is used when the compiler generates debug information. When <code>gcc</code> is using <code>mips-tfile</code> to generate debug information for <font SIZE="-1">ECOFF</font>, local labels must be passed through to the object file. Otherwise this option has no effect.</p>
-<dt><code>-G</code><i>size</i></p>
-<dd> A local common symbol larger than <i>size</i> is placed in <tt>&quot;.bss&quot;</tt>, while smaller symbols are placed in <tt>&quot;.sbss&quot;</tt>.</p>
-<dt><code>-F</code></p>
+</dd><dt><code>-noreplace</code></dt>
+<dd> Enables or disables the optimization of procedure calls, both at assemblage and at link time. These options are only available for <font SIZE="-1">VMS</font> targets and <tt>&quot;-replace&quot;</tt> is the default. See section 1.4.1 of the OpenVMS Linker Utility Manual.</dd>
+<dt><code>-g</code></dt>
+<dd> This option is used when the compiler generates debug information. When <code>gcc</code> is using <code>mips-tfile</code> to generate debug information for <font SIZE="-1">ECOFF</font>, local labels must be passed through to the object file. Otherwise this option has no effect.</dd>
+<dt><code>-G</code><i>size</i></dt>
+<dd> A local common symbol larger than <i>size</i> is placed in <tt>&quot;.bss&quot;</tt>, while smaller symbols are placed in <tt>&quot;.sbss&quot;</tt>.</dd>
+<dt><code>-F</code></dt>
 <dd>
-<dt><code>-32addr</code></p>
-<dd> These options are ignored for backward compatibility.</dl>
+</dd><dt><code>-32addr</code></dt>
+<dd> These options are ignored for backward compatibility.</dd></dl>
 <p> The following options are available when as is configured for an <font SIZE="-1">ARC</font> processor.</p>
 <dl>
-<dt><code>-marc[5|6|7|8]</code></p>
-<dd> This option selects the core processor variant.</p>
-<dt><code>-EB | -EL</code></p>
-<dd> Select either big-endian (-EB) or little-endian (-EL) output.</dl>
+<dt><code>-marc[5|6|7|8]</code></dt>
+<dd> This option selects the core processor variant.</dd>
+<dt><code>-EB | -EL</code></dt>
+<dd> Select either big-endian (-EB) or little-endian (-EL) output.</dd></dl>
 <p> The following options are available when as is configured for the <font SIZE="-1">ARM</font> processor family.</p>
 <dl>
-<dt><code>-mcpu=</code><i>processor</i><code>[+</code><i>extension</i><code>&#8230;]</code></p>
-<dd> Specify which <font SIZE="-1">ARM</font> processor variant is the target.</p>
-<dt><code>-march=</code><i>architecture</i><code>[+</code><i>extension</i><code>&#8230;]</code></p>
-<dd> Specify which <font SIZE="-1">ARM</font> architecture variant is used by the target.</p>
-<dt><code>-mfpu=</code><i>floating-point-format</i></p>
-<dd> Select which Floating Point architecture is the target.</p>
-<dt><code>-mfloat-abi=</code><i>abi</i></p>
-<dd> Select which floating point <font SIZE="-1">ABI</font> is in use.</p>
-<dt><code>-mthumb</code></p>
-<dd> Enable Thumb only instruction decoding.</p>
-<dt><code>-mapcs-32 | -mapcs-26 | -mapcs-float | -mapcs-reentrant</code></p>
-<dd> Select which procedure calling convention is in use.</p>
-<dt><code>-EB | -EL</code></p>
-<dd> Select either big-endian (-EB) or little-endian (-EL) output.</p>
-<dt><code>-mthumb-interwork</code></p>
-<dd> Specify that the code has been generated with interworking between Thumb and <font SIZE="-1">ARM</font> code in mind.</p>
-<dt><code>-k</code></p>
-<dd> Specify that <font SIZE="-1">PIC</font> code has been generated.</dl>
+<dt><code>-mcpu=</code><i>processor</i><code>[+</code><i>extension</i><code>&#8230;]</code></dt>
+<dd> Specify which <font SIZE="-1">ARM</font> processor variant is the target.</dd>
+<dt><code>-march=</code><i>architecture</i><code>[+</code><i>extension</i><code>&#8230;]</code></dt>
+<dd> Specify which <font SIZE="-1">ARM</font> architecture variant is used by the target.</dd>
+<dt><code>-mfpu=</code><i>floating-point-format</i></dt>
+<dd> Select which Floating Point architecture is the target.</dd>
+<dt><code>-mfloat-abi=</code><i>abi</i></dt>
+<dd> Select which floating point <font SIZE="-1">ABI</font> is in use.</dd>
+<dt><code>-mthumb</code></dt>
+<dd> Enable Thumb only instruction decoding.</dd>
+<dt><code>-mapcs-32 | -mapcs-26 | -mapcs-float | -mapcs-reentrant</code></dt>
+<dd> Select which procedure calling convention is in use.</dd>
+<dt><code>-EB | -EL</code></dt>
+<dd> Select either big-endian (-EB) or little-endian (-EL) output.</dd>
+<dt><code>-mthumb-interwork</code></dt>
+<dd> Specify that the code has been generated with interworking between Thumb and <font SIZE="-1">ARM</font> code in mind.</dd>
+<dt><code>-k</code></dt>
+<dd> Specify that <font SIZE="-1">PIC</font> code has been generated.</dd></dl>
 <p> The following options are available when as is configured for the Blackfin processor family.</p>
 <dl>
-<dt><code>-mcpu=</code><i>processor</i>[<code>&#8211;</code><i>sirevision</i>]</p>
-<dd> This option specifies the target processor. The optional <i>sirevision</i> is not used in assembler. It&#8217;s here such that <font SIZE="-1">GCC</font> can easily pass down its <tt>&quot;-mcpu=&quot;</tt> option. The assembler will issue an error message if an attempt is made to assemble an instruction which will not execute on the target processor. The following processor names are recognized: <tt>&quot;bf504&quot;</tt>, <tt>&quot;bf506&quot;</tt>, <tt>&quot;bf512&quot;</tt>, <tt>&quot;bf514&quot;</tt>, <tt>&quot;bf516&quot;</tt>, <tt>&quot;bf518&quot;</tt>, <tt>&quot;bf522&quot;</tt>, <tt>&quot;bf523&quot;</tt>, <tt>&quot;bf524&quot;</tt>, <tt>&quot;bf525&quot;</tt>, <tt>&quot;bf526&quot;</tt>, <tt>&quot;bf527&quot;</tt>, <tt>&quot;bf531&quot;</tt>, <tt>&quot;bf532&quot;</tt>, <tt>&quot;bf533&quot;</tt>, <tt>&quot;bf534&quot;</tt>, <tt>&quot;bf535&quot;</tt> (not implemented yet), <tt>&quot;bf536&quot;</tt>, <tt>&quot;bf537&quot;</tt>, <tt>&quot;bf538&quot;</tt>, <tt>&quot;bf539&quot;</tt>, <tt>&quot;bf542&quot;</tt>, <tt>&quot;bf542m&quot;</tt>, <tt>&quot;bf544&quot;</tt>, <tt>&quot;bf544m&quot;</tt>, <tt>&quot;bf547&quot;</tt>, <tt>&quot;bf547m&quot;</tt>, <tt>&quot;bf548&quot;</tt>, <tt>&quot;bf548m&quot;</tt>, <tt>&quot;bf549&quot;</tt>, <tt>&quot;bf549m&quot;</tt>, <tt>&quot;bf561&quot;</tt>, and <tt>&quot;bf592&quot;</tt>.</p>
-<dt><code>-mfdpic</code></p>
-<dd> Assemble for the <font SIZE="-1">FDPIC</font> <font SIZE="-1">ABI</font>.</p>
-<dt><code>-mno-fdpic</code></p>
+<dt><code>-mcpu=</code><i>processor</i>[<code>&#8211;</code><i>sirevision</i>]</dt>
+<dd> This option specifies the target processor. The optional <i>sirevision</i> is not used in assembler. It&#8217;s here such that <font SIZE="-1">GCC</font> can easily pass down its <tt>&quot;-mcpu=&quot;</tt> option. The assembler will issue an error message if an attempt is made to assemble an instruction which will not execute on the target processor. The following processor names are recognized: <tt>&quot;bf504&quot;</tt>, <tt>&quot;bf506&quot;</tt>, <tt>&quot;bf512&quot;</tt>, <tt>&quot;bf514&quot;</tt>, <tt>&quot;bf516&quot;</tt>, <tt>&quot;bf518&quot;</tt>, <tt>&quot;bf522&quot;</tt>, <tt>&quot;bf523&quot;</tt>, <tt>&quot;bf524&quot;</tt>, <tt>&quot;bf525&quot;</tt>, <tt>&quot;bf526&quot;</tt>, <tt>&quot;bf527&quot;</tt>, <tt>&quot;bf531&quot;</tt>, <tt>&quot;bf532&quot;</tt>, <tt>&quot;bf533&quot;</tt>, <tt>&quot;bf534&quot;</tt>, <tt>&quot;bf535&quot;</tt> (not implemented yet), <tt>&quot;bf536&quot;</tt>, <tt>&quot;bf537&quot;</tt>, <tt>&quot;bf538&quot;</tt>, <tt>&quot;bf539&quot;</tt>, <tt>&quot;bf542&quot;</tt>, <tt>&quot;bf542m&quot;</tt>, <tt>&quot;bf544&quot;</tt>, <tt>&quot;bf544m&quot;</tt>, <tt>&quot;bf547&quot;</tt>, <tt>&quot;bf547m&quot;</tt>, <tt>&quot;bf548&quot;</tt>, <tt>&quot;bf548m&quot;</tt>, <tt>&quot;bf549&quot;</tt>, <tt>&quot;bf549m&quot;</tt>, <tt>&quot;bf561&quot;</tt>, and <tt>&quot;bf592&quot;</tt>.</dd>
+<dt><code>-mfdpic</code></dt>
+<dd> Assemble for the <font SIZE="-1">FDPIC</font> <font SIZE="-1">ABI</font>.</dd>
+<dt><code>-mno-fdpic</code></dt>
 <dd>
-<dt><code>-mnopic</code></p>
-<dd> Disable -mfdpic.</dl>
+</dd><dt><code>-mnopic</code></dt>
+<dd> Disable -mfdpic.</dd></dl>
 <p> See the info pages for documentation of the CRIS-specific options. </p>
 <p> The following options are available when as is configured for a D10V processor.</p>
 <dl>
-<dt><code>-O</code></p>
-<dd> Optimize output by parallelizing instructions.</dl>
+<dt><code>-O</code></dt>
+<dd> Optimize output by parallelizing instructions.</dd></dl>
 <p> The following options are available when as is configured for a D30V processor.</p>
 <dl>
-<dt><code>-O</code></p>
-<dd> Optimize output by parallelizing instructions.</p>
-<dt><code>-n</code></p>
-<dd> Warn when nops are generated.</p>
-<dt><code>-N</code></p>
-<dd> Warn when a nop after a 32-bit multiply instruction is generated.</dl>
+<dt><code>-O</code></dt>
+<dd> Optimize output by parallelizing instructions.</dd>
+<dt><code>-n</code></dt>
+<dd> Warn when nops are generated.</dd>
+<dt><code>-N</code></dt>
+<dd> Warn when a nop after a 32-bit multiply instruction is generated.</dd></dl>
 <p> The following options are available when as is configured for an Epiphany processor.</p>
 <dl>
-<dt><code>-mepiphany</code></p>
-<dd> Specifies that the both 32 and 16 bit instructions are allowed. This is the default behavior.</p>
-<dt><code>-mepiphany16</code></p>
-<dd> Restricts the permitted instructions to just the 16 bit set.</dl>
+<dt><code>-mepiphany</code></dt>
+<dd> Specifies that the both 32 and 16 bit instructions are allowed. This is the default behavior.</dd>
+<dt><code>-mepiphany16</code></dt>
+<dd> Restricts the permitted instructions to just the 16 bit set.</dd></dl>
 <p> The following options are available when as is configured for an H8/300 processor. <tt>@chapter</tt> H8/300 Dependent Features</p>
 <h3>Options</h3>
 <p> The Renesas H8/300 version of <tt>&quot;as&quot;</tt> has one machine-dependent option:</p>
 <dl>
-<dt><code>-h-tick-hex</code></p>
-<dd> Support H&#8217;00 style hex constants in addition to 0x00 style.</dl>
+<dt><code>-h-tick-hex</code></dt>
+<dd> Support H&#8217;00 style hex constants in addition to 0x00 style.</dd></dl>
 <p> The following options are available when as is configured for an i386 processor.</p>
 <dl>
-<dt><code>&#8211;32 | &#8211;x32 | &#8211;64</code></p>
-<dd> Select the word size, either 32 bits or 64 bits. <code>&#8211;32</code> implies Intel i386 architecture, while <code>&#8211;x32</code> and <code>&#8211;64</code> imply <font SIZE="-1">AMD</font> x86-64 architecture with 32-bit or 64-bit word-size respectively. </p>
+<dt><code>&#8211;32 | &#8211;x32 | &#8211;64</code></dt>
+<dd> Select the word size, either 32 bits or 64 bits. <code>&#8211;32</code> implies Intel i386 architecture, while <code>&#8211;x32</code> and <code>&#8211;64</code> imply <font SIZE="-1">AMD</font> x86-64 architecture with 32-bit or 64-bit word-size respectively. </dd>
 <p> These options are only available with the <font SIZE="-1">ELF</font> object file format, and require that the necessary <font SIZE="-1">BFD</font> support has been included (on a 32-bit platform you have to add &#8211;enable-64-bit-bfd to configure enable 64-bit usage and use x86-64 as target platform).</p>
-<dt><code>-n</code></p>
-<dd> By default, x86 <font SIZE="-1">GAS</font> replaces multiple nop instructions used for alignment within code sections with multi-byte nop instructions such as leal 0(%esi,1),%esi. This switch disables the optimization.</p>
-<dt><code>&#8211;divide</code></p>
-<dd> On SVR4-derived platforms, the character <code>/</code> is treated as a comment character, which means that it cannot be used in expressions. The <code>&#8211;divide</code> option turns <code>/</code> into a normal character. This does not disable <code>/</code> at the beginning of a line starting a comment, or affect using <code>#</code> for starting a comment.</p>
-<dt><code>-march=</code><i></i><font SIZE="-1"><i>CPU</i></font><i></i><code>[+</code><i></i><font SIZE="-1"><i>EXTENSION</i></font><i></i><code>&#8230;]</code></p>
-<dd> This option specifies the target processor. The assembler will issue an error message if an attempt is made to assemble an instruction which will not execute on the target processor. The following processor names are recognized: <tt>&quot;i8086&quot;</tt>, <tt>&quot;i186&quot;</tt>, <tt>&quot;i286&quot;</tt>, <tt>&quot;i386&quot;</tt>, <tt>&quot;i486&quot;</tt>, <tt>&quot;i586&quot;</tt>, <tt>&quot;i686&quot;</tt>, <tt>&quot;pentium&quot;</tt>, <tt>&quot;pentiumpro&quot;</tt>, <tt>&quot;pentiumii&quot;</tt>, <tt>&quot;pentiumiii&quot;</tt>, <tt>&quot;pentium4&quot;</tt>, <tt>&quot;prescott&quot;</tt>, <tt>&quot;nocona&quot;</tt>, <tt>&quot;core&quot;</tt>, <tt>&quot;core2&quot;</tt>, <tt>&quot;corei7&quot;</tt>, <tt>&quot;l1om&quot;</tt>, <tt>&quot;k1om&quot;</tt>, <tt>&quot;k6&quot;</tt>, <tt>&quot;k6_2&quot;</tt>, <tt>&quot;athlon&quot;</tt>, <tt>&quot;opteron&quot;</tt>, <tt>&quot;k8&quot;</tt>, <tt>&quot;amdfam10&quot;</tt>, <tt>&quot;bdver1&quot;</tt>, <tt>&quot;bdver2&quot;</tt>, <tt>&quot;bdver3&quot;</tt>, <tt>&quot;btver1&quot;</tt>, <tt>&quot;btver2&quot;</tt>, <tt>&quot;generic32&quot;</tt> and <tt>&quot;generic64&quot;</tt>. </p>
+<dt><code>-n</code></dt>
+<dd> By default, x86 <font SIZE="-1">GAS</font> replaces multiple nop instructions used for alignment within code sections with multi-byte nop instructions such as leal 0(%esi,1),%esi. This switch disables the optimization.</dd>
+<dt><code>&#8211;divide</code></dt>
+<dd> On SVR4-derived platforms, the character <code>/</code> is treated as a comment character, which means that it cannot be used in expressions. The <code>&#8211;divide</code> option turns <code>/</code> into a normal character. This does not disable <code>/</code> at the beginning of a line starting a comment, or affect using <code>#</code> for starting a comment.</dd>
+<dt><code>-march=</code><i></i><font SIZE="-1"><i>CPU</i></font><i></i><code>[+</code><i></i><font SIZE="-1"><i>EXTENSION</i></font><i></i><code>&#8230;]</code></dt>
+<dd> This option specifies the target processor. The assembler will issue an error message if an attempt is made to assemble an instruction which will not execute on the target processor. The following processor names are recognized: <tt>&quot;i8086&quot;</tt>, <tt>&quot;i186&quot;</tt>, <tt>&quot;i286&quot;</tt>, <tt>&quot;i386&quot;</tt>, <tt>&quot;i486&quot;</tt>, <tt>&quot;i586&quot;</tt>, <tt>&quot;i686&quot;</tt>, <tt>&quot;pentium&quot;</tt>, <tt>&quot;pentiumpro&quot;</tt>, <tt>&quot;pentiumii&quot;</tt>, <tt>&quot;pentiumiii&quot;</tt>, <tt>&quot;pentium4&quot;</tt>, <tt>&quot;prescott&quot;</tt>, <tt>&quot;nocona&quot;</tt>, <tt>&quot;core&quot;</tt>, <tt>&quot;core2&quot;</tt>, <tt>&quot;corei7&quot;</tt>, <tt>&quot;l1om&quot;</tt>, <tt>&quot;k1om&quot;</tt>, <tt>&quot;k6&quot;</tt>, <tt>&quot;k6_2&quot;</tt>, <tt>&quot;athlon&quot;</tt>, <tt>&quot;opteron&quot;</tt>, <tt>&quot;k8&quot;</tt>, <tt>&quot;amdfam10&quot;</tt>, <tt>&quot;bdver1&quot;</tt>, <tt>&quot;bdver2&quot;</tt>, <tt>&quot;bdver3&quot;</tt>, <tt>&quot;btver1&quot;</tt>, <tt>&quot;btver2&quot;</tt>, <tt>&quot;generic32&quot;</tt> and <tt>&quot;generic64&quot;</tt>. </dd>
 <p> In addition to the basic instruction set, the assembler can be told to accept various extension mnemonics. For example, <tt>&quot;-march=i686+sse4+vmx&quot;</tt> extends <i>i686</i> with <i>sse4</i> and <i>vmx</i>. The following extensions are currently supported: <tt>8087</tt>, <tt>287</tt>, <tt>387</tt>, <tt>&quot;no87&quot;</tt>, <tt>&quot;mmx&quot;</tt>, <tt>&quot;nommx&quot;</tt>, <tt>&quot;sse&quot;</tt>, <tt>&quot;sse2&quot;</tt>, <tt>&quot;sse3&quot;</tt>, <tt>&quot;ssse3&quot;</tt>, <tt>&quot;sse4.1&quot;</tt>, <tt>&quot;sse4.2&quot;</tt>, <tt>&quot;sse4&quot;</tt>, <tt>&quot;nosse&quot;</tt>, <tt>&quot;avx&quot;</tt>, <tt>&quot;avx2&quot;</tt>, <tt>&quot;adx&quot;</tt>, <tt>&quot;rdseed&quot;</tt>, <tt>&quot;prfchw&quot;</tt>, <tt>&quot;smap&quot;</tt>, <tt>&quot;mpx&quot;</tt>, <tt>&quot;sha&quot;</tt>, <tt>&quot;avx512f&quot;</tt>, <tt>&quot;avx512cd&quot;</tt>, <tt>&quot;avx512er&quot;</tt>, <tt>&quot;avx512pf&quot;</tt>, <tt>&quot;noavx&quot;</tt>, <tt>&quot;vmx&quot;</tt>, <tt>&quot;vmfunc&quot;</tt>, <tt>&quot;smx&quot;</tt>, <tt>&quot;xsave&quot;</tt>, <tt>&quot;xsaveopt&quot;</tt>, <tt>&quot;aes&quot;</tt>, <tt>&quot;pclmul&quot;</tt>, <tt>&quot;fsgsbase&quot;</tt>, <tt>&quot;rdrnd&quot;</tt>, <tt>&quot;f16c&quot;</tt>, <tt>&quot;bmi2&quot;</tt>, <tt>&quot;fma&quot;</tt>, <tt>&quot;movbe&quot;</tt>, <tt>&quot;ept&quot;</tt>, <tt>&quot;lzcnt&quot;</tt>, <tt>&quot;hle&quot;</tt>, <tt>&quot;rtm&quot;</tt>, <tt>&quot;invpcid&quot;</tt>, <tt>&quot;clflush&quot;</tt>, <tt>&quot;lwp&quot;</tt>, <tt>&quot;fma4&quot;</tt>, <tt>&quot;xop&quot;</tt>, <tt>&quot;cx16&quot;</tt>, <tt>&quot;syscall&quot;</tt>, <tt>&quot;rdtscp&quot;</tt>, <tt>&quot;3dnow&quot;</tt>, <tt>&quot;3dnowa&quot;</tt>, <tt>&quot;sse4a&quot;</tt>, <tt>&quot;sse5&quot;</tt>, <tt>&quot;svme&quot;</tt>, <tt>&quot;abm&quot;</tt> and <tt>&quot;padlock&quot;</tt>. Note that rather than extending a basic instruction set, the extension mnemonics starting with <tt>&quot;no&quot;</tt> revoke the respective functionality. </p>
 <p> When the <tt>&quot;.arch&quot;</tt> directive is used with <code>-march</code>, the <tt>&quot;.arch&quot;</tt> directive will take precedent.</p>
-<dt><code>-mtune=</code><i></i><font SIZE="-1"><i>CPU</i></font><i></i></p>
-<dd> This option specifies a processor to optimize for. When used in conjunction with the <code>-march</code> option, only instructions of the processor specified by the <code>-march</code> option will be generated. </p>
+<dt><code>-mtune=</code><i></i><font SIZE="-1"><i>CPU</i></font><i></i></dt>
+<dd> This option specifies a processor to optimize for. When used in conjunction with the <code>-march</code> option, only instructions of the processor specified by the <code>-march</code> option will be generated. </dd>
 <p> Valid <i></i><font SIZE="-1"><i>CPU</i></font><i></i> values are identical to the processor list of <code>-march=</code><i></i><font SIZE="-1"><i>CPU</i></font><i></i>.</p>
-<dt><code>-msse2avx</code></p>
-<dd> This option specifies that the assembler should encode <font SIZE="-1">SSE</font> instructions with <font SIZE="-1">VEX</font> prefix.</p>
-<dt><code>-msse-check=</code><i>none</i></p>
+<dt><code>-msse2avx</code></dt>
+<dd> This option specifies that the assembler should encode <font SIZE="-1">SSE</font> instructions with <font SIZE="-1">VEX</font> prefix.</dd>
+<dt><code>-msse-check=</code><i>none</i></dt>
 <dd>
-<dt><code>-msse-check=</code><i>warning</i></p>
+</dd><dt><code>-msse-check=</code><i>warning</i></dt>
 <dd>
-<dt><code>-msse-check=</code><i>error</i></p>
-<dd> These options control if the assembler should check <font SIZE="-1">SSE</font> instructions. <code>-msse-check=</code><i>none</i> will make the assembler not to check <font SIZE="-1">SSE</font> instructions, which is the default. <code>-msse-check=</code><i>warning</i> will make the assembler issue a warning for any <font SIZE="-1">SSE</font> instruction. <code>-msse-check=</code><i>error</i> will make the assembler issue an error for any <font SIZE="-1">SSE</font> instruction.</p>
-<dt><code>-mavxscalar=</code><i>128</i></p>
+</dd><dt><code>-msse-check=</code><i>error</i></dt>
+<dd> These options control if the assembler should check <font SIZE="-1">SSE</font> instructions. <code>-msse-check=</code><i>none</i> will make the assembler not to check <font SIZE="-1">SSE</font> instructions, which is the default. <code>-msse-check=</code><i>warning</i> will make the assembler issue a warning for any <font SIZE="-1">SSE</font> instruction. <code>-msse-check=</code><i>error</i> will make the assembler issue an error for any <font SIZE="-1">SSE</font> instruction.</dd>
+<dt><code>-mavxscalar=</code><i>128</i></dt>
 <dd>
-<dt><code>-mavxscalar=</code><i>256</i></p>
-<dd> These options control how the assembler should encode scalar <font SIZE="-1">AVX</font> instructions. <code>-mavxscalar=</code><i>128</i> will encode scalar <font SIZE="-1">AVX</font> instructions with 128bit vector length, which is the default. <code>-mavxscalar=</code><i>256</i> will encode scalar <font SIZE="-1">AVX</font> instructions with 256bit vector length.</p>
-<dt><code>-mevexlig=</code><i>128</i></p>
+</dd><dt><code>-mavxscalar=</code><i>256</i></dt>
+<dd> These options control how the assembler should encode scalar <font SIZE="-1">AVX</font> instructions. <code>-mavxscalar=</code><i>128</i> will encode scalar <font SIZE="-1">AVX</font> instructions with 128bit vector length, which is the default. <code>-mavxscalar=</code><i>256</i> will encode scalar <font SIZE="-1">AVX</font> instructions with 256bit vector length.</dd>
+<dt><code>-mevexlig=</code><i>128</i></dt>
 <dd>
-<dt><code>-mevexlig=</code><i>256</i></p>
+</dd><dt><code>-mevexlig=</code><i>256</i></dt>
 <dd>
-<dt><code>-mevexlig=</code><i>512</i></p>
-<dd> These options control how the assembler should encode length-ignored (<font SIZE="-1">LIG</font>) <font SIZE="-1">EVEX</font> instructions. <code>-mevexlig=</code><i>128</i> will encode <font SIZE="-1">LIG</font> <font SIZE="-1">EVEX</font> instructions with 128bit vector length, which is the default. <code>-mevexlig=</code><i>256</i> and <code>-mevexlig=</code><i>512</i> will encode <font SIZE="-1">LIG</font> <font SIZE="-1">EVEX</font> instructions with 256bit and 512bit vector length, respectively.</p>
-<dt><code>-mevexwig=</code><i>0</i></p>
+</dd><dt><code>-mevexlig=</code><i>512</i></dt>
+<dd> These options control how the assembler should encode length-ignored (<font SIZE="-1">LIG</font>) <font SIZE="-1">EVEX</font> instructions. <code>-mevexlig=</code><i>128</i> will encode <font SIZE="-1">LIG</font> <font SIZE="-1">EVEX</font> instructions with 128bit vector length, which is the default. <code>-mevexlig=</code><i>256</i> and <code>-mevexlig=</code><i>512</i> will encode <font SIZE="-1">LIG</font> <font SIZE="-1">EVEX</font> instructions with 256bit and 512bit vector length, respectively.</dd>
+<dt><code>-mevexwig=</code><i>0</i></dt>
 <dd>
-<dt><code>-mevexwig=</code><i>1</i></p>
-<dd> These options control how the assembler should encode w-ignored (<font SIZE="-1">WIG</font>) <font SIZE="-1">EVEX</font> instructions. <code>-mevexwig=</code><i>0</i> will encode <font SIZE="-1">WIG</font> <font SIZE="-1">EVEX</font> instructions with evex.w = 0, which is the default. <code>-mevexwig=</code><i>1</i> will encode <font SIZE="-1">WIG</font> <font SIZE="-1">EVEX</font> instructions with evex.w = 1.</p>
-<dt><code>-mmnemonic=</code><i>att</i></p>
+</dd><dt><code>-mevexwig=</code><i>1</i></dt>
+<dd> These options control how the assembler should encode w-ignored (<font SIZE="-1">WIG</font>) <font SIZE="-1">EVEX</font> instructions. <code>-mevexwig=</code><i>0</i> will encode <font SIZE="-1">WIG</font> <font SIZE="-1">EVEX</font> instructions with evex.w = 0, which is the default. <code>-mevexwig=</code><i>1</i> will encode <font SIZE="-1">WIG</font> <font SIZE="-1">EVEX</font> instructions with evex.w = 1.</dd>
+<dt><code>-mmnemonic=</code><i>att</i></dt>
 <dd>
-<dt><code>-mmnemonic=</code><i>intel</i></p>
-<dd> This option specifies instruction mnemonic for matching instructions. The <tt>&quot;.att_mnemonic&quot;</tt> and <tt>&quot;.intel_mnemonic&quot;</tt> directives will take precedent.</p>
-<dt><code>-msyntax=</code><i>att</i></p>
+</dd><dt><code>-mmnemonic=</code><i>intel</i></dt>
+<dd> This option specifies instruction mnemonic for matching instructions. The <tt>&quot;.att_mnemonic&quot;</tt> and <tt>&quot;.intel_mnemonic&quot;</tt> directives will take precedent.</dd>
+<dt><code>-msyntax=</code><i>att</i></dt>
 <dd>
-<dt><code>-msyntax=</code><i>intel</i></p>
-<dd> This option specifies instruction syntax when processing instructions. The <tt>&quot;.att_syntax&quot;</tt> and <tt>&quot;.intel_syntax&quot;</tt> directives will take precedent.</p>
-<dt><code>-mnaked-reg</code></p>
-<dd> This opetion specifies that registers don&#8217;t require a <code>%</code> prefix. The <tt>&quot;.att_syntax&quot;</tt> and <tt>&quot;.intel_syntax&quot;</tt> directives will take precedent.</p>
-<dt><code>-madd-bnd-prefix</code></p>
-<dd> This option forces the assembler to add <font SIZE="-1">BND</font> prefix to all branches, even if such prefix was not explicitly specified in the source code.</dl>
+</dd><dt><code>-msyntax=</code><i>intel</i></dt>
+<dd> This option specifies instruction syntax when processing instructions. The <tt>&quot;.att_syntax&quot;</tt> and <tt>&quot;.intel_syntax&quot;</tt> directives will take precedent.</dd>
+<dt><code>-mnaked-reg</code></dt>
+<dd> This opetion specifies that registers don&#8217;t require a <code>%</code> prefix. The <tt>&quot;.att_syntax&quot;</tt> and <tt>&quot;.intel_syntax&quot;</tt> directives will take precedent.</dd>
+<dt><code>-madd-bnd-prefix</code></dt>
+<dd> This option forces the assembler to add <font SIZE="-1">BND</font> prefix to all branches, even if such prefix was not explicitly specified in the source code.</dd></dl>
 <p> The following options are available when as is configured for the Intel 80960 processor.</p>
 <dl>
-<dt><code>-ACA | -ACA_A | -ACB | -ACC | -AKA | -AKB | -AKC | -AMC</code></p>
-<dd> Specify which variant of the 960 architecture is the target.</p>
-<dt><code>-b</code></p>
-<dd> Add code to collect statistics about branches taken.</p>
-<dt><code>-no-relax</code></p>
-<dd> Do not alter compare-and-branch instructions for long displacements; error if necessary.</dl>
+<dt><code>-ACA | -ACA_A | -ACB | -ACC | -AKA | -AKB | -AKC | -AMC</code></dt>
+<dd> Specify which variant of the 960 architecture is the target.</dd>
+<dt><code>-b</code></dt>
+<dd> Add code to collect statistics about branches taken.</dd>
+<dt><code>-no-relax</code></dt>
+<dd> Do not alter compare-and-branch instructions for long displacements; error if necessary.</dd></dl>
 <p> The following options are available when as is configured for the Ubicom <font SIZE="-1">IP2K</font> series.</p>
 <dl>
-<dt><code>-mip2022ext</code></p>
-<dd> Specifies that the extended <font SIZE="-1">IP2022</font> instructions are allowed.</p>
-<dt><code>-mip2022</code></p>
-<dd> Restores the default behaviour, which restricts the permitted instructions to just the basic <font SIZE="-1">IP2022</font> ones.</dl>
+<dt><code>-mip2022ext</code></dt>
+<dd> Specifies that the extended <font SIZE="-1">IP2022</font> instructions are allowed.</dd>
+<dt><code>-mip2022</code></dt>
+<dd> Restores the default behaviour, which restricts the permitted instructions to just the basic <font SIZE="-1">IP2022</font> ones.</dd></dl>
 <p> The following options are available when as is configured for the Renesas M32C and M16C processors.</p>
 <dl>
-<dt><code>-m32c</code></p>
-<dd> Assemble M32C instructions.</p>
-<dt><code>-m16c</code></p>
-<dd> Assemble M16C instructions (the default).</p>
-<dt><code>-relax</code></p>
-<dd> Enable support for link-time relaxations.</p>
-<dt><code>-h-tick-hex</code></p>
-<dd> Support H&#8217;00 style hex constants in addition to 0x00 style.</dl>
+<dt><code>-m32c</code></dt>
+<dd> Assemble M32C instructions.</dd>
+<dt><code>-m16c</code></dt>
+<dd> Assemble M16C instructions (the default).</dd>
+<dt><code>-relax</code></dt>
+<dd> Enable support for link-time relaxations.</dd>
+<dt><code>-h-tick-hex</code></dt>
+<dd> Support H&#8217;00 style hex constants in addition to 0x00 style.</dd></dl>
 <p> The following options are available when as is configured for the Renesas M32R (formerly Mitsubishi M32R) series.</p>
 <dl>
-<dt><code>&#8211;m32rx</code></p>
-<dd> Specify which processor in the M32R family is the target. The default is normally the M32R, but this option changes it to the M32RX.</p>
-<dt><code>&#8211;warn-explicit-parallel-conflicts or &#8211;Wp</code></p>
-<dd> Produce warning messages when questionable parallel constructs are encountered.</p>
-<dt><code>&#8211;no-warn-explicit-parallel-conflicts or &#8211;Wnp</code></p>
-<dd> Do not produce warning messages when questionable parallel constructs are encountered.</dl>
+<dt><code>&#8211;m32rx</code></dt>
+<dd> Specify which processor in the M32R family is the target. The default is normally the M32R, but this option changes it to the M32RX.</dd>
+<dt><code>&#8211;warn-explicit-parallel-conflicts or &#8211;Wp</code></dt>
+<dd> Produce warning messages when questionable parallel constructs are encountered.</dd>
+<dt><code>&#8211;no-warn-explicit-parallel-conflicts or &#8211;Wnp</code></dt>
+<dd> Do not produce warning messages when questionable parallel constructs are encountered.</dd></dl>
 <p> The following options are available when as is configured for the Motorola 68000 series.</p>
 <dl>
-<dt><code>-l</code></p>
-<dd> Shorten references to undefined symbols, to one word instead of two.</p>
-<dt><code>-m68000 | -m68008 | -m68010 | -m68020 | -m68030</code></p>
+<dt><code>-l</code></dt>
+<dd> Shorten references to undefined symbols, to one word instead of two.</dd>
+<dt><code>-m68000 | -m68008 | -m68010 | -m68020 | -m68030</code></dt>
 <dd>
-<dt><code>| -m68040 | -m68060 | -m68302 | -m68331 | -m68332</code></p>
+</dd><dt><code>| -m68040 | -m68060 | -m68302 | -m68331 | -m68332</code></dt>
 <dd>
-<dt><code>| -m68333 | -m68340 | -mcpu32 | -m5200</code></p>
-<dd> Specify what processor in the 68000 family is the target. The default is normally the 68020, but this can be changed at configuration time.</p>
-<dt><code>-m68881 | -m68882 | -mno-68881 | -mno-68882</code></p>
-<dd> The target machine does (or does not) have a floating-point coprocessor. The default is to assume a coprocessor for 68020, 68030, and cpu32. Although the basic 68000 is not compatible with the 68881, a combination of the two can be specified, since it&#8217;s possible to do emulation of the coprocessor instructions with the main processor.</p>
-<dt><code>-m68851 | -mno-68851</code></p>
-<dd> The target machine does (or does not) have a memory-management unit coprocessor. The default is to assume an <font SIZE="-1">MMU</font> for 68020 and up.</dl>
+</dd><dt><code>| -m68333 | -m68340 | -mcpu32 | -m5200</code></dt>
+<dd> Specify what processor in the 68000 family is the target. The default is normally the 68020, but this can be changed at configuration time.</dd>
+<dt><code>-m68881 | -m68882 | -mno-68881 | -mno-68882</code></dt>
+<dd> The target machine does (or does not) have a floating-point coprocessor. The default is to assume a coprocessor for 68020, 68030, and cpu32. Although the basic 68000 is not compatible with the 68881, a combination of the two can be specified, since it&#8217;s possible to do emulation of the coprocessor instructions with the main processor.</dd>
+<dt><code>-m68851 | -mno-68851</code></dt>
+<dd> The target machine does (or does not) have a memory-management unit coprocessor. The default is to assume an <font SIZE="-1">MMU</font> for 68020 and up.</dd></dl>
 <p> The following options are available when as is configured for an Altera Nios <font SIZE="-1">II</font> processor.</p>
 <dl>
-<dt><code>-relax-section</code></p>
-<dd> Replace identified out-of-range branches with PC-relative <tt>&quot;jmp&quot;</tt> sequences when possible. The generated code sequences are suitable for use in position-independent code, but there is a practical limit on the extended branch range because of the length of the sequences. This option is the default.</p>
-<dt><code>-relax-all</code></p>
-<dd> Replace branch instructions not determinable to be in range and all call instructions with <tt>&quot;jmp&quot;</tt> and <tt>&quot;callr&quot;</tt> sequences (respectively). This option generates absolute relocations against the target symbols and is not appropriate for position-independent code.</p>
-<dt><code>-no-relax</code></p>
-<dd> Do not replace any branches or calls.</p>
-<dt><code>-EB</code></p>
-<dd> Generate big-endian output.</p>
-<dt><code>-EL</code></p>
-<dd> Generate little-endian output. This is the default.</dl>
+<dt><code>-relax-section</code></dt>
+<dd> Replace identified out-of-range branches with PC-relative <tt>&quot;jmp&quot;</tt> sequences when possible. The generated code sequences are suitable for use in position-independent code, but there is a practical limit on the extended branch range because of the length of the sequences. This option is the default.</dd>
+<dt><code>-relax-all</code></dt>
+<dd> Replace branch instructions not determinable to be in range and all call instructions with <tt>&quot;jmp&quot;</tt> and <tt>&quot;callr&quot;</tt> sequences (respectively). This option generates absolute relocations against the target symbols and is not appropriate for position-independent code.</dd>
+<dt><code>-no-relax</code></dt>
+<dd> Do not replace any branches or calls.</dd>
+<dt><code>-EB</code></dt>
+<dd> Generate big-endian output.</dd>
+<dt><code>-EL</code></dt>
+<dd> Generate little-endian output. This is the default.</dd></dl>
 <p> The following options are available when as is configured for a Meta processor.</p>
 <dl>
-<dt>&quot;-mcpu=metac11&quot;</p>
-<dd> Generate code for Meta 1.1.</p>
-<dt>&quot;-mcpu=metac12&quot;</p>
-<dd> Generate code for Meta 1.2.</p>
-<dt>&quot;-mcpu=metac21&quot;</p>
-<dd> Generate code for Meta 2.1.</p>
-<dt>&quot;-mfpu=metac21&quot;</p>
-<dd> Allow code to use <font SIZE="-1">FPU</font> hardware of Meta 2.1.</dl>
+<dt>&quot;-mcpu=metac11&quot;</dt>
+<dd> Generate code for Meta 1.1.</dd>
+<dt>&quot;-mcpu=metac12&quot;</dt>
+<dd> Generate code for Meta 1.2.</dd>
+<dt>&quot;-mcpu=metac21&quot;</dt>
+<dd> Generate code for Meta 2.1.</dd>
+<dt>&quot;-mfpu=metac21&quot;</dt>
+<dd> Allow code to use <font SIZE="-1">FPU</font> hardware of Meta 2.1.</dd></dl>
 <p> See the info pages for documentation of the MMIX-specific options. </p>
 <p> The following options are available when as is configured for a PowerPC processor.</p>
 <dl>
-<dt><code>-a32</code></p>
-<dd> Generate <font SIZE="-1">ELF32</font> or <font SIZE="-1">XCOFF32</font>.</p>
-<dt><code>-a64</code></p>
-<dd> Generate <font SIZE="-1">ELF64</font> or <font SIZE="-1">XCOFF64</font>.</p>
-<dt><code>-K </code><font SIZE="-1"><code>PIC</code></font></p>
-<dd> Set <font SIZE="-1">EF_PPC_RELOCATABLE_LIB</font> in <font SIZE="-1">ELF</font> flags.</p>
-<dt><code>-mpwrx | -mpwr2</code></p>
-<dd> Generate code for <font SIZE="-1">POWER/2</font> (<font SIZE="-1">RIOS2</font>).</p>
-<dt><code>-mpwr</code></p>
-<dd> Generate code for <font SIZE="-1">POWER</font> (<font SIZE="-1">RIOS1</font>)</p>
-<dt><code>-m601</code></p>
-<dd> Generate code for PowerPC 601.</p>
-<dt><code>-mppc, -mppc32, -m603, -m604</code></p>
-<dd> Generate code for PowerPC 603/604.</p>
-<dt><code>-m403, -m405</code></p>
-<dd> Generate code for PowerPC 403/405.</p>
-<dt><code>-m440</code></p>
-<dd> Generate code for PowerPC 440. BookE and some 405 instructions.</p>
-<dt><code>-m464</code></p>
-<dd> Generate code for PowerPC 464.</p>
-<dt><code>-m476</code></p>
-<dd> Generate code for PowerPC 476.</p>
-<dt><code>-m7400, -m7410, -m7450, -m7455</code></p>
-<dd> Generate code for PowerPC 7400/7410/7450/7455.</p>
-<dt><code>-m750cl</code></p>
-<dd> Generate code for PowerPC 750CL.</p>
-<dt><code>-mppc64, -m620</code></p>
-<dd> Generate code for PowerPC 620/625/630.</p>
-<dt><code>-me500, -me500x2</code></p>
-<dd> Generate code for Motorola e500 core complex.</p>
-<dt><code>-me500mc</code></p>
-<dd> Generate code for Freescale e500mc core complex.</p>
-<dt><code>-me500mc64</code></p>
-<dd> Generate code for Freescale e500mc64 core complex.</p>
-<dt><code>-me5500</code></p>
-<dd> Generate code for Freescale e5500 core complex.</p>
-<dt><code>-me6500</code></p>
-<dd> Generate code for Freescale e6500 core complex.</p>
-<dt><code>-mspe</code></p>
-<dd> Generate code for Motorola <font SIZE="-1">SPE</font> instructions.</p>
-<dt><code>-mtitan</code></p>
-<dd> Generate code for AppliedMicro Titan core complex.</p>
-<dt><code>-mppc64bridge</code></p>
-<dd> Generate code for PowerPC 64, including bridge insns.</p>
-<dt><code>-mbooke</code></p>
-<dd> Generate code for 32-bit BookE.</p>
-<dt><code>-ma2</code></p>
-<dd> Generate code for A2 architecture.</p>
-<dt><code>-me300</code></p>
-<dd> Generate code for PowerPC e300 family.</p>
-<dt><code>-maltivec</code></p>
-<dd> Generate code for processors with AltiVec instructions.</p>
-<dt><code>-mvle</code></p>
-<dd> Generate code for Freescale PowerPC <font SIZE="-1">VLE</font> instructions.</p>
-<dt><code>-mvsx</code></p>
-<dd> Generate code for processors with Vector-Scalar (<font SIZE="-1">VSX</font>) instructions.</p>
-<dt><code>-mhtm</code></p>
-<dd> Generate code for processors with Hardware Transactional Memory instructions.</p>
-<dt><code>-mpower4, -mpwr4</code></p>
-<dd> Generate code for Power4 architecture.</p>
-<dt><code>-mpower5, -mpwr5, -mpwr5x</code></p>
-<dd> Generate code for Power5 architecture.</p>
-<dt><code>-mpower6, -mpwr6</code></p>
-<dd> Generate code for Power6 architecture.</p>
-<dt><code>-mpower7, -mpwr7</code></p>
-<dd> Generate code for Power7 architecture.</p>
-<dt><code>-mpower8, -mpwr8</code></p>
-<dd> Generate code for Power8 architecture.</p>
-<dt><code>-mcell</code></p>
+<dt><code>-a32</code></dt>
+<dd> Generate <font SIZE="-1">ELF32</font> or <font SIZE="-1">XCOFF32</font>.</dd>
+<dt><code>-a64</code></dt>
+<dd> Generate <font SIZE="-1">ELF64</font> or <font SIZE="-1">XCOFF64</font>.</dd>
+<dt><code>-K </code><font SIZE="-1"><code>PIC</code></font></dt>
+<dd> Set <font SIZE="-1">EF_PPC_RELOCATABLE_LIB</font> in <font SIZE="-1">ELF</font> flags.</dd>
+<dt><code>-mpwrx | -mpwr2</code></dt>
+<dd> Generate code for <font SIZE="-1">POWER/2</font> (<font SIZE="-1">RIOS2</font>).</dd>
+<dt><code>-mpwr</code></dt>
+<dd> Generate code for <font SIZE="-1">POWER</font> (<font SIZE="-1">RIOS1</font>)</dd>
+<dt><code>-m601</code></dt>
+<dd> Generate code for PowerPC 601.</dd>
+<dt><code>-mppc, -mppc32, -m603, -m604</code></dt>
+<dd> Generate code for PowerPC 603/604.</dd>
+<dt><code>-m403, -m405</code></dt>
+<dd> Generate code for PowerPC 403/405.</dd>
+<dt><code>-m440</code></dt>
+<dd> Generate code for PowerPC 440. BookE and some 405 instructions.</dd>
+<dt><code>-m464</code></dt>
+<dd> Generate code for PowerPC 464.</dd>
+<dt><code>-m476</code></dt>
+<dd> Generate code for PowerPC 476.</dd>
+<dt><code>-m7400, -m7410, -m7450, -m7455</code></dt>
+<dd> Generate code for PowerPC 7400/7410/7450/7455.</dd>
+<dt><code>-m750cl</code></dt>
+<dd> Generate code for PowerPC 750CL.</dd>
+<dt><code>-mppc64, -m620</code></dt>
+<dd> Generate code for PowerPC 620/625/630.</dd>
+<dt><code>-me500, -me500x2</code></dt>
+<dd> Generate code for Motorola e500 core complex.</dd>
+<dt><code>-me500mc</code></dt>
+<dd> Generate code for Freescale e500mc core complex.</dd>
+<dt><code>-me500mc64</code></dt>
+<dd> Generate code for Freescale e500mc64 core complex.</dd>
+<dt><code>-me5500</code></dt>
+<dd> Generate code for Freescale e5500 core complex.</dd>
+<dt><code>-me6500</code></dt>
+<dd> Generate code for Freescale e6500 core complex.</dd>
+<dt><code>-mspe</code></dt>
+<dd> Generate code for Motorola <font SIZE="-1">SPE</font> instructions.</dd>
+<dt><code>-mtitan</code></dt>
+<dd> Generate code for AppliedMicro Titan core complex.</dd>
+<dt><code>-mppc64bridge</code></dt>
+<dd> Generate code for PowerPC 64, including bridge insns.</dd>
+<dt><code>-mbooke</code></dt>
+<dd> Generate code for 32-bit BookE.</dd>
+<dt><code>-ma2</code></dt>
+<dd> Generate code for A2 architecture.</dd>
+<dt><code>-me300</code></dt>
+<dd> Generate code for PowerPC e300 family.</dd>
+<dt><code>-maltivec</code></dt>
+<dd> Generate code for processors with AltiVec instructions.</dd>
+<dt><code>-mvle</code></dt>
+<dd> Generate code for Freescale PowerPC <font SIZE="-1">VLE</font> instructions.</dd>
+<dt><code>-mvsx</code></dt>
+<dd> Generate code for processors with Vector-Scalar (<font SIZE="-1">VSX</font>) instructions.</dd>
+<dt><code>-mhtm</code></dt>
+<dd> Generate code for processors with Hardware Transactional Memory instructions.</dd>
+<dt><code>-mpower4, -mpwr4</code></dt>
+<dd> Generate code for Power4 architecture.</dd>
+<dt><code>-mpower5, -mpwr5, -mpwr5x</code></dt>
+<dd> Generate code for Power5 architecture.</dd>
+<dt><code>-mpower6, -mpwr6</code></dt>
+<dd> Generate code for Power6 architecture.</dd>
+<dt><code>-mpower7, -mpwr7</code></dt>
+<dd> Generate code for Power7 architecture.</dd>
+<dt><code>-mpower8, -mpwr8</code></dt>
+<dd> Generate code for Power8 architecture.</dd>
+<dt><code>-mcell</code></dt>
 <dd>
-<dt><code>-mcell</code></p>
-<dd> Generate code for Cell Broadband Engine architecture.</p>
-<dt><code>-mcom</code></p>
-<dd> Generate code Power/PowerPC common instructions.</p>
-<dt><code>-many</code></p>
-<dd> Generate code for any architecture (<font SIZE="-1">PWR/PWRX/PPC</font>).</p>
-<dt><code>-mregnames</code></p>
-<dd> Allow symbolic names for registers.</p>
-<dt><code>-mno-regnames</code></p>
-<dd> Do not allow symbolic names for registers.</p>
-<dt><code>-mrelocatable</code></p>
-<dd> Support for <font SIZE="-1">GCC</font>&#8216;s -mrelocatable option.</p>
-<dt><code>-mrelocatable-lib</code></p>
-<dd> Support for <font SIZE="-1">GCC</font>&#8216;s -mrelocatable-lib option.</p>
-<dt><code>-memb</code></p>
-<dd> Set <font SIZE="-1">PPC_EMB</font> bit in <font SIZE="-1">ELF</font> flags.</p>
-<dt><code>-mlittle, -mlittle-endian, -le</code></p>
-<dd> Generate code for a little endian machine.</p>
-<dt><code>-mbig, -mbig-endian, -be</code></p>
-<dd> Generate code for a big endian machine.</p>
-<dt><code>-msolaris</code></p>
-<dd> Generate code for Solaris.</p>
-<dt><code>-mno-solaris</code></p>
-<dd> Do not generate code for Solaris.</p>
-<dt><code>-nops=</code><i>count</i></p>
-<dd> If an alignment directive inserts more than <i>count</i> nops, put a branch at the beginning to skip execution of the nops.</dl>
+</dd><dt><code>-mcell</code></dt>
+<dd> Generate code for Cell Broadband Engine architecture.</dd>
+<dt><code>-mcom</code></dt>
+<dd> Generate code Power/PowerPC common instructions.</dd>
+<dt><code>-many</code></dt>
+<dd> Generate code for any architecture (<font SIZE="-1">PWR/PWRX/PPC</font>).</dd>
+<dt><code>-mregnames</code></dt>
+<dd> Allow symbolic names for registers.</dd>
+<dt><code>-mno-regnames</code></dt>
+<dd> Do not allow symbolic names for registers.</dd>
+<dt><code>-mrelocatable</code></dt>
+<dd> Support for <font SIZE="-1">GCC</font>&#8216;s -mrelocatable option.</dd>
+<dt><code>-mrelocatable-lib</code></dt>
+<dd> Support for <font SIZE="-1">GCC</font>&#8216;s -mrelocatable-lib option.</dd>
+<dt><code>-memb</code></dt>
+<dd> Set <font SIZE="-1">PPC_EMB</font> bit in <font SIZE="-1">ELF</font> flags.</dd>
+<dt><code>-mlittle, -mlittle-endian, -le</code></dt>
+<dd> Generate code for a little endian machine.</dd>
+<dt><code>-mbig, -mbig-endian, -be</code></dt>
+<dd> Generate code for a big endian machine.</dd>
+<dt><code>-msolaris</code></dt>
+<dd> Generate code for Solaris.</dd>
+<dt><code>-mno-solaris</code></dt>
+<dd> Do not generate code for Solaris.</dd>
+<dt><code>-nops=</code><i>count</i></dt>
+<dd> If an alignment directive inserts more than <i>count</i> nops, put a branch at the beginning to skip execution of the nops.</dd></dl>
 <p> See the info pages for documentation of the RX-specific options. </p>
 <p> The following options are available when as is configured for the s390 processor family.</p>
 <dl>
-<dt><code>-m31</code></p>
+<dt><code>-m31</code></dt>
 <dd>
-<dt><code>-m64</code></p>
-<dd> Select the word size, either 31/32 bits or 64 bits.</p>
-<dt><code>-mesa</code></p>
+</dd><dt><code>-m64</code></dt>
+<dd> Select the word size, either 31/32 bits or 64 bits.</dd>
+<dt><code>-mesa</code></dt>
 <dd>
-<dt><code>-mzarch</code></p>
-<dd> Select the architecture mode, either the Enterprise System Architecture (esa) or the z/Architecture mode (zarch).</p>
-<dt><code>-march=</code><i>processor</i></p>
-<dd> Specify which s390 processor variant is the target, <code>g6</code>, <code>g6</code>, <code>z900</code>, <code>z990</code>, <code>z9-109</code>, <code>z9-ec</code>, <code>z10</code>, <code>z196</code>, or <code>zEC12</code>.</p>
-<dt><code>-mregnames</code></p>
+</dd><dt><code>-mzarch</code></dt>
+<dd> Select the architecture mode, either the Enterprise System Architecture (esa) or the z/Architecture mode (zarch).</dd>
+<dt><code>-march=</code><i>processor</i></dt>
+<dd> Specify which s390 processor variant is the target, <code>g6</code>, <code>g6</code>, <code>z900</code>, <code>z990</code>, <code>z9-109</code>, <code>z9-ec</code>, <code>z10</code>, <code>z196</code>, or <code>zEC12</code>.</dd>
+<dt><code>-mregnames</code></dt>
 <dd>
-<dt><code>-mno-regnames</code></p>
-<dd> Allow or disallow symbolic names for registers.</p>
-<dt><code>-mwarn-areg-zero</code></p>
-<dd> Warn whenever the operand for a base or index register has been specified but evaluates to zero.</dl>
+</dd><dt><code>-mno-regnames</code></dt>
+<dd> Allow or disallow symbolic names for registers.</dd>
+<dt><code>-mwarn-areg-zero</code></dt>
+<dd> Warn whenever the operand for a base or index register has been specified but evaluates to zero.</dd></dl>
 <p> The following options are available when as is configured for a <font SIZE="-1">TMS320C6000</font> processor.</p>
 <dl>
-<dt><code>-march=</code><i>arch</i></p>
-<dd> Enable (only) instructions from architecture <i>arch</i>. By default, all instructions are permitted. </p>
+<dt><code>-march=</code><i>arch</i></dt>
+<dd> Enable (only) instructions from architecture <i>arch</i>. By default, all instructions are permitted. </dd>
 <p> The following values of <i>arch</i> are accepted: <tt>&quot;c62x&quot;</tt>, <tt>&quot;c64x&quot;</tt>, <tt>&quot;c64x+&quot;</tt>, <tt>&quot;c67x&quot;</tt>, <tt>&quot;c67x+&quot;</tt>, <tt>&quot;c674x&quot;</tt>.</p>
-<dt><code>-mdsbt</code></p>
+<dt><code>-mdsbt</code></dt>
 <dd>
-<dt><code>-mno-dsbt</code></p>
-<dd> The <code>-mdsbt</code> option causes the assembler to generate the <tt>&quot;Tag_ABI_DSBT&quot;</tt> attribute with a value of 1, indicating that the code is using <font SIZE="-1">DSBT</font> addressing. The <code>-mno-dsbt</code> option, the default, causes the tag to have a value of 0, indicating that the code does not use <font SIZE="-1">DSBT</font> addressing. The linker will emit a warning if objects of different type (<font SIZE="-1">DSBT</font> and non-DSBT) are linked together.</p>
-<dt><code>-mpid=no</code></p>
+</dd><dt><code>-mno-dsbt</code></dt>
+<dd> The <code>-mdsbt</code> option causes the assembler to generate the <tt>&quot;Tag_ABI_DSBT&quot;</tt> attribute with a value of 1, indicating that the code is using <font SIZE="-1">DSBT</font> addressing. The <code>-mno-dsbt</code> option, the default, causes the tag to have a value of 0, indicating that the code does not use <font SIZE="-1">DSBT</font> addressing. The linker will emit a warning if objects of different type (<font SIZE="-1">DSBT</font> and non-DSBT) are linked together.</dd>
+<dt><code>-mpid=no</code></dt>
 <dd>
-<dt><code>-mpid=near</code></p>
+</dd><dt><code>-mpid=near</code></dt>
 <dd>
-<dt><code>-mpid=far</code></p>
-<dd> The <code>-mpid=</code> option causes the assembler to generate the <tt>&quot;Tag_ABI_PID&quot;</tt> attribute with a value indicating the form of data addressing used by the code. <code>-mpid=no</code>, the default, indicates position-dependent data addressing, <code>-mpid=near</code> indicates position-independent addressing with <font SIZE="-1">GOT</font> accesses using near <font SIZE="-1">DP</font> addressing, and <code>-mpid=far</code> indicates position-independent addressing with <font SIZE="-1">GOT</font> accesses using far <font SIZE="-1">DP</font> addressing. The linker will emit a warning if objects built with different settings of this option are linked together.</p>
-<dt><code>-mpic</code></p>
+</dd><dt><code>-mpid=far</code></dt>
+<dd> The <code>-mpid=</code> option causes the assembler to generate the <tt>&quot;Tag_ABI_PID&quot;</tt> attribute with a value indicating the form of data addressing used by the code. <code>-mpid=no</code>, the default, indicates position-dependent data addressing, <code>-mpid=near</code> indicates position-independent addressing with <font SIZE="-1">GOT</font> accesses using near <font SIZE="-1">DP</font> addressing, and <code>-mpid=far</code> indicates position-independent addressing with <font SIZE="-1">GOT</font> accesses using far <font SIZE="-1">DP</font> addressing. The linker will emit a warning if objects built with different settings of this option are linked together.</dd>
+<dt><code>-mpic</code></dt>
 <dd>
-<dt><code>-mno-pic</code></p>
-<dd> The <code>-mpic</code> option causes the assembler to generate the <tt>&quot;Tag_ABI_PIC&quot;</tt> attribute with a value of 1, indicating that the code is using position-independent code addressing, The <tt>&quot;-mno-pic&quot;</tt> option, the default, causes the tag to have a value of 0, indicating position-dependent code addressing. The linker will emit a warning if objects of different type (position-dependent and position-independent) are linked together.</p>
-<dt><code>-mbig-endian</code></p>
+</dd><dt><code>-mno-pic</code></dt>
+<dd> The <code>-mpic</code> option causes the assembler to generate the <tt>&quot;Tag_ABI_PIC&quot;</tt> attribute with a value of 1, indicating that the code is using position-independent code addressing, The <tt>&quot;-mno-pic&quot;</tt> option, the default, causes the tag to have a value of 0, indicating position-dependent code addressing. The linker will emit a warning if objects of different type (position-dependent and position-independent) are linked together.</dd>
+<dt><code>-mbig-endian</code></dt>
 <dd>
-<dt><code>-mlittle-endian</code></p>
-<dd> Generate code for the specified endianness. The default is little-endian.</dl>
+</dd><dt><code>-mlittle-endian</code></dt>
+<dd> Generate code for the specified endianness. The default is little-endian.</dd></dl>
 <p> The following options are available when as is configured for a TILE-Gx processor.</p>
 <dl>
-<dt><code>-m32 | -m64</code></p>
-<dd> Select the word size, either 32 bits or 64 bits.</p>
-<dt><code>-EB | -EL</code></p>
-<dd> Select the endianness, either big-endian (-EB) or little-endian (-EL).</dl>
+<dt><code>-m32 | -m64</code></dt>
+<dd> Select the word size, either 32 bits or 64 bits.</dd>
+<dt><code>-EB | -EL</code></dt>
+<dd> Select the endianness, either big-endian (-EB) or little-endian (-EL).</dd></dl>
 <p> The following options are available when as is configured for an Xtensa processor.</p>
 <dl>
-<dt><code>&#8211;text-section-literals | &#8211;no-text-section-literals</code></p>
-<dd> Control the treatment of literal pools. The default is <code>&#8211;no-text-section-literals</code>, which places literals in separate sections in the output file. This allows the literal pool to be placed in a data <font SIZE="-1">RAM/ROM</font>. With <code>&#8211;text-section-literals</code>, the literals are interspersed in the text section in order to keep them as close as possible to their references. This may be necessary for large assembly files, where the literals would otherwise be out of range of the <tt>&quot;L32R&quot;</tt> instructions in the text section. These options only affect literals referenced via PC-relative <tt>&quot;L32R&quot;</tt> instructions; literals for absolute mode <tt>&quot;L32R&quot;</tt> instructions are handled separately.</p>
-<dt><code>&#8211;absolute-literals | &#8211;no-absolute-literals</code></p>
-<dd> Indicate to the assembler whether <tt>&quot;L32R&quot;</tt> instructions use absolute or PC-relative addressing. If the processor includes the absolute addressing option, the default is to use absolute <tt>&quot;L32R&quot;</tt> relocations. Otherwise, only the PC-relative <tt>&quot;L32R&quot;</tt> relocations can be used.</p>
-<dt><code>&#8211;target-align | &#8211;no-target-align</code></p>
-<dd> Enable or disable automatic alignment to reduce branch penalties at some expense in code size. This optimization is enabled by default. Note that the assembler will always align instructions like <tt>&quot;LOOP&quot;</tt> that have fixed alignment requirements.</p>
-<dt><code>&#8211;longcalls | &#8211;no-longcalls</code></p>
-<dd> Enable or disable transformation of call instructions to allow calls across a greater range of addresses. This option should be used when call targets can potentially be out of range. It may degrade both code size and performance, but the linker can generally optimize away the unnecessary overhead when a call ends up within range. The default is <code>&#8211;no-longcalls</code>.</p>
-<dt><code>&#8211;transform | &#8211;no-transform</code></p>
-<dd> Enable or disable all assembler transformations of Xtensa instructions, including both relaxation and optimization. The default is <code>&#8211;transform</code>; <code>&#8211;no-transform</code> should only be used in the rare cases when the instructions must be exactly as specified in the assembly source. Using <code>&#8211;no-transform</code> causes out of range instruction operands to be errors.</p>
-<dt><code>&#8211;rename-section</code> <i>oldname</i><code>=</code><i>newname</i></p>
-<dd> Rename the <i>oldname</i> section to <i>newname</i>. This option can be used multiple times to rename multiple sections.</dl>
+<dt><code>&#8211;text-section-literals | &#8211;no-text-section-literals</code></dt>
+<dd> Control the treatment of literal pools. The default is <code>&#8211;no-text-section-literals</code>, which places literals in separate sections in the output file. This allows the literal pool to be placed in a data <font SIZE="-1">RAM/ROM</font>. With <code>&#8211;text-section-literals</code>, the literals are interspersed in the text section in order to keep them as close as possible to their references. This may be necessary for large assembly files, where the literals would otherwise be out of range of the <tt>&quot;L32R&quot;</tt> instructions in the text section. These options only affect literals referenced via PC-relative <tt>&quot;L32R&quot;</tt> instructions; literals for absolute mode <tt>&quot;L32R&quot;</tt> instructions are handled separately.</dd>
+<dt><code>&#8211;absolute-literals | &#8211;no-absolute-literals</code></dt>
+<dd> Indicate to the assembler whether <tt>&quot;L32R&quot;</tt> instructions use absolute or PC-relative addressing. If the processor includes the absolute addressing option, the default is to use absolute <tt>&quot;L32R&quot;</tt> relocations. Otherwise, only the PC-relative <tt>&quot;L32R&quot;</tt> relocations can be used.</dd>
+<dt><code>&#8211;target-align | &#8211;no-target-align</code></dt>
+<dd> Enable or disable automatic alignment to reduce branch penalties at some expense in code size. This optimization is enabled by default. Note that the assembler will always align instructions like <tt>&quot;LOOP&quot;</tt> that have fixed alignment requirements.</dd>
+<dt><code>&#8211;longcalls | &#8211;no-longcalls</code></dt>
+<dd> Enable or disable transformation of call instructions to allow calls across a greater range of addresses. This option should be used when call targets can potentially be out of range. It may degrade both code size and performance, but the linker can generally optimize away the unnecessary overhead when a call ends up within range. The default is <code>&#8211;no-longcalls</code>.</dd>
+<dt><code>&#8211;transform | &#8211;no-transform</code></dt>
+<dd> Enable or disable all assembler transformations of Xtensa instructions, including both relaxation and optimization. The default is <code>&#8211;transform</code>; <code>&#8211;no-transform</code> should only be used in the rare cases when the instructions must be exactly as specified in the assembly source. Using <code>&#8211;no-transform</code> causes out of range instruction operands to be errors.</dd>
+<dt><code>&#8211;rename-section</code> <i>oldname</i><code>=</code><i>newname</i></dt>
+<dd> Rename the <i>oldname</i> section to <i>newname</i>. This option can be used multiple times to rename multiple sections.</dd></dl>
 <p> The following options are available when as is configured for a Z80 family processor.</p>
 <dl>
-<dt><code>-z80</code></p>
-<dd> Assemble for Z80 processor.</p>
-<dt><code>-r800</code></p>
-<dd> Assemble for R800 processor.</p>
-<dt><code>-ignore-undocumented-instructions</code></p>
+<dt><code>-z80</code></dt>
+<dd> Assemble for Z80 processor.</dd>
+<dt><code>-r800</code></dt>
+<dd> Assemble for R800 processor.</dd>
+<dt><code>-ignore-undocumented-instructions</code></dt>
 <dd>
-<dt><code>-Wnud</code></p>
-<dd> Assemble undocumented Z80 instructions that also work on R800 without warning.</p>
-<dt><code>-ignore-unportable-instructions</code></p>
+</dd><dt><code>-Wnud</code></dt>
+<dd> Assemble undocumented Z80 instructions that also work on R800 without warning.</dd>
+<dt><code>-ignore-unportable-instructions</code></dt>
 <dd>
-<dt><code>-Wnup</code></p>
-<dd> Assemble all undocumented Z80 instructions without warning.</p>
-<dt><code>-warn-undocumented-instructions</code></p>
+</dd><dt><code>-Wnup</code></dt>
+<dd> Assemble all undocumented Z80 instructions without warning.</dd>
+<dt><code>-warn-undocumented-instructions</code></dt>
 <dd>
-<dt><code>-Wud</code></p>
-<dd> Issue a warning for undocumented Z80 instructions that also work on R800.</p>
-<dt><code>-warn-unportable-instructions</code></p>
+</dd><dt><code>-Wud</code></dt>
+<dd> Issue a warning for undocumented Z80 instructions that also work on R800.</dd>
+<dt><code>-warn-unportable-instructions</code></dt>
 <dd>
-<dt><code>-Wup</code></p>
-<dd> Issue a warning for undocumented Z80 instructions that do not work on R800.</p>
-<dt><code>-forbid-undocumented-instructions</code></p>
+</dd><dt><code>-Wup</code></dt>
+<dd> Issue a warning for undocumented Z80 instructions that do not work on R800.</dd>
+<dt><code>-forbid-undocumented-instructions</code></dt>
 <dd>
-<dt><code>-Fud</code></p>
-<dd> Treat all undocumented instructions as errors.</p>
-<dt><code>-forbid-unportable-instructions</code></p>
+</dd><dt><code>-Fud</code></dt>
+<dd> Treat all undocumented instructions as errors.</dd>
+<dt><code>-forbid-unportable-instructions</code></dt>
 <dd>
-<dt><code>-Fup</code></p>
-<dd> Treat undocumented Z80 instructions that do not work on R800 as errors.</dl>
+</dd><dt><code>-Fup</code></dt>
+<dd> Treat undocumented Z80 instructions that do not work on R800 as errors.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <i><a href="/docs/linux/man/1-gcc/">gcc</a></i>(1), <i><a href="/docs/linux/man/1-ld/">ld</a></i>(1), and the Info entries for <i>binutils</i> and <i>ld</i>.</p>
 <h2>COPYRIGHT</h2>

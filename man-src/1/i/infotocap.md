@@ -14,18 +14,18 @@ description: "infotocap – convert a terminfo description into a termcap descri
 <h2>DESCRIPTION</h2>
 <p> <code>infotocap</code> looks in each given text <i>file</i> for <code>terminfo</code> descriptions. For each terminfo description found, an equivalent <code>termcap</code> description is written to standard output. Terminfo <code>use</code> capabilities are translated directly to termcap <code>tc</code> capabilities.</p>
 <dl>
-<dt><code>-v</code></p>
-<dd> print out tracing information on standard error as the program runs.</p>
-<dt><code>-V</code></p>
-<dd> print out the version of the program in use on standard error and exit.</p>
-<dt><code>-1</code></p>
-<dd> cause the fields to print out one to a line. Otherwise, the fields will be printed several to a line to a maximum width of 60 characters.</p>
-<dt><code>-w</code></p>
-<dd> change the output to <i>width</i> characters.</dl>
+<dt><code>-v</code></dt>
+<dd> print out tracing information on standard error as the program runs.</dd>
+<dt><code>-V</code></dt>
+<dd> print out the version of the program in use on standard error and exit.</dd>
+<dt><code>-1</code></dt>
+<dd> cause the fields to print out one to a line. Otherwise, the fields will be printed several to a line to a maximum width of 60 characters.</dd>
+<dt><code>-w</code></dt>
+<dd> change the output to <i>width</i> characters.</dd></dl>
 <h2>FILES</h2>
 <dl>
-<dt>/etc/terminfo</p>
-<dd> Compiled terminal description database.</dl>
+<dt>/etc/terminfo</dt>
+<dd> Compiled terminal description database.</dd></dl>
 <h2>NOTES</h2>
 <p> This utility is actually a link to <code>tic</code>, running in <i>-C</i> mode. You can use other <code>tic</code> options such as <code>-f</code> and <code>-x</code>.</p>
 <h2>PORTABILITY</h2>

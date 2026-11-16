@@ -28,6 +28,6 @@ description: "globus_gsi_gss_constants.h – Globus GSI GSS constants."
 <p>Globus GSI GSS constants. </p>
 <p> <code>Author:</code></p>
 <dl COMPACT>
-<dd>Sam Lang, Sam Meder</dl>
+<dd>Sam Lang, Sam Meder</dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for globus_gssapi_gsi from the source code.</p>

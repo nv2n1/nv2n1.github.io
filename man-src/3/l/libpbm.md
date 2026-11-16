@@ -59,14 +59,14 @@ description: "libpbm – libnetpbm functions to read and write PBM image files"
 <p> If <code>pbm_nextimage() </code> successfully positions to the next image, it returns <code>*</code><i>eofP</i> false (0). If there is no next image in the file, it returns <code>*</code><i>eofP</i> true . If it can&#8217;t position or determine the file status due to a file error, it throws an error . </p>
 <p> <code>pbm_check()</code> checks for the common file integrity error where the file is the wrong size to contain all the image data. <code>pbm_check()</code> assumes the file is positioned after an image header (as if <code>pbm_readpbminit() </code> was the last operation on the file). It checks the file size to see if the number of bytes left in the file are the number required to contain the image raster. If the file is too short, <code>pbm_check()</code> causes the program t throws an error . Otherwise, it returns one of the following values (enumerations of the <code>enum pm_check_code</code> type) as <code>*</code><i>retval</i>: </p>
 <dl>
-<dt><code>PM_CHECK_OK</code></p>
-<dd> The file&#8217;s size is exactly what is required to hold the image raster. </p>
-<dt><code>PM_CHECK_UNKNOWN_TYPE</code></p>
-<dd> <i>format</i> is not a format whose size <code>pbm_check()</code> can anticipate. The only format with which <code>pbm_check()</code> can deal is raw PBM format. </p>
-<dt><code>PM_CHECK_TOO_LONG</code></p>
-<dd> The file is longer than it needs to be to contain the image raster. The extra data might be another image. </p>
-<dt><code>PM_CHECK_UNCHECKABLE</code></p>
-<dd> The file is not a kind that has a predictable size, so there is no simple way for <code>pbm_check()</code> to know if it is the right size. Only a regular file has predictable size. A pipe is a common example of a file that does not. </p>
+<dt><code>PM_CHECK_OK</code></dt>
+<dd> The file&#8217;s size is exactly what is required to hold the image raster. </dd>
+<dt><code>PM_CHECK_UNKNOWN_TYPE</code></dt>
+<dd> <i>format</i> is not a format whose size <code>pbm_check()</code> can anticipate. The only format with which <code>pbm_check()</code> can deal is raw PBM format. </dd>
+<dt><code>PM_CHECK_TOO_LONG</code></dt>
+<dd> The file is longer than it needs to be to contain the image raster. The extra data might be another image. </dd>
+<dt><code>PM_CHECK_UNCHECKABLE</code></dt>
+<dd> The file is not a kind that has a predictable size, so there is no simple way for <code>pbm_check()</code> to know if it is the right size. Only a regular file has predictable size. A pipe is a common example of a file that does not. </dd>
 </dl>
 <p> <i>check_type</i> must have the value <code>PM_CHECK_BASIC </code> (an enumerated value of the <code>pm_check_type</code> enumerated type). Otherwise, the effect of <code>pbm_check()</code> is unpredictable. This argument exists for future backward compatible expansion of the function of <code>pbm_check()</code>. </p>
 <h2>SEE ALSO</h2>

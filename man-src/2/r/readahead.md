@@ -22,10 +22,10 @@ ssize_t readahead(int fd, off64_t offset, size_t count);
 <p> On success, <code>readahead</code>() returns 0; on failure, -1 is returned, with <i>errno</i> set to indicate the cause of the error.</p>
 <h2>ERRORS</h2>
 <dl>
-<dt><code>EBADF</code></p>
-<dd> <i>fd</i> is not a valid file descriptor or is not open for reading.</p>
-<dt><code>EINVAL</code></p>
-<dd> <i>fd</i> does not refer to a file type to which <code>readahead</code>() can be applied.</dl>
+<dt><code>EBADF</code></dt>
+<dd> <i>fd</i> is not a valid file descriptor or is not open for reading.</dd>
+<dt><code>EINVAL</code></dt>
+<dd> <i>fd</i> does not refer to a file type to which <code>readahead</code>() can be applied.</dd></dl>
 <h2>VERSIONS</h2>
 <p> The <code>readahead</code>() system call appeared in Linux 2.4.13; glibc support has been provided since version 2.3.</p>
 <h2>CONFORMING TO</h2>

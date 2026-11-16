@@ -22,8 +22,8 @@ long get_avphys_pages(void);
 <p> On success, these functions return a nonnegative value as given in DESCRIPTION. On failure, they return -1 and set <i>errno</i> to indicate the cause of the error.</p>
 <h2>ERRORS</h2>
 <dl>
-<dt><code>ENOSYS</code></p>
-<dd> The system could not provide the required information (possibly because the <i>/proc</i> filesystem was not mounted).</dl>
+<dt><code>ENOSYS</code></dt>
+<dd> The system could not provide the required information (possibly because the <i>/proc</i> filesystem was not mounted).</dd></dl>
 <h2>CONFORMING TO</h2>
 <p> These functions are GNU extensions.</p>
 <h2>NOTES</h2>

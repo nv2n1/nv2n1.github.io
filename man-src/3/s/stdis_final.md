@@ -10,10 +10,8 @@ description: "std::is_final – std::is_final"
 <p>std::is_final &#8211; std::is_final</p>
 <h2>Synopsis</h2>
 <pre><code>Defined in header&lt;type_traits&gt;
-
     template &lt;class T&gt;
     (since C++ 14)
-
         struct is_final;</code></pre>
 <p>If T is a final class (that is, a class declared with the final_specifier), provides the member constant value equal true. For any other type, value is false.<br />
 If T is a class type, T shall be a complete type; otherwise, the behavior is undefined. </p>
@@ -43,17 +41,14 @@ A union can be marked final (and std::is_final will detect that), even though un
 <h2>Example</h2>
 <p>// Run this code </p>
 <pre><code>#include &lt;iostream&gt;
-
 #include &lt;type_traits&gt;
 class A
 {
 };
-
 class B final
 {
 };
 int main()
-
 {
     std::cout
         &lt;&lt; std::boolalpha

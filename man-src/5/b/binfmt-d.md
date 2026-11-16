@@ -28,12 +28,13 @@ description: "binfmt.d – Configure additional binary formats for executables a
 <dd>
 <pre># Start WINE on Windows executables
 :DOSWin:M::MZ::/usr/bin/wine:</pre>
-</dl>
+</dd></dl>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/1-systemd/">systemd</a></code>(1), <code><a href="/docs/linux/man/8-systemd-binfmt-service/">systemd-binfmt.service</a></code>(8), <code><a href="/docs/linux/man/1-systemd-delta/">systemd-delta</a></code>(1), <code>wine</code>(8)</p>
 <h2>Notes</h2>
 <dl>
-<dt> 1.</p>
-<dd>binfmt-misc.rst</p>
+<dt> 1.</dt>
+<dd>binfmt-misc.rst</dd>
 <dl>
-<dd><a rel="nofollow" href="https://www.kernel.org/doc/html/latest/admin-guide/binfmt-misc.html">https://www.kernel.org/doc/html/latest/admin-guide/binfmt-misc.html</a></dl>
+<dd><a rel="nofollow" href="https://www.kernel.org/doc/html/latest/admin-guide/binfmt-misc.html">https://www.kernel.org/doc/html/latest/admin-guide/binfmt-misc.html</a></dd></dl>
+</dl>

@@ -16,8 +16,8 @@ bson_count_keys(const bson_t *bson);
 </code></pre>
 <h2>PARAMETERS</h2>
 <dl>
-<dt><code>bson</code></p>
-<dd> A <code>bson_t</code> \&amp;.</dl>
+<dt><code>bson</code></dt>
+<dd> A <code>bson_t</code> \&amp;.</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> The <code><a href="/docs/linux/man/3-bson_count_keys/">bson_count_keys</a>(3)</code> function shall count the number of elements within <code>bson</code> \&amp;. </p>
 <h2>RETURNS</h2>

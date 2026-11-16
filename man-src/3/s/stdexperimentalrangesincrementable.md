@@ -11,19 +11,12 @@ std::experimental::ranges::Incrementable - std::experimental::ranges::Incrementa
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header &lt;experimental/ranges/iterator&gt;
-
 template &lt;class I&gt;
-
 concept bool Incrementable =
-
 Regular&lt;I&gt; &amp;&amp;
-
 WeaklyIncrementable&lt;I&gt; &amp;&amp;                         (ranges TS)
-
 requires(I i) {
-
     { i++ } -&gt; Same&lt;I&gt;&amp;&amp;;
-
 };</code></pre> 
 The concept Incrementable&lt;I&gt; specifies the requirements on a type that can be incremented (with the pre- and post-increment operators). The increment operations (including those required by WeaklyIncrementable) are required to be equality-preserving, and the type is required to be EqualityComparable. 
 Let a and b be incrementable objects of type I. Incrementable&lt;I&gt; is satisfied only if: 

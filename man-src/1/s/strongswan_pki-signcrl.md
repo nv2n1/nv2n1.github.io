@@ -14,47 +14,47 @@ description: "pki –signcrl – Issue a Certificate Revocation List (CRL) using
 <p>This sub-command of <code><a href="/docs/linux/man/1-pki/">pki</a></code>(1) is used to issue a Certificate Revocation List (CRL) using a CA certificate and private key.</p>
 <h2>Options</h2>
 <dl COMPACT>
-<dt><code>-h, &#8211;help</code></p>
-<dd>Print usage information with a summary of the available options.</p>
-<dt><code>-v, &#8211;debug </code><i>level</i></p>
-<dd>Set debug level, default: 1.</p>
-<dt><code>-+, &#8211;options </code><i>file</i></p>
-<dd>Read command line options from <i>file</i>.</p>
-<dt><code>-k, &#8211;cakey </code><i>file</i></p>
-<dd>CA private key file. Either this or <code>&#8211;cakeyid</code> is required.</p>
-<dt><code>-x, &#8211;cakeyid </code><i>hex</i></p>
-<dd>Smartcard or TPM CA private key object handle in hex format with an optional 0x prefix. Either this or <code>&#8211;cakey</code> is required.</p>
-<dt><code>-c, &#8211;cacert </code><i>file</i></p>
-<dd>CA certificate file. Required.</p>
-<dt><code>-l, &#8211;lifetime </code><i>days</i></p>
-<dd>Days until the CRL gets a nextUpdate, default: 15. Ignored if both an absolute start and end time are given.</p>
-<dt><code>-F, &#8211;this-update </code><i>datetime</i></p>
-<dd>Absolute time when the validity of the CRL begins. The datetime format is defined by the <code>&#8211;dateform</code> option.</p>
-<dt><code>-T, &#8211;next-update </code><i>datetime</i></p>
-<dd>Absolute time when the validity of the CRL end. The datetime format is defined by the <code>&#8211;dateform</code> option.</p>
-<dt><code>-D, &#8211;dateform </code><i>form</i></p>
-<dd><a href="/docs/linux/man/3-strptime/">strptime</a>(3) format for the <code>&#8211;this-update</code> and <code>&#8211;next-update</code> options, default: <code>%d.%m.%y %T</code></p>
-<dt><code>-a, &#8211;lastcrl </code><i>crl</i></p>
-<dd>CRL of lastUpdate to copy revocations from.</p>
-<dt><code>-b, &#8211;basecrl </code><i>crl</i></p>
-<dd>Base CRL to create a delta CRL for.</p>
-<dt><code>-u, &#8211;crluri </code><i>uri</i></p>
-<dd>Freshest delta CRL URI to include in CRL. Can be used multiple times.</p>
-<dt><code>-g, &#8211;digest </code><i>digest</i></p>
-<dd>Digest to use for signature creation. One of <i>md5</i>, <i>sha1</i>, <i>sha224</i>, <i>sha256</i>, <i>sha384</i>, or <i>sha512</i>. The default is determined based on the type and size of the signature key.</p>
-<dt><code>-f, &#8211;outform </code><i>encoding</i></p>
-<dd>Encoding of the created certificate file. Either <i>der</i> (ASN.1 DER) or <i>pem</i> (Base64 PEM), defaults to <i>der</i>.</dl>
+<dt><code>-h, &#8211;help</code></dt>
+<dd>Print usage information with a summary of the available options.</dd>
+<dt><code>-v, &#8211;debug </code><i>level</i></dt>
+<dd>Set debug level, default: 1.</dd>
+<dt><code>-+, &#8211;options </code><i>file</i></dt>
+<dd>Read command line options from <i>file</i>.</dd>
+<dt><code>-k, &#8211;cakey </code><i>file</i></dt>
+<dd>CA private key file. Either this or <code>&#8211;cakeyid</code> is required.</dd>
+<dt><code>-x, &#8211;cakeyid </code><i>hex</i></dt>
+<dd>Smartcard or TPM CA private key object handle in hex format with an optional 0x prefix. Either this or <code>&#8211;cakey</code> is required.</dd>
+<dt><code>-c, &#8211;cacert </code><i>file</i></dt>
+<dd>CA certificate file. Required.</dd>
+<dt><code>-l, &#8211;lifetime </code><i>days</i></dt>
+<dd>Days until the CRL gets a nextUpdate, default: 15. Ignored if both an absolute start and end time are given.</dd>
+<dt><code>-F, &#8211;this-update </code><i>datetime</i></dt>
+<dd>Absolute time when the validity of the CRL begins. The datetime format is defined by the <code>&#8211;dateform</code> option.</dd>
+<dt><code>-T, &#8211;next-update </code><i>datetime</i></dt>
+<dd>Absolute time when the validity of the CRL end. The datetime format is defined by the <code>&#8211;dateform</code> option.</dd>
+<dt><code>-D, &#8211;dateform </code><i>form</i></dt>
+<dd><a href="/docs/linux/man/3-strptime/">strptime</a>(3) format for the <code>&#8211;this-update</code> and <code>&#8211;next-update</code> options, default: <code>%d.%m.%y %T</code></dd>
+<dt><code>-a, &#8211;lastcrl </code><i>crl</i></dt>
+<dd>CRL of lastUpdate to copy revocations from.</dd>
+<dt><code>-b, &#8211;basecrl </code><i>crl</i></dt>
+<dd>Base CRL to create a delta CRL for.</dd>
+<dt><code>-u, &#8211;crluri </code><i>uri</i></dt>
+<dd>Freshest delta CRL URI to include in CRL. Can be used multiple times.</dd>
+<dt><code>-g, &#8211;digest </code><i>digest</i></dt>
+<dd>Digest to use for signature creation. One of <i>md5</i>, <i>sha1</i>, <i>sha224</i>, <i>sha256</i>, <i>sha384</i>, or <i>sha512</i>. The default is determined based on the type and size of the signature key.</dd>
+<dt><code>-f, &#8211;outform </code><i>encoding</i></dt>
+<dd>Encoding of the created certificate file. Either <i>der</i> (ASN.1 DER) or <i>pem</i> (Base64 PEM), defaults to <i>der</i>.</dd></dl>
 <h3>Revoked Certificates</h3>
 <p>Multiple revoked certificates can be added to the CRL by either providing the certificate file or the respective serial number directly. A reason and a timestamp can be configured for each revocation (they have to be given before each certificate/serial on the command line).</p>
 <dl COMPACT>
-<dt><code>-r, &#8211;reason </code><i>reason</i></p>
-<dd>The reason why the certificate was revoked. One of <i>key-compromise</i>, <i>ca-compromise</i>, <i>affiliation-changed</i>, <i>superseded</i>, <i>cessation-of-operation</i>, or <i>certificate-hold</i>.</p>
-<dt><code>-d, &#8211;date </code><i>ts</i></p>
-<dd>Revocation date as Unix timestamp. Defaults to the current time.</p>
-<dt><code>-z, &#8211;cert </code><i>file</i></p>
-<dd>Certificate file to revoke.</p>
-<dt><code>-s, &#8211;serial </code><i>hex</i></p>
-<dd>Hexadecimal encoded serial number of the certificate to revoke.</dl>
+<dt><code>-r, &#8211;reason </code><i>reason</i></dt>
+<dd>The reason why the certificate was revoked. One of <i>key-compromise</i>, <i>ca-compromise</i>, <i>affiliation-changed</i>, <i>superseded</i>, <i>cessation-of-operation</i>, or <i>certificate-hold</i>.</dd>
+<dt><code>-d, &#8211;date </code><i>ts</i></dt>
+<dd>Revocation date as Unix timestamp. Defaults to the current time.</dd>
+<dt><code>-z, &#8211;cert </code><i>file</i></dt>
+<dd>Certificate file to revoke.</dd>
+<dt><code>-s, &#8211;serial </code><i>hex</i></dt>
+<dd>Hexadecimal encoded serial number of the certificate to revoke.</dd></dl>
 <h2>Examples</h2>
 <p>Revoke a certificate: </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>pki &#8211;signcrl &#8211;cacert ca_cert.der &#8211;cakey ca_key.der&nbsp;<wbr>\<br />

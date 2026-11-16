@@ -26,8 +26,8 @@ description: "dcc_selinux – Security Enhanced Linux Policy for the dcc process
 <p> <code>dcc_client_map_t </code> </p>
 <p> &#8211; Set files with the dcc_client_map_t type, if you want to treat the files as dcc client map data. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/var/lib/dcc/map, /etc/dcc/map, /var/run/dcc/map, /var/dcc/map </p>
+<dt>Paths:</dt>
+<dd>/var/lib/dcc/map, /etc/dcc/map, /var/run/dcc/map, /var/dcc/map </dd>
 </dl>
 <p> <code>dcc_client_tmp_t </code> </p>
 <p> &#8211; Set files with the dcc_client_tmp_t type, if you want to store dcc client temporary files in the /tmp directories. </p>
@@ -40,8 +40,8 @@ description: "dcc_selinux – Security Enhanced Linux Policy for the dcc process
 <p> <code>dcc_var_t </code> </p>
 <p> &#8211; Set files with the dcc_var_t type, if you want to store the files under the /var directory. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/etc/dcc(/.*)?, /var/dcc(/.*)?, /var/lib/dcc(/.*)? </p>
+<dt>Paths:</dt>
+<dd>/etc/dcc(/.*)?, /var/dcc(/.*)?, /var/lib/dcc(/.*)? </dd>
 </dl>
 <p> <code>dccd_exec_t </code> </p>
 <p> &#8211; Set files with the dccd_exec_t type, if you want to transition an executable to the dccd_t domain. </p>
@@ -56,8 +56,8 @@ description: "dcc_selinux – Security Enhanced Linux Policy for the dcc process
 <p> <code>dccifd_var_run_t </code> </p>
 <p> &#8211; Set files with the dccifd_var_run_t type, if you want to store the dccifd files under the /run directory. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/etc/dcc/dccifd, /var/run/dcc/dccifd </p>
+<dt>Paths:</dt>
+<dd>/etc/dcc/dccifd, /var/run/dcc/dccifd </dd>
 </dl>
 <p> <code>dccm_exec_t </code> </p>
 <p> &#8211; Set files with the dccm_exec_t type, if you want to transition an executable to the dccm_t domain. </p>
@@ -73,12 +73,12 @@ description: "dcc_selinux – Security Enhanced Linux Policy for the dcc process
 <p> Policy governs the access confined processes have to these ports. SELinux dcc policy is very flexible allowing users to setup their dcc processes in as secure a method as possible. </p>
 <p> The following port types are defined for dcc: </p>
 <dl>
-<dt><code>dcc_port_t </code></p>
+<dt><code>dcc_port_t </code></dt>
 <dd>
-<dd>Default Defined Ports: udp 6276,6277 </p>
-<dt><code>dccm_port_t </code></p>
+</dd><dd>Default Defined Ports: udp 6276,6277 </dd>
+<dt><code>dccm_port_t </code></dt>
 <dd>
-<dd>Default Defined Ports: tcp 5679 udp 5679</dl>
+</dd><dd>Default Defined Ports: tcp 5679 udp 5679</dd></dl>
 <h2>Process Types</h2>
 <p>SELinux defines process types (domains) for each process running on the system </p>
 <p> You can see the context of a process using the <code>-Z</code> option to <code>psP Policy governs the access confined processes have to files. SELinux dcc policy is very flexible allowing users to setup their dcc processes in as secure a method as possible. </p>

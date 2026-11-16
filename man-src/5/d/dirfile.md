@@ -13,10 +13,10 @@ description: "dirfile — a filesystem based database format for time-ordered bi
 <h3>Complex Number Storage Format</h3>
 <p>Version 7 of the Dirfile Standards added support for complex valued data. Two types of complex valued data are supported by the Dirfile Standards:</p>
 <dl>
-<dt>*</p>
-<dd>A 64-bit complex number consisting of a IEEE-754 standard 32-bit single precision floating point real part and a IEEE-754 standard 32-bit single precision floating point imaginary part, and</p>
-<dt>*</p>
-<dd>A 128-bit complex number consisting of a IEEE-754 standard 64-bit double precision floating point real part and a IEEE-754 standard 64-bit double precision floating point imaginary part.</dl>
+<dt>*</dt>
+<dd>A 64-bit complex number consisting of a IEEE-754 standard 32-bit single precision floating point real part and a IEEE-754 standard 32-bit single precision floating point imaginary part, and</dd>
+<dt>*</dt>
+<dd>A 128-bit complex number consisting of a IEEE-754 standard 64-bit double precision floating point real part and a IEEE-754 standard 64-bit double precision floating point imaginary part.</dd></dl>
 <p> No integer-type complex numbers are supported. Unencoded complex numbers are stored on disk in &quot;Fortran order&quot;, that is with the IEEE-754 real part followed by the IEEE-754 imaginary part. The specified endianness of the two components follows that of purely real floating point numbers. Endianness does not affect the ordering of the real and imaginary parts. This format also conforms to the C99 standard. The latest C++ standard (C++98) does not specify a standard storage format for native complex numbers, but the upcoming standard, (C++0x) is intended to specify the above format for compatibility with C99 (<i>see</i>: ISO/IEC JTC1/SC22/WG21/N1388). To aid in using complex valued data, dirfile field codes may contain a <i>representation suffix</i> which specifies a norm to apply to the complex valued data to convert it into purely real data. See <code><a href="/docs/linux/man/5-dirfile-format/">dirfile-format</a></code>(5). </p>
 <h2>Authors</h2>
 <p>The dirfile specification was developed by C. B. Netterfield &lt;netterfield [at] astro.utoronto.ca&gt;. </p>

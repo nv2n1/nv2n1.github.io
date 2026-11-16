@@ -285,26 +285,26 @@ $&nbsp;<wbr>sudo chmod 777&nbsp;<wbr>/mnt/t</p>
  $ nfstest_xid /tmp/trace.cap</p>
 <h2>USEFUL OPTIONS</h2>
 <dl>
-<dt>-h, &#8211;help</p>
-<dd> All tests have this option to display usage information and options available</p>
-<dt>&#8211;createlog</p>
-<dd> Create log file when specified</p>
-<dt>&#8211;keeptraces</p>
-<dd> Do not remove any trace files at the end of execution</p>
-<dt>-v, &#8211;verbose &lt;none|opts|info|debug|all|intbitmask&gt;</p>
-<dd> Verbose level for info/debug messages </p>
+<dt>-h, &#8211;help</dt>
+<dd> All tests have this option to display usage information and options available</dd>
+<dt>&#8211;createlog</dt>
+<dd> Create log file when specified</dd>
+<dt>&#8211;keeptraces</dt>
+<dd> Do not remove any trace files at the end of execution</dd>
+<dt>-v, &#8211;verbose &lt;none|opts|info|debug|all|intbitmask&gt;</dt>
+<dd> Verbose level for info/debug messages </dd>
 <p> Example:<br />
 &nbsp;<wbr>$&nbsp;<wbr>nfstest_posix &#8211;server 192.168.0.11 &#8211;verbose all<br />
 &nbsp;<wbr>$&nbsp;<wbr>nfstest_posix &#8211;server 192.168.0.11 &#8211;verbose 0x0F</p>
-<dt>&#8211;runtest &lt;[^]testname1[,testname2[,&#8230;]]&gt;</p>
-<dd> Comma separated list of tests to run, if the first character on the list is &#8216;^&#8217; then run all the tests except the ones listed. </p>
+<dt>&#8211;runtest &lt;[^]testname1[,testname2[,&#8230;]]&gt;</dt>
+<dd> Comma separated list of tests to run, if the first character on the list is &#8216;^&#8217; then run all the tests except the ones listed. </dd>
 <p> Example:<br />
 &nbsp;<wbr>Run only the access, chdir, creat and fcntl tests<br />
 &nbsp;<wbr>$&nbsp;<wbr>nfstest_posix &#8211;server 192.168.0.11 &#8211;runtest access,chdir,creat,fcntl </p>
 <p>&nbsp;<wbr>Run all the tests except for open and chmod<br />
 &nbsp;<wbr>$&nbsp;<wbr>nfstest_posix &#8211;server 192.168.0.11 &#8211;runtest&nbsp;<wbr>^open,chmod</p>
-<dt>&#8211;tverbose &lt;group|normal|verbose&gt;</p>
-<dd> Verbose level for test messages (default: normal) When tverbose=group, only the test groups are displayed as PASS if all the tests in the group passed, otherwise it will FAIL. In some of the tests tverbose could be &#8216;verbose&#8217; for a greater level of verbosity in which a particular test have many sub-tests (&gt;100) </p>
+<dt>&#8211;tverbose &lt;group|normal|verbose&gt;</dt>
+<dd> Verbose level for test messages (default: normal) When tverbose=group, only the test groups are displayed as PASS if all the tests in the group passed, otherwise it will FAIL. In some of the tests tverbose could be &#8216;verbose&#8217; for a greater level of verbosity in which a particular test have many sub-tests (&gt;100) </dd>
 <p> Example:<br />
 &nbsp;<wbr>$&nbsp;<wbr>nfstest_posix &#8211;server 192.168.0.11<br />
 &nbsp;<wbr>***&nbsp;<wbr>Verify POSIX API access()&nbsp;<wbr>on NFSv4<br />
@@ -316,14 +316,14 @@ $&nbsp;<wbr>sudo chmod 777&nbsp;<wbr>/mnt/t</p>
 &nbsp;<wbr>&nbsp;<wbr>&#8230; </p>
 <p>&nbsp;<wbr>$&nbsp;<wbr>nfstest_posix &#8211;server 192.168.0.11 &#8211;tverbose group<br />
 &nbsp;<wbr>&nbsp;<wbr>PASS: Verify POSIX API access()&nbsp;<wbr>on NFSv4&nbsp;<wbr>(58 passed, 0 failed)</p>
-<dt>&#8211;bugmsgs &lt;filename&gt;</p>
-<dd> File containing test messages to mark as bugs if they failed. When at least one of the tests fails the exit code is set to 1. When this option is specified, all known bugs are not counted as failures so the whole test execution is not failed. If the known bugs actually passed, using this option will fail the test to let the user know that the bug has been fixed.</p>
-<dt>&#8211;ignore</p>
-<dd> Ignore all bugs given by bugmsgs. If this option is specified all failures given by bugmsgs are ignored. On the other hand, if a test passes which is marked as a bug, using this option the test will not failed as when using the bugmsgs option alone.</p>
-<dt>&#8211;nfsdebug &lt;flags&gt;</p>
-<dd> Set NFS kernel debug flags and save log messages. Use any of the valid flags given for module &#8216;nfs&#8217; on command &#8216;rpcdebug&#8217;.</p>
-<dt>&#8211;rpcdebug &lt;flags&gt;</p>
-<dd> Set RPC kernel debug flags and save log messages. Use any of the valid flags given for module &#8216;rpc&#8217; on command &#8216;rpcdebug&#8217;.</dl>
+<dt>&#8211;bugmsgs &lt;filename&gt;</dt>
+<dd> File containing test messages to mark as bugs if they failed. When at least one of the tests fails the exit code is set to 1. When this option is specified, all known bugs are not counted as failures so the whole test execution is not failed. If the known bugs actually passed, using this option will fail the test to let the user know that the bug has been fixed.</dd>
+<dt>&#8211;ignore</dt>
+<dd> Ignore all bugs given by bugmsgs. If this option is specified all failures given by bugmsgs are ignored. On the other hand, if a test passes which is marked as a bug, using this option the test will not failed as when using the bugmsgs option alone.</dd>
+<dt>&#8211;nfsdebug &lt;flags&gt;</dt>
+<dd> Set NFS kernel debug flags and save log messages. Use any of the valid flags given for module &#8216;nfs&#8217; on command &#8216;rpcdebug&#8217;.</dd>
+<dt>&#8211;rpcdebug &lt;flags&gt;</dt>
+<dd> Set RPC kernel debug flags and save log messages. Use any of the valid flags given for module &#8216;rpc&#8217; on command &#8216;rpcdebug&#8217;.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-nfstest_alloc/">nfstest_alloc</a>(1),</code> <code><a href="/docs/linux/man/1-nfstest_cache/">nfstest_cache</a>(1),</code> <code><a href="/docs/linux/man/1-nfstest_delegation/">nfstest_delegation</a>(1),</code> <code><a href="/docs/linux/man/1-nfstest_dio/">nfstest_dio</a>(1),</code> <code><a href="/docs/linux/man/1-nfstest_file/">nfstest_file</a>(1),</code> <code><a href="/docs/linux/man/1-nfstest_interop/">nfstest_interop</a>(1),</code> <code><a href="/docs/linux/man/1-nfstest_io/">nfstest_io</a>(1),</code> <code><a href="/docs/linux/man/1-nfstest_lock/">nfstest_lock</a>(1),</code> <code><a href="/docs/linux/man/1-nfstest_pkt/">nfstest_pkt</a>(1),</code> <code><a href="/docs/linux/man/1-nfstest_pnfs/">nfstest_pnfs</a>(1),</code> <code><a href="/docs/linux/man/1-nfstest_posix/">nfstest_posix</a>(1),</code> <code><a href="/docs/linux/man/1-nfstest_sparse/">nfstest_sparse</a>(1),</code> <code><a href="/docs/linux/man/1-nfstest_xid/">nfstest_xid</a>(1)</code> </p>
 <h2>BUGS</h2>

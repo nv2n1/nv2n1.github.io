@@ -18,140 +18,140 @@ description: "bzr – Bazaar next-generation distributed version control"
 <p> Bazaar keeps track of changes to software source code (or similar information); lets you explore who changed it, when, and why; merges concurrent changes; and helps people work together in a team.</p>
 <h2>COMMAND OVERVIEW</h2>
 <dl>
-<dt><code>bzr add [FILE&#8230;]</code></p>
-<dd> Add specified files or directories.</p>
-<dt><code>bzr alias [NAME]</code></p>
-<dd> Set/unset and display aliases.</p>
-<dt><code>bzr annotate FILENAME</code></p>
-<dd> Show the origin of each line in a file.</p>
-<dt><code>bzr bind [LOCATION]</code></p>
-<dd> Convert the current branch into a checkout of the supplied branch.</p>
-<dt><code>bzr branch FROM_LOCATION [TO_LOCATION]</code></p>
-<dd> Create a new branch that is a copy of an existing branch.</p>
-<dt><code>bzr branches [LOCATION]</code></p>
-<dd> List the branches available at the current location.</p>
-<dt><code>bzr break-lock [LOCATION]</code></p>
-<dd> Break a dead lock.</p>
-<dt><code>bzr cat FILENAME</code></p>
-<dd> Write the contents of a file as of a given revision to standard output.</p>
-<dt><code>bzr check [PATH]</code></p>
-<dd> Validate working tree structure, branch consistency and repository history.</p>
-<dt><code>bzr checkout [BRANCH_LOCATION] [TO_LOCATION]</code></p>
-<dd> Create a new checkout of an existing branch.</p>
-<dt><code>bzr clean-tree</code></p>
-<dd> Remove unwanted files from working tree.</p>
-<dt><code>bzr commit [SELECTED&#8230;]</code></p>
-<dd> Commit changes into a new revision.</p>
-<dt><code>bzr config [NAME]</code></p>
-<dd> Display, set or remove a configuration option.</p>
-<dt><code>bzr conflicts</code></p>
-<dd> List files with conflicts.</p>
-<dt><code>bzr deleted</code></p>
-<dd> List files deleted in the working tree.</p>
-<dt><code>bzr diff [FILE&#8230;]</code></p>
-<dd> Show differences in the working tree, between revisions or branches.</p>
-<dt><code>bzr dpush [LOCATION]</code></p>
-<dd> Push into a different VCS without any custom bzr metadata.</p>
-<dt><code>bzr export DEST [BRANCH_OR_SUBDIR]</code></p>
-<dd> Export current or past revision to a destination directory or archive.</p>
-<dt><code>bzr help [TOPIC]</code></p>
-<dd> Show help on a command or other topic.</p>
-<dt><code>bzr ignore [NAME_PATTERN&#8230;]</code></p>
-<dd> Ignore specified files or patterns.</p>
-<dt><code>bzr ignored</code></p>
-<dd> List ignored files and the patterns that matched them.</p>
-<dt><code>bzr info [LOCATION]</code></p>
-<dd> Show information about a working tree, branch or repository.</p>
-<dt><code>bzr init [LOCATION]</code></p>
-<dd> Make a directory into a versioned branch.</p>
-<dt><code>bzr init-repository LOCATION</code></p>
-<dd> Create a shared repository for branches to share storage space.</p>
-<dt><code>bzr join TREE</code></p>
-<dd> Combine a tree into its containing tree.</p>
-<dt><code>bzr log [FILE&#8230;]</code></p>
-<dd> Show historical log for a branch or subset of a branch.</p>
-<dt><code>bzr ls [PATH]</code></p>
-<dd> List files in a tree.</p>
-<dt><code>bzr merge [LOCATION]</code></p>
-<dd> Perform a three-way merge.</p>
-<dt><code>bzr missing [OTHER_BRANCH]</code></p>
-<dd> Show unmerged/unpulled revisions between two branches.</p>
-<dt><code>bzr mkdir DIR&#8230;</code></p>
-<dd> Create a new versioned directory.</p>
-<dt><code>bzr mv [NAMES&#8230;]</code></p>
-<dd> Move or rename a file.</p>
-<dt><code>bzr nick [NICKNAME]</code></p>
-<dd> Print or set the branch nickname.</p>
-<dt><code>bzr pack [BRANCH_OR_REPO]</code></p>
-<dd> Compress the data within a repository.</p>
-<dt><code>bzr plugins</code></p>
-<dd> List the installed plugins.</p>
-<dt><code>bzr pull [LOCATION]</code></p>
-<dd> Turn this branch into a mirror of another branch.</p>
-<dt><code>bzr push [LOCATION]</code></p>
-<dd> Update a mirror of this branch.</p>
-<dt><code>bzr reconcile [BRANCH]</code></p>
-<dd> Reconcile bzr metadata in a branch.</p>
-<dt><code>bzr reconfigure [LOCATION]</code></p>
-<dd> Reconfigure the type of a bzr directory.</p>
-<dt><code>bzr remerge [FILE&#8230;]</code></p>
-<dd> Redo a merge.</p>
-<dt><code>bzr remove [FILE&#8230;]</code></p>
-<dd> Remove files or directories.</p>
-<dt><code>bzr remove-branch [LOCATION]</code></p>
-<dd> Remove a branch.</p>
-<dt><code>bzr remove-tree [LOCATION&#8230;]</code></p>
-<dd> Remove the working tree from a given branch/checkout.</p>
-<dt><code>bzr renames [DIR]</code></p>
-<dd> Show list of renamed files.</p>
-<dt><code>bzr resolve [FILE&#8230;]</code></p>
-<dd> Mark a conflict as resolved.</p>
-<dt><code>bzr revert [FILE&#8230;]</code></p>
-<dd> Revert files to a previous revision.</p>
-<dt><code>bzr revno [LOCATION]</code></p>
-<dd> Show current revision number.</p>
-<dt><code>bzr root [FILENAME]</code></p>
-<dd> Show the tree root directory.</p>
-<dt><code>bzr send [SUBMIT_BRANCH] [PUBLIC_BRANCH]</code></p>
-<dd> Mail or create a merge-directive for submitting changes.</p>
-<dt><code>bzr serve</code></p>
-<dd> Run the bzr server.</p>
-<dt><code>bzr shelve [FILE&#8230;]</code></p>
-<dd> Temporarily set aside some changes from the current tree.</p>
-<dt><code>bzr sign-my-commits [LOCATION] [COMMITTER]</code></p>
-<dd> Sign all commits by a given committer.</p>
-<dt><code>bzr split TREE</code></p>
-<dd> Split a subdirectory of a tree into a separate tree.</p>
-<dt><code>bzr status [FILE&#8230;]</code></p>
-<dd> Display status summary.</p>
-<dt><code>bzr switch [TO_LOCATION]</code></p>
-<dd> Set the branch of a checkout and update.</p>
-<dt><code>bzr tag [TAG_NAME]</code></p>
-<dd> Create, remove or modify a tag naming a revision.</p>
-<dt><code>bzr tags</code></p>
-<dd> List tags.</p>
-<dt><code>bzr testament [BRANCH]</code></p>
-<dd> Show testament (signing-form) of a revision.</p>
-<dt><code>bzr unbind</code></p>
-<dd> Convert the current checkout into a regular branch.</p>
-<dt><code>bzr uncommit [LOCATION]</code></p>
-<dd> Remove the last committed revision.</p>
-<dt><code>bzr unshelve [SHELF_ID]</code></p>
-<dd> Restore shelved changes.</p>
-<dt><code>bzr update [DIR]</code></p>
-<dd> Update a working tree to a new revision.</p>
-<dt><code>bzr upgrade [URL]</code></p>
-<dd> Upgrade a repository, branch or working tree to a newer format.</p>
-<dt><code>bzr verify-signatures [LOCATION]</code></p>
-<dd> Verify all commit signatures.</p>
-<dt><code>bzr version</code></p>
-<dd> Show version of bzr.</p>
-<dt><code>bzr version-info [LOCATION]</code></p>
-<dd> Show version information about this tree.</p>
-<dt><code>bzr view [FILE&#8230;]</code></p>
-<dd> Manage filtered views.</p>
-<dt><code>bzr whoami [NAME]</code></p>
-<dd> Show or set bzr user id.</dl>
+<dt><code>bzr add [FILE&#8230;]</code></dt>
+<dd> Add specified files or directories.</dd>
+<dt><code>bzr alias [NAME]</code></dt>
+<dd> Set/unset and display aliases.</dd>
+<dt><code>bzr annotate FILENAME</code></dt>
+<dd> Show the origin of each line in a file.</dd>
+<dt><code>bzr bind [LOCATION]</code></dt>
+<dd> Convert the current branch into a checkout of the supplied branch.</dd>
+<dt><code>bzr branch FROM_LOCATION [TO_LOCATION]</code></dt>
+<dd> Create a new branch that is a copy of an existing branch.</dd>
+<dt><code>bzr branches [LOCATION]</code></dt>
+<dd> List the branches available at the current location.</dd>
+<dt><code>bzr break-lock [LOCATION]</code></dt>
+<dd> Break a dead lock.</dd>
+<dt><code>bzr cat FILENAME</code></dt>
+<dd> Write the contents of a file as of a given revision to standard output.</dd>
+<dt><code>bzr check [PATH]</code></dt>
+<dd> Validate working tree structure, branch consistency and repository history.</dd>
+<dt><code>bzr checkout [BRANCH_LOCATION] [TO_LOCATION]</code></dt>
+<dd> Create a new checkout of an existing branch.</dd>
+<dt><code>bzr clean-tree</code></dt>
+<dd> Remove unwanted files from working tree.</dd>
+<dt><code>bzr commit [SELECTED&#8230;]</code></dt>
+<dd> Commit changes into a new revision.</dd>
+<dt><code>bzr config [NAME]</code></dt>
+<dd> Display, set or remove a configuration option.</dd>
+<dt><code>bzr conflicts</code></dt>
+<dd> List files with conflicts.</dd>
+<dt><code>bzr deleted</code></dt>
+<dd> List files deleted in the working tree.</dd>
+<dt><code>bzr diff [FILE&#8230;]</code></dt>
+<dd> Show differences in the working tree, between revisions or branches.</dd>
+<dt><code>bzr dpush [LOCATION]</code></dt>
+<dd> Push into a different VCS without any custom bzr metadata.</dd>
+<dt><code>bzr export DEST [BRANCH_OR_SUBDIR]</code></dt>
+<dd> Export current or past revision to a destination directory or archive.</dd>
+<dt><code>bzr help [TOPIC]</code></dt>
+<dd> Show help on a command or other topic.</dd>
+<dt><code>bzr ignore [NAME_PATTERN&#8230;]</code></dt>
+<dd> Ignore specified files or patterns.</dd>
+<dt><code>bzr ignored</code></dt>
+<dd> List ignored files and the patterns that matched them.</dd>
+<dt><code>bzr info [LOCATION]</code></dt>
+<dd> Show information about a working tree, branch or repository.</dd>
+<dt><code>bzr init [LOCATION]</code></dt>
+<dd> Make a directory into a versioned branch.</dd>
+<dt><code>bzr init-repository LOCATION</code></dt>
+<dd> Create a shared repository for branches to share storage space.</dd>
+<dt><code>bzr join TREE</code></dt>
+<dd> Combine a tree into its containing tree.</dd>
+<dt><code>bzr log [FILE&#8230;]</code></dt>
+<dd> Show historical log for a branch or subset of a branch.</dd>
+<dt><code>bzr ls [PATH]</code></dt>
+<dd> List files in a tree.</dd>
+<dt><code>bzr merge [LOCATION]</code></dt>
+<dd> Perform a three-way merge.</dd>
+<dt><code>bzr missing [OTHER_BRANCH]</code></dt>
+<dd> Show unmerged/unpulled revisions between two branches.</dd>
+<dt><code>bzr mkdir DIR&#8230;</code></dt>
+<dd> Create a new versioned directory.</dd>
+<dt><code>bzr mv [NAMES&#8230;]</code></dt>
+<dd> Move or rename a file.</dd>
+<dt><code>bzr nick [NICKNAME]</code></dt>
+<dd> Print or set the branch nickname.</dd>
+<dt><code>bzr pack [BRANCH_OR_REPO]</code></dt>
+<dd> Compress the data within a repository.</dd>
+<dt><code>bzr plugins</code></dt>
+<dd> List the installed plugins.</dd>
+<dt><code>bzr pull [LOCATION]</code></dt>
+<dd> Turn this branch into a mirror of another branch.</dd>
+<dt><code>bzr push [LOCATION]</code></dt>
+<dd> Update a mirror of this branch.</dd>
+<dt><code>bzr reconcile [BRANCH]</code></dt>
+<dd> Reconcile bzr metadata in a branch.</dd>
+<dt><code>bzr reconfigure [LOCATION]</code></dt>
+<dd> Reconfigure the type of a bzr directory.</dd>
+<dt><code>bzr remerge [FILE&#8230;]</code></dt>
+<dd> Redo a merge.</dd>
+<dt><code>bzr remove [FILE&#8230;]</code></dt>
+<dd> Remove files or directories.</dd>
+<dt><code>bzr remove-branch [LOCATION]</code></dt>
+<dd> Remove a branch.</dd>
+<dt><code>bzr remove-tree [LOCATION&#8230;]</code></dt>
+<dd> Remove the working tree from a given branch/checkout.</dd>
+<dt><code>bzr renames [DIR]</code></dt>
+<dd> Show list of renamed files.</dd>
+<dt><code>bzr resolve [FILE&#8230;]</code></dt>
+<dd> Mark a conflict as resolved.</dd>
+<dt><code>bzr revert [FILE&#8230;]</code></dt>
+<dd> Revert files to a previous revision.</dd>
+<dt><code>bzr revno [LOCATION]</code></dt>
+<dd> Show current revision number.</dd>
+<dt><code>bzr root [FILENAME]</code></dt>
+<dd> Show the tree root directory.</dd>
+<dt><code>bzr send [SUBMIT_BRANCH] [PUBLIC_BRANCH]</code></dt>
+<dd> Mail or create a merge-directive for submitting changes.</dd>
+<dt><code>bzr serve</code></dt>
+<dd> Run the bzr server.</dd>
+<dt><code>bzr shelve [FILE&#8230;]</code></dt>
+<dd> Temporarily set aside some changes from the current tree.</dd>
+<dt><code>bzr sign-my-commits [LOCATION] [COMMITTER]</code></dt>
+<dd> Sign all commits by a given committer.</dd>
+<dt><code>bzr split TREE</code></dt>
+<dd> Split a subdirectory of a tree into a separate tree.</dd>
+<dt><code>bzr status [FILE&#8230;]</code></dt>
+<dd> Display status summary.</dd>
+<dt><code>bzr switch [TO_LOCATION]</code></dt>
+<dd> Set the branch of a checkout and update.</dd>
+<dt><code>bzr tag [TAG_NAME]</code></dt>
+<dd> Create, remove or modify a tag naming a revision.</dd>
+<dt><code>bzr tags</code></dt>
+<dd> List tags.</dd>
+<dt><code>bzr testament [BRANCH]</code></dt>
+<dd> Show testament (signing-form) of a revision.</dd>
+<dt><code>bzr unbind</code></dt>
+<dd> Convert the current checkout into a regular branch.</dd>
+<dt><code>bzr uncommit [LOCATION]</code></dt>
+<dd> Remove the last committed revision.</dd>
+<dt><code>bzr unshelve [SHELF_ID]</code></dt>
+<dd> Restore shelved changes.</dd>
+<dt><code>bzr update [DIR]</code></dt>
+<dd> Update a working tree to a new revision.</dd>
+<dt><code>bzr upgrade [URL]</code></dt>
+<dd> Upgrade a repository, branch or working tree to a newer format.</dd>
+<dt><code>bzr verify-signatures [LOCATION]</code></dt>
+<dd> Verify all commit signatures.</dd>
+<dt><code>bzr version</code></dt>
+<dd> Show version of bzr.</dd>
+<dt><code>bzr version-info [LOCATION]</code></dt>
+<dd> Show version information about this tree.</dd>
+<dt><code>bzr view [FILE&#8230;]</code></dt>
+<dd> Manage filtered views.</dd>
+<dt><code>bzr whoami [NAME]</code></dt>
+<dd> Show or set bzr user id.</dd></dl>
 <h2>COMMAND REFERENCE</h2>
 <h3>bzr &#8211;help</h3>
 <p> Alias for &quot;help&quot;, see &quot;bzr help&quot;.</p>
@@ -969,3 +969,4 @@ description: "bzr – Bazaar next-generation distributed version control"
 &nbsp;<wbr>&#8211;kind ARG, -k&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>List entries of a particular kind: file,<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>directory, symlink.<br />
 &nbsp;<wbr>&#8211;null, -0&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Use an ASCII NUL&nbsp;<wbr>(
+</p>

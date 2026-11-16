@@ -17,34 +17,32 @@ description: "doveadm-dump – Dump the content of Dovecot’s binary mailbox in
 <h2>OPTIONS</h2>
 <p> Global <code><a href="/docs/linux/man/1-doveadm/">doveadm</a></code>(1) <i>options</i>:</p>
 <dl>
-<dt><code>-D</code></p>
-<dd> Enables verbosity and debug messages.</p>
-<dt><code>-v</code></p>
-<dd> Enables verbosity, including progress counter.</dl>
+<dt><code>-D</code></dt>
+<dd> Enables verbosity and debug messages.</dd>
+<dt><code>-v</code></dt>
+<dd> Enables verbosity, including progress counter.</dd></dl>
 <p> Command specific <i>options</i>:</p>
 <dl>
-<dt><code>-t&nbsp;<wbr></code><i>type</i></p>
-<dd> the file type of the file to be dumped. If the <i>type</i> was omitted, <code><a href="/docs/linux/man/1-doveadm/">doveadm</a></code>(1) tries to detect the type of <i>path</i>. <i>type</i> can be:</p>
+<dt><code>-t&nbsp;<wbr></code><i>type</i></dt>
+<dd> the file type of the file to be dumped. If the <i>type</i> was omitted, <code><a href="/docs/linux/man/1-doveadm/">doveadm</a></code>(1) tries to detect the type of <i>path</i>. <i>type</i> can be:</dd>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt><code>dbox</code></p>
-<dd> &rArr; m.<i>n</i> (sdbox or mdbox mailbox file)</p>
-<dt><code>index</code></p>
-<dd> &rArr; dovecot.index, dovecot.map.index</p>
-<dt><code>log</code></p>
-<dd> &rArr; dovecot.index.log, dovecot.map.index.log</p>
-<dt><code>mailboxlog</code></p>
-<dd> &rArr; dovecot.mailbox.log</p>
-<dt><code>thread</code></p>
-<dd> &rArr; dovecot.index.thread</dl>
+<dt><code>dbox</code></dt>
+<dd> &rArr; m.<i>n</i> (sdbox or mdbox mailbox file)</dd>
+<dt><code>index</code></dt>
+<dd> &rArr; dovecot.index, dovecot.map.index</dd>
+<dt><code>log</code></dt>
+<dd> &rArr; dovecot.index.log, dovecot.map.index.log</dd>
+<dt><code>mailboxlog</code></dt>
+<dd> &rArr; dovecot.mailbox.log</dd>
+<dt><code>thread</code></dt>
+<dd> &rArr; dovecot.index.thread</dd></dl>
 </dl>
 </dl>
 <h2>ARGUMENTS</h2>
 <dl>
-<dt><i>path</i></p>
-<dd> The path to the corresponding dbox storage, index or log file. If only a directory is specified, doveadm tries to detect the type of files under it and dumps them.</dl>
+<dt><i>path</i></dt>
+<dd> The path to the corresponding dbox storage, index or log file. If only a directory is specified, doveadm tries to detect the type of files under it and dumps them.</dd></dl>
 <h2>EXAMPLE</h2>
 <p> Look at the contents of a mailbox&#8217;s index: </p>
 <pre>

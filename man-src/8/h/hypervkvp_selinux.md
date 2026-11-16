@@ -113,8 +113,8 @@ description: "hypervkvp_selinux – Security Enhanced Linux Policy for the hyper
 <p> <code>hypervkvp_exec_t</code> </p>
 <p> &#8211; Set files with the hypervkvp_exec_t type, if you want to transition an executable to the hypervkvp_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/usr/sbin/hypervkvpd, /usr/sbin/hv_kvp_daemon </p>
+<dt>Paths:</dt>
+<dd>/usr/sbin/hypervkvpd, /usr/sbin/hv_kvp_daemon </dd>
 </dl>
 <p> <code>hypervkvp_initrc_exec_t</code> </p>
 <p> &#8211; Set files with the hypervkvp_initrc_exec_t type, if you want to transition an executable to the hypervkvp_initrc_t domain. </p>

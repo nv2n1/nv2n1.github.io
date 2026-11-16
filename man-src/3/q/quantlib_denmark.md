@@ -15,29 +15,29 @@ description: "QuantLib::Denmark – Danish calendar."
 <p>Danish calendar. </p>
 <p> Holidays: </p>
 <dl COMPACT>
-<dt>*</p>
-<dd>Saturdays</p>
-<dt>*</p>
-<dd>Sundays</p>
-<dt>*</p>
-<dd>Maunday Thursday</p>
-<dt>*</p>
-<dd>Good Friday</p>
-<dt>*</p>
-<dd>Easter Monday</p>
-<dt>*</p>
-<dd>General Prayer Day, 25 days after Easter Monday</p>
-<dt>*</p>
-<dd>Ascension</p>
-<dt>*</p>
-<dd>Whit (Pentecost) Monday</p>
-<dt>*</p>
-<dd>New Year&#8217;s Day, January 1st</p>
-<dt>*</p>
-<dd>Constitution Day, June 5th</p>
-<dt>*</p>
-<dd>Christmas, December 25th</p>
-<dt>*</p>
-<dd>Boxing Day, December 26th</dl>
+<dt>*</dt>
+<dd>Saturdays</dd>
+<dt>*</dt>
+<dd>Sundays</dd>
+<dt>*</dt>
+<dd>Maunday Thursday</dd>
+<dt>*</dt>
+<dd>Good Friday</dd>
+<dt>*</dt>
+<dd>Easter Monday</dd>
+<dt>*</dt>
+<dd>General Prayer Day, 25 days after Easter Monday</dd>
+<dt>*</dt>
+<dd>Ascension</dd>
+<dt>*</dt>
+<dd>Whit (Pentecost) Monday</dd>
+<dt>*</dt>
+<dd>New Year&#8217;s Day, January 1st</dd>
+<dt>*</dt>
+<dd>Constitution Day, June 5th</dd>
+<dt>*</dt>
+<dd>Christmas, December 25th</dd>
+<dt>*</dt>
+<dd>Boxing Day, December 26th</dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for QuantLib from the source code.</p>

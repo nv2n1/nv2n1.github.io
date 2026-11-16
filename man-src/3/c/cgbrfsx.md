@@ -19,7 +19,7 @@ description: "cgbrfsx.f –"
 <p> <code>Purpose: </code></p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre><code>
     CGBRFSX improves the computed solution to a system of linear
     equations and provides error bounds and backward error estimates
@@ -40,11 +40,11 @@ description: "cgbrfsx.f –"
      can pass NPARAMS = 0 which prevents the source code from accessing
      the PARAMS argument.
 </pre>
-</dl>
+</dd></dl>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>TRANS</i> </p>
+</dt><dd> <i>TRANS</i> </dd>
 <pre>
           TRANS is CHARACTER*1
      Specifies the form of the system of equations:
@@ -327,14 +327,14 @@ description: "cgbrfsx.f –"
 <p> <code>Author:</code></p>
 <dl>
 <dt>
-<dd> Univ. of Tennessee </p>
+</dt><dd> Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl>
 <dt>
-<dd> April 2012</dl>
+</dt><dd> April 2012</dd></dl>
 <p> Definition at line 437 of file cgbrfsx.f.</p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for LAPACK from the source code. </p>

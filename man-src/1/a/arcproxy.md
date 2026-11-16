@@ -15,21 +15,21 @@ description: "arcproxy – ARC Credentials Proxy generation utility"
 <p> arcproxy generates proxy credentials (general proxy certificate, or proxy certificate with VOMS AC extenstion) from private key and certificate of user.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-h</code></p>
-<dd> prints short usage description </p>
-<dt><code>-P</code> <i>filename</i></p>
-<dd> location of the generated proxy file </p>
-<dt><code>-C</code></p>
-<dd> location of X509 certificate file, the file can be either pem, der, or pkcs12 formated; if this option is not set, then env X509_USER_CERT will be searched; if X509_USER_CERT env is not set, then certificatepath item in client.conf will be searched; if the location still is not found, then ~/.arc/, ~/.globus/, ./etc/arc, and ./ will be searched. </p>
-<dt><code>-K</code></p>
-<dd> location of private key file, if the certificate is in pkcs12 format, then no need to give private key; if this option is not set, then env X509_USER_KEY will be searched; if X509_USER_KEY env is not set, then keypath item in client.conf will be searched; if the location still is not found, then ~/.arc/, ~/.globus/, ./etc/arc, and ./ will be searched. </p>
-<dt><code>-T</code></p>
-<dd> path to trusted certificate directory, only needed for VOMS client functionality; if this option is not set, then env X509_CERT_DIR will be searched; if X509_CERT_DIR env is not set, then cacertificatesdirectory item in client.conf will be searched. </p>
-<dt><code>-s</code></p>
-<dd> path to top directory of VOMS *.lsc files, only needed for VOMS client functionality </p>
-<dt><code>-V</code></p>
-<dd> path to VOMS server configuration file, only needed for VOMS client functionality if the path is a directory rather than a file, all of the files under this directory will be searched </p>
-<dt><code>-S</code></p>
+<dt><code>-h</code></dt>
+<dd> prints short usage description </dd>
+<dt><code>-P</code> <i>filename</i></dt>
+<dd> location of the generated proxy file </dd>
+<dt><code>-C</code></dt>
+<dd> location of X509 certificate file, the file can be either pem, der, or pkcs12 formated; if this option is not set, then env X509_USER_CERT will be searched; if X509_USER_CERT env is not set, then certificatepath item in client.conf will be searched; if the location still is not found, then ~/.arc/, ~/.globus/, ./etc/arc, and ./ will be searched. </dd>
+<dt><code>-K</code></dt>
+<dd> location of private key file, if the certificate is in pkcs12 format, then no need to give private key; if this option is not set, then env X509_USER_KEY will be searched; if X509_USER_KEY env is not set, then keypath item in client.conf will be searched; if the location still is not found, then ~/.arc/, ~/.globus/, ./etc/arc, and ./ will be searched. </dd>
+<dt><code>-T</code></dt>
+<dd> path to trusted certificate directory, only needed for VOMS client functionality; if this option is not set, then env X509_CERT_DIR will be searched; if X509_CERT_DIR env is not set, then cacertificatesdirectory item in client.conf will be searched. </dd>
+<dt><code>-s</code></dt>
+<dd> path to top directory of VOMS *.lsc files, only needed for VOMS client functionality </dd>
+<dt><code>-V</code></dt>
+<dd> path to VOMS server configuration file, only needed for VOMS client functionality if the path is a directory rather than a file, all of the files under this directory will be searched </dd>
+<dt><code>-S</code></dt>
 <dd> voms&lt;:command&gt;. Specify VOMS server.<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>:command is optional, and is used to ask for specific attributes(e.g: roles)<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>command option is:<br />
@@ -38,25 +38,25 @@ description: "arcproxy – ARC Credentials Proxy generation utility"
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>/Role=yourRole &#8212; specify the role, if this DN<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>has such a role, the role will be put into AC<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>/voname/groupname/Role=yourRole &#8212; specify the vo,group and role if this DN<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>has such a role, the role will be put into AC </p>
-<dt><code>-o</code></p>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>has such a role, the role will be put into AC </dd>
+<dt><code>-o</code></dt>
 <dd> group&lt;:role&gt;. Specify ordering of attributes.<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Example: &#8211;order&nbsp;<wbr>/knowarc.eu/coredev:Developer,/knowarc.eu/testers:Tester<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>or: &#8211;order&nbsp;<wbr>/knowarc.eu/coredev:Developer &#8211;order&nbsp;<wbr>/knowarc.eu/testers:Tester<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Note that it does not make sense to specify the order if you have two or more different VOMS server specified </p>
-<dt><code>-G</code></p>
-<dd> use GSI communication protocol for contacting VOMS services </p>
-<dt><code>-H</code></p>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Note that it does not make sense to specify the order if you have two or more different VOMS server specified </dd>
+<dt><code>-G</code></dt>
+<dd> use GSI communication protocol for contacting VOMS services </dd>
+<dt><code>-H</code></dt>
 <dd> use HTTP communication protocol for contacting VOMS services that provide RESTful access<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Note for RESTful access,&nbsp;<wbr>&#8216;list&#8217;&nbsp;<wbr>command and multiple VOMS server are not supported </p>
-<dt><code>-O</code></p>
-<dd> use GSI proxy (RFC 3820 compliant proxy is default) </p>
-<dt><code>-I</code></p>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Note for RESTful access,&nbsp;<wbr>&#8216;list&#8217;&nbsp;<wbr>command and multiple VOMS server are not supported </dd>
+<dt><code>-O</code></dt>
+<dd> use GSI proxy (RFC 3820 compliant proxy is default) </dd>
+<dt><code>-I</code></dt>
 <dd> print all information about this proxy.<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>In order to show the Identity&nbsp;<wbr>(DN without CN as subfix for proxy)<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>of the certificate, the&nbsp;<wbr>&#8216;trusted certdir&#8217;&nbsp;<wbr>is needed. </p>
-<dt><code>-i</code></p>
-<dd> print selected information about this proxy. Currently following information items are supported: </p>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>of the certificate, the&nbsp;<wbr>&#8216;trusted certdir&#8217;&nbsp;<wbr>is needed. </dd>
+<dt><code>-i</code></dt>
+<dd> print selected information about this proxy. Currently following information items are supported: </dd>
 <p> <code>subject</code> &#8211; subject name of proxy certificate. </p>
 <p> <code>identity</code> &#8211; identity subject name of proxy certificate. </p>
 <p> <code>issuer</code> &#8211; issuer subject name of proxy certificate. </p>
@@ -78,35 +78,35 @@ description: "arcproxy – ARC Credentials Proxy generation utility"
 <p> <code>keybits</code> &#8211; size of proxy certificate key in bits. </p>
 <p> <code>signingAlgorithm</code> &#8211; algorithm used to sign proxy certificate. </p>
 <p> Items are printed in requested order and are separated by newline. If item has multiple values they are printed in same line separated by |. </p>
-<dt><code>-r</code></p>
-<dd> Remove the proxy file. </p>
-<dt><code>-U</code></p>
-<dd> Username to myproxy server. </p>
-<dt><code>-N</code></p>
+<dt><code>-r</code></dt>
+<dd> Remove the proxy file. </dd>
+<dt><code>-U</code></dt>
+<dd> Username to myproxy server. </dd>
+<dt><code>-N</code></dt>
 <dd> don&#8217;t prompt for a credential passphrase, when retrieve a credential from on MyProxy server.<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>The precondition of this choice is the credential is PUT onto&nbsp;<wbr><br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>the MyProxy server without a passphrase by using -R&nbsp;<wbr>(&#8211;retrievable_by_cert)&nbsp;<wbr><br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>option when being PUTing onto Myproxy server.&nbsp;<wbr><br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>This option is specific for the GET command when contacting Myproxy server. </p>
-<dt><code>-R</code></p>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>This option is specific for the GET command when contacting Myproxy server. </dd>
+<dt><code>-R</code></dt>
 <dd> Allow specified entity to retrieve credential without passphrase.<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>This option is specific for the PUT command when contacting Myproxy server. </p>
-<dt><code>-L</code></p>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>This option is specific for the PUT command when contacting Myproxy server. </dd>
+<dt><code>-L</code></dt>
 <dd> hostname of myproxy server optionally followed by colon and port number, e.g.<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>example.org:7512. If the port number has not<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>been specified, 7512 is used by default. </p>
-<dt><code>-M</code></p>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>been specified, 7512 is used by default. </dd>
+<dt><code>-M</code></dt>
 <dd> command to myproxy server. The command can be PUT and GET.<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>PUT/put &#8212; put a delegated credential to myproxy server;<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>GET/get &#8212; get a delegated credential from myproxy server,<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>credential&nbsp;<wbr>(certificate and key)&nbsp;<wbr>is not needed in this case;<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>myproxy functionality can be used together with VOMS functionality.<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>voms and vomses can be used for Get command if VOMS attributes<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>is required to be included in the proxy. </p>
-<dt><code>-F</code></p>
-<dd> use NSS credential DB in default Mozilla profiles, including Firefox, Seamonkey and Thunderbird. </p>
-<dt><code>-c</code></p>
-<dd> constraints of proxy certificate. Currently following constraints are supported: </p>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>is required to be included in the proxy. </dd>
+<dt><code>-F</code></dt>
+<dd> use NSS credential DB in default Mozilla profiles, including Firefox, Seamonkey and Thunderbird. </dd>
+<dt><code>-c</code></dt>
+<dd> constraints of proxy certificate. Currently following constraints are supported: </dd>
 <p> <code>validityStart=time</code> &#8211; time when certificate becomes valid. Default is now. </p>
 <p> <code>validityEnd=time</code> &#8211; time when certificate becomes invalid. Default is 43200 (12 hours) from start for local proxy and 7 days for delegated to MyProxy. </p>
 <p> <code>validityPeriod=time</code> &#8211; for how long certificate is valid. Default is 43200 (12 hours)for local proxy and 7 days for delegated to MyProxy. </p>
@@ -115,8 +115,8 @@ description: "arcproxy – ARC Credentials Proxy generation utility"
 <p> <code>proxyPolicy=policy content</code> &#8211; assigns specified string to proxy policy to limit it&#8217;s functionality. </p>
 <p> <code>keybits=number</code> &#8211; length of the key to generate. Default is 1024 bits. Special value &#8216;inherit&#8217; is to use key length of signing certificate. </p>
 <p> <code>signingAlgorithm=name</code> &#8211; signing algorithm to use for signing public key of proxy. Default is sha1. Possible values are sha1, sha2 (alias for sha256), sha224, sha256, sha384, sha512 and inherit (use algorithm of signing certificate). </p>
-<dt><code>-p</code></p>
-<dd> password destination=password source. Supported password destinations are: </p>
+<dt><code>-p</code></dt>
+<dd> password destination=password source. Supported password destinations are: </dd>
 <p> <code>key</code> &#8211; for reading private key </p>
 <p> <code>myproxy</code> &#8211; for accessing credentials at MyProxy service </p>
 <p> <code>myproxynew</code> &#8211; for creating credentials at MyProxy service </p>
@@ -127,14 +127,14 @@ description: "arcproxy – ARC Credentials Proxy generation utility"
 <p> <code>stdin</code> &#8211; read password from standard input delimited by newline </p>
 <p> <code>file:filename</code> &#8211; read password from file named filename </p>
 <p> <code>stream:#</code> &#8211; read password from input stream number #. Currently only 0 (standard input) is supported. </p>
-<dt><code>-t</code></p>
-<dd> timeout in seconds (default 20) </p>
-<dt><code>-z</code></p>
-<dd> configuration file (default ~/.arc/client.conf) </p>
-<dt><code>-d</code></p>
-<dd> level of information printed. Possible values are DEBUG, VERBOSE, INFO, WARNING, ERROR and FATAL. </p>
-<dt><code>-v</code></p>
-<dd> print version information </p>
+<dt><code>-t</code></dt>
+<dd> timeout in seconds (default 20) </dd>
+<dt><code>-z</code></dt>
+<dd> configuration file (default ~/.arc/client.conf) </dd>
+<dt><code>-d</code></dt>
+<dd> level of information printed. Possible values are DEBUG, VERBOSE, INFO, WARNING, ERROR and FATAL. </dd>
+<dt><code>-v</code></dt>
+<dd> print version information </dd>
 </dl>
 <p> If location of certificate and key are not exlicitly specified they are looked for in following location and order: </p>
 <p> Key/certificate paths specified by the environment variables X509_USER_KEY and X509_USER_CERT respectively. </p>
@@ -146,64 +146,62 @@ description: "arcproxy – ARC Credentials Proxy generation utility"
 <p> Report bugs to <a rel="nofollow" href="http://bugzilla.nordugrid.org/">http://bugzilla.nordugrid.org/</a> </p>
 <h2>ENVIRONMENT VARIABLES</h2>
 <dl>
-<dt><code>ARC_LOCATION</code></p>
-<dd> The location where ARC is installed can be specified by this variable. If not specified the install location will be determined from the path to the command being executed, and if this fails a WARNING will be given stating the location which will be used. </p>
-<dt><code>ARC_PLUGIN_PATH</code></p>
-<dd> The location of ARC plugins can be specified by this variable. Multiple locations can be specified by separating them by : (; in Windows). The default location is <code>$ARC_LOCATION</code>/lib/arc (\ in Windows). </p>
+<dt><code>ARC_LOCATION</code></dt>
+<dd> The location where ARC is installed can be specified by this variable. If not specified the install location will be determined from the path to the command being executed, and if this fails a WARNING will be given stating the location which will be used. </dd>
+<dt><code>ARC_PLUGIN_PATH</code></dt>
+<dd> The location of ARC plugins can be specified by this variable. Multiple locations can be specified by separating them by : (; in Windows). The default location is <code>$ARC_LOCATION</code>/lib/arc (\ in Windows). </dd>
 </dl>
 <h2>COPYRIGHT</h2>
 <p> APACHE LICENSE Version 2.0 </p>
 <h2>FILES</h2>
 <dl>
-<dt><code>/etc/vomses</code></p>
-<dd> Common file containing a list of selected VO contact point, one VO per line, for example:</p>
+<dt><code>/etc/vomses</code></dt>
+<dd> Common file containing a list of selected VO contact point, one VO per line, for example:</dd>
 <dl>
-<dt>
+<dl>
+<dt>&quot;gin&quot; &quot;kuiken.nikhef.nl&quot; &quot;15050&quot; &quot;/O=dutchgrid/O=hosts/OU=nikhef.nl/CN=kuiken.nikhef.nl&quot; &quot;gin.ggf.org&quot;</dt>
 <dd>
-<dl>
-<dt>&quot;gin&quot; &quot;kuiken.nikhef.nl&quot; &quot;15050&quot; &quot;/O=dutchgrid/O=hosts/OU=nikhef.nl/CN=kuiken.nikhef.nl&quot; &quot;gin.ggf.org&quot;</p>
-<dd>
-<dt>&quot;nordugrid.org&quot; &quot;voms.uninett.no&quot; &quot;15015&quot; &quot;/O=Grid/O=NorduGrid/CN=host/voms.ndgf.org&quot; &quot;nordugrid.org&quot;</p>
-<dd></dl>
+</dd><dt>&quot;nordugrid.org&quot; &quot;voms.uninett.no&quot; &quot;15015&quot; &quot;/O=Grid/O=NorduGrid/CN=host/voms.ndgf.org&quot; &quot;nordugrid.org&quot;</dt>
+<dd></dd></dl>
 </dl>
-<dt><code>~/.voms/vomses</code></p>
-<dd> Same as <code>/etc/vomses</code> but located in user&#8217;s home area. If exists, has precedence over <code>/etc/vomses</code> </p>
+<dt><code>~/.voms/vomses</code></dt>
+<dd> Same as <code>/etc/vomses</code> but located in user&#8217;s home area. If exists, has precedence over <code>/etc/vomses</code> </dd>
 <dl>
 <dt>
-<dd> The order of the parsing of vomses location is: </p>
+</dt><dd> The order of the parsing of vomses location is: </dd>
 <dl>
 <dt>
-<dd> 1. command line options</dl>
+</dt><dd> 1. command line options</dd></dl>
 <dl>
 <dt>
-<dd> 2. client configuration file ~/.arc/client.conf</dl>
+</dt><dd> 2. client configuration file ~/.arc/client.conf</dd></dl>
 <dl>
 <dt>
-<dd> 3. $X509_VOMSES or $X509_VOMS_FILE</dl>
+</dt><dd> 3. $X509_VOMSES or $X509_VOMS_FILE</dd></dl>
 <dl>
 <dt>
-<dd> 4. ~/.arc/vomses</dl>
+</dt><dd> 4. ~/.arc/vomses</dd></dl>
 <dl>
 <dt>
-<dd> 5. ~/.voms/vomses</dl>
+</dt><dd> 5. ~/.voms/vomses</dd></dl>
 <dl>
 <dt>
-<dd> 6. $ARC_LOCATION/etc/vomses (this is for Windows environment)</dl>
+</dt><dd> 6. $ARC_LOCATION/etc/vomses (this is for Windows environment)</dd></dl>
 <dl>
 <dt>
-<dd> 7. $ARC_LOCATION/etc/grid-security/vomses (this is for Windows environment)</dl>
+</dt><dd> 7. $ARC_LOCATION/etc/grid-security/vomses (this is for Windows environment)</dd></dl>
 <dl>
 <dt>
-<dd> 8. $PWD/vomses</dl>
+</dt><dd> 8. $PWD/vomses</dd></dl>
 <dl>
 <dt>
-<dd> 9. /etc/vomses</dl>
+</dt><dd> 9. /etc/vomses</dd></dl>
 <dl>
 <dt>
-<dd> 10. /etc/grid-security/vomses</dl>
+</dt><dd> 10. /etc/grid-security/vomses</dd></dl>
 </dl>
-<dt><code>~/.arc/client.conf</code></p>
-<dd> Some options can be given default values by specifying them in the ARC client configuration file. By using the <code>&#8211;conffile</code> option a different configuration file can be used than the default. </p>
+<dt><code>~/.arc/client.conf</code></dt>
+<dd> Some options can be given default values by specifying them in the ARC client configuration file. By using the <code>&#8211;conffile</code> option a different configuration file can be used than the default. </dd>
 </dl>
 <h2>AUTHOR</h2>
 <p> ARC software is developed by the NorduGrid Collaboration (<a rel="nofollow" href="http://www.nordugrid.org">http://www.nordugrid.org</a>), please consult the AUTHORS file distributed with ARC. Please report bugs and feature requests to <a rel="nofollow" href="http://bugzilla.nordugrid.org">http://bugzilla.nordugrid.org</a> </p>

@@ -16,18 +16,18 @@ description: "arc-config-check – checks the arc.conf for inconsistencies, know
 <p> BECAUSE EVERY INSTALLATION OF ARC IS DIFFERENT THIS UTILITY ONLY SUGGESTS WHAT COULD BE WRONG. SOMETIMES IT IS OVERRESTRICTIVE. AND SOMETIMES IT CAN MISS SOME MISCONFIGURATION. NEVER TREAT RESULTS PRODUCED BY IT AS ULTIMATE TRUTH. </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>&#8211;config &lt;string&gt;</code></p>
-<dd> Specifies the location of the config file, by default it is /etc/arc.conf</p>
-<dt><code>&#8211;printall</code></p>
-<dd> Lists all variable names of the config file together with their values.</p>
-<dt><code>&#8211;timeserver &lt;server&gt;</code></p>
-<dd> Allows the specification of a server against which to test the local system&#8217;s time.</p>
-<dt><code>&#8211;skip-warnings</code></p>
-<dd> Do not show warnings.</p>
-<dt><code>&#8211;help</code></p>
-<dd> Quick summary of options</p>
-<dt><code>&#8211;man</code></p>
-<dd> Detailed man page. </p>
+<dt><code>&#8211;config &lt;string&gt;</code></dt>
+<dd> Specifies the location of the config file, by default it is /etc/arc.conf</dd>
+<dt><code>&#8211;printall</code></dt>
+<dd> Lists all variable names of the config file together with their values.</dd>
+<dt><code>&#8211;timeserver &lt;server&gt;</code></dt>
+<dd> Allows the specification of a server against which to test the local system&#8217;s time.</dd>
+<dt><code>&#8211;skip-warnings</code></dt>
+<dd> Do not show warnings.</dd>
+<dt><code>&#8211;help</code></dt>
+<dd> Quick summary of options</dd>
+<dt><code>&#8211;man</code></dt>
+<dd> Detailed man page. </dd>
 </dl>
 <h2>COPYRIGHT</h2>
 <p> APACHE LICENSE Version 2.0 </p>

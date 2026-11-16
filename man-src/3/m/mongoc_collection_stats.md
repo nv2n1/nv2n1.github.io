@@ -16,17 +16,17 @@ mongoc_collection_stats (mongoc_collection_t *collection,
  bson_error_t *error);</pre>
 <h2>Parameters</h2>
 <dl COMPACT>
-<dt><code>collection</code></p>
-<dd>A <code>mongoc_collection_t</code> \&amp;.</dl>
+<dt><code>collection</code></dt>
+<dd>A <code>mongoc_collection_t</code> \&amp;.</dd></dl>
 <dl COMPACT>
-<dt><code>options</code></p>
-<dd>An optional <code>bson_t</code> containing extra options to pass to the <code>collStats</code> command.</dl>
+<dt><code>options</code></dt>
+<dd>An optional <code>bson_t</code> containing extra options to pass to the <code>collStats</code> command.</dd></dl>
 <dl COMPACT>
-<dt><code>reply</code></p>
-<dd>An optional location for a <code>bson_t</code> to store the result.</dl>
+<dt><code>reply</code></dt>
+<dd>An optional location for a <code>bson_t</code> to store the result.</dd></dl>
 <dl COMPACT>
-<dt><code>error</code></p>
-<dd>An optional location for a <code>bson_error_t</code> or <code>NULL</code> \&amp;.</dl>
+<dt><code>error</code></dt>
+<dd>An optional location for a <code>bson_error_t</code> or <code>NULL</code> \&amp;.</dd></dl>
 <h2>Description</h2>
 <p>This function is a helper to retrieve statistics about the collection. </p>
 <h2>Errors</h2>

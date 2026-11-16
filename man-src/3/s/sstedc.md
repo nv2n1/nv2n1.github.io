@@ -19,7 +19,7 @@ description: "sstedc.f –"
 <p> <code>Purpose: </code></p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
  SSTEDC computes all eigenvalues and, optionally, eigenvectors of a
  symmetric tridiagonal matrix using the divide and conquer method.
@@ -33,11 +33,11 @@ description: "sstedc.f –"
  It could conceivably fail on hexadecimal or decimal machines
  without guard digits, but we know of none.  See SLAED3 for details.
 </pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>COMPZ</i> </p>
+</dt><dd> <i>COMPZ</i> </dd>
 <pre>
           COMPZ is CHARACTER*1
           = 'N':  Compute eigenvalues only.
@@ -132,20 +132,21 @@ Z is REAL array, dimension(LDZ, N) On entry, if COMPZ = 'V', then Z contains the
 <p> <code>Author:</code></p>
 <dl>
 <dt>
-<dd> Univ. of Tennessee </p>
+</dt><dd> Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl>
 <dt>
-<dd> November 2011</dl>
+</dt><dd> November 2011</dd></dl>
 <p> <code>Contributors: </code></p>
 <dl>
 <dt>
-<dd> Jeff Rutter, Computer Science Division, University of California at Berkeley, USA </p>
+</dt><dd> Jeff Rutter, Computer Science Division, University of California at Berkeley, USA </dd>
 <p>&nbsp;<wbr>Modified by Francoise Tisseur, University of Tennessee&nbsp;<wbr></dl>
 <p> Definition at line 188 of file sstedc.f.</p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for LAPACK from the source code. </p>
 <h2>Index</h2>
+</p>

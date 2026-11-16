@@ -10,17 +10,17 @@ c_ftcurv - 1D interpolation for non-periodic functions
 <h2>Function Prototype</h2>int c_ftcurv (int, float [], float [], int, float [], float []);
 <h2>Synopsis</h2>int c_ftcurv (n, xi, yi, m, xo, yo);
 <h2>Description</h2><dl COMPACT><dt>n
-<dd>The number of input data points. (n &gt; 1)
-<dt>xi
-<dd>An array containing the abscissae for the input function.
-<dt>yi
-<dd>An array containing the functional values of the input function -- y(k) is the functional value at x(k) for k=0,n.
-<dt>m
-<dd>The number of desired interpolated values.
-<dt>xo
-<dd>An array containing the abscissae for the interpolated values.
-<dt>yo
-<dd>An array containing the interpolated functional values -- yo(k) is the functional value at xo(k) for k=0,n.</dl><h2>Return Value</h2>c_ftcurv returns an error value as per: 
+</dt><dd>The number of input data points. (n &gt; 1)
+</dd><dt>xi
+</dt><dd>An array containing the abscissae for the input function.
+</dd><dt>yi
+</dt><dd>An array containing the functional values of the input function -- y(k) is the functional value at x(k) for k=0,n.
+</dd><dt>m
+</dt><dd>The number of desired interpolated values.
+</dd><dt>xo
+</dt><dd>An array containing the abscissae for the interpolated values.
+</dd><dt>yo
+</dt><dd>An array containing the interpolated functional values -- yo(k) is the functional value at xo(k) for k=0,n.</dd></dl><h2>Return Value</h2>c_ftcurv returns an error value as per: 
  
 
  = 0 -- no error. 

@@ -20,27 +20,27 @@ description: "perf-inject – Filter to augment the events stream with additiona
 <p> -b, &#8211;build-ids=</p>
 <dl>
 <dt>
-<dd> Inject build-ids into the output stream</dl>
+</dt><dd> Inject build-ids into the output stream</dd></dl>
 <p> -v, &#8211;verbose</p>
 <dl>
 <dt>
-<dd> Be more verbose.</dl>
+</dt><dd> Be more verbose.</dd></dl>
 <p> -i, &#8211;input=</p>
 <dl>
 <dt>
-<dd> Input file name. (default: stdin)</dl>
+</dt><dd> Input file name. (default: stdin)</dd></dl>
 <p> -o, &#8211;output=</p>
 <dl>
 <dt>
-<dd> Output file name. (default: stdout)</dl>
+</dt><dd> Output file name. (default: stdout)</dd></dl>
 <p> -s, &#8211;sched-stat</p>
 <dl>
 <dt>
-<dd> Merge sched_stat and sched_switch for getting events where and how long tasks slept. sched_switch contains a callchain where a task slept and sched_stat contains a timeslice how long a task slept.</dl>
+</dt><dd> Merge sched_stat and sched_switch for getting events where and how long tasks slept. sched_switch contains a callchain where a task slept and sched_stat contains a timeslice how long a task slept.</dd></dl>
 <p> &#8211;kallsyms=&lt;file&gt;</p>
 <dl>
 <dt>
-<dd> kallsyms pathname</dl>
+</dt><dd> kallsyms pathname</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-perf-record/">perf-record</a></code>(1), <code><a href="/docs/linux/man/1-perf-report/">perf-report</a></code>(1), <code><a href="/docs/linux/man/1-perf-archive/">perf-archive</a></code>(1) </p>
 <h2>Index</h2>

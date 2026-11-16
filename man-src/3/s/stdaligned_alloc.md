@@ -34,19 +34,15 @@ On failure, returns a null pointer.
 <h2>Notes</h2>
 
 <pre><code>Passing a size which is not an integral multiple of alignment or an alignment which is not valid or not supported by the implementation causes the function to fail and return a null pointer (C11, as published, specified undefined behavior in this case, this was corrected by DR 460).
-
 As an example of the &quot;supported by the implementation&quot; requirement, POSIX function posix_memalign accepts any alignment that is a power of two and a multiple of sizeof(void*), and POSIX-based implementations of aligned_alloc inherit this requirements.
-
 Regular std::malloc aligns memory suitable for any object type (which, in practice, means that it is aligned to alignof(std::max_align_t)). This function is useful for over-aligned allocations, such as to SSE, cache line, or VM page boundary.
 </code></pre>
 
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;cstdio&gt;
-
 #include &lt;cstdlib&gt;
 int main()
-
 {
     int *p1 = static_cast&lt;int *&gt;(std::malloc(10 * sizeof *p1));
     std::printf(&quot;default-aligned address:   %p\n&quot;, static_cast&lt;void *&gt;(p1));

@@ -15,35 +15,35 @@ description: "heif-enc – convert image to HEIC/HEIF"
 <p> <code>heif-enc</code> Convert image to HEIC/HEIF.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-q</code>&nbsp;<i>QUALITY</i>, <code>&#8211;quality</code>&nbsp;<i>QUALITY</i></p>
-<dd> Defines quality level between 0 and 100 for the generated output file.</p>
-<dt><code>-L</code>, &#8211;lossless</p>
-<dd> Generate lossless output (<code>-q</code> has no effect)</p>
-<dt><code>-t</code>&nbsp;<i>SIZE</i>, <code>&#8211;thumb</code>&nbsp;<i>SIZE</i></p>
-<dd> Generate thumbnail with maximum size <i>SIZE</i> pixels (default: off).</p>
-<dt><code>&#8211;no-alpha</code></p>
-<dd> Do not save alpha channel.</p>
-<dt><code>&#8211;no-thumb-alpha</code></p>
-<dd> Do not save alpha channel in thumbnail image.</p>
-<dt><code>-o</code>&nbsp;<i>FILENAME</i>, <code>&#8211;output</code>&nbsp;<i>FILENAME</i></p>
-<dd> Output filename (optional).</p>
-<dt><code>-v</code>, &#8211;verbose</p>
-<dd> Enable logging output (more <code>-v</code> will increase logging level).</p>
-<dt><code>-P</code>, &#8211;params</p>
-<dd> Show all encoder parameters.</p>
-<dt><code>-b</code>&nbsp;<i>DEPTH</i></p>
-<dd> Bit-depth of generated HEIF file when using 16-bit PNG input (default: 10 bit).</p>
-<dt><code>-p</code>&nbsp;<i>NAME</i><code>=</code><i>VALUE</i></p>
-<dd> Set additional encoder parameters. See <code>NOTES</code> below.</dl>
+<dt><code>-q</code>&nbsp;<i>QUALITY</i>, <code>&#8211;quality</code>&nbsp;<i>QUALITY</i></dt>
+<dd> Defines quality level between 0 and 100 for the generated output file.</dd>
+<dt><code>-L</code>, &#8211;lossless</dt>
+<dd> Generate lossless output (<code>-q</code> has no effect)</dd>
+<dt><code>-t</code>&nbsp;<i>SIZE</i>, <code>&#8211;thumb</code>&nbsp;<i>SIZE</i></dt>
+<dd> Generate thumbnail with maximum size <i>SIZE</i> pixels (default: off).</dd>
+<dt><code>&#8211;no-alpha</code></dt>
+<dd> Do not save alpha channel.</dd>
+<dt><code>&#8211;no-thumb-alpha</code></dt>
+<dd> Do not save alpha channel in thumbnail image.</dd>
+<dt><code>-o</code>&nbsp;<i>FILENAME</i>, <code>&#8211;output</code>&nbsp;<i>FILENAME</i></dt>
+<dd> Output filename (optional).</dd>
+<dt><code>-v</code>, &#8211;verbose</dt>
+<dd> Enable logging output (more <code>-v</code> will increase logging level).</dd>
+<dt><code>-P</code>, &#8211;params</dt>
+<dd> Show all encoder parameters.</dd>
+<dt><code>-b</code>&nbsp;<i>DEPTH</i></dt>
+<dd> Bit-depth of generated HEIF file when using 16-bit PNG input (default: 10 bit).</dd>
+<dt><code>-p</code>&nbsp;<i>NAME</i><code>=</code><i>VALUE</i></dt>
+<dd> Set additional encoder parameters. See <code>NOTES</code> below.</dd></dl>
 <h2>EXIT STATUS</h2>
 <p> <code>0</code></p>
 <dl>
 <dt>
-<dd> Success</dl>
+</dt><dd> Success</dd></dl>
 <p> <code>1</code></p>
 <dl>
 <dt>
-<dd> Failure (syntax or usage error; error while loading, converting or writing image).</dl>
+</dt><dd> Failure (syntax or usage error; error while loading, converting or writing image).</dd></dl>
 <h2>NOTES</h2>
 <p> The available input formats depend on the libraries that were available at compile time. Supported are JPEG, PNG and Y4M, the file type is determined based on the extension of the input file. </p>
 <p> When specifying multiple source images, they will all be saved into the same HEIF file. </p>

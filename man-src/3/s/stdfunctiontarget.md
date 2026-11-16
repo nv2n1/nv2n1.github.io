@@ -12,12 +12,9 @@ std::function&lt;R(Args...)&gt;::target - std::function&lt;R(Args...)&gt;::targe
 
 <pre><code>template &lt;class T&gt;
 (1)(since C++ 11)
-
     T *target() noexcept;
-
 template &lt;class T&gt;
 (2)(since C++ 11)
-
     const T *target() const noexcept;</code></pre> 
 Returns a pointer to the stored callable function target. 
 
@@ -32,20 +29,16 @@ A pointer to the stored function if target_type() == typeid(T), otherwise a null
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;functional&gt;
-
 #include &lt;iostream&gt;
 int f(int, int)
 {
     return 1;
 }
-
 int g(int, int)
 {
     return 2;
 }
-
 void test(std::function&lt;int(int, int)&gt; const &amp;arg)
-
 {
     std::cout &lt;&lt; &quot;test function: &quot;;
     if (arg.target&lt;std::plus&lt;int&gt;&gt;())
@@ -59,7 +52,6 @@ void test(std::function&lt;int(int, int)&gt; const &amp;arg)
         std::cout &lt;&lt; &quot;it is the function g\n&quot;;
 }
 int main()
-
 {
     test(std::function&lt;int(int, int)&gt;(std::plus&lt;int&gt;()));
     test(std::function&lt;int(int, int)&gt;(std::minus&lt;int&gt;()));

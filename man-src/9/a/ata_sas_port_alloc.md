@@ -14,13 +14,13 @@ description: "ata_sas_port_alloc – Allocate port for a SAS attached SATA devic
 <p><i>host</i></p>
 <dl>
 <dd>
-<dd>ATA host container for all SAS ports</dl>
+</dd><dd>ATA host container for all SAS ports</dd></dl>
 <p> <i>port_info</i></p>
 <dl>
-<dd>Information from low-level host driver</dl>
+<dd>Information from low-level host driver</dd></dl>
 <p> <i>shost</i></p>
 <dl>
-<dd>SCSI host that the scsi device is attached to</dl>
+<dd>SCSI host that the scsi device is attached to</dd></dl>
 <h2>Description</h2>
 <p>LOCKING: PCI/etc. bus probe sem.</p>
 <h2>Return</h2>
@@ -28,5 +28,5 @@ description: "ata_sas_port_alloc – Allocate port for a SAS attached SATA devic
 <h2>Author</h2>
 <p><code>Jeff Garzik</code></p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

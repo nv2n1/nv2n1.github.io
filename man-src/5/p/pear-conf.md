@@ -12,10 +12,10 @@ description: "pear.conf – configuration file for PEAR applications."
 <p>The <code>pear.conf</code> is used by <code>PEAR</code> applications to store their configuration. This file should not be edited. The <code>pear</code> command provides the <code>config-show</code>, <code>config-get</code> and <code>config-set</code> sub-commands needed to change the configuration. </p>
 <h2>Files</h2>
 <dl>
-<dt><code>/etc/pear.conf</code></p>
-<dd>The system configuration file.</p>
-<dt><code>$HOME/.pearrc</code></p>
-<dd>The user configuration file. </p>
+<dt><code>/etc/pear.conf</code></dt>
+<dd>The system configuration file.</dd>
+<dt><code>$HOME/.pearrc</code></dt>
+<dd>The user configuration file. </dd>
 </dl>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/1-pear/">pear</a>(1)</code> </p>

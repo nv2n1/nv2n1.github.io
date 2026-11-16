@@ -43,13 +43,11 @@ s_test_detached(void *args)
     //  Create a socket to check it'll be automatically deleted
     zctx_t *ctx = zctx_new();
     assert(ctx);
-
     void *push = zsocket_new(ctx, ZMQ_PUSH);
     assert(push);
     zctx_destroy(&amp;ctx);
     return NULL;
 }
-
 static void
 s_test_attached(void *args, zctx_t *ctx, void *pipe)
 {
@@ -62,16 +60,13 @@ s_test_attached(void *args, zctx_t *ctx, void *pipe)
     zstr_free(&amp;ping);
     zstr_send(pipe, &quot;pong&quot;);
 }
-
 zctx_t *ctx = zctx_new();
 assert(ctx);
 int rc = 0;
-
 //  Create a detached thread, let it run
 rc = zthread_new(s_test_detached, NULL);
 assert(rc == 0);
 zclock_sleep(100);
-
 //  Create an attached thread, check it's safely alive
 void *pipe = zthread_fork(ctx, s_test_attached, NULL);
 assert(pipe);
@@ -80,7 +75,6 @@ char *pong = zstr_recv(pipe);
 assert(pong);
 assert(streq(pong, &quot;pong&quot;));
 zstr_free(&amp;pong);
-
 //  Everything should be cleanly closed now
 zctx_destroy(&amp;ctx);
 </code></pre>
@@ -93,7 +87,8 @@ zctx_destroy(&amp;ctx);
 <p>Copyright (c) 1991-2012 iMatix Corporation &#8212; <a rel="nofollow" href="http://www.imatix.com">http://www.imatix.com</a> Copyright other contributors as noted in the AUTHORS file. This file is part of CZMQ, the high-level C binding for 0MQ: <a href="http://czmq.zeromq.org">http://czmq.zeromq.org</a> This Source Code Form is subject to the terms of the Mozilla Public License, v. 2.0. If a copy of the MPL was not distributed with this file, You can obtain one at <a href="http://mozilla.org/MPL/2.0/.">http://mozilla.org/MPL/2.0/.</a> LICENSE included with the czmq distribution.</p>
 <h2>Notes</h2>
 <dl>
-<dt> 1.</p>
-<dd>zeromq-dev [at] lists.zeromq.org</p>
+<dt> 1.</dt>
+<dd>zeromq-dev [at] lists.zeromq.org</dd>
 <dl>
-<dd>mailto:zeromq-dev [at] lists.zeromq.org</dl>
+<dd>mailto:zeromq-dev [at] lists.zeromq.org</dd></dl>
+</dl>

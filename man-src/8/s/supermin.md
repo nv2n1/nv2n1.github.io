@@ -23,54 +23,54 @@ description: "supermin – Tool for creating supermin appliances"
 <p> In all cases supermin can only build a supermin appliance which is identical in distro, version and architecture to the host. It does <i>not</i> do cross-builds.</p>
 <h2>Options</h2>
 <dl>
-<dt><code>&#8211;help</code></p>
-<dd>Display brief command line usage, and exit.</p>
-<dt><code>&#8211;exclude </code><font SIZE="-1"><code>REGEXP</code></font></p>
-<dd>After doing dependency resolution, exclude packages which match the regular expression. </p>
+<dt><code>&#8211;help</code></dt>
+<dd>Display brief command line usage, and exit.</dd>
+<dt><code>&#8211;exclude </code><font SIZE="-1"><code>REGEXP</code></font></dt>
+<dd>After doing dependency resolution, exclude packages which match the regular expression. </dd>
 <p> This option is only used with <i>&#8211;names</i>, and it can be given multiple times on the command line.</p>
-<dt><code>&#8211;names</code></p>
-<dd>Provide a list of package names, instead of providing packages directly. In this mode supermin may require network access. See &#8220;<font SIZE="-1">BASIC OPERATION&#8221;</font> above.</p>
-<dt><code>&#8211;no-warnings</code></p>
-<dd>Don&#8217;t print warnings about packaging problems.</p>
-<dt><code>-o outputdir</code></p>
-<dd>Select the output directory where the two supermin appliance files are written (<tt>&quot;hostfiles&quot;</tt> and <tt>&quot;base.img&quot;</tt>). The default directory is the current directory. Note that if this files exist already in the output directory then they will be overwritten.</p>
-<dt><code>&#8211;packager-config </code><font SIZE="-1"><code>CONFIGFILE</code></font></p>
-<dd>Set the configuration file for the package manager. This allows you to specify alternate software repositories. </p>
+<dt><code>&#8211;names</code></dt>
+<dd>Provide a list of package names, instead of providing packages directly. In this mode supermin may require network access. See &#8220;<font SIZE="-1">BASIC OPERATION&#8221;</font> above.</dd>
+<dt><code>&#8211;no-warnings</code></dt>
+<dd>Don&#8217;t print warnings about packaging problems.</dd>
+<dt><code>-o outputdir</code></dt>
+<dd>Select the output directory where the two supermin appliance files are written (<tt>&quot;hostfiles&quot;</tt> and <tt>&quot;base.img&quot;</tt>). The default directory is the current directory. Note that if this files exist already in the output directory then they will be overwritten.</dd>
+<dt><code>&#8211;packager-config </code><font SIZE="-1"><code>CONFIGFILE</code></font></dt>
+<dd>Set the configuration file for the package manager. This allows you to specify alternate software repositories. </dd>
 <p> For ArchLinux, this sets the pacman configuration file (default <tt>&quot;/etc/pacman.conf&quot;</tt>). See <i>pacman.conf</i>(5). </p>
 <p> For Yum/RPM distributions, this sets the yum configuration file (default <tt>&quot;/etc/yum.conf&quot;</tt>). See <i>yum.conf</i>(5).</p>
-<dt><code>&#8211;save-temps</code></p>
-<dd>Don&#8217;t remove temporary files and directories on exit. This is useful for debugging.</p>
-<dt><code>&#8211;use-installed</code></p>
-<dd>If packages are already installed, use the contents (from the local filesystem) instead of downloading them. </p>
+<dt><code>&#8211;save-temps</code></dt>
+<dd>Don&#8217;t remove temporary files and directories on exit. This is useful for debugging.</dd>
+<dt><code>&#8211;use-installed</code></dt>
+<dd>If packages are already installed, use the contents (from the local filesystem) instead of downloading them. </dd>
 <p> Note that this can cause malformed appliances if local files have been changed from what was originally in the package. This is particularly a problem for configuration files. </p>
 <p> However this option is useful in some controlled situations: for example when using supermin inside a freshly installed chroot.</p>
-<dt><code>-v</code></p>
+<dt><code>-v</code></dt>
 <dd>
-<dt><code>&#8211;verbose</code></p>
-<dd>Enable verbose messages.</p>
-<dt><code>-V</code></p>
+</dd><dt><code>&#8211;verbose</code></dt>
+<dd>Enable verbose messages.</dd>
+<dt><code>-V</code></dt>
 <dd>
-<dt><code>&#8211;version</code></p>
-<dd>Print the package name and version number, and exit.</p>
-<dt><code>&#8211;yum-config </code><font SIZE="-1"><code>CONFIGFILE</code></font></p>
-<dd>This is a deprecated alias for <i>&#8211;packager-config </i><font SIZE="-1"><i>CONFIGFILE</i></font><i></i>.</dl>
+</dd><dt><code>&#8211;version</code></dt>
+<dd>Print the package name and version number, and exit.</dd>
+<dt><code>&#8211;yum-config </code><font SIZE="-1"><code>CONFIGFILE</code></font></dt>
+<dd>This is a deprecated alias for <i>&#8211;packager-config </i><font SIZE="-1"><i>CONFIGFILE</i></font><i></i>.</dd></dl>
 <h2>Supermin Appliances</h2>
 <p>Supermin appliances consist of just enough information to be able to build an appliance containing the same operating system (Linux version, distro, release etc) as the host <font SIZE="-1">OS. </font> Since the host and appliance share many common files such as <tt>&quot;/bin/bash&quot;</tt> and <tt>&quot;/lib/libc.so&quot;</tt> there is no reason to ship these files in the appliance. They can simply be read from the host on demand when the appliance is launched. Therefore to save space we just store the names of the host files that we want. </p>
 <p> There are some files which cannot just be copied from the host in this way. These include configuration files which the host admin might have edited. So along with the list of host files, we also store a skeleton base image which contains these files and the outline directory structure. </p>
 <p> Therefore the supermin appliance normally consists of at least two control files:</p>
 <dl>
-<dt><code>hostfiles</code></p>
-<dd>The list of files that are to be copied from the host. This is a plain text file with one pathname per line. Directories are included in this file. </p>
+<dt><code>hostfiles</code></dt>
+<dd>The list of files that are to be copied from the host. This is a plain text file with one pathname per line. Directories are included in this file. </dd>
 <p> Paths can contain wildcards, which are expanded when the appliance is created, eg: </p>
 <pre> /etc/yum.repos.d/*.repo</pre>
 <p>would copy all of the <tt>&quot;*.repo&quot;</tt> files into the appliance. </p>
 <p> Each pathname in the file should start with a <tt>&quot;/&quot;</tt> character. (In older versions of febootstrap, paths started with <tt>&quot;./&quot;</tt> and were relative to the root directory, but you should not do that in new files).</p>
-<dt><code>base.img</code></p>
-<dd>This uncompressed cpio file contains the skeleton filesystem. Mostly it contains directories and a few configuration files. </p>
+<dt><code>base.img</code></dt>
+<dd>This uncompressed cpio file contains the skeleton filesystem. Mostly it contains directories and a few configuration files. </dd>
 <p> All paths in the cpio file should be relative to the root directory of the appliance. </p>
 <p> Note that unlike <tt>&quot;hostfiles&quot;</tt>, paths and directories in the base image don&#8217;t need to have any relationship to the host filesystem.</p>
-<dt><code>base.img.gz</code></p>
-<dd>Since supermin ≥ 4.1.4, any cpio image files may be gzip-compressed to save disk space. <tt>&quot;hostfiles&quot;</tt> cannot be compressed. The supermin program won&#8217;t create these files. You need to compress the output yourself, eg by doing: </p>
+<dt><code>base.img.gz</code></dt>
+<dd>Since supermin ≥ 4.1.4, any cpio image files may be gzip-compressed to save disk space. <tt>&quot;hostfiles&quot;</tt> cannot be compressed. The supermin program won&#8217;t create these files. You need to compress the output yourself, eg by doing: </dd>
 <pre> gzip -9 supermin.d/*.img</pre>
 </dl>
 <h3><font SIZE="-1">RECONSTRUCTING THE APPLIANCE</font></h3>
@@ -121,10 +121,10 @@ usr/sbin/serviced&quot; |
 <p><i><a href="/docs/linux/man/8-supermin-helper/">supermin-helper</a></i>(8), &lt;<a rel="nofollow" href="http://people.redhat.com/~rjones/supermin/">http://people.redhat.com/~rjones/supermin/</a>&gt;, <i>guestfs</i>(3), &lt;<a rel="nofollow" href="http://libguestfs.org/">http://libguestfs.org/</a>&gt;.</p>
 <h2>Authors</h2>
 <dl>
-<dt>&bull;</p>
-<dd>Richard W.M. Jones &lt;<a rel="nofollow" href="http://people.redhat.com/~rjones/">http://people.redhat.com/~rjones/</a>&gt;</p>
-<dt>&bull;</p>
-<dd>Matthew Booth mbooth [at] redhat.com</dl>
+<dt>&bull;</dt>
+<dd>Richard W.M. Jones &lt;<a rel="nofollow" href="http://people.redhat.com/~rjones/">http://people.redhat.com/~rjones/</a>&gt;</dd>
+<dt>&bull;</dt>
+<dd>Matthew Booth mbooth [at] redhat.com</dd></dl>
 <h2>Copyright</h2>
 <p>Copyright (C) 2009-2011 Red Hat Inc. </p>
 <p> This program is free software; you can redistribute it and/or modify it under the terms of the <font SIZE="-1">GNU</font> General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version. </p>

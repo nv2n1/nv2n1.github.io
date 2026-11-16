@@ -14,21 +14,21 @@ description: "scsi_inq_str – print INQUIRY data from min to max index, strip t
 <p><i>buf</i></p>
 <dl>
 <dd>
-<dd>Output buffer with at least end-first+1 bytes of space</dl>
+</dd><dd>Output buffer with at least end-first+1 bytes of space</dd></dl>
 <p> <i>inq</i></p>
 <dl>
-<dd>Inquiry buffer (input)</dl>
+<dd>Inquiry buffer (input)</dd></dl>
 <p> <i>first</i></p>
 <dl>
-<dd>Offset of string into inq</dl>
+<dd>Offset of string into inq</dd></dl>
 <p> <i>end</i></p>
 <dl>
-<dd>Index after last character in inq</dl>
+<dd>Index after last character in inq</dd></dl>
 <h2>Authors</h2>
 <p><code>James Bottomley</code> &lt;James.Bottomley [at] hansenpartnership.com&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <p> <code>Rob Landley</code> &lt;rob [at] landley.net&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

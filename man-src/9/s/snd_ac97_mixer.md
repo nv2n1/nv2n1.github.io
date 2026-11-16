@@ -15,15 +15,15 @@ snd_ac97_mixer - create an Codec97 component
 <h2>Arguments</h2>
 
 <i>bus</i>
-<dl><dd><dd>the AC97 bus which codec is attached to</dl>
+<dl><dd></dd><dd>the AC97 bus which codec is attached to</dd></dl>
  
 
  <i>template</i>
-<dl><dd>the template of ac97, including index, callbacks and the private data.</dl>
+<dl><dd>the template of ac97, including index, callbacks and the private data.</dd></dl>
  
 
  <i>rac97</i>
-<dl><dd>the pointer to store the new ac97 instance.</dl>
+<dl><dd>the pointer to store the new ac97 instance.</dd></dl>
 
 <h2>Description</h2>
 

@@ -10,13 +10,9 @@ description: "std::time_get_byname – std::time_get_byname"
 <p>std::time_get_byname &#8211; std::time_get_byname</p>
 <h2>Synopsis</h2>
 <pre><code>Defined in header &lt;locale&gt;
-
 template&lt;
-
 class CharT,
-
 class InputIt = std::istreambuf_iterator&lt;CharT&gt;
-
 &gt; class time_get_byname : public std::time_get&lt;CharT, InputIt&gt;</code></pre>
 <p>std::time_get_byname is a std::time_get facet which encapsulates time and date parsing rules of the locale specified at its construction.<br />
 Two specializations are provided by the standard library<br />

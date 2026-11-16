@@ -22,10 +22,10 @@ description: "slargv.f –"
  elements of the real vectors x and y. For i = 1,2,...,n
  ( c(i) s(i) ) ( x(i) ) = ( a(i) )
  ( -s(i) c(i) ) ( y(i) ) = ( 0 )</pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>N</i> </p>
+<dd><i>N</i> </dd>
 <pre> N is INTEGER
  The number of plane rotations to be generated.</pre>
 <p><i>X</i> </p>
@@ -53,13 +53,13 @@ description: "slargv.f –"
 <p>&nbsp;<wbr></dl>
 <p> <code>Author:</code></p>
 <dl>
-<dd>Univ. of Tennessee </p>
+<dd>Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl>
-<dd>September 2012</dl>
+<dd>September 2012</dd></dl>
 <p> Definition at line 105 of file slargv.f.</p>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for LAPACK from the source code.</p>

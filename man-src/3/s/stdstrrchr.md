@@ -11,9 +11,7 @@ std::strrchr - std::strrchr
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;cstring&gt;
-
     const char *strrchr(const char *str, int ch);
-
 char *strrchr(char *str, int ch);</code></pre> 
 Finds the last occurrence of ch (after conversion to char) in the byte string pointed to by str. The terminating null character is considered to be a part of the string and can be found if searching for '\0'. 
 
@@ -29,10 +27,8 @@ Pointer to the found character in str, or null pointer if no such character is f
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;iostream&gt;
-
 #include &lt;cstring&gt;
 int main()
-
 {
     char input[] = &quot;/home/user/hello.c&quot;;
     char *output = std::strrchr(input, '/');

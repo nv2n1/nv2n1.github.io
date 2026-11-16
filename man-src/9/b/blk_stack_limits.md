@@ -15,15 +15,15 @@ blk_stack_limits - adjust queue_limits for stacked devices
 <h2>Arguments</h2>
 
 <i>t</i>
-<dl><dd><dd>the stacking driver limits (top device)</dl>
+<dl><dd></dd><dd>the stacking driver limits (top device)</dd></dl>
  
 
  <i>b</i>
-<dl><dd>the underlying queue limits (bottom, component device)</dl>
+<dl><dd>the underlying queue limits (bottom, component device)</dd></dl>
  
 
  <i>start</i>
-<dl><dd>first data sector within component device</dl>
+<dl><dd>first data sector within component device</dd></dl>
 
 <h2>Description</h2>
 

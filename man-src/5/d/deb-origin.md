@@ -16,14 +16,14 @@ description: "deb-origin – Vendor-specific information files"
 <p> The file should be named according to the vendor name. The usual convention is to name the vendor file using the vendor name in all lowercase, but some variation is permitted. Namely, spaces are mapped to dashes (&#8216;<code>&#8211;</code>&#8216;), and the file can have the same casing as the value in <code>Vendor</code> field, or it can be capitalized.</p>
 <h2>Fields</h2>
 <dl>
-<dt><code>Vendor:</code> <i>vendor-name</i> (required)</p>
-<dd>The value of this field determines the vendor name.</p>
-<dt><code>Vendor-URL:</code> <i>vendor-url</i></p>
-<dd>The value of this field determines the vendor <font SIZE="-1">URL.</font></p>
-<dt><code>Bugs:</code> <i>bug-url</i></p>
-<dd>The value of this field determines the type and address of the bug tracking system used by this vendor. It can be a mailto <font SIZE="-1">URL</font> or a debbugs <font SIZE="-1">URL</font> (e.g., debbugs://bugs.debian.org/).</p>
-<dt><code>Parent:</code> <i>vendor-name</i></p>
-<dd>The value of this field determines the vendor name of the vendor that this vendor derives from.</dl>
+<dt><code>Vendor:</code> <i>vendor-name</i> (required)</dt>
+<dd>The value of this field determines the vendor name.</dd>
+<dt><code>Vendor-URL:</code> <i>vendor-url</i></dt>
+<dd>The value of this field determines the vendor <font SIZE="-1">URL.</font></dd>
+<dt><code>Bugs:</code> <i>bug-url</i></dt>
+<dd>The value of this field determines the type and address of the bug tracking system used by this vendor. It can be a mailto <font SIZE="-1">URL</font> or a debbugs <font SIZE="-1">URL</font> (e.g., debbugs://bugs.debian.org/).</dd>
+<dt><code>Parent:</code> <i>vendor-name</i></dt>
+<dd>The value of this field determines the vendor name of the vendor that this vendor derives from.</dd></dl>
 <h2>Example</h2>
 <pre> Vendor: Debian
  Vendor-URL: <a rel="nofollow" href="https://www.debian.org/">https://www.debian.org/</a>

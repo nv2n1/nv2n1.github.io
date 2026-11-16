@@ -10,17 +10,8 @@ description: "QuantLib::Schedule – Payment schedule."
 <p>QuantLib::Schedule &#8211; Payment schedule. </p>
 <h2>Synopsis</h2>
 <pre><code>typedef std::vector&lt; Date &gt;::const_iterator const_iterator
-
-
-
 const_iterator begin () const
-
-
-
 const_iterator end () const
-
-
-
 const_iterator lower_bound (const Date &amp;d=Date()) const</code></pre>
 <h3>Public Member Functions</h3>
 <p>typedef std::vector&lt; Date &gt;::const_iterator const_iterator</p>
@@ -47,17 +38,8 @@ const_iterator lower_bound (const Date &amp;d=Date()) const</code></pre>
 <p> bool <code>endOfMonth</code> () const</p>
 <h3>Iterators</h3>
 <pre><code>typedef std::vector&lt; Date &gt;::const_iterator const_iterator
-
-
-
 const_iterator begin () const
-
-
-
 const_iterator end () const
-
-
-
 const_iterator lower_bound (const Date &amp;d=Date()) const</code></pre>
 <h2>Detailed Description</h2>
 <p>Payment schedule. </p>

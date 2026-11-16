@@ -15,12 +15,12 @@ description: "gpg-check-pattern – Check a passphrase on stdin against the patt
 <p> <code>gpg-check-pattern</code> checks a passphrase given on stdin against a specified patternfile. </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-v</code>, <code>&#8211;verbose</code></p>
-<dd> Produce verbose output</p>
-<dt><code>&#8211;check</code></p>
-<dd> run only a syntax check on the patternfile</p>
-<dt><code>-0</code>, <code>&#8211;null</code></p>
-<dd> input is expected to be null delimited</dl>
+<dt><code>-v</code>, <code>&#8211;verbose</code></dt>
+<dd> Produce verbose output</dd>
+<dt><code>&#8211;check</code></dt>
+<dd> run only a syntax check on the patternfile</dd>
+<dt><code>-0</code>, <code>&#8211;null</code></dt>
+<dd> input is expected to be null delimited</dd></dl>
 <p> Please report bugs to &lt;<a rel="nofollow" href="https://dev.gnupg.org">https://dev.gnupg.org</a>&gt;. </p>
 <h2>COPYRIGHT</h2>
 <p> Copyright &#169; 2016 Free Software Foundation, Inc. License GPLv3+: GNU GPL version 3 or later &lt;<a rel="nofollow" href="https://gnu.org/licenses/gpl.html">https://gnu.org/licenses/gpl.html</a>&gt; </p>

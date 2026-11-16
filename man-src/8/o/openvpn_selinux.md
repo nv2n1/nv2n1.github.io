@@ -67,9 +67,9 @@ description: "openvpn_selinux – Security Enhanced Linux Policy for the openvpn
 <p> Policy governs the access confined processes have to these ports. SELinux openvpn policy is very flexible allowing users to setup their openvpn processes in as secure a method as possible. </p>
 <p> The following port types are defined for openvpn: </p>
 <dl>
-<dt><code>openvpn_port_t</code></p>
+<dt><code>openvpn_port_t</code></dt>
 <dd>
-<dd>Default Defined Ports: tcp 1194 udp 1194</dl>
+</dd><dd>Default Defined Ports: tcp 1194 udp 1194</dd></dl>
 <h2>Managed Files</h2>
 <p>The SELinux process type openvpn_t can manage files labeled with the following file types. The paths listed are the default paths for these file types. Note the processes UID still need to have DAC permissions. </p>
 <p> <code>NetworkManager_var_run_t</code> </p>
@@ -193,8 +193,8 @@ description: "openvpn_selinux – Security Enhanced Linux Policy for the openvpn
 <p> <code>openvpn_var_run_t</code> </p>
 <p> &#8211; Set files with the openvpn_var_run_t type, if you want to store the openvpn files under the /run or /var/run directory. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/var/run/openvpn(/.*)?, /var/run/openvpn.client.* </p>
+<dt>Paths:</dt>
+<dd>/var/run/openvpn(/.*)?, /var/run/openvpn.client.* </dd>
 </dl>
 <p> Note: File context can be temporarily modified with the chcon command. If you want to permanently change the file context you need to use the <code>semanage fcontext</code> command. This will modify the SELinux labeling database. You will need to use <code>restorecon</code> to apply the labels.</p>
 <h2>Commands</h2>

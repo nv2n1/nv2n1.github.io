@@ -28,21 +28,21 @@ int
 <code>Tk_PhotoSetSize</code>(<i>interp. handle, width, height</i>)</pre>
 <h2>Arguments</h2>
 <dl COMPACT>
-<dd>Tcl_Interp <i>*interp</i> (in) Interpreter in which image was created and in which error reporting is to be done.</p>
-<dd>const char <i>*imageName</i> (in) Name of the photo image.</p>
-<dd>Tk_PhotoHandle <i>handle</i> (in) Opaque handle identifying the photo image to be affected.</p>
-<dd>Tk_PhotoImageBlock <i>*blockPtr</i> (in) Specifies the address and storage layout of image data.</p>
-<dd>int <i>x</i> (in) Specifies the X coordinate where the top-left corner of the block is to be placed within the image.</p>
-<dd>int <i>y</i> (in) Specifies the Y coordinate where the top-left corner of the block is to be placed within the image.</p>
-<dd>int <i>width</i> (in) Specifies the width of the image area to be affected (for <code>Tk_PhotoPutBlock</code>) or the desired image width (for <code>Tk_PhotoExpand</code> and <code>Tk_PhotoSetSize</code>).</p>
-<dd>int <i>compRule</i> (in) Specifies the compositing rule used when combining transparent pixels in a block of data with a photo image. Must be one of <code>TK_PHOTO_COMPOSITE_OVERLAY</code> (which puts the block of data over the top of the existing photo image, with the previous contents showing through in the transparent bits) or <code>TK_PHOTO_COMPOSITE_SET</code> (which discards the existing photo image contents in the rectangle covered by the data block.)</p>
-<dd>int <i>height</i> (in) Specifies the height of the image area to be affected (for <code>Tk_PhotoPutBlock</code>) or the desired image height (for <code>Tk_PhotoExpand</code> and <code>Tk_PhotoSetSize</code>).</p>
-<dd>int <i>*widthPtr</i> (out) Pointer to location in which to store the image width.</p>
-<dd>int <i>*heightPtr</i> (out) Pointer to location in which to store the image height.</p>
-<dd>int <i>subsampleX</i> (in) Specifies the subsampling factor in the X direction for input image data.</p>
-<dd>int <i>subsampleY</i> (in) Specifies the subsampling factor in the Y direction for input image data.</p>
-<dd>int <i>zoomX</i> (in) Specifies the zoom factor to be applied in the X direction to pixels being written to the photo image.</p>
-<dd>int <i>zoomY</i> (in) Specifies the zoom factor to be applied in the Y direction to pixels being written to the photo image. </p>
+<dd>Tcl_Interp <i>*interp</i> (in) Interpreter in which image was created and in which error reporting is to be done.</dd>
+<dd>const char <i>*imageName</i> (in) Name of the photo image.</dd>
+<dd>Tk_PhotoHandle <i>handle</i> (in) Opaque handle identifying the photo image to be affected.</dd>
+<dd>Tk_PhotoImageBlock <i>*blockPtr</i> (in) Specifies the address and storage layout of image data.</dd>
+<dd>int <i>x</i> (in) Specifies the X coordinate where the top-left corner of the block is to be placed within the image.</dd>
+<dd>int <i>y</i> (in) Specifies the Y coordinate where the top-left corner of the block is to be placed within the image.</dd>
+<dd>int <i>width</i> (in) Specifies the width of the image area to be affected (for <code>Tk_PhotoPutBlock</code>) or the desired image width (for <code>Tk_PhotoExpand</code> and <code>Tk_PhotoSetSize</code>).</dd>
+<dd>int <i>compRule</i> (in) Specifies the compositing rule used when combining transparent pixels in a block of data with a photo image. Must be one of <code>TK_PHOTO_COMPOSITE_OVERLAY</code> (which puts the block of data over the top of the existing photo image, with the previous contents showing through in the transparent bits) or <code>TK_PHOTO_COMPOSITE_SET</code> (which discards the existing photo image contents in the rectangle covered by the data block.)</dd>
+<dd>int <i>height</i> (in) Specifies the height of the image area to be affected (for <code>Tk_PhotoPutBlock</code>) or the desired image height (for <code>Tk_PhotoExpand</code> and <code>Tk_PhotoSetSize</code>).</dd>
+<dd>int <i>*widthPtr</i> (out) Pointer to location in which to store the image width.</dd>
+<dd>int <i>*heightPtr</i> (out) Pointer to location in which to store the image height.</dd>
+<dd>int <i>subsampleX</i> (in) Specifies the subsampling factor in the X direction for input image data.</dd>
+<dd>int <i>subsampleY</i> (in) Specifies the subsampling factor in the Y direction for input image data.</dd>
+<dd>int <i>zoomX</i> (in) Specifies the zoom factor to be applied in the X direction to pixels being written to the photo image.</dd>
+<dd>int <i>zoomY</i> (in) Specifies the zoom factor to be applied in the Y direction to pixels being written to the photo image. </dd>
 </dl>
 <h2>Description</h2>
 <p><code>Tk_FindPhoto</code> returns an opaque handle that is used to identify a particular photo image to the other procedures. The parameter is the name of the image, that is, the name specified to the <code>image create photo</code> command, or assigned by that command if no name was specified. </p>
@@ -58,7 +58,7 @@ int
  int <i>pixelSize</i>;
  int <i>offset[4]</i>;
 } Tk_PhotoImageBlock;</pre>
-</dl>
+</dd></dl>
 <p> The <i>pixelPtr</i> field points to the first pixel, that is, the top-left pixel in the block. The <i>width</i> and <i>height</i> fields specify the dimensions of the block of pixels. The <i>pixelSize</i> field specifies the address difference between two horizontally adjacent pixels. Often it is 3 or 4, but it can have any value. The <i>pitch</i> field specifies the address difference between two vertically adjacent pixels. The <i>offset</i> array contains the offsets from the address of a pixel to the addresses of the bytes containing the red, green, blue and alpha (transparency) components. These are normally 0, 1, 2 and 3, but can have other values, e.g., for images that are stored as separate red, green and blue planes. </p>
 <p> The <i>compRule</i> parameter to <code>Tk_PhotoPutBlock</code> specifies a compositing rule that says what to do with transparent pixels. The value <code>TK_PHOTO_COMPOSITE_OVERLAY</code> says that the previous contents of the photo image should show through, and the value <code>TK_PHOTO_COMPOSITE_SET</code> says that the previous contents of the photo image should be completely ignored, and the values from the block be copied directly across. The behavior in Tk8.3 and earlier was equivalent to having <code>TK_PHOTO_COMPOSITE_OVERLAY</code> as a compositing rule. </p>
 <p> The value given for the <i>width</i> and <i>height</i> parameters to <code>Tk_PhotoPutBlock</code> do not have to correspond to the values specified in <i>block</i>. If they are smaller, <code>Tk_PhotoPutBlock</code> extracts a sub-block from the image data supplied. If they are larger, the data given are replicated (in a tiled fashion) to fill the specified area. These rules operate independently in the horizontal and vertical directions. </p>

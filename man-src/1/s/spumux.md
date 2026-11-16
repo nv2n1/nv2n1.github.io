@@ -14,18 +14,18 @@ description: "spumux – generates and multiplexes subtitles into an existing mp
 <h2>DESCRIPTION</h2>
 <p> <code>spumux</code> encodes the subtitles and multiplexes it into the mpeg2 program stream.</p>
 <dl>
-<dt><code>-m </code><i>mode</i></p>
-<dd> Sets the encoding for the subtitles. Can be dvd, cvd, or svcd. Default is dvd.</p>
-<dt><code>-s </code><i>stream</i></p>
-<dd> Sets the subtitle stream id. Default is 0.</p>
-<dt><code>-v </code><i>level</i></p>
-<dd> Sets the verbosity level.</p>
-<dt><code>-P</code></p>
-<dd> Enables a progress bar.</p>
-<dt><code>&#8211;nomux</code></p>
-<dd> Disables reading of an MPEG stream from standard input. Instead, the output will contain only the subpicture stream.</p>
-<dt><code>&#8211;nodvdauthor-data</code></p>
-<dd> Disables passing of color and button info to dvdauthor.</dl>
+<dt><code>-m </code><i>mode</i></dt>
+<dd> Sets the encoding for the subtitles. Can be dvd, cvd, or svcd. Default is dvd.</dd>
+<dt><code>-s </code><i>stream</i></dt>
+<dd> Sets the subtitle stream id. Default is 0.</dd>
+<dt><code>-v </code><i>level</i></dt>
+<dd> Sets the verbosity level.</dd>
+<dt><code>-P</code></dt>
+<dd> Enables a progress bar.</dd>
+<dt><code>&#8211;nomux</code></dt>
+<dd> Disables reading of an MPEG stream from standard input. Instead, the output will contain only the subpicture stream.</dd>
+<dt><code>&#8211;nodvdauthor-data</code></dt>
+<dd> Disables passing of color and button info to dvdauthor.</dd></dl>
 <p> Here&#8217;s a sample configuration file: </p>
 <pre><code>
 &lt;subpictures&gt;
@@ -89,12 +89,12 @@ description: "spumux – generates and multiplexes subtitles into an existing mp
 <h2>SPECIFYING COLORS</h2>
 <p> Colors for image transparency and text fill and outlines can be specified in a number of ways:</p>
 <dl>
-<dt>&bull;</p>
-<dd> As a color name, e.g. &quot;green&quot;. You can use most of the color names listed at &lt;<a rel="nofollow" href="http://www.imagemagick.org/script/color.php">http://www.imagemagick.org/script/color.php</a>&gt;.</p>
-<dt>&bull;</p>
-<dd> As a hexadecimal string preceded by a &quot;#&quot;, similar to HTML format, e.g. &quot;#FF8080&quot;. The number of digits must be a multiple of 3; the first group specifies the red component, the second green, and the third blue.</p>
-<dt>&bull;</p>
-<dd> As the name of a color space, followed by one to four component values in parentheses, e.g. &quot;hsv(120, 50%, 90%)&quot;.</dl>
+<dt>&bull;</dt>
+<dd> As a color name, e.g. &quot;green&quot;. You can use most of the color names listed at &lt;<a rel="nofollow" href="http://www.imagemagick.org/script/color.php">http://www.imagemagick.org/script/color.php</a>&gt;.</dd>
+<dt>&bull;</dt>
+<dd> As a hexadecimal string preceded by a &quot;#&quot;, similar to HTML format, e.g. &quot;#FF8080&quot;. The number of digits must be a multiple of 3; the first group specifies the red component, the second green, and the third blue.</dd>
+<dt>&bull;</dt>
+<dd> As the name of a color space, followed by one to four component values in parentheses, e.g. &quot;hsv(120, 50%, 90%)&quot;.</dd></dl>
 <p> Valid color spaces are &quot;gray&quot; (1 component), &quot;graya&quot; (2 components), &quot;hsl&quot; (3 components), &quot;hsla&quot; (4 components), &quot;hsv&quot; (3 components), &quot;hsva&quot; (4 components), &quot;rgb&quot; (3 components) and &quot;rgba&quot; (4 components). Each component can be specified as either a percentage of the maximum value suffixed by &quot;%&quot;, or an absolute value in the range 0-360 for hues, 0-255 for everything else. For color space names ending with &quot;a&quot;, the last component is the alpha (transparency) value. </p>
 <p> Note that alpha values are meaningless for the &quot;transparent&quot; attribute on the &lt;spu&gt; tag above. &lt;marc.leeman [at] gmail.com&gt; MarcLeeman2003Marc Leeman </p>
 <h2>Index</h2>

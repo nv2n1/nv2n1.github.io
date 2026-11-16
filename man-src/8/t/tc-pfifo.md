@@ -18,8 +18,8 @@ description: "pfifo – Packet limited First In, First Out queue"
 <p> If the list is too long, no further packets are allowed on. This is called &#8216;tail drop&#8217;.</p>
 <h2>Parameters</h2>
 <dl>
-<dt>limit</p>
-<dd>Maximum queue size. Specified in bytes for bfifo, in packets for pfifo. For pfifo, defaults to the interface txqueuelen, as specified with <code><a href="/docs/linux/man/8-ifconfig/">ifconfig</a></code>(8) or <code><a href="/docs/linux/man/8-ip/">ip</a></code>(8). The range for this parameter is [0, UINT32_MAX]. </p>
+<dt>limit</dt>
+<dd>Maximum queue size. Specified in bytes for bfifo, in packets for pfifo. For pfifo, defaults to the interface txqueuelen, as specified with <code><a href="/docs/linux/man/8-ifconfig/">ifconfig</a></code>(8) or <code><a href="/docs/linux/man/8-ip/">ip</a></code>(8). The range for this parameter is [0, UINT32_MAX]. </dd>
 <p> For bfifo, it defaults to the txqueuelen multiplied by the interface MTU. The range for this parameter is [0, UINT32_MAX] bytes. </p>
 <p> Note: The link layer header was considered when counting packets length. </p>
 </dl>

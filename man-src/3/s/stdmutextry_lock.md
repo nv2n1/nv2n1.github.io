@@ -23,15 +23,11 @@ Prior unlock() operation on the same mutex synchronizes-with (as defined in std:
 <h2>Example</h2>
 <p>// Run this code </p>
 <pre><code>#include &lt;chrono&gt;
-
 #include &lt;mutex&gt;
-
 #include &lt;thread&gt;
-
 #include &lt;iostream&gt; // std::cout
 std::chrono::milliseconds interval(100);
 std::mutex mutex;
-
 int job_shared = 0;    // both threads can modify 'job_shared',
                        // mutex will protect this variable
 int job_exclusive = 0; // only one thread can modify 'job_exclusive'
@@ -58,9 +54,7 @@ int job_exclusive = 0; // only one thread can modify 'job_exclusive'
 }
 }
 // this thread can modify only 'job_shared'
-
 void job_2()
-
 {
     mutex.lock();
     std::this_thread::sleep_for(5 * interval);
@@ -68,7 +62,6 @@ void job_2()
     mutex.unlock();
 }
 int main()
-
 {
     std::thread thread_1(job_1);
     std::thread thread_2(job_2);

@@ -17,10 +17,10 @@ description: "ipythonx – Simple graphical frontend to IPython, using WxWidgets
 <p> ipythonx is a simple graphical frontend to IPython, using WxWidgets.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-h, &#8211;help</code></p>
-<dd> show this help message and exit</p>
-<dt><code>-d, &#8211;debug</code></p>
-<dd> Enable debug messages for the wx frontend. look for config files and profiles in this directory</dl>
+<dt><code>-h, &#8211;help</code></dt>
+<dd> show this help message and exit</dd>
+<dt><code>-d, &#8211;debug</code></dt>
+<dd> Enable debug messages for the wx frontend. look for config files and profiles in this directory</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-ipython/">ipython</a>(1),</code><a href="/docs/linux/man/1-ipython-wx/">ipython-wx</a>(1) </p>
 <h2>AUTHOR</h2>

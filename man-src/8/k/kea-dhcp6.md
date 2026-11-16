@@ -10,29 +10,29 @@ description: "kea-dhcp6 – DHCPv6 server in Kea"
 <p>kea-dhcp6 &#8211; DHCPv6 server in Kea</p>
 <h2>Synopsis</h2>
 <dl>
-<dt> <code>kea-dhcp6</code> [<code>-v</code>] [<code>-V</code>] [<code>-W</code>] [<code>-d</code>] [<code>-c</code><i>config-file</i>] [<code>-p</code><i>port-number</i>]</dl>
+<dt> <code>kea-dhcp6</code> [<code>-v</code>] [<code>-V</code>] [<code>-W</code>] [<code>-d</code>] [<code>-c</code><i>config-file</i>] [<code>-p</code><i>port-number</i>]</dt></dl>
 <h2>Description</h2>
-<dd>The <code>kea-dhcp6</code> daemon provides the DHCPv6 server implementation.</p>
+<dd>The <code>kea-dhcp6</code> daemon provides the DHCPv6 server implementation.</dd>
 <h2>Arguments</h2>
 <p>The arguments are as follows: </p>
 <p> <code>-v</code></p>
 <dl>
-<dd>Display the version.</dl>
+<dd>Display the version.</dd></dl>
 <p> <code>-V</code></p>
 <dl>
-<dd>Display the extended version.</dl>
+<dd>Display the extended version.</dd></dl>
 <p> <code>-W</code></p>
 <dl>
-<dd>Display the configuration report.</dl>
+<dd>Display the configuration report.</dd></dl>
 <p> <code>-d</code></p>
 <dl>
-<dd>Enable the debug mode with extra verbosity.</dl>
+<dd>Enable the debug mode with extra verbosity.</dd></dl>
 <p> <code>-c</code></p>
 <dl>
-<dd>Configuration file including the configuration for DHCPv6 server. It may also contain configuration entries for other Kea services.</dl>
+<dd>Configuration file including the configuration for DHCPv6 server. It may also contain configuration entries for other Kea services.</dd></dl>
 <p> <code>-p</code></p>
 <dl>
-<dd>Port number (1-65535) on which the server listens. This is useful for testing purposes only.</dl>
+<dd>Port number (1-65535) on which the server listens. This is useful for testing purposes only.</dd></dl>
 <h2>Documentation</h2>
 <p>Kea comes with an extensive Kea User&#8217;s Guide documentation that covers all aspects of running the Kea software &#8211; compilation, installation, configuration, configuration examples and many more. Kea also features a Kea Messages Manual, which lists all possible messages Kea can print with a brief description for each of them. Both documents are typically available in various formats (txt, html, pdf) with your Kea distribution. The on-line version is available at <a rel="nofollow" href="http://kea.isc.org/docs/.">http://kea.isc.org/docs/.</a> </p>
 <p> Kea source code is documented in the Kea Developer&#8217;s Guide. It&#8217;s on-line version is available at <a rel="nofollow" href="http://kea.isc.org.">http://kea.isc.org.</a> Please follow Developer&#8217;s Guide link. </p>

@@ -20,7 +20,7 @@ const char *
 <code>Tcl_ErrnoMsg</code>(<i>errorCode</i>)</pre>
 <h2>Arguments</h2>
 <dl COMPACT>
-<dd>int <i>errorCode</i> (in) A POSIX error code such as <code>ENOENT</code>. </p>
+<dd>int <i>errorCode</i> (in) A POSIX error code such as <code>ENOENT</code>. </dd>
 </dl>
 <h2>Description</h2>
 <p><code>Tcl_SetErrno</code> and <code>Tcl_GetErrno</code> provide portable access to the <code>errno</code> variable, which is used to record a POSIX error code after system calls and other operations such as <code>Tcl_Gets</code>. These procedures are necessary because global variable accesses cannot be made across module boundaries on some platforms. </p>

@@ -11,14 +11,14 @@ description: "XkbAllocDeviceLedInfo – Obtain an XkbDeviceLedInfoRec structure"
 <h2>Synopsis</h2>
 <dl COMPACT>
 <dt> <code>Status XkbAllocDeviceLedInfo</code> <code>(XkbDeviceInfoPtr </code><i>device_info</i><code>,</code> <code>int </code><i>num_needed</i><code>);</code><br />
- &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</dl>
+ &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</dt></dl>
 <h2>Arguments</h2>
 <dl COMPACT>
-<dt><i>&#8211; device_info</i></p>
+<dt><i>&#8211; device_info</i></dt>
 <dd>
-<dd>structure in which to allocate LED space</p>
-<dt><i>&#8211; num_needed</i></p>
-<dd>number of indicators to allocate space for</dl>
+</dd><dd>structure in which to allocate LED space</dd>
+<dt><i>&#8211; num_needed</i></dt>
+<dd>number of indicators to allocate space for</dd></dl>
 <h2>Description</h2>
 <p><i>XkbAllocDeviceLedInfo </i> allocates space for an XkbDeviceLedInfoRec and places it in <i>device_info. </i> If <i>num_needed </i> is nonzero, <i>num_needed </i> XkbIndicatorMapRec structures are also allocated and linked into the XkbDeviceLedInfoRec structure. If you request XkbIndicatorMapRec structures be allocated using this request, you must initialize them explicitly. All other fields are initialized to zero. </p>
 <p> To initialize an XkbDeviceLedInfoRec structure, use <i>XkbAddDeviceLedInfo.</i></p>
@@ -39,7 +39,6 @@ description: "XkbAllocDeviceLedInfo – Obtain an XkbDeviceLedInfoRec structure"
  unsigned short dflt_led_fb; /* input extension ID of default indicator feedback */
  XkbDeviceLedInfoPtr leds; /* LED descriptions */
  } XkbDeviceInfoRec, *XkbDeviceInfoPtr;
- 
  typedef struct {
  unsigned short led_class; /* class for this LED device*/
  unsigned short led_id; /* ID for this LED device */
@@ -61,13 +60,13 @@ description: "XkbAllocDeviceLedInfo – Obtain an XkbDeviceLedInfoRec structure"
  } XkbIndicatorMapRec, *XkbIndicatorMapPtr;</pre>
 <p>This indicator map specifies for each indicator: </p>
 <dl COMPACT>
-<dt>&bull;</p>
-<dd>The conditions under which the keyboard modifier state affects the indicator</p>
-<dt>&bull;</p>
-<dd>The conditions under which the keyboard group state affects the indicator</p>
-<dt>&bull;</p>
-<dd>The conditions under which the state of the boolean controls affects the indicator</p>
-<dt>&bull;</p>
-<dd>The effect (if any) of attempts to explicitly change the state of the indicator using the functions XkbSetControls or XChangeKeyboardControl</dl>
+<dt>&bull;</dt>
+<dd>The conditions under which the keyboard modifier state affects the indicator</dd>
+<dt>&bull;</dt>
+<dd>The conditions under which the keyboard group state affects the indicator</dd>
+<dt>&bull;</dt>
+<dd>The conditions under which the state of the boolean controls affects the indicator</dd>
+<dt>&bull;</dt>
+<dd>The effect (if any) of attempts to explicitly change the state of the indicator using the functions XkbSetControls or XChangeKeyboardControl</dd></dl>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/3-xkbadddeviceledinfo/">XkbAddDeviceLedInfo</a></code>(3), <code><a href="/docs/linux/man/3-xkbsetcontrols/">XkbSetControls</a></code>(3)</p>

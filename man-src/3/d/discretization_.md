@@ -65,7 +65,7 @@ description: "QuantLib::StochasticProcess – multi-dimensional stochastic proce
 <p> <code>Note:</code></p>
 <dl>
 <dt>
-<dd> As a number of processes might not need this functionality, a default implementation is given which raises an exception.</dl>
+</dt><dd> As a number of processes might not need this functionality, a default implementation is given which raises an exception.</dd></dl>
 <p> Reimplemented in <code>GeneralizedBlackScholesProcess</code>, <code>GJRGARCHProcess</code>, <code>HestonProcess</code>, <code>Merton76Process</code>, and <code>StochasticProcessArray</code>.</p>
 <h3>void update () [virtual]</h3>
 <p> This method must be implemented in derived classes. An instance of Observer does not call this method directly: instead, it will be called by the observables the instance registered with when they need to notify any changes. </p>
@@ -74,5 +74,5 @@ description: "QuantLib::StochasticProcess – multi-dimensional stochastic proce
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for QuantLib from the source code. </p>
 <h2>Index</h2>
-<dt><a href="#lbAQ">Author</a></p>
-<dd></dl>
+<dt><a href="#lbAQ">Author</a></dt>
+<dd></dd></dl>

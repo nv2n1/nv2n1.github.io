@@ -14,12 +14,12 @@ description: "gnutls_certificate_set_pin_function – API function"
 <p> <code>void gnutls_certificate_set_pin_function(gnutls_certificate_credentials_t </code><i>cred</i><code>, gnutls_pin_callback_t </code><i>fn</i><code>, void * </code><i>userdata</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
-<dt>gnutls_certificate_credentials_t cred</p>
-<dd> is a <code>gnutls_certificate_credentials_t</code> structure.</p>
-<dt>gnutls_pin_callback_t fn</p>
-<dd> A PIN callback</p>
-<dt>void * userdata</p>
-<dd> Data to be passed in the callback</dl>
+<dt>gnutls_certificate_credentials_t cred</dt>
+<dd> is a <code>gnutls_certificate_credentials_t</code> structure.</dd>
+<dt>gnutls_pin_callback_t fn</dt>
+<dd> A PIN callback</dd>
+<dt>void * userdata</dt>
+<dd> Data to be passed in the callback</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> This function will set a callback function to be used when required to access a protected object. This function overrides any other global PIN functions. </p>
 <p> Note that this function must be called right after initialization to have effect.</p>
@@ -34,6 +34,6 @@ description: "gnutls_certificate_set_pin_function – API function"
 <h2>SEE ALSO</h2>
 <p> The full documentation for <code>gnutls</code> is maintained as a Texinfo manual. If the /usr/share/doc/gnutls/ directory does not contain the HTML form visit <code></p>
 <dl>
-<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></p>
-<dd> </code></dl>
+<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></dt>
+<dd> </code></dd></dl>
 <h2>Index</h2>

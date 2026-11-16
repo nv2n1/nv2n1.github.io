@@ -15,16 +15,16 @@ description: "zipnote – write the comments in zipfile to stdout, edit comments
 <p> zipfile Zipfile to read comments from or edit. </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-w</code></p>
-<dd> Write comments to a zipfile from stdin (see below).</p>
-<dt><code>-b&nbsp;</code>path</p>
-<dd> Use path for the temporary zip file.</p>
-<dt><code>-h</code></p>
-<dd> Show a short help.</p>
-<dt><code>-v</code></p>
-<dd> Show version information.</p>
-<dt><code>-L</code></p>
-<dd> Show software license. </p>
+<dt><code>-w</code></dt>
+<dd> Write comments to a zipfile from stdin (see below).</dd>
+<dt><code>-b&nbsp;</code>path</dt>
+<dd> Use path for the temporary zip file.</dd>
+<dt><code>-h</code></dt>
+<dd> Show a short help.</dd>
+<dt><code>-v</code></dt>
+<dd> Show version information.</dd>
+<dt><code>-L</code></dt>
+<dd> Show software license. </dd>
 </dl>
 <h2>DESCRIPTION</h2>
 <p> <i>zipnote</i> writes the comments in a zipfile to stdout. This is the default mode. A second mode allows updating the comments in a zipfile as well as allows changing the names of the files in the zipfile. These modes are described below. </p>

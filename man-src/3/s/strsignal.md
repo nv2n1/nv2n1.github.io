@@ -10,27 +10,25 @@ description: "strsignal, sigdescr_np, sigdescr_np, sys_siglist – return string
 <p>strsignal, sigdescr_np, sigdescr_np, sys_siglist &#8211; return string describing signal</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;string.h&gt;
-
 char *strsignal(int sig);
 char *sigdescr_np(int sig);
 char *sigabbrev_np(int sig);
-
 extern const char *const sys_siglist[];</code></pre>
 <p> Feature Test Macro Requirements for glibc (see <code><a href="/docs/linux/man/7-feature_test_macros/">feature_test_macros</a></code>(7)): <code>sigabbrev_np</code>(), <code>sigdescr_np</code>():</p>
 <dl>
 <dd>
-<dl>
-<dt>_GNU_SOURCE</p>
-<dd></dl>
+</dd><dl>
+<dt>_GNU_SOURCE</dt>
+<dd></dd></dl>
 </dl>
 <p> <code>strsignal</code>():</p>
 <dl>
 <dd>
-<dl>
-<dt>From glibc 2.10 to 2.31:</p>
-<dd>_POSIX_C_SOURCE&nbsp;&gt;=&nbsp;200809L</p>
-<dt>Before glibc 2.10:</p>
-<dd>_GNU_SOURCE</dl>
+</dd><dl>
+<dt>From glibc 2.10 to 2.31:</dt>
+<dd>_POSIX_C_SOURCE&nbsp;&gt;=&nbsp;200809L</dd>
+<dt>Before glibc 2.10:</dt>
+<dd>_GNU_SOURCE</dd></dl>
 </dl>
 <p> <i>sys_siglist</i>:<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;Since glibc 2.19:<br />

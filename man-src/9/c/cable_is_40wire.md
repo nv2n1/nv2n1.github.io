@@ -14,12 +14,12 @@ description: "cable_is_40wire – 40/80/SATA decider"
 <p><i>ap</i></p>
 <dl>
 <dd>
-<dd>port to consider</dl>
+</dd><dd>port to consider</dd></dl>
 <h2>Description</h2>
 <p>This function encapsulates the policy for speed management in one place. At the moment we don&#8217;t cache the result but there is a good case for setting ap-&gt;cbl to the result when we are called with unknown cables (and figuring out if it impacts hotplug at all). </p>
 <p> Return 1 if the cable appears to be 40 wire.</p>
 <h2>Author</h2>
 <p><code>Jeff Garzik</code></p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

@@ -22,7 +22,7 @@ description: "QuantLib::SwaptionHelper – calibration helper for ATM swaption"
 <p>calibration helper for ATM swaption </p>
 <p> <code>Bug</code></p>
 <dl COMPACT>
-<dd>This helper does not register with the passed IBOR index and with the evaluation date. Furthermore, the ATM exercise rate is not recalculated when any of its observables change.</dl>
+<dd>This helper does not register with the passed IBOR index and with the evaluation date. Furthermore, the ATM exercise rate is not recalculated when any of its observables change.</dd></dl>
 <p> <code>Examples: </code> </p>
 <p> <code>BermudanSwaption.cpp</code>. </p>
 <h2>Author</h2>

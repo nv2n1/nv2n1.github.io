@@ -13,10 +13,10 @@ description: "pskc_get_keypackage – API function"
 <p> <code>pskc_key_t * pskc_get_keypackage(pskc_t * </code><i>container</i><code>, size_t </code><i>i</i><code>);</code></p>
 <h2>Arguments</h2>
 <dl>
-<dt>pskc_t * container</p>
-<dd>a <code>pskc_t</code> handle, from <code>pskc_init()</code>.</p>
-<dt>size_t i</p>
-<dd>number of keypackage to get.</dl>
+<dt>pskc_t * container</dt>
+<dd>a <code>pskc_t</code> handle, from <code>pskc_init()</code>.</dd>
+<dt>size_t i</dt>
+<dd>number of keypackage to get.</dd></dl>
 <h2>Description</h2>
 <p>Get a PSKC keypackage <code>pskc_key_t</code> handle for the <i>i</i>&#8216;th key package in <i>container</i>. <i>i</i> is zero-based, i.e., 0 refer to the first key package, 1 refer to the second key package, and so on.</p>
 <h2>Returns</h2>

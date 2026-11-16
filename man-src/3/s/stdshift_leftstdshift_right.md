@@ -10,29 +10,17 @@ description: "std::shift_left,std::shift_right – std::shift_left,std::shift_ri
 <p>std::shift_left,std::shift_right &#8211; std::shift_left,std::shift_right</p>
 <h2>Synopsis</h2>
 <pre><code>Defined in header &lt;algorithm&gt;
-
 template&lt; class ForwardIt &gt;
-
 constexpr ForwardIt shift_left( ForwardIt first, ForwardIt last,                  (1) (since C++20)
-
 typename std::iterator_traits&lt;ForwardIt&gt;::difference_type n );
-
 template&lt; class ExecutionPolicy, class ForwardIt &gt;
-
 ForwardIt shift_left( ExecutionPolicy&amp;&amp; policy, ForwardIt first, ForwardIt last,  (2) (since C++20)
-
 typename std::iterator_traits&lt;ForwardIt&gt;::difference_type n );
-
 template&lt; class ForwardIt &gt;
-
 constexpr ForwardIt shift_right( ForwardIt first, ForwardIt last,                 (3) (since C++20)
-
 typename std::iterator_traits&lt;ForwardIt&gt;::difference_type n );
-
 template&lt; class ExecutionPolicy, class ForwardIt &gt;
-
 ForwardIt shift_right( ExecutionPolicy&amp;&amp; policy, ForwardIt first, ForwardIt last, (4) (since C++20)
-
 typename std::iterator_traits&lt;ForwardIt&gt;::difference_type n );</code></pre>
 <p>Shifts the elements in the range [first, last) by n positions.<br />
 1) Shifts the elements towards the beginning of the range. If n &lt;= 0 || n &gt;= last &#8211; first, there are no effects. Otherwise, for every integer i in [0, last &#8211; first &#8211; n), moves the element originally at position first + n + i to position first + i. The moves are performed in increasing order of i starting from 0.<br />

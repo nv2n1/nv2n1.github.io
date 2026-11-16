@@ -15,36 +15,36 @@ description: "xkbvleds – XKB extension user utility"
 <p> This program is used to display the state of LEDs on an XKB keyboard. It reports the changes in the fundamental components of the XKB state which includes the effective compatibility state. The default set of LEDs is -union +name +automatic +real.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-indpy &lt;name&gt;</code></p>
-<dd> Mask of LEDs to watch</p>
-<dt><code>-watch &lt;leds&gt;</code></p>
-<dd> turn on synchronization</dl>
+<dt><code>-indpy &lt;name&gt;</code></dt>
+<dd> Mask of LEDs to watch</dd>
+<dt><code>-watch &lt;leds&gt;</code></dt>
+<dd> turn on synchronization</dd></dl>
 <dl>
-<dt><code>-+automatic</code></p>
-<dd> (Don&#8217;t) watch automatic LEDs</dl>
+<dt><code>-+automatic</code></dt>
+<dd> (Don&#8217;t) watch automatic LEDs</dd></dl>
 <dl>
-<dt><code>-+explicit</code></p>
-<dd> (Don&#8217;t) watch explicit LEDs</dl>
+<dt><code>-+explicit</code></dt>
+<dd> (Don&#8217;t) watch explicit LEDs</dd></dl>
 <dl>
-<dt><code>-+name</code></p>
-<dd> (Don&#8217;t) watch named LEDs</dl>
+<dt><code>-+name</code></dt>
+<dd> (Don&#8217;t) watch named LEDs</dd></dl>
 <dl>
-<dt><code>-+real</code></p>
-<dd> (Don&#8217;t) watch real LEDs</dl>
+<dt><code>-+real</code></dt>
+<dd> (Don&#8217;t) watch real LEDs</dd></dl>
 <dl>
-<dt><code>-+virtual</code></p>
-<dd> (Don&#8217;t) watch virtual LEDs</dl>
+<dt><code>-+virtual</code></dt>
+<dd> (Don&#8217;t) watch virtual LEDs</dd></dl>
 <dl>
-<dt><code>-intersection</code></p>
-<dd> Watch only LEDs in all desired sets</dl>
+<dt><code>-intersection</code></dt>
+<dd> Watch only LEDs in all desired sets</dd></dl>
 <dl>
-<dt><code>-union</code></p>
-<dd> Watch LEDs in any desired sets</dl>
+<dt><code>-union</code></dt>
+<dd> Watch LEDs in any desired sets</dd></dl>
 <dl>
-<dt><code>-help</code></p>
-<dd> print list of options and exit</dl>
+<dt><code>-help</code></dt>
+<dd> print list of options and exit</dd></dl>
 <dl>
-<dt><code>-version</code></p>
-<dd> print program version and exit </p>
+<dt><code>-version</code></dt>
+<dd> print program version and exit </dd>
 </dl>
 <h2>Index</h2>

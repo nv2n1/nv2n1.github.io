@@ -47,62 +47,38 @@ order - the memory ordering executed by this fence
 
 atomic_thread_fence imposes stronger synchronization constraints than an atomic store operation with the same std::memory_order. While an atomic store-release operation prevents all preceding writes from moving past the store-release, an atomic_thread_fence with memory_order_release ordering prevents all preceding writes from moving past all subsequent stores. 
 Fence-fence synchronization can be used to add synchronization to a sequence of several relaxed atomic operations, for example <pre><code>// Global
-
 std::string computation(int);
-
 void print(std::string);
 std::atomic&lt;int&gt; arr[3] = {-1, -1, -1};
-
 std::string data[1000] // non-atomic data
     // Thread A, compute 3 values
-
     void
     ThreadA(int v0, int v1, int v2)
-
 {
-
     // assert( 0 &lt;= v0, v1, v2 &lt; 1000 );
-
     data[v0] = computation(v0);
-
     data[v1] = computation(v1);
-
     data[v2] = computation(v2);
-
     std::atomic_thread_fence(std::memory_order_release);
-
     std::atomic_store_explicit(&amp;arr[0], v0, std::memory_order_relaxed);
-
     std::atomic_store_explicit(&amp;arr[1], v1, std::memory_order_relaxed);
-
     std::atomic_store_explicit(&amp;arr[2], v2, std::memory_order_relaxed);
 }
 // Thread B, prints between 0 and 3 values already computed.
-
 void ThreadB()
-
 {
-
     int v0 = std::atomic_load_explicit(&amp;arr[0], std::memory_order_relaxed);
-
     int v1 = std::atomic_load_explicit(&amp;arr[1], std::memory_order_relaxed);
-
     int v2 = std::atomic_load_explicit(&amp;arr[2], std::memory_order_relaxed);
-
     std::atomic_thread_fence(std::memory_order_acquire);
-
     // v0, v1, v2 might turn out to be -1, some or all of them.
-
     // otherwise it is safe to read the non-atomic data because of the fences:
-
     if (v0 != -1) {
         print(data[v0]);
     }
-
     if (v1 != -1) {
         print(data[v1]);
     }
-
     if (v2 != -1) {
         print(data[v2]);
     }
@@ -113,19 +89,13 @@ void ThreadB()
 
 Scan an array of mailboxes, and process only the ones intended for us, without unnecessary synchronization. This example uses atomic-fence synchronization. 
  // Run this code <pre><code>const int num_mailboxes = 32;
-
 std::atomic&lt;int&gt; mailbox_receiver[num_mailboxes];
-
 std::string mailbox_data[num_mailboxes];
 // The writer threads update non-atomic shared data
-
 // and then update mailbox_receiver[i] as follows
-
 mailbox_data[i] = ...;
-
 std::atomic_store_explicit(&amp;mailbox_receiver[i], receiver_id, std::memory_order_release);
 // Reader thread needs to check all mailbox[i], but only needs to sync with one
-
 for (int i = 0; i &lt; num_mailboxes; ++i) {
     if (std::atomic_load_explicit(&amp;mailbox_receiver[i], std::memory_order_relaxed) == my_id) {
         std::atomic_thread_fence(std::memory_order_acquire); // synchronize with just one writer

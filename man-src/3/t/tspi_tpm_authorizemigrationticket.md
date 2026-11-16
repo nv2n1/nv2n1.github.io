@@ -35,10 +35,10 @@ description: "Tspi_TPM_AuthorizeMigrationTicket- create the migration ticket req
 <h2>Return Codes</h2>
 <p><code>Tspi_TPM_AuthorizeMigrationTicket</code> returns TSS_SUCCESS on success, otherwise one of the following values are returned:</p>
 <dl COMPACT>
-<dt><font SIZE="-1">TSS_E_INVALID_HANDLE</font></p>
-<dd>Either <code>hTPM</code> or <code>hMigrationKey</code> is not a valid handle.</p>
-<dt><font SIZE="-1">TSS_E_INTERNAL_ERROR</font></p>
-<dd>An error occurred internal to the TSS. </p>
+<dt><font SIZE="-1">TSS_E_INVALID_HANDLE</font></dt>
+<dd>Either <code>hTPM</code> or <code>hMigrationKey</code> is not a valid handle.</dd>
+<dt><font SIZE="-1">TSS_E_INTERNAL_ERROR</font></dt>
+<dd>An error occurred internal to the TSS. </dd>
 </dl>
 <h2>Conforming To</h2>
 <p><code>Tspi_TPM_AuthorizeMigrationTicket</code> conforms to the Trusted Computing Group Software Specification version 1.1 Golden</p>

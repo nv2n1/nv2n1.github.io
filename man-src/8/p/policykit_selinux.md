@@ -113,36 +113,36 @@ description: "policykit_selinux – Security Enhanced Linux Policy for the polic
 <p> <code>policykit_auth_exec_t</code> </p>
 <p> &#8211; Set files with the policykit_auth_exec_t type, if you want to transition an executable to the policykit_auth_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/usr/bin/pkla-check-authorization, /usr/libexec/polkit-read-auth-helper, /usr/lib/polkit-1/polkit-agent-helper-1, /usr/lib/policykit/polkit-read-auth-helper, /usr/libexec/polkit-1/polkit-agent-helper-1, /usr/libexec/kde4/polkit-kde-authentication-agent-1 </p>
+<dt>Paths:</dt>
+<dd>/usr/bin/pkla-check-authorization, /usr/libexec/polkit-read-auth-helper, /usr/lib/polkit-1/polkit-agent-helper-1, /usr/lib/policykit/polkit-read-auth-helper, /usr/libexec/polkit-1/polkit-agent-helper-1, /usr/libexec/kde4/polkit-kde-authentication-agent-1 </dd>
 </dl>
 <p> <code>policykit_exec_t</code> </p>
 <p> &#8211; Set files with the policykit_exec_t type, if you want to transition an executable to the policykit_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/usr/libexec/polkitd.*, /usr/libexec/polkit-1/polkitd.*, /usr/lib/polkit-1/polkitd, /usr/lib/policykit/polkitd </p>
+<dt>Paths:</dt>
+<dd>/usr/libexec/polkitd.*, /usr/libexec/polkit-1/polkitd.*, /usr/lib/polkit-1/polkitd, /usr/lib/policykit/polkitd </dd>
 </dl>
 <p> <code>policykit_grant_exec_t</code> </p>
 <p> &#8211; Set files with the policykit_grant_exec_t type, if you want to transition an executable to the policykit_grant_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/usr/libexec/polkit-grant-helper.*, /usr/lib/policykit/polkit-grant-helper.* </p>
+<dt>Paths:</dt>
+<dd>/usr/libexec/polkit-grant-helper.*, /usr/lib/policykit/polkit-grant-helper.* </dd>
 </dl>
 <p> <code>policykit_reload_t</code> </p>
 <p> &#8211; Set files with the policykit_reload_t type, if you want to treat the files as policykit reload data. </p>
 <p> <code>policykit_resolve_exec_t</code> </p>
 <p> &#8211; Set files with the policykit_resolve_exec_t type, if you want to transition an executable to the policykit_resolve_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/usr/libexec/polkit-resolve-exe-helper.*, /usr/lib/policykit/polkit-resolve-exe-helper.* </p>
+<dt>Paths:</dt>
+<dd>/usr/libexec/polkit-resolve-exe-helper.*, /usr/lib/policykit/polkit-resolve-exe-helper.* </dd>
 </dl>
 <p> <code>policykit_tmp_t</code> </p>
 <p> &#8211; Set files with the policykit_tmp_t type, if you want to store policykit temporary files in the /tmp directories. </p>
 <p> <code>policykit_var_lib_t</code> </p>
 <p> &#8211; Set files with the policykit_var_lib_t type, if you want to store the policykit files under the /var/lib directory. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/var/lib/polkit-1(/.*)?, /var/lib/PolicyKit(/.*)?, /var/lib/PolicyKit-public(/.*)? </p>
+<dt>Paths:</dt>
+<dd>/var/lib/polkit-1(/.*)?, /var/lib/PolicyKit(/.*)?, /var/lib/PolicyKit-public(/.*)? </dd>
 </dl>
 <p> <code>policykit_var_run_t</code> </p>
 <p> &#8211; Set files with the policykit_var_run_t type, if you want to store the policykit files under the /run or /var/run directory. </p>

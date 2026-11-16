@@ -11,8 +11,8 @@ description: "tcdecode – read multimedia streams from medium, decode to raw fo
 <p> tcdecode &#8211; read multimedia streams from medium, decode to raw format and print to standard output</p>
 <h2>SYNOPSIS</h2>
 <dl>
-<dt><code>tcdecode</code></p>
-<dd> <code>-i</code> <i>name</i> [ <code>-x</code> <i>codec</i> ] [ <code>-t</code> <i>package</i> ] [ <code>-g</code> <i>WxH</i> ] [ <code>-s</code> <i>c,f,r</i> ] [ <code>-C</code> <i>s-e</i> ] [ <code>-y</code> <i>codec</i> ] [ <code>-Y</code> ] [ <code>-Q</code> <i>mode</i> ] [ <code>-A</code> <i>flag</i> ] [ <code>-d</code> <i>verbosity</i> ] [ <code>-v</code> ]</dl>
+<dt><code>tcdecode</code></dt>
+<dd> <code>-i</code> <i>name</i> [ <code>-x</code> <i>codec</i> ] [ <code>-t</code> <i>package</i> ] [ <code>-g</code> <i>WxH</i> ] [ <code>-s</code> <i>c,f,r</i> ] [ <code>-C</code> <i>s-e</i> ] [ <code>-y</code> <i>codec</i> ] [ <code>-Y</code> ] [ <code>-Q</code> <i>mode</i> ] [ <code>-A</code> <i>flag</i> ] [ <code>-d</code> <i>verbosity</i> ] [ <code>-v</code> ]</dd></dl>
 <h2>COPYRIGHT</h2>
 <p> <code>tcdecode</code> is Copyright (C) by Thomas Oestreich.</p>
 <h2>DESCRIPTION</h2>
@@ -21,17 +21,17 @@ description: "tcdecode – read multimedia streams from medium, decode to raw fo
  <code>tcdecode</code> reads source (from stdin if not explicitely defined) and prints on the standard output.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-i </code><i>name</i></p>
-<dd> Specify input source. If ommited, <i>stdin</i> is assumed. <code>tcdecode</code> reads streams from file or from stdin. </p>
-<dt><code>-g </code><i>WxH</i></p>
-<dd> video frame width and height [720&#215;576] </p>
-<dt><code>-C </code><i>s-e</i></p>
-<dd> decode and print out only this frame interval (video) or bytes (audio) [all]. </p>
-<dt><code>-x </code><i>codec</i></p>
-<dd> source codec, if not detected of reading from stdin. This option also specifies video and audio context of the source for decoding. Currently, supported parameter for <i>codec</i> are </p>
+<dt><code>-i </code><i>name</i></dt>
+<dd> Specify input source. If ommited, <i>stdin</i> is assumed. <code>tcdecode</code> reads streams from file or from stdin. </dd>
+<dt><code>-g </code><i>WxH</i></dt>
+<dd> video frame width and height [720&#215;576] </dd>
+<dt><code>-C </code><i>s-e</i></dt>
+<dd> decode and print out only this frame interval (video) or bytes (audio) [all]. </dd>
+<dt><code>-x </code><i>codec</i></dt>
+<dd> source codec, if not detected of reading from stdin. This option also specifies video and audio context of the source for decoding. Currently, supported parameter for <i>codec</i> are </dd>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <table>
 <tr VALIGN=top>
 <td><i>mp3</i></td>
@@ -70,14 +70,14 @@ description: "tcdecode – read multimedia streams from medium, decode to raw fo
 </td>
 </tr>
 </table>
-</dl>
-<dt><code>-t </code><i>package</i></p>
-<dd> Currently only argument supported is &quot;lavc&quot;. Use the codec by -x from this package. Available (-x) codecs for <i>lavc</i> are: mpeg2, divx3, divx, divx4, mp42, mjpg, rv10, svq1, svq3, vp3, 4xm, wmv1, wmv2, hfyu, indeo3, h263p, h263i </p>
-<dt><code>-y </code><i>codec</i></p>
-<dd> target codec. <code> tcdecode </code> only decodes to raw format suitable for transcode. Valid option parameter for <i>codec</i> are </p>
+</dd></dl>
+<dt><code>-t </code><i>package</i></dt>
+<dd> Currently only argument supported is &quot;lavc&quot;. Use the codec by -x from this package. Available (-x) codecs for <i>lavc</i> are: mpeg2, divx3, divx, divx4, mp42, mjpg, rv10, svq1, svq3, vp3, 4xm, wmv1, wmv2, hfyu, indeo3, h263p, h263i </dd>
+<dt><code>-y </code><i>codec</i></dt>
+<dd> target codec. <code> tcdecode </code> only decodes to raw format suitable for transcode. Valid option parameter for <i>codec</i> are </dd>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <table>
 <tr VALIGN=top>
 <td><i>rgb</i></td>
@@ -100,16 +100,16 @@ description: "tcdecode – read multimedia streams from medium, decode to raw fo
 </td>
 </tr>
 </table>
-</dl>
-<dt><code>-s</code> <i>c,f,r</i></p>
-<dd> audio gain for AC3 downmixing [1.0,1.0,1.0] </p>
-<dt><code>-Y</code></p>
-<dd> decoded Digital Video (raw) YUV frame is in YUY2 (packet) format using libdv. Downsample frame to YV12. PAL users should compile libdv with &#8211;with-pal-yuv=YV12 to avoid this option [off] </p>
-<dt><code>-A</code> <i>flag</i></p>
-<dd> audio flag for AC3/A52 decoder [none]. This flag determines the down-mixing configuration. Valid choices for <i>flag</i> are determined by the following bits set: </p>
+</dd></dl>
+<dt><code>-s</code> <i>c,f,r</i></dt>
+<dd> audio gain for AC3 downmixing [1.0,1.0,1.0] </dd>
+<dt><code>-Y</code></dt>
+<dd> decoded Digital Video (raw) YUV frame is in YUY2 (packet) format using libdv. Downsample frame to YV12. PAL users should compile libdv with &#8211;with-pal-yuv=YV12 to avoid this option [off] </dd>
+<dt><code>-A</code> <i>flag</i></dt>
+<dd> audio flag for AC3/A52 decoder [none]. This flag determines the down-mixing configuration. Valid choices for <i>flag</i> are determined by the following bits set: </dd>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <table>
 <tr VALIGN=top>
 <td>drc off</td>
@@ -127,15 +127,15 @@ description: "tcdecode – read multimedia streams from medium, decode to raw fo
 </td>
 </tr>
 </table>
-</dl>
+</dd></dl>
 <p> Add those numbers to turn multiple options on. </p>
-<dt><code>-Q</code> <i>mode</i></p>
-<dd> decoding quality. Certain codecs, e.g., DV with libdv allow for changing this parameter if speed is prefered over quality. Valid parameter are 1=fastest-5=best [5]. </p>
-<dt><code>-d</code> <i>level</i></p>
-<dd> With this option you can specify a bitmask to enable different levels of verbosity (if supported). You can combine several levels by adding the corresponding values: </p>
+<dt><code>-Q</code> <i>mode</i></dt>
+<dd> decoding quality. Certain codecs, e.g., DV with libdv allow for changing this parameter if speed is prefered over quality. Valid parameter are 1=fastest-5=best [5]. </dd>
+<dt><code>-d</code> <i>level</i></dt>
+<dd> With this option you can specify a bitmask to enable different levels of verbosity (if supported). You can combine several levels by adding the corresponding values: </dd>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <table>
 <tr VALIGN=top>
 <td>QUIET</td>
@@ -188,9 +188,9 @@ description: "tcdecode – read multimedia streams from medium, decode to raw fo
 </td>
 </tr>
 </table>
-</dl>
-<dt><code>-v</code></p>
-<dd> Print version information and exit. </p>
+</dd></dl>
+<dt><code>-v</code></dt>
+<dd> Print version information and exit. </dd>
 </dl>
 <h2>NOTES</h2>
 <p> <code>tcdecode</code> is a front end for decoding various sources and is used in <code><a href="/docs/linux/man/1-transcode/">transcode</a>(1)</code>&#8216;s import modules.</p>

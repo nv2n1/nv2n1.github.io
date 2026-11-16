@@ -49,15 +49,15 @@ description: "globus_module.h –"
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>module_descriptor</i> pointer to a module descriptor (module does NOT need to be activated)<br />
- <i>version</i> pointer to storage for a globus_version_t. The version will be copied into this</dl>
+ <i>version</i> pointer to storage for a globus_version_t. The version will be copied into this</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
 <dd>
-<dl COMPACT>
-<dt>&bull;</p>
-<dd>GLOBUS_SUCCESS</p>
-<dt>&bull;</p>
-<dd>GLOBUS_FAILURE if there is no version associated with this module (module-&gt;version == null)</dl>
+</dd><dl COMPACT>
+<dt>&bull;</dt>
+<dd>GLOBUS_SUCCESS</dd>
+<dt>&bull;</dt>
+<dd>GLOBUS_FAILURE if there is no version associated with this module (module-&gt;version == null)</dd></dl>
 </dl>
 <h3>char* globus_module_getenv (const char *name)</h3>
 <p>Get the value of an environment variable</p>
@@ -67,13 +67,13 @@ description: "globus_module.h –"
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>stream</i> stream to print on (stdout, stderr, etc)<br />
- <i>verbose</i> If GLOBUS_TRUE, then all available version info is printed (ex: globus_module: 1.1 (1013708618-5)) else, only the major.minor is printed (ex: globus_module: 1.1)</dl>
+ <i>verbose</i> If GLOBUS_TRUE, then all available version info is printed (ex: globus_module: 1.1 (1013708618-5)) else, only the major.minor is printed (ex: globus_module: 1.1)</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
 <dd>
-<dl COMPACT>
-<dt>&bull;</p>
-<dd>void</dl>
+</dd><dl COMPACT>
+<dt>&bull;</dt>
+<dd>void</dd></dl>
 </dl>
 <h3>void globus_module_print_version (<code>globus_module_descriptor_t</code> *module_descriptor, FILE *stream, <code>globus_bool_t</code>verbose)</h3>
 <p>print module&#8217;s version </p>
@@ -82,13 +82,13 @@ description: "globus_module.h –"
 <dl COMPACT>
 <dd><i>module_descriptor</i> pointer to a module descriptor (module does NOT need to be activated)<br />
  <i>stream</i> stream to print on (stdout, stderr, etc)<br />
- <i>verbose</i> If GLOBUS_TRUE, then all available version info is printed (ex: globus_module: 1.1 (1013708618-5)) else, only the major.minor is printed (ex: globus_module: 1.1)</dl>
+ <i>verbose</i> If GLOBUS_TRUE, then all available version info is printed (ex: globus_module: 1.1 (1013708618-5)) else, only the major.minor is printed (ex: globus_module: 1.1)</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
 <dd>
-<dl COMPACT>
-<dt>&bull;</p>
-<dd>void</dl>
+</dd><dl COMPACT>
+<dt>&bull;</dt>
+<dd>void</dd></dl>
 </dl>
 <h3>void globus_module_setenv (const char *name, const char *value)</h3>
 <p>set an environment variable</p>
@@ -101,13 +101,13 @@ description: "globus_module.h –"
 <dd><i>name</i> A string to prefix the version. May be NULL<br />
  <i>version</i> The version structure containing the info to print. (May be NULL, although pointless to do so)<br />
  <i>stream</i> stream to print on (stdout, stderr, etc)<br />
- <i>verbose</i> If GLOBUS_TRUE, then all available version info is printed (ex: globus_module: 1.1 (1013708618-5)) else, only the major.minor is printed (ex: globus_module: 1.1)</dl>
+ <i>verbose</i> If GLOBUS_TRUE, then all available version info is printed (ex: globus_module: 1.1 (1013708618-5)) else, only the major.minor is printed (ex: globus_module: 1.1)</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
 <dd>
-<dl COMPACT>
-<dt>&bull;</p>
-<dd>void</dl>
+</dd><dl COMPACT>
+<dt>&bull;</dt>
+<dd>void</dd></dl>
 </dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for globus_common from the source code.</p>

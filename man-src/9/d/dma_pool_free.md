@@ -15,15 +15,15 @@ dma_pool_free - put block back into dma pool
 <h2>Arguments</h2>
 
 <i>pool</i>
-<dl><dd><dd>the dma pool holding the block</dl>
+<dl><dd></dd><dd>the dma pool holding the block</dd></dl>
  
 
  <i>vaddr</i>
-<dl><dd>virtual address of block</dl>
+<dl><dd>virtual address of block</dd></dl>
  
 
  <i>dma</i>
-<dl><dd>dma address of block</dl>
+<dl><dd>dma address of block</dd></dl>
 
 <h2>Description</h2>
 

@@ -15,7 +15,7 @@ snd_ac97_suspend - General suspend function for AC97 codec
 <h2>Arguments</h2>
 
 <i>ac97</i>
-<dl><dd><dd>the ac97 instance</dl>
+<dl><dd></dd><dd>the ac97 instance</dd></dl>
 
 <h2>Description</h2>
 

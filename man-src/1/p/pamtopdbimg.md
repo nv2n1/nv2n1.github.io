@@ -19,19 +19,19 @@ description: "pamtodbimg – convert a Netpbm image to a Palm Pilot Image Viewer
 <p> If the Neptbm image is black and white, the Pilot image is monochrome. Otherwise, the Pilot image is either 4-level or 16-level grayscale, depending on the <code>-4depth</code> option. </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-title=</code><i>text</i></p>
-<dd> The title of the image, to be included in the image. </p>
-<dt><code>-compressed</code></p>
+<dt><code>-title=</code><i>text</i></dt>
+<dd> The title of the image, to be included in the image. </dd>
+<dt><code>-compressed</code></dt>
 <dd>
-<dt><code>-uncompressed</code></p>
+</dd><dt><code>-uncompressed</code></dt>
 <dd>
-<dt><code>-maybecompressed</code></p>
-<dd> You may specify only one of these. <code>-compressed</code> says to generate the image in compressed format. <code>-uncompressed</code> says to generate the image in uncompressed format. <code>-maybecompressed</code> says to generate whichever format is smaller (the compression algorithm sometimes actually makes the data larger). </p>
-<dt><code>-4depth</code></p>
-<dd> This option makes <code>pamtopdbimg</code> create the image in 16-level grayscale (4 bits per pixel) format. If you don&#8217;t specify this, <code>pamtopdbimg</code> uses 4-level (2 bits per pixel) format. </p>
+</dd><dt><code>-maybecompressed</code></dt>
+<dd> You may specify only one of these. <code>-compressed</code> says to generate the image in compressed format. <code>-uncompressed</code> says to generate the image in uncompressed format. <code>-maybecompressed</code> says to generate whichever format is smaller (the compression algorithm sometimes actually makes the data larger). </dd>
+<dt><code>-4depth</code></dt>
+<dd> This option makes <code>pamtopdbimg</code> create the image in 16-level grayscale (4 bits per pixel) format. If you don&#8217;t specify this, <code>pamtopdbimg</code> uses 4-level (2 bits per pixel) format. </dd>
 <p> This option has no effect when the input is black and white (maxval 1). In that case, <code>pamtopdbimg</code> generates the monochrome (1 bit per pixel) format regardless. </p>
-<dt><code>-notefile=</code><i>filename</i></p>
-<dd> Attach the note in the specified file to the image. </p>
+<dt><code>-notefile=</code><i>filename</i></dt>
+<dd> Attach the note in the specified file to the image. </dd>
 <p> If you don&#8217;t specify this, <code>pamtopdbimg</code> does not attach any note. </p>
 </dl>
 <h2>SEE ALSO</h2>

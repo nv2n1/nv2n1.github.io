@@ -15,11 +15,11 @@ xprt_lookup_rqst - find an RPC request corresponding to an XID
 <h2>Arguments</h2>
 
 <i>xprt</i>
-<dl><dd><dd>transport on which the original request was transmitted</dl>
+<dl><dd></dd><dd>transport on which the original request was transmitted</dd></dl>
  
 
  <i>xid</i>
-<dl><dd>RPC XID of incoming reply</dl>
+<dl><dd>RPC XID of incoming reply</dd></dl>
 
 <h2>Copyright</h2>
 

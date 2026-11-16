@@ -19,7 +19,7 @@ description: "dtrsen.f –"
 <p> <code>Purpose: </code></p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
  DTRSEN reorders the real Schur factorization of a real matrix
  A = Q*T*Q**T, so that a selected cluster of eigenvalues appears in
@@ -33,11 +33,11 @@ description: "dtrsen.f –"
  2-by-2 diagonal block has its diagonal elements equal and its
  off-diagonal elements of opposite sign.
 </pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>JOB</i> </p>
+</dt><dd> <i>JOB</i> </dd>
 <pre><code>
           JOB is CHARACTER*1
           Specifies whether condition numbers are required for the
@@ -176,18 +176,18 @@ S and
 <p> <code>Author:</code></p>
 <dl>
 <dt>
-<dd> Univ. of Tennessee </p>
+</dt><dd> Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl>
 <dt>
-<dd> April 2012</dl>
+</dt><dd> April 2012</dd></dl>
 <p> <code>Further Details: </code></p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
   DTRSEN first collects the selected eigenvalues by computing an
   orthogonal transformation Z to move them to the top left corner of T.
@@ -238,8 +238,9 @@ S and
   error in the computed right invariant subspace is
                       EPS * norm(T) / SEP
 </pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> Definition at line 313 of file dtrsen.f.</p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for LAPACK from the source code. </p>
 <h2>Index</h2>
+</p>

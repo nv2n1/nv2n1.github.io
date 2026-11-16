@@ -36,14 +36,14 @@ int open_by_handle_at(int mount_fd, struct file_handle *handle,
 <p> The <i>flags</i> argument is a bit mask constructed by ORing together zero or more of <code>AT_EMPTY_PATH</code> and <code>AT_SYMLINK_FOLLOW</code>, described below. </p>
 <p> Together, the <i>pathname</i> and <i>dirfd</i> arguments identify the file for which a handle is to be obtained. There are four distinct cases:</p>
 <dl>
-<dt>*</p>
-<dd> If <i>pathname</i> is a nonempty string containing an absolute pathname, then a handle is returned for the file referred to by that pathname. In this case, <i>dirfd</i> is ignored.</p>
-<dt>*</p>
-<dd> If <i>pathname</i> is a nonempty string containing a relative pathname and <i>dirfd</i> has the special value <code>AT_FDCWD</code>, then <i>pathname</i> is interpreted relative to the current working directory of the caller, and a handle is returned for the file to which it refers.</p>
-<dt>*</p>
-<dd> If <i>pathname</i> is a nonempty string containing a relative pathname and <i>dirfd</i> is a file descriptor referring to a directory, then <i>pathname</i> is interpreted relative to the directory referred to by <i>dirfd</i>, and a handle is returned for the file to which it refers. (See <code><a href="/docs/linux/man/2-openat/">openat</a></code>(2) for an explanation of why &quot;directory file descriptors&quot; are useful.)</p>
-<dt>*</p>
-<dd> If <i>pathname</i> is an empty string and <i>flags</i> specifies the value <code>AT_EMPTY_PATH</code>, then <i>dirfd</i> can be an open file descriptor referring to any type of file, or <code>AT_FDCWD</code>, meaning the current working directory, and a handle is returned for the file to which it refers.</dl>
+<dt>*</dt>
+<dd> If <i>pathname</i> is a nonempty string containing an absolute pathname, then a handle is returned for the file referred to by that pathname. In this case, <i>dirfd</i> is ignored.</dd>
+<dt>*</dt>
+<dd> If <i>pathname</i> is a nonempty string containing a relative pathname and <i>dirfd</i> has the special value <code>AT_FDCWD</code>, then <i>pathname</i> is interpreted relative to the current working directory of the caller, and a handle is returned for the file to which it refers.</dd>
+<dt>*</dt>
+<dd> If <i>pathname</i> is a nonempty string containing a relative pathname and <i>dirfd</i> is a file descriptor referring to a directory, then <i>pathname</i> is interpreted relative to the directory referred to by <i>dirfd</i>, and a handle is returned for the file to which it refers. (See <code><a href="/docs/linux/man/2-openat/">openat</a></code>(2) for an explanation of why &quot;directory file descriptors&quot; are useful.)</dd>
+<dt>*</dt>
+<dd> If <i>pathname</i> is an empty string and <i>flags</i> specifies the value <code>AT_EMPTY_PATH</code>, then <i>dirfd</i> can be an open file descriptor referring to any type of file, or <code>AT_FDCWD</code>, meaning the current working directory, and a handle is returned for the file to which it refers.</dd></dl>
 <p> The <i>mount_id</i> argument returns an identifier for the filesystem mount that corresponds to <i>pathname</i>. This corresponds to the first field in one of the records in <i>/proc/self/mountinfo</i>. Opening the pathname in the fifth field of that record yields a file descriptor for the mount point; that file descriptor can be used in a subsequent call to <code>open_by_handle_at</code>(). <i>mount_id</i> is returned both for a successful call and for a call that results in the error <code>EOVERFLOW</code>. </p>
 <p> By default, <code>name_to_handle_at</code>() does not dereference <i>pathname</i> if it is a symbolic link, and thus returns a handle for the link itself. If <code>AT_SYMLINK_FOLLOW</code> is specified in <i>flags</i>, <i>pathname</i> is dereferenced if it is a symbolic link (so that the call returns a handle for the file referred to by the link). </p>
 <p> <code>name_to_handle_at</code>() does not trigger a mount when the final component of the pathname is an automount point. When a filesystem supports both file handles and automount points, a <code>name_to_handle_at</code>() call on an automount point will return with error <code>EOVERFLOW</code> without having increased <i>handle_bytes</i>. This can happen since Linux 4.13 with NFS when accessing a directory which is on a separate filesystem on the server. In this case, the automount can be triggered by adding a &quot;/&quot; to the end of the pathname.</p>
@@ -59,34 +59,34 @@ int open_by_handle_at(int mount_fd, struct file_handle *handle,
 <p> <code>name_to_handle_at</code>() and <code>open_by_handle_at</code>() can fail for the same errors as <code><a href="/docs/linux/man/2-openat/">openat</a></code>(2). In addition, they can fail with the errors noted below. </p>
 <p> <code>name_to_handle_at</code>() can fail with the following errors:</p>
 <dl>
-<dt><code>EFAULT</code></p>
-<dd> <i>pathname</i>, <i>mount_id</i>, or <i>handle</i> points outside your accessible address space.</p>
-<dt><code>EINVAL</code></p>
-<dd> <i>flags</i> includes an invalid bit value.</p>
-<dt><code>EINVAL</code></p>
-<dd> <i>handle-&gt;handle_bytes</i> is greater than <code>MAX_HANDLE_SZ</code>.</p>
-<dt><code>ENOENT</code></p>
-<dd> <i>pathname</i> is an empty string, but <code>AT_EMPTY_PATH</code> was not specified in <i>flags</i>.</p>
-<dt><code>ENOTDIR</code></p>
-<dd> The file descriptor supplied in <i>dirfd</i> does not refer to a directory, and it is not the case that both <i>flags</i> includes <code>AT_EMPTY_PATH</code> and <i>pathname</i> is an empty string.</p>
-<dt><code>EOPNOTSUPP</code></p>
-<dd> The filesystem does not support decoding of a pathname to a file handle.</p>
-<dt><code>EOVERFLOW</code></p>
-<dd> The <i>handle-&gt;handle_bytes</i> value passed into the call was too small. When this error occurs, <i>handle-&gt;handle_bytes</i> is updated to indicate the required size for the handle.</dl>
+<dt><code>EFAULT</code></dt>
+<dd> <i>pathname</i>, <i>mount_id</i>, or <i>handle</i> points outside your accessible address space.</dd>
+<dt><code>EINVAL</code></dt>
+<dd> <i>flags</i> includes an invalid bit value.</dd>
+<dt><code>EINVAL</code></dt>
+<dd> <i>handle-&gt;handle_bytes</i> is greater than <code>MAX_HANDLE_SZ</code>.</dd>
+<dt><code>ENOENT</code></dt>
+<dd> <i>pathname</i> is an empty string, but <code>AT_EMPTY_PATH</code> was not specified in <i>flags</i>.</dd>
+<dt><code>ENOTDIR</code></dt>
+<dd> The file descriptor supplied in <i>dirfd</i> does not refer to a directory, and it is not the case that both <i>flags</i> includes <code>AT_EMPTY_PATH</code> and <i>pathname</i> is an empty string.</dd>
+<dt><code>EOPNOTSUPP</code></dt>
+<dd> The filesystem does not support decoding of a pathname to a file handle.</dd>
+<dt><code>EOVERFLOW</code></dt>
+<dd> The <i>handle-&gt;handle_bytes</i> value passed into the call was too small. When this error occurs, <i>handle-&gt;handle_bytes</i> is updated to indicate the required size for the handle.</dd></dl>
 <p> <code>open_by_handle_at</code>() can fail with the following errors:</p>
 <dl>
-<dt><code>EBADF</code></p>
-<dd> <i>mount_fd</i> is not an open file descriptor.</p>
-<dt><code>EFAULT</code></p>
-<dd> <i>handle</i> points outside your accessible address space.</p>
-<dt><code>EINVAL</code></p>
-<dd> <i>handle-&gt;handle_bytes</i> is greater than <code>MAX_HANDLE_SZ</code> or is equal to zero.</p>
-<dt><code>ELOOP</code></p>
-<dd> <i>handle</i> refers to a symbolic link, but <code>O_PATH</code> was not specified in <i>flags</i>.</p>
-<dt><code>EPERM</code></p>
-<dd> The caller does not have the <code>CAP_DAC_READ_SEARCH</code> capability.</p>
-<dt><code>ESTALE</code></p>
-<dd> The specified <i>handle</i> is not valid. This error will occur if, for example, the file has been deleted.</dl>
+<dt><code>EBADF</code></dt>
+<dd> <i>mount_fd</i> is not an open file descriptor.</dd>
+<dt><code>EFAULT</code></dt>
+<dd> <i>handle</i> points outside your accessible address space.</dd>
+<dt><code>EINVAL</code></dt>
+<dd> <i>handle-&gt;handle_bytes</i> is greater than <code>MAX_HANDLE_SZ</code> or is equal to zero.</dd>
+<dt><code>ELOOP</code></dt>
+<dd> <i>handle</i> refers to a symbolic link, but <code>O_PATH</code> was not specified in <i>flags</i>.</dd>
+<dt><code>EPERM</code></dt>
+<dd> The caller does not have the <code>CAP_DAC_READ_SEARCH</code> capability.</dd>
+<dt><code>ESTALE</code></dt>
+<dd> The specified <i>handle</i> is not valid. This error will occur if, for example, the file has been deleted.</dd></dl>
 <h2>VERSIONS</h2>
 <p> These system calls first appeared in Linux 2.6.39. Library support is provided in glibc since version 2.14.</p>
 <h2>CONFORMING TO</h2>

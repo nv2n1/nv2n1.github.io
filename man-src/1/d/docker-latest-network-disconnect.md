@@ -15,11 +15,11 @@ description: "docker-network-disconnect – disconnect a container from a networ
 <p> Disconnects a container from a network. </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
   $ docker network disconnect multi-host-network container1
 </pre>
-</dl>
+</dd></dl>
 <h2>OPTIONS</h2>
 <p> <code>NETWORK</code><br />
 &nbsp;<wbr>&nbsp;<wbr>Specify network name </p>

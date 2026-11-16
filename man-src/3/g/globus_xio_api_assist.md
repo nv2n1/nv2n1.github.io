@@ -38,26 +38,26 @@ globus_xio_server_accept(&amp;handle, server);</pre>
 <p> It is possible that part of an I/O operation will complete before the timeout expires. In this case the operation can still be canceled. The user will receive there IO callback with and error set and the length value appropriately set to indicate how much of the operation completed. </p>
 <p> Timeouts are registered by using the following handle_cntl values: </p>
 <dl COMPACT>
-<dt>&bull;</p>
-<dd>GLOBUS_XIO_ATTR_SET_TIMEOUT_ALL</p>
-<dt>&bull;</p>
-<dd>GLOBUS_XIO_ATTR_SET_TIMEOUT_OPEN</p>
-<dt>&bull;</p>
-<dd>GLOBUS_XIO_ATTR_SET_TIMEOUT_CLOSE</p>
-<dt>&bull;</p>
-<dd>GLOBUS_XIO_ATTR_SET_TIMEOUT_READ</p>
-<dt>&bull;</p>
-<dd>GLOBUS_XIO_ATTR_SET_TIMEOUT_WRITE</p>
-<dt>&bull;</p>
-<dd>GLOBUS_XIO_ATTR_SET_TIMEOUT_ACCEPT</dl>
+<dt>&bull;</dt>
+<dd>GLOBUS_XIO_ATTR_SET_TIMEOUT_ALL</dd>
+<dt>&bull;</dt>
+<dd>GLOBUS_XIO_ATTR_SET_TIMEOUT_OPEN</dd>
+<dt>&bull;</dt>
+<dd>GLOBUS_XIO_ATTR_SET_TIMEOUT_CLOSE</dd>
+<dt>&bull;</dt>
+<dd>GLOBUS_XIO_ATTR_SET_TIMEOUT_READ</dd>
+<dt>&bull;</dt>
+<dd>GLOBUS_XIO_ATTR_SET_TIMEOUT_WRITE</dd>
+<dt>&bull;</dt>
+<dd>GLOBUS_XIO_ATTR_SET_TIMEOUT_ACCEPT</dd></dl>
 <p> Each of these cntls expect three parameters: </p>
 <dl COMPACT>
-<dt>&bull;</p>
-<dd>globus_xio_timeout_callback_t callback_function</p>
-<dt>&bull;</p>
-<dd>globus_reltime_t * delay_time</p>
-<dt>&bull;</p>
-<dd>void * callback_arg</dl>
+<dt>&bull;</dt>
+<dd>globus_xio_timeout_callback_t callback_function</dd>
+<dt>&bull;</dt>
+<dd>globus_reltime_t * delay_time</dd>
+<dt>&bull;</dt>
+<dd>void * callback_arg</dd></dl>
 <h2>Data Descriptor</h2>
 <p>The data descriptor ADT gives the user a means of attaching/extracting meta data to a read or write operation. </p>
 <p>&nbsp;<wbr>Things like offset, out of band message, and other driver specific meta data are contained in the data descriptor. </p>

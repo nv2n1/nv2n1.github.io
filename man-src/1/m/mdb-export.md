@@ -18,57 +18,55 @@ mdb - export[-H][-d delimiter][-R row_delim][[-Q] | [-q quote[-X escape]]][-I ba
 <p> It produces a CSV (comma separated value) output for the given <i>table</i>. Such output is suitable for importation into databases or spreadsheets.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-H</code></p>
-<dd> Supress header row</p>
-<dt><code>-Q</code></p>
-<dd> Don&#8217;t wrap text-like fields (text, memo, date) in quotes. If not specified text fiels will be surrounded by &quot; (double <i>quote</i>) characters.</p>
-<dt><code>-d</code></p>
-<dd> Specify an alternative column <i>delimiter</i> If no <i>delimiter</i> is specified, <i>table</i> names will be delimited by a , (comma) character.</p>
-<dt><code>-R</code></p>
-<dd> Specify a row <i>delimiter</i></p>
-<dt><code>-I</code> <i>backend</i></p>
-<dd> INSERT statements (instead of CSV). You must specify which SQL <i>backend</i> dialect to use. Allowed values are: access, sybase, oracle, postgres, mysql and sqlite.</p>
-<dt><code>-D</code></p>
-<dd> Set the date <i>format</i> (see <code><a href="/docs/linux/man/3-strftime/">strftime</a></code>(3) for details)</p>
-<dt><code>-q</code></p>
-<dd> Use to wrap text-like fields. Default is &quot;.</p>
-<dt><code>-X</code></p>
-<dd> Use to <i>escape</i> quoted characters within a field. Default is doubling.</p>
-<dt><code>-N</code> <i>namespace</i></p>
-<dd> Prefix identifiers with <i>namespace</i>.</p>
-<dt><code>-b</code> strip|raw|octal</p>
-<dd> Binary export mode: strip binaries, export as-is, or output style octal data.</dl>
+<dt><code>-H</code></dt>
+<dd> Supress header row</dd>
+<dt><code>-Q</code></dt>
+<dd> Don&#8217;t wrap text-like fields (text, memo, date) in quotes. If not specified text fiels will be surrounded by &quot; (double <i>quote</i>) characters.</dd>
+<dt><code>-d</code></dt>
+<dd> Specify an alternative column <i>delimiter</i> If no <i>delimiter</i> is specified, <i>table</i> names will be delimited by a , (comma) character.</dd>
+<dt><code>-R</code></dt>
+<dd> Specify a row <i>delimiter</i></dd>
+<dt><code>-I</code> <i>backend</i></dt>
+<dd> INSERT statements (instead of CSV). You must specify which SQL <i>backend</i> dialect to use. Allowed values are: access, sybase, oracle, postgres, mysql and sqlite.</dd>
+<dt><code>-D</code></dt>
+<dd> Set the date <i>format</i> (see <code><a href="/docs/linux/man/3-strftime/">strftime</a></code>(3) for details)</dd>
+<dt><code>-q</code></dt>
+<dd> Use to wrap text-like fields. Default is &quot;.</dd>
+<dt><code>-X</code></dt>
+<dd> Use to <i>escape</i> quoted characters within a field. Default is doubling.</dd>
+<dt><code>-N</code> <i>namespace</i></dt>
+<dd> Prefix identifiers with <i>namespace</i>.</dd>
+<dt><code>-b</code> strip|raw|octal</dt>
+<dd> Binary export mode: strip binaries, export as-is, or output style octal data.</dd></dl>
 <h2>NOTES</h2>
 <h2>ENVIRONMENT</h2>
 <dl>
-<dt><code>MDB_JET3_CHARSET</code></p>
-<dd> Defines the charset of the input JET3 (access 97) file. Default is CP1252. See <code><a href="/docs/linux/man/1-iconv/">iconv</a></code>(1).</p>
-<dt><code>MDBICONV</code></p>
-<dd> Defines the output charset to use for the SQL file. Default is UTF-8. mdbtools must have been compiled with iconv.</p>
-<dt><code>MDBOPTS</code></p>
-<dd> semi-column separated list of options:</p>
+<dt><code>MDB_JET3_CHARSET</code></dt>
+<dd> Defines the charset of the input JET3 (access 97) file. Default is CP1252. See <code><a href="/docs/linux/man/1-iconv/">iconv</a></code>(1).</dd>
+<dt><code>MDBICONV</code></dt>
+<dd> Defines the output charset to use for the SQL file. Default is UTF-8. mdbtools must have been compiled with iconv.</dd>
+<dt><code>MDBOPTS</code></dt>
+<dd> semi-column separated list of options:</dd>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>&bull;</p>
-<dd> use_index</p>
-<dt>&bull;</p>
-<dd> no_memo</p>
-<dt>&bull;</p>
-<dd> debug_like</p>
-<dt>&bull;</p>
-<dd> debug_write</p>
-<dt>&bull;</p>
-<dd> debug_usage</p>
-<dt>&bull;</p>
-<dd> debug_ole</p>
-<dt>&bull;</p>
-<dd> debug_row</p>
-<dt>&bull;</p>
-<dd> debug_props</p>
-<dt>&bull;</p>
-<dd> debug_all is a shortcut for all debug_* options</dl>
+<dt>&bull;</dt>
+<dd> use_index</dd>
+<dt>&bull;</dt>
+<dd> no_memo</dd>
+<dt>&bull;</dt>
+<dd> debug_like</dd>
+<dt>&bull;</dt>
+<dd> debug_write</dd>
+<dt>&bull;</dt>
+<dd> debug_usage</dd>
+<dt>&bull;</dt>
+<dd> debug_ole</dd>
+<dt>&bull;</dt>
+<dd> debug_row</dd>
+<dt>&bull;</dt>
+<dd> debug_props</dd>
+<dt>&bull;</dt>
+<dd> debug_all is a shortcut for all debug_* options</dd></dl>
 </dl>
 </dl>
 <h2>SEE ALSO</h2>

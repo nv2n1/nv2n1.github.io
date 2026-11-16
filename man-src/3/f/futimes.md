@@ -29,14 +29,14 @@ int lutimes(const char *filename, const struct timeval tv[2]);
 <h2>ERRORS</h2>
 <p> Errors are as for <code><a href="/docs/linux/man/2-utimes/">utimes</a></code>(2), with the following additions for <code>futimes</code>():</p>
 <dl>
-<dt><code>EBADF</code></p>
-<dd> <i>fd</i> is not a valid file descriptor.</p>
-<dt><code>ENOSYS</code></p>
-<dd> The <i>/proc</i> filesystem could not be accessed.</dl>
+<dt><code>EBADF</code></dt>
+<dd> <i>fd</i> is not a valid file descriptor.</dd>
+<dt><code>ENOSYS</code></dt>
+<dd> The <i>/proc</i> filesystem could not be accessed.</dd></dl>
 <p> The following additional error may occur for <code>lutimes</code>():</p>
 <dl>
-<dt><code>ENOSYS</code></p>
-<dd> The kernel does not support this call; Linux 2.6.22 or later is required.</dl>
+<dt><code>ENOSYS</code></dt>
+<dd> The kernel does not support this call; Linux 2.6.22 or later is required.</dd></dl>
 <h2>VERSIONS</h2>
 <p> <code>futimes</code>() is available since glibc 2.3. <code>lutimes</code>() is available since glibc 2.6, and is implemented using the <code><a href="/docs/linux/man/2-utimensat/">utimensat</a></code>(2) system call, which is supported since kernel 2.6.22.</p>
 <h2>ATTRIBUTES</h2>

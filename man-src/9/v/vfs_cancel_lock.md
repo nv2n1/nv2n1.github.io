@@ -15,11 +15,11 @@ vfs_cancel_lock - file byte range unblock lock
 <h2>Arguments</h2>
 
 <i>filp</i>
-<dl><dd><dd>The file to apply the unblock to</dl>
+<dl><dd></dd><dd>The file to apply the unblock to</dd></dl>
  
 
  <i>fl</i>
-<dl><dd>The lock to be unblocked</dl>
+<dl><dd>The lock to be unblocked</dd></dl>
 
 <h2>Description</h2>
 

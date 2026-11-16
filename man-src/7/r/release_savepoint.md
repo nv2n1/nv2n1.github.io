@@ -16,8 +16,8 @@ description: "RELEASE SAVEPOINT – destroy a previously defined savepoint"
 <p> <code>RELEASE SAVEPOINT</code> also destroys all savepoints that were established after the named savepoint was established.</p>
 <h2>Parameters</h2>
 <dl>
-<dt><i>savepoint_name</i></p>
-<dd>The name of the savepoint to destroy.</dl>
+<dt><i>savepoint_name</i></dt>
+<dd>The name of the savepoint to destroy.</dd></dl>
 <h2>Notes</h2>
 <p>Specifying a savepoint name that was not previously defined is an error. </p>
 <p> It is not possible to release a savepoint when the transaction is in an aborted state. </p>

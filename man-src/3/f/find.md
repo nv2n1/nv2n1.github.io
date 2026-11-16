@@ -51,7 +51,7 @@ description: "QuantLib::TimeSeries – Container for historical data."
 <p> <code>Precondition:</code></p>
 <dl>
 <dt>
-<dd> The Container type must satisfy the requirements set by the C++ standard for associative containers.</dl>
+</dt><dd> The Container type must satisfy the requirements set by the C++ standard for associative containers.</dd></dl>
 <h2>Constructor &amp; Destructor Documentation</h2>
 <h3><code>TimeSeries</code> ()</h3>
 <p> Default constructor</p>
@@ -62,5 +62,5 @@ description: "QuantLib::TimeSeries – Container for historical data."
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for QuantLib from the source code. </p>
 <h2>Index</h2>
-<dt><a href="#lbAM">Author</a></p>
-<dd></dl>
+<dt><a href="#lbAM">Author</a></dt>
+<dd></dd></dl>

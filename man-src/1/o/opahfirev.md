@@ -14,10 +14,10 @@ description: "opahfirev"
 <p> opahfirev</p>
 <h2>Options</h2>
 <dl>
-<dt>no option</p>
-<dd> Returns information about all of the HFIs in the system. </p>
-<dt>&#8211;help</p>
-<dd> Produces full help text. </p>
+<dt>no option</dt>
+<dd> Returns information about all of the HFIs in the system. </dd>
+<dt>&#8211;help</dt>
+<dd> Produces full help text. </dd>
 </dl>
 <h2>Example</h2>
 <p> # opahfirev<br />

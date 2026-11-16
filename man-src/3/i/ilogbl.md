@@ -19,16 +19,16 @@ description: "ilogb, ilogbf, ilogbl – get integer exponent of a floating-point
 <p> <code>ilogb</code>():</p>
 <dl>
 <dt>
-<dd> _ISOC99_SOURCE || _POSIX_C_SOURCE&nbsp;&gt;=&nbsp;200112L<br />
+</dt><dd> _ISOC99_SOURCE || _POSIX_C_SOURCE&nbsp;&gt;=&nbsp;200112L<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;_XOPEN_SOURCE&nbsp;&gt;=&nbsp;500<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Since glibc 2.19:&nbsp;*/&nbsp;_DEFAULT_SOURCE<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Glibc versions&nbsp;&lt;=&nbsp;2.19:&nbsp;*/&nbsp;_BSD_SOURCE ||&nbsp;_SVID_SOURCE</dl>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Glibc versions&nbsp;&lt;=&nbsp;2.19:&nbsp;*/&nbsp;_BSD_SOURCE ||&nbsp;_SVID_SOURCE</dd></dl>
 <p> <code>ilogbf</code>(), <code>ilogbl</code>():</p>
 <dl>
 <dt>
-<dd> _ISOC99_SOURCE || _POSIX_C_SOURCE&nbsp;&gt;=&nbsp;200112L<br />
+</dt><dd> _ISOC99_SOURCE || _POSIX_C_SOURCE&nbsp;&gt;=&nbsp;200112L<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Since glibc 2.19:&nbsp;*/&nbsp;_DEFAULT_SOURCE<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Glibc versions&nbsp;&lt;=&nbsp;2.19:&nbsp;*/&nbsp;_BSD_SOURCE ||&nbsp;_SVID_SOURCE</dl>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Glibc versions&nbsp;&lt;=&nbsp;2.19:&nbsp;*/&nbsp;_BSD_SOURCE ||&nbsp;_SVID_SOURCE</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> These functions return the exponent part of their argument as a signed integer. When no error occurs, these functions are equivalent to the corresponding <code><a href="/docs/linux/man/3-logb/">logb</a></code>(3) functions, cast to <i>int</i>.</p>
 <h2>RETURN VALUE</h2>
@@ -40,10 +40,10 @@ description: "ilogb, ilogbf, ilogbl – get integer exponent of a floating-point
 <p> See <code><a href="/docs/linux/man/7-math_error/">math_error</a></code>(7) for information on how to determine whether an error has occurred when calling these functions. </p>
 <p> The following errors can occur:</p>
 <dl>
-<dt>Domain error: <i>x</i> is 0 or a NaN</p>
-<dd> An invalid floating-point exception (<code>FE_INVALID</code>) is raised, and <i>errno</i> is set to <code>EDOM</code> (but see BUGS).</p>
-<dt>Domain error: <i>x</i> is an infinity</p>
-<dd> An invalid floating-point exception (<code>FE_INVALID</code>) is raised, and <i>errno</i> is set to <code>EDOM</code> (but see BUGS).</dl>
+<dt>Domain error: <i>x</i> is 0 or a NaN</dt>
+<dd> An invalid floating-point exception (<code>FE_INVALID</code>) is raised, and <i>errno</i> is set to <code>EDOM</code> (but see BUGS).</dd>
+<dt>Domain error: <i>x</i> is an infinity</dt>
+<dd> An invalid floating-point exception (<code>FE_INVALID</code>) is raised, and <i>errno</i> is set to <code>EDOM</code> (but see BUGS).</dd></dl>
 <h2>ATTRIBUTES</h2>
 <p> For an explanation of the terms used in this section, see <code><a href="/docs/linux/man/7-attributes/">attributes</a></code>(7). </p>
 <table BORDER>
@@ -65,10 +65,10 @@ description: "ilogb, ilogbf, ilogbl – get integer exponent of a floating-point
 <h2>BUGS</h2>
 <p> Before version 2.16, the following bugs existed in the glibc implementation of these functions:</p>
 <dl>
-<dt>*</p>
-<dd> The domain error case where <i>x</i> is 0 or a NaN did not cause <i>errno</i> to be set or (on some architectures) raise a floating-point exception.</p>
-<dt>*</p>
-<dd> The domain error case where <i>x</i> is an infinity did not cause <i>errno</i> to be set or raise a floating-point exception.</dl>
+<dt>*</dt>
+<dd> The domain error case where <i>x</i> is 0 or a NaN did not cause <i>errno</i> to be set or (on some architectures) raise a floating-point exception.</dd>
+<dt>*</dt>
+<dd> The domain error case where <i>x</i> is an infinity did not cause <i>errno</i> to be set or raise a floating-point exception.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-log/">log</a></code>(3), <code><a href="/docs/linux/man/3-logb/">logb</a></code>(3), <code><a href="/docs/linux/man/3-significand/">significand</a></code>(3)</p>
 <h2>COLOPHON</h2>

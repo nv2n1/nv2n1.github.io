@@ -16,35 +16,35 @@ description: "docker-events – Get real time events from the server"
 <p> Docker containers will report the following events: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 attach, commit, copy, create, destroy, detach, die, exec_create, exec_detach, exec_start, export, kill, oom, pause, rename, resize, restart, start, stop, top, unpause, update
 </pre>
-</dl>
+</dd></dl>
 <p> Docker images report the following events: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 delete, import, load, pull, push, save, tag, untag
 </pre>
-</dl>
+</dd></dl>
 <p> Docker volumes report the following events: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 create, mount, unmount, destroy
 </pre>
-</dl>
+</dd></dl>
 <p> Docker networks report the following events: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 create, connect, disconnect, destroy
 </pre>
-</dl>
+</dd></dl>
 <h2>OPTIONS</h2>
 <p> <code>&#8211;help</code><br />
 &nbsp;<wbr>&nbsp;<wbr>Print usage statement </p>
@@ -60,19 +60,19 @@ Stream events until this timestamp </p>
 <p> After running docker events a container 786d698004576 is started and stopped (The container name has been shortened in the output below): </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 # docker events
 2015-01-28T20:21:31.000000000-08:00 59211849bc10: (from whenry/testimage:latest) start
 2015-01-28T20:21:31.000000000-08:00 59211849bc10: (from whenry/testimage:latest) die
 2015-01-28T20:21:32.000000000-08:00 59211849bc10: (from whenry/testimage:latest) stop
 </pre>
-</dl>
+</dd></dl>
 <h2>Listening for events since a given date</h2>
 <p> Again the output container IDs have been shortened for the purposes of this document: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 # docker events --since '2015-01-28'
 2015-01-28T20:25:38.000000000-08:00 c21f6c22ba27: (from whenry/testimage:latest) create
@@ -85,11 +85,11 @@ Stream events until this timestamp </p>
 2015-01-28T20:25:45.000000000-08:00 c21f6c22ba27: (from whenry/testimage:latest) die
 2015-01-28T20:25:46.000000000-08:00 c21f6c22ba27: (from whenry/testimage:latest) stop
 </pre>
-</dl>
+</dd></dl>
 <p> The following example outputs all events that were generated in the last 3 minutes, relative to the current time on the client machine: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 # docker events --since '3m'
 2015-05-12T11:51:30.999999999Z07:00  4386fb97867d: (from ubuntu-1:14.04) die
@@ -97,7 +97,7 @@ Stream events until this timestamp </p>
 2015-05-12T15:53:45.999999999Z07:00  7805c1d35632: (from redis:2.8) die
 2015-05-12T15:54:03.999999999Z07:00  7805c1d35632: (from redis:2.8) stop
 </pre>
-</dl>
+</dd></dl>
 <p> If you do not provide the &#8211;since option, the command returns only new and/or live events. </p>
 <h2>HISTORY</h2>
 <p> April 2014, Originally compiled by William Henry (whenry at redhat dot com) based on docker.com source material and internal work. June 2014, updated by Sven Dowideit &lt;SvenDowideit [at] home.org.au&gt; June 2015, updated by Brian Goff &lt;cpuguy83 [at] gmail.com&gt; October 2015, updated by Mike Brown &lt;mikebrow [at] gmail.com&gt; </p>

@@ -13,7 +13,7 @@ description: "PAPI_read_ts –"
 <h2>Detailed Description</h2>
 <p><code>C Interface:</code></p>
 <dl COMPACT>
-<dd>#include &lt;<code>papi.h</code>&gt; </p>
+<dd>#include &lt;<code>papi.h</code>&gt; </dd>
 <p>&nbsp;<wbr>int&nbsp;<wbr><code>PAPI_read_ts(int EventSet, long long&nbsp;<wbr>*values, long long&nbsp;<wbr>*cycles&nbsp;<wbr>)</code>;</dl>
 <p> <code>PAPI_read_ts()</code> copies the counters of the indicated event set into the provided array. It also places a real-time cycle timestamp into the cycles array. </p>
 <p> The counters continue counting after the read. </p>
@@ -22,23 +22,24 @@ description: "PAPI_read_ts –"
 <dl COMPACT>
 <dd><i>EventSet</i> &#8212; an integer handle for a PAPI Event Set as created by <code>PAPI_create_eventset()</code><br />
  <i>*values</i> &#8212; an array to hold the counter values of the counting events<br />
- <i>*cycles</i> &#8212; an array to hold the timestamp values</dl>
+ <i>*cycles</i> &#8212; an array to hold the timestamp values</dd></dl>
 <p> <code>Return values:</code></p>
 <dl COMPACT>
 <dd><i>PAPI_EINVAL</i> One or more of the arguments is invalid.<br />
  <i>PAPI_ESYS</i> A system or C library call failed inside PAPI, see the errno variable.<br />
- <i>PAPI_ENOEVST</i> The event set specified does not exist.</dl>
+ <i>PAPI_ENOEVST</i> The event set specified does not exist.</dd></dl>
 <p> <code>Examples</code></p>
 <dl COMPACT>
 <dd>
 <pre>* </pre>
-</dl>
+</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>PAPI_read</code> </p>
+<dd><code>PAPI_read</code> </dd>
 <p> <code>PAPI_accum</code> </p>
 <p> <code>PAPI_start</code> </p>
 <p> <code>PAPI_stop</code> </p>
 <p> <code>PAPI_reset</code></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for PAPI from the source code.</p>
+</p>

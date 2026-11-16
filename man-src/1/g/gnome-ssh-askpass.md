@@ -17,10 +17,10 @@ description: "gnome-ssh-askpass – prompts a user for a passphrase using GNOME"
 <h2>ENVIRONMENT VARIABLES</h2>
 <p> The following environment variables are recognized:</p>
 <dl>
-<dt><i>GNOME_SSH_ASKPASS_GRAB_SERVER</i></p>
-<dd> Causes <code>gnome-ssh-askpass</code> to grab the X server before asking for a passphrase.</p>
-<dt><i>GNOME_SSH_ASKPASS_GRAB_POINTER</i></p>
-<dd> Causes <code>gnome-ssh-askpass</code> to grab the mouse pointer using <i>gdk_pointer_grab</i>() before asking for a passphrase.</dl>
+<dt><i>GNOME_SSH_ASKPASS_GRAB_SERVER</i></dt>
+<dd> Causes <code>gnome-ssh-askpass</code> to grab the X server before asking for a passphrase.</dd>
+<dt><i>GNOME_SSH_ASKPASS_GRAB_POINTER</i></dt>
+<dd> Causes <code>gnome-ssh-askpass</code> to grab the mouse pointer using <i>gdk_pointer_grab</i>() before asking for a passphrase.</dd></dl>
 <p> Regardless of whether either of these environment variables is set, <code>gnome-ssh-askpass</code> will grab the keyboard using <i>gdk_keyboard_grab</i>().</p>
 <h2>AUTHOR</h2>
 <p> This manual page was written by Colin Watson &lt;cjwatson [at] debian.org&gt; for the Debian system (but may be used by others). It was based on that for <code>x11-ssh-askpass</code> by Philip Hands. </p>

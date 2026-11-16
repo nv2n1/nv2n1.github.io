@@ -16,4 +16,4 @@ description: "SPI_freetuple – free a row allocated in the upper executor conte
 <h2>Arguments</h2>
 <p>HeapTuple <i>row</i></p>
 <dl COMPACT>
-<dd>row to free</dl>
+<dd>row to free</dd></dl>

@@ -14,44 +14,44 @@ description: "who – show who is logged on"
 <h2>DESCRIPTION</h2>
 <p> Print information about users who are currently logged in.</p>
 <dl>
-<dt><code>-a</code>, <code>&#8211;all</code></p>
-<dd> same as <code>-b</code> <code>-d</code> <code>&#8211;login</code> <code>-p</code> <code>-r</code> <code>-t</code> <code>-T</code> <code>-u</code></p>
-<dt><code>-b</code>, <code>&#8211;boot</code></p>
-<dd> time of last system boot</p>
-<dt><code>-d</code>, <code>&#8211;dead</code></p>
-<dd> print dead processes</p>
-<dt><code>-H</code>, <code>&#8211;heading</code></p>
-<dd> print line of column headings</p>
-<dt><code>&#8211;ips</code></p>
-<dd> print ips instead of hostnames. with <code>&#8211;lookup</code>, canonicalizes based on stored IP, if available, rather than stored hostname</p>
-<dt><code>-l</code>, <code>&#8211;login</code></p>
-<dd> print system login processes</p>
-<dt><code>&#8211;lookup</code></p>
-<dd> attempt to canonicalize hostnames via DNS</p>
-<dt><code>-m</code></p>
-<dd> only hostname and user associated with stdin</p>
-<dt><code>-p</code>, <code>&#8211;process</code></p>
-<dd> print active processes spawned by init</p>
-<dt><code>-q</code>, <code>&#8211;count</code></p>
-<dd> all login names and number of users logged on</p>
-<dt><code>-r</code>, <code>&#8211;runlevel</code></p>
-<dd> print current runlevel</p>
-<dt><code>-s</code>, <code>&#8211;short</code></p>
-<dd> print only name, line, and time (default)</p>
-<dt><code>-t</code>, <code>&#8211;time</code></p>
-<dd> print last system clock change</p>
-<dt><code>-T</code>, <code>-w</code>, <code>&#8211;mesg</code></p>
-<dd> add user&#8217;s message status as +, &#8211; or ?</p>
-<dt><code>-u</code>, <code>&#8211;users</code></p>
-<dd> list users logged in</p>
-<dt><code>&#8211;message</code></p>
-<dd> same as <code>-T</code></p>
-<dt><code>&#8211;writable</code></p>
-<dd> same as <code>-T</code></p>
-<dt><code>&#8211;help</code></p>
-<dd> display this help and exit</p>
-<dt><code>&#8211;version</code></p>
-<dd> output version information and exit</dl>
+<dt><code>-a</code>, <code>&#8211;all</code></dt>
+<dd> same as <code>-b</code> <code>-d</code> <code>&#8211;login</code> <code>-p</code> <code>-r</code> <code>-t</code> <code>-T</code> <code>-u</code></dd>
+<dt><code>-b</code>, <code>&#8211;boot</code></dt>
+<dd> time of last system boot</dd>
+<dt><code>-d</code>, <code>&#8211;dead</code></dt>
+<dd> print dead processes</dd>
+<dt><code>-H</code>, <code>&#8211;heading</code></dt>
+<dd> print line of column headings</dd>
+<dt><code>&#8211;ips</code></dt>
+<dd> print ips instead of hostnames. with <code>&#8211;lookup</code>, canonicalizes based on stored IP, if available, rather than stored hostname</dd>
+<dt><code>-l</code>, <code>&#8211;login</code></dt>
+<dd> print system login processes</dd>
+<dt><code>&#8211;lookup</code></dt>
+<dd> attempt to canonicalize hostnames via DNS</dd>
+<dt><code>-m</code></dt>
+<dd> only hostname and user associated with stdin</dd>
+<dt><code>-p</code>, <code>&#8211;process</code></dt>
+<dd> print active processes spawned by init</dd>
+<dt><code>-q</code>, <code>&#8211;count</code></dt>
+<dd> all login names and number of users logged on</dd>
+<dt><code>-r</code>, <code>&#8211;runlevel</code></dt>
+<dd> print current runlevel</dd>
+<dt><code>-s</code>, <code>&#8211;short</code></dt>
+<dd> print only name, line, and time (default)</dd>
+<dt><code>-t</code>, <code>&#8211;time</code></dt>
+<dd> print last system clock change</dd>
+<dt><code>-T</code>, <code>-w</code>, <code>&#8211;mesg</code></dt>
+<dd> add user&#8217;s message status as +, &#8211; or ?</dd>
+<dt><code>-u</code>, <code>&#8211;users</code></dt>
+<dd> list users logged in</dd>
+<dt><code>&#8211;message</code></dt>
+<dd> same as <code>-T</code></dd>
+<dt><code>&#8211;writable</code></dt>
+<dd> same as <code>-T</code></dd>
+<dt><code>&#8211;help</code></dt>
+<dd> display this help and exit</dd>
+<dt><code>&#8211;version</code></dt>
+<dd> output version information and exit</dd></dl>
 <p> If FILE is not specified, use <i>,/var/run/utmp/</i>. <i>,/var/log/wtmp/</i> as FILE is common. If ARG1 ARG2 given, <code>-m</code> presumed: &#8216;am i&#8217; or &#8216;mom likes&#8217; are usual.</p>
 <h2>AUTHOR</h2>
 <p> Written by Joseph Arceneaux, David MacKenzie, and Michael Stone.</p>

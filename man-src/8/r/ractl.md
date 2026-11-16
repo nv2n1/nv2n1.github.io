@@ -14,18 +14,18 @@ description: "ractl – Router Advertisement Control (ratools/ractl)"
 <p>Control program for the Router Advertisement Daemin (ratools/rad) providing an easy to use command line interface.</p>
 <h2>Options</h2>
 <dl>
-<dt><code>&#8211;socket</code></p>
-<dd>Override default path of the control socket.</dl>
+<dt><code>&#8211;socket</code></dt>
+<dd>Override default path of the control socket.</dd></dl>
 <h2>Built-In Commands</h2>
 <dl>
-<dt><code>dump</code></p>
-<dd>Print configuration of all Router Advertisements to stdout.</p>
-<dt><code>show</code></p>
-<dd>Show all Router Advertisements.</p>
-<dt><code>version</code></p>
-<dd>Show version information for ratools/ractl.</p>
-<dt><code>loglevel</code></p>
-<dd>Set logging level of rad. Possible values are &#8216;info&#8217;, &#8216;warning&#8217;, and</dl>
+<dt><code>dump</code></dt>
+<dd>Print configuration of all Router Advertisements to stdout.</dd>
+<dt><code>show</code></dt>
+<dd>Show all Router Advertisements.</dd>
+<dt><code>version</code></dt>
+<dd>Show version information for ratools/ractl.</dd>
+<dt><code>loglevel</code></dt>
+<dd>Set logging level of rad. Possible values are &#8216;info&#8217;, &#8216;warning&#8217;, and</dd></dl>
 <h2>Module Commands</h2>
 <p>There are more commands provided by modules. To learn more about them, have a look at the module&#8217;s manual pages.</p>
 <h2>Availability</h2>

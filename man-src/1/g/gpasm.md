@@ -18,56 +18,56 @@ description: "gpasm – GNU PIC assembler"
 <h2>OPTIONS</h2>
 <p> Below is a summary of the <code>gpasm</code> options. <code>gpasm</code> options always supersede any settings in the source code.</p>
 <dl>
-<dt><code>-a FMT,</code> &#8211;hex-format FMT</p>
-<dd> GPASM supports inhx8m, inhx8s, inhx16, and inhx32 hex file formats. This option controls which hex file format is used. The default is inhx32.</p>
-<dt><code>-c</code>, &#8211;object</p>
-<dd> Output a relocatable object (new COFF format).</p>
-<dt><code>-C</code>, &#8211;old-coff</p>
-<dd> Output a relocatable object (old COFF format).</p>
-<dt><code>-d</code>, <code>&#8211;debug</code></p>
-<dd> Output debug messages.</p>
-<dt><code>-D SYM=VAL,</code> &#8211;define SYM=VAL</p>
-<dd> Define SYM with value VAL. This is equivalent to placing &quot;#define SYM VAL&quot; in the source.</p>
-<dt><code>-e [ON|OFF],</code> &#8211;expand [ON|OFF]</p>
-<dd> Macro expansion in the listing file is controlled using the EXPAND and NOEXPAND directives. This option can force either directive to be ignored. When &quot;ON&quot; is selected the macros are always expanded regardless of the presence of NOEXPAND. Likewise, &quot;OFF&quot; will force macros not to be expanded.</p>
-<dt><code>-g</code>, <code>&#8211;debug-info</code></p>
-<dd> Use debug directives for COFF.</p>
-<dt><code>-h</code>, <code>&#8211;help</code></p>
-<dd> Show the usage message and exit.</p>
-<dt><code>-i</code>, <code>&#8211;ignore-case</code></p>
-<dd> All user defined symbols and macros are case sensitive. This option makes them case insensitive.</p>
-<dt><code>-I DIR,</code> &#8211;include DIR</p>
-<dd> The top level assembly file is passed to gpasm as an argument. This file can contain INCLUDE directives. These directives open the specified file and then its contents are assembled. GPASM searches for these files in the local directory. If the file is not located, the default header path is checked. Finally, all paths specified using this argument are searched.</p>
-<dt><code>-l[12[ce]|14[ce]|16[ce]]</code>, <code>&#8211;list-chips[=([12[ce]|14[ce]|16[ce]])]</code></p>
-<dd> List supported processors based on various aspects.</p>
-<dt><code>-L</code>, &#8211;force-list</p>
-<dd> Ignore NOLIST directives. This forces gpasm to print every line assembled in the list file output.</p>
-<dt><code>-m</code>, &#8211;dump</p>
-<dd> Upon completion of the final pass of assembly, display the contents of instruction memory.</p>
-<dt><code>&#8211;mpasm-compatible</code></p>
-<dd> This option sets the MPASM compatibility mode.</p>
-<dt><code>-M</code>, &#8211;deps</p>
-<dd> Output a dependency file.</p>
-<dt><code>-n</code>, &#8211;dos</p>
-<dd> By default, gpasm generates hex files using ISO format. However, some device programmers required a DOS formatted file. This option will cause gpasm to generate a DOS formatted hex file.</p>
-<dt><code>-o FILE,</code> &#8211;output FILE</p>
-<dd> Alternate name of the output file.</p>
-<dt><code>-p PROC,</code> &#8211;processor PROC</p>
-<dd> Select the processor.</p>
-<dt><code>-P FILE,</code> &#8211;preprocess FILE</p>
-<dd> Write preprocessed asm file to FILE.</p>
-<dt><code>-q</code>, &#8211;quiet</p>
-<dd> Suppress anything sent to standard output.</p>
-<dt><code>-r RADIX,</code> &#8211;radix RADIX</p>
-<dd> The supported radices are BIN, DEC, OCT, and HEX. The default is HEX.</p>
-<dt><code>-u</code>, &#8211;absolute</p>
-<dd> Use absolute paths.</p>
-<dt><code>-v</code>, &#8211;version</p>
-<dd> Show the version information and exit.</p>
-<dt><code>-w [0|1|2],</code> &#8211;warning [0|1|2]</p>
-<dd> This option sets the message level. &quot;0&quot; is the default. It will allow all messages, warnings, and errors to be reported. &quot;1&quot; will suppress the messages. &quot;2&quot; will suppress the messages and warnings.</p>
-<dt><code>-y</code>, &#8211;extended</p>
-<dd> Enable 18xx extended mode.</dl>
+<dt><code>-a FMT,</code> &#8211;hex-format FMT</dt>
+<dd> GPASM supports inhx8m, inhx8s, inhx16, and inhx32 hex file formats. This option controls which hex file format is used. The default is inhx32.</dd>
+<dt><code>-c</code>, &#8211;object</dt>
+<dd> Output a relocatable object (new COFF format).</dd>
+<dt><code>-C</code>, &#8211;old-coff</dt>
+<dd> Output a relocatable object (old COFF format).</dd>
+<dt><code>-d</code>, <code>&#8211;debug</code></dt>
+<dd> Output debug messages.</dd>
+<dt><code>-D SYM=VAL,</code> &#8211;define SYM=VAL</dt>
+<dd> Define SYM with value VAL. This is equivalent to placing &quot;#define SYM VAL&quot; in the source.</dd>
+<dt><code>-e [ON|OFF],</code> &#8211;expand [ON|OFF]</dt>
+<dd> Macro expansion in the listing file is controlled using the EXPAND and NOEXPAND directives. This option can force either directive to be ignored. When &quot;ON&quot; is selected the macros are always expanded regardless of the presence of NOEXPAND. Likewise, &quot;OFF&quot; will force macros not to be expanded.</dd>
+<dt><code>-g</code>, <code>&#8211;debug-info</code></dt>
+<dd> Use debug directives for COFF.</dd>
+<dt><code>-h</code>, <code>&#8211;help</code></dt>
+<dd> Show the usage message and exit.</dd>
+<dt><code>-i</code>, <code>&#8211;ignore-case</code></dt>
+<dd> All user defined symbols and macros are case sensitive. This option makes them case insensitive.</dd>
+<dt><code>-I DIR,</code> &#8211;include DIR</dt>
+<dd> The top level assembly file is passed to gpasm as an argument. This file can contain INCLUDE directives. These directives open the specified file and then its contents are assembled. GPASM searches for these files in the local directory. If the file is not located, the default header path is checked. Finally, all paths specified using this argument are searched.</dd>
+<dt><code>-l[12[ce]|14[ce]|16[ce]]</code>, <code>&#8211;list-chips[=([12[ce]|14[ce]|16[ce]])]</code></dt>
+<dd> List supported processors based on various aspects.</dd>
+<dt><code>-L</code>, &#8211;force-list</dt>
+<dd> Ignore NOLIST directives. This forces gpasm to print every line assembled in the list file output.</dd>
+<dt><code>-m</code>, &#8211;dump</dt>
+<dd> Upon completion of the final pass of assembly, display the contents of instruction memory.</dd>
+<dt><code>&#8211;mpasm-compatible</code></dt>
+<dd> This option sets the MPASM compatibility mode.</dd>
+<dt><code>-M</code>, &#8211;deps</dt>
+<dd> Output a dependency file.</dd>
+<dt><code>-n</code>, &#8211;dos</dt>
+<dd> By default, gpasm generates hex files using ISO format. However, some device programmers required a DOS formatted file. This option will cause gpasm to generate a DOS formatted hex file.</dd>
+<dt><code>-o FILE,</code> &#8211;output FILE</dt>
+<dd> Alternate name of the output file.</dd>
+<dt><code>-p PROC,</code> &#8211;processor PROC</dt>
+<dd> Select the processor.</dd>
+<dt><code>-P FILE,</code> &#8211;preprocess FILE</dt>
+<dd> Write preprocessed asm file to FILE.</dd>
+<dt><code>-q</code>, &#8211;quiet</dt>
+<dd> Suppress anything sent to standard output.</dd>
+<dt><code>-r RADIX,</code> &#8211;radix RADIX</dt>
+<dd> The supported radices are BIN, DEC, OCT, and HEX. The default is HEX.</dd>
+<dt><code>-u</code>, &#8211;absolute</dt>
+<dd> Use absolute paths.</dd>
+<dt><code>-v</code>, &#8211;version</dt>
+<dd> Show the version information and exit.</dd>
+<dt><code>-w [0|1|2],</code> &#8211;warning [0|1|2]</dt>
+<dd> This option sets the message level. &quot;0&quot; is the default. It will allow all messages, warnings, and errors to be reported. &quot;1&quot; will suppress the messages. &quot;2&quot; will suppress the messages and warnings.</dd>
+<dt><code>-y</code>, &#8211;extended</dt>
+<dd> Enable 18xx extended mode.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-gputils/">gputils</a></code>(1)</p>
 <h2>AUTHOR</h2>

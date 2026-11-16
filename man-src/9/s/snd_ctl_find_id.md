@@ -14,10 +14,10 @@ description: "snd_ctl_find_id – find the control instance with the given id"
 <p><i>card</i></p>
 <dl>
 <dd>
-<dd>the card instance</dl>
+</dd><dd>the card instance</dd></dl>
 <p> <i>id</i></p>
 <dl>
-<dd>the id to search</dl>
+<dd>the id to search</dd></dl>
 <h2>Description</h2>
 <p>Finds the control instance with the given id from the card. </p>
 <p> The caller must down card-&gt;controls_rwsem before calling this function (if the race condition can happen).</p>

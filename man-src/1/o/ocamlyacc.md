@@ -17,20 +17,20 @@ description: "ocamlyacc – The OCaml parser generator"
 <h2>OPTIONS</h2>
 <p> The <code><a href="/docs/linux/man/1-ocamlyacc/">ocamlyacc</a></code>(1) command recognizes the following options:</p>
 <dl>
-<dt><code>-b</code><i>prefix</i></p>
-<dd> Name the output files <i>prefix</i>.ml, <i>prefix</i>.mli, <i>prefix</i>.output, instead of the default naming convention.</p>
-<dt><code>-q</code></p>
-<dd> This option has no effect.</p>
-<dt><code>-v</code></p>
-<dd> Generate a description of the parsing tables and a report on conflicts resulting from ambiguities in the grammar. The description is put in file <i>grammar</i>.output.</p>
-<dt><code>-version</code></p>
-<dd> Print version string and exit.</p>
-<dt><code>-vnum</code></p>
-<dd> Print short version number and exit.</p>
-<dt><code>&#8211;</code></p>
-<dd> Read the grammar specification from standard input. The default output file names are stdin.ml and stdin.mli.</p>
-<dt><code>&#8212;</code><i>&nbsp;<wbr>file</i></p>
-<dd> Process <i>file</i> as the grammar specification, even if its name starts with a dash (-) character. This option must be the last on the command line. </p>
+<dt><code>-b</code><i>prefix</i></dt>
+<dd> Name the output files <i>prefix</i>.ml, <i>prefix</i>.mli, <i>prefix</i>.output, instead of the default naming convention.</dd>
+<dt><code>-q</code></dt>
+<dd> This option has no effect.</dd>
+<dt><code>-v</code></dt>
+<dd> Generate a description of the parsing tables and a report on conflicts resulting from ambiguities in the grammar. The description is put in file <i>grammar</i>.output.</dd>
+<dt><code>-version</code></dt>
+<dd> Print version string and exit.</dd>
+<dt><code>-vnum</code></dt>
+<dd> Print short version number and exit.</dd>
+<dt><code>&#8211;</code></dt>
+<dd> Read the grammar specification from standard input. The default output file names are stdin.ml and stdin.mli.</dd>
+<dt><code>&#8212;</code><i>&nbsp;<wbr>file</i></dt>
+<dd> Process <i>file</i> as the grammar specification, even if its name starts with a dash (-) character. This option must be the last on the command line. </dd>
 </dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-ocamllex/">ocamllex</a></code>(1).<br />

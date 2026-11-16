@@ -95,40 +95,40 @@ description: "Sord –"
 <p>Index into a SordQuad. </p>
 <p> <code>Enumerator</code></p>
 <dl>
-<dt><i>SORD_SUBJECT </i></p>
-<dd>Subject.</p>
-<dt><i>SORD_PREDICATE </i></p>
-<dd>Predicate (a.k.a. &#8216;key&#8217;)</p>
-<dt><i>SORD_OBJECT </i></p>
-<dd>Object (a.k.a. &#8216;value&#8217;)</p>
-<dt><i>SORD_GRAPH </i></p>
-<dd>Graph (a.k.a. &#8216;context&#8217;)</dl>
+<dt><i>SORD_SUBJECT </i></dt>
+<dd>Subject.</dd>
+<dt><i>SORD_PREDICATE </i></dt>
+<dd>Predicate (a.k.a. &#8216;key&#8217;)</dd>
+<dt><i>SORD_OBJECT </i></dt>
+<dd>Object (a.k.a. &#8216;value&#8217;)</dd>
+<dt><i>SORD_GRAPH </i></dt>
+<dd>Graph (a.k.a. &#8216;context&#8217;)</dd></dl>
 <h3>enum <code>SordNodeType</code></h3>
 <p>Type of a node. </p>
 <p> <code>Enumerator</code></p>
 <dl>
-<dt><i>SORD_URI </i></p>
-<dd>URI.</p>
-<dt><i>SORD_BLANK </i></p>
-<dd>Blank node identifier.</p>
-<dt><i>SORD_LITERAL </i></p>
-<dd>Literal (string with optional lang or datatype)</dl>
+<dt><i>SORD_URI </i></dt>
+<dd>URI.</dd>
+<dt><i>SORD_BLANK </i></dt>
+<dd>Blank node identifier.</dd>
+<dt><i>SORD_LITERAL </i></dt>
+<dd>Literal (string with optional lang or datatype)</dd></dl>
 <h3>enum <code>SordIndexOption</code></h3>
 <p>Indexing option. </p>
 <p> <code>Enumerator</code></p>
 <dl>
-<dt><i>SORD_SPO </i></p>
-<dd>Subject, Predicate, Object.</p>
-<dt><i>SORD_SOP </i></p>
-<dd>Subject, Object, Predicate.</p>
-<dt><i>SORD_OPS </i></p>
-<dd>Object, Predicate, Subject.</p>
-<dt><i>SORD_OSP </i></p>
-<dd>Object, Subject, Predicate.</p>
-<dt><i>SORD_PSO </i></p>
-<dd>Predicate, Subject, Object.</p>
-<dt><i>SORD_POS </i></p>
-<dd>Predicate, Object, Subject.</dl>
+<dt><i>SORD_SPO </i></dt>
+<dd>Subject, Predicate, Object.</dd>
+<dt><i>SORD_SOP </i></dt>
+<dd>Subject, Object, Predicate.</dd>
+<dt><i>SORD_OPS </i></dt>
+<dd>Object, Predicate, Subject.</dd>
+<dt><i>SORD_OSP </i></dt>
+<dd>Object, Subject, Predicate.</dd>
+<dt><i>SORD_PSO </i></dt>
+<dd>Predicate, Subject, Object.</dd>
+<dt><i>SORD_POS </i></dt>
+<dd>Predicate, Object, Subject.</dd></dl>
 <h2>Function Documentation</h2>
 <h3><code>SordWorld</code>* sord_world_new (void)</h3>
 <p>Create a new Sord World. It is safe to use multiple worlds in one process, though no data (e.g. nodes) can be shared between worlds, and this should be avoided if possible for performance reasons.</p>
@@ -174,7 +174,7 @@ description: "Sord –"
 <dl>
 <dd><i>world</i> The world in which to make this model.<br />
  <i>indices</i> SordIndexOption flags (e.g. SORD_SPO|SORD_OPS). Be sure to enable an index where the most significant node(s) are not variables in your queries (e.g. to make (? P O) queries, enable either SORD_OPS or SORD_POS).<br />
- <i>graphs</i> If true, store (and index) graph contexts.</dl>
+ <i>graphs</i> If true, store (and index) graph contexts.</dd></dl>
 <h3>void sord_free (<code>SordModel</code> *model)</h3>
 <p>Close and free model.</p>
 <h3><code>SordWorld</code>* sord_get_world (<code>SordModel</code> *model)</h3>
@@ -189,17 +189,17 @@ description: "Sord –"
 <p>Search for statements by a quad pattern. </p>
 <p> <code>Returns:</code></p>
 <dl>
-<dd>an iterator to the first match, or NULL if no matches found.</dl>
+<dd>an iterator to the first match, or NULL if no matches found.</dd></dl>
 <h3><code>SordIter</code>* sord_search (<code>SordModel</code> *model, const <code>SordNode</code> *s, const <code>SordNode</code> *p, const <code>SordNode</code> *o, const <code>SordNode</code> *g)</h3>
 <p>Search for statements by nodes. </p>
 <p> <code>Returns:</code></p>
 <dl>
-<dd>an iterator to the first match, or NULL if no matches found.</dl>
+<dd>an iterator to the first match, or NULL if no matches found.</dd></dl>
 <h3><code>SordNode</code>* sord_get (<code>SordModel</code> *model, const <code>SordNode</code> *s, const <code>SordNode</code> *p, const <code>SordNode</code> *o, const <code>SordNode</code> *g)</h3>
 <p>Search for a single node that matches a pattern. Exactly one of s, p, o must be NULL. This function is mainly useful for predicates that only have one value. The returned node must be freed using sord_node_free. </p>
 <p> <code>Returns:</code></p>
 <dl>
-<dd>the first matching node, or NULL if no matches are found.</dl>
+<dd>the first matching node, or NULL if no matches are found.</dd></dl>
 <h3>bool sord_ask (<code>SordModel</code> *model, const <code>SordNode</code> *s, const <code>SordNode</code> *p, const <code>SordNode</code> *o, const <code>SordNode</code> *g)</h3>
 <p>Return true iff a statement exists.</p>
 <h3>uint64_t sord_count (<code>SordModel</code> *model, const <code>SordNode</code> *s, const <code>SordNode</code> *p, const <code>SordNode</code> *o, const <code>SordNode</code> *g)</h3>
@@ -236,7 +236,7 @@ description: "Sord –"
 <p>Match two quads (using ID comparison only). This function is a straightforward and fast equivalence match with wildcard support (ID 0 is a wildcard). It does not actually read node data. </p>
 <p> <code>Returns:</code></p>
 <dl>
-<dd>true iff x and y match.</dl>
+<dd>true iff x and y match.</dd></dl>
 <h3>SerdReader* sord_new_reader (<code>SordModel</code> *model, SerdEnv *env, SerdSyntaxsyntax, <code>SordNode</code> *graph)</h3>
 <p>Return a reader that will read into model.</p>
 <h3>bool sord_write (<code>SordModel</code> *model, SerdWriter *writer, <code>SordNode</code> *graph)</h3>

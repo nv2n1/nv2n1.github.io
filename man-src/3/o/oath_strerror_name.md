@@ -13,8 +13,8 @@ description: "oath_strerror_name – API function"
 <p> <code>const char * oath_strerror_name(int </code><i>err</i><code>);</code></p>
 <h2>Arguments</h2>
 <dl COMPACT>
-<dt>int err</p>
-<dd> liboath error code</dl>
+<dt>int err</dt>
+<dd> liboath error code</dd></dl>
 <h2>Description</h2>
 <p> Convert return code to human readable string representing the error code symbol itself. For example, oath_strerror_name(<code>OATH_OK</code>) returns the string &quot;OATH_OK&quot;. </p>
 <p> This string can be used to output a diagnostic message to the user. </p>

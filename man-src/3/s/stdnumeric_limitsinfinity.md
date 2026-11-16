@@ -10,7 +10,6 @@ description: "std::numeric_limits<T>::infinity – std::numeric_limits<T>::infin
 <p>std::numeric_limits&lt;T&gt;::infinity &#8211; std::numeric_limits&lt;T&gt;::infinity</p>
 <h2>Synopsis</h2>
 <pre><code>static T infinity() throw();             (until C++11)
-
 static constexpr T infinity() noexcept;  (since C++11)</code></pre>
 <p>Returns the special value &quot;positive infinity&quot;, as represented by the floating-point type T. Only meaningful if std::numeric_limits&lt;T&gt;::has_infinity == true. In IEEE 754, the most common binary representation of floating-point numbers, the positive infinity is the value with all bits of the exponent set and all bits of the fraction cleared. </p>
 <h2>Return value</h2>
@@ -38,11 +37,8 @@ long double HUGE_VALL </p>
 <h2>Example</h2>
 <p>// Run this code </p>
 <pre><code>#include &lt;iostream&gt;
-
 #include &lt;limits&gt;
-
 int main()
-
 {
     double max = std::numeric_limits&lt;double&gt;::max();
     double inf = std::numeric_limits&lt;double&gt;::infinity();

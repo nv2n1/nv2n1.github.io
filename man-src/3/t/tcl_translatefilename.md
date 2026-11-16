@@ -14,9 +14,9 @@ char *
 <code>Tcl_TranslateFileName</code>(<i>interp</i>, <i>name</i>, <i>bufferPtr</i>)</pre>
 <h2>Arguments</h2>
 <dl COMPACT>
-<dd>Tcl_Interp <i>*interp</i> (in) Interpreter in which to report an error, if any.</p>
-<dd>const char <i>*name</i> (in) File name, which may start with a &#8220;~&#8221;.</p>
-<dd>Tcl_DString <i>*bufferPtr</i> (in/out) If needed, this dynamic string is used to store the new file name. At the time of the call it should be uninitialized or free. The caller must eventually call <code>Tcl_DStringFree</code> to free up anything stored here. </p>
+<dd>Tcl_Interp <i>*interp</i> (in) Interpreter in which to report an error, if any.</dd>
+<dd>const char <i>*name</i> (in) File name, which may start with a &#8220;~&#8221;.</dd>
+<dd>Tcl_DString <i>*bufferPtr</i> (in/out) If needed, this dynamic string is used to store the new file name. At the time of the call it should be uninitialized or free. The caller must eventually call <code>Tcl_DStringFree</code> to free up anything stored here. </dd>
 </dl>
 <h2>Description</h2>
 <p>This utility procedure translates a file name to a platform-specific form which, after being converted to the appropriate encoding, is suitable for passing to the local operating system. In particular, it converts network names into native form and does tilde substitution. </p>

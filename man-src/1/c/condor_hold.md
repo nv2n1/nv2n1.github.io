@@ -21,83 +21,68 @@ description: "condor_hold put jobs in the queue into the hold state"
 <p> <code>-help</code></p>
 <dl>
 <dt>
-<dd> Display usage information</p>
-<dt>
-<dd></dl>
+</dt><dd> Display usage information</dd>
+</dl>
 <p> <code>-version</code></p>
 <dl>
 <dt>
-<dd> Display version information</p>
-<dt>
-<dd></dl>
+</dt><dd> Display version information</dd>
+</dl>
 <p> <code>-pool </code> <i>centralmanagerhostname[:portnumber]</i></p>
 <dl>
 <dt>
-<dd> Specify a pool by giving the central manager&#8217;s host name and an optional port number</p>
-<dt>
-<dd></dl>
+</dt><dd> Specify a pool by giving the central manager&#8217;s host name and an optional port number</dd>
+</dl>
 <p> <code>-name </code> <i>scheddname</i></p>
 <dl>
 <dt>
-<dd> Send the command to a machine identified by <i>scheddname</i></p>
-<dt>
-<dd></dl>
+</dt><dd> Send the command to a machine identified by <i>scheddname</i></dd>
+</dl>
 <p> <code>-addr </code> <i>&lt;a.b.c.d:port&gt;</i></p>
 <dl>
 <dt>
-<dd> Send the command to a machine located at <i>&lt;a.b.c.d:port&gt;</i></p>
-<dt>
-<dd></dl>
+</dt><dd> Send the command to a machine located at <i>&lt;a.b.c.d:port&gt;</i></dd>
+</dl>
 <p> <code>-debug</code></p>
 <dl>
 <dt>
-<dd> Causes debugging information to be sent to stderr , based on the value of the configuration variable TOOL_DEBUG</p>
-<dt>
-<dd></dl>
+</dt><dd> Causes debugging information to be sent to stderr , based on the value of the configuration variable TOOL_DEBUG</dd>
+</dl>
 <p> <code>-reason </code> <i>reasonstring</i></p>
 <dl>
 <dt>
-<dd> Sets the job ClassAd attribute HoldReason to the value given by <i>reasonstring</i> . <i>reasonstring</i> will be delimited by double quote marks on the command line, if it contains space characters.</p>
-<dt>
-<dd></dl>
+</dt><dd> Sets the job ClassAd attribute HoldReason to the value given by <i>reasonstring</i> . <i>reasonstring</i> will be delimited by double quote marks on the command line, if it contains space characters.</dd>
+</dl>
 <p> <code>-subcode </code> <i>number</i></p>
 <dl>
 <dt>
-<dd> Sets the job ClassAd attribute HoldReasonSubCode to the integer value given by <i>number</i> .</p>
-<dt>
-<dd></dl>
+</dt><dd> Sets the job ClassAd attribute HoldReasonSubCode to the integer value given by <i>number</i> .</dd>
+</dl>
 <p> <i>cluster</i></p>
 <dl>
 <dt>
-<dd> Hold all jobs in the specified cluster</p>
-<dt>
-<dd></dl>
+</dt><dd> Hold all jobs in the specified cluster</dd>
+</dl>
 <p> <i>cluster.process</i></p>
 <dl>
 <dt>
-<dd> Hold the specific job in the cluster</p>
-<dt>
-<dd></dl>
+</dt><dd> Hold the specific job in the cluster</dd>
+</dl>
 <p> <i>user</i></p>
 <dl>
 <dt>
-<dd> Hold all jobs belonging to specified user</p>
-<dt>
-<dd></dl>
+</dt><dd> Hold all jobs belonging to specified user</dd>
+</dl>
 <p> <code>-constraint </code> <i>expression</i></p>
 <dl>
 <dt>
-<dd> Hold all jobs which match the job ClassAd expression constraint (within quotation marks). Note that quotation marks must be escaped with the backslash characters for most shells.</p>
-<dt>
-<dd></dl>
+</dt><dd> Hold all jobs which match the job ClassAd expression constraint (within quotation marks). Note that quotation marks must be escaped with the backslash characters for most shells.</dd>
+</dl>
 <p> <i>-all</i></p>
 <dl>
 <dt>
-<dd> Hold all the jobs in the queue</p>
-<dt>
-<dd>
-<dt>
-<dd></dl>
+</dt><dd> Hold all the jobs in the queue</dd>
+</dl>
 <h2>See Also</h2>
 <p> <i>condor_release</i> </p>
 <h2>Examples</h2>

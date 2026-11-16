@@ -15,22 +15,22 @@ description: "Glusterd – Gluster elastic volume management daemon"
 <h2>Options</h2>
 <h3>Basic options</h3>
 <dl>
-<dd><code>-l &lt;LOGFILE&gt;, &#8211;log-file=&lt;LOGFILE&gt;</code> File to use for logging.</p>
-<dt><code>-L &lt;LOGLEVEL&gt;, &#8211;log-level=&lt;LOGLEVEL&gt;</code></p>
-<dd>Logging severity. Valid options are TRACE, DEBUG, INFO, WARNING, ERROR and CRITICAL (the default is INFO).</p>
-<dt><code>&#8211;debug</code></p>
-<dd>Run the program in debug mode. This option sets <code>&#8211;no-daemon</code>, <code>&#8211;log-level</code> to DEBUG and <code>&#8211;log-file</code> to console.</p>
-<dt><code>-N, &#8211;no-daemon</code></p>
-<dd>Run the program in the foreground. </p>
+<dd><code>-l &lt;LOGFILE&gt;, &#8211;log-file=&lt;LOGFILE&gt;</code> File to use for logging.</dd>
+<dt><code>-L &lt;LOGLEVEL&gt;, &#8211;log-level=&lt;LOGLEVEL&gt;</code></dt>
+<dd>Logging severity. Valid options are TRACE, DEBUG, INFO, WARNING, ERROR and CRITICAL (the default is INFO).</dd>
+<dt><code>&#8211;debug</code></dt>
+<dd>Run the program in debug mode. This option sets <code>&#8211;no-daemon</code>, <code>&#8211;log-level</code> to DEBUG and <code>&#8211;log-file</code> to console.</dd>
+<dt><code>-N, &#8211;no-daemon</code></dt>
+<dd>Run the program in the foreground. </dd>
 </dl>
 <h3>Miscellaneous Options:</h3>
 <dl>
-<dt><code>-?, &#8211;help</code></p>
-<dd>Display this help.</p>
-<dt><code>&#8211;usage</code></p>
-<dd>Display a short usage message.</p>
-<dt><code>-V, &#8211;version</code></p>
-<dd>Print the program version. </p>
+<dt><code>-?, &#8211;help</code></dt>
+<dd>Display this help.</dd>
+<dt><code>&#8211;usage</code></dt>
+<dd>Display a short usage message.</dd>
+<dt><code>-V, &#8211;version</code></dt>
+<dd>Print the program version. </dd>
 </dl>
 <h2>Files</h2>
 <p>/var/lib/glusterd/*</p>

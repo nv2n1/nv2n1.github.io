@@ -14,14 +14,14 @@ description: "gnutls_psk_netconf_derive_key – derive PSK Netconf key from pass
 <p> <code>int gnutls_psk_netconf_derive_key(const char * </code><i>password</i><code>, const char * </code><i>psk_identity</i><code>, const char * </code><i>psk_identity_hint</i><code>, gnutls_datum_t * </code><i>output_key</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
-<dt>const char * password</p>
-<dd> zero terminated string containing password.</p>
-<dt>const char * psk_identity</p>
-<dd> zero terminated string with PSK identity.</p>
-<dt>const char * psk_identity_hint</p>
-<dd> zero terminated string with PSK identity hint.</p>
-<dt>gnutls_datum_t * output_key</p>
-<dd> output variable, contains newly allocated *data pointer.</dl>
+<dt>const char * password</dt>
+<dd> zero terminated string containing password.</dd>
+<dt>const char * psk_identity</dt>
+<dd> zero terminated string with PSK identity.</dd>
+<dt>const char * psk_identity_hint</dt>
+<dd> zero terminated string with PSK identity hint.</dd>
+<dt>gnutls_datum_t * output_key</dt>
+<dd> output variable, contains newly allocated *data pointer.</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> This function will derive a PSK key from a password, for use with the Netconf protocol.</p>
 <h2>RETURNS</h2>
@@ -37,6 +37,6 @@ description: "gnutls_psk_netconf_derive_key – derive PSK Netconf key from pass
 <p> The full documentation for <code>gnutls</code> is maintained as a Texinfo manual. If the <code>info</code> and <code>gnutls</code> programs are properly installed at your site, the command</p>
 <dl>
 <dt>
-<dd> <code>info gnutls</code></dl>
+</dt><dd> <code>info gnutls</code></dd></dl>
 <p> should give you access to the complete manual. </p>
 <h2>Index</h2>

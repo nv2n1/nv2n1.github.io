@@ -11,11 +11,8 @@ std::sub_match - std::sub_match
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header &lt;regex&gt;
-
 template&lt;
-
 class BidirIt              (since C++11)
-
 &gt; class sub_match;</code></pre> 
 The class template sub_match is used by the regular expression engine to denote sequences of characters matched by marked sub-expressions. A match is a [begin, end) pair within the target range matched by the regular expression, but with additional observer functions to enhance code clarity. 
 Only the default constructor is publicly accessible. Instances of sub_match are normally constructed and populated as a part of a std::match_results container during the processing of one of the regex algorithms. 

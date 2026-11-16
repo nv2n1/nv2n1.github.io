@@ -14,13 +14,13 @@ description: "truncate_inode_pages_range – truncate range of pages specified b
 <p><i>mapping</i></p>
 <dl>
 <dd>
-<dd>mapping to truncate</dl>
+</dd><dd>mapping to truncate</dd></dl>
 <p> <i>lstart</i></p>
 <dl>
-<dd>offset from which to truncate</dl>
+<dd>offset from which to truncate</dd></dl>
 <p> <i>lend</i></p>
 <dl>
-<dd>offset to which to truncate (inclusive)</dl>
+<dd>offset to which to truncate (inclusive)</dd></dl>
 <h2>Description</h2>
 <p>Truncate the page cache, removing the pages that are between specified offsets (and zeroing out partial pages if lstart or lend + 1 is not page aligned). </p>
 <p> Truncate takes two passes &#8211; the first pass is nonblocking. It will not block on page locks and it will not block on writeback. The second pass will wait. This is to prevent as much IO as possible in the affected region. The first pass will remove most pages, so the search cost of the second pass is low. </p>

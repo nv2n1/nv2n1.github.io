@@ -11,18 +11,18 @@ description: "XkbChangeEnabledControls – Manipulates the EnabledControls contr
 <h2>Synopsis</h2>
 <dl COMPACT>
 <dt> <code>Bool XkbChangeEnabledControls</code> <code>(Display *</code><i>dpy</i><code>,</code> <code>unsigned int </code><i>device_spec</i><code>,</code> <code>unsigned int </code><i>mask</i><code>,</code> <code>unsigned int </code><i>values</i><code>);</code><br />
- &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</dl>
+ &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</dt></dl>
 <h2>Arguments</h2>
 <dl COMPACT>
-<dt><i>&#8211; dpy</i></p>
+<dt><i>&#8211; dpy</i></dt>
 <dd>
-<dd>connection to X server</p>
-<dt><i>&#8211; device_spec</i></p>
-<dd>&nbsp;keyboard device to modify</p>
-<dt><i>&#8211; mask</i></p>
-<dd>1 bit -&gt; controls to enable / disable</p>
-<dt><i>&#8211; values</i></p>
-<dd>1 bit =&gt; enable, 0 bit =&gt; disable</dl>
+</dd><dd>connection to X server</dd>
+<dt><i>&#8211; device_spec</i></dt>
+<dd>&nbsp;keyboard device to modify</dd>
+<dt><i>&#8211; mask</i></dt>
+<dd>1 bit -&gt; controls to enable / disable</dd>
+<dt><i>&#8211; values</i></dt>
+<dd>1 bit =&gt; enable, 0 bit =&gt; disable</dd></dl>
 <h2>Description</h2>
 <p>The EnabledControls control is a bit mask where each bit that is turned on means the corresponding control is enabled, and when turned off, disabled. It corresponds to the <i>enabled_ctrls </i> field of an XkbControlsRec structure (see STRUCTURES). The bits describing which controls are turned on or off are defined in Table 1. </p>
 <p> Table 1 shows the actual values for the individual mask bits used to select controls for modification and to enable and disable the control. Note that the same mask bit is used to specify general modifications to the parameters used to configure the control (which), and to enable and disable the control (enabled_ctrls). The anomalies in the table (no &quot;ok&quot; in column) are for controls that have no configurable attributes; and for controls that are not boolean controls and therefore cannot be enabled or disabled. </p>
@@ -215,16 +215,14 @@ description: "XkbChangeEnabledControls – Manipulates the EnabledControls contr
 <p> Note that the EnabledControls control only enables and disables controls; it does not configure them. Some controls, such as the AudibleBell control, have no configuration attributes and are therefore manipulated solely by enabling and disabling them. Others, however, have additional attributes to configure their behavior. For example, the RepeatControl control uses <i>repeat_delay </i> and <i>repeat_interval </i> fields to describe the timing behavior of keys that repeat. The RepeatControl behavior is turned on or off depending on the value of the XkbRepeatKeysMask bit, but you must use other means, as described in this chapter, to configure its behavior in detail.</p>
 <h2>Return Values</h2>
 <dl COMPACT>
-<dt>True</p>
-<dd>The X server supports a compatible version of Xkb.</p>
-<dt>False</p>
-<dd>The X server does not support a compatible version of Xkb or the Xkb extension has not been properly initialized.</dl>
+<dt>True</dt>
+<dd>The X server supports a compatible version of Xkb.</dd>
+<dt>False</dt>
+<dd>The X server does not support a compatible version of Xkb or the Xkb extension has not been properly initialized.</dd></dl>
 <h2>Structures</h2>
 <pre>The XkbControlsRec structure is defined as follows:
  #define XkbMaxLegalKeyCode 255
  #define XkbPerKeyBitArraySize ((XkbMaxLegalKeyCode+1)/8)
- 
- 
  typedef struct {
  unsigned char mk_dflt_btn; /* default button for keyboard driven mouse */
  unsigned char num_groups; /* number of keyboard groups */

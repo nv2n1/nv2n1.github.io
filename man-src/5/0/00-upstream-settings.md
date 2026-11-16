@@ -16,7 +16,7 @@ description: "00-upstream-settings – dconf configuration file"
 <dl>
 <dd>
 <pre>env DCONF_PROFILE=ibus dconf list /desktop/ibus/
-</dl></pre>
+</dd></dl></pre>
 <h2>Bugs</h2>
 <p>If you find a bug, please report it at <a rel="nofollow" href="https://github.com/ibus/ibus/issues">https://github.com/ibus/ibus/issues</a> </p>
 <h2>See Also</h2>

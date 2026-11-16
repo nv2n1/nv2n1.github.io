@@ -18,7 +18,7 @@ description: "dltest – A simple library symbol test"
 <p> To determine if the symbol <code>printf</code> is found in the <i>libc-2.18.so</i>: </p>
 <dl>
 <dt>
-<dd> $ dltest /usr/lib/libc-2.18.so printf</dl>
+</dt><dd> $ dltest /usr/lib/libc-2.18.so printf</dd></dl>
 <h2>AUTHORS</h2>
 <p> The authors of unixODBC are Peter Harvey and Nick Gorham For the full list of contributors see the <i>AUTHORS</i> file. </p>
 <h2>COPYRIGHT</h2>

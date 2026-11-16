@@ -28,7 +28,7 @@ int ibv_close_device(struct ibv_context *context);
 <p> <code>ibv_get_device_list</code>(3), <code>ibv_query_device</code>(3), <code>ibv_query_port</code>(3), <code>ibv_query_gid</code>(3), <code>ibv_query_pkey</code>(3)</p>
 <h2>AUTHORS</h2>
 <dl>
-<dt>Dotan Barak &lt;dotanba [at] gmail.com&gt;</p>
+<dt>Dotan Barak &lt;dotanba [at] gmail.com&gt;</dt>
 <dd>
-</dl>
+</dd></dl>
 <h2>Index</h2>

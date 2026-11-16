@@ -15,28 +15,28 @@ description: "ipmiutil_firewall – configure the IPMI firmware firewall functio
 <h2>Options</h2>
 <p>Command line options are described below.</p>
 <dl>
-<dt>-m 002000</p>
-<dd>Show FRU for a specific MC (e.g. bus 00, sa 20, lun 00). This could be used for PICMG or ATCA blade systems. The trailing character, if present, indicates SMI addressing if &#8216;s&#8217;, or IPMB addressing if &#8216;i&#8217; or not present.</p>
-<dt>-x</p>
-<dd>Causes extra debug messages to be displayed.</p>
-<dt>-N nodename</p>
-<dd>Nodename or IP address of the remote target system. If a nodename is specified, IPMI LAN interface is used. Otherwise the local system management interface is used.</p>
-<dt>-U rmt_user</p>
-<dd>Remote username for the nodename given. The default is a null username.</p>
-<dt>-P/-R rmt_pswd</p>
-<dd>Remote password for the nodename given. The default is a null password.</p>
-<dt>-E</p>
-<dd>Use the remote password from Environment variable IPMI_PASSWORD.</p>
-<dt>-F drv_t</p>
-<dd>Force the driver type to one of the followng: imb, va, open, gnu, landesk, lan, lan2, lan2i, kcs, smb. Note that lan2i means lan2 with intelplus. The default is to detect any available driver type and use it.</p>
-<dt>-J</p>
-<dd>Use the specified LanPlus cipher suite (0 thru 17): 0=none/none/none, 1=sha1/none/none, 2=sha1/sha1/none, 3=sha1/sha1/cbc128, 4=sha1/sha1/xrc4_128, 5=sha1/sha1/xrc4_40, 6=md5/none/none, &#8230; 14=md5/md5/xrc4_40. Default is 3.</p>
-<dt>-T</p>
-<dd>Use a specified IPMI LAN Authentication Type: 0=None, 1=MD2, 2=MD5, 4=Straight Password, 5=OEM.</p>
-<dt>-V</p>
-<dd>Use a specified IPMI LAN privilege level. 1=Callback level, 2=User level, 3=Operator level, 4=Administrator level (default), 5=OEM level.</p>
-<dt>-Y</p>
-<dd>Yes, do prompt the user for the IPMI LAN remote password. Alternatives for the password are -E or -P. </p>
+<dt>-m 002000</dt>
+<dd>Show FRU for a specific MC (e.g. bus 00, sa 20, lun 00). This could be used for PICMG or ATCA blade systems. The trailing character, if present, indicates SMI addressing if &#8216;s&#8217;, or IPMB addressing if &#8216;i&#8217; or not present.</dd>
+<dt>-x</dt>
+<dd>Causes extra debug messages to be displayed.</dd>
+<dt>-N nodename</dt>
+<dd>Nodename or IP address of the remote target system. If a nodename is specified, IPMI LAN interface is used. Otherwise the local system management interface is used.</dd>
+<dt>-U rmt_user</dt>
+<dd>Remote username for the nodename given. The default is a null username.</dd>
+<dt>-P/-R rmt_pswd</dt>
+<dd>Remote password for the nodename given. The default is a null password.</dd>
+<dt>-E</dt>
+<dd>Use the remote password from Environment variable IPMI_PASSWORD.</dd>
+<dt>-F drv_t</dt>
+<dd>Force the driver type to one of the followng: imb, va, open, gnu, landesk, lan, lan2, lan2i, kcs, smb. Note that lan2i means lan2 with intelplus. The default is to detect any available driver type and use it.</dd>
+<dt>-J</dt>
+<dd>Use the specified LanPlus cipher suite (0 thru 17): 0=none/none/none, 1=sha1/none/none, 2=sha1/sha1/none, 3=sha1/sha1/cbc128, 4=sha1/sha1/xrc4_128, 5=sha1/sha1/xrc4_40, 6=md5/none/none, &#8230; 14=md5/md5/xrc4_40. Default is 3.</dd>
+<dt>-T</dt>
+<dd>Use a specified IPMI LAN Authentication Type: 0=None, 1=MD2, 2=MD5, 4=Straight Password, 5=OEM.</dd>
+<dt>-V</dt>
+<dd>Use a specified IPMI LAN privilege level. 1=Callback level, 2=User level, 3=Operator level, 4=Administrator level (default), 5=OEM level.</dd>
+<dt>-Y</dt>
+<dd>Yes, do prompt the user for the IPMI LAN remote password. Alternatives for the password are -E or -P. </dd>
 </dl>
 <h2>Parameters</h2>
 <p>Parameter syntax and dependencies are as follows: </p>
@@ -46,28 +46,28 @@ description: "ipmiutil_firewall – configure the IPMI firmware firewall functio
 <p> Firmware firewall commands:</p>
 <dl>
 <dd>
-<dl>
-<dt><i>info</i> [<code>(Parms as described above)</code>]</p>
-<dd>List firmware firewall information for the specified LUN, NetFn, and Command (if supplied) on the current or specified channel. Listed information includes the support, configurable, and enabled bits for the specified command or commands. </p>
+</dd><dl>
+<dt><i>info</i> [<code>(Parms as described above)</code>]</dt>
+<dd>List firmware firewall information for the specified LUN, NetFn, and Command (if supplied) on the current or specified channel. Listed information includes the support, configurable, and enabled bits for the specified command or commands. </dd>
 <p> Some usage examples:</p>
 <dl>
 <dd>
-<dl>
-<dt><i>info</i> [<code>channel H</code>] [<code>lun L</code>]</p>
-<dd>This command will list firmware firewall information for all NetFns for the specified LUN on either the current or the specified channel.</p>
-<dt><i>info</i> [<code>channel H</code>] [<code>lun L</code> [ <code>netfn N</code> ]</p>
-<dd>This command will print out all command information for a single LUN/NetFn pair.</p>
-<dt><i>info</i> [<code>channel H</code>] [<code>lun L</code> [ <code>netfn N</code> [<code>command C</code>] ]]</p>
-<dd>This prints out detailed, human-readable information showing the support, configurable, and enabled bits for the specified command on the specified LUN/NetFn pair. Information will be printed about each of the command subfunctions.</p>
-<dt><i>info</i> [<code>channel H</code>] [<code>lun L</code> [ <code>netfn N</code> [<code>command C</code> [<code>subfn S</code>]]]]</p>
-<dd>Print out information for a specific sub-function.</dl>
+</dd><dl>
+<dt><i>info</i> [<code>channel H</code>] [<code>lun L</code>]</dt>
+<dd>This command will list firmware firewall information for all NetFns for the specified LUN on either the current or the specified channel.</dd>
+<dt><i>info</i> [<code>channel H</code>] [<code>lun L</code> [ <code>netfn N</code> ]</dt>
+<dd>This command will print out all command information for a single LUN/NetFn pair.</dd>
+<dt><i>info</i> [<code>channel H</code>] [<code>lun L</code> [ <code>netfn N</code> [<code>command C</code>] ]]</dt>
+<dd>This prints out detailed, human-readable information showing the support, configurable, and enabled bits for the specified command on the specified LUN/NetFn pair. Information will be printed about each of the command subfunctions.</dd>
+<dt><i>info</i> [<code>channel H</code>] [<code>lun L</code> [ <code>netfn N</code> [<code>command C</code> [<code>subfn S</code>]]]]</dt>
+<dd>Print out information for a specific sub-function.</dd></dl>
 </dl>
-<dt><i>enable</i> [<code>(Parms as described above)</code>]</p>
-<dd>This command is used to enable commands for a given NetFn/LUN combination on the specified channel.</p>
-<dt><i>disable</i> [<code>(Parms as described above)</code>] [<code>force</code>]</p>
-<dd>This command is used to disable commands for a given NetFn/LUN combination on the specified channel. Great care should be taken if using the &quot;force&quot; option so as not to disable the &quot;Set Command Enables&quot; command.</p>
-<dt><i>reset</i> [<code>(Parms as described above)</code>]</p>
-<dd>This command may be used to reset the firmware firewall back to a state where all commands and command sub-functions are enabled. </p>
+<dt><i>enable</i> [<code>(Parms as described above)</code>]</dt>
+<dd>This command is used to enable commands for a given NetFn/LUN combination on the specified channel.</dd>
+<dt><i>disable</i> [<code>(Parms as described above)</code>] [<code>force</code>]</dt>
+<dd>This command is used to disable commands for a given NetFn/LUN combination on the specified channel. Great care should be taken if using the &quot;force&quot; option so as not to disable the &quot;Set Command Enables&quot; command.</dd>
+<dt><i>reset</i> [<code>(Parms as described above)</code>]</dt>
+<dd>This command may be used to reset the firmware firewall back to a state where all commands and command sub-functions are enabled. </dd>
 </dl>
 </dl>
 <h2>See Also</h2>

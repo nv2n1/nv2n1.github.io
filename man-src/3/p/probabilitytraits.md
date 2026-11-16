@@ -11,9 +11,7 @@ description: "ql/termstructures/credit/probabilitytraits.hpp – default-probabi
 <h2>Synopsis</h2>
 <pre><code>
 #include &lt;ql/termstructures/credit/interpolateddefaultdensitycurve.hpp&gt;
-
 #include &lt;ql/termstructures/credit/interpolatedhazardratecurve.hpp&gt;
-
 #include &lt;ql/termstructures/bootstraphelper.hpp&gt;</code></pre>
 <h3>Classes</h3>
 <p>struct <code>HazardRate</code><br />

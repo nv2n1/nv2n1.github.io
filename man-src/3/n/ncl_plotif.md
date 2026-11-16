@@ -21,11 +21,11 @@ CALL PLOTIF (FX,FY,IP)
 <h2>Description</h2>
 
 <dl><dt>FX
-<dd>(an input expression of type REAL) is the X fractional coordinate of the point to which the plotter pen is to be moved. If IP = 2, this argument is ignored.
-<dt>FY
-<dd>(an input expression of type REAL) is the Y fractional coordinate of the point to which the plotter pen is to be moved. If IP = 2, this argument is ignored.
-<dt>IP
-<dd>(an input expression of type INTEGER) determines whether the movement of the plotter pen to the point (FX,FY) will occur with the pen up (IP = 0), or with the pen down (IP = 1). If IP = 2, no pen move occurs, but the SPPS polyline buffer is flushed.</dl>
+</dt><dd>(an input expression of type REAL) is the X fractional coordinate of the point to which the plotter pen is to be moved. If IP = 2, this argument is ignored.
+</dd><dt>FY
+</dt><dd>(an input expression of type REAL) is the Y fractional coordinate of the point to which the plotter pen is to be moved. If IP = 2, this argument is ignored.
+</dd><dt>IP
+</dt><dd>(an input expression of type INTEGER) determines whether the movement of the plotter pen to the point (FX,FY) will occur with the pen up (IP = 0), or with the pen down (IP = 1). If IP = 2, no pen move occurs, but the SPPS polyline buffer is flushed.</dd></dl>
 
 <h2>C-Binding Description</h2>
 

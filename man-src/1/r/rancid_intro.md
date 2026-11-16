@@ -24,7 +24,6 @@ From : rancid
                 shrubbery[at] shrubbery.net
                         Subject : shrubbery router config diffs
                                       Precedence : bulk
-
                                                        Index : configs /
                     dfw.shrubbery.net ==
     == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == ==
@@ -39,12 +38,12 @@ From : rancid
 <h2>ADDING NEW GROUPS</h2>
 <p> Follow this procedure for adding new groups:</p>
 <dl>
-<dt>o</p>
-<dd> Update the <i>LIST_OF_GROUPS</i> variable in <i>etc/rancid.conf</i> (see <code><a href="/docs/linux/man/5-rancid-conf/">rancid.conf</a></code>(5)).</p>
-<dt>o</p>
-<dd> Run <code><a href="/docs/linux/man/1-rancid-cvs/">rancid-cvs</a></code>(1).</p>
-<dt>o</p>
-<dd> Update the system&#8217;s mail aliases file <i>/etc/aliases</i> (see <code><a href="/docs/linux/man/5-rancid-conf/">rancid.conf</a></code>(5)).</dl>
+<dt>o</dt>
+<dd> Update the <i>LIST_OF_GROUPS</i> variable in <i>etc/rancid.conf</i> (see <code><a href="/docs/linux/man/5-rancid-conf/">rancid.conf</a></code>(5)).</dd>
+<dt>o</dt>
+<dd> Run <code><a href="/docs/linux/man/1-rancid-cvs/">rancid-cvs</a></code>(1).</dd>
+<dt>o</dt>
+<dd> Update the system&#8217;s mail aliases file <i>/etc/aliases</i> (see <code><a href="/docs/linux/man/5-rancid-conf/">rancid.conf</a></code>(5)).</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-clogin/">clogin</a></code>(1), <code><a href="/docs/linux/man/5-cloginrc/">cloginrc</a></code>(5), <code><a href="/docs/linux/man/1-control_rancid/">control_rancid</a></code>(1), <code><a href="/docs/linux/man/1-lg_intro/">lg_intro</a></code>(1), <code><a href="/docs/linux/man/1-rancid/">rancid</a></code>(1), <code><a href="/docs/linux/man/1-rancid-run/">rancid-run</a></code>(1), <code><a href="/docs/linux/man/5-rancid-conf/">rancid.conf</a></code>(5), <code><a href="/docs/linux/man/5-router-db/">router.db</a></code>(5) </p>
 <h2>Index</h2>

@@ -11,7 +11,6 @@ std::clock - std::clock
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header &lt;ctime&gt;
-
 std::clock_t clock();</code></pre> 
 Returns the approximate processor time used by the process since the beginning of an implementation-defined era related to the program's execution. To convert result value to seconds divide it by CLOCKS_PER_SEC. 
 Only the difference between two values returned by different calls to std::clock is meaningful, as the beginning of the std::clock era does not have to coincide with the start of the program. std::clock time may advance faster or slower than the wall clock, depending on the execution resources given to the program by the operating system. For example, if the CPU is shared by other processes, std::clock time may advance slower than wall clock. On the other hand, if the current process is multithreaded and more than one execution core is available, std::clock time may advance faster than wall clock. 
@@ -37,18 +36,12 @@ The value returned by clock() may wrap around on some implementations. For examp
 
 This example demonstrates the difference between clock() time and real time 
  // Run this code <pre><code>#include &lt;iostream&gt;
-
 #include &lt;iomanip&gt;
-
 #include &lt;chrono&gt;
-
 #include &lt;ctime&gt;
-
 #include &lt;thread&gt;
 // the function f() does some time-consuming work
-
 void f()
-
 {
     volatile double d = 0;
     for (int n = 0; n &lt; 10000; ++n)
@@ -56,7 +49,6 @@ void f()
             d += d * n * m;
 }
 int main()
-
 {
     std::clock_t c_start = std::clock();
     auto t_start = std::chrono::high_resolution_clock::now();

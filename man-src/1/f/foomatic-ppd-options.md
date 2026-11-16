@@ -16,7 +16,7 @@ description: "foomatic-ppd-options – show the PPD options"
 <p> The output format consists of a set of lines, each starting with a keyword, followed by a set of options and the default value. For example:</p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre><code>
 makemodel = Tektronix Phaser 350 Foomatic / Postscript(recommended)
                                                 name = PageSize;
@@ -26,14 +26,14 @@ options = Letter(US Letter),
 default = Letter;
 options = Letter(US Letter), A4(A4), ...
 </code></pre>
-</dl>
+</dd></dl>
 <p> Each option starts with the <code>name</code> tag, followed by a default value (if any), followed by the set of options and a comment describing them. Punctuation in the comment is escaped.</p>
 <h3>Options</h3>
 <dl>
-<dt><code>-d</code><i>debuglevel</i></p>
-<dd> Set the debug level. 0 disables debug messages. </p>
-<dt><code>[&nbsp;<wbr>files&nbsp;<wbr>]</code></p>
-<dd> The list of PPD files to read for options. A &#8216;-&#8216; causes STDIN to be read. </p>
+<dt><code>-d</code><i>debuglevel</i></dt>
+<dd> Set the debug level. 0 disables debug messages. </dd>
+<dt><code>[&nbsp;<wbr>files&nbsp;<wbr>]</code></dt>
+<dd> The list of PPD files to read for options. A &#8216;-&#8216; causes STDIN to be read. </dd>
 </dl>
 <h2>EXIT STATUS</h2>
 <p> <code>foomatic-ppd-options</code> exits with a 0 status if successful, and nonzero if an error. An error message is also printed on standard error (STDERR). </p>

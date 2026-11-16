@@ -15,26 +15,26 @@ description: "dahdi_cfg – configures DAHDI kernel modules from /etc/dahdi/syst
 <h2>Options</h2>
 <p><code>-c </code><i>CFG_FILE</i></p>
 <dl>
-<dd>Use an alternative configuration file instead of <i>/etc/dahdi/system.conf</i></dl>
+<dd>Use an alternative configuration file instead of <i>/etc/dahdi/system.conf</i></dd></dl>
 <p> <code>-s</code></p>
 <dl>
-<dd>Only shutdown spans.</dl>
+<dd>Only shutdown spans.</dd></dl>
 <p> <code>-f</code></p>
 <dl>
-<dd>Always configure every channel, even if it appears not to have changed.</dl>
+<dd>Always configure every channel, even if it appears not to have changed.</dd></dl>
 <p> <code>-t</code></p>
 <dl>
-<dd>Test mode. Don&#8217;t do anything, just report what you wanted to do.</dl>
+<dd>Test mode. Don&#8217;t do anything, just report what you wanted to do.</dd></dl>
 <p> <code>-v</code></p>
 <dl>
-<dd>Be more verbose. Add extra v-s for extra verbosity.</dl>
+<dd>Be more verbose. Add extra v-s for extra verbosity.</dd></dl>
 <p> <code>-h</code></p>
 <dl>
-<dd>Display a brief help message.</dl>
+<dd>Display a brief help message.</dd></dl>
 <h2>Files</h2>
 <p><i>/etc/dahdi/system.conf</i></p>
 <dl>
-<dd>The default location for the configuration file.</dl>
+<dd>The default location for the configuration file.</dd></dl>
 <h2>See Also</h2>
 <p><a href="/docs/linux/man/8-dahdi_tool/">dahdi_tool</a>(8), <a href="/docs/linux/man/8-dahdi_monitor/">dahdi_monitor</a>(8), <a href="/docs/linux/man/8-asterisk/">asterisk</a>(8). </p>
 <h2>Author</h2>

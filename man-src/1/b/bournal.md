@@ -16,51 +16,51 @@ description: "bournal – When nobody else cares what you have to say!"
 <h2>OPTIONS</h2>
 <p> These programs follow the usual GNU command line syntax, with long options starting with two dashes (`-&#8216;). A summary of options is included below.</p>
 <dl>
-<dt><code>-h, &#8211;help</code></p>
-<dd> Show summary of options</p>
-<dt><code>-i</code></p>
-<dd> Interactive mode&#8211;Open a bournal shell to run several operations without having to reenter your password. Readline editing options are supported.</p>
-<dt><code>-lst</code></p>
-<dd> List and edit entries made today. You will be prompted to choose a subject.</p>
-<dt><code>-ls [MONTH] [YEAR]</code></p>
-<dd> List and edit archived entries. Month and year arguments filter out superfluous entries, which will prompt you first with a list of days within the given timeframe, then a list of subjects made on the chosen day. If no month or year arguments are given, all days containing entries are listed, followed by a list of entries made on the chosen day.</p>
-<dt><code>-d [MONTH] [YEAR]</code></p>
-<dd> List and delete archived entries. Month and year arguments filter out superfluous entries, which will prompt you first with a list of days within the given time frame, then a list of subjects made on the chosen day. If no month or year arguments are given, all days containing entries are listed, followed by a list of entries made on the chosen day, then a prompt to confirm deletion.</p>
-<dt><code>-f [PATTERN] [MONTH]</code></p>
-<dd> Find text within entries. Protect space-separated search terms with quotes. Regular expression searches are accepted, using egrep syntax.</p>
-<dt><code>-fi [PatTerN] [MONTH]</code></p>
-<dd> Find case-insensitive text within entries. Protect space-separated search terms with quotes. Regular expression searches are accepted, using egrep syntax.</p>
-<dt><code>-r </code></p>
-<dd> Read all entries at once</p>
-<dt><code>-p </code></p>
-<dd> Change the encryption password</p>
-<dt><code>-v, &#8211;version</code></p>
-<dd> Show version information</p>
-<dt><code>&#8211;hack_the_gibson</code></p>
-<dd> Hack the planet (for updates)</dl>
+<dt><code>-h, &#8211;help</code></dt>
+<dd> Show summary of options</dd>
+<dt><code>-i</code></dt>
+<dd> Interactive mode&#8211;Open a bournal shell to run several operations without having to reenter your password. Readline editing options are supported.</dd>
+<dt><code>-lst</code></dt>
+<dd> List and edit entries made today. You will be prompted to choose a subject.</dd>
+<dt><code>-ls [MONTH] [YEAR]</code></dt>
+<dd> List and edit archived entries. Month and year arguments filter out superfluous entries, which will prompt you first with a list of days within the given timeframe, then a list of subjects made on the chosen day. If no month or year arguments are given, all days containing entries are listed, followed by a list of entries made on the chosen day.</dd>
+<dt><code>-d [MONTH] [YEAR]</code></dt>
+<dd> List and delete archived entries. Month and year arguments filter out superfluous entries, which will prompt you first with a list of days within the given time frame, then a list of subjects made on the chosen day. If no month or year arguments are given, all days containing entries are listed, followed by a list of entries made on the chosen day, then a prompt to confirm deletion.</dd>
+<dt><code>-f [PATTERN] [MONTH]</code></dt>
+<dd> Find text within entries. Protect space-separated search terms with quotes. Regular expression searches are accepted, using egrep syntax.</dd>
+<dt><code>-fi [PatTerN] [MONTH]</code></dt>
+<dd> Find case-insensitive text within entries. Protect space-separated search terms with quotes. Regular expression searches are accepted, using egrep syntax.</dd>
+<dt><code>-r </code></dt>
+<dd> Read all entries at once</dd>
+<dt><code>-p </code></dt>
+<dd> Change the encryption password</dd>
+<dt><code>-v, &#8211;version</code></dt>
+<dd> Show version information</dd>
+<dt><code>&#8211;hack_the_gibson</code></dt>
+<dd> Hack the planet (for updates)</dd></dl>
 <h2>SYSTEM REQUIREMENTS</h2>
 <dl>
-<dt><code>ccrypt</code></p>
-<dd> a utility for encrypting and decrypting files and streams</p>
-<dt><code>Linux</code></p>
-<dd> or something similar with basic *NIX utils</p>
-<dt><code>Vim </code></p>
-<dd> or <code>Nano</code> or <code>Jed</code> , or some other editor that is not as awesome as Vim.</dl>
+<dt><code>ccrypt</code></dt>
+<dd> a utility for encrypting and decrypting files and streams</dd>
+<dt><code>Linux</code></dt>
+<dd> or something similar with basic *NIX utils</dd>
+<dt><code>Vim </code></dt>
+<dd> or <code>Nano</code> or <code>Jed</code> , or some other editor that is not as awesome as Vim.</dd></dl>
 <h2>NOTES</h2>
 <p> Files encrypted with ccrypt WILL work between computers (assuming it&#8217;s installed), so taking Bournal and all its entries with you on a flash drive will work just peachy. You can have entries automatically saved to the flash drive by changing the DIR variable to the path of your flashdrive, (e.g. ` <i>DIR=/media/USB_VOL_NAME</i> `). However, if you run Bournal from a USB drive, you will need to predeed it with a shell (e.g. ` <i>bash bournal</i> `)</p>
 <h2>FILES</h2>
 <dl>
-<dt><code>~/.bournal/</code></p>
-<dd> Default directory where entries are stored.</p>
-<dt><code>~/.bournal/.passwd.cpt</code></p>
-<dd> Default password file.</p>
-<dt><code>~/.bournalrc</code></p>
-<dd> Default configuration file.</dl>
+<dt><code>~/.bournal/</code></dt>
+<dd> Default directory where entries are stored.</dd>
+<dt><code>~/.bournal/.passwd.cpt</code></dt>
+<dd> Default password file.</dd>
+<dt><code>~/.bournalrc</code></dt>
+<dd> Default configuration file.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-grep/">grep</a>(1), <a href="/docs/linux/man/7-regex/">regex</a>(7), <a href="/docs/linux/man/3-readline/">readline</a>(3), <a href="/docs/linux/man/1-vim/">vim</a>(1), <a href="/docs/linux/man/1-nano/">nano</a>(1), nanorc(1), <a href="/docs/linux/man/1-jed/">jed</a>(1)</code> </p>
 <dl>
-<dt><code>Bournal web page</code></p>
-<dd> <i><a rel="nofollow" href="http://freshmeat.net/projects/bournal">http://freshmeat.net/projects/bournal</a></i></dl>
+<dt><code>Bournal web page</code></dt>
+<dd> <i><a rel="nofollow" href="http://freshmeat.net/projects/bournal">http://freshmeat.net/projects/bournal</a></i></dd></dl>
 <h2>AUTHOR</h2>
 <p> bournal was written by Professor Fapsanders &lt;frankpena [at] gmail.com&gt;. </p>
 <p> This manual page was written by Kevin Wallace &lt;kevjava [at] gmail.com&gt;, for the Ubuntu project (but may be used by others). </p>

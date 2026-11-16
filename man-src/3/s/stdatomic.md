@@ -10,27 +10,18 @@ description: "std::atomic – std::atomic"
 <p>std::atomic &#8211; std::atomic</p>
 <h2>Synopsis</h2>
 <pre><code>Defined in header&lt;atomic&gt;
-
     template &lt;class T&gt;
     (1)(since C++ 11)
-
         struct atomic;
-
 template &lt;class T&gt;
 (2)(since C++ 11)
-
     struct atomic&lt;T *&gt;;
-
 Defined in header&lt;memory&gt;
-
     template &lt;class T&gt;
     (3)(since C++ 20)
-
         struct atomic&lt;std::shared_ptr&lt;T&gt;&gt;;
-
 template &lt;class T&gt;
 (4)(since C++ 20)
-
     struct atomic&lt;std::weak_ptr&lt;T&gt;&gt;;</code></pre>
 <p>Each instantiation and full specialization of the std::atomic template defines an atomic type. If one thread writes to an atomic object while another thread reads from it, the behavior is well-defined (see memory_model for details on data races)<br />
 In addition, accesses to atomic objects may establish inter-thread synchronization and order non-atomic memory accesses as specified by std::memory_order.<br />

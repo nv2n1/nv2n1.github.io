@@ -18,11 +18,11 @@ description: "getdns_display_ip_address — convert an getdns ip address to stri
 <h2>DESCRIPTION</h2>
 <p> This helper function returns a nicely formatted string representation of the IPv4 or IPv6 address. The length of the bindata is used to determine whether the address is IPv4 or IPv6. </p>
 <dl>
-<dt> <i>ipv4_or_ipv6_addr</i></p>
-<dd>bindata of the address to print </p>
-<dt></dl>
+<dt> <i>ipv4_or_ipv6_addr</i></dt>
+<dd>bindata of the address to print </dd>
+<dt></dt></dl>
 <h2>RETURN VALUES</h2>
-<dd>Returns a string representation of the IP address (allocated using the system allocator &#8211; malloc), the caller is responsible for freeing the storage using free(). </p>
+<dd>Returns a string representation of the IP address (allocated using the system allocator &#8211; malloc), the caller is responsible for freeing the storage using free(). </dd>
 <h2>EXAMPLES</h2>
 <p> TBD </p>
 <h2>SEE ALSO</h2>

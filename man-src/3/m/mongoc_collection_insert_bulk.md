@@ -22,23 +22,23 @@ mongoc_collection_insert_bulk (mongoc_collection_t *collection,
 <p> Please use <code><a href="/docs/linux/man/3-mongoc_collection_create_bulk_operation/">mongoc_collection_create_bulk_operation</a>(3)</code> instead. </p>
 <h2>Parameters</h2>
 <dl COMPACT>
-<dt><code>collection</code></p>
-<dd>A <code>mongoc_collection_t</code> \&amp;.</dl>
+<dt><code>collection</code></dt>
+<dd>A <code>mongoc_collection_t</code> \&amp;.</dd></dl>
 <dl COMPACT>
-<dt><code>flags</code></p>
-<dd>A bitwise or of <code>mongoc_insert_flags_t</code> \&amp;.</dl>
+<dt><code>flags</code></dt>
+<dd>A bitwise or of <code>mongoc_insert_flags_t</code> \&amp;.</dd></dl>
 <dl COMPACT>
-<dt><code>documents</code></p>
-<dd>An array of <code>const bson_t *</code> \&amp;.</dl>
+<dt><code>documents</code></dt>
+<dd>An array of <code>const bson_t *</code> \&amp;.</dd></dl>
 <dl COMPACT>
-<dt><code>n_documents</code></p>
-<dd>The number of documents in <code>documents</code> \&amp;.</dl>
+<dt><code>n_documents</code></dt>
+<dd>The number of documents in <code>documents</code> \&amp;.</dd></dl>
 <dl COMPACT>
-<dt><code>write_concern</code></p>
-<dd>A <code>mongoc_write_concern_t</code> or <code>NULL</code> \&amp;.</dl>
+<dt><code>write_concern</code></dt>
+<dd>A <code>mongoc_write_concern_t</code> or <code>NULL</code> \&amp;.</dd></dl>
 <dl COMPACT>
-<dt><code>error</code></p>
-<dd>An optional location for a <code>bson_error_t</code> or <code>NULL</code> \&amp;.</dl>
+<dt><code>error</code></dt>
+<dd>An optional location for a <code>bson_error_t</code> or <code>NULL</code> \&amp;.</dd></dl>
 <h2>Description</h2>
 <p>This function performs a bulk insert of all of the documents in <code>documents</code> \&amp;. This function is deprecated as it cannot accurately return which documents may have failed during the bulk insert. </p>
 <h2>Errors</h2>

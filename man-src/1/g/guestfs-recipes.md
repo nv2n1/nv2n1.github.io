@@ -35,3 +35,4 @@ description: "guestfs-recipes – libguestfs, guestfish and virt tools recipes"
 <pre>
  guestfish --ro -a disk.img -i \
    checksum sha256 'win:\windows\system32
+</pre>

@@ -16,12 +16,12 @@ ALTER SCHEMA <i>name</i> OWNER TO <i>newowner</i></pre>
 <p> You must own the schema to use <code>ALTER SCHEMA</code>. To rename a schema you must also have the CREATE privilege for the database. To alter the owner, you must also be a direct or indirect member of the new owning role, and you must have the CREATE privilege for the database. (Note that superusers have all these privileges automatically.)</p>
 <h2>Parameters</h2>
 <dl>
-<dt><i>name</i></p>
-<dd>The name of an existing schema.</p>
-<dt><i>newname</i></p>
-<dd>The new name of the schema. The new name cannot begin with pg_, as such names are reserved for system schemas.</p>
-<dt><i>newowner</i></p>
-<dd>The new owner of the schema.</dl>
+<dt><i>name</i></dt>
+<dd>The name of an existing schema.</dd>
+<dt><i>newname</i></dt>
+<dd>The new name of the schema. The new name cannot begin with pg_, as such names are reserved for system schemas.</dd>
+<dt><i>newowner</i></dt>
+<dd>The new owner of the schema.</dd></dl>
 <h2>Compatibility</h2>
 <p>There is no <code>ALTER SCHEMA</code> statement in the SQL standard.</p>
 <h2>See Also</h2>

@@ -10,7 +10,6 @@ description: "ustrtok_r – Reentrant function to retrieve tokens from a string.
 <p>ustrtok_r &#8211; Reentrant function to retrieve tokens from a string. Allegro game programming library.</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;allegro.h&gt;
-
 char *ustrtok_r(char *s, const char *set, char **last);</code></pre>
 <h2>Description</h2>
 <p>Reentrant version of ustrtok. The `last&#8217; parameter is used to keep track of where the parsing is up to and must be a pointer to a char * variable allocated by the user that remains the same while parsing the same string. Example: </p>

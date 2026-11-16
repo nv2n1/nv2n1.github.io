@@ -15,8 +15,8 @@ description: "XmTextGetSelectionWcs — A Text function that retrieves the value
 <h2>Description</h2>
 <p><code>XmTextGetSelectionWcs</code> retrieves the value of the primary selection that is encoded in a wide character format. It returns a NULL pointer if no text is selected in the widget. The application is responsible for freeing the storage associated with the wide character buffer by calling <code>XtFree</code>.</p>
 <dl COMPACT>
-<dt><i>widget</i></p>
-<dd>Specifies the Text widget ID</dl>
+<dt><i>widget</i></dt>
+<dd>Specifies the Text widget ID</dd></dl>
 <p> For a complete definition of Text and its associated resources, see <code><a href="/docs/linux/man/3-xmtext/">XmText</a></code>(3).</p>
 <h2>Return</h2>
 <p>Returns the wide character string that is associated with the primary selection in the Text widget.</p>

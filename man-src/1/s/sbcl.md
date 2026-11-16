@@ -28,71 +28,71 @@ description: "SBCL — Steel Bank Common Lisp"
 <p> The overall command line syntax is:</p>
 <dl>
 <dt>
-<dd> <code>sbcl [runtime options] &#8211;end-runtime-options [toplevel options] &#8211;end-toplevel-options [user options]</code></dl>
+</dt><dd> <code>sbcl [runtime options] &#8211;end-runtime-options [toplevel options] &#8211;end-toplevel-options [user options]</code></dd></dl>
 <p> Both &#8211;end-runtime-options and &#8211;end-toplevel-options are optional, and may be omitted. They are intended for use in situations where any command line options are under user control (<i>e.g.</i> in batch files): by using them you can prevent options intended for your program being accidentally processed by SBCL. </p>
 <p> Supported runtime options are</p>
 <dl>
-<dt><code>&#8211;core &lt;corefilename&gt;</code></p>
-<dd> Use the specified Lisp core file instead of the default. (See the FILES section for the standard core, or the system documentation for SB-EXT:SAVE-LISP-AND-DIE for information about how to create a custom core.) Note that if the Lisp core file is a user-created core file, it may run a nonstandard toplevel which does not recognize the standard toplevel options.</p>
-<dt><code>&#8211;dynamic-space-size &lt;megabytes&gt;</code></p>
-<dd> Size of the dynamic space reserved on startup in megabytes. Default value is platform dependent.</p>
-<dt><code>&#8211;control-stack-size &lt;megabytes&gt;</code></p>
-<dd> Size of control stack reserved for each thread in megabytes. Default value is 2.</p>
-<dt><code>&#8211;noinform</code></p>
-<dd> Suppress the printing of any banner or other informational message at startup. (This makes it easier to write Lisp programs which work cleanly in Unix pipelines. See also the &quot;&#8211;noprint&quot; and &quot;&#8211;disable-debugger&quot; options.)</p>
-<dt><code>&#8211;disable-ldb</code></p>
-<dd> Disable the low-level debugger. Only effective if SBCL is compiled with LDB.</p>
-<dt><code>&#8211;lose-on-corruption</code></p>
-<dd> There are some dangerous low level errors (for instance, control stack exhausted, memory fault) that (or whose handlers) can corrupt the image. By default SBCL prints a warning, then tries to continue and handle the error in Lisp, but this will not always work and SBCL may malfunction or even hang. With this option, upon encountering such an error SBCL will invoke ldb (if present and enabled) or else exit.</p>
-<dt><code>&#8211;script &lt;filename&gt;</code></p>
-<dd> As a runtime option equivalent to &#8211;noinform &#8211;disable-ldb &#8211;lose-on-corruption &#8211;end-runtime-options &#8211;script &lt;filename&gt;. See the description of &#8211;script as a toplevel option below.</p>
-<dt><code>&#8211;merge-core-pages</code></p>
-<dd> When platform support is present, provide hints to the operating system that identical pages may be shared between processes until they are written to. This can be useful to reduce the memory usage on systems with multiple SBCL processes started from similar but differently-named core files, or from compressed cores. Without platform support, do nothing.</p>
-<dt><code>&#8211;no-merge-core-pages</code></p>
-<dd> Ensures that no sharing hint is provided to the operating system.</p>
-<dt><code>&#8211;default-merge-core-pages</code></p>
-<dd> Reverts the sharing hint policy to the default: only compressed cores trigger hinting. Uncompressed cores are mapped directly from the core file, which is usually enough to ensure sharing.</p>
-<dt><code>&#8211;help</code></p>
-<dd> Print some basic information about SBCL, then exit.</p>
-<dt><code>&#8211;version</code></p>
-<dd> Print SBCL&#8217;s version information, then exit.</dl>
+<dt><code>&#8211;core &lt;corefilename&gt;</code></dt>
+<dd> Use the specified Lisp core file instead of the default. (See the FILES section for the standard core, or the system documentation for SB-EXT:SAVE-LISP-AND-DIE for information about how to create a custom core.) Note that if the Lisp core file is a user-created core file, it may run a nonstandard toplevel which does not recognize the standard toplevel options.</dd>
+<dt><code>&#8211;dynamic-space-size &lt;megabytes&gt;</code></dt>
+<dd> Size of the dynamic space reserved on startup in megabytes. Default value is platform dependent.</dd>
+<dt><code>&#8211;control-stack-size &lt;megabytes&gt;</code></dt>
+<dd> Size of control stack reserved for each thread in megabytes. Default value is 2.</dd>
+<dt><code>&#8211;noinform</code></dt>
+<dd> Suppress the printing of any banner or other informational message at startup. (This makes it easier to write Lisp programs which work cleanly in Unix pipelines. See also the &quot;&#8211;noprint&quot; and &quot;&#8211;disable-debugger&quot; options.)</dd>
+<dt><code>&#8211;disable-ldb</code></dt>
+<dd> Disable the low-level debugger. Only effective if SBCL is compiled with LDB.</dd>
+<dt><code>&#8211;lose-on-corruption</code></dt>
+<dd> There are some dangerous low level errors (for instance, control stack exhausted, memory fault) that (or whose handlers) can corrupt the image. By default SBCL prints a warning, then tries to continue and handle the error in Lisp, but this will not always work and SBCL may malfunction or even hang. With this option, upon encountering such an error SBCL will invoke ldb (if present and enabled) or else exit.</dd>
+<dt><code>&#8211;script &lt;filename&gt;</code></dt>
+<dd> As a runtime option equivalent to &#8211;noinform &#8211;disable-ldb &#8211;lose-on-corruption &#8211;end-runtime-options &#8211;script &lt;filename&gt;. See the description of &#8211;script as a toplevel option below.</dd>
+<dt><code>&#8211;merge-core-pages</code></dt>
+<dd> When platform support is present, provide hints to the operating system that identical pages may be shared between processes until they are written to. This can be useful to reduce the memory usage on systems with multiple SBCL processes started from similar but differently-named core files, or from compressed cores. Without platform support, do nothing.</dd>
+<dt><code>&#8211;no-merge-core-pages</code></dt>
+<dd> Ensures that no sharing hint is provided to the operating system.</dd>
+<dt><code>&#8211;default-merge-core-pages</code></dt>
+<dd> Reverts the sharing hint policy to the default: only compressed cores trigger hinting. Uncompressed cores are mapped directly from the core file, which is usually enough to ensure sharing.</dd>
+<dt><code>&#8211;help</code></dt>
+<dd> Print some basic information about SBCL, then exit.</dd>
+<dt><code>&#8211;version</code></dt>
+<dd> Print SBCL&#8217;s version information, then exit.</dd></dl>
 <p> In the future, runtime options may be added to control behavior such as lazy allocation of memory. </p>
 <p> Runtime options, including any &#8211;end-runtime-options option, are stripped out of the command line before the Lisp toplevel logic gets a chance to see it. </p>
 <p> The toplevel options supported by the standard SBCL core are</p>
 <dl>
-<dt><code>&#8211;sysinit &lt;filename&gt;</code></p>
-<dd> Load filename instead of the default system-wide initialization file. (See the FILES section.)</p>
-<dt><code>&#8211;no-sysinit</code></p>
-<dd> Do not load a system-wide initialization file. If this option is given, the &#8211;sysinit option is ignored.</p>
-<dt><code>&#8211;userinit &lt;filename&gt;</code></p>
-<dd> Load filename instead of the default user initialization file. (See the FILES section.)</p>
-<dt><code>&#8211;no-userinit</code></p>
-<dd> Do not load a user initialization file. If this option is given, the &#8211;userinit option is ignored.</p>
-<dt><code>&#8211;eval &lt;command&gt;</code></p>
-<dd> After executing any initialization file, but before starting the read-eval-print loop on standard input, read and evaluate the command given. More than one &#8211;eval option can be used, and all will be read and executed, in the order they appear on the command line.</p>
-<dt><code>&#8211;load &lt;filename&gt;</code></p>
-<dd> This is equivalent to &#8211;eval &#8216;(load &quot;&lt;filename&gt;&quot;)&#8217;. The special syntax is intended to reduce quoting headaches when invoking SBCL from shell scripts.</p>
-<dt><code>&#8211;noprint</code></p>
-<dd> When ordinarily the toplevel &quot;read-eval-print loop&quot; would be executed, execute a &quot;read-eval loop&quot; instead, <i>i.e.</i> don&#8217;t print a prompt and don&#8217;t echo results. Combined with the &#8211;noinform runtime option, this makes it easier to write Lisp &quot;scripts&quot; which work cleanly in Unix pipelines.</p>
-<dt><code>&#8211;disable-debugger</code></p>
-<dd> By default when SBCL encounters an error, it enters the builtin debugger, allowing interactive diagnosis and possible intercession. This option disables the debugger, causing errors to print a backtrace and exit with status 1 instead &#8212; which is a mode of operation better suited for batch processing. See the User Manual on SB-EXT:DISABLE-DEBUGGER for details.</p>
-<dt><code>&#8211;quit</code></p>
-<dd> At the end of toplevel option processing, exit SBCL with a successful code of zero. Note that the effect of this option is delayed until after toplevel options following this one.</p>
-<dt><code>&#8211;non-interactive</code></p>
-<dd> This option disables the read-eval-print loop for both exceptional and non-exceptional reasons. It is short for &#8211;disable-debugger and &#8211;quit in combination and is useful for batch uses where the special option processing implied by &#8211;script is not desired.</p>
-<dt><code>&#8211;script &lt;filename&gt;</code></p>
-<dd> Implies &#8211;no-sysinit &#8211;no-userinit &#8211;disable-debugger &#8211;end-toplevel-options. </p>
+<dt><code>&#8211;sysinit &lt;filename&gt;</code></dt>
+<dd> Load filename instead of the default system-wide initialization file. (See the FILES section.)</dd>
+<dt><code>&#8211;no-sysinit</code></dt>
+<dd> Do not load a system-wide initialization file. If this option is given, the &#8211;sysinit option is ignored.</dd>
+<dt><code>&#8211;userinit &lt;filename&gt;</code></dt>
+<dd> Load filename instead of the default user initialization file. (See the FILES section.)</dd>
+<dt><code>&#8211;no-userinit</code></dt>
+<dd> Do not load a user initialization file. If this option is given, the &#8211;userinit option is ignored.</dd>
+<dt><code>&#8211;eval &lt;command&gt;</code></dt>
+<dd> After executing any initialization file, but before starting the read-eval-print loop on standard input, read and evaluate the command given. More than one &#8211;eval option can be used, and all will be read and executed, in the order they appear on the command line.</dd>
+<dt><code>&#8211;load &lt;filename&gt;</code></dt>
+<dd> This is equivalent to &#8211;eval &#8216;(load &quot;&lt;filename&gt;&quot;)&#8217;. The special syntax is intended to reduce quoting headaches when invoking SBCL from shell scripts.</dd>
+<dt><code>&#8211;noprint</code></dt>
+<dd> When ordinarily the toplevel &quot;read-eval-print loop&quot; would be executed, execute a &quot;read-eval loop&quot; instead, <i>i.e.</i> don&#8217;t print a prompt and don&#8217;t echo results. Combined with the &#8211;noinform runtime option, this makes it easier to write Lisp &quot;scripts&quot; which work cleanly in Unix pipelines.</dd>
+<dt><code>&#8211;disable-debugger</code></dt>
+<dd> By default when SBCL encounters an error, it enters the builtin debugger, allowing interactive diagnosis and possible intercession. This option disables the debugger, causing errors to print a backtrace and exit with status 1 instead &#8212; which is a mode of operation better suited for batch processing. See the User Manual on SB-EXT:DISABLE-DEBUGGER for details.</dd>
+<dt><code>&#8211;quit</code></dt>
+<dd> At the end of toplevel option processing, exit SBCL with a successful code of zero. Note that the effect of this option is delayed until after toplevel options following this one.</dd>
+<dt><code>&#8211;non-interactive</code></dt>
+<dd> This option disables the read-eval-print loop for both exceptional and non-exceptional reasons. It is short for &#8211;disable-debugger and &#8211;quit in combination and is useful for batch uses where the special option processing implied by &#8211;script is not desired.</dd>
+<dt><code>&#8211;script &lt;filename&gt;</code></dt>
+<dd> Implies &#8211;no-sysinit &#8211;no-userinit &#8211;disable-debugger &#8211;end-toplevel-options. </dd>
 <p> Causes the system to load the specified file and exit immediately afterwards, instead of entering the read-eval-print loop. If the file begins with a shebang line, it is ignored.</dl>
 <p> Regardless of the order in which toplevel options appear on the command line, the order of actions is: </p>
 <dl>
-<dt>step].</p>
-<dd> Debugger is disabled, if requested.</p>
-<dt>step].</p>
-<dd> Any system initialization file is loaded, unless prohibited.</p>
-<dt>step].</p>
-<dd> Any user initialization file is loaded, unless prohibited.</p>
-<dt>step].</p>
-<dd> &#8211;eval and &#8211;load options are processed in the order given.</dl>
+<dt>step].</dt>
+<dd> Debugger is disabled, if requested.</dd>
+<dt>step].</dt>
+<dd> Any system initialization file is loaded, unless prohibited.</dd>
+<dt>step].</dt>
+<dd> Any user initialization file is loaded, unless prohibited.</dd>
+<dt>step].</dt>
+<dd> &#8211;eval and &#8211;load options are processed in the order given.</dd></dl>
 <p> Finally, either the read-eval-print loop is entered or the file specified with &#8211;script option is loaded. </p>
 <p> When running in the read-eval-print loop the system exits on end of file. Similarly, the system exits immediately after processing the file specified with &#8211;script. </p>
 <p> Note that when running SBCL with the &#8211;core option, using a core file created by a user call to the SB-EXT:SAVE-LISP-AND-DIE, the toplevel options may be under the control of user code passed as arguments to SB-EXT:SAVE-LISP-AND-DIE. For this purpose, the &#8211;end-toplevel-options option itself can be considered a toplevel option, <i>i.e.</i> the user core, at its option, may not support it. </p>
@@ -122,10 +122,10 @@ description: "SBCL — Steel Bank Common Lisp"
  then running (FOO 1) gives NOT-THIS-TIME, because the compiler relied on the truth of the DECLAIM without checking it. </p>
 <p> Some things are implemented very inefficiently.</p>
 <dl>
-<dt>&#8212;</p>
-<dd> Multidimensional arrays are inefficient, especially multidimensional arrays of floating point numbers.</p>
-<dt>&#8212;</p>
-<dd> SBCL, like most (maybe all?) implementations of Common Lisp on stock hardware, has trouble passing floating point numbers around efficiently, because a floating point number, plus a few extra bits to identify its type, is larger than a machine word. (Thus, they get &quot;boxed&quot; in heap-allocated storage, causing GC overhead.) Within a single compilation unit, or when doing built-in operations like SQRT and AREF, or some special operations like structure slot accesses, this is avoidable: see the user manual for some efficiency hints. But for general function calls across the boundaries of compilation units, passing the result of a floating point calculation as a function argument (or returning a floating point result as a function value) is a fundamentally slow operation.</dl>
+<dt>&#8212;</dt>
+<dd> Multidimensional arrays are inefficient, especially multidimensional arrays of floating point numbers.</dd>
+<dt>&#8212;</dt>
+<dd> SBCL, like most (maybe all?) implementations of Common Lisp on stock hardware, has trouble passing floating point numbers around efficiently, because a floating point number, plus a few extra bits to identify its type, is larger than a machine word. (Thus, they get &quot;boxed&quot; in heap-allocated storage, causing GC overhead.) Within a single compilation unit, or when doing built-in operations like SQRT and AREF, or some special operations like structure slot accesses, this is avoidable: see the user manual for some efficiency hints. But for general function calls across the boundaries of compilation units, passing the result of a floating point calculation as a function argument (or returning a floating point result as a function value) is a fundamentally slow operation.</dd></dl>
 <h2>REPORTING BUGS</h2>
 <p> To report a bug, please send mail to the mailing lists sbcl-help or sbcl-devel. You can find the complete mailing list addresses on the web pages at &lt;<a rel="nofollow" href="http://sbcl.sourceforge.net/">http://sbcl.sourceforge.net/</a>&gt;; note that as a spam reduction measure you must subscribe to the lists before you can post. (You may also find fancy SourceForge bug-tracking machinery there, but don&#8217;t be fooled. As of 2002-07-25 anyway, we don&#8217;t actively monitor that machinery, and it exists only because we haven&#8217;t been able to figure out how to turn it off.) </p>
 <p> As with any software bug report, it&#8217;s most helpful if you can provide enough information to reproduce the symptoms reliably, and if you say clearly what the symptoms are. For example, &quot;There seems to be something wrong with TAN of very small negative arguments. When I execute (TAN LEAST-NEGATIVE-SINGLE-FLOAT) interactively on sbcl-1.2.3 on my Linux 4.5 X86 box, I get an UNBOUND-VARIABLE error.&quot; </p>
@@ -140,32 +140,32 @@ description: "SBCL — Steel Bank Common Lisp"
 <p> Dozens of people have made substantial contributions to SBCL and its subsystems, and to the CMU CL system on which it was based, over the years. See the CREDITS file in the distribution for more information. </p>
 <h2>ENVIRONMENT</h2>
 <dl>
-<dt><code>SBCL_HOME</code></p>
-<dd> This variable controls where files like &quot;sbclrc&quot;, &quot;sbcl.core&quot;, and the add-on &quot;contrib&quot; systems are searched for. If it is not set, then sbcl sets it from a compile-time default location which is usually <code>/usr/local/lib/sbcl/</code> but may have been changed <i>e.g.</i> by a third-party packager. </p>
+<dt><code>SBCL_HOME</code></dt>
+<dd> This variable controls where files like &quot;sbclrc&quot;, &quot;sbcl.core&quot;, and the add-on &quot;contrib&quot; systems are searched for. If it is not set, then sbcl sets it from a compile-time default location which is usually <code>/usr/local/lib/sbcl/</code> but may have been changed <i>e.g.</i> by a third-party packager. </dd>
 </dl>
 <h2>FILES</h2>
 <dl>
-<dt><i>sbcl</i></p>
-<dd> executable program containing some low-level runtime support and a loader, used to read sbcl.core</p>
-<dt><i>sbcl.core</i></p>
-<dd> dumped memory image containing most of SBCL, to be loaded by the `sbcl&#8217; executable. Looked for in <code>$SBCL_HOME</code>, unless overridden by the &#8211;core option.</p>
-<dt><i>sbclrc</i></p>
-<dd> optional system-wide startup script, looked for in <code>$SBCL_HOME</code> then <code>/etc</code>, unless overridden by the &#8211;sysinit command line option.</p>
-<dt><i>.sbclrc</i></p>
-<dd> optional per-user customizable startup script (in user&#8217;s home directory, or as specified by &#8211;userinit) </p>
+<dt><i>sbcl</i></dt>
+<dd> executable program containing some low-level runtime support and a loader, used to read sbcl.core</dd>
+<dt><i>sbcl.core</i></dt>
+<dd> dumped memory image containing most of SBCL, to be loaded by the `sbcl&#8217; executable. Looked for in <code>$SBCL_HOME</code>, unless overridden by the &#8211;core option.</dd>
+<dt><i>sbclrc</i></dt>
+<dd> optional system-wide startup script, looked for in <code>$SBCL_HOME</code> then <code>/etc</code>, unless overridden by the &#8211;sysinit command line option.</dd>
+<dt><i>.sbclrc</i></dt>
+<dd> optional per-user customizable startup script (in user&#8217;s home directory, or as specified by &#8211;userinit) </dd>
 </dl>
 <h2>SEE ALSO</h2>
 <p> Full SBCL documentation is maintained as a Texinfo manual. If is has been installed, the command</p>
 <dl>
 <dt>
-<dd> <code>info sbcl</code></dl>
+</dt><dd> <code>info sbcl</code></dd></dl>
 <p> should give you access to the complete manual. Depending on your installation it may also be available in HTML and PDF formats in <i>e.g.</i></p>
 <dl>
 <dt>
-<dd> <code>/usr/local/share/doc/sbcl/</code></dl>
+</dt><dd> <code>/usr/local/share/doc/sbcl/</code></dd></dl>
 <p> See the SBCL homepage</p>
 <dl>
 <dt>
-<dd> &lt;<a rel="nofollow" href="http://www.sbcl.org/">http://www.sbcl.org/</a>&gt;</dl>
+</dt><dd> &lt;<a rel="nofollow" href="http://www.sbcl.org/">http://www.sbcl.org/</a>&gt;</dd></dl>
 <p> for more information, including directions on how to subscribe to the sbcl-devel and sbcl-help mailing-lists. </p>
 <h2>Index</h2>

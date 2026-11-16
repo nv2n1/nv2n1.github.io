@@ -11,30 +11,19 @@ std::from_chars - std::from_chars
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;charconv&gt;
-
     std::from_chars_result from_chars(const char *first, const char *last, (1)(since C++ 17)
-
                                                                                /*see below*/
                                                                                &amp; value,
                                       int base = 10);
-
 std::from_chars_result from_chars(const char *first, const char *last, float &amp;value, (2)(since C++ 17)
-
                                                                                          std::chars_format fmt = std::chars_format::general);
-
 std::from_chars_result from_chars(const char *first, const char *last, double &amp;value, (3)(since C++ 17)
-
                                                                                           std::chars_format fmt = std::chars_format::general);
-
 std::from_chars_result from_chars(const char *first, const char *last, long double &amp;value, (4)(since C++ 17)
-
                                                                                                std::chars_format fmt = std::chars_format::general);
-
 struct from_chars_result {
-
     const char *ptr;
     (5)(since C++ 17)
-
         std::errc ec;
 };</code></pre> 
 Analyzes the character sequence [first,last) for a pattern described below. If no characters match the pattern or if the value obtained by parsing the matched characters is not representable in the type of value, value is unmodified, otherwise the characters matching the pattern are interpreted as a text representation of an arithmetic value, which is stored in value. 
@@ -76,12 +65,9 @@ A pattern consisting of a sign with no digits following it is treated as pattern
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;iostream&gt;
-
 #include &lt;charconv&gt;
-
 #include &lt;array&gt;
 int main()
-
 {
     std::array&lt;char, 10&gt; str{&quot;42&quot;};
     int result;

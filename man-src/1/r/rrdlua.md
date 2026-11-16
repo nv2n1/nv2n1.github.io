@@ -124,10 +124,8 @@ description: "RRDLua – Lua binding for RRDTool"
 <p> <code>rrd.fetch</code> is the most complex of the pack regarding return values. It returns 5 values: the initial timestamp, the step, two parallel arrays containing the data source names and their data points respectively, and the final timestamp. </p>
 <pre><code>
      --require compat-5.1 if necessary
-    
      package.cpath = '/usr/local/rrdtool-1.3.2/lib/lua/5.0/?.so;' ..
                      package.cpath
-    
      local rrd = require "rrd"
      local first, last = rrd.first("test.rrd"), rrd.last("test.rrd")
      local start, step, names, data =

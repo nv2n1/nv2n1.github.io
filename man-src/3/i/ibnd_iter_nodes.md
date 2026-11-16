@@ -20,7 +20,7 @@ void ibnd_iter_nodes(ibnd_fabric_t *fabric, ibnd_iter_func_t func, void *user_da
 <p> <code>ibnd_iter_nodes(), ibnd_iter_nodes_type()</code> NONE</p>
 <h2>AUTHORS</h2>
 <dl>
-<dt>Ira Weiny &lt;weiny2 [at] llnl.gov&gt;</p>
+<dt>Ira Weiny &lt;weiny2 [at] llnl.gov&gt;</dt>
 <dd>
-</dl>
+</dd></dl>
 <h2>Index</h2>

@@ -17,13 +17,13 @@ description: "chk_cyrus – perform a consistency check of the cyrus mailstore"
 <p> <i>Chk_cyrus</i> reads its configuration options out of the <i><a href="/docs/linux/man/5-imapd-conf/">imapd.conf</a></i>(5) file unless specified otherwise by <code>-C</code>.</p>
 <h2>Options</h2>
 <dl>
-<dt><code>-C</code><i> config-file</i></p>
-<dd>Read configuration options from <i>config-file</i>.</p>
-<dt><code>-P</code><i> partition</i></p>
-<dd>Run the consistency check for only the given partition. May not be specified with -M. <code>-M</code><i> mailbox</i> Run the consistency check for only the given mailbox. May not be specified with -P.</dl>
+<dt><code>-C</code><i> config-file</i></dt>
+<dd>Read configuration options from <i>config-file</i>.</dd>
+<dt><code>-P</code><i> partition</i></dt>
+<dd>Run the consistency check for only the given partition. May not be specified with -M. <code>-M</code><i> mailbox</i> Run the consistency check for only the given mailbox. May not be specified with -P.</dd></dl>
 <h2>Files</h2>
 <dl>
-<dt><code>/etc/imapd.conf</code></p>
-<dd></dl>
+<dt><code>/etc/imapd.conf</code></dt>
+<dd></dd></dl>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/5-imapd-conf/">imapd.conf</a>(5)</code>, <code><a href="/docs/linux/man/8-cyrus-master/">cyrus-master</a>(8)</code> </p>

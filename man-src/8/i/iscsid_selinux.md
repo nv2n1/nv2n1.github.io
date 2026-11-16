@@ -55,9 +55,9 @@ description: "iscsid_selinux – Security Enhanced Linux Policy for the iscsid p
 <p> Policy governs the access confined processes have to these ports. SELinux iscsid policy is very flexible allowing users to setup their iscsid processes in as secure a method as possible. </p>
 <p> The following port types are defined for iscsid: </p>
 <dl>
-<dt><code>iscsi_port_t</code></p>
+<dt><code>iscsi_port_t</code></dt>
 <dd>
-<dd>Default Defined Ports: tcp 3260</dl>
+</dd><dd>Default Defined Ports: tcp 3260</dd></dl>
 <h2>Managed Files</h2>
 <p>The SELinux process type iscsid_t can manage files labeled with the following file types. The paths listed are the default paths for these file types. Note the processes UID still need to have DAC permissions. </p>
 <p> <code>cluster_conf_t</code> </p>
@@ -106,8 +106,8 @@ description: "iscsid_selinux – Security Enhanced Linux Policy for the iscsid p
 <p> <code>iscsid_exec_t</code> </p>
 <p> &#8211; Set files with the iscsid_exec_t type, if you want to transition an executable to the iscsid_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/sbin/iscsid, /sbin/iscsiuio, /usr/sbin/iscsid, /usr/sbin/iscsiuio, /usr/sbin/iscsiadm </p>
+<dt>Paths:</dt>
+<dd>/sbin/iscsid, /sbin/iscsiuio, /usr/sbin/iscsid, /usr/sbin/iscsiuio, /usr/sbin/iscsiadm </dd>
 </dl>
 <p> Note: File context can be temporarily modified with the chcon command. If you want to permanently change the file context you need to use the <code>semanage fcontext</code> command. This will modify the SELinux labeling database. You will need to use <code>restorecon</code> to apply the labels.</p>
 <h2>Commands</h2>

@@ -11,7 +11,6 @@ description: "sc::StateOutText –"
 <p> Writes out state information in an almost human readable format.</p>
 <h2>Synopsis</h2>
 <pre><code>
-
 #include &lt;state_text.h&gt;</code></pre>
 <p> Inherits <code>sc::StateOutFile</code>.</p>
 <h3>Public Member Functions</h3>
@@ -41,40 +40,15 @@ description: "sc::StateOutText –"
 <p> int <code>put</code> (const double *, int)</p>
 <h3>Protected Member Functions</h3>
 <pre><code>void no_newline ()
-
-
-
 void no_array ()
-
-
-
 void newline ()
-
-
-
 void start_array ()
-
-
-
 void end_array ()
-
-
-
 int putobject (const Ref&lt; SavableState &gt; &amp;)
-
-
 This will prepare StateOut to output a pointer to data.
-
-
 int putparents (const ClassDesc *)
-
-
-
 Protected Attributes
 int no_newline_
-
-
-
 int no_array_</code></pre>
 <h2>Detailed Description</h2>
 <p>Writes out state information in an almost human readable format. </p>

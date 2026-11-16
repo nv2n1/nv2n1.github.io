@@ -14,7 +14,7 @@ description: "scsi_dev_info_list_add_str – parse dev_list and add to the scsi_
 <p><i>dev_list</i></p>
 <dl>
 <dd>
-<dd>string of device flags to add</dl>
+</dd><dd>string of device flags to add</dd></dl>
 <h2>Description</h2>
 <p>Parse dev_list, and add entries to the scsi_dev_info_list. dev_list is of the form &#8220;vendor:product:flag,vendor:product:flag&#8221;. dev_list is modified via strsep. Can be called for command line addition, for proc or mabye a sysfs interface.</p>
 <h2>Return</h2>
@@ -22,8 +22,8 @@ description: "scsi_dev_info_list_add_str – parse dev_list and add to the scsi_
 <h2>Authors</h2>
 <p><code>James Bottomley</code> &lt;James.Bottomley [at] hansenpartnership.com&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <p> <code>Rob Landley</code> &lt;rob [at] landley.net&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

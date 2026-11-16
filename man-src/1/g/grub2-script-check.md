@@ -15,10 +15,10 @@ description: "grub-script-check — Check GRUB configuration file for syntax err
 <p> <code>grub-script-check</code> verifies that a specified GRUB configuration file does not contain syntax errors. </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt>&#8211;verbose</p>
-<dd> Print verbose output. </p>
-<dt><i>PATH</i></p>
-<dd> Path of the file to use as input. </p>
+<dt>&#8211;verbose</dt>
+<dd> Print verbose output. </dd>
+<dt><i>PATH</i></dt>
+<dd> Path of the file to use as input. </dd>
 </dl>
 <h2>SEE ALSO</h2>
 <p> <code>info grub</code> </p>

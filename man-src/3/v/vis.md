@@ -18,22 +18,23 @@ description: "vis strvis strnvis strvisx – visually encode characters"
 <p> The encoding is a unique, invertible representation composed entirely of graphic characters; it can be decoded back into the original form using the <a href="/docs/linux/man/3-unvis/">unvis</a>(3) or strunvis(3) functions. </p>
 <p> There are two parameters that can be controlled: the range of characters that are encoded, and the type of representation used. By default, all non-graphic characters except space, tab, and newline are encoded (see isgraph(3)). The following flags alter this:</p>
 <dl>
-<dt><code>VIS_GLOB</code></p>
-<dd>Also encode magic characters recognized by <a href="/docs/linux/man/3-glob/">glob</a>(3) ( `*&#8217; `?&#8217; , `[&#8216; ) and `#&#8217;</p>
-<dt><code>VIS_SP</code></p>
-<dd>Also encode space.</p>
-<dt><code>VIS_TAB</code></p>
-<dd>Also encode tab.</p>
-<dt><code>VIS_NL</code></p>
-<dd>Also encode newline.</p>
-<dt><code>VIS_WHITE</code></p>
-<dd>Synonym for <code>VIS_SP</code> | <code>VIS_TAB</code> | <code>VIS_NL</code></p>
-<dt><code>VIS_SAFE</code></p>
-<dd>Only encode &#8220;unsafe&#8221; characters. These are control characters which may cause common terminals to perform unexpected functions. Currently this form allows space, tab, newline, backspace, bell, and return &#8212; in addition to all graphic characters &#8212; unencoded.</dl>
+<dt><code>VIS_GLOB</code></dt>
+<dd>Also encode magic characters recognized by <a href="/docs/linux/man/3-glob/">glob</a>(3) ( `*&#8217; `?&#8217; , `[&#8216; ) and `#&#8217;</dd>
+<dt><code>VIS_SP</code></dt>
+<dd>Also encode space.</dd>
+<dt><code>VIS_TAB</code></dt>
+<dd>Also encode tab.</dd>
+<dt><code>VIS_NL</code></dt>
+<dd>Also encode newline.</dd>
+<dt><code>VIS_WHITE</code></dt>
+<dd>Synonym for <code>VIS_SP</code> | <code>VIS_TAB</code> | <code>VIS_NL</code></dd>
+<dt><code>VIS_SAFE</code></dt>
+<dd>Only encode &#8220;unsafe&#8221; characters. These are control characters which may cause common terminals to perform unexpected functions. Currently this form allows space, tab, newline, backspace, bell, and return &#8212; in addition to all graphic characters &#8212; unencoded.</dd></dl>
 <p> There are three forms of encoding. All forms use the backslash `\&#8217; character to introduce a special sequence; two backslashes are used to represent a real backslash. These are the visual formats:</p>
 <dl>
-<dt><code>(default)</code></p>
-<dd>Use an `M&#8217; to represent meta characters (characters with the 8th bit set), and use a caret `^&#8217; to represent control characters (see iscntrl(3)). The following formats are used:</p>
+<dt><code>(default)</code></dt>
+<dd>Use an `M&#8217; to represent meta characters (characters with the 8th bit set), and use a caret `^&#8217; to represent control characters (see iscntrl(3)). The following formats are used:</dd>
 <dl>
-<dt><code>\^C</code></p>
+<dt><code>\^C</code></dt>
 <dd>Represents the control character `C&#8217; Spans characters `
+</dd></dl></dl>

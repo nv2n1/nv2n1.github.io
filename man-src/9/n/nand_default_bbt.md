@@ -14,11 +14,11 @@ description: "nand_default_bbt – [NAND Interface] Select a default bad block t
 <p><i>mtd</i></p>
 <dl>
 <dd>
-<dd>MTD device structure</dl>
+</dd><dd>MTD device structure</dd></dl>
 <h2>Description</h2>
 <p>This function selects the default bad block table support for the device and calls the nand_scan_bbt function.</p>
 <h2>Author</h2>
 <p><code>Thomas Gleixner</code> &lt;tglx [at] linutronix.de&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

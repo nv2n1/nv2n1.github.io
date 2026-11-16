@@ -14,7 +14,7 @@ description: "phy_poll_reset – Safely wait until a PHY reset has properly comp
 <p><i>phydev</i></p>
 <dl>
 <dd>
-<dd>The PHY device to poll</dl>
+</dd><dd>The PHY device to poll</dd></dl>
 <h2>Description</h2>
 <p>According to IEEE 802.3, Section 2, Subsection 22.2.4.1.1, as published in 2008, a PHY reset may take up to 0.5 seconds. The MII BMCR register must be polled until the BMCR_RESET bit clears. </p>
 <p> Furthermore, any attempts to write to PHY registers may have no effect or even generate MDIO bus errors until this is complete. </p>

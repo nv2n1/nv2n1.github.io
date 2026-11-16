@@ -16,25 +16,25 @@ description: "insync – command line interface for the Insync process"
 <h2>COMMANDS</h2>
 <h3><code>Help command</code></h3>
 <dl>
-<dt><code>insync [COMMAND] &#8211;help</p>
-<dd> If COMMAND is given, shows the help message for it; if not, show the basic help message.</dl>
+<dt><code>insync [COMMAND] &#8211;help</dt>
+<dd> If COMMAND is given, shows the help message for it; if not, show the basic help message.</dd></dl>
 <p> </code></p>
 <h3><code>Commands for controlling Insync</code></h3>
 <dl>
-<dt><code>insync </code><i>start </i><code>[OPTION]&#8230;</p>
-<dd> Start Insync. </p>
+<dt><code>insync </code><i>start </i><code>[OPTION]&#8230;</dt>
+<dd> Start Insync. </dd>
 <p> Options: </p>
 <p> &#8211;no-daemon &#8211; don&#8217;t detach from the terminal, log output to stdout </p>
-<dt>insync </code><i>show</p>
-<dd> Show Insync. </p>
-<dt></i><code>insync </code><i>hide</p>
-<dd> Hide Insync. </p>
+<dt>insync </code><i>show</dt>
+<dd> Show Insync. </dd>
+<dt></i><code>insync </code><i>hide</dt>
+<dd> Hide Insync. </dd>
 </dl>
 <p> </i></p>
 <h3><code>File commands</code></h3>
 <dl>
-<dt><code>insync </code><i>open-gdlink-file </i><code>FULL_PATH</p>
-<dd> Open the selected google docs link file (.gddocs) in Web browser. </p>
+<dt><code>insync </code><i>open-gdlink-file </i><code>FULL_PATH</dt>
+<dd> Open the selected google docs link file (.gddocs) in Web browser. </dd>
 </dl>
 <p> </code></p>
 <h2>BUGS</h2>
@@ -44,7 +44,7 @@ description: "insync – command line interface for the Insync process"
 <h2>AUTHOR</h2>
 <p> Created by the Insync team. </p>
 <h2>Index</h2>
-<dt><a href="#lbAI">BUGS</a></p>
+<dt><a href="#lbAI">BUGS</a></dt>
 <dd>
-<dt><a href="#lbAJ">AUTHOR</a></p>
-<dd></dl>
+</dd><dt><a href="#lbAJ">AUTHOR</a></dt>
+<dd></dd></dl>

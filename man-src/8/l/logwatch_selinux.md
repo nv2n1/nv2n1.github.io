@@ -103,14 +103,14 @@ description: "logwatch_selinux – Security Enhanced Linux Policy for the logwat
 <p> <code>logwatch_cache_t</code> </p>
 <p> &#8211; Set files with the logwatch_cache_t type, if you want to store the files under the /var/cache directory. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/var/lib/epylog(/.*)?, /var/lib/logcheck(/.*)?, /var/cache/logwatch(/.*)? </p>
+<dt>Paths:</dt>
+<dd>/var/lib/epylog(/.*)?, /var/lib/logcheck(/.*)?, /var/cache/logwatch(/.*)? </dd>
 </dl>
 <p> <code>logwatch_exec_t</code> </p>
 <p> &#8211; Set files with the logwatch_exec_t type, if you want to transition an executable to the logwatch_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/usr/sbin/epylog, /usr/sbin/logcheck, /usr/sbin/logwatch.pl, /usr/share/logwatch/scripts/logwatch.pl </p>
+<dt>Paths:</dt>
+<dd>/usr/sbin/epylog, /usr/sbin/logcheck, /usr/sbin/logwatch.pl, /usr/share/logwatch/scripts/logwatch.pl </dd>
 </dl>
 <p> <code>logwatch_lock_t</code> </p>
 <p> &#8211; Set files with the logwatch_lock_t type, if you want to treat the files as logwatch lock data, stored under the /var/lock directory </p>

@@ -10,10 +10,8 @@ description: "std::chrono::duration_values – std::chrono::duration_values"
 <p>std::chrono::duration_values &#8211; std::chrono::duration_values</p>
 <h2>Synopsis</h2>
 <pre><code>Defined in header&lt;chrono&gt;
-
     template &lt;class Rep&gt;
     (since C++ 11)
-
         struct duration_values;</code></pre>
 <p>The std::chrono::duration_values type defines three common durations:<br />
 * std::chrono::duration_values::zero<br />

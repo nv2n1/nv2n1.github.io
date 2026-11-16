@@ -24,13 +24,13 @@ This is an internal routine used for sorting. Originally, it was not intended th
 
  The arguments of TDSORT are as follows:
 <dl><dt>RWRK
-<dd>(an input array, of type REAL, dimensioned NWRK) - an array of NWRK real numbers that are to be sorted. The contents of RWRK are returned unchanged; the ordering is as specified by the contents of the array IWRK.
-<dt>NWRK
-<dd>(an input expression of type INTEGER) - the dimension of RWRK (and of IWRK).
-<dt>IORD
-<dd>(an input expression of type INTEGER) - if IORD is zero, the desired ordering is from smallest numeric value to largest; otherwise, the desired ordering is from largest value to smallest.
-<dt>IWRK
-<dd>(an output array of type INTEGER, dimensioned at least NWRK) - returned containing a permutation of the integers from 1 to NWRK.</dl>
+</dt><dd>(an input array, of type REAL, dimensioned NWRK) - an array of NWRK real numbers that are to be sorted. The contents of RWRK are returned unchanged; the ordering is as specified by the contents of the array IWRK.
+</dd><dt>NWRK
+</dt><dd>(an input expression of type INTEGER) - the dimension of RWRK (and of IWRK).
+</dd><dt>IORD
+</dt><dd>(an input expression of type INTEGER) - if IORD is zero, the desired ordering is from smallest numeric value to largest; otherwise, the desired ordering is from largest value to smallest.
+</dd><dt>IWRK
+</dt><dd>(an output array of type INTEGER, dimensioned at least NWRK) - returned containing a permutation of the integers from 1 to NWRK.</dd></dl>
 
 <h2>C-Binding Description</h2>
 

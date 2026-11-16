@@ -17,46 +17,46 @@ description: "Proxy Constants –"
 <p> Proxy Error codes </p>
 <p> <code>Enumerator</code></p>
 <dl>
-<dt><i>GLOBUS_GSI_PROXY_ERROR_SUCCESS </i></p>
-<dd> Success &#8211; never used</p>
-<dt><i>GLOBUS_GSI_PROXY_ERROR_WITH_HANDLE </i></p>
-<dd> Invalid proxy handle state</p>
-<dt><i>GLOBUS_GSI_PROXY_ERROR_WITH_HANDLE_ATTRS </i></p>
-<dd> Invalid proxy handle attributes state</p>
-<dt><i>GLOBUS_GSI_PROXY_ERROR_WITH_PROXYCERTINFO </i></p>
-<dd> Error with ASN.1 proxycertinfo structure</p>
-<dt><i>GLOBUS_GSI_PROXY_ERROR_WITH_PROXYPOLICY </i></p>
-<dd> Error with ASN.1 proxypolicy structure</p>
-<dt><i>GLOBUS_GSI_PROXY_ERROR_WITH_PATHLENGTH </i></p>
-<dd> Error with proxy path length</p>
-<dt><i>GLOBUS_GSI_PROXY_ERROR_WITH_X509_REQ </i></p>
-<dd> Error with the X.509 request structure</p>
-<dt><i>GLOBUS_GSI_PROXY_ERROR_WITH_X509 </i></p>
-<dd> Error with X.509 structure</p>
-<dt><i>GLOBUS_GSI_PROXY_ERROR_WITH_X509_EXTENSIONS </i></p>
-<dd> Error with X.509 extensions</p>
-<dt><i>GLOBUS_GSI_PROXY_ERROR_WITH_PRIVATE_KEY </i></p>
-<dd> Error with private key</p>
-<dt><i>GLOBUS_GSI_PROXY_ERROR_WITH_BIO </i></p>
-<dd> Error with OpenSSL&#8217;s BIO handle</p>
-<dt><i>GLOBUS_GSI_PROXY_ERROR_WITH_CREDENTIAL </i></p>
-<dd> Error with credential</p>
-<dt><i>GLOBUS_GSI_PROXY_ERROR_WITH_CRED_HANDLE </i></p>
-<dd> Error with credential handle</p>
-<dt><i>GLOBUS_GSI_PROXY_ERROR_WITH_CRED_HANDLE_ATTRS </i></p>
-<dd> Error with credential handle attributes</p>
-<dt><i>GLOBUS_GSI_PROXY_ERROR_ERRNO </i></p>
-<dd> System error</p>
-<dt><i>GLOBUS_GSI_PROXY_ERROR_SETTING_HANDLE_TYPE </i></p>
-<dd> Unable to set proxy type</p>
-<dt><i>GLOBUS_GSI_PROXY_INVALID_PARAMETER </i></p>
-<dd> Invalid function parameter</p>
-<dt><i>GLOBUS_GSI_PROXY_ERROR_SIGNING </i></p>
-<dd> A error occurred while signing the proxy certificate</p>
-<dt><i>GLOBUS_GSI_PROXY_ERROR_LAST </i></p>
-<dd> Last marker &#8211; never used</dl>
+<dt><i>GLOBUS_GSI_PROXY_ERROR_SUCCESS </i></dt>
+<dd> Success &#8211; never used</dd>
+<dt><i>GLOBUS_GSI_PROXY_ERROR_WITH_HANDLE </i></dt>
+<dd> Invalid proxy handle state</dd>
+<dt><i>GLOBUS_GSI_PROXY_ERROR_WITH_HANDLE_ATTRS </i></dt>
+<dd> Invalid proxy handle attributes state</dd>
+<dt><i>GLOBUS_GSI_PROXY_ERROR_WITH_PROXYCERTINFO </i></dt>
+<dd> Error with ASN.1 proxycertinfo structure</dd>
+<dt><i>GLOBUS_GSI_PROXY_ERROR_WITH_PROXYPOLICY </i></dt>
+<dd> Error with ASN.1 proxypolicy structure</dd>
+<dt><i>GLOBUS_GSI_PROXY_ERROR_WITH_PATHLENGTH </i></dt>
+<dd> Error with proxy path length</dd>
+<dt><i>GLOBUS_GSI_PROXY_ERROR_WITH_X509_REQ </i></dt>
+<dd> Error with the X.509 request structure</dd>
+<dt><i>GLOBUS_GSI_PROXY_ERROR_WITH_X509 </i></dt>
+<dd> Error with X.509 structure</dd>
+<dt><i>GLOBUS_GSI_PROXY_ERROR_WITH_X509_EXTENSIONS </i></dt>
+<dd> Error with X.509 extensions</dd>
+<dt><i>GLOBUS_GSI_PROXY_ERROR_WITH_PRIVATE_KEY </i></dt>
+<dd> Error with private key</dd>
+<dt><i>GLOBUS_GSI_PROXY_ERROR_WITH_BIO </i></dt>
+<dd> Error with OpenSSL&#8217;s BIO handle</dd>
+<dt><i>GLOBUS_GSI_PROXY_ERROR_WITH_CREDENTIAL </i></dt>
+<dd> Error with credential</dd>
+<dt><i>GLOBUS_GSI_PROXY_ERROR_WITH_CRED_HANDLE </i></dt>
+<dd> Error with credential handle</dd>
+<dt><i>GLOBUS_GSI_PROXY_ERROR_WITH_CRED_HANDLE_ATTRS </i></dt>
+<dd> Error with credential handle attributes</dd>
+<dt><i>GLOBUS_GSI_PROXY_ERROR_ERRNO </i></dt>
+<dd> System error</dd>
+<dt><i>GLOBUS_GSI_PROXY_ERROR_SETTING_HANDLE_TYPE </i></dt>
+<dd> Unable to set proxy type</dd>
+<dt><i>GLOBUS_GSI_PROXY_INVALID_PARAMETER </i></dt>
+<dd> Invalid function parameter</dd>
+<dt><i>GLOBUS_GSI_PROXY_ERROR_SIGNING </i></dt>
+<dd> A error occurred while signing the proxy certificate</dd>
+<dt><i>GLOBUS_GSI_PROXY_ERROR_LAST </i></dt>
+<dd> Last marker &#8211; never used</dd></dl>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for globus_gsi_proxy_core from the source code. </p>
 <h2>Index</h2>
-<dt><a href="#lbAG">Author</a></p>
-<dd></dl>
+<dt><a href="#lbAG">Author</a></dt>
+<dd></dd></dl>

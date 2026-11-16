@@ -19,7 +19,7 @@ description: "strsna.f –"
 <p> <code>Purpose: </code></p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
  STRSNA estimates reciprocal condition numbers for specified
  eigenvalues and/or right eigenvectors of a real upper
@@ -30,11 +30,11 @@ description: "strsna.f –"
  2-by-2 diagonal block has its diagonal elements equal and its
  off-diagonal elements of opposite sign.
 </pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>JOB</i> </p>
+</dt><dd> <i>JOB</i> </dd>
 <pre><code>
           JOB is CHARACTER*1
           Specifies whether condition numbers are required for
@@ -168,18 +168,18 @@ and if JOB = 'V' or 'B', LDWORK &gt;= N.
 <p> <code>Author:</code></p>
 <dl>
 <dt>
-<dd> Univ. of Tennessee </p>
+</dt><dd> Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl>
 <dt>
-<dd> November 2011</dl>
+</dt><dd> November 2011</dd></dl>
 <p> <code>Further Details: </code></p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
   The reciprocal of the condition number of an eigenvalue lambda is
   defined as
@@ -206,8 +206,9 @@ and if JOB = 'V' or 'B', LDWORK &gt;= N.
   is given by
                       EPS * norm(T) / SEP(i)
 </pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> Definition at line 264 of file strsna.f.</p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for LAPACK from the source code. </p>
 <h2>Index</h2>
+</p>

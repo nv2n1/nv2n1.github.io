@@ -67,15 +67,12 @@ int port_nbr = zsock_bind(service, &quot;tcp://127.0.0.1:*&quot;);
 byte announcement[2] = {(port_nbr &gt;&gt; 8) &amp; 0xFF, port_nbr &amp; 0xFF};
 zbeacon_set_interval(service_beacon, 100);
 zbeacon_publish(service_beacon, announcement, 2);
-
 //  Create beacon to lookup service
 zbeacon_t *client_beacon = zbeacon_new(ctx, 9999);
 assert(client_beacon);
 zbeacon_subscribe(client_beacon, NULL, 0);
-
 //  Wait for at most 1/2 second if there's no broadcast networking
 zsocket_set_rcvtimeo(zbeacon_socket(client_beacon), 500);
-
 char *ipaddress = zstr_recv(zbeacon_socket(client_beacon));
 if (ipaddress) {
     zframe_t *content = zframe_recv(zbeacon_socket(client_beacon));
@@ -87,18 +84,15 @@ if (ipaddress) {
 }
 zbeacon_destroy(&amp;client_beacon);
 zbeacon_destroy(&amp;service_beacon);
-
 zbeacon_t *node1 = zbeacon_new(ctx, 5670);
 assert(node1);
 zbeacon_t *node2 = zbeacon_new(ctx, 5670);
 assert(node2);
 zbeacon_t *node3 = zbeacon_new(ctx, 5670);
 assert(node3);
-
 assert(*zbeacon_hostname(node1));
 assert(*zbeacon_hostname(node2));
 assert(*zbeacon_hostname(node3));
-
 zbeacon_set_interval(node1, 250);
 zbeacon_set_interval(node2, 250);
 zbeacon_set_interval(node3, 250);
@@ -107,14 +101,12 @@ zbeacon_publish(node1, (byte *)&quot;NODE/1&quot;, 6);
 zbeacon_publish(node2, (byte *)&quot;NODE/2&quot;, 6);
 zbeacon_publish(node3, (byte *)&quot;GARBAGE&quot;, 7);
 zbeacon_subscribe(node1, (byte *)&quot;NODE&quot;, 4);
-
 //  Poll on three API sockets at once
 zpoller_t *poller = zpoller_new(
     zbeacon_socket(node1),
     zbeacon_socket(node2),
     zbeacon_socket(node3), NULL);
 assert(poller);
-
 int64_t stop_at = zclock_mono() + 1000;
 while (zclock_mono() &lt; stop_at) {
     long timeout = (long)(stop_at - zclock_mono());
@@ -131,20 +123,16 @@ while (zclock_mono() &lt; stop_at) {
     }
 }
 zpoller_destroy(&amp;poller);
-
 //  Stop listening
 zbeacon_unsubscribe(node1);
-
 //  Stop all node broadcasts
 zbeacon_silence(node1);
 zbeacon_silence(node2);
 zbeacon_silence(node3);
-
 //  Destroy the test nodes
 zbeacon_destroy(&amp;node1);
 zbeacon_destroy(&amp;node2);
 zbeacon_destroy(&amp;node3);
-
 zsock_destroy(&amp;service);
 zctx_destroy(&amp;ctx);
 </code></pre>
@@ -157,7 +145,8 @@ zctx_destroy(&amp;ctx);
 <p>Copyright (c) 1991-2012 iMatix Corporation &#8212; <a rel="nofollow" href="http://www.imatix.com">http://www.imatix.com</a> Copyright other contributors as noted in the AUTHORS file. This file is part of CZMQ, the high-level C binding for 0MQ: <a href="http://czmq.zeromq.org">http://czmq.zeromq.org</a> This Source Code Form is subject to the terms of the Mozilla Public License, v. 2.0. If a copy of the MPL was not distributed with this file, You can obtain one at <a href="http://mozilla.org/MPL/2.0/.">http://mozilla.org/MPL/2.0/.</a> LICENSE included with the czmq distribution.</p>
 <h2>Notes</h2>
 <dl>
-<dt> 1.</p>
-<dd>zeromq-dev [at] lists.zeromq.org</p>
+<dt> 1.</dt>
+<dd>zeromq-dev [at] lists.zeromq.org</dd>
 <dl>
-<dd>mailto:zeromq-dev [at] lists.zeromq.org</dl>
+<dd>mailto:zeromq-dev [at] lists.zeromq.org</dd></dl>
+</dl>

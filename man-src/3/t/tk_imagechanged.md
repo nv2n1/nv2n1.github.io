@@ -13,13 +13,13 @@ description: "Tk_ImageChanged – notify widgets that image needs to be redrawn"
 <code>Tk_ImageChanged</code>(<i>imageMaster, x, y, width, height, imageWidth, imageHeight</i>)</pre>
 <h2>Arguments</h2>
 <dl COMPACT>
-<dd>Tk_ImageMaster <i>imageMaster</i> (in) Token for image, which was passed to image&#8217;s <i>createProc</i> when the image was created.</p>
-<dd>int <i>x</i> (in) X-coordinate of upper-left corner of region that needs redisplay (measured from upper-left corner of image).</p>
-<dd>int <i>y</i> (in) Y-coordinate of upper-left corner of region that needs redisplay (measured from upper-left corner of image).</p>
-<dd>int <i>width</i> (in) Width of region that needs to be redrawn, in pixels.</p>
-<dd>int <i>height</i> (in) Height of region that needs to be redrawn, in pixels.</p>
-<dd>int <i>imageWidth</i> (in) Current width of image, in pixels.</p>
-<dd>int <i>imageHeight</i> (in) Current height of image, in pixels. </p>
+<dd>Tk_ImageMaster <i>imageMaster</i> (in) Token for image, which was passed to image&#8217;s <i>createProc</i> when the image was created.</dd>
+<dd>int <i>x</i> (in) X-coordinate of upper-left corner of region that needs redisplay (measured from upper-left corner of image).</dd>
+<dd>int <i>y</i> (in) Y-coordinate of upper-left corner of region that needs redisplay (measured from upper-left corner of image).</dd>
+<dd>int <i>width</i> (in) Width of region that needs to be redrawn, in pixels.</dd>
+<dd>int <i>height</i> (in) Height of region that needs to be redrawn, in pixels.</dd>
+<dd>int <i>imageWidth</i> (in) Current width of image, in pixels.</dd>
+<dd>int <i>imageHeight</i> (in) Current height of image, in pixels. </dd>
 </dl>
 <h2>Description</h2>
 <p>An image manager calls <code>Tk_ImageChanged</code> for an image whenever anything happens that requires the image to be redrawn. As a result of calling <code>Tk_ImageChanged</code>, any widgets using the image are notified so that they can redisplay themselves appropriately. The <i>imageMaster</i> argument identifies the image, and <i>x</i>, <i>y</i>, <i>width</i>, and <i>height</i> specify a rectangular region within the image that needs to be redrawn. <i>imageWidth</i> and <i>imageHeight</i> specify the image&#8217;s (new) size. </p>

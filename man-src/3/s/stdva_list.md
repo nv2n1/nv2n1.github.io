@@ -11,7 +11,6 @@ std::va_list - std::va_list
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header &lt;cstdarg&gt;
-
 typedef /* unspecified */ va_list;</code></pre> 
 va_list is a complete object type suitable for holding the information needed by the macros va_start, va_copy, va_arg, and va_end. 
 If a va_list instance is created, passed to another function, and used via va_arg in that function, then any subsequent use in the calling function should be preceded by a call to va_end. 

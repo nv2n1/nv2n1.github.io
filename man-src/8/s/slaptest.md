@@ -14,26 +14,26 @@ description: "slaptest – Check the suitability of the OpenLDAP slapd configura
 <p><code>Slaptest</code> is used to check the conformance of the <code><a href="/docs/linux/man/8-slapd/">slapd</a></code>(8) configuration. It opens the <code><a href="/docs/linux/man/5-slapd-conf/">slapd.conf</a></code>(5) configuration file or the <code><a href="/docs/linux/man/5-slapd-config/">slapd-config</a></code>(5) backend, and parses it according to the general and the backend-specific rules, checking its sanity. </p>
 <h2>Options</h2>
 <dl>
-<dt><code>-d</code><i>&nbsp;<wbr>debug-level</i></p>
-<dd>enable debugging messages as defined by the specified <i>debug-level</i>; see <code><a href="/docs/linux/man/8-slapd/">slapd</a></code>(8) for details.</p>
-<dt><code>-f</code><i>&nbsp;<wbr>slapd.conf</i></p>
-<dd>specify an alternative <code><a href="/docs/linux/man/5-slapd-conf/">slapd.conf</a></code>(5) file.</p>
-<dt><code>-F</code><i>&nbsp;<wbr>confdir</i></p>
-<dd>specify a config directory. If both <code>-f</code> and <code>-F</code> are specified, the config file will be read and converted to config directory format and written to the specified directory. If neither option is specified, slaptest will attempt to read the default config directory before trying to use the default config file. If a valid config directory exists then the default config file is ignored. If dry-run mode is also specified, no conversion will occur.</p>
-<dt><code>-n</code><i>&nbsp;<wbr>dbnum</i></p>
-<dd>Just open and test the <i>dbnum</i>-th database listed in the configuration file. To only test the config database <code><a href="/docs/linux/man/5-slapd-config/">slapd-config</a></code>(5), use <code>-n 0</code> as it is always the first database.</p>
-<dt><code>-o</code><i>&nbsp;<wbr>option</i>[<code>=</code><i>value</i>]</p>
-<dd>Specify an <i>option</i> with a(n optional) <i>value</i>. Possible generic options/values are:</dl>
+<dt><code>-d</code><i>&nbsp;<wbr>debug-level</i></dt>
+<dd>enable debugging messages as defined by the specified <i>debug-level</i>; see <code><a href="/docs/linux/man/8-slapd/">slapd</a></code>(8) for details.</dd>
+<dt><code>-f</code><i>&nbsp;<wbr>slapd.conf</i></dt>
+<dd>specify an alternative <code><a href="/docs/linux/man/5-slapd-conf/">slapd.conf</a></code>(5) file.</dd>
+<dt><code>-F</code><i>&nbsp;<wbr>confdir</i></dt>
+<dd>specify a config directory. If both <code>-f</code> and <code>-F</code> are specified, the config file will be read and converted to config directory format and written to the specified directory. If neither option is specified, slaptest will attempt to read the default config directory before trying to use the default config file. If a valid config directory exists then the default config file is ignored. If dry-run mode is also specified, no conversion will occur.</dd>
+<dt><code>-n</code><i>&nbsp;<wbr>dbnum</i></dt>
+<dd>Just open and test the <i>dbnum</i>-th database listed in the configuration file. To only test the config database <code><a href="/docs/linux/man/5-slapd-config/">slapd-config</a></code>(5), use <code>-n 0</code> as it is always the first database.</dd>
+<dt><code>-o</code><i>&nbsp;<wbr>option</i>[<code>=</code><i>value</i>]</dt>
+<dd>Specify an <i>option</i> with a(n optional) <i>value</i>. Possible generic options/values are:</dd></dl>
 <pre> syslog=&lt;subsystems&gt; (see `-s' in <a href="//www.systutorials.com/docs/linux/man/8-slapd/">slapd</a>(8))
  syslog-level=&lt;level&gt; (see `-S' in <a href="//www.systutorials.com/docs/linux/man/8-slapd/">slapd</a>(8))
  syslog-user=&lt;user&gt; (see `-l' in <a href="//www.systutorials.com/docs/linux/man/8-slapd/">slapd</a>(8))</pre>
 <dl>
-<dt><code>-Q</code></p>
-<dd>Be extremely quiet: only the exit code indicates success (0) or not (any other value).</p>
-<dt><code>-u</code></p>
-<dd>enable dry-run mode (i.e. don&#8217;t fail if databases cannot be opened, but config is fine).</p>
-<dt><code>-v</code></p>
-<dd>enable verbose mode.</dl>
+<dt><code>-Q</code></dt>
+<dd>Be extremely quiet: only the exit code indicates success (0) or not (any other value).</dd>
+<dt><code>-u</code></dt>
+<dd>enable dry-run mode (i.e. don&#8217;t fail if databases cannot be opened, but config is fine).</dd>
+<dt><code>-v</code></dt>
+<dd>enable verbose mode.</dd></dl>
 <h2>Examples</h2>
 <p>To check a <code><a href="/docs/linux/man/5-slapd-conf/">slapd.conf</a></code>(5) give the command: </p>
 <pre> /usr/sbin/slaptest -f //etc/openldap/slapd.conf -v</pre>

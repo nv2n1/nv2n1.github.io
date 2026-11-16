@@ -39,14 +39,14 @@ struct ibv_wc {
 </code></pre>
 <p> The attribute wc_flags describes the properties of the work completion. It is either 0 or the bitwise OR of one or more of the following flags: </p>
 <dl>
-<dt><code>IBV_WC_GRH </code> GRH is present (valid only for UD QPs)</p>
+<dt><code>IBV_WC_GRH </code> GRH is present (valid only for UD QPs)</dt>
 <dd>
-<dt><code>IBV_WC_WITH_IMM </code> Immediate data value is valid</p>
+</dd><dt><code>IBV_WC_WITH_IMM </code> Immediate data value is valid</dt>
 <dd>
-<dt><code>IBV_WC_WITH_INV </code> Invalidated RKey data value is valid (cannot be combined with IBV_WC_WITH_IMM)</p>
+</dd><dt><code>IBV_WC_WITH_INV </code> Invalidated RKey data value is valid (cannot be combined with IBV_WC_WITH_IMM)</dt>
 <dd>
-<dt><code>IBV_WC_IP_CSUM_OK </code> TCP/UDP checksum over IPv4 and IPv4 header checksum are</p>
-<dd> verified. Valid only when <code>device_cap_flags</code> in device_attr indicates current QP is supported by checksum offload.</dl>
+</dd><dt><code>IBV_WC_IP_CSUM_OK </code> TCP/UDP checksum over IPv4 and IPv4 header checksum are</dt>
+<dd> verified. Valid only when <code>device_cap_flags</code> in device_attr indicates current QP is supported by checksum offload.</dd></dl>
 <p> Not all <i>wc</i> attributes are always valid. If the completion status is other than <code>IBV_WC_SUCCESS</code>, only the following attributes are valid: wr_id, status, qp_num, and vendor_err.</p>
 <h2>RETURN VALUE</h2>
 <p> On success, <code>ibv_poll_cq()</code> returns a non-negative value equal to the number of completions found. On failure, a negative value is returned.</p>
@@ -58,7 +58,7 @@ struct ibv_wc {
 <p> <code>ibv_post_send</code>(3), <code>ibv_post_recv</code>(3)</p>
 <h2>AUTHORS</h2>
 <dl>
-<dt>Dotan Barak &lt;dotanba [at] gmail.com&gt;</p>
+<dt>Dotan Barak &lt;dotanba [at] gmail.com&gt;</dt>
 <dd>
-</dl>
+</dd></dl>
 <h2>Index</h2>

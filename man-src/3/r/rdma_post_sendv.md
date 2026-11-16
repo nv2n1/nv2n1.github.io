@@ -12,29 +12,24 @@ rdma_post_sendv - post a work request to send a message.
 
 <pre><code>#include &lt;rdma/rdma_verbs.h&gt;
 int rdma_post_sendv
-
     (struct rdma_cm_id *id,
-
      void *context,
-
      struct ibv_sge *slg,
-
      int nsge,
-
      int flags);</code></pre>
 
 <h2>Arguments</h2>
 
 <dl><dt>id
-<dd>A reference to a communication identifier where the message buffer will be posted.
-<dt>context
-<dd>User-defined context associated with the request.
-<dt>slg
-<dd>A scatter-gather list of memory buffers posted as a single request.
-<dt>nsge
-<dd>The number of scatter-gather entries in the slg array.
-<dt>flags
-<dd>Optional flags used to control the send operation.</dl>
+</dt><dd>A reference to a communication identifier where the message buffer will be posted.
+</dd><dt>context
+</dt><dd>User-defined context associated with the request.
+</dd><dt>slg
+</dt><dd>A scatter-gather list of memory buffers posted as a single request.
+</dd><dt>nsge
+</dt><dd>The number of scatter-gather entries in the slg array.
+</dd><dt>flags
+</dt><dd>Optional flags used to control the send operation.</dd></dl>
 
 <h2>Description</h2>
 

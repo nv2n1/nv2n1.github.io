@@ -16,17 +16,17 @@ description: "abook – text-based address book program"
 <p> <code>abook </code> is a text-based address book program. It contains Name, Email, Address and various Phone fields. It is designed for use with mutt, but can be equally useful on its own.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-h &#8211;help</code></p>
-<dd> Show usage.</p>
-<dt><code>-C &#8211;config</code> <i>&lt;filename&gt;</i></p>
-<dd> Use an alternative configuration file (default is <i>$HOME/.abook/abookrc</i>).</p>
-<dt><code>&#8211;datafile</code> <i>&lt;filename&gt;</i></p>
-<dd> Use an alternative addressbook file (default is <i>$HOME/.abook/addressbook</i>).</p>
-<dt><code>&#8211;mutt-query</code> <i>&lt;string&gt;</i></p>
+<dt><code>-h &#8211;help</code></dt>
+<dd> Show usage.</dd>
+<dt><code>-C &#8211;config</code> <i>&lt;filename&gt;</i></dt>
+<dd> Use an alternative configuration file (default is <i>$HOME/.abook/abookrc</i>).</dd>
+<dt><code>&#8211;datafile</code> <i>&lt;filename&gt;</i></dt>
+<dd> Use an alternative addressbook file (default is <i>$HOME/.abook/addressbook</i>).</dd>
+<dt><code>&#8211;mutt-query</code> <i>&lt;string&gt;</i></dt>
 <dd> Make a query for mutt (search the addressbook for <i>&lt;string&gt;</i>).<br />
- The <code>&#8211;datafile</code> option, as documented above, may be used <code>BEFORE</code> this option to search a different addressbook file.</p>
-<dt><code>&#8211;convert</code> [ <code>&#8211;informat</code> <i>&lt;inputformat&gt;</i> ] [ <code>&#8211;infile</code> <i>&lt;inputfile&gt;</i> ] [ <code>&#8211;outformat</code> <i>&lt;outputformat&gt;</i> ] [ <code>&#8211;outfile</code> <i>&lt;outputfile&gt;</i> ]</p>
-<dd> Converts <i>&lt;inputfile&gt;</i> in <i>&lt;inputformat&gt;</i> to <i>&lt;outputfile&gt;</i> in <i>&lt;outputformat&gt;</i> (defaults are <code>abook</code>, <code>stdin</code>, <code>text</code> and <code>stdout</code>). </p>
+ The <code>&#8211;datafile</code> option, as documented above, may be used <code>BEFORE</code> this option to search a different addressbook file.</dd>
+<dt><code>&#8211;convert</code> [ <code>&#8211;informat</code> <i>&lt;inputformat&gt;</i> ] [ <code>&#8211;infile</code> <i>&lt;inputfile&gt;</i> ] [ <code>&#8211;outformat</code> <i>&lt;outputformat&gt;</i> ] [ <code>&#8211;outfile</code> <i>&lt;outputfile&gt;</i> ]</dt>
+<dd> Converts <i>&lt;inputfile&gt;</i> in <i>&lt;inputformat&gt;</i> to <i>&lt;outputfile&gt;</i> in <i>&lt;outputformat&gt;</i> (defaults are <code>abook</code>, <code>stdin</code>, <code>text</code> and <code>stdout</code>). </dd>
 <p> The following <i>inputformats</i> are supported:<br />
  &#8211; <code>abook</code> abook native format<br />
  &#8211; <code>ldif</code> ldif / Netscape addressbook<br />
@@ -48,12 +48,12 @@ description: "abook – text-based address book program"
  &#8211; <code>spruce</code> Spruce address book<br />
  &#8211; <code>wl</code> Wanderlust address book<br />
  &#8211; <code>bsdcal</code> BSD calendar</p>
-<dt><code>&#8211;add-email</code></p>
-<dd> Read an e-mail message from stdin and add the sender to the addressbook.</p>
-<dt><code>&#8211;add-email-quiet</code></p>
-<dd> Same as &#8211;add-email but doesn&#8217;t confirm adding.</p>
-<dt><code>&#8211;formats</code></p>
-<dd> List available formats. </p>
+<dt><code>&#8211;add-email</code></dt>
+<dd> Read an e-mail message from stdin and add the sender to the addressbook.</dd>
+<dt><code>&#8211;add-email-quiet</code></dt>
+<dd> Same as &#8211;add-email but doesn&#8217;t confirm adding.</dd>
+<dt><code>&#8211;formats</code></dt>
+<dd> List available formats. </dd>
 </dl>
 <h2>COMMANDS DURING USE</h2>
 <p> Press &#8216;<code>?</code>&#8216; during use to get a list of commands.</p>

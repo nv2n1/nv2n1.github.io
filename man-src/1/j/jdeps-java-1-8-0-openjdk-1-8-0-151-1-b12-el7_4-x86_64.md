@@ -11,46 +11,46 @@ description: "jdeps – Java class dependency analyzer."
 <h2>Synopsis</h2>
 <pre><code>jdeps</code> [<i>options</i>] <i>classes</i> ...</pre>
 <dl>
-<dt><i>options</i></p>
-<dd>Command-line options. See Options.</p>
-<dt><i>classes</i></p>
-<dd>Name of the classes to analyze. You can specify a class that can be found in the class path, by its file name, a directory, or a JAR file.</dl>
+<dt><i>options</i></dt>
+<dd>Command-line options. See Options.</dd>
+<dt><i>classes</i></dt>
+<dd>Name of the classes to analyze. You can specify a class that can be found in the class path, by its file name, a directory, or a JAR file.</dd></dl>
 <h2>Description</h2>
 <p>The <i></i><code>jdeps</code> command shows the package-level or class-level dependencies of Java class files. The input class can be a path name to a <code>.class</code> file, a directory, a JAR file, or it can be a fully qualified class name to analyze all class files. The options determine the output. By default, <code>jdeps</code> outputs the dependencies to the system output. It can generate the dependencies in DOT language (see the <code>-dotoutput</code> option).</p>
 <h2>Options</h2>
 <dl>
-<dt>-dotoutput &lt;<i>dir</i>&gt;</p>
-<dd>Destination directory for DOT file output. If specified, <code>jdeps</code> will generate one dot file per each analyzed archive named &lt;<i>archive-file-name</i>&gt;.dot listing the dependencies, and also a summary file named summary.dot listing the dependencies among the archives.</p>
-<dt>-s, -summary</p>
-<dd>Prints dependency summary only.</p>
-<dt>-v, -verbose</p>
-<dd>Prints all class-level dependencies.</p>
-<dt>-verbose:package</p>
-<dd>Prints package-level dependencies excluding dependencies within the same archive.</p>
-<dt>-verbose:class</p>
-<dd>Prints class-level dependencies excluding dependencies within the same archive.</p>
-<dt>-cp &lt;<i>path</i>&gt;, -classpath &lt;<i>path</i>&gt;</p>
-<dd>Specifies where to find class files. </p>
+<dt>-dotoutput &lt;<i>dir</i>&gt;</dt>
+<dd>Destination directory for DOT file output. If specified, <code>jdeps</code> will generate one dot file per each analyzed archive named &lt;<i>archive-file-name</i>&gt;.dot listing the dependencies, and also a summary file named summary.dot listing the dependencies among the archives.</dd>
+<dt>-s, -summary</dt>
+<dd>Prints dependency summary only.</dd>
+<dt>-v, -verbose</dt>
+<dd>Prints all class-level dependencies.</dd>
+<dt>-verbose:package</dt>
+<dd>Prints package-level dependencies excluding dependencies within the same archive.</dd>
+<dt>-verbose:class</dt>
+<dd>Prints class-level dependencies excluding dependencies within the same archive.</dd>
+<dt>-cp &lt;<i>path</i>&gt;, -classpath &lt;<i>path</i>&gt;</dt>
+<dd>Specifies where to find class files. </dd>
 <p> See also Setting the Class Path.</p>
-<dt>-p &lt;<i>pkg name</i>&gt;, -package &lt;<i>pkg name</i>&gt;</p>
-<dd>Finds dependencies in the specified package. You can specify this option multiple times for different packages. The <code>-p</code> and <code>-e</code> options are mutually exclusive.</p>
-<dt>-e &lt;<i>regex</i>&gt;, -regex &lt;<i>regex</i>&gt;</p>
-<dd>Finds dependencies in packages matching the specified regular expression pattern. The <code>-p</code> and <code>-e</code> options are mutually exclusive.</p>
-<dt>-include &lt;<i>regex</i>&gt;</p>
-<dd>Restricts analysis to classes matching pattern. This option filters the list of classes to be analyzed. It can be used together with <code>-p</code> and <code>-e</code> which apply pattern to the dependencies.</p>
-<dt>-jdkinternals</p>
-<dd>Finds class-level dependences in JDK internal APIs. By default, it analyzes all classes specified in the <code>-classpath</code> option and in input files unless you specified the <code>-include</code> option. You cannot use this option with the <code>-p</code>, <code>-e</code>, and <code>-s</code> options. </p>
+<dt>-p &lt;<i>pkg name</i>&gt;, -package &lt;<i>pkg name</i>&gt;</dt>
+<dd>Finds dependencies in the specified package. You can specify this option multiple times for different packages. The <code>-p</code> and <code>-e</code> options are mutually exclusive.</dd>
+<dt>-e &lt;<i>regex</i>&gt;, -regex &lt;<i>regex</i>&gt;</dt>
+<dd>Finds dependencies in packages matching the specified regular expression pattern. The <code>-p</code> and <code>-e</code> options are mutually exclusive.</dd>
+<dt>-include &lt;<i>regex</i>&gt;</dt>
+<dd>Restricts analysis to classes matching pattern. This option filters the list of classes to be analyzed. It can be used together with <code>-p</code> and <code>-e</code> which apply pattern to the dependencies.</dd>
+<dt>-jdkinternals</dt>
+<dd>Finds class-level dependences in JDK internal APIs. By default, it analyzes all classes specified in the <code>-classpath</code> option and in input files unless you specified the <code>-include</code> option. You cannot use this option with the <code>-p</code>, <code>-e</code>, and <code>-s</code> options. </dd>
 <p> <i>Warning</i>: JDK internal APIs may not be accessible in upcoming releases.</p>
-<dt>-P, -profile</p>
-<dd>Shows profile or the file containing a package.</p>
-<dt>-apionly</p>
-<dd>Restricts analysis to APIs, for example, dependences from the signature of <code>public</code> and <code>protected</code> members of public classes including field type, method parameter types, returned type, and checked exception types.</p>
-<dt>-R, -recursive</p>
-<dd>Recursively traverses all dependencies.</p>
-<dt>-version</p>
-<dd>Prints version information.</p>
-<dt>-h, -?, -help</p>
-<dd>Prints help message for <code>jdeps</code>.</dl>
+<dt>-P, -profile</dt>
+<dd>Shows profile or the file containing a package.</dd>
+<dt>-apionly</dt>
+<dd>Restricts analysis to APIs, for example, dependences from the signature of <code>public</code> and <code>protected</code> members of public classes including field type, method parameter types, returned type, and checked exception types.</dd>
+<dt>-R, -recursive</dt>
+<dd>Recursively traverses all dependencies.</dd>
+<dt>-version</dt>
+<dd>Prints version information.</dd>
+<dt>-h, -?, -help</dt>
+<dd>Prints help message for <code>jdeps</code>.</dd></dl>
 <h2>Examples</h2>
 <p>Analyzing the dependencies of Notepad.jar. </p>
 <pre><code>$ jdeps demo/jfc/Notepad/Notepad.jar</code></pre>
@@ -176,6 +176,6 @@ description: "jdeps – Java class dependency analyzer."
 <pre><code>}</code></pre>
 <h2>See Also</h2>
 <dl>
-<dt>&bull;</p>
-<dd><a href="/docs/linux/man/1-javap/">javap</a>(1) </p>
+<dt>&bull;</dt>
+<dd><a href="/docs/linux/man/1-javap/">javap</a>(1) </dd>
 </dl>

@@ -20,23 +20,23 @@ description: "acpihelp – ACPI help utility"
 <h2>OPTIONS</h2>
 <h3>ACPI Names and Symbols</h3>
 <dl>
-<dt><code>-k [&lt;name-prefix&gt;]</code></p>
-<dd> Find/Display ASL non-operator keyword(s)</p>
-<dt><code>-m [&lt;name-prefix&gt;]</code></p>
-<dd> Find/Display AML opcode name(s)</p>
-<dt><code>-p [&lt;name-prefix&gt;]</code></p>
-<dd> Find/Display ASL predefined method name(s)</p>
-<dt><code>-s [&lt;name-prefix&gt;]</code></p>
-<dd> Find/Display ASL operator name(s) </p>
+<dt><code>-k [&lt;name-prefix&gt;]</code></dt>
+<dd> Find/Display ASL non-operator keyword(s)</dd>
+<dt><code>-m [&lt;name-prefix&gt;]</code></dt>
+<dd> Find/Display AML opcode name(s)</dd>
+<dt><code>-p [&lt;name-prefix&gt;]</code></dt>
+<dd> Find/Display ASL predefined method name(s)</dd>
+<dt><code>-s [&lt;name-prefix&gt;]</code></dt>
+<dd> Find/Display ASL operator name(s) </dd>
 </dl>
 <h3>ACPI Values</h3>
 <dl>
-<dt><code>-e [&lt;hex-value&gt;]</code></p>
-<dd> Decode ACPICA exception code</p>
-<dt><code>-i</code></p>
-<dd> Display known ACPI Device IDs (_HID)</p>
-<dt><code>-i [&lt;hex-value&gt;]</code></p>
-<dd> Decode hex AML opcode </p>
+<dt><code>-e [&lt;hex-value&gt;]</code></dt>
+<dd> Decode ACPICA exception code</dd>
+<dt><code>-i</code></dt>
+<dd> Display known ACPI Device IDs (_HID)</dd>
+<dt><code>-i [&lt;hex-value&gt;]</code></dt>
+<dd> Decode hex AML opcode </dd>
 </dl>
 <h2>AUTHOR</h2>
 <p> acpihelp was written by Robert Moore &lt;robert.moore [at] intel.com&gt;. </p>

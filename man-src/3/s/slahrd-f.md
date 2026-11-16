@@ -26,10 +26,10 @@ description: "slahrd.f –"
  This is an OBSOLETE auxiliary routine. 
  This routine will be 'deprecated' in a future release.
  Please use the new routine SLAHR2 instead.</pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>N</i> </p>
+<dd><i>N</i> </dd>
 <pre> N is INTEGER
  The order of the matrix A.</pre>
 <p><i>K</i> </p>
@@ -70,13 +70,13 @@ description: "slahrd.f –"
 <p>&nbsp;<wbr></dl>
 <p> <code>Author:</code></p>
 <dl>
-<dd>Univ. of Tennessee </p>
+<dd>Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl>
-<dd>September 2012</dl>
+<dd>September 2012</dd></dl>
 <p> <code>Further Details: </code></p>
 <dl>
 <dd>
@@ -103,7 +103,8 @@ description: "slahrd.f –"
  where a denotes an element of the original matrix A, h denotes a
  modified element of the upper Hessenberg matrix H, and vi denotes an
  element of the vector defining H(i).</pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> Definition at line 170 of file slahrd.f.</p>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for LAPACK from the source code.</p>
+</p>

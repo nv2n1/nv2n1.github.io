@@ -16,12 +16,12 @@ description: "xml-rpc-api2cpp – Make a C++ wrapper class for an XML-RPC API"
 <p> You can find a list of supported XML-RPC server libraries (and patches for many others) at <code><a rel="nofollow" href="http://xmlrpc-c.sourceforge.net/hacks.php">http://xmlrpc-c.sourceforge.net/hacks.php</a></code>.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><i>server-url</i></p>
-<dd> The name of the server to query. Try <code><a rel="nofollow" href="http://xmlrpc-c.sourceforge.net/cgi-bin/interop.cgi">http://xmlrpc-c.sourceforge.net/cgi-bin/interop.cgi</a></code>.</p>
-<dt><i>remote-method-prefix</i></p>
-<dd> The prefix of the methods to wrap. For example, to wrap all the system.* calls, you could specify &quot;system&quot;.</p>
-<dt><i>c++-class-name</i></p>
-<dd> The name of the C++ class to generate. Try &quot;SystemProxy&quot;.</dl>
+<dt><i>server-url</i></dt>
+<dd> The name of the server to query. Try <code><a rel="nofollow" href="http://xmlrpc-c.sourceforge.net/cgi-bin/interop.cgi">http://xmlrpc-c.sourceforge.net/cgi-bin/interop.cgi</a></code>.</dd>
+<dt><i>remote-method-prefix</i></dt>
+<dd> The prefix of the methods to wrap. For example, to wrap all the system.* calls, you could specify &quot;system&quot;.</dd>
+<dt><i>c++-class-name</i></dt>
+<dd> The name of the C++ class to generate. Try &quot;SystemProxy&quot;.</dd></dl>
 <h2>BUGS</h2>
 <p> xml-rpc-api2cpp can&#8217;t talk to certain PHP servers based on Edd Dumbill&#8217;s PHP library, because the trailing bytes of the XML-RPC message get truncated in HTTP pipelining mode. It&#8217;s not clear whether this is a PHP, Apache or w3c-libwww bug. </p>
 <p> xml-rpc-api2cpp assumes that method descriptions are ASCII text, not HTML as specified in the standard. (In practice, both conventions are often seen.) It may also get unhappy if method descriptions contain &quot;*/&quot;. </p>

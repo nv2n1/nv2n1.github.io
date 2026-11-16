@@ -529,44 +529,44 @@ description: "Core — The Core widget class"
 </table>
 </table>
 <dl COMPACT>
-<dt><code>XmNaccelerators</code></p>
-<dd>Specifies a translation table that is bound with its actions in the context of a particular widget. The accelerator table can then be installed on some destination widget. Note that the default accelerators for any widget will always be installed, no matter whether this resource is specified or not.</p>
-<dt><code>XmNancestorSensitive</code></p>
-<dd>Specifies whether the immediate parent of the widget receives input events. Use the function <code>XtSetSensitive</code> to change the argument to preserve data integrity (see <code>XmNsensitive</code>). For shells, the default is copied from the parent&#8217;s <code>XmNancestorSensitive</code> resource if there is a parent; otherwise, it is True. For other widgets, the default is the bitwise AND of the parent&#8217;s <code>XmNsensitive</code> and <code>XmNancestorSensitive</code> resources.</p>
-<dt><code>XmNbackground</code></p>
-<dd>Specifies the background color for the widget.</p>
-<dt><code>XmNbackgroundPixmap</code></p>
-<dd>Specifies a pixmap for tiling the background. The first tile is placed at the upper left corner of the widget&#8217;s window.</p>
-<dt><code>XmNborderColor</code></p>
-<dd>Specifies the color of the border in a pixel value.</p>
-<dt><code>XmNborderPixmap</code></p>
-<dd>Specifies a pixmap to be used for tiling the border. The first tile is placed at the upper left corner of the border.</p>
-<dt><code>XmNborderWidth</code></p>
-<dd>Specifies the width of the border that surrounds the widget&#8217;s window on all four sides. The width is specified in pixels. A width of 0 (zero) means that no border shows. Note that you should use resources like <code>XmNshadowThickness</code> and <code>XmNhighlightThickness</code> instead of <code>XmNborderWidth</code> to specify border widths.</p>
-<dt><code>XmNcolormap</code></p>
-<dd>Specifies the colormap that is used for conversions to the type <code>Pixel</code> for this widget instance. When this resource is changed, previously generated pixel values are not affected, but newly generated values are in the new colormap. For shells without parents, the default is the default colormap of the widget&#8217;s screen. Otherwise, the default is copied from the parent.</p>
-<dt><code>XmNdepth</code></p>
-<dd>Specifies the number of bits that can be used for each pixel in the widget&#8217;s window. Applications should not change or set the value of this resource as it is set by the Xt Intrinsics when the widget is created. For shells without parents, the default is the default depth of the widget&#8217;s screen. Otherwise, the default is copied from the parent.</p>
-<dt><code>XmNdestroyCallback</code></p>
-<dd>Specifies a list of callbacks that is called when the widget is destroyed.</p>
-<dt><code>XmNheight</code></p>
-<dd>Specifies the inside height (excluding the border) of the widget&#8217;s window.</p>
-<dt><code>XmNinitialResourcesPersistent</code></p>
-<dd>Specifies whether or not resources are reference counted. If the value is True when the widget is created, the resources referenced by the widget are not reference counted, regardless of how the resource type converter is registered. An application that expects to destroy the widget and wants to have resources deallocated should specify a value of False. The default is True, implying an assumption that the widget will not be destroyed during the life of the application.</p>
-<dt><code>XmNmappedWhenManaged</code></p>
-<dd>If this resource is set to True, it maps the widget (makes it visible) as soon as it is both realized and managed. If this resource is set to False, the client is responsible for mapping and unmapping the widget. If the value is changed from True to False after the widget has been realized and managed, the widget is unmapped.</p>
-<dt><code>XmNscreen</code></p>
-<dd>Specifies the screen on which a widget instance resides. It is read only. When the Toolkit is initialized, the top-level widget obtains its default value from the default screen of the display. Otherwise, the default is copied from the parent.</p>
-<dt><code>XmNsensitive</code></p>
-<dd>Determines whether a widget receives input events. If a widget is sensitive, the Xt Intrinsics&#8217; Event Manager dispatches to the widget all keyboard, mouse button, motion, window enter/leave, and focus events. Insensitive widgets do not receive these events. Use the function <code>XtSetSensitive</code> to change the sensitivity argument. Using <code>XtSetSensitive</code> ensures that if a parent widget has <code>XmNsensitive</code> set to False, the ancestor-sensitive flag of all its children is appropriately set.</p>
-<dt><code>XmNtranslations</code></p>
-<dd>Points to a translations list. A translations list is a list of events and actions that are to be performed when the events occur. Note that the default translations for any widget will always be installed, no matter whether this resource is specified or not.</p>
-<dt><code>XmNwidth</code></p>
-<dd>Specifies the inside width (excluding the border) of the widget&#8217;s window.</p>
-<dt><code>XmNx</code></p>
-<dd>Specifies the x-coordinate of the upper left outside corner of the widget&#8217;s window. The value is relative to the upper left inside corner of the parent window.</p>
-<dt><code>XmNy</code></p>
-<dd>Specifies the y-coordinate of the upper left outside corner of the widget&#8217;s window. The value is relative to the upper left inside corner of the parent window.</dl>
+<dt><code>XmNaccelerators</code></dt>
+<dd>Specifies a translation table that is bound with its actions in the context of a particular widget. The accelerator table can then be installed on some destination widget. Note that the default accelerators for any widget will always be installed, no matter whether this resource is specified or not.</dd>
+<dt><code>XmNancestorSensitive</code></dt>
+<dd>Specifies whether the immediate parent of the widget receives input events. Use the function <code>XtSetSensitive</code> to change the argument to preserve data integrity (see <code>XmNsensitive</code>). For shells, the default is copied from the parent&#8217;s <code>XmNancestorSensitive</code> resource if there is a parent; otherwise, it is True. For other widgets, the default is the bitwise AND of the parent&#8217;s <code>XmNsensitive</code> and <code>XmNancestorSensitive</code> resources.</dd>
+<dt><code>XmNbackground</code></dt>
+<dd>Specifies the background color for the widget.</dd>
+<dt><code>XmNbackgroundPixmap</code></dt>
+<dd>Specifies a pixmap for tiling the background. The first tile is placed at the upper left corner of the widget&#8217;s window.</dd>
+<dt><code>XmNborderColor</code></dt>
+<dd>Specifies the color of the border in a pixel value.</dd>
+<dt><code>XmNborderPixmap</code></dt>
+<dd>Specifies a pixmap to be used for tiling the border. The first tile is placed at the upper left corner of the border.</dd>
+<dt><code>XmNborderWidth</code></dt>
+<dd>Specifies the width of the border that surrounds the widget&#8217;s window on all four sides. The width is specified in pixels. A width of 0 (zero) means that no border shows. Note that you should use resources like <code>XmNshadowThickness</code> and <code>XmNhighlightThickness</code> instead of <code>XmNborderWidth</code> to specify border widths.</dd>
+<dt><code>XmNcolormap</code></dt>
+<dd>Specifies the colormap that is used for conversions to the type <code>Pixel</code> for this widget instance. When this resource is changed, previously generated pixel values are not affected, but newly generated values are in the new colormap. For shells without parents, the default is the default colormap of the widget&#8217;s screen. Otherwise, the default is copied from the parent.</dd>
+<dt><code>XmNdepth</code></dt>
+<dd>Specifies the number of bits that can be used for each pixel in the widget&#8217;s window. Applications should not change or set the value of this resource as it is set by the Xt Intrinsics when the widget is created. For shells without parents, the default is the default depth of the widget&#8217;s screen. Otherwise, the default is copied from the parent.</dd>
+<dt><code>XmNdestroyCallback</code></dt>
+<dd>Specifies a list of callbacks that is called when the widget is destroyed.</dd>
+<dt><code>XmNheight</code></dt>
+<dd>Specifies the inside height (excluding the border) of the widget&#8217;s window.</dd>
+<dt><code>XmNinitialResourcesPersistent</code></dt>
+<dd>Specifies whether or not resources are reference counted. If the value is True when the widget is created, the resources referenced by the widget are not reference counted, regardless of how the resource type converter is registered. An application that expects to destroy the widget and wants to have resources deallocated should specify a value of False. The default is True, implying an assumption that the widget will not be destroyed during the life of the application.</dd>
+<dt><code>XmNmappedWhenManaged</code></dt>
+<dd>If this resource is set to True, it maps the widget (makes it visible) as soon as it is both realized and managed. If this resource is set to False, the client is responsible for mapping and unmapping the widget. If the value is changed from True to False after the widget has been realized and managed, the widget is unmapped.</dd>
+<dt><code>XmNscreen</code></dt>
+<dd>Specifies the screen on which a widget instance resides. It is read only. When the Toolkit is initialized, the top-level widget obtains its default value from the default screen of the display. Otherwise, the default is copied from the parent.</dd>
+<dt><code>XmNsensitive</code></dt>
+<dd>Determines whether a widget receives input events. If a widget is sensitive, the Xt Intrinsics&#8217; Event Manager dispatches to the widget all keyboard, mouse button, motion, window enter/leave, and focus events. Insensitive widgets do not receive these events. Use the function <code>XtSetSensitive</code> to change the sensitivity argument. Using <code>XtSetSensitive</code> ensures that if a parent widget has <code>XmNsensitive</code> set to False, the ancestor-sensitive flag of all its children is appropriately set.</dd>
+<dt><code>XmNtranslations</code></dt>
+<dd>Points to a translations list. A translations list is a list of events and actions that are to be performed when the events occur. Note that the default translations for any widget will always be installed, no matter whether this resource is specified or not.</dd>
+<dt><code>XmNwidth</code></dt>
+<dd>Specifies the inside width (excluding the border) of the widget&#8217;s window.</dd>
+<dt><code>XmNx</code></dt>
+<dd>Specifies the x-coordinate of the upper left outside corner of the widget&#8217;s window. The value is relative to the upper left inside corner of the parent window.</dd>
+<dt><code>XmNy</code></dt>
+<dd>Specifies the y-coordinate of the upper left outside corner of the widget&#8217;s window. The value is relative to the upper left inside corner of the parent window.</dd></dl>
 <h3>Translations</h3>
 <p>There are no translations for Core.</p>
 <h2>Related</h2>

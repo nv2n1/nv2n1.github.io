@@ -39,14 +39,14 @@ description: "infotopam – convert Amiga .info icons to PAM"
 <p> <code>infotopam</code> currently handles 1 and 2 bit-plane icons. If the .info icon only has 1 bit-plane, <code>infotopam</code> generates a bitmap (black&amp;white) PAM image; otherwise it generates a color PAM image. You can force <code>infotopam</code> to convert 1 bit-plane images to color PAM images by using the <i>-forcecolor</i> option. </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-forcecolor</code></p>
+<dt><code>-forcecolor</code></dt>
 <dd>
 <p>&nbsp;<wbr>&nbsp;<wbr> </p>
 <p> Forces <code>infotopam</code> to convert 1 bit-plane icons to color PAM<br />
 &nbsp;<wbr>&nbsp;<wbr>images instead of bitmap PAM images.&nbsp;<wbr>&nbsp;<wbr><code>infotopam</code>&nbsp;<wbr>uses the index 2<br />
 &nbsp;<wbr>&nbsp;<wbr>color for black and the index 1 color for white&nbsp;<wbr>(more on this<br />
 &nbsp;<wbr>&nbsp;<wbr>below). </p>
-<dt><code>-numcolors</code> <i>numcolors</i></p>
+</dd><dt><code>-numcolors</code> <i>numcolors</i></dt>
 <dd>
 <p>&nbsp;<wbr>&nbsp;<wbr> </p>
 <p> Tells <code>infotopam</code> how many colors to override. Pixels in the<br />
@@ -63,7 +63,7 @@ description: "infotopam – convert Amiga .info icons to PAM"
 &nbsp;<wbr>&nbsp;<wbr>you want to override, where&nbsp;<wbr><i>index</i>&nbsp;<wbr>is a value from 0 to 3 and<br />
 &nbsp;<wbr>&nbsp;<wbr><i>color</i>&nbsp;<wbr>the new color for that index.&nbsp;<wbr>&nbsp;<wbr>Specify&nbsp;<wbr><i>color</i>&nbsp;<wbr>as<br />
 &nbsp;<wbr>&nbsp;<wbr>described for the&nbsp;<wbr> <code>ppm_parsecolor()</code> argument . </p>
-<dt><code>-selected</code></p>
+</dd><dt><code>-selected</code></dt>
 <dd>
 <p>&nbsp;<wbr>&nbsp;<wbr> Tells <code>infotopam</code> to convert the selected (second) icon instead of<br />
 &nbsp;<wbr>&nbsp;<wbr>the normal&nbsp;<wbr>(first)&nbsp;<wbr>icon.&nbsp;<wbr>&nbsp;<wbr>Each Amiga .info icon file contains two icon<br />
@@ -71,7 +71,7 @@ description: "infotopam – convert Amiga .info icons to PAM"
 &nbsp;<wbr>&nbsp;<wbr>image is the selected icon.&nbsp;<wbr>&nbsp;<wbr>By default&nbsp;<wbr><code>infotopam</code>&nbsp;<wbr>converts the first<br />
 &nbsp;<wbr>&nbsp;<wbr>icon.&nbsp;<wbr>&nbsp;<wbr>You can tell&nbsp;<wbr><code>infotopam</code>&nbsp;<wbr>to convert the second icon by using the<br />
 &nbsp;<wbr>&nbsp;<wbr><i>-selected</i>&nbsp;<wbr>option. </p>
-</dl>
+</dd></dl>
 <p> All options can be abbreviated to their shortest unique prefix. </p>
 <h2>SEE ALSO</h2>
 <p> <code>pam</code>(1) </p>
@@ -80,18 +80,18 @@ description: "infotopam – convert Amiga .info icons to PAM"
 <h2>NOTES</h2>
 <p> Thanks to the following people on comp.sys.amiga.programmer for tips and pointers on decoding the info file format: </p>
 <dl>
-<dt>&bull;</p>
-<dd> Ben Hutchings</p>
-<dt>&bull;</p>
-<dd> Thomas Richter</p>
-<dt>&bull;</p>
-<dd> Kjetil Svalastog Matheussen</p>
-<dt>&bull;</p>
-<dd> Anders Melchiorsen</p>
-<dt>&bull;</p>
-<dd> Dirk Stoecker</p>
-<dt>&bull;</p>
-<dd> Ronald V.D. </p>
+<dt>&bull;</dt>
+<dd> Ben Hutchings</dd>
+<dt>&bull;</dt>
+<dd> Thomas Richter</dd>
+<dt>&bull;</dt>
+<dd> Kjetil Svalastog Matheussen</dd>
+<dt>&bull;</dt>
+<dd> Anders Melchiorsen</dd>
+<dt>&bull;</dt>
+<dd> Dirk Stoecker</dd>
+<dt>&bull;</dt>
+<dd> Ronald V.D. </dd>
 </dl>
 <p> The format of the Amiga .info file is as follows: </p>
 <pre>
@@ -107,8 +107,8 @@ description: "infotopam – convert Amiga .info icons to PAM"
 <p> The icon data has the following format: </p>
 <dl>
 <dt>
-<dd>
-&nbsp;<wbr> </p>
+</dt><dd>
+&nbsp;<wbr> </dd>
 <p> <i>BIT-PLANE</i> planes, each with <i>HEIGHT</i> rows of (<i>WIDTH</i><br />
 &nbsp;<wbr>+15)&nbsp;<wbr>/&nbsp;<wbr>16&nbsp;<wbr>*&nbsp;<wbr>2 bytes length.</dl>
 <p> So if you have a 9x3x2 icon, the icon data will look like this: </p>
@@ -129,3 +129,4 @@ description: "infotopam – convert Amiga .info icons to PAM"
 <h2>AUTHOR</h2>
 <p> Copyright (C) 2000, 2004 by Richard Griswold. </p>
 <h2>Index</h2>
+</p>

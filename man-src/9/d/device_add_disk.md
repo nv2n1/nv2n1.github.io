@@ -15,11 +15,11 @@ device_add_disk - add partitioning information to kernel list
 <h2>Arguments</h2>
 
 <i>parent</i>
-<dl><dd><dd>parent device for the disk</dl>
+<dl><dd></dd><dd>parent device for the disk</dd></dl>
  
 
  <i>disk</i>
-<dl><dd>per-device partitioning information</dl>
+<dl><dd>per-device partitioning information</dd></dl>
 
 <h2>Description</h2>
 

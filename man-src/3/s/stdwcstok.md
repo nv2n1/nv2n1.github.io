@@ -11,7 +11,6 @@ std::wcstok - std::wcstok
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;cwchar&gt;
-
     wchar_t *wcstok(wchar_t *str, const wchar_t *delim, wchar_t **ptr);</code></pre> 
 Finds the next token in a null-terminated wide string pointed to by str. The separator characters are identified by null-terminated wide string pointed to by delim. 
 This function is designed to be called multiples times to obtain successive tokens from the same string. 
@@ -42,10 +41,8 @@ Unlike most other tokenizers, the delimiters in std::wcstok can be different for
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;cwchar&gt;
-
 #include &lt;iostream&gt;
 int main()
-
 {
     wchar_t input[100] = L&quot;A bird came down the walk&quot;;
     wchar_t *buffer;

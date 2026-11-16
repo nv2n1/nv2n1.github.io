@@ -14,13 +14,13 @@ description: "ksplice-undo – Undo a Ksplice update that has been applied to th
 <p><code>ksplice-undo</code> takes as input a Ksplice identification tag, as reported by <i><a href="/docs/linux/man/8-ksplice-view/">ksplice-view</a></i>(8), and it reverses that update within the running binary kernel.</p>
 <h2>Options</h2>
 <dl>
-<dt><code>&#8211;debug</code></p>
-<dd>Reverses the update with debugging output enabled. Recommended only for debugging.</p>
-<dt><code>&#8211;debugfile=</code><i>filename</i></p>
-<dd>Sets the location where debugging output should be saved. Implies &#8211;debug.</p>
-<dt><code>&#8211;raw-errors</code></p>
+<dt><code>&#8211;debug</code></dt>
+<dd>Reverses the update with debugging output enabled. Recommended only for debugging.</dd>
+<dt><code>&#8211;debugfile=</code><i>filename</i></dt>
+<dd>Sets the location where debugging output should be saved. Implies &#8211;debug.</dd>
+<dt><code>&#8211;raw-errors</code></dt>
 <dd>Print only raw error information designed to be machine-readable on standard error (standard output is still intended to be human-readable). If <code>ksplice-undo</code> fails due to an error from the Ksplice kernel modules, the first line on standard error will be a Ksplice <code>abort code</code> (see the Ksplice source code for documentation on these codes). Further lines will vary depending on the abort code. If <code>ksplice-undo</code> fails for any other reason, it will output the line <tt>&quot;OTHER
-&quot;</tt>, followed by a human-readable failure message, to standard error.</dl>
+&quot;</tt>, followed by a human-readable failure message, to standard error.</dd></dl>
 <h2>See Also</h2>
 <p><i><a href="/docs/linux/man/8-ksplice-create/">ksplice-create</a></i>(8), <i><a href="/docs/linux/man/8-ksplice-apply/">ksplice-apply</a></i>(8), <i><a href="/docs/linux/man/8-ksplice-view/">ksplice-view</a></i>(8)</p>
 <h2>Bugs</h2>

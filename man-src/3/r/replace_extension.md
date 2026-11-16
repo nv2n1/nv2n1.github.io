@@ -10,9 +10,7 @@ description: "replace_extension – Replaces filename+extension with a new exten
 <p>replace_extension &#8211; Replaces filename+extension with a new extension tail. Allegro game programming library.</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;allegro.h&gt;
-
 char *replace_extension(char *dest, const char *filename,
-
                         const char *ext, int size);</code></pre>
 <h2>Description</h2>
 <p>Replaces the specified filename+extension with a new extension tail, storing at most `size&#8217; bytes into the `dest&#8217; buffer. If the filename doesn&#8217;t have any extension at all, `ext&#8217; will be appended to it, adding a dot character if needed. You can use the same buffer both as input and output because Allegro internally works on a copy of the input before touching `dest&#8217;. Example: </p>

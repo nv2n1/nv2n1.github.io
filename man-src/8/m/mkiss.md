@@ -16,22 +16,22 @@ description: "mkiss – Attach a multi KISS interface"
 <p> Although mention is made of using pseudo ttys as the last arguments, these devices may be normal serial ports. However <code>mkiss</code> provides no way in which to set their speed, the speed must therefore be set by some other method.</p>
 <h2>Options</h2>
 <dl>
-<dt><code>-c</code></p>
-<dd>This enables a one-byte checksum on each incoming and outgoing KISS frame on the serial port. This checksum is used by G8BPQ KISS roms to maintain the integrity of KISS frames.</p>
-<dt><code>-f</code></p>
-<dd>This enables a 16-bit checksum on each incoming and outgoing KISS frame on the serial port. This checksum is used by Flexnet Node and BayCom Mailbox to maintain the integrity of KISS frames.</p>
-<dt><code>-h</code></p>
-<dd>Enables hardware handshaking on the serial line to the TNC. The KISS specification states that no hardware flow control shall be used so the default is off. But some KISS implementations do use hardware flow control.</p>
-<dt><code>-l</code></p>
-<dd>Enables system logging, the default is off.</p>
-<dt><code>-s speed</code></p>
-<dd>Set the speed of the serial port.</p>
-<dt><code>-p pollrate</code></p>
-<dd>Enables polling. Polled mode is used by G8BPQ KISS roms to prevent contention on systems where multiple TNCs share the same serial line. Pollrate is interval between polls (in 100ms units).</p>
-<dt><code>-v</code></p>
-<dd>Display the version.</p>
-<dt><code>-x number</code></p>
-<dd>This option is for Unix98 PTYs. It allocates &quot;number&quot; ptys; their names are written to stdout. When -x is used, the pty arguments are optional.</dl>
+<dt><code>-c</code></dt>
+<dd>This enables a one-byte checksum on each incoming and outgoing KISS frame on the serial port. This checksum is used by G8BPQ KISS roms to maintain the integrity of KISS frames.</dd>
+<dt><code>-f</code></dt>
+<dd>This enables a 16-bit checksum on each incoming and outgoing KISS frame on the serial port. This checksum is used by Flexnet Node and BayCom Mailbox to maintain the integrity of KISS frames.</dd>
+<dt><code>-h</code></dt>
+<dd>Enables hardware handshaking on the serial line to the TNC. The KISS specification states that no hardware flow control shall be used so the default is off. But some KISS implementations do use hardware flow control.</dd>
+<dt><code>-l</code></dt>
+<dd>Enables system logging, the default is off.</dd>
+<dt><code>-s speed</code></dt>
+<dd>Set the speed of the serial port.</dd>
+<dt><code>-p pollrate</code></dt>
+<dd>Enables polling. Polled mode is used by G8BPQ KISS roms to prevent contention on systems where multiple TNCs share the same serial line. Pollrate is interval between polls (in 100ms units).</dd>
+<dt><code>-v</code></dt>
+<dd>Display the version.</dd>
+<dt><code>-x number</code></dt>
+<dd>This option is for Unix98 PTYs. It allocates &quot;number&quot; ptys; their names are written to stdout. When -x is used, the pty arguments are optional.</dd></dl>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/8-kissattach/">kissattach</a></code>(8), <code><a href="/docs/linux/man/8-ifconfig/">ifconfig</a></code>(8), <code><a href="/docs/linux/man/1-kill/">kill</a></code>(1).</p>
 <h2>Authors</h2>

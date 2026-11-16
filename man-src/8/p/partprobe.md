@@ -16,14 +16,14 @@ description: "partprobe – inform the OS of partition table changes"
 <h2>Options</h2>
 <p>This program uses short UNIX style options.</p>
 <dl>
-<dt><code>-d, &#8211;dry-run</code></p>
-<dd>Don&#8217;t update the kernel.</p>
-<dt><code>-s, &#8211;summary</code></p>
-<dd>Show a summary of devices and their partitions.</p>
-<dt><code>-h, &#8211;help</code></p>
-<dd>Show summary of options.</p>
-<dt><code>-v, &#8211;version</code></p>
-<dd>Show version of program.</dl>
+<dt><code>-d, &#8211;dry-run</code></dt>
+<dd>Don&#8217;t update the kernel.</dd>
+<dt><code>-s, &#8211;summary</code></dt>
+<dd>Show a summary of devices and their partitions.</dd>
+<dt><code>-h, &#8211;help</code></dt>
+<dd>Show summary of options.</dd>
+<dt><code>-v, &#8211;version</code></dt>
+<dd>Show version of program.</dd></dl>
 <h2>Reporting Bugs</h2>
 <p>Report bugs to &lt;bug-parted [at] gnu.org&gt;</p>
 <h2>See Also</h2>

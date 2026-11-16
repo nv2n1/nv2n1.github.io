@@ -14,13 +14,13 @@ description: "usb_hcd_check_unlink_urb – check whether an URB may be unlinked"
 <p><i>hcd</i></p>
 <dl>
 <dd>
-<dd>host controller to which <i>urb</i> was submitted</dl>
+</dd><dd>host controller to which <i>urb</i> was submitted</dd></dl>
 <p> <i>urb</i></p>
 <dl>
-<dd>URB being checked for unlinkability</dl>
+<dd>URB being checked for unlinkability</dd></dl>
 <p> <i>status</i></p>
 <dl>
-<dd>error code to store in <i>urb</i> if the unlink succeeds</dl>
+<dd>error code to store in <i>urb</i> if the unlink succeeds</dd></dl>
 <h2>Description</h2>
 <p>Host controller drivers should call this routine in their <code>dequeue</code> method. The HCD&#8217;s private spinlock must be held and interrupts must be disabled. The actions carried out here are required for making sure than an unlink is valid.</p>
 <h2>Return</h2>

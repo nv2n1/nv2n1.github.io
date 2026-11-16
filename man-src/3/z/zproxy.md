@@ -68,7 +68,6 @@ description: "zproxy – run a steerable proxy in the background"
 //  uppercase strings separated by a hyphen:
 CZMQ_EXPORT void
 zproxy(zsock_t *pipe, void *unused);
-
 //  Selftest
 CZMQ_EXPORT void
 zproxy_test(bool verbose);</code></pre>
@@ -88,13 +87,11 @@ zstr_sendx(proxy, &quot;FRONTEND&quot;, &quot;PULL&quot;, &quot;inproc://fronten
 zsock_wait(proxy);
 zstr_sendx(proxy, &quot;BACKEND&quot;, &quot;PUSH&quot;, &quot;inproc://backend&quot;, NULL);
 zsock_wait(proxy);
-
 //  Connect application sockets to proxy
 zsock_t *faucet = zsock_new_push(&quot;&gt;inproc://frontend&quot;);
 assert(faucet);
 zsock_t *sink = zsock_new_pull(&quot;&gt;inproc://backend&quot;);
 assert(sink);
-
 //  Send some messages and check they arrived
 char *hello, *world;
 zstr_sendx(faucet, &quot;Hello&quot;, &quot;World&quot;, NULL);
@@ -103,7 +100,6 @@ assert(streq(hello, &quot;Hello&quot;));
 assert(streq(world, &quot;World&quot;));
 zstr_free(&amp;hello);
 zstr_free(&amp;world);
-
 //  Test pause/resume functionality
 zstr_sendx(proxy, &quot;PAUSE&quot;, NULL);
 zsock_wait(proxy);
@@ -111,7 +107,6 @@ zstr_sendx(faucet, &quot;Hello&quot;, &quot;World&quot;, NULL);
 zsock_set_rcvtimeo(sink, 100);
 zstr_recvx(sink, &amp;hello, &amp;world, NULL);
 assert(!hello &amp;&amp; !world);
-
 zstr_sendx(proxy, &quot;RESUME&quot;, NULL);
 zsock_wait(proxy);
 zstr_recvx(sink, &amp;hello, &amp;world, NULL);
@@ -119,11 +114,9 @@ assert(streq(hello, &quot;Hello&quot;));
 assert(streq(world, &quot;World&quot;));
 zstr_free(&amp;hello);
 zstr_free(&amp;world);
-
 //  Test capture functionality
 zsock_t *capture = zsock_new_pull(&quot;inproc://capture&quot;);
 assert(capture);
-
 //  Switch on capturing, check that it works
 zstr_sendx(proxy, &quot;CAPTURE&quot;, &quot;inproc://capture&quot;, NULL);
 zsock_wait(proxy);
@@ -133,13 +126,11 @@ assert(streq(hello, &quot;Hello&quot;));
 assert(streq(world, &quot;World&quot;));
 zstr_free(&amp;hello);
 zstr_free(&amp;world);
-
 zstr_recvx(capture, &amp;hello, &amp;world, NULL);
 assert(streq(hello, &quot;Hello&quot;));
 assert(streq(world, &quot;World&quot;));
 zstr_free(&amp;hello);
 zstr_free(&amp;world);
-
 zsock_destroy(&amp;faucet);
 zsock_destroy(&amp;sink);
 zsock_destroy(&amp;capture);
@@ -154,7 +145,8 @@ zactor_destroy(&amp;proxy);
 <p>Copyright (c) 1991-2012 iMatix Corporation &#8212; <a rel="nofollow" href="http://www.imatix.com">http://www.imatix.com</a> Copyright other contributors as noted in the AUTHORS file. This file is part of CZMQ, the high-level C binding for 0MQ: <a href="http://czmq.zeromq.org">http://czmq.zeromq.org</a> This Source Code Form is subject to the terms of the Mozilla Public License, v. 2.0. If a copy of the MPL was not distributed with this file, You can obtain one at <a href="http://mozilla.org/MPL/2.0/.">http://mozilla.org/MPL/2.0/.</a> LICENSE included with the czmq distribution.</p>
 <h2>Notes</h2>
 <dl>
-<dt> 1.</p>
-<dd>zeromq-dev [at] lists.zeromq.org</p>
+<dt> 1.</dt>
+<dd>zeromq-dev [at] lists.zeromq.org</dd>
 <dl>
-<dd>mailto:zeromq-dev [at] lists.zeromq.org</dl>
+<dd>mailto:zeromq-dev [at] lists.zeromq.org</dd></dl>
+</dl>

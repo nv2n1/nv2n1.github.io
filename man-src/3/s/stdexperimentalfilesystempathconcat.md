@@ -11,39 +11,28 @@ description: "std::experimental::filesystem::path::concat,std::experimental::fil
 <h2>Synopsis</h2>
 <pre><code>path &amp;operator+=(const path &amp;p);
 (1)(filesystem TS)
-
     path &amp;
     operator+=(const string_type &amp;str);
 (2)(filesystem TS)
-
     path &amp;
     operator+=(const value_type *ptr);
 (3)(filesystem TS)
-
     path &amp;
     operator+=(value_type x);
 (4)(filesystem TS)
-
     template &lt;class Source&gt;
     (5)(filesystem TS)
-
         path &amp;
         operator+=(const Source &amp;source);
-
 template &lt;class CharT&gt;
 (6)(filesystem TS)
-
     path &amp;
     operator+=(CharT x);
-
 template &lt;class Source&gt;
 (7)(filesystem TS)
-
     path &amp;concat(const Source &amp;source);
-
 template &lt;class InputIt&gt;
 (8)(filesystem TS)
-
     path &amp;concat(InputIterator first, InputIterator last);</code></pre>
 <p>Concatenates the current path and the argument<br />
 1) Concatenates *this and p in such a way that native() of the result is exactly original native() concatenated with p.native()<br />
@@ -93,15 +82,8 @@ CharT must be one of the encoded character types (char, wchar_t, char16_t and ch
 &nbsp;<wbr>&nbsp;&quot;&quot; + &quot;var&quot; + &quot;lib&quot; == &quot;varlib&quot;</p>
 <h2>See also</h2>
 <pre><code>appends elements to the path
-
 append     (public member function)
-
 operator/=
 concatenates two paths with a directory separator
-
 operator/  (function)
-
-
-
-
 </code></pre>

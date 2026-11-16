@@ -55,17 +55,17 @@ description: "QuantLib::Money – amount of cash"
 <p>amount of cash </p>
 <p> <code>Tests</code></p>
 <dl COMPACT>
-<dd>money arithmetic is tested with and without currency conversions.</dl>
+<dd>money arithmetic is tested with and without currency conversions.</dd></dl>
 <h2>Member Enumeration Documentation</h2>
 <h3>enum <code>ConversionType</code></h3>
 <p><code>Enumerator: </code></p>
 <dl COMPACT>
-<dt><i>NoConversion </i></p>
-<dd>do not perform conversions</p>
-<dt><i>BaseCurrencyConversion </i></p>
-<dd>convert both operands to the base currency before converting</p>
-<dt><i>AutomatedConversion </i></p>
-<dd>return the result in the currency of the first operand</dl>
+<dt><i>NoConversion </i></dt>
+<dd>do not perform conversions</dd>
+<dt><i>BaseCurrencyConversion </i></dt>
+<dd>convert both operands to the base currency before converting</dd>
+<dt><i>AutomatedConversion </i></dt>
+<dd>return the result in the currency of the first operand</dd></dl>
 <h2>Friends And Related Function Documentation</h2>
 <h3><code>Money</code> operator+ (const <code>Money</code> &amp;, const <code>Money</code> &amp;) [related]</h3>
 <h3><code>Money</code> operator- (const <code>Money</code> &amp;, const <code>Money</code> &amp;) [related]</h3>

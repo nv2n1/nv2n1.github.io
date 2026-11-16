@@ -18,7 +18,6 @@ description: "makecol15_dither, makecol16_dither – Calculates a dithered 15 or
 <p> Example: </p>
 <pre><code>
 int pixel1, pixel2;
-
 /* The following two color values MAY be different. */
 pixel1 = makecol16_dither(255, 192, 64, 0, 0);
 pixel2 = makecol16_dither(255, 192, 64, 1, 0);

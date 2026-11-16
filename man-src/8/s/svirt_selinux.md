@@ -90,16 +90,16 @@ description: "svirt_selinux – Security Enhanced Linux Policy for the svirt pro
 <p> <code>svirt_home_t</code> </p>
 <p> &#8211; Set files with the svirt_home_t type, if you want to store svirt files in the users home directory. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/home/[^/]+/.libvirt/qemu(/.*)?, /home/[^/]+/.cache/libvirt/qemu(/.*)?, /home/[^/]+/.config/libvirt/qemu(/.*)?, /home/[^/]+/.local/share/libvirt/boot(/.*)?, /home/[^/]+/.local/share/libvirt/images(/.*)?, /home/[^/]+/.local/share/gnome-boxes/images(/.*)? </p>
+<dt>Paths:</dt>
+<dd>/home/[^/]+/.libvirt/qemu(/.*)?, /home/[^/]+/.cache/libvirt/qemu(/.*)?, /home/[^/]+/.config/libvirt/qemu(/.*)?, /home/[^/]+/.local/share/libvirt/boot(/.*)?, /home/[^/]+/.local/share/libvirt/images(/.*)?, /home/[^/]+/.local/share/gnome-boxes/images(/.*)? </dd>
 </dl>
 <p> <code>svirt_image_t</code> </p>
 <p> &#8211; Set files with the svirt_image_t type, if you want to treat the files as svirt image data. </p>
 <p> <code>svirt_sandbox_file_t</code> </p>
 <p> &#8211; Set files with the svirt_sandbox_file_t type, if you want to treat the files as svirt sandbox content. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/var/lib/kubelet(/.*)?, /var/lib/docker/vfs(/.*)? </p>
+<dt>Paths:</dt>
+<dd>/var/lib/kubelet(/.*)?, /var/lib/docker/vfs(/.*)? </dd>
 </dl>
 <p> <code>svirt_tmp_t</code> </p>
 <p> &#8211; Set files with the svirt_tmp_t type, if you want to store svirt temporary files in the /tmp directories. </p>

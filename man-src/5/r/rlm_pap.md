@@ -14,8 +14,8 @@ description: "rlm_pap – FreeRADIUS Module"
 <h2>Configuration</h2>
 <p>The only relevant configuration item is:</p>
 <dl>
-<dt>normify</p>
-<dd>The default is &quot;yes&quot;. This means that the module will try to convert hex passwords and base64-encoded passwords to &quot;normalized&quot; form. However, some clear text passwords may be erroneously converted. Setting this to &quot;no&quot; prevents that conversion.</dl>
+<dt>normify</dt>
+<dd>The default is &quot;yes&quot;. This means that the module will try to convert hex passwords and base64-encoded passwords to &quot;normalized&quot; form. However, some clear text passwords may be erroneously converted. Setting this to &quot;no&quot; prevents that conversion.</dd></dl>
 <p> The module looks for the Password-With-Header attribute to find the &quot;known good password. The header is given by the following table. </p>
 <dl>
 <dd>
@@ -43,7 +43,7 @@ Header Attribute Description
 {x-nthash} NT-Password Windows NT hashed passwords
 <br>
 {lm} LM-Password Windows Lan Manager (LM) passwords.</pre>
-</dl>
+</dd></dl>
 <p> The module tries to be flexible when handling the various password formats. It will automatically handle Base-64 encoded data, hex strings, and binary data, and convert them to a format that the server can use. </p>
 <p> If there is no Password-With-Header attribute, the module looks for Cleartext-Password, NT-Password, Crypt-Password, etc. </p>
 <p> It is important to understand the difference between the User-Password and Cleartext-Password attributes. The Cleartext-Password attribute is the &quot;known good&quot; password for the user. Simply supplying the Cleartext-Password to the server will result in most authentication methods working. The User-Password attribute is the password as typed in by the user on their private machine. The two are not the same, and should be treated very differently. That is, you should generally not use the User-Password attribute anywhere in the RADIUS configuration. </p>

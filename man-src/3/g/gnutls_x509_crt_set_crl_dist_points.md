@@ -14,14 +14,14 @@ description: "gnutls_x509_crt_set_crl_dist_points – API function"
 <p> <code>int gnutls_x509_crt_set_crl_dist_points(gnutls_x509_crt_t </code><i>crt</i><code>, gnutls_x509_subject_alt_name_t </code><i>type</i><code>, const void * </code><i>data_string</i><code>, unsigned int </code><i>reason_flags</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
-<dt>gnutls_x509_crt_t crt</p>
-<dd> a certificate of type <code>gnutls_x509_crt_t</code></p>
-<dt>gnutls_x509_subject_alt_name_t type</p>
-<dd> is one of the gnutls_x509_subject_alt_name_t enumerations</p>
-<dt>const void * data_string</p>
-<dd> The data to be set</p>
-<dt>unsigned int reason_flags</p>
-<dd> revocation reasons</dl>
+<dt>gnutls_x509_crt_t crt</dt>
+<dd> a certificate of type <code>gnutls_x509_crt_t</code></dd>
+<dt>gnutls_x509_subject_alt_name_t type</dt>
+<dd> is one of the gnutls_x509_subject_alt_name_t enumerations</dd>
+<dt>const void * data_string</dt>
+<dd> The data to be set</dd>
+<dt>unsigned int reason_flags</dt>
+<dd> revocation reasons</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> This function will set the CRL distribution points certificate extension.</p>
 <h2>RETURNS</h2>
@@ -35,6 +35,6 @@ description: "gnutls_x509_crt_set_crl_dist_points – API function"
 <h2>SEE ALSO</h2>
 <p> The full documentation for <code>gnutls</code> is maintained as a Texinfo manual. If the /usr/share/doc/gnutls/ directory does not contain the HTML form visit <code></p>
 <dl>
-<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></p>
-<dd> </code></dl>
+<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></dt>
+<dd> </code></dd></dl>
 <h2>Index</h2>

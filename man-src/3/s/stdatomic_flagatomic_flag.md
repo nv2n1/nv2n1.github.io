@@ -11,10 +11,8 @@ std::atomic_flag::atomic_flag - std::atomic_flag::atomic_flag
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;atomic&gt;
-
 atomic_flag() noexcept;
 (1)(since C++ 11)
-
     atomic_flag(const atomic_flag &amp;) = delete;
 (2)(since C++ 11)</code></pre> 
 Constructs a new std::atomic_flag. 

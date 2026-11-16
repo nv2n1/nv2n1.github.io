@@ -14,10 +14,10 @@ description: "sos.conf – sosreport configuration"
 <p>There are two sections in the sosreport configuration file: plugins, and tunables. Options are set using &#8216;ini&#8217;-style <code>name = value</code> pairs. </p>
 <p> Some options accept a comma separated list of values. </p>
 <dl>
-<dt><code>[plugins]</code></p>
-<dd>disable Comma separated list of plugins to disable.</p>
-<dt><code>[tunables]</code></p>
-<dd>plugin.option Alter available options for defined plugin.</dl>
+<dt><code>[plugins]</code></dt>
+<dd>disable Comma separated list of plugins to disable.</dd>
+<dt><code>[tunables]</code></dt>
+<dd>plugin.option Alter available options for defined plugin.</dd></dl>
 <h2>Examples</h2>
 <p>To disable the &#8216;general&#8217; and &#8216;filesys&#8217; plugins: </p>
 <p> [plugins]<br />

@@ -12,44 +12,17 @@ description: "sc::OSSHF –"
 <p> Inherits <code>sc::OSSSCF</code>.</p>
 <h3>Public Member Functions</h3>
 <pre><code>OSSHF (StateIn &amp;)
-
-
-
 OSSHF (const Ref&lt; KeyVal &gt; &amp;)
-
-
-
 void save_data_state (StateOut &amp;)
-
-
 Save the base classes (with save_data_state) and the members in the same order that the StateIn CTOR initializes them.
-
-
 void print (std::ostream &amp;o=ExEnv::out0()) const
-
-
 Print information about the object.
-
-
 void two_body_energy (double &amp;ec, double &amp;ex)
-
-
-
 int value_implemented () const
-
-
 Information about the availability of values, gradients, and hessians.
-
-
 int gradient_implemented () const
-
-
-
 Protected Member Functions
 void ao_fock (double accuracy)
-
-
-
 void two_body_deriv (double *)</code></pre>
 <h2>Member Function Documentation</h2>
 <h3>void sc::OSSHF::save_data_state (<code>StateOut</code> &amp;) [virtual]</h3>

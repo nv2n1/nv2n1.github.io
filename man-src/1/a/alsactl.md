@@ -44,54 +44,54 @@ description: "alsactl – advanced controls for ALSA soundcard driver"
 <p> This command dumps the current configuration (all cards) to stdout. Note that the configuration hooks are evaluated. </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><i>-h, &#8211;help</i></p>
-<dd> Help: show available flags and commands. </p>
-<dt><i>-d, &#8211;debug</i></p>
-<dd> Use debug mode: a bit more verbose. </p>
-<dt><i>-v, &#8211;version</i></p>
-<dd> Print alsactl version number. </p>
-<dt><i>-f, &#8211;file</i></p>
-<dd> Select the configuration file to use. The default is /var/lib/alsa/asound.state. </p>
-<dt><i>-a, &#8211;config-dir</i></p>
-<dd> Select the boot / hotplug ALSA configuration directory to use. The default is /var/lib/alsa. </p>
-<dt><i>-l, &#8211;lock</i></p>
-<dd> Use the file locking to serialize the concurrent access to the state file (this option is default for the global state file). </p>
-<dt><i>-L, &#8211;no-lock</i></p>
-<dd> Do not use the file locking to serialize the concurrent access to the state file (including the global state file). </p>
-<dt><i>-O, &#8211;lock-state-file</i></p>
-<dd> Select the state lock file path. </p>
-<dt><i>-F, &#8211;force</i></p>
-<dd> Used with restore command. Try to restore the matching control elements as much as possible. This option is set as default now. </p>
-<dt><i>-g, &#8211;ignore</i></p>
-<dd> Used with store, restore and init commands. Do not show &#8216;No soundcards found&#8217; and do not set an error exit code when soundcards are not installed. </p>
-<dt><i>-P, &#8211;pedantic</i></p>
-<dd> Used with restore command. Don&#8217;t restore mismatching control elements. This option was the old default behavior. </p>
-<dt><i>-I, &#8211;no-init-fallback</i></p>
-<dd> Don&#8217;t initialize cards if restore fails. Since version 1.0.18, <code>alsactl</code> tries to initialize the card with the restore operation as default. But this can cause incompatibility with the older version. The caller may expect that the state won&#8217;t be touched if no state file exists. This option takes the restore behavior back to the older version by suppressing the initialization. </p>
-<dt><i>-r, &#8211;runstate</i></p>
-<dd> Save restore and init state to this file. The file will contain only errors. Errors are appended with the soundcard id to the end of file. </p>
-<dt><i>-R, &#8211;remove</i></p>
-<dd> Remove runstate file at first. </p>
-<dt><i>-E, &#8211;env</i> #=#</p>
-<dd> Set environment variable (useful for init action or you may override ALSA_CONFIG_PATH to read different or optimized configuration &#8211; may be useful for &quot;boot&quot; scripts). </p>
-<dt><i>-i, &#8211;initfile</i></p>
-<dd> The configuration file for init. By default, PREFIX/share/alsa/init/00main is used. </p>
-<dt><i>-p, &#8211;period</i></p>
-<dd> The store period in seconds for the daemon command. </p>
-<dt><i>-e, &#8211;pid-file</i></p>
-<dd> The pathname to store the process-id file in the HDB UUCP format (ASCII). </p>
-<dt><i>-b, &#8211;background</i></p>
-<dd> Run the task in background. </p>
-<dt><i>-s, &#8211;syslog</i></p>
-<dd> Use syslog for messages. </p>
-<dt><i>-n, &#8211;nice</i></p>
-<dd> Set the process priority (see &#8216;man nice&#8217;) </p>
-<dt><i>-c, &#8211;sched-idle</i></p>
-<dd> Set the process scheduling policy to idle (SCHED_IDLE). </p>
-<dt><i>-D, &#8211;ucm-defaults</i></p>
-<dd> Execute also the &#8216;defaults&#8217; section from the UCM configuration. The standard behaviour is to execute only &#8216;once&#8217; section. </p>
-<dt><i>-U, &#8211;no-ucm</i></p>
-<dd> Skip the UCM init even if available. It may be useful for the test the legacy init configuration. </p>
+<dt><i>-h, &#8211;help</i></dt>
+<dd> Help: show available flags and commands. </dd>
+<dt><i>-d, &#8211;debug</i></dt>
+<dd> Use debug mode: a bit more verbose. </dd>
+<dt><i>-v, &#8211;version</i></dt>
+<dd> Print alsactl version number. </dd>
+<dt><i>-f, &#8211;file</i></dt>
+<dd> Select the configuration file to use. The default is /var/lib/alsa/asound.state. </dd>
+<dt><i>-a, &#8211;config-dir</i></dt>
+<dd> Select the boot / hotplug ALSA configuration directory to use. The default is /var/lib/alsa. </dd>
+<dt><i>-l, &#8211;lock</i></dt>
+<dd> Use the file locking to serialize the concurrent access to the state file (this option is default for the global state file). </dd>
+<dt><i>-L, &#8211;no-lock</i></dt>
+<dd> Do not use the file locking to serialize the concurrent access to the state file (including the global state file). </dd>
+<dt><i>-O, &#8211;lock-state-file</i></dt>
+<dd> Select the state lock file path. </dd>
+<dt><i>-F, &#8211;force</i></dt>
+<dd> Used with restore command. Try to restore the matching control elements as much as possible. This option is set as default now. </dd>
+<dt><i>-g, &#8211;ignore</i></dt>
+<dd> Used with store, restore and init commands. Do not show &#8216;No soundcards found&#8217; and do not set an error exit code when soundcards are not installed. </dd>
+<dt><i>-P, &#8211;pedantic</i></dt>
+<dd> Used with restore command. Don&#8217;t restore mismatching control elements. This option was the old default behavior. </dd>
+<dt><i>-I, &#8211;no-init-fallback</i></dt>
+<dd> Don&#8217;t initialize cards if restore fails. Since version 1.0.18, <code>alsactl</code> tries to initialize the card with the restore operation as default. But this can cause incompatibility with the older version. The caller may expect that the state won&#8217;t be touched if no state file exists. This option takes the restore behavior back to the older version by suppressing the initialization. </dd>
+<dt><i>-r, &#8211;runstate</i></dt>
+<dd> Save restore and init state to this file. The file will contain only errors. Errors are appended with the soundcard id to the end of file. </dd>
+<dt><i>-R, &#8211;remove</i></dt>
+<dd> Remove runstate file at first. </dd>
+<dt><i>-E, &#8211;env</i> #=#</dt>
+<dd> Set environment variable (useful for init action or you may override ALSA_CONFIG_PATH to read different or optimized configuration &#8211; may be useful for &quot;boot&quot; scripts). </dd>
+<dt><i>-i, &#8211;initfile</i></dt>
+<dd> The configuration file for init. By default, PREFIX/share/alsa/init/00main is used. </dd>
+<dt><i>-p, &#8211;period</i></dt>
+<dd> The store period in seconds for the daemon command. </dd>
+<dt><i>-e, &#8211;pid-file</i></dt>
+<dd> The pathname to store the process-id file in the HDB UUCP format (ASCII). </dd>
+<dt><i>-b, &#8211;background</i></dt>
+<dd> Run the task in background. </dd>
+<dt><i>-s, &#8211;syslog</i></dt>
+<dd> Use syslog for messages. </dd>
+<dt><i>-n, &#8211;nice</i></dt>
+<dd> Set the process priority (see &#8216;man nice&#8217;) </dd>
+<dt><i>-c, &#8211;sched-idle</i></dt>
+<dd> Set the process scheduling policy to idle (SCHED_IDLE). </dd>
+<dt><i>-D, &#8211;ucm-defaults</i></dt>
+<dd> Execute also the &#8216;defaults&#8217; section from the UCM configuration. The standard behaviour is to execute only &#8216;once&#8217; section. </dd>
+<dt><i>-U, &#8211;no-ucm</i></dt>
+<dd> Skip the UCM init even if available. It may be useful for the test the legacy init configuration. </dd>
 </dl>
 <h2>FILES</h2>
 <p> <i>/var/lib/alsa/asound.state</i> (or whatever file you specify with the <code>-f</code> flag) is used to store current settings for your soundcards. The settings include all the usual soundcard mixer settings. More importantly, alsactl is capable of controlling other card-specific features that mixer apps usually don&#8217;t know about. </p>

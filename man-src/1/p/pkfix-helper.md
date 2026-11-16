@@ -25,42 +25,42 @@ description: "pkfix-helper – preprocess dvips-produced PostScript documents be
 <p> <code>pkfix-helper</code> accepts on the command line the filename of a PostScript document to process (with the default being the standard input device) and the filename of a modified PostScript document to create (with the default being the standard output device). The program also accepts the following command-line options:</p>
 <h3>Frequently Used Options</h3>
 <dl>
-<dt><code>-h</code>, <code>&#8211;help</code></p>
-<dd> Display usage information and exit. The <code>&#8211;verbose</code> and <code>&#8211;quiet</code> options can be used to increase and decrease the amount of information presented.</p>
-<dt><code>-v</code>, <code>&#8211;verbose</code></p>
-<dd> Increase the amount of status information that <code>pkfix-helper</code> displays as it runs. Additional instances of <code>&#8211;verbose</code> on the command line further increase the program&#8217;s verbosity. By default, only major operations are displayed. A single <code>&#8211;verbose</code> additionally displays information about individual font comparisons. A second <code>&#8211;verbose</code> additionally displays details about some of the program&#8217;s internal operations.</p>
-<dt><code>-f</code> <i>name</i>=<i>fontspec</i>, <code>&#8211;force</code>=<i>name</i>=<i>fontspec</i></p>
-<dd> Force <code>pkfix-helper</code> to associate a specific font with a given font name appearing the document. <i>name</i> is a (usually) two-character <code>dvips</code> font name such as <tt>&quot;Fa&quot;</tt>. <i>fontspec</i> is a font specification that comprises a font name and an optional scale: &quot;<i>font</i> [<tt>&quot;@&quot;</tt>&nbsp;<i>scale</i>]&quot;. Some examples of <i>fontspec</i>s are <tt>&quot;cmmi8&quot;</tt> and <tt>&quot;cmsy10&nbsp;@&nbsp;1.1X&quot;</tt>. </p>
+<dt><code>-h</code>, <code>&#8211;help</code></dt>
+<dd> Display usage information and exit. The <code>&#8211;verbose</code> and <code>&#8211;quiet</code> options can be used to increase and decrease the amount of information presented.</dd>
+<dt><code>-v</code>, <code>&#8211;verbose</code></dt>
+<dd> Increase the amount of status information that <code>pkfix-helper</code> displays as it runs. Additional instances of <code>&#8211;verbose</code> on the command line further increase the program&#8217;s verbosity. By default, only major operations are displayed. A single <code>&#8211;verbose</code> additionally displays information about individual font comparisons. A second <code>&#8211;verbose</code> additionally displays details about some of the program&#8217;s internal operations.</dd>
+<dt><code>-f</code> <i>name</i>=<i>fontspec</i>, <code>&#8211;force</code>=<i>name</i>=<i>fontspec</i></dt>
+<dd> Force <code>pkfix-helper</code> to associate a specific font with a given font name appearing the document. <i>name</i> is a (usually) two-character <code>dvips</code> font name such as <tt>&quot;Fa&quot;</tt>. <i>fontspec</i> is a font specification that comprises a font name and an optional scale: &quot;<i>font</i> [<tt>&quot;@&quot;</tt>&nbsp;<i>scale</i>]&quot;. Some examples of <i>fontspec</i>s are <tt>&quot;cmmi8&quot;</tt> and <tt>&quot;cmsy10&nbsp;@&nbsp;1.1X&quot;</tt>. </dd>
 <p> An asterisk used in the name of the font (e.g.,&nbsp;<tt>&quot;cmti*&quot;</tt>) will be replaced by all integers from 5 to 17 (<tt>&quot;cmti5&quot;</tt>, <tt>&quot;cmti6&quot;</tt>, &#8230;, <tt>&quot;cmti17&quot;</tt>). The scale can be written as a multiple of the design size (<tt>&quot;X&quot;</tt>) or as an absolute size in either TeX points (<tt>&quot;pt&quot;</tt>) or PostScript &#8220;big&#8221; points (<tt>&quot;bp&quot;</tt>). Hence, <tt>&quot;cmsy8&nbsp;@&nbsp;1.5X&quot;</tt>, <tt>&quot;cmsy8&nbsp;@&nbsp;12pt&quot;</tt>, and <tt>&quot;cmsy8&nbsp;@&nbsp;11.96bp&quot;</tt> all represent the <i>Computer Modern Math Symbols 8 Point</i> font scaled to 12 TeX points/11.96 PostScript points. Instead of specifying an explicit scale, an asterisk can be used (as in <tt>&quot;cmsy8&nbsp;@&nbsp;*&quot;</tt>) to request that <code>pkfix-helper</code> find the scale that best matches the original font&#8217;s metrics. </p>
 <p> The <code>&#8211;force</code> option can be specified repeatedly on the command line.</p>
-<dt><code>-p</code> <i>filename.ps</i>, <code>&#8211;ps</code>=<i>filename.ps</i></p>
-<dd> Create a PostScript file called <i>filename.ps</i> that shows the <code>dvips</code> name and a font sample of every font used by the input document.</p>
-<dt><code>-t</code> <i>filename.tex</i>, <code>&#8211;tex</code>=<i>filename.tex</i></p>
-<dd> Create a Plain TeX file called <i>filename.tex</i> that shows the <code>dvips</code> name and a font sample of every font that <code>pkfix-helper</code> used in the output document.</p>
-<dt><code>-k</code> <i>fontspec</i>, <code>&#8211;keep</code>=<i>fontspec</i></p>
-<dd> Do not substitute a vector font for bitmapped font <i>fontspec</i> (<tt>&quot;Fa&quot;</tt>, <tt>&quot;Fb&quot;</tt>, etc.). This is useful when converting documents that use obscure bitmapped fonts for which there is no vector equivalent. For example, it was somewhat common in the past to include graphics such as university or corporate logos into a document by converting the bitmapped image into a single-character font and using that font in LaTeX. <code>&#8211;keep</code> prevents such fonts from being replaced. The <code>&#8211;keep</code> option can be specified repeatedly on the command line.</p>
-<dt><code>-1</code>, <code>&#8211;no-repeats</code></p>
-<dd> Prevent <code>pkfix-helper</code> from associating the same <i>fontspec</i> with more than one <code>dvips</code> font name.</dl>
+<dt><code>-p</code> <i>filename.ps</i>, <code>&#8211;ps</code>=<i>filename.ps</i></dt>
+<dd> Create a PostScript file called <i>filename.ps</i> that shows the <code>dvips</code> name and a font sample of every font used by the input document.</dd>
+<dt><code>-t</code> <i>filename.tex</i>, <code>&#8211;tex</code>=<i>filename.tex</i></dt>
+<dd> Create a Plain TeX file called <i>filename.tex</i> that shows the <code>dvips</code> name and a font sample of every font that <code>pkfix-helper</code> used in the output document.</dd>
+<dt><code>-k</code> <i>fontspec</i>, <code>&#8211;keep</code>=<i>fontspec</i></dt>
+<dd> Do not substitute a vector font for bitmapped font <i>fontspec</i> (<tt>&quot;Fa&quot;</tt>, <tt>&quot;Fb&quot;</tt>, etc.). This is useful when converting documents that use obscure bitmapped fonts for which there is no vector equivalent. For example, it was somewhat common in the past to include graphics such as university or corporate logos into a document by converting the bitmapped image into a single-character font and using that font in LaTeX. <code>&#8211;keep</code> prevents such fonts from being replaced. The <code>&#8211;keep</code> option can be specified repeatedly on the command line.</dd>
+<dt><code>-1</code>, <code>&#8211;no-repeats</code></dt>
+<dd> Prevent <code>pkfix-helper</code> from associating the same <i>fontspec</i> with more than one <code>dvips</code> font name.</dd></dl>
 <h3>Less-frequently Used Options</h3>
 <dl>
-<dt><code>-q</code>, <code>&#8211;quiet</code></p>
-<dd> Instruct <code>pkfix-helper</code> to produce no output during its run except for error and warning messages.</p>
-<dt><code>-C</code> <i>filename</i>, <code>&#8211;cache</code>=<i>filename</i></p>
-<dd> Speed up <font SIZE="-1">TFM</font> file processing by caching character metrics into file <i>filename</i>. On some systems it takes a long time to read a <font SIZE="-1">TFM</font> file, spawn <i>tftopl</i> to convert it to <font SIZE="-1">PL</font> format, and extract from the <font SIZE="-1">PL</font> data the metrics for each character. The first time <code>&#8211;cache</code> is specified, <code>pkfix-helper</code> proceeds as normal then writes all of the extracted character metrics to <i>filename</i>. On subsequent runs in which <code>&#8211;cache</code>=<i>filename</i> is specified, <code>pkfix-helper</code> reads the previously extracted metrics from <i>filename</i>, going through the <i>tftopl</i>-based process only for <font SIZE="-1">TFM</font> files that were not previously encountered.</p>
-<dt><code>-i</code> <i>fontspec</i>, <code>&#8211;include</code>=<i>fontspec</i></p>
-<dd> Add <i>fontspec</i> to the list of font specifications against which <code>pkfix-helper</code> compares <i>every</i> document font. (In contrast, <code>&#8211;force</code> designates a font specification to use only for a <i>specific</i> document font.) The <code>&#8211;include</code> option can be specified repeatedly on the command line.</p>
-<dt><code>-x</code> <i>regexp</i>, <code>&#8211;exclude</code>=<i>regexp</i></p>
-<dd> Remove all font specifications matching regular expression <i>regexp</i> from <code>pkfix-helper</code>&#8216;s list of known fonts. The <code>&#8211;exclude</code> option can be specified repeatedly on the command line.</p>
-<dt><code>-s</code>, <code>&#8211;spp</code></p>
-<dd> Specify the number of font samples per page to print to the files indicated using the <code>&#8211;ps</code> and <code>&#8211;tex</code> options. The default value, 25, should work well in most circumstances.</dl>
+<dt><code>-q</code>, <code>&#8211;quiet</code></dt>
+<dd> Instruct <code>pkfix-helper</code> to produce no output during its run except for error and warning messages.</dd>
+<dt><code>-C</code> <i>filename</i>, <code>&#8211;cache</code>=<i>filename</i></dt>
+<dd> Speed up <font SIZE="-1">TFM</font> file processing by caching character metrics into file <i>filename</i>. On some systems it takes a long time to read a <font SIZE="-1">TFM</font> file, spawn <i>tftopl</i> to convert it to <font SIZE="-1">PL</font> format, and extract from the <font SIZE="-1">PL</font> data the metrics for each character. The first time <code>&#8211;cache</code> is specified, <code>pkfix-helper</code> proceeds as normal then writes all of the extracted character metrics to <i>filename</i>. On subsequent runs in which <code>&#8211;cache</code>=<i>filename</i> is specified, <code>pkfix-helper</code> reads the previously extracted metrics from <i>filename</i>, going through the <i>tftopl</i>-based process only for <font SIZE="-1">TFM</font> files that were not previously encountered.</dd>
+<dt><code>-i</code> <i>fontspec</i>, <code>&#8211;include</code>=<i>fontspec</i></dt>
+<dd> Add <i>fontspec</i> to the list of font specifications against which <code>pkfix-helper</code> compares <i>every</i> document font. (In contrast, <code>&#8211;force</code> designates a font specification to use only for a <i>specific</i> document font.) The <code>&#8211;include</code> option can be specified repeatedly on the command line.</dd>
+<dt><code>-x</code> <i>regexp</i>, <code>&#8211;exclude</code>=<i>regexp</i></dt>
+<dd> Remove all font specifications matching regular expression <i>regexp</i> from <code>pkfix-helper</code>&#8216;s list of known fonts. The <code>&#8211;exclude</code> option can be specified repeatedly on the command line.</dd>
+<dt><code>-s</code>, <code>&#8211;spp</code></dt>
+<dd> Specify the number of font samples per page to print to the files indicated using the <code>&#8211;ps</code> and <code>&#8211;tex</code> options. The default value, 25, should work well in most circumstances.</dd></dl>
 <h2>DIAGNOSTICS</h2>
 <dl>
-<dt>&quot;Best match for <i>name</i> is rather poor&quot;</p>
-<dd> The best font <code>pkfix-helper</code> found for <code>dvips</code> font name <i>name</i> has a mismatch value greater than or equal to 1.0. (The mismatch value is the sum of the squares of the difference between the character widths of a document font and a potential replacement font.) Use the <code>&#8211;force</code> option to designate an alternative replacement font or scaling amount.</p>
-<dt>&quot;<i>name</i> uses characters that don&#8217;t appear in any candidate font&quot;</p>
-<dd> None of the fonts considered for a match include all of the characters in font <i>name</i>. The user should use the <code>&#8211;force</code> option to inform <code>pkfix-helper</code> which font to use or the <code>&#8211;keep</code> option to retain the original, bitmapped font.</p>
-<dt>&quot;Processing <i>name</i> &#8230; done (<i>font</i> with mismatch=<i>number</i>, tied with <i>font</i>&#8230;)&quot;</p>
-<dd> The best match for <i>name</i> is font <i>font</i>. A perfect match has a <i>number</i> of 0.00000. Worse matches observe larger values. If a tie is reported, this means one or more fonts matched <i>name</i> equally well (i.e., they see the same <i>number</i>). In this case, <code>pkfix-helper</code> selects the qualitatively most likely font as the winner.</dl>
+<dt>&quot;Best match for <i>name</i> is rather poor&quot;</dt>
+<dd> The best font <code>pkfix-helper</code> found for <code>dvips</code> font name <i>name</i> has a mismatch value greater than or equal to 1.0. (The mismatch value is the sum of the squares of the difference between the character widths of a document font and a potential replacement font.) Use the <code>&#8211;force</code> option to designate an alternative replacement font or scaling amount.</dd>
+<dt>&quot;<i>name</i> uses characters that don&#8217;t appear in any candidate font&quot;</dt>
+<dd> None of the fonts considered for a match include all of the characters in font <i>name</i>. The user should use the <code>&#8211;force</code> option to inform <code>pkfix-helper</code> which font to use or the <code>&#8211;keep</code> option to retain the original, bitmapped font.</dd>
+<dt>&quot;Processing <i>name</i> &#8230; done (<i>font</i> with mismatch=<i>number</i>, tied with <i>font</i>&#8230;)&quot;</dt>
+<dd> The best match for <i>name</i> is font <i>font</i>. A perfect match has a <i>number</i> of 0.00000. Worse matches observe larger values. If a tie is reported, this means one or more fonts matched <i>name</i> equally well (i.e., they see the same <i>number</i>). In this case, <code>pkfix-helper</code> selects the qualitatively most likely font as the winner.</dd></dl>
 <h2>EXAMPLES</h2>
 <p> For the purpose of the following examples, assume that <i>oldfile.ps</i> is the name of a PostScript file produced by an old version of <code>dvips</code> and utilizing at least one bitmapped font. It&#8217;s always worth verifying that <code>pkfix</code> can&#8217;t convert the file on its own: </p>
 <pre>
@@ -120,10 +120,10 @@ $ pkfix - helper - q oldfile.ps pkfix - oldfile.ps-- ps = oldfonts.ps-- tex = ne
 <h2>ENVIRONMENT</h2>
 <p> <code>pkfix-helper</code> honors the following environment variables:</p>
 <dl>
-<dt><font SIZE="-1">GS</font></p>
-<dd> The name of the Ghostscript interpreter (default: <i>gs</i>)</p>
-<dt><font SIZE="-1">TFTOPL</font></p>
-<dd> The name of a utility for converting <i>.tfm</i> files to <i>.pl</i> files (default: <i>tftopl</i>)</dl>
+<dt><font SIZE="-1">GS</font></dt>
+<dd> The name of the Ghostscript interpreter (default: <i>gs</i>)</dd>
+<dt><font SIZE="-1">TFTOPL</font></dt>
+<dd> The name of a utility for converting <i>.tfm</i> files to <i>.pl</i> files (default: <i>tftopl</i>)</dd></dl>
 <h2>RESTRICTIONS</h2>
 <p> <code>pkfix-helper</code> works only with PostScript files produced by <code>dvips</code>, not with arbitrary PostScript files. Only bitmapped fonts loaded by <code>dvips</code> can be analyzed, not bitmapped fonts loaded by embedded graphics. </p>
 <p> <code>pkfix-helper</code> works by comparing character widths, not the actual glyphs. Consequently, it is misled by sets of fonts with similar character widths (at least for those characters used by a given document). As an extreme example, all Computer Modern Teletype fonts of a given design size (e.g., <tt>&quot;cmtt10&quot;</tt>, <tt>&quot;cmsltt10&quot;</tt>, and <tt>&quot;cmitt10&quot;</tt>) use exactly the same widths for all characters. Human assistance is generally needed to guide <code>pkfix-helper</code>&#8216;s font-matching procedures, especially for fonts for which relatively few characters appear in the document. </p>

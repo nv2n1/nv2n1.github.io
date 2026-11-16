@@ -48,10 +48,10 @@ description: "libnetpbm_draw \\- Libnetpbm PPM Drawing Function Manual"
 <h3><code>ppmd_set_font</code></h3>
 <p> This function sets the currently selected font. You identify the font to which to set it with a handle such as you get from <code>ppmd_read_font</code> or <code>ppmd_get_font</code>. </p>
 <h2>Index</h2>
-<dt><a href="#lbAQ">Fonts</a></p>
+<dt><a href="#lbAQ">Fonts</a></dt>
 <dd>
-<dt><a href="#lbAR">Font File Format</a></p>
+</dd><dt><a href="#lbAR">Font File Format</a></dt>
 <dd>
-<dt><a href="#lbAS">Font Control Functions</a></p>
+</dd><dt><a href="#lbAS">Font Control Functions</a></dt>
 <dd>
-</dl>
+</dd></dl>

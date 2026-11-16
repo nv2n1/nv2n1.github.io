@@ -13,8 +13,8 @@ description: "droboview – GUI for managing data robotics (drobo) storage units
 <h2>Description</h2>
 <p>Starts the graphical management utility for Drobos. See drobom for detailed usage. (this is the same as the &#8216;drobom view&#8217;)</p>
 <dl>
-<dt><i>device</i></p>
-<dd>raw block device of a drobo. If not given, it will be searched for.</dl>
+<dt><i>device</i></dt>
+<dd>raw block device of a drobo. If not given, it will be searched for.</dd></dl>
 <h2>See Also</h2>
 <p><a href="/docs/linux/man/8-drobom/">drobom</a>(8)</p>
 <h2>Author</h2>

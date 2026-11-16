@@ -20,11 +20,11 @@ description: "guilt-guard – Assign guards to patches"
 <p> -l|&#8211;list</p>
 <dl>
 <dt>
-<dd> List all patches and their guards</dl>
+</dt><dd> List all patches and their guards</dd></dl>
 <p> -n|&#8211;none</p>
 <dl>
 <dt>
-<dd> Remove all guards from a patch</dl>
+</dt><dd> Remove all guards from a patch</dd></dl>
 <h2>AUTHOR</h2>
 <p> Written by Eric Lesh &lt;m[blue]<code>eclesh [at] ucla.edu</code>m[]<font SIZE="-2">[1]</font>&gt;</p>
 <h2>DOCUMENTATION</h2>
@@ -33,10 +33,10 @@ description: "guilt-guard – Assign guards to patches"
 <p> Part of the linkguilt:guilt[7] suite (Generated for Guilt v0.33)</p>
 <h2>NOTES</h2>
 <dl>
-<dt> 1.</p>
-<dd> eclesh [at] ucla.edu</p>
+<dt> 1.</dt>
+<dd> eclesh [at] ucla.edu</dd>
 <dl>
 <dt>
-<dd> mailto:eclesh [at] ucla.edu</dl>
+</dt><dd> mailto:eclesh [at] ucla.edu</dd></dl>
 </dl>
 <h2>Index</h2>

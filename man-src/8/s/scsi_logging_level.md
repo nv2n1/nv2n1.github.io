@@ -16,44 +16,44 @@ description: "scsi_logging_level – access Linux SCSI logging level information
 <h2>Options</h2>
 <p>Arguments to long options are mandatory for short options as well.</p>
 <dl>
-<dt><code>-a</code>, <code>&#8211;all</code>=<i>LEV</i></p>
-<dd><i>LEV</i> is used for all SCSI_LOG fields.</p>
-<dt><code>-c</code>, <code>&#8211;create</code></p>
-<dd>Options are parsed and placed in internal fields that are displayed but no logging levels are changed within the Linux kernel.</p>
-<dt><code>-E</code>, <code>&#8211;error</code>=<i>LEV</i></p>
-<dd><i>LEV</i> is placed in the SCSI_LOG_ERROR field.</p>
-<dt><code>-g</code>, <code>&#8211;get</code></p>
-<dd>Fetches the current SCSI logging levels from the Linux kernel and displays them.</p>
-<dt><code>-h</code>, <code>&#8211;help</code></p>
-<dd>print out the usage message then exit.</p>
-<dt><code>-H</code>, <code>&#8211;highlevel</code>=<i>LEV</i></p>
-<dd><i>LEV</i> is placed in the SCSI_LOG_HLQUEUE and SCSI_LOG_HLCOMPLETE fields.</p>
-<dt><code>&#8211;hlcomplete</code>=<i>LEV</i></p>
-<dd><i>LEV</i> is placed in the SCSI_LOG_HLCOMPLETE field.</p>
-<dt><code>&#8211;hlqueue</code>=<i>LEV</i></p>
-<dd><i>LEV</i> is placed in the SCSI_LOG_HLQUEUE field.</p>
-<dt><code>-I</code>, <code>&#8211;ioctl</code>=<i>LEV</i></p>
-<dd><i>LEV</i> is placed in the SCSI_LOG_IOCTL field.</p>
-<dt><code>&#8211;llcomplete</code>=<i>LEV</i></p>
-<dd><i>LEV</i> is placed in the SCSI_LOG_LLCOMPLETE field.</p>
-<dt><code>&#8211;llqueue</code>=<i>LEV</i></p>
-<dd><i>LEV</i> is placed in the SCSI_LOG_LLQUEUE field.</p>
-<dt><code>-L</code>, <code>&#8211;lowlevel</code>=<i>LEV</i></p>
-<dd><i>LEV</i> is placed in the SCSI_LOG_LLQUEUE and SCSI_LOG_LLCOMPLETE fields.</p>
-<dt><code>-M</code>, <code>&#8211;midlevel</code>=<i>LEV</i></p>
-<dd><i>LEV</i> is placed in the SCSI_LOG_MLQUEUE and SCSI_LOG_MLCOMPLETE fields.</p>
-<dt><code>&#8211;mlcomplete</code>=<i>LEV</i></p>
-<dd><i>LEV</i> is placed in the SCSI_LOG_MLCOMPLETE field.</p>
-<dt><code>&#8211;mlqueue</code>=<i>LEV</i></p>
-<dd><i>LEV</i> is placed in the SCSI_LOG_MLQUEUE field.</p>
-<dt><code>-S</code>, <code>&#8211;scan</code>=<i>LEV</i></p>
-<dd><i>LEV</i> is placed in the SCSI_LOG_SCAN field.</p>
-<dt><code>-s</code>, <code>&#8211;set</code></p>
-<dd>Uses the fields specified in this command&#8217;s options and attempts to apply them to the Linux SCSI subsystem logging levels. Typically superuser permissions will be required to do this.</p>
-<dt><code>-T</code>, <code>&#8211;timeout</code>=<i>LEV</i></p>
-<dd><i>LEV</i> is placed in the SCSI_LOG_TIMEOUT field.</p>
-<dt><code>-v</code>, <code>&#8211;version</code></p>
-<dd>Outputs the version information and then exits.</dl>
+<dt><code>-a</code>, <code>&#8211;all</code>=<i>LEV</i></dt>
+<dd><i>LEV</i> is used for all SCSI_LOG fields.</dd>
+<dt><code>-c</code>, <code>&#8211;create</code></dt>
+<dd>Options are parsed and placed in internal fields that are displayed but no logging levels are changed within the Linux kernel.</dd>
+<dt><code>-E</code>, <code>&#8211;error</code>=<i>LEV</i></dt>
+<dd><i>LEV</i> is placed in the SCSI_LOG_ERROR field.</dd>
+<dt><code>-g</code>, <code>&#8211;get</code></dt>
+<dd>Fetches the current SCSI logging levels from the Linux kernel and displays them.</dd>
+<dt><code>-h</code>, <code>&#8211;help</code></dt>
+<dd>print out the usage message then exit.</dd>
+<dt><code>-H</code>, <code>&#8211;highlevel</code>=<i>LEV</i></dt>
+<dd><i>LEV</i> is placed in the SCSI_LOG_HLQUEUE and SCSI_LOG_HLCOMPLETE fields.</dd>
+<dt><code>&#8211;hlcomplete</code>=<i>LEV</i></dt>
+<dd><i>LEV</i> is placed in the SCSI_LOG_HLCOMPLETE field.</dd>
+<dt><code>&#8211;hlqueue</code>=<i>LEV</i></dt>
+<dd><i>LEV</i> is placed in the SCSI_LOG_HLQUEUE field.</dd>
+<dt><code>-I</code>, <code>&#8211;ioctl</code>=<i>LEV</i></dt>
+<dd><i>LEV</i> is placed in the SCSI_LOG_IOCTL field.</dd>
+<dt><code>&#8211;llcomplete</code>=<i>LEV</i></dt>
+<dd><i>LEV</i> is placed in the SCSI_LOG_LLCOMPLETE field.</dd>
+<dt><code>&#8211;llqueue</code>=<i>LEV</i></dt>
+<dd><i>LEV</i> is placed in the SCSI_LOG_LLQUEUE field.</dd>
+<dt><code>-L</code>, <code>&#8211;lowlevel</code>=<i>LEV</i></dt>
+<dd><i>LEV</i> is placed in the SCSI_LOG_LLQUEUE and SCSI_LOG_LLCOMPLETE fields.</dd>
+<dt><code>-M</code>, <code>&#8211;midlevel</code>=<i>LEV</i></dt>
+<dd><i>LEV</i> is placed in the SCSI_LOG_MLQUEUE and SCSI_LOG_MLCOMPLETE fields.</dd>
+<dt><code>&#8211;mlcomplete</code>=<i>LEV</i></dt>
+<dd><i>LEV</i> is placed in the SCSI_LOG_MLCOMPLETE field.</dd>
+<dt><code>&#8211;mlqueue</code>=<i>LEV</i></dt>
+<dd><i>LEV</i> is placed in the SCSI_LOG_MLQUEUE field.</dd>
+<dt><code>-S</code>, <code>&#8211;scan</code>=<i>LEV</i></dt>
+<dd><i>LEV</i> is placed in the SCSI_LOG_SCAN field.</dd>
+<dt><code>-s</code>, <code>&#8211;set</code></dt>
+<dd>Uses the fields specified in this command&#8217;s options and attempts to apply them to the Linux SCSI subsystem logging levels. Typically superuser permissions will be required to do this.</dd>
+<dt><code>-T</code>, <code>&#8211;timeout</code>=<i>LEV</i></dt>
+<dd><i>LEV</i> is placed in the SCSI_LOG_TIMEOUT field.</dd>
+<dt><code>-v</code>, <code>&#8211;version</code></dt>
+<dd>Outputs the version information and then exits.</dd></dl>
 <h2>Notes</h2>
 <p>The <i>&#8211;get</i> and <i>&#8211;set</i> options access the /proc/sys/dev/scsi/logging_level pseudo file.</p>
 <h2>Exit Status</h2>

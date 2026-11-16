@@ -16,16 +16,16 @@ description: "hal-find-by-property – find device objects by property matching"
 <h2>OPTIONS</h2>
 <p> The following options are supported:</p>
 <dl>
-<dt><i>&#8211;key</i></p>
-<dd> The name of the property.</p>
-<dt><i>&#8211;string</i></p>
-<dd> String value of the property</p>
-<dt><i>&#8211;verbose</i></p>
-<dd> Verbose output.</p>
-<dt><i>&#8211;help</i></p>
-<dd> Print out usage.</p>
-<dt><i>&#8211;version</i></p>
-<dd> Print the version. </p>
+<dt><i>&#8211;key</i></dt>
+<dd> The name of the property.</dd>
+<dt><i>&#8211;string</i></dt>
+<dd> String value of the property</dd>
+<dt><i>&#8211;verbose</i></dt>
+<dd> Verbose output.</dd>
+<dt><i>&#8211;help</i></dt>
+<dd> Print out usage.</dd>
+<dt><i>&#8211;version</i></dt>
+<dd> Print the version. </dd>
 </dl>
 <h2>RETURN VALUE</h2>
 <p> If devices matching the given property are found each UDI (<i>Unique Device Identifier</i>) is printed on stdout and the program exits with exit code 0. If no devices are found or an error occured, the program exits with a non-zero exit code. </p>

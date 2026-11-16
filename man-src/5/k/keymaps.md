@@ -16,32 +16,32 @@ description: "keymaps – keyboard table descriptions for loadkeys and dumpkeys"
 <h2>Include Files</h2>
 <p>A keymap can include other keymaps using the syntax </p>
 <dl>
-<dd>include &quot;pathname&quot;</dl>
+<dd>include &quot;pathname&quot;</dd></dl>
 <h2>Charset Definitions</h2>
 <p>A character set definition line is of the form: </p>
 <dl>
-<dd>charset &quot;iso-8859-x&quot;</dl>
+<dd>charset &quot;iso-8859-x&quot;</dd></dl>
 <p> It defines how following keysyms are to be interpreted. For example, in iso-8859-1 the symbol mu (or micro) has code 0265, while in iso-8859-7 the letter mu has code 0354.</p>
 <h2>Complete Keycode Definitions</h2>
 <p>Each complete key definition line is of the form: </p>
 <dl>
 <dd>
 <pre><code>keycode</code><i> keynumber </i><code>=</code><i> keysym keysym keysym</i>...</pre>
-</dl>
+</dd></dl>
 <p> <i>keynumber</i> is the internal identification number of the key, roughly equivalent to the scan code of it. <i>keynumber</i> can be given in decimal, octal or hexadecimal notation. Octal is denoted by a leading zero and hexadecimal by the prefix <code>0x.</code> </p>
 <p> Each of the <i>keysyms</i> represent keyboard actions, of which up to 256 can be bound to a single key. The actions available include outputting character codes or character sequences, switching consoles or keymaps, booting the machine etc. (The complete list can be obtained from <code><a href="/docs/linux/man/1-dumpkeys/">dumpkeys</a></code>(1) by saying <code> dumpkeys -l</code> .) </p>
 <p> Each <i>keysym</i> may be prefixed by a &#8216;+&#8217; (plus sign), in wich case this keysym is treated as a &quot;letter&quot; and therefore affected by the &quot;CapsLock&quot; the same way as by &quot;Shift&quot; (to be correct, the CapsLock inverts the Shift state). The ASCII letters (&#8216;a&#8217;-&#8216;z&#8217; and &#8216;A&#8217;-&#8216;Z&#8217;) are made CapsLock&#8217;able by default. If Shift+CapsLock should not produce a lower case symbol, put lines like </p>
 <dl>
 <dd>
 <pre><code>keycode 30 = +a A</code></pre>
-</dl>
+</dd></dl>
 <p> in the map file. </p>
 <p> Which of the actions bound to a given key is taken when it is pressed depends on what modifiers are in effect at that moment. The keyboard driver supports 9 modifiers. These modifiers are labeled (completely arbitrarily) Shift, AltGr, Control, Alt, ShiftL, ShiftR, CtrlL, CtrlR and CapsShift. Each of these modifiers has an associated weight of power of two according to the following table: </p>
 <dl>
 <dd>
-<dl>
-<dt><i>modifier</i></p>
-<dd><i>weight</i></dl>
+</dd><dl>
+<dt><i>modifier</i></dt>
+<dd><i>weight</i></dd></dl>
 <p> Shift<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>1</p>
 <p> AltGr<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>2</p>
 <p> Control<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>4</p>
@@ -60,58 +60,58 @@ description: "keymaps – keyboard table descriptions for loadkeys and dumpkeys"
 <p> There is a number of short-hand notations to add readability and reduce typing work and the probability of typing-errors. </p>
 <p> First of all, you can give a map specification line, of the form </p>
 <dl>
-<dd>keymaps 0-2,4-5,8,12</dl>
+<dd>keymaps 0-2,4-5,8,12</dd></dl>
 <p> to indicate that the lines of the keymap will not specify all 256 columns, but only the indicated ones. (In the example: only the plain, Shift, AltGr, Control, Control+Shift, Alt and Control+Alt maps, that is, 7 columns instead of 256.) When no such line is given, the keymaps 0-M will be defined, where M+1 is the maximum number of entries found in any definition line. </p>
 <p> Next, you can leave off any trailing VoidSymbol entries from a key definition line. VoidSymbol denotes a keyboard action which produces no output and has no other effects either. For example, to define key number 30 to output &#8216;a&#8217; unshifted, &#8216;A&#8217; when pressed with Shift and do nothing when pressed with AltGr or other modifiers, you can write </p>
 <dl>
 <dd>
 <pre>keycode 30 = a A</pre>
-</dl>
+</dd></dl>
 <p> instead of the more verbose </p>
 <dl>
 <dd>
 <pre>keycode 30 = a AVoidSymbolVoidSymbol \
  VoidSymbol VoidSymbol VoidSymbol ...</pre>
-</dl>
+</dd></dl>
 <p> For added convenience, you can usually get off with still more terse definitions. If you enter a key definition line with only and exactly one action code after the equals sign, it has a special meaning. If the code (numeric or symbolic) is not an ASCII letter, it means the code is implicitly replicated through all columns being defined. If, on the other hand, the action code is an ASCII character in the range &#8216;a&#8217;, &#8230;, &#8216;z&#8217; or &#8216;A&#8217;, &#8230;, &#8216;Z&#8217; in the ASCII collating sequence, the following definitions are made for the different modifier combinations, provided these are actually being defined. (The table lists the two possible cases: either the single action code is a lower case letter, denoted by &#8216;x&#8217; or an upper case letter, denoted by &#8216;Y&#8217;.) </p>
 <dl>
 <dd>
-<dl>
-<dt><i>modifier</i></p>
-<dd><i>symbol</i></p>
-<dt>none</p>
-<dd>x<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>Y</p>
-<dt>Shift</p>
-<dd>X<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>y</p>
-<dt>AltGr</p>
-<dd>x<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>Y</p>
-<dt>Shift+AltGr</p>
-<dd>X<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>y</p>
-<dt>Control</p>
-<dd>Control_x<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>Control_y</p>
-<dt>Shift+Control</p>
-<dd>Control_x<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>Control_y</p>
-<dt>AltGr+Control</p>
-<dd>Control_x<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>Control_y</p>
-<dt>Shift+AltGr+Control</p>
-<dd>Control_x<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>Control_y</p>
-<dt>Alt</p>
-<dd>Meta_x<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>Meta_Y</p>
-<dt>Shift+Alt</p>
-<dd>Meta_X<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>Meta_y</p>
-<dt>AltGr+Alt</p>
-<dd>Meta_x<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>Meta_Y</p>
-<dt>Shift+AltGr+Alt</p>
-<dd>Meta_X<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>Meta_y</p>
-<dt>Control+Alt</p>
-<dd>Meta_Control_x<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>Meta_Control_y</p>
-<dt>Shift+Control+Alt</p>
-<dd>Meta_Control_x<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>Meta_Control_y</p>
-<dt>AltGr+Control+Alt</p>
-<dd>Meta_Control_x<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>Meta_Control_y</p>
-<dt>Shift+AltGr+Control+Alt</p>
+</dd><dl>
+<dt><i>modifier</i></dt>
+<dd><i>symbol</i></dd>
+<dt>none</dt>
+<dd>x<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>Y</dd>
+<dt>Shift</dt>
+<dd>X<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>y</dd>
+<dt>AltGr</dt>
+<dd>x<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>Y</dd>
+<dt>Shift+AltGr</dt>
+<dd>X<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>y</dd>
+<dt>Control</dt>
+<dd>Control_x<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>Control_y</dd>
+<dt>Shift+Control</dt>
+<dd>Control_x<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>Control_y</dd>
+<dt>AltGr+Control</dt>
+<dd>Control_x<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>Control_y</dd>
+<dt>Shift+AltGr+Control</dt>
+<dd>Control_x<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>Control_y</dd>
+<dt>Alt</dt>
+<dd>Meta_x<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>Meta_Y</dd>
+<dt>Shift+Alt</dt>
+<dd>Meta_X<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>Meta_y</dd>
+<dt>AltGr+Alt</dt>
+<dd>Meta_x<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>Meta_Y</dd>
+<dt>Shift+AltGr+Alt</dt>
+<dd>Meta_X<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>Meta_y</dd>
+<dt>Control+Alt</dt>
+<dd>Meta_Control_x<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>Meta_Control_y</dd>
+<dt>Shift+Control+Alt</dt>
+<dd>Meta_Control_x<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>Meta_Control_y</dd>
+<dt>AltGr+Control+Alt</dt>
+<dd>Meta_Control_x<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>Meta_Control_y</dd>
+<dt>Shift+AltGr+Control+Alt</dt>
 <dd>Meta_Control_x<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>Meta_Control_y
-</dl>
+</dd></dl>
 </dl>
 <h2>Single Modifier Definitions</h2>
 <p>All the previous forms of key definition lines always define all the M+1 possible modifier combinations being defined, whether the line actually contains that many action codes or not. There is, however, a variation of the definition syntax for defining only single actions to a particular modifier combination of a key. This is especially useful, if you load a keymap which doesn&#8217;t match your needs in only some modifier combinations, like AltGr+function keys. You can then make a small local file redefining only those modifier combinations and loading it after the main file. The syntax of this form is: </p>
@@ -123,31 +123,31 @@ description: "keymaps – keyboard table descriptions for loadkeys and dumpkeys"
 control alt keycode 83 = Boot
 alt keycode 105 = Decr_Console
 alt keycode 106 = Incr_Console</pre>
-</dl>
+</dd></dl>
 <p> Using &quot;plain&quot; will define only the base entry of a key (i.e. the one with no modifiers in effect) without affecting the bindings of other modifier combinations of that key.</p>
 <h2>String Definitions</h2>
 <p>In addition to comments and key definition lines, a keymap can contain string definitions. These are used to define what each function key action code sends. The syntax of string definitions is: </p>
 <dl>
-<dd><code>string</code> <i>keysym</i> <code>=</code> <code>&quot;</code><i>text</i><code>&quot;</code></dl>
+<dd><code>string</code> <i>keysym</i> <code>=</code> <code>&quot;</code><i>text</i><code>&quot;</code></dd></dl>
 <p> <i>text</i> can contain literal characters, octal character codes in the format of backslash followed by up to three octal digits, and the three escape sequences <code>
 </code>, <code>\</code>, and <code>\&quot;</code>, for newline, backslash and quote, respectively.</p>
 <h2>Compose Definitions</h2>
 <p>Then there may also be compose definitions. They have syntax </p>
 <dl>
-<dd><code>compose &#8216;</code><i>char</i><code>&#8216; &#8216;</code><i>char</i><code>&#8216; to &#8216;</code><i>char</i><code>&#8216;</code></dl>
+<dd><code>compose &#8216;</code><i>char</i><code>&#8216; &#8216;</code><i>char</i><code>&#8216; to &#8216;</code><i>char</i><code>&#8216;</code></dd></dl>
 <p> and describe how two bytes are combined to form a third one (when a dead accent or compose key is used). This is used to get accented letters and the like on a standard keyboard.</p>
 <h2>Abbreviations</h2>
 <p>Various abbreviations can be used with kbd-0.96 and later.</p>
 <dl>
-<dt><code>strings as usual</code></p>
-<dd>Defines the usual values of the strings (but not the keys they are bound to).</p>
-<dt><code>compose as usual for &quot;iso-8859-1&quot;</code></p>
-<dd>Defines the usual compose combinations.</dl>
+<dt><code>strings as usual</code></dt>
+<dd>Defines the usual values of the strings (but not the keys they are bound to).</dd>
+<dt><code>compose as usual for &quot;iso-8859-1&quot;</code></dt>
+<dd>Defines the usual compose combinations.</dd></dl>
 <p> To find out what <i>keysyms</i> there are available for use in keymaps, use the command </p>
 <dl>
 <dd>
 <pre><code>dumpkeys --long-info</code></pre>
-</dl>
+</dd></dl>
 <p> Unfortunately, there is currently no description of what each symbol does. It has to be guessed from the name or figured out from the kernel sources.</p>
 <h2>Examples</h2>
 <p>(Be careful to use a keymaps line, like the first line of `dumpkeys`, or &quot;keymaps 0-15&quot; or so.) The following entry exchanges the left Control key and the Caps Lock key on the keyboard:</p>
@@ -155,14 +155,14 @@ alt keycode 106 = Incr_Console</pre>
 <dd>
 <pre>keycode 58 = Control
 keycode 29 = Caps_Lock</pre>
-</dl>
+</dd></dl>
 <p> Key number 58 is normally the Caps Lock key, and key number 29 is normally the Control key. The following entry sets the Shift and Caps Lock keys to behave more nicely, like in older typewriters. That is, pressing Caps Lock key once or more sets the keyboard in CapsLock state and pressing either of the Shift keys releases it.</p>
 <dl>
 <dd>
 <pre>keycode 42 = Uncaps_Shift
 keycode 54 = Uncaps_Shift
 keycode 58 = Caps_On</pre>
-</dl>
+</dd></dl>
 <p> The following entry sets the layout of the edit pad in the enhanced keyboard to be more like that in the VT200 series terminals:</p>
 <dl>
 <dd>
@@ -174,7 +174,7 @@ keycode 110 = Find
 keycode 111 = Select
 control alt keycode 111 = Boot
 control altgr keycode 111 = Boot</pre>
-</dl>
+</dd></dl>
 <p> Here&#8217;s an example to bind the string &quot;du
 df
 &quot; to the key AltGr-D. We use the &quot;spare&quot; action code F100 not normally bound to any key. </p>

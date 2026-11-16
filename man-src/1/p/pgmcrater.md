@@ -25,18 +25,18 @@ description: "pgmcrater – create cratered terrain by fractal forgery"
 <p> Larger craters should really use this profile, including the central peak, and totally obliterate the pre-existing terrain. </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-number</code><i> n</i></p>
-<dd> Causes <i>n</i> craters to be generated. If no <code>-number</code> specification is given, 50000 craters will be generated. Don&#8217;t expect to see them all! For every large crater there are many, many more tiny ones which tend simply to erode the landscape. In general, the more craters you specify the more realistic the result; ideally you want the entire terrain to have been extensively turned over again and again by cratering. High resolution images containing five to ten million craters are stunning but take quite a while to create.</p>
-<dt><code>-height</code><i> height</i></p>
-<dd> Sets the height of the generated image to <i>height</i> pixels. The default height is 256 pixels.</p>
-<dt><code>-width</code><i> width</i></p>
-<dd> Sets the width of the generated image to <i>width</i> pixels. The default width is 256 pixels.</p>
-<dt><code>-xsize</code><i> width</i></p>
-<dd> Sets the width of the generated image to <i>width</i> pixels. The default width is 256 pixels.</p>
-<dt><code>-ysize</code><i> height</i></p>
-<dd> Sets the height of the generated image to <i>height</i> pixels. The default height is 256 pixels.</p>
-<dt><code>-gamma</code><i> factor</i></p>
-<dd> The specified <i>factor</i> is used to gamma adjust the image in the same manner as performed by <code>pnmgamma</code>. The default value is 1.0, which results in a medium contrast image. Values larger than 1 lighten the image and reduce contrast, while values less than 1 darken the image, increasing contrast. </p>
+<dt><code>-number</code><i> n</i></dt>
+<dd> Causes <i>n</i> craters to be generated. If no <code>-number</code> specification is given, 50000 craters will be generated. Don&#8217;t expect to see them all! For every large crater there are many, many more tiny ones which tend simply to erode the landscape. In general, the more craters you specify the more realistic the result; ideally you want the entire terrain to have been extensively turned over again and again by cratering. High resolution images containing five to ten million craters are stunning but take quite a while to create.</dd>
+<dt><code>-height</code><i> height</i></dt>
+<dd> Sets the height of the generated image to <i>height</i> pixels. The default height is 256 pixels.</dd>
+<dt><code>-width</code><i> width</i></dt>
+<dd> Sets the width of the generated image to <i>width</i> pixels. The default width is 256 pixels.</dd>
+<dt><code>-xsize</code><i> width</i></dt>
+<dd> Sets the width of the generated image to <i>width</i> pixels. The default width is 256 pixels.</dd>
+<dt><code>-ysize</code><i> height</i></dt>
+<dd> Sets the height of the generated image to <i>height</i> pixels. The default height is 256 pixels.</dd>
+<dt><code>-gamma</code><i> factor</i></dt>
+<dd> The specified <i>factor</i> is used to gamma adjust the image in the same manner as performed by <code>pnmgamma</code>. The default value is 1.0, which results in a medium contrast image. Values larger than 1 lighten the image and reduce contrast, while values less than 1 darken the image, increasing contrast. </dd>
 <p> Note that this is separate from the gamma correction that is part of the definition of the PGM format. The image <code>pnmgamma</code> generates is a genuine, gamma-corrected PGM image in any case. This option simply changes the contrast and may compensate for a display device that does not correctly render PGM images. </p>
 </dl>
 <h2>DESIGN NOTES</h2>
@@ -45,24 +45,24 @@ description: "pgmcrater – create cratered terrain by fractal forgery"
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/5-pgm/">pgm</a></code>(5), <code><a href="/docs/linux/man/1-pnmgamma/">pnmgamma</a></code>(1), <code><a href="/docs/linux/man/1-pnmsmooth/">pnmsmooth</a></code>(1)</p>
 <dl>
-<dt>[1]</p>
-<dd> Peitgen, H.-O., and Saupe, D. eds., The Science Of Fractal Images, New York: Springer Verlag, 1988.</dl>
+<dt>[1]</dt>
+<dd> Peitgen, H.-O., and Saupe, D. eds., The Science Of Fractal Images, New York: Springer Verlag, 1988.</dd></dl>
 <h2>AUTHOR</h2>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 John Walker
 Autodesk SA
 Avenue des Champs-Montants 14b
 CH-2074 MARIN
 Suisse/Schweiz/Svizzera/Svizra/Switzerland
-<dl>
-<dt>Usenet:<dd>kelvin [at] Autodesk.com
-<dt>Fax:<dd>038/33 88 15
-<dt>Voice:<dd>038/33 76 33
+</dd><dl>
+<dt>Usenet:</dt><dd>kelvin [at] Autodesk.com
+</dd><dt>Fax:</dt><dd>038/33 88 15
+</dd><dt>Voice:</dt><dd>038/33 76 33
 </pre>
-</dl>
+</dd></dl>
 </dl>
 <p> Permission to use, copy, modify, and distribute this software and its documentation for any purpose and without fee is hereby granted, without any conditions or restrictions. This software is provided &#8220;as is&#8221; without express or implied warranty. </p>
 <p> <code>PLUGWARE!</code> If you like this kind of stuff, you may also enjoy &#8220;James Gleick&#8217;s Chaos&#8211;The Software&#8221; for MS-DOS, available for $59.95 from your local software store or directly from Autodesk, Inc., Attn: Science Series, 2320 Marinship Way, Sausalito, CA 94965, USA. Telephone: (800) 688-2344 toll-free or, outside the U.S. (415) 332-2344 Ext 4886. Fax: (415) 289-4718. &#8220;Chaos&#8211;The Software&#8221; includes a more comprehensive fractal forgery generator which creates three-dimensional landscapes as well as clouds and planets, plus five more modules which explore other aspects of Chaos. The user guide of more than 200 pages includes an introduction by James Gleick and detailed explanations by Rudy Rucker of the mathematics and algorithms used by each program. </p>

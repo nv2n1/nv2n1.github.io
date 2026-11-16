@@ -11,93 +11,35 @@ description: "sc::CartMolecularCoor –"
 <p> The <code>CartMolecularCoor</code> class implements Cartesian coordinates in a way suitable for use in geometry optimizations.</p>
 <h2>Synopsis</h2>
 <pre><code>
-
 #include &lt;coor.h&gt;</code></pre>
 <p> Inherits <code>sc::MolecularCoor</code>.</p>
 <h3>Public Member Functions</h3>
 <pre><code>CartMolecularCoor (Ref&lt; Molecule &gt; &amp;mol)
-
-
-
 CartMolecularCoor (StateIn &amp;)
-
-
-
 CartMolecularCoor (const Ref&lt; KeyVal &gt; &amp;)
-
-
 The KeyVal constructor.
-
-
 void save_data_state (StateOut &amp;)
-
-
 Save the base classes (with save_data_state) and the members in the same order that the StateIn CTOR initializes them.
-
-
 virtual RefSCDimension dim ()
-
-
 These implement the virtual functions inherited from MolecularCoor.
-
-
 virtual int to_cartesian (const Ref&lt; Molecule &gt; &amp;, const RefSCVector &amp;internal)
-
-
-
 virtual int to_internal (RefSCVector &amp;internal)
-
-
 Fill in the vector ``internal'' with the current internal coordinates.
-
-
 virtual int to_cartesian (RefSCVector &amp;cartesian, RefSCVector &amp;internal)
-
-
 Convert the internal coordinate gradients in ``internal'' to Cartesian coordinates and copy these Cartesian coordinate gradients to ``cartesian''.
-
-
 virtual int to_internal (RefSCVector &amp;internal, RefSCVector &amp;cartesian)
-
-
 Convert the Cartesian coordinate gradients in ``cartesian'' to internal coordinates and copy these internal coordinate gradients to ``internal''.
-
-
 virtual int to_cartesian (RefSymmSCMatrix &amp;cart, RefSymmSCMatrix &amp;internal)
-
-
 Convert the internal coordinate Hessian ``internal'' to Cartesian coordinates and copy the result to ``cartesian''.
-
-
 virtual int to_internal (RefSymmSCMatrix &amp;internal, RefSymmSCMatrix &amp;cart)
-
-
 Convert the Cartesian coordinate Hessian ``cartesian'' to internal coordinates and copy the result to ``internal''.
-
-
 virtual void print (std::ostream &amp;=ExEnv::out0()) const
-
-
 Print the coordinate.
-
-
 virtual void print_simples (std::ostream &amp;=ExEnv::out0()) const
-
-
-
 void guess_hessian (RefSymmSCMatrix &amp;hessian)
-
-
 Calculate an approximate hessian and place the result in ``hessian''.
-
-
 RefSymmSCMatrix inverse_hessian (RefSymmSCMatrix &amp;)
-
-
 Given an Hessian, return the inverse of that hessian.
-
-
-
 Protected Member Functions</code></pre>
 <p> virtual void <code>init</code> ()<br />
  <i>Initializes the dimensions. </i></p>

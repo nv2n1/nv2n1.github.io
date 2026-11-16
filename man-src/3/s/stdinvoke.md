@@ -11,9 +11,7 @@ std::invoke - std::invoke
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header &lt;functional&gt;
-
 template&lt; class F, class... Args&gt;                                                          (since C++17)
-
 std::invoke_result_t&lt;F, Args...&gt; invoke(F&amp;&amp; f, Args&amp;&amp;... args) noexcept(/* see below */);</code></pre> 
 Invoke the Callable object f with the parameters args. As by INVOKE(std::forward&lt;F&gt;(f), std::forward&lt;Args&gt;(args)...). 
 where INVOKE(f, t1, t2, ..., tN) is defined as follows: 
@@ -89,7 +87,6 @@ noexcept(std::is_nothrow_invocable_v&lt;F, Args...&gt;)
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;functional&gt;
-
 #include &lt;iostream&gt;
 struct Foo {
     Foo(int num)
@@ -103,7 +100,6 @@ struct Foo {
     int num_;
 };
 void print_num(int i)
-
 {
     std::cout &lt;&lt; i &lt;&lt; '\n';
 }
@@ -114,7 +110,6 @@ struct PrintNum {
     }
 };
 int main()
-
 {
     // invoke a free function
     std::invoke(print_num, -9);

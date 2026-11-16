@@ -40,11 +40,8 @@ NCAR Graphics utilities (AREAS, CONPACK, etc.).</code></pre>
 <p> Conran_family, Conrec_family, Halftone, Isosrfhr, and Pwrite_family.</p>
 <h2>See Also</h2>
 <pre><code>Online : ncargcc(1NCARG),
-
          ncargex(1NCARG),
-
          ncarg_gks_cbind(3NCARG),
-
          ncargintro(5NCARG).Hardcopy : NCAR Graphics Fundamentals,
          UNIX Version;
 User's Guide for NCAR GKS - 0A Graphics</code></pre>

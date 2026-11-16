@@ -24,14 +24,14 @@ description: "hgignore – syntax for Mercurial ignore files"
 <pre>syntax: NAME</pre>
 <p>where <code>NAME</code> is one of the following:</p>
 <dl>
-<dt><code>regexp</code></p>
-<dd>Regular expression, Python/Perl syntax.</p>
-<dt><code>glob</code></p>
-<dd>Shell-style glob. </p>
+<dt><code>regexp</code></dt>
+<dd>Regular expression, Python/Perl syntax.</dd>
+<dt><code>glob</code></dt>
+<dd>Shell-style glob. </dd>
 <p> The chosen syntax stays in effect when parsing all patterns that follow, until another syntax is selected. </p>
 <p> Neither glob nor regexp patterns are rooted. A glob-syntax pattern of the form <code>*.c</code> will match a file ending in <code>.c</code> in any directory, and a regexp pattern of the form <code>\.c$</code> will do the same. To root a regexp pattern, start it with <code>^</code>.</p>
-<dt>Note</p>
-<dd>Patterns specified in other than <code>.hgignore</code> are always rooted. Please see <code>hg help patterns</code>: for details.</dl>
+<dt>Note</dt>
+<dd>Patterns specified in other than <code>.hgignore</code> are always rooted. Please see <code>hg help patterns</code>: for details.</dd></dl>
 <h2>Example</h2>
 <p>Here is an example ignore file. </p>
 <pre># use glob syntax.

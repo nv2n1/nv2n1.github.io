@@ -15,15 +15,13 @@ description: "flock – apply or remove an advisory lock on an open file"
 <h2>DESCRIPTION</h2>
 <p> Apply or remove an advisory lock on the open file specified by <i>fd</i>. The argument <i>operation</i> is one of the following:</p>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt><code>LOCK_SH</code></p>
-<dd> Place a shared lock. More than one process may hold a shared lock for a given file at a given time.</p>
-<dt><code>LOCK_EX</code></p>
-<dd> Place an exclusive lock. Only one process may hold an exclusive lock for a given file at a given time.</p>
-<dt><code>LOCK_UN</code></p>
-<dd> Remove an existing lock held by this process.</dl>
+<dt><code>LOCK_SH</code></dt>
+<dd> Place a shared lock. More than one process may hold a shared lock for a given file at a given time.</dd>
+<dt><code>LOCK_EX</code></dt>
+<dd> Place an exclusive lock. Only one process may hold an exclusive lock for a given file at a given time.</dd>
+<dt><code>LOCK_UN</code></dt>
+<dd> Remove an existing lock held by this process.</dd></dl>
 </dl>
 <p> A call to <code>flock</code>() may block if an incompatible lock is held by another process. To make a nonblocking request, include <code>LOCK_NB</code> (by ORing) with any of the above operations. </p>
 <p> A single file may not simultaneously have both shared and exclusive locks. </p>
@@ -36,16 +34,16 @@ description: "flock – apply or remove an advisory lock on an open file"
 <p> On success, zero is returned. On error, -1 is returned, and <i>errno</i> is set appropriately.</p>
 <h2>ERRORS</h2>
 <dl>
-<dt><code>EBADF</code></p>
-<dd> <i>fd</i> is not an open file descriptor.</p>
-<dt><code>EINTR</code></p>
-<dd> While waiting to acquire a lock, the call was interrupted by delivery of a signal caught by a handler; see <code><a href="/docs/linux/man/7-signal/">signal</a></code>(7).</p>
-<dt><code>EINVAL</code></p>
-<dd> <i>operation</i> is invalid.</p>
-<dt><code>ENOLCK</code></p>
-<dd> The kernel ran out of memory for allocating lock records.</p>
-<dt><code>EWOULDBLOCK</code></p>
-<dd> The file is locked and the <code>LOCK_NB</code> flag was selected.</dl>
+<dt><code>EBADF</code></dt>
+<dd> <i>fd</i> is not an open file descriptor.</dd>
+<dt><code>EINTR</code></dt>
+<dd> While waiting to acquire a lock, the call was interrupted by delivery of a signal caught by a handler; see <code><a href="/docs/linux/man/7-signal/">signal</a></code>(7).</dd>
+<dt><code>EINVAL</code></dt>
+<dd> <i>operation</i> is invalid.</dd>
+<dt><code>ENOLCK</code></dt>
+<dd> The kernel ran out of memory for allocating lock records.</dd>
+<dt><code>EWOULDBLOCK</code></dt>
+<dd> The file is locked and the <code>LOCK_NB</code> flag was selected.</dd></dl>
 <h2>CONFORMING TO</h2>
 <p> 4.4BSD (the <code>flock</code>() call first appeared in 4.2BSD). A version of <code>flock</code>(), possibly implemented in terms of <code><a href="/docs/linux/man/2-fcntl/">fcntl</a></code>(2), appears on most UNIX systems.</p>
 <h2>NOTES</h2>

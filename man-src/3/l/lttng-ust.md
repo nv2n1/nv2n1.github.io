@@ -319,7 +319,7 @@ LD_PRELOAD=liblttng-ust-fork.so appname).
 
 <dl>
 <dt>vtid
-<dd> Virtual thread ID: thread ID as seen from the point of view of the process namespace.</dl>
+</dt><dd> Virtual thread ID: thread ID as seen from the point of view of the process namespace.</dd></dl>
  
 
  
@@ -328,7 +328,7 @@ LD_PRELOAD=liblttng-ust-fork.so appname).
 
 <dl>
 <dt>vpid
-<dd> Virtual process ID: process ID as seen from the point of view of the process namespace.</dl>
+</dt><dd> Virtual process ID: process ID as seen from the point of view of the process namespace.</dd></dl>
  
 
  
@@ -337,7 +337,7 @@ LD_PRELOAD=liblttng-ust-fork.so appname).
 
 <dl>
 <dt>ip
-<dd> Instruction pointer: Enables recording of the exact location where a tracepoint was emitted. Can be used to reverse-lookup the source location that caused the event to be emitted.</dl>
+</dt><dd> Instruction pointer: Enables recording of the exact location where a tracepoint was emitted. Can be used to reverse-lookup the source location that caused the event to be emitted.</dd></dl>
  
 
  
@@ -346,7 +346,7 @@ LD_PRELOAD=liblttng-ust-fork.so appname).
 
 <dl>
 <dt>procname
-<dd> Thread name, as set by exec() or prctl(). It is recommended that programs set their thread name with prctl() before hitting the first tracepoint for that thread.</dl>
+</dt><dd> Thread name, as set by exec() or prctl(). It is recommended that programs set their thread name with prctl() before hitting the first tracepoint for that thread.</dd></dl>
  
 
  
@@ -355,7 +355,7 @@ LD_PRELOAD=liblttng-ust-fork.so appname).
 
 <dl>
 <dt>pthread_id
-<dd> Pthread identifier. Can be used on architectures where pthread_t maps nicely to an unsigned long type.</dl>
+</dt><dd> Pthread identifier. Can be used on architectures where pthread_t maps nicely to an unsigned long type.</dd></dl>
  
 
  
@@ -372,7 +372,7 @@ LD_PRELOAD=liblttng-ust-fork.so appname).
 
 <dl>
 <dt>ust_baddr_statedump:soinfo
-<dd> This event is used to trace a currently loaded shared object. The base address (where the dynamic linker has placed the shared object) is recorded in the &quot;baddr&quot; field. The path to the shared object gets recorded in the &quot;sopath&quot; field (as string). The file size of the loaded object (in bytes) is recorded to the &quot;size&quot; field and its time of last modification (in seconds since Epoch) is recorded in the &quot;mtime&quot; field.</dl>
+</dt><dd> This event is used to trace a currently loaded shared object. The base address (where the dynamic linker has placed the shared object) is recorded in the &quot;baddr&quot; field. The path to the shared object gets recorded in the &quot;sopath&quot; field (as string). The file size of the loaded object (in bytes) is recorded to the &quot;size&quot; field and its time of last modification (in seconds since Epoch) is recorded in the &quot;mtime&quot; field.</dd></dl>
  
 
  If the event above is enabled, a series of &quot;ust_baddr_statedump:soinfo&quot; events is recorded at session-enable time. It represents the state of currently loaded shared objects for the traced process. If this information gets combined with the <a HREF="/docs/linux/man/3-lttng-ust-dl/">lttng-ust-dl</a>(3) instrumentation, all aspects of dynamic loading that are relevant for symbol and line number lookup are traced by LTTng. 
@@ -385,17 +385,17 @@ LD_PRELOAD=liblttng-ust-fork.so appname).
 
 <dl>
 <dt>LTTNG_UST_DEBUG
-<dd> Activate liblttng-ust debug output.</dl>
+</dt><dd> Activate liblttng-ust debug output.</dd></dl>
  
 
 <dl>
 <dt>LTTNG_UST_REGISTER_TIMEOUT
-<dd> The environment variable &quot;LTTNG_UST_REGISTER_TIMEOUT&quot; can be used to specify how long the applications should wait for sessiond &quot;registration done&quot; command before proceeding to execute the main program. The default is 3000ms (3 seconds). The timeout value is specified in milliseconds. The value 0 means &quot;don't wait&quot;. The value -1 means &quot;wait forever&quot;. Setting this environment variable to 0 is recommended for applications with time constraints on the process startup time.</dl>
+</dt><dd> The environment variable &quot;LTTNG_UST_REGISTER_TIMEOUT&quot; can be used to specify how long the applications should wait for sessiond &quot;registration done&quot; command before proceeding to execute the main program. The default is 3000ms (3 seconds). The timeout value is specified in milliseconds. The value 0 means &quot;don't wait&quot;. The value -1 means &quot;wait forever&quot;. Setting this environment variable to 0 is recommended for applications with time constraints on the process startup time.</dd></dl>
  
 
 <dl>
 <dt>LTTNG_UST_WITH_EXPERIMENTAL_BADDR_STATEDUMP
-<dd> Experimentally allow liblttng-ust to perform a base-address statedump on session-enable.</dl>
+</dt><dd> Experimentally allow liblttng-ust to perform a base-address statedump on session-enable.</dd></dl>
  
 
  

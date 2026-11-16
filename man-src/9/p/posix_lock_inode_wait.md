@@ -15,11 +15,11 @@ posix_lock_inode_wait - Apply a POSIX-style lock to a file
 <h2>Arguments</h2>
 
 <i>inode</i>
-<dl><dd><dd>inode of file to which lock request should be applied</dl>
+<dl><dd></dd><dd>inode of file to which lock request should be applied</dd></dl>
  
 
  <i>fl</i>
-<dl><dd>The lock to be applied</dl>
+<dl><dd>The lock to be applied</dd></dl>
 
 <h2>Description</h2>
 

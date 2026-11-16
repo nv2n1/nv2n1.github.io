@@ -11,7 +11,6 @@ description: "program_invocation_name, program_invocation_short_name – obtain 
 <h2>Synopsis</h2>
 <pre><code>#define _GNU_SOURCE /* See feature_test_macros(7) */
 #include &lt;errno.h&gt;
-
 extern char *program_invocation_name;
 extern char *program_invocation_short_name;</code></pre>
 <h2>Description</h2>

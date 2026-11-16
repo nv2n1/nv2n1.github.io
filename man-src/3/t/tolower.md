@@ -10,20 +10,18 @@ description: "toupper, tolower, toupper_l, tolower_l – convert uppercase or lo
 <p>toupper, tolower, toupper_l, tolower_l &#8211; convert uppercase or lowercase</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;ctype.h&gt;
-
 int toupper(int c);
 int tolower(int c);
-
 int toupper_l(int c, locale_t locale);
 int tolower_l(int c, locale_t locale);</code></pre>
 <p> Feature Test Macro Requirements for glibc (see <code><a href="/docs/linux/man/7-feature_test_macros/">feature_test_macros</a></code>(7)): <code>toupper_l</code>(), <code>tolower_l</code>():</p>
 <dl>
 <dd>
-<dl>
-<dt>Since glibc 2.10:</p>
-<dd>_XOPEN_SOURCE&nbsp;&gt;=&nbsp;700</p>
-<dt>Before glibc 2.10:</p>
-<dd>_GNU_SOURCE</dl>
+</dd><dl>
+<dt>Since glibc 2.10:</dt>
+<dd>_XOPEN_SOURCE&nbsp;&gt;=&nbsp;700</dd>
+<dt>Before glibc 2.10:</dt>
+<dd>_GNU_SOURCE</dd></dl>
 </dl>
 <h2>Description</h2>
 <p>These functions convert lowercase letters to uppercase, and vice versa. </p>

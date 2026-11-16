@@ -16,50 +16,45 @@ description: "ddate – convert Gregorian dates to Discordian dates"
 <p> If called with no arguments, <code>ddate</code> will get the current system date, convert this to the Discordian date format and print this on the standard output. Alternatively, a Gregorian date may be specified on the command line, in the form of a numerical day, month and year. </p>
 <p> If a format string is specified, the Discordian date will be printed in a format specified by the string. This mechanism works similarly to the format string mechanism of <code><a href="/docs/linux/man/1-date/">date</a>(1),</code> only almost completely differently. The fields are:</p>
 <dl>
-<dt>%A</p>
-<dd> Full name of the day of the week (i.e., Sweetmorn)</p>
-<dt>%a</p>
-<dd> Abbreviated name of the day of the week (i.e., SM)</p>
-<dt>%B</p>
-<dd> Full name of the season (i.e., Chaos)</p>
-<dt>%b</p>
-<dd> Abbreviated name of the season (i.e., Chs)</p>
-<dt>%d</p>
-<dd> Ordinal number of day in season (i.e., 23)</p>
-<dt>%e</p>
-<dd> Cardinal number of day in season (i.e., 23rd)</p>
-<dt>%H</p>
-<dd> Name of current Holyday, if any</p>
-<dt>%N</p>
-<dd> Magic code to prevent rest of format from being printed unless today is a Holyday.</p>
-<dt>%n</p>
-<dd> Newline</p>
-<dt>%t</p>
-<dd> Tab</p>
-<dt>%X</p>
-<dd> Number of days remaining until X-Day. (Not valid if the SubGenius options are not compiled in.)</p>
-<dt>%{</p>
+<dt>%A</dt>
+<dd> Full name of the day of the week (i.e., Sweetmorn)</dd>
+<dt>%a</dt>
+<dd> Abbreviated name of the day of the week (i.e., SM)</dd>
+<dt>%B</dt>
+<dd> Full name of the season (i.e., Chaos)</dd>
+<dt>%b</dt>
+<dd> Abbreviated name of the season (i.e., Chs)</dd>
+<dt>%d</dt>
+<dd> Ordinal number of day in season (i.e., 23)</dd>
+<dt>%e</dt>
+<dd> Cardinal number of day in season (i.e., 23rd)</dd>
+<dt>%H</dt>
+<dd> Name of current Holyday, if any</dd>
+<dt>%N</dt>
+<dd> Magic code to prevent rest of format from being printed unless today is a Holyday.</dd>
+<dt>%n</dt>
+<dd> Newline</dd>
+<dt>%t</dt>
+<dd> Tab</dd>
+<dt>%X</dt>
+<dd> Number of days remaining until X-Day. (Not valid if the SubGenius options are not compiled in.)</dd>
+<dt>%{</dt>
 <dd>
-<dt>%}</p>
-<dd> Used to enclose the part of the string which is to be replaced with the words &quot;St. Tib&#8217;s Day&quot; if the current day is St. Tib&#8217;s Day.</p>
-<dt>%.</p>
-<dd> Try it and see.</dl>
+</dd><dt>%}</dt>
+<dd> Used to enclose the part of the string which is to be replaced with the words &quot;St. Tib&#8217;s Day&quot; if the current day is St. Tib&#8217;s Day.</dd>
+<dt>%.</dt>
+<dd> Try it and see.</dd></dl>
 <h2>EXAMPLES</h2>
 <pre><code>
 % ddate
-
         Sweetmorn,
     Bureaucracy 42, 3161 YOLD % ddate + 'Today is %{%A, the %e of %B%}, %Y. %N%nCelebrate %H'
-
                         Today is Sweetmorn,
     the 42nd of Bureaucracy, 3161. % ddate + "It's %{%A, the %e of %B%}, %Y. %N%nCelebrate %H" 26 9 1995
-
                                                  It's Prickle-Prickle, the 50th of Bureaucracy, 3161.
-
                                                  Celebrate Bureflux %
                                                  ddate +
                                  "Today's %{%A, the %e of %B%}, %Y. %N%nCelebrate %H" 29 2 1996
-
                                  Today 's St. Tib' s Day,
     3162.
 </code></pre>

@@ -10,19 +10,18 @@ description: "usleep – suspend execution for microsecond intervals"
 <p>usleep &#8211; suspend execution for microsecond intervals</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;unistd.h&gt;
-
 int usleep(useconds_t usec);</code></pre>
 <p> Feature Test Macro Requirements for glibc (see <code><a href="/docs/linux/man/7-feature_test_macros/">feature_test_macros</a></code>(7)): <code>usleep</code>():</p>
 <dl>
 <dd>
-<dl>
-<dt>Since glibc 2.12:</p>
+</dd><dl>
+<dt>Since glibc 2.12:</dt>
 <dd>
 <pre>(_XOPEN_SOURCE&nbsp;&gt;=&nbsp;500) &amp;&amp; ! (_POSIX_C_SOURCE&nbsp;&gt;=&nbsp;200809L)
  || /* Glibc since 2.19: */ _DEFAULT_SOURCE
  || /* Glibc versions &lt;= 2.19: */ _BSD_SOURCE</pre>
-<dt>Before glibc 2.12:</p>
-<dd>_BSD_SOURCE || _XOPEN_SOURCE&nbsp;&gt;=&nbsp;500</dl>
+</dd><dt>Before glibc 2.12:</dt>
+<dd>_BSD_SOURCE || _XOPEN_SOURCE&nbsp;&gt;=&nbsp;500</dd></dl>
 </dl>
 <h2>Description</h2>
 <p>The <code>usleep</code>() function suspends execution of the calling thread for (at least) <i>usec</i> microseconds. The sleep may be lengthened slightly by any system activity or by the time spent processing the call or by the granularity of system timers.</p>
@@ -30,10 +29,10 @@ int usleep(useconds_t usec);</code></pre>
 <p>The <code>usleep</code>() function returns 0 on success. On error, -1 is returned, with <i>errno</i> set to indicate the cause of the error.</p>
 <h2>Errors</h2>
 <dl>
-<dt><code>EINTR</code></p>
-<dd>Interrupted by a signal; see <code><a href="/docs/linux/man/7-signal/">signal</a></code>(7).</p>
-<dt><code>EINVAL</code></p>
-<dd><i>usec</i> is greater than or equal to 1000000. (On systems where that is considered an error.)</dl>
+<dt><code>EINTR</code></dt>
+<dd>Interrupted by a signal; see <code><a href="/docs/linux/man/7-signal/">signal</a></code>(7).</dd>
+<dt><code>EINVAL</code></dt>
+<dd><i>usec</i> is greater than or equal to 1000000. (On systems where that is considered an error.)</dd></dl>
 <h2>Attributes</h2>
 <p>For an explanation of the terms used in this section, see <code><a href="/docs/linux/man/7-attributes/">attributes</a></code>(7). </p>
 <table BORDER>

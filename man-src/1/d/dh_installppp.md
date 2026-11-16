@@ -15,14 +15,14 @@ description: "dh_installppp – install ppp ip-up and ip-down files"
 <p> <code>dh_installppp</code> is a debhelper program that is responsible for installing ppp ip-up and ip-down scripts into package build directories.</p>
 <h2>FILES</h2>
 <dl>
-<dt>debian/<i>package</i>.ppp.ip-up</p>
-<dd> Installed into etc/ppp/ip-up.d/<i>package</i> in the package build directory.</p>
-<dt>debian/<i>package</i>.ppp.ip-down</p>
-<dd> Installed into etc/ppp/ip-down.d/<i>package</i> in the package build directory.</dl>
+<dt>debian/<i>package</i>.ppp.ip-up</dt>
+<dd> Installed into etc/ppp/ip-up.d/<i>package</i> in the package build directory.</dd>
+<dt>debian/<i>package</i>.ppp.ip-down</dt>
+<dd> Installed into etc/ppp/ip-down.d/<i>package</i> in the package build directory.</dd></dl>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>&#8211;name=</code><i>name</i></p>
-<dd> Look for files named <i>debian/package.name.ppp.ip-*</i> and install them as <i>etc/ppp/ip-*/name</i>, instead of using the usual files and installing them as the package name.</dl>
+<dt><code>&#8211;name=</code><i>name</i></dt>
+<dd> Look for files named <i>debian/package.name.ppp.ip-*</i> and install them as <i>etc/ppp/ip-*/name</i>, instead of using the usual files and installing them as the package name.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <i><a href="/docs/linux/man/7-debhelper/">debhelper</a></i>(7) </p>
 <p> This program is a part of debhelper.</p>

@@ -14,30 +14,30 @@ description: "grub-syslinux2cfg – transform syslinux config into grub.cfg"
 <h2>DESCRIPTION</h2>
 <p> Transform syslinux config into GRUB one.</p>
 <dl>
-<dt><code>-c</code>, <code>&#8211;cwd</code>=<i>,DIR/</i></p>
-<dd> current directory of syslinux [default is parent directory of input file].</p>
-<dt><code>-i</code>, <code>&#8211;isolinux</code></p>
-<dd> assume input is an isolinux configuration file.</p>
-<dt><code>-o</code>, <code>&#8211;output</code>=<i>,FILE/</i></p>
-<dd> write output to FILE [default=stdout].</p>
-<dt><code>-p</code>, <code>&#8211;pxelinux</code></p>
-<dd> assume input is a pxelinux configuration file.</p>
-<dt><code>-r</code>, <code>&#8211;root</code>=<i>,DIR/</i></p>
-<dd> root directory of the syslinux disk [default=/].</p>
-<dt><code>-s</code>, <code>&#8211;syslinux</code></p>
-<dd> assume input is a syslinux configuration file.</p>
-<dt><code>-t</code>, <code>&#8211;target-root</code>=<i>,DIR/</i></p>
-<dd> root directory as it will be seen on runtime [default=/].</p>
-<dt><code>-T</code>, <code>&#8211;target-cwd</code>=<i>,DIR/</i></p>
-<dd> current directory of syslinux as it will be seen on runtime [default is parent directory of input file].</p>
-<dt><code>-v</code>, <code>&#8211;verbose</code></p>
-<dd> print verbose messages.</p>
-<dt>-?, <code>&#8211;help</code></p>
-<dd> give this help list</p>
-<dt><code>&#8211;usage</code></p>
-<dd> give a short usage message</p>
-<dt><code>-V</code>, <code>&#8211;version</code></p>
-<dd> print program version</dl>
+<dt><code>-c</code>, <code>&#8211;cwd</code>=<i>,DIR/</i></dt>
+<dd> current directory of syslinux [default is parent directory of input file].</dd>
+<dt><code>-i</code>, <code>&#8211;isolinux</code></dt>
+<dd> assume input is an isolinux configuration file.</dd>
+<dt><code>-o</code>, <code>&#8211;output</code>=<i>,FILE/</i></dt>
+<dd> write output to FILE [default=stdout].</dd>
+<dt><code>-p</code>, <code>&#8211;pxelinux</code></dt>
+<dd> assume input is a pxelinux configuration file.</dd>
+<dt><code>-r</code>, <code>&#8211;root</code>=<i>,DIR/</i></dt>
+<dd> root directory of the syslinux disk [default=/].</dd>
+<dt><code>-s</code>, <code>&#8211;syslinux</code></dt>
+<dd> assume input is a syslinux configuration file.</dd>
+<dt><code>-t</code>, <code>&#8211;target-root</code>=<i>,DIR/</i></dt>
+<dd> root directory as it will be seen on runtime [default=/].</dd>
+<dt><code>-T</code>, <code>&#8211;target-cwd</code>=<i>,DIR/</i></dt>
+<dd> current directory of syslinux as it will be seen on runtime [default is parent directory of input file].</dd>
+<dt><code>-v</code>, <code>&#8211;verbose</code></dt>
+<dd> print verbose messages.</dd>
+<dt>-?, <code>&#8211;help</code></dt>
+<dd> give this help list</dd>
+<dt><code>&#8211;usage</code></dt>
+<dd> give a short usage message</dd>
+<dt><code>-V</code>, <code>&#8211;version</code></dt>
+<dd> print program version</dd></dl>
 <p> Mandatory or optional arguments to long options are also mandatory or optional for any corresponding short options.</p>
 <h2>REPORTING BUGS</h2>
 <p> Report bugs to &lt;bug-grub [at] gnu.org&gt;.</p>
@@ -46,6 +46,6 @@ description: "grub-syslinux2cfg – transform syslinux config into grub.cfg"
 <p> The full documentation for <code>grub-syslinux2cfg</code> is maintained as a Texinfo manual. If the <code>info</code> and <code>grub-syslinux2cfg</code> programs are properly installed at your site, the command</p>
 <dl>
 <dt>
-<dd> <code>info grub-syslinux2cfg</code></dl>
+</dt><dd> <code>info grub-syslinux2cfg</code></dd></dl>
 <p> should give you access to the complete manual. </p>
 <h2>Index</h2>

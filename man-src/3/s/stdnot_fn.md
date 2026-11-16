@@ -10,9 +10,7 @@ description: "std::not_fn – std::not_fn"
 <p>std::not_fn &#8211; std::not_fn</p>
 <h2>Synopsis</h2>
 <pre><code>Defined in header &lt;functional&gt;
-
 template&lt; class F&gt;                (since C++17)
-
 /*unspecified*/ not_fn( F&amp;&amp; f );</code></pre>
 <p>Creates a forwarding call wrapper that returns the negation of the callable object it holds. </p>
 <h2>Parameters</h2>
@@ -25,7 +23,6 @@ std::is_constructible_v&lt;std::decay_t&lt;F&gt;, F&gt; is required to be true</
 <h2>Return value</h2>
 <p>A function object of unspecified type T. It has the following members: </p>
 <pre><code>std::not_fn return type
-
 </code></pre>
 <h2>Member objects</h2>
 <p>The return type of std::not_fn holds a member object of type std::decay_t&lt;F&gt;. </p>

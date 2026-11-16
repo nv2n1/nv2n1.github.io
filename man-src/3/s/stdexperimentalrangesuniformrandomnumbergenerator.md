@@ -11,21 +11,13 @@ std::experimental::ranges::UniformRandomNumberGenerator - std::experimental::ran
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header &lt;experimental/ranges/random&gt;
-
 template &lt;class G&gt;
-
 concept bool UniformRandomNumberGenerator =
-
 Invocable&lt;G&amp;&gt; &amp;&amp;
-
 UnsignedIntegral&lt;std::result_of_t&lt;G&amp;()&gt;&gt; &amp;&amp;      (ranges TS)
-
 requires {
-
     { G::min() } -&gt; Same&lt;std::result_of_t&lt;G&amp;()&gt;&gt;&amp;&amp;;
-
     { G::max() } -&gt; Same&lt;std::result_of_t&lt;G&amp;()&gt;&gt;&amp;&amp;;
-
 };</code></pre> 
 The concept UniformRandomNumberGenerator&lt;G&gt; specifies that G is the type of a uniform random number generator, that is, objects of type G is a function object returning unsigned integer values such that each value in the range of possible results has (ideally) equal probability of being returned. 
 UniformRandomNumberGenerator&lt;G&gt; is satisfied only if, given any object g of type G: 

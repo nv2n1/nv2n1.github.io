@@ -14,18 +14,18 @@ description: "gnutls_cipher_suite_info – API function"
 <p> <code>const char * gnutls_cipher_suite_info(size_t </code><i>idx</i><code>, unsigned char * </code><i>cs_id</i><code>, gnutls_kx_algorithm_t * </code><i>kx</i><code>, gnutls_cipher_algorithm_t * </code><i>cipher</i><code>, gnutls_mac_algorithm_t * </code><i>mac</i><code>, gnutls_protocol_t * </code><i>min_version</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
-<dt>size_t idx</p>
-<dd> index of cipher suite to get information about, starts on 0.</p>
-<dt>unsigned char * cs_id</p>
-<dd> output buffer with room for 2 bytes, indicating cipher suite value</p>
-<dt>gnutls_kx_algorithm_t * kx</p>
-<dd> output variable indicating key exchange algorithm, or <code>NULL</code>.</p>
-<dt>gnutls_cipher_algorithm_t * cipher</p>
-<dd> output variable indicating cipher, or <code>NULL</code>.</p>
-<dt>gnutls_mac_algorithm_t * mac</p>
-<dd> output variable indicating MAC algorithm, or <code>NULL</code>.</p>
-<dt>gnutls_protocol_t * min_version</p>
-<dd> output variable indicating TLS protocol version, or <code>NULL</code>.</dl>
+<dt>size_t idx</dt>
+<dd> index of cipher suite to get information about, starts on 0.</dd>
+<dt>unsigned char * cs_id</dt>
+<dd> output buffer with room for 2 bytes, indicating cipher suite value</dd>
+<dt>gnutls_kx_algorithm_t * kx</dt>
+<dd> output variable indicating key exchange algorithm, or <code>NULL</code>.</dd>
+<dt>gnutls_cipher_algorithm_t * cipher</dt>
+<dd> output variable indicating cipher, or <code>NULL</code>.</dd>
+<dt>gnutls_mac_algorithm_t * mac</dt>
+<dd> output variable indicating MAC algorithm, or <code>NULL</code>.</dd>
+<dt>gnutls_protocol_t * min_version</dt>
+<dd> output variable indicating TLS protocol version, or <code>NULL</code>.</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> Get information about supported cipher suites. Use the function iteratively to get information about all supported cipher suites. Call with idx=0 to get information about first cipher suite, then idx=1 and so on until the function returns NULL.</p>
 <h2>RETURNS</h2>
@@ -39,6 +39,6 @@ description: "gnutls_cipher_suite_info – API function"
 <h2>SEE ALSO</h2>
 <p> The full documentation for <code>gnutls</code> is maintained as a Texinfo manual. If the /usr/share/doc/gnutls/ directory does not contain the HTML form visit <code></p>
 <dl>
-<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></p>
-<dd> </code></dl>
+<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></dt>
+<dd> </code></dd></dl>
 <h2>Index</h2>

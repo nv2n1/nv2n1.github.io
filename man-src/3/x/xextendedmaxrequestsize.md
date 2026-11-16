@@ -11,40 +11,40 @@ description: "AllPlanes, BlackPixel, WhitePixel, ConnectionNumber, DefaultColorm
 <h2>Syntax</h2>
 <p>unsigned long AllPlanes;</p>
 <dl COMPACT>
-<dd>unsigned long BlackPixel(Display *<i>display</i>, int <i>screen_number</i>);</p>
-<dd>unsigned long WhitePixel(Display *<i>display</i>, int <i>screen_number</i>);</p>
-<dd>int ConnectionNumber(Display *<i>display</i>);</p>
-<dd>Colormap DefaultColormap(Display *<i>display</i>, int <i>screen_number</i>);</p>
-<dd>int DefaultDepth(Display *<i>display</i>, int <i>screen_number</i>);</p>
-<dd>int *XListDepths(Display *<i>display</i>, int <i>screen_number</i>, int <i>count_return</i>);</p>
-<dd>GC DefaultGC(Display *<i>display</i>, int <i>screen_number</i>);</p>
-<dd>Window DefaultRootWindow(Display *<i>display</i>);</p>
-<dd>Screen *DefaultScreenOfDisplay(Display *<i>display</i>);</p>
-<dd>int DefaultScreen(Display *<i>display</i>);</p>
-<dd>Visual *DefaultVisual(Display *<i>display</i>, int <i>screen_number</i>);</p>
-<dd>int DisplayCells(Display *<i>display</i>, int <i>screen_number</i>);</p>
-<dd>int DisplayPlanes(Display *<i>display</i>, int <i>screen_number</i>);</p>
-<dd>char *DisplayString(Display *<i>display</i>);</p>
-<dd>long XMaxRequestSize(Display *<i>display</i>)</p>
-<dd>long XExtendedMaxRequestSize(Display *<i>display</i>)</p>
-<dd>unsigned long LastKnownRequestProcessed(Display *<i>display</i>);</p>
-<dd>unsigned long NextRequest(Display *<i>display</i>);</p>
-<dd>int ProtocolVersion(Display *<i>display</i>);</p>
-<dd>int ProtocolRevision(Display *<i>display</i>);</p>
-<dd>int QLength(Display *<i>display</i>);</p>
-<dd>Window RootWindow(Display *<i>display</i>, int <i>screen_number</i>);</p>
-<dd>int ScreenCount(Display *<i>display</i>);</p>
-<dd>Screen *ScreenOfDisplay(Display *<i>display</i>, int <i>screen_number</i>);</p>
-<dd>char *ServerVendor(Display *<i>display</i>)</p>
-<dd>int VendorRelease(Display *<i>display</i>)</dl>
+<dd>unsigned long BlackPixel(Display *<i>display</i>, int <i>screen_number</i>);</dd>
+<dd>unsigned long WhitePixel(Display *<i>display</i>, int <i>screen_number</i>);</dd>
+<dd>int ConnectionNumber(Display *<i>display</i>);</dd>
+<dd>Colormap DefaultColormap(Display *<i>display</i>, int <i>screen_number</i>);</dd>
+<dd>int DefaultDepth(Display *<i>display</i>, int <i>screen_number</i>);</dd>
+<dd>int *XListDepths(Display *<i>display</i>, int <i>screen_number</i>, int <i>count_return</i>);</dd>
+<dd>GC DefaultGC(Display *<i>display</i>, int <i>screen_number</i>);</dd>
+<dd>Window DefaultRootWindow(Display *<i>display</i>);</dd>
+<dd>Screen *DefaultScreenOfDisplay(Display *<i>display</i>);</dd>
+<dd>int DefaultScreen(Display *<i>display</i>);</dd>
+<dd>Visual *DefaultVisual(Display *<i>display</i>, int <i>screen_number</i>);</dd>
+<dd>int DisplayCells(Display *<i>display</i>, int <i>screen_number</i>);</dd>
+<dd>int DisplayPlanes(Display *<i>display</i>, int <i>screen_number</i>);</dd>
+<dd>char *DisplayString(Display *<i>display</i>);</dd>
+<dd>long XMaxRequestSize(Display *<i>display</i>)</dd>
+<dd>long XExtendedMaxRequestSize(Display *<i>display</i>)</dd>
+<dd>unsigned long LastKnownRequestProcessed(Display *<i>display</i>);</dd>
+<dd>unsigned long NextRequest(Display *<i>display</i>);</dd>
+<dd>int ProtocolVersion(Display *<i>display</i>);</dd>
+<dd>int ProtocolRevision(Display *<i>display</i>);</dd>
+<dd>int QLength(Display *<i>display</i>);</dd>
+<dd>Window RootWindow(Display *<i>display</i>, int <i>screen_number</i>);</dd>
+<dd>int ScreenCount(Display *<i>display</i>);</dd>
+<dd>Screen *ScreenOfDisplay(Display *<i>display</i>, int <i>screen_number</i>);</dd>
+<dd>char *ServerVendor(Display *<i>display</i>)</dd>
+<dd>int VendorRelease(Display *<i>display</i>)</dd></dl>
 <h2>Arguments</h2>
 <dl COMPACT>
-<dt><i>display</i></p>
-<dd>Specifies the connection to the X server.</p>
-<dt><i>screen_number</i></p>
-<dd>Specifies the appropriate screen number on the host server.</p>
-<dt><i>count_return</i></p>
-<dd>Returns the number of depths.</dl>
+<dt><i>display</i></dt>
+<dd>Specifies the connection to the X server.</dd>
+<dt><i>screen_number</i></dt>
+<dd>Specifies the appropriate screen number on the host server.</dd>
+<dt><i>count_return</i></dt>
+<dd>Returns the number of depths.</dd></dl>
 <h2>Description</h2>
 <p>The <code>AllPlanes</code> macro returns a value with all bits set to 1 suitable for use in a plane argument to a procedure. </p>
 <p> The <code>BlackPixel</code> macro returns the black pixel value for the specified screen. </p>

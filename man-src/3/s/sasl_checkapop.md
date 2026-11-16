@@ -10,7 +10,6 @@ description: "sasl_checkapop – Check an APOP challenge/response"
 <p>sasl_checkapop &#8211; Check an APOP challenge/response</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;sasl/sasl.h&gt;
-
 int sasl_checkapop(sasl_conn_t *conn,
                    const char *challenge,
                    unsigned challen,

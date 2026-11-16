@@ -18,11 +18,11 @@ url: "/docs/linux/man/1-perlmod/"
  There are other documents which might contain the information that you're looking for:
 <dl>
 <dt>This doc
-<dd> Perl's packages, namespaces, and some info on classes.
-<dt>perlnewmod
-<dd> Tutorial on making a new module.
-<dt>perlmodstyle
-<dd> Best practices for making a new module.</dl>
+</dt><dd> Perl's packages, namespaces, and some info on classes.
+</dd><dt>perlnewmod
+</dt><dd> Tutorial on making a new module.
+</dd><dt>perlmodstyle
+</dt><dd> Best practices for making a new module.</dd></dl>
 
 <h3>Packages</h3>
 
@@ -416,4 +416,4 @@ require Cwd;
 
 
 <dt><a HREF="#lbAK">SEE ALSO</a>
-<dd></dl>
+</dt><dd></dd></dl>

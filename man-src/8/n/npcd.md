@@ -14,16 +14,16 @@ description: "npcd – Nagios Performance C Daemon"
 <p>The <code>npcd</code> is a daemon processing nagios performance data. </p>
 <p> For more information you can visit pnp4nagios website:</p>
 <dl>
-<dd><a rel="nofollow" href="http://docs.pnp4nagios.org/">http://docs.pnp4nagios.org/</a></dl>
+<dd><a rel="nofollow" href="http://docs.pnp4nagios.org/">http://docs.pnp4nagios.org/</a></dd></dl>
 <p> and SourceForge project:</p>
 <dl>
-<dd><a rel="nofollow" href="http://pnp4nagios.sourceforge.net">http://pnp4nagios.sourceforge.net</a></dl>
+<dd><a rel="nofollow" href="http://pnp4nagios.sourceforge.net">http://pnp4nagios.sourceforge.net</a></dd></dl>
 <h2>Options</h2>
 <dl>
-<dt><code>-d, &#8211;daemon</p>
-<dd>Run npcd</code> as daemon in the background.</p>
-<dt><code>-f, &#8211;config</code> <i>&lt;configfile&gt;</p>
-<dd>Path to the </i><code>npcd</code> config file (typically /etc/pnp4nagios/npcd.cfg).</dl>
+<dt><code>-d, &#8211;daemon</dt>
+<dd>Run npcd</code> as daemon in the background.</dd>
+<dt><code>-f, &#8211;config</code> <i>&lt;configfile&gt;</dt>
+<dd>Path to the </i><code>npcd</code> config file (typically /etc/pnp4nagios/npcd.cfg).</dd></dl>
 <h2>Return Value</h2>
 <p>On success starting <code>npcd</code> 0 is returned.</p>
 <h2>Errors</h2>

@@ -16,10 +16,10 @@ description: "lxshortcut – desktop entry file editor"
 <h2>OPTIONS</h2>
 <p> At least one option should be specified and if <i>output-file</i> isn&#8217;t specified then <i>input-file</i> will be used to make a result &#8211; either full path or path in XDG specified user data directory for menu entries.</p>
 <dl>
-<dt><code>-i</code><i> input-file</i>, &#8211;input=<i>input-file</i></p>
-<dd> use <i>input-file</i> as source for editing, it may be some XDG menu entry if no full path is specified or custom path to some file</p>
-<dt><code>-o</code><i> output-file</i>, &#8211;output=<i>output-file</i></p>
-<dd> write result into <i>output-file</i></dl>
+<dt><code>-i</code><i> input-file</i>, &#8211;input=<i>input-file</i></dt>
+<dd> use <i>input-file</i> as source for editing, it may be some XDG menu entry if no full path is specified or custom path to some file</dd>
+<dt><code>-o</code><i> output-file</i>, &#8211;output=<i>output-file</i></dt>
+<dd> write result into <i>output-file</i></dd></dl>
 <h2>SEE ALSO</h2>
 <p> XDG Desktop Entry Specification</p>
 <h2>AUTHOR</h2>

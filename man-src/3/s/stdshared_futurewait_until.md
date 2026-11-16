@@ -12,7 +12,6 @@ std::shared_future&lt;T&gt;::wait_until - std::shared_future&lt;T&gt;::wait_unti
 
 <pre><code>template &lt;class Clock, class Duration&gt;
 (since C++ 11)
-
     std::future_status wait_until(const std::chrono::time_point&lt;Clock, Duration&gt; &amp;timeout_time) const;</code></pre> 
 wait_until waits for a result to become available. It blocks until specified timeout_time has been reached or the result becomes available, whichever comes first. The return value indicates why wait_until returned. 
 The behavior is undefined if valid()== false before the call to this function. 

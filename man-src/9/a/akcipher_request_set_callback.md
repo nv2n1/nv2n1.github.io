@@ -14,23 +14,23 @@ description: "akcipher_request_set_callback – Sets an asynchronous callback."
 <p><i>req</i></p>
 <dl>
 <dd>
-<dd>request that the callback will be set for</dl>
+</dd><dd>request that the callback will be set for</dd></dl>
 <p> <i>flgs</i></p>
 <dl>
-<dd>specify for instance if the operation may backlog</dl>
+<dd>specify for instance if the operation may backlog</dd></dl>
 <p> <i>cmpl</i></p>
 <dl>
-<dd>callback which will be called</dl>
+<dd>callback which will be called</dd></dl>
 <p> <i>data</i></p>
 <dl>
-<dd>private data used by the caller</dl>
+<dd>private data used by the caller</dd></dl>
 <h2>Description</h2>
 <p>Callback will be called when an asynchronous operation on a given request is finished.</p>
 <h2>Authors</h2>
 <p><code>Stephan Mueller</code> &lt;smueller [at] chronox.de&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <p> <code>Marek Vasut</code> &lt;marek [at] denx.de&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

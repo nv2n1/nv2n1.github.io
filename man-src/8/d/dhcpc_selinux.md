@@ -57,9 +57,9 @@ description: "dhcpc_selinux – Security Enhanced Linux Policy for the dhcpc pro
 <p> Policy governs the access confined processes have to these ports. SELinux dhcpc policy is very flexible allowing users to setup their dhcpc processes in as secure a method as possible. </p>
 <p> The following port types are defined for dhcpc: </p>
 <dl>
-<dt><code>dhcpc_port_t</code></p>
+<dt><code>dhcpc_port_t</code></dt>
 <dd>
-<dd>Default Defined Ports: tcp 68,546,5546 udp 68,546,5546</dl>
+</dd><dd>Default Defined Ports: tcp 68,546,5546 udp 68,546,5546</dd></dl>
 <h2>Managed Files</h2>
 <p>The SELinux process type dhcpc_t can manage files labeled with the following file types. The paths listed are the default paths for these file types. Note the processes UID still need to have DAC permissions. </p>
 <p> <code>NetworkManager_var_lib_t</code> </p>
@@ -150,24 +150,24 @@ description: "dhcpc_selinux – Security Enhanced Linux Policy for the dhcpc pro
 <p> <code>dhcpc_exec_t</code> </p>
 <p> &#8211; Set files with the dhcpc_exec_t type, if you want to transition an executable to the dhcpc_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/sbin/dhclient.*, /usr/sbin/dhclient.*, /sbin/pump, /sbin/dhcdbd, /sbin/dhcpcd, /usr/sbin/pump, /usr/sbin/dhcdbd, /usr/sbin/dhcpcd </p>
+<dt>Paths:</dt>
+<dd>/sbin/dhclient.*, /usr/sbin/dhclient.*, /sbin/pump, /sbin/dhcdbd, /sbin/dhcpcd, /usr/sbin/pump, /usr/sbin/dhcdbd, /usr/sbin/dhcpcd </dd>
 </dl>
 <p> <code>dhcpc_helper_exec_t</code> </p>
 <p> &#8211; Set files with the dhcpc_helper_exec_t type, if you want to transition an executable to the dhcpc_helper_t domain. </p>
 <p> <code>dhcpc_state_t</code> </p>
 <p> &#8211; Set files with the dhcpc_state_t type, if you want to treat the files as dhcpc state data. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/var/lib/dhcp3?/dhclient.*, /var/lib/dhcpcd(/.*)?, /var/lib/dhclient(/.*)?, /var/lib/wifiroamd(/.*)? </p>
+<dt>Paths:</dt>
+<dd>/var/lib/dhcp3?/dhclient.*, /var/lib/dhcpcd(/.*)?, /var/lib/dhclient(/.*)?, /var/lib/wifiroamd(/.*)? </dd>
 </dl>
 <p> <code>dhcpc_tmp_t</code> </p>
 <p> &#8211; Set files with the dhcpc_tmp_t type, if you want to store dhcpc temporary files in the /tmp directories. </p>
 <p> <code>dhcpc_var_run_t</code> </p>
 <p> &#8211; Set files with the dhcpc_var_run_t type, if you want to store the dhcpc files under the /run or /var/run directory. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/var/run/dhcpcd(/.*)?, /var/run/dhclient.* </p>
+<dt>Paths:</dt>
+<dd>/var/run/dhcpcd(/.*)?, /var/run/dhclient.* </dd>
 </dl>
 <p> Note: File context can be temporarily modified with the chcon command. If you want to permanently change the file context you need to use the <code>semanage fcontext</code> command. This will modify the SELinux labeling database. You will need to use <code>restorecon</code> to apply the labels.</p>
 <h2>Commands</h2>

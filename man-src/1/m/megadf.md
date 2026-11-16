@@ -19,99 +19,99 @@ megadf[--free | --total | --used][--mb | --gb | -h]
 <p> &#8211;total</p>
 <dl>
 <dt>
-<dd> Show only total available space (free + used).</dl>
+</dt><dd> Show only total available space (free + used).</dd></dl>
 <p> &#8211;free</p>
 <dl>
 <dt>
-<dd> Show only free space.</dl>
+</dt><dd> Show only free space.</dd></dl>
 <p> &#8211;used</p>
 <dl>
 <dt>
-<dd> Show only used space.</dl>
+</dt><dd> Show only used space.</dd></dl>
 <p> &#8211;human, -h</p>
 <dl>
 <dt>
-<dd> Display file sizes in a human readable format.</dl>
+</dt><dd> Display file sizes in a human readable format.</dd></dl>
 <p> &#8211;mb</p>
 <dl>
 <dt>
-<dd> Show in MiB units.</dl>
+</dt><dd> Show in MiB units.</dd></dl>
 <p> &#8211;gb</p>
 <dl>
 <dt>
-<dd> Show in GiB units.</dl>
+</dt><dd> Show in GiB units.</dd></dl>
 <p> -u &lt;email&gt;, &#8211;username &lt;email&gt;</p>
 <dl>
 <dt>
-<dd> Account username (email)</dl>
+</dt><dd> Account username (email)</dd></dl>
 <p> -p &lt;password&gt;, &#8211;password &lt;password&gt;</p>
 <dl>
 <dt>
-<dd> Account password</dl>
+</dt><dd> Account password</dd></dl>
 <p> &#8211;config &lt;path&gt;</p>
 <dl>
 <dt>
-<dd> Load configuration from a file</dl>
+</dt><dd> Load configuration from a file</dd></dl>
 <p> &#8211;ignore-config-file</p>
 <dl>
 <dt>
-<dd> Disable loading .megarc</dl>
+</dt><dd> Disable loading .megarc</dd></dl>
 <p> &#8211;no-ask-password</p>
 <dl>
 <dt>
-<dd> Never ask interactively for a password</dl>
+</dt><dd> Never ask interactively for a password</dd></dl>
 <p> &#8211;reload</p>
 <dl>
 <dt>
-<dd> Reload filesystem cache</dl>
+</dt><dd> Reload filesystem cache</dd></dl>
 <p> &#8211;debug [&lt;options&gt;]</p>
 <dl>
 <dt>
-<dd> Enable debugging of various aspects of the megatools operation. You may enable multiple debugging options separated by commas. (eg. &#8211;debug api,fs) </p>
+</dt><dd> Enable debugging of various aspects of the megatools operation. You may enable multiple debugging options separated by commas. (eg. &#8211;debug api,fs) </dd>
 <p> Available options are: </p>
 <dl>
 <dt>
-<dd> &bull; </p>
+</dt><dd> &bull; </dd>
 <p> api: Dump Mega.co.nz API calls</dl>
 <dl>
 <dt>
-<dd> &bull; </p>
+</dt><dd> &bull; </dd>
 <p> fs: Dump Mega.co.nz filesystem (may require &#8211;reload to actually print something)</dl>
 <dl>
 <dt>
-<dd> &bull; </p>
+</dt><dd> &bull; </dd>
 <p> cache: Dump cache contents</dl>
 </dl>
 <p> &#8211;version</p>
 <dl>
 <dt>
-<dd> Show version information</dl>
+</dt><dd> Show version information</dd></dl>
 <h2>EXAMPLES</h2>
 <dl>
 <dt>
-<dd> &bull; Show overall human readable space usage information: </p>
+</dt><dd> &bull; Show overall human readable space usage information: </dd>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 $ megadf -h
 Total: 50.0 GiB
 Used:  6.4 GiB
 Free:  43.6 GiB
 </pre>
-</dl>
+</dd></dl>
 </dl>
 <dl>
 <dt>
-<dd> &bull; Check free space from a script: </p>
+</dt><dd> &bull; Check free space from a script: </dd>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 $ test `megadf --free --gb` -lt 1 &amp;&amp; \
   echo &quot;You have less than 1 GiB of available free space&quot;
 </pre>
-</dl>
+</dd></dl>
 </dl>
 <h2>KNOWN BUGS</h2>
 <p> Megadf can&#8217;t determine available space for premium accounts.</p>

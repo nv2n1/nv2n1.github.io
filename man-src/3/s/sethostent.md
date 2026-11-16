@@ -11,72 +11,60 @@ description: "gethostbyname, gethostbyaddr, sethostent, gethostent, endhostent, 
 <h2>Synopsis</h2>
 <pre><code>#include &lt;netdb.h&gt;
 extern int h_errno;
-
 struct hostent *gethostbyname(const char *name);
-
 #include &lt;sys/socket.h&gt; /* for AF_INET */
 struct hostent *gethostbyaddr(const void *addr,
                               socklen_t len, int type);
-
 void sethostent(int stayopen);
-
 void endhostent(void);
-
 void herror(const char *s);
-
 const char *hstrerror(int err);
-
 /* System V/POSIX extension */
 struct hostent *gethostent(void);
-
 /* GNU extensions */
 struct hostent *gethostbyname2(const char *name, int af);
-
 int gethostent_r(
     struct hostent *ret, char *buf, size_t buflen,
     struct hostent **result, int *h_errnop);
-
 int gethostbyaddr_r(const void *addr, socklen_t len, int type,
                     struct hostent *ret, char *buf, size_t buflen,
                     struct hostent **result, int *h_errnop);
-
 int gethostbyname_r(const char *name,
                     struct hostent *ret, char *buf, size_t buflen,
                     struct hostent **result, int *h_errnop);
-
 int gethostbyname2_r(const char *name, int af,
                      struct hostent *ret, char *buf, size_t buflen,
                      struct hostent **result, int *h_errnop);</code></pre>
 <p> Feature Test Macro Requirements for glibc (see <code><a href="/docs/linux/man/7-feature_test_macros/">feature_test_macros</a></code>(7)): <code>gethostbyname2</code>(), <code>gethostent_r</code>(), <code>gethostbyaddr_r</code>(), <code>gethostbyname_r</code>(), <code>gethostbyname2_r</code>():</p>
 <dl>
 <dd>
-<dl>
-<dt>Since glibc 2.19:</p>
-<dd>_DEFAULT_SOURCE</p>
-<dt>Glibc versions up to and including 2.19:</p>
-<dd>_BSD_SOURCE || _SVID_SOURCE</dl>
+</dd><dl>
+<dt>Since glibc 2.19:</dt>
+<dd>_DEFAULT_SOURCE</dd>
+<dt>Glibc versions up to and including 2.19:</dt>
+<dd>_BSD_SOURCE || _SVID_SOURCE</dd></dl>
 </dl>
 <p> <code>herror</code>(), <code>hstrerror</code>():</p>
 <dl>
 <dd>
-<dl>
-<dt>Since glibc 2.19:</p>
-<dd>_DEFAULT_SOURCE</p>
-<dt>Glibc 2.8 to 2.19:</p>
-<dd>_BSD_SOURCE || _SVID_SOURCE</p>
-<dt>Before glibc 2.8:</p>
-<dd>none</dl>
+</dd><dl>
+<dt>Since glibc 2.19:</dt>
+<dd>_DEFAULT_SOURCE</dd>
+<dt>Glibc 2.8 to 2.19:</dt>
+<dd>_BSD_SOURCE || _SVID_SOURCE</dd>
+<dt>Before glibc 2.8:</dt>
+<dd>none</dd></dl>
 </dl>
 <p> <code>h_errno</code>:</p>
 <dl>
 <dd>
-<dl>
-<dt>Since glibc 2.19</p>
-<dd>_DEFAULT_SOURCE || _POSIX_C_SOURCE &lt; 200809L</p>
-<dt>Glibc 2.12 to 2.19:</p>
-<dd>_BSD_SOURCE || _SVID_SOURCE || _POSIX_C_SOURCE &lt; 200809L</p>
-<dt>Before glibc 2.12:</p>
-<dd>none</dl>
+</dd><dl>
+<dt>Since glibc 2.19</dt>
+<dd>_DEFAULT_SOURCE || _POSIX_C_SOURCE &lt; 200809L</dd>
+<dt>Glibc 2.12 to 2.19:</dt>
+<dd>_BSD_SOURCE || _SVID_SOURCE || _POSIX_C_SOURCE &lt; 200809L</dd>
+<dt>Before glibc 2.12:</dt>
+<dd>none</dd></dl>
 </dl>
 <h2>Description</h2>
 <p>The <code>gethostbyname*</code>(), <code>gethostbyaddr*</code>(), <code>herror</code>(), and <code>hstrerror</code>() functions are obsolete. Applications should use <code><a href="/docs/linux/man/3-getaddrinfo/">getaddrinfo</a></code>(3), <code><a href="/docs/linux/man/3-getnameinfo/">getnameinfo</a></code>(3), and <code><a href="/docs/linux/man/3-gai_strerror/">gai_strerror</a></code>(3) instead. The <code>gethostbyname</code>() function returns a structure of type <i>hostent</i> for the given host <i>name</i>. Here <i>name</i> is either a hostname or an IPv4 address in standard dot notation (as for <code>inet_addr</code>(3)). If <i>name</i> is an IPv4 address, no lookup is performed and <code>gethostbyname</code>() simply copies <i>name</i> into the <i>h_name</i> field and its <i>struct in_addr</i> equivalent into the <i>h_addr_list[0]</i> field of the returned <i>hostent</i> structure. If <i>name</i> doesn&#8217;t end in a dot and the environment variable <code>HOSTALIASES</code> is set, the alias file pointed to by <code>HOSTALIASES</code> will first be searched for <i>name</i> (see <code><a href="/docs/linux/man/7-hostname/">hostname</a></code>(7) for the file format). The current domain and its parents are searched unless <i>name</i> ends in a dot. The <code>gethostbyaddr</code>() function returns a structure of type <i>hostent</i> for the given host address <i>addr</i> of length <i>len</i> and address type <i>type</i>. Valid address types are <code>AF_INET</code> and <code>AF_INET6</code>. The host address argument is a pointer to a struct of a type depending on the address type, for example a <i>struct in_addr *</i> (probably obtained via a call to <code>inet_addr</code>(3)) for address type <code>AF_INET</code>. The <code>sethostent</code>() function specifies, if <i>stayopen</i> is true (1), that a connected TCP socket should be used for the name server queries and that the connection should remain open during successive queries. Otherwise, name server queries will use UDP datagrams. The <code>endhostent</code>() function ends the use of a TCP connection for name server queries. The (obsolete) <code>herror</code>() function prints the error message associated with the current value of <i>h_errno</i> on <i>stderr</i>. The (obsolete) <code>hstrerror</code>() function takes an error number (typically <i>h_errno</i>) and returns the corresponding message string. The domain name queries carried out by <code>gethostbyname</code>() and <code>gethostbyaddr</code>() rely on the Name Service Switch (<code><a href="/docs/linux/man/5-nsswitch-conf/">nsswitch.conf</a></code>(5)) configured sources or a local name server (<code><a href="/docs/linux/man/8-named/">named</a></code>(8)). The default action is to query the Name Service Switch (<code><a href="/docs/linux/man/5-nsswitch-conf/">nsswitch.conf</a></code>(5)) configured sources, failing that, a local name server (<code><a href="/docs/linux/man/8-named/">named</a></code>(8)).</p>
@@ -92,39 +80,39 @@ int gethostbyname2_r(const char *name, int af,
 #define h_addr h_addr_list[0] /* for backward compatibility */</code></pre>
 <p> The members of the <i>hostent</i> structure are:</p>
 <dl>
-<dt><i>h_name</i></p>
-<dd>The official name of the host.</p>
-<dt><i>h_aliases</i></p>
-<dd>An array of alternative names for the host, terminated by a null pointer.</p>
-<dt><i>h_addrtype</i></p>
-<dd>The type of address; always <code>AF_INET</code> or <code>AF_INET6</code> at present.</p>
-<dt><i>h_length</i></p>
-<dd>The length of the address in bytes.</p>
-<dt><i>h_addr_list</i></p>
-<dd>An array of pointers to network addresses for the host (in network byte order), terminated by a null pointer.</p>
-<dt><i>h_addr</i></p>
-<dd>The first address in <i>h_addr_list</i> for backward compatibility.</dl>
+<dt><i>h_name</i></dt>
+<dd>The official name of the host.</dd>
+<dt><i>h_aliases</i></dt>
+<dd>An array of alternative names for the host, terminated by a null pointer.</dd>
+<dt><i>h_addrtype</i></dt>
+<dd>The type of address; always <code>AF_INET</code> or <code>AF_INET6</code> at present.</dd>
+<dt><i>h_length</i></dt>
+<dd>The length of the address in bytes.</dd>
+<dt><i>h_addr_list</i></dt>
+<dd>An array of pointers to network addresses for the host (in network byte order), terminated by a null pointer.</dd>
+<dt><i>h_addr</i></dt>
+<dd>The first address in <i>h_addr_list</i> for backward compatibility.</dd></dl>
 <h2>Return Value</h2>
 <p>The <code>gethostbyname</code>() and <code>gethostbyaddr</code>() functions return the <i>hostent</i> structure or a null pointer if an error occurs. On error, the <i>h_errno</i> variable holds an error number. When non-NULL, the return value may point at static data, see the notes below.</p>
 <h2>Errors</h2>
 <p>The variable <i>h_errno</i> can have the following values:</p>
 <dl>
-<dt><code>HOST_NOT_FOUND</code></p>
-<dd>The specified host is unknown.</p>
-<dt><code>NO_DATA</code></p>
-<dd>The requested name is valid but does not have an IP address. Another type of request to the name server for this domain may return an answer. The constant <code>NO_ADDRESS</code> is a synonym for <code>NO_DATA</code>.</p>
-<dt><code>NO_RECOVERY</code></p>
-<dd>A nonrecoverable name server error occurred.</p>
-<dt><code>TRY_AGAIN</code></p>
-<dd>A temporary error occurred on an authoritative name server. Try again later.</dl>
+<dt><code>HOST_NOT_FOUND</code></dt>
+<dd>The specified host is unknown.</dd>
+<dt><code>NO_DATA</code></dt>
+<dd>The requested name is valid but does not have an IP address. Another type of request to the name server for this domain may return an answer. The constant <code>NO_ADDRESS</code> is a synonym for <code>NO_DATA</code>.</dd>
+<dt><code>NO_RECOVERY</code></dt>
+<dd>A nonrecoverable name server error occurred.</dd>
+<dt><code>TRY_AGAIN</code></dt>
+<dd>A temporary error occurred on an authoritative name server. Try again later.</dd></dl>
 <h2>Files</h2>
 <dl>
-<dt><i>/etc/host.conf</i></p>
-<dd>resolver configuration file</p>
-<dt><i>/etc/hosts</i></p>
-<dd>host database file</p>
-<dt><i>/etc/nsswitch.conf</i></p>
-<dd>name service switch configuration</dl>
+<dt><i>/etc/host.conf</i></dt>
+<dd>resolver configuration file</dd>
+<dt><i>/etc/hosts</i></dt>
+<dd>host database file</dd>
+<dt><i>/etc/nsswitch.conf</i></dt>
+<dd>name service switch configuration</dd></dl>
 <h2>Attributes</h2>
 <p>For an explanation of the terms used in this section, see <code><a href="/docs/linux/man/7-attributes/">attributes</a></code>(7). </p>
 <table BORDER>

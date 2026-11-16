@@ -13,7 +13,7 @@ description: "signbit – test sign of a real floating-point number"
 int signbit(x);</code></pre>
 <p> Link with <i>-lm</i>. Feature Test Macro Requirements for glibc (see <code><a href="/docs/linux/man/7-feature_test_macros/">feature_test_macros</a></code>(7)): <code>signbit</code>():</p>
 <dl>
-<dd>_ISOC99_SOURCE || _POSIX_C_SOURCE&nbsp;&gt;=&nbsp;200112L</dl>
+<dd>_ISOC99_SOURCE || _POSIX_C_SOURCE&nbsp;&gt;=&nbsp;200112L</dd></dl>
 <h2>Description</h2>
 <p><code>signbit</code>() is a generic macro which can work on all real floating-point types. It returns a nonzero value if the value of <i>x</i> has its sign bit set. </p>
 <p> This is not the same as <i>x &lt; 0.0</i>, because IEEE 754 floating point allows zero to be signed. The comparison <i>-0.0 &lt; 0.0</i> is false, but <i>signbit(-0.0)</i> will return a nonzero value. </p>

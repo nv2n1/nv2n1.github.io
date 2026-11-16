@@ -15,13 +15,13 @@ url: "/docs/linux/man/1-stubmaker/"
 
 <dl>
 <dt>-d &lt;dirname&gt;
-<dd> Specifies the directory you wish to output the files to. The directory must already exist.
-<dt>-v
-<dd> Turns on ``verbose'' output during the code stub generation process. To be honest, there is not much the program outputs, but if you must see something output to the console, then this fits the bill.
-<dt>--help
-<dd> Outputs a short help message.
-<dt>--version
-<dd> Outputs the current version of stubmaker.pl.</dl>
+</dt><dd> Specifies the directory you wish to output the files to. The directory must already exist.
+</dd><dt>-v
+</dt><dd> Turns on ``verbose'' output during the code stub generation process. To be honest, there is not much the program outputs, but if you must see something output to the console, then this fits the bill.
+</dd><dt>--help
+</dt><dd> Outputs a short help message.
+</dd><dt>--version
+</dt><dd> Outputs the current version of stubmaker.pl.</dd></dl>
 
 <h2>STUB FILES</h2>
 
@@ -34,7 +34,7 @@ url: "/docs/linux/man/1-stubmaker/"
  The following subroutines are unique to generated stub classes, and help the user control and configure the stub class.
 <dl>
 <dt>want_som(boolean)
-<dd> When set to 1, SOAP::Lite will return <font SIZE="-1">SOAP::SOM</font> objects to the user upon invoking a method on a remote service. This is very helpful when you need to check to see if the return value is a SOAP::Fault or not. When set to 0, SOAP::Lite will return the return value of the method.</dl>
+</dt><dd> When set to 1, SOAP::Lite will return <font SIZE="-1">SOAP::SOM</font> objects to the user upon invoking a method on a remote service. This is very helpful when you need to check to see if the return value is a SOAP::Fault or not. When set to 0, SOAP::Lite will return the return value of the method.</dd></dl>
 
 <h2>EXAMPLES</h2>
 

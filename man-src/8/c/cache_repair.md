@@ -15,14 +15,14 @@ description: "cache_repair – repair cache binary metadata from device/file to 
 <p> This tool cannot be run on live metadata.</p>
 <h2>Options</h2>
 <dl>
-<dt><code>-h</code>, <code>&#8211;help</code></p>
-<dd>Print help and exit.</p>
-<dt><code>-V</code>, <code>&#8211;version</code></p>
-<dd>Print version information and exit.</p>
-<dt><code>-i</code>, <code>&#8211;input</code> {device|file}</p>
-<dd>Input file or device containing binary metadata.</p>
-<dt><code>-o</code>, <code>&#8211;output</code> {device|file}</p>
-<dd>Output file or device for repaired binary metadata.</dl>
+<dt><code>-h</code>, <code>&#8211;help</code></dt>
+<dd>Print help and exit.</dd>
+<dt><code>-V</code>, <code>&#8211;version</code></dt>
+<dd>Print version information and exit.</dd>
+<dt><code>-i</code>, <code>&#8211;input</code> {device|file}</dt>
+<dd>Input file or device containing binary metadata.</dd>
+<dt><code>-o</code>, <code>&#8211;output</code> {device|file}</dt>
+<dd>Output file or device for repaired binary metadata.</dd></dl>
 <pre> If a file is then it must be preallocated, and large enough to hold the
  metadata.</pre>
 <h2>Example</h2>

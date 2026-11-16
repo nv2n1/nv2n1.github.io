@@ -21,10 +21,10 @@ description: "zgebd2.f –"
 <pre> ZGEBD2 reduces a complex general m by n matrix A to upper or lower
  real bidiagonal form B by a unitary transformation: Q**H * A * P = B.
  If m &gt;= n, B is upper bidiagonal; if m &lt; n, B is lower bidiagonal.</pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>M</i> </p>
+<dd><i>M</i> </dd>
 <pre> M is INTEGER
  The number of rows in the matrix A. M &gt;= 0.</pre>
 <p><i>N</i> </p>
@@ -78,13 +78,13 @@ description: "zgebd2.f –"
 <p>&nbsp;<wbr></dl>
 <p> <code>Author:</code></p>
 <dl>
-<dd>Univ. of Tennessee </p>
+<dd>Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl>
-<dd>September 2012</dl>
+<dd>September 2012</dd></dl>
 <p> <code>Further Details: </code></p>
 <dl>
 <dd>
@@ -117,7 +117,8 @@ description: "zgebd2.f –"
  where d and e denote diagonal and off-diagonal elements of B, vi
  denotes an element of the vector defining H(i), and ui an element of
  the vector defining G(i).</pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> Definition at line 190 of file zgebd2.f.</p>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for LAPACK from the source code.</p>
+</p>

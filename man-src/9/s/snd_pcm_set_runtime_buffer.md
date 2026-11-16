@@ -15,11 +15,11 @@ snd_pcm_set_runtime_buffer - Set the PCM runtime buffer
 <h2>Arguments</h2>
 
 <i>substream</i>
-<dl><dd><dd>PCM substream to set</dl>
+<dl><dd></dd><dd>PCM substream to set</dd></dl>
  
 
  <i>bufp</i>
-<dl><dd>the buffer information, NULL to clear</dl>
+<dl><dd>the buffer information, NULL to clear</dd></dl>
 
 <h2>Description</h2>
 

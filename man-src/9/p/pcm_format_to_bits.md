@@ -10,10 +10,10 @@ description: "pcm_format_to_bits – Strong-typed conversion of pcm_format to bi
 <p>pcm_format_to_bits &#8211; Strong-typed conversion of pcm_format to bitwise</p>
 <h2>Synopsis</h2>
 <dl>
-<dt> <code>u64 pcm_format_to_bits(snd_pcm_format_t&nbsp;<wbr></code><i>pcm_format</i><code>);</code></dl>
+<dt> <code>u64 pcm_format_to_bits(snd_pcm_format_t&nbsp;<wbr></code><i>pcm_format</i><code>);</code></dt></dl>
 <h2>Arguments</h2>
 <p><i>pcm_format</i></p>
 <dl>
 <dd>
-<dd>PCM format</dl>
+</dd><dd>PCM format</dd></dl>
 <h2>Copyright</h2>

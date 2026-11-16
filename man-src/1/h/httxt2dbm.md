@@ -23,15 +23,15 @@ description: "httxt2dbm – Generate dbm files for use with RewriteMap"
 <p>&nbsp;<br />
 &nbsp;</p>
 <dl>
-<dt><code>-v</code></p>
-<dd> More verbose output</p>
-<dt><code>-f </code><i>DBM_TYPE</i></p>
-<dd> Specify the DBM type to be used for the output. If not specified, will use the APR Default. Available types are: <code>GDBM</code> for GDBM files, <code>SDBM</code> for SDBM files, <code>DB</code> for berkeley DB files, <code>NDBM</code> for NDBM files, <code>default</code> for the default DBM type.</p>
-<dt><code>-i </code><i>SOURCE_TXT</i></p>
-<dd> Input file from which the dbm is to be created. The file should be formatted with one record per line, of the form: <code>key value</code>. See the documentation for RewriteMap for further details of this file&#8217;s format and meaning.</p>
-<dt><code>-o </code><i>OUTPUT_DBM</i></p>
+<dt><code>-v</code></dt>
+<dd> More verbose output</dd>
+<dt><code>-f </code><i>DBM_TYPE</i></dt>
+<dd> Specify the DBM type to be used for the output. If not specified, will use the APR Default. Available types are: <code>GDBM</code> for GDBM files, <code>SDBM</code> for SDBM files, <code>DB</code> for berkeley DB files, <code>NDBM</code> for NDBM files, <code>default</code> for the default DBM type.</dd>
+<dt><code>-i </code><i>SOURCE_TXT</i></dt>
+<dd> Input file from which the dbm is to be created. The file should be formatted with one record per line, of the form: <code>key value</code>. See the documentation for RewriteMap for further details of this file&#8217;s format and meaning.</dd>
+<dt><code>-o </code><i>OUTPUT_DBM</i></dt>
 <dd> Name of the output dbm files.<br />
-&nbsp;</dl>
+&nbsp;</dd></dl>
 <h2>EXAMPLES</h2>
 <p>&nbsp; </p>
 <pre>

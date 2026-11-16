@@ -14,13 +14,13 @@ description: "crypto_ahash_setkey – set key for cipher handle"
 <p><i>tfm</i></p>
 <dl>
 <dd>
-<dd>cipher handle</dl>
+</dd><dd>cipher handle</dd></dl>
 <p> <i>key</i></p>
 <dl>
-<dd>buffer holding the key</dl>
+<dd>buffer holding the key</dd></dl>
 <p> <i>keylen</i></p>
 <dl>
-<dd>length of the key in bytes</dl>
+<dd>length of the key in bytes</dd></dl>
 <h2>Description</h2>
 <p>The caller provided key is set for the ahash cipher. The cipher handle must point to a keyed hash in order for this function to succeed.</p>
 <h2>Return</h2>
@@ -28,8 +28,8 @@ description: "crypto_ahash_setkey – set key for cipher handle"
 <h2>Authors</h2>
 <p><code>Stephan Mueller</code> &lt;smueller [at] chronox.de&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <p> <code>Marek Vasut</code> &lt;marek [at] denx.de&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

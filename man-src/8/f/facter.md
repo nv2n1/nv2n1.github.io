@@ -28,13 +28,13 @@ domain =&gt; example.com
 fqdn =&gt; puppet.example.com
 hardwaremodel =&gt; x86_64
 [...]</pre>
-<dd></dl>
+</dd><dd></dd></dl>
 <p> Display a single fact:</p>
 <dl>
 <dd>
 <pre>$ facter kernel
 Linux</pre>
-<dd></dl>
+</dd><dd></dd></dl>
 <p> Format facts as JSON:</p>
 <dl>
 <dd>
@@ -44,7 +44,7 @@ Linux</pre>
  &quot;kernel&quot;: &quot;Linux&quot;,
  &quot;hardwaremodel&quot;: &quot;x86_64&quot;
 }</pre>
-<dd></dl>
+</dd><dd></dd></dl>
 <h2>Author</h2>
 <p>Luke Kanies</p>
 <h2>Copyright</h2>

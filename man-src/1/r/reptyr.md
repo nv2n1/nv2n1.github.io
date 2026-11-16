@@ -18,37 +18,37 @@ description: "reptyr – Reparent a running program to a new terminal"
 <p> After attaching a program, the program will appear to be either backgrounded or suspended to the shell it was launched from (depending on the shell). For maximal safety you can run</p>
 <dl>
 <dt>
-<dd> bg; disown</dl>
+</dt><dd> bg; disown</dd></dl>
 <p> in the old shell to remove the association with the program, but <code>reptyr</code> will attempt to ensure that the target program remains running even if you close the shell without doing so. </p>
 <h2>OPTIONS</h2>
 <p> <code>-l, -L [COMMAND [ARGS]]</code></p>
 <dl>
 <dt>
-<dd> Instead of attaching to a new process, create a new pty pair, proxy the master end to the current terminal, and then print the name of the slave pty. This can be passed to e.g. <code>gdb&#8217;s</code> <i>set inferior-tty</i> option. </p>
+</dt><dd> Instead of attaching to a new process, create a new pty pair, proxy the master end to the current terminal, and then print the name of the slave pty. This can be passed to e.g. <code>gdb&#8217;s</code> <i>set inferior-tty</i> option. </dd>
 <p> If an optional <code>COMMAND</code> and <code>ARGS</code> are passed in conjunction with <code>-l,</code> that command will be executed as a child of <code>reptyr</code> with the <code>REPTYR_PTY</code> environment variable set to the name of the slave pty. If <code>-L</code> is used instead of <code>-l,</code> then fds 0-2 of the child will also be redirected to point to the slave, and the child will be run in a fresh session with the slave as its controlling terminal.</dl>
 <p> <code>-s</code></p>
 <dl>
 <dt>
-<dd>
-<p> By default, reptyr will move any file descriptors in the target that were connected to the target&#8217;s controlling terminal to point to the new terminal. The <code>-s</code> option will cause reptyr to unconditionally attach file descriptors 0, 1, and 2 in the target, even if the target has no controlling terminal or they are not connected to a terminal.</dl>
+</dt><dd>
+<p> By default, reptyr will move any file descriptors in the target that were connected to the target&#8217;s controlling terminal to point to the new terminal. The <code>-s</code> option will cause reptyr to unconditionally attach file descriptors 0, 1, and 2 in the target, even if the target has no controlling terminal or they are not connected to a terminal.</dd></dl>
 <p> <code>-v</code></p>
 <dl>
 <dt>
-<dd> Print the version of <code>reptyr</code> and exit.</dl>
+</dt><dd> Print the version of <code>reptyr</code> and exit.</dd></dl>
 <p> <code>-h</code></p>
 <dl>
 <dt>
-<dd> Print a usage message and exit.</dl>
+</dt><dd> Print a usage message and exit.</dd></dl>
 <p> <code>-V</code></p>
 <dl>
 <dt>
-<dd> Print verbose debug output while running.</dl>
+</dt><dd> Print verbose debug output while running.</dd></dl>
 <h2>NOTES</h2>
 <p> <code>reptyr</code> depends on the <code><a href="/docs/linux/man/2-ptrace/">ptrace</a></code>(2) system call to attach to the remote program. On Ubuntu Maverick and higher, this ability is disabled by default for security reasons. You can enable it temporarily by doing</p>
 <dl>
 <dt>
-<dd>
-&nbsp;<wbr>#&nbsp;<wbr>echo 0&nbsp;<wbr>&gt;&nbsp;<wbr>/proc/sys/kernel/yama/ptrace_scope</dl>
+</dt><dd>
+&nbsp;<wbr>#&nbsp;<wbr>echo 0&nbsp;<wbr>&gt;&nbsp;<wbr>/proc/sys/kernel/yama/ptrace_scope</dd></dl>
 <p> as root, or permanently by editing the file <i>/etc/sysctl.d/10-ptrace.conf</i>, which also contains more information about this setting. </p>
 <h2>BUGS</h2>
 <p> When attaching to some curses programs, they will not redraw the screen right away, and a <code>^L</code> or similar will be needed to force a redraw. </p>

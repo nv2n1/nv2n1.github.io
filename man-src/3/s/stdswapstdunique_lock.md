@@ -11,9 +11,7 @@ std::swap(std::unique_lock) - std::swap(std::unique_lock)
 <h2>Synopsis</h2>
 
 <pre><code>template &lt;class Mutex&gt;
-
 void swap(unique_lock&lt;Mutex&gt; &amp;lhs, (since C++ 11)
-
                                        unique_lock&lt;Mutex&gt; &amp;rhs) noexcept;</code></pre> 
 Specializes the std::swap algorithm for std::unique_lock. Exchanges the state of lhs with that of rhs. Effectively calls lhs.swap(rhs). 
 

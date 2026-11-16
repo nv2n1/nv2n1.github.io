@@ -25,36 +25,36 @@ description: "pammosaicknit – validate a mosaic knitting pattern"
 <p> If the input image is not a black-and-white image, <code>pammosaicknit</code> converts it internally to black and white by thresholding each pixel&#8217;s luminosity. The output image is always a color image containing at most four colors (black, white, dark red, light red). </p>
 <h2>SEE ALSO</h2>
 <dl>
-<dt>&bull;</p>
+<dt>&bull;</dt>
 <dd>
 <p> <code>pam</code>(1) </p>
-</dl>
+</dd></dl>
 <h2>HISTORY</h2>
 <p> pammosaicknit was new in Netpbm 10.53 (December 2010). </p>
 <h2>AUTHOR</h2>
 <p> Copyright (C) 2010 Scott Pakin, <i>scott+pbm [at] pakin.org.</i> </p>
 <h2>Table Of Contents</h2>
 <dl>
-<dt>&bull;</p>
+<dt>&bull;</dt>
 <dd>
 <p> SYNOPSIS</p>
-<dt>&bull;</p>
+</dd><dt>&bull;</dt>
 <dd>
 <p> DESCRIPTION</p>
-<dt>&bull;</p>
+</dd><dt>&bull;</dt>
 <dd>
 <p> ARGUMENTS</p>
-<dt>&bull;</p>
+</dd><dt>&bull;</dt>
 <dd>
 <p> NOTES</p>
-<dt>&bull;</p>
+</dd><dt>&bull;</dt>
 <dd>
 <p> SEE ALSO</p>
-<dt>&bull;</p>
+</dd><dt>&bull;</dt>
 <dd>
 <p> HISTORY</p>
-<dt>&bull;</p>
+</dd><dt>&bull;</dt>
 <dd>
 <p> AUTHOR </p>
-</dl>
+</dd></dl>
 <h2>Index</h2>

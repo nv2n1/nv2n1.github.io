@@ -17,13 +17,13 @@ description: "ecryptfs-add-passphrase – add an eCryptfs mount passphrase to th
 <p> If the &#8211;fnek option is specified, the filename encryption key associated with the input passphrase will also be added to the keyring. </p>
 <h2>SEE ALSO</h2>
 <dl>
-<dt><code><a href="/docs/linux/man/7-ecryptfs/">ecryptfs</a></code>(7), <code><a href="/docs/linux/man/1-keyctl/">keyctl</a></code>(1)</p>
+<dt><code><a href="/docs/linux/man/7-ecryptfs/">ecryptfs</a></code>(7), <code><a href="/docs/linux/man/1-keyctl/">keyctl</a></code>(1)</dt>
 <dd>
-<dt><i>/usr/share/doc/ecryptfs-utils/ecryptfs-faq.html</i></p>
+</dd><dt><i>/usr/share/doc/ecryptfs-utils/ecryptfs-faq.html</i></dt>
 <dd>
-<dt><i><a rel="nofollow" href="http://ecryptfs.org/">http://ecryptfs.org/</a></i></p>
+</dd><dt><i><a rel="nofollow" href="http://ecryptfs.org/">http://ecryptfs.org/</a></i></dt>
 <dd>
-</dl>
+</dd></dl>
 <h2>AUTHOR</h2>
 <p> This manpage was written by Dustin Kirkland &lt;kirkland [at] ubuntu.com&gt; for Ubuntu systems (but may be used by others). Permission is granted to copy, distribute and/or modify this document under the terms of the GNU General Public License, Version 2 or any later version published by the Free Software Foundation. </p>
 <p> On Debian and Ubuntu systems, the complete text of the GNU General Public License can be found in /usr/share/common-licenses/GPL. </p>

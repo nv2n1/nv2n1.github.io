@@ -19,26 +19,26 @@ description: "npm-ls — List installed packages"
 <h2>Configuration</h2>
 <h3>long</h3>
 <dl>
-<dt>&bull;</p>
-<dd>Default: false</p>
-<dt>&bull;</p>
-<dd>Type: Boolean</p>
-<dd></dl>
+<dt>&bull;</dt>
+<dd>Default: false</dd>
+<dt>&bull;</dt>
+<dd>Type: Boolean</dd>
+<dd></dd></dl>
 <p> Show extended information.</p>
 <h3>parseable</h3>
 <dl>
-<dt>&bull;</p>
-<dd>Default: false</p>
-<dt>&bull;</p>
-<dd>Type: Boolean</p>
-<dd></dl>
+<dt>&bull;</dt>
+<dd>Default: false</dd>
+<dt>&bull;</dt>
+<dd>Type: Boolean</dd>
+<dd></dd></dl>
 <p> Show parseable output instead of tree view.</p>
 <h3>global</h3>
 <dl>
-<dt>&bull;</p>
-<dd>Default: false</p>
-<dt>&bull;</p>
-<dd>Type: Boolean</p>
-<dd></dl>
+<dt>&bull;</dt>
+<dd>Default: false</dd>
+<dt>&bull;</dt>
+<dd>Type: Boolean</dd>
+<dd></dd></dl>
 <p> List packages in the global install prefix instead of in the current project. </p>
 <p> Note, if parseable is set or long isn&#8217;t set, then duplicates will be trimmed. This means that if a submodule a same dependency as a parent module, then the dependency will only be output once.</p>

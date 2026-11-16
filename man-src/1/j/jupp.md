@@ -35,82 +35,82 @@ description: "joe – Joe’s Own Editor"
 <h2>Command Line Options</h2>
 <p> The following global options may be specified on the command line: </p>
 <dl>
-<dt>-asis</p>
-<dd> Characters with codes above 127 will be sent to the terminal as-is, instead of as inverse of the corresponding character below 128. If this does not work, check your terminal server. </p>
-<dt>-backpath path</p>
-<dd> If this option is given, backup files will be stored in the specified directory instead of in each file&#8217;s original directory. </p>
-<dt>-baud nnn</p>
-<dd> Set the baud rate for the purposes of terminal screen optimisation. Joe inserts delays for baud rates below 19200, which bypasses tty buffering so that typeahead will interrupt the screen output. Scrolling commands will not be used for 38400 baud. This is useful for X-terms and other console ttys which really aren&#8217;t going over a serial line. </p>
-<dt>-beep</p>
-<dd> Joe will beep on command errors and when the cursor goes past extremes. </p>
-<dt>-columns nnn</p>
-<dd> Sets the number of screen columns. </p>
-<dt>-csmode</p>
-<dd> Continued search mode: a search immediately following a search will repeat the previous search instead of prompting for new string. This is useful for the the ^[S and ^[R commands and for when joe is trying to be emacs. </p>
-<dt>-dopadding</p>
-<dd> Joe usually assumes that there is some kind of flow control between it and the tty. If there isn&#8217;t, this option will make joe output extra ^@s to the tty as specified by the termcap entry. The extra ^@s allow the terminal to catch up after long terminal commands. </p>
-<dt>-exask</p>
-<dd> This option makes ^KX verify the file name that it&#8217;s about to write. </p>
-<dt>-force</p>
-<dd> This option makes sure that the last line of the file has a line-feed which it&#8217;s saved. </p>
-<dt>-help</p>
-<dd> The editor will start with the help screen on if this option is given. </p>
-<dt>-keepup</p>
-<dd> Normally the column number and control-key prefix fields of the status lines are on a one second delay to reduce CPU consumption, but with this option they are updated after each key-stroke. </p>
-<dt>-lightoff</p>
-<dd> The block highlighting will go away after any block command if this option is given. </p>
-<dt>-lines nnn</p>
-<dd> Sets the number of screen lines. </p>
-<dt>-marking</p>
-<dd> Text between ^KB and the cursor is highlighted (use with -lightoff and a modified joerc file to have drop-anchor style block selection). </p>
-<dt>-mid</p>
-<dd> If this option is set and the cursor moves off the window, the window will be scrolled so that the cursor is in the center. This option is forced on slow terminals which don&#8217;t have scrolling commands. </p>
-<dt>-nobackups</p>
-<dd> This option prevents backup files. </p>
-<dt>-nonotice</p>
-<dd> This option prevent the copyright notice from being displayed when the editor starts. </p>
-<dt>-nosta</p>
-<dd> This option eliminates the top-most status line. It&#8217;s nice for when you only want to see your text on the screen or if you&#8217;re using a vt52. </p>
-<dt>-noxon</p>
-<dd> Attempt to turn off ^S/^Q processing. This is useful for when joe is trying to be WordStar or EMACS. </p>
-<dt>-orphan</p>
-<dd> When this option is active, extra files on the command line will be placed in orphaned buffers instead of in extra windows. This is useful for when joe is trying to be emacs. </p>
-<dt>-pg nnn</p>
-<dd> This specifies the number of lines to keep after PgUp/PgDn (^U/^V). If -1 is given, half the window is kept. </p>
-<dt>-skiptop nnn</p>
-<dd> Don&#8217;t use the top nnn lines of the screen. Useful for when joe is used as a BBS editor. </p>
+<dt>-asis</dt>
+<dd> Characters with codes above 127 will be sent to the terminal as-is, instead of as inverse of the corresponding character below 128. If this does not work, check your terminal server. </dd>
+<dt>-backpath path</dt>
+<dd> If this option is given, backup files will be stored in the specified directory instead of in each file&#8217;s original directory. </dd>
+<dt>-baud nnn</dt>
+<dd> Set the baud rate for the purposes of terminal screen optimisation. Joe inserts delays for baud rates below 19200, which bypasses tty buffering so that typeahead will interrupt the screen output. Scrolling commands will not be used for 38400 baud. This is useful for X-terms and other console ttys which really aren&#8217;t going over a serial line. </dd>
+<dt>-beep</dt>
+<dd> Joe will beep on command errors and when the cursor goes past extremes. </dd>
+<dt>-columns nnn</dt>
+<dd> Sets the number of screen columns. </dd>
+<dt>-csmode</dt>
+<dd> Continued search mode: a search immediately following a search will repeat the previous search instead of prompting for new string. This is useful for the the ^[S and ^[R commands and for when joe is trying to be emacs. </dd>
+<dt>-dopadding</dt>
+<dd> Joe usually assumes that there is some kind of flow control between it and the tty. If there isn&#8217;t, this option will make joe output extra ^@s to the tty as specified by the termcap entry. The extra ^@s allow the terminal to catch up after long terminal commands. </dd>
+<dt>-exask</dt>
+<dd> This option makes ^KX verify the file name that it&#8217;s about to write. </dd>
+<dt>-force</dt>
+<dd> This option makes sure that the last line of the file has a line-feed which it&#8217;s saved. </dd>
+<dt>-help</dt>
+<dd> The editor will start with the help screen on if this option is given. </dd>
+<dt>-keepup</dt>
+<dd> Normally the column number and control-key prefix fields of the status lines are on a one second delay to reduce CPU consumption, but with this option they are updated after each key-stroke. </dd>
+<dt>-lightoff</dt>
+<dd> The block highlighting will go away after any block command if this option is given. </dd>
+<dt>-lines nnn</dt>
+<dd> Sets the number of screen lines. </dd>
+<dt>-marking</dt>
+<dd> Text between ^KB and the cursor is highlighted (use with -lightoff and a modified joerc file to have drop-anchor style block selection). </dd>
+<dt>-mid</dt>
+<dd> If this option is set and the cursor moves off the window, the window will be scrolled so that the cursor is in the center. This option is forced on slow terminals which don&#8217;t have scrolling commands. </dd>
+<dt>-nobackups</dt>
+<dd> This option prevents backup files. </dd>
+<dt>-nonotice</dt>
+<dd> This option prevent the copyright notice from being displayed when the editor starts. </dd>
+<dt>-nosta</dt>
+<dd> This option eliminates the top-most status line. It&#8217;s nice for when you only want to see your text on the screen or if you&#8217;re using a vt52. </dd>
+<dt>-noxon</dt>
+<dd> Attempt to turn off ^S/^Q processing. This is useful for when joe is trying to be WordStar or EMACS. </dd>
+<dt>-orphan</dt>
+<dd> When this option is active, extra files on the command line will be placed in orphaned buffers instead of in extra windows. This is useful for when joe is trying to be emacs. </dd>
+<dt>-pg nnn</dt>
+<dd> This specifies the number of lines to keep after PgUp/PgDn (^U/^V). If -1 is given, half the window is kept. </dd>
+<dt>-skiptop nnn</dt>
+<dd> Don&#8217;t use the top nnn lines of the screen. Useful for when joe is used as a BBS editor. </dd>
 </dl>
 <p> Each of these options may be specified in the joerc file as well. In addition, the NOXON, BAUD, LINES, COLUMNS and DOPADDING options may be specified with environment variables. See the section <code>Environment variables</code> below. </p>
 <p> The following options may be specified before each filename on the command line: </p>
 <dl>
-<dt>+nnn</p>
-<dd> The cursor starts on the specified line. </p>
-<dt>-crlf</p>
-<dd> Joe uses CR-LF as the end of line sequence instead of just LF. This is for editing MS-DOS or VMS files. </p>
-<dt>-hex</p>
-<dd> Sets the buffer to hex edit mode. </p>
-<dt>-wordwrap</p>
-<dd> Joe wraps the previous word when you type past the right margin. </p>
-<dt>-autoindent</p>
-<dd> When you hit Return on an indented line, the indentation is duplicated onto the new line. </p>
-<dt>-overwrite</p>
-<dd> Typing overwrites existing characters instead of inserting before them. </p>
-<dt>-lmargin nnn</p>
-<dd> Sets the left margin. </p>
-<dt>-rmargin nnn</p>
-<dd> Sets the right margin. </p>
-<dt>-tab nnn</p>
-<dd> Sets the tab width. </p>
-<dt>-indentc nnn</p>
-<dd> Sets the indentation character for ^K, and ^K. (32 for SPACE, 9 for TAB). </p>
-<dt>-istep nnn</p>
-<dd> Sets the indentation step for ^K, and ^K.. </p>
-<dt>-linums</p>
-<dd> Line numbers are displayed before each line. </p>
-<dt>-rdonly</p>
-<dd> The file is read only. </p>
-<dt>-keymap name</p>
-<dd> Use an alternate section of the joerc file for the key sequence bindings. For example, <code>joe, jstar, rjoe</code> and <code>jupp</code> support <code>-keymap cua</code> to make ^Z, ^X, ^C and ^V do the same thing as in contemporary GUI editors. </p>
+<dt>+nnn</dt>
+<dd> The cursor starts on the specified line. </dd>
+<dt>-crlf</dt>
+<dd> Joe uses CR-LF as the end of line sequence instead of just LF. This is for editing MS-DOS or VMS files. </dd>
+<dt>-hex</dt>
+<dd> Sets the buffer to hex edit mode. </dd>
+<dt>-wordwrap</dt>
+<dd> Joe wraps the previous word when you type past the right margin. </dd>
+<dt>-autoindent</dt>
+<dd> When you hit Return on an indented line, the indentation is duplicated onto the new line. </dd>
+<dt>-overwrite</dt>
+<dd> Typing overwrites existing characters instead of inserting before them. </dd>
+<dt>-lmargin nnn</dt>
+<dd> Sets the left margin. </dd>
+<dt>-rmargin nnn</dt>
+<dd> Sets the right margin. </dd>
+<dt>-tab nnn</dt>
+<dd> Sets the tab width. </dd>
+<dt>-indentc nnn</dt>
+<dd> Sets the indentation character for ^K, and ^K. (32 for SPACE, 9 for TAB). </dd>
+<dt>-istep nnn</dt>
+<dd> Sets the indentation step for ^K, and ^K.. </dd>
+<dt>-linums</dt>
+<dd> Line numbers are displayed before each line. </dd>
+<dt>-rdonly</dt>
+<dd> The file is read only. </dd>
+<dt>-keymap name</dt>
+<dd> Use an alternate section of the joerc file for the key sequence bindings. For example, <code>joe, jstar, rjoe</code> and <code>jupp</code> support <code>-keymap cua</code> to make ^Z, ^X, ^C and ^V do the same thing as in contemporary GUI editors. </dd>
 </dl>
 <p> These options can also be specified in the joerc file. They can be set depending on the file-name extension. Programs (.c, .h or .p extension) usually have autoindent enabled. Wordwrap is enabled on other files, but rc files have it disabled. </p>
 <h2>Editing Tasks</h2>
@@ -153,27 +153,29 @@ description: "joe – Joe’s Own Editor"
 <h3>Searching for text</h3>
 <p> Hit <code>^K F</code> to have the editor search forwards or backwards for a text fragment (<code>string</code>) for you. You will be prompted for the text to search for. After you hit <code>Return</code>, you are prompted to enter options. You can just hit <code>Return</code> again to have the editor immediately search forwards for the text, or you can enter one or more of these options: </p>
 <dl>
-<dt><code>b</p>
-<dd> Search backwards instead of forwards. </p>
-<dt>i</p>
-<dd> Treat uppercase and lower case letters as the same when searching. Normally uppercase and lowercase letters are considered to be different. </p>
-<dt>nnn</p>
-<dd> (where nnn</code> is a number) If you enter a number, JOE searches for the Nth occurrence of the text. This is useful for going to specific places in files structured in some regular manner. </p>
-<dt><code>r</p>
-<dd> Replace text. If you enter the r</code> option, then you will be further prompted for replacement text. Each time the editor finds the search text, you will be prompted as to whether you want to replace the found search text with the replacement text. You hit: <code>y</code> to replace the text and then find the next occurrence, <code>n</code> to not replace this text, but to then find the next occurrence, <code>l</code> to replace the text and then stop searching, <code>r</code> to replace all of the remaining occurrences of the search text in the remainder of the file without asking for confirmation (subject to the <code>nnn</code> option above), or <code>^C</code> to stop searching and replacing. </p>
+<dt><code>b</dt>
+<dd> Search backwards instead of forwards. </dd>
+<dt>i</dt>
+<dd> Treat uppercase and lower case letters as the same when searching. Normally uppercase and lowercase letters are considered to be different. </dd>
+<dt>nnn</dt>
+<dd> (where nnn</code> is a number) If you enter a number, JOE searches for the Nth occurrence of the text. This is useful for going to specific places in files structured in some regular manner. </dd>
+<dt><code>r</dt>
+<dd> Replace text. If you enter the r</code> option, then you will be further prompted for replacement text. Each time the editor finds the search text, you will be prompted as to whether you want to replace the found search text with the replacement text. You hit: <code>y</code> to replace the text and then find the next occurrence, <code>n</code> to not replace this text, but to then find the next occurrence, <code>l</code> to replace the text and then stop searching, <code>r</code> to replace all of the remaining occurrences of the search text in the remainder of the file without asking for confirmation (subject to the <code>nnn</code> option above), or <code>^C</code> to stop searching and replacing. </dd>
 </dl>
 <p> You can hit <code>^L</code> to repeat the previous search. </p>
 <h3>Regular Expressions</h3>
 <p> A number of special character sequences may be entered as search text: </p>
 <dl>
-<dt><code>\*</p>
-<dd> This finds zero or more characters. For example, if you give A\*B</code> as the search text, JOE will try to find an A followed by any number of characters and then a B. </p>
-<dt><code>\?</p>
-<dd> This finds exactly one character. For example, if you give A\?B</code> as the search text, JOE will find AXB, but not AB or AXXB. </p>
-<dt><code>\^&nbsp;<wbr>\$</p>
-<dd> These match the beginning and end of a line. For example, if you give \^test\$</code>, then JOE with find <code>test</code> on a line by itself. </p>
-<dt><code>\&lt;&nbsp;<wbr>\&gt;</p>
-<dd> These match the beginning and end of a word. For example, if you give \&lt;\*is\*\&gt;</code>, then joe will find whole words which have the sub-string <code>is</code> within them. </p>
-<dt><code>\[&#8230;]</p>
-<dd> This matches any single character which appears within the brackets. For example, if \[Tt]his</code> is entered as the search string, then JOE finds both <code>This</code> and <code>this</code>. Ranges of characters can be entered within the brackets. For example, <code>\[A-Z]</code> finds any uppercase letter. If the first character given in the brackets is <code>^</code>, then JOE tries to find any character not given in the the brackets. </p>
+<dt><code>\*</dt>
+<dd> This finds zero or more characters. For example, if you give A\*B</code> as the search text, JOE will try to find an A followed by any number of characters and then a B. </dd>
+<dt><code>\?</dt>
+<dd> This finds exactly one character. For example, if you give A\?B</code> as the search text, JOE will find AXB, but not AB or AXXB. </dd>
+<dt><code>\^&nbsp;<wbr>\$</dt>
+<dd> These match the beginning and end of a line. For example, if you give \^test\$</code>, then JOE with find <code>test</code> on a line by itself. </dd>
+<dt><code>\&lt;&nbsp;<wbr>\&gt;</dt>
+<dd> These match the beginning and end of a word. For example, if you give \&lt;\*is\*\&gt;</code>, then joe will find whole words which have the sub-string <code>is</code> within them. </dd>
+<dt><code>\[&#8230;]</dt>
+<dd> This matches any single character which appears within the brackets. For example, if \[Tt]his</code> is entered as the search string, then JOE finds both <code>This</code> and <code>this</code>. Ranges of characters can be entered within the brackets. For example, <code>\[A-Z]</code> finds any uppercase letter. If the first character given in the brackets is <code>^</code>, then JOE tries to find any character not given in the the brackets. </dd>
 <dt><code>
+</dt></dl>
+</code>

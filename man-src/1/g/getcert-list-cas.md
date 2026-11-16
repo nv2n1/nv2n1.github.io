@@ -15,8 +15,8 @@ description: "getcert"
 <p> Queries <i>certmonger</i> for a list of known CAs. </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-c</code> NAME</p>
-<dd> List only information about the CA which has the specified nickname. </p>
+<dt><code>-c</code> NAME</dt>
+<dd> List only information about the CA which has the specified nickname. </dd>
 </dl>
 <h2>BUGS</h2>
 <p> Please file tickets for any that you find at <a rel="nofollow" href="https://fedorahosted.org/certmonger/">https://fedorahosted.org/certmonger/</a> </p>

@@ -14,14 +14,14 @@ description: "sas_remove_children – tear down a devices SAS data structures"
 <p><i>dev</i></p>
 <dl>
 <dd>
-<dd>device belonging to the sas object</dl>
+</dd><dd>device belonging to the sas object</dd></dl>
 <h2>Description</h2>
 <p>Removes all SAS PHYs and remote PHYs for a given object</p>
 <h2>Authors</h2>
 <p><code>James Bottomley</code> &lt;James.Bottomley [at] hansenpartnership.com&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <p> <code>Rob Landley</code> &lt;rob [at] landley.net&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

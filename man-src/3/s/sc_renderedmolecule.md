@@ -12,21 +12,9 @@ description: "sc::RenderedMolecule –"
 <p> Inherits <code>sc::RenderedObject</code>. Inherited by <code>sc::RenderedBallMolecule</code>, <code>sc::RenderedMolecularSurface</code>, and <code>sc::RenderedStickMolecule</code>.</p>
 <h3>Public Member Functions</h3>
 <pre><code>RenderedMolecule (const Ref&lt; KeyVal &gt; &amp;keyval)
-
-
-
 Ref&lt; Molecule &gt; molecule ()
-
-
-
 virtual void init ()=0
-
-
-
 void render (const Ref&lt; Render &gt; &amp;)
-
-
-
 Protected Attributes</code></pre>
 <p> <code>Ref</code>&lt; <code>RenderedObject</code> &gt; <code>object_</code> </p>
 <p> <code>Ref</code>&lt; <code>Molecule</code> &gt; <code>mol_</code> </p>

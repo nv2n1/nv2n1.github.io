@@ -48,14 +48,14 @@ description: "QuantLib::Instrument – Abstract instrument class."
 <p> <code>Tests</code></p>
 <dl>
 <dt>
-<dd> observability of class instances is checked.</dl>
+</dt><dd> observability of class instances is checked.</dd></dl>
 <h2>Member Function Documentation</h2>
 <h3>void setPricingEngine (const boost::shared_ptr&lt; <code>PricingEngine</code> &gt; &amp; e)</h3>
 <p> set the pricing engine to be used. </p>
 <p> <code>Warning</code></p>
 <dl>
 <dt>
-<dd> calling this method will have no effects in case the <code>performCalculation</code> method was overridden in a derived class.</dl>
+</dt><dd> calling this method will have no effects in case the <code>performCalculation</code> method was overridden in a derived class.</dd></dl>
 <h3>void setupArguments (PricingEngine::arguments *) const [virtual]</h3>
 <p> When a derived argument structure is defined for an instrument, this method should be overridden to fill it. This is mandatory in case a pricing engine is used. </p>
 <p> Reimplemented in <code>CallableBond</code>, <code>CallableFixedRateBond</code>, <code>EnergyCommodity</code>, <code>SyntheticCDO</code>, <code>DividendBarrierOption</code>, <code>PathMultiAssetOption</code>, <code>VarianceOption</code>, <code>ContinuousAveragingAsianOption</code>, <code>DiscreteAveragingAsianOption</code>, <code>AssetSwap</code>, <code>BarrierOption</code>, <code>Bond</code>, <code>CapFloor</code>, <code>CliquetOption</code>, <code>CreditDefaultSwap</code>, <code>DividendVanillaOption</code>, <code>ForwardVanillaOption</code>, <code>HimalayaOption</code>, <code>ContinuousFloatingLookbackOption</code>, <code>ContinuousFixedLookbackOption</code>, <code>MultiAssetOption</code>, <code>PagodaOption</code>, <code>Swap</code>, <code>Swaption</code>, <code>VanillaSwap</code>, <code>VarianceSwap</code>, and <code>Option</code>.</p>
@@ -67,11 +67,11 @@ description: "QuantLib::Instrument – Abstract instrument class."
 <p> <code>Warning</code></p>
 <dl>
 <dt>
-<dd> Objects cache the results of the previous calculation. Such results will be returned upon later invocations of <i></i><code>calculate</code>. When the results depend on arguments which could change between invocations, the lazy object must register itself as observer of such objects for the calculations to be performed again when they change.</dl>
+</dt><dd> Objects cache the results of the previous calculation. Such results will be returned upon later invocations of <i></i><code>calculate</code>. When the results depend on arguments which could change between invocations, the lazy object must register itself as observer of such objects for the calculations to be performed again when they change.</dd></dl>
 <p> <code>Warning</code></p>
 <dl>
 <dt>
-<dd> Should this method be redefined in derived classes, <code>LazyObject::calculate()</code> should be called in the overriding method.</dl>
+</dt><dd> Should this method be redefined in derived classes, <code>LazyObject::calculate()</code> should be called in the overriding method.</dd></dl>
 <p> Reimplemented from <code>LazyObject</code>.</p>
 <h3>void setupExpired () const [protected, virtual]</h3>
 <p> This method must leave the instrument in a consistent state when the expiration condition is met. </p>
@@ -83,5 +83,5 @@ description: "QuantLib::Instrument – Abstract instrument class."
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for QuantLib from the source code. </p>
 <h2>Index</h2>
-<dt><a href="#lbAO">Author</a></p>
-<dd></dl>
+<dt><a href="#lbAO">Author</a></dt>
+<dd></dd></dl>

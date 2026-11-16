@@ -66,14 +66,14 @@ description: "iceauth_selinux – Security Enhanced Linux Policy for the iceauth
 <p> <code>iceauth_exec_t</code> </p>
 <p> &#8211; Set files with the iceauth_exec_t type, if you want to transition an executable to the iceauth_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/usr/bin/iceauth, /usr/X11R6/bin/iceauth </p>
+<dt>Paths:</dt>
+<dd>/usr/bin/iceauth, /usr/X11R6/bin/iceauth </dd>
 </dl>
 <p> <code>iceauth_home_t</code> </p>
 <p> &#8211; Set files with the iceauth_home_t type, if you want to store iceauth files in the users home directory. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/root/.DCOP.*, /root/.ICEauthority.*, /home/[^/]+/.DCOP.*, /home/[^/]+/.ICEauthority.* </p>
+<dt>Paths:</dt>
+<dd>/root/.DCOP.*, /root/.ICEauthority.*, /home/[^/]+/.DCOP.*, /home/[^/]+/.ICEauthority.* </dd>
 </dl>
 <p> Note: File context can be temporarily modified with the chcon command. If you want to permanently change the file context you need to use the <code>semanage fcontext</code> command. This will modify the SELinux labeling database. You will need to use <code>restorecon</code> to apply the labels.</p>
 <h2>Commands</h2>

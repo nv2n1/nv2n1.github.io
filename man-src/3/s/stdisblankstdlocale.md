@@ -11,10 +11,8 @@ std::isblank(std::locale) - std::isblank(std::locale)
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;locale&gt;
-
     template &lt;class charT&gt;
     (since C++ 11)
-
         bool isblank(charT ch, const locale &amp;loc);
 </code></pre> 
 Checks if the given character is classified as a blank character by the given locale's ctype facet. 
@@ -39,17 +37,13 @@ Returns true if the character is classified as a blank character, false otherwis
 
 Demonstrates the use of isblank() with different locales (OS-specific). 
  // Run this code <pre><code>#include &lt;iostream&gt;
-
 #include &lt;locale&gt;
 void try_with(wchar_t c, const char *loc)
-
 {
     std::wcout &lt;&lt; &quot;isblank('&quot; &lt;&lt; c &lt;&lt; &quot;', locale(\&quot;&quot; &lt;&lt; loc &lt;&lt; &quot;\&quot;)) returned &quot; &lt;&lt; std::boolalpha
                &lt;&lt; std::isblank(c, std::locale(loc)) &lt;&lt; '\n';
 }
-
 int main()
-
 {
     const wchar_t IDEO_SPACE = L'\u3000'; // Unicode character 'IDEOGRAPHIC SPACE'
     try_with(IDEO_SPACE, &quot;C&quot;);

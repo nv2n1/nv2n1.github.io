@@ -15,15 +15,15 @@ snd_pcm_set_ops - set the PCM operators
 <h2>Arguments</h2>
 
 <i>pcm</i>
-<dl><dd><dd>the pcm instance</dl>
+<dl><dd></dd><dd>the pcm instance</dd></dl>
  
 
  <i>direction</i>
-<dl><dd>stream direction, SNDRV_PCM_STREAM_XXX</dl>
+<dl><dd>stream direction, SNDRV_PCM_STREAM_XXX</dd></dl>
  
 
  <i>ops</i>
-<dl><dd>the operator table</dl>
+<dl><dd>the operator table</dd></dl>
 
 <h2>Description</h2>
 

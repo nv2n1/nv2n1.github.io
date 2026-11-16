@@ -21,7 +21,6 @@ float hue, saturation, value;
 ...
     /* Convert a reddish color to HSV format. */
     rgb_to_hsv(255, 0, 128, &amp;hue, &amp;saturation, &amp;value);
-
 /* Now put our tin foil hat, and verify that. */
 hsv_to_rgb(hue, saturation, value, &amp;r, &amp;g, &amp;b);
 ASSERT(r == 255);

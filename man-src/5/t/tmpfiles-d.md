@@ -66,96 +66,96 @@ A+ /path-or-glob/to/append/acls/recursively - - - - POSIX ACLs</pre>
 <pre>#Type Path Mode User Group Age Argument...
 d /run/user 0755 root root 10d -
 L /tmp/foobar - - - - /dev/null</pre>
-</dl>
+</dd></dl>
 <p> Fields may contain C-style escapes. With the exception of the seventh field (the &quot;argument&quot;) all fields may be enclosed in quotes. Note that any whitespace found in the line after the beginning of the argument field will be considered part of the argument field. To begin the argument field with a whitespace character, use C-style escapes (e.g. &quot; &quot;).</p>
 <h3>Type</h3>
 <p>The type consists of a single letter and optionally an exclamation mark (&quot;!&quot;) minus sign (&quot;-&quot;), and/or equals sign (&quot;=&quot;). </p>
 <p> The following line types are understood: </p>
 <p> <i>f</i>, <i>f+</i></p>
 <dl>
-<dd><i>f</i> will create a file if it does not exist yet. If the argument parameter is given and the file did not exist yet, it will be written to the file. <i>f+</i> will create or truncate the file. If the argument parameter is given, it will be written to the file. Does not follow symlinks.</dl>
+<dd><i>f</i> will create a file if it does not exist yet. If the argument parameter is given and the file did not exist yet, it will be written to the file. <i>f+</i> will create or truncate the file. If the argument parameter is given, it will be written to the file. Does not follow symlinks.</dd></dl>
 <p> <i>w</i>, <i>w+</i></p>
 <dl>
-<dd>Write the argument parameter to a file, if the file exists. If suffixed with <i>+</i>, the line will be appended to the file. If your configuration writes multiple lines to the same file, use <i>w+</i>. Lines of this type accept shell-style globs in place of normal path names. The argument parameter will be written without a trailing newline. C-style backslash escapes are interpreted. Follows symlinks.</dl>
+<dd>Write the argument parameter to a file, if the file exists. If suffixed with <i>+</i>, the line will be appended to the file. If your configuration writes multiple lines to the same file, use <i>w+</i>. Lines of this type accept shell-style globs in place of normal path names. The argument parameter will be written without a trailing newline. C-style backslash escapes are interpreted. Follows symlinks.</dd></dl>
 <p> <i>d</i></p>
 <dl>
-<dd>Create a directory. The mode and ownership will be adjusted if specified. Contents of this directory are subject to time based cleanup if the age argument is specified.</dl>
+<dd>Create a directory. The mode and ownership will be adjusted if specified. Contents of this directory are subject to time based cleanup if the age argument is specified.</dd></dl>
 <p> <i>D</i></p>
 <dl>
-<dd>Similar to <i>d</i>, but in addition the contents of the directory will be removed when <code>&#8211;remove</code> is used.</dl>
+<dd>Similar to <i>d</i>, but in addition the contents of the directory will be removed when <code>&#8211;remove</code> is used.</dd></dl>
 <p> <i>e</i></p>
 <dl>
-<dd>Adjust the mode and ownership of existing directories and remove their contents based on age. Lines of this type accept shell-style globs in place of normal path names. Contents of the directories are subject to time based cleanup if the age argument is specified. If the age argument is &quot;0&quot;, contents will be unconditionally deleted every time <code>systemd-tmpfiles &#8211;clean</code> is run. </p>
+<dd>Adjust the mode and ownership of existing directories and remove their contents based on age. Lines of this type accept shell-style globs in place of normal path names. Contents of the directories are subject to time based cleanup if the age argument is specified. If the age argument is &quot;0&quot;, contents will be unconditionally deleted every time <code>systemd-tmpfiles &#8211;clean</code> is run. </dd>
 <p> For this entry to be useful, at least one of the mode, user, group, or age arguments must be specified, since otherwise this entry has no effect. As an exception, an entry with no effect may be useful when combined with <i>!</i>, see the examples.</dl>
 <p> <i>v</i></p>
 <dl>
-<dd>Create a subvolume if the path does not exist yet, the file system supports subvolumes (btrfs), and the system itself is installed into a subvolume (specifically: the root directory / is itself a subvolume). Otherwise, create a normal directory, in the same way as <i>d</i>. </p>
+<dd>Create a subvolume if the path does not exist yet, the file system supports subvolumes (btrfs), and the system itself is installed into a subvolume (specifically: the root directory / is itself a subvolume). Otherwise, create a normal directory, in the same way as <i>d</i>. </dd>
 <p> A subvolume created with this line type is not assigned to any higher-level quota group. For that, use <i>q</i> or <i>Q</i>, which allow creating simple quota group hierarchies, see below.</dl>
 <p> <i>q</i></p>
 <dl>
-<dd>Create a subvolume or directory the same as <i>v</i>, but assign the subvolume to the same higher-level quota groups as the parent. This ensures that higher-level limits and accounting applied to the parent subvolume also include the specified subvolume. On non-btrfs file systems, this line type is identical to <i>d</i>. </p>
+<dd>Create a subvolume or directory the same as <i>v</i>, but assign the subvolume to the same higher-level quota groups as the parent. This ensures that higher-level limits and accounting applied to the parent subvolume also include the specified subvolume. On non-btrfs file systems, this line type is identical to <i>d</i>. </dd>
 <p> If the subvolume already exists, no change to the quota hierarchy is made, regardless of whether the subvolume is already attached to a quota group or not. Also see <i>Q</i> below. See <code><a href="/docs/linux/man/8-btrfs-qgroup/">btrfs-qgroup</a></code>(8) for details about the btrfs quota group concept.</dl>
 <p> <i>Q</i></p>
 <dl>
-<dd>Create the subvolume or directory the same as <i>v</i>, but assign the new subvolume to a new leaf quota group. Instead of copying the higher-level quota group assignments from the parent as is done with <i>q</i>, the lowest quota group of the parent subvolume is determined that is not the leaf quota group. Then, an &quot;intermediary&quot; quota group is inserted that is one level below this level, and shares the same ID part as the specified subvolume. If no higher-level quota group exists for the parent subvolume, a new quota group at level 255 sharing the same ID as the specified subvolume is inserted instead. This new intermediary quota group is then assigned to the parent subvolume&#8217;s higher-level quota groups, and the specified subvolume&#8217;s leaf quota group is assigned to it. </p>
+<dd>Create the subvolume or directory the same as <i>v</i>, but assign the new subvolume to a new leaf quota group. Instead of copying the higher-level quota group assignments from the parent as is done with <i>q</i>, the lowest quota group of the parent subvolume is determined that is not the leaf quota group. Then, an &quot;intermediary&quot; quota group is inserted that is one level below this level, and shares the same ID part as the specified subvolume. If no higher-level quota group exists for the parent subvolume, a new quota group at level 255 sharing the same ID as the specified subvolume is inserted instead. This new intermediary quota group is then assigned to the parent subvolume&#8217;s higher-level quota groups, and the specified subvolume&#8217;s leaf quota group is assigned to it. </dd>
 <p> Effectively, this has a similar effect as <i>q</i>, however introduces a new higher-level quota group for the specified subvolume that may be used to enforce limits and accounting to the specified subvolume and children subvolume created within it. Thus, by creating subvolumes only via <i>q</i> and <i>Q</i>, a concept of &quot;subtree quotas&quot; is implemented. Each subvolume for which <i>Q</i> is set will get a &quot;subtree&quot; quota group created, and all child subvolumes created within it will be assigned to it. Each subvolume for which <i>q</i> is set will not get such a &quot;subtree&quot; quota group, but it is ensured that they are added to the same &quot;subtree&quot; quota group as their immediate parents. </p>
 <p> It is recommended to use <i>Q</i> for subvolumes that typically contain further subvolumes, and where it is desirable to have accounting and quota limits on all child subvolumes together. Examples for <i>Q</i> are typically /home/ or /var/lib/machines/. In contrast, <i>q</i> should be used for subvolumes that either usually do not include further subvolumes or where no accounting and quota limits are needed that apply to all child subvolumes together. Examples for <i>q</i> are typically /var/ or /var/tmp/. </p>
 <p> As with <i>q</i>, <i>Q</i> has no effect on the quota group hierarchy if the subvolume already exists, regardless of whether the subvolume already belong to a quota group or not.</dl>
 <p> <i>p</i>, <i>p+</i></p>
 <dl>
-<dd>Create a named pipe (FIFO) if it does not exist yet. If suffixed with <i>+</i> and a file already exists where the pipe is to be created, it will be removed and be replaced by the pipe.</dl>
+<dd>Create a named pipe (FIFO) if it does not exist yet. If suffixed with <i>+</i> and a file already exists where the pipe is to be created, it will be removed and be replaced by the pipe.</dd></dl>
 <p> <i>L</i>, <i>L+</i></p>
 <dl>
-<dd>Create a symlink if it does not exist yet. If suffixed with <i>+</i> and a file or directory already exists where the symlink is to be created, it will be removed and be replaced by the symlink. If the argument is omitted, symlinks to files with the same name residing in the directory /usr/share/factory/ are created. Note that permissions and ownership on symlinks are ignored.</dl>
+<dd>Create a symlink if it does not exist yet. If suffixed with <i>+</i> and a file or directory already exists where the symlink is to be created, it will be removed and be replaced by the symlink. If the argument is omitted, symlinks to files with the same name residing in the directory /usr/share/factory/ are created. Note that permissions and ownership on symlinks are ignored.</dd></dl>
 <p> <i>c</i>, <i>c+</i></p>
 <dl>
-<dd>Create a character device node if it does not exist yet. If suffixed with <i>+</i> and a file already exists where the device node is to be created, it will be removed and be replaced by the device node. It is recommended to suffix this entry with an exclamation mark to only create static device nodes at boot, as udev will not manage static device nodes that are created at runtime.</dl>
+<dd>Create a character device node if it does not exist yet. If suffixed with <i>+</i> and a file already exists where the device node is to be created, it will be removed and be replaced by the device node. It is recommended to suffix this entry with an exclamation mark to only create static device nodes at boot, as udev will not manage static device nodes that are created at runtime.</dd></dl>
 <p> <i>b</i>, <i>b+</i></p>
 <dl>
-<dd>Create a block device node if it does not exist yet. If suffixed with <i>+</i> and a file already exists where the device node is to be created, it will be removed and be replaced by the device node. It is recommended to suffix this entry with an exclamation mark to only create static device nodes at boot, as udev will not manage static device nodes that are created at runtime.</dl>
+<dd>Create a block device node if it does not exist yet. If suffixed with <i>+</i> and a file already exists where the device node is to be created, it will be removed and be replaced by the device node. It is recommended to suffix this entry with an exclamation mark to only create static device nodes at boot, as udev will not manage static device nodes that are created at runtime.</dd></dl>
 <p> <i>C</i></p>
 <dl>
-<dd>Recursively copy a file or directory, if the destination files or directories do not exist yet or the destination directory is empty. Note that this command will not descend into subdirectories if the destination directory already exists and is not empty. Instead, the entire copy operation is skipped. If the argument is omitted, files from the source directory /usr/share/factory/ with the same name are copied. Does not follow symlinks.</dl>
+<dd>Recursively copy a file or directory, if the destination files or directories do not exist yet or the destination directory is empty. Note that this command will not descend into subdirectories if the destination directory already exists and is not empty. Instead, the entire copy operation is skipped. If the argument is omitted, files from the source directory /usr/share/factory/ with the same name are copied. Does not follow symlinks.</dd></dl>
 <p> <i>x</i></p>
 <dl>
-<dd>Ignore a path during cleaning. Use this type to exclude paths from clean-up as controlled with the Age parameter. Note that lines of this type do not influence the effect of <i>r</i> or <i>R</i> lines. Lines of this type accept shell-style globs in place of normal path names.</dl>
+<dd>Ignore a path during cleaning. Use this type to exclude paths from clean-up as controlled with the Age parameter. Note that lines of this type do not influence the effect of <i>r</i> or <i>R</i> lines. Lines of this type accept shell-style globs in place of normal path names.</dd></dl>
 <p> <i>X</i></p>
 <dl>
-<dd>Ignore a path during cleaning. Use this type to exclude paths from clean-up as controlled with the Age parameter. Unlike <i>x</i>, this parameter will not exclude the content if path is a directory, but only directory itself. Note that lines of this type do not influence the effect of <i>r</i> or <i>R</i> lines. Lines of this type accept shell-style globs in place of normal path names.</dl>
+<dd>Ignore a path during cleaning. Use this type to exclude paths from clean-up as controlled with the Age parameter. Unlike <i>x</i>, this parameter will not exclude the content if path is a directory, but only directory itself. Note that lines of this type do not influence the effect of <i>r</i> or <i>R</i> lines. Lines of this type accept shell-style globs in place of normal path names.</dd></dl>
 <p> <i>r</i></p>
 <dl>
-<dd>Remove a file or directory if it exists. This may not be used to remove non-empty directories, use <i>R</i> for that. Lines of this type accept shell-style globs in place of normal path names. Does not follow symlinks.</dl>
+<dd>Remove a file or directory if it exists. This may not be used to remove non-empty directories, use <i>R</i> for that. Lines of this type accept shell-style globs in place of normal path names. Does not follow symlinks.</dd></dl>
 <p> <i>R</i></p>
 <dl>
-<dd>Recursively remove a path and all its subdirectories (if it is a directory). Lines of this type accept shell-style globs in place of normal path names. Does not follow symlinks.</dl>
+<dd>Recursively remove a path and all its subdirectories (if it is a directory). Lines of this type accept shell-style globs in place of normal path names. Does not follow symlinks.</dd></dl>
 <p> <i>z</i></p>
 <dl>
-<dd>Adjust the access mode, user and group ownership, and restore the SELinux security context of a file or directory, if it exists. Lines of this type accept shell-style globs in place of normal path names. Does not follow symlinks.</dl>
+<dd>Adjust the access mode, user and group ownership, and restore the SELinux security context of a file or directory, if it exists. Lines of this type accept shell-style globs in place of normal path names. Does not follow symlinks.</dd></dl>
 <p> <i>Z</i></p>
 <dl>
-<dd>Recursively set the access mode, user and group ownership, and restore the SELinux security context of a file or directory if it exists, as well as of its subdirectories and the files contained therein (if applicable). Lines of this type accept shell-style globs in place of normal path names. Does not follow symlinks.</dl>
+<dd>Recursively set the access mode, user and group ownership, and restore the SELinux security context of a file or directory if it exists, as well as of its subdirectories and the files contained therein (if applicable). Lines of this type accept shell-style globs in place of normal path names. Does not follow symlinks.</dd></dl>
 <p> <i>t</i></p>
 <dl>
-<dd>Set extended attributes, see <code><a href="/docs/linux/man/5-attr/">attr</a></code>(5) for details. The argument field should take one or more assignment expressions in the form <i>namespace</i>.<i>attribute</i>=<i>value</i>, for examples see below. Lines of this type accept shell-style globs in place of normal path names. This can be useful for setting SMACK labels. Does not follow symlinks. </p>
+<dd>Set extended attributes, see <code><a href="/docs/linux/man/5-attr/">attr</a></code>(5) for details. The argument field should take one or more assignment expressions in the form <i>namespace</i>.<i>attribute</i>=<i>value</i>, for examples see below. Lines of this type accept shell-style globs in place of normal path names. This can be useful for setting SMACK labels. Does not follow symlinks. </dd>
 <p> Please note that extended attributes settable with this line type are a different concept from the Linux file attributes settable with <i>h</i>/<i>H</i>, see below.</dl>
 <p> <i>T</i></p>
 <dl>
-<dd>Same as <i>t</i>, but operates recursively.</dl>
+<dd>Same as <i>t</i>, but operates recursively.</dd></dl>
 <p> <i>h</i></p>
 <dl>
-<dd>Set Linux file/directory attributes. Lines of this type accept shell-style globs in place of normal path names. </p>
+<dd>Set Linux file/directory attributes. Lines of this type accept shell-style globs in place of normal path names. </dd>
 <p> The format of the argument field is <i>[+-=][aAcCdDeijPsStTu]</i>. The prefix <i>+</i> (the default one) causes the attribute(s) to be added; <i>&#8211;</i> causes the attribute(s) to be removed; <i>=</i> causes the attributes to be set exactly as the following letters. The letters &quot;aAcCdDeijPsStTu&quot; select the new attributes for the files, see <code><a href="/docs/linux/man/1-chattr/">chattr</a></code>(1) for further information. </p>
 <p> Passing only <i>=</i> as argument resets all the file attributes listed above. It has to be pointed out that the <i>=</i> prefix limits itself to the attributes corresponding to the letters listed here. All other attributes will be left untouched. Does not follow symlinks. </p>
 <p> Please note that the Linux file attributes settable with this line type are a different concept from the extended attributes settable with <i>t</i>/<i>T</i>, see above.</dl>
 <p> <i>H</i></p>
 <dl>
-<dd>Sames as <i>h</i>, but operates recursively.</dl>
+<dd>Sames as <i>h</i>, but operates recursively.</dd></dl>
 <p> <i>a</i>, <i>a+</i></p>
 <dl>
-<dd>Set POSIX ACLs (access control lists), see <code><a href="/docs/linux/man/5-acl/">acl</a></code>(5). If suffixed with <i>+</i>, the specified entries will be added to the existing set. <code>systemd-tmpfiles</code> will automatically add the required base entries for user and group based on the access mode of the file, unless base entries already exist or are explicitly specified. The mask will be added if not specified explicitly or already present. Lines of this type accept shell-style globs in place of normal path names. This can be useful for allowing additional access to certain files. Does not follow symlinks.</dl>
+<dd>Set POSIX ACLs (access control lists), see <code><a href="/docs/linux/man/5-acl/">acl</a></code>(5). If suffixed with <i>+</i>, the specified entries will be added to the existing set. <code>systemd-tmpfiles</code> will automatically add the required base entries for user and group based on the access mode of the file, unless base entries already exist or are explicitly specified. The mask will be added if not specified explicitly or already present. Lines of this type accept shell-style globs in place of normal path names. This can be useful for allowing additional access to certain files. Does not follow symlinks.</dd></dl>
 <p> <i>A</i>, <i>A+</i></p>
 <dl>
-<dd>Same as <i>a</i> and <i>a+</i>, but recursive. Does not follow symlinks.</dl>
+<dd>Same as <i>a</i> and <i>a+</i>, but recursive. Does not follow symlinks.</dd></dl>
 <p> If the exclamation mark (&quot;!&quot;) is used, this line is only safe to execute during boot, and can break a running system. Lines without the exclamation mark are presumed to be safe to execute at any time, e.g. on package upgrades. <code>systemd-tmpfiles</code> will take lines with an exclamation mark only into consideration, if the <code>&#8211;boot</code> option is given. </p>
 <p> For example: </p>
 <dl>
@@ -164,7 +164,7 @@ L /tmp/foobar - - - - /dev/null</pre>
 d /tmp/.X11-unix 1777 root root 10d
 # Unlink the X11 lock files
 r! /tmp/.X[0-9]*-lock</pre>
-</dl>
+</dd></dl>
 <p> The second line in contrast to the first one would break a running system, and will only be executed with <code>&#8211;boot</code>. </p>
 <p> If the minus sign (&quot;-&quot;) is used, this line failing to run successfully during create (and only create) will not cause the execution of <code>systemd-tmpfiles</code> to return an error. </p>
 <p> For example: </p>
@@ -172,7 +172,7 @@ r! /tmp/.X[0-9]*-lock</pre>
 <dd>
 <pre># Modify sysfs but don't fail if we are in a container with a read-only /proc
 w- /proc/sys/vm/swappiness - - - - 10</pre>
-</dl>
+</dd></dl>
 <p> If the equals sign (&quot;=&quot;) is used, the file types of existing objects in the specified path are checked, and removed if they do not match. This includes any implicitly created parent directories (which can be either directories or directory symlinks). For example, if there is a FIFO in place of one of the parent path components it will be replaced with a directory. </p>
 <p> Note that for all line types that result in creation of any kind of file node (i.e. <i>f</i>/<i>F</i>, <i>d</i>/<i>D</i>/<i>v</i>/<i>q</i>/<i>Q</i>, <i>p</i>, <i>L</i>, <i>c</i>/<i>b</i> and <i>C</i>) leading directories are implicitly created if needed, owned by root with an access mode of 0755. In order to create them with different modes or ownership make sure to add appropriate <i>d</i> lines.</p>
 <h3>Path</h3>
@@ -198,7 +198,7 @@ w- /proc/sys/vm/swappiness - - - - 10</pre>
 <pre># Files created and modified, and directories accessed more than
 # an hour ago in &quot;/tmp/foo/bar&quot;, are subject to time-based cleanup.
 d /tmp/foo/bar - - - - bmA:1h -</pre>
-</dl>
+</dd></dl>
 <p> Note that while the aging algorithm is run a &#8216;shared&#8217; BSD file lock (see <code><a href="/docs/linux/man/2-flock/">flock</a></code>(2)) is taken on each directory the algorithm descends into (and each directory below that, and so on). If the aging algorithm finds a lock is already taken on some directory, it (and everything below it) is skipped. Applications may use this to temporarily exclude certain directory subtrees from the aging algorithm: the applications can take a BSD file lock themselves, and as long as they keep it aging of the directory and everything below it is disabled.</p>
 <h3>Argument</h3>
 <p>For <i>L</i> lines determines the destination path of the symlink. For <i>c</i> and <i>b</i>, determines the major/minor of the device node, with major and minor formatted as integers, separated by &quot;:&quot;, e.g. &quot;1:3&quot;. For <i>f</i>, <i>F</i>, and <i>w</i>, the argument may be used to specify a short string that is written to the file, suffixed by a newline. For <i>C</i>, specifies the source file or directory. For <i>t</i> and <i>T</i>, determines extended attributes to be set. For <i>a</i> and <i>A</i>, determines ACL attributes to be set. For <i>h</i> and <i>H</i>, determines the file attributes to set. Ignored for all other lines. </p>
@@ -365,7 +365,7 @@ d /tmp/foo/bar - - - - bmA:1h -</pre>
 <pre># /usr/lib/tmpfiles.d/screen.conf
 d /run/screens 1777 root screen 10d
 d /run/uscreens 0755 root screen 10d12h</pre>
-</dl>
+</dd></dl>
 <p> Contents of /run/screens and /run/uscreens will be cleaned up after 10 and 10&#189; days, respectively. <code>Example 2. Create a directory with a SMACK attribute</code> </p>
 <pre><code>D /run/cups - - - -
 t /run/cups - - - - security.SMACK64=printing user.attr-with-spaces=&quot;foo bar&quot;</code></pre>
@@ -374,12 +374,12 @@ t /run/cups - - - - security.SMACK64=printing user.attr-with-spaces=&quot;foo ba
 <dd>
 <pre># /usr/lib/tmpfiles.d/tmp.conf
 d /var/tmp 1777 root root 30d</pre>
-</dl>
+</dd></dl>
 <dl>
 <dd>
 <pre># /usr/lib/tmpfiles.d/abrt.conf
 d /var/tmp/abrt 0755 abrt abrt -</pre>
-</dl>
+</dd></dl>
 <p> <code>Example 4. Apply clean up during boot and based on time</code></p>
 <dl>
 <dd>
@@ -388,13 +388,13 @@ r! /var/cache/dnf/*/*/download_lock.pid
 r! /var/cache/dnf/*/*/metadata_lock.pid
 r! /var/lib/dnf/rpmdb_lock.pid
 e /var/cache/dnf/ - - - 30d</pre>
-</dl>
+</dd></dl>
 <p> The lock files will be removed during boot. Any files and directories in /var/cache/dnf/ will be removed after they have not been accessed in 30 days. <code>Example 5. Empty the contents of a cache directory on boot</code></p>
 <dl>
 <dd>
 <pre># /usr/lib/tmpfiles.d/krb5rcache.conf
 e! /var/cache/krb5rcache - - - 0</pre>
-</dl>
+</dd></dl>
 <p> Any files and subdirectories in /var/cache/krb5rcache/ will be removed on boot. The directory will not be created.</p>
 <h2>/Run/ And /Var/Run/</h2>
 <p>/var/run/ is a deprecated symlink to /run/, and applications should use the latter. <code>systemd-tmpfiles</code> will warn if /var/run/ is used.</p>
@@ -402,7 +402,8 @@ e! /var/cache/krb5rcache - - - 0</pre>
 <p><code><a href="/docs/linux/man/1-systemd/">systemd</a></code>(1), <code><a href="/docs/linux/man/8-systemd-tmpfiles/">systemd-tmpfiles</a></code>(8), <code><a href="/docs/linux/man/1-systemd-delta/">systemd-delta</a></code>(1), <code><a href="/docs/linux/man/5-systemd-exec/">systemd.exec</a></code>(5), <code><a href="/docs/linux/man/5-attr/">attr</a></code>(5), <code><a href="/docs/linux/man/1-getfattr/">getfattr</a></code>(1), <code><a href="/docs/linux/man/1-setfattr/">setfattr</a></code>(1), <code><a href="/docs/linux/man/1-setfacl/">setfacl</a></code>(1), <code><a href="/docs/linux/man/1-getfacl/">getfacl</a></code>(1), <code><a href="/docs/linux/man/1-chattr/">chattr</a></code>(1), <code><a href="/docs/linux/man/8-btrfs-subvolume/">btrfs-subvolume</a></code>(8), <code><a href="/docs/linux/man/8-btrfs-qgroup/">btrfs-qgroup</a></code>(8)</p>
 <h2>Notes</h2>
 <dl>
-<dt> 1.</p>
-<dd>Notes on Resolvability of User and Group Names</p>
+<dt> 1.</dt>
+<dd>Notes on Resolvability of User and Group Names</dd>
 <dl>
-<dd><a rel="nofollow" href="https://systemd.io/UIDS-GIDS/#notes-on-resolvability-of-user-and-group-names">https://systemd.io/UIDS-GIDS/#notes-on-resolvability-of-user-and-group-names</a></dl>
+<dd><a rel="nofollow" href="https://systemd.io/UIDS-GIDS/#notes-on-resolvability-of-user-and-group-names">https://systemd.io/UIDS-GIDS/#notes-on-resolvability-of-user-and-group-names</a></dd></dl>
+</dl>

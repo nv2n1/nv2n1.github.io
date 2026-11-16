@@ -72,75 +72,75 @@ description: "pure-ftpd – simple File Transfer Protocol server"
 <p><code>Pure-FTPd</code> is a small, simple server for the old and hairy File Transfer Protocol, designed to use less resources than older servers, be smaller and very secure, and to never execute any external program. It support most-used features and commands of FTP (including many modern extensions), and leaves out everything which is deprecated, meaningless, insecure, or correlates with trouble. IPv6 is fully supported. </p>
 <h2>Options</h2>
 <dl>
-<dt><code>-0</code></p>
-<dd>When a file is uploaded and there is already a previous version of the file with the same name, the old file will neither get removed nor truncated. Upload will take place in a temporary file and once the upload is complete, the switch to the new version will be atomic. This option should not be used together with virtual quotas.</p>
-<dt><code>-1</code></p>
-<dd>Add the PID to the syslog output. Ignored if <code>-f</code> <code>none</code> is set.</p>
-<dt><code>-2 file</code></p>
-<dd>When using TLS, set the path to the certificate file.</p>
-<dt><code>-4</code></p>
-<dd>Listen only to IPv4 connections.</p>
-<dt><code>-6</code></p>
-<dd>Listen only to IPv6 connections.</p>
-<dt><code>-a gid</code></p>
-<dd>Regular users will be chrooted to their home directories, unless they belong to the specified gid. Note that root is always trusted, and that chroot() occurs only for anonymous ftp without this option.</p>
-<dt><code>-A</code></p>
-<dd>Chroot() everyone, but root.</p>
-<dt><code>-b</code></p>
-<dd>Be broken. Turns on some compatibility hacks for shoddy clients, and for broken Netfilter gateways.</p>
-<dt><code>-B</code></p>
-<dd>Start the standalone server in background (daemonize).</p>
-<dt><code>-c clients</code></p>
-<dd>Allow a maximum of <i>clients</i> to be connected. <i>clients</i> must be at least 1, and if you combine it with <code>-p</code> it will be forced down to half the number of ports specified by <code>-p.</code> If more than <i>clients</i> are connected, new clients are rejected at once, even clients wishing to upload, or to log in as normal users. Therefore, it is advisable to use <code>-m</code> as primary overload protection. The default value is 50.</p>
-<dt><code>-C max connection per ip</code></p>
-<dd>Limit the number of simultanous connections coming from the same IP address. This is yet another very effective way to prevent stupid denial of services and bandwidth starvation by a single user. It works only when the server is launched in standalone mode (if you use a super-server, it is supposed to do that). If the server is launched with <code>-C 2</code> , it doesn&#8217;t mean that the total number of connection is limited to 2. But the same client, coming from the same machine (or at least the same IP), can&#8217;t have more than two simultaneous connections. This features needs some memory to track IP addresses, but it&#8217;s recommended to use it.</p>
-<dt><code>-d</code></p>
-<dd>turns on debug logging. Every command is logged, except that the argument to PASS is changed to &quot;&lt;password&gt;&quot;. If you repeat <code>-d</code> , responses too are logged.</p>
-<dt><code>-e</code></p>
-<dd>Only allow anonymous users to log in.</p>
-<dt><code>-E</code></p>
-<dd>Only allow authenticated login. Anonymous users are prohibited.</p>
-<dt><code>-f facility</code></p>
-<dd>makes ftpd use <i>facility</i> for all <code><a href="/docs/linux/man/3-syslog/">syslog</a></code>(3) messages. <i>facility</i> defaults to <code>ftp</code>. The facility names are normally listed in <i>/usr/include/sys/syslog.h</i>. Note that if <code>-f</code> is not the first option on the command line, a couple of messages may be logged to local2 before the <code>-f</code> option is parsed. Use <code>-f none</code> to disable logging.</p>
-<dt><code>-F fortunes file</code></p>
-<dd>Display a funny random message in the initial login banner. The random cookies are extracted from a text file, in the standard <code>fortune</code> format. If you installed the <code>fortune</code> package, you should have a directory (usually <code>/usr/share/fortune</code> ) with binary files ( <code>xxxx.dat</code> ) and text files (without the <code>.dat</code> extension).</p>
-<dt><code>-g pidfile</code></p>
-<dd>In standalone mode, write the pid to that file in instead of /var/run/pure-ftpd.pid .</p>
-<dt><code>-G</code></p>
-<dd>When this option is enabled, people can no more change the name of already uploaded files, even if they own those files or their directory.</p>
-<dt><code>-H</code></p>
-<dd>Don&#8217;t resolve host names (&quot;192.0.34.166&quot; will be logged instead of &quot;<a rel="nofollow" href="http://www.example.com">www.example.com</a>&quot;). It can significantly speed up connections and reduce bandwidth usage on busy servers. Use it especially on public FTP sites.</p>
-<dt><code>-i</code></p>
-<dd>Disallow upload for anonymous users, whatever directory permissions are. This option is especially useful for virtual hosting, to avoid your users create warez sites in their account.</p>
-<dt><code>-I timeout</code></p>
-<dd>Change the maximum idle time. The timeout is in minutes, and defaults to 15.</p>
-<dt><code>-j</code></p>
-<dd>If the home directory of a user doesn&#8217;t exist, automatically create it. The newly created home directory belongs to the user, and permissions are set according to the current directory mask. To avoid local attacks, the parent directory should never belong to an untrusted user.</p>
-<dt><code>-J ciphers</code></p>
-<dd>Set the list of ciphers that will be accepted for SSL/TLS connections.</p>
-<dt><code>-k percentage</code></p>
-<dd>Disallow upload if the partition is more than <code>percentage</code> full. Example: -k 95 will ensure that your disk will never get filled more than 95% by FTP users.</p>
-<dt><code>-K</code></p>
-<dd>Allow users to resume and upload files, but NOT to delete them. Directories can be removed, but only if they are empty.</p>
-<dt><code>-l authentication:file</code></p>
+<dt><code>-0</code></dt>
+<dd>When a file is uploaded and there is already a previous version of the file with the same name, the old file will neither get removed nor truncated. Upload will take place in a temporary file and once the upload is complete, the switch to the new version will be atomic. This option should not be used together with virtual quotas.</dd>
+<dt><code>-1</code></dt>
+<dd>Add the PID to the syslog output. Ignored if <code>-f</code> <code>none</code> is set.</dd>
+<dt><code>-2 file</code></dt>
+<dd>When using TLS, set the path to the certificate file.</dd>
+<dt><code>-4</code></dt>
+<dd>Listen only to IPv4 connections.</dd>
+<dt><code>-6</code></dt>
+<dd>Listen only to IPv6 connections.</dd>
+<dt><code>-a gid</code></dt>
+<dd>Regular users will be chrooted to their home directories, unless they belong to the specified gid. Note that root is always trusted, and that chroot() occurs only for anonymous ftp without this option.</dd>
+<dt><code>-A</code></dt>
+<dd>Chroot() everyone, but root.</dd>
+<dt><code>-b</code></dt>
+<dd>Be broken. Turns on some compatibility hacks for shoddy clients, and for broken Netfilter gateways.</dd>
+<dt><code>-B</code></dt>
+<dd>Start the standalone server in background (daemonize).</dd>
+<dt><code>-c clients</code></dt>
+<dd>Allow a maximum of <i>clients</i> to be connected. <i>clients</i> must be at least 1, and if you combine it with <code>-p</code> it will be forced down to half the number of ports specified by <code>-p.</code> If more than <i>clients</i> are connected, new clients are rejected at once, even clients wishing to upload, or to log in as normal users. Therefore, it is advisable to use <code>-m</code> as primary overload protection. The default value is 50.</dd>
+<dt><code>-C max connection per ip</code></dt>
+<dd>Limit the number of simultanous connections coming from the same IP address. This is yet another very effective way to prevent stupid denial of services and bandwidth starvation by a single user. It works only when the server is launched in standalone mode (if you use a super-server, it is supposed to do that). If the server is launched with <code>-C 2</code> , it doesn&#8217;t mean that the total number of connection is limited to 2. But the same client, coming from the same machine (or at least the same IP), can&#8217;t have more than two simultaneous connections. This features needs some memory to track IP addresses, but it&#8217;s recommended to use it.</dd>
+<dt><code>-d</code></dt>
+<dd>turns on debug logging. Every command is logged, except that the argument to PASS is changed to &quot;&lt;password&gt;&quot;. If you repeat <code>-d</code> , responses too are logged.</dd>
+<dt><code>-e</code></dt>
+<dd>Only allow anonymous users to log in.</dd>
+<dt><code>-E</code></dt>
+<dd>Only allow authenticated login. Anonymous users are prohibited.</dd>
+<dt><code>-f facility</code></dt>
+<dd>makes ftpd use <i>facility</i> for all <code><a href="/docs/linux/man/3-syslog/">syslog</a></code>(3) messages. <i>facility</i> defaults to <code>ftp</code>. The facility names are normally listed in <i>/usr/include/sys/syslog.h</i>. Note that if <code>-f</code> is not the first option on the command line, a couple of messages may be logged to local2 before the <code>-f</code> option is parsed. Use <code>-f none</code> to disable logging.</dd>
+<dt><code>-F fortunes file</code></dt>
+<dd>Display a funny random message in the initial login banner. The random cookies are extracted from a text file, in the standard <code>fortune</code> format. If you installed the <code>fortune</code> package, you should have a directory (usually <code>/usr/share/fortune</code> ) with binary files ( <code>xxxx.dat</code> ) and text files (without the <code>.dat</code> extension).</dd>
+<dt><code>-g pidfile</code></dt>
+<dd>In standalone mode, write the pid to that file in instead of /var/run/pure-ftpd.pid .</dd>
+<dt><code>-G</code></dt>
+<dd>When this option is enabled, people can no more change the name of already uploaded files, even if they own those files or their directory.</dd>
+<dt><code>-H</code></dt>
+<dd>Don&#8217;t resolve host names (&quot;192.0.34.166&quot; will be logged instead of &quot;<a rel="nofollow" href="http://www.example.com">www.example.com</a>&quot;). It can significantly speed up connections and reduce bandwidth usage on busy servers. Use it especially on public FTP sites.</dd>
+<dt><code>-i</code></dt>
+<dd>Disallow upload for anonymous users, whatever directory permissions are. This option is especially useful for virtual hosting, to avoid your users create warez sites in their account.</dd>
+<dt><code>-I timeout</code></dt>
+<dd>Change the maximum idle time. The timeout is in minutes, and defaults to 15.</dd>
+<dt><code>-j</code></dt>
+<dd>If the home directory of a user doesn&#8217;t exist, automatically create it. The newly created home directory belongs to the user, and permissions are set according to the current directory mask. To avoid local attacks, the parent directory should never belong to an untrusted user.</dd>
+<dt><code>-J ciphers</code></dt>
+<dd>Set the list of ciphers that will be accepted for SSL/TLS connections.</dd>
+<dt><code>-k percentage</code></dt>
+<dd>Disallow upload if the partition is more than <code>percentage</code> full. Example: -k 95 will ensure that your disk will never get filled more than 95% by FTP users.</dd>
+<dt><code>-K</code></dt>
+<dd>Allow users to resume and upload files, but NOT to delete them. Directories can be removed, but only if they are empty.</dd>
+<dt><code>-l authentication:file</code></dt>
 <dd>Enable a new authentication method. It can be one of : <i>-l unix</i> For standard (/etc/passwd) authentication. <i>-l pam</i> For PAM authentication. <i>-l ldap:LDAP config file</i> For LDAP directories. <i>-l mysql:MySQL config file</i> For MySQL databases. <i>-l pgsql:Postgres config file</i> For Postgres databases. <i>-l puredb:PureDB database file</i> For PureDB databases. <i>-l extauth:path to pure-authd socket</i> For external authentication handlers.<br />
  Different authentication methods can be mixed together. For instance if you run the server with <i>-lpuredb:/etc/pure-ftpd/pwd.pdb -lmysql:/etc/pure-ftpd/my.cf -lunix</i> Accounts will first be authenticated from a PureDB database. If it fails, a MySQL server will be asked. If the account is still not found is the database, standard unix accounts will be scanned. Authentication methods are tried in the order you give the -l options, if you do not give -l, then the decision comes from configure, if PAM is built in, it is used, if not, then UNIX (/etc/passwd) is used by default.<br />
- See the <i>README.LDAP</i> and <i>README.MySQL</i> files for info about the built-in LDAP and SQL directory support.</p>
-<dt><code>-L max files:max depth</code></p>
-<dd>Avoid denial-of-service attacks by limiting the number of displayed files in a &#8216;ls&#8217; and the maximum depth of a recursive &#8216;ls&#8217;. Defaults are 2000:5 (2000 files displayed for a single &#8216;ls&#8217; and walk through 5 subdirectories max).</p>
-<dt><code>-m load</code></p>
-<dd>Do not allow anonymous users to download files if the load is above <i>load</i> when the user connects. Uploads and file listings are still allowed, as are downloads by real users. The user is not told about this until he/she tries to download a file.</p>
-<dt><code>-M</code></p>
-<dd>Allow anonymous users to create directories.</p>
-<dt><code>-n maxfiles:maxsize</code></p>
-<dd>Enable <code>virtual quotas</code> When virtual quotas are enabled, .ftpquota files are created, and the number of files for a user is restricted to &#8216;maxfiles&#8217;. The max total size of his directory is also restricted to &#8216;maxsize&#8217; Megabytes. Members of the trusted group aren&#8217;t subject to quotas.</p>
-<dt><code>-N</code></p>
+ See the <i>README.LDAP</i> and <i>README.MySQL</i> files for info about the built-in LDAP and SQL directory support.</dd>
+<dt><code>-L max files:max depth</code></dt>
+<dd>Avoid denial-of-service attacks by limiting the number of displayed files in a &#8216;ls&#8217; and the maximum depth of a recursive &#8216;ls&#8217;. Defaults are 2000:5 (2000 files displayed for a single &#8216;ls&#8217; and walk through 5 subdirectories max).</dd>
+<dt><code>-m load</code></dt>
+<dd>Do not allow anonymous users to download files if the load is above <i>load</i> when the user connects. Uploads and file listings are still allowed, as are downloads by real users. The user is not told about this until he/she tries to download a file.</dd>
+<dt><code>-M</code></dt>
+<dd>Allow anonymous users to create directories.</dd>
+<dt><code>-n maxfiles:maxsize</code></dt>
+<dd>Enable <code>virtual quotas</code> When virtual quotas are enabled, .ftpquota files are created, and the number of files for a user is restricted to &#8216;maxfiles&#8217;. The max total size of his directory is also restricted to &#8216;maxsize&#8217; Megabytes. Members of the trusted group aren&#8217;t subject to quotas.</dd>
+<dt><code>-N</code></dt>
 <dd>NAT mode. Force <code>active</code> mode. If your FTP server is behind a NAT box that doesn&#8217;t support applicative FTP proxying, or if you use port redirection without a transparent FTP proxy, use this. Well&#8230; the previous sentence isn&#8217;t very clear. Okay: if your network looks like this:<br />
  FTP&#8211;NAT.gateway/router&#8211;Internet<br />
- and if you want people coming from the internet to have access to your FTP server, please try without this option first. If Netscape clients can connect without any problem, your NAT gateway rulez. If Netscape doesn&#8217;t display directory listings, your NAT gateway sucks. Use <code>-N</code> as a workaround.</p>
-<dt><code>-o</code></p>
-<dd>Enable <i>pure-uploadscript</i>.</p>
-<dt><code>-O format:log file</code></p>
+ and if you want people coming from the internet to have access to your FTP server, please try without this option first. If Netscape clients can connect without any problem, your NAT gateway rulez. If Netscape doesn&#8217;t display directory listings, your NAT gateway sucks. Use <code>-N</code> as a workaround.</dd>
+<dt><code>-o</code></dt>
+<dd>Enable <i>pure-uploadscript</i>.</dd>
+<dt><code>-O format:log file</code></dt>
 <dd>Record all file transfers into a specific log file, in an alternative format. Currently, three formats are supported : CLF, Stats, W3C and xferlog.<br />
  If you add<br />
  <code>-O clf:/var/log/pureftpd.log</code><br />
@@ -151,55 +151,55 @@ description: "pure-ftpd – simple File Transfer Protocol server"
  If you add<br />
  <code>-O w3c:/var/log/pureftpd.log</code><br />
  to your starting options, Pure-FTPd will create W3C-conformant log files.<br />
- For security purposes, the path must be absolute (eg. <code>/var/log/pureftpd.log</code>, not <code> ../log/pureftpd.log</code>).</p>
-<dt><code>-p first:last</code></p>
-<dd>Use only ports in the range <i>first</i> to <i>last</i> inclusive for passive-mode downloads. This means that clients will not try to open connections to TCP ports outside the range <i>first &#8211; last</i>, which makes pure-ftpd more compatible with packet filters. Note that the maximum number of clients (specified with <code>-c</code>) is forced down to <i>(last + 1 &#8211; first)/2</i> if it is greater, as the default is. (The syntax for the port range is, conveniently, the same as that of <code>iptables).</code></p>
-<dt><code>-P ip address or host name</code></p>
-<dd>Force the specified IP address in reply to a <code>PASV/EPSV/SPSV</code> command. If the server is behind a masquerading (NAT) box that doesn&#8217;t properly handle stateful FTP masquerading, put the ip address of that box here. If you have a dynamic IP address, you can use a symbolic host name (probably the one of your gateway), that will be resolved every time a new client will connect.</p>
-<dt><code>-q upload:download</code></p>
-<dd>Enable an upload/download ratio for anonymous users (ex: <i>-q 1:5</i> means that 1 Mb of goodies have to be uploaded to leech 5 Mb).</p>
-<dt><code>-Q upload:download</code></p>
-<dd>Enable ratios for anonymous and non-anonymous users. If the <i>-a</i> option is also used, users from the trusted group have no ratio.</p>
-<dt><code>-r</code></p>
-<dd>Never overwrite existing files. Uploading a file whose name already exists cause an automatic rename. Files are called xyz.1, xyz.2, xyz.3, etc.</p>
-<dt><code>-R</code></p>
-<dd>Disallow users (even non-anonymous ones) usage of the CHMOD command. On hosting services, it may prevent newbies from doing mistakes, like setting bad permissions on their home directory. Only root can use CHMOD when this switch is enabled.</p>
-<dt><code>-s</code></p>
-<dd>Don&#8217;t allow anonymous users to retrieve files owned by &quot;ftp&quot; (generally, files uploaded by other anonymous users).</p>
-<dt><code>-S [{ip address|hostname}] [,{port|service name}]</code></p>
-<dd>This option is only effective when the server is launched as a standalone server. Connections are accepted on the specified IP and port. IPv4 and IPv6 are supported. Numeric and fully-qualified host names are accepted. A service name (see /etc/services) can be used instead of a numeric port number.</p>
-<dt><code>-t bandwidth</code></p>
-<dd>or <code>-t upload bandwidth:download bandwidth</code> Enable process priority lowering and bandwidth throttling for anonymous users. Delay should be in kilobytes/seconds.</p>
-<dt><code>-T bandwidth</code></p>
-<dd>or <code>-T upload bandwidth:download bandwidth</code> Enable process priority lowering and bandwidth throttling for *ALL* users. Pure-FTPd should have been explicitely compiled with throttling support to have these flags work. It is possible to have different bandwidth limits for uploads and for downloads. &#8216;-t&#8217; and &#8216;-T&#8217; can indeed be followed by two numbers delimited by a column (&#8216;:&#8217;). The first number is the upload bandwidth and the next one applies only to downloads. One of them can be left blank which means infinity. A single number without any column means that the same limit applies to upload and download.</p>
-<dt><code>-u uid</code></p>
-<dd>Do not allow uids below <i>uid</i> to log in (typically, low-numbered <i>uid</i>s are used for administrative accounts). <code>-u 100</code> is sufficient to deny access to all administrative accounts on many linux boxes, where 99 is the last administrative account. Anonymous FTP is allowed even if the uid of the ftp user is smaller than <i>uid</i>. <code>-u 1</code> denies access only to root accounts. The default is to allow FTP access to all accounts.</p>
-<dt><code>-U umask files:umask dirs</code></p>
-<dd>Change the mask for creation of new files and directories. The default are 133 (files are readable -but not writable- by other users) and 022 (same thing for directory, with the execute bit on). If new files should only be readable by the user, use 177:077. If you want uploaded files to be executable, use 022:022 (files will be readable by other people) or 077:077 (files will only be readable by their owner).</p>
-<dt><code>-v bonjour name</code></p>
-<dd>Set the Bonjour name of the service (only available on MacOS X when Bonjour support is compiled in).</p>
-<dt><code>-V ip address</code></p>
-<dd>Allow non-anonymous FTP access only on this specific local IP address. All other IP addresses are only anonymous. With that option, you can have routed IPs for public access, and a local IP (like 10.x.x.x) for administration. You can also have a routable trusted IP protected by firewall rules, and only that IP can be used to login as a non-anonymous user.</p>
-<dt><code>-w</code></p>
-<dd>Enable support for the FXP protocol, for non-anonymous users only.</p>
-<dt><code>-W</code></p>
-<dd>Enable the FXP protocol for everyone. <i>FXP IS AN UNSECURE PROTOCOL. NEVER ENABLE IT ON UNTRUSTED NETWORKS.</i></p>
-<dt><code>-x</code></p>
-<dd>In normal operation mode, authenticated users can read/write files beginning with a dot (&#8216;.&#8217;). Anonymous users can&#8217;t, for security reasons (like changing banners or a forgotten .rhosts). When &#8216;-x&#8217; is used, authenticated users can download dot-files, but not overwrite/create them, even if they own them. That way, you can prevent hosted users from messing .qmail files.</p>
-<dt><code>-X</code></p>
-<dd>This flag is identical to the previous one (writing dot-files is prohibited), but in addition, users can&#8217;t even *read* files and directories beginning with a dot (like &quot;cd .ssh&quot;).</p>
-<dt><code>-y per user max sessions:max anonymous sessions</code></p>
-<dd>This switch enables per-user concurrency limits. Two values are separated by a column. The first one is the max number of concurrent sessions for a single login. The second one is the maximum number of anonoymous sessions.</p>
-<dt><code>-Y tls behavior</code></p>
+ For security purposes, the path must be absolute (eg. <code>/var/log/pureftpd.log</code>, not <code> ../log/pureftpd.log</code>).</dd>
+<dt><code>-p first:last</code></dt>
+<dd>Use only ports in the range <i>first</i> to <i>last</i> inclusive for passive-mode downloads. This means that clients will not try to open connections to TCP ports outside the range <i>first &#8211; last</i>, which makes pure-ftpd more compatible with packet filters. Note that the maximum number of clients (specified with <code>-c</code>) is forced down to <i>(last + 1 &#8211; first)/2</i> if it is greater, as the default is. (The syntax for the port range is, conveniently, the same as that of <code>iptables).</code></dd>
+<dt><code>-P ip address or host name</code></dt>
+<dd>Force the specified IP address in reply to a <code>PASV/EPSV/SPSV</code> command. If the server is behind a masquerading (NAT) box that doesn&#8217;t properly handle stateful FTP masquerading, put the ip address of that box here. If you have a dynamic IP address, you can use a symbolic host name (probably the one of your gateway), that will be resolved every time a new client will connect.</dd>
+<dt><code>-q upload:download</code></dt>
+<dd>Enable an upload/download ratio for anonymous users (ex: <i>-q 1:5</i> means that 1 Mb of goodies have to be uploaded to leech 5 Mb).</dd>
+<dt><code>-Q upload:download</code></dt>
+<dd>Enable ratios for anonymous and non-anonymous users. If the <i>-a</i> option is also used, users from the trusted group have no ratio.</dd>
+<dt><code>-r</code></dt>
+<dd>Never overwrite existing files. Uploading a file whose name already exists cause an automatic rename. Files are called xyz.1, xyz.2, xyz.3, etc.</dd>
+<dt><code>-R</code></dt>
+<dd>Disallow users (even non-anonymous ones) usage of the CHMOD command. On hosting services, it may prevent newbies from doing mistakes, like setting bad permissions on their home directory. Only root can use CHMOD when this switch is enabled.</dd>
+<dt><code>-s</code></dt>
+<dd>Don&#8217;t allow anonymous users to retrieve files owned by &quot;ftp&quot; (generally, files uploaded by other anonymous users).</dd>
+<dt><code>-S [{ip address|hostname}] [,{port|service name}]</code></dt>
+<dd>This option is only effective when the server is launched as a standalone server. Connections are accepted on the specified IP and port. IPv4 and IPv6 are supported. Numeric and fully-qualified host names are accepted. A service name (see /etc/services) can be used instead of a numeric port number.</dd>
+<dt><code>-t bandwidth</code></dt>
+<dd>or <code>-t upload bandwidth:download bandwidth</code> Enable process priority lowering and bandwidth throttling for anonymous users. Delay should be in kilobytes/seconds.</dd>
+<dt><code>-T bandwidth</code></dt>
+<dd>or <code>-T upload bandwidth:download bandwidth</code> Enable process priority lowering and bandwidth throttling for *ALL* users. Pure-FTPd should have been explicitely compiled with throttling support to have these flags work. It is possible to have different bandwidth limits for uploads and for downloads. &#8216;-t&#8217; and &#8216;-T&#8217; can indeed be followed by two numbers delimited by a column (&#8216;:&#8217;). The first number is the upload bandwidth and the next one applies only to downloads. One of them can be left blank which means infinity. A single number without any column means that the same limit applies to upload and download.</dd>
+<dt><code>-u uid</code></dt>
+<dd>Do not allow uids below <i>uid</i> to log in (typically, low-numbered <i>uid</i>s are used for administrative accounts). <code>-u 100</code> is sufficient to deny access to all administrative accounts on many linux boxes, where 99 is the last administrative account. Anonymous FTP is allowed even if the uid of the ftp user is smaller than <i>uid</i>. <code>-u 1</code> denies access only to root accounts. The default is to allow FTP access to all accounts.</dd>
+<dt><code>-U umask files:umask dirs</code></dt>
+<dd>Change the mask for creation of new files and directories. The default are 133 (files are readable -but not writable- by other users) and 022 (same thing for directory, with the execute bit on). If new files should only be readable by the user, use 177:077. If you want uploaded files to be executable, use 022:022 (files will be readable by other people) or 077:077 (files will only be readable by their owner).</dd>
+<dt><code>-v bonjour name</code></dt>
+<dd>Set the Bonjour name of the service (only available on MacOS X when Bonjour support is compiled in).</dd>
+<dt><code>-V ip address</code></dt>
+<dd>Allow non-anonymous FTP access only on this specific local IP address. All other IP addresses are only anonymous. With that option, you can have routed IPs for public access, and a local IP (like 10.x.x.x) for administration. You can also have a routable trusted IP protected by firewall rules, and only that IP can be used to login as a non-anonymous user.</dd>
+<dt><code>-w</code></dt>
+<dd>Enable support for the FXP protocol, for non-anonymous users only.</dd>
+<dt><code>-W</code></dt>
+<dd>Enable the FXP protocol for everyone. <i>FXP IS AN UNSECURE PROTOCOL. NEVER ENABLE IT ON UNTRUSTED NETWORKS.</i></dd>
+<dt><code>-x</code></dt>
+<dd>In normal operation mode, authenticated users can read/write files beginning with a dot (&#8216;.&#8217;). Anonymous users can&#8217;t, for security reasons (like changing banners or a forgotten .rhosts). When &#8216;-x&#8217; is used, authenticated users can download dot-files, but not overwrite/create them, even if they own them. That way, you can prevent hosted users from messing .qmail files.</dd>
+<dt><code>-X</code></dt>
+<dd>This flag is identical to the previous one (writing dot-files is prohibited), but in addition, users can&#8217;t even *read* files and directories beginning with a dot (like &quot;cd .ssh&quot;).</dd>
+<dt><code>-y per user max sessions:max anonymous sessions</code></dt>
+<dd>This switch enables per-user concurrency limits. Two values are separated by a column. The first one is the max number of concurrent sessions for a single login. The second one is the maximum number of anonoymous sessions.</dd>
+<dt><code>-Y tls behavior</code></dt>
 <dd><code>-Y 0</code> (default) disables SSL/TLS security mechanisms.<br />
  <code>-Y 1</code> Accept both normal sessions and SSL/TLS ones.<br />
  <code>-Y 2</code> refuses connections that aren&#8217;t using SSL/TLS security mechanisms, including anonymous ones.<br />
  <code>-Y 3</code> refuses connections that aren&#8217;t using SSL/TLS security mechanisms, and refuse cleartext data channels as well.<br />
- The server must have been compiled with SSL/TLS support and a valid certificate must be in place to accept encrypted sessions.</p>
-<dt><code>-z</code></p>
-<dd>Allow anonymous users to read files and directories starting with a dot (&#8216;.&#8217;).</p>
-<dt><code>-Z</code></p>
-<dd>Add safe guards against common customer mistakes (like chmod 0 on their own files) . </p>
+ The server must have been compiled with SSL/TLS support and a valid certificate must be in place to accept encrypted sessions.</dd>
+<dt><code>-z</code></dt>
+<dd>Allow anonymous users to read files and directories starting with a dot (&#8216;.&#8217;).</dd>
+<dt><code>-Z</code></dt>
+<dd>Add safe guards against common customer mistakes (like chmod 0 on their own files) . </dd>
 </dl>
 <h2>Authentication</h2>
 <p>Some of the complexities of older servers are left out. </p>
@@ -255,28 +255,28 @@ description: "pure-ftpd – simple File Transfer Protocol server"
 <p> This server uses <code><a href="/docs/linux/man/3-glob/">glob</a></code>(3) to do filename globbing. </p>
 <p> The response to NLST is by default similar to that of <code><a href="/docs/linux/man/1-ls/">ls</a></code>(1), and that to LIST is by default similar to that of <code>ls -l</code> or <code>ls -lg</code> on most Unix systems, except that the &quot;total&quot; count is meaningless. Only regular files, directories and symlinks are shown. Only important <code>ls</code> options are supported:</p>
 <dl>
-<dt><code>-1</code></p>
-<dd>Undoes <code>-l</code> and <code>-C</code>.</p>
-<dt><code>-a</code></p>
-<dd>lists even files/directories whose names begin with &quot;.&quot;.</p>
-<dt><code>-C</code></p>
-<dd>lists files in as many colums as will fit on the screen. Undoes <code>-1</code> and <code>-l</code>.</p>
-<dt><code>-d</code></p>
-<dd>lists argument directories&#8217; names rather their contents.</p>
-<dt><code>-D</code></p>
-<dd>List files beginning with a dot (&#8216;.&#8217;) even when the client doesn&#8217;t append the <code>-a</code> option to the <code>list</code> command.</p>
-<dt><code>-F</code></p>
-<dd>appends &#8216;*&#8217; to executable regular files, &#8216;@&#8217; to symlinks and &#8216;/&#8217; to directories.</p>
-<dt><code>-l</code></p>
-<dd>shows various details about the file, including file group. See <code><a href="/docs/linux/man/1-ls/">ls</a></code>(1) for details. Undoes <code>-1</code> and <code>-C</code>.</p>
-<dt><code>-r</code></p>
-<dd>reverses the sorting order (modifies <code>-S</code> and <code>-t</code> and the default alphabetical ordering).</p>
-<dt><code>-R</code></p>
-<dd>recursively descends into subdirectories of the argument directories.</p>
-<dt><code>-S</code></p>
-<dd>Sorts by file size instead of by name. Undoes <code>-t</code>.</p>
-<dt><code>-t</code></p>
-<dd>Sorts by file modification time instead of by name. Undoes <code>-S</code>. </p>
+<dt><code>-1</code></dt>
+<dd>Undoes <code>-l</code> and <code>-C</code>.</dd>
+<dt><code>-a</code></dt>
+<dd>lists even files/directories whose names begin with &quot;.&quot;.</dd>
+<dt><code>-C</code></dt>
+<dd>lists files in as many colums as will fit on the screen. Undoes <code>-1</code> and <code>-l</code>.</dd>
+<dt><code>-d</code></dt>
+<dd>lists argument directories&#8217; names rather their contents.</dd>
+<dt><code>-D</code></dt>
+<dd>List files beginning with a dot (&#8216;.&#8217;) even when the client doesn&#8217;t append the <code>-a</code> option to the <code>list</code> command.</dd>
+<dt><code>-F</code></dt>
+<dd>appends &#8216;*&#8217; to executable regular files, &#8216;@&#8217; to symlinks and &#8216;/&#8217; to directories.</dd>
+<dt><code>-l</code></dt>
+<dd>shows various details about the file, including file group. See <code><a href="/docs/linux/man/1-ls/">ls</a></code>(1) for details. Undoes <code>-1</code> and <code>-C</code>.</dd>
+<dt><code>-r</code></dt>
+<dd>reverses the sorting order (modifies <code>-S</code> and <code>-t</code> and the default alphabetical ordering).</dd>
+<dt><code>-R</code></dt>
+<dd>recursively descends into subdirectories of the argument directories.</dd>
+<dt><code>-S</code></dt>
+<dd>Sorts by file size instead of by name. Undoes <code>-t</code>.</dd>
+<dt><code>-t</code></dt>
+<dd>Sorts by file modification time instead of by name. Undoes <code>-S</code>. </dd>
 </dl>
 <h2>Protocol</h2>
 <p>Here are the FTP commands supported by this server.<br />

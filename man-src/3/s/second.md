@@ -37,35 +37,27 @@ url: "/docs/linux/man/3-second/"
  <b>SECOND</b> Using ETIME <b>Purpose: </b>
 <dl>
 <dt>
-<dd> 
-
- 
-
+</dt><dd> 
  <pre>
   SECOND returns the user time for a process in seconds.
   This version gets the time from the EXTERNAL system function ETIME.
 </pre> 
-
- 
-&nbsp;<wbr></dl>
+&nbsp;<wbr></dd></dl>
  
 
  <b>Author:</b>
 <dl>
 <dt>
-<dd> Univ. of Tennessee 
-
+</dt><dd> Univ. of Tennessee 
  Univ. of California Berkeley 
-
  Univ. of Colorado Denver 
-
- NAG Ltd.</dl>
+ NAG Ltd.</dd></dl>
  
 
  <b>Date:</b>
 <dl>
 <dt>
-<dd> November 2011</dl>
+</dt><dd> November 2011</dd></dl>
  
 
  

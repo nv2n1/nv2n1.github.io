@@ -22,14 +22,14 @@ int ares_parse_aaaa_reply(const unsigned char *abuf, int alen,
 <h2>RETURN VALUES</h2>
 <p> <code>ares_parse_aaaa_reply</code> can return any of the following values:</p>
 <dl>
-<dt><code>ARES_SUCCESS</code></p>
-<dd> The response was successfully parsed.</p>
-<dt><code>ARES_EBADRESP</code></p>
-<dd> The response was malformatted.</p>
-<dt><code>ARES_ENODATA</code></p>
-<dd> The response did not contain an answer to the query.</p>
-<dt><code>ARES_ENOMEM</code></p>
-<dd> Memory was exhausted.</dl>
+<dt><code>ARES_SUCCESS</code></dt>
+<dd> The response was successfully parsed.</dd>
+<dt><code>ARES_EBADRESP</code></dt>
+<dd> The response was malformatted.</dd>
+<dt><code>ARES_ENODATA</code></dt>
+<dd> The response did not contain an answer to the query.</dd>
+<dt><code>ARES_ENOMEM</code></dt>
+<dd> Memory was exhausted.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-ares_gethostbyname/">ares_gethostbyname</a></code>(3), <code><a href="/docs/linux/man/3-ares_free_hostent/">ares_free_hostent</a></code>(3)</p>
 <h2>AUTHOR</h2>

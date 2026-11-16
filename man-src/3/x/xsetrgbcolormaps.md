@@ -10,56 +10,56 @@ description: "XAllocStandardColormap, XSetRGBColormaps, XGetRGBColormaps, XStand
 <p>XAllocStandardColormap, XSetRGBColormaps, XGetRGBColormaps, XStandardColormap &#8211; allocate, set, or read a standard colormap structure </p>
 <h2>Syntax</h2>
 <dl COMPACT>
-<dd>XStandardColormap *XAllocStandardColormap(void);</p>
-<dd>void XSetRGBColormaps(Display *<i>display</i>, Window <i>w</i>, XStandardColormap *<i>std_colormap</i>, int <i>count</i>, Atom <i>property</i>);</p>
-<dd>Status XGetRGBColormaps(Display *<i>display</i>, Window <i>w</i>, XStandardColormap **<i>std_colormap_return</i>, int *<i>count_return</i>, Atom <i>property</i>);</dl>
+<dd>XStandardColormap *XAllocStandardColormap(void);</dd>
+<dd>void XSetRGBColormaps(Display *<i>display</i>, Window <i>w</i>, XStandardColormap *<i>std_colormap</i>, int <i>count</i>, Atom <i>property</i>);</dd>
+<dd>Status XGetRGBColormaps(Display *<i>display</i>, Window <i>w</i>, XStandardColormap **<i>std_colormap_return</i>, int *<i>count_return</i>, Atom <i>property</i>);</dd></dl>
 <h2>Arguments</h2>
 <dl COMPACT>
-<dt><i>display</i></p>
-<dd>Specifies the connection to the X server.</p>
-<dt><i>count</i></p>
-<dd>Specifies the number of colormaps.</p>
-<dt><i>count_return</i></p>
-<dd>Returns the number of colormaps.</p>
-<dt><i>property</i></p>
-<dd>Specifies the property name.</p>
-<dt><i>std_colormap</i></p>
-<dd>Specifies the <code>XStandardColormap</code> structure to be used.</p>
-<dt><i>std_colormap_return</i></p>
-<dd>Returns the <code>XStandardColormap</code> structure.</dl>
+<dt><i>display</i></dt>
+<dd>Specifies the connection to the X server.</dd>
+<dt><i>count</i></dt>
+<dd>Specifies the number of colormaps.</dd>
+<dt><i>count_return</i></dt>
+<dd>Returns the number of colormaps.</dd>
+<dt><i>property</i></dt>
+<dd>Specifies the property name.</dd>
+<dt><i>std_colormap</i></dt>
+<dd>Specifies the <code>XStandardColormap</code> structure to be used.</dd>
+<dt><i>std_colormap_return</i></dt>
+<dd>Returns the <code>XStandardColormap</code> structure.</dd></dl>
 <h2>Description</h2>
 <p>The <code>XAllocStandardColormap</code> function allocates and returns a pointer to a <code>XStandardColormap</code> structure. Note that all fields in the <code>XStandardColormap</code> structure are initially set to zero. If insufficient memory is available, <code>XAllocStandardColormap</code> returns NULL. To free the memory allocated to this structure, use <code>XFree</code>. </p>
 <p> The <code>XSetRGBColormaps</code> function replaces the RGB colormap definition in the specified property on the named window. If the property does not already exist, <code>XSetRGBColormaps</code> sets the RGB colormap definition in the specified property on the named window. The property is stored with a type of RGB_COLOR_MAP and a format of 32. Note that it is the caller&#8217;s responsibility to honor the ICCCM restriction that only RGB_DEFAULT_MAP contain more than one definition. </p>
 <p> The <code>XSetRGBColormaps</code> function usually is only used by window or session managers. To create a standard colormap, follow this procedure:</p>
 <dl COMPACT>
-<dt>1.</p>
-<dd>Open a new connection to the same server.</p>
-<dt>2.</p>
-<dd>Grab the server.</p>
-<dt>3.</p>
-<dd>See if the property is on the property list of the root window for the screen.</p>
-<dt>4.</p>
-<dd>If the desired property is not present:</p>
+<dt>1.</dt>
+<dd>Open a new connection to the same server.</dd>
+<dt>2.</dt>
+<dd>Grab the server.</dd>
+<dt>3.</dt>
+<dd>See if the property is on the property list of the root window for the screen.</dd>
+<dt>4.</dt>
+<dd>If the desired property is not present:</dd>
 <dl COMPACT>
 <dd>
-<dl COMPACT>
-<dt>&bull;</p>
-<dd>Create a colormap (unless you are using the default colormap of the screen).</p>
-<dt>&bull;</p>
-<dd>Determine the color characteristics of the visual.</p>
-<dt>&bull;</p>
-<dd>Allocate cells in the colormap (or create it with <code>AllocAll</code>).</p>
-<dt>&bull;</p>
-<dd>Call <code>XStoreColors</code> to store appropriate color values in the colormap.</p>
-<dt>&bull;</p>
-<dd>Fill in the descriptive members in the <code>XStandardColormap</code> structure.</p>
-<dt>&bull;</p>
-<dd>Attach the property to the root window.</p>
-<dt>&bull;</p>
-<dd>Use <code>XSetCloseDownMode</code> to make the resource permanent.</dl>
+</dd><dl COMPACT>
+<dt>&bull;</dt>
+<dd>Create a colormap (unless you are using the default colormap of the screen).</dd>
+<dt>&bull;</dt>
+<dd>Determine the color characteristics of the visual.</dd>
+<dt>&bull;</dt>
+<dd>Allocate cells in the colormap (or create it with <code>AllocAll</code>).</dd>
+<dt>&bull;</dt>
+<dd>Call <code>XStoreColors</code> to store appropriate color values in the colormap.</dd>
+<dt>&bull;</dt>
+<dd>Fill in the descriptive members in the <code>XStandardColormap</code> structure.</dd>
+<dt>&bull;</dt>
+<dd>Attach the property to the root window.</dd>
+<dt>&bull;</dt>
+<dd>Use <code>XSetCloseDownMode</code> to make the resource permanent.</dd></dl>
 </dl>
-<dt>5.</p>
-<dd>Ungrab the server.</dl>
+<dt>5.</dt>
+<dd>Ungrab the server.</dd></dl>
 <p> <code>XSetRGBColormaps</code> can generate <code>BadAlloc</code>, <code>BadAtom</code>, and <code>BadWindow</code> errors. </p>
 <p> The <code>XGetRGBColormaps</code> function returns the RGB colormap definitions stored in the specified property on the named window. If the property exists, is of type RGB_COLOR_MAP, is of format 32, and is long enough to contain a colormap definition, <code>XGetRGBColormaps</code> allocates and fills in space for the returned colormaps and returns a nonzero status. If the visualid is not present, <code>XGetRGBColormaps</code> assumes the default visual for the screen on which the window is located; if the killid is not present, <code>None</code> is assumed, which indicates that the resources cannot be released. Otherwise, none of the fields are set, and <code>XGetRGBColormaps</code> returns a zero status. Note that it is the caller&#8217;s responsibility to honor the ICCCM restriction that only RGB_DEFAULT_MAP contain more than one definition. </p>
 <p> <code>XGetRGBColormaps</code> can generate <code>BadAtom</code> and <code>BadWindow</code> errors.</p>
@@ -96,12 +96,12 @@ description: "XAllocStandardColormap, XSetRGBColormaps, XGetRGBColormaps, XStand
 <p> The properties containing the <code>XStandardColormap</code> information have the type RGB_COLOR_MAP.</p>
 <h2>Diagnostics</h2>
 <dl COMPACT>
-<dt><code>BadAlloc</code></p>
-<dd>The server failed to allocate the requested resource or server memory.</p>
-<dt><code>BadAtom</code></p>
-<dd>A value for an Atom argument does not name a defined Atom.</p>
-<dt><code>BadWindow</code></p>
-<dd>A value for a Window argument does not name a defined Window.</dl>
+<dt><code>BadAlloc</code></dt>
+<dd>The server failed to allocate the requested resource or server memory.</dd>
+<dt><code>BadAtom</code></dt>
+<dd>A value for an Atom argument does not name a defined Atom.</dd>
+<dt><code>BadWindow</code></dt>
+<dd>A value for a Window argument does not name a defined Window.</dd></dl>
 <h2>See Also</h2>
 <p><a href="/docs/linux/man/3-xalloccolor/">XAllocColor</a>(3), <a href="/docs/linux/man/3-xcreatecolormap/">XCreateColormap</a>(3), <a href="/docs/linux/man/3-xfree/">XFree</a>(3), <a href="/docs/linux/man/3-xsetclosedownmode/">XSetCloseDownMode</a>(3)<br />
  <i>Xlib &#8211; C Language X Interface</i></p>

@@ -15,13 +15,13 @@ description: "slapo-collect – Collective attributes overlay to slapd"
 <h2>Configuration</h2>
 <p>This <code>slapd.conf</code> option applies to the collect overlay. It should appear after the <code>overlay</code> directive.</p>
 <dl>
-<dt><code>collectinfo &lt;DN&gt; &lt;attrlist&gt;</code></p>
-<dd>Specify the <code>DN</code> of the ancestor entry and the set of related collective attributes, where <code>attrlist</code> is a comma-separated list of attributes. The <code>DN </code> should be within the naming context of the database. </p>
+<dt><code>collectinfo &lt;DN&gt; &lt;attrlist&gt;</code></dt>
+<dd>Specify the <code>DN</code> of the ancestor entry and the set of related collective attributes, where <code>attrlist</code> is a comma-separated list of attributes. The <code>DN </code> should be within the naming context of the database. </dd>
 </dl>
 <h2>Files</h2>
 <dl>
-<dt>/etc/openldap/slapd.conf</p>
-<dd>default slapd configuration file</dl>
+<dt>/etc/openldap/slapd.conf</dt>
+<dd>default slapd configuration file</dd></dl>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/5-slapd-conf/">slapd.conf</a></code>(5), <code><a href="/docs/linux/man/5-slapd-config/">slapd-config</a></code>(5), The <code><a href="/docs/linux/man/5-slapo-collect/">slapo-collect</a></code>(5) overlay supports dynamic configuration via <code>back-config</code>.</p>
 <h2>Acknowledgements</h2>

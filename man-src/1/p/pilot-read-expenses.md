@@ -20,7 +20,6 @@ description: "pilot-read-expenses – Export Palm Expense application data in a 
 <pre>
             Category: Unfiled Type:   5 Payment:   7 Currency:  23 Amount: 400.00 Vendor: Super Salads City: Westerly
             Attendees: Joe, Mary, Bob Note: Some simple note text Date: Fri May 9 00:00:00 2004
-        
 </pre>
 <h2>OPTIONS</h2>
 <h3>pilot-read-expenses option</h3>

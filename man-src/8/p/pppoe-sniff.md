@@ -18,10 +18,10 @@ description: "pppoe-sniff – examine network for non-standard PPPoE frames"
 <pre> ifconfig eth0 -promisc</pre>
 <h2>Options</h2>
 <dl>
-<dt><code>-I </code><i>interface</i></p>
-<dd>The <code>-I</code> option specifies the Ethernet interface to use. Under Linux, it is typically <i>eth0</i> or <i>eth1</i>. The interface should be &quot;up&quot; and in promiscuous mode before you start <code>pppoe-sniff</code>. </p>
-<dt><code>-V</code></p>
-<dd>The <code>-V</code> option causes <code>pppoe-sniff</code> to print its version number and exit. </p>
+<dt><code>-I </code><i>interface</i></dt>
+<dd>The <code>-I</code> option specifies the Ethernet interface to use. Under Linux, it is typically <i>eth0</i> or <i>eth1</i>. The interface should be &quot;up&quot; and in promiscuous mode before you start <code>pppoe-sniff</code>. </dd>
+<dt><code>-V</code></dt>
+<dd>The <code>-V</code> option causes <code>pppoe-sniff</code> to print its version number and exit. </dd>
 </dl>
 <h2>Bugs</h2>
 <p><code>pppoe-sniff</code> only works on Linux. </p>

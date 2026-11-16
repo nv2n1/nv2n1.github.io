@@ -21,11 +21,11 @@ description: "ecryptfs-rewrite-file – force a file to be rewritten (reencrypte
 <p> <code>USING THIS SCRIPT WHILE GNOME, KDE, OR OTHER APPLICATIONS ARE RUNNING MAY CAUSE DATA LOSS.</code> </p>
 <h2>SEE ALSO</h2>
 <dl>
-<dt><code><a href="/docs/linux/man/1-find/">find</a></code>(1), <code><a href="/docs/linux/man/1-xargs/">xargs</a></code>(1), <code><a href="/docs/linux/man/1-ecryptfs-umount-private/">ecryptfs-umount-private</a></code>(1), <code><a href="/docs/linux/man/1-sync/">sync</a></code>(1)</p>
+<dt><code><a href="/docs/linux/man/1-find/">find</a></code>(1), <code><a href="/docs/linux/man/1-xargs/">xargs</a></code>(1), <code><a href="/docs/linux/man/1-ecryptfs-umount-private/">ecryptfs-umount-private</a></code>(1), <code><a href="/docs/linux/man/1-sync/">sync</a></code>(1)</dt>
 <dd>
-<dt><i><a rel="nofollow" href="http://ecryptfs.org/">http://ecryptfs.org/</a></i></p>
+</dd><dt><i><a rel="nofollow" href="http://ecryptfs.org/">http://ecryptfs.org/</a></i></dt>
 <dd>
-</dl>
+</dd></dl>
 <h2>AUTHOR</h2>
 <p> This manpage was written by Dustin Kirkland &lt;kirkland [at] ubuntu.com&gt; for Ubuntu systems (but may be used by others). Permission is granted to copy, distribute and/or modify this document under the terms of the GNU General Public License, Version 2 or any later version published by the Free Software Foundation. </p>
 <p> On Debian and Ubuntu systems, the complete text of the GNU General Public License can be found in /usr/share/common-licenses/GPL. </p>

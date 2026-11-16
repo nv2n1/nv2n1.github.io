@@ -18,23 +18,21 @@ int inet_pton(int af, const char *src, void *dst);
 <p> This function converts the character string <i>src</i> into a network address structure in the <i>af</i> address family, then copies the network address structure to <i>dst</i>. The <i>af</i> argument must be either <code>AF_INET</code> or <code>AF_INET6</code>. <i>dst</i> is written in network byte order. </p>
 <p> The following address families are currently supported:</p>
 <dl>
-<dt><code>AF_INET</code></p>
-<dd> <i>src</i> points to a character string containing an IPv4 network address in dotted-decimal format, &quot;<i>ddd.ddd.ddd.ddd</i>&quot;, where <i>ddd</i> is a decimal number of up to three digits in the range 0 to 255. The address is converted to a <i>struct in_addr</i> and copied to <i>dst</i>, which must be <i>sizeof(struct in_addr)</i> (4) bytes (32 bits) long.</p>
-<dt><code>AF_INET6</code></p>
-<dd> <i>src</i> points to a character string containing an IPv6 network address. The address is converted to a <i>struct in6_addr</i> and copied to <i>dst</i>, which must be <i>sizeof(struct in6_addr)</i> (16) bytes (128 bits) long. The allowed formats for IPv6 addresses follow these rules:</p>
+<dt><code>AF_INET</code></dt>
+<dd> <i>src</i> points to a character string containing an IPv4 network address in dotted-decimal format, &quot;<i>ddd.ddd.ddd.ddd</i>&quot;, where <i>ddd</i> is a decimal number of up to three digits in the range 0 to 255. The address is converted to a <i>struct in_addr</i> and copied to <i>dst</i>, which must be <i>sizeof(struct in_addr)</i> (4) bytes (32 bits) long.</dd>
+<dt><code>AF_INET6</code></dt>
+<dd> <i>src</i> points to a character string containing an IPv6 network address. The address is converted to a <i>struct in6_addr</i> and copied to <i>dst</i>, which must be <i>sizeof(struct in6_addr)</i> (16) bytes (128 bits) long. The allowed formats for IPv6 addresses follow these rules:</dd>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>1.</p>
-<dd> The preferred format is <i>x:x:x:x:x:x:x:x</i>. This form consists of eight hexadecimal numbers, each of which expresses a 16-bit value (i.e., each <i>x</i> can be up to 4 hex digits).</p>
-<dt>2.</p>
-<dd> A series of contiguous zero values in the preferred format can be abbreviated to <i>::</i>. Only one instance of <i>::</i> can occur in an address. For example, the loopback address <i>0:0:0:0:0:0:0:1</i> can be abbreviated as <i>::1</i>. The wildcard address, consisting of all zeros, can be written as <i>::</i>.</p>
-<dt>3.</p>
-<dd> An alternate format is useful for expressing IPv4-mapped IPv6 addresses. This form is written as <i>x:x:x:x:x:x:d.d.d.d</i>, where the six leading <i>x</i>s are hexadecimal values that define the six most-significant 16-bit pieces of the address (i.e., 96 bits), and the <i>d</i>s express a value in dotted-decimal notation that defines the least significant 32 bits of the address. An example of such an address is <i>::FFFF:204.152.189.116</i>.</dl>
+<dt>1.</dt>
+<dd> The preferred format is <i>x:x:x:x:x:x:x:x</i>. This form consists of eight hexadecimal numbers, each of which expresses a 16-bit value (i.e., each <i>x</i> can be up to 4 hex digits).</dd>
+<dt>2.</dt>
+<dd> A series of contiguous zero values in the preferred format can be abbreviated to <i>::</i>. Only one instance of <i>::</i> can occur in an address. For example, the loopback address <i>0:0:0:0:0:0:0:1</i> can be abbreviated as <i>::1</i>. The wildcard address, consisting of all zeros, can be written as <i>::</i>.</dd>
+<dt>3.</dt>
+<dd> An alternate format is useful for expressing IPv4-mapped IPv6 addresses. This form is written as <i>x:x:x:x:x:x:d.d.d.d</i>, where the six leading <i>x</i>s are hexadecimal values that define the six most-significant 16-bit pieces of the address (i.e., 96 bits), and the <i>d</i>s express a value in dotted-decimal notation that defines the least significant 32 bits of the address. An example of such an address is <i>::FFFF:204.152.189.116</i>.</dd></dl>
 </dl>
 <dt>
-<dd> See RFC 2373 for further details on the representation of IPv6 addresses.</dl>
+</dt><dd> See RFC 2373 for further details on the representation of IPv6 addresses.</dd></dl>
 <h2>RETURN VALUE</h2>
 <p> <code>inet_pton</code>() returns 1 on success (network address was successfully converted). 0 is returned if <i>src</i> does not contain a character string representing a valid network address in the specified address family. If <i>af</i> does not contain a valid address family, -1 is returned and <i>errno</i> is set to <code>EAFNOSUPPORT</code>.</p>
 <h2>ATTRIBUTES</h2>

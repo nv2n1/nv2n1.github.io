@@ -10,7 +10,6 @@ description: "polygon – Draws a filled polygon. Allegro game programming libra
 <p>polygon &#8211; Draws a filled polygon. Allegro game programming library.</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;allegro.h&gt;
-
 void polygon(BITMAP *bmp, int vertices, const int *points, int color);</code></pre>
 <h2>Description</h2>
 <p>Draws a filled polygon with an arbitrary number of corners. Pass the number of vertices and an array containing a series of x, y points (a total of vertices*2 values). Example: </p>

@@ -15,26 +15,26 @@ description: "nfstest_xid – Verify packets are matched correctly by their XID"
 <p> Search all the packet traces given for XID inconsistencies. Verify all operations in the NFSv4.x COMPOUND reply are the same as the operations given in the call. </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt>&#8211;version</p>
-<dd> show program&#8217;s version number and exit</p>
-<dt>-h, &#8211;help</p>
-<dd> show this help message and exit </p>
+<dt>&#8211;version</dt>
+<dd> show program&#8217;s version number and exit</dd>
+<dt>-h, &#8211;help</dt>
+<dd> show this help message and exit </dd>
 </dl>
 <h3>Packet display:</h3>
 <dl>
-<dt>&#8211;load-body=LOAD_BODY</p>
-<dd> Display RPC payload body [default: False] </p>
+<dt>&#8211;load-body=LOAD_BODY</dt>
+<dd> Display RPC payload body [default: False] </dd>
 </dl>
 <h3>Debug:</h3>
 <dl>
-<dt>&#8211;enum-check=ENUM_CHECK</p>
-<dd> If set to True, enums are strictly enforced [default: True]</p>
-<dt>&#8211;debug-level=DEBUG_LEVEL</p>
-<dd> Set debug level messages</p>
-<dt>&#8211;unpack-error=UNPACK_ERROR</p>
-<dd> Raise unpack error when True</p>
-<dt>&#8211;error</p>
-<dd> Exit on first error</dl>
+<dt>&#8211;enum-check=ENUM_CHECK</dt>
+<dd> If set to True, enums are strictly enforced [default: True]</dd>
+<dt>&#8211;debug-level=DEBUG_LEVEL</dt>
+<dd> Set debug level messages</dd>
+<dt>&#8211;unpack-error=UNPACK_ERROR</dt>
+<dd> Raise unpack error when True</dd>
+<dt>&#8211;error</dt>
+<dd> Exit on first error</dd></dl>
 <h2>EXAMPLES</h2>
 <p> $ nfstest_xid /tmp/trace1.pcap</p>
 <h2>NOTES</h2>

@@ -34,11 +34,11 @@ url: "/docs/linux/man/3-fmemcmp/"
 
 <dl>
 <dt><a HREF="/docs/linux/man/3-fmemcmpi/">fmemcmpi</a>(3)
-<dd> fuzzy comparison of two memory areas
-<dt><a HREF="/docs/linux/man/3-fstrcmp/">fstrcmp</a>(3)
-<dd> fuzzy comparison of two strings
-<dt><a HREF="/docs/linux/man/3-memcmp/">memcmp</a>(3)
-<dd> compare memory areas</dl>
+</dt><dd> fuzzy comparison of two memory areas
+</dd><dt><a HREF="/docs/linux/man/3-fstrcmp/">fstrcmp</a>(3)
+</dt><dd> fuzzy comparison of two strings
+</dd><dt><a HREF="/docs/linux/man/3-memcmp/">memcmp</a>(3)
+</dt><dd> compare memory areas</dd></dl>
 
 <h2>COPYRIGHT</h2>
 

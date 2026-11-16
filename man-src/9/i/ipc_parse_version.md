@@ -15,7 +15,7 @@ ipc_parse_version - ipc call version
 <h2>Arguments</h2>
 
 <i>cmd</i>
-<dl><dd><dd>pointer to command</dl>
+<dl><dd></dd><dd>pointer to command</dd></dl>
 
 <h2>Description</h2>
 

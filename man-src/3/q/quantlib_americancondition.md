@@ -18,6 +18,6 @@ description: "QuantLib::AmericanCondition – American exercise condition."
 <p>American exercise condition. </p>
 <p> <code>Possible enhancements</code></p>
 <dl COMPACT>
-<dd>unify the intrinsicValues/Payoff thing</dl>
+<dd>unify the intrinsicValues/Payoff thing</dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for QuantLib from the source code.</p>

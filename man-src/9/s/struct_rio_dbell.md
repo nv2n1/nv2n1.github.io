@@ -18,18 +18,18 @@ description: "struct_rio_dbell – RIO doorbell event"
 <h2>Members</h2>
 <p>node</p>
 <dl>
-<dd>Node in list of doorbell events</dl>
+<dd>Node in list of doorbell events</dd></dl>
 <p> res</p>
 <dl>
-<dd>Doorbell resource</dl>
+<dd>Doorbell resource</dd></dl>
 <p> dinb</p>
 <dl>
-<dd>Doorbell event callback</dl>
+<dd>Doorbell event callback</dd></dl>
 <p> dev_id</p>
 <dl>
-<dd>Device specific pointer to pass on event</dl>
+<dd>Device specific pointer to pass on event</dd></dl>
 <h2>Author</h2>
 <p><code>Matt Porter</code> &lt;mporter [at] kernel.crashing.org&gt;, &lt;mporter [at] mvista.com&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

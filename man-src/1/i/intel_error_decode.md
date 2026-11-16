@@ -18,7 +18,7 @@ description: "intel_error_decode – Decodes an Intel GPU dump automatically cap
 <p> <code>intel_error_decode</code> is a tool that decodes the instructions and state of the GPU at the time of an error. It requires kernel 2.6.34 or newer, and either debugfs mounted on /sys/kernel/debug or /debug containing a current i915_error_state or you can pass a file containing a saved error.</p>
 <h3>Options</h3>
 <dl>
-<dt><code>filename</code></p>
-<dd> Decodes a previously saved error. </p>
+<dt><code>filename</code></dt>
+<dd> Decodes a previously saved error. </dd>
 </dl>
 <h2>Index</h2>

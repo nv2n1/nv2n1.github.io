@@ -27,6 +27,6 @@ description: "modules-load.d – Configure kernel modules to load at boot"
 <dd>
 <pre># Load virtio-net.ko at boot
 virtio-net</pre>
-</dl>
+</dd></dl>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/1-systemd/">systemd</a></code>(1), <code><a href="/docs/linux/man/8-systemd-modules-load-service/">systemd-modules-load.service</a></code>(8), <code><a href="/docs/linux/man/1-systemd-delta/">systemd-delta</a></code>(1), <code><a href="/docs/linux/man/8-modprobe/">modprobe</a></code>(8) </p>

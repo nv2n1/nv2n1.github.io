@@ -13,8 +13,8 @@ description: "pskc_global_log – API function"
 void pskc_global_log(pskc_log_func log_func);</code></pre>
 <h2>Arguments</h2>
 <dl>
-<dt>pskc_log_func log_func</p>
-<dd>new global <code>pskc_log_func</code> log function to use.</dl>
+<dt>pskc_log_func log_func</dt>
+<dd>new global <code>pskc_log_func</code> log function to use.</dd></dl>
 <h2>Description</h2>
 <p>Enable global debug logging function. The function will be invoked to print various debugging information. </p>
 <p> <i>pskc_log_func</i> is of the form, void (*pskc_log_func) (const char *msg); </p>

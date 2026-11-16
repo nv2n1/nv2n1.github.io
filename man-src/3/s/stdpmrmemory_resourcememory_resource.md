@@ -12,7 +12,6 @@ std::pmr::memory_resource::memory_resource - std::pmr::memory_resource::memory_r
 
 <pre><code>memory_resource() = default;
 (1)(since C++ 17)(implicitly declared)
-
     memory_resource(const memory_resource &amp;) = default;
 (2)(since C++ 17)(implicitly declared)</code></pre> 
 1) Implicitly declared default constructor. 

@@ -24,97 +24,91 @@ git cvsexportcommit[-h][-u][-v][-c][-P][-p][-a][-d cvsroot]
 <p> -c</p>
 <dl>
 <dt>
-<dd> Commit automatically if the patch applied cleanly. It will not commit if any hunks fail to apply or there were other problems.</dl>
+</dt><dd> Commit automatically if the patch applied cleanly. It will not commit if any hunks fail to apply or there were other problems.</dd></dl>
 <p> -p</p>
 <dl>
 <dt>
-<dd> Be pedantic (paranoid) when applying patches. Invokes patch with &#8211;fuzz=0</dl>
+</dt><dd> Be pedantic (paranoid) when applying patches. Invokes patch with &#8211;fuzz=0</dd></dl>
 <p> -a</p>
 <dl>
 <dt>
-<dd> Add authorship information. Adds Author line, and Committer (if different from Author) to the message.</dl>
+</dt><dd> Add authorship information. Adds Author line, and Committer (if different from Author) to the message.</dd></dl>
 <p> -d</p>
 <dl>
 <dt>
-<dd> Set an alternative CVSROOT to use. This corresponds to the CVS -d parameter. Usually users will not want to set this, except if using CVS in an asymmetric fashion.</dl>
+</dt><dd> Set an alternative CVSROOT to use. This corresponds to the CVS -d parameter. Usually users will not want to set this, except if using CVS in an asymmetric fashion.</dd></dl>
 <p> -f</p>
 <dl>
 <dt>
-<dd> Force the merge even if the files are not up to date.</dl>
+</dt><dd> Force the merge even if the files are not up to date.</dd></dl>
 <p> -P</p>
 <dl>
 <dt>
-<dd> Force the parent commit, even if it is not a direct parent.</dl>
+</dt><dd> Force the parent commit, even if it is not a direct parent.</dd></dl>
 <p> -m</p>
 <dl>
 <dt>
-<dd> Prepend the commit message with the provided prefix. Useful for patch series and the like.</dl>
+</dt><dd> Prepend the commit message with the provided prefix. Useful for patch series and the like.</dd></dl>
 <p> -u</p>
 <dl>
 <dt>
-<dd> Update affected files from CVS repository before attempting export.</dl>
+</dt><dd> Update affected files from CVS repository before attempting export.</dd></dl>
 <p> -k</p>
 <dl>
 <dt>
-<dd> Reverse CVS keyword expansion (e.g. $Revision: 1.2.3.4$ becomes $Revision$) in working CVS checkout before applying patch.</dl>
+</dt><dd> Reverse CVS keyword expansion (e.g. $Revision: 1.2.3.4$ becomes $Revision$) in working CVS checkout before applying patch.</dd></dl>
 <p> -w</p>
 <dl>
 <dt>
-<dd> Specify the location of the CVS checkout to use for the export. This option does not require GIT_DIR to be set before execution if the current directory is within a Git repository. The default is the value of <i>cvsexportcommit.cvsdir</i>.</dl>
+</dt><dd> Specify the location of the CVS checkout to use for the export. This option does not require GIT_DIR to be set before execution if the current directory is within a Git repository. The default is the value of <i>cvsexportcommit.cvsdir</i>.</dd></dl>
 <p> -W</p>
 <dl>
 <dt>
-<dd> Tell cvsexportcommit that the current working directory is not only a Git checkout, but also the CVS checkout. Therefore, Git will reset the working directory to the parent commit before proceeding.</dl>
+</dt><dd> Tell cvsexportcommit that the current working directory is not only a Git checkout, but also the CVS checkout. Therefore, Git will reset the working directory to the parent commit before proceeding.</dd></dl>
 <p> -v</p>
 <dl>
 <dt>
-<dd> Verbose.</dl>
+</dt><dd> Verbose.</dd></dl>
 <h2>CONFIGURATION</h2>
 <p> cvsexportcommit.cvsdir</p>
 <dl>
 <dt>
-<dd> The default location of the CVS checkout to use for the export.</dl>
+</dt><dd> The default location of the CVS checkout to use for the export.</dd></dl>
 <h2>EXAMPLES</h2>
 <p> Merge one patch into CVS</p>
 <dl>
-<dt>
-<dd>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 $ export GIT_DIR=~/project/.git
 $ cd ~/project_cvs_checkout
 $ git cvsexportcommit -v &lt;commit-sha1&gt;
 $ cvs commit -F .msg &lt;files&gt;
 </pre>
-</dl>
+</dd></dl>
 </dl>
 <p> Merge one patch into CVS (-c and -w options). The working directory is within the Git Repo</p>
 <dl>
-<dt>
-<dd>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
         $ git cvsexportcommit -v -c -w ~/project_cvs_checkout &lt;commit-sha1&gt;
 </pre>
-</dl>
+</dd></dl>
 </dl>
 <p> Merge pending patches into CVS automatically &#8212; only if you really know what you are doing</p>
 <dl>
-<dt>
-<dd>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 $ export GIT_DIR=~/project/.git
 $ cd ~/project_cvs_checkout
 $ git cherry cvshead myhead | sed -n 's/^+ //p' | xargs -l1 git cvsexportcommit -c -p -v
 </pre>
-</dl>
+</dd></dl>
 </dl>
 <h2>GIT</h2>
 <p> Part of the <code><a href="/docs/linux/man/1-git/">git</a></code>(1) suite </p>

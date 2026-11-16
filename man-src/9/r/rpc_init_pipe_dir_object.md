@@ -15,15 +15,15 @@ rpc_init_pipe_dir_object - initialise a struct rpc_pipe_dir_object
 <h2>Arguments</h2>
 
 <i>pdo</i>
-<dl><dd><dd>pointer to struct rpc_pipe_dir_object</dl>
+<dl><dd></dd><dd>pointer to struct rpc_pipe_dir_object</dd></dl>
  
 
  <i>pdo_ops</i>
-<dl><dd>pointer to const struct rpc_pipe_dir_object_ops</dl>
+<dl><dd>pointer to const struct rpc_pipe_dir_object_ops</dd></dl>
  
 
  <i>pdo_data</i>
-<dl><dd>pointer to caller-defined data</dl>
+<dl><dd>pointer to caller-defined data</dd></dl>
 
 <h2>Copyright</h2>
 
