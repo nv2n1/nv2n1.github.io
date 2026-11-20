@@ -88,3 +88,9 @@ code, pre { font-family: SFMono-Regular, Menlo, Consolas, "Liberation Mono", mon
     margin-right: auto;
   }
 }
+
+/* after-content responsive ad */
+.ad-after-content {
+  clear: both;
+  margin-top: 2rem;
+}
