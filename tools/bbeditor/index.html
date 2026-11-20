@@ -7,6 +7,31 @@ canonical: https://www.systutorials.com/tools/bbeditor/
 <script src="./jquery.min.js"></script>
 <script src="./jquery.wysibb.min.js"></script>
 <link rel="stylesheet" href="./theme/st/wbbtheme.css">
+<style>
+.ad-bb-editor {
+  width: 300px;
+  height: 250px;
+  margin-bottom: 50px;
+}
+@media (min-width: 801px) {
+  .ad-bb-editor {
+    float: right;
+    margin-left: 50px;
+  }
+  /* keep the wysibb editor box left of the floated ad */
+  div.wysibb {
+    width: calc(100% - 350px);
+  }
+}
+@media (max-width: 800px) {
+  .ad-bb-editor {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+</style>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
 <script>
 $(document).ready(function() {
   $("#editor").css("height","320px");
@@ -17,6 +42,16 @@ $(document).ready(function() {
 <h1>BB Code Editor</h1>
 <p>Welcome to the online bb code editor! Edit your text and click the "[BBCODE]" button to get your bb code.</p>
 
+<div class="ad-bb-editor">
+<!-- bb-code-editor-1 -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4712122667"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
 <textarea id="editor"></textarea>
 
 <h2>BB Code Editor shortcuts</h2>
