@@ -6,22 +6,29 @@ permalink: /license/
 
 ## License
 
-SysTutorials is owned and operated by Eric Ma ("SysTutorials", "we", "us")
-and is published at [www.systutorials.com](/). By using this website you
-accept the terms on this page. If you do not accept them, do not use the
-website.
+"SysTutorials" (also "we" and "us") means this website and its operator,
+published at [www.systutorials.com](/). By using this website you accept
+the terms on this page. If you do not accept them, do not use the website.
 
 ### Copyright
 
-Copyright © 2010-2026 SysTutorials. All rights reserved.
+The site design, the site's own pages such as this one, and the source
+code are Copyright © 2010-2026 SysTutorials. All rights reserved.
 
-Unless stated otherwise, all content on this website, including articles,
-tutorials, questions and answers, page text, graphics, and the site design,
-is the property of SysTutorials and is protected by copyright and other
-laws. No content may be copied, republished, sold, redistributed, or used
-to train machine learning models without our prior written permission.
-Brief quotations are allowed only with clear attribution and a link to the
-original page.
+Posts, tutorials, and answers are contributed by their respective authors
+(see the [authors page](/authors/)). Copyright in each post remains with
+its author or other rights holder and does not automatically belong to
+SysTutorials, unless stated otherwise. By contributing, an author grants
+SysTutorials a license to publish the post on this website, and each
+author remains responsible for what they wrote. Views expressed in a post
+are those of its author and do not necessarily reflect those of
+SysTutorials.
+
+All content on this website is protected by copyright and other laws. No
+content may be copied, republished, sold, redistributed, or used to train
+machine learning models without the prior written permission of
+SysTutorials or the respective rights holder. Brief quotations are
+allowed only with clear attribution and a link to the original page.
 
 The source code of this website is public on GitHub for transparency,
 corrections, and contributions. Viewing it does not grant a license to
@@ -53,8 +60,9 @@ website is at your own risk.
 
 ### Limitation of liability
 
-To the maximum extent permitted by applicable law, SysTutorials and Eric
-Ma will not be liable for any direct, indirect, incidental, special,
+To the maximum extent permitted by applicable law, SysTutorials, its
+operator, and its authors and contributors will not be liable for any
+direct, indirect, incidental, special,
 consequential, or exemplary damages, including loss of data, loss of
 profits, loss of business, hardware or software damage, or system
 downtime, arising from or related to your use of, or inability to use,

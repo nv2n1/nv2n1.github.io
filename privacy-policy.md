@@ -8,9 +8,8 @@ Last updated: November 20, 2026.
 
 ## Privacy Policy
 
-SysTutorials is owned and operated by Eric Ma. This policy explains what
-data is collected when you use [www.systutorials.com](/) and how it is
-handled.
+This policy explains what data is collected when you use
+[www.systutorials.com](/) ("the website") and how it is handled.
 
 We keep this simple: the website has no accounts, no registration, no
 on-site comments, and no data entry forms. We collect almost no personal
