@@ -131,11 +131,29 @@
       color: #666;
       margin-bottom: 1rem;
     }
+    .ad-above-fold {
+      width: 300px;
+      margin-bottom: 50px;
+    }
+    @media (min-width: 801px) {
+      .ad-above-fold {
+        float: right;
+        margin-left: 50px;
+      }
+    }
+    @media (max-width: 800px) {
+      .ad-above-fold {
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
     .back {
       display: inline-block;
       margin-top: 3rem;
     }
   </style>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
 </head>
 <body>
   <main>
@@ -167,6 +185,16 @@
         <h1>{{ page.title }}</h1>
         <time class="post-date" datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %-d, %Y" }}</time>{% if page.author %}{% assign author_page = site.pages | where: 'author_name', page.author | first %} <span class="post-author">&middot; {% if author_page %}<a href="{{ author_page.url }}">{{ page.author | escape }}</a>{% else %}{{ page.author | escape }}{% endif %} and Community</span>{% endif %}{% assign pd = page.date | date: "%Y-%m-%d" %}{% assign md = page.modified | date: "%Y-%m-%d" %}{% if page.modified and pd != md %} <span class="post-updated">&middot; updated {{ page.modified | date: "%B %-d, %Y" }}</span>{% endif %}
       </header>
+      <div class="ad-above-fold">
+        <!-- above-the-fold-1 -->
+        <ins class="adsbygoogle"
+             style="display:inline-block;width:300px;height:250px"
+             data-ad-client="ca-pub-5988258742963952"
+             data-ad-slot="4315544630"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
       {{ content }}
     </article>
     <footer class="post-footer">
