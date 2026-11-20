@@ -18,10 +18,6 @@ canonical: https://www.systutorials.com/tools/bbeditor/
     float: right;
     margin-left: 50px;
   }
-  /* keep the wysibb editor box left of the floated ad */
-  div.wysibb {
-    width: calc(100% - 350px);
-  }
 }
 @media (max-width: 800px) {
   .ad-bb-editor {
@@ -44,6 +40,8 @@ $(document).ready(function() {
 
 <textarea id="editor"></textarea>
 
+<h2>BB Code Editor shortcuts</h2>
+
 <div class="ad-bb-editor">
 <!-- bb-code-editor-1 -->
 <ins class="adsbygoogle"
@@ -54,8 +52,6 @@ $(document).ready(function() {
      (adsbygoogle = window.adsbygoogle || []).push({});
 </script>
 </div>
-
-<h2>BB Code Editor shortcuts</h2>
 <ul>
 <li><b>Bold</b>: ctrl + b</li>
 <li><b>Italic</b>: ctrl + i</li>
