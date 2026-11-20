@@ -26,11 +26,13 @@ used to serve pages, maintain security, and measure traffic.
 
 ### Analytics
 
-This website uses [Statcounter](https://statcounter.com/) to count
-visitors and analyze traffic. Statcounter uses cookies and log data such
-as IP addresses and page views for this purpose. See the [Statcounter
-privacy policy](https://statcounter.com/about/legal/) for details on what
-it collects and how to opt out.
+This website uses [Google
+Analytics](https://support.google.com/analytics/answer/1008015) to count
+visitors and analyze traffic. Google Analytics uses cookies and
+collects data such as IP addresses and page views for this purpose. See
+the [Google privacy policy](https://policies.google.com/privacy) for
+details on what it collects, and [Google's opt-out
+tool](https://tools.google.com/dlpage/gaoptout) to opt out.
 
 ### Advertising
 
@@ -62,7 +64,7 @@ marketing lists, and we do not add you to any list.
 
 We do not sell personal data. Data described in this policy is shared
 only with the services that process it on our behalf (website hosting on
-GitHub Pages, Statcounter analytics, and Google AdSense advertising) or
+GitHub Pages, Google Analytics, and Google AdSense advertising) or
 when disclosure is required by law.
 
 ### Retention
