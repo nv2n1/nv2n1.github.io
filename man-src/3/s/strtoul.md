@@ -21,5 +21,47 @@ unsigned long long strtoull(const char *nptr, char **endptr,
 <p>The <code>strtoul</code>() function converts the initial part of the string in <i>nptr</i> to an <i>unsigned long</i> value according to the given <i>base</i>, which must be between 2 and 36 inclusive, or be the special value 0. </p>
 <p> The string may begin with an arbitrary amount of white space (as determined by <code>isspace</code>(3)) followed by a single optional &#8216;+&#8217; or &#8216;-&#8216; sign. If <i>base</i> is zero or 16, the string may then include a &quot;0x&quot; prefix, and the number will be read in base 16; otherwise, a zero <i>base</i> is taken as 10 (decimal) unless the next character is &#8216;0&#8217;, in which case it is taken as 8 (octal). </p>
 <p> The remainder of the string is converted to an <i>unsigned long</i> value in the obvious manner, stopping at the first character which is not a valid digit in the given base. (In bases above 10, the letter &#8216;A&#8217; in either uppercase or lowercase represents 10, &#8216;B&#8217; represents 11, and so forth, with &#8216;Z&#8217; representing 35.) </p>
-<p> If <i>endptr</i> is not NULL, <code>strtoul</code>() stores the address of the first invalid character in <i>*endptr</i>. If there were no digits at all, <code>strtoul</code>() stores the original value of <i>nptr</i> in <i>*endptr</i> (and returns 0). In particular, if <i>*nptr</i> is not &#8216;
-</p>
+<p> If <i>endptr</i> is not NULL, <code>strtoul</code>() stores the address of the first invalid character in <i>*endptr</i>. If there were no digits at all, <code>strtoul</code>() stores the original value of <i>nptr</i> in <i>*endptr</i> (and returns 0). In particular, if <i>*nptr</i> is not &#8216;\0&#8217; but <i>**endptr</i> is &#8216;\0&#8217; on return, the entire string is valid. </p>
+<p> The <code>strtoull</code>() function works just like the <code>strtoul</code>() function but returns an <i>unsigned long long</i> value. </p>
+<h2>Return value</h2>
+<p> The <code>strtoul</code>() function returns either the result of the conversion or, if there was a leading minus sign, the negation of the result of the conversion represented as an unsigned value, unless the original (nonnegated) value would overflow; in the latter case, <code>strtoul</code>() returns <code>ULONG_MAX</code> and sets <i>errno</i> to <code>ERANGE</code>. Precisely the same holds for <code>strtoull</code>() (with <code>ULLONG_MAX</code> instead of <code>ULONG_MAX</code>). </p>
+<h2>Errors</h2>
+<dl>
+<dt><code>EINVAL</code></dt>
+<dd> (not in C99) The given <i>base</i> contains an unsupported value. </dd>
+<dt><code>ERANGE</code></dt>
+<dd> The resulting value was out of range. </dd></dl>
+<p> The implementation may also set <i>errno</i> to <code>EINVAL</code> in case no conversion was performed (no digits seen, and 0 returned). </p>
+<h2>Attributes</h2>
+<p> For an explanation of the terms used in this section, see <code><a href="/docs/linux/man/7-attributes/">attributes</a></code>(7). </p>
+<table BORDER>
+<tr VALIGN=top>
+<td><code>Interface</code></td>
+<td><code>Attribute</code></td>
+<td><code>Value</code>
+</td>
+</tr>
+<tr VALIGN=top>
+<td> <code>strtoul</code>(), <code>strtoull</code>(), <code>strtouq</code>() </td>
+<td>Thread safety</td>
+<td>MT-Safe locale
+</td>
+</tr>
+</table>
+<h2>Conforming to</h2>
+<p> <code>strtoul</code>(): POSIX.1-2001, POSIX.1-2008, C89, C99 SVr4. </p>
+<p> <code>strtoull</code>(): POSIX.1-2001, POSIX.1-2008, C99. </p>
+<h2>Notes</h2>
+<p> Since <code>strtoul</code>() can legitimately return 0 or <code>ULONG_MAX</code> (<code>ULLONG_MAX</code> for <code>strtoull</code>()) on both success and failure, the calling program should set <i>errno</i> to 0 before the call, and then determine if an error occurred by checking whether <i>errno</i> has a nonzero value after the call. </p>
+<p> In locales other than the &quot;C&quot; locale, other strings may be accepted. (For example, the thousands separator of the current locale may be supported.) </p>
+<p> BSD also has </p>
+<p> <code>u_quad_t strtouq(const char *nptr, char **endptr, int base);</code> </p>
+<p> with completely analogous definition. Depending on the wordsize of the current architecture, this may be equivalent to <code>strtoull</code>() or to <code>strtoul</code>(). </p>
+<p> Negative values are considered valid input and are silently converted to the equivalent <i>unsigned long</i> value. </p>
+<h2>Examples</h2>
+<p> See the example on the <code><a href="/docs/linux/man/3-strtol/">strtol</a></code>(3) manual page; the use of the functions described in this manual page is similar. </p>
+<h2>See also</h2>
+<p> <code><a href="/docs/linux/man/3-a64l/">a64l</a></code>(3), <code><a href="/docs/linux/man/3-atof/">atof</a></code>(3), <code><a href="/docs/linux/man/3-atoi/">atoi</a></code>(3), <code><a href="/docs/linux/man/3-atol/">atol</a></code>(3), <code><a href="/docs/linux/man/3-strtod/">strtod</a></code>(3), <code><a href="/docs/linux/man/3-strtol/">strtol</a></code>(3), <code><a href="/docs/linux/man/3-strtoumax/">strtoumax</a></code>(3)</p>
+<h2>Colophon</h2>
+<p> This page is part of release 5.10 of the Linux <i>man-pages</i> project. A description of the project, information about reporting bugs, and the latest version of this page, can be found at <a rel="nofollow" href="https://www.kernel.org/doc/man-pages/.">https://www.kernel.org/doc/man-pages/.</a> </p>
+<h2>Index</h2>
