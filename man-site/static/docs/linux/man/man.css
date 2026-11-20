@@ -36,6 +36,8 @@ p { margin-bottom: 1rem; }
 /* man page body */
 article { font-size: 1rem; }
 article h2 {
+  /* BFC so the underline stops before the floated ad instead of crossing it */
+  overflow: hidden;
   border-bottom: 1px solid #ddd;
   padding-bottom: 0.2rem;
   margin-top: 2rem;
