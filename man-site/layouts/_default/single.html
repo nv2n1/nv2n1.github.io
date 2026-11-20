@@ -2,6 +2,11 @@
 <p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/{{ .Params.section }}/">Section {{ .Params.section }}</a></p>
 <article>
 <h1>{{ .Title }}</h1>
+{{ $lengthTag := "" }}
+{{ with index .Site.Data "man-page-length" }}
+{{ $lengthTag = index . $.Params.url }}
+{{ end }}
+{{ if ne $lengthTag "short" }}
 <div class="ad-above-fold">
 <!-- above-the-fold-1 -->
 <ins class="adsbygoogle"
@@ -12,6 +17,7 @@
      (adsbygoogle = window.adsbygoogle || []).push({});
 </script>
 </div>
+{{ end }}
 {{ .Content }}
 </article>
 {{ end }}

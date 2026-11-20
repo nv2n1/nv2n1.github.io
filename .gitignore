@@ -5,3 +5,4 @@ _site*/
 .jekyll-cache/
 man-site/.hugo_build.lock
 man-site/resources/
+man-site/data/

@@ -40,6 +40,9 @@ jobs:
         uses: peaceiris/actions-hugo@v3
         with:
           hugo-version: 'latest'
+      # Tag man pages short/long by body word count; the man single layout
+      # skips the ad unit on short pages. Data file is generated, not committed.
+      - run: python3 scripts/gen-man-page-length.py man-src man-site/data
       # Build outside _site, then copy only docs/ in: Hugo's sitemap.xml and
       # any other root files must not clobber the Jekyll blog's.
       - run: hugo --source man-site --destination ../_man_out --minify
