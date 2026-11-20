@@ -15,4 +15,4 @@ at [github.com/nv2n1/nv2n1.github.io](https://github.com/nv2n1/nv2n1.github.io).
 
 ## Contact
 
-Questions? Contact <span class="email-contact"></span>.
+See the [contact page](/contact/).
