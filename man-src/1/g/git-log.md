@@ -1994,5 +1994,3 @@ deleted file mode &lt;mode&gt;,&lt;mode&gt;
 <p> This setting can be disabled by the <code>&#8211;no-notes</code> option, overridden by the <code>GIT_NOTES_DISPLAY_REF</code> environment variable, and overridden by the <code>&#8211;notes=&lt;ref&gt;</code> option.</dl>
 <h2>GIT</h2>
 <p> Part of the <code><a href="/docs/linux/man/1-git/">git</a></code>(1) suite </p>
-<h2>Index</h2>
-</p>

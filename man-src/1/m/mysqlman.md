@@ -21,8 +21,4 @@ url: "/docs/linux/man/1-mysqlman/"
 
 <h2>BUGS</h2>
 
- Please refer to <a rel="nofollow" HREF="http://bugs.mysql.com/">http://bugs.mysql.com/</a> to report bugs. 
-
-<h2>Index</h2>
-
-
+ Please refer to <a rel="nofollow" HREF="http://bugs.mysql.com/">http://bugs.mysql.com/</a> to report bugs.

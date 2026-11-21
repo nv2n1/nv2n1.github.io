@@ -56,5 +56,3 @@ description: "pamtojpeg2k – convert PAM/PNM image to a JPEG-2000 code stream"
 <p> <code><a href="/docs/linux/man/1-jpeg2ktopam/">jpeg2ktopam</a></code>(1) , <code>pnmtopeg</code>(1) , <code>ppm</code>(1) , <code>pgm</code>(1) , <code>pbm</code>(1) , <code>pam</code>(1) , </p>
 <h2>History</h2>
 <p> <code>pamtojpeg2k</code> was added to Netpbm in Release 10.12 (November 2002). </p>
-<h2>Index</h2>
-</p>

@@ -139,9 +139,4 @@ url: "/docs/linux/man/1-perlsource/"
 
  <pre><code>
 % perl - lne 'print if /^[^\/]+\.[ch]\s+/' MANIFEST
-</code></pre> 
-
-<h2>Index</h2>
-
-
-</dl>
+</code></pre>

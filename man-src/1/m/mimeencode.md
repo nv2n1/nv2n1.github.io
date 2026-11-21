@@ -28,8 +28,4 @@ url: "/docs/linux/man/1-mimeencode/"
 
 <h2>AUTHOR</h2>
 
- Eryq, eryq [at] zeegee.com 
-
-<h2>Index</h2>
-
-
+ Eryq, eryq [at] zeegee.com

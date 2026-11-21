@@ -69,8 +69,4 @@ url: "/docs/linux/man/1-func-build-map/"
 
 <h2>AUTHOR</h2>
 
- Steve Salevan &lt;ssalevan [at] redhat.com&gt;, Nima Talebi &lt;nima [at] it.net.au&gt; 
-
-<h2>Index</h2>
-
-
+ Steve Salevan &lt;ssalevan [at] redhat.com&gt;, Nima Talebi &lt;nima [at] it.net.au&gt;

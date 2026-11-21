@@ -91,5 +91,3 @@ password=secr3t
 <p> Components which are missing from the URL (e.g., there is no username in the example above) will be left unset.</dl>
 <h2>GIT</h2>
 <p> Part of the <code><a href="/docs/linux/man/1-git/">git</a></code>(1) suite </p>
-<h2>Index</h2>
-</p>

@@ -76,8 +76,4 @@ nvme smart - log&lt;device&gt;[--namespace - id = &lt;nsid&gt; | -n&lt;nsid&gt;]
 
  
 
- Part of the nvme-user suite 
-
-<h2>Index</h2>
-
-
+ Part of the nvme-user suite

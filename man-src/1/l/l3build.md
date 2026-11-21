@@ -81,8 +81,4 @@ url: "/docs/linux/man/1-l3build/"
 
 <h2>SEE ALSO</h2>
 
- See l3build.pdf for more details. 
-
-<h2>Index</h2>
-
-
+ See l3build.pdf for more details.

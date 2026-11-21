@@ -149,8 +149,4 @@ url: "/docs/linux/man/1-anyremote/"
 
  
 
- This is free software. You may redistribute copies of it under the terms of the GNU General Public License <i><a rel="nofollow" HREF="http://www.gnu.org/licenses/gpl.html">http://www.gnu.org/licenses/gpl.html</a></i>. There is NO WARRANTY, to the extent permitted by law. 
-
-<h2>Index</h2>
-
-
+ This is free software. You may redistribute copies of it under the terms of the GNU General Public License <i><a rel="nofollow" HREF="http://www.gnu.org/licenses/gpl.html">http://www.gnu.org/licenses/gpl.html</a></i>. There is NO WARRANTY, to the extent permitted by law.

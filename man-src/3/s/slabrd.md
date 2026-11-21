@@ -171,5 +171,3 @@ tauq is stored in TAUQ(i) and taup in TAUP(i).The elements of the vectors v and 
 <p> Definition at line 210 of file slabrd.f.</p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for LAPACK from the source code. </p>
-<h2>Index</h2>
-</p>

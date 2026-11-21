@@ -34,8 +34,4 @@ url: "/docs/linux/man/1-tex2vcd/"
 
  
 
- <i><a HREF="/docs/linux/man/1-mvl2vcd/">mvl2vcd</a></i>(1) <i><a HREF="/docs/linux/man/1-mvl2lxt/">mvl2lxt</a></i>(1) <i><a HREF="/docs/linux/man/1-lxt2vcd/">lxt2vcd</a></i>(1) <i><a HREF="/docs/linux/man/1-vcd2lxt2/">vcd2lxt2</a></i>(1) <i><a HREF="/docs/linux/man/1-vcd2lxt/">vcd2lxt</a></i>(1) <i><a HREF="/docs/linux/man/1-gtkwave/">gtkwave</a></i>(1) 
-
-<h2>Index</h2>
-
-
+ <i><a HREF="/docs/linux/man/1-mvl2vcd/">mvl2vcd</a></i>(1) <i><a HREF="/docs/linux/man/1-mvl2lxt/">mvl2lxt</a></i>(1) <i><a HREF="/docs/linux/man/1-lxt2vcd/">lxt2vcd</a></i>(1) <i><a HREF="/docs/linux/man/1-vcd2lxt2/">vcd2lxt2</a></i>(1) <i><a HREF="/docs/linux/man/1-vcd2lxt/">vcd2lxt</a></i>(1) <i><a HREF="/docs/linux/man/1-gtkwave/">gtkwave</a></i>(1)

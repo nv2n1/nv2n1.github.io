@@ -24,8 +24,4 @@ url: "/docs/linux/man/1-urxvt256c-option-popup/"
  <pre><code>
 push @{$self-&gt;{term} {option_popup_hook}}, sub{
                                                ("my option" = &gt; $myoption, sub{$self-&gt;{myoption} = $_[0]})};
-</code></pre> 
-
-<h2>Index</h2>
-
-
+</code></pre>

@@ -38,5 +38,3 @@ description: "trampoline – closures as first-class C functions"
 <p> Bruno Haible &lt;bruno [at] clisp.org&gt; </p>
 <h2>ACKNOWLEDGEMENTS</h2>
 <p> Many ideas were cribbed from the gcc source. </p>
-<h2>Index</h2>
-</p>

@@ -48,8 +48,4 @@ url: "/docs/linux/man/1-nqs2pbs/"
 
 <h2>SEE ALSO</h2>
 
- qsub(1B) 
-
-<h2>Index</h2>
-
-
+ qsub(1B)

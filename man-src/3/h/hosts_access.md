@@ -84,7 +84,3 @@ Eindhoven University of Technology
 Den Dolech 2, P.O. Box 513, 
 5600 MB Eindhoven, The Netherlands
 </pre>
-
-<h2>Index</h2>
-
-

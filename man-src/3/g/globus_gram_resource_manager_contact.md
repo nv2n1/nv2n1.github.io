@@ -52,8 +52,4 @@ subject = subject based on hostname
 
  Note: Any of the above forms may be preceded by an optional '&lt;b&gt;https&lt;/b&gt;&lt;b&gt;://&lt;/b&gt;'. 
 
- <hr> 
-
-<h2>Index</h2>
-
-
+ <hr>

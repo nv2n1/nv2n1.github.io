@@ -107,5 +107,3 @@ description: "ccze – A robust log colorizer"
 <p> <code><a href="/docs/linux/man/1-colorize/">colorize</a></code>(1)</p>
 <h2>AUTHOR</h2>
 <p> ccze was written by Gergely Nagy &lt;algernon [at] bonehunter.rulez.org&gt;, based on colorize by Istvan Karaszi &lt;colorize [at] spam.raszi.hu&gt;. </p>
-<h2>Index</h2>
-</p>

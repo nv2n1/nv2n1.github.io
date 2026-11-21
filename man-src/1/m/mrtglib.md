@@ -129,8 +129,4 @@ $confcache{$host} {'Descr'} {ifDescr} {oid} = (ifDescr or 'Dup')
 
  Rainer Bawidamann &lt;Rainer.Bawidamann [at] rz.uni-ulm.de&gt; 
 
- (This Manpage) 
-
-<h2>Index</h2>
-
-
+ (This Manpage)

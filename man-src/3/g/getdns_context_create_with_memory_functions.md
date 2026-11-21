@@ -171,10 +171,4 @@ url: "/docs/linux/man/3-getdns_context_create_with_memory_functions/"
 
 <h2>SEE ALSO</h2>
 
- <b><a HREF="/docs/linux/man/3-libgetdns/">libgetdns</a></b>(3), <b><a HREF="/docs/linux/man/3-getdns_address/">getdns_address</a></b>(3), <b><a HREF="/docs/linux/man/3-getdns_address_sync/">getdns_address_sync</a></b>(3), <b><a HREF="/docs/linux/man/3-getdns_context_set/">getdns_context_set</a></b>(3), <b><a HREF="/docs/linux/man/3-getdns_context_set_context_update_callback/">getdns_context_set_context_update_callback</a></b>(3), <b><a HREF="/docs/linux/man/3-getdns_general/">getdns_general</a></b>(3), <b><a HREF="/docs/linux/man/3-getdns_general_sync/">getdns_general_sync</a></b>(3), <b><a HREF="/docs/linux/man/3-getdns_hostname/">getdns_hostname</a></b>(3), <b><a HREF="/docs/linux/man/3-getdns_hostname_sync/">getdns_hostname_sync</a></b>(3), <b><a HREF="/docs/linux/man/3-getdns_service/">getdns_service</a></b>(3), <b><a HREF="/docs/linux/man/3-getdns_service_sync/">getdns_service_sync</a></b>(3). 
-
- 
-
-<h2>Index</h2>
-
-
+ <b><a HREF="/docs/linux/man/3-libgetdns/">libgetdns</a></b>(3), <b><a HREF="/docs/linux/man/3-getdns_address/">getdns_address</a></b>(3), <b><a HREF="/docs/linux/man/3-getdns_address_sync/">getdns_address_sync</a></b>(3), <b><a HREF="/docs/linux/man/3-getdns_context_set/">getdns_context_set</a></b>(3), <b><a HREF="/docs/linux/man/3-getdns_context_set_context_update_callback/">getdns_context_set_context_update_callback</a></b>(3), <b><a HREF="/docs/linux/man/3-getdns_general/">getdns_general</a></b>(3), <b><a HREF="/docs/linux/man/3-getdns_general_sync/">getdns_general_sync</a></b>(3), <b><a HREF="/docs/linux/man/3-getdns_hostname/">getdns_hostname</a></b>(3), <b><a HREF="/docs/linux/man/3-getdns_hostname_sync/">getdns_hostname_sync</a></b>(3), <b><a HREF="/docs/linux/man/3-getdns_service/">getdns_service</a></b>(3), <b><a HREF="/docs/linux/man/3-getdns_service_sync/">getdns_service_sync</a></b>(3).

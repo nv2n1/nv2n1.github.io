@@ -176,7 +176,3 @@ url: "/docs/linux/man/1-ufraw/"
 <dt>The <font SIZE="-1">GIMP</font> homepage: &lt;<a rel="nofollow" HREF="http://www.gimp.org">http://www.gimp.org</a>&gt;
 </dt><dd> 
 </dd></dl>
-
-<h2>Index</h2>
-
-

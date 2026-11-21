@@ -155,8 +155,4 @@ int main(int argc, char **argv)
 
  
 
- Part of the nvme-user suite 
-
-<h2>Index</h2>
-
-
+ Part of the nvme-user suite

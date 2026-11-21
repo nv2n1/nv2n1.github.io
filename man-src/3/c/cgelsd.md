@@ -176,5 +176,3 @@ RWORK is REAL array, dimension(MAX(1, LRWORK)) LRWORK &gt;= 10 * N + 2 * N *SMLS
 <p> Definition at line 225 of file cgelsd.f.</p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for LAPACK from the source code. </p>
-<h2>Index</h2>
-</p>

@@ -26,8 +26,4 @@ url: "/docs/linux/man/1-bubblemon-gnome2/"
 
 <h2>URL</h2>
 
- The home page of Bubblemon is at &quot;<a rel="nofollow" HREF="http://www.nongnu.org/bubblemon/">http://www.nongnu.org/bubblemon/</a>&quot;. 
-
-<h2>Index</h2>
-
-
+ The home page of Bubblemon is at &quot;<a rel="nofollow" HREF="http://www.nongnu.org/bubblemon/">http://www.nongnu.org/bubblemon/</a>&quot;.

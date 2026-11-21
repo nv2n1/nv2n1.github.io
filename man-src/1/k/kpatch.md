@@ -63,10 +63,4 @@ url: "/docs/linux/man/1-kpatch/"
 
 <h2>COPYRIGHT</h2>
 
- Copyright (C) 2014: Seth Jennings &lt;sjenning [at] redhat.com&gt; and Josh Poimboeuf &lt;jpoimboe [at] redhat.com&gt; 
-
- 
-
-<h2>Index</h2>
-
-
+ Copyright (C) 2014: Seth Jennings &lt;sjenning [at] redhat.com&gt; and Josh Poimboeuf &lt;jpoimboe [at] redhat.com&gt;

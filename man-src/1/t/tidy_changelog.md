@@ -37,8 +37,4 @@ url: "/docs/linux/man/1-tidy_changelog/"
 
 <h3>--reverse</h3>
 
- Prints the releases in reverse order (from the oldest to latest). 
-
-<h2>Index</h2>
-
-
+ Prints the releases in reverse order (from the oldest to latest).

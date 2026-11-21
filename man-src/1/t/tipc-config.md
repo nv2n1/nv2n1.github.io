@@ -87,8 +87,4 @@ url: "/docs/linux/man/1-tipc-config/"
 
 <h2>REPORTING BUGS</h2>
 
- Report ls bugs to <i>tipc-discussion [at] lists.sourceforge.net</i> 
-
-<h2>Index</h2>
-
-
+ Report ls bugs to <i>tipc-discussion [at] lists.sourceforge.net</i>

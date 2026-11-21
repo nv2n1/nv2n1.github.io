@@ -72,8 +72,4 @@ url: "/docs/linux/man/1-perlivp/"
 
 <h2>AUTHOR</h2>
 
- Peter Prymmer 
-
-<h2>Index</h2>
-
-
+ Peter Prymmer

@@ -16,8 +16,4 @@ url: "/docs/linux/man/1-euca-version/"
 
 <h2>DESCRIPTION</h2>
 
- Display the euca2ools suite's version 
-
-<h2>Index</h2>
-
-
+ Display the euca2ools suite's version

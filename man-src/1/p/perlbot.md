@@ -15,8 +15,4 @@ url: "/docs/linux/man/1-perlbot/"
 
  For information on <font SIZE="-1">OO</font> programming with Perl, please see perlootut and perlobj. 
 
- (The above documents supersede the collection of tricks that was formerly here in perlbot.) 
-
-<h2>Index</h2>
-
-
+ (The above documents supersede the collection of tricks that was formerly here in perlbot.)

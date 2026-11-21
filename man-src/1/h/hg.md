@@ -5287,5 +5287,3 @@ zc-test = <a rel="nofollow" href="http://example.com:8000/test">http://example.c
 <h2>AUTHOR</h2>
 <p> Matt Mackall &lt;mpm [at] selenic.com&gt; </p>
 <p> Organization: Mercurial </p>
-<h2>Index</h2>
-</p>

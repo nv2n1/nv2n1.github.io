@@ -297,5 +297,3 @@ cmake3 --find-package &lt;options&gt;...
 <p> For help and discussion about using cmake, a mailing list is provided at <i>cmake [at] cmake.org</i>. The list is member-post-only but one may sign up on the CMake web page. Please first read the full documentation at <i><a rel="nofollow" href="https://cmake.org">https://cmake.org</a></i> before posting questions to the list.</dl>
 <h2>COPYRIGHT</h2>
 <p> 2000-2016 Kitware, Inc. </p>
-<h2>Index</h2>
-</p>

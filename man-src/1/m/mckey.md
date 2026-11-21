@@ -52,8 +52,4 @@ mckey - m multicast_address[-s][-b bind_address][-c connections][-C message_coun
 
 <h2>SEE ALSO</h2>
 
- <a HREF="/docs/linux/man/7-rdma_cm/">rdma_cm</a>(7), <a HREF="/docs/linux/man/1-ucmatose/">ucmatose</a>(1), <a HREF="/docs/linux/man/1-udaddy/">udaddy</a>(1), <a HREF="/docs/linux/man/1-rping/">rping</a>(1) 
-
-<h2>Index</h2>
-
-
+ <a HREF="/docs/linux/man/7-rdma_cm/">rdma_cm</a>(7), <a HREF="/docs/linux/man/1-ucmatose/">ucmatose</a>(1), <a HREF="/docs/linux/man/1-udaddy/">udaddy</a>(1), <a HREF="/docs/linux/man/1-rping/">rping</a>(1)

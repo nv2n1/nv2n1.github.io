@@ -99,8 +99,4 @@ info kpathsea
 
  Piet Tutelaers, modified for ps2pkm by Pierre A. Mackay. This manpage was adapted to teTeX by Frank Kuester. 
 
- Maintained in TeX Live; please send bug reports or other correspondence to tex-k [at] tug.org (<a rel="nofollow" HREF="http://lists.tug.org/tex-k">http://lists.tug.org/tex-k</a>). 
-
-<h2>Index</h2>
-
-
+ Maintained in TeX Live; please send bug reports or other correspondence to tex-k [at] tug.org (<a rel="nofollow" HREF="http://lists.tug.org/tex-k">http://lists.tug.org/tex-k</a>).

@@ -39,8 +39,4 @@ url: "/docs/linux/man/1-guards/"
 
 <h2>AUTHOR</h2>
 
- Andreas Gruenbacher &lt;agruen [at] suse.de&gt;, <font SIZE="-1">SUSE</font> Labs 
-
-<h2>Index</h2>
-
-
+ Andreas Gruenbacher &lt;agruen [at] suse.de&gt;, <font SIZE="-1">SUSE</font> Labs

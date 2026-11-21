@@ -149,5 +149,3 @@ Original Author-- -- -- -- -- -- --Richard Sharpe&lt;sharpe[AT] ns.aus.com&gt;
     Contributors-- -- -- -- -- --Guy Harris&lt;guy[AT] alum.mit.edu&gt;
         Ulf Lamping&lt;ulf.lamping[AT] web.de&gt;
 </code></pre>
-<h2>Index</h2>
-</p>

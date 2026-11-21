@@ -640,5 +640,3 @@ xdotool behave_screen_edge-- delay 500 bottom - right key XF86Forward
 <p> xdotool was written by Jordan Sissel. </p>
 <p> This manual page was written originally by Daniel Kahn Gillmor &lt;dkg [at] fifthhorseman.net&gt; for the Debian project (but may be used by others). It is maintained by Jordan Sissel. </p>
 <p> Patches, ideas, and other contributions by many, nice folks. See the <font SIZE="-1">CHANGELIST</font> file for who provided what. </p>
-<h2>Index</h2>
-</p>

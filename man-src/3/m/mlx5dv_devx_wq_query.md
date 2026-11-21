@@ -99,8 +99,4 @@ int mlx5dv_devx_ind_tbl_query(struct ibv_rwq_ind_table *ind_tbl,
 
  #AUTHOR 
 
- Yishai Hadas &lt;yishaih [at] mellanox.com&gt; 
-
-<h2>Index</h2>
-
-
+ Yishai Hadas &lt;yishaih [at] mellanox.com&gt;

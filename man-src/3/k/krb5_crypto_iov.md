@@ -30,8 +30,4 @@ url: "/docs/linux/man/3-krb5_crypto_iov/"
 
  
 
- Generated automatically by Doxygen for HeimdalKerberos5library from the source code. 
-
-<h2>Index</h2>
-
-
+ Generated automatically by Doxygen for HeimdalKerberos5library from the source code.

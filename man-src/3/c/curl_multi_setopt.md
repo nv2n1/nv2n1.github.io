@@ -38,5 +38,3 @@ description: "curl_multi_setopt – set options for a curl multi handle"
 <p> This function was added in libcurl 7.15.4.</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-curl_multi_cleanup/">curl_multi_cleanup</a></code>(3), <code><a href="/docs/linux/man/3-curl_multi_init/">curl_multi_init</a></code>(3), <code><a href="/docs/linux/man/3-curl_multi_socket/">curl_multi_socket</a></code>(3), <code><a href="/docs/linux/man/3-curl_multi_info_read/">curl_multi_info_read</a></code>(3) </p>
-<h2>Index</h2>
-</p>

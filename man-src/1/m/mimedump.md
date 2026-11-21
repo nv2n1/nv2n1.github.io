@@ -23,8 +23,4 @@ url: "/docs/linux/man/1-mimedump/"
 
 <h2>AUTHOR</h2>
 
- Andreas Koenig suggested this, and wrote the original code. Eryq perverted the hell out of it. 
-
-<h2>Index</h2>
-
-
+ Andreas Koenig suggested this, and wrote the original code. Eryq perverted the hell out of it.

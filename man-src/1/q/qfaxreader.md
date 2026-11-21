@@ -72,8 +72,4 @@ url: "/docs/linux/man/1-qfaxreader/"
 <h2>URL</h2>
 
  <a rel="nofollow" HREF="http://qfaxreader.sourceforge.net/">http://qfaxreader.sourceforge.net/</a> 
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr> 
-
-<h2>Index</h2>
-
-
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>

@@ -45,8 +45,4 @@ url: "/docs/linux/man/1-use-devel-checklib/"
 
 <h2>CONSPIRACY</h2>
 
- This module is also free-as-in-mason software. 
-
-<h2>Index</h2>
-
-
+ This module is also free-as-in-mason software.

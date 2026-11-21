@@ -57,5 +57,3 @@ description: "rrdupdate – Store a new set of values into the RRD"
 <p> Use the <font SIZE="-1">UNIX</font> domain socket <tt>&quot;/tmp/rrdd.sock&quot;</tt> to contact the caching daemon. If the caching daemon is not available, update the file <tt>&quot;demo4.rrd&quot;</tt> directly. <font SIZE="-1"><code>WARNING:</code></font> Since a relative path is specified, the following disturbing effect may occur: If the daemon is available, the file relative to the working directory <code>of the daemon</code> is used. If the daemon is not available, the file relative to the current working directory of the invoking process is used. <code>This may update two different files depending on whether the daemon could be reached or not.</code> Don&#8217;t do relative paths, kids!</dl>
 <h2>AUTHORS</h2>
 <p> Tobias Oetiker &lt;tobi [at] oetiker.ch&gt;, Florian Forster &lt;octo at verplant.org&gt; </p>
-<h2>Index</h2>
-</p>

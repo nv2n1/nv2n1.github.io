@@ -123,5 +123,3 @@ free(comments);
 &nbsp;<wbr>describes the the&nbsp;<wbr><code>libnetpbm</code>&nbsp;<wbr>functions for processing image data. </p>
 <p> The <code>Libnetpbm</code>Utility<code>Manual</code>(1) </p>
 <p> describes the functions that are not specifically related to the Netpbm image formats. </p>
-<h2>Index</h2>
-</dl>

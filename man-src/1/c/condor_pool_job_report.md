@@ -38,8 +38,4 @@ url: "/docs/linux/man/1-condor_pool_job_report/"
 
 <h2>Copyright</h2>
 
- Copyright (C) 1990-2015 Center for High Throughput Computing, Computer Sciences Department, University of Wisconsin-Madison, Madison, WI. All Rights Reserved. Licensed under the Apache License, Version 2.0. 
-
-<h2>Index</h2>
-
-
+ Copyright (C) 1990-2015 Center for High Throughput Computing, Computer Sciences Department, University of Wisconsin-Madison, Madison, WI. All Rights Reserved. Licensed under the Apache License, Version 2.0.

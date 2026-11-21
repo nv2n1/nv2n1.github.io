@@ -39,8 +39,4 @@ url: "/docs/linux/man/1-podlint/"
 
 <h2>SEE ALSO</h2>
 
- For further information please see Pod::POM. 
-
-<h2>Index</h2>
-
-
+ For further information please see Pod::POM.

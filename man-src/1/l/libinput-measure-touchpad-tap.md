@@ -39,5 +39,3 @@ description: "libinput-measure-touchpad-tap – measure tap-to-click properties 
 <p> This tool does not take finger pressure into account. The tap it detects may be different to those detected by libinput if libinput&#8217;s pressure thresholds differ significantly to the kernel&#8217;s pressure thresholds.</p>
 <h2>LIBINPUT</h2>
 <p> Part of the <code><a href="/docs/linux/man/1-libinput/">libinput</a>(1)</code> suite </p>
-<h2>Index</h2>
-</p>

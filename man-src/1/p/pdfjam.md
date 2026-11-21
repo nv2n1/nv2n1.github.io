@@ -56,10 +56,4 @@ url: "/docs/linux/man/1-pdfjam/"
 
  
 
- The pdfjam package is written and maintained by David Firth. 
-
- 
-
-<h2>Index</h2>
-
-
+ The pdfjam package is written and maintained by David Firth.

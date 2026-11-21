@@ -511,8 +511,4 @@ url: "/docs/linux/man/1-x86_64-linux-gnu-objcopy/"
 
  Copyright (c) 1991-2022 Free Software Foundation, Inc. 
 
- Permission is granted to copy, distribute and/or modify this document under the terms of the <font SIZE="-1">GNU</font> Free Documentation License, Version 1.3 or any later version published by the Free Software Foundation; with no Invariant Sections, with no Front-Cover Texts, and with no Back-Cover Texts. A copy of the license is included in the section entitled ``<font SIZE="-1">GNU</font> Free Documentation License''. 
-
-<h2>Index</h2>
-
-
+ Permission is granted to copy, distribute and/or modify this document under the terms of the <font SIZE="-1">GNU</font> Free Documentation License, Version 1.3 or any later version published by the Free Software Foundation; with no Invariant Sections, with no Front-Cover Texts, and with no Back-Cover Texts. A copy of the license is included in the section entitled ``<font SIZE="-1">GNU</font> Free Documentation License''.

@@ -33,8 +33,4 @@ url: "/docs/linux/man/1-opa_osd_dump/"
 
 <h2>Example</h2>
 
- opa_osd_dump #8217gt;opasadb_contents 
-
-<h2>Index</h2>
-
-
+ opa_osd_dump #8217gt;opasadb_contents

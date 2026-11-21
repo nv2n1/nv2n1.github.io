@@ -45,5 +45,3 @@ description: "rosinstall – rosinstall command"
 <p> Tully Foote, Thibault Kruse, Morgan Quigley, Ken Conley, Brian Gerkey</p>
 <h2>COPYRIGHT</h2>
 <p> 2011, Willow Garage </p>
-<h2>Index</h2>
-</p>

@@ -47,8 +47,4 @@ url: "/docs/linux/man/1-ncarlogo2ps/"
  University Corporation for Atmospheric Research 
  
 
- The use of this Software is governed by a License Agreement. 
-
-<h2>Index</h2>
-
-
+ The use of this Software is governed by a License Agreement.

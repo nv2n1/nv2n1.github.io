@@ -103,5 +103,3 @@ description: "devdump, isoinfo, isovfy, isodump – Utility programs for dumping
 <p> <code><a href="/docs/linux/man/1-genisoimage/">genisoimage</a></code>(1), <code><a href="/docs/linux/man/1-wodim/">wodim</a></code>(1), <code>readcd</code>(1), <code><a href="/docs/linux/man/1-ssh/">ssh</a></code>(1).</p>
 <h2>SOURCES</h2>
 <p> [1] Cdrtools 2.01.01a08 from May 2006, <a rel="nofollow" href="http://cdrecord.berlios.de">http://cdrecord.berlios.de</a> </p>
-<h2>Index</h2>
-</p>

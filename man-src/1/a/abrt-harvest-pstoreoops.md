@@ -36,8 +36,3 @@ url: "/docs/linux/man/1-abrt-harvest-pstoreoops/"
 <dl>
 <dt>
 </dt><dd> &bull; ABRT team</dd></dl>
- 
-
-<h2>Index</h2>
-
-

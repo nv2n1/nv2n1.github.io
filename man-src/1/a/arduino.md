@@ -24,8 +24,4 @@ url: "/docs/linux/man/1-arduino/"
 
 <h2>AUTHOR</h2>
 
- Peter Oliver &lt;arduino [at] mavit.org.uk&gt; 
-
-<h2>Index</h2>
-
-
+ Peter Oliver &lt;arduino [at] mavit.org.uk&gt;

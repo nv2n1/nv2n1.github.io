@@ -24,8 +24,4 @@ url: "/docs/linux/man/3-libssh2_channel_get_exit_status/"
 
 <h2>RETURN VALUE</h2>
 
- Returns 0 on failure, otherwise the <i>Exit Status</i> reported by remote host 
-
-<h2>Index</h2>
-
-
+ Returns 0 on failure, otherwise the <i>Exit Status</i> reported by remote host

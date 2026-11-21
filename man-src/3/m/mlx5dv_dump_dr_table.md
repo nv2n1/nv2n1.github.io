@@ -55,8 +55,4 @@ int mlx5dv_dump_dr_rule(FILE *fout, struct mlx5dv_dr_rule *rule);
 
  
 
- Yevgeny Kliteynik &lt;kliteyn [at] mellanox.com&gt; Muhammad Sammar &lt;muhammads [at] mellanox.com&gt; 
-
-<h2>Index</h2>
-
-
+ Yevgeny Kliteynik &lt;kliteyn [at] mellanox.com&gt; Muhammad Sammar &lt;muhammads [at] mellanox.com&gt;

@@ -102,7 +102,3 @@ url: "/docs/linux/man/1-podbeuter/"
  
 
 </dl>
-
-<h2>Index</h2>
-
-

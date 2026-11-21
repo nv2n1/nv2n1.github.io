@@ -30,5 +30,3 @@ description: "ocamlobjinfo – dump information about OCaml compiled objects"
 <p> <code><a href="/docs/linux/man/1-ocamlc/">ocamlc</a></code>(1), <code><a href="/docs/linux/man/1-ocamlopt/">ocamlopt</a></code>(1) </p>
 <h2>AUTHOR</h2>
 <p> This manual page was written by Stefano Zacchiroli &lt;zack [at] debian.org&gt; and Stéphane Glondu &lt;glondu [at] debian.org&gt;, for the Debian GNU/Linux system (but may be used by others). </p>
-<h2>Index</h2>
-</p>

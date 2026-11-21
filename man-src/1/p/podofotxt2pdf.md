@@ -39,5 +39,3 @@ description: "podofotxt2pdf – convert plain text files into PDF files"
 <h2>AUTHORS</h2>
 <p> PoDoFo is written by Dominik Seichter &lt;domseichter [at] web.de&gt; and others. </p>
 <p> This manual page was written by Oleksandr Moskalenko &lt;malex [at] debian.org&gt; for the Debian Project (but may be used by others). </p>
-<h2>Index</h2>
-</p>

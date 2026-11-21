@@ -61,8 +61,4 @@ ps2pdf test.ps test.pdf
 
 <h2>SEE ALSO</h2>
 
- See attachfile2.pdf for more details. 
-
-<h2>Index</h2>
-
-
+ See attachfile2.pdf for more details.

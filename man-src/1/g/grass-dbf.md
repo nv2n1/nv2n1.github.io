@@ -97,8 +97,4 @@ url: "/docs/linux/man/1-grass-dbf/"
  DBF Specifications (Shapelib) </i> 
 
  <i>Last changed: $Date: 2007-07-18 16:10:27 +0200 (Wed, 18 Jul 2007) $</i> 
- Help Index 
-
-<h2>Index</h2>
-
-
+ Help Index

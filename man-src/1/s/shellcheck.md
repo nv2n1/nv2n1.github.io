@@ -306,8 +306,4 @@ export SHELLCHECK_OPTS='--shell=bash --exclude=SC2016'
 
  
 
- <a HREF="/docs/linux/man/1-sh/">sh</a>(1) <a HREF="/docs/linux/man/1-bash/">bash</a>(1) 
-
-<h2>Index</h2>
-
-
+ <a HREF="/docs/linux/man/1-sh/">sh</a>(1) <a HREF="/docs/linux/man/1-bash/">bash</a>(1)

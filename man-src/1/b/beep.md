@@ -94,5 +94,3 @@ C               523.2
 <p> Report bugs to &lt;johnath [at] johnath.com&gt;</p>
 <h2>AUTHOR</h2>
 <p> This program was written by Johnathan Nightingale (johnath [at] johnath.com) and is distributed under the GNU General Public License. For more contributing information, check the source, and past contributors can be found in CREDITS. </p>
-<h2>Index</h2>
-</p>

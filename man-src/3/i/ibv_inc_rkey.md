@@ -44,8 +44,4 @@ uint32_t ibv_inc_rkey(uint32_t rkey);
 
  
 
- Majd Dibbiny &lt;majd [at] mellanox.com&gt;, Yishai Hadas &lt;yishaih [at] mellanox.com&gt; 
-
-<h2>Index</h2>
-
-
+ Majd Dibbiny &lt;majd [at] mellanox.com&gt;, Yishai Hadas &lt;yishaih [at] mellanox.com&gt;

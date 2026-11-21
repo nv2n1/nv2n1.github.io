@@ -18,8 +18,4 @@ url: "/docs/linux/man/1-opagetvf_env/"
 
  A usage example is provided in: 
 
- /usr/lib/opa-ff/src/mpi_apps/ofed.openmpi.params 
-
-<h2>Index</h2>
-
-
+ /usr/lib/opa-ff/src/mpi_apps/ofed.openmpi.params

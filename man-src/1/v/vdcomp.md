@@ -73,8 +73,4 @@ url: "/docs/linux/man/1-vdcomp/"
 
  JUN89 Fixed READVAR, to get length on 16-bit unswapped hosts. 
 
- JUL88 C driver to decompress standard Voyager Compressed images by Mike Martin 1989/12/02. 
-
-<h2>Index</h2>
-
-
+ JUL88 C driver to decompress standard Voyager Compressed images by Mike Martin 1989/12/02.

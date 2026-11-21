@@ -60,8 +60,4 @@ int ibv_fork_init(void);
 
  
 
- Dotan Barak &lt;dotanba [at] gmail.com&gt; 
-
-<h2>Index</h2>
-
-
+ Dotan Barak &lt;dotanba [at] gmail.com&gt;

@@ -82,5 +82,3 @@ description: "saxon8q – manual page for saxon8q"
 <p> This applies also to output parameters. For example, you can set the indentation level to 4 by using the parameter !{<a rel="nofollow" href="http://saxon.sf.net/}indent-spaces=4.">http://saxon.sf.net/}indent-spaces=4.</a> For the extended set of output parameters supported by Saxon, see Additional serialization parameters.</p>
 <h2>AUTHOR</h2>
 <p> Michael H. Kay &lt;mike [at] saxonica.com&gt; </p>
-<h2>Index</h2>
-</p>

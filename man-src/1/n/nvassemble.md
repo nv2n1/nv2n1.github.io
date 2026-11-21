@@ -16,8 +16,4 @@ url: "/docs/linux/man/1-nvassemble/"
 
  usage: nvassemble [-cube|-volume|-array] 'file0' 'file1' ... 
 
- usage: nvassemble [-cube|-volume|-array] 'file0' 'file1' ... 
-
-<h2>Index</h2>
-
-
+ usage: nvassemble [-cube|-volume|-array] 'file0' 'file1' ...

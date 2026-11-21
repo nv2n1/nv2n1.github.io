@@ -274,8 +274,4 @@ struct ibv_flow_action_esp_encap {
 
  
 
- ibv_create_flow(3), ibv_destroy_action(3), RFC 4106 
-
-<h2>Index</h2>
-
-
+ ibv_create_flow(3), ibv_destroy_action(3), RFC 4106

@@ -210,8 +210,4 @@ for (int i = 0; i &lt; n; i++) printf("%s, result[i]);
 
  Author of the Aspell table-driven phonetic transcription algorithm and code is Björn Jacke. 
 
- See also THANKS and Changelog files of Hunspell distribution. 
-
-<h2>Index</h2>
-
-
+ See also THANKS and Changelog files of Hunspell distribution.

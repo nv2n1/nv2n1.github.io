@@ -676,7 +676,3 @@ PerlIO *foo_to_PerlIO(pTHX_ char *mode, ...)
 </dd><dt>&bull;
 </dt><dd> I think it would help to give some concrete examples to make it easier to understand the <font SIZE="-1">API.</font> Of course I agree that the <font SIZE="-1">API</font> has to be concise, but since there is no second document that is more of a guide, I think that it'd make it easier to start with the doc which is an <font SIZE="-1">API,</font> but has examples in it in places where things are unclear, to a person who is not a PerlIO guru (yet). 
 </dd></dl>
-
-<h2>Index</h2>
-
-

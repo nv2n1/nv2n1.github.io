@@ -47,5 +47,3 @@ description: "debconf-updatepo – update PO files about debconf templates"
 <pre>
   Denis Barbier &lt;barbier [at] linuxfr.org&gt;
 </pre>
-<h2>Index</h2>
-</p>

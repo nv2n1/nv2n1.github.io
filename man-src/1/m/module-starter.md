@@ -51,8 +51,4 @@ module - starter-- module = Foo::Bar, Foo::Bat-- author = "Andy Lester" --email 
  xyz_option: red green blue
 </pre> 
 
- This format may become more elaborate in the future, but a file of this type should remain valid. 
-
-<h2>Index</h2>
-
-
+ This format may become more elaborate in the future, but a file of this type should remain valid.

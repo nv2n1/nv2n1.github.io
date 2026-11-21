@@ -2402,8 +2402,4 @@ x / y is 9 / 44 x *y is 1 / 11
   Math::GMPf             an interface to libgmp's floating point numbers
 </pre> 
 
- Choose wisely. 
-
-<h2>Index</h2>
-
-
+ Choose wisely.

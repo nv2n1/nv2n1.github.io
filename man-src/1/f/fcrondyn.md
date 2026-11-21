@@ -166,8 +166,4 @@ url: "/docs/linux/man/1-fcrondyn/"
 
  
 
- Thibault Godouet &lt;fcron [at] free.fr&gt; 
-
-<h2>Index</h2>
-
-
+ Thibault Godouet &lt;fcron [at] free.fr&gt;

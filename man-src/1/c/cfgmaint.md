@@ -91,8 +91,4 @@ url: "/docs/linux/man/1-cfgmaint/"
 
 <h2>SEE ALSO</h2>
 
- <font SIZE="-1">VB</font>, Prima::VB::CfgMaint 
-
-<h2>Index</h2>
-
-
+ <font SIZE="-1">VB</font>, Prima::VB::CfgMaint

@@ -41,8 +41,4 @@ lrunzip[options] FILE[... FILE]
 
  Program was written by Con Kolivas. 
 
- This manual page was written by Jari Aalto &lt;jari.aalto [at] cante.net&gt; (but may be used by others). Released under license <font SIZE="-1">GNU GPL</font> version 2 or (at your option) any later version. For more information about license, visit &lt;<a rel="nofollow" HREF="http://www.gnu.org/copyleft/gpl.html">http://www.gnu.org/copyleft/gpl.html</a>&gt;. 
-
-<h2>Index</h2>
-
-
+ This manual page was written by Jari Aalto &lt;jari.aalto [at] cante.net&gt; (but may be used by others). Released under license <font SIZE="-1">GNU GPL</font> version 2 or (at your option) any later version. For more information about license, visit &lt;<a rel="nofollow" HREF="http://www.gnu.org/copyleft/gpl.html">http://www.gnu.org/copyleft/gpl.html</a>&gt;.

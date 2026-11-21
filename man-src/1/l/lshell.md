@@ -245,5 +245,3 @@ On *BSD:
 <p> Currently maintained by Ignace Mouzannar (ghantoos) </p>
 <h2>EMAIL</h2>
 <p> Feel free to send me your recommendations at &lt;ghantoos [at] ghantoos.org&gt; </p>
-<h2>Index</h2>
-</dl></dl></dl>

@@ -46,8 +46,4 @@ url: "/docs/linux/man/1-bdf2gdfont/"
 
  Copyright (c) 2004 Cold Spring Harbor Laboratory 
 
- This library is free software; you can redistribute it and/or modify it under the same terms as Perl itself. 
-
-<h2>Index</h2>
-
-
+ This library is free software; you can redistribute it and/or modify it under the same terms as Perl itself.

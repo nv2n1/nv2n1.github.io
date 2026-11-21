@@ -53,8 +53,4 @@ url: "/docs/linux/man/1-geoiplookup/"
 
 <h2>SEE ALSO</h2>
 
- <a HREF="/docs/linux/man/1-geoipupdate/">geoipupdate</a>(1), <a HREF="/docs/linux/man/1-nslookup/">nslookup</a>(1). 
-
-<h2>Index</h2>
-
-
+ <a HREF="/docs/linux/man/1-geoipupdate/">geoipupdate</a>(1), <a HREF="/docs/linux/man/1-nslookup/">nslookup</a>(1).

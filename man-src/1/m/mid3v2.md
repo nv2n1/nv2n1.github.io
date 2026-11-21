@@ -62,5 +62,3 @@ description: "mid3v2 – audio tag editor similar to ‘id3v2’"
 <p> No sanity checking is done on the editing operations you perform, so mid3v2 will happily accept &#8211;TSIZ when editing an ID3v2.4 frame. However, it will also automatically throw it out during the next edit operation.</p>
 <h2>AUTHOR</h2>
 <p> Joe Wreschnig is the author of mid3v2, but he doesn&#8217;t like to admit it. </p>
-<h2>Index</h2>
-</p>

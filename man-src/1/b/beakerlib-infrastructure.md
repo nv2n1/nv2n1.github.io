@@ -346,7 +346,3 @@ rlFileBackup[--clean][--namespace name][--missing - ok | --no - missing - ok] fi
 </dd><dt>&bull;
 </dt><dd> Karel Srot &lt;ksrot [at] redhat.com&gt; 
 </dd></dl>
-
-<h2>Index</h2>
-
-

@@ -32,8 +32,4 @@ url: "/docs/linux/man/3-libssh2_base64_decode/"
 
 <h2>RETURN VALUE</h2>
 
- 0 if successful, -1 if any error occurred. 
-
-<h2>Index</h2>
-
-
+ 0 if successful, -1 if any error occurred.

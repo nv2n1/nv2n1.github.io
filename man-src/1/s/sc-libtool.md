@@ -95,8 +95,4 @@ sc - libtool[--config][--debug][{-n, --dry - run}][--features][--finish][--help]
 
  
 
- sc-libtool is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details. 
-
-<h2>Index</h2>
-
-
+ sc-libtool is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.

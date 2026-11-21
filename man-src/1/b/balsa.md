@@ -162,5 +162,3 @@ description: "Balsa – the GNOME email client."
 <h2>COPYRIGHT</h2>
 <p> (c) 1997-2003 Stuart Parmenter and others, see AUTHORS for a list of people. </p>
 <p> This is free software; see the source for copying conditions. There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. </p>
-<h2>Index</h2>
-</p>

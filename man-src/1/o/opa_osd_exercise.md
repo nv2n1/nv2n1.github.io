@@ -99,8 +99,4 @@ url: "/docs/linux/man/1-opa_osd_exercise/"
 
 <h2>Example</h2>
 
- opa_osd_exercise -p 0x9001 guidtable 
-
-<h2>Index</h2>
-
-
+ opa_osd_exercise -p 0x9001 guidtable

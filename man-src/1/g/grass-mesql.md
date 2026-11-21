@@ -56,8 +56,4 @@ MySQL database driver in GRASS enables GRASS to store vector attributes in MySQL
  Radim Blazek 
 
  <i>Last changed: $Date: 2007-10-28 22:04:00 +0100 (Sun, 28 Oct 2007) $</i> 
- Help Index 
-
-<h2>Index</h2>
-
-
+ Help Index

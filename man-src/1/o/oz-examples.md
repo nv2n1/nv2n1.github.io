@@ -284,8 +284,4 @@ url: "/docs/linux/man/1-oz-examples/"
 
 <h2>AUTHOR</h2>
 
- Chris Lalancette &lt;clalancette [at] gmail.com&gt; 
-
-<h2>Index</h2>
-
-
+ Chris Lalancette &lt;clalancette [at] gmail.com&gt;

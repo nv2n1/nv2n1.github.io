@@ -36,8 +36,4 @@ url: "/docs/linux/man/1-isomaster/"
 
  Andrew Smith, &lt; <a rel="nofollow" HREF="http://littlesvr.ca/misc/contactandrew.php">http://littlesvr.ca/misc/contactandrew.php</a> &gt; 
 
- All other contributors are listed in the CREDITS.TXT file. 
-
-<h2>Index</h2>
-
-
+ All other contributors are listed in the CREDITS.TXT file.

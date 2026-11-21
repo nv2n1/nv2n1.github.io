@@ -278,8 +278,4 @@ ret = ibv_wr_complete(qpx);
 
  
 
- Jason Gunthorpe &lt;jgg [at] mellanox.com&gt; Guy Levi &lt;guyle [at] mellanox.com&gt; 
-
-<h2>Index</h2>
-
-
+ Jason Gunthorpe &lt;jgg [at] mellanox.com&gt; Guy Levi &lt;guyle [at] mellanox.com&gt;

@@ -52,5 +52,3 @@ debconf - copydb configdb pipe-- config = Name : pipe-- config = Driver : Pipe--
 <p> <code><a href="/docs/linux/man/5-debconf-conf/">debconf.conf</a></code>(5)</p>
 <h2>AUTHOR</h2>
 <p> Joey Hess &lt;joeyh [at] debian.org&gt; </p>
-<h2>Index</h2>
-</p>

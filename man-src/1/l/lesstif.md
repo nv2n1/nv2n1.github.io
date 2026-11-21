@@ -79,5 +79,3 @@ description: "LessTif – an open-source Motif replacement"
 <p> The LessTif home page: <a rel="nofollow" href="http://www.lesstif.org">http://www.lesstif.org</a> </p>
 <p> The Free Software Foundation (FSF) home page: <a rel="nofollow" href="http://www.gnu.org">http://www.gnu.org</a> </p>
 <p> The OpenGroup (owners of OSF/Motif&#174; and the X Window System) home page: <a rel="nofollow" href="http://www.opengroup.org">http://www.opengroup.org</a></dd></dl>
-<h2>Index</h2>
-</p>

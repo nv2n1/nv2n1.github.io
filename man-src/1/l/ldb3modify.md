@@ -59,8 +59,4 @@ ldbmodify - Modify records in a LDB database
 
  If you wish to report a problem or make a suggestion then please see the : <a rel="nofollow" HREF="http://ldb.samba.org/">http://ldb.samba.org/</a> web site for current contact and maintainer information. 
 
- This manpage was written by Jelmer Vernooij. 
-
-<h2>Index</h2>
-
-
+ This manpage was written by Jelmer Vernooij.

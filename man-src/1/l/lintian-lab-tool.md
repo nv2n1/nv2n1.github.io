@@ -48,5 +48,3 @@ description: "lintian-lab-tool – perform common operations on/involving labora
 <p> Niels Thykier &lt;niels [at] thykier.net&gt; </p>
 <p> Richard Braakman &lt;dark [at] xs4all.nl&gt; </p>
 <p> Christian Schwarz &lt;schwarz [at] monet.m.isar.de&gt; </p>
-<h2>Index</h2>
-</p>

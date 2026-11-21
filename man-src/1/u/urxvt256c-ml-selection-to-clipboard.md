@@ -19,8 +19,4 @@ url: "/docs/linux/man/1-urxvt256c-ml-selection-to-clipboard/"
 
 <h2>DESCRIPTION</h2>
 
- This very simple extension copies the selection to the clipboard every time a selection is made. This, in effect, synchronises the clipboard with the selection for selections done by rxvt-unicode. 
-
-<h2>Index</h2>
-
-
+ This very simple extension copies the selection to the clipboard every time a selection is made. This, in effect, synchronises the clipboard with the selection for selections done by rxvt-unicode.

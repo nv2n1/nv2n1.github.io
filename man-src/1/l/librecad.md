@@ -22,8 +22,4 @@ url: "/docs/linux/man/1-librecad/"
 
  There are some wonderfull people on the forum and IRC channel that can give you a hand to get going. 
 
- We are sure you will enjoy LibreCAD as much as we do, even without a manual. 
-
-<h2>Index</h2>
-
-
+ We are sure you will enjoy LibreCAD as much as we do, even without a manual.

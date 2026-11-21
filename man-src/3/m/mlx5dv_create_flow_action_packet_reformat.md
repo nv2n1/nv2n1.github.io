@@ -89,8 +89,4 @@ It defines the flow table type to which the packet reformat action
 
  
 
- ibv_create_flow(3), ibv_create_flow_action(3) 
-
-<h2>Index</h2>
-
-
+ ibv_create_flow(3), ibv_create_flow_action(3)

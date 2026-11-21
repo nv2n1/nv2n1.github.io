@@ -61,8 +61,4 @@ dm_date[OPTION]...[+FORMAT]
 
 <h2>AUTHOR</h2>
 
- Sullivan Beck (sbeck [at] cpan.org) 
-
-<h2>Index</h2>
-
-
+ Sullivan Beck (sbeck [at] cpan.org)

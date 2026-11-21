@@ -52,8 +52,4 @@ url: "/docs/linux/man/1-stubmaker/"
 
  Copyright (C) 2000-2005 Paul Kulchenko. All rights reserved. 
 
- This library is free software; you can redistribute it and/or modify it under the same terms as Perl itself. 
-
-<h2>Index</h2>
-
-
+ This library is free software; you can redistribute it and/or modify it under the same terms as Perl itself.

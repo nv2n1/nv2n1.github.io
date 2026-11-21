@@ -138,5 +138,3 @@ $ ship++ --help
 <p> It&#8217;s very confusing that the struct you pass in is called getargS.</p>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/3-getopt/">getopt</a>(3) </p>
-<h2>Index</h2>
-</p>

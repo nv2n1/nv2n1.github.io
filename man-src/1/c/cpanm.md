@@ -235,5 +235,3 @@ alias minicpanm = 'cpanm --mirror ~/minicpan --mirror-only' alias darkpan = 'cpa
 <p> Copyright 2010 Tatsuhiko Miyagawa.</p>
 <h2>AUTHOR</h2>
 <p> Tatsuhiko Miyagawa </p>
-<h2>Index</h2>
-</p>

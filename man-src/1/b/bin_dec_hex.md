@@ -276,8 +276,4 @@ url: "/docs/linux/man/1-bin_dec_hex/"
 
  I hope you enjoyed the examples and their descriptions. If you do, help other people by pointing them to this document when they are asking basic questions. They will not only get their answer, but at the same time learn a whole lot more. 
 
- Alex van den Bogaerdt &lt;alex [at] vandenbogaerdt.nl&gt; 
-
-<h2>Index</h2>
-
-
+ Alex van den Bogaerdt &lt;alex [at] vandenbogaerdt.nl&gt;

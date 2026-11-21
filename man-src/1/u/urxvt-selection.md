@@ -48,7 +48,3 @@ url: "/docs/linux/man/1-urxvt-selection/"
    URxvt.keysym.C-M-r: selection:rot13
 </pre> 
 </dd></dl>
-
-<h2>Index</h2>
-
-

@@ -32,5 +32,3 @@ description: "ktoblzcheck – Check Account and BLZ (bank routing code)"
 <p> No bugs are known at this time. Only certain checksum algorythms are supported as of now, so please don&#8217;t complain if you always get &quot;unknown&quot; as return value.</p>
 <h2>AUTHOR</h2>
 <p> This manual page was written by Jens Gecius &lt;jens [at] gecius.de&gt; for the Debian GNU/Linux system. Authors of ktoblzcheck are Fabian Kaiser &lt;fabian [at] openhbci.de&gt; and Christian Stimming &lt;stimming [at] tuhh.de&gt;. </p>
-<h2>Index</h2>
-</p>

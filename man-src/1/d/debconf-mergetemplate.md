@@ -43,8 +43,4 @@ debconf - mergetemplate[options][templates.ll...] templates
 
 <h2>AUTHOR</h2>
 
- Joey Hess &lt;joeyh [at] debian.org&gt; 
-
-<h2>Index</h2>
-
-
+ Joey Hess &lt;joeyh [at] debian.org&gt;

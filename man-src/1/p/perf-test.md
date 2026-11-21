@@ -43,8 +43,3 @@ perf test[&lt;options&gt;][{list&lt;test - name - fragment&gt; | [&lt;test - nam
 <dl>
 <dt>
 </dt><dd> Be more verbose.</dd></dl>
- 
-
-<h2>Index</h2>
-
-

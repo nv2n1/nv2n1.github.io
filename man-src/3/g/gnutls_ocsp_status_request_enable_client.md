@@ -56,10 +56,3 @@ url: "/docs/linux/man/3-gnutls_ocsp_status_request_enable_client/"
 <dl>
 <dt><a rel="nofollow" HREF="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a>
 </dt><dd> </b></dd></dl>
- 
-
- 
-
-<h2>Index</h2>
-
-

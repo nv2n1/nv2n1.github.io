@@ -85,5 +85,3 @@ elasticdump-- input = http :                               //production.es.com:9
 </code></pre>
 <h2>SEE ALSO</h2>
 <p> <a rel="nofollow" href="https://github.com/taskrabbit/elasticsearch-dump">https://github.com/taskrabbit/elasticsearch-dump</a> </p>
-<h2>Index</h2>
-</dt></dl>

@@ -39,5 +39,3 @@ description: "ssh-copy-id – use locally available keys to authorise logins on 
 <p> Having mentioned ssh-add1Ns&#8217;s &#8211;<code>c</code> option, you might consider using this whenever using agent forwarding to avoid your key being hijacked, but it is much better to instead use <a href="/docs/linux/man/1-ssh/">ssh</a>(1)Ns&#8217;s <i>ProxyCommand</i> and &#8211;<code>W</code> option, to bounce through remote servers while always doing direct end-to-end authentication. This way the middle hop(s) don&#8217;t get access to your ssh-agent1. A web search for `ssh&#8217; proxycommand nc should prove enlightening (N.B. the modern approach is to use the &#8211;<code>W</code> option, rather than <a href="/docs/linux/man/1-nc/">nc</a>(1)).</p>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/1-ssh/">ssh</a>(1), ssh-agent1, <a href="/docs/linux/man/8-sshd/">sshd</a>(8) </p>
-<h2>Index</h2>
-</p>

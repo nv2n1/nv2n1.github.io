@@ -120,8 +120,4 @@ url: "/docs/linux/man/1-opa_osd_query/"
 
 <h2>Example</h2>
 
- opa_osd_query -s2 -d4 
-
-<h2>Index</h2>
-
-
+ opa_osd_query -s2 -d4

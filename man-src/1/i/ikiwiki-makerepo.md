@@ -34,14 +34,4 @@ url: "/docs/linux/man/1-ikiwiki-makerepo/"
 
 <h2>AUTHOR</h2>
 
- Joey Hess &lt;joey [at] ikiwiki.info&gt; 
-
- 
-
- 
-
- 
-
-<h2>Index</h2>
-
-
+ Joey Hess &lt;joey [at] ikiwiki.info&gt;

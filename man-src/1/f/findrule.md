@@ -63,8 +63,4 @@ findrule[path...][expression]
 
 <h2>SEE ALSO</h2>
 
- File::Find::Rule 
-
-<h2>Index</h2>
-
-
+ File::Find::Rule

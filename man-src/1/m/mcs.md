@@ -231,5 +231,3 @@ class X
 <h2>MORE INFORMATION</h2>
 <p> The Mono C# compiler was developed by Novell, Inc (<a rel="nofollow" href="http://www.novell.com)">http://www.novell.com)</a> and Xamarin Inc (<a href="http://www.xamarin.com)">http://www.xamarin.com)</a> is based on the ECMA C# language standard available here: <a rel="nofollow" href="http://www.ecma.ch/ecma1/STAND/ecma-334.htm">http://www.ecma.ch/ecma1/STAND/ecma-334.htm</a> </p>
 <p> The home page for the Mono C# compiler is at <a rel="nofollow" href="http://www.mono-project.com/docs/about-mono/languages/csharp/">http://www.mono-project.com/docs/about-mono/languages/csharp/</a> </p>
-<h2>Index</h2>
-</p>

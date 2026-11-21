@@ -105,8 +105,4 @@ url: "/docs/linux/man/1-texfot/"
 
 <h2>AUTHORS AND COPYRIGHT</h2>
 
- This script and its documentation were written by Karl Berry and both are released to the public domain. Email <tt>&quot;karl [at] freefriends.org&quot;</tt> with bug reports. It has no home page beyond the package on <font SIZE="-1">CTAN:</font> &lt;<a rel="nofollow" HREF="https://ctan.org/pkg/texfot">https://ctan.org/pkg/texfot</a>&gt;. 
-
-<h2>Index</h2>
-
-
+ This script and its documentation were written by Karl Berry and both are released to the public domain. Email <tt>&quot;karl [at] freefriends.org&quot;</tt> with bug reports. It has no home page beyond the package on <font SIZE="-1">CTAN:</font> &lt;<a rel="nofollow" HREF="https://ctan.org/pkg/texfot">https://ctan.org/pkg/texfot</a>&gt;.

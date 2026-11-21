@@ -630,7 +630,3 @@ $ swaks-- from fred[at] example.com-- h - From : '"Fred Example" &lt;fred [at] e
 </dd><dt><a rel="nofollow" HREF="http://www.jetmore.org/john/code/swaks/">http://www.jetmore.org/john/code/swaks/</a>
 </dt><dd> Change logs, this help, and the latest version is found at this link. 
 </dd></dl>
-
-<h2>Index</h2>
-
-

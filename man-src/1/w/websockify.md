@@ -136,10 +136,4 @@ url: "/docs/linux/man/1-websockify/"
 
  <a rel="nofollow" HREF="https://github.com/kanaka/websockify/">https://github.com/kanaka/websockify/</a> 
 
- <a rel="nofollow" HREF="https://github.com/kanaka/websockify/wiki/">https://github.com/kanaka/websockify/wiki/</a> 
-
- 
-
-<h2>Index</h2>
-
-
+ <a rel="nofollow" HREF="https://github.com/kanaka/websockify/wiki/">https://github.com/kanaka/websockify/wiki/</a>

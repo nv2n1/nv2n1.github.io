@@ -39,8 +39,4 @@ url: "/docs/linux/man/1-ec2meta/"
  security_groups    Names of the security groups the instance is launched in. Only available if supplied at instance launch time    1.0
  product_codes      Product codes associated with this instance.    2007_03_01
  user_data          User supplied data at instance launch
-</pre> 
-
-<h2>Index</h2>
-
-
+</pre>

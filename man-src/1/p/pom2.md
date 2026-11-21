@@ -58,8 +58,4 @@ url: "/docs/linux/man/1-pom2/"
 
 <h2>SEE ALSO</h2>
 
- For further information please see Pod::POM. 
-
-<h2>Index</h2>
-
-
+ For further information please see Pod::POM.

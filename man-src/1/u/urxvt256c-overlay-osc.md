@@ -13,8 +13,4 @@ url: "/docs/linux/man/1-urxvt256c-overlay-osc/"
 
 <h2>DESCRIPTION</h2>
 
- This extension implements some <font SIZE="-1">OSC</font> commands to display timed popups on the screen - useful for status displays from within scripts. You have to read the sources for more info. 
-
-<h2>Index</h2>
-
-
+ This extension implements some <font SIZE="-1">OSC</font> commands to display timed popups on the screen - useful for status displays from within scripts. You have to read the sources for more info.

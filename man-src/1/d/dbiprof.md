@@ -125,8 +125,4 @@ url: "/docs/linux/man/1-dbiprof/"
 
 <h2>SEE ALSO</h2>
 
- DBI::ProfileDumper, DBI::Profile, <font SIZE="-1">DBI</font>. 
-
-<h2>Index</h2>
-
-
+ DBI::ProfileDumper, DBI::Profile, <font SIZE="-1">DBI</font>.

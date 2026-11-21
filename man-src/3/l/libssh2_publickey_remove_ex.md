@@ -27,9 +27,3 @@ url: "/docs/linux/man/3-libssh2_publickey_remove_ex/"
  
 
 <h2>SEE ALSO</h2>
-
- 
-
-<h2>Index</h2>
-
-

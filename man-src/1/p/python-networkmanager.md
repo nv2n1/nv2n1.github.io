@@ -139,5 +139,3 @@ description: "python-networkmanager – python-networkmanager Documentation"
 <p> Dennis Kaarsemaker</p>
 <h2>COPYRIGHT</h2>
 <p> 2011-2016, Dennis Kaarsemaker </p>
-<h2>Index</h2>
-</p>

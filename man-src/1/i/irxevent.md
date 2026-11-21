@@ -154,5 +154,3 @@ LINE = "config =" &lt; KEY | BUTTON | XYKEY &gt; &lt;TARGET&gt; |
 <p> Written by Heinrich Langos &lt;heinrich [at] mad.scientist.com&gt;.</p>
 <h2>SEE ALSO</h2>
 <p> The documentation for <code>lirc</code> is maintained as html pages. They are located under html/ in the documentation directory. </p>
-<h2>Index</h2>
-</p>

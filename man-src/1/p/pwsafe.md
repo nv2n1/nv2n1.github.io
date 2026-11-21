@@ -121,5 +121,3 @@ description: "pwsafe – commandline password database utility compatible with C
 <h2>SEE ALSO</h2>
 <p> <a rel="nofollow" href="http://nsd.dyndns.org/pwsafe/">http://nsd.dyndns.org/pwsafe/</a><br />
  <a rel="nofollow" href="http://passwordsafe.sourceforge.net/,">http://passwordsafe.sourceforge.net/,</a> <a rel="nofollow" href="http://www.counterpane.com/">http://www.counterpane.com/</a> </p>
-<h2>Index</h2>
-</p>

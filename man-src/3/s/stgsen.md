@@ -329,5 +329,3 @@ may move and<br />
 <p> Definition at line 450 of file stgsen.f.</p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for LAPACK from the source code. </p>
-<h2>Index</h2>
-</p>

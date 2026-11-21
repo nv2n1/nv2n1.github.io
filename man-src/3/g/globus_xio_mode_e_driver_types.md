@@ -15,8 +15,4 @@ url: "/docs/linux/man/3-globus_xio_mode_e_driver_types/"
 
  
 
- Generated automatically by Doxygen for globus_xio from the source code. 
-
-<h2>Index</h2>
-
-
+ Generated automatically by Doxygen for globus_xio from the source code.

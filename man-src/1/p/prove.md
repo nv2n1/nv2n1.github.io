@@ -331,8 +331,4 @@ prove-- source MyCustom-- source Perl-- perl - option 'foo=bar baz' --perl - opt
 
 <h3>Writing Plugins</h3>
 
- Please see ``<font SIZE="-1">PLUGINS''</font> in App::Prove. 
-
-<h2>Index</h2>
-
-
+ Please see ``<font SIZE="-1">PLUGINS''</font> in App::Prove.

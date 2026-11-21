@@ -163,5 +163,3 @@ tauq is stored in TAUQ(i) and taup in TAUP(i).The contents of A on exit are illu
 <p> Definition at line 190 of file sgebd2.f.</p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for LAPACK from the source code. </p>
-<h2>Index</h2>
-</p>

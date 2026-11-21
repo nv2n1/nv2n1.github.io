@@ -64,5 +64,3 @@ description: "mkwinpeimg – Make a customized bootable image of Windows PE"
 <p> Report bugs to ebiggers3 [at] gmail.com.</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-wimlib-imagex/">wimlib-imagex</a></code>(1) </p>
-<h2>Index</h2>
-</p>

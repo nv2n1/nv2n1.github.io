@@ -133,5 +133,3 @@ rabbitmq-plugins set rabbitmq_management
 </dl>
 <h2>AUTHOR</h2>
 <p> <code>The RabbitMQ Team &lt;</code><code>m[blue]&lt;info [at] rabbitmq.com&gt;</code>m[]<code>&gt;</code> </p>
-<h2>Index</h2>
-</p>

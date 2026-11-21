@@ -70,8 +70,4 @@ git backpan - init[--help | --man][--mkdir&lt;directory&gt;][--force] Foo::Bar
 
 <h2>SEE ALSO</h2>
 
- Git::CPAN::Patch 
-
-<h2>Index</h2>
-
-
+ Git::CPAN::Patch

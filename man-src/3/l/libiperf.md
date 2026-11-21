@@ -93,8 +93,4 @@ iperf_free_test(test);
 
 <h2>SEE ALSO</h2>
 
- <a HREF="/docs/linux/man/1-iperf3/">iperf3</a>(1), <a rel="nofollow" HREF="http://software.es.net/iperf/">http://software.es.net/iperf/</a> 
-
-<h2>Index</h2>
-
-
+ <a HREF="/docs/linux/man/1-iperf3/">iperf3</a>(1), <a rel="nofollow" HREF="http://software.es.net/iperf/">http://software.es.net/iperf/</a>

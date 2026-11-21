@@ -33,8 +33,4 @@ url: "/docs/linux/man/1-fusioninventory-inventory/"
 
 <h2>DESCRIPTION</h2>
 
- <i>fusioninventory-inventory</i> allows to run an inventory task without a <font SIZE="-1">GLPI</font> server. 
-
-<h2>Index</h2>
-
-
+ <i>fusioninventory-inventory</i> allows to run an inventory task without a <font SIZE="-1">GLPI</font> server.

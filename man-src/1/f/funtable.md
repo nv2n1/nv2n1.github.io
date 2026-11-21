@@ -75,5 +75,3 @@ funtable - m input.fits '[cir(512,512,1);cir(520,520,1)...]' 'foo_evt'
 <p> If the <code>-z</code> (&#8220;zero&#8221; pixel values) switch is specified and <code>-i</code> is not specified, then pixels having a zero value will be output with their &#8220;<font SIZE="-1">VALUE</font>&#8221; column set to zero. Obviously, this switch does not make sense when individual events are output.</p>
 <h2>SEE ALSO</h2>
 <p> See funtools(n) for a list of Funtools help pages </p>
-<h2>Index</h2>
-</p>

@@ -68,5 +68,3 @@ description: "xdg-user-dirs-update – Update XDG user dir configuration"
 <p> The <code>XDG_CONFIG_HOME</code> environment variable determines where the user-dirs.dirs file is located.</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-xdg-user-dir/">xdg-user-dir</a></code>(1), <code><a href="/docs/linux/man/5-user-dirs-dirs/">user-dirs.dirs</a></code>(5), <code><a href="/docs/linux/man/5-user-dirs-defaults/">user-dirs.defaults</a></code>(5), <code><a href="/docs/linux/man/5-user-dirs-conf/">user-dirs.conf</a></code>(5). </p>
-<h2>Index</h2>
-</p>

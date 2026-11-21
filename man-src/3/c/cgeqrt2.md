@@ -104,5 +104,3 @@ description: "cgeqrt2.f –"
 <p> Definition at line 128 of file cgeqrt2.f.</p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for LAPACK from the source code. </p>
-<h2>Index</h2>
-</p>

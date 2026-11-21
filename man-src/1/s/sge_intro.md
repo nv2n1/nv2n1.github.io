@@ -74,8 +74,4 @@ url: "/docs/linux/man/1-sge_intro/"
 
 <h2>COPYRIGHT</h2>
 
- Copyright: 2008 by Sun Microsystems, Inc. Parts of the manual page texts are Copyright 2011 Univa Corporation, and various dates by other contributors. The manual pages are licensed under the Sun Industry Standards Source License, like the source, except where noted in some files by other contributors, which are under other free licences noted in their source. 
-
-<h2>Index</h2>
-
-
+ Copyright: 2008 by Sun Microsystems, Inc. Parts of the manual page texts are Copyright 2011 Univa Corporation, and various dates by other contributors. The manual pages are licensed under the Sun Industry Standards Source License, like the source, except where noted in some files by other contributors, which are under other free licences noted in their source.

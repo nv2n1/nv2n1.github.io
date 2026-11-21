@@ -71,8 +71,4 @@ int main(int argc, char **argv)
 </code></pre> 
 
  
-&nbsp;<wbr> 
-
-<h2>Index</h2>
-
-
+&nbsp;<wbr>

@@ -73,8 +73,4 @@ url: "/docs/linux/man/1-urxvt-ml-extensions/"
 
 <h2>SEE ALSO</h2>
 
- <i><a HREF="/docs/linux/man/1-urxvt/">urxvt</a></i>(1), <i><a HREF="/docs/linux/man/3-urxvtperl/">urxvtperl</a></i>(3) 
-
-<h2>Index</h2>
-
-
+ <i><a HREF="/docs/linux/man/1-urxvt/">urxvt</a></i>(1), <i><a HREF="/docs/linux/man/3-urxvtperl/">urxvtperl</a></i>(3)

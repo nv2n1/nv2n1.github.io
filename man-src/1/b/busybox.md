@@ -2396,5 +2396,3 @@ locale, various fixes
 <pre>
     fixed two bugs in msh and hush (exitcode of killed processes)
 </pre>
-<h2>Index</h2>
-</p>

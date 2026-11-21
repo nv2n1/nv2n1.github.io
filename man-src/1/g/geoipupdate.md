@@ -80,8 +80,4 @@ url: "/docs/linux/man/1-geoipupdate/"
 
  Visit &lt;<a rel="nofollow" HREF="http://www.maxmind.com/app/products">http://www.maxmind.com/app/products</a>&gt; to sign up for a GeoIP subscription. 
 
- <a HREF="/docs/linux/man/1-geoiplookup/">geoiplookup</a>(1), <a HREF="/docs/linux/man/5-crontab/">crontab</a>(5) 
-
-<h2>Index</h2>
-
-
+ <a HREF="/docs/linux/man/1-geoiplookup/">geoiplookup</a>(1), <a HREF="/docs/linux/man/5-crontab/">crontab</a>(5)

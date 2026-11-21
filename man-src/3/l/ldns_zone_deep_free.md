@@ -43,5 +43,3 @@ description: "ldns_zone_new, ldns_zone_deep_free, ldns_zone_new_frm_fp, ldns_zon
 <p> <i>ldns_zone</i>. And <code>perldoc Net::DNS</code>, <code>RFC1034</code>, <code>RFC1035</code>, <code>RFC4033</code>, <code>RFC4034</code> and <code>RFC4035</code>.</p>
 <h2>REMARKS</h2>
 <p> This manpage was automaticly generated from the ldns source code by use of Doxygen and some perl. </p>
-<h2>Index</h2>
-</p>

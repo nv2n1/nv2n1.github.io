@@ -35,8 +35,4 @@ url: "/docs/linux/man/1-rcapid/"
 
 <h2>AUTHOR</h2>
 
- This manual page was written by Paul Slootman &lt;paul [at] tdebian.org&gt;, Than Ngo &lt;than [at] redhat.com&gt; 
-
-<h2>Index</h2>
-
-
+ This manual page was written by Paul Slootman &lt;paul [at] tdebian.org&gt;, Than Ngo &lt;than [at] redhat.com&gt;

@@ -92,8 +92,4 @@ sub afterinit
 
 <h2>AUTHOR</h2>
 
- Hiroo Hayashi &lt;hiroo.hayashi [at] computer.org&gt; 
-
-<h2>Index</h2>
-
-
+ Hiroo Hayashi &lt;hiroo.hayashi [at] computer.org&gt;

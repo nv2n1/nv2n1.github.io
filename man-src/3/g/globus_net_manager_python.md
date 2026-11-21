@@ -66,8 +66,4 @@ globus_net_manager_attr_init(
 
  
 
- Generated automatically by Doxygen for globus_net_manager from the source code. 
-
-<h2>Index</h2>
-
-
+ Generated automatically by Doxygen for globus_net_manager from the source code.

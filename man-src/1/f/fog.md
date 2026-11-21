@@ -34,8 +34,4 @@ url: "/docs/linux/man/1-fog/"
 
 <h2>AUTHOR</h2>
 
- Mohammed Isam &lt;mohammed_isam1984 [at] yahoo.com&gt; 
-
-<h2>Index</h2>
-
-
+ Mohammed Isam &lt;mohammed_isam1984 [at] yahoo.com&gt;

@@ -46,8 +46,4 @@ url: "/docs/linux/man/3-libspectrum/"
 
 <h2>AUTHOR</h2>
 
- Philip Kendall (philip-fuse [at] shadowmagic.org.uk) 
-
-<h2>Index</h2>
-
-
+ Philip Kendall (philip-fuse [at] shadowmagic.org.uk)

@@ -78,5 +78,3 @@ rrd_free_ptrs(&amp;arr, &amp;arr_size);
 </dl>
 <h2>AUTHOR</h2>
 <p> <font SIZE="-1">RRD</font> Contributors &lt;rrd-developers [at] lists.oetiker.ch&gt; </p>
-<h2>Index</h2>
-</p>

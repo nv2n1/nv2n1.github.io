@@ -46,8 +46,4 @@ url: "/docs/linux/man/1-nvme-delete-ns/"
 
  
 
- Part of the nvme-user suite 
-
-<h2>Index</h2>
-
-
+ Part of the nvme-user suite

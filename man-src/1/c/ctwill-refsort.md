@@ -175,8 +175,4 @@ url: "/docs/linux/man/1-ctwill-refsort/"
 
  Don Knuth wrote ctwill based on cweave by Silvio Levy and Knuth. 
 
- Contemporary development on <a rel="nofollow" HREF="https://github.com/ascherer/cwebbin.">https://github.com/ascherer/cwebbin.</a> 
-
-<h2>Index</h2>
-
-
+ Contemporary development on <a rel="nofollow" HREF="https://github.com/ascherer/cwebbin.">https://github.com/ascherer/cwebbin.</a>

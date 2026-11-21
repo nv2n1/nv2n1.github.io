@@ -4867,8 +4867,4 @@ pandoc --print-default-data-file sample.lua
 
  Copyright 2006--2020 John MacFarlane (jgm [at] berkeley.edu). Released under the GPL, version 2 or greater. This software carries no warranty of any kind. (See COPYRIGHT for full copyright and warranty notices.) For a full list of contributors, see the file AUTHORS.md in the pandoc source code. 
 
- The Pandoc source code and all documentation may be downloaded from &lt;<a rel="nofollow" HREF="http://pandoc.org">http://pandoc.org</a>&gt;. 
-
-<h2>Index</h2>
-
-
+ The Pandoc source code and all documentation may be downloaded from &lt;<a rel="nofollow" HREF="http://pandoc.org">http://pandoc.org</a>&gt;.

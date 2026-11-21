@@ -138,8 +138,4 @@ $ pm_which - V MyModule MyModule - / path / to / MyModule.pm[1.00] $ pm_which - 
 
 <h2>AUTHOR</h2>
 
- Matt Lawrence &lt;mattlaw [at] cpan.org&gt; 
-
-<h2>Index</h2>
-
-
+ Matt Lawrence &lt;mattlaw [at] cpan.org&gt;

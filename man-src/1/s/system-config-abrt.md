@@ -30,8 +30,3 @@ url: "/docs/linux/man/1-system-config-abrt/"
 <dl>
 <dt>
 </dt><dd> &bull; ABRT team</dd></dl>
- 
-
-<h2>Index</h2>
-
-

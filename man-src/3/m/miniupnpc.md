@@ -48,9 +48,3 @@ url: "/docs/linux/man/3-miniupnpc/"
  minissdpd(1)
 
 <h2>BUGS</h2>
-
- 
-
-<h2>Index</h2>
-
-

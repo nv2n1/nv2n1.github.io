@@ -97,8 +97,4 @@ url: "/docs/linux/man/1-gcov2perl/"
 
  This software is free. It is licensed under the same terms as Perl itself. 
 
- The latest version of this software should be available from my homepage: <a rel="nofollow" HREF="http://www.pjcj.net">http://www.pjcj.net</a> 
-
-<h2>Index</h2>
-
-
+ The latest version of this software should be available from my homepage: <a rel="nofollow" HREF="http://www.pjcj.net">http://www.pjcj.net</a>

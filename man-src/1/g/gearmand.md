@@ -57,8 +57,4 @@ url: "/docs/linux/man/1-gearmand/"
 
  Gearman::Worker 
 
- Gearman::Client::Async 
-
-<h2>Index</h2>
-
-
+ Gearman::Client::Async

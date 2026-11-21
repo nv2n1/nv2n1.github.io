@@ -40,8 +40,4 @@ salt-unity salt '*' test.ping
 
 <h2>COPYRIGHT</h2>
 
- 2016 SaltStack, Inc. 
-
-<h2>Index</h2>
-
-
+ 2016 SaltStack, Inc.

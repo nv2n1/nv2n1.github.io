@@ -47,5 +47,3 @@ description: "fvwm-convert-2.6 – convert fvwm 2.4.x configuration file to fvwm
 <p> Bug reports can be sent to the fvwm-workers mailing list (see the <i>FAQ</i>).</p>
 <h2>AUTHOR</h2>
 <p> Thomas Adam &lt;thomas.adam22 [at] gmail.com&gt; </p>
-<h2>Index</h2>
-</dd>

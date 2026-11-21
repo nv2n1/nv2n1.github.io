@@ -864,8 +864,4 @@ alias your_copr='copr --config ~/.config/your-copr'
 
  
 
- Miroslav Suchý &lt;msuchy [at] redhat.com&gt;, clime &lt;clime [at] redhat.com&gt; 
-
-<h2>Index</h2>
-
-
+ Miroslav Suchý &lt;msuchy [at] redhat.com&gt;, clime &lt;clime [at] redhat.com&gt;

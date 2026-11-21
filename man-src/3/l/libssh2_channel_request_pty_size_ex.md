@@ -27,9 +27,3 @@ url: "/docs/linux/man/3-libssh2_channel_request_pty_size_ex/"
  
 
 <h2>SEE ALSO</h2>
-
- 
-
-<h2>Index</h2>
-
-

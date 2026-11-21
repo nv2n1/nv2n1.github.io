@@ -72,5 +72,3 @@ description: "opatmmtool"
 <p> opatmmtool -h 1 fwversion<br />
  opatmmtool -v -f main.signed.bin update<br />
  opatmmtool reboot </p>
-<h2>Index</h2>
-</p>

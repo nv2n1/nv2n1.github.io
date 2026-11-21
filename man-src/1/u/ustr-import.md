@@ -89,5 +89,3 @@ description: "ustr-import – ustr string library import tool"
 </dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-ustr/">ustr</a></code>(3),<code><a href="/docs/linux/man/3-ustr_const/">ustr_const</a></code>(3) </p>
-<h2>Index</h2>
-</dl>

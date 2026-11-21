@@ -44,5 +44,3 @@ Dominik Brodowski&lt;linux[at] brodo.de&gt; - author Mattia Dongili&lt;malattia[
 </code></pre>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/1-cpupower-frequency-info/">cpupower-frequency-info</a>(1), <a href="/docs/linux/man/1-cpupower/">cpupower</a>(1) </p>
-<h2>Index</h2>
-</dd>

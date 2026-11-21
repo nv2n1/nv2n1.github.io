@@ -64,5 +64,3 @@ description: "atomic-containers – operations on containers"
 &nbsp;<wbr>&nbsp;<wbr>Set a value that is going to be used by a system container for its configuration and can be specified multiple times.&nbsp;<wbr>&nbsp;<wbr>OSTree is required for this feature to be available. </p>
 <h2>HISTORY</h2>
 <p> June 2016, Originally compiled by Giuseppe Scrivano (gscrivan at redhat dot com) July 2016, Added sub-commands filter, no-trunc and quiet (jerzhang at redhat dot com) Sept 2016, Added atomic containers trim subcommand (shishir dot mahajan at redhat dot com) </p>
-<h2>Index</h2>
-</p>

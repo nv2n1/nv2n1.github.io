@@ -178,5 +178,3 @@ description: "ipa-client-install – Configure an IPA client"
 <p> 4 if an uninstall error occurred </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-ipa-client-automount/">ipa-client-automount</a>(1),</code> <code><a href="/docs/linux/man/5-krb5-conf/">krb5.conf</a>(5),</code> <code><a href="/docs/linux/man/5-sssd-conf/">sssd.conf</a>(5)</code> </p>
-<h2>Index</h2>
-</p>

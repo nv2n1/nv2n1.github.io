@@ -39,5 +39,3 @@ description: "jpilot – A palm pilot desktop for Linux/Unix"
 <p> <a href="/docs/linux/man/1-jpilot-sync/">jpilot-sync</a>(1)</p>
 <h2>AUTHOR</h2>
 <p> Judd Montgomery &lt;judd [at] jpilot.org&gt; </p>
-<h2>Index</h2>
-</p>

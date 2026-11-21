@@ -35,8 +35,4 @@ url: "/docs/linux/man/3-mchestonhullwhiteengine/"
 
  
 
- Generated automatically by Doxygen for QuantLib from the source code. 
-
-<h2>Index</h2>
-
-
+ Generated automatically by Doxygen for QuantLib from the source code.

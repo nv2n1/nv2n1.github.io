@@ -57,8 +57,4 @@ url: "/docs/linux/man/1-memerror/"
 
 <h2>COPYRIGHT</h2>
 
- 2011-2013, Brian Aker DataDifferential, <a rel="nofollow" HREF="http://datadifferential.com/">http://datadifferential.com/</a> 
-
-<h2>Index</h2>
-
-
+ 2011-2013, Brian Aker DataDifferential, <a rel="nofollow" HREF="http://datadifferential.com/">http://datadifferential.com/</a>

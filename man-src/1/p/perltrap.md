@@ -211,5 +211,3 @@ while (defined($_ = &lt;FH&gt;)) {
 <dt>&bull;</dt>
 <dd> If you localize an exported variable in a module, its exported value will not change. The local name becomes an alias to a new value but the external name is still an alias for the original.</dd></dl>
 <p> As always, if any of these are ever officially declared as bugs, they&#8217;ll be fixed and removed. </p>
-<h2>Index</h2>
-</dl>

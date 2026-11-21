@@ -34,8 +34,4 @@ url: "/docs/linux/man/1-fusioninventory-injector/"
 
 <h2>DESCRIPTION</h2>
 
- This tool can be used to test your server, do benchmark or push inventory from off-line machine. 
-
-<h2>Index</h2>
-
-
+ This tool can be used to test your server, do benchmark or push inventory from off-line machine.

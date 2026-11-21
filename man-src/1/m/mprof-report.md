@@ -390,8 +390,4 @@ url: "/docs/linux/man/1-mprof-report/"
 
 <h2>AUTHORS</h2>
 
- Paolo Molaro, Alex Rønne Petersen 
-
-<h2>Index</h2>
-
-
+ Paolo Molaro, Alex Rønne Petersen

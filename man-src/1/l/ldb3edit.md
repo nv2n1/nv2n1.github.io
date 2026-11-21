@@ -105,8 +105,4 @@ ldbedit - Edit LDB databases using your preferred editor
 
  If you wish to report a problem or make a suggestion then please see the : <a rel="nofollow" HREF="http://ldb.samba.org/">http://ldb.samba.org/</a> web site for current contact and maintainer information. 
 
- This manpage was written by Jelmer Vernooij and updated by Brad Hards. 
-
-<h2>Index</h2>
-
-
+ This manpage was written by Jelmer Vernooij and updated by Brad Hards.

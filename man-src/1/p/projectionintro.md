@@ -65,8 +65,4 @@ url: "/docs/linux/man/1-projectionintro/"
 </dl>
  
 
- full index 
-
-<h2>Index</h2>
-
-
+ full index

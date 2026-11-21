@@ -61,8 +61,4 @@ url: "/docs/linux/man/1-opa_osd_perf/"
 
 <h2>Example</h2>
 
- opa_osd_perf -q 100000 -p 0x8001 guidtable 
-
-<h2>Index</h2>
-
-
+ opa_osd_perf -q 100000 -p 0x8001 guidtable

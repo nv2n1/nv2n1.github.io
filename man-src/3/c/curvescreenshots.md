@@ -22,8 +22,4 @@ url: "/docs/linux/man/3-curvescreenshots/"
  
 &nbsp;<wbr> 
 
- <hr> 
-
-<h2>Index</h2>
-
-
+ <hr>

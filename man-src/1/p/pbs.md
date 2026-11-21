@@ -51,8 +51,4 @@ url: "/docs/linux/man/1-pbs/"
 
 <h2>SEE ALSO</h2>
 
- qalter(1B), qdel(1B), qhold(1B), qmove(1B), qmsg(1B), qrerun(1B), qrls(1B), qselect(1B), qsig(1B), qsub(1B) and the PBS User Guide. Starting with qsub(1B), you can find all other available PBS man pages by following references in the &quot;See Also&quot; section. 
-
-<h2>Index</h2>
-
-
+ qalter(1B), qdel(1B), qhold(1B), qmove(1B), qmsg(1B), qrerun(1B), qrls(1B), qselect(1B), qsig(1B), qsub(1B) and the PBS User Guide. Starting with qsub(1B), you can find all other available PBS man pages by following references in the &quot;See Also&quot; section.

@@ -82,8 +82,4 @@ url: "/docs/linux/man/1-convertxls2csv/"
 
  Copyright (C) 2005-2012 Ken Prows. All rights reserved. 
 
- This script is free software; you can redistribute it and/or modify it under the same terms as Perl itself. 
-
-<h2>Index</h2>
-
-
+ This script is free software; you can redistribute it and/or modify it under the same terms as Perl itself.

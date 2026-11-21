@@ -110,8 +110,4 @@ struct mlx5dv_dc_init_attr {
 
  
 
- Yonatan Cohen &lt;yonatanc [at] mellanox.com&gt; 
-
-<h2>Index</h2>
-
-
+ Yonatan Cohen &lt;yonatanc [at] mellanox.com&gt;

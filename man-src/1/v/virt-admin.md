@@ -221,5 +221,3 @@ virt - admin[OPTION]...&lt;command&gt;[ARG]...
 <p> virt-admin is distributed under the terms of the <font SIZE="-1">GNU LGPL</font> v2+. This is free software; see the source for copying conditions. There is <font SIZE="-1">NO</font> warranty; not even for <font SIZE="-1">MERCHANTABILITY</font> or <font SIZE="-1">FITNESS FOR A PARTICULAR PURPOSE</font></p>
 <h2>SEE ALSO</h2>
 <p> <i><a href="/docs/linux/man/1-virsh/">virsh</a></i>(1), <i><a href="/docs/linux/man/1-virt-xml-validate/">virt-xml-validate</a></i>(1), <i><a href="/docs/linux/man/1-virt-host-validate/">virt-host-validate</a></i>(1), &lt;<a rel="nofollow" href="http://www.libvirt.org/">http://www.libvirt.org/</a>&gt; </p>
-<h2>Index</h2>
-</p>

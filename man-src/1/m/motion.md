@@ -557,5 +557,3 @@ description: "motion – Detect motion using a video4linux device"
  <a rel="nofollow" href="http://www.lavrsen.dk/twiki/bin/view/Motion/VideoFourLinuxLoopbackDevice">http://www.lavrsen.dk/twiki/bin/view/Motion/VideoFourLinuxLoopbackDevice</a></dl>
 <h2>AUTHORS</h2>
 <p> Jeroen Vreeken (pe1rxq [at] amsat.org), Folkert van Heusden, Kenneth Lavrsen (kenneth [at] lavrsen.dk) </p>
-<h2>Index</h2>
-</p>

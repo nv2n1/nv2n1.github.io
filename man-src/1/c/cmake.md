@@ -553,5 +553,3 @@ cmake &lt;source-dir&gt; --list-presets
 <p> The Discourse Forum hosts discussion and questions about CMake.</dl>
 <h2>COPYRIGHT</h2>
 <p> 2000-2022 Kitware, Inc. and Contributors </p>
-<h2>Index</h2>
-</p>

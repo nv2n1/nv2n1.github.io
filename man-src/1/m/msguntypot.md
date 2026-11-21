@@ -80,8 +80,4 @@ url: "/docs/linux/man/1-msguntypot/"
 
  Copyright 2005 by <font SIZE="-1">SPI</font>, inc. 
 
- This program is free software; you may redistribute it and/or modify it under the terms of <font SIZE="-1">GPL</font> (see the <font SIZE="-1">COPYING</font> file). 
-
-<h2>Index</h2>
-
-
+ This program is free software; you may redistribute it and/or modify it under the terms of <font SIZE="-1">GPL</font> (see the <font SIZE="-1">COPYING</font> file).

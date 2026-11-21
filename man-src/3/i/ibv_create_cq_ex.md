@@ -114,5 +114,3 @@ struct ibv_wc_tm_info {
 <dt>Matan Barak &lt;matanb [at] mellanox.com&gt;</dt>
 <dd>
 </dd></dl>
-<h2>Index</h2>
-</dl>

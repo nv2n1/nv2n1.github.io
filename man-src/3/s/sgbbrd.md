@@ -186,8 +186,4 @@ LDC &gt;= 1 if NCC = 0.
 
  
 
- Generated automatically by Doxygen for LAPACK from the source code. 
-
-<h2>Index</h2>
-
-
+ Generated automatically by Doxygen for LAPACK from the source code.

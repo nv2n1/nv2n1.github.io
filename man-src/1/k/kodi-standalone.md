@@ -12,8 +12,4 @@ url: "/docs/linux/man/1-kodi-standalone/"
 
 <h2>DESCRIPTION</h2>
 
- This script runs Kodi in standalone mode. 
-
-<h2>Index</h2>
-
-
+ This script runs Kodi in standalone mode.

@@ -56,8 +56,4 @@ url: "/docs/linux/man/1-pdl2/"
 
 <h2>SEE ALSO</h2>
 
- perldl, Devel::REPL 
-
-<h2>Index</h2>
-
-
+ perldl, Devel::REPL

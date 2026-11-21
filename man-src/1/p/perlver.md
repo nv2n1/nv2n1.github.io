@@ -69,8 +69,4 @@ url: "/docs/linux/man/1-perlver/"
 
  This program is free software; you can redistribute it and/or modify it under the same terms as Perl itself. 
 
- The full text of the license can be found in the <font SIZE="-1">LICENSE</font> file included with this module. 
-
-<h2>Index</h2>
-
-
+ The full text of the license can be found in the <font SIZE="-1">LICENSE</font> file included with this module.

@@ -134,5 +134,3 @@ description: "dcraw – command-line decoder for raw digital photos"
 <p> <code><a href="/docs/linux/man/5-pgm/">pgm</a></code>(5), <code><a href="/docs/linux/man/5-ppm/">ppm</a></code>(5), <code><a href="/docs/linux/man/5-pam/">pam</a></code>(5), <code><a href="/docs/linux/man/1-pamsumm/">pamsumm</a></code>(1), <code><a href="/docs/linux/man/1-pnmgamma/">pnmgamma</a></code>(1), <code><a href="/docs/linux/man/1-pnmtotiff/">pnmtotiff</a></code>(1), <code><a href="/docs/linux/man/1-pnmtopng/">pnmtopng</a></code>(1), <code><a href="/docs/linux/man/1-gphoto2/">gphoto2</a></code>(1), <code><a href="/docs/linux/man/1-cjpeg/">cjpeg</a></code>(1), <code><a href="/docs/linux/man/1-djpeg/">djpeg</a></code>(1)</p>
 <h2>AUTHOR</h2>
 <p> Written by David Coffin, dcoffin a cybercom o net </p>
-<h2>Index</h2>
-</p>

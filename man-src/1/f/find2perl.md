@@ -107,8 +107,4 @@ find2perl[paths][predicates] | perl
 
 <h2>SEE ALSO</h2>
 
- find, File::Find. 
-
-<h2>Index</h2>
-
-
+ find, File::Find.

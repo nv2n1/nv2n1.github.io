@@ -104,5 +104,3 @@ description: "dumpcap – Dump network traffic"
 <p> <font SIZE="-1">HTML</font> versions of the Wireshark project man pages are available at: &lt;<a rel="nofollow" href="http://www.wireshark.org/docs/man-pages">http://www.wireshark.org/docs/man-pages</a>&gt;.</p>
 <h2>AUTHORS</h2>
 <p> <code>Dumpcap</code> is derived from the <code>Wireshark</code> capturing engine code; see the list of authors in the <code>Wireshark</code> man page for a list of authors of that code. </p>
-<h2>Index</h2>
-</p>

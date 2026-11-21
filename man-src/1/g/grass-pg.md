@@ -118,8 +118,4 @@ The driver name is 'pg'.
  MapServer Wiki </i> 
 
  <i>Last changed: $Date: 2007-11-24 13:41:10 +0100 (Sat, 24 Nov 2007) $</i> 
- Help Index 
-
-<h2>Index</h2>
-
-
+ Help Index

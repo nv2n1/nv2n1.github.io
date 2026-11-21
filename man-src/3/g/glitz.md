@@ -29,8 +29,4 @@ url: "/docs/linux/man/3-glitz/"
 
 <h2>AUTHOR</h2>
 
- David Reveman 
-
-<h2>Index</h2>
-
-
+ David Reveman

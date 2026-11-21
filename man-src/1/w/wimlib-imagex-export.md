@@ -100,5 +100,3 @@ To export the first image of this split WIM to a new or existing WIM file
 <p> wimlib-imagex export install.wim all install.esd &#8211;solid</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-wimlib-imagex/">wimlib-imagex</a></code>(1) <code><a href="/docs/linux/man/1-wimlib-imagex-info/">wimlib-imagex-info</a></code>(1) <code><a href="/docs/linux/man/1-wimlib-imagex-optimize/">wimlib-imagex-optimize</a></code>(1) </p>
-<h2>Index</h2>
-</p>

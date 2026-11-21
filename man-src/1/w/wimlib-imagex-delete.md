@@ -36,5 +36,3 @@ description: "wimlib-imagex-delete – Delete an image from a WIM archive"
 <p> wimlib-imagex delete boot.wim 1</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-wimlib-imagex/">wimlib-imagex</a></code>(1) <code><a href="/docs/linux/man/1-wimlib-imagex-info/">wimlib-imagex-info</a></code>(1) <code><a href="/docs/linux/man/1-wimlib-imagex-optimize/">wimlib-imagex-optimize</a></code>(1) </p>
-<h2>Index</h2>
-</p>

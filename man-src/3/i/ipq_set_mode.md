@@ -54,5 +54,3 @@ if (status &lt; 0) {
 <p> Distributed under the GNU General Public License.</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-libipq/">libipq</a></code>(3), <code><a href="/docs/linux/man/8-iptables/">iptables</a></code>(8). </p>
-<h2>Index</h2>
-</dd></dl>

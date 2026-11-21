@@ -74,8 +74,4 @@ The channel to get the event over.
 
  #AUTHOR 
 
- Yishai Hadas &lt;yishaih [at] mellanox.com&gt; 
-
-<h2>Index</h2>
-
-
+ Yishai Hadas &lt;yishaih [at] mellanox.com&gt;

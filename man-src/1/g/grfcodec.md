@@ -66,5 +66,3 @@ description: "GRFCodec – A tool to convert a GRF file into graphics files and 
 <p> This manual page was written by Remko Bijker.</p>
 <h2>COPYRIGHT</h2>
 <p> GRFCodec is Copyright (C) 2000-2005 by Josef Drexler &lt;josef [at] ttdpatch.net&gt; </p>
-<h2>Index</h2>
-</p>

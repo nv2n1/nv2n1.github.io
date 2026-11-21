@@ -150,8 +150,4 @@ and(7) to believe your
 
  <pre>
         mailto:guido [at] FreeMiNT.de
-</pre> 
-
-<h2>Index</h2>
-
-
+</pre>

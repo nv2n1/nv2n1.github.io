@@ -49,6 +49,3 @@ std::size_t converted() const noexcept; <i>(since C++14)</i> </p>
 to_bytes <i>(public member function)</i><br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;converts a byte string into a wide string<br />
 from_bytes <i>(public member function)</i> </p>
-<h2>Index</h2>
-
-

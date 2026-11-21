@@ -45,8 +45,4 @@ url: "/docs/linux/man/1-modemtest/"
 
  Copyright 2000-2004 by Kees Cook &lt;kees [at] outflux.net&gt;. 
 
- This program is free software; you may redistribute it and/or modify it under the same terms ans Perl itself. 
-
-<h2>Index</h2>
-
-
+ This program is free software; you may redistribute it and/or modify it under the same terms ans Perl itself.

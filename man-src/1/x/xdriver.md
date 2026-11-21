@@ -55,5 +55,3 @@ description: "XDRIVER – GRASS Monitor – driver to display GRASS maps in X11 
  various improvements from several authors.<br />
  Rewritten 2001 by Glynn Clements </p>
 <p> <i>Last changed: $Date: 2007-05-14 08:26:06 +0200 (Mon, 14 May 2007) $</i> </p>
-<h2>Index</h2>
-</p>

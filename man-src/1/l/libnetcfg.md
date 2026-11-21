@@ -56,8 +56,4 @@ url: "/docs/linux/man/1-libnetcfg/"
 
  Graham Barr, the original Configure script of libnet. 
 
- Jarkko Hietaniemi, conversion into libnetcfg for inclusion into Perl 5.8. 
-
-<h2>Index</h2>
-
-
+ Jarkko Hietaniemi, conversion into libnetcfg for inclusion into Perl 5.8.

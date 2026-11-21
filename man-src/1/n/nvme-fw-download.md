@@ -70,8 +70,4 @@ nvme fw - download&lt;device&gt;[--fw = &lt;firmware - file&gt; | -f&lt;firmware
 
  
 
- Part of the nvme-user suite 
-
-<h2>Index</h2>
-
-
+ Part of the nvme-user suite

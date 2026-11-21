@@ -149,8 +149,4 @@ url: "/docs/linux/man/1-cweb/"
 
  Many other helpers are acknowledged in the CWEB manual. 
 
- Contemporary development on <a rel="nofollow" HREF="https://github.com/ascherer/cweb.">https://github.com/ascherer/cweb.</a> 
-
-<h2>Index</h2>
-
-
+ Contemporary development on <a rel="nofollow" HREF="https://github.com/ascherer/cweb.">https://github.com/ascherer/cweb.</a>

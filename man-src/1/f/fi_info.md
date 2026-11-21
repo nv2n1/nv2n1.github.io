@@ -121,8 +121,4 @@ protocol : FI_PROTO_UDP
 
 <h2>AUTHORS</h2>
 
- OpenFabrics. 
-
-<h2>Index</h2>
-
-
+ OpenFabrics.

@@ -41,8 +41,4 @@ url: "/docs/linux/man/1-vipe/"
 
  Copyright 2006 by Joey Hess &lt;id [at] joeyh.name&gt; 
 
- Licensed under the <font SIZE="-1">GNU GPL.</font> 
-
-<h2>Index</h2>
-
-
+ Licensed under the <font SIZE="-1">GNU GPL.</font>

@@ -178,5 +178,3 @@ description: "swatch – simple watcher"
 </pre>
 <h2>AVAILABILITY</h2>
 <p> Swatch is a SourceForge project whose project page is at <a rel="nofollow" href="http://sourceforge.net/projects/swatch">http://sourceforge.net/projects/swatch</a> and homepage is at <a rel="nofollow" href="http://swatch.sourceforge.net">http://swatch.sourceforge.net</a> </p>
-<h2>Index</h2>
-</p>

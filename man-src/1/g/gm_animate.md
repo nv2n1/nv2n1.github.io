@@ -83,8 +83,4 @@ url: "/docs/linux/man/1-gm_animate/"
 
  <i>Last changed: $Date: 2007-11-18 21:17:33 +0100 (Sun, 18 Nov 2007) $</i> 
 
- Full index 
-
-<h2>Index</h2>
-
-
+ Full index

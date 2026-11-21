@@ -29,8 +29,4 @@ url: "/docs/linux/man/1-certmaster/"
 
 <h2>AUTHOR</h2>
 
- Various. See <a rel="nofollow" HREF="https://fedorahosted.org/certmaster">https://fedorahosted.org/certmaster</a> and <a rel="nofollow" HREF="https://fedorahosted.org/func">https://fedorahosted.org/func</a> 
-
-<h2>Index</h2>
-
-
+ Various. See <a rel="nofollow" HREF="https://fedorahosted.org/certmaster">https://fedorahosted.org/certmaster</a> and <a rel="nofollow" HREF="https://fedorahosted.org/func">https://fedorahosted.org/func</a>

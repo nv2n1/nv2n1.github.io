@@ -48,8 +48,4 @@ url: "/docs/linux/man/1-mogstored/"
 
  mogilefsd --- MogileFS daemon 
 
- &lt;<a rel="nofollow" HREF="http://danga.com/mogilefs/">http://danga.com/mogilefs/</a>&gt; 
-
-<h2>Index</h2>
-
-
+ &lt;<a rel="nofollow" HREF="http://danga.com/mogilefs/">http://danga.com/mogilefs/</a>&gt;

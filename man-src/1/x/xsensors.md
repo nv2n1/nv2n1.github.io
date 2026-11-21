@@ -46,8 +46,4 @@ url: "/docs/linux/man/1-xsensors/"
 
 <h2>AUTHOR</h2>
 
- This manual page was written by Nick Rusnov &lt;nickrusnov [at] debian.org&gt; and Nanley Chery &lt;nanleychery [at] gmail.com&gt; for the Debian GNU/Linux system (but may be used by others). 
-
-<h2>Index</h2>
-
-
+ This manual page was written by Nick Rusnov &lt;nickrusnov [at] debian.org&gt; and Nanley Chery &lt;nanleychery [at] gmail.com&gt; for the Debian GNU/Linux system (but may be used by others).

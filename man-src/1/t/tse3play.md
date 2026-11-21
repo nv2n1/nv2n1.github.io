@@ -91,5 +91,3 @@ description: "tse3play – play/convert music files (MIDI or TSE3MDL) using the 
 <p> Trax Software 2001</p>
 <h2>SEE ALSO</h2>
 <p> <code>playmidi</code>(1), <code>TSE3</code>(3) </p>
-<h2>Index</h2>
-</p>

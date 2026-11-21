@@ -33,8 +33,4 @@ lwp - mirror[-v][-t timeout]&lt;url&gt;&lt;local file&gt;
 
 <h2>AUTHOR</h2>
 
- Gisle Aas &lt;gisle [at] aas.no&gt; 
-
-<h2>Index</h2>
-
-
+ Gisle Aas &lt;gisle [at] aas.no&gt;

@@ -178,5 +178,3 @@ a3ed95caeb02: Pulling fs layer
 <p> <code>Note</code>: Technically, the Engine terminates a pull operation when the connection between the Docker Engine daemon and the Docker Engine client initiating the pull is lost. If the connection with the Engine daemon is lost for other reasons than a manual interaction, the pull is also aborted.</dd></dl>
 <h2>HISTORY</h2>
 <p> April 2014, Originally compiled by William Henry (whenry at redhat dot com) based on docker.com source material and internal work. June 2014, updated by Sven Dowideit &lt;SvenDowideit [at] home.org.au&gt; August 2014, updated by Sven Dowideit &lt;SvenDowideit [at] home.org.au&gt; April 2015, updated by John Willis &lt;john.willis [at] docker.com&gt; April 2015, updated by Mary Anthony for v2 &lt;mary [at] docker.com&gt; September 2015, updated by Sally O&#8217;Malley &lt;somalley [at] redhat.com&gt; </p>
-<h2>Index</h2>
-</p>

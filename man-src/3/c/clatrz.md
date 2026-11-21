@@ -117,5 +117,3 @@ CLATRZ factors the M - by - (M + L) complex upper trapezoidal matrix[A1 A2] = [A
 <p> Definition at line 141 of file clatrz.f.</p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for LAPACK from the source code. </p>
-<h2>Index</h2>
-</p>

@@ -68,8 +68,4 @@ url: "/docs/linux/man/1-exempi/"
 
  
 
- Exempi is licensed under the BSD license. 
-
-<h2>Index</h2>
-
-
+ Exempi is licensed under the BSD license.

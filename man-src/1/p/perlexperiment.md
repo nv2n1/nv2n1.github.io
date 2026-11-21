@@ -170,5 +170,3 @@ description: "perlexperiment – A listing of experimental features in Perl"
 <p> Copyright 2010, brian d foy <tt>&quot;&lt;brian.d.foy [at] gmail.com&gt;&quot;</tt></p>
 <h2>LICENSE</h2>
 <p> You can use and redistribute this document under the same terms as Perl itself. </p>
-<h2>Index</h2>
-</p>

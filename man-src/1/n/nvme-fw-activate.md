@@ -78,8 +78,4 @@ nvme fw - activate&lt;device&gt;[--slot = &lt;slot&gt; | -s&lt;slot&gt;]
 
  
 
- Part of the nvme-user suite 
-
-<h2>Index</h2>
-
-
+ Part of the nvme-user suite

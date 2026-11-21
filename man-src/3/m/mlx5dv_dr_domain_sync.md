@@ -203,8 +203,4 @@ int mlx5dv_dr_action_destroy(struct mlx5dv_dr_action *action);
 
  
 
- Alex Rosenbaum &lt;alexr [at] mellanox.com&gt; Alex Vesker &lt;valex [at] mellanox.com&gt; 
-
-<h2>Index</h2>
-
-
+ Alex Rosenbaum &lt;alexr [at] mellanox.com&gt; Alex Vesker &lt;valex [at] mellanox.com&gt;

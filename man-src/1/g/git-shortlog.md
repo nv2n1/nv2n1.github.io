@@ -505,5 +505,3 @@ E&#8211; &#8212; &#8212; -F<br />
 <p> Note that if <code>git shortlog</code> is run outside of a repository (to process log contents on standard input), it will look for a <code>.mailmap</code> file in the current directory.</p>
 <h2>GIT</h2>
 <p> Part of the <code><a href="/docs/linux/man/1-git/">git</a></code>(1) suite </p>
-<h2>Index</h2>
-</p>

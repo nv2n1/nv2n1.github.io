@@ -68,5 +68,3 @@ description: "dh_installtex – register Type 1 fonts, hyphenation patterns, or 
 <p> <code><a href="/docs/linux/man/7-debhelper/">debhelper</a></code>(7)</p>
 <h2>AUTHOR</h2>
 <p> This program and its documentation was written by Norbert Preining for the Debian Operating System and both are licensed under the <font SIZE="-1">GNU</font> General Public License Version 2 or later. </p>
-<h2>Index</h2>
-</p>

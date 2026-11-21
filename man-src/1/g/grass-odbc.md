@@ -77,5 +77,3 @@ description: "Communication between GRASS and ODBC database for attribute manage
 <p> <i> db.connect, v.db.connect, unixODBC web site, SQL support in GRASS GIS</i> </p>
 <p> <i>Last changed: $Date: 2007-07-18 16:10:27 +0200 (Wed, 18 Jul 2007) $</i><br />
  Help Index </p>
-<h2>Index</h2>
-</p></p>

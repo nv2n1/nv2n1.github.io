@@ -70,8 +70,4 @@ url: "/docs/linux/man/1-yapp/"
 
 <h2>SEE ALSO</h2>
 
- <i>Parse::Yapp</i>(3) <i><a HREF="/docs/linux/man/1-perl/">Perl</a></i>(1) <i><a HREF="/docs/linux/man/1-yacc/">yacc</a></i>(1) <i><a HREF="/docs/linux/man/1-bison/">bison</a></i>(1) 
-
-<h2>Index</h2>
-
-
+ <i>Parse::Yapp</i>(3) <i><a HREF="/docs/linux/man/1-perl/">Perl</a></i>(1) <i><a HREF="/docs/linux/man/1-yacc/">yacc</a></i>(1) <i><a HREF="/docs/linux/man/1-bison/">bison</a></i>(1)

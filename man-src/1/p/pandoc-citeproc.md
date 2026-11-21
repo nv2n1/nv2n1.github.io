@@ -353,8 +353,4 @@ container - title : Journal of Generic Studies
 
  pandoc (1). 
 
- The pandoc-citeproc source code and all documentation may be downloaded from &lt;<a rel="nofollow" HREF="http://github.com/jgm/pandoc-citeproc/">http://github.com/jgm/pandoc-citeproc/</a>&gt;. 
-
-<h2>Index</h2>
-
-
+ The pandoc-citeproc source code and all documentation may be downloaded from &lt;<a rel="nofollow" HREF="http://github.com/jgm/pandoc-citeproc/">http://github.com/jgm/pandoc-citeproc/</a>&gt;.

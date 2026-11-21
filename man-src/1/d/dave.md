@@ -384,5 +384,3 @@ description: "dave – DAV Explorer"
 <p> You may distribute this module under the terms of either the <font SIZE="-1">GNU</font> General Public License or the Artistic License, as specified in the Perl <font SIZE="-1">README</font> file.</p>
 <h2>MAINTAINER</h2>
 <p> Cosimo Streppone, &lt;cosimo [at] cpan.org&gt; </p>
-<h2>Index</h2>
-</p>

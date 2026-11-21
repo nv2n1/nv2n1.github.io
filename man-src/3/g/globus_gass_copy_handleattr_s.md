@@ -34,8 +34,4 @@ url: "/docs/linux/man/3-globus_gass_copy_handleattr_s/"
 
  
 
- Generated automatically by Doxygen for globus_gass_copy from the source code. 
-
-<h2>Index</h2>
-
-
+ Generated automatically by Doxygen for globus_gass_copy from the source code.

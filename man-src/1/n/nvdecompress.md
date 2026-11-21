@@ -12,8 +12,4 @@ url: "/docs/linux/man/1-nvdecompress/"
 
 <h2>DESCRIPTION</h2>
 
- The file '--help' is not a valid DDS file. 
-
-<h2>Index</h2>
-
-
+ The file '--help' is not a valid DDS file.

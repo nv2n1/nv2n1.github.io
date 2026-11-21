@@ -108,8 +108,3 @@ bmpanel2[-h | --help][--version][--usage][--list][--theme = &lt;theme&gt;]
 <dl>
 <dt>
 </dt><dd> * weakhead (<a rel="nofollow" HREF="http://weakhead.deviantart.com)">http://weakhead.deviantart.com)</a></dd></dl>
- 
-
-<h2>Index</h2>
-
-

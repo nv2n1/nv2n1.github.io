@@ -45,8 +45,4 @@ url: "/docs/linux/man/1-mech-dump/"
 
 <h2>SEE ALSO</h2>
 
- WWW::Mechanize 
-
-<h2>Index</h2>
-
-
+ WWW::Mechanize

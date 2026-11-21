@@ -33,8 +33,4 @@ Brad Fitzpatrick, &lt;brad[at] danga.com&gt; Mark Smith, &lt;marksmith[at] danga
 
  Copyright 2004, Danga Interactive, Inc. Copyright 2005-2007, Six Apart, Ltd. 
 
- You can use and redistribute Perlbal under the same terms as Perl itself. 
-
-<h2>Index</h2>
-
-
+ You can use and redistribute Perlbal under the same terms as Perl itself.

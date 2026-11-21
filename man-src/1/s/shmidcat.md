@@ -49,8 +49,4 @@ url: "/docs/linux/man/1-shmidcat/"
 
  
 
- <i><a HREF="/docs/linux/man/1-gtkwave/">gtkwave</a></i>(1) 
-
-<h2>Index</h2>
-
-
+ <i><a HREF="/docs/linux/man/1-gtkwave/">gtkwave</a></i>(1)

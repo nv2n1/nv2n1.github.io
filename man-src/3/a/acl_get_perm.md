@@ -30,5 +30,3 @@ description: "acl_get_perm – test for a permission in an ACL permission set"
 <p> acl_add_perm3, acl_clear_perms3, acl_delete_perm3, acl_get_permset3, acl_set_permset3, <a href="/docs/linux/man/5-acl/">acl</a>(5)</p>
 <h2>AUTHOR</h2>
 <p> Written by An Andreas Gruenbacher Aq a.gruenbacher [at] bestbits.at . </p>
-<h2>Index</h2>
-</p>

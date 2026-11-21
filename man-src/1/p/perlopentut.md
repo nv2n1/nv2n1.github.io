@@ -229,8 +229,4 @@ open($out_fh, "&gt;", $name_out) || die "$0: cannot open $name_out for writing: 
 
  Copyright 2013 Tom Christiansen. 
 
- This documentation is free; you can redistribute it and/or modify it under the same terms as Perl itself. 
-
-<h2>Index</h2>
-
-
+ This documentation is free; you can redistribute it and/or modify it under the same terms as Perl itself.

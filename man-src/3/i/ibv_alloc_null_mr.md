@@ -52,8 +52,4 @@ struct ibv_mr *ibv_alloc_null_mr(struct ibv_pd *pd);
 
  
 
- Yonatan Cohen &lt;yonatanc [at] mellanox.com&gt; 
-
-<h2>Index</h2>
-
-
+ Yonatan Cohen &lt;yonatanc [at] mellanox.com&gt;

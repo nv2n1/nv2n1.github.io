@@ -60,5 +60,3 @@ description: "latex-git-log – Generates the version history of a git project a
 <p> Dieses Programm ist Freie Software: Sie kA~Xnnen es unter den Bedingungen der <font SIZE="-1">GNU</font> General Public License, wie von der Free Software Foundation, Version 3 der Lizenz oder (nach Ihrer Option) jeder spA~Xteren verA~Xffentlichten Version, weiterverbreiten und/oder modifizieren. </p>
 <p> Dieses Programm wird in der Hoffnung, dass es nA~Xtzlich sein wird, aber <font SIZE="-1">OHNE</font> <font SIZE="-1">JEDE</font> GEWA~XHRLEISTUNG, bereitgestellt; sogar ohne die implizite GewA~Xhrleistung der MARKTFA~XHIGKEIT oder <font SIZE="-1">EIGNUNG</font> FA~XR <font SIZE="-1">EINEN</font> <font SIZE="-1">BESTIMMTEN</font> <font SIZE="-1">ZWECK</font>. Siehe die <font SIZE="-1">GNU</font> General Public License fA~Xr weitere Details. </p>
 <p> Sie sollten eine Kopie der <font SIZE="-1">GNU</font> General Public License zusammen mit diesem Programm erhalten haben. Wenn nicht, siehe &lt;<a rel="nofollow" href="http://www.gnu.org/licenses/">http://www.gnu.org/licenses/</a>&gt;. </p>
-<h2>Index</h2>
-</p>

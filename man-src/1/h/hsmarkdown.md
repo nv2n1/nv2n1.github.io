@@ -42,10 +42,4 @@ hsmarkdown input.txt&nbsp;<wbr>&gt;&nbsp;<wbr>output.html
 
 <h2>AUTHORS</h2>
 
- John MacFarlane. 
-
- 
-
-<h2>Index</h2>
-
-
+ John MacFarlane.

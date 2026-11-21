@@ -36,8 +36,4 @@ url: "/docs/linux/man/1-mimesend/"
 
  Eryq, eryq [at] zeegee.com 
 
- 8 Jan 1997 
-
-<h2>Index</h2>
-
-
+ 8 Jan 1997

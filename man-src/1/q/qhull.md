@@ -460,8 +460,4 @@ C.Bradford Barber Hannu Huhdanpaa
 
  The Geometry Center is supported by grant DMS-8920161 from the National Science Foundation, by grant DOE/DE-FG02-92ER25137 from the Department of Energy, by the University of Minnesota, and by Minnesota Technology, Inc. 
 
- Qhull is available from <a rel="nofollow" HREF="http://www.qhull.org">http://www.qhull.org</a> 
-
-<h2>Index</h2>
-
-
+ Qhull is available from <a rel="nofollow" HREF="http://www.qhull.org">http://www.qhull.org</a>

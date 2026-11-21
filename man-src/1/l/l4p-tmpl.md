@@ -43,8 +43,4 @@ url: "/docs/linux/man/1-l4p-tmpl/"
 
  Authors (please contact them via the list above, not directly): Mike Schilli &lt;m@perlmeister.com&gt;, Kevin Goess &lt;cpan [at] goess.org&gt; 
 
- Contributors (in alphabetical order): Ateeq Altaf, Cory Bennett, Jens Berthold, Jeremy Bopp, Hutton Davidson, Chris R. Donnelly, Matisse Enzer, Hugh Esco, Anthony Foiani, James FitzGibbon, Carl Franks, Dennis Gregorovic, Andy Grundman, Paul Harrington, Alexander Hartmaier David Hull, Robert Jacobson, Jason Kohles, Jeff Macdonald, Markus Peter, Brett Rann, Peter Rabbitson, Erik Selberg, Aaron Straup Cope, Lars Thegler, David Viner, Mac Yang. 
-
-<h2>Index</h2>
-
-
+ Contributors (in alphabetical order): Ateeq Altaf, Cory Bennett, Jens Berthold, Jeremy Bopp, Hutton Davidson, Chris R. Donnelly, Matisse Enzer, Hugh Esco, Anthony Foiani, James FitzGibbon, Carl Franks, Dennis Gregorovic, Andy Grundman, Paul Harrington, Alexander Hartmaier David Hull, Robert Jacobson, Jason Kohles, Jeff Macdonald, Markus Peter, Brett Rann, Peter Rabbitson, Erik Selberg, Aaron Straup Cope, Lars Thegler, David Viner, Mac Yang.

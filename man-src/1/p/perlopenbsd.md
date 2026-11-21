@@ -23,8 +23,4 @@ url: "/docs/linux/man/1-perlopenbsd/"
 
  Steve Peters &lt;steve [at] fisharerojo.org&gt; 
 
- Please report any errors, updates, or suggestions to <i>perlbug [at] perl.org</i>. 
-
-<h2>Index</h2>
-
-
+ Please report any errors, updates, or suggestions to <i>perlbug [at] perl.org</i>.

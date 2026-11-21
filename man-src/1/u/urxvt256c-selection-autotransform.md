@@ -47,8 +47,4 @@ URxvt.selection - autotransform .0 : s / ^([^:[:space:]] +)
    URxvt.selection-autotransform.0: s/^ at (.*?) line (\\d+)[,.]$/:e \\Q$1\E\\x0d:$2\\x0d/
 </code></pre> 
 
- The first line tells the selection code to treat the unchanging part of every error message as a selection pattern, and the second line transforms the message into vi commands to load the file. 
-
-<h2>Index</h2>
-
-
+ The first line tells the selection code to treat the unchanging part of every error message as a selection pattern, and the second line transforms the message into vi commands to load the file.

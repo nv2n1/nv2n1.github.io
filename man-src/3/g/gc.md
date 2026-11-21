@@ -60,8 +60,4 @@ url: "/docs/linux/man/3-gc/"
 
 <h2>AUTHOR</h2>
 
- Hans-J. Boehm (Hans.Boehm [at] hp.com). Some of the code was written by others, most notably Alan Demers. 
-
-<h2>Index</h2>
-
-
+ Hans-J. Boehm (Hans.Boehm [at] hp.com). Some of the code was written by others, most notably Alan Demers.

@@ -145,7 +145,3 @@ check_updates[OPTIONS] - ?, --usage Print usage information - h, --help Print de
 </dd><dt>&bull;
 </dt><dd> PhiBo (<a rel="nofollow" HREF="https://github.com/phibos)">https://github.com/phibos)</a> for the --boot-check-warning patch 
 </dd></dl>
-
-<h2>Index</h2>
-
-

@@ -34,8 +34,4 @@ url: "/docs/linux/man/3-globus_i_ftp_client_features_s/"
 
  
 
- Generated automatically by Doxygen for globus_ftp_client from the source code. 
-
-<h2>Index</h2>
-
-
+ Generated automatically by Doxygen for globus_ftp_client from the source code.

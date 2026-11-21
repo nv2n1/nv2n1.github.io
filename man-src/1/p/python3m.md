@@ -123,5 +123,3 @@ description: "python – an interpreted, interactive, object-oriented programmin
  Newsgroups: comp.lang.python, comp.lang.python.announce</p>
 <h2>LICENSING</h2>
 <p> Python is distributed under an Open Source license. See the file &quot;LICENSE&quot; in the Python source distribution for information on terms &amp; conditions for accessing and otherwise using Python and for a DISCLAIMER OF ALL WARRANTIES. </p>
-<h2>Index</h2>
-</p>

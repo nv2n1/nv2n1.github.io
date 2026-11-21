@@ -27,8 +27,4 @@ url: "/docs/linux/man/1-perlfreebsd/"
 
  Nicholas Clark &lt;nick [at] ccl4.org&gt;, collating wisdom supplied by Slaven Rezic and Tim Bunce. 
 
- Please report any errors, updates, or suggestions to &lt;mailto:perlbug [at] perl.org&gt;. 
-
-<h2>Index</h2>
-
-
+ Please report any errors, updates, or suggestions to &lt;mailto:perlbug [at] perl.org&gt;.

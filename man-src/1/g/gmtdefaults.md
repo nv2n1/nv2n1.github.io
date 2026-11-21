@@ -45,5 +45,3 @@ gmt defaults -D &gt; ~/gmt.conf
 <p> <code>gmt</code>, <code>gmt.conf</code>, <code>gmtcolors</code>, <code>gmtget</code>, <code>gmtset</code></p>
 <h2>COPYRIGHT</h2>
 <p> 2015, P. Wessel, W. H. F. Smith, R. Scharroo, J. Luis, and F. Wobbe </p>
-<h2>Index</h2>
-</p>

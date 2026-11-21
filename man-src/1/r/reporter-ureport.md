@@ -295,8 +295,3 @@ case, the default value is yes.
 <dl>
 <dt>
 </dt><dd> &bull; ABRT team</dd></dl>
- 
-
-<h2>Index</h2>
-
-

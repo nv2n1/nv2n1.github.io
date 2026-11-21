@@ -94,8 +94,4 @@ url: "/docs/linux/man/1-perlbeos/"
 
  For BeOS specifics problems feel free to mail to: Ingo Weinhold &lt;bonefish [at] cs.tu-berlin.de&gt; 
 
- Last update: 2004-12-16 
-
-<h2>Index</h2>
-
-
+ Last update: 2004-12-16

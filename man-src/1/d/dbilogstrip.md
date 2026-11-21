@@ -43,8 +43,4 @@ url: "/docs/linux/man/1-dbilogstrip/"
 
  <pre>
   -&gt; STORE for DBD::DBM::st (DBI::st=HASH(0xN)~0xN 'f_params' ARRAY(0xN)) thrN
-</pre> 
-
-<h2>Index</h2>
-
-
+</pre>

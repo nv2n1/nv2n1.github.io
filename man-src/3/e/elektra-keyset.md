@@ -599,5 +599,3 @@ ksRewind(ks);
 <p> <code>ksRewind()</code>, <code>ksCurrent()</code> and <code>ksNext()</code> for iterating over the <code>KeySet :: Class Methods</code></dl>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for Elektra Projekt from the source code. </p>
-<h2>Index</h2>
-</p>

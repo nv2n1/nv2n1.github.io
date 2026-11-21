@@ -48,8 +48,4 @@ const char *ibv_port_state_str(enum ibv_port_state port_state);
 
  
 
- Roland Dreier &lt;rolandd [at] cisco.com&gt; 
-
-<h2>Index</h2>
-
-
+ Roland Dreier &lt;rolandd [at] cisco.com&gt;

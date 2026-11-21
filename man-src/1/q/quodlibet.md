@@ -140,5 +140,3 @@ tag = |(value1, value2)
 <i><a rel="nofollow" href="http://code.google.com/p/quodlibet/wiki/FAQ">http://code.google.com/p/quodlibet/wiki/FAQ</a></i>,
 <code><a href="//www.systutorials.com/docs/linux/man/7-regex/">regex</a></code>(7), <code>gst-launch</code>(1)
 </pre>
-<h2>Index</h2>
-</p>

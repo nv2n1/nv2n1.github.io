@@ -72,8 +72,4 @@ lwp - rget[--verbose] [--auth = USER:PASS][--depth = N][--hier][--iis][--keepext
 
 <h2>AUTHOR</h2>
 
- Gisle Aas &lt;aas [at] sn.no&gt; 
-
-<h2>Index</h2>
-
-
+ Gisle Aas &lt;aas [at] sn.no&gt;

@@ -132,5 +132,3 @@ perladmin = "your.email [at] goes.here"
 <p> June 2017, for Synology <font SIZE="-1">DSM 5.1.5022</font> and <font SIZE="-1">DSM 6.1-15101-4.</font></p>
 <h2>AUTHOR</h2>
 <p> Johan Vromans &lt;jvromans [at] squirrel.nl&gt; H. Merijn Brand &lt;h.m.brand [at] xs4all.nl&gt; </p>
-<h2>Index</h2>
-</p>

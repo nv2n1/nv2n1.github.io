@@ -41,8 +41,4 @@ url: "/docs/linux/man/1-mupprnt/"
 
  
 
- You must have mup in your PATH. You must have ghostscript (gs or gs386.exe) in your PATH. 
-
-<h2>Index</h2>
-
-
+ You must have mup in your PATH. You must have ghostscript (gs or gs386.exe) in your PATH.

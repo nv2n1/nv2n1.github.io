@@ -35,9 +35,3 @@ url: "/docs/linux/man/3-libssh2_session_flag/"
  This function has existed since the age of dawn. LIBSSH2_FLAG_COMPRESS was added in version 1.2.8.
 
 <h2>SEE ALSO</h2>
-
- 
-
-<h2>Index</h2>
-
-

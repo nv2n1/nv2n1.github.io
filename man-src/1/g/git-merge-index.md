@@ -98,8 +98,4 @@ fatal: merge program failed
 
  
 
- Part of the <b><a HREF="/docs/linux/man/1-git/">git</a></b>(1) suite 
-
-<h2>Index</h2>
-
-
+ Part of the <b><a HREF="/docs/linux/man/1-git/">git</a></b>(1) suite

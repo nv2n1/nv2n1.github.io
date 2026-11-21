@@ -111,8 +111,4 @@ $ perl - e 'print q|{"foo":"あい","bar":1234567890000000000000000}|' |
 
  Copyright 2010 by Makamaka Hannyaharamitu 
 
- This library is free software; you can redistribute it and/or modify it under the same terms as Perl itself. 
-
-<h2>Index</h2>
-
-
+ This library is free software; you can redistribute it and/or modify it under the same terms as Perl itself.

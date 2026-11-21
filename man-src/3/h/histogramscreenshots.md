@@ -12,8 +12,4 @@ url: "/docs/linux/man/3-histogramscreenshots/"
  histogramscreenshots - Histogram 
 &nbsp;<wbr> 
 
- <hr> 
-
-<h2>Index</h2>
-
-
+ <hr>

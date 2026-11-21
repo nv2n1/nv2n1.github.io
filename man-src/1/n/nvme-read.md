@@ -62,8 +62,4 @@ nvme - read&lt;device&gt;[--start - block = &lt;slba&gt; | -s&lt;slba&gt;]
 
  
 
- Part of the nvme-user suite 
-
-<h2>Index</h2>
-
-
+ Part of the nvme-user suite

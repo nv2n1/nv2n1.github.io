@@ -53,8 +53,4 @@ url: "/docs/linux/man/1-urxvt-ml-matcher/"
     URxvt.matcher.pattern.1:  \\bwww\\.[\\w-]+\\.[\\w./?&amp;@#-]*[\\w/-]
     URxvt.matcher.pattern.2:  \\B(/\\S+?):(\\d+)(?=:|$)
     URxvt.matcher.launcher.2: gvim +$2 $1
-</code></pre> 
-
-<h2>Index</h2>
-
-
+</code></pre>

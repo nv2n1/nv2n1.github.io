@@ -1037,7 +1037,3 @@ filter:~/bin/filter-script:<a rel="nofollow" HREF="http://some.test/url">http://
  
 
 </dl>
-
-<h2>Index</h2>
-
-

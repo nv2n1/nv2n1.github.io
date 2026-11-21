@@ -143,5 +143,3 @@ enc_type = application / pgp - encrypted
 <p> The code is licensed under the <font SIZE="-1">GNU GPL. </font> Check <a rel="nofollow" href="http://www.argon.org/~roderick/">http://www.argon.org/~roderick/</a> for updated versions.</p>
 <h2>AUTHOR</h2>
 <p> Roderick Schertler &lt;roderick [at] argon.org&gt; </p>
-<h2>Index</h2>
-</p>

@@ -50,8 +50,4 @@ int ibv_resize_cq(struct ibv_cq *cq, int cqe);
 
  
 
- Dotan Barak &lt;dotanba [at] gmail.com&gt; 
-
-<h2>Index</h2>
-
-
+ Dotan Barak &lt;dotanba [at] gmail.com&gt;

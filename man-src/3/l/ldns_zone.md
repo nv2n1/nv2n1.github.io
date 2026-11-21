@@ -42,5 +42,3 @@ description: "ldns_zone"
 <p> <i>ldns_zone_new</i>, <i>ldns_zone_deep_free</i>, <i>ldns_zone_new_frm_fp</i>, <i>ldns_zone_new_frm_fp_l</i>, <i>ldns_zone_sort</i>, <i>ldns_zone_glue_rr_list</i>, <i>ldns_zone_push_rr</i>, <i>ldns_zone_push_rr_list</i>, <i>ldns_zone_set_rrs</i>, <i>ldns_zone_set_soa</i>, <i>ldns_zone_rrs</i>, <i>ldns_zone_soa</i>, <i>ldns_zone_rr_count</i>. And <code>perldoc Net::DNS</code>, <code>RFC1034</code>, <code>RFC1035</code>, <code>RFC4033</code>, <code>RFC4034</code> and <code>RFC4035</code>.</p>
 <h2>REMARKS</h2>
 <p> This manpage was automaticly generated from the ldns source code by use of Doxygen and some perl. </p>
-<h2>Index</h2>
-</p>

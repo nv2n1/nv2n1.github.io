@@ -276,5 +276,3 @@ Any text, except that lines must not begin with `['.
 <p> <code><a href="/docs/linux/man/1-jigdo/">jigdo</a></code>(1) (NOT YET IMPLEMENTED), <code><a href="/docs/linux/man/1-jigdo-lite/">jigdo-lite</a></code>(1), <code>jigdo-mirror</code>(1), <code><a href="/docs/linux/man/1-split/">split</a></code>(1) (or `<code>info split</code>&#8216;), <code><a href="/docs/linux/man/1-find/">find</a></code>(1) (or `<code>info find</code>&#8216;), <code><a href="/docs/linux/man/1-mkisofs/">mkisofs</a></code>(1), <code><a href="/docs/linux/man/1-md5sum/">md5sum</a></code>(1)</p>
 <h2>AUTHOR</h2>
 <p> Jigsaw Download &lt;URL:<a rel="nofollow" href="http://atterer.net/jigdo/">http://atterer.net/jigdo/</a>&gt; was written by Richard Atterer &lt;jigdo atterer.net&gt;, to make downloading of CD ROM images for the Debian Linux distribution more convenient. </p>
-<h2>Index</h2>
-</p>

@@ -56,8 +56,4 @@ url: "/docs/linux/man/1-xdt-csource/"
 </dt><dd> The Xfce development team. All rights reserved.</dd></dl>
  
 
- Please report bugs to &lt;<a rel="nofollow" HREF="http://bugzilla.xfce.org/enter_bug.cgi?product=Xfce4-dev-tools">http://bugzilla.xfce.org/enter_bug.cgi?product=Xfce4-dev-tools</a>&gt;. 
-
-<h2>Index</h2>
-
-
+ Please report bugs to &lt;<a rel="nofollow" HREF="http://bugzilla.xfce.org/enter_bug.cgi?product=Xfce4-dev-tools">http://bugzilla.xfce.org/enter_bug.cgi?product=Xfce4-dev-tools</a>&gt;.

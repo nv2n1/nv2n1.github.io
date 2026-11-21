@@ -219,7 +219,3 @@ url: "/docs/linux/man/3-libcurl-errors/"
 </dd><dt>CURLSHE_NOT_BUILT_IN (5)
 </dt><dd> The requested sharing could not be done because the library you use don't have that particular feature enabled. (Added in 7.23.0) 
 </dd></dl>
-
-<h2>Index</h2>
-
-

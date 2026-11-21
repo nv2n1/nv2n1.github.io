@@ -111,8 +111,4 @@ url: "/docs/linux/man/1-koan/"
 
 <h2>AUTHOR</h2>
 
- Michael DeHaan &lt;michael.dehaan <font SIZE="-1">AT</font> gmail&gt; 
-
-<h2>Index</h2>
-
-
+ Michael DeHaan &lt;michael.dehaan <font SIZE="-1">AT</font> gmail&gt;

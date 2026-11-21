@@ -114,5 +114,3 @@ description: "dpkg-shlibdeps – generate shared library substvar dependencies"
 <p> Calling <code>dpkg-shlibdeps</code> in verbose mode (<code>-v</code>) will provide much more information about where it tried to find the dependency information. This might be useful if you don&#8217;t understand why it&#8217;s giving you this error.</dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/5-deb-shlibs/">deb-shlibs</a></code>(5), <code><a href="/docs/linux/man/5-deb-symbols/">deb-symbols</a></code>(5), <code><a href="/docs/linux/man/1-dpkg-gensymbols/">dpkg-gensymbols</a></code>(1). </p>
-<h2>Index</h2>
-</p>

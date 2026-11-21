@@ -46,8 +46,4 @@ url: "/docs/linux/man/1-umap/"
 
  Copyright 1998 Gisle Aas. 
 
- This is free software; you can redistribute it and/or modify it under the same terms as Perl itself. 
-
-<h2>Index</h2>
-
-
+ This is free software; you can redistribute it and/or modify it under the same terms as Perl itself.

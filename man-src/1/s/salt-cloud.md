@@ -132,5 +132,3 @@ salt-cloud -m /path/to/cloud.map -Q
 <p> Thomas S. Hatch &lt;thatch45 [at] gmail.com&gt; and many others, please see the Authors file</p>
 <h2>COPYRIGHT</h2>
 <p> 2016 SaltStack, Inc. </p>
-<h2>Index</h2>
-</p>

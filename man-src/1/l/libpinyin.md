@@ -34,5 +34,3 @@ description: "libpinyin – Library to deal with pinyin"
 </dt><dd> gen_binary_files &#8211;table-dir ../data </dd>
 <p> import_interpolation &lt; ../data/interpolation.text </p>
 <p> gen_unigram</dl>
-<h2>Index</h2>
-</p>

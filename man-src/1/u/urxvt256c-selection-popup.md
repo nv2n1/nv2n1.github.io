@@ -25,8 +25,4 @@ url: "/docs/linux/man/1-urxvt256c-selection-popup/"
 push @{$self-&gt;{term} {selection_popup_hook}}, sub{
                                                   / a / ? ("a to b" = &gt; sub{s / a / b / g}
                                                            : ()};
-</code></pre> 
-
-<h2>Index</h2>
-
-
+</code></pre>

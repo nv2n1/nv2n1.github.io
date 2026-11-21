@@ -323,5 +323,3 @@ pamperspective
 <p> It was new in Netpbm 10.22 (April 2004). </p>
 <h2>AUTHOR</h2>
 <p> This documentation was written by Mark Weyer. Permission is granted to copy, distribute and/or modify this document under the terms of the GNU General Public License, Version 2 or any later version published by the Free Software Foundation. </p>
-<h2>Index</h2>
-</p>

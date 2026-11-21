@@ -19,8 +19,4 @@ url: "/docs/linux/man/1-urxvt-ml-xim-onthespot/"
 
  <pre>
    urxvt -pt OnTheSpot -pe xim-onthespot
-</pre> 
-
-<h2>Index</h2>
-
-
+</pre>

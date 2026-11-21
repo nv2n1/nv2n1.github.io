@@ -242,5 +242,3 @@ i18ncheckarg: Check validity of i18n calls<br />
 <p> flawfinder &#8211; Examines source code looking for security weaknesses, &lt;<a rel="nofollow" href="http://www.dwheeler.com/flawfinder">http://www.dwheeler.com/flawfinder</a>&gt;.</p>
 <h2>AUTHORS</h2>
 <p> Allen Winter, &lt;winter [at] kde.org&gt; </p>
-<h2>Index</h2>
-</p>

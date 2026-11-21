@@ -460,5 +460,3 @@ print *(e-after today:12:00-)</code>
 <p> Relative periods of months and years do not take into account the variable number of days. </p>
 <p> The <code>calendar_show</code> function is currently hardwired to use <code>xmessage</code> for displaying alerts on X Window System displays. This should be configurable and ideally integrate better with the desktop. </p>
 <p> <code>calendar_lockfiles</code> hangs the shell while waiting for a lock on a file. If called from a scheduled task, it should instead reschedule the event that caused it. </p>
-<h2>Index</h2>
-</p>

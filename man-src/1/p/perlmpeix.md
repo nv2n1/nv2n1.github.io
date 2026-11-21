@@ -402,8 +402,4 @@ Failed Test Status Wstat Total Fail Failed List of failed-- -- -- -- -- -- -- --
 
 <h2>AUTHOR</h2>
 
- Mark Bixby, &lt;<a rel="nofollow" HREF="http://www.bixby.org/mark/">http://www.bixby.org/mark/</a>&gt; 
-
-<h2>Index</h2>
-
-
+ Mark Bixby, &lt;<a rel="nofollow" HREF="http://www.bixby.org/mark/">http://www.bixby.org/mark/</a>&gt;

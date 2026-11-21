@@ -261,5 +261,3 @@ V1 **T *B13 *Q1 = S1 * R1,
 <p> Definition at line 377 of file dtgsja.f.</p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for LAPACK from the source code. </p>
-<h2>Index</h2>
-</p>

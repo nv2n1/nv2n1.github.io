@@ -19,8 +19,4 @@ url: "/docs/linux/man/1-perlapollo/"
 
 <h2>AUTHOR</h2>
 
- Johann Klasek &lt;jk [at] auto.tuwien.ac.at&gt; 
-
-<h2>Index</h2>
-
-
+ Johann Klasek &lt;jk [at] auto.tuwien.ac.at&gt;

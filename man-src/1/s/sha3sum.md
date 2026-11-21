@@ -69,8 +69,4 @@ url: "/docs/linux/man/1-sha3sum/"
 
 <h2>SEE ALSO</h2>
 
- <i>sha3sum</i> is implemented using the Perl module Digest::SHA3. 
-
-<h2>Index</h2>
-
-
+ <i>sha3sum</i> is implemented using the Perl module Digest::SHA3.

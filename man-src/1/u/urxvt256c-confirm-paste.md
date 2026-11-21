@@ -13,8 +13,4 @@ url: "/docs/linux/man/1-urxvt256c-confirm-paste/"
 
 <h2>DESCRIPTION</h2>
 
- Displays a confirmation dialog when a paste containing at least a full line is detected. 
-
-<h2>Index</h2>
-
-
+ Displays a confirmation dialog when a paste containing at least a full line is detected.

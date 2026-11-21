@@ -27,8 +27,4 @@ url: "/docs/linux/man/1-ppmtv/"
 
 <h2>AUTHOR</h2>
 
- Copyright (C) 1993 by Frank Neumann 
-
-<h2>Index</h2>
-
-
+ Copyright (C) 1993 by Frank Neumann

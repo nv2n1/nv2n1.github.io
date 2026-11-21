@@ -15,8 +15,4 @@ url: "/docs/linux/man/1-perltodo/"
 
  The Perl 5 to-do list is maintained in the git repository, and can be viewed at &lt;<a rel="nofollow" HREF="http://perl5.git.perl.org/perl.git/blob/HEAD:/Porting/todo.pod">http://perl5.git.perl.org/perl.git/blob/HEAD:/Porting/todo.pod</a>&gt; 
 
- (The to-do list used to be here in perltodo. That has stopped, as installing a snapshot that becomes increasingly out of date isn't that useful to anyone.) 
-
-<h2>Index</h2>
-
-
+ (The to-do list used to be here in perltodo. That has stopped, as installing a snapshot that becomes increasingly out of date isn't that useful to anyone.)

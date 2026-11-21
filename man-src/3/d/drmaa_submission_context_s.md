@@ -24,8 +24,4 @@ url: "/docs/linux/man/3-drmaa_submission_context_s/"
 
  
 
- Generated automatically by Doxygen for torque from the source code. 
-
-<h2>Index</h2>
-
-
+ Generated automatically by Doxygen for torque from the source code.

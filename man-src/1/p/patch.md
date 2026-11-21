@@ -300,5 +300,3 @@ new lines from the patch
 <p> Permission is granted to copy and distribute translations of this manual into another language, under the above conditions for modified versions, except that this permission notice may be included in translations approved by the copyright holders instead of in the original English.</p>
 <h2>AUTHORS</h2>
 <p> Larry Wall wrote the original version of <code>patch</code>. Paul Eggert removed <code>patch</code>&#8216;s arbitrary limits; added support for binary files, setting file times, and deleting files; and made it conform better to <font SIZE="-1">POSIX</font>. Other contributors include Wayne Davison, who added unidiff support, and David MacKenzie, who added configuration and backup support. Andreas Gr&uuml;nbacher added support for merging. </p>
-<h2>Index</h2>
-</dl>

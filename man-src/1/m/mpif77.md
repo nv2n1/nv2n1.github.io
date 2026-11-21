@@ -27,8 +27,4 @@ url: "/docs/linux/man/1-mpif77/"
 
 <h2>SEE ALSO</h2>
 
- <a HREF="/docs/linux/man/1-mpifort/">mpifort</a>(1) 
-
-<h2>Index</h2>
-
-
+ <a HREF="/docs/linux/man/1-mpifort/">mpifort</a>(1)

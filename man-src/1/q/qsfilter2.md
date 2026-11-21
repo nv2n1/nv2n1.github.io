@@ -101,8 +101,4 @@ url: "/docs/linux/man/1-qsfilter2/"
 
 <h2>AUTHOR</h2>
 
- Pascal Buchbinder, <a rel="nofollow" HREF="http://opensource.adnovum.ch/mod_qos/">http://opensource.adnovum.ch/mod_qos/</a> 
-
-<h2>Index</h2>
-
-
+ Pascal Buchbinder, <a rel="nofollow" HREF="http://opensource.adnovum.ch/mod_qos/">http://opensource.adnovum.ch/mod_qos/</a>

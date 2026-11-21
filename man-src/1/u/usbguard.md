@@ -313,8 +313,4 @@ rules.conf &amp;nbsp;
 
 <h2>AUTHORS</h2>
 
- Daniel Kopeček &lt;dkopecek [at] redhat.com&gt;. 
-
-<h2>Index</h2>
-
-
+ Daniel Kopeček &lt;dkopecek [at] redhat.com&gt;.

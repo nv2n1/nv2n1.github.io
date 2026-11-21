@@ -49,8 +49,4 @@ map - recode from and to various character sets.Reads from STDIN, writes to STDO
 
 <h2>AUTHOR</h2>
 
- Martin Schwartz &lt;<i>martin [at] nacho.de</i>&gt;. 
-
-<h2>Index</h2>
-
-
+ Martin Schwartz &lt;<i>martin [at] nacho.de</i>&gt;.

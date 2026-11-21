@@ -1510,5 +1510,3 @@ virsh snapshot - dumpxml dom name &gt; snapshot.xml
 <p> virsh is distributed under the terms of the <font SIZE="-1">GNU LGPL</font> v2+. This is free software; see the source for copying conditions. There is <font SIZE="-1">NO</font> warranty; not even for <font SIZE="-1">MERCHANTABILITY</font> or <font SIZE="-1">FITNESS FOR A PARTICULAR PURPOSE</font></p>
 <h2>SEE ALSO</h2>
 <p> <i><a href="/docs/linux/man/1-virt-install/">virt-install</a></i>(1), <i><a href="/docs/linux/man/1-virt-xml-validate/">virt-xml-validate</a></i>(1), <i><a href="/docs/linux/man/1-virt-top/">virt-top</a></i>(1), <i><a href="/docs/linux/man/1-virt-df/">virt-df</a></i>(1), &lt;<a rel="nofollow" href="http://www.libvirt.org/">http://www.libvirt.org/</a>&gt; </p>
-<h2>Index</h2>
-</p>

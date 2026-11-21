@@ -27,8 +27,4 @@ Options : --host host host to inventorize(use multiple time to inventorize more 
 
 <h2>DESCRIPTION</h2>
 
- <i>fusioninventory-netinventory</i> allows to run a network inventory task without a <font SIZE="-1">GLPI</font> server. 
-
-<h2>Index</h2>
-
-
+ <i>fusioninventory-netinventory</i> allows to run a network inventory task without a <font SIZE="-1">GLPI</font> server.

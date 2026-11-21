@@ -40,5 +40,3 @@ description: "atomic-pull – fetch an image locally"
 <p> <code>-t</code> <code>&#8211;type atomic</code> Define an alternate registry type. The only valid option is <code>atomic</code> for when you want to take advantage of advanced atomic registry options. </p>
 <h2>HISTORY</h2>
 <p> April 2016, Originally compiled by Giuseppe Scrivano (gscrivan at redhat dot com) </p>
-<h2>Index</h2>
-</p>

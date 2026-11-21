@@ -30,5 +30,3 @@ description: "control_rancid – run rancid for devices of a group"
 <p> <code>control_rancid</code> is normally (and best) run via <code><a href="/docs/linux/man/1-rancid-run/">rancid-run</a></code>(1) which provides a locking mechanism on a group basis and saves output in a log file for each group.</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-rancid-run/">rancid-run</a></code>(1), <code><a href="/docs/linux/man/5-rancid-conf/">rancid.conf</a></code>(5), <code><a href="/docs/linux/man/5-router-db/">router.db</a></code>(5) </p>
-<h2>Index</h2>
-</p>

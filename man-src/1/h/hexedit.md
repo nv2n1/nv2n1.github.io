@@ -184,10 +184,4 @@ Esc-I:  fill
 
  I have an example where the display is completly screwed up. It seems to be a bug in ncurses (or maybe in xterm and rxvt)?? Don't know if it's me using ncurses badly or not... It seems to happen when <i>hexedit</i> leaves only one space at the end of the lines... If anyone has a (or the) solution, please tell me! 
 
- If you have any problem with the program (even a small one), please do report it to me. Remarks of any kind are also welcome. 
-
- 
-
-<h2>Index</h2>
-
-
+ If you have any problem with the program (even a small one), please do report it to me. Remarks of any kind are also welcome.

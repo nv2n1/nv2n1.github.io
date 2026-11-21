@@ -17,8 +17,4 @@ url: "/docs/linux/man/1-urxvt-bell-command/"
 
  <pre>
    URxvt.bell-command: notify-send &quot;Beep, Beep&quot;
-</pre> 
-
-<h2>Index</h2>
-
-
+</pre>

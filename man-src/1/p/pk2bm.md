@@ -47,7 +47,3 @@ Piet Tutelaers
 Maintained in TeX Live; please send bug reports or other correspondence
 to tex-k [at] tug.org (<a rel="nofollow" HREF="http://lists.tug.org/tex-k">http://lists.tug.org/tex-k</a>).
 </pre>
-
-<h2>Index</h2>
-
-

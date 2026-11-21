@@ -157,7 +157,3 @@ url: "/docs/linux/man/1-beakerlib-journal/"
 </dd><dt>&bull;
 </dt><dd> Petr Splichal &lt;psplicha [at] redhat.com&gt; 
 </dd></dl>
-
-<h2>Index</h2>
-
-

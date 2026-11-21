@@ -1968,8 +1968,4 @@ end:
 
  
 
- mmdblookup(1) 
-
-<h2>Index</h2>
-
-
+ mmdblookup(1)

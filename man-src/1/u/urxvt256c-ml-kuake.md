@@ -28,8 +28,4 @@ url: "/docs/linux/man/1-urxvt256c-ml-kuake/"
 
  The accelerator key is grabbed regardless of any modifiers, so this extension will actually grab a physical key just for this function. 
 
- If you want a quake-like animation, tell your window manager to do so (fvwm can do it). 
-
-<h2>Index</h2>
-
-
+ If you want a quake-like animation, tell your window manager to do so (fvwm can do it).

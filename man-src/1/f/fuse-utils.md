@@ -107,8 +107,4 @@ url: "/docs/linux/man/1-fuse-utils/"
 
 <h2>AUTHOR</h2>
 
- Philip Kendall (philip-fuse [at] shadowmagic.org.uk) and others; see the individual man pages for more details. 
-
-<h2>Index</h2>
-
-
+ Philip Kendall (philip-fuse [at] shadowmagic.org.uk) and others; see the individual man pages for more details.

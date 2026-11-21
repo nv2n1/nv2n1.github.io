@@ -85,5 +85,3 @@ description: "pamx – display Netpbm image in X Window System window"
 <dd> slide show </dd>
 <p> <code>pamx</code> also differs from <code>xloadimage</code> in that it uses Libnetpbm.</dl>
 <p> There is virtually no code from <code>xloadimage</code> actually in <code>pamx</code>, because Bryan rewrote it all to make it easier to understand. </p>
-<h2>Index</h2>
-</p>

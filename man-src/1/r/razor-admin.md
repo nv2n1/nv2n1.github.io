@@ -89,8 +89,4 @@ razor - admin[options][-register | -create | -discover]
 
 <h2>LICENSE</h2>
 
- This is free software, distributed under the Artistic License 2.0. 
-
-<h2>Index</h2>
-
-
+ This is free software, distributed under the Artistic License 2.0.

@@ -27,8 +27,4 @@ url: "/docs/linux/man/1-urxvt-readline/"
 </dt><dd></dd></dl>
  
 
- The normal selection mechanism isn't disabled, so quick successive clicks might interfere with selection creation in harmless ways. 
-
-<h2>Index</h2>
-
-
+ The normal selection mechanism isn't disabled, so quick successive clicks might interfere with selection creation in harmless ways.

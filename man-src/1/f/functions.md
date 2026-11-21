@@ -40,8 +40,4 @@ url: "/docs/linux/man/1-functions/"
 
  Automatically loaded functions can not be removed using functions -e. Either remove the definition file or change the $fish_function_path variable to remove autoloaded functions. 
 
- The exit status of the functions builtin is the number functions specified in the argument list that do not exist. 
-
-<h2>Index</h2>
-
-
+ The exit status of the functions builtin is the number functions specified in the argument list that do not exist.

@@ -195,5 +195,3 @@ if that is less than overflow, CTBSV
 <p> Definition at line 243 of file clatbs.f.</p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for LAPACK from the source code. </p>
-<h2>Index</h2>
-</p>

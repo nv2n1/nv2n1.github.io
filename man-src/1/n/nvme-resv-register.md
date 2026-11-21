@@ -87,8 +87,4 @@ url: "/docs/linux/man/1-nvme-resv-register/"
 
  
 
- Part of the nvme-user suite 
-
-<h2>Index</h2>
-
-
+ Part of the nvme-user suite

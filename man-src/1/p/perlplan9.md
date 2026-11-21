@@ -115,8 +115,4 @@ future.To install this software:
 
  Direct questions, comments, and the unlikely bug report (ahem) direct comments toward: 
 
- Luther Huffman, lutherh [at] stratcom.com, Strategic Computer Solutions, Inc. 
-
-<h2>Index</h2>
-
-
+ Luther Huffman, lutherh [at] stratcom.com, Strategic Computer Solutions, Inc.

@@ -24,8 +24,4 @@ url: "/docs/linux/man/1-urxvt-remote-clipboard/"
  <pre>
    URxvt.remote-selection.store: rsh ruth 'cat &gt;/tmp/distributed-selection'
    URxvt.remote-selection.fetch: rsh ruth 'cat /tmp/distributed-selection'
-</pre> 
-
-<h2>Index</h2>
-
-
+</pre>

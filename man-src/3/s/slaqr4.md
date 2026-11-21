@@ -206,5 +206,3 @@ H is REAL array, dimension(LDH, N) On entry, the upper Hessenberg matrix H.On ex
 <p> Definition at line 265 of file slaqr4.f.</p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for LAPACK from the source code. </p>
-<h2>Index</h2>
-</p>
