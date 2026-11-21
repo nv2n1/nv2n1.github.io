@@ -10,8 +10,6 @@ canonical: /less-instructions-more-performance-achieving-near-native-speed-in-a-
 url: /less-instructions-more-performance-achieving-near-native-speed-in-a-cross-isa-binary-translator/
 ---
 
-## Introduction
-
 Cross-ISA dynamic binary translation (DBT) is a foundational technique for running executables compiled for one instruction set architecture on a host with a different ISA. It powers widely-used emulators like <a href="https://www.qemu.org/" rel="nofollow noopener" target="_blank">QEMU</a>, enabling everything from ARM-to-x86 mobile app emulation to legacy system preservation. Unlike static binary translation, DBT translates code *at runtime* — converting guest instructions to host instructions on demand, caching the results for reuse.
 
 The central challenge in DBT is `translation overhead`: a single source instruction typically expands into multiple host instructions, and the translation framework adds its own bookkeeping (operand mapping, branch resolution, trampoline dispatch). In tight compute loops, this overhead compounds dramatically, making translated code orders of magnitude slower than native execution.
