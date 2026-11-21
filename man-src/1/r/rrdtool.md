@@ -115,12 +115,3 @@ description: "rrdtool – Round Robin Database Tool"
 <p> Bugs? Features!</p>
 <h2>AUTHOR</h2>
 <p> Tobias Oetiker &lt;tobi [at] oetiker.ch&gt; </p>
-<h2>Index</h2>
-<dt><a href="#lbAJ">RRDCACHED, THE CACHING DAEMON</a></dt>
-<dd>
-</dd><dt><a href="#lbAK">SEE ALSO</a></dt>
-<dd>
-</dd><dt><a href="#lbAL">BUGS</a></dt>
-<dd>
-</dd><dt><a href="#lbAM">AUTHOR</a></dt>
-<dd></dd></dl>

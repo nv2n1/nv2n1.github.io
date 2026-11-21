@@ -123,12 +123,3 @@ description: "qhost – show the status of xxQS_NAMExx hosts, queues, jobs"
 <h2>SEE ALSO</h2>
 <h2>COPYRIGHT</h2>
 <p> See for a full statement of rights and permissions. </p>
-<h2>Index</h2>
-<dt><a href="#lbAH">ENVIRONMENT VARIABLES</a></dt>
-<dd>
-</dd><dt><a href="#lbAI">FILES</a></dt>
-<dd>
-</dd><dt><a href="#lbAJ">SEE ALSO</a></dt>
-<dd>
-</dd><dt><a href="#lbAK">COPYRIGHT</a></dt>
-<dd></dd></dl>

@@ -1152,36 +1152,3 @@ first | 4
 second | four
 </code></pre>
  </dd></dl>
-<h2>Index</h2>
-<dl>
-<dt><a href="#lbAB">NAME</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAC">SYNOPSIS</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAD">DESCRIPTION</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAE">OPTIONS</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAF">EXIT STATUS</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAG">USAGE</a></dt>
-<dd>  </dd>
-<dl>
-<dt><a href="#lbAH">Connecting to a Database</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAI">Entering SQL Commands</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAJ">Meta-Commands</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAK">Advanced Features</a></dt>
-<dd>  </dd></dl>
-<dt><a href="#lbAL">ENVIRONMENT</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAM">FILES</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAN">NOTES</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAO">NOTES FOR WINDOWS USERS</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAP">EXAMPLES</a></dt>
-<dd>  </dd></dl>

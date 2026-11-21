@@ -1932,8 +1932,6 @@ $re = customre::convert $re;
 
  <i>Mastering Regular Expressions</i> by Jeffrey Friedl, published by O'Reilly and Associates. 
 
-<h2>Index</h2>
-
 
 
 <dt><a HREF="#lbAR">BUGS</a>

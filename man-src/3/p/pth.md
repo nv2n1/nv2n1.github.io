@@ -983,33 +983,3 @@ description: "pth – GNU Portable Threads"
 <pre><code> Ralf S. Engelschall
  rse [at] engelschall.comwww.engelschall.com
 </code></pre>
-<h2>Index</h2>
-<dl>
-<dt><a href="#lbAB">NAME</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAC">VERSION</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAD">SYNOPSIS</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAE">DESCRIPTION</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAF">APPLICATION PROGRAMMING INTERFACE (API)</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAG">EXAMPLE</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAH">BUILD ENVIRONMENTS</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAI">SYSTEM CALL WRAPPER FACILITY</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAJ">IMPLEMENTATION NOTES</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAK">RESTRICTIONS</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAL">HISTORY</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAM">BUG REPORTS AND SUPPORT</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAN">SEE ALSO</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAO">AUTHOR</a></dt>
-<dd>  </dd></dl>

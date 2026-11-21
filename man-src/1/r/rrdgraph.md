@@ -195,10 +195,3 @@ print[0] = "0.020833" print[1] = "0.0440833" graph_left = 51 graph_top = 22 grap
 <h2>AUTHOR</h2>
 <p> Program by Tobias Oetiker &lt;tobi [at] oetiker.ch&gt; </p>
 <p> This manual page by Alex van den Bogaerdt &lt;alex [at] vandenbogaerdt.nl&gt; with corrections and/or additions by several people </p>
-<h2>Index</h2>
-<dt><a href="#lbAS">ENVIRONMENT VARIABLES</a></dt>
-<dd>
-</dd><dt><a href="#lbAT">SEE ALSO</a></dt>
-<dd>
-</dd><dt><a href="#lbAU">AUTHOR</a></dt>
-<dd></dd></dl>

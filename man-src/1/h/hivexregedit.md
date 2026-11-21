@@ -107,14 +107,3 @@ hivexregedit-- export[--prefix prefix] hivefile key &gt; regfile
 <p> This program is free software; you can redistribute it and/or modify it under the terms of the <font SIZE="-1">GNU</font> General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version. </p>
 <p> This program is distributed in the hope that it will be useful, but <font SIZE="-1">WITHOUT ANY WARRANTY</font>; without even the implied warranty of <font SIZE="-1">MERCHANTABILITY</font> or <font SIZE="-1">FITNESS FOR A PARTICULAR PURPOSE. </font> See the <font SIZE="-1">GNU</font> General Public License for more details. </p>
 <p> You should have received a copy of the <font SIZE="-1">GNU</font> General Public License along with this program; if not, write to the Free Software Foundation, Inc., 675 Mass Ave, Cambridge, <font SIZE="-1">MA 02139, USA.</font> </p>
-<h2>Index</h2>
-<dt><a href="#lbAH">EXAMPLE</a></dt>
-<dd>
-</dd><dt><a href="#lbAI">OPTIONS</a></dt>
-<dd>
-</dd><dt><a href="#lbAJ">SEE ALSO</a></dt>
-<dd>
-</dd><dt><a href="#lbAK">AUTHOR</a></dt>
-<dd>
-</dd><dt><a href="#lbAL">COPYRIGHT</a></dt>
-<dd></dd></dl>

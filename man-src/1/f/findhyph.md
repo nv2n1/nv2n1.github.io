@@ -110,23 +110,3 @@ description: "findhyph – find words hyphenated by TeX in a document"
 <p> This program is free software; you can redistribute it and/or modify it under the terms of the <font SIZE="-1">GNU</font> General Public License as published by the Free Software Foundation; either version 2 of the License, or any later version.  </p>
 <h2>AUTHOR</h2>
 <p> Copyright (c) Martin Budaj &lt;m.b [at] speleo.sk&gt; 2000, 2001, 2009, 2012, 2015 </p>
-<h2>Index</h2>
-<dl>
-<dt><a href="#lbAB">NAME</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAC">INSTALLATION</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAD">SYNOPSIS</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAE">DESCRIPTION</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAF">OPTIONS</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAG">OUTPUT FILES</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAH">HISTORY</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAI">LICENSE</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAJ">AUTHOR</a></dt>
-<dd>  </dd></dl>

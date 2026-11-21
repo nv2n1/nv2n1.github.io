@@ -1118,8 +1118,3 @@ description: "pki-python-client – Dogtag Python Client API"
 <p> Dogtag PKI Project Team</p>
 <h2>COPYRIGHT</h2>
 <p> 2014, Dogtag PKI Team </p>
-<h2>Index</h2>
-<dt><a href="#lbAQ">AUTHOR</a></dt>
-<dd>
-</dd><dt><a href="#lbAR">COPYRIGHT</a></dt>
-<dd></dd></dl>

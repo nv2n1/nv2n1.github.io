@@ -178,8 +178,3 @@ description: "Priority Queue –"
 </dt><dd> This function returns the number of elements in the queue, or GLOBUS_FAILURE if the priority_q pointer is invalid.</dd></dl>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for globus_common from the source code. </p>
-<h2>Index</h2>
-<dt><a href="#lbAJ">Function Documentation</a></dt>
-<dd>
-</dd><dt><a href="#lbAU">Author</a></dt>
-<dd></dd></dl>

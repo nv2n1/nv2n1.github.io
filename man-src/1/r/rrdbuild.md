@@ -264,6 +264,3 @@ cd $BUILD_DIR
 <p> Now go to <i></i>$INSTALL_DIR<i></i><code>/share/rrdtool/examples/</code> and run them to see if your build has been successful.</p>
 <h2>AUTHOR</h2>
 <p> Tobias Oetiker &lt;tobi [at] oetiker.ch&gt; </p>
-<h2>Index</h2>
-<dt><a href="#lbAM">AUTHOR</a></dt>
-<dd></dd></dl>

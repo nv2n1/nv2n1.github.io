@@ -27,6 +27,3 @@ description: "daala_image –"
 <p> Typical 3 planes for Y, Cb, and Cr. Can have a 4th plane for alpha </p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for daala from the source code. </p>
-<h2>Index</h2>
-<dt><a href="#lbAH">Author</a></dt>
-<dd></dd></dl>

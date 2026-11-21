@@ -53,11 +53,3 @@ description: "PCRE – Perl-compatible regular expressions"
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;(1=yes 0=no) </p>
 <p>The function yields 0 on success or PCRE_ERROR_BADOPTION otherwise. That error is also given if PCRE_CONFIG_UTF16 or PCRE_CONFIG_UTF32 is passed to <code>pcre_config()</code>, if PCRE_CONFIG_UTF8 or PCRE_CONFIG_UTF32 is passed to <code>pcre16_config()</code>, or if PCRE_CONFIG_UTF8 or PCRE_CONFIG_UTF16 is passed to <code>pcre32_config()</code>. </p>
 <p>There is a complete description of the PCRE native API in the <code>pcreapi</code> page and a description of the POSIX API in the <code>pcreposix</code> page. </p>
-<h2>Index</h2>
-<dl>
-<dt><a href="#lbAB">NAME</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAC">SYNOPSIS</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAD">DESCRIPTION</a></dt>
-<dd>  </dd></dl>

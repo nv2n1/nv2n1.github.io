@@ -159,26 +159,3 @@ description: "perl5132delta – what is new for perl v5.13.2"
 <p> The <i></i><font SIZE="-1"><i>INSTALL</i></font><i></i> file for how to build Perl. </p>
 <p> The <i></i><font SIZE="-1"><i>README</i></font><i></i> file for general stuff. </p>
 <p> The <i>Artistic</i> and <i>Copying</i> files for copyright information. </p>
-<h2>Index</h2>
-<dt><a href="#lbAM">Modules and Pragmata</a></dt>
-<dd>
-</dd><dt><a href="#lbAO">Changes to Existing Documentation</a></dt>
-<dd>
-</dd><dt><a href="#lbAV">Performance Enhancements</a></dt>
-<dd>
-</dd><dt><a href="#lbBA">Installation and Configuration Improvements</a></dt>
-<dd>
-</dd><dt><a href="#lbBC">Selected Bug Fixes</a></dt>
-<dd>
-</dd><dt><a href="#lbBD">Changed Internals</a></dt>
-<dd>
-</dd><dt><a href="#lbBE">Deprecations</a></dt>
-<dd>
-</dd><dt><a href="#lbBF">Platform Specific Notes</a></dt>
-<dd>
-</dd><dt><a href="#lbBH">Acknowledgements</a></dt>
-<dd>
-</dd><dt><a href="#lbBI">Reporting Bugs</a></dt>
-<dd>
-</dd><dt><a href="#lbBJ">SEE ALSO</a></dt>
-<dd></dd></dl>

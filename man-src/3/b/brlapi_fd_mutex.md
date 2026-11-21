@@ -220,10 +220,3 @@ description: "BrlAPI’s protocol –"
 <p> If both these functions and <code>brlapi_writePacket()</code> or <code>brlapi_readPacket()</code> are used in a multithreaded application, this mutex must be locked before calling <code>brlapi_writePacket()</code> or <code>brlapi_readPacket()</code>, and unlocked afterwards.</p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for BrlAPI from the source code. </p>
-<h2>Index</h2>
-<dt><a href="#lbBP">Function Documentation</a></dt>
-<dd>
-</dd><dt><a href="#lbBU">Variable Documentation</a></dt>
-<dd>
-</dd><dt><a href="#lbBW">Author</a></dt>
-<dd></dd></dl>

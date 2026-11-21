@@ -93,23 +93,3 @@ description: "mingetty – minimal getty for consoles"
 <p> <code><a href="/docs/linux/man/8-mgetty/">mgetty</a></code>(8), <code><a href="/docs/linux/man/8-agetty/">agetty</a></code>(8). </p>
 <h2>AUTHOR</h2>
 <p> Copyright &#169; 1996 Florian La Roche &lt;laroche [at] redhat.com&gt;. Man-page written by David Frey &lt;David.Frey [at] eos.lugs.ch&gt; and Florian La Roche. </p>
-<h2>Index</h2>
-<dl>
-<dt><a href="#lbAB">NAME</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAC">SYNOPSIS</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAD">DESCRIPTION</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAE">OPTIONS</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAF">ISSUE ESCAPES</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAG">EXAMPLE</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAH">FILES</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAI">SEE ALSO</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAJ">AUTHOR</a></dt>
-<dd>  </dd></dl>

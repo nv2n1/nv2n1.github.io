@@ -71,28 +71,3 @@ description: "QuantLib::InterpolatedHazardRateCurve – interpolated hazard-rate
 <p>Reimplemented from <code>HazardRateStructure</code>. </p>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for QuantLib from the source code. </p>
-<h2>Index</h2>
-<dl>
-<dt><a href="#lbAB">NAME</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAC">SYNOPSIS</a></dt>
-<dd>  </dd>
-<dl>
-<dt><a href="#lbAD">Public Member Functions</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAE">Protected Member Functions</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAF">Protected Attributes</a></dt>
-<dd>  </dd></dl>
-<dt><a href="#lbAG">Detailed Description</a></dt>
-<dd>  </dd>
-<dl>
-<dt><a href="#lbAH">template&lt;class Interpolator&gt; class QuantLib::InterpolatedHazardRateCurve&lt; Interpolator &gt;</a></dt>
-<dd>  </dd></dl>
-<dt><a href="#lbAI">Member Function Documentation</a></dt>
-<dd>  </dd>
-<dl>
-<dt><a href="#lbAJ">Probability survivalProbabilityImpl (Time) const [protected, virtual]</a></dt>
-<dd>  </dd></dl>
-<dt><a href="#lbAK">Author</a></dt>
-<dd>  </dd></dl>

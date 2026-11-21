@@ -1142,16 +1142,3 @@ table nat chain PREROUTING interface $DEV_WORLD daddr $HOST_STATIC proto $proto 
 <p> You should have received a copy of the <font SIZE="-1">GNU</font> General Public License along with this program; if not, write to the Free Software Foundation, Inc., 59 Temple Place, Suite 330, Boston, <font SIZE="-1">MA</font> 02111-1307 <font SIZE="-1">USA</font></p>
 <h2>AUTHOR</h2>
 <p> Max Kellermann &lt;max [at] foo-projects.org&gt;, Auke Kok &lt;sofar [at] foo-projects.org&gt; </p>
-<h2>Index</h2>
-<dt><a href="#lbBP">OPTIONS</a></dt>
-<dd>
-</dd><dt><a href="#lbBQ">SEE ALSO</a></dt>
-<dd>
-</dd><dt><a href="#lbBR">REQUIREMENTS</a></dt>
-<dd>
-</dd><dt><a href="#lbBU">BUGS</a></dt>
-<dd>
-</dd><dt><a href="#lbBV">COPYRIGHT</a></dt>
-<dd>
-</dd><dt><a href="#lbBW">AUTHOR</a></dt>
-<dd></dd></dl>

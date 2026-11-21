@@ -27,6 +27,3 @@ description: "Error Types –"
 <dd> Indicates that the mode_e header is erroneous</dd></dl>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for globus_xio from the source code. </p>
-<h2>Index</h2>
-<dt><a href="#lbAG">Author</a></dt>
-<dd></dd></dl>

@@ -206,18 +206,3 @@ description: "rrdcreate – Set up a new Round Robin Database"
 <p> In the <font SIZE="-1"><code>RRD</code></font>, the first data source stores the requests per second rate during the interval. The second data source stores the total duration of all requests processed during the interval divided by 300. The <font SIZE="-1">COMPUTE</font> data source divides each <font SIZE="-1">PDP</font> of the AccumDuration by the corresponding <font SIZE="-1">PDP</font> of TotalRequests and stores the average request duration. The remainder of the <font SIZE="-1">RPN</font> expression handles the divide by zero case.</p>
 <h2>AUTHOR</h2>
 <p> Tobias Oetiker &lt;tobi [at] oetiker.ch&gt; </p>
-<h2>Index</h2>
-<dt><a href="#lbAK">Aberrant Behavior Detection with Holt-Winters Forecasting</a></dt>
-<dd>
-</dd><dt><a href="#lbAL">The HEARTBEAT and the STEP</a></dt>
-<dd>
-</dd><dt><a href="#lbAM">HOW TO MEASURE</a></dt>
-<dd>
-</dd><dt><a href="#lbAN">EXAMPLE</a></dt>
-<dd>
-</dd><dt><a href="#lbAO">EXAMPLE 2</a></dt>
-<dd>
-</dd><dt><a href="#lbAP">EXAMPLE 3</a></dt>
-<dd>
-</dd><dt><a href="#lbAQ">AUTHOR</a></dt>
-<dd></dd></dl>

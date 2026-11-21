@@ -201,39 +201,3 @@ TAG_TYPE &quot;None&quot;
 <p> <code><a href="/docs/linux/man/1-gdcmdump/">gdcmdump</a></code>(1), <code><a href="/docs/linux/man/1-gdcmraw/">gdcmraw</a></code>(1), <code><a href="/docs/linux/man/1-gdcmanon/">gdcmanon</a></code>(1)  </p>
 <h2>COPYRIGHT</h2>
 <p> Copyright (c) 2006-2010 Mathieu Malaterre </p>
-<h2>Index</h2>
-<dl>
-<dt><a href="#lbAB">NAME</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAC">NAME</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAD">DESCRIPTION</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAE">PARAMETERS</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAF">OPTIONS</a></dt>
-<dd>  </dd>
-<dl>
-<dt><a href="#lbAG">OPTIONS</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAH">general options</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAI">special options</a></dt>
-<dd>  </dd></dl>
-<dt><a href="#lbAJ">Typical usage</a></dt>
-<dd>  </dd>
-<dl>
-<dt><a href="#lbAK">Printing Implicit Transfer Syntax</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAL">Print Private Attributes</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAM">SIEMENS CSA Header</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAN">GEMS Protocol Data Block</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAO">Encapsulated ASN1 Structure</a></dt>
-<dd>  </dd></dl>
-<dt><a href="#lbAP">SEE ALSO</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAQ">COPYRIGHT</a></dt>
-<dd>  </dd></dl>

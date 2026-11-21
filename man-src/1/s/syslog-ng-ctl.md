@@ -251,6 +251,3 @@ processed;
 <dt>
 </dt><dd> <a rel="nofollow" href="http://insider.blogs.balabit.com">http://insider.blogs.balabit.com</a></dd></dl>
 </dl>
-<h2>Index</h2>
-<dt><a href="#lbAL">NOTES</a></dt>
-<dd></dd></dl>

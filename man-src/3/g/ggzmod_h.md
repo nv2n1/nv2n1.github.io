@@ -513,10 +513,3 @@ description: "ggzmod.h – Common functions for interfacing a game server and GG
 </dt><dd> TRUE if there is a record; FALSE if not or on error.</dd></dl>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for GGZMod from the source code. </p>
-<h2>Index</h2>
-<dt><a href="#lbAL">Enumeration Type Documentation</a></dt>
-<dd>
-</dd><dt><a href="#lbAP">Function Documentation</a></dt>
-<dd>
-</dd><dt><a href="#lbBW">Author</a></dt>
-<dd></dd></dl>

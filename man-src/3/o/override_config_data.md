@@ -21,13 +21,3 @@ description: "override_config_data – Specifies a block of data containing conf
 <p>Note that this function and override_config_file() are mutually exclusive, i.e. calling one will cancel the effects of the other. </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-override_config_file/">override_config_file</a></code>(3), <code><a href="/docs/linux/man/3-set_config_data/">set_config_data</a></code>(3) </p>
-<h2>Index</h2>
-<dl>
-<dt><a href="#lbAB">NAME</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAC">SYNOPSIS</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAD">DESCRIPTION</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAE">SEE ALSO</a></dt>
-<dd>  </dd></dl>

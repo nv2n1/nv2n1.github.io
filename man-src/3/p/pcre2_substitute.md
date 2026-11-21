@@ -58,11 +58,3 @@ description: "PCRE2 – Perl-compatible regular expressions (revised API)"
 &nbsp;<wbr>&nbsp;PCRE2_SUBSTITUTE_UNSET_EMPTY&nbsp;<wbr>&nbsp;Simple unset insert&nbsp;=&nbsp;empty string </p>
 <p>The function returns the number of substitutions, which may be zero if there were no matches. The result can be greater than one only when PCRE2_SUBSTITUTE_GLOBAL is set. In the event of an error, a negative error code is returned. </p>
 <p>There is a complete description of the PCRE2 native API in the <code>pcre2api</code> page and a description of the POSIX API in the <code>pcre2posix</code> page. </p>
-<h2>Index</h2>
-<dl>
-<dt><a href="#lbAB">NAME</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAC">SYNOPSIS</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAD">DESCRIPTION</a></dt>
-<dd>  </dd></dl>

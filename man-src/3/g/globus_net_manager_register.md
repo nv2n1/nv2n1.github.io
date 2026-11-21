@@ -63,6 +63,3 @@ globus_module_deactivate(GLOBUS_NET_MANAGER_MODULE);
 </dt><dd> <i>manager</i> Manager information to unregister.</dd></dl>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for globus_net_manager from the source code. </p>
-<h2>Index</h2>
-<dt><a href="#lbAL">Author</a></dt>
-<dd></dd></dl>

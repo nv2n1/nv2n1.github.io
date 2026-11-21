@@ -505,12 +505,3 @@ $ systemd-analyze security --no-pager systemd-logind.service
 </dt><dd> The value must be a boolean. Controls whether clickable links should be generated in the output for terminal emulators supporting this. This can be specified to override the decision that <code>systemd</code> makes based on <i>$TERM</i> and other conditions.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-systemd/">systemd</a></code>(1), <code><a href="/docs/linux/man/1-systemctl/">systemctl</a></code>(1) </p>
-<h2>Index</h2>
-<dt><a href="#lbAV">OPTIONS</a></dt>
-<dd>
-</dd><dt><a href="#lbAW">EXIT STATUS</a></dt>
-<dd>
-</dd><dt><a href="#lbAX">ENVIRONMENT</a></dt>
-<dd>
-</dd><dt><a href="#lbAY">SEE ALSO</a></dt>
-<dd></dd></dl>

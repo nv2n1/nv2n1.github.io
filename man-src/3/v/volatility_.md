@@ -96,27 +96,3 @@ description: "QuantLib::SingleAssetOption – Black-Scholes-Merton option."
  </dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for QuantLib from the source code. </p>
-<h2>Index</h2>
-<dl>
-<dt><a href="#lbAB">NAME</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAC">SYNOPSIS</a></dt>
-<dd>  </dd>
-<dl>
-<dt><a href="#lbAD">Public Member Functions</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAE">Protected Attributes</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAF">Static Protected Attributes</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAG">Friends</a></dt>
-<dd>  </dd></dl>
-<dt><a href="#lbAH">Detailed Description</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAI">Member Function Documentation</a></dt>
-<dd>  </dd>
-<dl>
-<dt><a href="#lbAJ"><code>Volatility</code> impliedVolatility (Real targetValue, Real accuracy = 1e-4, Size maxEvaluations = 100, <code>Volatility</code> minVol = 1.0e-7, <code>Volatility</code> maxVol = 4.0) const</a></dt>
-<dd>  </dd></dl>
-<dt><a href="#lbAK">Author</a></dt>
-<dd>  </dd></dl>

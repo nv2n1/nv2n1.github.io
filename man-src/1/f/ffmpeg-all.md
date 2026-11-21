@@ -36879,8 +36879,6 @@ movie = dvd.vob : s = v : 0 + #0x81 [video][audio]
 
  Maintainers for the specific components are listed in the file <i></i><font SIZE="-1"><i>MAINTAINERS</i></font><i></i> in the source code tree. 
 
-<h2>Index</h2>
-
 
 
 <dt><a HREF="#lbDW">SUBTITLES ENCODERS</a>

@@ -124,30 +124,3 @@ description: "perl591delta – what is new for perl v5.9.1"
 <p> The <i></i><font SIZE="-1"><i>INSTALL</i></font><i></i> file for how to build Perl. </p>
 <p> The <i></i><font SIZE="-1"><i>README</i></font><i></i> file for general stuff. </p>
 <p> The <i>Artistic</i> and <i>Copying</i> files for copyright information. </p>
-<h2>Index</h2>
-<dt><a href="#lbAG">Core Enhancements</a></dt>
-<dd>
-</dd><dt><a href="#lbAL">Modules and Pragmata</a></dt>
-<dd>
-</dd><dt><a href="#lbAM">Utility Changes</a></dt>
-<dd>
-</dd><dt><a href="#lbAN">Documentation</a></dt>
-<dd>
-</dd><dt><a href="#lbAO">Performance Enhancements</a></dt>
-<dd>
-</dd><dt><a href="#lbAP">Selected Bug Fixes</a></dt>
-<dd>
-</dd><dt><a href="#lbAT">New or Changed Diagnostics</a></dt>
-<dd>
-</dd><dt><a href="#lbAU">Changed Internals</a></dt>
-<dd>
-</dd><dt><a href="#lbAZ">Configuration and Building</a></dt>
-<dd>
-</dd><dt><a href="#lbBA">Known Problems</a></dt>
-<dd>
-</dd><dt><a href="#lbBC">To-do for perl 5.10.0</a></dt>
-<dd>
-</dd><dt><a href="#lbBD">Reporting Bugs</a></dt>
-<dd>
-</dd><dt><a href="#lbBE">SEE ALSO</a></dt>
-<dd></dd></dl>

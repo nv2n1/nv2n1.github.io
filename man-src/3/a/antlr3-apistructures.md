@@ -76,6 +76,3 @@ description: "API Typedefs and Structs –"
 <p> Master context structure for an ANTLR3 C runtime based input stream.</p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for ANTLR3C from the source code. </p>
-<h2>Index</h2>
-<dt><a href="#lbAI">Author</a></dt>
-<dd></dd></dl>

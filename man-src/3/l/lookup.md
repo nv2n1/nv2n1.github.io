@@ -42,6 +42,3 @@ description: "QuantLib::ExchangeRateManager – exchange-rate repository"
 </dt><dd> if two or more exchange-rate chains are possible which allow to specify a requested rate, it is unspecified which one is returned.</dd></dl>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for QuantLib from the source code. </p>
-<h2>Index</h2>
-<dt><a href="#lbAJ">Author</a></dt>
-<dd></dd></dl>

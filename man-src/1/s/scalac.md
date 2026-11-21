@@ -355,36 +355,3 @@ description: "scalac – Compiler for the Scala 2 language"
 <p> This is open-source software, available to you under a BSD-like license. See accomponying &quot;copyright&quot; or &quot;LICENSE&quot; file for copying conditions. There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-fsc/">fsc</a></code>(1), <code><a href="/docs/linux/man/1-scala/">scala</a></code>(1), <code><a href="/docs/linux/man/1-scaladoc/">scaladoc</a></code>(1), <code><a href="/docs/linux/man/1-scalap/">scalap</a></code>(1) </p>
-<h2>Index</h2>
-<dl>
-<dt><a href="#lbAB">NAME</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAC">SYNOPSIS</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAD">PARAMETERS</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAE">DESCRIPTION</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAF">OPTIONS</a></dt>
-<dd>  </dd>
-<dl>
-<dt><a href="#lbAG">Standard Options</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAH">Advanced Options</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAI">Compilation Phases</a></dt>
-<dd>  </dd></dl>
-<dt><a href="#lbAJ">ENVIRONMENT</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAK">EXAMPLES</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAL">EXIT STATUS</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAM">AUTHOR</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAN">REPORTING BUGS</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAO">COPYRIGHT</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAP">SEE ALSO</a></dt>
-<dd>  </dd></dl>

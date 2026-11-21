@@ -94,10 +94,3 @@ description: "src/antlr3convertutf.c –"
 <p> Referenced by ConvertUTF8toUTF16(), ConvertUTF8toUTF32(), and isLegalUTF8Sequence().</p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for ANTLR3C from the source code. </p>
-<h2>Index</h2>
-<dt><a href="#lbAN">Function Documentation</a></dt>
-<dd>
-</dd><dt><a href="#lbAW">Variable Documentation</a></dt>
-<dd>
-</dd><dt><a href="#lbBD">Author</a></dt>
-<dd></dd></dl>

@@ -899,20 +899,3 @@ Inactive Branches&#8211; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212;
 <p> <code><a href="/docs/linux/man/1-git-fast-export/">git-fast-export</a></code>(1)</p>
 <h2>GIT</h2>
 <p> Part of the <code><a href="/docs/linux/man/1-git/">git</a></code>(1) suite </p>
-<h2>Index</h2>
-<dt><a href="#lbBH">RESPONSES TO COMMANDS</a></dt>
-<dd>
-</dd><dt><a href="#lbBI">CRASH REPORTS</a></dt>
-<dd>
-</dd><dt><a href="#lbBJ">TIPS AND TRICKS</a></dt>
-<dd>
-</dd><dt><a href="#lbBR">PACKFILE OPTIMIZATION</a></dt>
-<dd>
-</dd><dt><a href="#lbBS">MEMORY UTILIZATION</a></dt>
-<dd>
-</dd><dt><a href="#lbBY">SIGNALS</a></dt>
-<dd>
-</dd><dt><a href="#lbBZ">SEE ALSO</a></dt>
-<dd>
-</dd><dt><a href="#lbCA">GIT</a></dt>
-<dd></dd></dl>

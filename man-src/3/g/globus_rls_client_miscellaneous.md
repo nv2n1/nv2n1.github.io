@@ -219,8 +219,3 @@ description: "Miscellaneous –"
 </dt><dd> <i>char</i> * Returns <i>buf</i>, error message written to <i>buf</i>.</dd></dl>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for globus rls client from the source code. </p>
-<h2>Index</h2>
-<dt><a href="#lbAV">Function Documentation</a></dt>
-<dd>
-</dd><dt><a href="#lbBF">Author</a></dt>
-<dd></dd></dl>

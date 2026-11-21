@@ -249,24 +249,3 @@ foreach
 <p> The <i></i><font SIZE="-1"><i>INSTALL</i></font><i></i> file for how to build Perl. </p>
 <p> The <i></i><font SIZE="-1"><i>README</i></font><i></i> file for general stuff. </p>
 <p> The <i>Artistic</i> and <i>Copying</i> files for copyright information. </p>
-<h2>Index</h2>
-<dt><a href="#lbAM">Core Enhancements</a></dt>
-<dd>
-</dd><dt><a href="#lbAV">Modules and Pragmas</a></dt>
-<dd>
-</dd><dt><a href="#lbBB">Utility Changes</a></dt>
-<dd>
-</dd><dt><a href="#lbBF">Documentation</a></dt>
-<dd>
-</dd><dt><a href="#lbBH">Installation and Configuration Improvements</a></dt>
-<dd>
-</dd><dt><a href="#lbBQ">Selected Bug Fixes</a></dt>
-<dd>
-</dd><dt><a href="#lbBR">New or Changed Diagnostics</a></dt>
-<dd>
-</dd><dt><a href="#lbBT">Changed Internals</a></dt>
-<dd>
-</dd><dt><a href="#lbBU">Reporting Bugs</a></dt>
-<dd>
-</dd><dt><a href="#lbBV">SEE ALSO</a></dt>
-<dd></dd></dl>

@@ -612,18 +612,3 @@ $ git merge origin/next
 <p> <code><a href="/docs/linux/man/1-git-fetch/">git-fetch</a></code>(1), <code><a href="/docs/linux/man/1-git-merge/">git-merge</a></code>(1), <code><a href="/docs/linux/man/1-git-config/">git-config</a></code>(1)</p>
 <h2>GIT</h2>
 <p> Part of the <code><a href="/docs/linux/man/1-git/">git</a></code>(1) suite </p>
-<h2>Index</h2>
-<dt><a href="#lbAM">MERGE STRATEGIES</a></dt>
-<dd>
-</dd><dt><a href="#lbAN">DEFAULT BEHAVIOUR</a></dt>
-<dd>
-</dd><dt><a href="#lbAO">EXAMPLES</a></dt>
-<dd>
-</dd><dt><a href="#lbAP">SECURITY</a></dt>
-<dd>
-</dd><dt><a href="#lbAQ">BUGS</a></dt>
-<dd>
-</dd><dt><a href="#lbAR">SEE ALSO</a></dt>
-<dd>
-</dd><dt><a href="#lbAS">GIT</a></dt>
-<dd></dd></dl>

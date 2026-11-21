@@ -342,6 +342,3 @@ description: "src/antlr3string.c –"
 <p> Referenced by stringInit8().</p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for ANTLR3C from the source code. </p>
-<h2>Index</h2>
-<dt><a href="#lbCI">Author</a></dt>
-<dd></dd></dl>

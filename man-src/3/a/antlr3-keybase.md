@@ -40,6 +40,3 @@ description: "ANTLR3_HASH_ENTRY_struct –"
 <p> Referenced by antlr3EnumNextEntry(), antlr3HashFree(), antlr3HashGet(), antlr3HashGetI(), antlr3HashPut(), antlr3HashPutI(), antlr3HashRemove(), and antlr3HashRemoveI(). </p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for ANTLR3C from the source code. </p>
-<h2>Index</h2>
-<dt><a href="#lbAM">Author</a></dt>
-<dd></dd></dl>

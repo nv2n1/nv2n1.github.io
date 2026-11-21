@@ -125,8 +125,3 @@ hwloc_set_cpubind(topology, set, HWLOC_CPUBIND_THREAD),
 <p> <code>HWLOC_CPUBIND_PROCESS</code> can not be used in flags.</dl>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for Hardware Locality (hwloc) from the source code. </p>
-<h2>Index</h2>
-<dt><a href="#lbAH">Function Documentation</a></dt>
-<dd>
-</dd><dt><a href="#lbAQ">Author</a></dt>
-<dd></dd></dl>

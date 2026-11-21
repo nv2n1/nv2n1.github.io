@@ -73,6 +73,3 @@ description: "QuantLib::StochasticProcess – multi-dimensional stochastic proce
 <p> Reimplemented in <code>GeneralizedBlackScholesProcess</code>, and <code>HybridHestonHullWhiteProcess</code>. </p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for QuantLib from the source code. </p>
-<h2>Index</h2>
-<dt><a href="#lbAQ">Author</a></dt>
-<dd></dd></dl>

@@ -469,23 +469,3 @@ FAX: +1 801 581 4148
 Email: &lt;beebe [at] math.utah.edu&gt;
 </code></pre>
  </dd></dl>
-<h2>Index</h2>
-<dl>
-<dt><a href="#lbAB">NAME</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAC">SYNOPSIS</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAD">DESCRIPTION</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAE">DVI COMMAND DESCRIPTION</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAF">DTL COMMAND DESCRIPTION</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAG">SAMPLE DTL FILE</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAH">SEE ALSO</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAI">FILES</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAJ">AUTHOR</a></dt>
-<dd>  </dd></dl>

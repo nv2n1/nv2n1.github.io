@@ -317,28 +317,3 @@ disk - image - create virt - dib-- -- -- -- -- -- -- -- - -- -- -- -- -a ARCH-- 
 <dt>&bull;</dt>
 <dd> Run <i><a href="/docs/linux/man/1-libguestfs-test-tool/">libguestfs-test-tool</a></i>(1) and paste the <code>complete, unedited</code> output into the bug report. </dd>
 </dl>
-<h2>Index</h2>
-<dt><a href="#lbAL">RAMDISK BUILDING</a></dt>
-<dd>
-</dd><dt><a href="#lbAM">TEMPORARY DIRECTORY</a></dt>
-<dd>
-</dd><dt><a href="#lbAN">EXTRA DEPENDENCIES</a></dt>
-<dd>
-</dd><dt><a href="#lbAO">COMPARISON WITH DISKIMAGE-BUILDER</a></dt>
-<dd>
-</dd><dt><a href="#lbAP">MACHINE READABLE OUTPUT</a></dt>
-<dd>
-</dd><dt><a href="#lbAQ">TESTING</a></dt>
-<dd>
-</dd><dt><a href="#lbAR">EXIT STATUS</a></dt>
-<dd>
-</dd><dt><a href="#lbAS">SEE ALSO</a></dt>
-<dd>
-</dd><dt><a href="#lbAT">AUTHOR</a></dt>
-<dd>
-</dd><dt><a href="#lbAU">COPYRIGHT</a></dt>
-<dd>
-</dd><dt><a href="#lbAV">LICENSE</a></dt>
-<dd>
-</dd><dt><a href="#lbAW">BUGS</a></dt>
-<dd></dd></dl>

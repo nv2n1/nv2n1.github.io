@@ -148,6 +148,3 @@ description: "ANTLR3_RECOGNIZER_SHARED_STATE_struct –"
 <p> User programmable pointer that can be used for instance as a place to store some tracking structure specific to the grammar that would not normally be available to the error handling functions. </p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for ANTLR3C from the source code. </p>
-<h2>Index</h2>
-<dt><a href="#lbBH">Author</a></dt>
-<dd></dd></dl>

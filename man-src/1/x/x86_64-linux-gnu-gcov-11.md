@@ -500,8 +500,3 @@ else<br />
      software.  Copies published by the Free Software Foundation raise
      funds for GNU development.
 </pre>
-<h2>Index</h2>
-<dt><a href="#lbAG">SEE ALSO</a></dt>
-<dd>
-</dd><dt><a href="#lbAH">COPYRIGHT</a></dt>
-<dd></dd></dl>

@@ -97,23 +97,3 @@ description: "pam_issue – PAM module to add issue file to user prompt"
 <p> <code>pam.conf</code>(5), <code>pam.d</code>(5), <code><a href="/docs/linux/man/7-pam/">pam</a></code>(7)  </p>
 <h2>AUTHOR</h2>
 <p>pam_issue was written by Ben Collins &lt;bcollins [at] debian.org&gt;. </p>
-<h2>Index</h2>
-<dl>
-<dt><a href="#lbAB">NAME</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAC">SYNOPSIS</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAD">DESCRIPTION</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAE">OPTIONS</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAF">MODULE TYPES PROVIDED</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAG">RETURN VALUES</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAH">EXAMPLES</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAI">SEE ALSO</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAJ">AUTHOR</a></dt>
-<dd>  </dd></dl>

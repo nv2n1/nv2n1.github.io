@@ -124,8 +124,3 @@ description: "Globus XIO GRIDFTP Client Driver –"
 <dd> Indicates that a second partial xfer has been initiated while the first one is still outstanding</dd></dl>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for globus_xio_gridftp_driver from the source code. </p>
-<h2>Index</h2>
-<dt><a href="#lbAM">Enumeration Type Documentation</a></dt>
-<dd>
-</dd><dt><a href="#lbAQ">Author</a></dt>
-<dd></dd></dl>

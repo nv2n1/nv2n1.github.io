@@ -114,8 +114,6 @@ $ echo Lorem ipsum dolor sit | perl./ bin / streamzip - member - name latin &gt;
 
  This program is free software; you can redistribute it and/or modify it under the same terms as Perl itself. 
 
-<h2>Index</h2>
-
 
 
 <dt><a HREF="#lbAH">SUPPORT</a>

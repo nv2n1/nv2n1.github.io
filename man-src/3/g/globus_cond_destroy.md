@@ -153,6 +153,3 @@ description: "Condition Variables –"
 </dt><dd> On success, <code>globus_condattr_setspace()</code> returns GLOBUS_SUCCESS and adds a reference to the callback space to the condition variable attribute. If an error occurs, <code>globus_condattr_setspace()</code> returns an implementation-specific non-zero error code.</dd></dl>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for globus_common from the source code. </p>
-<h2>Index</h2>
-<dt><a href="#lbAQ">Author</a></dt>
-<dd></dd></dl>

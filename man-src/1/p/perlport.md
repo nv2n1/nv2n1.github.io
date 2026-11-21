@@ -1334,8 +1334,6 @@ POSIX::_exit(0);
 
  Abigail &lt;abigail [at] abigail.be&gt;, Charles Bailey &lt;bailey [at] newman.upenn.edu&gt;, Graham Barr &lt;gbarr [at] pobox.com&gt;, Tom Christiansen &lt;tchrist [at] perl.com&gt;, Nicholas Clark &lt;nick [at] ccl4.org&gt;, Thomas Dorner &lt;Thomas.Dorner [at] start.de&gt;, Andy Dougherty &lt;doughera [at] lafayette.edu&gt;, Dominic Dunlop &lt;domo [at] computer.org&gt;, Neale Ferguson &lt;neale [at] vma.tabnsw.com.au&gt;, David J. Fiander &lt;davidf [at] mks.com&gt;, Paul Green &lt;Paul.Green [at] stratus.com&gt;, M.J.T. Guy &lt;mjtg [at] cam.ac.uk&gt;, Jarkko Hietaniemi &lt;jhi [at] iki.fi&gt;, Luther Huffman &lt;lutherh [at] stratcom.com&gt;, Nick Ing-Simmons &lt;nick [at] ing-simmons.net&gt;, Andreas J. König &lt;a.koenig [at] mind.de&gt;, Markus Laker &lt;mlaker [at] contax.co.uk&gt;, Andrew M. Langmead &lt;aml [at] world.std.com&gt;, Lukas Mai &lt;l.mai [at] web.de&gt;, Larry Moore &lt;ljmoore [at] freespace.net&gt;, Paul Moore &lt;Paul.Moore [at] uk.origin-it.com&gt;, Chris Nandor &lt;pudge [at] pobox.com&gt;, Matthias Neeracher &lt;neeracher [at] mac.com&gt;, Philip Newton &lt;pne [at] cpan.org&gt;, Gary Ng &lt;71564.1743 [at] CompuServe.COM&gt;, Tom Phoenix &lt;rootbeer [at] teleport.com&gt;, André Pirard &lt;A.Pirard [at] ulg.ac.be&gt;, Peter Prymmer &lt;pvhp [at] forte.com&gt;, Hugo van der Sanden &lt;hv [at] crypt0.demon.co.uk&gt;, Gurusamy Sarathy &lt;gsar [at] activestate.com&gt;, Paul J. Schinder &lt;schinder [at] pobox.com&gt;, Michael G Schwern &lt;schwern [at] pobox.com&gt;, Dan Sugalski &lt;dan [at] sidhe.org&gt;, Nathan Torkington &lt;gnat [at] frii.com&gt;, John Malmberg &lt;wb8tyw [at] qsl.net&gt; 
 
-<h2>Index</h2>
-
 
 
 <dt><a HREF="#lbAT">CPAN Testers</a>

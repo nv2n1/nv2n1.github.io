@@ -29,6 +29,3 @@ description: "ANTLR3_COMMON_TREE_ADAPTOR_struct –"
 <p> Any enclosing structure/class can use this pointer to point to its own interface. </p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for ANTLR3C from the source code. </p>
-<h2>Index</h2>
-<dt><a href="#lbAI">Author</a></dt>
-<dd></dd></dl>

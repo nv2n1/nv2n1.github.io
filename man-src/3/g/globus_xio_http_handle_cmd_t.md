@@ -205,8 +205,3 @@ description: "Attributes and Cntls –"
 <p> This handle command MUST be called on the client side of an HTTP connection when the HTTP method is OPTIONS, POST, or PUT, or when the open attributes indicate that an entity will be sent. This handle command MUST be called on the server side of an HTTP request connection when the HTTP method was OPTIONS, GET, POST, or TRACE.</p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for globus_xio from the source code. </p>
-<h2>Index</h2>
-<dt><a href="#lbAI">Function Documentation</a></dt>
-<dd>
-</dd><dt><a href="#lbAR">Author</a></dt>
-<dd></dd></dl>

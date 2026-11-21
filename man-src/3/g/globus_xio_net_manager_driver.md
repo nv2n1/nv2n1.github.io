@@ -46,8 +46,3 @@ yet - another = baz
 <p> This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. Get the task id associated with this XIO handle.</p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for globus_net_manager from the source code. </p>
-<h2>Index</h2>
-<dt><a href="#lbAH">Function Documentation</a></dt>
-<dd>
-</dd><dt><a href="#lbAK">Author</a></dt>
-<dd></dd></dl>

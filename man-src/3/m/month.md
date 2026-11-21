@@ -109,8 +109,3 @@ description: "QuantLib::Date – Concrete date class."
 <h3>std::ostream &amp; operator&lt;&lt; (std::ostream &amp;, const <code>Date</code> &amp;) [related]</h3>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for QuantLib from the source code. </p>
-<h2>Index</h2>
-<dt><a href="#lbAK">Friends And Related Function Documentation</a></dt>
-<dd>
-</dd><dt><a href="#lbAS">Author</a></dt>
-<dd></dd></dl>

@@ -511,8 +511,3 @@ part       ::= nr | [-0-9A-Za-z]+
 <dd> <code>require(&#8216;semver/ranges/valid&#8217;)</code> </dd>
 </dl>
 </dl>
-<h2>Index</h2>
-<dt><a href="#lbAO">Functions</a></dt>
-<dd>
-</dd><dt><a href="#lbAU">Exported Modules</a></dt>
-<dd></dd></dl>

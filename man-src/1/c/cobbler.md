@@ -465,16 +465,3 @@ description: "cobbler – a provisioning and update server"
 <p> Official web site, bug tracker, and Wiki: <a rel="nofollow" href="http://cobbler.github.io.">http://cobbler.github.io.</a></p>
 <h2>AUTHOR</h2>
 <p> Michael DeHaan &lt;michael.dehaan <font SIZE="-1">AT</font> gmail&gt; </p>
-<h2>Index</h2>
-<dt><a href="#lbAM">MANAGEMENT RESOURCES</a></dt>
-<dd>
-</dd><dt><a href="#lbAW">EXAMPLES</a></dt>
-<dd>
-</dd><dt><a href="#lbBB">ADVANCED TOPICS</a></dt>
-<dd>
-</dd><dt><a href="#lbBV">EXIT_STATUS</a></dt>
-<dd>
-</dd><dt><a href="#lbBW">ADDITIONAL RESOURCES</a></dt>
-<dd>
-</dd><dt><a href="#lbBX">AUTHOR</a></dt>
-<dd></dd></dl>

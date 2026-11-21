@@ -668,28 +668,3 @@ virt - resize template -- -- -- -- -- &gt;
 <dt>&bull;</dt>
 <dd> Run <i><a href="/docs/linux/man/1-libguestfs-test-tool/">libguestfs-test-tool</a></i>(1) and paste the <code>complete, unedited</code> output into the bug report. </dd>
 </dl>
-<h2>Index</h2>
-<dt><a href="#lbBT">COPYING AND CLONING</a></dt>
-<dd>
-</dd><dt><a href="#lbBY">FIRSTBOOT VS SCRIPT</a></dt>
-<dd>
-</dd><dt><a href="#lbBZ">SECURITY</a></dt>
-<dd>
-</dd><dt><a href="#lbCB">SELINUX</a></dt>
-<dd>
-</dd><dt><a href="#lbCC">WINDOWS 8</a></dt>
-<dd>
-</dd><dt><a href="#lbCD">EXIT STATUS</a></dt>
-<dd>
-</dd><dt><a href="#lbCE">ENVIRONMENT VARIABLES</a></dt>
-<dd>
-</dd><dt><a href="#lbCF">SEE ALSO</a></dt>
-<dd>
-</dd><dt><a href="#lbCG">AUTHORS</a></dt>
-<dd>
-</dd><dt><a href="#lbCH">COPYRIGHT</a></dt>
-<dd>
-</dd><dt><a href="#lbCI">LICENSE</a></dt>
-<dd>
-</dd><dt><a href="#lbCJ">BUGS</a></dt>
-<dd></dd></dl>

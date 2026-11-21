@@ -39,13 +39,3 @@ description: "dlys – format of .dlys files read by the SCALD simulator and tim
 <h2>BUGS</h2>
 <p> There should be some way to specify which pins are drivers and which are receivers in a net. </p>
 <p>The ability to omit pin names is dangerous; although it usually works it can introduce large inaccuracies when the parts are large compared to the sizes of the wires used to connect them, as might be the case on a silicon PCB. </p>
-<h2>Index</h2>
-<dl>
-<dt><a href="#lbAB">NAME</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAC">DESCRIPTION</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAD">SEE ALSO</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAE">BUGS</a></dt>
-<dd>  </dd></dl>

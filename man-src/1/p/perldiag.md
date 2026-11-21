@@ -3878,11 +3878,3 @@ description: "perldiag – various Perl diagnostics"
  </dd></dl>
 <h2>SEE ALSO</h2>
 <p> warnings, diagnostics. </p>
-<h2>Index</h2>
-<dl>
-<dt><a href="#lbAB">NAME</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAC">DESCRIPTION</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAD">SEE ALSO</a></dt>
-<dd>  </dd></dl>

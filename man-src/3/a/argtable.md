@@ -190,8 +190,3 @@ Every argument table must have an arg_end structure as its last entry.It marks t
  /usr/share/doc/argtable2/example/ </p>
 <h2>AUTHOR</h2>
 <p> Stewart Heitmann &lt;sheitmann [at] users.sourceforge.net&gt; </p>
-<h2>Index</h2>
-<dt><a href="#lbAY">FILES</a></dt>
-<dd>
-</dd><dt><a href="#lbAZ">AUTHOR</a></dt>
-<dd></dd></dl>

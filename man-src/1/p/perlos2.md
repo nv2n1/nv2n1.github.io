@@ -1621,8 +1621,6 @@ LIBRARY 'perlE0AC' INITINSTANCE TERMINSTANCE
 
  <b><a HREF="/docs/linux/man/1-perl/">perl</a></b>(1). 
 
-<h2>Index</h2>
-
 
 
 <dt><a HREF="#lbAJ">Frequently asked questions</a>

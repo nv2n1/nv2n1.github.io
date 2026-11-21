@@ -223,32 +223,3 @@ description: "sed – stream editor for filtering and transforming text"
 <dd> <p> <code>info sed</code> </p>
  </dd></dl>
 <p> should give you access to the complete manual. </p>
-<h2>Index</h2>
-<dl>
-<dt><a href="#lbAB">NAME</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAC">SYNOPSIS</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAD">DESCRIPTION</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAE">COMMAND SYNOPSIS</a></dt>
-<dd>  </dd>
-<dl>
-<dt><a href="#lbAF">Zero-address ``commands&#8217;&#8216;</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAG">Zero- or One- address commands</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAH">Commands which accept address ranges</a></dt>
-<dd>  </dd></dl>
-<dt><a href="#lbAI">Addresses</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAJ">REGULAR EXPRESSIONS</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAK">BUGS</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAL">AUTHOR</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAM">COPYRIGHT</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAN">SEE ALSO</a></dt>
-<dd>  </dd></dl>

@@ -210,15 +210,3 @@ description: "gpg-connect-agent – Communicate with a running agent"
 </code></pre>
  </dd></dl>
 <p> should give you access to the complete manual including a menu structure and an index. </p>
-<h2>Index</h2>
-<dl>
-<dt><a href="#lbAB">NAME</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAC">SYNOPSIS</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAD">DESCRIPTION</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAE">CONTROL COMMANDS</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAF">SEE ALSO</a></dt>
-<dd>  </dd></dl>

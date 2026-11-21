@@ -77,24 +77,3 @@ description: "fragmaster – Using psfrag constructs with pdflatex"
  Copyright (C) 2011-2015 Agustin Martin
 </code></pre>
 <p> This program is free software; you can redistribute it and/or modify it under the terms of the <font SIZE="-1">GNU</font> General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version. </p>
-<h2>Index</h2>
-<dl>
-<dt><a href="#lbAB">NAME</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAC">SYNOPSIS</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAD">DESCRIPTION</a></dt>
-<dd>  </dd>
-<dl>
-<dt><a href="#lbAE"><code>fragmaster</code> control file and other related files.</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAF">Per-directory <code>fragmaster</code> dir control file.</a></dt>
-<dd>  </dd></dl>
-<dt><a href="#lbAG">KNOWN PROBLEMS</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAH">AUTHORS</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAI">HISTORY</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAJ">COPYRIGHT</a></dt>
-<dd>  </dd></dl>

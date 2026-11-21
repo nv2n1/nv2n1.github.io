@@ -712,18 +712,3 @@ $ lsmcli -u smispy+<a href="ssl://username@host:5989/?namespace=interop">ssl://u
 <h2>AUTHOR</h2>
 <p> Tony Asleson <i>&lt;tasleson [at] redhat.com&gt;</i><br />
  Gris Ge <i>&lt;fge [at] redhat.com&gt;</i> </p>
-<h2>Index</h2>
-<dt><a href="#lbDQ">FILES</a></dt>
-<dd>
-</dd><dt><a href="#lbDR">EXAMPLES (command output omitted for brevity)</a></dt>
-<dd>
-</dd><dt><a href="#lbDS">ENVIRONMENT</a></dt>
-<dd>
-</dd><dt><a href="#lbDT">VOLUME REPLICATION TYPES</a></dt>
-<dd>
-</dd><dt><a href="#lbDU">NOTES</a></dt>
-<dd>
-</dd><dt><a href="#lbDV">BUGS</a></dt>
-<dd>
-</dd><dt><a href="#lbDW">AUTHOR</a></dt>
-<dd></dd></dl>

@@ -241,6 +241,3 @@ description: "globus_xio_gridftp_driver.h – XIO GRIDFTP Client Driver."
 </dt><dd> <i>seek_offset</i> Specifies the desired offset.</dd></dl>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for globus_xio_gridftp_driver from the source code. </p>
-<h2>Index</h2>
-<dt><a href="#lbBH">Author</a></dt>
-<dd></dd></dl>

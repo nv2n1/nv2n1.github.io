@@ -48,17 +48,3 @@ description: "sd-daemon – Reference implementation of APIs for new-style daemo
 <dl>
 <dd> <p> Developer </p>
  </dd></dl>
-<h2>Index</h2>
-<dl>
-<dt><a href="#lbAB">NAME</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAC">SYNOPSIS</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAD">DESCRIPTION</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAE">NOTES</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAF">SEE ALSO</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAG">AUTHOR</a></dt>
-<dd>  </dd></dl>

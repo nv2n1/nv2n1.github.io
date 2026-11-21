@@ -168,21 +168,3 @@ description: "dvips – convert a TeX DVI file to PostScript"
 <p> PostScript is a registered trademark of Adobe Systems Incorporated.  </p>
 <h2>AUTHOR</h2>
 <p> Tomas Rokicki &lt;rokicki [at] cs.stanford.edu&gt;; extended to virtual fonts by Don Knuth. Path searching and configuration modifications by kb [at] mail.tug.org. </p>
-<h2>Index</h2>
-<dl>
-<dt><a href="#lbAB">NAME</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAC">SYNOPSIS</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAD">DESCRIPTION</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAE">OPTIONS</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAF">SEE ALSO</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAG">ENVIRONMENT</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAH">NOTES</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAI">AUTHOR</a></dt>
-<dd>  </dd></dl>

@@ -286,8 +286,3 @@ description: "Protocol Modules –"
  <i>GLOBUS_GASS_TRANSFER_ERROR_INVALID_USE</i> A protocol module has not been registered with GASS to handle this URL scheme.</dd></dl>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for globus_gass_transfer from the source code. </p>
-<h2>Index</h2>
-<dt><a href="#lbAR">Function Documentation</a></dt>
-<dd>
-</dd><dt><a href="#lbBB">Author</a></dt>
-<dd></dd></dl>

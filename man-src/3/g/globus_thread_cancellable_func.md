@@ -207,6 +207,3 @@ description: "Threading –"
 <p> Yield execution to another thread. The <code>globus_thread_yield()</code> function yields execution to other threads which are ready for execution. The current thread may continue to execute if there are no other threads in the system&#8217;s ready queue.</p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for globus_common from the source code. </p>
-<h2>Index</h2>
-<dt><a href="#lbBA">Author</a></dt>
-<dd></dd></dl>

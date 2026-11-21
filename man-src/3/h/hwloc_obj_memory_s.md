@@ -30,6 +30,3 @@ description: "hwloc_obj_memory_s –"
 <p> Total memory (in bytes) in this object and its children. </p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for Hardware Locality (hwloc) from the source code. </p>
-<h2>Index</h2>
-<dt><a href="#lbAL">Author</a></dt>
-<dd></dd></dl>

@@ -85,19 +85,3 @@ DROP SERVER fdtest;
 DROP FOREIGN DATA WRAPPER postgresql;
 </code></pre>
  </dd></dl>
-<h2>Index</h2>
-<dl>
-<dt><a href="#lbAB">NAME</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAC">SYNOPSIS</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAD">DESCRIPTION</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAE">ARGUMENTS</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAF">RETURN VALUE</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAG">NOTES</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAH">EXAMPLES</a></dt>
-<dd>  </dd></dl>

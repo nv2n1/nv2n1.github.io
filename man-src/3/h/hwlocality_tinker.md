@@ -66,8 +66,3 @@ description: "hwlocality_tinker – Modifying a loaded Topology"
 <p> -1 with errno set to ENOMEM on failure to allocate internal data. The topology is reinitialized in this case. It should be either destroyed with <code>hwloc_topology_destroy()</code> or configured and loaded again.</dl>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for Hardware Locality (hwloc) from the source code. </p>
-<h2>Index</h2>
-<dt><a href="#lbAH">Function Documentation</a></dt>
-<dd>
-</dd><dt><a href="#lbAL">Author</a></dt>
-<dd></dd></dl>

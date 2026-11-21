@@ -30,6 +30,3 @@ description: "Types –"
 <dd> Use this with <code>GLOBUS_XIO_TCP_SET_SEND_FLAGS</code> to send a TCP message out of band (Urgent data flag set)</dd></dl>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for globus_xio from the source code. </p>
-<h2>Index</h2>
-<dt><a href="#lbAJ">Author</a></dt>
-<dd></dd></dl>

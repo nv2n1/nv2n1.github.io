@@ -84,17 +84,3 @@ description: "jstack – Prints Java thread stack traces for a Java process, cor
 <dd> <p> jsadebugd(1) <br />
  </p>
  </dd></dl>
-<h2>Index</h2>
-<dl>
-<dt><a href="#lbAB">NAME </a></dt>
-<dd>  </dd>
-<dt><a href="#lbAC">SYNOPSIS </a></dt>
-<dd>  </dd>
-<dt><a href="#lbAD">DESCRIPTION </a></dt>
-<dd>  </dd>
-<dt><a href="#lbAE">OPTIONS </a></dt>
-<dd>  </dd>
-<dt><a href="#lbAF">KNOWN BUGS </a></dt>
-<dd>  </dd>
-<dt><a href="#lbAG">SEE ALSO </a></dt>
-<dd>  </dd></dl>

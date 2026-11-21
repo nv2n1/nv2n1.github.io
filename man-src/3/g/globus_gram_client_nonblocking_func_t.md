@@ -141,8 +141,3 @@ description: "Job state callbacks –"
  <i>GLOBUS_GRAM_PROTOCOL_ERROR_NO_RESOURCES</i> No resources</dd></dl>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for globus_gram_client from the source code. </p>
-<h2>Index</h2>
-<dt><a href="#lbAL">Function Documentation</a></dt>
-<dd>
-</dd><dt><a href="#lbAP">Author</a></dt>
-<dd></dd></dl>

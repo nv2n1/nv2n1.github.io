@@ -133,8 +133,3 @@ description: "Handle Management –"
 </dt><dd> Access to the user_pointer are not synchronized, the user must take care to make sure that multiple threads are not modifying it&#8217;s value.</dd></dl>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for globus_ftp_client from the source code. </p>
-<h2>Index</h2>
-<dt><a href="#lbAM">Function Documentation</a></dt>
-<dd>
-</dd><dt><a href="#lbAU">Author</a></dt>
-<dd></dd></dl>

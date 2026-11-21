@@ -98,22 +98,3 @@ description: "split – split a file into pieces"
 <h2>SEE ALSO</h2>
 <p> Full documentation &lt;<a rel="nofollow" href="https://www.gnu.org/software/coreutils/split">https://www.gnu.org/software/coreutils/split</a>&gt; <br />
  or available locally via: info &#8216;(coreutils) split invocation&#8217; </p>
-<h2>Index</h2>
-<dl>
-<dt><a href="#lbAB">NAME</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAC">SYNOPSIS</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAD">DESCRIPTION</a></dt>
-<dd>  </dd>
-<dl>
-<dt><a href="#lbAE">CHUNKS may be:</a></dt>
-<dd>  </dd></dl>
-<dt><a href="#lbAF">AUTHOR</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAG">REPORTING BUGS</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAH">COPYRIGHT</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAI">SEE ALSO</a></dt>
-<dd>  </dd></dl>

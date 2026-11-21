@@ -314,12 +314,3 @@ description: "sa-learn – train SpamAssassin’s Bayesian classifier"
 <p> <tt>&quot;Mail::SpamAssassin&quot;</tt></p>
 <h2>AUTHORS</h2>
 <p> The SpamAssassin(tm) Project &lt;<a rel="nofollow" href="http://spamassassin.apache.org/">http://spamassassin.apache.org/</a>&gt; </p>
-<h2>Index</h2>
-<dt><a href="#lbAO">INSTALLATION</a></dt>
-<dd>
-</dd><dt><a href="#lbAP">SEE ALSO</a></dt>
-<dd>
-</dd><dt><a href="#lbAQ">PREREQUISITES</a></dt>
-<dd>
-</dd><dt><a href="#lbAR">AUTHORS</a></dt>
-<dd></dd></dl>

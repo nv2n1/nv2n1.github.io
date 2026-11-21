@@ -233,32 +233,3 @@ foo $a &lt; $b;
 <p> The <i></i><font SIZE="-1"><i>INSTALL</i></font><i></i> file for how to build Perl. </p>
 <p> The <i></i><font SIZE="-1"><i>README</i></font><i></i> file for general stuff. </p>
 <p> The <i>Artistic</i> and <i>Copying</i> files for copyright information. </p>
-<h2>Index</h2>
-<dt><a href="#lbAG">Incompatible Changes</a></dt>
-<dd>
-</dd><dt><a href="#lbAL">Deprecations</a></dt>
-<dd>
-</dd><dt><a href="#lbAN">Performance Enhancements</a></dt>
-<dd>
-</dd><dt><a href="#lbAO">Modules and Pragmata</a></dt>
-<dd>
-</dd><dt><a href="#lbAS">Documentation</a></dt>
-<dd>
-</dd><dt><a href="#lbAU">Configuration and Compilation</a></dt>
-<dd>
-</dd><dt><a href="#lbAV">Testing</a></dt>
-<dd>
-</dd><dt><a href="#lbAW">Platform Support</a></dt>
-<dd>
-</dd><dt><a href="#lbAY">Internal Changes</a></dt>
-<dd>
-</dd><dt><a href="#lbAZ">Selected Bug Fixes</a></dt>
-<dd>
-</dd><dt><a href="#lbBA">Known Problems</a></dt>
-<dd>
-</dd><dt><a href="#lbBB">Acknowledgements</a></dt>
-<dd>
-</dd><dt><a href="#lbBC">Reporting Bugs</a></dt>
-<dd>
-</dd><dt><a href="#lbBD">SEE ALSO</a></dt>
-<dd></dd></dl>

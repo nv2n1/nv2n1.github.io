@@ -475,39 +475,3 @@ description: "gfortran – GNU Fortran compiler"
      software. Copies published by the Free Software Foundation raise
      funds for GNU development.
 </code></pre>
-<h2>Index</h2>
-<dl>
-<dt><a href="#lbAB">NAME</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAC">SYNOPSIS</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAD">DESCRIPTION</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAE">OPTIONS</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAF">Options controlling Fortran dialect</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAG">Enable and customize preprocessing</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAH">Options to request or suppress errors and warnings</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAI">Options for debugging your program or <font SIZE="-1">GNU</font> Fortran</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAJ">Options for directory search</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAK">Influencing the linking step</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAL">Influencing runtime behavior</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAM">Options for code generation conventions</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAN">ENVIRONMENT</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAO">BUGS</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAP">SEE ALSO</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAQ">AUTHOR</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAR">COPYRIGHT</a></dt>
-<dd>  </dd></dl>

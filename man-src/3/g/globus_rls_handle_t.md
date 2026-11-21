@@ -26,6 +26,3 @@ description: "globus_rls_handle_t –"
 <p> See FH_xxx flags below. </p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for globus rls client from the source code. </p>
-<h2>Index</h2>
-<dt><a href="#lbAJ">Author</a></dt>
-<dd></dd></dl>

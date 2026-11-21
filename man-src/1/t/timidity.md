@@ -989,27 +989,3 @@ description: "TiMidity++ – MIDI-to-WAVE converter and player"
 <p> The English version of this man page was written by NAGANO Daisuke &lt;breeze.nagano [at] nifty.ne.jp&gt;. </p>
 <p> Now, TAMUKI Shoichi &lt;tamuki [at] linet.gr.jp&gt; and URABE Shohei &lt;root [at] mput.dip.jp&gt; are maintaining the man page. <br />
  If you have any comments or suggestions or complaints :) about this man page, please tell us it. </p>
-<h2>Index</h2>
-<dl>
-<dt><a href="#lbAB">NAME</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAC">SYNOPSIS</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAD">DESCRIPTION</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAE">FILENAME</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAF">INPUT FILE</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAG">OPTIONS</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAH">SEE ALSO</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAI">COPYRIGHT</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAJ">AVAILABILITY</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAK">BUGS</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAL">AUTHORS</a></dt>
-<dd>  </dd></dl>

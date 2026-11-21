@@ -49,6 +49,3 @@ description: "include/antlr3lexer.h –"
 <p>&nbsp;<wbr>&nbsp;<wbr><code>ANTLR3_LEXER</code>&quot;</p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for ANTLR3C from the source code. </p>
-<h2>Index</h2>
-<dt><a href="#lbAL">Author</a></dt>
-<dd></dd></dl>

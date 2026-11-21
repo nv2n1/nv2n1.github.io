@@ -110,6 +110,3 @@ description: "ANTLR3_LEXER_struct –"
 <p> If there is a super structure that is implementing the lexer, then a pointer to it can be stored here in case implementing functions are overridden by this super structure. </p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for ANTLR3C from the source code. </p>
-<h2>Index</h2>
-<dt><a href="#lbAZ">Author</a></dt>
-<dd></dd></dl>

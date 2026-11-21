@@ -172,6 +172,3 @@ description: "Client-Initiated Operations –"
 </dt><dd> <code>globus_gass_transfer_put()</code></dd></dl>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for globus_gass_transfer from the source code. </p>
-<h2>Index</h2>
-<dt><a href="#lbAL">Author</a></dt>
-<dd></dd></dl>

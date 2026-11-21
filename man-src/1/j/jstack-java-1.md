@@ -95,19 +95,3 @@ description: "jstack – Stack Trace"
 <p>Mixed mode stack trace, the -m option, does not work with the remote debug server. </p>
 <p> <br />
 &nbsp;<wbr> </p>
-<h2>Index</h2>
-<dl>
-<dt><a href="#lbAB">Name</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAC">SYNOPSIS</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAD">PARAMETERS</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAE">DESCRIPTION</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAF">OPTIONS</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAG">SEE ALSO</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAH">KNOWN BUGS</a></dt>
-<dd>  </dd></dl>

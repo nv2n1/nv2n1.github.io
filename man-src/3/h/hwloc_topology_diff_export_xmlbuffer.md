@@ -133,10 +133,3 @@ description: "hwlocality_diff – Topology differences"
 <p> the pointer returned in refname should later be freed by the caller.</dl>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for Hardware Locality (hwloc) from the source code. </p>
-<h2>Index</h2>
-<dt><a href="#lbAL">Enumeration Type Documentation</a></dt>
-<dd>
-</dd><dt><a href="#lbAP">Function Documentation</a></dt>
-<dd>
-</dd><dt><a href="#lbAX">Author</a></dt>
-<dd></dd></dl>

@@ -98,6 +98,3 @@ description: "HDB –"
 <p> Unlock database </p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for Heimdalhdblibrary from the source code. </p>
-<h2>Index</h2>
-<dt><a href="#lbBC">Author</a></dt>
-<dd></dd></dl>

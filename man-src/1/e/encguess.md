@@ -69,8 +69,6 @@ url: "/docs/linux/man/1-encguess/"
 
  &lt;<a rel="nofollow" HREF="http://www.perlfoundation.org/artistic_license_2_0">http://www.perlfoundation.org/artistic_license_2_0</a>&gt; 
 
-<h2>Index</h2>
-
 
 
 <dt><a HREF="#lbAG">DESCRIPTION</a>

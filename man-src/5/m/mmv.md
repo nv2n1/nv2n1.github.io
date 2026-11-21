@@ -439,15 +439,3 @@ description: "mmv – Memory Mapped Values for Performance Co-Pilot"
 <p>Each entry in the strings section is a 256 byte character array, containing a single NULL-terminated character string. So each string has a maximum length of 256 bytes, which includes the terminating NULL. </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-PCPIntro/">PCPIntro</a></code>(1), <code><a href="/docs/linux/man/3-PMAPI/">PMAPI</a></code>(3), <code><a href="/docs/linux/man/3-mmv_stats_init/">mmv_stats_init</a></code>(3), <code>pcp.conf</code>(5) and <code>pcp.env</code>(5). </p>
-<h2>Index</h2>
-<dl>
-<dt><a href="#lbAB">NAME</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAC">SYNOPSIS</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAD">DESCRIPTION</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAE">FILE FORMAT</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAF">SEE ALSO</a></dt>
-<dd>  </dd></dl>

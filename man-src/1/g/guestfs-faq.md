@@ -652,34 +652,3 @@ Shell(guestfish) ln - sf target linkname
 <dt>&bull;</dt>
 <dd> Run <code><a href="/docs/linux/man/1-libguestfs-test-tool/">libguestfs-test-tool</a></code>(1) and paste the <code>complete, unedited</code> output into the bug report. </dd>
 </dl>
-<h2>Index</h2>
-<dt><a href="#lbAH">GETTING HELP AND REPORTING BUGS</a></dt>
-<dd>
-</dd><dt><a href="#lbAM">COMMON PROBLEMS</a></dt>
-<dd>
-</dd><dt><a href="#lbAU">DOWNLOADING, INSTALLING, COMPILING LIBGUESTFS</a></dt>
-<dd>
-</dd><dt><a href="#lbBE">SPEED, DISK SPACE USED BY LIBGUESTFS</a></dt>
-<dd>
-</dd><dt><a href="#lbBK">PROBLEMS OPENING DISK IMAGES</a></dt>
-<dd>
-</dd><dt><a href="#lbBW">USING LIBGUESTFS IN YOUR OWN PROGRAMS</a></dt>
-<dd>
-</dd><dt><a href="#lbBZ">DEBUGGING LIBGUESTFS</a></dt>
-<dd>
-</dd><dt><a href="#lbCK">DESIGN/INTERNALS OF LIBGUESTFS</a></dt>
-<dd>
-</dd><dt><a href="#lbCX">DEVELOPERS</a></dt>
-<dd>
-</dd><dt><a href="#lbDC">MISCELLANEOUS QUESTIONS</a></dt>
-<dd>
-</dd><dt><a href="#lbDE">SEE ALSO</a></dt>
-<dd>
-</dd><dt><a href="#lbDF">AUTHORS</a></dt>
-<dd>
-</dd><dt><a href="#lbDG">COPYRIGHT</a></dt>
-<dd>
-</dd><dt><a href="#lbDH">LICENSE</a></dt>
-<dd>
-</dd><dt><a href="#lbDI">BUGS</a></dt>
-<dd></dd></dl>

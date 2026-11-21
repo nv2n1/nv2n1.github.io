@@ -612,8 +612,3 @@ description: "Attributes and Cntls –"
 </dt><dd> <code>GLOBUS_XIO_GET_LOCAL_NUMERIC_CONTACT</code></dd></dl>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for globus_xio from the source code. </p>
-<h2>Index</h2>
-<dt><a href="#lbAH">Function Documentation</a></dt>
-<dd>
-</dd><dt><a href="#lbCP">Author</a></dt>
-<dd></dd></dl>

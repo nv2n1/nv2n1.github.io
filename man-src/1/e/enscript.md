@@ -990,33 +990,3 @@ description: "enscript – convert text files to PostScript, HTML, RTF, ANSI, an
 <h2>AUTHOR</h2>
 <p> Markku Rossi &lt;mtr [at] iki.fi&gt; &lt;<a rel="nofollow" href="http://www.iki.fi/~mtr/">http://www.iki.fi/~mtr/</a>&gt; </p>
 <p> GNU Enscript WWW home page: &lt;<a rel="nofollow" href="http://www.iki.fi/~mtr/genscript/">http://www.iki.fi/~mtr/genscript/</a>&gt; </p>
-<h2>Index</h2>
-<dl>
-<dt><a href="#lbAB">NAME</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAC">SYNOPSIS</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAD">DESCRIPTION</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAE">OPTIONS</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAF">CONFIGURATION FILES</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAG">FANCY HEADERS</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAH">SPECIAL ESCAPES</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAI">PAGE DEVICE OPTIONS</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAJ">PRINTING EXAMPLES</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAK">ENVIRONMENT VARIABLES</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAL">RETURN VALUE</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAM">FILES</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAN">SEE ALSO</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAO">AUTHOR</a></dt>
-<dd>  </dd></dl>

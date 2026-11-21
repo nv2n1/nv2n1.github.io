@@ -222,8 +222,6 @@ url: "/docs/linux/man/1-perlmodinstall/"
 
  This document may be distributed under the same terms as Perl itself. 
 
-<h2>Index</h2>
-
 
 
 <dt><a HREF="#lbAE">PORTABILITY</a>

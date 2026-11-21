@@ -28,6 +28,3 @@ description: "include/antlr3basetree.h –"
 <p> A generic tree implementation with no payload. You must subclass to actually have any user data. ANTLR v3 uses a list of children approach instead of the child-sibling approach in v2. A flat tree (a list) is an empty node whose children represent the list. An empty (as in it does not have payload itself), but non-null node is called &#8216;nil&#8217;.</p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for ANTLR3C from the source code. </p>
-<h2>Index</h2>
-<dt><a href="#lbAI">Author</a></dt>
-<dd></dd></dl>

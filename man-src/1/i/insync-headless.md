@@ -142,10 +142,3 @@ description: "insync-headless – command line interface for the Insync process"
 <p> Created by the Insync team.</p>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/1-insync/">insync</a>(1) </p>
-<h2>Index</h2>
-<dt><a href="#lbAP">BUGS</a></dt>
-<dd>
-</dd><dt><a href="#lbAQ">AUTHOR</a></dt>
-<dd>
-</dd><dt><a href="#lbAR">SEE ALSO</a></dt>
-<dd></dd></dl>

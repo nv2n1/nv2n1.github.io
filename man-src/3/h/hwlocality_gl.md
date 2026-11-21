@@ -36,6 +36,3 @@ description: "hwlocality_gl – Interoperability with OpenGL displays"
 </dt><dd> The corresponding PCI device object can be obtained by looking at the OS device parent object.</dd></dl>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for Hardware Locality (hwloc) from the source code. </p>
-<h2>Index</h2>
-<dt><a href="#lbAI">Author</a></dt>
-<dd></dd></dl>

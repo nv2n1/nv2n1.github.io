@@ -85,12 +85,3 @@ description: "include/antlr3convertutf.h –"
 <p> References isLegalUTF8(), and trailingBytesForUTF8.</p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for ANTLR3C from the source code. </p>
-<h2>Index</h2>
-<dt><a href="#lbAN">Typedef Documentation</a></dt>
-<dd>
-</dd><dt><a href="#lbAR">Enumeration Type Documentation</a></dt>
-<dd>
-</dd><dt><a href="#lbAU">Function Documentation</a></dt>
-<dd>
-</dd><dt><a href="#lbBC">Author</a></dt>
-<dd></dd></dl>

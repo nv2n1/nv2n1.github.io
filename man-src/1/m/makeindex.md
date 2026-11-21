@@ -850,16 +850,3 @@ characters 127 ... 255.
 <h2>ACKNOWLEDGMENTS</h2>
 <p> Leslie Lamport contributed significantly to the design of MakeIndex. Michael Harrison provided valuable comments and suggestions. Nelson Beebe improved on the portable version, and maintained the source distribution for the TeX Users Group for many years. Andreas Brosig contributed to the German word ordering. The modification to the <code>-ms</code> macros was derived from a method proposed by Ravi Sethi of AT&amp;T Bell Laboratories. The <i>LOG</i> and <i>CONTRIB</i> files in the <i>makeindex</i> source distribution record other contributions. </p>
 <p> <i>makeindex</i> is currently maintained as part of the TeX Live distribution (<a rel="nofollow" href="http://tug.org/texlive">http://tug.org/texlive</a>); please send bug reports to tex-k [at] tug.org. </p>
-<h2>Index</h2>
-<dt><a href="#lbAO">ORDERING</a></dt>
-<dd>
-</dd><dt><a href="#lbAP">SPECIAL EFFECTS</a></dt>
-<dd>
-</dd><dt><a href="#lbAQ">FILES</a></dt>
-<dd>
-</dd><dt><a href="#lbAR">SEE ALSO</a></dt>
-<dd>
-</dd><dt><a href="#lbAS">AUTHOR</a></dt>
-<dd>
-</dd><dt><a href="#lbAT">ACKNOWLEDGMENTS</a></dt>
-<dd></dd></dl>

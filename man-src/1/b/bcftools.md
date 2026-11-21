@@ -3753,18 +3753,3 @@ cd outdir &amp;&amp; python plot.py &amp;&amp; pdflatex summary.tex
 <p> BCFtools wiki page: <i></i> &lt;<a rel="nofollow" href="https://github.com/samtools/bcftools/wiki">https://github.com/samtools/bcftools/wiki</a>&gt;</p>
 <h2>COPYING</h2>
 <p> The MIT/Expat License or GPL License, see the LICENSE document for details. Copyright (c) Genome Research Ltd. </p>
-<h2>Index</h2>
-<dt><a href="#lbCX">FILTERING EXPRESSIONS</a></dt>
-<dd>
-</dd><dt><a href="#lbCY">SCRIPTS</a></dt>
-<dd>
-</dd><dt><a href="#lbDB">PERFORMANCE</a></dt>
-<dd>
-</dd><dt><a href="#lbDC">BUGS</a></dt>
-<dd>
-</dd><dt><a href="#lbDD">AUTHORS</a></dt>
-<dd>
-</dd><dt><a href="#lbDE">RESOURCES</a></dt>
-<dd>
-</dd><dt><a href="#lbDF">COPYING</a></dt>
-<dd></dd></dl>

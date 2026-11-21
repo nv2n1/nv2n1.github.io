@@ -457,18 +457,3 @@ infocmp -0 -q -Q2
 <h2>AUTHOR</h2>
 <p> Eric S. Raymond &lt;esr [at] snark.thyrsus.com&gt; and<br />
  Thomas E. Dickey &lt;dickey [at] invisible-island.net&gt; </p>
-<h2>Index</h2>
-<dt><a href="#lbAK">FILES</a></dt>
-<dd>
-</dd><dt><a href="#lbAL">HISTORY</a></dt>
-<dd>
-</dd><dt><a href="#lbAM">PORTABILITY</a></dt>
-<dd>
-</dd><dt><a href="#lbAN">EXTENSIONS</a></dt>
-<dd>
-</dd><dt><a href="#lbAO">BUGS</a></dt>
-<dd>
-</dd><dt><a href="#lbAP">SEE ALSO</a></dt>
-<dd>
-</dd><dt><a href="#lbAQ">AUTHOR</a></dt>
-<dd></dd></dl>

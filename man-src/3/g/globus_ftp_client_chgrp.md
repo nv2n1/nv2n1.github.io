@@ -1578,8 +1578,6 @@ url: "/docs/linux/man/3-globus_ftp_client_chgrp/"
 
  Generated automatically by Doxygen for globus_ftp_client from the source code. 
 
-<h2>Index</h2>
-
 
 
 <dt><a HREF="#lbBE">Enumeration Type Documentation</a>

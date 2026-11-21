@@ -91,26 +91,3 @@ description: "UTF-8 – an ASCII compatible multibyte Unicode encoding"
 <p> <code><a href="/docs/linux/man/1-locale/">locale</a></code>(1), <code><a href="/docs/linux/man/3-nl_langinfo/">nl_langinfo</a></code>(3), <code><a href="/docs/linux/man/3-setlocale/">setlocale</a></code>(3), <code><a href="/docs/linux/man/7-charsets/">charsets</a></code>(7), <code><a href="/docs/linux/man/7-unicode/">unicode</a></code>(7)  </p>
 <h2>COLOPHON</h2>
 <p> This page is part of release 5.10 of the Linux <i>man-pages</i> project. A description of the project, information about reporting bugs, and the latest version of this page, can be found at <a rel="nofollow" href="https://www.kernel.org/doc/man-pages/.">https://www.kernel.org/doc/man-pages/.</a> </p>
-<h2>Index</h2>
-<dl>
-<dt><a href="#lbAB">NAME</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAC">DESCRIPTION</a></dt>
-<dd>  </dd>
-<dl>
-<dt><a href="#lbAD">Properties</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAE">Encoding</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAF">Example</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAG">Application notes</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAH">Security</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAI">Standards</a></dt>
-<dd>  </dd></dl>
-<dt><a href="#lbAJ">SEE ALSO</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAK">COLOPHON</a></dt>
-<dd>  </dd></dl>

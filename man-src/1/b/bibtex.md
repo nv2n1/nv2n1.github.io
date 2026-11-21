@@ -48,21 +48,3 @@ description: "bibtex – make a bibliography for (La)TeX"
  Leslie Lamport, <i>LaTeX - A Document Preparation System</i>, Addison-Wesley, 1985, ISBN 0-201-15790-X.  </p>
 <h2>AUTHOR</h2>
 <p> Oren Patashnik, Stanford University. This man page describes the web2c version of BibTeX. Other ports of BibTeX, such as Donald Knuth&#8217;s version using the Sun Pascal compiler, do not have the same path searching implementation, or the command-line options. </p>
-<h2>Index</h2>
-<dl>
-<dt><a href="#lbAB">NAME</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAC">SYNOPSIS</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAD">DESCRIPTION</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAE">OPTIONS</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAF">ENVIRONMENT</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAG">FILES</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAH">SEE ALSO</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAI">AUTHOR</a></dt>
-<dd>  </dd></dl>

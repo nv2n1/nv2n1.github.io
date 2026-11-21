@@ -243,6 +243,3 @@ options (20 sender and receiver processes per group)
 </dt><dd> Suite for evaluating requeue calls.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-perf/">perf</a></code>(1) </p>
-<h2>Index</h2>
-<dt><a href="#lbAK">SEE ALSO</a></dt>
-<dd></dd></dl>

@@ -150,14 +150,3 @@ untrusted filesystem-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --appl
 <dt>&bull;</dt>
 <dd> Run <code><a href="/docs/linux/man/1-libguestfs-test-tool/">libguestfs-test-tool</a></code>(1) and paste the <code>complete, unedited</code> output into the bug report. </dd>
 </dl>
-<h2>Index</h2>
-<dt><a href="#lbBB">SEE ALSO</a></dt>
-<dd>
-</dd><dt><a href="#lbBC">AUTHORS</a></dt>
-<dd>
-</dd><dt><a href="#lbBD">COPYRIGHT</a></dt>
-<dd>
-</dd><dt><a href="#lbBE">LICENSE</a></dt>
-<dd>
-</dd><dt><a href="#lbBF">BUGS</a></dt>
-<dd></dd></dl>

@@ -205,19 +205,3 @@ url: "/docs/linux/man/1-bib2gls/"
 </code></pre>
 <h2>AUTHOR</h2>
 <p> Nicola L. C. Talbot, &lt;<a rel="nofollow" href="https://www.dickimaw-books.com/">https://www.dickimaw-books.com/</a>&gt; </p>
-<h2>Index</h2>
-<dl>
-<dt><a href="#lbAB">SYNOPSIS</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAC">DESCRIPTION</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAD">OPTIONS</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAE">REQUIRES</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAF">LICENSE</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAG">RECOMMENDED READING</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAH">AUTHOR</a></dt>
-<dd>  </dd></dl>

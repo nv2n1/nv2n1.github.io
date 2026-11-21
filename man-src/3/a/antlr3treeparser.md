@@ -25,6 +25,3 @@ description: "include/antlr3treeparser.h –"
 <p> Internal structure representing an element in a hash bucket. Stores the original key so that duplicate keys can be rejected if necessary, and contains function can be supported If the hash key could be unique I would have invented the perfect compression algorithm ;-)</p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for ANTLR3C from the source code. </p>
-<h2>Index</h2>
-<dt><a href="#lbAH">Author</a></dt>
-<dd></dd></dl>

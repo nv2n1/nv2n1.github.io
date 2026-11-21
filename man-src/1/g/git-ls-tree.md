@@ -82,17 +82,3 @@ description: "git-ls-tree – List the contents of a tree object"
 <p> Without the <code>-z</code> option, pathnames with &quot;unusual&quot; characters are quoted as explained for the configuration variable <code>core.quotePath</code> (see <code><a href="/docs/linux/man/1-git-config/">git-config</a></code>(1)). Using <code>-z</code> the filename is output verbatim and the line is terminated by a NUL byte.  </p>
 <h2>GIT</h2>
 <p> Part of the <code><a href="/docs/linux/man/1-git/">git</a></code>(1) suite </p>
-<h2>Index</h2>
-<dl>
-<dt><a href="#lbAB">NAME</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAC">SYNOPSIS</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAD">DESCRIPTION</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAE">OPTIONS</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAF">OUTPUT FORMAT</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAG">GIT</a></dt>
-<dd>  </dd></dl>

@@ -39,6 +39,3 @@ description: "hwlocality_linux – Linux-specific helpers"
 </dt><dd> This is equivalent to calling <code>hwloc_set_proc_cpubind()</code> with HWLOC_CPUBIND_THREAD as flags.</dd></dl>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for Hardware Locality (hwloc) from the source code. </p>
-<h2>Index</h2>
-<dt><a href="#lbAJ">Author</a></dt>
-<dd></dd></dl>

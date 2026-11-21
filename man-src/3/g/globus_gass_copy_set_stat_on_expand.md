@@ -277,6 +277,3 @@ description: "globus_gass_copy.h – GASS Copy Library."
 </dt><dd> <code>globus_gass_copy_url_to_handle()</code> <code>globus_gass_copy_handle_to_url()</code></dd></dl>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for globus_gass_copy from the source code. </p>
-<h2>Index</h2>
-<dt><a href="#lbAS">Author</a></dt>
-<dd></dd></dl>

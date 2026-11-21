@@ -607,14 +607,3 @@ description: "cdrskin – burns preformatted data to CD, DVD, and BD via libburn
 <h2>AUTHOR</h2>
 <p> cdrskin was written by Thomas Schmitt &lt;scdbackup [at] gmx.net&gt;. </p>
 <p> This manual page was started by George Danchev &lt;danchev [at] spnet.net&gt; and is now maintained by Thomas Schmitt. </p>
-<h2>Index</h2>
-<dt><a href="#lbAN">OPTIONS</a></dt>
-<dd>
-</dd><dt><a href="#lbAO">EXAMPLES</a></dt>
-<dd>
-</dd><dt><a href="#lbBA">FILES</a></dt>
-<dd>
-</dd><dt><a href="#lbBD">SEE ALSO</a></dt>
-<dd>
-</dd><dt><a href="#lbBE">AUTHOR</a></dt>
-<dd></dd></dl>

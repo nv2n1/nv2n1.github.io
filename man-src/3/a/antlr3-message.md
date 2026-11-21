@@ -135,6 +135,3 @@ description: "ANTLR3_EXCEPTION_struct –"
 <p> Referenced by antlr3ExceptionNew(), antlr3ExceptionPrint(), antlr3MTExceptionNew(), antlr3MTNExceptionNew(), displayRecognitionError(), mismatch(), noViableAlt(), recoverFromMismatchedSet(), and recoverFromMismatchedToken(). </p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for ANTLR3C from the source code. </p>
-<h2>Index</h2>
-<dt><a href="#lbBC">Author</a></dt>
-<dd></dd></dl>

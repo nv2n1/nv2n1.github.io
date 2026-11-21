@@ -544,20 +544,3 @@ $ git log FETCH_HEAD
 <p> <code><a href="/docs/linux/man/1-git-pull/">git-pull</a></code>(1)</p>
 <h2>GIT</h2>
 <p> Part of the <code><a href="/docs/linux/man/1-git/">git</a></code>(1) suite </p>
-<h2>Index</h2>
-<dt><a href="#lbAK">CONFIGURED REMOTE-TRACKING BRANCHES</a></dt>
-<dd>
-</dd><dt><a href="#lbAL">PRUNING</a></dt>
-<dd>
-</dd><dt><a href="#lbAM">OUTPUT</a></dt>
-<dd>
-</dd><dt><a href="#lbAN">EXAMPLES</a></dt>
-<dd>
-</dd><dt><a href="#lbAO">SECURITY</a></dt>
-<dd>
-</dd><dt><a href="#lbAP">BUGS</a></dt>
-<dd>
-</dd><dt><a href="#lbAQ">SEE ALSO</a></dt>
-<dd>
-</dd><dt><a href="#lbAR">GIT</a></dt>
-<dd></dd></dl>

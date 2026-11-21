@@ -61,6 +61,3 @@ description: "globus_gass_transfer_proto_descriptor_t –"
 <p> The GASS Transfer library allows only one protocol module to be registered to handle a particular <i>url_scheme</i>. However, a protocol module may implement only the client or only the server part of the protocol. If a protocol has several variations with different scheme names (for example http and https), each scheme must be registered with GASS in order to be used. </p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for globus_gass_transfer from the source code. </p>
-<h2>Index</h2>
-<dt><a href="#lbAL">Author</a></dt>
-<dd></dd></dl>

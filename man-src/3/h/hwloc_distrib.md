@@ -35,8 +35,3 @@ description: "hwlocality_helper_distribute – Distributing items over a topolog
 <p> This function replaces the now deprecated hwloc_distribute() and hwloc_distributev() functions.</dl>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for Hardware Locality (hwloc) from the source code. </p>
-<h2>Index</h2>
-<dt><a href="#lbAH">Function Documentation</a></dt>
-<dd>
-</dd><dt><a href="#lbAJ">Author</a></dt>
-<dd></dd></dl>

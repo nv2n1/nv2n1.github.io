@@ -158,8 +158,3 @@ description: "Attributes and Cntls –"
 <p> <code>GLOBUS_XIO_SEEK</code></dl>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for globus xio from the source code. </p>
-<h2>Index</h2>
-<dt><a href="#lbAH">Function Documentation</a></dt>
-<dd>
-</dd><dt><a href="#lbAW">Author</a></dt>
-<dd></dd></dl>

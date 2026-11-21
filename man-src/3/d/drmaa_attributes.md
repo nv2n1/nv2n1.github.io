@@ -274,12 +274,3 @@ UTC
 <p> When there are no more entries in the vector. </p>
 <h2>SEE ALSO</h2>
 <p> and </p>
-<h2>Index</h2>
-<dt><a href="#lbBC">ENVIRONMENTAL VARIABLES</a></dt>
-<dd>
-</dd><dt><a href="#lbBD">RETURN VALUES</a></dt>
-<dd>
-</dd><dt><a href="#lbBE">ERRORS</a></dt>
-<dd>
-</dd><dt><a href="#lbBM">SEE ALSO</a></dt>
-<dd></dd></dl>

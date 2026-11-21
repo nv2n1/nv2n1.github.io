@@ -267,24 +267,3 @@ create<br />
 <p> lzop and the <font SIZE="-1">LZO</font> library are Copyright (C) 1996-2017 Markus Franz Xaver Oberhumer &lt;markus [at] oberhumer.com&gt;. All Rights Reserved. </p>
 <p> lzop and the <font SIZE="-1">LZO</font> library are distributed under the terms of the <font SIZE="-1">GNU</font> General Public License (<font SIZE="-1">GPL</font>). </p>
 <p> Legal info: If want to integrate lzop into your commercial (backup-)system please carefully read the <font SIZE="-1">GNU GPL FAQ</font> at <a rel="nofollow" href="http://www.gnu.org/licenses/gpl-faq.html">http://www.gnu.org/licenses/gpl-faq.html</a> about possible implications. </p>
-<h2>Index</h2>
-<dt><a href="#lbAG">MAIN COMMAND</a></dt>
-<dd>
-</dd><dt><a href="#lbAH">OPTIONS</a></dt>
-<dd>
-</dd><dt><a href="#lbAI">OTHER OPTIONS</a></dt>
-<dd>
-</dd><dt><a href="#lbAJ">ADVANCED USAGE</a></dt>
-<dd>
-</dd><dt><a href="#lbAK">ENVIRONMENT</a></dt>
-<dd>
-</dd><dt><a href="#lbAL">SEE ALSO</a></dt>
-<dd>
-</dd><dt><a href="#lbAM">DIAGNOSTICS</a></dt>
-<dd>
-</dd><dt><a href="#lbAN">BUGS</a></dt>
-<dd>
-</dd><dt><a href="#lbAO">AUTHOR</a></dt>
-<dd>
-</dd><dt><a href="#lbAP">COPYRIGHT</a></dt>
-<dd></dd></dl>

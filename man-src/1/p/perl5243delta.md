@@ -122,20 +122,3 @@ description: "perl5243delta – what is new for perl v5.24.3"
 <p> The <i></i><font SIZE="-1"><i>INSTALL</i></font><i></i> file for how to build Perl. </p>
 <p> The <i></i><font SIZE="-1"><i>README</i></font><i></i> file for general stuff. </p>
 <p> The <i>Artistic</i> and <i>Copying</i> files for copyright information. </p>
-<h2>Index</h2>
-<dt><a href="#lbAH">Incompatible Changes</a></dt>
-<dd>
-</dd><dt><a href="#lbAI">Modules and Pragmata</a></dt>
-<dd>
-</dd><dt><a href="#lbAK">Configuration and Compilation</a></dt>
-<dd>
-</dd><dt><a href="#lbAL">Platform Support</a></dt>
-<dd>
-</dd><dt><a href="#lbAN">Selected Bug Fixes</a></dt>
-<dd>
-</dd><dt><a href="#lbAO">Acknowledgements</a></dt>
-<dd>
-</dd><dt><a href="#lbAP">Reporting Bugs</a></dt>
-<dd>
-</dd><dt><a href="#lbAQ">SEE ALSO</a></dt>
-<dd></dd></dl>

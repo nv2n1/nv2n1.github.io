@@ -113,8 +113,3 @@ void mod_ctype.wdouble(Number value, String endian, Buffer buf, Number offset);
 </table>
 <p> All functions are MT-safe in so far as there aren&#8217;t shared memory MT concerns in most node programs. If one where to concoct such an environment, these functions wouldn&#8217;t be MT-safe. </p>
 <h2>SEE ALSO</h2>
-<h2>Index</h2>
-<dt><a href="#lbAM">ATTRIBUTES</a></dt>
-<dd>
-</dd><dt><a href="#lbAN">SEE ALSO</a></dt>
-<dd></dd></dl>

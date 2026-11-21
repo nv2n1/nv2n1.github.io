@@ -149,39 +149,3 @@ Qabs_ranges=18,19,19,20,19,19,20,19,19,20,19,19,20,19,19,20
 <p> <code><a href="/docs/linux/man/1-gdcmdump/">gdcmdump</a></code>(1), <code><a href="/docs/linux/man/1-gdcmraw/">gdcmraw</a></code>(1)  </p>
 <h2>COPYRIGHT</h2>
 <p> Copyright (c) 2006-2010 Mathieu Malaterre </p>
-<h2>Index</h2>
-<dl>
-<dt><a href="#lbAB">NAME</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAC">NAME</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAD">DESCRIPTION</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAE">PARAMETERS</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAF">OPTIONS</a></dt>
-<dd>  </dd>
-<dl>
-<dt><a href="#lbAG">PARAMETERS</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAH">OPTIONS</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAI">general options</a></dt>
-<dd>  </dd></dl>
-<dt><a href="#lbAJ">Typical usage</a></dt>
-<dd>  </dd>
-<dl>
-<dt><a href="#lbAK">Copy Attribute Value to file</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAL">Extract Pixel Data</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAM">Encapsulated Syntax</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAN">Extract fragments as single file</a></dt>
-<dd>  </dd></dl>
-<dt><a href="#lbAO">Footnote about JPEG files</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAP">SEE ALSO</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAQ">COPYRIGHT</a></dt>
-<dd>  </dd></dl>

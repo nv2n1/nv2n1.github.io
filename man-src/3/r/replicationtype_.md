@@ -159,27 +159,3 @@ description: "QuantLib::DigitalCoupon – Digital-payoff coupon."
 <p>Reimplemented from <code>FloatingRateCoupon</code>. </p>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for QuantLib from the source code. </p>
-<h2>Index</h2>
-<dl>
-<dt><a href="#lbAB">NAME</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAC">SYNOPSIS</a></dt>
-<dd>  </dd>
-<dl>
-<dt><a href="#lbAD">Public Member Functions</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAE">Protected Attributes</a></dt>
-<dd>  </dd></dl>
-<dt><a href="#lbAF">Detailed Description</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAG">Member Function Documentation</a></dt>
-<dd>  </dd>
-<dl>
-<dt><a href="#lbAH"><code>Rate</code> callOptionRate () const</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAI"><code>Rate</code> putOptionRate () const</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAJ">void update () [virtual]</a></dt>
-<dd>  </dd></dl>
-<dt><a href="#lbAK">Author</a></dt>
-<dd>  </dd></dl>

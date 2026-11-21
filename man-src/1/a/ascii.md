@@ -118,15 +118,3 @@ description: "ascii – report character aliases"
 <p> This utility is particularly handy for interpreting <a href="/docs/linux/man/1-cc/">cc</a>(1)&#8216;s ugly octal `invalid-character&#8217; messages, or when coding anything to do with serial communications. As a side effect it serves as a handy base-converter for random 8-bit values.  </p>
 <h2>AUTHOR</h2>
 <p> Eric S. Raymond &lt;esr [at] thyrsus.com&gt;; November 1990 (home page at m[blue]<code><a rel="nofollow" href="http://www.catb.org/~esr/">http://www.catb.org/~esr/</a></code>m[]). Reproduce, use, and modify as you like as long as you don&#8217;t remove this authorship notice. Ioannis E. Tambouras &lt;ioannis [at] debian.org&gt; added command options and minor enhancements. Brian J. Ginsbach &lt;ginsbach [at] sgi.com&gt; fixed several bugs and expanded the man page. David N. Welton &lt;davidw [at] efn.org&gt; added the <code>-s</code> option. Matej Vela corrected the ISO names. Dave Capella contributed the idea of listing HTML/SGML entities. </p>
-<h2>Index</h2>
-<dl>
-<dt><a href="#lbAB">NAME</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAC">SYNOPSIS</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAD">OPTIONS</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAE">DESCRIPTION</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAF">AUTHOR</a></dt>
-<dd>  </dd></dl>

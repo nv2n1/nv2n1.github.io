@@ -1010,14 +1010,3 @@ vec($rin, fileno(STDIN), 1) = 1;
 <p> The <i></i><font SIZE="-1"><i>INSTALL</i></font><i></i> file for how to build Perl. </p>
 <p> The <i></i><font SIZE="-1"><i>README</i></font><i></i> file for general stuff. </p>
 <p> The <i>Artistic</i> and <i>Copying</i> files for copyright information. </p>
-<h2>Index</h2>
-<dt><a href="#lbAS">New or Changed Diagnostics</a></dt>
-<dd>
-</dd><dt><a href="#lbAW">Changed Internals</a></dt>
-<dd>
-</dd><dt><a href="#lbAX">Platform Specific Problems</a></dt>
-<dd>
-</dd><dt><a href="#lbAY">Reporting Bugs</a></dt>
-<dd>
-</dd><dt><a href="#lbAZ">SEE ALSO</a></dt>
-<dd></dd></dl>

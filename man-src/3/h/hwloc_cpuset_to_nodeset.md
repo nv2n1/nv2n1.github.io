@@ -30,6 +30,3 @@ description: "hwlocality_helper_nodeset_convert – Converting between CPU sets 
 <p> Convert a CPU set into a NUMA node set without handling non-NUMA cases. This is the strict variant of <code>hwloc_cpuset_to_nodeset()</code>. It does not fix non-NUMA cases. If the topology contains some NUMA nodes, behave exactly the same. However, if the topology contains no NUMA nodes, return an empty nodeset.</p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for Hardware Locality (hwloc) from the source code. </p>
-<h2>Index</h2>
-<dt><a href="#lbAJ">Author</a></dt>
-<dd></dd></dl>

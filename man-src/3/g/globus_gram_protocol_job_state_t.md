@@ -58,6 +58,3 @@ description: "GRAM Job States –"
 <dd> A mask of all job states.</dd></dl>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for globus_gram_protocol from the source code. </p>
-<h2>Index</h2>
-<dt><a href="#lbAG">Author</a></dt>
-<dd></dd></dl>

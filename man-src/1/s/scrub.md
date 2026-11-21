@@ -149,23 +149,3 @@ scrub: 0xffaa |................................................|
  <a rel="nofollow" href="http://cmrr.ucsd.edu/people/Hughes/DataSanitizationTutorial.pdf.">http://cmrr.ucsd.edu/people/Hughes/DataSanitizationTutorial.pdf.</a> </p>
 <p> &quot;Guidelines for Media Sanitization&quot;, NIST special publication 800-88, Kissel et al, September, 2006. </p>
 <p> <a href="/docs/linux/man/1-shred/">shred</a>(1), <a href="/docs/linux/man/8-hdparm/">hdparm</a>(8) </p>
-<h2>Index</h2>
-<dl>
-<dt><a href="#lbAB">NAME</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAC">SYNOPSIS</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAD">DESCRIPTION</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAE">OPTIONS</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAF">SCRUB METHODS</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAG">CAVEATS</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAH">EXAMPLES</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAI">AUTHOR</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAJ">SEE ALSO</a></dt>
-<dd>  </dd></dl>

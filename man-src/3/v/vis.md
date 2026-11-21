@@ -80,17 +80,3 @@ description: "vis strvis strnvis strvisx – visually encode characters"
 <p> unvis(1), vis(1), <a href="/docs/linux/man/3-snprintf/">snprintf</a>(3), <a href="/docs/linux/man/3-strlcpy/">strlcpy</a>(3), <a href="/docs/linux/man/3-unvis/">unvis</a>(3)  </p>
 <h2>HISTORY</h2>
 <p> The Fn vis , Fn strvis and Fn strvisx functions first appeared in BSD 4.4 The Fn strnvis function first appeared in Ox 2.9 . </p>
-<h2>Index</h2>
-<dl>
-<dt><a href="#lbAB">NAME</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAC">LIBRARY</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAD">SYNOPSIS</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAE">DESCRIPTION</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAF">SEE ALSO</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAG">HISTORY</a></dt>
-<dd>  </dd></dl>

@@ -40,6 +40,3 @@ description: "hwloc_obj_attr_u::hwloc_bridge_attr_s –"
 <h3><code>hwloc_obj_bridge_type_t</code> hwloc_obj_attr_u::hwloc_bridge_attr_s::upstream_type</h3>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for Hardware Locality (hwloc) from the source code. </p>
-<h2>Index</h2>
-<dt><a href="#lbAQ">Author</a></dt>
-<dd></dd></dl>

@@ -132,14 +132,3 @@ description: "closelog, openlog, syslog, vsyslog – send messages to the system
 <p> <code><a href="/docs/linux/man/1-journalctl/">journalctl</a></code>(1), <code><a href="/docs/linux/man/1-logger/">logger</a></code>(1), <code><a href="/docs/linux/man/3-setlogmask/">setlogmask</a></code>(3), <code>syslog.conf</code>(5), <code>syslogd</code>(8)</p>
 <h2>COLOPHON</h2>
 <p> This page is part of release 5.10 of the Linux <i>man-pages</i> project. A description of the project, information about reporting bugs, and the latest version of this page, can be found at <a rel="nofollow" href="https://www.kernel.org/doc/man-pages/.">https://www.kernel.org/doc/man-pages/.</a> </p>
-<h2>Index</h2>
-<dt><a href="#lbAK">ATTRIBUTES</a></dt>
-<dd>
-</dd><dt><a href="#lbAL">CONFORMING TO</a></dt>
-<dd>
-</dd><dt><a href="#lbAM">NOTES</a></dt>
-<dd>
-</dd><dt><a href="#lbAN">SEE ALSO</a></dt>
-<dd>
-</dd><dt><a href="#lbAO">COLOPHON</a></dt>
-<dd></dd></dl>

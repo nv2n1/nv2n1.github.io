@@ -65,28 +65,3 @@ description: "QuantLib::FixedRateBondHelper – fixed-coupon bond helper"
 <p>Reimplemented from <code>BootstrapHelper&lt; YieldTermStructure &gt;</code>. </p>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for QuantLib from the source code. </p>
-<h2>Index</h2>
-<dl>
-<dt><a href="#lbAB">NAME</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAC">SYNOPSIS</a></dt>
-<dd>  </dd>
-<dl>
-<dt><a href="#lbAD">Public Member Functions</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAE">Protected Attributes</a></dt>
-<dd>  </dd></dl>
-<dt><a href="#lbAF">Detailed Description</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAG">Constructor &amp; Destructor Documentation</a></dt>
-<dd>  </dd>
-<dl>
-<dt><a href="#lbAH"><code>FixedRateBondHelper</code> (const <code>Handle</code>&lt; <code>Quote</code> &gt; &amp; cleanPrice, const boost::shared_ptr&lt; <code>FixedRateBond</code> &gt; &amp; bond)</a></dt>
-<dd>  </dd></dl>
-<dt><a href="#lbAI">Member Function Documentation</a></dt>
-<dd>  </dd>
-<dl>
-<dt><a href="#lbAJ">void setTermStructure (<code>YieldTermStructure</code> *) [virtual]</a></dt>
-<dd>  </dd></dl>
-<dt><a href="#lbAK">Author</a></dt>
-<dd>  </dd></dl>

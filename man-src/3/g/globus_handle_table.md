@@ -118,6 +118,3 @@ description: "Handle Table for Reference Counting Data –"
 </dt><dd> The <code>globus_handle_table_lookup()</code> function returns the datum associated with the handle in the handle table, or NULL if the handle does not reference valid data.</dd></dl>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for globus_common from the source code. </p>
-<h2>Index</h2>
-<dt><a href="#lbAS">Author</a></dt>
-<dd></dd></dl>

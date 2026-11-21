@@ -121,6 +121,3 @@ description: "Functions for Decoding –"
  <i>OD_EFAULT</i> One of <i>dec</i> or <i>img</i> was NULL.</dd></dl>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for daala from the source code. </p>
-<h2>Index</h2>
-<dt><a href="#lbAN">Author</a></dt>
-<dd></dd></dl>

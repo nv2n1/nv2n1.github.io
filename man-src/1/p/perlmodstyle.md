@@ -442,8 +442,6 @@ our $VERSION = "1.12_01";
 
  Kirrily ``Skud'' Robert &lt;skud [at] cpan.org&gt; 
 
-<h2>Index</h2>
-
 
 
 <dt><a HREF="#lbAJ">BEFORE YOU START WRITING A MODULE</a>

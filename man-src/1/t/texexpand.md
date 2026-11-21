@@ -89,15 +89,3 @@ The line of course must be at least interpreted to determine the closing tag.
  Herbert Swan
  Jens Lippmann
 </code></pre>
-<h2>Index</h2>
-<dl>
-<dt><a href="#lbAB">NAME</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAC">DESCRIPTION</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAD">The gory Details</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAE">CAVEATS</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAF">Authors</a></dt>
-<dd>  </dd></dl>

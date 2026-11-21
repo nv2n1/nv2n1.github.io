@@ -104,25 +104,3 @@ description: "omega, iniomega, viromega – extended unicode TeX"
 <p> <code><a href="/docs/linux/man/1-tex/">tex</a></code>(1), <code><a href="/docs/linux/man/1-mf/">mf</a></code>(1), <a href="/docs/linux/man/1-odvips/">odvips</a><code>(1),</code>  </p>
 <h2>AUTHORS</h2>
 <p> The primary authors of Omega are John Plaice and Yannis Haralambous. </p>
-<h2>Index</h2>
-<dl>
-<dt><a href="#lbAB">NAME</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAC">SYNOPSIS</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAD">DESCRIPTION</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAE">OPTIONS</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAF">ENVIRONMENT</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAG">FILES</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAH">NOTES</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAI">BUGS</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAJ">SEE ALSO</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAK">AUTHORS</a></dt>
-<dd>  </dd></dl>

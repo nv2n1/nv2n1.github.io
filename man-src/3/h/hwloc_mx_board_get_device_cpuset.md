@@ -25,6 +25,3 @@ description: "hwlocality_myriexpress – Interoperability with Myrinet Express"
 <p> The function only returns the locality of the endpoint. No additional information about the endpoint or device is available.</p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for Hardware Locality (hwloc) from the source code. </p>
-<h2>Index</h2>
-<dt><a href="#lbAH">Author</a></dt>
-<dd></dd></dl>

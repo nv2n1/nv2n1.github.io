@@ -1756,18 +1756,3 @@ class agilent7000(ivi.Driver, scope.Base, scope.TVTrigger,
 <p> Alex Forencich</p>
 <h2>COPYRIGHT</h2>
 <p> 2012-2014, Alex Forencich </p>
-<h2>Index</h2>
-<dt><a href="#lbBA">IVI.SCOPE &#8212; OSCILLOSCOPE CLASS</a></dt>
-<dd>
-</dd><dt><a href="#lbBR">IVI.FGEN &#8212; FUNCTION GENERATOR CLASS</a></dt>
-<dd>
-</dd><dt><a href="#lbCR">IVI.DCPWR &#8212; DC POWER SUPPLY CLASS</a></dt>
-<dd>
-</dd><dt><a href="#lbCX">WRITING NEW PYTHON IVI DRIVERS</a></dt>
-<dd>
-</dd><dt><a href="#lbCZ">APPENDIX</a></dt>
-<dd>
-</dd><dt><a href="#lbDB">AUTHOR</a></dt>
-<dd>
-</dd><dt><a href="#lbDC">COPYRIGHT</a></dt>
-<dd></dd></dl>

@@ -78,6 +78,3 @@ description: "QuantLib::FloatingRateCoupon – base floating-rate coupon class"
 <p> Reimplemented in <code>CappedFlooredCoupon</code>, and <code>DigitalCoupon</code>. </p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for QuantLib from the source code. </p>
-<h2>Index</h2>
-<dt><a href="#lbAK">Author</a></dt>
-<dd></dd></dl>

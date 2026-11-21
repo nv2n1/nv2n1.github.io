@@ -117,30 +117,3 @@ description: "lsipc – show information on IPC facilities currently employed in
 <p> For bug reports, use the issue tracker at <i></i> &lt;<a rel="nofollow" href="https://github.com/karelzak/util-linux/issues">https://github.com/karelzak/util-linux/issues</a>&gt;.  </p>
 <h2>AVAILABILITY</h2>
 <p> The <code>lsipc</code> command is part of the util-linux package which can be downloaded from <i>Linux Kernel Archive</i> &lt;<a rel="nofollow" href="https://www.kernel.org/pub/linux/utils/util-linux/">https://www.kernel.org/pub/linux/utils/util-linux/</a>&gt;. </p>
-<h2>Index</h2>
-<dl>
-<dt><a href="#lbAB">NAME</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAC">SYNOPSIS</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAD">DESCRIPTION</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAE">OPTIONS</a></dt>
-<dd>  </dd>
-<dl>
-<dt><a href="#lbAF">Resource options</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAG">Output formatting</a></dt>
-<dd>  </dd></dl>
-<dt><a href="#lbAH">EXIT STATUS</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAI">HISTORY</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAJ">AUTHORS</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAK">SEE ALSO</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAL">REPORTING BUGS</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAM">AVAILABILITY</a></dt>
-<dd>  </dd></dl>

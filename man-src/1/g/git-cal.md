@@ -54,10 +54,3 @@ git - cal git - cal-- period = &lt;1..12, -1.. - 11&gt;
 <dt>Around line 451:</dt>
 <dd> You forgot a &#8216;=back&#8217; before &#8216;=head2&#8217; </dd>
 </dl>
-<h2>Index</h2>
-<dt><a href="#lbAF">AUTHOR</a></dt>
-<dd>
-</dd><dt><a href="#lbAG">COPYRIGHT AND LICENSE</a></dt>
-<dd>
-</dd><dt><a href="#lbAH">POD ERRORS</a></dt>
-<dd></dd></dl>

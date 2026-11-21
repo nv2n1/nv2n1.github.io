@@ -172,6 +172,3 @@ description: "Credential Operations –"
 </dt><dd> GLOBUS_SUCCESS unless an error occurred, in which case an error object ID is returned.</dd></dl>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for globus_gsi_credential from the source code. </p>
-<h2>Index</h2>
-<dt><a href="#lbAQ">Author</a></dt>
-<dd></dd></dl>

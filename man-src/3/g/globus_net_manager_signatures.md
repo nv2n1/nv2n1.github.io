@@ -163,6 +163,3 @@ description: "Function Signatures –"
  <i>attr_array_out</i> A pointer to an array of transport options to apply to the listener prior to returning it to the service. This may be NULL to indicate no change in the options. If non-NULL, this array must be terminated with an attribute having a NULL scope. The array and the members of the globus_net_manager_attr_t struct will be freed by the globus_net_manager library by calling free().</dd></dl>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for globus_net_manager from the source code. </p>
-<h2>Index</h2>
-<dt><a href="#lbAO">Author</a></dt>
-<dd></dd></dl>

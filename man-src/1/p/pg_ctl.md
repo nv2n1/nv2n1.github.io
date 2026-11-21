@@ -180,33 +180,3 @@ description: "pg_ctl – initialize, start, stop, or control a PostgreSQL server
 <p> This is the command line that would be invoked in restart mode.  </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-initdb/">initdb</a></code>(1), <code><a href="/docs/linux/man/1-postgres/">postgres</a></code>(1) </p>
-<h2>Index</h2>
-<dl>
-<dt><a href="#lbAB">NAME</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAC">SYNOPSIS</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAD">DESCRIPTION</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAE">OPTIONS</a></dt>
-<dd>  </dd>
-<dl>
-<dt><a href="#lbAF">Options for Windows</a></dt>
-<dd>  </dd></dl>
-<dt><a href="#lbAG">ENVIRONMENT</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAH">FILES</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAI">EXAMPLES</a></dt>
-<dd>  </dd>
-<dl>
-<dt><a href="#lbAJ">Starting the Server</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAK">Stopping the Server</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAL">Restarting the Server</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAM">Showing the Server Status</a></dt>
-<dd>  </dd></dl>
-<dt><a href="#lbAN">SEE ALSO</a></dt>
-<dd>  </dd></dl>

@@ -92,8 +92,6 @@ url: "/docs/linux/man/1-perlvmesa/"
 </dt><dd> <a rel="nofollow" HREF="http://archive.develooper.com/perl-mvs@perl.org/">http://archive.develooper.com/perl-mvs@perl.org/</a> &lt;<a HREF="http://archive.develooper.com/perl-mvs@perl.org/">http://archive.develooper.com/perl-mvs@perl.org/</a>&gt; 
 </dd></dl>
 
-<h2>Index</h2>
-
 
 
 <dt><a HREF="#lbAJ">AUTHORS</a>

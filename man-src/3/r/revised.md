@@ -98,35 +98,3 @@ description: "QuantLib::InflationIndex – Base class for inflation-rate indexes
 <p>The availability lag describes when the index is <i>available</i>, not how it is used. Specifically the fixing for, say, January, may only be available in April but the index will always return the index value applicable for January as its January fixing (independent of the lag in availability). </p>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for QuantLib from the source code. </p>
-<h2>Index</h2>
-<dl>
-<dt><a href="#lbAB">NAME</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAC">SYNOPSIS</a></dt>
-<dd>  </dd>
-<dl>
-<dt><a href="#lbAD">Public Member Functions</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAE">Protected Attributes</a></dt>
-<dd>  </dd></dl>
-<dt><a href="#lbAF">Detailed Description</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAG">Member Function Documentation</a></dt>
-<dd>  </dd>
-<dl>
-<dt><a href="#lbAH">std::string name () const [virtual]</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAI"><code>Calendar</code> fixingCalendar () const [virtual]</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAJ">virtual Rate fixing (const <code>Date</code> &amp; fixingDate, bool forecastTodaysFixing = false) const [pure virtual]</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAK">void addFixing (const <code>Date</code> &amp; fixingDate, Rate fixing, bool forceOverwrite = false)</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAL">void update () [virtual]</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAM">bool interpolated () const</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAN"><code>Period</code> availabilityLag () const</a></dt>
-<dd>  </dd></dl>
-<dt><a href="#lbAO">Author</a></dt>
-<dd>  </dd></dl>

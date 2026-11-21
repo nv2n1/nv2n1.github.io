@@ -1611,10 +1611,3 @@ AdmBlackBox_setMark(box_p, 'app1_mark_string', error);
  <i>subspace_cfg</i> the subspace config no use</dd></dl>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for Alchemist from the source code. </p>
-<h2>Index</h2>
-<dt><a href="#lbCP">Enumeration Type Documentation</a></dt>
-<dd>
-</dd><dt><a href="#lbCR">Function Documentation</a></dt>
-<dd>
-</dd><dt><a href="#lbHA">Author</a></dt>
-<dd></dd></dl>

@@ -123,16 +123,3 @@ description: "dbus-binding-tool – C language GLib bindings generation utility.
 <p> <code><a href="/docs/linux/man/1-dbus-cleanup-sockets/">dbus-cleanup-sockets</a></code>(1), <code><a href="/docs/linux/man/1-dbus-daemon/">dbus-daemon</a></code>(1), <code><a href="/docs/linux/man/1-dbus-monitor/">dbus-monitor</a></code>(1), <code><a href="/docs/linux/man/1-dbus-send/">dbus-send</a></code>(1), <code><a href="/docs/linux/man/1-dbus-uuidgen/">dbus-uuidgen</a></code>(1), <code>libdbus-glib-1</code>(3), <code>attributes</code>(5)</p>
 <h2>NOTES</h2>
 <p> Written by Brian Cameron, Sun Microsystems Inc., 2009. </p>
-<h2>Index</h2>
-<dt><a href="#lbAI">OPTIONS</a></dt>
-<dd>
-</dd><dt><a href="#lbAJ">OPERANDS</a></dt>
-<dd>
-</dd><dt><a href="#lbAK">FILES</a></dt>
-<dd>
-</dd><dt><a href="#lbAL">ATTRIBUTES</a></dt>
-<dd>
-</dd><dt><a href="#lbAM">SEE ALSO</a></dt>
-<dd>
-</dd><dt><a href="#lbAN">NOTES</a></dt>
-<dd></dd></dl>

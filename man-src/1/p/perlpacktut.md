@@ -912,8 +912,6 @@ my $advice = pack('all u can in a van');
 
  Simon Cozens and Wolfgang Laun. 
 
-<h2>Index</h2>
-
 
 
 <dt><a HREF="#lbAX">Packing and Unpacking C Structures</a>

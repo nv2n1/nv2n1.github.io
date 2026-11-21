@@ -198,8 +198,3 @@ description: "Attributes and Cntls –"
 <dd> If present in the server response, the connection will be closed after the end of the data response is written. Otherwise, when persistent connections are enabled, the connection <i>may</i> be left open by the driver. Persistent connections are not yet implemented.</dd></dl>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for globus xio from the source code. </p>
-<h2>Index</h2>
-<dt><a href="#lbAI">Function Documentation</a></dt>
-<dd>
-</dd><dt><a href="#lbAR">Author</a></dt>
-<dd></dd></dl>

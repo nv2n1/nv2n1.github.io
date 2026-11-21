@@ -40,8 +40,3 @@ description: "intel_panel_fitter – Change the panel fitter settings"
 <h2>NOTES</h2>
 <p> In the future, there will be support for this feature inside the Linux Kernel. </p>
 <p> Machines older than Ironlake are still not supported, but support may be possible to implement. </p>
-<h2>Index</h2>
-<dt><a href="#lbAG">EXAMPLES</a></dt>
-<dd>
-</dd><dt><a href="#lbAH">NOTES</a></dt>
-<dd></dd></dl>

@@ -43,8 +43,3 @@ description: "pyjwt3 – Python implementation of JSON Web Token"
 <h2>AUTHOR</h2>
 <p> Jeff Lindsay &lt;progrium [at] gmail.com&gt; </p>
 <p> This manual page was written by Daniele Tricoli &lt;eriol [at] mornie.org&gt;, for the Debian project (but may be used by others). </p>
-<h2>Index</h2>
-<dt><a href="#lbAG">EXAMPLES</a></dt>
-<dd>
-</dd><dt><a href="#lbAH">AUTHOR</a></dt>
-<dd></dd></dl>

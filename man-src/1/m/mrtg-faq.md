@@ -41,6 +41,3 @@ description: "mrtg-faq – How to get help if you have problems with MRTG"
 <p> In the above cases where some <font SIZE="-1">SNMP</font> packets are lost but traffic is flowing, assuming zero is the wrong thing to do &#8211; you end up with a graph that looks like it&#8217;s missing teeth whenever the link fills up. <font SIZE="-1">MRTG</font> interpolates the lost data to produce a smoother graph which is more accurate in cases of intermittent packet loss. But with V2.8.4 and above, you can use the &#8220;unknaszero&#8221; option to produce whichever graph is best under the conditions typical for your network.</p>
 <h2>AUTHOR</h2>
 <p> Tobias Oetiker &lt;tobi [at] oetiker.ch&gt; </p>
-<h2>Index</h2>
-<dt><a href="#lbAK">AUTHOR</a></dt>
-<dd></dd></dl>

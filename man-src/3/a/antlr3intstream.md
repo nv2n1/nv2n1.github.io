@@ -64,6 +64,3 @@ description: "include/antlr3intstream.h –"
 <p>&nbsp;<wbr>&nbsp;<wbr><code>ANTLR3_INT_STREAM</code>&quot;</p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for ANTLR3C from the source code. </p>
-<h2>Index</h2>
-<dt><a href="#lbAO">Author</a></dt>
-<dd></dd></dl>

@@ -7654,16 +7654,3 @@ void __cyg_profile_func_exit(void *this_fn,
      software.  Copies published by the Free Software Foundation raise
      funds for GNU development.
 </pre>
-<h2>Index</h2>
-<dt><a href="#lbAW">ENVIRONMENT</a></dt>
-<dd>
-</dd><dt><a href="#lbAX">BUGS</a></dt>
-<dd>
-</dd><dt><a href="#lbAY">FOOTNOTES</a></dt>
-<dd>
-</dd><dt><a href="#lbAZ">SEE ALSO</a></dt>
-<dd>
-</dd><dt><a href="#lbBA">AUTHOR</a></dt>
-<dd>
-</dd><dt><a href="#lbBB">COPYRIGHT</a></dt>
-<dd></dd></dl>

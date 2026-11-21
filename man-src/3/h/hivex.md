@@ -665,8 +665,6 @@ int hivex_visit_node(hive_h *h, hive_node_h node, const struct hivex_visitor *vi
 
  This library is distributed in the hope that it will be useful, but <font SIZE="-1">WITHOUT ANY WARRANTY</font>; without even the implied warranty of <font SIZE="-1">MERCHANTABILITY</font> or <font SIZE="-1">FITNESS FOR A PARTICULAR PURPOSE. </font> See the <font SIZE="-1">GNU</font> Lesser General Public License for more details. 
 
-<h2>Index</h2>
-
 
 
 <dt><a HREF="#lbBP">VISITING ALL NODES</a>

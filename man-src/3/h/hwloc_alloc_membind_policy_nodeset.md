@@ -231,8 +231,3 @@ hwloc_alloc_membind_policy(topology, size, set,
 </dt><dd> hwloc_pid_t is pid_t on Unix platforms, and HANDLE on native Windows platforms.</dd></dl>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for Hardware Locality (hwloc) from the source code. </p>
-<h2>Index</h2>
-<dt><a href="#lbAI">Function Documentation</a></dt>
-<dd>
-</dd><dt><a href="#lbBB">Author</a></dt>
-<dd></dd></dl>

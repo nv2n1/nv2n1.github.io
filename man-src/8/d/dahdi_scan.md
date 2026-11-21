@@ -73,21 +73,3 @@ description: "dahdi_scan — Print Configuration of DAHDI Spans"
 <h2>AUTHOR</h2>
 <p>This manual page was written by Tzafrir Cohen &lt;tzafrir.cohen [at] xorcom.com&gt; Permission is granted to copy, distribute and/or modify this document under the terms of the GNU General Public License, Version 2 any later version published by the Free Software Foundation. <br />
 &nbsp;<wbr> On Debian systems, the complete text of the GNU General Public License can be found in /usr/share/common-licenses/GPL. </p>
-<h2>Index</h2>
-<dl>
-<dt><a href="#lbAB">NAME </a></dt>
-<dd>  </dd>
-<dt><a href="#lbAC">SYNOPSIS </a></dt>
-<dd>  </dd>
-<dt><a href="#lbAD">DESCRIPTION </a></dt>
-<dd>  </dd>
-<dt><a href="#lbAE">EXAMPLES</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAF">FILES</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAG">SEE ALSO </a></dt>
-<dd>  </dd>
-<dt><a href="#lbAH">BUGS</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAI">AUTHOR </a></dt>
-<dd>  </dd></dl>

@@ -698,14 +698,3 @@ VCPUs State Time(s)
   Stefan Berger &lt;stefanb at us dot ibm dot com&gt;
 </pre>
 <h2>BUGS</h2>
-<h2>Index</h2>
-<dt><a href="#lbAM">VNET COMMANDS</a></dt>
-<dd>
-</dd><dt><a href="#lbAN">ACCESS CONTROL SUBCOMMANDS</a></dt>
-<dd>
-</dd><dt><a href="#lbAO">SEE ALSO</a></dt>
-<dd>
-</dd><dt><a href="#lbAP">AUTHOR</a></dt>
-<dd>
-</dd><dt><a href="#lbAQ">BUGS</a></dt>
-<dd></dd></dl>

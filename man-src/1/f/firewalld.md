@@ -87,12 +87,3 @@ description: "firewalld – Dynamic Firewall Manager"
 <dl>
 <dt>
 </dt><dd> Developer</dd></dl>
-<h2>Index</h2>
-<dt><a href="#lbAP">SIGNALS</a></dt>
-<dd>
-</dd><dt><a href="#lbAR">SEE ALSO</a></dt>
-<dd>
-</dd><dt><a href="#lbAS">NOTES</a></dt>
-<dd>
-</dd><dt><a href="#lbAT">AUTHORS</a></dt>
-<dd></dd></dl>

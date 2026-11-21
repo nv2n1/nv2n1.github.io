@@ -59,6 +59,3 @@ description: "QuantLib::CallableBond – Callable bond base class."
 <p> Reimplemented in <code>CallableFixedRateBond</code>. </p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for QuantLib from the source code. </p>
-<h2>Index</h2>
-<dt><a href="#lbAM">Author</a></dt>
-<dd></dd></dl>

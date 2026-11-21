@@ -776,10 +776,3 @@ sub UNTIE
 <p> <font SIZE="-1">UNTIE</font> by Nick Ing-Simmons &lt;<i>nick [at] ing-simmons.net</i>&gt; </p>
 <p> <font SIZE="-1">SCALAR</font> by Tassilo von Parseval &lt;<i>tassilo.von.parseval [at] rwth-aachen.de</i>&gt; </p>
 <p> Tying Arrays by Casey West &lt;<i>casey [at] geeknest.com</i>&gt; </p>
-<h2>Index</h2>
-<dt><a href="#lbAK">SEE ALSO</a></dt>
-<dd>
-</dd><dt><a href="#lbAL">BUGS</a></dt>
-<dd>
-</dd><dt><a href="#lbAM">AUTHOR</a></dt>
-<dd></dd></dl>

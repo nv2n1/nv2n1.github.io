@@ -164,8 +164,3 @@ description: "GRAM Client Attribute Functions –"
 </dt><dd> <code>globus_gram_client_attr_get_delegation_mode()</code></dd></dl>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for globus_gram_client from the source code. </p>
-<h2>Index</h2>
-<dt><a href="#lbAK">Function Documentation</a></dt>
-<dd>
-</dd><dt><a href="#lbAR">Author</a></dt>
-<dd></dd></dl>

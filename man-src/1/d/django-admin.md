@@ -1055,18 +1055,3 @@ with open('/path/to/command_output') as f:
 <p> Django Software Foundation</p>
 <h2>COPYRIGHT</h2>
 <p> Django Software Foundation and contributors </p>
-<h2>Index</h2>
-<dt><a href="#lbBU">COMMANDS PROVIDED BY APPLICATIONS</a></dt>
-<dd>
-</dd><dt><a href="#lbCH">DEFAULT OPTIONS</a></dt>
-<dd>
-</dd><dt><a href="#lbCI">COMMON OPTIONS</a></dt>
-<dd>
-</dd><dt><a href="#lbCJ">EXTRA NICETIES</a></dt>
-<dd>
-</dd><dt><a href="#lbCM">OUTPUT REDIRECTION</a></dt>
-<dd>
-</dd><dt><a href="#lbCN">AUTHOR</a></dt>
-<dd>
-</dd><dt><a href="#lbCO">COPYRIGHT</a></dt>
-<dd></dd></dl>

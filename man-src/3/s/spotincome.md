@@ -79,32 +79,3 @@ description: "QuantLib::FixedRateBondForward – Forward contract on a fixed-rat
 <p>Reimplemented from <code>Forward</code>. </p>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for QuantLib from the source code. </p>
-<h2>Index</h2>
-<dl>
-<dt><a href="#lbAB">NAME</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAC">SYNOPSIS</a></dt>
-<dd>  </dd>
-<dl>
-<dt><a href="#lbAD">Public Member Functions</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAE">Protected Member Functions</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAF">Protected Attributes</a></dt>
-<dd>  </dd></dl>
-<dt><a href="#lbAG">Detailed Description</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAH">Constructor &amp; Destructor Documentation</a></dt>
-<dd>  </dd>
-<dl>
-<dt><a href="#lbAI"><code>FixedRateBondForward</code> (const <code>Date</code> &amp; valueDate, const <code>Date</code> &amp; maturityDate, Position::Type type, <code>Real</code> strike, <code>Natural</code> settlementDays, const <code>DayCounter</code> &amp; dayCounter, const <code>Calendar</code> &amp; calendar, <code>BusinessDayConvention</code> businessDayConvention, const boost::shared_ptr&lt; <code>FixedRateBond</code> &gt; &amp; fixedCouponBond, const <code>Handle</code>&lt; <code>YieldTermStructure</code> &gt; &amp; discountCurve = <code>Handle</code>&lt; <code>YieldTermStructure</code> &gt;(), const <code>Handle</code>&lt; <code>YieldTermStructure</code> &gt; &amp; incomeDiscountCurve = <code>Handle</code>&lt; <code>YieldTermStructure</code> &gt;())</a></dt>
-<dd>  </dd></dl>
-<dt><a href="#lbAJ">Member Function Documentation</a></dt>
-<dd>  </dd>
-<dl>
-<dt><a href="#lbAK"><code>Real</code> spotIncome (const <code>Handle</code>&lt; <code>YieldTermStructure</code> &gt; &amp; incomeDiscountCurve) const [virtual]</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAL">void performCalculations () const [protected, virtual]</a></dt>
-<dd>  </dd></dl>
-<dt><a href="#lbAM">Author</a></dt>
-<dd>  </dd></dl>

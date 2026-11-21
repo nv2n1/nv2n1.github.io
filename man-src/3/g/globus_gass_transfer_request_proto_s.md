@@ -55,6 +55,3 @@ description: "globus_gass_transfer_request_proto_s –"
 </dt><dd> <code>globus_gass_transfer_proto_send_t</code></dd></dl>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for globus_gass_transfer from the source code. </p>
-<h2>Index</h2>
-<dt><a href="#lbAN">Author</a></dt>
-<dd></dd></dl>

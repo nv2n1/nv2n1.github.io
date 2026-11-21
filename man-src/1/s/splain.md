@@ -125,12 +125,3 @@ print "done with 4th bogus
 <p> While it&#8217;s true that this documentation is somewhat subserious, if you use a program named <i>splain</i>, you should expect a bit of whimsy.</p>
 <h2>AUTHOR</h2>
 <p> Tom Christiansen &lt;<i>tchrist [at] mox.perl.com</i>&gt;, 25 June 1995. </p>
-<h2>Index</h2>
-<dt><a href="#lbAG">EXAMPLES</a></dt>
-<dd>
-</dd><dt><a href="#lbAH">INTERNALS</a></dt>
-<dd>
-</dd><dt><a href="#lbAI">BUGS</a></dt>
-<dd>
-</dd><dt><a href="#lbAJ">AUTHOR</a></dt>
-<dd></dd></dl>

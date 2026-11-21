@@ -54,8 +54,3 @@ description: "ncftool – Network configuration tool"
 <p> interfaces (5)</p>
 <h2>AUTHORS</h2>
 <p> Please refer to the <font SIZE="-1">AUTHORS</font> file distributed with netcf. </p>
-<h2>Index</h2>
-<dt><a href="#lbAQ">SEE ALSO</a></dt>
-<dd>
-</dd><dt><a href="#lbAR">AUTHORS</a></dt>
-<dd></dd></dl>

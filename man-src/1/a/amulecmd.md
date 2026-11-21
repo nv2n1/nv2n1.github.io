@@ -193,18 +193,3 @@ description: "amulecmd – Console-based program to control aMule"
 <h2>SEE ALSO</h2>
 <h2>AUTHOR</h2>
 <p> This manpage was written by Vollstrecker &lt;amule [at] vollstreckernet.de&gt; </p>
-<h2>Index</h2>
-<dt><a href="#lbBB">NOTES</a></dt>
-<dd>
-</dd><dt><a href="#lbBE">FILES</a></dt>
-<dd>
-</dd><dt><a href="#lbBF">EXAMPLE</a></dt>
-<dd>
-</dd><dt><a href="#lbBG">REPORTING BUGS</a></dt>
-<dd>
-</dd><dt><a href="#lbBH">COPYRIGHT</a></dt>
-<dd>
-</dd><dt><a href="#lbBI">SEE ALSO</a></dt>
-<dd>
-</dd><dt><a href="#lbBJ">AUTHOR</a></dt>
-<dd></dd></dl>

@@ -266,8 +266,6 @@ print $d[0];
 
  The <i>Artistic</i> and <i>Copying</i> files for copyright information. 
 
-<h2>Index</h2>
-
 
 
 <dt><a HREF="#lbAK">Performance Enhancements</a>

@@ -2095,39 +2095,3 @@ description: "socat – Multipurpose relay (SOcket CAT)"
 <p> <code>Socat</code> home page <a rel="nofollow" href="http://www.dest-unreach.org/socat/">http://www.dest-unreach.org/socat/</a> </p>
 <h2>AUTHOR</h2>
 <p> Gerhard Rieger &lt;rieger [at] dest-unreach.org&gt; </p>
-<h2>Index</h2>
-<dl>
-<dt><a href="#lbAB">NAME</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAC">SYNOPSIS</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAD">DESCRIPTION</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAE">OPTIONS</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAF">ADDRESS SPECIFICATIONS</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAG">ADDRESS TYPES</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAH">ADDRESS OPTIONS</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAI">DATA VALUES</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAJ">EXAMPLES</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAK">DIAGNOSTICS</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAL">FILES</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAM">ENVIRONMENT VARIABLES</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAN">CREDITS</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAO">VERSION</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAP">BUGS</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAQ">SEE ALSO</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAR">AUTHOR</a></dt>
-<dd>  </dd></dl>

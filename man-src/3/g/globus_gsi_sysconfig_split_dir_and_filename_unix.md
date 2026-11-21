@@ -370,6 +370,3 @@ description: "Functions for UNIX platforms –"
 </dt><dd> GLOBUS_SUCCESS if no error occurred. Otherwise an error object ID is returned.</dd></dl>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for globus_gsi_sysconfig from the source code. </p>
-<h2>Index</h2>
-<dt><a href="#lbBE">Author</a></dt>
-<dd></dd></dl>

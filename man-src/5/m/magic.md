@@ -342,13 +342,3 @@ description: "magic – file command’s magic pattern file"
 <p> <a href="/docs/linux/man/1-file/">file</a>(1) - the command that reads this file.  </p>
 <h2>BUGS</h2>
 <p> The formats <code>long</code> <code>belong</code> <code>lelong</code> <code>melong</code> <code>short</code> <code>beshort</code> and <code>leshort</code> do not depend on the length of the C data types <code>short</code> and <code>long</code> on the platform, even though the Single UNIX Specification implies that they do. However, as OS X Mountain Lion has passed the Single UNIX Specification validation suite, and supplies a version of <a href="/docs/linux/man/1-file/">file</a>(1) in which they do not depend on the sizes of the C data types and that is built for a 64-bit environment in which <code>long</code> is 8 bytes rather than 4 bytes, presumably the validation suite does not test whether, for example <code>long</code> refers to an item with the same size as the C data type <code>long</code> There should probably be <code>type</code> names <code>int8</code> <code>uint8</code> <code>int16</code> <code>uint16</code> <code>int32</code> <code>uint32</code> <code>int64</code> and <code>uint64</code> and specified-byte-order variants of them, to make it clearer that those types have specified widths. </p>
-<h2>Index</h2>
-<dl>
-<dt><a href="#lbAB">NAME</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAC">DESCRIPTION</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAD">SEE ALSO</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAE">BUGS</a></dt>
-<dd>  </dd></dl>

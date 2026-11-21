@@ -55,6 +55,3 @@ description: "GSI Callback Constants –"
 <dd> Last marker &#8211; never used</dd></dl>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for globus_gsi_callback from the source code. </p>
-<h2>Index</h2>
-<dt><a href="#lbAG">Author</a></dt>
-<dd></dd></dl>

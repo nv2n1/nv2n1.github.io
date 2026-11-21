@@ -1020,8 +1020,6 @@ use strict 'refs';
 
  Richard Foley &lt;richard.foley [at] rfi.net&gt; Copyright (c) 2008 
 
-<h2>Index</h2>
-
 
 
 <dt><a HREF="#lbAH">GENERAL GUIDELINES</a>

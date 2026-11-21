@@ -569,8 +569,6 @@ sub square
 
  Kirrily ``Skud'' Robert &lt;skud [at] cpan.org&gt; 
 
-<h2>Index</h2>
-
 
 
 <dt><a HREF="#lbAQ">AUTHOR</a>

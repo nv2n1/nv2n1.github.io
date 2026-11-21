@@ -125,10 +125,3 @@ description: "kdesvn – A Subversion client for KDE (standalone application)"
 Rajko Albrecht &lt;ral [at] alwins-world.de&gt;
 <br>
 </pre>
-<h2>Index</h2>
-<dt><a href="#lbAT">EXAMPLE</a></dt>
-<dd>
-</dd><dt><a href="#lbAU">SEE ALSO</a></dt>
-<dd>
-</dd><dt><a href="#lbAV">AUTHORS</a></dt>
-<dd></dd></dl>

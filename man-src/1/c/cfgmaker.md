@@ -606,14 +606,3 @@ cfgmaker-- global "WorkDir: /home/tobi" --global "Options[_]: growright,bits" --
 <p> <font SIZE="-1">GNU</font> General Public License</p>
 <h2>COPYRIGHT</h2>
 <p> Cfgmaker is Copyright 2000 by Tobias Oetiker &lt;tobi [at] oetiker.ch&gt; </p>
-<h2>Index</h2>
-<dt><a href="#lbAJ">EXAMPLES</a></dt>
-<dd>
-</dd><dt><a href="#lbAK">SEE ALSO</a></dt>
-<dd>
-</dd><dt><a href="#lbAL">AUTHOR</a></dt>
-<dd>
-</dd><dt><a href="#lbAM">LICENSE</a></dt>
-<dd>
-</dd><dt><a href="#lbAN">COPYRIGHT</a></dt>
-<dd></dd></dl>

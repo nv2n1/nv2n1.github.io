@@ -78,8 +78,3 @@ url: "/docs/linux/man/1-gm_georect/"
 <p> Michael Barton, Arizona State University, Tempe, Arizona, USA </p>
 <p> <i>Last changed: $Date: 2007-11-18 21:17:33 +0100 (Sun, 18 Nov 2007) $</i> </p>
 <p> Full index </p>
-<h2>Index</h2>
-<dt><a href="#lbAI">SEE ALSO</a></dt>
-<dd>
-</dd><dt><a href="#lbAJ">AUTHORS</a></dt>
-<dd></dd></dl>

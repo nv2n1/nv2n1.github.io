@@ -404,22 +404,3 @@ $long_int = 10000000000;
 <h2>COPYRIGHT</h2>
 <p> Copyright (c) 2005-2011 Imaginative Software Systems. All rights reserved. </p>
 <p> This program is free software; you can redistribute it and/or modify it under the same terms as Perl itself. The full text of this license can be found in the <font SIZE="-1">LICENSE</font> file included with this module. </p>
-<h2>Index</h2>
-<dt><a href="#lbAT">EXIT STATUS</a></dt>
-<dd>
-</dd><dt><a href="#lbAU">THE Perl::Critic PHILOSOPHY</a></dt>
-<dd>
-</dd><dt><a href="#lbAV">EXTENDING THE CRITIC</a></dt>
-<dd>
-</dd><dt><a href="#lbAW">CONTACTING THE DEVELOPMENT TEAM</a></dt>
-<dd>
-</dd><dt><a href="#lbAX">SEE ALSO</a></dt>
-<dd>
-</dd><dt><a href="#lbAY">BUGS</a></dt>
-<dd>
-</dd><dt><a href="#lbAZ">CREDITS</a></dt>
-<dd>
-</dd><dt><a href="#lbBA">AUTHOR</a></dt>
-<dd>
-</dd><dt><a href="#lbBB">COPYRIGHT</a></dt>
-<dd></dd></dl>

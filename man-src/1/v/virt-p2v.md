@@ -398,22 +398,3 @@ description: "virt-p2v – Convert a physical machine to use KVM"
 <dt>&bull;</dt>
 <dd> Run <i><a href="/docs/linux/man/1-libguestfs-test-tool/">libguestfs-test-tool</a></i>(1) and paste the <code>complete, unedited</code> output into the bug report. </dd>
 </dl>
-<h2>Index</h2>
-<dt><a href="#lbAJ">KERNEL COMMAND LINE CONFIGURATION</a></dt>
-<dd>
-</dd><dt><a href="#lbAK">SSH IDENTITIES</a></dt>
-<dd>
-</dd><dt><a href="#lbAL">OPTIONS</a></dt>
-<dd>
-</dd><dt><a href="#lbAM">HOW VIRT-P2V WORKS</a></dt>
-<dd>
-</dd><dt><a href="#lbAN">SEE ALSO</a></dt>
-<dd>
-</dd><dt><a href="#lbAO">AUTHORS</a></dt>
-<dd>
-</dd><dt><a href="#lbAP">COPYRIGHT</a></dt>
-<dd>
-</dd><dt><a href="#lbAQ">LICENSE</a></dt>
-<dd>
-</dd><dt><a href="#lbAR">BUGS</a></dt>
-<dd></dd></dl>

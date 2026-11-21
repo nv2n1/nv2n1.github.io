@@ -31,8 +31,3 @@ globus_module_activate(GLOBUS_RLS_CLIENT_MODULE);
 <p> RLS module.</p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for globus rls client from the source code. </p>
-<h2>Index</h2>
-<dt><a href="#lbAH">Variable Documentation</a></dt>
-<dd>
-</dd><dt><a href="#lbAJ">Author</a></dt>
-<dd></dd></dl>

@@ -245,20 +245,3 @@ then
 <dt>&bull;</dt>
 <dd> Run <i><a href="/docs/linux/man/1-libguestfs-test-tool/">libguestfs-test-tool</a></i>(1) and paste the <code>complete, unedited</code> output into the bug report. </dd>
 </dl>
-<h2>Index</h2>
-<dt><a href="#lbAL">OPTIONS</a></dt>
-<dd>
-</dd><dt><a href="#lbAM">FILES</a></dt>
-<dd>
-</dd><dt><a href="#lbAN">EXIT STATUS</a></dt>
-<dd>
-</dd><dt><a href="#lbAO">SEE ALSO</a></dt>
-<dd>
-</dd><dt><a href="#lbAP">AUTHORS</a></dt>
-<dd>
-</dd><dt><a href="#lbAQ">COPYRIGHT</a></dt>
-<dd>
-</dd><dt><a href="#lbAR">LICENSE</a></dt>
-<dd>
-</dd><dt><a href="#lbAS">BUGS</a></dt>
-<dd></dd></dl>

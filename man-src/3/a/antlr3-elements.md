@@ -123,6 +123,3 @@ description: "ANTLR3_REWRITE_RULE_ELEMENT_STREAM_struct –"
 <p> Referenced by _next(), antlr3RewriteRuleElementStreamNewAE(), antlr3RewriteRuleNODEStreamNewAE(), antlr3RewriteRuleNODEStreamNewAEE(), and antlr3RewriteRuleNODEStreamNewAEV(). </p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for ANTLR3C from the source code. </p>
-<h2>Index</h2>
-<dt><a href="#lbBB">Author</a></dt>
-<dd></dd></dl>

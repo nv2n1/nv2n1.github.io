@@ -32,6 +32,3 @@ description: "globus_gass_copy_state_s –"
 <p> indicates the status of the cancel operation. </p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for globus gass copy from the source code. </p>
-<h2>Index</h2>
-<dt><a href="#lbAL">Author</a></dt>
-<dd></dd></dl>

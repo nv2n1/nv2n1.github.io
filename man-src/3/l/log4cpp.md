@@ -172,10 +172,3 @@ description: "log4cpp –"
 <h3><code>LayoutsFactory</code>* log4cpp::layouts_factory_ = 0 [static]</h3>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for log4cpp from the source code. </p>
-<h2>Index</h2>
-<dt><a href="#lbAL">Function Documentation</a></dt>
-<dd>
-</dd><dt><a href="#lbBH">Variable Documentation</a></dt>
-<dd>
-</dd><dt><a href="#lbBP">Author</a></dt>
-<dd></dd></dl>

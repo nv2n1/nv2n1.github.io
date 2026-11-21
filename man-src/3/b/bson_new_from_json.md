@@ -35,19 +35,3 @@ bson_new_from_json (const uint8_t *data,
 <p> A newly allocated <code>bson_t</code> if successful, otherwise NULL and <code>error</code> is set. </p>
 <h2>COLOPHON</h2>
 <p> This page is part of libbson. Please report any bugs at <a rel="nofollow" href="https://jira.mongodb.org/browse/CDRIVER.">https://jira.mongodb.org/browse/CDRIVER.</a> </p>
-<h2>Index</h2>
-<dl>
-<dt><a href="#lbAB">NAME</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAC">SYNOPSIS</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAD">PARAMETERS</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAE">DESCRIPTION</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAF">ERRORS</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAG">RETURNS</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAH">COLOPHON</a></dt>
-<dd>  </dd></dl>

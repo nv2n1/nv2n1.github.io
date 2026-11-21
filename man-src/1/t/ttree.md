@@ -284,8 +284,6 @@ ttree[options][files]
 
  tpage 
 
-<h2>Index</h2>
-
 
 
 <dt><a HREF="#lbAJ">AUTHORS</a>

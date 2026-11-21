@@ -77,14 +77,3 @@ my $xp = XML::XPath-&gt;new (context = &gt; $node);
 <p> Matt Sergeant, matt [at] sergeant.org</p>
 <h2>SEE ALSO</h2>
 <p> XML::XPath::Literal, XML::XPath::Boolean, XML::XPath::Number, XML::XPath::XMLParser, XML::XPath::NodeSet, XML::XPath::PerlSAX, XML::XPath::Builder. </p>
-<h2>Index</h2>
-<dt><a href="#lbAT">Node Object Model</a></dt>
-<dd>
-</dd><dt><a href="#lbAU">On Garbage Collection</a></dt>
-<dd>
-</dd><dt><a href="#lbAV">Example</a></dt>
-<dd>
-</dd><dt><a href="#lbAW">Support/Author</a></dt>
-<dd>
-</dd><dt><a href="#lbAX">SEE ALSO</a></dt>
-<dd></dd></dl>

@@ -1018,10 +1018,3 @@ description: "FTP Operations –"
 </dt><dd> <code>globus_ftp_client_register_read()</code></dd></dl>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for globus_ftp_client from the source code. </p>
-<h2>Index</h2>
-<dt><a href="#lbBE">Enumeration Type Documentation</a></dt>
-<dd>
-</dd><dt><a href="#lbBH">Function Documentation</a></dt>
-<dd>
-</dd><dt><a href="#lbCP">Author</a></dt>
-<dd></dd></dl>

@@ -244,22 +244,3 @@ int munmap(void *addr, size_t length);
 <p> B.O. Gallmeister, POSIX.4, O&#8217;Reilly, pp. 128-129 and 389-391.</p>
 <h2>COLOPHON</h2>
 <p> This page is part of release 5.10 of the Linux <i>man-pages</i> project. A description of the project, information about reporting bugs, and the latest version of this page, can be found at <a rel="nofollow" href="https://www.kernel.org/doc/man-pages/.">https://www.kernel.org/doc/man-pages/.</a> </p>
-<h2>Index</h2>
-<dt><a href="#lbAG">RETURN VALUE</a></dt>
-<dd>
-</dd><dt><a href="#lbAH">ERRORS</a></dt>
-<dd>
-</dd><dt><a href="#lbAI">ATTRIBUTES</a></dt>
-<dd>
-</dd><dt><a href="#lbAJ">CONFORMING TO</a></dt>
-<dd>
-</dd><dt><a href="#lbAK">NOTES</a></dt>
-<dd>
-</dd><dt><a href="#lbAP">BUGS</a></dt>
-<dd>
-</dd><dt><a href="#lbAQ">EXAMPLES</a></dt>
-<dd>
-</dd><dt><a href="#lbAS">SEE ALSO</a></dt>
-<dd>
-</dd><dt><a href="#lbAT">COLOPHON</a></dt>
-<dd></dd></dl>

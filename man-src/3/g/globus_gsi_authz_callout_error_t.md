@@ -58,6 +58,3 @@ description: "GSI Authorization Callout Error API –"
 <dd> A invalid parameter was detected</dd></dl>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for globus_authz_callout_error from the source code. </p>
-<h2>Index</h2>
-<dt><a href="#lbAK">Author</a></dt>
-<dd></dd></dl>

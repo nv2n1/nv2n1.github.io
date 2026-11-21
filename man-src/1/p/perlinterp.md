@@ -562,8 +562,6 @@ XPUSHn(value);
 
  For more information on the Perl internals, please see the documents listed at ``Internals and C Language Interface'' in perl. 
 
-<h2>Index</h2>
-
 
 
 <dt><a HREF="#lbAK">OP TREES</a>

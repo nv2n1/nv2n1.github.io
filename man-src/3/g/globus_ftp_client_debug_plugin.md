@@ -68,6 +68,3 @@ description: "Debugging Plugin –"
 <p> <code>Examples: </code> <code>globus_ftp_client_debug_plugin.example</code>.</p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for globus_ftp_client from the source code. </p>
-<h2>Index</h2>
-<dt><a href="#lbAK">Author</a></dt>
-<dd></dd></dl>

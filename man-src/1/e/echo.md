@@ -79,19 +79,3 @@ description: "echo – display a line of text"
 <h2>SEE ALSO</h2>
 <p> Full documentation &lt;<a rel="nofollow" href="https://www.gnu.org/software/coreutils/echo">https://www.gnu.org/software/coreutils/echo</a>&gt; <br />
  or available locally via: info &#8216;(coreutils) echo invocation&#8217; </p>
-<h2>Index</h2>
-<dl>
-<dt><a href="#lbAB">NAME</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAC">SYNOPSIS</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAD">DESCRIPTION</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAE">AUTHOR</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAF">REPORTING BUGS</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAG">COPYRIGHT</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAH">SEE ALSO</a></dt>
-<dd>  </dd></dl>

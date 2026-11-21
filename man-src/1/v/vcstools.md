@@ -944,8 +944,3 @@ make test
 <p> Tully Foote, Thibault Kruse, Ken Conley</p>
 <h2>COPYRIGHT</h2>
 <p> 2010, Willow Garage </p>
-<h2>Index</h2>
-<dt><a href="#lbCF">AUTHOR</a></dt>
-<dd>
-</dd><dt><a href="#lbCG">COPYRIGHT</a></dt>
-<dd></dd></dl>

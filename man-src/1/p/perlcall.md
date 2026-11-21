@@ -1023,12 +1023,3 @@ POP_MULTICALL; /* Tear down the calling context */
 <p> Jeff Okamoto, Tim Bunce, Nick Gianniotis, Steve Kelem, Gurusamy Sarathy and Larry Wall.</p>
 <h2>DATE</h2>
 <p> Last updated for perl 5.23.1. </p>
-<h2>Index</h2>
-<dt><a href="#lbBE">LIGHTWEIGHT CALLBACKS</a></dt>
-<dd>
-</dd><dt><a href="#lbBF">SEE ALSO</a></dt>
-<dd>
-</dd><dt><a href="#lbBG">AUTHOR</a></dt>
-<dd>
-</dd><dt><a href="#lbBH">DATE</a></dt>
-<dd></dd></dl>

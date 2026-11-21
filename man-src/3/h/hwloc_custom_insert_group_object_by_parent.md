@@ -36,6 +36,3 @@ description: "hwlocality_custom – Building Custom Topologies"
 </dt><dd> The cpuset and nodeset of the newparent object are not modified based on the contents of oldtopology.</dd></dl>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for Hardware Locality (hwloc) from the source code. </p>
-<h2>Index</h2>
-<dt><a href="#lbAH">Author</a></dt>
-<dd></dd></dl>

@@ -276,12 +276,3 @@ description: "dpkg-source – Debian source package (.dsc) manipulation tool"
 <p> The point at which field overriding occurs compared to certain standard output field settings is rather confused.</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/5-deb-src-control/">deb-src-control</a></code>(5), <code><a href="/docs/linux/man/5-deb-changelog/">deb-changelog</a></code>(5), <code><a href="/docs/linux/man/5-dsc/">dsc</a></code>(5). </p>
-<h2>Index</h2>
-<dt><a href="#lbAX">ENVIRONMENT</a></dt>
-<dd>
-</dd><dt><a href="#lbAY">FILES</a></dt>
-<dd>
-</dd><dt><a href="#lbBH">BUGS</a></dt>
-<dd>
-</dd><dt><a href="#lbBI">SEE ALSO</a></dt>
-<dd></dd></dl>

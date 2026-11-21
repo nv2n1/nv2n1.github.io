@@ -335,8 +335,3 @@ description: "Credential Handle Management –"
 </dt><dd> GLOBUS_SUCCESS if no error, otherwise an error object identifier is returned</dd></dl>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for globus_gsi_credential from the source code. </p>
-<h2>Index</h2>
-<dt><a href="#lbAH">Function Documentation</a></dt>
-<dd>
-</dd><dt><a href="#lbBG">Author</a></dt>
-<dd></dd></dl>

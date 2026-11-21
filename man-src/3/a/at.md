@@ -130,6 +130,3 @@ description: "QuantLib::Array – 1-D array used in linear algebra."
 <h3>std::ostream &amp; operator&lt;&lt; (std::ostream &amp;, const <code>Array</code> &amp;) [related]</h3>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for QuantLib from the source code. </p>
-<h2>Index</h2>
-<dt><a href="#lbBD">Author</a></dt>
-<dd></dd></dl>

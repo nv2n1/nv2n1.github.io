@@ -384,33 +384,3 @@ url: "/docs/linux/man/1-feh/"
 <p>THE SOFTWARE IS PROVIDED &quot;AS IS&quot;, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE. </p>
 <p>Email bugs and feature requests to <br />
  <code>&lt;feh_sucks [at] linuxbrit.co.uk&gt;</code> </p>
-<h2>Index</h2>
-<dl>
-<dt><a href="#lbAB">NAME</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAC">SYNOPSIS</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAD">DESCRIPTION</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAE">MODES</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAF">OPTIONS</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAG">FORMAT SPECIFIERS</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAH">MONTAGE MODE OPTIONS</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAI">INDEX MODE OPTIONS</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAJ">CONFIG FILE SYNTAX</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAK">SLIDESHOW KEYS</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAL">MOUSE ACTIONS</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAM">SUGGESTED USAGE EXAMPLES</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAN">BUGS</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAO">LICENSE</a></dt>
-<dd>  </dd></dl>

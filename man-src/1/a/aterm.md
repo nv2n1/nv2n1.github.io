@@ -577,39 +577,3 @@ description: "aterm (Afterstep XVT) – a VT102 emulator for the X window system
 <dd> <p> branched rxvt with Alfredo Kojima additions to aterm. <br />
  </p>
  </dd></dl>
-<h2>Index</h2>
-<dl>
-<dt><a href="#lbAB">NAME </a></dt>
-<dd>  </dd>
-<dt><a href="#lbAC">SYNOPSIS </a></dt>
-<dd>  </dd>
-<dt><a href="#lbAD">DESCRIPTION </a></dt>
-<dd>  </dd>
-<dt><a href="#lbAE">OPTIONS </a></dt>
-<dd>  </dd>
-<dt><a href="#lbAF">RESOURCES (available also as long-options) </a></dt>
-<dd>  </dd>
-<dt><a href="#lbAG">THE SCROLLBAR </a></dt>
-<dd>  </dd>
-<dt><a href="#lbAH">MOUSE REPORTING </a></dt>
-<dd>  </dd>
-<dt><a href="#lbAI">TEXT SELECTION AND INSERTION </a></dt>
-<dd>  </dd>
-<dt><a href="#lbAJ">CHANGING FONTS </a></dt>
-<dd>  </dd>
-<dt><a href="#lbAK">LOGIN STAMP </a></dt>
-<dd>  </dd>
-<dt><a href="#lbAL">COLORS AND GRAPHICS </a></dt>
-<dd>  </dd>
-<dt><a href="#lbAM">ENVIRONMENT </a></dt>
-<dd>  </dd>
-<dt><a href="#lbAN">FILES </a></dt>
-<dd>  </dd>
-<dt><a href="#lbAO">SEE ALSO </a></dt>
-<dd>  </dd>
-<dt><a href="#lbAP">FTP LOCATION </a></dt>
-<dd>  </dd>
-<dt><a href="#lbAQ">CURRENT PROJECT COORDINATOR </a></dt>
-<dd>  </dd>
-<dt><a href="#lbAR">AUTHORS </a></dt>
-<dd>  </dd></dl>

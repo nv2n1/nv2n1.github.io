@@ -50,8 +50,3 @@ description: "QuantLib::ExchangeRate – exchange rate between two currencies"
 <p> the rate $ r $ is given with the convention that a unit of the source is worth $ r $ units of the target. </p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for QuantLib from the source code. </p>
-<h2>Index</h2>
-<dt><a href="#lbAJ">Constructor &amp; Destructor Documentation</a></dt>
-<dd>
-</dd><dt><a href="#lbAL">Author</a></dt>
-<dd></dd></dl>

@@ -995,26 +995,3 @@ setting type | example values-- -- -- -- -- -- -- -+-- -- -- -- -- -- -- -- -- -
 <h2>BUGS</h2>
 <p> Report bugs here: &lt;<a rel="nofollow" href="https://github.com/ranger/ranger/issues">https://github.com/ranger/ranger/issues</a>&gt; </p>
 <p> Please include as much relevant information as possible. For the most diagnostic output, run ranger like this: <tt>&quot;PYTHONOPTIMIZE= ranger --debug&quot;</tt> </p>
-<h2>Index</h2>
-<dt><a href="#lbAP">KEY BINDINGS</a></dt>
-<dd>
-</dd><dt><a href="#lbAS">MOUSE BUTTONS</a></dt>
-<dd>
-</dd><dt><a href="#lbAT">SETTINGS</a></dt>
-<dd>
-</dd><dt><a href="#lbAU">COMMANDS</a></dt>
-<dd>
-</dd><dt><a href="#lbAV">FILES</a></dt>
-<dd>
-</dd><dt><a href="#lbAY">ENVIRONMENT</a></dt>
-<dd>
-</dd><dt><a href="#lbAZ">EXAMPLES</a></dt>
-<dd>
-</dd><dt><a href="#lbBA">LICENSE</a></dt>
-<dd>
-</dd><dt><a href="#lbBB">LINKS</a></dt>
-<dd>
-</dd><dt><a href="#lbBC">SEE ALSO</a></dt>
-<dd>
-</dd><dt><a href="#lbBD">BUGS</a></dt>
-<dd></dd></dl>

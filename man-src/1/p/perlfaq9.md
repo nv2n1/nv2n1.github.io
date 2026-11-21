@@ -187,6 +187,3 @@ my $hostname = hostname_long();
 <p> Copyright (c) 1997-2010 Tom Christiansen, Nathan Torkington, and other authors as noted. All rights reserved. </p>
 <p> This documentation is free; you can redistribute it and/or modify it under the same terms as Perl itself. </p>
 <p> Irrespective of its distribution, all code examples in this file are hereby placed into the public domain. You are permitted and encouraged to use this code in your own programs for fun or for profit as you see fit. A simple comment in the code giving credit would be courteous but is not required. </p>
-<h2>Index</h2>
-<dt><a href="#lbAZ">AUTHOR AND COPYRIGHT</a></dt>
-<dd></dd></dl>

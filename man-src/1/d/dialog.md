@@ -994,26 +994,3 @@ as tailbox, timebox, calendarbox, etc.
 <dt>&bull;</dt>
 <dd> Pasquale De Marco &quot;Pako&quot; &#8211; version 0.9a, &quot;cdialog&quot; </dd>
 </dl>
-<h2>Index</h2>
-<dt><a href="#lbAI">RUN-TIME CONFIGURATION</a></dt>
-<dd>
-</dd><dt><a href="#lbAJ">KEY BINDINGS</a></dt>
-<dd>
-</dd><dt><a href="#lbAN">ENVIRONMENT</a></dt>
-<dd>
-</dd><dt><a href="#lbAO">FILES</a></dt>
-<dd>
-</dd><dt><a href="#lbAP">EXAMPLES</a></dt>
-<dd>
-</dd><dt><a href="#lbAQ">DIAGNOSTICS</a></dt>
-<dd>
-</dd><dt><a href="#lbAR">PORTABILITY</a></dt>
-<dd>
-</dd><dt><a href="#lbAS">COMPATIBILITY</a></dt>
-<dd>
-</dd><dt><a href="#lbAW">BUGS</a></dt>
-<dd>
-</dd><dt><a href="#lbAX">AUTHOR</a></dt>
-<dd>
-</dd><dt><a href="#lbAY">CONTRIBUTORS</a></dt>
-<dd></dd></dl>

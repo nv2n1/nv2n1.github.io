@@ -1133,8 +1133,6 @@ Statement SQL executed == == == == == == == == == = == == == == == == == == == =
 
  You can report bugs, ask for improvements, and get other help and support at &lt;<a rel="nofollow" HREF="https://github.com/innotop/innotop">https://github.com/innotop/innotop</a>&gt;. There are mailing lists, a source code browser, a bug tracker, etc. Please use these instead of contacting the maintainer or author directly, as it makes our job easier and benefits others if the discussions are permanent and public. Of course, if you need to contact us in private, please do. 
 
-<h2>Index</h2>
-
 
 
 <dt><a HREF="#lbAM">SERVER ADMINISTRATION</a>

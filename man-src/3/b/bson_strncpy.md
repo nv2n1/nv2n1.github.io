@@ -31,15 +31,3 @@ bson_strncpy (char *dst,
 <p> Copies up to <code>size</code> bytes from <code>src</code> into <code>dst</code> \&amp;. <code>dst</code> must be at least <code>size</code> bytes in size. A trailing <code>\0</code> will be set. </p>
 <h2>COLOPHON</h2>
 <p> This page is part of libbson. Please report any bugs at <a rel="nofollow" href="https://jira.mongodb.org/browse/CDRIVER.">https://jira.mongodb.org/browse/CDRIVER.</a> </p>
-<h2>Index</h2>
-<dl>
-<dt><a href="#lbAB">NAME</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAC">SYNOPSIS</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAD">PARAMETERS</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAE">DESCRIPTION</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAF">COLOPHON</a></dt>
-<dd>  </dd></dl>

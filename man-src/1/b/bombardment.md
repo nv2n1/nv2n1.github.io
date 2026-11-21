@@ -45,8 +45,6 @@ url: "/docs/linux/man/1-bombardment/"
 
  Written by Peter Hutnick, et al. 
 
-<h2>Index</h2>
-
 
 
 <dt><a HREF="#lbAD">DESCRIPTION</a>

@@ -398,33 +398,3 @@ description: "gbdfed – GTK-based BDF font editor"
  Bertrand Janin &lt;tamentis [at] neopulsar.org&gt; for improving the GlyphEditor user interface. </p>
 <h2>AUTHOR</h2>
 <p> Mark Leisher &lt;mleisher [at] gmail.com&gt; </p>
-<h2>Index</h2>
-<dl>
-<dt><a href="#lbAB">NAME </a></dt>
-<dd>  </dd>
-<dt><a href="#lbAC">SYNOPSIS</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAD">DESCRIPTION</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAE">OPTIONS</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAF">FONT GRID</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAG">Font Grid Menus</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAH">Font Grid Other Features</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAI">GLYPH EDITOR</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAJ">Glyph Editor Menus</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAK">Glyph Editor Other Features</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAL">PROPERTIES</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAM">SEE ALSO</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAN">ACKNOWLEDGMENTS</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAO">AUTHOR</a></dt>
-<dd>  </dd></dl>

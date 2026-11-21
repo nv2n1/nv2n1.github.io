@@ -46,6 +46,3 @@ description: "ANTLR3_STACK_struct –"
 <p> Referenced by antlr3StackFree(), antlr3StackGet(), antlr3StackNew(), antlr3StackPop(), antlr3StackPush(), antlr3StackSize(), and mismatchIsMissingToken(). </p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for ANTLR3C from the source code. </p>
-<h2>Index</h2>
-<dt><a href="#lbAO">Author</a></dt>
-<dd></dd></dl>

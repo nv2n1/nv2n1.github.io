@@ -275,21 +275,3 @@ description: "git-grep – Print lines matching a pattern"
  </dd></dl>
 <h2>GIT</h2>
 <p> Part of the <code><a href="/docs/linux/man/1-git/">git</a></code>(1) suite </p>
-<h2>Index</h2>
-<dl>
-<dt><a href="#lbAB">NAME</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAC">SYNOPSIS</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAD">DESCRIPTION</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAE">OPTIONS</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAF">EXAMPLES</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAG">NOTES ON THREADS</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAH">CONFIGURATION</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAI">GIT</a></dt>
-<dd>  </dd></dl>

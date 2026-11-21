@@ -27,6 +27,3 @@ description: "hwloc_topology_diff_obj_attr_u –"
 <h3>struct <code>hwloc_topology_diff_obj_attr_u::hwloc_topology_diff_obj_attr_uint64_s</code> hwloc_topology_diff_obj_attr_u::uint64</h3>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for Hardware Locality (hwloc) from the source code. </p>
-<h2>Index</h2>
-<dt><a href="#lbAK">Author</a></dt>
-<dd></dd></dl>

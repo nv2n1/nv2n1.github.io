@@ -85,12 +85,3 @@ description: "mrtg-forum – Interactive Help for MRTG users"
 <p> There is a special Mailinglist for <font SIZE="-1">MRTG</font> Users in Japan. It carries translations of the traffic from MRTG-ANNOUNCE as well as updates on the Japanese Translation of the <font SIZE="-1">MRTG</font> documentation. Go to <a rel="nofollow" href="http://www.mrtg.jp/">http://www.mrtg.jp/</a> for further Information.</p>
 <h2>AUTHOR</h2>
 <p> Tobias Oetiker &lt;tobi [at] oetiker.ch&gt; and many contributors </p>
-<h2>Index</h2>
-<dt><a href="#lbAG">NEWSGROUP</a></dt>
-<dd>
-</dd><dt><a href="#lbAH">IRC Channel</a></dt>
-<dd>
-</dd><dt><a href="#lbAI">MRTG Japan</a></dt>
-<dd>
-</dd><dt><a href="#lbAJ">AUTHOR</a></dt>
-<dd></dd></dl>

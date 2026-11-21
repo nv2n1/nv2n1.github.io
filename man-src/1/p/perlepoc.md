@@ -102,8 +102,6 @@ url: "/docs/linux/man/1-perlepoc/"
 
  2003-01-18 
 
-<h2>Index</h2>
-
 
 
 <dt><a HREF="#lbAJ">SUPPORT STATUS OF PERL ON EPOC</a>

@@ -73,8 +73,3 @@ description: "hwlocality_creation – Topology Creation and Destruction"
 </dt><dd> <code>Topology Detection Configuration and Query</code></dd></dl>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for Hardware Locality (hwloc) from the source code. </p>
-<h2>Index</h2>
-<dt><a href="#lbAH">Function Documentation</a></dt>
-<dd>
-</dd><dt><a href="#lbAN">Author</a></dt>
-<dd></dd></dl>

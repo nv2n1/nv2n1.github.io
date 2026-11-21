@@ -172,10 +172,3 @@ description: "perldos – Perl under DOS, W31, W95."
 <p> Peter J. Farley <font SIZE="-1">III</font> <i>pjfarley [at] banet.net</i> [Building/installing modules]</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-perl/">perl</a></code>(1). </p>
-<h2>Index</h2>
-<dt><a href="#lbAJ">BUILDING AND INSTALLING MODULES ON DOS</a></dt>
-<dd>
-</dd><dt><a href="#lbAO">AUTHOR</a></dt>
-<dd>
-</dd><dt><a href="#lbAP">SEE ALSO</a></dt>
-<dd></dd></dl>

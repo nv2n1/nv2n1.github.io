@@ -67,17 +67,3 @@ description: "sam_initialize – Initialize health checking"
 <p> <code>CS_ERR_NOT_SUPPORTED</code> The requested protocol/functuality not supported </p>
 <p> <code>CS_ERR_MESSAGE_ERROR</code> Incorrect auth message received </p>
 <p> <code>CS_ERR_NO_MEMORY</code> Not enough memory to completed the requested task </p>
-<h2>Index</h2>
-<dl>
-<dt><a href="#lbAB">NAME</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAC">SYNOPSIS</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAD">DESCRIPTION</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAE">RETURN VALUE</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAF">ERRORS</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAG">SEE ALSO</a></dt>
-<dd>  </dd></dl>

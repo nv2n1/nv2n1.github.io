@@ -993,20 +993,3 @@ Out:</p>
 </code></pre>
 <h2>AUTHOR</h2>
 <p> Tobias Oetiker &lt;tobi [at] oetiker.ch&gt; and many contributors </p>
-<h2>Index</h2>
-<dt><a href="#lbBD">PER TARGET CONFIGURATION</a></dt>
-<dd>
-</dd><dt><a href="#lbBH">OPTIONAL PER TARGET KEYWORDS</a></dt>
-<dd>
-</dd><dt><a href="#lbCV">THRESHOLD CHECKING</a></dt>
-<dd>
-</dd><dt><a href="#lbDJ">PER TARGET DEFAULT VALUES</a></dt>
-<dd>
-</dd><dt><a href="#lbDN">COMMAND LINE OPTIONS</a></dt>
-<dd>
-</dd><dt><a href="#lbDO">EXIT CODES</a></dt>
-<dd>
-</dd><dt><a href="#lbDP">EXAMPLES</a></dt>
-<dd>
-</dd><dt><a href="#lbDS">AUTHOR</a></dt>
-<dd></dd></dl>

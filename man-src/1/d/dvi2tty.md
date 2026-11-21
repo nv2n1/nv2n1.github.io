@@ -98,21 +98,3 @@ description: "dvi2tty – preview a TeX DVI file on an ordinary ASCII terminal"
 <h2>BUGS</h2>
 <p> Blanks between words get lost quite easily. This is less likely if you are using a wider output than the default 80. </p>
 <p> Only one file may be specified on the command line. </p>
-<h2>Index</h2>
-<dl>
-<dt><a href="#lbAB">NAME</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAC">SYNOPSIS</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAD">DESCRIPTION</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAE">FILES</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAF">ENVIRONMENT</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAG">SEE ALSO</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAH">AUTHOR</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAI">BUGS</a></dt>
-<dd>  </dd></dl>

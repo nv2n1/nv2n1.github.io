@@ -76,6 +76,3 @@ description: "GRAM Signals –"
 <p>&nbsp;<wbr>the job RSL contained the&nbsp;<wbr>(two-phase&nbsp;<wbr>=&nbsp;<wbr>yes)&nbsp;<wbr>relation.&nbsp;<wbr></p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for globus_gram_protocol from the source code. </p>
-<h2>Index</h2>
-<dt><a href="#lbAG">Author</a></dt>
-<dd></dd></dl>

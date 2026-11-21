@@ -153,15 +153,3 @@ description: "mgettydefs – speed and terminal settings used by mgetty"
 <p> /etc/gettydefs  </p>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/8-mgetty/">mgetty</a>(8), <a href="/docs/linux/man/8-getty/">getty</a>(8), <a href="/docs/linux/man/1-login/">login</a>(1), <a href="/docs/linux/man/2-ioctl/">ioctl</a>(2), <a href="/docs/linux/man/7-termio/">termio</a>(7), termios(7). </p>
-<h2>Index</h2>
-<dl>
-<dt><a href="#lbAB">NAME</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAC">DESCRIPTION</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAD">EXAMPLES</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAE">FILES</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAF">SEE ALSO</a></dt>
-<dd>  </dd></dl>

@@ -233,16 +233,3 @@ virt - alignment - scan[--options] - d domname virt - alignment - scan[--options
 <dt>&bull;</dt>
 <dd> Run <i><a href="/docs/linux/man/1-libguestfs-test-tool/">libguestfs-test-tool</a></i>(1) and paste the <code>complete, unedited</code> output into the bug report. </dd>
 </dl>
-<h2>Index</h2>
-<dt><a href="#lbAK">EXIT STATUS</a></dt>
-<dd>
-</dd><dt><a href="#lbAL">SEE ALSO</a></dt>
-<dd>
-</dd><dt><a href="#lbAM">AUTHOR</a></dt>
-<dd>
-</dd><dt><a href="#lbAN">COPYRIGHT</a></dt>
-<dd>
-</dd><dt><a href="#lbAO">LICENSE</a></dt>
-<dd>
-</dd><dt><a href="#lbAP">BUGS</a></dt>
-<dd></dd></dl>

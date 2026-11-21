@@ -1141,12 +1141,3 @@ ewindex{special}{ndx}{nnd}{Special index}&quot; you will need to get <i>latexmk<
 <p> Released version can be obtained from CTAN: &lt;<a rel="nofollow" href="http://www.ctan.org/pkg/latexmk/">http://www.ctan.org/pkg/latexmk/</a>&gt;, and from the author&#8217;s website &lt;<a rel="nofollow" href="http://www.personal.psu.edu/jcc8/latexmk/">http://www.personal.psu.edu/jcc8/latexmk/</a>&gt;.<br />
  Modifications and enhancements by Evan McLean (Version 2.0)<br />
  Original script called &quot;go&quot; by David J. Musliner (RCS Version 3.2) </p>
-<h2>Index</h2>
-<dt><a href="#lbAY">SEE ALSO</a></dt>
-<dd>
-</dd><dt><a href="#lbAZ">BUGS</a></dt>
-<dd>
-</dd><dt><a href="#lbBA">THANKS TO</a></dt>
-<dd>
-</dd><dt><a href="#lbBB">AUTHOR</a></dt>
-<dd></dd></dl>

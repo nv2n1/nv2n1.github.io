@@ -39,6 +39,3 @@ description: "hwlocality_helper_find_cache – Looking at Cache Objects"
 </dt><dd> NULL if no cache matches or if an invalid object is given.</dd></dl>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for Hardware Locality (hwloc) from the source code. </p>
-<h2>Index</h2>
-<dt><a href="#lbAI">Author</a></dt>
-<dd></dd></dl>

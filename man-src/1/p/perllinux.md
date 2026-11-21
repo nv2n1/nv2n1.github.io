@@ -33,8 +33,6 @@ url: "/docs/linux/man/1-perllinux/"
 
  Please report any errors, updates, or suggestions to <i>perlbug [at] perl.org</i>. 
 
-<h2>Index</h2>
-
 
 
 <dt><a HREF="#lbAE">AUTHOR</a>

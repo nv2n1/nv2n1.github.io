@@ -85,6 +85,3 @@ description: "kgb-client – relay commits to KGB servers"
 </dd><dt>App::KGB::Client::CVS</dt>
 <dd>
 </dd></dl>
-<h2>Index</h2>
-<dt><a href="#lbAL">SEE ALSO</a></dt>
-<dd></dd></dl>

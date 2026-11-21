@@ -309,36 +309,3 @@ description: "perlreref – Perl Regular Expressions Reference"
  </dd></dl>
 <h2>THANKS</h2>
 <p> David P.C. Wollmann, Richard Soderberg, Sean M. Burke, Tom Christiansen, Jim Cromie, and Jeffrey Goff for useful advice. </p>
-<h2>Index</h2>
-<dl>
-<dt><a href="#lbAB">NAME</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAC">DESCRIPTION</a></dt>
-<dd>  </dd>
-<dl>
-<dt><a href="#lbAD"><font SIZE="-1">OPERATORS</font></a></dt>
-<dd>  </dd>
-<dt><a href="#lbAE"><font SIZE="-1">SYNTAX</font></a></dt>
-<dd>  </dd>
-<dt><a href="#lbAF"><font SIZE="-1">ESCAPE SEQUENCES</font></a></dt>
-<dd>  </dd>
-<dt><a href="#lbAG"><font SIZE="-1">CHARACTER CLASSES</font></a></dt>
-<dd>  </dd>
-<dt><a href="#lbAH"><font SIZE="-1">ANCHORS</font></a></dt>
-<dd>  </dd>
-<dt><a href="#lbAI"><font SIZE="-1">QUANTIFIERS</font></a></dt>
-<dd>  </dd>
-<dt><a href="#lbAJ"><font SIZE="-1">EXTENDED CONSTRUCTS</font></a></dt>
-<dd>  </dd>
-<dt><a href="#lbAK"><font SIZE="-1">VARIABLES</font></a></dt>
-<dd>  </dd>
-<dt><a href="#lbAL"><font SIZE="-1">FUNCTIONS</font></a></dt>
-<dd>  </dd>
-<dt><a href="#lbAM"><font SIZE="-1">TERMINOLOGY</font></a></dt>
-<dd>  </dd></dl>
-<dt><a href="#lbAN">AUTHOR</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAO">SEE ALSO</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAP">THANKS</a></dt>
-<dd>  </dd></dl>

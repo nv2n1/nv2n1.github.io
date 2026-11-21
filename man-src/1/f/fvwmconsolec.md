@@ -172,23 +172,3 @@ description: "FvwmConsoleC.pl – Command editor for fvwm command input interfac
 <p> FvwmConsole(1x), <a href="/docs/linux/man/1-perlre/">perlre</a>(1) </p>
 <h2>AUTHOR</h2>
 <p> Toshi Isogai </p>
-<h2>Index</h2>
-<dl>
-<dt><a href="#lbAB">NAME</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAC">SYNOPSIS</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAD">COPYRIGHT</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAE">DESCRIPTION</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAF">FUNCTIONS</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAG">CONFIGURATION</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAH">INVOCATION</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAI">SEE ALSO</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAJ">AUTHOR</a></dt>
-<dd>  </dd></dl>

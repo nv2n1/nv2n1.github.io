@@ -301,12 +301,3 @@ description: "qstat – show the status of Grid Engine jobs and queues"
 <h2>SEE ALSO</h2>
 <h2>COPYRIGHT</h2>
 <p> See for a full statement of rights and permissions. </p>
-<h2>Index</h2>
-<dt><a href="#lbAN">ENVIRONMENTAL VARIABLES</a></dt>
-<dd>
-</dd><dt><a href="#lbAO">FILES</a></dt>
-<dd>
-</dd><dt><a href="#lbAP">SEE ALSO</a></dt>
-<dd>
-</dd><dt><a href="#lbAQ">COPYRIGHT</a></dt>
-<dd></dd></dl>

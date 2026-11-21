@@ -107,6 +107,3 @@ description: "kcometen4.kss – An OpenGL screensaver with exploding comets."
 <p> Peter Müller &lt;pmueller [at] cs.tu-berlin.de&gt; wrote the original program for KDE3 as KCometen3.<br />
  John Stamp &lt;jstamp [at] users.sourceforge.net&gt; ported it to KDE4 and added a few bugfixes and features. </p>
 <p> This manual page was written by John Stamp &lt;jstamp [at] users.sourceforge.net&gt;. Permission is granted to copy, distribute and/or modify this document under the terms of the GNU General Public License, Version 2 or any later version published by the Free Software Foundation. </p>
-<h2>Index</h2>
-<dt><a href="#lbAO">AUTHORS</a></dt>
-<dd></dd></dl>

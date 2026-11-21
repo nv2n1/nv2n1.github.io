@@ -85,6 +85,3 @@ description: "QuantLib::CashFlows – cashflow-analysis functions"
 <p> The yield value of a one basis point change in price is the derivative of the yield with respect to the price multiplied by 0.01 </p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for QuantLib from the source code. </p>
-<h2>Index</h2>
-<dt><a href="#lbAQ">Author</a></dt>
-<dd></dd></dl>

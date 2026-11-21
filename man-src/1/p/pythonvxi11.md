@@ -138,10 +138,3 @@ python setup.py install
 <p> Alex Forencich</p>
 <h2>COPYRIGHT</h2>
 <p> 2013, Alex Forencich </p>
-<h2>Index</h2>
-<dt><a href="#lbAP">APPENDIX</a></dt>
-<dd>
-</dd><dt><a href="#lbAR">AUTHOR</a></dt>
-<dd>
-</dd><dt><a href="#lbAS">COPYRIGHT</a></dt>
-<dd></dd></dl>

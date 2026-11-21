@@ -78,17 +78,3 @@ description: "bibtex8 – 8-bit Big BibTeX"
 <p> More detailed description of <code>BibTeX8</code> is available at $TEXMFDIST/doc/bibtex8/00readme.txt. The syntax of Codepage and Sort order (CS) File can be found at $TEXMFDIST/doc/bibtex8/csfile.txt.  </p>
 <h2>AUTHORS</h2>
 <p> <code>BibTeX8</code> was written by Niel Kempson &lt;kempson [at] snowyowl.co.uk&gt; and Alejandro Aguilar-Sierra &lt;asierra [at] servidor.unam.mx&gt;. This manpage was written for TeX Live, based on the work by Norbert Preining for Debian/GNU Linux. </p>
-<h2>Index</h2>
-<dl>
-<dt><a href="#lbAB">NAME</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAC">SYNOPSIS</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAD">DESCRIPTION</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAE">OPTIONS</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAF">SEE ALSO</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAG">AUTHORS</a></dt>
-<dd>  </dd></dl>

@@ -542,14 +542,3 @@ A-- - B(unnamed branch) / o-- - o-- - o-- - X-- - Y-- - Z master
 </dt><dd> 2. As in #1, the attacker chooses an object ID X to steal. The victim sends an object Y that the attacker already has, and the attacker falsely claims to have X and not Y, so the victim sends Y as a delta against X. The delta reveals regions of X that are similar to Y to the attacker.</dd></dl>
 <h2>GIT</h2>
 <p> Part of the <code><a href="/docs/linux/man/1-git/">git</a></code>(1) suite </p>
-<h2>Index</h2>
-<dt><a href="#lbAK">OUTPUT</a></dt>
-<dd>
-</dd><dt><a href="#lbAL">NOTE ABOUT FAST-FORWARDS</a></dt>
-<dd>
-</dd><dt><a href="#lbAM">EXAMPLES</a></dt>
-<dd>
-</dd><dt><a href="#lbAN">SECURITY</a></dt>
-<dd>
-</dd><dt><a href="#lbAO">GIT</a></dt>
-<dd></dd></dl>

@@ -109,6 +109,3 @@ description: "boltctl – control the thunderbolt device manager"
 </dt><dd> Query the current force power status of the daemon.</dd></dl>
 <h2>AUTHOR</h2>
 <p> Written by Christian Kellner &lt;ckellner [at] redhat.com&gt;. </p>
-<h2>Index</h2>
-<dt><a href="#lbAR">AUTHOR</a></dt>
-<dd></dd></dl>

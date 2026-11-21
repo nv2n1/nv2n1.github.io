@@ -82,6 +82,3 @@ description: "hwlocality_helper_find_inside – Finding Objects inside a CPU set
 </dt><dd> This function cannot work if objects of the given type do not have CPU sets or if the topology is made of different machines.</dd></dl>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for Hardware Locality (hwloc) from the source code. </p>
-<h2>Index</h2>
-<dt><a href="#lbAO">Author</a></dt>
-<dd></dd></dl>

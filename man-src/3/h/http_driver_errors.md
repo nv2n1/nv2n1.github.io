@@ -35,6 +35,3 @@ description: "Error Types –"
 <dd> Persistent connection dropped by the server.</dd></dl>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for globus xio from the source code. </p>
-<h2>Index</h2>
-<dt><a href="#lbAG">Author</a></dt>
-<dd></dd></dl>

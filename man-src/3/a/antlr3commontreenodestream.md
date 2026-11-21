@@ -49,6 +49,3 @@ description: "include/antlr3commontreenodestream.h –"
 <p> This structure is used to save the state information in the treenodestream when walking ahead with cyclic DFA or for syntactic predicates, we need to record the state of the tree node stream. This class wraps up the current state of the CommonTreeNodeStream. Calling <code>mark()</code> will push another of these on the markers stack.</p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for ANTLR3C from the source code. </p>
-<h2>Index</h2>
-<dt><a href="#lbAO">Author</a></dt>
-<dd></dd></dl>

@@ -972,20 +972,3 @@ tlmgr update-- self #update infrastructure only
 <h2>AUTHORS AND COPYRIGHT</h2>
 <p> This script and its documentation were written for the TeX Live distribution (&lt;<a rel="nofollow" href="https://tug.org/texlive">https://tug.org/texlive</a>&gt;) and both are licensed under the <font SIZE="-1">GNU</font> General Public License Version 2 or later. </p>
 <p> <tt>$Id:</tt> tlmgr.pl 60557 2021-09-20 10:46:43Z preining $ </p>
-<h2>Index</h2>
-<dt><a href="#lbBL">CONFIGURATION FILE FOR TLMGR</a></dt>
-<dd>
-</dd><dt><a href="#lbBM">CRYPTOGRAPHIC VERIFICATION</a></dt>
-<dd>
-</dd><dt><a href="#lbBO">USER MODE</a></dt>
-<dd>
-</dd><dt><a href="#lbBS">MULTIPLE REPOSITORIES</a></dt>
-<dd>
-</dd><dt><a href="#lbBU">GUI FOR TLMGR</a></dt>
-<dd>
-</dd><dt><a href="#lbBY">MACHINE-READABLE OUTPUT</a></dt>
-<dd>
-</dd><dt><a href="#lbCB">ENVIRONMENT VARIABLES</a></dt>
-<dd>
-</dd><dt><a href="#lbCC">AUTHORS AND COPYRIGHT</a></dt>
-<dd></dd></dl>

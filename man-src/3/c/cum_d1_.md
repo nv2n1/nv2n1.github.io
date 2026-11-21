@@ -91,6 +91,3 @@ description: "QuantLib::BlackCalculator – Black 1976 calculator class."
 <p> Sensitivity to strike. </p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for QuantLib from the source code. </p>
-<h2>Index</h2>
-<dt><a href="#lbAW">Author</a></dt>
-<dd></dd></dl>

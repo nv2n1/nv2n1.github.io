@@ -234,6 +234,3 @@ description: "ANTLR3_BASE_RECOGNIZER_struct –"
 <p> Referenced by alreadyParsedRule(), antlr3BaseRecognizerNew(), antlr3RecognitionExceptionNew(), antlr3TreeParserNewStream(), consumeUntil(), consumeUntilSet(), displayRecognitionError(), match(), matchAny(), memoize(), mismatch(), recover(), recoverFromMismatchedElement(), recoverFromMismatchedSet(), recoverFromMismatchedToken(), and synpred(). </p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for ANTLR3C from the source code. </p>
-<h2>Index</h2>
-<dt><a href="#lbBS">Author</a></dt>
-<dd></dd></dl>

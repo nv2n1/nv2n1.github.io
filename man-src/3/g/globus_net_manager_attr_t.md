@@ -101,10 +101,3 @@ description: "Attributes –"
 <p> End of array value. This value may be assigned to an element in an array of Network Manager attributes to terminate the array.</p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for globus_net_manager from the source code. </p>
-<h2>Index</h2>
-<dt><a href="#lbAK">Function Documentation</a></dt>
-<dd>
-</dd><dt><a href="#lbAQ">Variable Documentation</a></dt>
-<dd>
-</dd><dt><a href="#lbAS">Author</a></dt>
-<dd></dd></dl>

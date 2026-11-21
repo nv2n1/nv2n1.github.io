@@ -39,13 +39,3 @@ description: "mlocate.db – a mlocate database"
 <p> Miloslav Trmac &lt;mitr [at] redhat.com&gt; </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-locate/">locate</a></code>(1), <code>updatedb.conf</code>(5), <code><a href="/docs/linux/man/8-updatedb/">updatedb</a></code>(8) </p>
-<h2>Index</h2>
-<dl>
-<dt><a href="#lbAB">NAME</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAC">DESCRIPTION</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAD">AUTHOR</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAE">SEE ALSO</a></dt>
-<dd>  </dd></dl>

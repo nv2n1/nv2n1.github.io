@@ -73,13 +73,3 @@ Miguel de Icaza&lt;miguel[at] helixcode.com&gt;(2000)
 <h2>SEE ALSO</h2>
 <h3>Further information may also be available at: <a rel="nofollow" href="http://wiki.mate-desktop.org/docs">http://wiki.mate-desktop.org/docs</a></h3>
 <p> <code><a href="/docs/linux/man/1-mate-session-properties/">mate-session-properties</a>(1),</code> <code><a href="/docs/linux/man/1-mate-session-save/">mate-session-save</a>(1),</code> <code><a href="/docs/linux/man/1-mate-wm/">mate-wm</a>(1)</code> </p>
-<h2>Index</h2>
-<dt><a href="#lbAI">FILES</a></dt>
-<dd>
-</dd><dt><a href="#lbAJ">BUGS</a></dt>
-<dd>
-</dd><dt><a href="#lbAL">AUTHORS</a></dt>
-<dd>
-</dd><dt><a href="#lbAO">SEE ALSO</a></dt>
-<dd>
-</dd></dl>

@@ -226,8 +226,3 @@ description: "Globus Callback Spaces –"
 </dl>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for globus_common from the source code. </p>
-<h2>Index</h2>
-<dt><a href="#lbAK">Function Documentation</a></dt>
-<dd>
-</dd><dt><a href="#lbAV">Author</a></dt>
-<dd></dd></dl>

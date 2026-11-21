@@ -210,22 +210,3 @@ description: "enc2xs — Perl Encode Module Generator"
  </dd></dl>
 <h2>SEE ALSO</h2>
 <p> Encode, perlmod, perlpod </p>
-<h2>Index</h2>
-<dl>
-<dt><a href="#lbAB">NAME</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAC">SYNOPSIS</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAD">DESCRIPTION</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAE">Quick Guide</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAF">The Unicode Character Map</a></dt>
-<dd>  </dd>
-<dl>
-<dt><a href="#lbAG">Coping with duplicate mappings</a></dt>
-<dd>  </dd></dl>
-<dt><a href="#lbAH">Bookmarks</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAI">SEE ALSO</a></dt>
-<dd>  </dd></dl>

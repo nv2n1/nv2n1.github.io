@@ -89,6 +89,3 @@ description: "include/antlr3commontoken.h –"
 <p> ANTLR3 Token factory interface to create lots of tokens efficiently rather than creating and freeing lots of little bits of memory.</p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for ANTLR3C from the source code. </p>
-<h2>Index</h2>
-<dt><a href="#lbAX">Author</a></dt>
-<dd></dd></dl>

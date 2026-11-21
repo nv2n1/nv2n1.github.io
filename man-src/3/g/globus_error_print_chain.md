@@ -56,6 +56,3 @@ description: "Error Handling Helpers –"
 </dt><dd> A string containing a friendly error message. This string needs to be freed by the user of this function.</dd></dl>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for globus_common from the source code. </p>
-<h2>Index</h2>
-<dt><a href="#lbAK">Author</a></dt>
-<dd></dd></dl>

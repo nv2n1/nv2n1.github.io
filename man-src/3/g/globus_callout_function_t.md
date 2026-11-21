@@ -43,6 +43,3 @@ description: "Callout Invocation –"
  <i>GLOBUS_CALLOUT_ERROR_OUT_OF_MEMORY</i> Out of memory</dd></dl>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for globus_callout from the source code. </p>
-<h2>Index</h2>
-<dt><a href="#lbAJ">Author</a></dt>
-<dd></dd></dl>

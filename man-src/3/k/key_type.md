@@ -61,6 +61,3 @@ description: "QuantLib::TimeSeries – Container for historical data."
 <p> This constructor initializes the history with a set of values. Such values are assigned to a corresponding number of consecutive dates starting from <i>firstDate</i> included. </p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for QuantLib from the source code. </p>
-<h2>Index</h2>
-<dt><a href="#lbAM">Author</a></dt>
-<dd></dd></dl>

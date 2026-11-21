@@ -157,8 +157,3 @@ create;
 <dt>
 </dt><dd> <a rel="nofollow" href="http://standards.freedesktop.org/desktop-entry-spec/latest/">http://standards.freedesktop.org/desktop-entry-spec/latest/</a></dd></dl>
 </dl>
-<h2>Index</h2>
-<dt><a href="#lbAK">SEE ALSO</a></dt>
-<dd>
-</dd><dt><a href="#lbAL">NOTES</a></dt>
-<dd></dd></dl>

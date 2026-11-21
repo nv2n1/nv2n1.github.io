@@ -22,6 +22,3 @@ description: "dmlite_security_ent –"
 <h3>const char* name</h3>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for dmlite from the source code. </p>
-<h2>Index</h2>
-<dt><a href="#lbAI">Author</a></dt>
-<dd></dd></dl>

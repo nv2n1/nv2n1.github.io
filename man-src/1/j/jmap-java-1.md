@@ -117,17 +117,3 @@ description: "jmap – Memory Map"
 </dl>
 <p> <br />
 &nbsp;<wbr> </p>
-<h2>Index</h2>
-<dl>
-<dt><a href="#lbAB">Name</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAC">SYNOPSIS</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAD">PARAMETERS</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAE">DESCRIPTION</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAF">OPTIONS</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAG">SEE ALSO</a></dt>
-<dd>  </dd></dl>

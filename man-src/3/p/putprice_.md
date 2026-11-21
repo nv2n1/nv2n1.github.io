@@ -51,25 +51,3 @@ description: "QuantLib::EurodollarFuturesImpliedStdDevQuote – quote for the Eu
 <p>Implements <code>LazyObject</code>. </p>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for QuantLib from the source code. </p>
-<h2>Index</h2>
-<dl>
-<dt><a href="#lbAB">NAME</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAC">SYNOPSIS</a></dt>
-<dd>  </dd>
-<dl>
-<dt><a href="#lbAD">Public Member Functions</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAE">Protected Member Functions</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAF">Protected Attributes</a></dt>
-<dd>  </dd></dl>
-<dt><a href="#lbAG">Detailed Description</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAH">Member Function Documentation</a></dt>
-<dd>  </dd>
-<dl>
-<dt><a href="#lbAI">void performCalculations () const [protected, virtual]</a></dt>
-<dd>  </dd></dl>
-<dt><a href="#lbAJ">Author</a></dt>
-<dd>  </dd></dl>

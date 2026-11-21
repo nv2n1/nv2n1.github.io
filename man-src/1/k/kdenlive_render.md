@@ -51,10 +51,3 @@ description: "kdenlive_render – Render program for Kdenlive."
 Jean - Baptiste Mardelle&lt;jb[at] kdenlive.org&gt;
            Marco Gittler&lt;g.marco[at] freenet.de&gt;
 </code></pre>
-<h2>Index</h2>
-<dt><a href="#lbAJ">ENVIRONMENT</a></dt>
-<dd>
-</dd><dt><a href="#lbAK">SEE ALSO</a></dt>
-<dd>
-</dd><dt><a href="#lbAL">AUTHORS</a></dt>
-<dd></dd></dl>

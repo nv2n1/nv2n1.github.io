@@ -25,6 +25,3 @@ description: "ANTLR3_BITSET_LIST_struct –"
 <p> Referenced by antlr3BitsetAdd(), antlr3BitsetClone(), antlr3BitsetCopy(), antlr3BitsetEquals(), antlr3BitsetIsNil(), antlr3BitsetLoad(), antlr3BitsetMember(), antlr3BitsetNew(), antlr3BitsetNumBits(), antlr3BitsetORInPlace(), antlr3BitsetSize(), grow(), and growToInclude(). </p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for ANTLR3C from the source code. </p>
-<h2>Index</h2>
-<dt><a href="#lbAH">Author</a></dt>
-<dd></dd></dl>

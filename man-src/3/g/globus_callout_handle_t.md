@@ -49,8 +49,3 @@ description: "Callout Handle Operations –"
 </dt><dd> <i>GLOBUS_CALLOUT_ERROR_WITH_HASHTABLE</i> Hashtable initialization failed</dd></dl>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for globus_callout from the source code. </p>
-<h2>Index</h2>
-<dt><a href="#lbAH">Function Documentation</a></dt>
-<dd>
-</dd><dt><a href="#lbAK">Author</a></dt>
-<dd></dd></dl>

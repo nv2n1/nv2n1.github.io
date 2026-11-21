@@ -41,6 +41,3 @@ description: "QuantLib::CashFlow – Base class for cash flows."
 <p> Implemented in <code>Dividend</code>, <code>FixedDividend</code>, <code>FractionalDividend</code>, <code>FixedRateCoupon</code>, <code>FloatingRateCoupon</code>, and <code>SimpleCashFlow</code>. </p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for QuantLib from the source code. </p>
-<h2>Index</h2>
-<dt><a href="#lbAI">Author</a></dt>
-<dd></dd></dl>

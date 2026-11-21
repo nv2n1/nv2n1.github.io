@@ -38,6 +38,3 @@ description: "ANTLR3_TRIE_ENTRY_struct –"
 <p> Referenced by freeIntNode(), and intTrieAdd(). </p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for ANTLR3C from the source code. </p>
-<h2>Index</h2>
-<dt><a href="#lbAO">Author</a></dt>
-<dd></dd></dl>

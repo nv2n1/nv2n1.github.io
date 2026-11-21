@@ -183,8 +183,6 @@ url: "/docs/linux/man/1-perlmacosx/"
 
  Last modified 2013-04-29. 
 
-<h2>Index</h2>
-
 
 
 <dt><a HREF="#lbAM">Starting From Scratch</a>

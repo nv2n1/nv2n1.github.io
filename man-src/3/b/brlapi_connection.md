@@ -94,10 +94,3 @@ if (brlapi_openConnection(&amp;settings, &amp;settings) &lt; 0) {
 </dt><dd> <code>brlapi_connectionSettings_t</code> <code>brlapi_writePacket()</code> <code>brlapi_readPacketHeader()</code> <code>brlapi_readPacketContent()</code> <code>brlapi_readPacket()</code></dd></dl>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for BrlAPI from the source code. </p>
-<h2>Index</h2>
-<dt><a href="#lbAP">Typedef Documentation</a></dt>
-<dd>
-</dd><dt><a href="#lbAR">Function Documentation</a></dt>
-<dd>
-</dd><dt><a href="#lbAW">Author</a></dt>
-<dd></dd></dl>

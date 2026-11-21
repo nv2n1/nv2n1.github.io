@@ -325,25 +325,3 @@ amrecover&gt; quit
 <h2>AUTHORS</h2>
 <p> <code>Alan M. McIvor</code> &lt;alan [at] kauri.auck.irl.cri.nz&gt; </p>
 <p> <code>Stefan G. Weichinger</code> &lt;sgw [at] amanda.org&gt; </p>
-<h2>Index</h2>
-<dl>
-<dt><a href="#lbAB">NAME</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAC">SYNOPSIS</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAD">DESCRIPTION</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAE">OPTIONS</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAF">AUTH</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAG">COMMANDS</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAH">EXAMPLES</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAI">ENVIRONMENT</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAJ">SEE ALSO</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAK">AUTHORS</a></dt>
-<dd>  </dd></dl>

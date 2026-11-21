@@ -187,6 +187,3 @@ description: "GridFTP Server Control –"
  <i>callback_arg</i> The user argument that is passed into callback.</dd></dl>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for globus_ftp_control from the source code. </p>
-<h2>Index</h2>
-<dt><a href="#lbAU">Author</a></dt>
-<dd></dd></dl>

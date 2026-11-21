@@ -247,16 +247,3 @@ supermin-- build-- if - newer-- lock / run / user /`id - u`/ supermin.lock-- for
 <p> This program is free software; you can redistribute it and/or modify it under the terms of the <font SIZE="-1">GNU</font> General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version. </p>
 <p> This program is distributed in the hope that it will be useful, but <font SIZE="-1">WITHOUT ANY WARRANTY</font>; without even the implied warranty of <font SIZE="-1">MERCHANTABILITY</font> or <font SIZE="-1">FITNESS FOR A PARTICULAR PURPOSE.</font> See the <font SIZE="-1">GNU</font> General Public License for more details. </p>
 <p> You should have received a copy of the <font SIZE="-1">GNU</font> General Public License along with this program; if not, write to the Free Software Foundation, Inc., 675 Mass Ave, Cambridge, <font SIZE="-1">MA 02139, USA.</font> </p>
-<h2>Index</h2>
-<dt><a href="#lbAG">OPTIONS</a></dt>
-<dd>
-</dd><dt><a href="#lbAH">SUPERMIN APPLIANCES</a></dt>
-<dd>
-</dd><dt><a href="#lbAM">ENVIRONMENT VARIABLES</a></dt>
-<dd>
-</dd><dt><a href="#lbAN">SEE ALSO</a></dt>
-<dd>
-</dd><dt><a href="#lbAO">AUTHORS</a></dt>
-<dd>
-</dd><dt><a href="#lbAP">COPYRIGHT</a></dt>
-<dd></dd></dl>

@@ -377,22 +377,3 @@ SUBSYSTEM==&quot;net&quot;, OPTIONS=&quot;log_level=debug&quot;
 <dl>
 <dd> <p> <a rel="nofollow" href="https://en.wikipedia.org/wiki/Escape_sequences_in_C#Table_of_escape_sequences">https://en.wikipedia.org/wiki/Escape_sequences_in_C#Table_of_escape_sequences</a> </p>
  </dd></dl>
-<h2>Index</h2>
-<dl>
-<dt><a href="#lbAB">NAME</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAC">DESCRIPTION</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAD">RULES FILES</a></dt>
-<dd>  </dd>
-<dl>
-<dt><a href="#lbAE">Operators</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAF">Values</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAG">Keys</a></dt>
-<dd>  </dd></dl>
-<dt><a href="#lbAH">SEE ALSO</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAI">NOTES</a></dt>
-<dd>  </dd></dl>

@@ -106,8 +106,3 @@ description: "kdesvnaskpass – ssh-askpass for kdesvn"
 Rajko Albrecht &lt;ral [at] alwins-world.de&gt;
 <br>
 </pre>
-<h2>Index</h2>
-<dt><a href="#lbAQ">SEE ALSO</a></dt>
-<dd>
-</dd><dt><a href="#lbAR">AUTHORS</a></dt>
-<dd></dd></dl>

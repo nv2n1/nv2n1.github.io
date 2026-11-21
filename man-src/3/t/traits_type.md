@@ -70,28 +70,3 @@ description: "QuantLib::PiecewiseDefaultCurve – Piecewise default-probability 
 <p>Reimplemented from <code>LazyObject</code>. </p>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for QuantLib from the source code. </p>
-<h2>Index</h2>
-<dl>
-<dt><a href="#lbAB">NAME</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAC">SYNOPSIS</a></dt>
-<dd>  </dd>
-<dl>
-<dt><a href="#lbAD">Public Types</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAE">Public Member Functions</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAF">Friends</a></dt>
-<dd>  </dd></dl>
-<dt><a href="#lbAG">Detailed Description</a></dt>
-<dd>  </dd>
-<dl>
-<dt><a href="#lbAH">template&lt;class Traits, class Interpolator, template&lt; class &gt; class Bootstrap = IterativeBootstrap&gt; class QuantLib::PiecewiseDefaultCurve&lt; Traits, Interpolator, Bootstrap &gt;</a></dt>
-<dd>  </dd></dl>
-<dt><a href="#lbAI">Member Function Documentation</a></dt>
-<dd>  </dd>
-<dl>
-<dt><a href="#lbAJ">void update () [virtual]</a></dt>
-<dd>  </dd></dl>
-<dt><a href="#lbAK">Author</a></dt>
-<dd>  </dd></dl>

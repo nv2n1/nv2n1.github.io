@@ -136,28 +136,3 @@ description: "perl594delta – what is new for perl v5.9.4"
 <p> The <i></i><font SIZE="-1"><i>INSTALL</i></font><i></i> file for how to build Perl. </p>
 <p> The <i></i><font SIZE="-1"><i>README</i></font><i></i> file for general stuff. </p>
 <p> The <i>Artistic</i> and <i>Copying</i> files for copyright information. </p>
-<h2>Index</h2>
-<dt><a href="#lbAI">Core Enhancements</a></dt>
-<dd>
-</dd><dt><a href="#lbAO">Modules and Pragmas</a></dt>
-<dd>
-</dd><dt><a href="#lbAQ">Utility Changes</a></dt>
-<dd>
-</dd><dt><a href="#lbAS">Documentation</a></dt>
-<dd>
-</dd><dt><a href="#lbAW">Performance Enhancements</a></dt>
-<dd>
-</dd><dt><a href="#lbBB">Installation and Configuration Improvements</a></dt>
-<dd>
-</dd><dt><a href="#lbBH">Selected Bug Fixes</a></dt>
-<dd>
-</dd><dt><a href="#lbBO">New or Changed Diagnostics</a></dt>
-<dd>
-</dd><dt><a href="#lbBP">Changed Internals</a></dt>
-<dd>
-</dd><dt><a href="#lbBQ">Known Problems</a></dt>
-<dd>
-</dd><dt><a href="#lbBR">Reporting Bugs</a></dt>
-<dd>
-</dd><dt><a href="#lbBS">SEE ALSO</a></dt>
-<dd></dd></dl>

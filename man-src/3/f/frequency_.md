@@ -68,8 +68,6 @@ url: "/docs/linux/man/3-frequency_/"
 
  Generated automatically by Doxygen for QuantLib from the source code. 
 
-<h2>Index</h2>
-
 
 
 <dt><a HREF="#lbAI">Author</a>
